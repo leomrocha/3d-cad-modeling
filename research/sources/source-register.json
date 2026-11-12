@@ -368,6 +368,32 @@
       ]
     },
     {
+      "id": "SRC-031b438ece44",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json",
+      "title": "Leaf iteration — result.json",
+      "summary": "Completed Leaf iteration records 29 native checks, unchanged model hash, audit/persistence, inspected source/model views and applied checker/shared reader with 44 tests.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "7f89e3ac39db08427d78be0b43ac16e9d5e98a86cd01e63ab74cc130e7ce1dd3",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-03256efc5e07",
       "url": null,
       "local_source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
@@ -1487,6 +1513,32 @@
       ]
     },
     {
+      "id": "SRC-0cb70285e323",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json",
+      "title": "Leaf iteration — capture-top.json",
+      "summary": "Completed top capture response binds document 76, camera and module image for actual visual inspection.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad9e1f0520ba88a64dc1f3ae8b95edf6954526e12f88dc75325db74a97dd6a04",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-0d57f06ba877",
       "url": "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html",
       "local_source_path": null,
@@ -1548,6 +1600,32 @@
       "referring_documents": [
         "research/action-audit/reviews/point-06-sources.md",
         "research/sources/round-05/point-06-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-0da51768e908",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json",
+      "title": "Leaf iteration — initial-state.json",
+      "summary": "Native pre-open state identifies SKF document 75 and unrelated open work before opening the Leaf drawing.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json",
+          "access_date": "2026-11-12",
+          "sha256": "bd6da34eadfddac172f7c12bb83f5e4ddaf9f82319196daa2a24580c8f92b443",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -2039,6 +2117,32 @@
       ]
     },
     {
+      "id": "SRC-15f1b4d0281d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl",
+      "title": "Leaf iteration — ocs-journal.jsonl",
+      "summary": "Guarded requests retain the original Leaf open polling-bound result and same-ID recovery, followed by actual top, terminal-end and isometric view/capture operations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl",
+          "access_date": "2026-11-12",
+          "sha256": "f1d77f0318b02d093cd98bbbae4c0f1faa329d9dc9d906cba9d7a43c460965a5",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-16d2d9b6a0cb",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json",
@@ -2253,10 +2357,21 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/pillow_block.py",
+          "access_date": "2026-11-12",
+          "sha256": "da3ba1a80c4887a5588a271c100264e3b9e4a456ca0babe27a8e6bcc75cf8859",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -3113,6 +3228,32 @@
       ]
     },
     {
+      "id": "SRC-208dce2b3f17",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md",
+      "title": "Saved battery inspection and source-bound check procedure",
+      "summary": "Details exact source variant, metadata identity, unchanged-file persistence, transformed shell and terminal checks, source/model views and verified shared-reader extraction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md",
+          "access_date": "2026-11-12",
+          "sha256": "6a682556a2ae084a102fbbc60a7b83e322506d00c1c68a2455ba27d3fa3ab860",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-20a206cdbbd8",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/skills/README.md",
@@ -3619,11 +3760,22 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+          "access_date": "2026-11-12",
+          "sha256": "7206669f1275dc8a68c6dcdd372f83de184dc0e442f446e09468ace94213472a",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-12/saved-rail-reader-sources.json",
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -5194,7 +5346,8 @@
       "summary": "top and staged recovery functions reconstruct shell/terminal features; finish checks and saves the component. Applicability: Component-specific dimensions and staged resumption; imports shared battery/item/wrapper/SAT modules.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -5208,10 +5361,21 @@
             "research/action-audit/implementation-queue/assets.md",
             "research/action-audit/implementation-queue/queue.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/tmp/opencode/build_leaf_gen2.py",
+          "access_date": "2026-11-12",
+          "sha256": "4d6f8eb52addd7a4c5b3ee687cd3118364360a7a162713e6185101b369bb9ef7",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-06/implementation-queue-sources.json"
+        "research/sources/round-06/implementation-queue-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -6239,6 +6403,32 @@
       ]
     },
     {
+      "id": "SRC-3b89f4bc986b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json",
+      "title": "Leaf iteration — native-records.json",
+      "summary": "Actual eight-solid saved SAB records provide transformed shell vertices, analytic surfaces and terminal geometry for 29 source-bound checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json",
+          "access_date": "2026-11-12",
+          "sha256": "2254d8df602405ae125ccd456e929c99ea50e90d7e3ac60df1ce8b1c0ffe7227",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-3bb79a82bdb3",
       "url": "https://github.com/HakanSeven12/OpenCADStudio/blob/main/docs/cadkernel-body-path.md",
       "local_source_path": null,
@@ -6507,6 +6697,32 @@
       "referring_documents": [
         "research/sources/round-06/implementation-queue-sources.json",
         "research/sources/round-07/parts-catalogue-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-3d8897df5de5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png",
+      "title": "Leaf iteration — reopened-isometric.png",
+      "summary": "Inspected current isometric image shows both shell outlines, pressed features, corner mounts and three contacts corresponding to the retained source illustration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "4c8c12631464a7fe7e7ee90b34e5146837972323adcf139bb7756b21a0dadb11",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -6998,6 +7214,32 @@
       ]
     },
     {
+      "id": "SRC-40fd07a56db7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg",
+      "title": "Retained EVShop bare-terminal module illustration",
+      "summary": "Actual source image inspected against current top, terminal-end and isometric views. Pressed pan/ribs, four corner mounts and three bare terminal pedestals identify the exercised external reconstruction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "retained_source_image_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "retained_source_image_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg",
+          "access_date": "2026-11-12",
+          "sha256": "4a36ee5ea0f8ee440c5f69f21e547e2f10b4726bfffed4d75f53c0071ead6cec",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-41482c223014",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
@@ -7482,6 +7724,32 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-45aee6e7fdff",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json",
+      "title": "Leaf iteration — readiness.json",
+      "summary": "All 14 required feature values and observed source hashes pass SOURCE_READY before geometry checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "34155ad7dc79bff3195e79700fd931fef896a4cf17bc23de88d012216b174e2a",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -8126,7 +8394,8 @@
       "summary": "Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -8139,10 +8408,21 @@
             "COMPONENT_DEVELOPMENT_PLAN.md",
             "research/component-development-coverage.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md",
+          "access_date": "2026-11-12",
+          "sha256": "4bfc89d5b1b042938cdfd51456203dc606ed9f1a38f645805392eecea8092597",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-08/component-plan-sources.json"
+        "research/sources/round-08/component-plan-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -8456,6 +8736,16 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+          "access_date": "2026-11-12",
+          "sha256": "aae63f921d44b612d78be074c0cbac826531a4c083ac298f5369fc3e0279151b",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -8463,7 +8753,8 @@
         "research/sources/round-11/rail-execution-sources.json",
         "research/sources/round-12/saved-rail-reader-sources.json",
         "research/sources/round-13/crossmember-sources.json",
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -8698,6 +8989,32 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-51bc1eab5201",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json",
+      "title": "Leaf iteration — header.json",
+      "summary": "Current OCS document header identifies millimetres for source-bound native-coordinate checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json",
+          "access_date": "2026-11-12",
+          "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -9482,6 +9799,32 @@
       ]
     },
     {
+      "id": "SRC-5780c8aca8ae",
+      "url": "https://evshop.eu/en/batteries/321-module-from-nissan-leaf-gen-2-24kwh.html",
+      "local_source_path": null,
+      "title": "Retained EVShop Leaf Gen2 module listing",
+      "summary": "Actual retained page text inspected: 300 x 222 x 34 mm supplies this reconstruction case convention. Original retrieval metadata remains in the existing provenance register.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "retained_seller_page_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "retained_seller_page_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/leaf-gen2/evshop-en-321.html",
+          "access_date": "2026-11-12",
+          "sha256": "2a370b3c1f612de19edec955b2807fe685b96b2f9d51b9320994cf41b42cbf71",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-57e794a1c1cb",
       "url": "https://polyhaven.com/license",
       "local_source_path": null,
@@ -9955,6 +10298,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5c74a56ff439",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/scripts/battery_module.py",
+      "title": "Source-bound saved battery geometry checker",
+      "summary": "Adds 29 checks for actual saved Leaf shells, case envelope, mounting bore centres and axes, inner walls, nominal terminal bores, contact faces and pedestal sections. Expected values come from the external source job.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/battery_module.py",
+          "access_date": "2026-11-12",
+          "sha256": "6b40bc5b2c48ec3b9e6515f014747ee8270dd29419614c026e37f87e40e2e1c3",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -11405,12 +11774,23 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "27d431942c8f1d557a0bf00b0c927a4f785f791b33086dca02c8141d5a9d6003",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
         "research/sources/round-11/rail-execution-sources.json",
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -13216,6 +13596,32 @@
       ]
     },
     {
+      "id": "SRC-7c655a6cf054",
+      "url": "https://vt-tech.eu/en/articles/ev-transport/7-nissan-leaf-salvaged-battery-modules",
+      "local_source_path": null,
+      "title": "Retained VT-Tech Leaf reuse article",
+      "summary": "Actual retained article inspected: 9.1 mm mounting holes and M6 power/M4 tap terminals support nominal bore geometry. Its combined Gen1/Gen2 case dimensions 303 x 223 x 35 mm retain their separate attribution.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "retained_reuse_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "retained_reuse_source_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/leaf-gen2/vtteh-leaf-modules.html",
+          "access_date": "2026-11-12",
+          "sha256": "f195ee8b8c3bd9000d1fab8c2d1ff0ff97640885d5020615a349c26deeb17f9f",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-7c8a5bf54e7c",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md",
@@ -14002,6 +14408,32 @@
       ]
     },
     {
+      "id": "SRC-83551fe43914",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json",
+      "title": "Leaf iteration — audit.json",
+      "summary": "Current opened Leaf audit contains eight solids, zero errors/warnings and the original saved-file identity.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json",
+          "access_date": "2026-11-12",
+          "sha256": "60c5eb6a6fab0e4dbf053a37f7944bfc43e002c536cb02deded4fbe793726ca4",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-837950156e9e",
       "url": "https://www.3dcontentcentral.com/includes/Attachments/Terms_and_Conditions_for_Contributions.pdf",
       "local_source_path": null,
@@ -14135,7 +14567,8 @@
       "summary": "Input sheet registered from the inspected ferme manifest: battery; Leaf bank or BT-L alternative; original kind source component/model reference. Detailed geometry review belongs to its component iteration.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -14148,10 +14581,21 @@
             "COMPONENT_DEVELOPMENT_PLAN.md",
             "research/component-development-coverage.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md",
+          "access_date": "2026-11-12",
+          "sha256": "4af9d76752785decd45e85dc87b3e25bc3411da8fd17cb539a60d7b7c8070ec6",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-08/component-plan-sources.json"
+        "research/sources/round-08/component-plan-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -14188,7 +14632,8 @@
       "summary": "Input sheet registered from the inspected ferme manifest: frame; One variant per drive route; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -14201,10 +14646,21 @@
             "COMPONENT_DEVELOPMENT_PLAN.md",
             "research/component-development-coverage.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md",
+          "access_date": "2026-11-12",
+          "sha256": "b0314fe2082561b4227840f813eee1a829af318214228c909c6f876d1399943a",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-08/component-plan-sources.json"
+        "research/sources/round-08/component-plan-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -15144,6 +15600,32 @@
       ]
     },
     {
+      "id": "SRC-8f09660dbc00",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2.md",
+      "title": "Earlier Leaf native construction and verification report",
+      "summary": "Identifies the eight-solid drawing, earlier 14 pre-save checks, verified-save SHA and historical viewport failure. The current iteration reads saved SAB and inspects successful current captures.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2.md",
+          "access_date": "2026-11-12",
+          "sha256": "55a4769a8ea7d69edf20fc33c2fa45298eea52df4737b661c8b4c240bbfc0a9a",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-8f369f8f1381",
       "url": "https://mujoco.readthedocs.io/en/stable/python.html",
       "local_source_path": null,
@@ -15439,12 +15921,23 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+          "access_date": "2026-11-12",
+          "sha256": "e3fbe54c9c3d42ff21961da488afa27b1f5fc9df1b843660bfd2e8e8454505d5",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-12/saved-rail-reader-sources.json",
         "research/sources/round-13/crossmember-sources.json",
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -16513,6 +17006,32 @@
       ]
     },
     {
+      "id": "SRC-9968cbf922d2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png",
+      "title": "Leaf iteration — reopened-terminal.png",
+      "summary": "Inspected current end image shows separate power/tap/power terminal assemblies aligned along the reconstructed row.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png",
+          "access_date": "2026-11-12",
+          "sha256": "bee46f63db5042d6c59280e3a8fb191a4b55c6f1fcd35ca09c70ac3085ad2213",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9969afca68d8",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md",
@@ -16788,6 +17307,32 @@
       ]
     },
     {
+      "id": "SRC-9b9b3c47b23f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c021-leaf-module.md",
+      "title": "Completed saved Leaf module iteration report",
+      "summary": "Records reuse of the eight-solid model, the retained 300 x 222 x 34 mm case convention, 29 native checks, persistence, actual source/view inspection and the applied checker with 44 tests.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c021-leaf-module.md",
+          "access_date": "2026-11-12",
+          "sha256": "25cadc2dc3d0e6bd99ba2078af31a4d0367810fd7a5b91c96ff8b1b56a27603e",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9bffb9dff56b",
       "url": "https://github.com/HakanSeven12/OpenCADStudio",
       "local_source_path": null,
@@ -16836,6 +17381,32 @@
         "research/action-audit/reviews/software-review.md",
         "research/action-audit/reviews/source-check.md",
         "research/sources/round-04/intake-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9d121e4915e5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json",
+      "title": "Leaf iteration — capture-isometric.json",
+      "summary": "Completed isometric capture response binds document 76 and the model image compared with the source.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json",
+          "access_date": "2026-11-12",
+          "sha256": "2d5d08b0ffcad7712e6cf3faee653314ec817d048869a857228d240fd799b224",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -17063,6 +17634,32 @@
       ]
     },
     {
+      "id": "SRC-9f71130cf873",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json",
+      "title": "Leaf iteration — native-checks.json",
+      "summary": "All 29 current saved-geometry comparisons pass for eight closed solids, case dimensions, mounting bores, inner walls and three nominal terminal assemblies.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "a6990ce68b29eed70a4979cec5ca49ad7ba80120275957b0bf082724711d7102",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9f9c7199168b",
       "url": "https://github.com/HakanSeven12/OpenCADStudio/blob/main/README.md",
       "local_source_path": null,
@@ -17139,6 +17736,16 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "e071b5a2731c0348794945bb75c9fb91c51d18d2ab1711863d24c266ca7e90dc",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -17146,7 +17753,8 @@
         "research/sources/round-11/rail-execution-sources.json",
         "research/sources/round-12/saved-rail-reader-sources.json",
         "research/sources/round-13/crossmember-sources.json",
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -17909,6 +18517,32 @@
       ],
       "referring_documents": [
         "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a62979656e4c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png",
+      "title": "Leaf iteration — reopened-top.png",
+      "summary": "Inspected current top image shows case outline, pressed pan/ribs, four corner mounting bores and terminal projection.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png",
+          "access_date": "2026-11-12",
+          "sha256": "c83a8e9a300489327734739cf46e087116065f4dc7e7330327007cafc0cb9cd1",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -20434,6 +21068,32 @@
       ]
     },
     {
+      "id": "SRC-bc5f6a777dc4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json",
+      "title": "Leaf iteration — reopened-state.json",
+      "summary": "Recovered open state binds document 76 to the exact existing Leaf DWG and preserves other open drawing identities.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json",
+          "access_date": "2026-11-12",
+          "sha256": "94212529a5ca29f0adddde7232ab1f9e8597fded64b9dc3f08bd077415d1d6da",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-bcae1b9fb83c",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json",
@@ -21682,13 +22342,24 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "697054040864bb0c9e70a364c0a9f1c29550c682705ada261daa40f96f171392",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json",
         "research/sources/round-11/rail-execution-sources.json",
         "research/sources/round-13/crossmember-sources.json",
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -22384,6 +23055,32 @@
       ],
       "referring_documents": [
         "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-cbdfa4a88a6b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json",
+      "title": "Leaf iteration — capture-terminal.json",
+      "summary": "Completed terminal-end capture response identifies document 76 and its three distinct terminal assemblies.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json",
+          "access_date": "2026-11-12",
+          "sha256": "1d690f050d02698b837d669baab36542578338a08a4c76496e4f42ef16f21bdc",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -23519,6 +24216,32 @@
       ]
     },
     {
+      "id": "SRC-d9b54d7ca1b6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json",
+      "title": "Leaf iteration — persistence.json",
+      "summary": "Current file SHA matches the earlier verified-save SHA. Opened native audit has eight solids and zero errors/warnings; original file bytes remain preserved.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json",
+          "access_date": "2026-11-12",
+          "sha256": "257d965943e2de25431b79553626bbb224e4df259146d7d8ea23a2c0f0f29e97",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-da6cb18472ad",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json",
@@ -24560,6 +25283,32 @@
       ]
     },
     {
+      "id": "SRC-e70585fd1821",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json",
+      "title": "Leaf iteration — source-job.json",
+      "summary": "Pins 14 feature values with specific source sections, hashes, units, evidence labels and eight exact component names.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "3622292d02376f68f660ff149a1e7b767e744a6599b472cf5b15aa62210ca6e4",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
       "id": "SRC-e7211c15cdf1",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json",
@@ -24891,6 +25640,32 @@
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-web-sources.json",
         "research/workflows/details/dom-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-e941de7f22bc",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg",
+      "title": "Existing Leaf module saved native model",
+      "summary": "Original eight-solid reconstruction reused without changing its bytes. Current 29 source-bound native checks, file hash/audit and actual view inspection pass.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg",
+          "access_date": "2026-11-12",
+          "sha256": "4eabb05101f181a9ab8fbf29bd0e6f8f45b823c273eecd2e684e3e870053b13c",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -25692,6 +26467,32 @@
         "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/dom-r06.md",
         "research/workflows/details/dom-r08.md"
+      ]
+    },
+    {
+      "id": "SRC-f0d4b933a88b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md",
+      "title": "Leaf source attribution and reconstruction geometry record",
+      "summary": "Separates EVShop case dimensions, VT-Tech mounting holes and nominal terminal sizes, Jay Summet reuse pitch, and reconstructed shell/pan/terminal features. Supplies pinned feature expectations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md",
+          "access_date": "2026-11-12",
+          "sha256": "e9b915d4d426274e0bc15438d40b53bd3429aa05024cbf6848405b018f8221bd",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {
@@ -26833,6 +27634,16 @@
             "execution/c009-bearing.md",
             "skills/component-cad/references/existing-bearing.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+          "access_date": "2026-11-12",
+          "sha256": "43b8d0bac2f1badc4575d00ca378f9ece4016dae455acc7aad26d07acc119430",
+          "referring_documents": [
+            "execution/c021-leaf-module.md",
+            "skills/component-cad/references/existing-battery.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -26840,7 +27651,8 @@
         "research/sources/round-11/rail-execution-sources.json",
         "research/sources/round-12/saved-rail-reader-sources.json",
         "research/sources/round-13/crossmember-sources.json",
-        "research/sources/round-14/bearing-sources.json"
+        "research/sources/round-14/bearing-sources.json",
+        "research/sources/round-15/leaf-sources.json"
       ]
     },
     {

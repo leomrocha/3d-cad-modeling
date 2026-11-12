@@ -124,6 +124,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-031b438ece44"></a>
+
+## SRC-031b438ece44 — Leaf iteration — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json)
+
+Summary: Completed Leaf iteration records 29 native checks, unchanged model hash, audit/persistence, inspected source/model views and applied checker/shared reader with 44 tests.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-03256efc5e07"></a>
 
 ## SRC-03256efc5e07 — SKILL.md
@@ -472,6 +484,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-0cb70285e323"></a>
+
+## SRC-0cb70285e323 — Leaf iteration — capture-top.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json)
+
+Summary: Completed top capture response binds document 76, camera and module image for actual visual inspection.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-0d57f06ba877"></a>
 
 ## SRC-0d57f06ba877 — Open CASCADE Technology Reference Manual 8.0.1: STEPCAFControl_Reader Class Reference
@@ -495,6 +519,18 @@ Summary: Four direct page attempts did not yield page contents: ROS Rolling URDF
 Evidence: existing_report_registered, access_failed.
 
 Documents: research/action-audit/reviews/point-06-sources.md, research/sources/round-05/point-06-web-sources.json.
+
+<a id="src-0da51768e908"></a>
+
+## SRC-0da51768e908 — Leaf iteration — initial-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json)
+
+Summary: Native pre-open state identifies SKF document 75 and unrelated open work before opening the Leaf drawing.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-0df55f79b2d5"></a>
 
@@ -688,6 +724,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-15f1b4d0281d"></a>
+
+## SRC-15f1b4d0281d — Leaf iteration — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl)
+
+Summary: Guarded requests retain the original Leaf open polling-bound result and same-ID recovery, followed by actual top, terminal-end and isometric view/capture operations.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-16d2d9b6a0cb"></a>
 
 ## SRC-16d2d9b6a0cb — P01 p01-build-01 — rail-state.json
@@ -770,7 +818,7 @@ Summary: Reads ten exact metadata-labelled native parts and compares housing, sl
 
 Evidence: local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-19255db776eb"></a>
 
@@ -1084,6 +1132,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-208dce2b3f17"></a>
+
+## SRC-208dce2b3f17 — Saved battery inspection and source-bound check procedure
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md](/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md)
+
+Summary: Details exact source variant, metadata identity, unchanged-file persistence, transformed shell and terminal checks, source/model views and verified shared-reader extraction.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-20a206cdbbd8"></a>
 
 ## SRC-20a206cdbbd8 — README.md — evidence_index
@@ -1250,7 +1310,7 @@ Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body gr
 
 Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-26397bd1f7c2"></a>
 
@@ -1716,9 +1776,9 @@ Original source: [/tmp/opencode/build_leaf_gen2.py](/tmp/opencode/build_leaf_gen
 
 Summary: top and staged recovery functions reconstruct shell/terminal features; finish checks and saves the component. Applicability: Component-specific dimensions and staged resumption; imports shared battery/item/wrapper/SAT modules.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-31e3c7199ce2"></a>
 
@@ -2116,6 +2176,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-3b89f4bc986b"></a>
+
+## SRC-3b89f4bc986b — Leaf iteration — native-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json)
+
+Summary: Actual eight-solid saved SAB records provide transformed shell vertices, analytic surfaces and terminal geometry for 29 source-bound checks.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-3bb79a82bdb3"></a>
 
 ## SRC-3bb79a82bdb3 — kernel body path note
@@ -2211,6 +2283,18 @@ Summary: Authoritative existing action/route record or authored implementation-q
 Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
+
+<a id="src-3d8897df5de5"></a>
+
+## SRC-3d8897df5de5 — Leaf iteration — reopened-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png)
+
+Summary: Inspected current isometric image shows both shell outlines, pressed features, corner mounts and three contacts corresponding to the retained source illustration.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-3d8ba9ae669c"></a>
 
@@ -2380,6 +2464,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-40fd07a56db7"></a>
+
+## SRC-40fd07a56db7 — Retained EVShop bare-terminal module illustration
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg)
+
+Summary: Actual source image inspected against current top, terminal-end and isometric views. Pressed pan/ribs, four corner mounts and three bare terminal pedestals identify the exercised external reconstruction.
+
+Evidence: retained_source_image_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-41482c223014"></a>
 
 ## SRC-41482c223014 — Ferme part manifest
@@ -2547,6 +2643,18 @@ Summary: Input sheet registered from the inspected ferme manifest: battery; Sepa
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-45aee6e7fdff"></a>
+
+## SRC-45aee6e7fdff — Leaf iteration — readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json)
+
+Summary: All 14 required feature values and observed source hashes pass SOURCE_READY before geometry checks.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-46011fa591f5"></a>
 
@@ -2796,9 +2904,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad-in
 
 Summary: Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-4d1602b2855e"></a>
 
@@ -2918,7 +3026,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-4f49d9c8767a"></a>
 
@@ -3015,6 +3123,18 @@ Summary: Input sheet registered from the inspected ferme manifest: hitch; Traile
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-51bc1eab5201"></a>
+
+## SRC-51bc1eab5201 — Leaf iteration — header.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json)
+
+Summary: Current OCS document header identifies millimetres for source-bound native-coordinate checks.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-51e2013a5b3c"></a>
 
@@ -3304,6 +3424,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-5780c8aca8ae"></a>
+
+## SRC-5780c8aca8ae — Retained EVShop Leaf Gen2 module listing
+
+Original source: [https://evshop.eu/en/batteries/321-module-from-nissan-leaf-gen-2-24kwh.html](https://evshop.eu/en/batteries/321-module-from-nissan-leaf-gen-2-24kwh.html)
+
+Summary: Actual retained page text inspected: 300 x 222 x 34 mm supplies this reconstruction case convention. Original retrieval metadata remains in the existing provenance register.
+
+Evidence: retained_seller_page_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-57e794a1c1cb"></a>
 
 ## SRC-57e794a1c1cb — License
@@ -3447,6 +3579,18 @@ Summary: Existing archived source for procedural geometry and computational-engi
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-5c74a56ff439"></a>
+
+## SRC-5c74a56ff439 — Source-bound saved battery geometry checker
+
+Original source: [/home/leo/projects/3dmodeling/scripts/battery_module.py](/home/leo/projects/3dmodeling/scripts/battery_module.py)
+
+Summary: Adds 29 checks for actual saved Leaf shells, case envelope, mounting bore centres and axes, inner walls, nominal terminal bores, contact faces and pedestal sections. Expected values come from the external source job.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-5d152842ea12"></a>
 
@@ -3974,7 +4118,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: authored_document_or_code_inspected, authored_code_or_procedure_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-6b30ccb4447f"></a>
 
@@ -4576,6 +4720,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-7c655a6cf054"></a>
+
+## SRC-7c655a6cf054 — Retained VT-Tech Leaf reuse article
+
+Original source: [https://vt-tech.eu/en/articles/ev-transport/7-nissan-leaf-salvaged-battery-modules](https://vt-tech.eu/en/articles/ev-transport/7-nissan-leaf-salvaged-battery-modules)
+
+Summary: Actual retained article inspected: 9.1 mm mounting holes and M6 power/M4 tap terminals support nominal bore geometry. Its combined Gen1/Gen2 case dimensions 303 x 223 x 35 mm retain their separate attribution.
+
+Evidence: retained_reuse_source_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-7c8a5bf54e7c"></a>
 
 ## SRC-7c8a5bf54e7c — Electrical equipment bracket (P22) — CAD input sheet
@@ -4876,6 +5032,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-83551fe43914"></a>
+
+## SRC-83551fe43914 — Leaf iteration — audit.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json)
+
+Summary: Current opened Leaf audit contains eight solids, zero errors/warnings and the original saved-file identity.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-837950156e9e"></a>
 
 ## SRC-837950156e9e — Contributor terms
@@ -4932,9 +5100,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad-in
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Leaf bank or BT-L alternative; original kind source component/model reference. Detailed geometry review belongs to its component iteration.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-84c081bf3776"></a>
 
@@ -4956,9 +5124,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad-in
 
 Summary: Input sheet registered from the inspected ferme manifest: frame; One variant per drive route; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-856f00288f07"></a>
 
@@ -5260,6 +5428,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md, research/workflows/reconstruction-paths.md.
 
+<a id="src-8f09660dbc00"></a>
+
+## SRC-8f09660dbc00 — Earlier Leaf native construction and verification report
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2.md)
+
+Summary: Identifies the eight-solid drawing, earlier 14 pre-save checks, verified-save SHA and historical viewport failure. The current iteration reads saved SAB and inspects successful current captures.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-8f369f8f1381"></a>
 
 ## SRC-8f369f8f1381 — Python — MuJoCo Documentation
@@ -5318,7 +5498,7 @@ Summary: Four integration tests use FERME saved rail evidence: source dimensions
 
 Evidence: local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -5680,6 +5860,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-9968cbf922d2"></a>
+
+## SRC-9968cbf922d2 — Leaf iteration — reopened-terminal.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png)
+
+Summary: Inspected current end image shows separate power/tap/power terminal assemblies aligned along the reconstructed row.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-9969afca68d8"></a>
 
 ## SRC-9969afca68d8 — Point 04 designer notes — raster drawings and interpreted dimensions
@@ -5764,6 +5956,18 @@ Evidence: retained_source_render_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-9b9b3c47b23f"></a>
+
+## SRC-9b9b3c47b23f — Completed saved Leaf module iteration report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c021-leaf-module.md](/home/leo/projects/3dmodeling/execution/c021-leaf-module.md)
+
+Summary: Records reuse of the eight-solid model, the retained 300 x 222 x 34 mm case convention, 29 native checks, persistence, actual source/view inspection and the applied checker with 44 tests.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-9bffb9dff56b"></a>
 
 ## SRC-9bffb9dff56b — OCS repository
@@ -5787,6 +5991,18 @@ Summary: Official Python documentation describes CSV readers and writers, config
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-04/intake-sources.json.
+
+<a id="src-9d121e4915e5"></a>
+
+## SRC-9d121e4915e5 — Leaf iteration — capture-isometric.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json)
+
+Summary: Completed isometric capture response binds document 76 and the model image compared with the source.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-9df6cac46941"></a>
 
@@ -5860,6 +6076,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
 
+<a id="src-9f71130cf873"></a>
+
+## SRC-9f71130cf873 — Leaf iteration — native-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json)
+
+Summary: All 29 current saved-geometry comparisons pass for eight closed solids, case dimensions, mounting bores, inner walls and three nominal terminal assemblies.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-9f9c7199168b"></a>
 
 ## SRC-9f9c7199168b — local project README
@@ -5882,7 +6110,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-a00bd3c7c755"></a>
 
@@ -6159,6 +6387,18 @@ Summary: Existing ten-solid native reconstruction; measured crown32mm fails SKF 
 Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
+
+<a id="src-a62979656e4c"></a>
+
+## SRC-a62979656e4c — Leaf iteration — reopened-top.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png)
+
+Summary: Inspected current top image shows case outline, pressed pan/ribs, four corner mounting bores and terminal projection.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-a62b176d4381"></a>
 
@@ -7024,6 +7264,18 @@ Evidence: authored_document_inspected, local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-bc5f6a777dc4"></a>
+
+## SRC-bc5f6a777dc4 — Leaf iteration — reopened-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json)
+
+Summary: Recovered open state binds document 76 to the exact existing Leaf DWG and preserves other open drawing identities.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-bcae1b9fb83c"></a>
 
 ## SRC-bcae1b9fb83c — P02 crossmember — initial-state.json
@@ -7430,7 +7682,7 @@ Summary: Existing local component/action/skill/catalogue source reused by the co
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -7647,6 +7899,18 @@ Summary: Reports live saved-body checks, unchanged DWG hash, body-derived versus
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
+<a id="src-cbdfa4a88a6b"></a>
+
+## SRC-cbdfa4a88a6b — Leaf iteration — capture-terminal.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json)
+
+Summary: Completed terminal-end capture response identifies document 76 and its three distinct terminal assemblies.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-cc34a83be8f3"></a>
 
@@ -8092,6 +8356,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-d9b54d7ca1b6"></a>
+
+## SRC-d9b54d7ca1b6 — Leaf iteration — persistence.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json)
+
+Summary: Current file SHA matches the earlier verified-save SHA. Opened native audit has eight solids and zero errors/warnings; original file bytes remain preserved.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-da6cb18472ad"></a>
 
 ## SRC-da6cb18472ad — P01 p01-build-01 — rail-doc-schema-2.json
@@ -8476,6 +8752,18 @@ Evidence: local_execution_source_inspected.
 
 Documents: research/sources/round-13/crossmember-sources.json.
 
+<a id="src-e70585fd1821"></a>
+
+## SRC-e70585fd1821 — Leaf iteration — source-job.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json)
+
+Summary: Pins 14 feature values with specific source sections, hashes, units, evidence labels and eight exact component names.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
+
 <a id="src-e7211c15cdf1"></a>
 
 ## SRC-e7211c15cdf1 — P02 crossmember — reopened-checks.json
@@ -8595,6 +8883,18 @@ Summary: The FreeCAD documentation describes STEP import structure choices inclu
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md.
+
+<a id="src-e941de7f22bc"></a>
+
+## SRC-e941de7f22bc — Existing Leaf module saved native model
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg)
+
+Summary: Original eight-solid reconstruction reused without changing its bytes. Current 29 source-bound native checks, file hash/audit and actual view inspection pass.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-ea12fb9678d8"></a>
 
@@ -8847,6 +9147,18 @@ Summary: Open3D 0.20.0 API inspected 2026-11-12. Documents Poisson reconstructio
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/dom-r06.md, research/workflows/details/dom-r08.md.
+
+<a id="src-f0d4b933a88b"></a>
+
+## SRC-f0d4b933a88b — Leaf source attribution and reconstruction geometry record
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md)
+
+Summary: Separates EVShop case dimensions, VT-Tech mounting holes and nominal terminal sizes, Jay Summet reuse pitch, and reconstructed shell/pan/terminal features. Supplies pinned feature expectations.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-15/leaf-sources.json.
 
 <a id="src-f1c693b775e0"></a>
 
@@ -9206,7 +9518,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
 
 <a id="src-f954ab80c148"></a>
 

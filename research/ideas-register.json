@@ -3156,6 +3156,28 @@
       ]
     },
     {
+      "id": "COMP-I18",
+      "name": "Share strict native component identity reading across checked assemblies",
+      "summary": "Extracted a shared named-solid reader after SKF and Leaf models used Component: labels with different optional spacing. Added an external-job-bound saved Leaf shell, mounting-hole and terminal checker. All 29 saved-geometry checks and 44 helper tests pass; existing drawing bytes remain preserved.",
+      "status": "proposal",
+      "origin": "executed_leaf_iteration",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c021-leaf-module.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c021-leaf-module.md",
+          "line": 1,
+          "section": "Applied improvement"
+        }
+      ],
+      "next_check": "Keep exact required component sets and sourcebound features for each new assembly; reject unknown identities before reusing geometry checks.",
+      "source_ids": [
+        "SRC-9b9b3c47b23f"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

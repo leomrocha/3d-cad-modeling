@@ -1958,6 +1958,18 @@ Original proposal: [execution/c009-bearing.md](/home/leo/projects/3dmodeling/exe
 
 Next check: Use the documented component-label and source-bound dimension conditions for each other component before reusing this reader.
 
+## COMP-I18 — Share strict native component identity reading across checked assemblies
+
+Status: proposal.
+
+Extracted a shared named-solid reader after SKF and Leaf models used Component: labels with different optional spacing. Added an external-job-bound saved Leaf shell, mounting-hole and terminal checker. All 29 saved-geometry checks and 44 helper tests pass; existing drawing bytes remain preserved.
+
+Original source: [/home/leo/projects/3dmodeling/execution/c021-leaf-module.md](/home/leo/projects/3dmodeling/execution/c021-leaf-module.md)
+
+Original proposal: [execution/c021-leaf-module.md](/home/leo/projects/3dmodeling/execution/c021-leaf-module.md), line 1.
+
+Next check: Keep exact required component sets and sourcebound features for each new assembly; reject unknown identities before reusing geometry checks.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.
