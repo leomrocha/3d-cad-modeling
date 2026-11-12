@@ -1,0 +1,52 @@
+{
+  "observed_date": "2026-11-12",
+  "scope": "PATH and active Python module discoverability; no installation or modeling execution",
+  "python": "3.12.9",
+  "commands": {
+    "blender": "/bin/blender",
+    "FreeCAD": null,
+    "freecad": null,
+    "FreeCADCmd": null,
+    "openscad": "/bin/openscad",
+    "colmap": null,
+    "CloudCompare": null,
+    "meshlab": null,
+    "python3": "/home/leo/.pyenv/versions/3.12.9/bin/python3",
+    "uv": "/home/leo/.local/bin/uv",
+    "docker": "/bin/docker",
+    "nvidia-smi": null
+  },
+  "python_modules": {
+    "cadquery": false,
+    "build123d": false,
+    "OCP": false,
+    "OCC": false,
+    "FreeCAD": false,
+    "bpy": false,
+    "mujoco": false,
+    "ifcopenshell": false,
+    "open3d": false,
+    "trimesh": false,
+    "numpy": true,
+    "scipy": true,
+    "cv2": true,
+    "torch": true,
+    "nerfstudio": false,
+    "gsplat": false,
+    "pycolmap": false,
+    "ezdxf": false
+  },
+  "version_probes": {
+    "blender": "5.0.1",
+    "openscad": "2021.01"
+  },
+  "ocs_source_revision": "abad1b904577f4ea9d6d826c7143cad1eb5560bd",
+  "ocs_source_worktree": "clean at inspection",
+  "hardware": {
+    "cpu": "Intel Core i7-1270P",
+    "logical_cpus": 16,
+    "memory_free_h_total": "30 GiB",
+    "memory_free_h_available_at_probe": "13 GiB",
+    "nvidia_smi_on_path": false
+  }
+}
