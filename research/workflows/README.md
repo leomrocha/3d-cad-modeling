@@ -69,3 +69,7 @@ python3 research/tools/build_workflow_register.py --date 2026-11-12
 ```
 
 This rebuilds source/idea registers and the combined operation map from the retained reports and domain records. It checks operation references, source registration and declared type availability through each recipe. Those checks concern documentation consistency. Each workflow record also states the numerical and importer checks for its eventual execution.
+
+## Detailed procedures and effort classification
+
+[Input requirements, code, software and all 38 ranked workflows](/home/leo/projects/3dmodeling/research/workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.

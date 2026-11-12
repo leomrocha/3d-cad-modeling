@@ -2,7 +2,7 @@
 
 Registered: 2026-11-12.
 
-The records retain project proposals, experiment questions and the earlier implementation-plan ideas. Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](ideas-register.json).
+The records retain project proposals, experiment questions and the earlier implementation-plan ideas. Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](/home/leo/projects/3dmodeling/research/ideas-register.json).
 
 ## CAD-I01 — Feature-level evidence ledger
 
@@ -504,7 +504,7 @@ Status: proposal.
 
 **Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 34.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 34.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -514,7 +514,7 @@ Status: proposal.
 
 **Analytic solid:** Use a supported boundary-representation route for exact planes, cylinders and topology. Record export settings and reopen measurements. STEP exchange preserves the content its exporter writes; feature history remains in the native source or generator.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 35.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 35.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -524,7 +524,7 @@ Status: proposal.
 
 **Polygon mesh:** Keep visual and collision meshes as separate derivatives. Record tessellation, simplification, normals, watertightness and unit conversion. Use GLB for packaged visual assets, with consumer-specific STL/OBJ/PLY where appropriate.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 36.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 36.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -534,7 +534,7 @@ Status: proposal.
 
 **Point cloud:** Preserve sample positions, coordinate frame, colour, normals and measurement provenance when available. Store filtering and registration transforms.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 37.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 37.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -544,7 +544,7 @@ Status: proposal.
 
 **Gaussian/NeRF scene:** Preserve cameras and reconstruction settings with the native representation. Extracted meshes become separately tracked derivatives with their own checks.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 38.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 38.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -554,7 +554,7 @@ Status: proposal.
 
 **Building model:** Use IFC classes, placements, property sets, material assignments, spatial hierarchy and stable element IDs for architecture.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 39.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 39.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -564,7 +564,7 @@ Status: proposal.
 
 **Robot model:** Preserve the kinematic tree, joint axes, limits, inertial properties, visual/collision mapping and source part IDs in MJCF/URDF packages.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 40.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 40.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -574,7 +574,7 @@ Status: proposal.
 
 **Job brief and source intake.** A small Python CLI reads a structured model brief and reference files. It records units, frames, part IDs, required dimensions, intended use, input rights and output formats. Keep the original images, drawings and supplied measurements with hashes.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 46.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 46.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -584,7 +584,7 @@ Status: proposal.
 
 **Geometry adapters.** Reuse the local OCS session-control skill and revision-aware operations. Evaluate build123d and CadQuery on the same solid fixtures, then retain the one whose API and saved results fit the jobs. Use FreeCAD where an interactive feature tree and constrained sketches are required. Use OpenSCAD for concise CSG and suitable library components.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 47.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 47.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -594,7 +594,7 @@ Status: proposal.
 
 **Blender adapter.** Execute bounded Python scripts using Blender's native API for scene assembly, visual inspection, meshes, materials and rendering. Assess MCP bridges against direct scripts for session preservation and reproducibility.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 48.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 48.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -604,7 +604,7 @@ Status: proposal.
 
 **Reconstruction adapters.** Begin with a calibrated photogrammetry route and Open3D/CloudCompare processing. Add a separate GPU experiment for Gaussian scenes and learned object reconstruction after licence and hardware assessment.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 49.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 49.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -614,7 +614,7 @@ Status: proposal.
 
 **Domain exporters.** Use IfcOpenShell/Bonsai for building semantics and MuJoCo's native loader/compiler for simulation checks. Add URDF exchange when the robot consumer requires it.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 50.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 50.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -624,7 +624,7 @@ Status: proposal.
 
 **Component registry.** Store small metadata and procedural sources in Git; select binary storage after measuring fixture sizes and update frequency. Resolve components by stable ID, revision and content hash. Keep supplier models and scanned/generative assets traceable to their respective sources.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 51.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 51.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -634,7 +634,7 @@ Status: proposal.
 
 **Verification and reports.** Each adapter writes its actual execution state, logs, model revision, measured properties and output hashes. A readable report links dimensions and component names to the exact model being checked.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 52.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 52.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -644,7 +644,7 @@ Status: proposal.
 
 **Identity:** `component_id`, readable name, family, revision, source revision, author/manufacturer and part number where applicable.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 84.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 84.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -654,7 +654,7 @@ Status: proposal.
 
 **Evidence:** source URL or file, retrieval date, source hash, licence identifier, licence text path, attribution, redistribution terms and provenance status.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 85.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 85.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -664,7 +664,7 @@ Status: proposal.
 
 **Representation:** native source, generator and parameters, analytic solid, visual mesh, collision mesh, point cloud and their hashes.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 86.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 86.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -674,7 +674,7 @@ Status: proposal.
 
 **Geometry:** length unit, local frame, origin, axes, bounding dimensions, interface frames, mounting features and declared tolerances with their sources.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 87.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 87.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -684,7 +684,7 @@ Status: proposal.
 
 **Assembly:** child component IDs, occurrence transforms, connection references and joint metadata where applicable.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 88.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 88.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -694,7 +694,7 @@ Status: proposal.
 
 **Physical properties:** mass, centre of mass, inertia tensor, material and density, each with units, frame and measured/manufacturer/calculated/assumed status.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 89.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 89.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -704,7 +704,7 @@ Status: proposal.
 
 **Verification:** backend/version, solid validity, mesh checks, dimensions, importer results and check date tied to the exact revision.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 90.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 90.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -714,7 +714,7 @@ Status: proposal.
 
 **Use and discovery:** tags, preview paths, permitted uses and consumer formats.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 91.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 91.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -724,7 +724,7 @@ Status: proposal.
 
 Record the installed OCS build/session capabilities and retain the current local skill behaviour that already works.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 117.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 117.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -734,7 +734,7 @@ Status: proposal.
 
 Exercise one dimensioned bracket with a bore and multiple named parts using the authorized CAD route.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 118.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 118.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -744,7 +744,7 @@ Status: proposal.
 
 Compare a curved solid from build123d and CadQuery using identical declared dimensions; assess edits, export, analytic surfaces and saved-file readback.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 119.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 119.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -754,7 +754,7 @@ Status: proposal.
 
 Reopen derivatives in an independent supported importer and inspect part count, bounds, bore size and volume.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 120.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 120.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -764,7 +764,7 @@ Status: proposal.
 
 Deliver the existing-skill capability receipt, one selected procedural-solid adapter, model brief schema and an example with measured checks.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 121.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 121.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -774,7 +774,7 @@ Status: proposal.
 
 Run a dimensioned DXF profile with a hole, a dimensioned raster sketch and a text brief through the intake contract.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 127.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 127.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -784,7 +784,7 @@ Status: proposal.
 
 Create a corresponding part and a simple room with a wall opening; validate the supplied dimensions and geometry features.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 128.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 128.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -794,7 +794,7 @@ Status: proposal.
 
 Derive Blender visual assets from those same revisions and verify unit/axis mapping numerically.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 129.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 129.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -804,7 +804,7 @@ Status: proposal.
 
 Add a small pilot catalogue spanning a mechanical part, an assembly, and an architectural element. Preserve licences, interfaces and source dimensions.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 130.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 130.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -814,7 +814,7 @@ Status: proposal.
 
 Deliver `drawing-to-cad`, `blender-modeling` and `component-library` skills backed by exercised scripts.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 131.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 131.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -824,7 +824,7 @@ Status: proposal.
 
 Capture or reuse an authorized photo set with calibration evidence and measured control distances.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 135.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 135.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -834,7 +834,7 @@ Status: proposal.
 
 Reconstruct cameras and surfaces, then align scale/frame using a subset of controls.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 136.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 136.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -844,7 +844,7 @@ Status: proposal.
 
 Reserve independent measurements for error evaluation. Report per-control residuals in millimetres and surface-fit residuals over defined regions.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 137.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 137.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -854,7 +854,7 @@ Status: proposal.
 
 Fit relevant planes/cylinders and rebuild a selected part as CAD. Inspect functional dimensions and scan-to-CAD distances.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 138.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 138.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -864,7 +864,7 @@ Status: proposal.
 
 Deliver the capture, photogrammetry, cloud/mesh and scan-to-CAD skills with original images, transformations and measurements.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 139.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 139.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -874,7 +874,7 @@ Status: proposal.
 
 Create an IFC example with a wall, opening, door/window and storey placement. Check semantic classes, geometric dimensions and a consumer import.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 143.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 143.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -884,7 +884,7 @@ Status: proposal.
 
 Create an articulated robot example with separate links, defined joints and known physical-property inputs.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 144.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 144.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -894,7 +894,7 @@ Status: proposal.
 
 Export visual and collision geometry, compile the MJCF model and check frame transforms, joint ranges and intended contacts.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 145.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 145.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -904,7 +904,7 @@ Status: proposal.
 
 Export URDF if the selected robot consumer uses it; compare the imported kinematics and inertial metadata against the source.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 146.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 146.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -914,7 +914,7 @@ Status: proposal.
 
 Deliver `architecture-ifc` and `robot-model-handoff` skills with source-linked verification reports.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 147.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 147.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -924,7 +924,7 @@ Status: proposal.
 
 Select a specific tool/model from the licence assessment and record compatible hardware, dependencies and weights.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 151.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 151.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -934,7 +934,7 @@ Status: proposal.
 
 Benchmark Gaussian scene reconstruction on the metric photo fixture, retaining cameras and transforms.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 152.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 152.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -944,7 +944,7 @@ Status: proposal.
 
 Benchmark learned image-to-3D on an object with known independent dimensions and multi-view references.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 153.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 153.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -954,7 +954,7 @@ Status: proposal.
 
 Compare runtime, peak memory, output representation, appearance and measured geometry errors. Keep inferred surfaces tagged through remodeling.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 154.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 154.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -964,7 +964,7 @@ Status: proposal.
 
 Deliver optional reference-generation skills whose outputs enter the same asset registry and verification process.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 155.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 155.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -974,7 +974,7 @@ Status: proposal.
 
 Provide one CLI entrypoint for intake, adapter execution, inspection and export.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 159.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 159.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -984,7 +984,7 @@ Status: proposal.
 
 Add capability discovery per installed tool and versioned adapter configuration.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 160.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 160.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -994,7 +994,7 @@ Status: proposal.
 
 Record job state, partial outputs and restart points for long reconstruction operations.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 161.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 161.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1004,7 +1004,7 @@ Status: proposal.
 
 Package exercised skills and pinned environment definitions by workflow family.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 162.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 162.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1014,7 +1014,7 @@ Status: proposal.
 
 Document examples from each supported input type through its native source and downstream consumer.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 163.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 163.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1024,7 +1024,7 @@ Status: proposal.
 
 **Geometry:** Controlling dimensions and allowed errors come from the task brief and intended use. Measure the actual saved geometry. For solids, inspect validity, count, topology, volume, surface types and interfaces. For meshes, inspect scale, normals, disconnected components, degeneracy and watertightness where required.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 167.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 167.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1034,7 +1034,7 @@ Status: proposal.
 
 **Reconstruction:** Separate controls used to estimate the transformation from controls used to assess error. Record camera/image coverage, calibrated parameters, registration residuals, point/mesh coverage and local error distributions. Compare inferred and observed regions separately.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 168.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 168.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1044,7 +1044,7 @@ Status: proposal.
 
 **Interchange:** Reopen each supported output using its actual consumer and compare IDs/counts, placements, dimensions and available properties. Retain a numerical conversion factor and explicit source/target frames.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 169.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 169.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1054,7 +1054,7 @@ Status: proposal.
 
 **Robot dynamics:** Record the source of mass and inertia. Test loader compilation, joint-axis direction, limits and defined contact cases. A numerical simulation report describes that specified model and operating conditions.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 170.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 170.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1064,7 +1064,7 @@ Status: proposal.
 
 **Architecture:** Check IFC schema validity, class/property assignments, placements, openings and quantities against the example brief. Exercise the selected architecture consumer.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 171.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 171.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1074,7 +1074,7 @@ Status: proposal.
 
 **Reproducibility:** Record tool versions, dependency locks, model-weight revisions, parameters, seeds where relevant, original input hashes, execution logs and output hashes.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 172.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 172.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1084,7 +1084,7 @@ Status: proposal.
 
 Start with existing OCS use, dimensioned text/sketch modeling and Blender derivatives: these provide a direct route to CAD on the observed local setup.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 176.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 176.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1094,7 +1094,7 @@ Status: proposal.
 
 Add source-backed component reuse and drawing intake: these reduce repeated modeling and support architecture and robotics together.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 177.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 177.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1104,7 +1104,7 @@ Status: proposal.
 
 Establish metric reconstruction and scan-to-CAD with independent controls: this connects photographic evidence to dimensional geometry.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 178.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 178.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1114,7 +1114,7 @@ Status: proposal.
 
 Add IFC and MJCF consumers: these demonstrate the two named application domains.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 179.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 179.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -1124,6 +1124,6 @@ Status: proposal.
 
 Add GPU reference-generation options against the same fixtures: this provides a measured comparison of appearance and geometry for the additional methods.
 
-Original proposal: [research/implementation-plan.md](../research/implementation-plan.md), line 180.
+Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 180.
 
 Next check: Use the associated workflow operation and stage checks.

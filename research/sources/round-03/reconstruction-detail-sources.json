@@ -1,0 +1,411 @@
+[
+  {
+    "url": "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+    "title": "OpenCV 4.13 Camera Calibration",
+    "summary": "Known target object coordinates and corresponding image detections support intrinsic/distortion calibration; tutorial recommends at least ten pattern views. Calibration does not set the scale of an unrelated monocular reconstruction.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01",
+      "REC-R03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+    "title": "OpenCV 4.13 Perspective-n-Point pose computation",
+    "summary": "solvePnP estimates object/world-to-camera rotation and translation from 3D/2D correspondences, intrinsics and distortion; camera axes are X right, Y down, Z forward.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R03",
+      "REC-R07"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+    "title": "Open3D 0.20 ICP registration",
+    "summary": "registration_icp refines a source-to-target transform from an initial transform and distance threshold; RegistrationResult reports fitness and inlier RMSE. Point-to-plane ICP requires useful normals.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R02",
+      "REC-R04",
+      "REC-R05",
+      "REC-R06",
+      "REC-R09"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+    "title": "Open3D 0.20 global registration",
+    "summary": "FPFH/RANSAC provides feature-based coarse registration and a transform for subsequent ICP; thresholds and feature scale use cloud units.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R02",
+      "REC-R04",
+      "REC-R06",
+      "REC-R09"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+    "title": "Open3D 0.20 point-cloud operations",
+    "summary": "Point-cloud API includes plane segmentation, clustering, normal estimation and returned inlier indices. Fits are sampled geometry evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01",
+      "REC-R04",
+      "REC-R06",
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+    "title": "Open3D 0.20 RGB-D integration",
+    "summary": "Integrates calibrated RGB-D frames and camera poses into TSDF; voxel length controls discretization; marching cubes extracts mesh.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R02",
+      "REC-R09"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
+    "title": "Open3D RGB-D odometry",
+    "summary": "Estimates frame-to-frame motion from RGB-D frames; metric depth and calibration remain sensor-provided evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R02",
+      "REC-R09"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+    "title": "OpenMVG documentation: OpenMVS stages",
+    "summary": "OpenMVS imports an OpenMVG scene and runs DensifyPointCloud, ReconstructMesh and TextureMesh as separate command-line stages.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01",
+      "REC-R04",
+      "REC-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+    "title": "COLMAP command-line interface",
+    "summary": "COLMAP documents command-line reconstruction; reused as the SfM/camera and MVS alternative in these recipes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01",
+      "REC-R02",
+      "REC-R04",
+      "REC-R05",
+      "REC-R06",
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.nerf.studio/nerfology/methods/splat.html",
+    "title": "Nerfstudio Splatfacto",
+    "summary": "Documents Splatfacto training, Gaussian PLY output and memory variants; FAQ states mesh/point-cloud export is unsupported.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R05",
+      "REC-R06",
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+    "title": "Nerfstudio geometry export",
+    "summary": "Documents point-cloud and TSDF/Poisson geometry export; Splatfacto availability conflicts with its specific FAQ and must be checked by exact version.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R06",
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
+    "title": "Nerfstudio custom dataset",
+    "summary": "Documents image/video and pose ingestion paths for scene training.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/ByteDance-Seed/Depth-Anything-3",
+    "title": "Depth Anything 3 repository",
+    "summary": "Existing report records multi-view depth, poses and point/Gaussian exports; model outputs remain estimated geometry and scale claims need controls.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R05"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+    "title": "Depth Anything 3 streaming README",
+    "summary": "Existing report records long-sequence streaming and a below-12-GB GPU memory claim; reused from reconstruction.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R02",
+      "REC-R05"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
+    "title": "CloudCompare command-line mode",
+    "summary": "Command line opens, processes and saves cloud/mesh data; exact commands depend on the selected operation and version.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R04",
+      "REC-R06",
+      "REC-R09"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/VAST-AI-Research/TripoSR",
+    "title": "TripoSR repository",
+    "summary": "Existing report records single-image textured mesh output and approximately 6 GB VRAM claim; backside and dimensions are learned estimates.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://huggingface.co/stabilityai/TripoSR",
+    "title": "TripoSR model card",
+    "summary": "Existing report records MIT terms for code/checkpoint; reused from reconstruction.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/microsoft/TRELLIS.2",
+    "title": "Microsoft TRELLIS.2 repository",
+    "summary": "Existing report records single-image mesh/GLB generation and Linux/NVIDIA >=24 GB memory requirement for TRELLIS.2-4B.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://huggingface.co/microsoft/TRELLIS.2-4B",
+    "title": "Microsoft TRELLIS.2-4B model card",
+    "summary": "Existing report records MIT terms for source and model card; reused from reconstruction.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/facebookresearch/sam-3d-objects",
+    "title": "SAM 3D Objects repository",
+    "summary": "Existing report records >=32 GB NVIDIA GPU guidance and custom SAM terms for local code/checkpoints.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "OCS Engineering skill instructions",
+    "summary": "Local skill defines explicit units, origins, axes, datums, part boundaries, constrained model edits, readback and measured checks; retain it for remodeling handoff.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "REC-R01",
+      "REC-R04",
+      "REC-R06",
+      "REC-R07",
+      "REC-R09",
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md",
+    "title": "OpenMVS usage and COLMAP importer",
+    "summary": "Documents COLMAP image_undistorter output as the input to InterfaceCOLMAP, then DensifyPointCloud and later mesh stages; OpenMVG is an alternate importer.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://colmap.github.io/faq.html",
+    "title": "COLMAP FAQ: known camera intrinsics",
+    "summary": "Documents ImageReader camera parameters, shared camera setup, pycolmap database read/update API, default bundle-adjustment intrinsic refinement, and the +0.5 pixel-center correction from OpenCV/Kalibr.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://colmap.github.io/cameras.html",
+    "title": "COLMAP camera models",
+    "summary": "Documents COLMAP corner-based pixel coordinates, camera conventions and model selection; OPENCV and FULL_OPENCV distortion model details.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://colmap.github.io/cli.html",
+    "title": "COLMAP command-line interface",
+    "summary": "Documents feature_extractor options including ImageReader camera model/parameters, mapper and image_undistorter command routes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md",
+    "title": "Meshroom command-line batch usage",
+    "summary": "Official Meshroom instructions document `meshroom_batch --input INPUT_IMAGES_FOLDER --output OUTPUT_FOLDER`; the executable also accepts a saved pipeline graph.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R01"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.nerf.studio/quickstart/custom_dataset.html",
+    "title": "Nerfstudio custom image/video dataset",
+    "summary": "Documents `ns-process-data images|video --data ... --output-dir ...` and `ns-train nerfacto --data ...`; image/video processing uses COLMAP and FFmpeg.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.nerf.studio/quickstart/installation.html",
+    "title": "Nerfstudio installation and CLI examples",
+    "summary": "Official install guide documents CLI environment and a video-processing command; used only for documented CLI context, no installation was run.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md",
+    "title": "TripoSR inference README",
+    "summary": "Official README command is `python run.py <image> --output-dir <dir>`; it states about 6 GB VRAM per single image and MIT terms for code and pretrained models.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  }
+]

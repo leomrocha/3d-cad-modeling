@@ -22,3 +22,13 @@ Final registration and document checks are recorded in `workflows/register-check
 3. Scope: register the seven proposed work packages in `next-step-proposal.md`, add their original local source and idea records, and rebuild the documentation registers. Preserve `implementation-plan.md`.
 4. Evidence: reuse existing workflow/source records and the local OCS skill. The proposal describes targeted research and pilot experiments as proposed work packages.
 5. Documentation checks: recipe/source registration, JSON parsing, local links, source-document hashes and reproducible register generation are checked for this batch. Actual model identity of the coordinating agent is unavailable.
+
+## 12 November 2026 — Detailed procedures and independent effort rankings
+
+1. Request: document the elements, code, workflows, reference points, software and libraries needed to turn each input type into a 3D model, and classify all recorded routes by manual effort and processing demand.
+2. Starting checkpoint: `073521e`. Scope covers the 38 recorded generic routes and reference implementations; comparison conditions state the dataset and output representation.
+3. Method: reuse retained operation/source records and the three existing research agents. Requested dispatch model: `gpt-6-luna`; actual runtime model identities, including the coordinating agent, are unavailable.
+4. Outputs: independent manual/setup/compute scales; per-route prerequisites, datums, frames, software/API requirements, procedures, code entry points, outputs, checks and recovery; sorted Markdown tables and structured records. Combined-route dossiers retain proposal status.
+5. Reference code: dimensioned CAD, DXF extrusion, camera calibration, source-to-target cloud registration, semantic IFC and explicit MJCF writing. A common helper compares model-point distances with source lengths and distinguishes fit/check controls.
+6. Review: REC-07 and REC-08 now expose point-cloud inputs as well as their existing named source/target roles. REC-13 describes calculated ray-hit anchors and their calibration/reconstruction evidence. These narrow prior correction assignments were carried into this batch by the reconstruction agent. The reconstruction graph's documentation links use absolute local paths.
+7. Verification: documentation builders record recipe/source consistency and reference-code syntax. Synthetic distance-helper tests exercise numerical software behavior. Tool integrations and classification values have the evidence status stated in their individual records.

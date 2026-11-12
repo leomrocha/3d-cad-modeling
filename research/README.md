@@ -27,3 +27,7 @@ Primary-agent work includes local repository/source inspection, version and modu
 Web pages were inspected by the delegated research agents. Existing local originals are referenced in place with hashes. A web inspection records access to the source content; downloaded-original status applies only to files actually saved with a source manifest.
 
 The workflow-research extension preserves the implementation plan and prior tool assessments. Its graphs and recipes record candidate routes and their specific handoff conditions. The source register distinguishes fresh inspection, earlier-report registration and preserved archived originals.
+
+## Detailed procedures and effort classification
+
+[Input requirements, code, software and all 38 ranked workflows](/home/leo/projects/3dmodeling/research/workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.

@@ -153,13 +153,29 @@
           ],
           "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01",
+            "REC-R04",
+            "REC-R06",
+            "REC-R07",
+            "REC-R09",
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/markdown"
         }
       ],
       "referring_documents": [
         "research/local-baseline.md",
         "research/sources/local-evidence.json",
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -193,7 +209,7 @@
       "url": "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
       "local_source_path": null,
       "title": "OpenCV 4.13 Camera Calibration",
-      "summary": "Documents intrinsic matrix and radial/tangential distortion estimation from known 3D pattern coordinates and corresponding image points, and image undistortion.",
+      "summary": "Known target object coordinates and corresponding image detections support intrinsic/distortion calibration; tutorial recommends at least ten pattern views. Calibration does not set the scale of an unrelated monocular reconstruction.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "web_inspected"
@@ -210,10 +226,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01",
+            "REC-R03"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -532,11 +560,12 @@
       "id": "SRC-134b4e103e48",
       "url": "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
       "local_source_path": null,
-      "title": "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
-      "summary": "- OpenMVS processing stages: https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+      "title": "OpenMVG documentation: OpenMVS stages",
+      "summary": "OpenMVS imports an OpenMVG scene and runs DensifyPointCloud, ReconstructMesh and TextureMesh as separate command-line stages.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -550,11 +579,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01",
+            "REC-R04",
+            "REC-R06"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -764,8 +806,8 @@
       "id": "SRC-1f466f80fd41",
       "url": "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
       "local_source_path": null,
-      "title": "Open3D 0.20 point cloud operations",
-      "summary": "Documents point-cloud DBSCAN clustering and RANSAC plane segmentation, including `distance_threshold`, `ransac_n`, iterations and returned inlier indices/plane coefficients.",
+      "title": "Open3D 0.20 point-cloud operations",
+      "summary": "Point-cloud API includes plane segmentation, clustering, normal estimation and returned inlier indices. Fits are sampled geometry evidence.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "web_inspected"
@@ -782,10 +824,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01",
+            "REC-R04",
+            "REC-R06",
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -836,11 +892,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -1228,10 +1295,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R02",
+            "REC-R09"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -1934,9 +2013,21 @@
       "evidence_statuses": [
         "existing_report_registered"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
       "referring_documents": [
-        "research/reconstruction.md"
+        "research/reconstruction.md",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -2923,6 +3014,78 @@
       ]
     },
     {
+      "id": "SRC-6436ad01395b",
+      "url": "https://colmap.github.io/cameras.html",
+      "local_source_path": null,
+      "title": "COLMAP camera models",
+      "summary": "Documents COLMAP corner-based pixel coordinates, camera conventions and model selection; OPENCV and FULL_OPENCV distortion model details.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/reconstruction-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6507a5c7f8da",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
+      "title": "contract.json",
+      "summary": "Analyst classification contract: independent manual effort, software setup and computing classes; required evidence, input and output fields.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
+          "sha256": "3bfa102c217a207e694e648b517f1d29997cb203e7b8e0b048331888d62b28e5",
+          "content_type": "application/json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-651b6a16b16c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
+      "title": "check_control_distances.py",
+      "summary": "Standard-library reference length checker with explicit units, model revision, source provenance and independent check-control residuals.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
+          "sha256": "449442c3cd0852dafb46930ae11e019002a4e3aa48b988a496e10d9d68c8eef4",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-67c3aa703e13",
       "url": "https://api.github.com/repos/github/awesome-copilot/git/trees/HEAD?recursive=1",
       "local_source_path": null,
@@ -3000,6 +3163,32 @@
       ]
     },
     {
+      "id": "SRC-6c38d73efa65",
+      "url": "https://colmap.github.io/faq.html",
+      "local_source_path": null,
+      "title": "COLMAP FAQ: known camera intrinsics",
+      "summary": "Documents ImageReader camera parameters, shared camera setup, pycolmap database read/update API, default bundle-adjustment intrinsic refinement, and the +0.5 pixel-center correction from OpenCV/Kalibr.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/reconstruction-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6c6db30cba74",
       "url": "https://github.com/CadQuery/cadquery",
       "local_source_path": null,
@@ -3039,10 +3228,21 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R08"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -3216,11 +3416,49 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R02",
+            "REC-R05"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-75511277c637",
+      "url": "https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md",
+      "local_source_path": null,
+      "title": "TripoSR inference README",
+      "summary": "Official README command is `python run.py <image> --output-dir <dir>`; it states about 6 GB VRAM per single image and MIT terms for code and pretrained models.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -3252,6 +3490,32 @@
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-76b9efd76055",
+      "url": "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md",
+      "local_source_path": null,
+      "title": "OpenMVS usage and COLMAP importer",
+      "summary": "Documents COLMAP image_undistorter output as the input to InterfaceCOLMAP, then DensifyPointCloud and later mesh stages; OpenMVG is an alternate importer.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -3771,11 +4035,37 @@
       ]
     },
     {
+      "id": "SRC-8611e98b9ce8",
+      "url": "https://docs.nerf.studio/quickstart/custom_dataset.html",
+      "local_source_path": null,
+      "title": "Nerfstudio custom image/video dataset",
+      "summary": "Documents `ns-process-data images;video --data ... --output-dir ...` and `ns-train nerfacto --data ...`; image/video processing uses COLMAP and FFmpeg.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R08"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/reconstruction-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-86cdf9c119df",
       "url": "https://docs.nerf.studio/nerfology/methods/splat.html",
       "local_source_path": null,
       "title": "Nerfstudio Splatfacto",
-      "summary": "Documents Splatfacto camera/image inputs, COLMAP sparse-point initialization, Gaussian PLY export, memory estimates, and FAQ statement that mesh/point-cloud export is currently unsupported; this conflicts with the generic export_geometry page's TSDF-for-all-models wording.",
+      "summary": "Documents Splatfacto training, Gaussian PLY output and memory variants; FAQ states mesh/point-cloud export is unsupported.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -3797,11 +4087,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R05",
+            "REC-R06",
+            "REC-R08"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -3940,6 +4243,32 @@
       ]
     },
     {
+      "id": "SRC-8e6d7648b52e",
+      "url": "https://colmap.github.io/cli.html",
+      "local_source_path": null,
+      "title": "COLMAP command-line interface",
+      "summary": "Documents feature_extractor options including ImageReader camera model/parameters, mapper and image_undistorter command routes.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/reconstruction-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-8f8532cac48e",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
@@ -3993,9 +4322,21 @@
       "evidence_statuses": [
         "existing_report_registered"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
       "referring_documents": [
-        "research/reconstruction.md"
+        "research/reconstruction.md",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -4027,6 +4368,29 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "skills/README.md"
+      ]
+    },
+    {
+      "id": "SRC-92b1e01ee971",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
+      "title": "test_control_distances.py",
+      "summary": "Six synthetic software tests for coordinate units, fit/check separation, finite values and explicit provenance.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
+          "sha256": "d6199099c8875df335bdbbd4aed87f2cdab65b8b3c02b4ecccf11c33d13045df",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -4191,7 +4555,7 @@
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
       "local_source_path": null,
       "title": "Open3D 0.20 ICP registration",
-      "summary": "Documents point-to-point and point-to-plane ICP, fitness as overlapping inlier fraction, inlier RMSE, transforms, thresholds and convergence iterations.",
+      "summary": "registration_icp refines a source-to-target transform from an initial transform and distance threshold; RegistrationResult reports fitness and inlier RMSE. Point-to-plane ICP requires useful normals.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "web_inspected"
@@ -4209,10 +4573,25 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R02",
+            "REC-R04",
+            "REC-R05",
+            "REC-R06",
+            "REC-R09"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -4571,6 +4950,32 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-a2e021f0ada1",
+      "url": "https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md",
+      "local_source_path": null,
+      "title": "Meshroom command-line batch usage",
+      "summary": "Official Meshroom instructions document `meshroom_batch --input INPUT_IMAGES_FOLDER --output OUTPUT_FOLDER`; the executable also accepts a saved pipeline graph.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -5019,11 +5424,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R05"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -5562,11 +5978,12 @@
       "id": "SRC-bfd136961cc3",
       "url": "https://docs.nerf.studio/quickstart/installation.html",
       "local_source_path": null,
-      "title": "Nerfstudio installation and supported inputs",
-      "summary": "Existing report source: project plan documents image/video processing with COLMAP and supplied pose routes; reused for visual-scene recipe prerequisites.",
+      "title": "Nerfstudio installation and CLI examples",
+      "summary": "Official install guide documents CLI environment and a video-processing command; used only for documented CLI context, no installation was run.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -5580,10 +5997,21 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R08"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -5626,7 +6054,8 @@
       "summary": "Documents FPFH feature matching, RANSAC global registration, correspondence pruning by distance/edge length/normals, returned transform, fitness and inlier RMSE; a global initial pose can be refined by ICP.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "web_inspected"
+        "web_inspected",
+        "existing_report_registered"
       ],
       "observations": [
         {
@@ -5640,10 +6069,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R02",
+            "REC-R04",
+            "REC-R06",
+            "REC-R09"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -5989,7 +6432,8 @@
       "summary": "Documents ns-export pointcloud to PLY, TSDF meshes as available for all models, Poisson meshes only for models predicting normals, OBJ textured meshes and NeRF texture transfer to existing meshes.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "web_inspected"
+        "web_inspected",
+        "existing_report_registered"
       ],
       "observations": [
         {
@@ -6003,10 +6447,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R06",
+            "REC-R08"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -6075,10 +6531,21 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -6178,11 +6645,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R04",
+            "REC-R06",
+            "REC-R09"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -6190,7 +6670,7 @@
       "url": "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
       "local_source_path": null,
       "title": "OpenCV 4.13 Perspective-n-Point pose computation",
-      "summary": "Documents solving object/world-to-camera rotation and translation from known 3D points, 2D image projections, camera intrinsics and distortion; defines camera axes and reprojection-error objective.",
+      "summary": "solvePnP estimates object/world-to-camera rotation and translation from 3D/2D correspondences, intrinsics and distortion; camera axes are X right, Y down, Z forward.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "web_inspected"
@@ -6208,10 +6688,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R03",
+            "REC-R07"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -6365,6 +6857,29 @@
       ]
     },
     {
+      "id": "SRC-d52309ad63a6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
+      "title": "combined-details.json",
+      "summary": "Ten proposed combined workflow dossiers with source-backed operations, frame controls, tool/API entry points, resource conditions and relative classifications.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
+          "sha256": "c0b1ef07990b07aa70a2949a7e4b1662a11f7586727398301a531b84dbf31f85",
+          "content_type": "application/json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-d5265b630533",
       "url": null,
       "local_source_path": "/home/leo/.agents/skills/find-skills/SKILL.md",
@@ -6426,6 +6941,29 @@
       ]
     },
     {
+      "id": "SRC-d928392d886f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
+      "title": "build_workflow_details.py",
+      "summary": "Documentation renderer validating complete recipe coverage, source registration, ratings, code paths and Python syntax; builds independent sorted tables.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
+          "sha256": "cf3288bf2098757b8fa41103cea3e426cbea12e1fc26dbfd610fc9ec81b9e310",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-d9490cdbdfa2",
       "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1",
       "local_source_path": null,
@@ -6444,11 +6982,12 @@
       "id": "SRC-da7e7e83673f",
       "url": "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
       "local_source_path": null,
-      "title": "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
-      "summary": "- COLMAP CLI documentation: https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+      "title": "COLMAP command-line interface",
+      "summary": "COLMAP documents command-line reconstruction; reused as the SfM/camera and MVS alternative in these recipes.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -6476,12 +7015,28 @@
           ],
           "local_original": null,
           "sha256": null
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R01",
+            "REC-R02",
+            "REC-R04",
+            "REC-R05",
+            "REC-R06",
+            "REC-R08"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -6829,11 +7384,23 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R02",
+            "REC-R09"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {
@@ -7304,11 +7871,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-R10"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
     {

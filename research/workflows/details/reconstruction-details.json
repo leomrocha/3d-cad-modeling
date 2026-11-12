@@ -1,0 +1,1155 @@
+{
+  "domain": "reconstruction",
+  "workflows": [
+    {
+      "id": "REC-R01",
+      "name": "Calibrated photos and controls to editable CAD",
+      "output_scope": "Metric-anchored camera solution, dense surface reference and constrained CAD interpretation.",
+      "comparison_conditions": "Multi-view photos with adequate overlap and stable exposure; at least ten diverse calibration-target views if using the OpenCV calibration route; explicit scale/control measurements; dense MVS and selected OCS feature modeling.",
+      "inputs": [
+        {
+          "artifact": "photo-set",
+          "format_and_quality": "JPG/PNG originals with camera metadata; sharp overlapping views and visible calibration board in calibration subset."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "JSON/CSV target dimensions and 3D control coordinates with units, plus named image-pixel correspondences or board measurements."
+        },
+        {
+          "artifact": "model-brief",
+          "format_and_quality": "Text naming components, datums and intended CAD feature scope; it supplies semantics, not dimensions."
+        }
+      ],
+      "reference_points": "Board corners: object coordinates in target frame and pixel detections. Calibration target establishes intrinsics and target-frame units; camera calibration alone does not scale the object capture. At least two separated measured scale/control distances are used to set/check reconstruction scale; reserve one or more controls from fitting. COLMAP adapter detail: OpenCV pixel-center principal point is shifted +0.5 px in x and y for COLMAP; OpenCV’s five coefficients [k1,k2,p1,p2,k3] map into COLMAP FULL_OPENCV [k1,k2,p1,p2,k3,k4,k5,k6] with the final three set to zero. Verify COLMAP camera database readback after feature extraction. COLMAP bundle adjustment refines parameters by default unless controlled; choose this based on calibration evidence.",
+      "software": [
+        {
+          "name": "OpenCV",
+          "licence_scope": "BSD-3-Clause",
+          "role_and_api": "calibrateCamera, projectPoints",
+          "dependencies": "Python cv2 + NumPy"
+        },
+        {
+          "name": "COLMAP / pycolmap",
+          "licence_scope": "BSD-3-Clause",
+          "role_and_api": "feature extraction, matching, mapper; CLI or pycolmap",
+          "dependencies": "COLMAP environment"
+        },
+        {
+          "name": "OpenMVS",
+          "licence_scope": "AGPL-3.0",
+          "role_and_api": "DensifyPointCloud, ReconstructMesh",
+          "dependencies": "OpenMVG exported scene / MVS executables"
+        },
+        {
+          "name": "OCS",
+          "licence_scope": "Existing local skill contract",
+          "role_and_api": "Existing OCS session controls and constrained CAD readback",
+          "dependencies": "OpenCADStudio session + OCS Engineering skill"
+        },
+        {
+          "name": "AliceVision Meshroom alternate",
+          "licence_scope": "MPL-2.0 per upstream repository",
+          "role_and_api": "meshroom_batch --input <image-folder> --output <output-folder> invokes the documented photogrammetry pipeline; `--save <project.mg>` persists the graph. This route manages its own graph and calibration; it does not consume the OpenCV calibration JSON adapter above.",
+          "dependencies": "Meshroom/AliceVision bundled executable and pipeline resources; NVIDIA CUDA recommended for full reconstruction per official release notes."
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Calibrate the board-image subset with calibrate_camera.py using the board inner-corner count, measured square size and unit; retain the per-image residuals."
+        },
+        {
+          "step": 2,
+          "action": "Adapt the calibration JSON to COLMAP explicitly. For the script’s OpenCV five-coefficient output, use COLMAP FULL_OPENCV parameters [fx, fy, cx+0.5, cy+0.5, k1, k2, p1, p2, k3, 0, 0, 0]. The +0.5 shifts OpenCV pixel-center coordinates to COLMAP’s corner-based convention. Supply these during feature_extractor with --ImageReader.camera_model FULL_OPENCV --ImageReader.camera_params <comma-separated values> and --ImageReader.single_camera 1 only if every image has identical sensor/crop/focus settings. Read the stored camera back through pycolmap.Database.read_camera and compare width, height, model and every parameter before mapping; choose whether bundle adjustment may refine intrinsics. Never edit the binary SQLite camera parameter blob by hand."
+        },
+        {
+          "step": 3,
+          "action": "Run COLMAP feature_extractor, matcher and mapper on the photo set, producing database.db and a sparse/0 camera model with sparse points."
+        },
+        {
+          "step": 4,
+          "action": "Bridge the COLMAP sparse result to OpenMVS: run colmap image_undistorter --image_path <images> --input_path sparse/0 --output_path dense --output_type COLMAP, then InterfaceCOLMAP -i dense -o scene.mvs --image-folder dense/images. Run DensifyPointCloud scene.mvs and ReconstructMesh scene_dense.mvs. This explicit importer consumes undistorted images, sparse camera poses and sparse cloud."
+        },
+        {
+          "step": 5,
+          "action": "Set the reconstruction’s metric frame/scale from distributed measured controls, reserve independent control lengths, then remodel selected features in OCS with dimensions labeled by evidence and read back the CAD revision."
+        }
+      ],
+      "code": [
+        {
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
+          "status": "reference_code",
+          "entrypoint": "python calibrate_camera.py --images <glob-or-path> ... --inner-corners <cols> <rows> --square-size <measured> --unit <mm|cm|m|in> --output calibration.json",
+          "source_urls": [
+            "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "representation": "Metric-anchored camera solution, dense surface reference and constrained CAD interpretation.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "OCS remodeling is a separate feature-interpretation stage requiring explicit dimensions, coordinate frame, constraints and readback."
+        }
+      ],
+      "checks": "Pixel reprojection residuals; registered image fraction; withheld scale-control length error; mesh-to-cloud regional distances; OCS readback and independent feature dimensions. COLMAP camera DB readback: model name, image width/height and parameter values equal the adapter values after principal point conversion; verify whether bundle-adjustment refinement is enabled. Check COLMAP sparse reprojection and camera model before OpenMVS conversion.",
+      "failure_recovery": "If calibration residuals cluster by image edge, verify lens/focus and corner detections; recapture target views if insufficient. If SfM separates into components, improve overlap/mask moving objects. If dense mesh is incomplete, adjust image coverage/lighting or use calibrated depth. If control residuals vary spatially, retain warp evidence and rebuild with more distributed controls rather than only uniform scale. If COLMAP intrinsics differ from calibration unexpectedly, inspect parameter ordering, OpenCV-to-COLMAP +0.5 px principal-point conversion, image resize/crop and bundle-adjustment refinement. Reinitialize the database with corrected feature_extractor options or use pycolmap.Database.update_camera, then read back the camera. If InterfaceCOLMAP rejects the scene, confirm image_undistorter produced COLMAP dense workspace with matching undistorted images and camera records.",
+      "effort": {
+        "human": 5,
+        "setup": 4,
+        "compute": 4,
+        "human_reason": "Full measured reconstruction plus semantic CAD remodeling has several interpretation and validation stages.",
+        "setup_reason": "Requires camera calibration, photogrammetry, MVS and OCS adapters.",
+        "compute_reason": "Dense MVS is CPU/RAM intensive; GPU acceleration is backend dependent; no universal minimum is established."
+      },
+      "resources": {
+        "cpu": "OpenMVG/MVS supports CPU processing; image count/resolution affect time.",
+        "gpu": "MVS acceleration varies by build; no universal GPU minimum was documented.",
+        "ram": "Dense depth maps raise RAM use with image size and camera count; no universal minimum.",
+        "storage": "Keep images, sparse scene, dense maps and mesh; storage grows with source resolution and MVS outputs.",
+        "scaling_drivers": "Image count/resolution, depth-map resolution, overlap and dense reconstruction parameters.",
+        "variants": "Sparse-only reconstruction lowers cost but omits a dense surface; metric CAD still requires controls and OCS interpretation."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 4,
+        "compute_easiest_to_heaviest_tie_rank": 4,
+        "operation_stage_count": 5,
+        "recipe_stage_count_order": 8,
+        "setup_effort_easiest_to_hardest_tie_rank": 3
+      },
+      "source_urls": [
+        "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md",
+        "https://colmap.github.io/faq.html",
+        "https://colmap.github.io/cameras.html",
+        "https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md"
+      ],
+      "operation_ids": [
+        "REC-01",
+        "REC-03",
+        "REC-17",
+        "REC-14",
+        "REC-16"
+      ]
+    },
+    {
+      "id": "REC-R02",
+      "name": "Video and RGB-D to registered metric scene",
+      "output_scope": "Registered RGB photo-derived cloud and sensor-depth cloud, fused depth mesh and a checked source-to-target transform.",
+      "comparison_conditions": "Video frames overlap with RGB-D capture or share enough geometry; depth calibration, RGB-depth extrinsics and sensor units are known; motion/rolling-shutter errors are controlled.",
+      "inputs": [
+        {
+          "artifact": "video",
+          "format_and_quality": "Original video with timestamps and camera metadata; sufficient parallax and sharp frames."
+        },
+        {
+          "artifact": "depth-frames",
+          "format_and_quality": "RGB/depth frames and camera intrinsics/extrinsics; raw depth scale/range stated."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "Independent control distances/targets and frame coordinates; withheld controls retained."
+        }
+      ],
+      "reference_points": "Depth sensor calibration provides per-frame camera intrinsics, depth scale and RGB-depth extrinsics. COLMAP estimates RGB camera poses; depth odometry or sensor trajectory estimates range poses. FPFH/RANSAC establishes a coarse transform between distinct source/target clouds; ICP refines only with same-scale clouds and a good initial transform. Withheld dimensions test drift.",
+      "software": [
+        {
+          "name": "FFmpeg",
+          "licence_scope": "LGPL/GPL build-dependent",
+          "role_and_api": "ffmpeg frame extraction",
+          "dependencies": "FFmpeg CLI"
+        },
+        {
+          "name": "COLMAP",
+          "licence_scope": "BSD-3-Clause",
+          "role_and_api": "SfM CLI/pycolmap",
+          "dependencies": "Photo set"
+        },
+        {
+          "name": "Open3D",
+          "licence_scope": "MIT",
+          "role_and_api": "RGB-D odometry, global registration, registration_icp, TSDF integration",
+          "dependencies": "Python open3d + calibrated frames"
+        },
+        {
+          "name": "CloudCompare",
+          "licence_scope": "GPL-2.0-or-later",
+          "role_and_api": "CLI cloud processing / distance map",
+          "dependencies": "CloudCompare executable"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Extract selected frames preserving source timestamps and frame indices."
+        },
+        {
+          "step": 2,
+          "action": "Estimate RGB camera poses/cloud with COLMAP; estimate depth trajectory/cloud from calibrated frames or sensor SLAM."
+        },
+        {
+          "step": 3,
+          "action": "Use global registration for coarse alignment if needed, followed by register_clouds.py/ICP using explicit initial 4x4 and model-unit threshold."
+        },
+        {
+          "step": 4,
+          "action": "Integrate depth frames through TSDF with calibrated trajectory; compare loop closure and independent controls."
+        }
+      ],
+      "code": [
+        {
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+          "status": "reference_code",
+          "entrypoint": "python register_clouds.py --source source.ply --target target.ply --initial-transform init.json --max-correspondence-distance <value-in-model-units> --unit <unit> --output-report result.json --output-source-ply registered_source.ply",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "representation": "Registered RGB photo-derived cloud and sensor-depth cloud, fused depth mesh and a checked source-to-target transform.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "No new CAD in this workflow."
+        }
+      ],
+      "checks": "Timestamp and sharpness coverage; RGB/depth alignment; source-to-target transform direction; ICP fitness/inlier RMSE; loop closure; held-out range controls; TSDF mesh-to-point-cloud residuals.",
+      "failure_recovery": "If visual odometry drifts, add loop closure/targets or use sensor SLAM; if ICP fails, check units, initial transform, overlap and symmetry. Do not change threshold to hide a systematic residual. If RGB/depth edges disagree, check synchronization and extrinsics.",
+      "effort": {
+        "human": 4,
+        "setup": 4,
+        "compute": 3,
+        "human_reason": "Combines two sensing paths and frame alignment, but stops at a registered metric scene.",
+        "setup_reason": "Requires video extraction, sensor calibration and reconstruction/registration tools.",
+        "compute_reason": "Dense cloud registration and TSDF integrate many samples; compute scales with frame count, image dimensions and voxel density."
+      },
+      "resources": {
+        "cpu": "Frame extraction, Open3D ICP and TSDF have CPU paths.",
+        "gpu": "GPU use depends on selected SfM/SLAM backend; no requirement for core Open3D example.",
+        "ram": "RAM scales with frame count, point count and voxel volume.",
+        "storage": "Original video, extracted frames, depth, cloud and mesh storage scale with duration/resolution.",
+        "scaling_drivers": "Frame count/resolution, point density, TSDF voxel length and cloud overlap.",
+        "variants": "RGB-D-only route removes photo SfM comparison; photo-only route loses sensor depth metric input."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 3,
+        "compute_easiest_to_heaviest_tie_rank": 3,
+        "operation_stage_count": 6,
+        "recipe_stage_count_order": 10,
+        "setup_effort_easiest_to_hardest_tie_rank": 3
+      },
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
+      ],
+      "operation_ids": [
+        "REC-04",
+        "REC-03",
+        "REC-05",
+        "REC-07",
+        "REC-08",
+        "REC-06"
+      ]
+    },
+    {
+      "id": "REC-R03",
+      "name": "Existing CAD aligned to calibrated photos",
+      "output_scope": "Camera pose linking a known CAD revision to photo views and pixel reprojection report.",
+      "comparison_conditions": "CAD datum and units known; visible unique CAD landmarks; calibrated camera; pixel correspondences identified in the supplied measurement set.",
+      "inputs": [
+        {
+          "artifact": "parametric-source",
+          "format_and_quality": "Native editable CAD source and revision identifier."
+        },
+        {
+          "artifact": "photo-set",
+          "format_and_quality": "Calibration and object image set with stable camera/lens settings."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "CAD/world 3D point IDs and corresponding 2D pixel coordinates; units explicit."
+        }
+      ],
+      "reference_points": "PnP uses labeled pairs (X,Y,Z) in CAD/world frame and (u,v) pixels plus K/distortion. OpenCV outputs object/world-to-camera. Camera axes X-right Y-down Z-forward. A separate calibration target is required for K/distortion unless a documented calibration exists. Held-out CAD landmarks check pose, not hidden geometry.",
+      "software": [
+        {
+          "name": "OpenCV",
+          "licence_scope": "BSD-3-Clause",
+          "role_and_api": "calibrateCamera; solvePnPRansac; projectPoints",
+          "dependencies": "Python cv2 + NumPy"
+        },
+        {
+          "name": "OCS/Blender",
+          "licence_scope": "Project-specific / GPL-licensed Blender",
+          "role_and_api": "CAD landmarks and camera image overlays",
+          "dependencies": "Existing CAD importer and image projection"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Use calibrate_camera.py on measured calibration board views if no valid camera solution exists."
+        },
+        {
+          "step": 2,
+          "action": "Create correspondences from known CAD coordinates and measured image pixels."
+        },
+        {
+          "step": 3,
+          "action": "Run solvePnPRansac with camera matrix and distortion; save object-to-camera transform and inlier list."
+        },
+        {
+          "step": 4,
+          "action": "Project withheld CAD landmarks/edges with projectPoints and report pixel residuals; preserve native CAD revision."
+        }
+      ],
+      "code": [
+        {
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
+          "status": "reference_code",
+          "entrypoint": "python calibrate_camera.py --images <glob-or-path> ... --inner-corners <cols> <rows> --square-size <measured> --unit <mm|cm|m|in> --output calibration.json",
+          "source_urls": [
+            "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "representation": "Camera pose linking a known CAD revision to photo views and pixel reprojection report.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "No new CAD in this workflow."
+        }
+      ],
+      "checks": "PnP inlier count and spatial spread; pixel RMS/max residual on fit and withheld landmarks; coordinate-frame transform direction; repeated views yield consistent pose.",
+      "failure_recovery": "For a plausible but wrong pose, verify correspondence labels and CAD revision; add spatially distributed landmarks; resolve symmetric/ambiguous geometry with a target or known datum. Recalibrate after lens/focus change.",
+      "effort": {
+        "human": 3,
+        "setup": 2,
+        "compute": 1,
+        "human_reason": "Landmark identification and correspondence checking need judgment; geometry is already known.",
+        "setup_reason": "One OpenCV script plus CAD landmark export.",
+        "compute_reason": "PnP and projection are small CPU matrix operations; image resolution/count have low scaling cost."
+      },
+      "resources": {
+        "cpu": "OpenCV calibration/PnP and projection use CPU.",
+        "gpu": "No GPU required.",
+        "ram": "Low; calibration images are loaded in memory.",
+        "storage": "Low; outputs are camera matrices and residual reports.",
+        "scaling_drivers": "Image resolution, number of calibration views and landmark count.",
+        "variants": "Existing calibration avoids re-solving intrinsics; view projection remains CPU-light."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 2,
+        "compute_easiest_to_heaviest_tie_rank": 1,
+        "operation_stage_count": 2,
+        "recipe_stage_count_order": 1,
+        "setup_effort_easiest_to_hardest_tie_rank": 1
+      },
+      "source_urls": [
+        "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
+      ],
+      "operation_ids": [
+        "REC-01",
+        "REC-12"
+      ]
+    },
+    {
+      "id": "REC-R04",
+      "name": "Scan and dimensioned drawing to constrained CAD",
+      "output_scope": "Reconciled dimensions, scan-backed surface reference and OCS parametric feature interpretation.",
+      "comparison_conditions": "Point cloud has declared units/frame; drawing revision and scale known; common datums or identifiable features; a human selects semantic CAD features.",
+      "inputs": [
+        {
+          "artifact": "point-cloud",
+          "format_and_quality": "PLY/PCD/E57 converted without changing coordinate provenance; calibrated units/frame and useful surface coverage."
+        },
+        {
+          "artifact": "vector-drawing",
+          "format_and_quality": "DXF/SVG/PDF-derived linework with known scale, datums and drawing revision."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "Explicit drawing dimensions, scan datum correspondences and fit/validation labels."
+        }
+      ],
+      "reference_points": "Drawing dimensions and scan samples remain separate sources. Align shared datum points/planes/features; reserve dimensions and controls from fitting. Point-cloud primitive-fit residuals are candidate evidence; they do not name semantic design intent.",
+      "software": [
+        {
+          "name": "Open3D",
+          "licence_scope": "MIT",
+          "role_and_api": "segment_plane, cluster_dbscan, registration_icp",
+          "dependencies": "Python open3d"
+        },
+        {
+          "name": "CloudCompare",
+          "licence_scope": "GPL-2.0-or-later",
+          "role_and_api": "cloud alignment, distance maps and CLI",
+          "dependencies": "CloudCompare"
+        },
+        {
+          "name": "OCS",
+          "licence_scope": "Existing local skill contract",
+          "role_and_api": "Constrained sketch/features, part units and readback",
+          "dependencies": "OpenCADStudio + OCS skill"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Check cloud bounds, units, frame and sample coverage; preserve original file."
+        },
+        {
+          "step": 2,
+          "action": "Segment planes/clusters and record indices, thresholds and fit residuals."
+        },
+        {
+          "step": 3,
+          "action": "Align drawing and cloud through datums; report per-region distances and retain source offsets."
+        },
+        {
+          "step": 4,
+          "action": "Create constrained sketches/features in OCS from dimensioned drawing and named evidence; mark fitted/assumed values separately."
+        },
+        {
+          "step": 5,
+          "action": "Read back CAD and compare against withheld drawing dimensions and original cloud."
+        }
+      ],
+      "code": [
+        {
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+          "status": "reference_code",
+          "entrypoint": "python register_clouds.py --source source.ply --target target.ply --initial-transform init.json --max-correspondence-distance <value-in-model-units> --unit <unit> --output-report result.json --output-source-ply registered_source.ply",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "representation": "Reconciled dimensions, scan-backed surface reference and OCS parametric feature interpretation.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "OCS remodeling is a separate feature-interpretation stage requiring explicit dimensions, coordinate frame, constraints and readback."
+        }
+      ],
+      "checks": "Drawing unit and revision; datum residuals; fit point count/coverage; hold-out drawing dimensions; regional scan-CAD distance distribution; OCS readback.",
+      "failure_recovery": "If datums do not align, separate drawing revision/part variant instead of averaging. If partial arcs produce unstable cylinders, use explicit measurement/feature context. If scan coverage is incomplete, retain missing surfaces as unknown/inferred.",
+      "effort": {
+        "human": 4,
+        "setup": 4,
+        "compute": 3,
+        "human_reason": "Scan/drawing reconciliation and deciding feature semantics require substantial engineering interpretation.",
+        "setup_reason": "Needs cloud tools, drawing parser and OCS workflow.",
+        "compute_reason": "Cloud operations scale with point count; OCS part construction is modest CPU work."
+      },
+      "resources": {
+        "cpu": "Open3D segmentation, ICP and CAD authoring can use CPU.",
+        "gpu": "No GPU requirement for listed operations.",
+        "ram": "Scales with cloud point count and application geometry.",
+        "storage": "Cloud originals, derived segments, meshes and CAD revisions.",
+        "scaling_drivers": "Point count, surface coverage, registration threshold and mesh density.",
+        "variants": "Clean vector drawing reduces tracing work; raster drawing requires scale/datum extraction."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 3,
+        "compute_easiest_to_heaviest_tie_rank": 3,
+        "operation_stage_count": 4,
+        "recipe_stage_count_order": 5,
+        "setup_effort_easiest_to_hardest_tie_rank": 3
+      },
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "operation_ids": [
+        "REC-09",
+        "REC-15",
+        "REC-14",
+        "REC-16"
+      ]
+    },
+    {
+      "id": "REC-R05",
+      "name": "Photos, learned depth and view-synthesis comparison",
+      "output_scope": "Separate SfM and DA3 camera/depth/cloud estimates plus Gaussian view-synthesis scene and control residual comparison.",
+      "comparison_conditions": "Multi-view photos with overlap; independent dimensions/targets; selected DA3 and Splatfacto variants and model terms reviewed; same photo set used for comparisons.",
+      "inputs": [
+        {
+          "artifact": "photo-set",
+          "format_and_quality": "Original overlapping JPEG/PNG photos with camera metadata and static scene."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "Measured control lengths/points with fit versus withheld labels."
+        }
+      ],
+      "reference_points": "DA3 depth/pose is a model estimate and can provide metric variant but requires physical controls. COLMAP scale remains arbitrary absent controls. Splat scene optimizes novel-view appearance; it is not a mesh. Similarity alignment for comparing cloud estimates must be reported separately from metric controls.",
+      "software": [
+        {
+          "name": "COLMAP",
+          "licence_scope": "BSD-3-Clause",
+          "role_and_api": "SfM camera/cloud reconstruction",
+          "dependencies": "CLI/pycolmap"
+        },
+        {
+          "name": "Depth Anything 3",
+          "licence_scope": "Apache-2.0 per existing report",
+          "role_and_api": "multi-view prediction, metric depth/pose/cloud outputs",
+          "dependencies": "Model weights/environment"
+        },
+        {
+          "name": "Nerfstudio Splatfacto/gsplat",
+          "licence_scope": "Apache-2.0 per existing report",
+          "role_and_api": "train and export Gaussian PLY",
+          "dependencies": "CUDA GPU; selected version"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Run COLMAP sparse reconstruction and preserve component/camera metadata."
+        },
+        {
+          "step": 2,
+          "action": "Run DA3 multi-view or streaming inference; preserve metric/relative model name, confidence, poses and output formats."
+        },
+        {
+          "step": 3,
+          "action": "Train Gaussian view-synthesis scene from photos and known/estimated camera solution."
+        },
+        {
+          "step": 4,
+          "action": "Register estimate clouds with controls; compare withheld lengths, regional residuals and pose consistency."
+        }
+      ],
+      "code": [
+        {
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+          "status": "reference_code",
+          "entrypoint": "python register_clouds.py --source source.ply --target target.ply --initial-transform init.json --max-correspondence-distance <value-in-model-units> --unit <unit> --output-report result.json --output-source-ply registered_source.ply",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "representation": "Separate SfM and DA3 camera/depth/cloud estimates plus Gaussian view-synthesis scene and control residual comparison.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "No new CAD in this workflow."
+        }
+      ],
+      "checks": "Compare DA3 metric depth against independent control points; COLMAP reprojection errors; inter-estimate transform; regional cloud residuals; novel-view coverage separately from surface quality.",
+      "failure_recovery": "If DA3 and SfM disagree, check camera metadata, moving objects, lens distortion and scale/control definition. Report two estimates separately; do not average without a stated statistical model. If splat render artifacts occur, revise capture coverage; do not substitute splat appearance for dimensional evidence.",
+      "effort": {
+        "human": 3,
+        "setup": 4,
+        "compute": 4,
+        "human_reason": "Reviewing multiple model outputs and allocating controls requires engineering judgment.",
+        "setup_reason": "Combines reconstruction, learned model and CUDA scene training.",
+        "compute_reason": "DA3 streaming reports <12 GB GPU memory; Splatfacto docs list ~6 GB default and ~12 GB big; runtime scales with views/resolution."
+      },
+      "resources": {
+        "cpu": "Image preparation and sparse SfM use CPU.",
+        "gpu": "DA3 Streaming reports below 12 GB memory; Nerfstudio lists about 6 GB for default Splatfacto and 12 GB for Splatfacto-big in source report.",
+        "ram": "Model and reconstruction data scale with view count/resolution; no universal system-RAM minimum.",
+        "storage": "Images, checkpoints and output clouds/splats.",
+        "scaling_drivers": "Image resolution/count, chosen DA3 variant, Gaussian scene complexity.",
+        "variants": "Omit Gaussian branch for lower compute; omit DA3 branch to compare conventional SfM alone."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 2,
+        "compute_easiest_to_heaviest_tie_rank": 4,
+        "operation_stage_count": 4,
+        "recipe_stage_count_order": 6,
+        "setup_effort_easiest_to_hardest_tie_rank": 3
+      },
+      "source_urls": [
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://github.com/ByteDance-Seed/Depth-Anything-3",
+        "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "operation_ids": [
+        "REC-03",
+        "REC-10",
+        "REC-19",
+        "REC-08"
+      ]
+    },
+    {
+      "id": "REC-R06",
+      "name": "Gaussian context, independent mesh and CAD remodel",
+      "output_scope": "Gaussian PLY context, independently generated MVS mesh/cloud and editable CAD aligned to source evidence.",
+      "comparison_conditions": "Overlapping photos, camera solution, independent control points; MVS mesh and measured dimensions available for selected CAD features.",
+      "inputs": [
+        {
+          "artifact": "photo-set",
+          "format_and_quality": "Static, overlapping multi-view photographs."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "Control lengths/points and dimensions with units and withheld checks."
+        }
+      ],
+      "reference_points": "Gaussian scene is a view-synthesis representation. REC-17 MVS creates a separate mesh/cloud from photos and camera poses. Controls define scale/checks. CAD features are rebuilt from measurements and explicit interpretation; splat geometry is not assumed to be an analytic surface.",
+      "software": [
+        {
+          "name": "Nerfstudio Splatfacto",
+          "licence_scope": "Apache-2.0 per existing report",
+          "role_and_api": "Gaussian PLY training/export",
+          "dependencies": "CUDA GPU"
+        },
+        {
+          "name": "COLMAP + OpenMVS",
+          "licence_scope": "BSD-3-Clause + AGPL-3.0 OpenMVS",
+          "role_and_api": "sparse solve then DensifyPointCloud/ReconstructMesh",
+          "dependencies": "CLIs"
+        },
+        {
+          "name": "Open3D",
+          "licence_scope": "MIT",
+          "role_and_api": "cloud registration/distance metrics",
+          "dependencies": "Python"
+        },
+        {
+          "name": "OCS",
+          "licence_scope": "Existing local skill contract",
+          "role_and_api": "parametric remodeling",
+          "dependencies": "OpenCADStudio session"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Estimate camera poses using COLMAP."
+        },
+        {
+          "step": 2,
+          "action": "Train and export Gaussian PLY from Splatfacto for appearance context."
+        },
+        {
+          "step": 3,
+          "action": "Generate dense point cloud and mesh independently using OpenMVS; use measured controls for scale."
+        },
+        {
+          "step": 4,
+          "action": "Remodel selected features in OCS from the dense surface and dimensions; preserve separate splat, mesh, CAD layers."
+        },
+        {
+          "step": 5,
+          "action": "Compare CAD with source cloud and withheld dimensions."
+        }
+      ],
+      "code": [
+        {
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+          "status": "reference_code",
+          "entrypoint": "python register_clouds.py --source source.ply --target target.ply --initial-transform init.json --max-correspondence-distance <value-in-model-units> --unit <unit> --output-report result.json --output-source-ply registered_source.ply",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "representation": "Gaussian PLY context, independently generated MVS mesh/cloud and editable CAD aligned to source evidence.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "OCS remodeling is a separate feature-interpretation stage requiring explicit dimensions, coordinate frame, constraints and readback."
+        }
+      ],
+      "checks": "Novel view rendering; MVS coverage/mesh completeness; control residuals; source-to-CAD distances; CAD feature dimensions; representation transform consistency.",
+      "failure_recovery": "If Splatfacto mesh extraction is requested, its current FAQ says unsupported; use separate MVS or calibrated depth TSDF. If MVS incomplete, improve photos or add sensor depth. If CAD fit to scan deforms beyond controls, revise alignment/feature assumptions.",
+      "effort": {
+        "human": 4,
+        "setup": 4,
+        "compute": 4,
+        "human_reason": "Requires managing three representations and remodeling semantic features.",
+        "setup_reason": "Three software stacks including GPU scene training and OCS modeling.",
+        "compute_reason": "Dense stereo plus Gaussian training and CAD comparison; image count/resolution/cloud density drive memory and compute."
+      },
+      "resources": {
+        "cpu": "COLMAP/OpenMVS and cloud comparison are CPU-capable.",
+        "gpu": "Splatfacto uses CUDA GPU; source report lists ~6 GB default and ~12 GB big. MVS acceleration varies by build.",
+        "ram": "Dense MVS plus Gaussian training can raise memory; no universal system-RAM floor.",
+        "storage": "Store original photos, dense maps, mesh, checkpoint, Gaussian PLY and CAD.",
+        "scaling_drivers": "Image resolution/count, scene complexity, MVS depth density and mesh size.",
+        "variants": "Omit scene training for a lower-cost mesh-to-CAD path; omit CAD for visual-only deliverable."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 3,
+        "compute_easiest_to_heaviest_tie_rank": 4,
+        "operation_stage_count": 5,
+        "recipe_stage_count_order": 9,
+        "setup_effort_easiest_to_hardest_tie_rank": 3
+      },
+      "source_urls": [
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "operation_ids": [
+        "REC-03",
+        "REC-19",
+        "REC-17",
+        "REC-14",
+        "REC-16"
+      ]
+    },
+    {
+      "id": "REC-R07",
+      "name": "3D-anchored sketch and CAD edit comparison",
+      "output_scope": "Calculated screen-stroke anchors, interpreted constrained CAD feature and revision-bound comparison report.",
+      "comparison_conditions": "Existing calibrated camera solution and mesh/CAD target; screen strokes belong to the image associated with that camera; user supplies feature interpretation and dimensions.",
+      "inputs": [
+        {
+          "artifact": "raster-sketch",
+          "format_and_quality": "Image plus pixel-space strokes in a documented image coordinate system."
+        },
+        {
+          "artifact": "camera-solution",
+          "format_and_quality": "Intrinsics/distortion and camera pose tied to exact view and coordinate frame."
+        },
+        {
+          "artifact": "mesh",
+          "format_and_quality": "Selected raycast surface with transform and revision."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "Physical dimensions/datum controls and explicit intended feature interpretation."
+        }
+      ],
+      "reference_points": "Pixels map to normalized camera rays with K/distortion inverse, transformed into world by camera pose; ray intersection yields calculated 3D anchors against selected mesh. The mesh and camera are reference evidence. Anchors carry the uncertainty of calibration, pose, mesh and hit selection; they are not independent measurements. Independent dimension controls check CAD.",
+      "software": [
+        {
+          "name": "Blender Python API",
+          "licence_scope": "GPL-2.0-or-later",
+          "role_and_api": "camera ray projection and Scene.ray_cast",
+          "dependencies": "Blender bpy; signature version checked at implementation"
+        },
+        {
+          "name": "OpenCV",
+          "licence_scope": "BSD-3-Clause",
+          "role_and_api": "projectPoints/PnP for pose calibration or reprojection",
+          "dependencies": "Python cv2"
+        },
+        {
+          "name": "OCS",
+          "licence_scope": "Existing local skill contract",
+          "role_and_api": "constrained sketch and feature modeling",
+          "dependencies": "OpenCADStudio session"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Map stroke pixels through image calibration to camera rays; record camera, hit object and face/triangle IDs."
+        },
+        {
+          "step": 2,
+          "action": "Store ray-hit anchors and projection residual context in measurement-set as calculated anchors."
+        },
+        {
+          "step": 3,
+          "action": "Ask for/consume explicit sketch interpretation: surface curve, projected profile or datum-plane sketch; apply dimensions/constraints in OCS."
+        },
+        {
+          "step": 4,
+          "action": "Read back CAD revision and compare with same mesh and independent controls."
+        }
+      ],
+      "code": [],
+      "outputs": [
+        {
+          "representation": "Calculated screen-stroke anchors, interpreted constrained CAD feature and revision-bound comparison report.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "OCS remodeling is a separate feature-interpretation stage requiring explicit dimensions, coordinate frame, constraints and readback."
+        }
+      ],
+      "checks": "Reproject calculated anchors into original image; flag missed/occluded rays; check camera calibration/view identity; inspect hit distribution; verify OCS constraints and independent physical dimensions.",
+      "failure_recovery": "For ambiguous rays, require selected target surface or user selection; preserve multiple hit candidates. For sketch-plane ambiguity, stop at anchors until interpreted. If visible mesh is poorly reconstructed, do not convert anchor hits into physical dimensions.",
+      "effort": {
+        "human": 3,
+        "setup": 3,
+        "compute": 1,
+        "human_reason": "Small annotation can be quick, while selecting intended CAD meaning needs a human decision.",
+        "setup_reason": "Camera projection, raycast adapter and OCS session.",
+        "compute_reason": "Raycasting a small stroke set and CAD checks are CPU-light; high-resolution source mesh increases cost."
+      },
+      "resources": {
+        "cpu": "Ray projection, mesh ray-cast and CAD edits are CPU operations.",
+        "gpu": "No GPU requirement for listed operations.",
+        "ram": "Mesh size and CAD session geometry determine memory.",
+        "storage": "Stroke/image anchors, mesh, CAD revision and reports.",
+        "scaling_drivers": "Stroke count, mesh triangle count, CAD feature count.",
+        "variants": "Anchor-only output has low effort; interpreted constrained CAD needs semantic decisions and dimensions."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 2,
+        "compute_easiest_to_heaviest_tie_rank": 1,
+        "operation_stage_count": 3,
+        "recipe_stage_count_order": 3,
+        "setup_effort_easiest_to_hardest_tie_rank": 2
+      },
+      "source_urls": [
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "operation_ids": [
+        "REC-13",
+        "REC-14",
+        "REC-16"
+      ]
+    },
+    {
+      "id": "REC-R08",
+      "name": "Photogrammetry visual scene for downstream cameras",
+      "output_scope": "Navigable Gaussian-splat scene with camera poses and original capture provenance; NeRF alternative tracked separately.",
+      "comparison_conditions": "Adequate overlapping image set and known camera poses or workable COLMAP solve; output goal is view synthesis and camera navigation, not dimensional CAD.",
+      "inputs": [
+        {
+          "artifact": "photo-set",
+          "format_and_quality": "Overlapping JPEG/PNG image sequence with timestamps/camera metadata."
+        },
+        {
+          "artifact": "camera-solution",
+          "format_and_quality": "COLMAP or supplied intrinsics and per-view poses; output coordinate convention retained."
+        }
+      ],
+      "reference_points": "Images and poses determine the learned scene coordinates; no metric scale without control. Splatfacto produces Gaussian representation/PLY. NeRF checkpoint is another separate representation. Geometry export route is model-specific and not implied by training.",
+      "software": [
+        {
+          "name": "COLMAP",
+          "licence_scope": "BSD-3-Clause",
+          "role_and_api": "camera solve",
+          "dependencies": "CLI"
+        },
+        {
+          "name": "Nerfstudio Splatfacto/gsplat",
+          "licence_scope": "Apache-2.0 per existing report",
+          "role_and_api": "ns-process-data, ns-train splatfacto, Gaussian PLY export",
+          "dependencies": "CUDA GPU"
+        },
+        {
+          "name": "Nerfstudio nerfacto",
+          "licence_scope": "Apache-2.0 per existing report",
+          "role_and_api": "NeRF training/checkpoint",
+          "dependencies": "CLI and viewer"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Run COLMAP pose recovery or import the supplied camera solution and preserve image-to-camera mapping."
+        },
+        {
+          "step": 2,
+          "action": "Prepare the images with `ns-process-data images --data <images-folder> --output-dir <processed-data>`; Nerfstudio’s image pipeline uses COLMAP and requires FFmpeg."
+        },
+        {
+          "step": 3,
+          "action": "Train the Gaussian route with `ns-train splatfacto --data <processed-data>` and export its supported Gaussian PLY. The NeRF alternative uses `ns-train nerfacto --data <processed-data>` and keeps a separate checkpoint."
+        },
+        {
+          "step": 4,
+          "action": "Inspect held-out novel views and preserve the checkpoint, processed transforms and original photo set. Any mesh must come from a separate documented geometry extraction step."
+        }
+      ],
+      "code": [],
+      "outputs": [
+        {
+          "representation": "Navigable Gaussian-splat scene with camera poses and original capture provenance; NeRF alternative tracked separately.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "No new CAD in this workflow."
+        }
+      ],
+      "checks": "Image-to-camera association; training convergence/held-out views; scene coverage; saved pose transforms; dimension claims tested only with independent controls.",
+      "failure_recovery": "If camera solve fragments, capture more overlap or resolve moving objects/lens model. If novel views ghost, check pose and exposure consistency. For mesh, use separately checked MVS/TSDF workflow and model-specific extraction support.",
+      "effort": {
+        "human": 2,
+        "setup": 4,
+        "compute": 4,
+        "human_reason": "Good capture and a visual-only goal leave little semantic interpretation.",
+        "setup_reason": "GPU model environment and Nerfstudio processing/training CLI.",
+        "compute_reason": "Splatfacto documented memory approx. 6 GB default / 12 GB big; scaling with views, resolution and scene complexity."
+      },
+      "resources": {
+        "cpu": "COLMAP camera solve runs on CPU; Nerfstudio handles scene training.",
+        "gpu": "Source report: Splatfacto ~6 GB GPU memory default and ~12 GB big; confirm variant docs.",
+        "ram": "Depends on image resolution/count and representation; no universal RAM floor.",
+        "storage": "Store images, training checkpoint, Gaussian PLY and renders.",
+        "scaling_drivers": "Capture count/resolution, scene coverage and model variant.",
+        "variants": "NeRF and Gaussian are separate outputs; omit geometry extraction for visual delivery."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 1,
+        "compute_easiest_to_heaviest_tie_rank": 4,
+        "operation_stage_count": 2,
+        "recipe_stage_count_order": 2,
+        "setup_effort_easiest_to_hardest_tie_rank": 3
+      },
+      "source_urls": [
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+        "https://docs.nerf.studio/quickstart/custom_dataset.html",
+        "https://docs.nerf.studio/quickstart/installation.html"
+      ],
+      "operation_ids": [
+        "REC-03",
+        "REC-19"
+      ]
+    },
+    {
+      "id": "REC-R09",
+      "name": "RGB-D metric scan and CAD comparison",
+      "output_scope": "Calibrated depth point cloud/TSDF mesh registered to existing CAD with residual report.",
+      "comparison_conditions": "Depth sensor calibration, depth scale, frame poses and CAD revision/units available; CAD overlap with scan is sufficient.",
+      "inputs": [
+        {
+          "artifact": "depth-frames",
+          "format_and_quality": "Synchronized RGB/depth sequences, sensor intrinsics, depth units and RGB-depth extrinsics."
+        },
+        {
+          "artifact": "cad-solid",
+          "format_and_quality": "Existing CAD solid and exact revision with units/datums."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "Sensor/target controls, known CAD landmarks and independent dimensions."
+        }
+      ],
+      "reference_points": "Sensor depth scale provides metric input with calibration uncertainty. RGB-D odometry provides estimated poses. Open3D TSDF uses poses and intrinsics. Global cloud registration/ICP registers sampled surface to tessellated CAD; the CAD is a hypothesis and independent controls validate the transform.",
+      "software": [
+        {
+          "name": "Open3D",
+          "licence_scope": "MIT",
+          "role_and_api": "RGBD odometry, ScalableTSDFVolume, registration_icp, evaluate_registration",
+          "dependencies": "Python open3d"
+        },
+        {
+          "name": "CloudCompare",
+          "licence_scope": "GPL-2.0-or-later",
+          "role_and_api": "surface distances and inspection",
+          "dependencies": "CLI/GUI"
+        },
+        {
+          "name": "OCS",
+          "licence_scope": "Existing local skill contract",
+          "role_and_api": "read CAD datum/units and comparison revision",
+          "dependencies": "OpenCADStudio"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "Validate depth scale and extrinsics against measured target."
+        },
+        {
+          "step": 2,
+          "action": "Estimate/import pose trajectory and project depth into camera frame."
+        },
+        {
+          "step": 3,
+          "action": "Integrate TSDF with explicit voxel length and truncation."
+        },
+        {
+          "step": 4,
+          "action": "Register cloud/mesh against CAD with known init or feature matching then ICP."
+        },
+        {
+          "step": 5,
+          "action": "Report independent control and CAD surface distances; preserve input CAD."
+        }
+      ],
+      "code": [
+        {
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+          "status": "reference_code",
+          "entrypoint": "python register_clouds.py --source source.ply --target target.ply --initial-transform init.json --max-correspondence-distance <value-in-model-units> --unit <unit> --output-report result.json --output-source-ply registered_source.ply",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "representation": "Calibrated depth point cloud/TSDF mesh registered to existing CAD with residual report.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "OCS remodeling is a separate feature-interpretation stage requiring explicit dimensions, coordinate frame, constraints and readback."
+        }
+      ],
+      "checks": "Known-range sensor tests; trajectory loop closure; voxel sensitivity; source-to-target transform; ICP fitness/inlier RMSE; held-out CAD control residuals.",
+      "failure_recovery": "If depth holes or multipath appear, inspect range/reflectance and sensor operating range. If ICP converges to wrong symmetric pose, use CAD datums/targets. If TSDF smears, check trajectory drift and RGB-depth synchronization.",
+      "effort": {
+        "human": 3,
+        "setup": 3,
+        "compute": 2,
+        "human_reason": "Inputs already contain metric sensor depth and CAD; work centers on calibration/registration checks.",
+        "setup_reason": "Open3D pipeline and sensor calibration data plus CAD import.",
+        "compute_reason": "TSDF and ICP scale with number of frames/points and voxel length; CPU path is available."
+      },
+      "resources": {
+        "cpu": "Open3D odometry, TSDF, ICP and CAD checks have CPU routes.",
+        "gpu": "GPU optional by selected sensor/model backend.",
+        "ram": "Frame count, depth dimensions, voxel grid and point count.",
+        "storage": "Depth/color frames, pose trajectory, TSDF and registered derivatives.",
+        "scaling_drivers": "Voxel length, integration bounds, frame count, depth range and CAD tessellation.",
+        "variants": "Comparison-only can use existing CAD tessellation; lower frame sampling reduces compute but may increase gaps."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 2,
+        "compute_easiest_to_heaviest_tie_rank": 2,
+        "operation_stage_count": 4,
+        "recipe_stage_count_order": 7,
+        "setup_effort_easiest_to_hardest_tie_rank": 2
+      },
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "operation_ids": [
+        "REC-05",
+        "REC-06",
+        "REC-12",
+        "REC-16"
+      ]
+    },
+    {
+      "id": "REC-R10",
+      "name": "Single-image mesh proxy and evidence-based CAD remodel",
+      "output_scope": "Learned single-view mesh proxy, followed by constrained CAD built from supplied independent dimensions and measured data.",
+      "comparison_conditions": "One image suffices for a visual proxy. Full CAD path additionally requires measured dimensions, drawing views or other evidence for unseen geometry and scale.",
+      "inputs": [
+        {
+          "artifact": "photo-set",
+          "format_and_quality": "Single object photograph with clean silhouette/lighting; input set contains one selected view."
+        },
+        {
+          "artifact": "measurement-set",
+          "format_and_quality": "Independent dimensions, target frame and observed landmarks for CAD authoring/checks."
+        },
+        {
+          "artifact": "model-brief",
+          "format_and_quality": "Part identity/features and output scope; no dimensions are inferred from brief."
+        }
+      ],
+      "reference_points": "Image-to-3D models infer backside/occluded surfaces from priors and do not establish physical scale. Measurements provide dimensional evidence. Additional views are required to compare unseen geometry; surface proxy is not editable parametric CAD.",
+      "software": [
+        {
+          "name": "TripoSR",
+          "licence_scope": "MIT code/model per existing report",
+          "role_and_api": "single-image textured mesh inference",
+          "dependencies": "approximately 6 GB VRAM reported upstream"
+        },
+        {
+          "name": "TRELLIS.2-4B",
+          "licence_scope": "MIT repository/model card per existing report",
+          "role_and_api": "single-image mesh/GLB generation",
+          "dependencies": "Linux NVIDIA GPU >=24 GB"
+        },
+        {
+          "name": "SAM 3D Objects",
+          "licence_scope": "Custom Meta SAM terms per existing report",
+          "role_and_api": "single-image object reconstruction",
+          "dependencies": "Linux NVIDIA GPU >=32 GB"
+        },
+        {
+          "name": "OCS",
+          "licence_scope": "Existing local skill contract",
+          "role_and_api": "constrained CAD remodeling using measured dimensions",
+          "dependencies": "OpenCADStudio session"
+        }
+      ],
+      "steps": [
+        {
+          "step": 1,
+          "action": "For the TripoSR branch, run the upstream documented command `python run.py <single-image> --output-dir <output-folder>` to create a mesh proxy; alternatively run the selected TRELLIS.2 or SAM 3D model under its own documented environment and checkpoint terms. Retain model revision and image provenance."
+        },
+        {
+          "step": 2,
+          "action": "Measure/control source dimensions independently; compare visible silhouette across any extra views."
+        },
+        {
+          "step": 3,
+          "action": "Rebuild selected features with constraints in OCS using supplied dimensions; label unseen geometry as inferred."
+        },
+        {
+          "step": 4,
+          "action": "Read back CAD and compare to independent measurements, not proxy surface alone."
+        }
+      ],
+      "code": [],
+      "outputs": [
+        {
+          "representation": "Learned single-view mesh proxy, followed by constrained CAD built from supplied independent dimensions and measured data.",
+          "dimensional_status": "Metric only where tied to explicit controls/sensor calibration; learned visual surfaces and view-synthesis products remain inferred or appearance representations.",
+          "editable_cad_dependency": "OCS remodeling is a separate feature-interpretation stage requiring explicit dimensions, coordinate frame, constraints and readback."
+        }
+      ],
+      "checks": "Source silhouette; model/revision/weight terms; dimension comparisons; CAD constraints and units; separate proxy-vs-CAD residual from physical measurement residual.",
+      "failure_recovery": "If inferred backside is inconsistent with extra views, retain proxy as visual placeholder and remodel manually. If critical dimensions are absent, stop at mesh proxy; do not scale from image appearance. If model terms exclude intended use, switch model before generating deliverable.",
+      "effort": {
+        "human": 4,
+        "setup": 4,
+        "compute": 4,
+        "human_reason": "Single-view proxy is easy, but full measured CAD remodeling is hard because unseen shape requires independent evidence and feature decisions.",
+        "setup_reason": "Learned model setup, checkpoint terms and OCS CAD environment.",
+        "compute_reason": "GPU requirements vary sharply: TripoSR ~6 GB, TRELLIS.2-4B >=24 GB, SAM 3D >=32 GB per existing source reports."
+      },
+      "resources": {
+        "cpu": "Image preparation and OCS readback use CPU; inference backend may use GPU.",
+        "gpu": "TripoSR ~6 GB; TRELLIS.2-4B >=24 GB; SAM 3D Objects >=32 GB NVIDIA per existing report.",
+        "ram": "Model-specific VRAM plus point/mesh processing; no common system-RAM minimum.",
+        "storage": "Model checkpoints, source images, generated textures/mesh and CAD revisions.",
+        "scaling_drivers": "Model family, texture/resolution settings, single-view ambiguity and CAD feature count.",
+        "variants": "Proxy-only route has low human effort and GPU inference; full measured CAD requires more evidence and high human interpretation."
+      },
+      "rankings": {
+        "human_effort_easiest_to_hardest_tie_rank": 3,
+        "compute_easiest_to_heaviest_tie_rank": 4,
+        "operation_stage_count": 3,
+        "recipe_stage_count_order": 4,
+        "setup_effort_easiest_to_hardest_tie_rank": 3
+      },
+      "source_urls": [
+        "https://github.com/VAST-AI-Research/TripoSR",
+        "https://huggingface.co/stabilityai/TripoSR",
+        "https://github.com/microsoft/TRELLIS.2",
+        "https://huggingface.co/microsoft/TRELLIS.2-4B",
+        "https://github.com/facebookresearch/sam-3d-objects",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md"
+      ],
+      "operation_ids": [
+        "REC-18",
+        "REC-14",
+        "REC-16"
+      ]
+    }
+  ],
+  "ranking_notes": {
+    "human_effort_and_compute_are_independent_ordinal_axes": "Scores use contract scales 1-5, conditions and reasons above. Equal numeric scores tie. They are not runtimes, hardware benchmarks, accuracy scores or measured human action counts.",
+    "task_granularity": "operation_stage_count counts listed reference stages only; it does not count clicks, processing jobs or elapsed time.",
+    "rank_order": "Lower tie rank means lower effort/compute; stage_count_order sorts listed stage counts ascending then workflow ID."
+  }
+}

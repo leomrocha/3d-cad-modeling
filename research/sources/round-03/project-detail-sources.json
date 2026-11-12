@@ -1,0 +1,52 @@
+[
+  {
+    "url": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
+    "title": "contract.json",
+    "summary": "Analyst classification contract: independent manual effort, software setup and computing classes; required evidence, input and output fields.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
+    "sha256": "3bfa102c217a207e694e648b517f1d29997cb203e7b8e0b048331888d62b28e5",
+    "content_type": "application/json"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
+    "title": "combined-details.json",
+    "summary": "Ten proposed combined workflow dossiers with source-backed operations, frame controls, tool/API entry points, resource conditions and relative classifications.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
+    "sha256": "c0b1ef07990b07aa70a2949a7e4b1662a11f7586727398301a531b84dbf31f85",
+    "content_type": "application/json"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
+    "title": "check_control_distances.py",
+    "summary": "Standard-library reference length checker with explicit units, model revision, source provenance and independent check-control residuals.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
+    "sha256": "449442c3cd0852dafb46930ae11e019002a4e3aa48b988a496e10d9d68c8eef4",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
+    "title": "test_control_distances.py",
+    "summary": "Six synthetic software tests for coordinate units, fit/check separation, finite values and explicit provenance.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
+    "sha256": "d6199099c8875df335bdbbd4aed87f2cdab65b8b3c02b4ecccf11c33d13045df",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
+    "title": "build_workflow_details.py",
+    "summary": "Documentation renderer validating complete recipe coverage, source registration, ratings, code paths and Python syntax; builds independent sorted tables.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
+    "sha256": "cf3288bf2098757b8fa41103cea3e426cbea12e1fc26dbfd610fc9ec81b9e310",
+    "content_type": "text/x-python"
+  }
+]

@@ -2,7 +2,7 @@
 
 Registered: 2026-11-12.
 
-Each entry preserves the original URL or local source path and records its summary, evidence status and referring documents. Detailed observations are retained in [source-register.json](source-register.json).
+Each entry preserves the original URL or local source path and records its summary, evidence status and referring documents. Detailed observations are retained in [source-register.json](/home/leo/projects/3dmodeling/research/sources/source-register.json).
 
 <a id="src-00a3a7e8697d"></a>
 
@@ -50,7 +50,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -70,11 +70,11 @@ Documents: research/domains-and-components.md, research/sources/round-02/domain-
 
 Original source: [https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html](https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html)
 
-Summary: Documents intrinsic matrix and radial/tangential distortion estimation from known 3D pattern coordinates and corresponding image points, and image undistortion.
+Summary: Known target object coordinates and corresponding image detections support intrinsic/distortion calibration; tutorial recommends at least ten pattern views. Calibration does not set the scale of an unrelated monocular reconstruction.
 
 Evidence: web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-056984789982"></a>
 
@@ -246,15 +246,15 @@ Documents: research/local-baseline.md, research/sources/local-evidence.json.
 
 <a id="src-134b4e103e48"></a>
 
-## SRC-134b4e103e48 — https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/
+## SRC-134b4e103e48 — OpenMVG documentation: OpenMVS stages
 
 Original source: [https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/](https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/)
 
-Summary: - OpenMVS processing stages: https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/
+Summary: OpenMVS imports an OpenMVG scene and runs DensifyPointCloud, ReconstructMesh and TextureMesh as separate command-line stages.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-13f08bab005f"></a>
 
@@ -342,15 +342,15 @@ Documents: research/reconstruction.md.
 
 <a id="src-1f466f80fd41"></a>
 
-## SRC-1f466f80fd41 — Open3D 0.20 point cloud operations
+## SRC-1f466f80fd41 — Open3D 0.20 point-cloud operations
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html](https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html)
 
-Summary: Documents point-cloud DBSCAN clustering and RANSAC plane segmentation, including `distance_threshold`, `ransac_n`, iterations and returned inlier indices/plane coefficients.
+Summary: Point-cloud API includes plane segmentation, clustering, normal estimation and returned inlier indices. Fits are sampled geometry evidence.
 
 Evidence: web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-1fe1bf3380df"></a>
 
@@ -374,7 +374,7 @@ Summary: - SAM 3D Objects official repository: https://github.com/facebookresear
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-20cfbd87583b"></a>
 
@@ -542,7 +542,7 @@ Summary: Existing report source: documents estimating frame-to-frame motion from
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-31fb748a20df"></a>
 
@@ -830,7 +830,7 @@ Summary: - TRELLIS.2-4B model card (MIT): https://huggingface.co/microsoft/TRELL
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md.
+Documents: research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-42ef176046c7"></a>
 
@@ -1228,6 +1228,42 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-6436ad01395b"></a>
+
+## SRC-6436ad01395b — COLMAP camera models
+
+Original source: [https://colmap.github.io/cameras.html](https://colmap.github.io/cameras.html)
+
+Summary: Documents COLMAP corner-based pixel coordinates, camera conventions and model selection; OPENCV and FULL_OPENCV distortion model details.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/reconstruction-detail-sources.json.
+
+<a id="src-6507a5c7f8da"></a>
+
+## SRC-6507a5c7f8da — contract.json
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/contract.json](/home/leo/projects/3dmodeling/research/workflows/details/contract.json)
+
+Summary: Analyst classification contract: independent manual effort, software setup and computing classes; required evidence, input and output fields.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
+
+<a id="src-651b6a16b16c"></a>
+
+## SRC-651b6a16b16c — check_control_distances.py
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py](/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py)
+
+Summary: Standard-library reference length checker with explicit units, model revision, source provenance and independent check-control residuals.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
+
 <a id="src-67c3aa703e13"></a>
 
 ## SRC-67c3aa703e13 — GitHub repository metadata or tree response
@@ -1264,6 +1300,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-6c38d73efa65"></a>
+
+## SRC-6c38d73efa65 — COLMAP FAQ: known camera intrinsics
+
+Original source: [https://colmap.github.io/faq.html](https://colmap.github.io/faq.html)
+
+Summary: Documents ImageReader camera parameters, shared camera setup, pycolmap database read/update API, default bundle-adjustment intrinsic refinement, and the +0.5 pixel-center correction from OpenCV/Kalibr.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/reconstruction-detail-sources.json.
+
 <a id="src-6c6db30cba74"></a>
 
 ## SRC-6c6db30cba74 — CadQuery repository/licence
@@ -1286,7 +1334,7 @@ Summary: Existing report source: describes image/video and camera-pose data proc
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-6cbca4f9761c"></a>
 
@@ -1358,7 +1406,19 @@ Summary: - DA3 Streaming documentation (<12 GB GPU memory claim): https://github
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+
+<a id="src-75511277c637"></a>
+
+## SRC-75511277c637 — TripoSR inference README
+
+Original source: [https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md](https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md)
+
+Summary: Official README command is `python run.py <image> --output-dir <dir>`; it states about 6 GB VRAM per single image and MIT terms for code and pretrained models.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-75dbfddac2b8"></a>
 
@@ -1371,6 +1431,18 @@ Summary: Documents IFC geometry decoding into tessellated geometry or OpenCASCAD
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+
+<a id="src-76b9efd76055"></a>
+
+## SRC-76b9efd76055 — OpenMVS usage and COLMAP importer
+
+Original source: [https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md](https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md)
+
+Summary: Documents COLMAP image_undistorter output as the input to InterfaceCOLMAP, then DensifyPointCloud and later mesh stages; OpenMVG is an alternate importer.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-773aa3a5f61a"></a>
 
@@ -1528,17 +1600,29 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-8611e98b9ce8"></a>
+
+## SRC-8611e98b9ce8 — Nerfstudio custom image/video dataset
+
+Original source: [https://docs.nerf.studio/quickstart/custom_dataset.html](https://docs.nerf.studio/quickstart/custom_dataset.html)
+
+Summary: Documents `ns-process-data images;video --data ... --output-dir ...` and `ns-train nerfacto --data ...`; image/video processing uses COLMAP and FFmpeg.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/reconstruction-detail-sources.json.
+
 <a id="src-86cdf9c119df"></a>
 
 ## SRC-86cdf9c119df — Nerfstudio Splatfacto
 
 Original source: [https://docs.nerf.studio/nerfology/methods/splat.html](https://docs.nerf.studio/nerfology/methods/splat.html)
 
-Summary: Documents Splatfacto camera/image inputs, COLMAP sparse-point initialization, Gaussian PLY export, memory estimates, and FAQ statement that mesh/point-cloud export is currently unsupported; this conflicts with the generic export_geometry page's TSDF-for-all-models wording.
+Summary: Documents Splatfacto training, Gaussian PLY output and memory variants; FAQ states mesh/point-cloud export is unsupported.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-885fe0a26a5e"></a>
 
@@ -1600,6 +1684,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
+<a id="src-8e6d7648b52e"></a>
+
+## SRC-8e6d7648b52e — COLMAP command-line interface
+
+Original source: [https://colmap.github.io/cli.html](https://colmap.github.io/cli.html)
+
+Summary: Documents feature_extractor options including ImageReader camera model/parameters, mapper and image_undistorter command routes.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/reconstruction-detail-sources.json.
+
 <a id="src-8f8532cac48e"></a>
 
 ## SRC-8f8532cac48e — Domain and component research report
@@ -1622,7 +1718,7 @@ Summary: - TripoSR model card (MIT code and pretrained weights): https://hugging
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md.
+Documents: research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-91466ed68e96"></a>
 
@@ -1647,6 +1743,18 @@ Summary: Foster1202/cad-modeling-fusion-skill ; ModelSpec schema and code-genera
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
+
+<a id="src-92b1e01ee971"></a>
+
+## SRC-92b1e01ee971 — test_control_distances.py
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py](/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py)
+
+Summary: Six synthetic software tests for coordinate units, fit/check separation, finite values and explicit provenance.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
 
 <a id="src-932141965717"></a>
 
@@ -1714,11 +1822,11 @@ Documents: research/sources/round-02/archive-sources.json.
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html](https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html)
 
-Summary: Documents point-to-point and point-to-plane ICP, fitness as overlapping inlier fraction, inlier RMSE, transforms, thresholds and convergence iterations.
+Summary: registration_icp refines a source-to-target transform from an initial transform and distance threshold; RegistrationResult reports fitness and inlier RMSE. Point-to-plane ICP requires useful normals.
 
 Evidence: web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-96ae0c43af7d"></a>
 
@@ -1851,6 +1959,18 @@ Summary: Licence details for the upstream source, installed package and MCP inte
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-a2e021f0ada1"></a>
+
+## SRC-a2e021f0ada1 — Meshroom command-line batch usage
+
+Original source: [https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md](https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md)
+
+Summary: Official Meshroom instructions document `meshroom_batch --input INPUT_IMAGES_FOLDER --output OUTPUT_FOLDER`; the executable also accepts a saved pipeline graph.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-a318f3e786ed"></a>
 
@@ -2042,7 +2162,7 @@ Summary: - Depth Anything 3 repository/license and CLI/API: https://github.com/B
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-b1451ce1d409"></a>
 
@@ -2274,15 +2394,15 @@ Documents: research/sources/round-02/archive-sources.json.
 
 <a id="src-bfd136961cc3"></a>
 
-## SRC-bfd136961cc3 — Nerfstudio installation and supported inputs
+## SRC-bfd136961cc3 — Nerfstudio installation and CLI examples
 
 Original source: [https://docs.nerf.studio/quickstart/installation.html](https://docs.nerf.studio/quickstart/installation.html)
 
-Summary: Existing report source: project plan documents image/video processing with COLMAP and supplied pose routes; reused for visual-scene recipe prerequisites.
+Summary: Official install guide documents CLI environment and a video-processing command; used only for documented CLI context, no installation was run.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-bfe06f8511b1"></a>
 
@@ -2304,9 +2424,9 @@ Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/global_r
 
 Summary: Documents FPFH feature matching, RANSAC global registration, correspondence pruning by distance/edge length/normals, returned transform, fitness and inlier RMSE; a global initial pose can be refined by ICP.
 
-Evidence: web_inspected.
+Evidence: web_inspected, existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-c0ffb325c952"></a>
 
@@ -2412,9 +2532,9 @@ Original source: [https://github.com/nerfstudio-project/nerfstudio/blob/main/doc
 
 Summary: Documents ns-export pointcloud to PLY, TSDF meshes as available for all models, Poisson meshes only for models predicting normals, OBJ textured meshes and NeRF texture transfer to existing meshes.
 
-Evidence: web_inspected.
+Evidence: web_inspected, existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -2450,7 +2570,7 @@ Summary: Existing report source: single-image mesh/GLB generation; used as an al
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-c98a5b96ef0d"></a>
 
@@ -2486,7 +2606,7 @@ Summary: - CloudCompare command line: https://cloudcompare.org/doc/wiki/index.ph
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-cb2c93b6107b"></a>
 
@@ -2494,11 +2614,11 @@ Documents: research/reconstruction.md, research/sources/round-02/reconstruction-
 
 Original source: [https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html](https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html)
 
-Summary: Documents solving object/world-to-camera rotation and translation from known 3D points, 2D image projections, camera intrinsics and distortion; defines camera axes and reprojection-error objective.
+Summary: solvePnP estimates object/world-to-camera rotation and translation from 3D/2D correspondences, intrinsics and distortion; camera axes are X right, Y down, Z forward.
 
 Evidence: web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-cd7868332c03"></a>
 
@@ -2548,6 +2668,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json.
 
+<a id="src-d52309ad63a6"></a>
+
+## SRC-d52309ad63a6 — combined-details.json
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json](/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json)
+
+Summary: Ten proposed combined workflow dossiers with source-backed operations, frame controls, tool/API entry points, resource conditions and relative classifications.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
+
 <a id="src-d5265b630533"></a>
 
 ## SRC-d5265b630533 — find-skills — skill discovery workflow
@@ -2572,6 +2704,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-d928392d886f"></a>
+
+## SRC-d928392d886f — build_workflow_details.py
+
+Original source: [/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py)
+
+Summary: Documentation renderer validating complete recipe coverage, source registration, ratings, code paths and Python syntax; builds independent sorted tables.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
+
 <a id="src-d9490cdbdfa2"></a>
 
 ## SRC-d9490cdbdfa2 — https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1
@@ -2586,15 +2730,15 @@ Documents: research/reconstruction.md.
 
 <a id="src-da7e7e83673f"></a>
 
-## SRC-da7e7e83673f — https://github.com/colmap/colmap/blob/main/doc/cli.rst
+## SRC-da7e7e83673f — COLMAP command-line interface
 
 Original source: [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst)
 
-Summary: - COLMAP CLI documentation: https://github.com/colmap/colmap/blob/main/doc/cli.rst
+Summary: COLMAP documents command-line reconstruction; reused as the SfM/camera and MVS alternative in these recipes.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/cad-sources.json, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/cad-sources.json, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-db5de105c935"></a>
 
@@ -2750,7 +2894,7 @@ Summary: Documents calibrated RGB-D integration into uniform or scalable TSDF us
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-e8fb08827bf0"></a>
 
@@ -2930,7 +3074,7 @@ Summary: - TripoSR source: https://github.com/VAST-AI-Research/TripoSR
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-f51b1cc13707"></a>
 

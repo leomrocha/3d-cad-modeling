@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-12",
+  "scope": "Generic workflow requirements, reference code and relative effort/resource classification",
+  "rating_status": "Analyst classification under each workflow's stated conditions; runtime and memory benchmarks require measured runs.",
+  "human_effort_scale": {
+    "1": "Direct parameter entry or import of an identified, correctly scaled asset; little interpretation.",
+    "2": "Limited tracing, cleanup, feature association or assembly placement with explicit inputs.",
+    "3": "Calibration, reconstruction review, moderate remodeling or semantic data preparation.",
+    "4": "Several evidence sources, substantial feature interpretation, articulated assemblies or repeated reconciliation.",
+    "5": "Research reconstruction, ambiguous multi-view interpretation, or a complex combination requiring custom methods."
+  },
+  "setup_effort_scale": {
+    "1": "One existing application or executable with explicit inputs.",
+    "2": "One scriptable library or a documented application scripting setup.",
+    "3": "Several tools, exchange adapters, component metadata or application-session control.",
+    "4": "GPU/model environment, sensor calibration or several specialized software stacks.",
+    "5": "Research code integration or custom reconstruction/semantic adapters."
+  },
+  "compute_scale": {
+    "1": "Small CPU parsing, parameter changes, coordinate transforms or lightweight geometry.",
+    "2": "CPU CAD operations, small assemblies, moderate mesh operations or small image processing.",
+    "3": "Substantial CPU/RAM use for dense clouds, decomposition, batches or large scenes; optional acceleration.",
+    "4": "Dense image reconstruction or view-synthesis training with substantial processing, or GPU image-to-3D inference in the chosen route; CPU/GPU support follows the recorded backend.",
+    "5": "Large-memory GPU models or several heavy reconstruction/training branches in the selected route."
+  },
+  "record_required_fields": [
+    "id",
+    "name",
+    "output_scope",
+    "comparison_conditions",
+    "inputs",
+    "reference_points",
+    "software",
+    "steps",
+    "code",
+    "outputs",
+    "checks",
+    "failure_recovery",
+    "effort",
+    "resources",
+    "source_urls"
+  ],
+  "effort_required_fields": [
+    "human",
+    "setup",
+    "compute",
+    "human_reason",
+    "setup_reason",
+    "compute_reason"
+  ],
+  "code_statuses": [
+    "existing_tool_entrypoint",
+    "reference_code",
+    "syntax_checked",
+    "integration_tested"
+  ],
+  "ranking_rules": [
+    "Rate the complete requested output, including CAD remodeling when that is the recipe goal.",
+    "State the input size/quality, output representation and software/backend conditions for the comparison.",
+    "Explain lighter/heavier variants, especially image generation versus metric CAD, clean DXF versus raster interpretation, and known assembly versus inferred joints.",
+    "Human effort, setup effort and computing demand are independent axes. They are ordinal comparisons, not durations, accuracy scores or measured hardware usage.",
+    "Recorded operation counts describe the documented recipe granularity and are not counts of human actions or runtime jobs.",
+    "Keep source claims, proposed composition, reference code and actual local verification separate."
+  ]
+}

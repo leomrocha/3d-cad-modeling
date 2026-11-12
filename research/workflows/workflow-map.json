@@ -1354,7 +1354,9 @@
     {
       "id": "REC-07",
       "name": "Estimate coarse transform between point clouds",
-      "inputs": [],
+      "inputs": [
+        "point-cloud"
+      ],
       "input_roles": [
         {
           "role": "source cloud",
@@ -1409,7 +1411,8 @@
       "id": "REC-08",
       "name": "Refine registration and compare point-cloud surfaces",
       "inputs": [
-        "measurement-set"
+        "measurement-set",
+        "point-cloud"
       ],
       "input_roles": [
         {
@@ -1750,7 +1753,7 @@
       ],
       "automation": "mixed",
       "evidence_status": "proposed_composition",
-      "summary": "Convert 2D screen strokes into 3D surface anchors by camera ray intersection. Ray hits are calculated anchors whose evidence follows the camera and hit geometry; a separate interpretation step must define sketch plane, constraints and feature meaning.",
+      "summary": "Convert 2D screen strokes into calculated 3D surface anchors using the camera solution and selected hit geometry. Preserve calibration and reconstruction evidence; anchors are not independently measured physical dimensions. A separate interpretation step must define sketch plane, constraints and feature meaning.",
       "source_ids": [
         "SRC-c98a5b96ef0d",
         "SRC-cb2c93b6107b"

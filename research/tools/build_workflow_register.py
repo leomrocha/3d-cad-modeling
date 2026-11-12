@@ -75,6 +75,7 @@ def main():
     paths = [ROOT / 'README.md', ROOT / 'skills/README.md']
     paths += sorted(RESEARCH.glob('*.md'))
     paths += sorted((RESEARCH / 'workflows').glob('*-paths.md'))
+    paths += sorted((RESEARCH / 'workflows/details').glob('*.md'))
     for path in paths:
         if path.name in {'source-register.md', 'workflow-map.md', 'ideas-register.md'}:
             continue
@@ -102,7 +103,7 @@ def main():
                                     'research/sources/local-evidence.json'],
         }
 
-    for path in sorted((RESEARCH / 'sources/round-02').glob('*-sources.json')):
+    for path in sorted((RESEARCH / 'sources').glob('round-*/*-sources.json')):
         entries = read_json(path)
         if isinstance(entries, dict):
             entries = entries.get('sources', entries.get('records', []))
@@ -231,7 +232,7 @@ def main():
     lines = ['# Source register', '', f'Registered: {date}.', '',
              'Each entry preserves the original URL or local source path and records '
              'its summary, evidence status and referring documents. Detailed observations '
-             'are retained in [source-register.json](source-register.json).', '']
+             f'are retained in [source-register.json]({RESEARCH / "sources/source-register.json"}).', '']
     for item in sorted(records.values(), key=lambda x: x['id']):
         locator = item['url'] or item['local_source_path']
         lines += [f'<a id="{item["id"].lower()}"></a>', '', f'## {item["id"]} — {item["title"]}', '',
@@ -242,7 +243,7 @@ def main():
     (RESEARCH / 'sources/source-register.md').write_text('\n'.join(lines).rstrip() + '\n')
     idea_lines = ['# Ideas and research questions', '', f'Registered: {date}.', '',
                   'The records retain project proposals, experiment questions and the earlier implementation-plan ideas. '
-                  'Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](ideas-register.json).', '']
+                  f'Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json]({RESEARCH / "ideas-register.json"}).', '']
     for idea in ideas:
         idea_lines += [f'## {idea["id"]} — {idea["name"]}', '',
                        f'Status: {idea["status"]}.', '', idea['summary'], '']
@@ -250,12 +251,12 @@ def main():
             idea_lines += [f'Original source: [{url}]({url})', '']
         for doc in idea.get('source_documents', []):
             path = doc['path']
-            idea_lines += [f'Original proposal: [{path}](../{path}), line {doc["line"]}.', '']
+            idea_lines += [f'Original proposal: [{path}]({ROOT / path}), line {doc["line"]}.', '']
         idea_lines += ['Next check: ' + idea.get('next_check', 'See the associated operation checks.'), '']
     (RESEARCH / 'ideas-register.md').write_text('\n'.join(idea_lines).rstrip() + '\n')
     catalog = ['# Operation catalogue', '', f'Registered: {date}.', '',
                'All `inputs` apply together. Alternative sets and independent choice groups are recorded explicitly. '
-               'Full prerequisites, changes, checks and evidence are in [workflow-map.json](workflow-map.json) and the domain reports.', '',
+               f'Full prerequisites, changes, checks and evidence are in [workflow-map.json]({RESEARCH / "workflows/workflow-map.json"}) and the domain reports.', '',
                '| Operation | Required inputs and choices | Outputs | Summary and original sources |',
                '| --- | --- | --- | --- |']
     for op in operations:
