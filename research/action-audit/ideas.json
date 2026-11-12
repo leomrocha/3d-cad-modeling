@@ -1875,6 +1875,44 @@
         "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
       },
       "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records."
+    },
+    {
+      "id": "COMP-I06",
+      "name": "Required tube corner-profile input",
+      "summary": "Observed rail preflight requires a sourced tube corner profile or explicit nominal representation decision before dependent native construction.",
+      "status": "proposal",
+      "origin": "executed_component_source_preparation",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/2026-11-12-component-led.md",
+          "line": 1,
+          "section": "Required tube corner-profile input"
+        }
+      ],
+      "next_check": "Resolve the named feature input and exercise the matching native component actions with their own checks."
+    },
+    {
+      "id": "COMP-I07",
+      "name": "Reuse the newly extracted FERME CAD modules",
+      "summary": "Current FERME Client/Journal/Geometry/recipe and verification modules replace temporary-wrapper reuse assumptions for matching native operations; retain their existing tests and explicit data ownership.",
+      "status": "proposal",
+      "origin": "executed_component_source_preparation",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/2026-11-12-component-led.md",
+          "line": 1,
+          "section": "Reuse the newly extracted FERME CAD modules"
+        }
+      ],
+      "next_check": "Resolve the named feature input and exercise the matching native component actions with their own checks."
     }
   ]
 }

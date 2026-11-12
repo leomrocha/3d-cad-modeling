@@ -42,3 +42,7 @@ The [workflow operation catalogue](../research/workflows/operation-catalogue.md)
 ## Detailed action and helper contracts
 
 The [skill-to-action map](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) links the fifteen catalogue entries to all 77 audited operations. Each operation's action records state proposed helper inputs/outputs, existing API dependencies, software and agent decisions, validation cases and recovery. The [workflow-to-action index](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md) preserves the original 38 routes and their ordered steps. The existing OCS skill retains its documented capability; the map records proposed packaging and supported-backend conditions.
+
+## Component-driven implementation
+
+[Component CAD iterations](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md) uses the external project's existing part index/dictionary, checks source readiness, records individual action occurrences and requires an applied verified skill/script improvement per completed CAD design. [Python part-index access](/home/leo/projects/3dmodeling/scripts/part_index.py) and [component source/action records](/home/leo/projects/3dmodeling/scripts/component_records.py) operate on explicit data paths; FERME retains its parts data, CAD and component evidence.

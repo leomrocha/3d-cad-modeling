@@ -1,0 +1,28 @@
+---
+name: component-cad
+description: Execute a component CAD job using an external project's part index and existing OCS tools, recording source readiness, action occurrences and a verified reusable improvement.
+---
+
+# Component CAD iterations
+
+Use this skill when a real component job develops the reusable tools in this repository. Use the installed OCS engineering skill for native control and geometry. The component project owns its parts data, CAD artifacts and raw job evidence; this repository owns reusable code, tests and instructions.
+
+## Read current implementations first
+
+1. Read the component input sheet, exact variant, existing model/check records and current component-project skills. Existing FERME implementations are indexed in `/home/leo/projects/ferme/skills/cad-automation-and-reuse.md`.
+2. Reuse the existing `Client`, `Journal`, `Geometry` and verification functions for their supported actions. Select their helper, session, document and journal explicitly. Read the installed OCS control instructions before connecting.
+3. Use `scripts/part_index.py --index PATH --id PART_ID` to read the actual external index. Add another `--index` for an existing dictionary. Results retain source namespaces, original records and source hashes. A matching name/ID in two indexes remains two attributed records.
+
+## Bind the component requirements
+
+1. Preserve original source bytes, proposal/source labels, required features, units, local datums and assembly frame. `scripts/component_records.py JOB.json` checks required feature coverage and pinned source revisions. Its code/output contract is described in [the procedure](references/component-procedure.md).
+2. A required feature with a named unresolved input produces `NEEDS_INPUT`. Resolve that feature before dependent construction. The first FERME tube case has supplied 40 x 40 x 3 mm nominal dimensions and separate cut lengths; its corner profile requires the recorded source or task input. Keep the exact question with that feature.
+3. `SOURCE_READY` records input coverage. Native construction, geometry readback, saved-file persistence and visual checks produce their own results.
+
+## Execute and improve
+
+1. Map each job step to its readable action name and graph reference. Append component-specific occurrences with input/output revisions, representation, units/frames, preserved/changed information, alternatives, downstream conditions and actual check evidence.
+2. Use one writer for the selected CAD document. Preserve unrelated open work. Use stable request IDs and the existing same-ID recovery mechanism for uncertain completion.
+3. Record successful and failed occurrences. Document a repeated procedure with its supported conditions before extracting or extending its Python implementation. Reuse a matching function first.
+4. Every completed component iteration includes an applied, verified improvement to the current skill/procedure or script. A future task or confirmation of existing behavior supports the improvement's selection.
+5. Bind geometric observations to source expectations and actual document/geometry revisions. Verify save/reopen and captured component identity separately. Update component/part records in the owning project and tool/action definitions here, then commit the scoped results.

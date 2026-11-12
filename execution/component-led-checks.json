@@ -1,0 +1,60 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "checks": "passed",
+  "execution_state": "NEEDS_INPUT: rail tube corner profile",
+  "cad_iterations_completed": 0,
+  "native_geometry_mutations_sent": 0,
+  "new_helper_tests": {
+    "passed": 18,
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v"
+  },
+  "reused_ferme_tests": {
+    "passed": 66,
+    "scope": "existing offline transport/geometry and recorded-data checks"
+  },
+  "existing_dictionary_validation": {
+    "passed": true,
+    "entries": 8
+  },
+  "skill_validation": "passed",
+  "component_job_references": 103,
+  "job_states": {
+    "NOT_STARTED": 101,
+    "NEEDS_INPUT": 1,
+    "WAITING_FOR_P01": 1
+  },
+  "action_occurrences": 2,
+  "source_snapshots": 29,
+  "original_tooling_files_preserved": 192,
+  "original_ferme_native_models_preserved": 17,
+  "source_and_job_checks": "passed by real helpers and pinned source hashes",
+  "documentation_rebuild": "passed after actual comparison",
+  "histories": [
+    {
+      "check": "sandbox OCS discovery",
+      "result": "permission error",
+      "resolution": "authorised escalated read discovered OCS 2026.42"
+    },
+    {
+      "check": "new helper suite attempt 1",
+      "result": "17 passed; concurrent-source fixture error",
+      "resolution": "isolate Path.resolve from two-stat mock"
+    },
+    {
+      "check": "new helper suite attempt 2",
+      "result": "17 passed; occurrence fixture error",
+      "resolution": "provide actual readable representation/unit/frame fields required by validation"
+    },
+    {
+      "check": "new helper suite final",
+      "result": "18 passed"
+    },
+    {
+      "check": "real rail preflight",
+      "result": "NEEDS_INPUT",
+      "exit_code": 1,
+      "meaning": "named source input condition; no substitute value inserted"
+    }
+  ]
+}

@@ -62,7 +62,7 @@ Summary: Proposed OCS additions derived from recorded commands, topology recover
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
 
 <a id="src-011e8da740e4"></a>
 
@@ -219,6 +219,18 @@ Summary: earthtojake/text-to-cad ; Code-defined parametric models with `cadgen`/
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
+
+<a id="src-05baf05685b3"></a>
+
+## SRC-05baf05685b3 — component_records.py
+
+Original source: [/home/leo/projects/3dmodeling/scripts/component_records.py](/home/leo/projects/3dmodeling/scripts/component_records.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: authored_document_or_code_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-071deb628e4d"></a>
 
@@ -660,9 +672,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/README.md](/home/leo/proj
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, authored_document_or_code_inspected.
 
-Documents: research/sources/round-05/audit-index-sources.json.
+Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json.
 
 <a id="src-19255db776eb"></a>
 
@@ -747,6 +759,18 @@ Summary: Authoritative existing action/route record or authored implementation-q
 Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
+
+<a id="src-1b0d9fc7bcf8"></a>
+
+## SRC-1b0d9fc7bcf8 — manifest.tsv
+
+Original source: [/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv](/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-1b2c3957498a"></a>
 
@@ -1216,6 +1240,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
+<a id="src-2e8d8f25e086"></a>
+
+## SRC-2e8d8f25e086 — p02-source-job.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-2e92a48ed867"></a>
 
 ## SRC-2e92a48ed867 — Structural Analysis and Shape Descriptors — OpenCV 4.13.0
@@ -1286,7 +1322,7 @@ Summary: OCS 2026.42 component constructions, import/save results, failed reques
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
 
 <a id="src-31a38faa2037"></a>
 
@@ -1515,6 +1551,18 @@ Summary: Official FreeCAD docs list supported SVG paths/shapes, flattening of Z 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+
+<a id="src-3832553f9cb5"></a>
+
+## SRC-3832553f9cb5 — 02-fabrication-requirements.md
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/physical-build/02-fabrication-requirements.md](/home/leo/projects/ferme/engineering/module-development/physical-build/02-fabrication-requirements.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-3844fad0d2f9"></a>
 
@@ -1778,7 +1826,7 @@ Summary: Existing local component/action/skill/catalogue source reused by the co
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
 
 <a id="src-3ec7111d8cd7"></a>
 
@@ -2223,6 +2271,18 @@ Summary: Official raw source on tag v0.20.0 inspected 2026-11-12. `ConvertDepthT
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
+
+<a id="src-4f0c8d392a38"></a>
+
+## SRC-4f0c8d392a38 — component-work.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-4f49d9c8767a"></a>
 
@@ -2956,6 +3016,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r01.md, research/workflows/reconstruction-paths.md.
 
+<a id="src-647254850698"></a>
+
+## SRC-647254850698 — part_index.py
+
+Original source: [/home/leo/projects/3dmodeling/scripts/part_index.py](/home/leo/projects/3dmodeling/scripts/part_index.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: authored_document_or_code_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-6507a5c7f8da"></a>
 
 ## SRC-6507a5c7f8da — contract.json
@@ -2979,6 +3051,18 @@ Summary: Input sheet registered from the inspected ferme manifest: connectors; R
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-668386d68294"></a>
+
+## SRC-668386d68294 — 2026-11-12-component-led.md
+
+Original source: [/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: authored_document_or_code_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-6767227cb6dc"></a>
 
@@ -3015,6 +3099,18 @@ Summary: Official ezdxf documentation states that DXF coordinate values are unit
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+
+<a id="src-688d8e475957"></a>
+
+## SRC-688d8e475957 — p01-readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-68f329d41232"></a>
 
@@ -3099,6 +3195,18 @@ Summary: 2. The source observation retains the exact supplied OCCT URL and its r
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-03-independent.md, research/action-audit/reviews/point-03-sources.md.
+
+<a id="src-6b239a9bfdd1"></a>
+
+## SRC-6b239a9bfdd1 — SKILL.md
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: authored_document_or_code_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-6b30ccb4447f"></a>
 
@@ -3207,6 +3315,18 @@ Summary: Input sheet registered from the inspected ferme manifest: frame; Applic
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-6df970fcb6f8"></a>
+
+## SRC-6df970fcb6f8 — parts-and-standards.json
+
+Original source: [/home/leo/projects/ferme/skills/dictionaries/parts-and-standards.json](/home/leo/projects/ferme/skills/dictionaries/parts-and-standards.json)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-6e28384e1b5f"></a>
 
@@ -3748,6 +3868,18 @@ Evidence: authored_document_inspected, local_reference_registered.
 
 Documents: research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-8173158dcbfb"></a>
+
+## SRC-8173158dcbfb — cad-automation-and-reuse.md
+
+Original source: [/home/leo/projects/ferme/skills/cad-automation-and-reuse.md](/home/leo/projects/ferme/skills/cad-automation-and-reuse.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-819035442c74"></a>
 
 ## SRC-819035442c74 — https://mcpmarket.com/tools/skills/generate-3d-model
@@ -3986,7 +4118,7 @@ Summary: Existing local component/action/skill/catalogue source reused by the co
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
 
 <a id="src-896c4a89c975"></a>
 
@@ -4047,6 +4179,30 @@ Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-8ab7d0d86617"></a>
+
+## SRC-8ab7d0d86617 — 02-frame-hitch-supports.md
+
+Original source: [/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md](/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
+<a id="src-8ae740d518bb"></a>
+
+## SRC-8ae740d518bb — test_component_tools.py
+
+Original source: [/home/leo/projects/3dmodeling/tests/test_component_tools.py](/home/leo/projects/3dmodeling/tests/test_component_tools.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: authored_document_or_code_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-8b8ba89972cd"></a>
 
@@ -4599,6 +4755,18 @@ Summary: License observed locally: project `LICENSE` begins with GNU Affero Gene
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-9ff47adead00"></a>
+
+## SRC-9ff47adead00 — README.md
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-a00bd3c7c755"></a>
 
@@ -5356,6 +5524,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
 
+<a id="src-b7d893687f49"></a>
+
+## SRC-b7d893687f49 — p02-readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-b81d432f6f0a"></a>
 
 ## SRC-b81d432f6f0a — KiCad library repositories
@@ -5823,6 +6003,18 @@ Summary: Existing archived source for OCS automation documentation and historica
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-c5e854fd419c"></a>
+
+## SRC-c5e854fd419c — cad.py
+
+Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cad.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cad.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-c65b8007a000"></a>
 
@@ -6316,6 +6508,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-d74883941311"></a>
+
+## SRC-d74883941311 — p01-source-job.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-d7af850e4bd9"></a>
 
 ## SRC-d7af850e4bd9 — Independent review — Point 04 raster drawings and interpreted dimensions
@@ -6411,6 +6615,18 @@ Summary: Point 07 Photographs, depth and learned reconstruction: authored proced
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-dbc7c88be85f"></a>
+
+## SRC-dbc7c88be85f — test_cadtools.py
+
+Original source: [/home/leo/projects/ferme/skills/cad-construction/tests/test_cadtools.py](/home/leo/projects/ferme/skills/cad-construction/tests/test_cadtools.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-dc4ad193013b"></a>
 
@@ -6724,6 +6940,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-e8734095736c"></a>
+
+## SRC-e8734095736c — parts-and-standards-dictionary.md
+
+Original source: [/home/leo/projects/ferme/skills/parts-and-standards-dictionary.md](/home/leo/projects/ferme/skills/parts-and-standards-dictionary.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-e8c6f17f90e5"></a>
 
 ## SRC-e8c6f17f90e5 — RGBD integration — Open3D 0.20.0 documentation
@@ -6759,6 +6987,18 @@ Summary: Input sheet registered from the inspected ferme manifest: drive; BT; or
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-e9161d79c2fb"></a>
+
+## SRC-e9161d79c2fb — component-procedure.md
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/component-procedure.md](/home/leo/projects/3dmodeling/skills/component-cad/references/component-procedure.md)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: authored_document_or_code_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-e935d3ebe64f"></a>
 
@@ -7108,6 +7348,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-f4b8da3b384e"></a>
+
+## SRC-f4b8da3b384e — runtime.py
+
+Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/runtime.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/runtime.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-f4e7d302c752"></a>
 
 ## SRC-f4e7d302c752 — TripoSR — official repository, main branch
@@ -7204,6 +7456,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-f77e765324d1"></a>
+
+## SRC-f77e765324d1 — geometry.py
+
+Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
 <a id="src-f77f55667d7d"></a>
 
 ## SRC-f77f55667d7d — domain-sources.json
@@ -7239,6 +7503,30 @@ Summary: Local OCS guide describes stdio MCP and drawing inspection, mutation, m
 Evidence: local_source_inspected, local_reference_registered.
 
 Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-f87051bef24f"></a>
+
+## SRC-f87051bef24f — catalogue.py
+
+Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/catalogue.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/catalogue.py)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
+
+<a id="src-f945f7d18313"></a>
+
+## SRC-f945f7d18313 — action-occurrences.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl)
+
+Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-09/component-execution-sources.json.
 
 <a id="src-f954ab80c148"></a>
 

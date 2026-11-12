@@ -2868,6 +2868,50 @@
       ]
     },
     {
+      "id": "COMP-I06",
+      "name": "Required tube corner-profile input",
+      "summary": "Observed rail preflight requires a sourced tube corner profile or explicit nominal representation decision before dependent native construction.",
+      "status": "proposal",
+      "origin": "executed_component_source_preparation",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/2026-11-12-component-led.md",
+          "line": 1,
+          "section": "Required tube corner-profile input"
+        }
+      ],
+      "next_check": "Resolve the named feature input and exercise the matching native component actions with their own checks.",
+      "source_ids": [
+        "SRC-668386d68294"
+      ]
+    },
+    {
+      "id": "COMP-I07",
+      "name": "Reuse the newly extracted FERME CAD modules",
+      "summary": "Current FERME Client/Journal/Geometry/recipe and verification modules replace temporary-wrapper reuse assumptions for matching native operations; retain their existing tests and explicit data ownership.",
+      "status": "proposal",
+      "origin": "executed_component_source_preparation",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/2026-11-12-component-led.md",
+          "line": 1,
+          "section": "Reuse the newly extracted FERME CAD modules"
+        }
+      ],
+      "next_check": "Resolve the named feature input and exercise the matching native component actions with their own checks.",
+      "source_ids": [
+        "SRC-668386d68294"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

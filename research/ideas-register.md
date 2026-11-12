@@ -1814,6 +1814,30 @@ Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling
 
 Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
 
+## COMP-I06 — Required tube corner-profile input
+
+Status: proposal.
+
+Observed rail preflight requires a sourced tube corner profile or explicit nominal representation decision before dependent native construction.
+
+Original source: [/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md)
+
+Original proposal: [execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md), line 1.
+
+Next check: Resolve the named feature input and exercise the matching native component actions with their own checks.
+
+## COMP-I07 — Reuse the newly extracted FERME CAD modules
+
+Status: proposal.
+
+Current FERME Client/Journal/Geometry/recipe and verification modules replace temporary-wrapper reuse assumptions for matching native operations; retain their existing tests and explicit data ownership.
+
+Original source: [/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md)
+
+Original proposal: [execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md), line 1.
+
+Next check: Resolve the named feature input and exercise the matching native component actions with their own checks.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.
