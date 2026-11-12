@@ -1,0 +1,1549 @@
+[
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md",
+    "title": "Rear attachment crossmember doubler (P09D) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: attachments; Rear interface support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "729990e8397ce57cd7238d90be0964a30050ab1aa0e7449a8c82f69c2cac7bbf",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md",
+    "title": "Front attachment crossmember doubler (P08D) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: attachments; Front interface support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "ca240774fb31187d8275032569e327183cfc04b0abde9b57a9bdd684e607611d",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md",
+    "title": "Battery fuse CNL150 (C065) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Mersen fuse alternative; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e21cffb31e1e931d48b68da6f07982949482dd49ae360bcc33ca333f86800880",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md",
+    "title": "Category1 upper linkage pin (C064) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: attachments; Reference attachment interface; original kind source component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "bf5f6c605048a5259c46309aacb9e750818f4d2cf6683b9ba1b37c1e0c889abf",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md",
+    "title": "Category1 lower linkage pin (C063) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: attachments; Reference attachment interface; original kind source component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "7db5158352fe07b4958dd3d297fd8af4d1596844200eb81820db297a54f0a463",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md",
+    "title": "AHDBM06 mating plug geometry (C062) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Agricultural interface provision; original kind manufacturer mate-family reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "8971625b9e39bc7eb04342717580c5405fd4b182aa7fc287370ff879cc9830de",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md",
+    "title": "Anderson3-6055P2 boot (C061) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Charge-port accessory; original kind source accessory reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a9c5f94eed581e29927fb9a4c1499566a6134bc13ef09bd2e19b5a42cb4ba2e0",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md",
+    "title": "Anderson3-6054P2 boot (C060) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Charge-port accessory; original kind source accessory reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "140ea6c0d49bc605bf78f02d7eaf2f78ab4e8f179fe685d595e7d88f83396809",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md",
+    "title": "50mm2 main cable geometry (C059) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Existing main cable example; original kind source cable reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "670ec299785245afab6390437a9270288f8aa528f32464e1f547c501b1314050",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md",
+    "title": "CPC-T5008 cable lug (C058) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; M8 terminal example; original kind source terminal reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "5be73a23c48c39dcae808d203f012aaf4d4a3d6236ffa08c009255b209d56dc0",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md",
+    "title": "RadioMaster Pocket ELRS transmitter (C057) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Handheld operator equipment; original kind existing component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "19e08e11d82e0fdb86211fb773d84f98a0348491148d0956357a016d1a58a1a6",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md",
+    "title": "Tyro Indus1S handheld stop remote (C056) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Handheld operator equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "47d0667f98b888e315a2e86aac055dee7d4fe1952f69729004e18df23f25c257",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md",
+    "title": "Holybro PM02V3 module (C055) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Auxiliary controller supply proposal; original kind manufacturer hardware reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "9ba46c135afea632e71bc51c39bcdcee845c76ea814cc9d1ce7c80a88a91c5c5",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md",
+    "title": "Victron smallBMS NG (C054) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Victron alternative BMS arrangement; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "23bfe73fd989ae6f3d67e8f50571a95a4a5ec3b5f864600e7db465ad4cdcb835",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md",
+    "title": "BMW cell supervision circuit (C053) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; BMW; original kind OEM component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "0de9131022d75683f2f9a33983cf687b071c7fb94517660f5ce05bcf18e3a0df",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md",
+    "title": "Holybro Pixhawk6C hardware (C052) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Controller hardware proposal; original kind existing component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a2eb60b0051c991987480854975315cb4e4bef581140b39ebdbf7ae6d4e30651",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md",
+    "title": "Wheel splash panel (P24) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: guards; Common withroute-specificshape; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e31c3b2a71d34c3086c63cb4f5659055e9b3840c0cf3a49588e37695146662a8",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md",
+    "title": "Side connector mounting panel (P23) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Route-specific panel proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "6c49b376ee1f5444b90c4b9612d881e89f4deb841d470b601c96c982ea66183b",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md",
+    "title": "Electrical equipment bracket (P22) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Route-specific equipment support; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "be8bb9ea4bd10f0437ef0039584b261faded17a67f8396586ce4db3f63f7d458",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md",
+    "title": "Controller thermal mounting plate (P21) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; One variant per controller; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a4b2f3b32a47e129d795a1f6e36dfce6271ab6ee1daf222329332418a9901834",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md",
+    "title": "Happymodel EP1 receiver (C051) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Normal radio equipment; original kind existing component record. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "9d4c2de789c0359dbdc7b6a6ec9dcdd4c383559eb3d0ba1fa2646033dffe9ae8",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md",
+    "title": "Schneider XB5AA31 reset button (C050) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Local reset equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "3dd0769b366ab37bf0d871d71ac5dcd9107a927376b239440e76d7447f913d40",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md",
+    "title": "Schneider XB5AS8445 emergency button (C049) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Local stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "1869327d703e527f119437a1ce0cf038cc2b447a5ec6f4da22d25b1e6c3490cd",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md",
+    "title": "Pilz PNOZX3 774310 relay (C048) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "5c17527e2b04bb730f742981bc251566112485d920bac764b64b3a5d0c2f783f",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md",
+    "title": "Tyro Gemini1S remote-stop receiver (C047) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Separate stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "629edde34c87957bc0e37ac76d83edc207e8e13156e07c81586b57f53132bbd5",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md",
+    "title": "TDK I1C2W010A120V converter board (C046) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; BT24 V regulation proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "f2ef232c29c846accffc2d1006b90107323c666b1e0f95a90fbf76a73be76ac2",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md",
+    "title": "Victron Orion24-12 converter (C045) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; BT; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a788911aa73522fb6ce7f26ec325985e9be97f3f2f28875d5e26b92379588c86",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md",
+    "title": "Victron Orion48-24 converter (C044) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; 44–51.2 V battery routes; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "ca536d2e500a04e02d047ad4e736875156a5be12222aebb49a168a5c1acda512",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md",
+    "title": "Victron Orion48-12 converter (C043) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; 44–51.2 V battery routes; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "78e81b7c6cdb103636e28eb484cf16555b9c8ed99bb88623761c27353236f064",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md",
+    "title": "Blue Sea5026 auxiliary fuse block (C042) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; 12 or24 V branch distribution; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "5de0008c2ac56180741f982fac9394fa01cd8e1ff8e3e481402c0e34ac2b0d02",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md",
+    "title": "WISKA ESKV25 gland10066413 (C041) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Main cable entry candidate; original kind manufacturer source reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "0f182b05f04160d1e5c4bf2764290a4c55eb09493a841dee3153265236f0248d",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md",
+    "title": "Amphenol AHDBM04-24-91PN receptacle (C040) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Agricultural interface provision; original kind manufacturer source reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "2529df1574d80e603fd94b32dc79a63aa5d82efa3ff6b854caa4bdbd6626d961",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md",
+    "title": "Altec ALT-SB50RAMBKT bracket (C039) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Charge port proposal; original kind seller component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "6fa063d8faabafb397519136238a66ac6b6a1907d689b545258dc64ec1339a91",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md",
+    "title": "Anderson SB50 6331G5 connector assembly (C038) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Charge port proposal; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "bc0d8104ded84487eac4d549bcf94ea560cbf4b63eb106743006480d1c0d7bd0",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md",
+    "title": "SurLok SLPIRBBPSO0 receptacle (C037) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Battery service pole candidate; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e45097a0c2fbd35bbf17727c4269d425ad597f370aea5481dd42e32f6b654501",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md",
+    "title": "SurLok SLPIPB50BSO0 cable plug (C036) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: connectors; Battery service pole candidate; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "2261d41a6d93a1874f4aeca7982876395d28584d2ac6cf1e9ad8e16610d42c82",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md",
+    "title": "Precharge resistor Ohmite TA310PA1K00JE (C035) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Kelly wiring candidate; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "6d7cde658a6747162ed54f054d1df9599a47708153e42325f033fe0b239c2330",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md",
+    "title": "Albright SW200-281 contactor (C034) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; BT candidate; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "c89421f6625de86848e0ce7e7f443db7c93b047b76c7dd54fe6346b9fe92c48e",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md",
+    "title": "Albright SW80B-40 contactor (C033) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Leaf or BMW candidate; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e46f88bbe4f30ac7f8b276da37c6fd62747db9773e817fe82190afea40fefe49",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md",
+    "title": "Littelfuse75921-10 service disconnect (C032) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Battery isolation proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "160b069597db8ad4a4171f6614acb34f74136475d80c28462d002c000950192f",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md",
+    "title": "Mersen FTFH fuse holder (C031) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; CNL fuse alternative; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a3053e094f19cc3a6fa1c5b41afecb80f056310354f2d060111f722506d340d8",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md",
+    "title": "Littelfuse20EV100 bolt-down fuse (C030) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Traction fuse candidate; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "ab25fdb3ca06cdcf5c50e4bd34bbdf55db913e02f8ee35508456c3007051dbd1",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md",
+    "title": "Fibox ARCA203015 enclosure (C029) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Control enclosure proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "295c9b4c4e42a5a99c100ad9e34266636490bf5aa4e24e75125219070c51e259",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c028-simpbms-board.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c028-simpbms-board.md",
+    "title": "SimpBMS board (C028) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; BMW; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "dc03db0848f8e7f604f02cfae46516b03b5a2af2a15724c0a2e610d94c4df78a",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md",
+    "title": "Orion Jr2 16cell BMS (C027) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Leaf main bank; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "0afec89b51cb7aa4738d3133116b2d98e72a6cb43dabfe4a12b5e18d7dd327b2",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md",
+    "title": "Victron Lynx Smart BMS NG500 M10 (C026) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: electrical; Victron NG; original kind manufacturer assembly reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "cd72b91fdcac1502fafb67fd36825b3e19f1ac6327561bc64c5fe7654d69dfcc",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p10-side-lifting-tab.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p10-side-lifting-tab.md",
+    "title": "Side lifting tab (P10) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: frame; Side support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "d0633cb164bca2c417ccdccbaae2fed9fe04d8ef791d67afc90533ca170b2221",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md",
+    "title": "Rear attachment support plate (P09) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: attachments; Rear ISO730 reference proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "b976977fef5c6490b6d03e79defeb2a4e60ed6db45b3116af00dc5b74913d687",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md",
+    "title": "Front attachment support plate (P08) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: attachments; Front mount proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "620e8ff48c49d523842e753fca3490cd838c11413e14caae0123ed5377f123f0",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md",
+    "title": "Hitch support gusset (P07G) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a7f5ccfa8762d4384625dfbca8626a665a10b863a3d60387359833c9b20f7941",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md",
+    "title": "Robot tow-ball support plate (P07) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a2406e3c70d75587c7c6086cc11fc62af797d87cf53966dac143aab7f6777b5d",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c025-robot-tow-ball.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c025-robot-tow-ball.md",
+    "title": "Robot tow ball (C025) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind mating component input. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "0026bcb1d0fc58daf318fdeb6fad2a71f638f3431ee7f50c980055c39c865061",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md",
+    "title": "SPP ZSK0750 trailer coupling (C024) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind source coupling reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "24ec78137bbd1e7fd7d8ab8076955816ddf7072be6d43c7938797f5221b7d434",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md",
+    "title": "Battery terminal cover (P20C) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; Separate geometry per battery route; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e1977a9d99f5ba01d828390187a8ad4962e256055236ca39acbd327a285e5dec",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md",
+    "title": "Battery removable hold-down (P20H) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; Separate geometry per battery route; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e4de2884c725d67ce825f0ea0c708f066ba28e288e45c10b2b37e4ee21bda0ef",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md",
+    "title": "Victron supported shelf (P19) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; Victron or BT-V; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "9b5bb49cb0cd8c2bc310397f2569bcadee99274d825e07080c4510c8916cb19e",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p18-bmw-module-tray.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p18-bmw-module-tray.md",
+    "title": "BMW module tray (P18) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; BMW; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "18b4ffcbff4f8fd36de7c2502e03baec14a2cfee2b15dccec7794ed2e99b8b23",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md",
+    "title": "Leaf stack end restraint plate (P17E) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; Leaf; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "f0047d0bd6c3107fd7b88b1036e78a490e83b2de21616d0e71e68dcf690158fc",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md",
+    "title": "Leaf cassette support rail (P17R) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; Leaf; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "2cc57fc50a8f0ab1db97cae30931b1e44d4c0636ffe6b146b3e06fd53d6857d9",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md",
+    "title": "Victron NG25.6V100Ah battery (C023) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; Victron pair or single BT-V; original kind manufacturer case reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "b6e2541362b597be730f82399ccbb166319e1bb09924b227f01919564d07f8c1",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md",
+    "title": "BMW i3 94Ah battery module (C022) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; BMW; original kind source component/model reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "77165277726221ae691ec08163467adeffd1f177ad15f0c7dec899b02521c079",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md",
+    "title": "Nissan Leaf Gen2 battery module (C021) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: battery; Leaf bank or BT-L alternative; original kind source component/model reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "4af9d76752785decd45e85dc87b3e25bc3411da8fd17cb539a60d7b7c8070ec6",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md",
+    "title": "Caster head mounting plate (P06B) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Chosen caster reference; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "85c679fe9f4586b01ba5152d4b26d6f2bb4ebf14de75cb293742281d0def2ac1",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06-caster-support-arm.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06-caster-support-arm.md",
+    "title": "Caster support arm (P06) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Removable support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "ac692e766b7cd1ac053815d47f68601ca663aa7b804c3700f7a8f63fc012e204",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md",
+    "title": "Caster pin positive keeper (C020) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Removable support proposal; original kind retention component geometry input. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "d20ff0c1141a77975b6712c29485734cffad78ad565e08e7420db9c5e9c13433",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md",
+    "title": "Caster angle-setting pin (C019) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Retained fixed-setting arm proposal; original kind pin component geometry input. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "b4fcf47d29c665bac57637d8f0342fe8ca118954c582085d78a2178dca01bdbe",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md",
+    "title": "Caster primary removable pin (C018) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Retained fixed-setting arm proposal; original kind pin component geometry input. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "99636c5e5e205e1ce554325cc8aabff0528e6fbc360bffc78e0b503383118c59",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md",
+    "title": "Caster joint spacer or bush (P05S) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "53ba42d470fef31b7261e290898a5d6b5572f3a5438da8ad3b8befb8fa56d3c7",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md",
+    "title": "Caster frame doubler (P05D) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e52c970f37817ec27e47abb5c2411f6451642e4e917a3c39d00b86e6255bbe3e",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md",
+    "title": "Caster clevis cheek (P05A) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "ee2f81fd12064c409a5724aba1bc55e7029653fc0f6800fb688e47546dd2eb83",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md",
+    "title": "Deck support ledge (P04L) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "87cf4dcb31446b6dbd1980ece8a0850c40acf479e5be51d75ff8f3d18df3fd21",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md",
+    "title": "Upper deck panel (P04) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "4bfc89d5b1b042938cdfd51456203dc606ed9f1a38f645805392eecea8092597",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md",
+    "title": "Drive support gusset (P03G) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: frame; Applicable support variant; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e6f8de03995b9aee55fc59f0a55e81f44b06e385cabe0b5b8a88c83b389e4eeb",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md",
+    "title": "Drive support plate (P03) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: frame; One variant per drive route; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "b0314fe2082561b4227840f813eee1a829af318214228c909c6f876d1399943a",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
+    "title": "Main frame crossmember proposal",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "74ac8273745e31b329de91c5316f21eff0a5a59af26472048d49a2cada0fb7b8",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
+    "title": "Main frame longitudinal rail proposal",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "2cc2191778cd0b6ab9ca60f07263d664bcf97ecc58aaafb08e2ae50b9e81acf2",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md",
+    "title": "Blickle LS-VLE250K caster reference (C017) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Caster reference alternative; original kind project reference envelope. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "30d8694d9b042b5ee3388c285195e471bfbd5798d7cde28c9ea1ddc2c3110ead",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md",
+    "title": "Blickle LS-PS310K caster reference (C016) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: caster; Caster reference alternative; original kind project reference envelope. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "93893ee6daad48e9999de288f250c003d3509133c4ae3cfe4b8e99faca6c4222",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md",
+    "title": "ME0907 transmission guard (P16) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "557740465605d52476b4c0a886bf165dc12e6d6080faed50de44fbc6be2ecfb6",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md",
+    "title": "Brake caliper reaction bracket (P15) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907 or separate service-brake proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "628656f64c093ff0f1be32d5bf34ef2e95d586fe0590e7098e9adc5673f2c116",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md",
+    "title": "BT output to rim adapter (P14BT) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; BT; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "692d126b2bb3576979455fe957efbe8db92c3c1b06358108ec8322921cc42f21",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md",
+    "title": "PRO-L ring to rim adapter (P14SL) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-L; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "f2fbe595c67b5db5c16e0dd101ae1fc45eca6fa966269933d8c8d9767e1130f7",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md",
+    "title": "PRO-M ring to rim adapter (P14SM) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-M; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e5d8ae95cb99ec0b4ca4dd1387e60281c6dfb4634c7842c858c136be73b4fe97",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md",
+    "title": "ME0907 wheel shaft to rim adapter (P14ME) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "70847affbded1b74e35812d87d1406b7700806df3dd9f662e4916af98e7e7866",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md",
+    "title": "Wheel shaft bearing support plate (P13) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "8278d62dbc29a31bb6d90274134d32cf9060ff37351d57f337ea76cd7ac40db2",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md",
+    "title": "Driven sprocket axle carrier (P12B) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "36f2bf802ec1ae6ece2b401cdd7df45028826d6e703e90925d9fc17fd8218d0f",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md",
+    "title": "ME0907 supported wheel shaft (P12) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "00b623553baf24e5da00e608a9c617cfc3e3df7b49f0243d5d20812daf0089c5",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md",
+    "title": "ME0907 motor adjustment plate (P11) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "71379cca8b735b3b8246bd2216d6a9ecafd2fbbbc7cbe84d263d1f38bf8af324",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md",
+    "title": "Kelly KLS7240N controller (C015) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind exact controller candidate record. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "d67b0a4af18ad7c324be586d538bdacd63e274444702ad838e365dc464125d66",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md",
+    "title": "Curtis 1243-4303 controller (C014) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; BT; original kind donor controller reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "3eb5bd2132a53531976b4481434e6fc7bc9fb1efbf16054aa5e35f57ecea10e2",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md",
+    "title": "BT OEM169536 geared drive assembly (C013) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; BT; original kind donor assembly reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "5f756d697758c97321389cb5cef730edb9a5fce166544960261f748225ce8c9c",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md",
+    "title": "Sumitomo standard driver CH52308G10G10 (C012) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Sumitomo; original kind manufacturer outline reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "aab7a5c5f2bbe9bf73968a5895e231851a6ad996e4197f00b0bc32bbb1ddbabe",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md",
+    "title": "Sumitomo PRO-L CH54527G10 gearmotor (C011) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-L; original kind manufacturer geometry in retained drawing. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "1667ff2c3b8d63bc7e8133ab5555daf3e2641a4e44e6434c1dec01502526ce14",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md",
+    "title": "Sumitomo PRO-M CH54065G10 gearmotor (C010) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-M; original kind manufacturer geometry in retained drawing. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a1dbb0bb5d09c1d9a2082086a11900098e6bf989e212bdd7d5d839228a92cee4",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md",
+    "title": "SKF SY20TF bearing unit (C009) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907 supported-shaft candidate; original kind manufacturer dimensions in existing record. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "c1ed3b75123fe208da1b9bd1e4c28b8fc74b170774048b4d5bcb71f8a682cea6",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md",
+    "title": "PBR 4384 520 50T driven sprocket (C008) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "ac15a4170a1605748343926c782ee5e598eda0c6e0a893b5f89be906219e5623",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c007-520-roller-chain.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c007-520-roller-chain.md",
+    "title": "520 roller chain (C007) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source size family. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "b3f145bfb2b816cdc75f359998f4b9593cc1e3af41a06a36de352ad033095af9",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md",
+    "title": "AMP 520BS10HT-7-8 motor sprocket (C006) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source component interface example. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "ebb4a7fab393157ae8cd28a9bf581c6f0caa6d98760fe75c32127b0e6aee820a",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md",
+    "title": "Motenergy ME0907 motor (C005) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind component geometry reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "a3f61c2b75e4eb022e05b15d41636513b933b57a36e7644dbe11165ccbe50fe2",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md",
+    "title": "Knott 402386.001 steel rim (C004) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Knott wheel alternative; original kind seller/manufacturer dimensions recorded locally. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "2daaa5e583562762c220f157bc37bec4be80fd3e55781d2e3b003436286a16dd",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md",
+    "title": "Keiyama JA08-700-4T100-02 steel rim (C003) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Keiyama wheel alternative; original kind seller/manufacturer dimensions recorded locally. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "e051f1ff5ce09e4c64a50ee11edd6725d42231ad2eb3ffc2f502793a01376207",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md",
+    "title": "Trelleborg tube 6.00-9TR15 (C002) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Common wheel reference; original kind component reference. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "4ee7436017b838c0df61ed09086ed850f6b74b75d06a698f36885dd9d9a80819",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md",
+    "title": "Trelleborg T539 tyre (C001) — CAD input sheet",
+    "summary": "Input sheet registered from the inspected ferme manifest: drive; Common wheel reference; original kind manufacturer specification recorded locally. Detailed geometry review belongs to its component iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "sha256": "2a61c9efd451252ec5d496b344c019b24aaca157af9b8ab307bd7d960a16c021",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
+    "title": "Catalogue and future material/domain proposals",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "e68a751643467239dce45f839b26f3c77c965850fad622d92576e877e5ab1a01",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "title": "Retained original implementation plan",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
+    "title": "Original routes to separate actions",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "2472101e0ed524b88e2cabdf346eac0eb62bd30b82410ec5e271d6ff9b0cd5a5",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+    "title": "Action implementation queue",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "a32c803b5dabb0762423de33cc276078acf6f7e544fc45e1a7f69e583a945e46",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md",
+    "title": "Inspected existing implementation assets",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "d82ab3b9f00516efd574fc83902a0d942bc1c6820f7342439a59eccc56bd1f7f",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "Installed OCS skill source",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+    "local_original": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+    "title": "Recorded construction successes failures and recovery",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "8dcafc0cdd8fb60c9665bd6e05542acb00f101d3fca48d036b47c090d050be88",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+    "local_original": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+    "title": "Proposed OCS improvements",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "29bdea70113d72cca53a510214389c8d994c1bee32d52dc38338641fd67f0353",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+    "local_original": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+    "title": "Evidence-based CAD construction skill",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "7326361de851030db612f46f468b16949ba59562f3e120c3f2f2f113b6af5ac4",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/skills/README.md",
+    "local_original": "/home/leo/projects/ferme/skills/README.md",
+    "title": "Existing construction documentation index",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "883ffe45cc4f0b79266ceb1db4e02fd9460431100abaf2ecfdb65a77a26d8053",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "title": "Existing CAD and checks index",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "c9ec08a8d31b96c5feb16c830502e526235ab99f3169042f1709818adc6a9d3c",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/dependency-order.tsv",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/dependency-order.tsv",
+    "title": "Ferme geometric dependency order",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "1557739e4916dbdeed7eb27b2fc22a50ef403592463153d1553e39d4ec248f11",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+    "title": "Ferme part manifest",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "6df3aa47d6949a7b1760d7cdc4f2a5493c62c62b96253373812ee3f4f772a7f0",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md",
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md",
+    "title": "Ferme CAD input index",
+    "summary": "Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "ed6db21f660d040ed504b794eeef2e1a52d05cebba2b954aaeb09db9c1d81ece",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/component-development-coverage.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/component-development-coverage.md",
+    "title": "Complete component input coverage",
+    "summary": "Plan-side source coverage and ownership reference linking to the authoritative FERME 103-part data; group counts and proposed first two jobs are explicit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "b0b6142a6c24fc5f9312d6a3717a7bbf2a2cda977d9fa6a9bb6c76de85508447",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+    "local_original": "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+    "title": "Component-led CAD and tooling development plan",
+    "summary": "Consolidated proposal: minimum records, first rail/crossmember builds, per-component execution/check/improvement cycle, Python extraction, catalogue/search, priority rules and future extensions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "3f4db81bc38b9c24aa297abf4571be0ad0ad043a0f8c8e30fe9c06e926417993",
+    "referring_documents": [
+      "COMPONENT_DEVELOPMENT_PLAN.md",
+      "research/component-development-coverage.md"
+    ]
+  }
+]

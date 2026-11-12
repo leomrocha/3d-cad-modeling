@@ -62,7 +62,7 @@ Summary: Proposed OCS additions derived from recorded commands, topology recover
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-011e8da740e4"></a>
 
@@ -122,7 +122,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json, research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -147,6 +147,18 @@ Summary: The PCL API documents normal-based sample-consensus segmentation, input
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-independent.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
+<a id="src-03adf43b9941"></a>
+
+## SRC-03adf43b9941 — Kelly KLS7240N controller (C015) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind exact controller candidate record. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-03ea53a6f519"></a>
 
@@ -208,6 +220,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
 
+<a id="src-071deb628e4d"></a>
+
+## SRC-071deb628e4d — Caster support arm (P06) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06-caster-support-arm.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06-caster-support-arm.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Removable support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-0724f34c3f7f"></a>
 
 ## SRC-0724f34c3f7f — reconstruction-detail-sources.json
@@ -255,6 +279,18 @@ Summary: Point 05 CAD, photographs and scans alignment: authored procedure/actio
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-05-local-sources.json.
+
+<a id="src-09342e239988"></a>
+
+## SRC-09342e239988 — Tyro Gemini1S remote-stop receiver (C047) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Separate stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-096e1d7af9e5"></a>
 
@@ -304,6 +340,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-0aace313f4cb"></a>
+
+## SRC-0aace313f4cb — Curtis 1243-4303 controller (C014) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; BT; original kind donor controller reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-0afc75d0368f"></a>
 
 ## SRC-0afc75d0368f — Blender repository/licence
@@ -315,6 +363,18 @@ Summary: Licence details for the upstream source, installed package and MCP inte
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-0bc5d8f02292"></a>
+
+## SRC-0bc5d8f02292 — Trelleborg T539 tyre (C001) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Common wheel reference; original kind manufacturer specification recorded locally. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-0c098ecd90ed"></a>
 
@@ -388,6 +448,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md.
 
+<a id="src-0f1f289478e2"></a>
+
+## SRC-0f1f289478e2 — Wheel splash panel (P24) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: guards; Common withroute-specificshape; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-10fb35c8f807"></a>
 
 ## SRC-10fb35c8f807 — Python API quickstart
@@ -399,6 +471,30 @@ Summary: Licence details for the upstream source, installed package and MCP inte
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-1179a9bfdd5a"></a>
+
+## SRC-1179a9bfdd5a — Victron supported shelf (P19) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; Victron or BT-V; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-1195ea9b1b28"></a>
+
+## SRC-1195ea9b1b28 — Wheel shaft bearing support plate (P13) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-11a3ab01c356"></a>
 
@@ -472,6 +568,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r06.md.
 
+<a id="src-1361cced4e93"></a>
+
+## SRC-1361cced4e93 — 520 roller chain (C007) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c007-520-roller-chain.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c007-520-roller-chain.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source size family. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-13f08bab005f"></a>
 
 ## SRC-13f08bab005f — source repository/licence
@@ -507,6 +615,30 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-170cae45c8e7"></a>
+
+## SRC-170cae45c8e7 — Leaf cassette support rail (P17R) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; Leaf; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-172ac1af7b52"></a>
+
+## SRC-172ac1af7b52 — Pilz PNOZX3 774310 relay (C048) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-172fdcc953c4"></a>
 
@@ -556,6 +688,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-19e1d74855d9"></a>
+
+## SRC-19e1d74855d9 — ME0907 supported wheel shaft (P12) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-1a05e425438e"></a>
 
 ## SRC-1a05e425438e — REP-103: Standard Units of Measure and Coordinate Conventions — ros-infrastructure/rep master
@@ -600,9 +744,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementa
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-1b2c3957498a"></a>
 
@@ -648,9 +792,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-cata
 
 Summary: Authored proposal: requested identity/standards/location/search fields, storage alternatives and explicit future material/resistance/work-domain extensions.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_source_inspected.
 
-Documents: research/sources/round-07/parts-catalogue-sources.json.
+Documents: research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-1f314fe4accc"></a>
 
@@ -710,7 +854,7 @@ Summary: Scope, source session/review boundary, OCS build and document use order
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-20b61505fcba"></a>
 
@@ -760,6 +904,30 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
+<a id="src-22b94e3ef160"></a>
+
+## SRC-22b94e3ef160 — Caster angle-setting pin (C019) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Retained fixed-setting arm proposal; original kind pin component geometry input. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-22d386b03b6c"></a>
+
+## SRC-22d386b03b6c — Front attachment support plate (P08) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: attachments; Front mount proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-243b037b93ab"></a>
 
 ## SRC-243b037b93ab — CAD and skills assessment
@@ -771,6 +939,18 @@ Summary: Inspected in this research turn; records OCS baseline, CAD representati
 Evidence: local_source_inspected, local_reference_registered.
 
 Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
+
+<a id="src-24ffaaff970e"></a>
+
+## SRC-24ffaaff970e — BMW cell supervision circuit (C053) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; BMW; original kind OEM component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-251464b38bc3"></a>
 
@@ -867,6 +1047,18 @@ Summary: Observed dispatch, actual identity reports, review dispositions, scope 
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-29c790174a58"></a>
+
+## SRC-29c790174a58 — Robot tow-ball support plate (P07) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-29e05b3b3047"></a>
 
@@ -1036,6 +1228,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
+<a id="src-2f10709cdd89"></a>
+
+## SRC-2f10709cdd89 — Schneider XB5AS8445 emergency button (C049) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Local stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-2fad977d4fe9"></a>
 
 ## SRC-2fad977d4fe9 — /home/leo/projects/3dmodeling/research/workflows/cad-paths.json
@@ -1082,7 +1286,7 @@ Summary: OCS 2026.42 component constructions, import/save results, failed reques
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-31a38faa2037"></a>
 
@@ -1119,6 +1323,18 @@ Summary: top and staged recovery functions reconstruct shell/terminal features; 
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
+
+<a id="src-31e3c7199ce2"></a>
+
+## SRC-31e3c7199ce2 — Anderson SB50 6331G5 connector assembly (C038) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge port proposal; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-31fb748a20df"></a>
 
@@ -1204,6 +1420,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-34471858a5cb"></a>
+
+## SRC-34471858a5cb — 50mm2 main cable geometry (C059) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Existing main cable example; original kind source cable reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-347a968ad00e"></a>
 
 ## SRC-347a968ad00e — https://www.microsoft.com/en-us/research/workbench/project/trellis
@@ -1287,6 +1515,18 @@ Summary: Official FreeCAD docs list supported SVG paths/shapes, flattening of Z 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+
+<a id="src-3844fad0d2f9"></a>
+
+## SRC-3844fad0d2f9 — Orion Jr2 16cell BMS (C027) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Leaf main bank; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-39a648fd2c2a"></a>
 
@@ -1528,6 +1768,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/audit-index-sources.json.
 
+<a id="src-3eaf1eca263a"></a>
+
+## SRC-3eaf1eca263a — Main frame longitudinal rail proposal
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md)
+
+Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-3ec7111d8cd7"></a>
 
 ## SRC-3ec7111d8cd7 — GitHub repository metadata or tree response
@@ -1576,6 +1828,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r10.md.
 
+<a id="src-40beea4e687b"></a>
+
+## SRC-40beea4e687b — Victron Orion24-12 converter (C045) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; BT; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-41482c223014"></a>
 
 ## SRC-41482c223014 — Ferme part manifest
@@ -1586,7 +1850,7 @@ Summary: Existing 103 part records and their identity, route, dependency, source
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-07/parts-catalogue-sources.json.
+Documents: research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-416cb87ab6bb"></a>
 
@@ -1660,6 +1924,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-43744e9db2f6"></a>
+
+## SRC-43744e9db2f6 — Front attachment crossmember doubler (P08D) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: attachments; Front interface support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-43a296901978"></a>
 
 ## SRC-43a296901978 — Geometric Image Transformations — OpenCV 4.13.0
@@ -1672,6 +1948,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r02.md.
 
+<a id="src-441a0f0e29e3"></a>
+
+## SRC-441a0f0e29e3 — Blickle LS-VLE250K caster reference (C017) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Caster reference alternative; original kind project reference envelope. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-447a55563fd3"></a>
 
 ## SRC-447a55563fd3 — MuJoCo software repository and licence
@@ -1683,6 +1971,18 @@ Summary: Primary repository identifies MuJoCo source code under Apache-2.0 and p
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
+
+<a id="src-4576a97efe3e"></a>
+
+## SRC-4576a97efe3e — Battery removable hold-down (P20H) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; Separate geometry per battery route; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-46011fa591f5"></a>
 
@@ -1719,6 +2019,18 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
+
+<a id="src-47401a0e9609"></a>
+
+## SRC-47401a0e9609 — Controller thermal mounting plate (P21) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; One variant per controller; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-47d588ded00a"></a>
 
@@ -1840,6 +2152,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
 
+<a id="src-4cc49dfadc47"></a>
+
+## SRC-4cc49dfadc47 — Upper deck panel (P04) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-4d1602b2855e"></a>
 
 ## SRC-4d1602b2855e — https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html
@@ -1876,6 +2200,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-4de79e2f8bfe"></a>
+
+## SRC-4de79e2f8bfe — Caster joint spacer or bush (P05S) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-4e718650fd66"></a>
 
 ## SRC-4e718650fd66 — Image.cpp — Open3D v0.20.0 source
@@ -1887,6 +2223,18 @@ Summary: Official raw source on tag v0.20.0 inspected 2026-11-12. `ConvertDepthT
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
+
+<a id="src-4f49d9c8767a"></a>
+
+## SRC-4f49d9c8767a — PRO-M ring to rim adapter (P14SM) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-M; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-4f8a40b0e12a"></a>
 
@@ -1960,6 +2308,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-sources.md, research/sources/round-05/point-04-web-sources.json.
 
+<a id="src-5149721d596f"></a>
+
+## SRC-5149721d596f — SPP ZSK0750 trailer coupling (C024) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind source coupling reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-51e2013a5b3c"></a>
 
 ## SRC-51e2013a5b3c — neugart-ngv064-wheel-160-native.json — recorded_check_results
@@ -2007,6 +2367,18 @@ Summary: Existing artifact pattern: source hashes, declared mm-to-m conversion, 
 Evidence: existing_report_registered, local_reference_registered.
 
 Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-local-sources.json.
+
+<a id="src-52d0800bbbcf"></a>
+
+## SRC-52d0800bbbcf — Victron Orion48-24 converter (C044) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; 44–51.2 V battery routes; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-53486b514e1a"></a>
 
@@ -2092,6 +2464,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
+<a id="src-5537b62dfae7"></a>
+
+## SRC-5537b62dfae7 — Sumitomo standard driver CH52308G10G10 (C012) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo; original kind manufacturer outline reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-554c43270f1b"></a>
 
 ## SRC-554c43270f1b — IfcOpenShell repository and software licences
@@ -2127,6 +2511,18 @@ Summary: Official ROS URDFDOM header on mutable rolling branch, accessed 2026-11
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
+
+<a id="src-56687776c458"></a>
+
+## SRC-56687776c458 — BT OEM169536 geared drive assembly (C013) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; BT; original kind donor assembly reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-56b9d47414e7"></a>
 
@@ -2236,6 +2632,30 @@ Evidence: local_source_inspected, local_reference_registered.
 
 Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-5b7a1024db32"></a>
+
+## SRC-5b7a1024db32 — Leaf stack end restraint plate (P17E) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; Leaf; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-5b8ba14d70b1"></a>
+
+## SRC-5b8ba14d70b1 — Altec ALT-SB50RAMBKT bracket (C039) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge port proposal; original kind seller component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-5c5742981c2f"></a>
 
 ## SRC-5c5742981c2f — ShapeKernel upstream LICENSE file
@@ -2259,6 +2679,18 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
+
+<a id="src-5d32161e7c40"></a>
+
+## SRC-5d32161e7c40 — Holybro PM02V3 module (C055) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Auxiliary controller supply proposal; original kind manufacturer hardware reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-5d5609650edf"></a>
 
@@ -2536,6 +2968,30 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-03/project-detail-sources.json.
 
+<a id="src-667b0ab089a4"></a>
+
+## SRC-667b0ab089a4 — Side connector mounting panel (P23) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Route-specific panel proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-6767227cb6dc"></a>
+
+## SRC-6767227cb6dc — CPC-T5008 cable lug (C058) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; M8 terminal example; original kind source terminal reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-67c3aa703e13"></a>
 
 ## SRC-67c3aa703e13 — GitHub repository metadata or tree response
@@ -2740,6 +3196,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
 
+<a id="src-6d6dde7514cd"></a>
+
+## SRC-6d6dde7514cd — Drive support gusset (P03G) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: frame; Applicable support variant; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-6e28384e1b5f"></a>
 
 ## SRC-6e28384e1b5f — CadQuery LICENSE
@@ -2812,6 +3280,42 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-70208d220176"></a>
+
+## SRC-70208d220176 — Deck support ledge (P04L) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-704288e14b9b"></a>
+
+## SRC-704288e14b9b — Caster clevis cheek (P05A) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-707585d22a36"></a>
+
+## SRC-707585d22a36 — Tyro Indus1S handheld stop remote (C056) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Handheld operator equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-70879a2c2cb0"></a>
 
 ## SRC-70879a2c2cb0 — TechDraw ExportPageSVG — FreeCAD documentation main branch
@@ -2846,7 +3350,7 @@ Summary: Existing component sheet and source/model dependency index; relationshi
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-07/parts-catalogue-sources.json.
+Documents: research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-71dee9d2e674"></a>
 
@@ -2883,6 +3387,30 @@ Summary: Official mutable main README inspected 2026-11-12. Documents camera pos
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md.
+
+<a id="src-7300061feed8"></a>
+
+## SRC-7300061feed8 — Amphenol AHDBM04-24-91PN receptacle (C040) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Agricultural interface provision; original kind manufacturer source reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-735d336832fb"></a>
+
+## SRC-735d336832fb — Schneider XB5AA31 reset button (C050) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Local reset equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-74d5d4738857"></a>
 
@@ -3076,6 +3604,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-7c8a5bf54e7c"></a>
+
+## SRC-7c8a5bf54e7c — Electrical equipment bracket (P22) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Route-specific equipment support; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-7d7038c13789"></a>
 
 ## SRC-7d7038c13789 — FreeCAD AI
@@ -3088,6 +3628,30 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-7f544def9af7"></a>
+
+## SRC-7f544def9af7 — Robot tow ball (C025) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c025-robot-tow-ball.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c025-robot-tow-ball.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind mating component input. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-7f6eca002620"></a>
+
+## SRC-7f6eca002620 — AMP 520BS10HT-7-8 motor sprocket (C006) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source component interface example. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-7f7508ffab83"></a>
 
 ## SRC-7f7508ffab83 — Potrace: a polygon-based tracing algorithm
@@ -3099,6 +3663,18 @@ Summary: Peter Selinger’s 2003 paper describes Potrace tracing black/white bit
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-sources.md, research/sources/round-05/point-04-web-sources.json.
+
+<a id="src-7fb788503589"></a>
+
+## SRC-7fb788503589 — Happymodel EP1 receiver (C051) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Normal radio equipment; original kind existing component record. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-8089d1901b4f"></a>
 
@@ -3135,6 +3711,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-80f9c2092927"></a>
+
+## SRC-80f9c2092927 — ME0907 motor adjustment plate (P11) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-812380a2589c"></a>
 
@@ -3184,6 +3772,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-82875df94520"></a>
+
+## SRC-82875df94520 — Sumitomo PRO-L CH54527G10 gearmotor (C011) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-L; original kind manufacturer geometry in retained drawing. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-82d9fa8ce417"></a>
 
 ## SRC-82d9fa8ce417 — domain-detail-sources.json
@@ -3195,6 +3795,30 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-82e88e67d3cf"></a>
+
+## SRC-82e88e67d3cf — Littelfuse75921-10 service disconnect (C032) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Battery isolation proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-832bc3ab6751"></a>
+
+## SRC-832bc3ab6751 — ME0907 transmission guard (P16) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-837950156e9e"></a>
 
@@ -3232,6 +3856,30 @@ Evidence: authored_document_inspected, local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-84b231f10122"></a>
+
+## SRC-84b231f10122 — Nissan Leaf Gen2 battery module (C021) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; Leaf bank or BT-L alternative; original kind source component/model reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-856db78a1b1e"></a>
+
+## SRC-856db78a1b1e — Drive support plate (P03) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: frame; One variant per drive route; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-856f00288f07"></a>
 
 ## SRC-856f00288f07 — Optional Computer Use Workflow
@@ -3268,6 +3916,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r08.md, research/workflows/reconstruction-paths.md.
 
+<a id="src-868fbd6b345d"></a>
+
+## SRC-868fbd6b345d — Knott 402386.001 steel rim (C004) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Knott wheel alternative; original kind seller/manufacturer dimensions recorded locally. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-86cdf9c119df"></a>
 
 ## SRC-86cdf9c119df — Splatfacto — Nerfstudio documentation
@@ -3279,6 +3939,18 @@ Summary: Current Nerfstudio Splatfacto guide inspected 2026-11-12; release not p
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/findings.md, research/action-audit/implementation-queue/queue.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/mix-r09.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md, research/workflows/reconstruction-paths.md.
+
+<a id="src-87d4523a6fea"></a>
+
+## SRC-87d4523a6fea — BMW i3 94Ah battery module (C022) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; BMW; original kind source component/model reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-885fe0a26a5e"></a>
 
@@ -3304,6 +3976,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-891a60e9bc7b"></a>
+
+## SRC-891a60e9bc7b — Main frame crossmember proposal
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md)
+
+Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-896c4a89c975"></a>
 
 ## SRC-896c4a89c975 — Agent skill: freecad-ai
@@ -3328,6 +4012,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-02/project-sources.json.
 
+<a id="src-8a5ee96b7077"></a>
+
+## SRC-8a5ee96b7077 — SurLok SLPIPB50BSO0 cable plug (C036) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Battery service pole candidate; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-8a7317b2bcc0"></a>
 
 ## SRC-8a7317b2bcc0 — cad2urdf repository
@@ -3339,6 +4035,30 @@ Summary: Repository describes conversion of mesh plus YAML joints or STEP/IGES a
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+
+<a id="src-8a9e1c41280d"></a>
+
+## SRC-8a9e1c41280d — Brake caliper reaction bracket (P15) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 or separate service-brake proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-8b8ba89972cd"></a>
+
+## SRC-8b8ba89972cd — Blickle LS-PS310K caster reference (C016) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Caster reference alternative; original kind project reference envelope. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-8c216bd07f9d"></a>
 
@@ -3447,6 +4167,18 @@ Summary: License observed locally: project `LICENSE` begins with GNU Affero Gene
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-91d52ea5a02e"></a>
+
+## SRC-91d52ea5a02e — Ferme geometric dependency order
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/dependency-order.tsv](/home/leo/projects/ferme/engineering/module-development/cad-inputs/dependency-order.tsv)
+
+Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-926884ef85e8"></a>
 
@@ -3592,6 +4324,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r10.md, research/workflows/details/mix-r02.md.
 
+<a id="src-9498bff46463"></a>
+
+## SRC-9498bff46463 — SurLok SLPIRBBPSO0 receptacle (C037) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Battery service pole candidate; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-952bf146bbc5"></a>
 
 ## SRC-952bf146bbc5 — FreeCAD Headless Execution & Automation
@@ -3603,6 +4347,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-95551de04df8"></a>
+
+## SRC-95551de04df8 — Sumitomo PRO-M CH54065G10 gearmotor (C010) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-M; original kind manufacturer geometry in retained drawing. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-9557e8c0e378"></a>
 
@@ -3651,6 +4407,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-96b0604f6e83"></a>
+
+## SRC-96b0604f6e83 — Albright SW80B-40 contactor (C033) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Leaf or BMW candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-96e5bd9ad8ba"></a>
 
@@ -3794,7 +4562,7 @@ Summary: Authoritative existing action/route record or authored implementation-q
 
 Evidence: authored_document_inspected, local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-9e9899193ac9"></a>
 
@@ -3832,6 +4600,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-a00bd3c7c755"></a>
+
+## SRC-a00bd3c7c755 — Caster primary removable pin (C018) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Retained fixed-setting arm proposal; original kind pin component geometry input. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-a07601074c08"></a>
 
 ## SRC-a07601074c08 — Point 03 source check: confirmed dimensions and vector drawings
@@ -3868,6 +4648,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
+<a id="src-a189f01c9855"></a>
+
+## SRC-a189f01c9855 — Holybro Pixhawk6C hardware (C052) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Controller hardware proposal; original kind existing component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-a1b86705dc1b"></a>
 
 ## SRC-a1b86705dc1b — Mesh API
@@ -3891,6 +4683,18 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
+
+<a id="src-a1fc353f03bd"></a>
+
+## SRC-a1fc353f03bd — Victron Lynx Smart BMS NG500 M10 (C026) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Victron NG; original kind manufacturer assembly reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-a22f0b43932b"></a>
 
@@ -3940,6 +4744,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
+<a id="src-a3a2d5382a80"></a>
+
+## SRC-a3a2d5382a80 — Battery terminal cover (P20C) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; Separate geometry per battery route; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-a3e03c0d00b9"></a>
 
 ## SRC-a3e03c0d00b9 — cad — earthtojake/text-to-cad
@@ -3951,6 +4767,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-a426faf2681b"></a>
+
+## SRC-a426faf2681b — Anderson3-6055P2 boot (C061) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge-port accessory; original kind source accessory reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-a43126b0540b"></a>
 
@@ -4024,6 +4852,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
 
+<a id="src-a6e8373ba9d0"></a>
+
+## SRC-a6e8373ba9d0 — Side lifting tab (P10) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p10-side-lifting-tab.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p10-side-lifting-tab.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: frame; Side support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-a764655900e1"></a>
 
 ## SRC-a764655900e1 — FreeCAD contributing and licensing
@@ -4096,6 +4936,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
+<a id="src-acbface446ee"></a>
+
+## SRC-acbface446ee — Keiyama JA08-700-4T100-02 steel rim (C003) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Keiyama wheel alternative; original kind seller/manufacturer dimensions recorded locally. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-accaca72881d"></a>
 
 ## SRC-accaca72881d — KiCad Libraries License
@@ -4156,6 +5008,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
 
+<a id="src-ad47e1f99cf8"></a>
+
+## SRC-ad47e1f99cf8 — Littelfuse20EV100 bolt-down fuse (C030) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Traction fuse candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-adb5f990a3ee"></a>
 
 ## SRC-adb5f990a3ee — Add-on listing
@@ -4191,6 +5055,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-aec737b38b33"></a>
+
+## SRC-aec737b38b33 — SimpBMS board (C028) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c028-simpbms-board.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c028-simpbms-board.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; BMW; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-af8c2d79e989"></a>
 
@@ -4336,6 +5212,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-b3eaf3b1142c"></a>
+
+## SRC-b3eaf3b1142c — ME0907 wheel shaft to rim adapter (P14ME) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-b47fffcd39a7"></a>
 
 ## SRC-b47fffcd39a7 — 3D modeling implementation plan
@@ -4346,7 +5234,19 @@ Summary: Prior project proposal identifies OCS as the interactive baseline, Free
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json, research/sources/round-08/component-plan-sources.json.
+
+<a id="src-b4cef6ac5426"></a>
+
+## SRC-b4cef6ac5426 — SKF SY20TF bearing unit (C009) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 supported-shaft candidate; original kind manufacturer dimensions in existing record. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-b56bc21f14db"></a>
 
@@ -4371,6 +5271,18 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
+
+<a id="src-b600ecb1a3e1"></a>
+
+## SRC-b600ecb1a3e1 — BMW module tray (P18) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p18-bmw-module-tray.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p18-bmw-module-tray.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; BMW; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-b6504258277a"></a>
 
@@ -4419,6 +5331,18 @@ Summary: Documents mjSpec editing, XML/URDF parsing, compilation, MJCF and asset
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+
+<a id="src-b77d14bbded9"></a>
+
+## SRC-b77d14bbded9 — TDK I1C2W010A120V converter board (C046) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; BT24 V regulation proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-b7aa02d92193"></a>
 
@@ -4576,6 +5500,18 @@ Evidence: authored_document_inspected, local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-bce7d3359ed2"></a>
+
+## SRC-bce7d3359ed2 — Motenergy ME0907 motor (C005) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind component geometry reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-bcf9f8ff8137"></a>
 
 ## SRC-bcf9f8ff8137 — source repository and GPL licence
@@ -4624,6 +5560,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-02-local-sources.json.
 
+<a id="src-bea676f3a5b9"></a>
+
+## SRC-bea676f3a5b9 — Caster frame doubler (P05D) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-bec11051e812"></a>
 
 ## SRC-bec11051e812 — SKILL.md — documented_skill
@@ -4634,7 +5582,7 @@ Summary: Reusable source, component/frame, construction, feature-check and saved
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
 
 <a id="src-bec1fb0c7b0c"></a>
 
@@ -4647,6 +5595,18 @@ Summary: freshtechbro `web3d-integration-patterns/SKILL.md` (raw source) ; Raw s
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
+
+<a id="src-bee391035496"></a>
+
+## SRC-bee391035496 — Precharge resistor Ohmite TA310PA1K00JE (C035) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Kelly wiring candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-bf335a662f43"></a>
 
@@ -4840,6 +5800,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-c5c9233bf7a9"></a>
+
+## SRC-c5c9233bf7a9 — Rear attachment crossmember doubler (P09D) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: attachments; Rear interface support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-c5c9d3ec5705"></a>
 
 ## SRC-c5c9d3ec5705 — OpenCADStudio 2026.42 generated capability, command, and record-schema responses
@@ -4863,6 +5835,18 @@ Summary: Documents ns-export pointcloud to PLY, TSDF meshes as available for all
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r08.md.
+
+<a id="src-c66fe74bfd16"></a>
+
+## SRC-c66fe74bfd16 — Existing CAD and checks index
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/README.md](/home/leo/projects/ferme/engineering/module-development/cad/README.md)
+
+Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -4899,6 +5883,18 @@ Summary: - Meshroom copying/licenses: https://github.com/alicevision/Meshroom/bl
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
+
+<a id="src-c777cf43a2bb"></a>
+
+## SRC-c777cf43a2bb — Trelleborg tube 6.00-9TR15 (C002) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Common wheel reference; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-c7a5d7a2632d"></a>
 
@@ -4972,6 +5968,30 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-caa0e7dcf088"></a>
+
+## SRC-caa0e7dcf088 — Battery fuse CNL150 (C065) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Mersen fuse alternative; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-cabea6f9d38d"></a>
+
+## SRC-cabea6f9d38d — Category1 lower linkage pin (C063) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: attachments; Reference attachment interface; original kind source component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-cad1c2a4c242"></a>
 
 ## SRC-cad1c2a4c242 — Command line mode — CloudCompare wiki
@@ -4996,6 +6016,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-visual.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md.
 
+<a id="src-cb44d69bba55"></a>
+
+## SRC-cb44d69bba55 — AHDBM06 mating plug geometry (C062) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Agricultural interface provision; original kind manufacturer mate-family reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-cb5cec23d032"></a>
 
 ## SRC-cb5cec23d032 — Workflow routes linked to detailed actions
@@ -5004,9 +6036,33 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/workflow-t
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_source_inspected.
 
-Documents: research/sources/round-05/audit-index-sources.json.
+Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-08/component-plan-sources.json.
+
+<a id="src-cc34a83be8f3"></a>
+
+## SRC-cc34a83be8f3 — Caster pin positive keeper (C020) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Removable support proposal; original kind retention component geometry input. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-cc688c1df94b"></a>
+
+## SRC-cc688c1df94b — RadioMaster Pocket ELRS transmitter (C057) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Handheld operator equipment; original kind existing component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-ccbf0b22fcf6"></a>
 
@@ -5091,6 +6147,18 @@ Summary: Documents OpenSCAD source and command-line usage for rendering/exportin
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-03-visual.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r10.md.
+
+<a id="src-cf83883aed8c"></a>
+
+## SRC-cf83883aed8c — Victron smallBMS NG (C054) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Victron alternative BMS arrangement; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-cfeb029989f0"></a>
 
@@ -5236,6 +6304,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md.
 
+<a id="src-d6f3a12f4f78"></a>
+
+## SRC-d6f3a12f4f78 — PRO-L ring to rim adapter (P14SL) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-L; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-d7af850e4bd9"></a>
 
 ## SRC-d7af850e4bd9 — Independent review — Point 04 raster drawings and interpreted dimensions
@@ -5271,6 +6351,18 @@ Summary: Documentation renderer validating recipe coverage, classification value
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-03/project-detail-sources.json.
+
+<a id="src-d946b31f68ec"></a>
+
+## SRC-d946b31f68ec — WISKA ESKV25 gland10066413 (C041) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Main cable entry candidate; original kind manufacturer source reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-d9490cdbdfa2"></a>
 
@@ -5344,6 +6436,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/user-supplied-links.md, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
+<a id="src-dcb41c3ce9ea"></a>
+
+## SRC-dcb41c3ce9ea — Fibox ARCA203015 enclosure (C029) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; Control enclosure proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-dcc824a0bc1a"></a>
 
 ## SRC-dcc824a0bc1a — BOSL2 repository
@@ -5367,6 +6471,18 @@ Summary: Official FreeCAD docs list DXF entity support for C++ and legacy import
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+
+<a id="src-dd4c729f9ace"></a>
+
+## SRC-dd4c729f9ace — Victron Orion48-12 converter (C043) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; 44–51.2 V battery routes; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-ddbe71fda666"></a>
 
@@ -5524,6 +6640,30 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-e556fe740218"></a>
+
+## SRC-e556fe740218 — Anderson3-6054P2 boot (C060) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge-port accessory; original kind source accessory reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-e5981cd49734"></a>
+
+## SRC-e5981cd49734 — PBR 4384 520 50T driven sprocket (C008) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-e5af12a0873d"></a>
 
 ## SRC-e5af12a0873d — Research and proposed implementation
@@ -5572,6 +6712,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
 
+<a id="src-e7f1135e0337"></a>
+
+## SRC-e7f1135e0337 — Albright SW200-281 contactor (C034) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; BT candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-e8c6f17f90e5"></a>
 
 ## SRC-e8c6f17f90e5 — RGBD integration — Open3D 0.20.0 documentation
@@ -5595,6 +6747,18 @@ Summary: Primary sources: FreeCAD source/licence, Sketcher Python scripting, Par
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/next-step-proposal.md.
+
+<a id="src-e8fb488a4b54"></a>
+
+## SRC-e8fb488a4b54 — BT output to rim adapter (P14BT) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; BT; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-e935d3ebe64f"></a>
 
@@ -5740,6 +6904,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-ede1a41b29c4"></a>
+
+## SRC-ede1a41b29c4 — Caster head mounting plate (P06B) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: caster; Chosen caster reference; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-ede9c64cd596"></a>
 
 ## SRC-ede9c64cd596 — rec-r09.md
@@ -5763,6 +6939,30 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-eeafae2a7d94"></a>
+
+## SRC-eeafae2a7d94 — Mersen FTFH fuse holder (C031) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; CNL fuse alternative; original kind component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-eedbcb57b436"></a>
+
+## SRC-eedbcb57b436 — Complete component input coverage
+
+Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+
+Summary: Plan-side source coverage and ownership reference linking to the authoritative FERME 103-part data; group counts and proposed first two jobs are explicit.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-ef7f25d50b37"></a>
 
@@ -5836,6 +7036,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-f278cbf89b6d"></a>
+
+## SRC-f278cbf89b6d — Victron NG25.6V100Ah battery (C023) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: battery; Victron pair or single BT-V; original kind manufacturer case reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-f2c662a213ab"></a>
 
 ## SRC-f2c662a213ab — GitHub Copilot FreeCAD scripting skill
@@ -5859,6 +7071,42 @@ Summary: IfcOpenShell 0.9.0post1 API reference accessed 2026-11-12. Inspected as
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-f2cbfd7c15e2"></a>
+
+## SRC-f2cbfd7c15e2 — Hitch support gusset (P07G) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-f31b446de956"></a>
+
+## SRC-f31b446de956 — Blue Sea5026 auxiliary fuse block (C042) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: electrical; 12 or24 V branch distribution; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-f3798f920e4f"></a>
+
+## SRC-f3798f920e4f — Driven sprocket axle carrier (P12B) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-f4e7d302c752"></a>
 
@@ -6004,6 +7252,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-f9d4243f4cec"></a>
+
+## SRC-f9d4243f4cec — Category1 upper linkage pin (C064) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: attachments; Reference attachment interface; original kind source component reference. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
+
 <a id="src-f9e1dbc024e2"></a>
 
 ## SRC-f9e1dbc024e2 — dom-r02.md
@@ -6027,6 +7287,18 @@ Summary: Primary source gives Open3D MIT licence; third-party dependencies remai
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
+<a id="src-fae815d28e80"></a>
+
+## SRC-fae815d28e80 — Rear attachment support plate (P09) — CAD input sheet
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md)
+
+Summary: Input sheet registered from the inspected ferme manifest: attachments; Rear ISO730 reference proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-fbf7ed489d76"></a>
 
@@ -6075,6 +7347,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-fe876787e9e0"></a>
+
+## SRC-fe876787e9e0 — Component-led CAD and tooling development plan
+
+Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+
+Summary: Consolidated proposal: minimum records, first rail/crossmember builds, per-component execution/check/improvement cycle, Python extraction, catalogue/search, priority rules and future extensions.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-08/component-plan-sources.json.
 
 <a id="src-fe980d416f56"></a>
 

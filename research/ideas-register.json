@@ -2718,6 +2718,156 @@
       ]
     },
     {
+      "id": "COMP-I01",
+      "name": "Component-led CAD and tooling iterations",
+      "summary": "Use the real ferme component jobs as the development sequence; each job produces geometry/checks and an applied verified improvement to current skills/procedures or Python helpers.",
+      "status": "proposal",
+      "origin": "component_led_development_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "proposed_execution_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+      ],
+      "source_documents": [
+        {
+          "path": "COMPONENT_DEVELOPMENT_PLAN.md",
+          "line": 1,
+          "section": "Component-led CAD and tooling iterations"
+        }
+      ],
+      "relationships": {
+        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      },
+      "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.",
+      "source_ids": [
+        "SRC-fe876787e9e0",
+        "SRC-eedbcb57b436"
+      ]
+    },
+    {
+      "id": "COMP-I02",
+      "name": "Linked component action and parts records",
+      "summary": "FERME owns CAD, component/action occurrence evidence and parts catalogue/database data. This project owns reusable skills, Python helpers/tests, action definitions and instructions for consuming FERME data, linked by exact source/model/tool revisions.",
+      "status": "proposal",
+      "origin": "component_led_development_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "proposed_execution_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+      ],
+      "source_documents": [
+        {
+          "path": "COMPONENT_DEVELOPMENT_PLAN.md",
+          "line": 1,
+          "section": "Linked component action and parts records"
+        }
+      ],
+      "relationships": {
+        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      },
+      "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.",
+      "source_ids": [
+        "SRC-fe876787e9e0",
+        "SRC-eedbcb57b436"
+      ]
+    },
+    {
+      "id": "COMP-I03",
+      "name": "Observed procedure before Python extraction",
+      "summary": "Record action inputs, outputs, representations, units/frames, changed information, alternatives, recovery and handoff conditions; document repeated successful procedures before extracting or extending tested Python functions.",
+      "status": "proposal",
+      "origin": "component_led_development_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "proposed_execution_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+      ],
+      "source_documents": [
+        {
+          "path": "COMPONENT_DEVELOPMENT_PLAN.md",
+          "line": 1,
+          "section": "Observed procedure before Python extraction"
+        }
+      ],
+      "relationships": {
+        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      },
+      "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.",
+      "source_ids": [
+        "SRC-fe876787e9e0",
+        "SRC-eedbcb57b436"
+      ]
+    },
+    {
+      "id": "COMP-I04",
+      "name": "Rail and crossmember first iterations",
+      "summary": "Propose the main frame longitudinal rail followed by the dependent crossmember as initial component jobs using their existing proposed 40x40x3 mm sections and separate sourced cut lengths.",
+      "status": "proposal",
+      "origin": "component_led_development_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "proposed_execution_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+      ],
+      "source_documents": [
+        {
+          "path": "COMPONENT_DEVELOPMENT_PLAN.md",
+          "line": 1,
+          "section": "Rail and crossmember first iterations"
+        }
+      ],
+      "relationships": {
+        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      },
+      "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.",
+      "source_ids": [
+        "SRC-fe876787e9e0",
+        "SRC-eedbcb57b436"
+      ]
+    },
+    {
+      "id": "COMP-I05",
+      "name": "Dependency and evidence led component priority",
+      "summary": "Preserve all 103 source inputs and route alternatives; select ready jobs by geometric inputs, source evidence, local computation and useful repeated actions; use the existing graph/queue as action definitions and integration references.",
+      "status": "proposal",
+      "origin": "component_led_development_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "proposed_execution_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+      ],
+      "source_documents": [
+        {
+          "path": "COMPONENT_DEVELOPMENT_PLAN.md",
+          "line": 1,
+          "section": "Dependency and evidence led component priority"
+        }
+      ],
+      "relationships": {
+        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      },
+      "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.",
+      "source_ids": [
+        "SRC-fe876787e9e0",
+        "SRC-eedbcb57b436"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

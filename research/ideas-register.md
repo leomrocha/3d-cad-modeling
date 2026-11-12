@@ -1744,6 +1744,76 @@ Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo
 
 Next check: Define this extension when future work is taken up.
 
+## COMP-I01 — Component-led CAD and tooling iterations
+
+Status: proposal.
+
+Use the real ferme component jobs as the development sequence; each job produces geometry/checks and an applied verified improvement to current skills/procedures or Python helpers.
+
+Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+
+Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
+
+## COMP-I02 — Linked component action and parts records
+
+Status: proposal.
+
+FERME owns CAD, component/action occurrence evidence and parts catalogue/database data. This project owns reusable skills, Python helpers/tests, action definitions and instructions for consuming FERME data, linked by exact source/model/tool revisions.
+
+Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+
+Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
+
+## COMP-I03 — Observed procedure before Python extraction
+
+Status: proposal.
+
+Record action inputs, outputs, representations, units/frames, changed information, alternatives, recovery and handoff conditions; document repeated successful procedures before extracting or extending tested Python functions.
+
+Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+
+Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
+
+## COMP-I04 — Rail and crossmember first iterations
+
+Status: proposal.
+
+Propose the main frame longitudinal rail followed by the dependent crossmember as initial component jobs using their existing proposed 40x40x3 mm sections and separate sourced cut lengths.
+
+Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+
+Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
+
+## COMP-I05 — Dependency and evidence led component priority
+
+Status: proposal.
+
+Preserve all 103 source inputs and route alternatives; select ready jobs by geometric inputs, source evidence, local computation and useful repeated actions; use the existing graph/queue as action definitions and integration references.
+
+Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+
+Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.
