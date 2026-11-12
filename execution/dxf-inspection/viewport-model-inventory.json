@@ -1,0 +1,549 @@
+{
+  "state": "INVENTORIED",
+  "source": {
+    "path": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf",
+    "sha256": "2e9752b049fbdf4d31fc0ef0d2e3aa20559412f28d9de5227d6c1fbb7d05511a",
+    "bytes": 7790
+  },
+  "reader": {
+    "library": "ezdxf",
+    "version": "1.4.5",
+    "recovery": false,
+    "unit_conversion": false
+  },
+  "space": "Model",
+  "available_spaces": [
+    "Model",
+    "Layout1"
+  ],
+  "selected_layers": [],
+  "available_layers": [
+    "0",
+    "Defpoints"
+  ],
+  "units": {
+    "insunits_code": 0,
+    "label": null,
+    "evidence": "DXF $INSUNITS header",
+    "state": "NEEDS_UNIT_EVIDENCE"
+  },
+  "limits": {
+    "max_entities": 10000,
+    "max_depth": 32,
+    "max_bytes": 67108864
+  },
+  "counts": {
+    "occurrences": 8,
+    "selected_occurrences": 8,
+    "by_type": {
+      "LINE": 3,
+      "CIRCLE": 1,
+      "ARC": 1,
+      "LWPOLYLINE": 1,
+      "SPLINE": 1,
+      "INSERT": 1
+    }
+  },
+  "entities": [
+    {
+      "source_handle": "100",
+      "occurrence_path": [
+        "Model",
+        "100"
+      ],
+      "type": "LINE",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "100",
+        "owner": "1F",
+        "layer": "0",
+        "start": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "end": [
+          100.0,
+          0.0,
+          0.0
+        ]
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "WCS_or_entity_specific",
+      "role": "profile_candidate"
+    },
+    {
+      "source_handle": "107",
+      "occurrence_path": [
+        "Model",
+        "107"
+      ],
+      "type": "LINE",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "107",
+        "owner": "1F",
+        "layer": "0",
+        "start": [
+          60.0,
+          -30.0,
+          0.0
+        ],
+        "end": [
+          60.0,
+          30.0,
+          0.0
+        ]
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "WCS_or_entity_specific",
+      "role": "profile_candidate"
+    },
+    {
+      "source_handle": "101",
+      "occurrence_path": [
+        "Model",
+        "101"
+      ],
+      "type": "CIRCLE",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "101",
+        "owner": "1F",
+        "layer": "0",
+        "center": [
+          200.0,
+          0.0,
+          0.0
+        ],
+        "radius": 25.0
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "OCS",
+      "role": "profile_candidate"
+    },
+    {
+      "source_handle": "102",
+      "occurrence_path": [
+        "Model",
+        "102"
+      ],
+      "type": "ARC",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "102",
+        "owner": "1F",
+        "layer": "0",
+        "center": [
+          300.0,
+          0.0,
+          0.0
+        ],
+        "radius": 25.0,
+        "start_angle": 0.0,
+        "end_angle": 90.0
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "OCS",
+      "role": "profile_candidate"
+    },
+    {
+      "source_handle": "103",
+      "occurrence_path": [
+        "Model",
+        "103"
+      ],
+      "type": "LWPOLYLINE",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "103",
+        "owner": "1F",
+        "layer": "0",
+        "flags": 0
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "OCS",
+      "vertices_xy_start_end_width_bulge": [
+        [
+          0.0,
+          100.0,
+          0.0,
+          0.0,
+          0.5
+        ],
+        [
+          100.0,
+          100.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          100.0,
+          200.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "closed": false,
+      "role": "profile_candidate"
+    },
+    {
+      "source_handle": "104",
+      "occurrence_path": [
+        "Model",
+        "104"
+      ],
+      "type": "SPLINE",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "104",
+        "owner": "1F",
+        "layer": "0",
+        "extrusion": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "flags": 8,
+        "degree": 3
+      },
+      "extrusion_normal": [
+        0.0,
+        0.0,
+        1.0
+      ],
+      "coordinate_system": "WCS_or_entity_specific",
+      "role": "profile_candidate"
+    },
+    {
+      "source_handle": "105",
+      "occurrence_path": [
+        "Model",
+        "105"
+      ],
+      "type": "INSERT",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "105",
+        "owner": "1F",
+        "layer": "0",
+        "name": "TESTBLK",
+        "insert": [
+          400.0,
+          0.0,
+          0.0
+        ],
+        "xscale": 2.0,
+        "yscale": 2.0,
+        "zscale": 1.0,
+        "rotation": 0.0
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "WCS_or_entity_specific",
+      "role": "block_reference",
+      "block_name": "TESTBLK",
+      "block_units_code": 0,
+      "block_base_point": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "source_handle": "106",
+      "occurrence_path": [
+        "Model",
+        "105",
+        "106"
+      ],
+      "type": "LINE",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          2.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          2.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          400.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "106",
+        "owner": "21",
+        "layer": "0",
+        "start": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "end": [
+          40.0,
+          0.0,
+          0.0
+        ]
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "WCS_or_entity_specific",
+      "role": "profile_candidate"
+    }
+  ],
+  "issues": [],
+  "handoff": {
+    "action": "Create a mapped and explicitly cleaned derivative (CAD-08-A02)",
+    "agent_work": "Identify intended profile versus annotations/construction geometry; resolve unit/context evidence and choose target plane.",
+    "geometry_mapping": "Original coordinates and block transforms retained; source entity OCS conversion belongs to the selected geometry adapter."
+  }
+}

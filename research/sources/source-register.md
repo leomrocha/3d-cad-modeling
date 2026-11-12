@@ -324,9 +324,9 @@ Original source: [/home/leo/projects/3dmodeling/scripts/component_records.py](/h
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: authored_document_or_code_inspected, local_implementation_or_execution_record_inspected.
+Evidence: authored_document_or_code_inspected, local_implementation_or_execution_record_inspected, local_source_or_executed_inspection.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json, research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-06c5ba590bdd"></a>
 
@@ -900,9 +900,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/README.md](/home/leo/proj
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
-Evidence: authored_document_inspected, authored_document_or_code_inspected, local_implementation_or_execution_record_inspected.
+Evidence: authored_document_inspected, authored_document_or_code_inspected, local_implementation_or_execution_record_inspected, local_source_or_executed_inspection.
 
-Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json.
+Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json, research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-17a777175a39"></a>
 
@@ -951,6 +951,18 @@ Summary: MIT library source implements typed binary token decoding, versioned re
 Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json.
+
+<a id="src-196d24be8370"></a>
+
+## SRC-196d24be8370 — Installed MIT-licensed DXF units mapping
+
+Original source: [/tmp/3dmodeling-native-reader/ezdxf/units.py](/tmp/3dmodeling-native-reader/ezdxf/units.py)
+
+Summary: Inspected decode maps actual INSUNITS enum codes to unit labels. The inspector preserves code0 as unresolved unit evidence and actual code6 as metres.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-19a03b5f035d"></a>
 
@@ -1104,9 +1116,9 @@ Original source: [/home/leo/projects/3dmodeling/requirements-native.txt](/home/l
 
 Summary: Pins ezdxf1.4.5 and the observed fonttools4.68.0/numpy2.5.4/pyparsing3.3.3/typing_extensions4.16.0 dependencies installed in isolated temporary target. This pin set was exercised with Python3.12.9.
 
-Evidence: local_execution_evidence_inspected.
+Evidence: local_execution_evidence_inspected, local_source_or_executed_inspection.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-1c1ff9274d77"></a>
 
@@ -2895,6 +2907,18 @@ Summary: All62 source-bound native checksPASS in derivative document75 after sav
 Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
+
+<a id="src-469daa8796cd"></a>
+
+## SRC-469daa8796cd — DXF implementation execution report
+
+Original source: [/home/leo/projects/3dmodeling/execution/dxf-inspection.md](/home/leo/projects/3dmodeling/execution/dxf-inspection.md)
+
+Summary: Records two actual OCS fixture inspections, eight software tests, reused library/source hashing, exact action scope and agent/software responsibility boundaries.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-46a693242819"></a>
 
@@ -5796,9 +5820,9 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/LICENSE](/home/leo/p
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
-Evidence: existing_report_registered, local_reference_registered.
+Evidence: existing_report_registered, local_reference_registered, local_source_or_executed_inspection.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-8e6d7648b52e"></a>
 
@@ -6280,6 +6304,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
 
+<a id="src-998613bbc692"></a>
+
+## SRC-998613bbc692 — Implemented DXF entity/context inspector
+
+Original source: [/home/leo/projects/3dmodeling/scripts/dxf_inspect.py](/home/leo/projects/3dmodeling/scripts/dxf_inspect.py)
+
+Summary: New read-only adapter inventories original source handles, curve types, attributes, spaces/layers, units, source coordinate systems and nested INSERT transforms. Preserves hashes and guards explicit resource/output limits.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
+
 <a id="src-99954d282c44"></a>
 
 ## SRC-99954d282c44 — Point 03 designer notes — vector profiles and small solids
@@ -6444,9 +6480,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementa
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
-Evidence: authored_document_inspected, local_source_inspected.
+Evidence: authored_document_inspected, local_source_inspected, local_source_or_executed_inspection.
 
-Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json, research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-9e5cbb874a32"></a>
 
@@ -6928,6 +6964,18 @@ Evidence: retained_manufacturer_outline_inspected.
 
 Documents: research/sources/round-16/driver-sources.json.
 
+<a id="src-a807c8e08b82"></a>
+
+## SRC-a807c8e08b82 — Existing OCS metric page-setup DXF fixture
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf](/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf)
+
+Summary: Original existing fixture used read-only for the second inspection; actual INSUNITS code6 identifies metres. Original bytes remain unchanged.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
+
 <a id="src-a83674c889fd"></a>
 
 ## SRC-a83674c889fd — point-05-web-sources.json
@@ -6952,6 +7000,30 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-a8e753f7f1eb"></a>
+
+## SRC-a8e753f7f1eb — Actual metric page-setup DXF inventory
+
+Original source: [/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json](/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json)
+
+Summary: Actual read-only run records one LINE and one DIMENSION; source header code6 declares metres, preserving actual units rather than inferring them from a filename.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
+
+<a id="src-a9d0f0d71c99"></a>
+
+## SRC-a9d0f0d71c99 — Installed DXF file-reading API source
+
+Original source: [/tmp/3dmodeling-native-reader/ezdxf/filemanagement.py](/tmp/3dmodeling-native-reader/ezdxf/filemanagement.py)
+
+Summary: Inspected readfile/read API supports strict decoding and original file parsing. The implementation chooses readfile with strict errors and performs no recovery rewrite.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
+
 <a id="src-aa5f4c33e807"></a>
 
 ## SRC-aa5f4c33e807 — P02 crossmember — persistence.json
@@ -6963,6 +7035,18 @@ Summary: DWG2018 save/hash/audit-manifest and reopened identity checks PASS with
 Evidence: local_execution_source_inspected.
 
 Documents: research/sources/round-13/crossmember-sources.json.
+
+<a id="src-abde4c7c95ff"></a>
+
+## SRC-abde4c7c95ff — Actual viewport-fixture DXF inventory
+
+Original source: [/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json](/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json)
+
+Summary: Actual read-only run records eight entity occurrences and preserved handles/context. Source header code0 produces NEEDS_UNIT_EVIDENCE rather than an assumed physical scale.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-ac24864ef496"></a>
 
@@ -7143,6 +7227,18 @@ Summary: The W3C SVG 2 specification defines each SVG viewport as a width/height
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-sources.md, research/sources/round-05/point-03-web-sources.json.
+
+<a id="src-ae42dbaf6d16"></a>
+
+## SRC-ae42dbaf6d16 — Installed MIT-licensed INSERT API source
+
+Original source: [/tmp/3dmodeling-native-reader/ezdxf/entities/insert.py](/tmp/3dmodeling-native-reader/ezdxf/entities/insert.py)
+
+Summary: Inspected matrix44 handles block base point, OCS, scale and rotation. multi_insert supplies rotated array-cell positions without scaling grid spacing; these existing APIs are used directly.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-ae801910597e"></a>
 
@@ -8320,6 +8416,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-cab5e73f144b"></a>
+
+## SRC-cab5e73f144b — Existing OCS viewport-association DXF fixture
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf](/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf)
+
+Summary: Original existing fixture used read-only for the first actual DXF inspection; contains model/paper contexts and diverse entity types. Original bytes remain unchanged.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
+
 <a id="src-cabea6f9d38d"></a>
 
 ## SRC-cabea6f9d38d — Category1 lower linkage pin (C063) — CAD input sheet
@@ -9028,6 +9136,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
+<a id="src-dd1fcc78e97c"></a>
+
+## SRC-dd1fcc78e97c — Independent DXF transform and context tests
+
+Original source: [/home/leo/projects/3dmodeling/tests/test_dxf_inspect.py](/home/leo/projects/3dmodeling/tests/test_dxf_inspect.py)
+
+Summary: Eight passing cases verify nested world-coordinate control, layer inheritance, model/paper contexts, preserved bulges and bytes, unitless records, cycles, array identities and bounded expansion.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
+
 <a id="src-dd4c729f9ace"></a>
 
 ## SRC-dd4c729f9ace — Victron Orion48-12 converter (C043) — CAD input sheet
@@ -9075,6 +9195,18 @@ Summary: Actual reopened document audit identifies the saved DWG and its SHA256,
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
+<a id="src-dec8ef1082c6"></a>
+
+## SRC-dec8ef1082c6 — Implemented drawing-inspection skill
+
+Original source: [/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md](/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md)
+
+Summary: Documents the tested DXF command, dependency setup, coordinate matrix semantics, source-unit evidence, resource limits and agent handoff to mapped derivative selection.
+
+Evidence: local_source_or_executed_inspection.
+
+Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-df08a712232a"></a>
 
@@ -9252,9 +9384,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementa
 
 Summary: Marks source intake as implemented with actual code, skill, test and execution paths while preserving the original planning queue.
 
-Evidence: local_implementation_or_execution_record_inspected.
+Evidence: local_implementation_or_execution_record_inspected, local_source_or_executed_inspection.
 
-Documents: research/sources/round-17/source-intake-sources.json.
+Documents: research/sources/round-17/source-intake-sources.json, research/sources/round-18/dxf-inspection-sources.json.
 
 <a id="src-e5981cd49734"></a>
 

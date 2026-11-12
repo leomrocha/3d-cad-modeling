@@ -49,3 +49,7 @@ The [skill-to-action map](/home/leo/projects/3dmodeling/research/action-audit/sk
 # Implemented source intake
 
 1. [Record source files, revisions and job scope](/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. [Execution evidence](/home/leo/projects/3dmodeling/execution/source-intake.md).
+
+## Implemented DXF inspection
+
+1. [Inspect a DXF drawing before selecting a profile](/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. [Execution evidence](/home/leo/projects/3dmodeling/execution/dxf-inspection.md).

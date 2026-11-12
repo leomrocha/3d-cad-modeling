@@ -1048,7 +1048,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "authored_document_or_code_inspected",
-        "local_implementation_or_execution_record_inspected"
+        "local_implementation_or_execution_record_inspected",
+        "local_source_or_executed_inspection"
       ],
       "observations": [
         {
@@ -1070,11 +1071,22 @@
           "referring_documents": [
             "execution/source-intake.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/component_records.py",
+          "access_date": "2026-11-12",
+          "sha256": "e9a6f2ef7e14ba9ca0de4f201d55a27e0d4c58f09df15f0601d919333de573e0",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
-        "research/sources/round-17/source-intake-sources.json"
+        "research/sources/round-17/source-intake-sources.json",
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -2536,7 +2548,8 @@
       "evidence_statuses": [
         "authored_document_inspected",
         "authored_document_or_code_inspected",
-        "local_implementation_or_execution_record_inspected"
+        "local_implementation_or_execution_record_inspected",
+        "local_source_or_executed_inspection"
       ],
       "observations": [
         {
@@ -2569,12 +2582,23 @@
           "referring_documents": [
             "execution/source-intake.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/skills/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "213b4ba2db3478369c5843e437c01427036658175599ddf0662c933461d3afe4",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/audit-index-sources.json",
         "research/sources/round-09/component-execution-sources.json",
-        "research/sources/round-17/source-intake-sources.json"
+        "research/sources/round-17/source-intake-sources.json",
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -2691,6 +2715,32 @@
       "referring_documents": [
         "research/sources/round-12/saved-rail-reader-sources.json",
         "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-196d24be8370",
+      "url": null,
+      "local_source_path": "/tmp/3dmodeling-native-reader/ezdxf/units.py",
+      "title": "Installed MIT-licensed DXF units mapping",
+      "summary": "Inspected decode maps actual INSUNITS enum codes to unit labels. The inspector preserves code0 as unresolved unit evidence and actual code6 as metres.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/tmp/3dmodeling-native-reader/ezdxf/units.py",
+          "access_date": "2026-11-12",
+          "sha256": "9a9e8d3fffd9e23d4280665ad7e4faadb980dd206f318890c32d78c2a27e63fc",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -3111,7 +3161,8 @@
       "summary": "Pins ezdxf1.4.5 and the observed fonttools4.68.0/numpy2.5.4/pyparsing3.3.3/typing_extensions4.16.0 dependencies installed in isolated temporary target. This pin set was exercised with Python3.12.9.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_execution_evidence_inspected"
+        "local_execution_evidence_inspected",
+        "local_source_or_executed_inspection"
       ],
       "observations": [
         {
@@ -3122,10 +3173,21 @@
           "referring_documents": [
             "execution/p01-saved-verification.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/requirements-native.txt",
+          "access_date": "2026-11-12",
+          "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-12/saved-rail-reader-sources.json"
+        "research/sources/round-12/saved-rail-reader-sources.json",
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -8362,6 +8424,32 @@
       ],
       "referring_documents": [
         "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-469daa8796cd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/dxf-inspection.md",
+      "title": "DXF implementation execution report",
+      "summary": "Records two actual OCS fixture inspections, eight software tests, reused library/source hashing, exact action scope and agent/software responsibility boundaries.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/execution/dxf-inspection.md",
+          "access_date": "2026-11-12",
+          "sha256": "5aef42cc45174ea9faeeeaa12667a0f62d94215435736edf9461fe1eed91ef9f",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -16408,7 +16496,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
-        "local_reference_registered"
+        "local_reference_registered",
+        "local_source_or_executed_inspection"
       ],
       "observations": [
         {
@@ -16450,13 +16539,24 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "access_date": "2026-11-12",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -18022,6 +18122,32 @@
       ]
     },
     {
+      "id": "SRC-998613bbc692",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/scripts/dxf_inspect.py",
+      "title": "Implemented DXF entity/context inspector",
+      "summary": "New read-only adapter inventories original source handles, curve types, attributes, spaces/layers, units, source coordinate systems and nested INSERT transforms. Preserves hashes and guards explicit resource/output limits.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/dxf_inspect.py",
+          "access_date": "2026-11-12",
+          "sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
+      ]
+    },
+    {
       "id": "SRC-99954d282c44",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md",
@@ -18481,7 +18607,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "authored_document_inspected",
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_source_or_executed_inspection"
       ],
       "observations": [
         {
@@ -18516,12 +18643,23 @@
             "COMPONENT_DEVELOPMENT_PLAN.md",
             "research/component-development-coverage.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+          "access_date": "2026-11-12",
+          "sha256": "a32c803b5dabb0762423de33cc276078acf6f7e544fc45e1a7f69e583a945e46",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-06/implementation-queue-sources.json",
         "research/sources/round-07/parts-catalogue-sources.json",
-        "research/sources/round-08/component-plan-sources.json"
+        "research/sources/round-08/component-plan-sources.json",
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -19845,6 +19983,32 @@
       ]
     },
     {
+      "id": "SRC-a807c8e08b82",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf",
+      "title": "Existing OCS metric page-setup DXF fixture",
+      "summary": "Original existing fixture used read-only for the second inspection; actual INSUNITS code6 identifies metres. Original bytes remain unchanged.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf",
+          "access_date": "2026-11-12",
+          "sha256": "60372c545843be004c820a364f06d891845ccf15c319795a6b63c170ac17a21e",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
+      ]
+    },
+    {
       "id": "SRC-a83674c889fd",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json",
@@ -19897,6 +20061,58 @@
       ]
     },
     {
+      "id": "SRC-a8e753f7f1eb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json",
+      "title": "Actual metric page-setup DXF inventory",
+      "summary": "Actual read-only run records one LINE and one DIMENSION; source header code6 declares metres, preserving actual units rather than inferring them from a filename.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json",
+          "access_date": "2026-11-12",
+          "sha256": "9bc58f2a06ac833fa0bc962c28b76722f81a53737e223535dca5e3ddccefef27",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a9d0f0d71c99",
+      "url": null,
+      "local_source_path": "/tmp/3dmodeling-native-reader/ezdxf/filemanagement.py",
+      "title": "Installed DXF file-reading API source",
+      "summary": "Inspected readfile/read API supports strict decoding and original file parsing. The implementation chooses readfile with strict errors and performs no recovery rewrite.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/tmp/3dmodeling-native-reader/ezdxf/filemanagement.py",
+          "access_date": "2026-11-12",
+          "sha256": "46d3b5657389de88c899c34e7c361ce349f0df6caccd3fdaa4661d9c3b6f9e77",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
+      ]
+    },
+    {
       "id": "SRC-aa5f4c33e807",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json",
@@ -19919,6 +20135,32 @@
       ],
       "referring_documents": [
         "research/sources/round-13/crossmember-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-abde4c7c95ff",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json",
+      "title": "Actual viewport-fixture DXF inventory",
+      "summary": "Actual read-only run records eight entity occurrences and preserved handles/context. Source header code0 produces NEEDS_UNIT_EVIDENCE rather than an assumed physical scale.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json",
+          "access_date": "2026-11-12",
+          "sha256": "1215685c442f16ae9e57c04588b0dba07276fb9b8fc0d313ad9b8e2ae0892e5c",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -20372,6 +20614,32 @@
         "research/action-audit/reviews/point-03-designer.md",
         "research/action-audit/reviews/point-03-sources.md",
         "research/sources/round-05/point-03-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ae42dbaf6d16",
+      "url": null,
+      "local_source_path": "/tmp/3dmodeling-native-reader/ezdxf/entities/insert.py",
+      "title": "Installed MIT-licensed INSERT API source",
+      "summary": "Inspected matrix44 handles block base point, OCS, scale and rotation. multi_insert supplies rotated array-cell positions without scaling grid spacing; these existing APIs are used directly.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/tmp/3dmodeling-native-reader/ezdxf/entities/insert.py",
+          "access_date": "2026-11-12",
+          "sha256": "511f29c6ec9642803c122fcb1ddb6d2c3347c0d2ba668197ce330c607862544a",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -24001,6 +24269,32 @@
       ]
     },
     {
+      "id": "SRC-cab5e73f144b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf",
+      "title": "Existing OCS viewport-association DXF fixture",
+      "summary": "Original existing fixture used read-only for the first actual DXF inspection; contains model/paper contexts and diverse entity types. Original bytes remain unchanged.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf",
+          "access_date": "2026-11-12",
+          "sha256": "2e9752b049fbdf4d31fc0ef0d2e3aa20559412f28d9de5227d6c1fbb7d05511a",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
+      ]
+    },
+    {
       "id": "SRC-cabea6f9d38d",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md",
@@ -25865,6 +26159,32 @@
       ]
     },
     {
+      "id": "SRC-dd1fcc78e97c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/tests/test_dxf_inspect.py",
+      "title": "Independent DXF transform and context tests",
+      "summary": "Eight passing cases verify nested world-coordinate control, layer inheritance, model/paper contexts, preserved bulges and bytes, unitless records, cycles, array identities and bounded expansion.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/tests/test_dxf_inspect.py",
+          "access_date": "2026-11-12",
+          "sha256": "b1490ad03abfe8ae6d74b06d6d5772cff69098cfc7aa4b56005807004bb444fa",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
+      ]
+    },
+    {
       "id": "SRC-dd4c729f9ace",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md",
@@ -25988,6 +26308,32 @@
       ],
       "referring_documents": [
         "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-dec8ef1082c6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md",
+      "title": "Implemented drawing-inspection skill",
+      "summary": "Documents the tested DXF command, dependency setup, coordinate matrix semantics, source-unit evidence, resource limits and agent handoff to mapped derivative selection.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_executed_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "1be5a78986959cf8aed0a33932495b8b4dd398c9e6a2523cbe6be89775e681f6",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {
@@ -26492,7 +26838,8 @@
       "summary": "Marks source intake as implemented with actual code, skill, test and execution paths while preserving the original planning queue.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_implementation_or_execution_record_inspected"
+        "local_implementation_or_execution_record_inspected",
+        "local_source_or_executed_inspection"
       ],
       "observations": [
         {
@@ -26503,10 +26850,21 @@
           "referring_documents": [
             "execution/source-intake.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_executed_inspection",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json",
+          "access_date": "2026-11-12",
+          "sha256": "ae1cbae14c0d7facbc9dd982f54757c1cac0cca1b322a53b1aa8c52b419dbb88",
+          "referring_documents": [
+            "execution/dxf-inspection.md",
+            "skills/drawing-inspection/SKILL.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-17/source-intake-sources.json"
+        "research/sources/round-17/source-intake-sources.json",
+        "research/sources/round-18/dxf-inspection-sources.json"
       ]
     },
     {

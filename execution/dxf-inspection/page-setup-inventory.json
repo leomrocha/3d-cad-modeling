@@ -1,0 +1,192 @@
+{
+  "state": "INVENTORIED",
+  "source": {
+    "path": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf",
+    "sha256": "60372c545843be004c820a364f06d891845ccf15c319795a6b63c170ac17a21e",
+    "bytes": 136437
+  },
+  "reader": {
+    "library": "ezdxf",
+    "version": "1.4.5",
+    "recovery": false,
+    "unit_conversion": false
+  },
+  "space": "Model",
+  "available_spaces": [
+    "A3 - plotter",
+    "A4 1-100",
+    "ARCH D - PLOTTER",
+    "Model"
+  ],
+  "selected_layers": [],
+  "available_layers": [
+    "0",
+    "Defpoints"
+  ],
+  "units": {
+    "insunits_code": 6,
+    "label": "m",
+    "evidence": "DXF $INSUNITS header",
+    "state": "DECLARED"
+  },
+  "limits": {
+    "max_entities": 10000,
+    "max_depth": 32,
+    "max_bytes": 67108864
+  },
+  "counts": {
+    "occurrences": 2,
+    "selected_occurrences": 2,
+    "by_type": {
+      "LINE": 1,
+      "DIMENSION": 1
+    }
+  },
+  "entities": [
+    {
+      "source_handle": "22A",
+      "occurrence_path": [
+        "Model",
+        "22A"
+      ],
+      "type": "LINE",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "22A",
+        "owner": "1F",
+        "layer": "0",
+        "start": [
+          14.59833903654579,
+          10.82430074186357,
+          0.0
+        ],
+        "end": [
+          24.5983390365458,
+          10.82430074186357,
+          0.0
+        ]
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "WCS_or_entity_specific",
+      "role": "profile_candidate"
+    },
+    {
+      "source_handle": "22B",
+      "occurrence_path": [
+        "Model",
+        "22B"
+      ],
+      "type": "DIMENSION",
+      "source_layer": "0",
+      "effective_layer": "0",
+      "selected": true,
+      "world_from_block_rows": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "coordinate_contract": "Source entity attributes retain their own OCS/extrusion; matrix maps containing block coordinates to drawing WCS.",
+      "source_attributes": {
+        "handle": "22B",
+        "owner": "1F",
+        "layer": "0",
+        "version": 0,
+        "geometry": "*D3",
+        "defpoint": [
+          24.5983390365458,
+          12.33140470044061,
+          0.0
+        ],
+        "text_midpoint": [
+          19.59833903654579,
+          12.33140470044061,
+          0.0
+        ],
+        "dimtype": 32,
+        "attachment_point": 5,
+        "actual_measurement": 10.0,
+        "unknown1": 0,
+        "flip_arrow_1": 0,
+        "flip_arrow_2": 0,
+        "dimstyle": "Standard",
+        "defpoint2": [
+          14.59833903654579,
+          10.82430074186357,
+          0.0
+        ],
+        "defpoint3": [
+          24.5983390365458,
+          10.82430074186357,
+          0.0
+        ]
+      },
+      "extrusion_normal": [
+        0,
+        0,
+        1
+      ],
+      "coordinate_system": "WCS_or_entity_specific",
+      "role": "annotation"
+    }
+  ],
+  "issues": [],
+  "handoff": {
+    "action": "Create a mapped and explicitly cleaned derivative (CAD-08-A02)",
+    "agent_work": "Identify intended profile versus annotations/construction geometry; resolve unit/context evidence and choose target plane.",
+    "geometry_mapping": "Original coordinates and block transforms retained; source entity OCS conversion belongs to the selected geometry adapter."
+  }
+}

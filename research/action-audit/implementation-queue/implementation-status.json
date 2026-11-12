@@ -12,7 +12,30 @@
       "report": "/home/leo/projects/3dmodeling/execution/source-intake.md",
       "tests": "12 PASS",
       "local_execution": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json",
-      "reused": ["part_index.parse_json", "component_records.observe_file"]
+      "reused": [
+        "part_index.parse_json",
+        "component_records.observe_file"
+      ]
+    },
+    {
+      "action_id": "CAD-08-A01",
+      "name": "Inspect geometry, units and nested blocks in a DXF drawing",
+      "state": "IMPLEMENTED_BRANCH",
+      "branch": "DXF entity/context inventory",
+      "script": "/home/leo/projects/3dmodeling/scripts/dxf_inspect.py",
+      "skill": "/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md",
+      "report": "/home/leo/projects/3dmodeling/execution/dxf-inspection.md",
+      "tests": "8 PASS",
+      "local_execution": [
+        "/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json",
+        "/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json"
+      ],
+      "reused": [
+        "ezdxf.readfile",
+        "INSERT.matrix44",
+        "INSERT.multi_insert",
+        "component_records.observe_file"
+      ]
     }
   ]
 }
