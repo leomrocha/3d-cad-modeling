@@ -1,0 +1,145 @@
+[
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/source_intake.py",
+    "title": "Implemented immutable source intake",
+    "summary": "New script validates source/scope records, preserves exact text and corrections, reuses existing JSON/hash helpers, checks prior revisions and protects completed outputs through staged publication and failure records.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "cc8bfae3ba3ecd630dffb09b58fc4b2e325a6b8bfefb876c83d4c5ab98a66f92",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_source_intake.py",
+    "title": "Source-intake fidelity and failure tests",
+    "summary": "Twelve passing cases cover sources, corrections, changed revisions, zero-network URL registration, invalid records, interrupted publication and protected earlier artifacts. Final reference checks reject repeated conflict identities.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "d031a69543e6218eea3ff973cbfaea782d8f7aba91ca7b3927818727d45eaabd",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md",
+    "title": "Implemented source-intake skill",
+    "summary": "Documents the actual input schema, command, output layout, failure exit codes, recovery, reusable completed revisions and agent/software responsibility boundary.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "e8d9db557c28093a832814241454822032c56a05c625af5ed0bd19524da2f491",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/README.md",
+    "title": "Skill index with implemented source intake",
+    "summary": "Adds the actual source-intake skill and execution-report links while preserving the earlier researched catalogue.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "dcec7fb4e2d1414d1873c7a19ff0441245da63309ec7c4b05d182a39638b13c6",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/component_records.py",
+    "title": "Existing stable file observer reused",
+    "summary": "Streaming SHA-256 and before/after file identity checks are imported by source intake; existing implementation is reused unchanged.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "e9a6f2ef7e14ba9ca0de4f201d55a27e0d4c58f09df15f0601d919333de573e0",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/part_index.py",
+    "title": "Existing strict JSON reader reused",
+    "summary": "Duplicate-key and nonfinite-token rejection is reused by the new intake implementation; no CAD or network client is imported.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+    "title": "Existing unfinished first-action design",
+    "summary": "Defines source intake with correction/source relationships, retained revisions, protected publication, scope review and required software tests. This batch implements its script and skill.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "e452fcb1441b0a2abfd88dfbf477b31fb6b7ef14cbde41be294113108eeb19b2",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json",
+    "title": "Observed implementation status overlay",
+    "summary": "Marks source intake as implemented with actual code, skill, test and execution paths while preserving the original planning queue.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "09a8e77b9f352e3c1031549c5181449b914038d69aecd1019a860fafebaab88d",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake.md",
+    "title": "Source-intake execution and scope report",
+    "summary": "Records the new implementation, reused helpers, actual four-source capture, twelve tests, agent scope review and staged-publication design.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "e5b434962c68e45318d6e76ff530eaed83a4f6029f9362abd796b2425fcc38c0",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/job-input.json",
+    "title": "Actual implementation job input",
+    "summary": "Preserves exact current execution/no-redo instructions and identifies project rules plus the existing first-action plan as local source inputs.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "107202a53045e3e15bdb18c2de57c39a0b7b560b11d8b6d423a80beb2132609d",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/source-index.json",
+    "title": "Published four-source intake index",
+    "summary": "Actual execution retains two exact user messages, two file observations, byte hashes, scope and request identity with no network acquisition.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "c6f2c6d9790a8cb3a62c5b8a37e35a3f8be6a3840e61206f172010dc138fb033",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/scope.md",
+    "title": "Published exact request and scope",
+    "summary": "Actual Markdown output preserves the supplied request and explicitly limits implementation to the unfinished intake action and its deliverables.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "18d42e6cff0ba3808a43909c5b1b79d403be2ba10e9f76f4ca7064b027637a58",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json",
+    "title": "Actual intake completion receipt",
+    "summary": "Records COMPLETE publication, tool/input/artifact hashes, Python runtime, elapsed time and zero network requests for the executed capture.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_implementation_or_execution_record_inspected",
+    "sha256": "3a60dcca9d842f5be76a678d0f5b42c85a44b03dcb2adee90f9aa6dbfacaffba",
+    "referring_documents": [
+      "execution/source-intake.md"
+    ]
+  }
+]

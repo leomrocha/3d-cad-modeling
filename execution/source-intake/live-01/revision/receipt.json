@@ -1,0 +1,25 @@
+{
+  "state": "COMPLETE",
+  "revision_id": "source-intake-r1",
+  "model": "gpt-6.1-sol",
+  "input": {
+    "path": "/home/leo/projects/3dmodeling/execution/source-intake/job-input.json",
+    "sha256": "107202a53045e3e15bdb18c2de57c39a0b7b560b11d8b6d423a80beb2132609d",
+    "bytes": 2424
+  },
+  "artifacts": {
+    "source-index.json": {
+      "sha256": "c6f2c6d9790a8cb3a62c5b8a37e35a3f8be6a3840e61206f172010dc138fb033",
+      "bytes": 3490
+    },
+    "scope.md": {
+      "sha256": "18d42e6cff0ba3808a43909c5b1b79d403be2ba10e9f76f4ca7064b027637a58",
+      "bytes": 741
+    }
+  },
+  "python": "3.12.9",
+  "tool_sha256": "618e09a2b318f09bfb1c5cd2188eb0e82993782808320cf3ca2219fc3502a77a",
+  "completed_at": "2026-11-12T20:00:40.104524+00:00",
+  "elapsed_seconds": 0.001063306990545243,
+  "network_requests": 0
+}

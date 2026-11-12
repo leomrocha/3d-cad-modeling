@@ -1,0 +1,80 @@
+{
+  "format_version": 1,
+  "job_name": "Implement unfinished source-intake action",
+  "revision_id": "source-intake-r1",
+  "request": {
+    "text": "so no go forward IMPLEMENT the thigns and keep working on these skills now, execute",
+    "location": "current user message,12 November2026"
+  },
+  "request_sha256": "cb65174998ac05d3448fa1c1fa967c195eaac0d297d0bfa7d447fc2b991e0041",
+  "scope": {
+    "statement": "Implement the existing source-intake task using the existing JSON and file-observation helpers. Add its skill, meaningful tests, executed local source capture and documentation. Preserve completed CAD models and earlier implementations.",
+    "requested_output": "Source-intake Python script, skill, tests, protected source revision and execution records",
+    "authorized_paths": [
+      "/home/leo/projects/3dmodeling"
+    ]
+  },
+  "sources": [
+    {
+      "id": "request",
+      "title": "Current implementation instruction",
+      "summary": "Authorizes implementation of unfinished skill actions.",
+      "kind": "text",
+      "locator": "current conversation, implementation instruction, 12 November 2026",
+      "observed_at": "2026-11-12",
+      "text": "so no go forward IMPLEMENT the thigns and keep working on these skills now, execute",
+      "observation": {
+        "state": "supplied_text_retained",
+        "sha256": "cb65174998ac05d3448fa1c1fa967c195eaac0d297d0bfa7d447fc2b991e0041",
+        "bytes": 83
+      }
+    },
+    {
+      "id": "reuse-instruction",
+      "title": "Preserve completed work",
+      "summary": "Restricts execution to unfinished implementations and preserves completed work.",
+      "kind": "text",
+      "locator": "current conversation, preceding no-redo instruction, 12 November 2026",
+      "observed_at": "2026-11-12",
+      "text": "DO NOT REDO WORK NO I DO NOT FUCKIGN WANT TO REPEAT AND SPEND FUCKGIN TOKENS IN SOMETHIG THAT IS ALREADY DONE!!! IS THEIS FUCKIGN LCEAR!",
+      "observation": {
+        "state": "supplied_text_retained",
+        "sha256": "4aa7e14402e5712c903ad2219e6cc8911e3742a581e352ca1f2e19154e1c061a",
+        "bytes": 136
+      }
+    },
+    {
+      "id": "project-rules",
+      "title": "Current project rules",
+      "summary": "Defines task scope, source registration, before/after commits and communication rules.",
+      "kind": "file",
+      "locator": "/home/leo/projects/3dmodeling/AGENTS.md",
+      "observed_at": "2026-11-12",
+      "observation": {
+        "state": "local_file_observed",
+        "path": "/home/leo/projects/3dmodeling/AGENTS.md",
+        "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+        "bytes": 19232
+      }
+    },
+    {
+      "id": "first-action-plan",
+      "title": "Existing source-intake implementation plan",
+      "summary": "Defines the unfinished source-intake adapter, protected revisions, correction links and required checks.",
+      "kind": "file",
+      "locator": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+      "observed_at": "2026-11-12",
+      "observation": {
+        "state": "local_file_observed",
+        "path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+        "sha256": "e452fcb1441b0a2abfd88dfbf477b31fb6b7ef14cbde41be294113108eeb19b2",
+        "bytes": 10303
+      }
+    }
+  ],
+  "corrections": [],
+  "conflicts": [],
+  "prior_revision": null,
+  "prior_index_sha256": null,
+  "scope_path": "scope.md"
+}

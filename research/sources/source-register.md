@@ -324,9 +324,9 @@ Original source: [/home/leo/projects/3dmodeling/scripts/component_records.py](/h
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: authored_document_or_code_inspected.
+Evidence: authored_document_or_code_inspected, local_implementation_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json.
 
 <a id="src-06c5ba590bdd"></a>
 
@@ -408,9 +408,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementa
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
-Evidence: authored_document_inspected, local_source_inspected.
+Evidence: authored_document_inspected, local_source_inspected, local_implementation_or_execution_record_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json, research/sources/round-17/source-intake-sources.json.
 
 <a id="src-0910720e555c"></a>
 
@@ -615,6 +615,18 @@ Summary: Native pre-open state identifies SKF document 75 and unrelated open wor
 Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-15/leaf-sources.json.
+
+<a id="src-0db17291beb9"></a>
+
+## SRC-0db17291beb9 — Source-intake fidelity and failure tests
+
+Original source: [/home/leo/projects/3dmodeling/tests/test_source_intake.py](/home/leo/projects/3dmodeling/tests/test_source_intake.py)
+
+Summary: Twelve passing cases cover sources, corrections, changed revisions, zero-network URL registration, invalid records, interrupted publication and protected earlier artifacts. Final reference checks reject repeated conflict identities.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
 
 <a id="src-0df55f79b2d5"></a>
 
@@ -888,9 +900,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/README.md](/home/leo/proj
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
-Evidence: authored_document_inspected, authored_document_or_code_inspected.
+Evidence: authored_document_inspected, authored_document_or_code_inspected, local_implementation_or_execution_record_inspected.
 
-Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json.
 
 <a id="src-17a777175a39"></a>
 
@@ -3304,6 +3316,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-518a5353a3f2"></a>
+
+## SRC-518a5353a3f2 — Source-intake execution and scope report
+
+Original source: [/home/leo/projects/3dmodeling/execution/source-intake.md](/home/leo/projects/3dmodeling/execution/source-intake.md)
+
+Summary: Records the new implementation, reused helpers, actual four-source capture, twelve tests, agent scope review and staged-publication design.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
+
 <a id="src-51bc1eab5201"></a>
 
 ## SRC-51bc1eab5201 — Leaf iteration — header.json
@@ -3940,6 +3964,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-16/driver-sources.json.
 
+<a id="src-6002c90d8336"></a>
+
+## SRC-6002c90d8336 — Implemented immutable source intake
+
+Original source: [/home/leo/projects/3dmodeling/scripts/source_intake.py](/home/leo/projects/3dmodeling/scripts/source_intake.py)
+
+Summary: New script validates source/scope records, preserves exact text and corrections, reuses existing JSON/hash helpers, checks prior revisions and protects completed outputs through staged publication and failure records.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
+
 <a id="src-6038042a0445"></a>
 
 ## SRC-6038042a0445 — point-02-web-sources.json
@@ -4140,9 +4176,9 @@ Original source: [/home/leo/projects/3dmodeling/scripts/part_index.py](/home/leo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: authored_document_or_code_inspected.
+Evidence: authored_document_or_code_inspected, local_implementation_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json.
 
 <a id="src-64aded16baff"></a>
 
@@ -4540,6 +4576,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-6d89ac359e55"></a>
+
+## SRC-6d89ac359e55 — Published exact request and scope
+
+Original source: [/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/scope.md](/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/scope.md)
+
+Summary: Actual Markdown output preserves the supplied request and explicitly limits implementation to the unfinished intake action and its deliverables.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
+
 <a id="src-6df970fcb6f8"></a>
 
 ## SRC-6df970fcb6f8 — parts-and-standards.json
@@ -4839,6 +4887,18 @@ Summary: IfcOpenShell 0.9.0post1 documentation accessed 2026-11-12. Documents cr
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/findings.md, research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-7606cf6527a4"></a>
+
+## SRC-7606cf6527a4 — Implemented source-intake skill
+
+Original source: [/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md](/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md)
+
+Summary: Documents the actual input schema, command, output layout, failure exit codes, recovery, reusable completed revisions and agent/software responsibility boundary.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
 
 <a id="src-76b9efd76055"></a>
 
@@ -6016,6 +6076,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-944a92cb8bdf"></a>
+
+## SRC-944a92cb8bdf — Published four-source intake index
+
+Original source: [/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/source-index.json](/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/source-index.json)
+
+Summary: Actual execution retains two exact user messages, two file observations, byte hashes, scope and request identity with no network acquisition.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
+
 <a id="src-9463773b6a12"></a>
 
 ## SRC-9463773b6a12 — OpenSCAD Documentation index
@@ -6412,6 +6484,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
 
+<a id="src-9f577a14e903"></a>
+
+## SRC-9f577a14e903 — Actual intake completion receipt
+
+Original source: [/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json](/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json)
+
+Summary: Records COMPLETE publication, tool/input/artifact hashes, Python runtime, elapsed time and zero network requests for the executed capture.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
+
 <a id="src-9f71130cf873"></a>
 
 ## SRC-9f71130cf873 — Leaf iteration — native-checks.json
@@ -6435,6 +6519,18 @@ Summary: License observed locally: project `LICENSE` begins with GNU Affero Gene
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-9fdfe0a67f6a"></a>
+
+## SRC-9fdfe0a67f6a — Actual implementation job input
+
+Original source: [/home/leo/projects/3dmodeling/execution/source-intake/job-input.json](/home/leo/projects/3dmodeling/execution/source-intake/job-input.json)
+
+Summary: Preserves exact current execution/no-redo instructions and identifies project rules plus the existing first-action plan as local source inputs.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
 
 <a id="src-9ff47adead00"></a>
 
@@ -9147,6 +9243,18 @@ Summary: Input sheet registered from the inspected ferme manifest: connectors; C
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-e55c2ad4734f"></a>
+
+## SRC-e55c2ad4734f — Observed implementation status overlay
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json)
+
+Summary: Marks source intake as implemented with actual code, skill, test and execution paths while preserving the original planning queue.
+
+Evidence: local_implementation_or_execution_record_inspected.
+
+Documents: research/sources/round-17/source-intake-sources.json.
 
 <a id="src-e5981cd49734"></a>
 

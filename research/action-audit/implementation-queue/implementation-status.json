@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "scope": "Observed implementation results supplement the preserved planning queue. Select new work from actual existing code and delivered results.",
+  "actions": [
+    {
+      "action_id": "INTAKE-A01",
+      "name": "Record source files, revisions and job scope",
+      "state": "IMPLEMENTED",
+      "script": "/home/leo/projects/3dmodeling/scripts/source_intake.py",
+      "skill": "/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md",
+      "report": "/home/leo/projects/3dmodeling/execution/source-intake.md",
+      "tests": "12 PASS",
+      "local_execution": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json",
+      "reused": ["part_index.parse_json", "component_records.observe_file"]
+    }
+  ]
+}
