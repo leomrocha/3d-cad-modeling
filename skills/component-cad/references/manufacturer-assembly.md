@@ -28,3 +28,16 @@ Executed second case: [Fibox ARCA203015T8121020](/home/leo/projects/ferme/engine
 6. **Verification:** six helper tests exercise success,stale second record before any write,inconsistent target fields,duplicate targets,readback failure andchanged underlying geometry. Offline regression applies the helper to the retained battery and enclosure records:13/16 placements and21/12 solid definitions respectively. Existing battery CAD is unchanged. The new native enclosure run applies and verifies the same helper against OCS directly.
 
 The Fibox source coordinates are retained in millimetres. Saved body rear lower corner is(−150,−100,−120)mm;body/cover outerZ reaches32.5mm. Mounting feet extend10mm behind the body rear plane. A project mounting-frame choice and assembly placement consume these separately identified surfaces.
+
+## Verify that a capture shows the current component
+
+Observed case: [Victron Smart 24/12 converter capture check](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json).
+
+1. Record the active native document ID, saved path, geometry revision and camera before treating a capture as a component view.
+2. Inspect the actual image for the component's identity and orientation. The converter case returned an image of the previous Fibox enclosure while native queries addressed converter document87. Its subsequent isometric/top captures, native tab activation and REGEN captures were byte-identical. Completed capture requests and native document state therefore remain separate observations from image identity.
+3. Retain failed images, hashes and original request IDs. Recover pending operations under their original IDs. Compare repeated images after a known camera/component change, then use the source views and actual image contents to decide whether the repetition is a failed capture. Symmetric geometry can legitimately produce similar views.
+4. The current converter case passes37 persisted geometry checks andtwo analytic mounting checks; its visual check is FAIL. Keep those results separate and keep the iteration IN_PROGRESS while the required component views are unresolved.
+5. Compare source revisions at the measured interface. The saved heatsink has four analyticR4 mount-slot ends and71mm vertical spacing; its horizontal pitch is174.3mm versus174mm on the Rev01 drawing. The STEP header identifiesrev00/2019. Preserve these source-specific observations instead of silently changing the imported model or treating the difference as a manufacturing tolerance.
+6. This procedure change was applied to the current case: the repeated enclosure captures were classified as failed visual evidence while the native geometry checks retained their measured results. Native activate completed;REGEN completed;the captures retained the previous image. These outcomes are recorded in the component journal and capture check.
+
+7. Native plotting was also exercised for the saved converter:the plot operation completed andproduced aone-page PDF,butits Poppler render was entirelywhite. Preserve that output asfailed visual evidence. It supplies no successful substitute for the required component view.
