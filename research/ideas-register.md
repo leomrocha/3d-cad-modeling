@@ -920,6 +920,202 @@ Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
+## AUDIT-CAD-02B — Calibrate camera poses from photographs and known controls — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calibrate camera poses from photographs and known controls. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-01 — Calibrate camera intrinsics and distortion — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calibrate camera intrinsics and distortion. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-02 — Solve camera pose from known 3D-to-2D correspondences — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Solve camera pose from known 3D-to-2D correspondences. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-07 — Estimate coarse transform between point clouds — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate coarse transform between point clouds. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-08 — Refine registration and compare point-cloud surfaces — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Refine registration and compare point-cloud surfaces. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-09 — Segment point clouds and fit candidate primitive evidence — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Segment point clouds and fit candidate primitive evidence. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-11 — Fit analytic features to scans or image-derived point clouds — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Fit analytic features to scans or image-derived point clouds. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-12 — Register existing CAD to calibrated photographs or scan points — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register existing CAD to calibrated photographs or scan points. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-13 — Anchor a screen sketch to a 3D surface — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Anchor a screen sketch to a 3D surface. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-14 — Remodel segmented scan evidence as parametric CAD — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Remodel segmented scan evidence as parametric CAD. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-15 — Reconcile scan surfaces with dimensioned drawings — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconcile scan surfaces with dimensioned drawings. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-REC-16 — Iterate CAD edits against registered evidence — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Iterate CAD edits against registered evidence. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-19 — Register scan to building frame — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register scan to building frame. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-23 — Scan or mesh to parametric CAD remodeling — detailed execution options
+
+Status: proposal.
+
+Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Scan or mesh to parametric CAD remodeling. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

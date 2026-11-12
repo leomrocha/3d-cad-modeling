@@ -1,0 +1,1534 @@
+{
+  "point": 5,
+  "status": "proposal",
+  "date": "2026-11-12",
+  "requested_dispatch": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh"
+  },
+  "actual_model_identity": "unavailable",
+  "operations": [
+    {
+      "operation_id": "CAD-02B",
+      "name": "Calibrate camera poses from photographs and known controls",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html",
+        "https://docs.opencv.org/5.0/main_modules/calib.html"
+      ],
+      "actions": [
+        {
+          "id": "CAD-02B-A01",
+          "name": "Bind photographs, target evidence and camera state",
+          "purpose": "Separate intrinsic-calibration evidence from pose controls.",
+          "intended_use": "Prepare a metric camera solution for photo alignment.",
+          "inputs": "Photo-set; measurement-set; camera/lens/focus state; original pixel grid and preprocessing.",
+          "outputs": "Camera/image/control manifest selecting REC-01 and REC-02 prerequisites.",
+          "accuracy": "Target dimensions and point-localization uncertainty retain source; no pixel-fit value becomes engineering allowance.",
+          "evidence": "Image hashes, target IDs/units, capture state and source-to-working pixel maps.",
+          "software": "Check dimensions, target coordinates, image resolution and control-role completeness.",
+          "agent": "Identify camera grouping and whether existing calibration matches the actual images.",
+          "user_decisions": "Resolve target dimensions, camera-state changes or ambiguous point identity.",
+          "dependencies": "OpenCV calibration/PnP documented inputs; point04 image mapping records.",
+          "proposed_development": "Proposal: calibration intake emits camera groups, target roles and per-image prerequisites.",
+          "procedure": [
+            "Preserve originals/state.",
+            "Separate target-calibration and pose/check controls.",
+            "Select applicable calibration receipt or calibration action."
+          ],
+          "validation": "Calibration covers the actual image/lens state; transformed images retain compatible intrinsics/distortion mapping.",
+          "failure_resume": "Keep valid image groups; block only mismatched camera/image states.",
+          "resources": "Local manifests first; remote/manual point identification recorded separately."
+        },
+        {
+          "id": "CAD-02B-A02",
+          "name": "Compose intrinsic calibration and per-image pose solutions",
+          "purpose": "Produce camera parameters and poses through explicit supported subactions.",
+          "intended_use": "Supply pose candidates in known source units.",
+          "inputs": "Manifest; REC-01 calibration or compatible source receipt; known 3D/image correspondences.",
+          "outputs": "Per-camera intrinsic/distortion and per-image pose candidates with subaction receipts.",
+          "accuracy": "Calibration/pose residuals, source target uncertainty and feature requirements remain separate.",
+          "evidence": "Exact image/calibration/control revisions and estimator settings.",
+          "software": "Execute or reuse REC-01 then REC-02; retain object-to-camera transforms and explicit inverses for consumers.",
+          "agent": "Review alternate poses and control association; reject silent calibration changes.",
+          "user_decisions": "Resolve ambiguous geometry/control identity affecting pose.",
+          "dependencies": "REC-01 and REC-02 supported OpenCV paths; actual version/options recorded.",
+          "proposed_development": "Proposal: camera-solution composer links versioned calibration and pose receipts without rerunning valid stages.",
+          "procedure": [
+            "Reuse matching intrinsics.",
+            "Solve supported image poses.",
+            "Retain alternatives and transform directions."
+          ],
+          "validation": "Each pose uses matching image coordinates/intrinsics; source length units determine translation scale.",
+          "failure_resume": "Preserve successful subactions; resume failed image/state only after request reconciliation.",
+          "resources": "Local fit cost follows images/points; remote reasoning reserved for ambiguous hypotheses."
+        },
+        {
+          "id": "CAD-02B-A03",
+          "name": "Validate and publish camera solution",
+          "purpose": "Gate downstream alignment on independent camera checks.",
+          "intended_use": "Deliver camera-solution with per-image readiness.",
+          "inputs": "Pose/calibration candidates; withheld controls; target feature criteria.",
+          "outputs": "Camera-solution including camera model, image mapping, pose direction and check results.",
+          "accuracy": "Withheld pixel/dimensional criteria have sources; global reprojection summary accompanies regional/per-image checks.",
+          "evidence": "Independent controls, source images and actual calibration/pose reports.",
+          "software": "Project check points, verify positive depth where required and transform/inverse consistency.",
+          "agent": "Separate reviewer checks point identity, camera convention and plausible alternate poses.",
+          "user_decisions": "Provide additional controls when required pose components remain ambiguous.",
+          "dependencies": "REC-01/REC-02 check contracts and project source ledger.",
+          "proposed_development": "Proposal: camera package checker emits per-image/control readiness for named consumers.",
+          "procedure": [
+            "Check withheld correspondences.",
+            "Review residual coverage and pose alternatives.",
+            "Publish only supported per-image solution states."
+          ],
+          "validation": "Camera model/resolution and independent evidence match intended alignment use.",
+          "failure_resume": "Retain failed candidates; invalidate dependent alignment for affected image/group.",
+          "resources": "Local projections are bounded by checks; remote/full-view review and manual acquisition separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent identifies target/camera state and directs calibration/pose checks.",
+        "hybrid": "Software solves parameters; agent interprets controls and alternate poses.",
+        "software_first": "Checked target/capture classes run subactions; mismatched state or ambiguity enters review.",
+        "deterministic": "Explicit matched camera state, target geometry and controls produce checked camera-solution."
+      },
+      "alternatives": [
+        "Target-based calibration plus per-image known-point pose.",
+        "Reuse state-matched manufacturer/measured calibration with source identity.",
+        "Documented photogrammetric camera solution with independent metric controls.",
+        "Context overlay and precision feature alignment retain separate required pose/scale criteria."
+      ],
+      "merge": {
+        "branches": "Candidate camera models/control selections share image/control revisions and target use.",
+        "evaluation": "VLM reviews source point identity; software compares independent projection and metric checks.",
+        "combination": "Select coherent camera model/pose per image; retain conflicting control interpretations.",
+        "post_merge": "Reproject all required controls and check shared frame/calibration consistency."
+      },
+      "software_migration": "Automate checked camera/target classes after state mismatch, bad target units, pose ambiguity and withheld-check fixtures.",
+      "future_tests": [
+        "Cropped/resized photo paired with stale intrinsics fails compatibility.",
+        "Wrong target spacing yields plausible fit but fails independent scale checks.",
+        "Pose alternatives remain until independent controls distinguish them."
+      ]
+    },
+    {
+      "operation_id": "REC-01",
+      "name": "Calibrate camera intrinsics and distortion",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
+      ],
+      "actions": [
+        {
+          "id": "REC-01-A01",
+          "name": "Select calibrated target observations and hold-out views",
+          "purpose": "Ensure target evidence constrains the selected camera model.",
+          "intended_use": "Estimate optical parameters for a fixed camera/lens state.",
+          "inputs": "Photo-set; measurement-set target geometry/units; focus/zoom/sensor state; image mappings.",
+          "outputs": "Target/image-point sets with fit/hold-out roles and coverage report.",
+          "accuracy": "Target geometry accuracy and corner localization uncertainty are separately sourced.",
+          "evidence": "Original images, target coordinates, detector/version and rejected observations.",
+          "software": "Detect supported chessboard/target features; inspect ordering, image-field and orientation coverage.",
+          "agent": "Review target identity, blur/deformation and whether camera states require separate groups.",
+          "user_decisions": "Supply actual target dimensions or resolve camera-state grouping.",
+          "dependencies": "OpenCV target detector and calibrateCamera; selected target family API discovered.",
+          "proposed_development": "Proposal: target-observation collector returns point identities, coverage and exclusions.",
+          "procedure": [
+            "Group state-compatible images.",
+            "Detect/review target points.",
+            "Reserve independent views/controls."
+          ],
+          "validation": "Poor spatial/orientation coverage or wrong target order is diagnosed before parameter fitting.",
+          "failure_resume": "Retain raw detections; correct only failed points/groups or obtain required views.",
+          "resources": "Local detection follows image pixels; manual target review and remote ambiguity reasoning separate."
+        },
+        {
+          "id": "REC-01-A02",
+          "name": "Estimate intrinsic and distortion parameters",
+          "purpose": "Fit the documented optical model to valid target correspondences.",
+          "intended_use": "Produce calibration candidates and uncertainty evidence.",
+          "inputs": "Fit observations; model/options; actual image size; target units.",
+          "outputs": "Intrinsic matrix, distortion model/coefficients, fit poses and residual diagnostics.",
+          "accuracy": "Fit residual is image-domain evidence; parameter uncertainty/conditioning and source target error retain separate status.",
+          "evidence": "Point set, flags, version, image size and model identity.",
+          "software": "Run supported calibrateCamera; retain per-image/per-region residuals and available uncertainty diagnostics.",
+          "agent": "Compare model adequacy and outlier causes without excluding points solely to improve aggregate score.",
+          "user_decisions": "Choose a different physical camera model/group when source state requires it.",
+          "dependencies": "Version-pinned OpenCV calibration interface; extra diagnostics only when actually available.",
+          "proposed_development": "Proposal: intrinsic fitter emits candidates, residual distribution and declared observability findings.",
+          "procedure": [
+            "Fit selected camera model.",
+            "Record all parameters/options and residuals.",
+            "Compare justified model alternatives with unchanged check evidence."
+          ],
+          "validation": "Finite parameters and fit consistency accompany coverage/conditioning checks; unavailable diagnostics remain unresolved.",
+          "failure_resume": "Preserve failed fits/outlier masks; revise specific model or observations with new lineage.",
+          "resources": "Local nonlinear fit follows image/point/model size; no inferred GPU requirement; remote model interpretation separate."
+        },
+        {
+          "id": "REC-01-A03",
+          "name": "Check held-out distortion behavior and publish intrinsics",
+          "purpose": "Test calibration beyond the observations used to estimate it.",
+          "intended_use": "Provide camera-solution intrinsics for REC-02 and calibrated image consumers.",
+          "inputs": "Calibration candidates; held-out target images/controls; image-state record. Each held-out target view also needs an externally known pose or a designated pose-fitting point subset disjoint from evaluated points.",
+          "outputs": "Checked calibration with scope, residual maps and optional undistorted derivative/mapping.",
+          "accuracy": "Straightness, withheld reprojection and required regional accuracy each have explicit criteria.",
+          "evidence": "Original/undistorted image identities; new camera matrix and valid domain if used.",
+          "software": "Freeze intrinsics/distortion. Use externally known held-out target pose, or estimate that pose from designated target points and evaluate a separate reserved point set. Project reserved controls and inspect regional residuals/straight edges; retain new camera matrix and valid domain for derivatives.",
+          "agent": "Independent reviewer checks systematic distortion and target association.",
+          "user_decisions": "Supply extra coverage if required image regions lack independent evidence.",
+          "dependencies": "OpenCV project/undistort APIs and point04 derivative mapping.",
+          "proposed_development": "Proposal: calibration validator emits region/state validity and derivative metadata.",
+          "procedure": [
+            "Freeze intrinsic/distortion candidate and define held-out view pose evidence.",
+            "Use known pose or estimate pose from its designated subset, preserving distinct evaluated points.",
+            "Evaluate reserved controls/edge behavior and publish calibration scope and dependence."
+          ],
+          "validation": "Intrinsics remain tied to camera state and actual pixel grid; undistorted images use their recorded new matrix/distortion convention. Record shared target/calibration uncertainty and pose-fitting dependence; pose-fit points cannot count as independent validation points.",
+          "failure_resume": "Keep rejected calibration and source views; invalidate dependent poses only for affected calibration scope.",
+          "resources": "Local projection/remap cost follows checks/pixels; remote review/manual recapture effort distinct."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent reviews target/state and chooses justified model, software solves.",
+        "hybrid": "Detection/calibration automated; agent resolves coverage/outliers/model meaning.",
+        "software_first": "Checked camera-target class calibrates with explicit exception diagnostics.",
+        "deterministic": "Fixed target correspondences/model/state and check criteria produce a calibration receipt."
+      },
+      "alternatives": [
+        "Known target calibration.",
+        "Source-specific manufacturer calibration matched to state and checked.",
+        "Documented self-calibration retained as its own estimate with independent controls.",
+        "Context imagery may use lower-detail regional coverage; precision image measurement requires feature-region checks."
+      ],
+      "merge": {
+        "branches": "Calibration models share original observations and withheld checks; use/coverage/resources recorded.",
+        "evaluation": "Software compares residual patterns and independent checks; VLM checks target evidence.",
+        "combination": "Select one compatible model per physical state; preserve alternative models and source uncertainty.",
+        "post_merge": "Rerun withheld tests and invalidate dependent poses if model changes."
+      },
+      "software_migration": "Demonstrate target ordering, field coverage, state changes, held-out distortion and image-grid cases before routine automation.",
+      "future_tests": [
+        "Central-only calibration leaves edge-region validation unresolved.",
+        "Focus/resolution change invalidates inappropriate calibration reuse.",
+        "Undistorted derivative with original distortion reapplied fails check.",
+        "Held-out-view pose fit absorbs some distortion error: freeze intrinsics, separate pose-fit/evaluation points and inspect residuals across reserved image regions; report shared-target dependence."
+      ]
+    },
+    {
+      "operation_id": "REC-02",
+      "name": "Solve camera pose from known 3D-to-2D correspondences",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "https://docs.opencv.org/4.13.0/d5/d1f/calib3d_solvePnP.html"
+      ],
+      "actions": [
+        {
+          "id": "REC-02-A01",
+          "name": "Bind 3D landmarks to calibrated image coordinates",
+          "purpose": "Establish a compatible metric correspondence set and pose observability.",
+          "intended_use": "Anchor a camera to known world/CAD coordinates.",
+          "inputs": "Measurement-set with 3D points and image locations; camera-solution intrinsics/distortion; image/CAD revisions.",
+          "outputs": "Pose input record with point IDs, units, image model, fit/check roles and geometric sufficiency.",
+          "accuracy": "3D/control and pixel localization uncertainty remain distinct; desired pose/feature criteria sourced.",
+          "evidence": "Named landmark sources, pixel crops/full views, calibration/image hashes.",
+          "software": "Validate point count/configuration for selected PnP method, units, image transform and calibration compatibility.",
+          "agent": "Identify repeated/symmetric landmarks and planar/degenerate configurations with alternative poses.",
+          "user_decisions": "Resolve point identity or provide observations needed for ambiguous pose components.",
+          "dependencies": "OpenCV solvePnP method-specific prerequisites; source camera model.",
+          "proposed_development": "Proposal: PnP preflight returns compatible correspondences and ambiguous/unobservable components.",
+          "procedure": [
+            "Match named 3D and image landmarks.",
+            "Separate fitting/withheld correspondences.",
+            "Check selected solver requirements and image state."
+          ],
+          "validation": "Point configuration meets actual method rules; correspondences derive from exact CAD/image revisions.",
+          "failure_resume": "Retain valid points; block pose claims beyond supported geometry.",
+          "resources": "Local point checks first; remote VLM/manual identity review for repeated landmarks."
+        },
+        {
+          "id": "REC-02-A02",
+          "name": "Estimate object-to-camera pose candidates",
+          "purpose": "Solve rotation and translation under the chosen calibrated projection model.",
+          "intended_use": "Produce metric pose hypotheses for registration/projection.",
+          "inputs": "Validated correspondence set; solver options; initial guess if required.",
+          "outputs": "Candidate object-to-camera rotation/translation, inlier mask and residuals.",
+          "accuracy": "Robust threshold in pixel units is separate from engineering allowance and 3D source uncertainty.",
+          "evidence": "Actual method/version, input IDs, hypothesis lineage and rejected correspondences.",
+          "software": "Use solvePnP/solvePnPRansac as supported; retain multiple solutions where exposed and compute explicit inverse.",
+          "agent": "Review outliers, symmetry, planar alternatives and positive-depth consistency.",
+          "user_decisions": "Choose source-supported hypothesis when observations distinguish it; unresolved controlling ambiguity requires more evidence.",
+          "dependencies": "OpenCV PnP/projectPoints; camera axes x-right, y-down, z-forward recorded with conversion.",
+          "proposed_development": "Proposal: pose solver emits transform candidates, objective diagnostics and source-to-camera convention receipt.",
+          "procedure": [
+            "Solve declared model.",
+            "Retain valid hypotheses/inliers.",
+            "Record direction, units and inverse separately."
+          ],
+          "validation": "Check rotation/handedness, finite translation and required positive depths; solver success is a candidate result.",
+          "failure_resume": "Preserve all candidates; bounded change to point set/method creates new run identity.",
+          "resources": "Local fit follows points/hypotheses; robust sampling cost depends outliers; remote interpretation separate."
+        },
+        {
+          "id": "REC-02-A03",
+          "name": "Validate independent reprojection and publish pose",
+          "purpose": "Establish downstream camera-pose readiness with independent observations.",
+          "intended_use": "Output camera-solution retaining updated pose and original calibration.",
+          "inputs": "Pose hypotheses; withheld image landmarks/control quantities; source criteria.",
+          "outputs": "Camera-solution pose/check records with supported features and ambiguity status.",
+          "accuracy": "Per-point pixel and any independent metric differences use named criteria; fit aggregate stays separate.",
+          "evidence": "Exact image/model revision, withheld IDs and camera/frame conventions.",
+          "software": "Project withheld 3D points, compare regional residuals and roundtrip transform direction; evaluate alternate hypotheses.",
+          "agent": "Independent semantic reviewer checks landmark identities and occlusion visibility.",
+          "user_decisions": "Supply additional independent evidence for unresolved symmetry/depth.",
+          "dependencies": "projectPoints and independent source measurements; image preprocessing receipt.",
+          "proposed_development": "Proposal: pose verifier returns per-landmark residual and feature-level readiness.",
+          "procedure": [
+            "Reproject withheld landmarks.",
+            "Compare alternatives and source identity.",
+            "Publish checked pose/calibration package."
+          ],
+          "validation": "Wrong but low-fit-residual pose fails independent controls; output supplies pose, not reconstructed surfaces.",
+          "failure_resume": "Retain failed rows; revisit correspondence/solver; invalidate dependent ray/registration results.",
+          "resources": "Local projections bounded by points; remote/full-image review and manual extra controls separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent resolves landmark correspondence and directs pose alternatives.",
+        "hybrid": "Software solves/checks; agent reviews ambiguous landmarks and visibility.",
+        "software_first": "Demonstrated fiducial/landmark classes run PnP; degeneracy or inconsistent state enters review.",
+        "deterministic": "Explicit compatible correspondences/model/method and check criteria produce pose evidence."
+      },
+      "alternatives": [
+        "Surveyed fiducial pose.",
+        "Known CAD landmarks with calibrated camera.",
+        "Documented photogrammetric pose with separate metric anchors.",
+        "Context pose and precision interface projection retain feature-specific accuracy and ambiguity requirements."
+      ],
+      "merge": {
+        "branches": "Pose hypotheses share source/calibration revisions and check set.",
+        "evaluation": "VLM reviews landmark meaning; software compares independent reprojections and depth consistency.",
+        "combination": "Select coherent pose; never average incompatible symmetry solutions.",
+        "post_merge": "Reproject checks under selected pose and validate all downstream frame conversions."
+      },
+      "software_migration": "Automate checked point/model classes after planar ambiguity, collinearity, outliers, wrong revision and camera-axis fixtures.",
+      "future_tests": [
+        "Symmetric landmarks create multiple plausible poses retained until independent check.",
+        "Wrong world-to-camera direction fails known projection.",
+        "Stale image grid/calibration fails preflight."
+      ]
+    },
+    {
+      "operation_id": "REC-07",
+      "name": "Estimate coarse transform between point clouds",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html"
+      ],
+      "actions": [
+        {
+          "id": "REC-07-A01",
+          "name": "Bind both clouds and declare transform freedoms",
+          "purpose": "Set source/target identities and the permitted alignment model.",
+          "intended_use": "Initialize scan alignment for context or interface measurement.",
+          "inputs": "Distinct source and target cloud revisions; units/frames; overlap/static-region masks; independent controls.",
+          "outputs": "Registration manifest with source-to-target direction, rigid or justified similarity model and fit/check regions.",
+          "accuracy": "Scale conversion is explicit; physical deformation is not absorbed into optional scale; control uncertainty and fitting thresholds separate.",
+          "evidence": "Raw cloud hashes, sensor/capture state, sampling and control roles.",
+          "software": "Check unit/frame compatibility, sample coverage and geometric degeneracy; make bounded coarse derivatives with original-index mapping.",
+          "agent": "Identify static overlap, symmetries and observable translations/rotations/scale.",
+          "user_decisions": "Choose similarity scale only with source justification; resolve datum/overlap ambiguity.",
+          "dependencies": "Open3D global registration; original two input_roles preserved.",
+          "proposed_development": "Proposal: cloud preflight emits role/frame/model manifest, masks and observability prerequisites.",
+          "procedure": [
+            "Bind source and target revisions.",
+            "Select permitted freedoms and static overlap.",
+            "Reserve controls and derive source-mapped coarse samples."
+          ],
+          "validation": "A planar/repetitive region cannot silently constrain all pose freedoms; source and target remain distinct.",
+          "failure_resume": "Retain clouds/masks; block unsupported freedoms or acquire distributed controls.",
+          "resources": "Local coarse sampling first; point count controls RAM; remote/manual overlap interpretation separate."
+        },
+        {
+          "id": "REC-07-A02",
+          "name": "Generate coarse alignment hypotheses",
+          "purpose": "Find candidate source-to-target transforms from features or known landmarks.",
+          "intended_use": "Supply a stable initialization for REC-08.",
+          "inputs": "Manifest; coarse samples/normals; feature or landmark settings.",
+          "outputs": "Transform candidates, correspondence/inlier records and coarse fit diagnostics.",
+          "accuracy": "Feature radius/matching thresholds have cloud units and source sampling rationale.",
+          "evidence": "Sample-to-original IDs, feature settings, hypothesis generation and exclusions.",
+          "software": "Compute documented FPFH and RANSAC candidates or explicit target alignment; rigid default and similarity adapter distinguished.",
+          "agent": "Review symmetric/repeated matches and coverage; keep plausible alternatives.",
+          "user_decisions": "Resolve landmark identity or controlling datum when hypotheses conflict.",
+          "dependencies": "Open3D global registration/CloudCompare selected interface; similarity estimator requires evidenced capability.",
+          "proposed_development": "Proposal: coarse registrar outputs hypotheses and exact source/target correspondences.",
+          "procedure": [
+            "Compute supported features or use identified landmarks.",
+            "Estimate candidate transforms under permitted model.",
+            "Record inliers, coverage and alternative poses."
+          ],
+          "validation": "Check transform rotation/scale/handedness and spatial distribution of supporting matches.",
+          "failure_resume": "Retain candidates and errors; bounded threshold/landmark change creates separate branch.",
+          "resources": "Local feature/matching cost follows coarse points and candidate pairs; remote selection review separate."
+        },
+        {
+          "id": "REC-07-A03",
+          "name": "Test withheld controls and publish initialization",
+          "purpose": "Select an evidence-supported coarse pose for refinement.",
+          "intended_use": "Deliver measurement-set containing coarse transform and diagnostics.",
+          "inputs": "Hypotheses; independent controls; intended overlap and feature criteria.",
+          "outputs": "Source-to-target transform/check records and alternatives with REC-08 readiness.",
+          "accuracy": "Fitness/inlier error depends on matching rule; independent control differences have separate criteria.",
+          "evidence": "Exact cloud/sample revisions and withheld control sources.",
+          "software": "Transform controls, assess regional alignment/non-overlap and test transform inverse.",
+          "agent": "Independent reviewer checks landmark/region identity and symmetry choice.",
+          "user_decisions": "Provide further evidence when multiple poses remain compatible.",
+          "dependencies": "Open3D evaluation and source-independent metrology where supplied.",
+          "proposed_development": "Proposal: coarse-check report emits control residuals and permitted downstream refinement state.",
+          "procedure": [
+            "Measure withheld controls.",
+            "Inspect spatial residuals and alternate poses.",
+            "Publish selected transform or unresolved candidates."
+          ],
+          "validation": "Low matching error cannot pass a wrong symmetry pose that fails controls.",
+          "failure_resume": "Preserve rejected hypotheses; return to overlap/model/landmark selection; no silent replay.",
+          "resources": "Local control checks precede full clouds; remote/full-context review and manual controls separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent identifies overlap/datums and directs candidate generation.",
+        "hybrid": "Software proposes transforms; agent judges source regions and symmetry.",
+        "software_first": "Checked cloud/overlap classes use fixed preprocessing; degeneracy or scale mismatch enters review.",
+        "deterministic": "Explicit correspondences/model/settings and independent controls produce coarse transform evidence."
+      },
+      "alternatives": [
+        "Surveyed targets or known CAD datums.",
+        "Manual landmark initialization with numerical checks.",
+        "FPFH/RANSAC global feature registration.",
+        "Lower-detail context pose and working-interface alignment retain different controls/coverage and criteria."
+      ],
+      "merge": {
+        "branches": "Hypotheses share cloud/control revisions and record sampling, target use and resources.",
+        "evaluation": "VLM reviews region/landmark identity; software compares independent controls and coverage.",
+        "combination": "Select coherent transform; retain symmetry/scale alternatives without matrix averaging.",
+        "post_merge": "Recheck controls and source-to-target convention before refinement."
+      },
+      "software_migration": "Demonstrate overlap, symmetry, scale error, dynamic-region and geometric-degeneracy fixtures before routine registration.",
+      "future_tests": [
+        "Parallel plane/repeated corridor leaves some pose freedoms unresolved.",
+        "Wrong-unit scale cannot be silently fitted as physical deformation.",
+        "Moving objects are masked with source evidence and independent static checks.",
+        "Symmetric candidate has high fitness but fails withheld landmark."
+      ]
+    },
+    {
+      "operation_id": "REC-08",
+      "name": "Refine registration and compare point-cloud surfaces",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
+      ],
+      "actions": [
+        {
+          "id": "REC-08-A01",
+          "name": "Freeze initialization and comparison objective",
+          "purpose": "Define the local refinement problem and independent evaluation regions.",
+          "intended_use": "Refine registered cloud surfaces without changing source evidence.",
+          "inputs": "Source/target clouds; measurement-set coarse transform; units; normals/masks; source-backed thresholds.",
+          "outputs": "Refinement specification with source-to-target initialization, objective and check configuration.",
+          "accuracy": "Correspondence distance derives from sampling/noise/use; engineering allowance is separate.",
+          "evidence": "Raw/coarse revisions, masks, normals method and fixed check controls.",
+          "software": "Validate initialization/overlap and normals; define point-to-point or supported point-to-plane objective and sampling.",
+          "agent": "Assess partial overlap, density imbalance, symmetry and unobservable motions.",
+          "user_decisions": "Resolve permissible freedoms or altered reference region before fitting.",
+          "dependencies": "Open3D ICP/evaluate_registration; CloudCompare distance route.",
+          "proposed_development": "Proposal: refinement preflight emits supported objective, overlap and observability diagnostics.",
+          "procedure": [
+            "Bind initialization and roles.",
+            "Select objective/normals/masks.",
+            "Freeze fit and check regions."
+          ],
+          "validation": "ICP initialization lies within supported convergence conditions; missing normals or degeneracy creates a named exception.",
+          "failure_resume": "Retain coarse pose; revise specific objective/region without overwriting baseline.",
+          "resources": "Coarse/local checks first; RAM follows sampled points/normals; remote region review separate."
+        },
+        {
+          "id": "REC-08-A02",
+          "name": "Refine transform and retain correspondence evidence",
+          "purpose": "Minimize the declared surface objective under allowed freedoms.",
+          "intended_use": "Produce refined pose and participating-point diagnostics.",
+          "inputs": "Refinement specification and immutable cloud derivatives.",
+          "outputs": "Final source-to-target transform, iterations/status, correspondences and objective diagnostics.",
+          "accuracy": "Stopping criterion and fit threshold retain units/method; optimizer convergence does not supply absolute accuracy.",
+          "evidence": "Actual settings, initial/final transforms, sample IDs and outlier/mask decisions.",
+          "software": "Run registration_icp or evidenced equivalent; record whether returned transform includes initialization; evaluate declared objective.",
+          "agent": "Diagnose local minima, unexpected scale/motion and concentration on one surface.",
+          "user_decisions": "Choose a justified alternate objective/initialization when evidence supports it.",
+          "dependencies": "Selected Open3D/CloudCompare version and actual result semantics.",
+          "proposed_development": "Proposal: refinement adapter emits transform lineage, convergence and correspondence receipt.",
+          "procedure": [
+            "Execute bounded refinement.",
+            "Read returned full transform and diagnostics.",
+            "Compare expected allowed motion and fit distribution."
+          ],
+          "validation": "Check rigid/similarity properties and original-to-final mapping; reject silent double-application of initialization.",
+          "failure_resume": "Keep failed/local-minimum result; restart from retained coarse branch with new run ID.",
+          "resources": "Local nearest-neighbor/iteration cost follows points and overlap; remote diagnosis and manual intervention distinct."
+        },
+        {
+          "id": "REC-08-A03",
+          "name": "Measure independent and directional surface differences",
+          "purpose": "Separate registration fit from observed regional surface discrepancy.",
+          "intended_use": "Deliver measurement-set for comparison/fitting/remodeling.",
+          "inputs": "Final transform; original clouds; independent controls; fixed regions and distance/sampling rules.",
+          "outputs": "Regional distance maps, control residuals, non-overlap masks and transform readiness.",
+          "accuracy": "Unsigned/directional distances, coverage and summary statistics keep their method; signed distance requires supported orientation/surface assumptions.",
+          "evidence": "Exact query/reference revisions, sampling density, region IDs and control roles.",
+          "software": "Evaluate controls and declared source-to-target distances; compute reverse direction where needed; report regional maxima/quantiles/RMS and excluded counts.",
+          "agent": "Independent reviewer checks region correspondence and whether observed difference is sampling/occlusion or geometry.",
+          "user_decisions": "Select additional metrology for critical interfaces with inadequate scan coverage.",
+          "dependencies": "Open3D evaluation; documented CloudCompare distance commands; statistic helper proposed.",
+          "proposed_development": "Proposal: comparison reporter emits direction-specific residual/coverage and control checks.",
+          "procedure": [
+            "Compare withheld controls.",
+            "Measure fixed regional surfaces and non-overlap.",
+            "Publish fit and independent evidence separately."
+          ],
+          "validation": "Empty/low-overlap regions cannot pass through summary statistics; dense patches cannot conceal failing interfaces.",
+          "failure_resume": "Retain maps/check config; return to fit or evidence acquisition for affected regions.",
+          "resources": "Local distance queries may dominate full-resolution work; bounded critical regions first; remote/manual interpretation separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects source-supported objective/regions and diagnoses convergence.",
+        "hybrid": "Software refines/measures; agent evaluates surface meaning and ambiguity.",
+        "software_first": "Demonstrated registration classes use fixed settings; low overlap/degeneracy/outliers enter review.",
+        "deterministic": "Explicit initialization, samples, objective and check rules produce repeatable transform/comparison records."
+      },
+      "alternatives": [
+        "Point-to-point or point-to-plane ICP according to evidenced normals/geometry.",
+        "Documented robust objective with separately recorded settings.",
+        "Control-target transform retained without surface refinement when source intent requires it.",
+        "Context alignment uses declared regional detail; precision interfaces require independent metrology/coverage."
+      ],
+      "merge": {
+        "branches": "Objectives/initializations share immutable clouds and fixed check regions.",
+        "evaluation": "Software compares independent controls and regional coverage; VLM reviews corresponding physical surfaces.",
+        "combination": "Select one justified alignment; preserve incompatible transforms/residual interpretations.",
+        "post_merge": "Recompute fixed directional distances and controls under selected transform."
+      },
+      "software_migration": "Demonstrate wrong initialization, partial overlap, density imbalance, symmetry, unreliable normals and non-overlap statistics before automation.",
+      "future_tests": [
+        "Planar ICP fit improves but unconstrained in-plane motion remains unsupported.",
+        "Dense patch dominates aggregate error while critical interface fails.",
+        "Initialization applied twice produces wrong control positions and fails.",
+        "Non-overlap/empty region emits no valid accuracy statistic.",
+        "Signed-distance request without oriented surface uses an explicit unsupported-result state."
+      ]
+    },
+    {
+      "operation_id": "REC-09",
+      "name": "Segment point clouds and fit candidate primitive evidence",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://github.com/CloudCompare/CloudCompare",
+        "https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html",
+        "https://pointclouds.org/documentation/classpcl_1_1_s_a_c_segmentation_from_normals.html",
+        "https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/sample_consensus/include/pcl/sample_consensus/sac_model_cylinder.h"
+      ],
+      "actions": [
+        {
+          "id": "REC-09-A01",
+          "name": "Select observed regions and preserve point membership",
+          "purpose": "Define sampled feature regions before segmentation/fitting.",
+          "intended_use": "Prepare source-linked plane/cluster candidates.",
+          "inputs": "Metric framed point-cloud; registration/source receipt; target regions; scale/noise evidence.",
+          "outputs": "Region masks and original-point index mapping with sampling/coverage description.",
+          "accuracy": "Segmentation thresholds use cloud units; sensor uncertainty and feature allowance separate.",
+          "evidence": "Raw point IDs, capture/registration records, density and occlusion masks.",
+          "software": "Inventory density/normals/outliers; create explicit region/sampling derivatives retaining original membership.",
+          "agent": "Distinguish mixed surfaces, dynamic points and unsampled interfaces.",
+          "user_decisions": "Select intended physical feature or supply coverage needed for required fits.",
+          "dependencies": "Open3D point-cloud operations; source geometry/capture metadata.",
+          "proposed_development": "Proposal: region selector emits immutable point-membership and coverage manifests.",
+          "procedure": [
+            "Identify feature regions.",
+            "Record masks/density and exclusions.",
+            "Preserve sample-to-original links."
+          ],
+          "validation": "Region includes stated surface evidence without silently removing inconvenient samples.",
+          "failure_resume": "Retain all raw data; revise only region/sampling selection and dependent fits.",
+          "resources": "Local region/index checks precede full fitting; remote/manual surface classification separate."
+        },
+        {
+          "id": "REC-09-A02",
+          "name": "Generate plane, cluster and cylinder candidates",
+          "purpose": "Partition observed samples with explicit statistical/geometry settings.",
+          "intended_use": "Supply primitive evidence rather than authored CAD dimensions.",
+          "inputs": "Region manifest with original point IDs; plane/cluster settings or PCL cylinder model; point cloud plus corresponding normal cloud and normal-estimation neighborhood/index mapping; explicit cloud unit/frame, consensus controls and source-backed radius/axis constraints.",
+          "outputs": "Segmented point-cloud with original indices; plane/cluster candidates or cylinder inlier indices and seven coefficients: axis point x,y,z [0–2], axis direction x,y,z [3–5], radius [6]; fit residuals and coverage records.",
+          "accuracy": "Distance thresholds and radius bounds follow cloud coordinate units. Record normal-distance weight and its selected implementation's criterion separately from independently measured geometric residuals; source allowance, sensor/normal uncertainty and parameter uncertainty retain separate fields.",
+          "evidence": "PCL tutorial, SACSegmentationFromNormals API and cylinder header; exact adapter/version/settings, point-normal correspondence, normal-estimation neighborhood, random state where exposed, inliers/outliers and threshold alternatives.",
+          "software": "Open3D segment_plane and cluster_dbscan supply plane/cluster candidates. Proposed PCL adapter configures SACSegmentationFromNormals<PointXYZ, Normal>, SACMODEL_CYLINDER, selected consensus method (tutorial uses RANSAC), optimization flag, normal-distance weight, iterations/probability, distance threshold, radius limits and any evidenced axis/angle constraint; segment(inliers, coefficients) supplies sampled cylinder candidates.",
+          "agent": "Assess whether cluster/plane corresponds to intended feature and whether coverage constrains parameters.",
+          "user_decisions": "Resolve mixed-surface membership or desired primitive type when source evidence permits alternatives.",
+          "dependencies": "Open3D APIs; PCL 1.15.1-dev API documentation and mutable master cylinder header supply source contracts. Pin and inspect the selected installed release/binding before executing the proposed adapter; preserve point-normal order after every mask/downsample.",
+          "proposed_development": "Proposal: primitive-candidate adapter accepts immutable cloud/normal IDs, original-index mapping, model and typed settings; emits inlier IDs, raw coefficient vector, named parameter fields, source unit/frame, setting receipt, coverage and geometric residuals. Reject length/index mismatches, nonfinite/zero normals, empty support, invalid coefficient vectors and nonpositive radius before downstream use.",
+          "procedure": [
+            "Validate region and point-normal index correspondence; select plane, cluster or PCL cylinder model and record sourced settings without inheriting tutorial numeric examples.",
+            "Run the declared estimator and retain inlier/outlier indices, raw coefficients and exact settings; decode cylinder axis point, direction and radius in the recorded frame/unit.",
+            "Compare justified threshold/radius/normal-neighborhood alternatives and held-out geometric residuals; preserve partial-arc or mixed-surface candidates for the independent support check."
+          ],
+          "validation": "Check point-normal alignment, finite seven-value cylinder output, nonzero axis direction, positive radius and configured bounds. Independently measure sample-to-cylinder geometric residuals and axial/angular coverage; a threshold/bound-clipped candidate retains that state, and low residual alone cannot resolve radius or axis uncertainty.",
+          "failure_resume": "Keep raw points/normals/settings and all completed candidates. Wrong normal mapping, invalid coefficients or empty inliers block that fit; repair its specific input/settings, create a new candidate lineage and invalidate only dependent measurements.",
+          "resources": "Local point/normal inventory precedes fitting; normal-neighborhood search and consensus cost depend on selected point count, neighborhood size and bounded iteration/hypothesis counts. Start with source-linked region samples for candidate search, then check retained full/reserved samples. Record local memory/time separately from remote interpretation and manual surface labeling."
+        },
+        {
+          "id": "REC-09-A03",
+          "name": "Check sampling bias and publish primitive evidence",
+          "purpose": "Determine supported feature parameters and uncertainty from observed samples.",
+          "intended_use": "Deliver segmented point-cloud plus measurement-set for CAD-11/REC-14.",
+          "inputs": "Candidates; held-out regions/controls; alternative sample/threshold reports.",
+          "outputs": "Point labels and measurement records with parameter source, support, residual distribution and readiness.",
+          "accuracy": "Fit residual, parameter uncertainty, repeatability and engineering criteria reported separately.",
+          "evidence": "Held-out sample IDs and correlation with fit capture; density/coverage changes retained.",
+          "software": "Evaluate withheld distances and sensitivity to region/threshold/sampling; report unsupported parameter observability.",
+          "agent": "Independent reviewer checks primitive/feature identity and excluded regions.",
+          "user_decisions": "Obtain independent interface measurement where sampling cannot constrain required dimension.",
+          "dependencies": "Numerical sensitivity checker proposed; supported cloud distance queries.",
+          "proposed_development": "Proposal: fit evidence checker emits parameter confidence basis and source-dependent limitations.",
+          "procedure": [
+            "Measure held-out residuals.",
+            "Compare parameter sensitivity and spatial coverage.",
+            "Publish candidates with feature-specific readiness."
+          ],
+          "validation": "Low residual on a narrow patch does not resolve unconstrained radius/axis/extent; required parameter checks remain unresolved.",
+          "failure_resume": "Retain valid segments; revisit only unsupported fit or request missing evidence.",
+          "resources": "Local limited sensitivity checks follow selected points; remote/manual feature review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects feature evidence and directs candidate segmentation.",
+        "hybrid": "Software proposes plane, cluster and supported PCL cylinder candidates; agent interprets physical surfaces and parameter support.",
+        "software_first": "Checked surface classes segment automatically; mixed/partial/unstable fits enter review.",
+        "deterministic": "Explicit regions, model/settings and checked criteria produce candidate evidence."
+      },
+      "alternatives": [
+        "Manual region segmentation with original indices.",
+        "Open3D plane/DBSCAN candidates.",
+        "PCL normal-assisted cylinder candidate with matched point/normal indices, explicit consensus controls, coefficient contract and source-specific radius/axis constraints.",
+        "Context clusters and precision analytic interfaces retain different required support/uncertainty."
+      ],
+      "merge": {
+        "branches": "Region/model candidates share raw cloud/control revisions and resource/use records.",
+        "evaluation": "VLM reviews surface identity; software compares held-out residuals and parameter stability.",
+        "combination": "Merge compatible region evidence by original point ID; retain conflicting primitive interpretations.",
+        "post_merge": "Refit/check changed support and independently review resulting feature identity."
+      },
+      "software_migration": "Demonstrate mixed planes, narrow arcs, uneven density, outliers, threshold sensitivity and missing coverage before routine primitive classification.",
+      "future_tests": [
+        "Partial cylinder arc fits several radii with low residual; required radius remains unresolved.",
+        "Dense patch and sparse boundary produce biased plane; sensitivity check records shift.",
+        "Two adjacent planes combined as one fail regional residual inspection.",
+        "Original point membership survives segmentation and candidate merging.",
+        "Permuting normals after filtering while point count stays equal fails point-normal correspondence preflight; no cylinder measurement is published.",
+        "A cylinder radius clipped by configured bounds and a short visible arc retain candidate status; changed normal-neighborhood/density and withheld regions expose parameter sensitivity.",
+        "Equivalent cylinder axes with opposite direction or shifted axis reference point compare as the same unoriented line where the feature has no sourced direction; finite ends require separate extent evidence."
+      ]
+    },
+    {
+      "operation_id": "CAD-11",
+      "name": "Fit analytic features to scans or image-derived point clouds",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/projects/architecture/research/README.md",
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html",
+        "https://pointclouds.org/documentation/classpcl_1_1_s_a_c_segmentation_from_normals.html",
+        "https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/sample_consensus/include/pcl/sample_consensus/sac_model_cylinder.h"
+      ],
+      "actions": [
+        {
+          "id": "CAD-11-A01",
+          "name": "Verify metric evidence and select functional features",
+          "purpose": "Bind fitting to calibrated registered samples and required interfaces.",
+          "intended_use": "Prepare analytic feature measurement and possible solid reconstruction.",
+          "inputs": "One declared depth-frame/point-cloud/mesh route plus measurement-set; source scale/frame; registration and independent controls.",
+          "outputs": "Feature fit plan with sample membership, observation coverage and dimension provenance.",
+          "accuracy": "Sensor/control/registration uncertainty retained separately from interface allowance.",
+          "evidence": "Raw captures and sample IDs, scale/calibration/pose receipts, occluded regions and source feature IDs.",
+          "software": "Check metric registration; derive source-linked metric samples from supported depth/mesh route; reuse REC-09 regions when matching.",
+          "agent": "Identify functional plane/cylinder/axis and distinguish observations from nominal/hidden geometry.",
+          "user_decisions": "Supply interface intent or independent dimensions where coverage is inadequate.",
+          "dependencies": "REC-09 evidence; supported calibrated-depth/mesh sampling adapter; point03 construction contract.",
+          "proposed_development": "Proposal: analytic-fit intake emits feature/support/criteria manifest and unresolved prerequisites.",
+          "procedure": [
+            "Verify metric/frame evidence.",
+            "Select required features and sampled regions.",
+            "Retain observed/occluded boundaries and fit/check roles."
+          ],
+          "validation": "Unregistered or scale-ambiguous data cannot support metric feature dimensions.",
+          "failure_resume": "Retain original data and valid regions; block unsupported metric features only.",
+          "resources": "Local source/control preflight precedes fitting; remote/manual feature identification recorded."
+        },
+        {
+          "id": "CAD-11-A02",
+          "name": "Estimate analytic parameters and uncertainty",
+          "purpose": "Fit explicit surface/axis models to observed feature samples.",
+          "intended_use": "Produce calculated feature measurements with defensible support.",
+          "inputs": "Feature regions; Open3D plane or proposed PCL normal-assisted cylinder estimator; cloud/normal identities and membership mapping; source uncertainty and radius/axis constraints; held-out controls.",
+          "outputs": "Parameters, units/frame, support indices, residual distribution and sensitivity/uncertainty records. PCL cylinder output retains raw seven coefficients plus named axis point [0–2], direction [3–5] and radius [6]; finite extent and feature identity have separate evidence.",
+          "accuracy": "Residual spread and parameter uncertainty differ; sampling/registration bias and partial coverage are recorded.",
+          "evidence": "Estimator/version/settings, original samples/normals, neighborhood/index mapping, exclusions and alternate fits; PCL tutorial/API/header coefficient contract.",
+          "software": "Fit planes through evidenced Open3D support or cylinders through proposed PCL SACSegmentationFromNormals with SACMODEL_CYLINDER and matched points/normals. Preserve consensus method, optimization, normal weight, threshold, iteration/probability, radius limits and optional sourced axis/angle constraints. Independently evaluate geometric residuals, coverage, sensitivity and retained checks.",
+          "agent": "Compare primitive meanings and distinguish geometric fit from functional nominal dimension.",
+          "user_decisions": "Choose authored idealization or nominal source only through explicit feature intent.",
+          "dependencies": "REC-09 cylinder adapter contract; PCL 1.15.1-dev API and mutable master header remain separate from selected installed-release evidence. Normal estimation and point-index mapping must be recorded. Additional primitive types require their own evidenced estimator contract.",
+          "proposed_development": "Proposal: analytic estimator accepts feature/model/support/normal/settings/criteria records and emits named parameters plus raw coefficients, inlier IDs, coverage, diagnostics and observable components. Cylinder-axis comparison uses a common sourced datum and explicit direction convention; extent/closure comes from separate feature evidence. Validate settings and decoded output before CAD consumption.",
+          "procedure": [
+            "Validate the declared estimator input, including matched point/normal indices for PCL cylinders; fit with source-backed threshold/radius constraints in cloud units and retain raw coefficients.",
+            "Decode axis point/direction/radius, retain sample masks and normal-neighborhood provenance, and measure geometric residuals and parameter sensitivity on declared region/setting alternatives.",
+            "Compare independent controls and alternate models; record observable parameter components, axis reference/sign convention and separately supported finite extent before CAD construction."
+          ],
+          "validation": "Verify finite supported coefficients and axis/radius conventions, then compare independent feature distances and axial/angular coverage. Narrow arcs, short spans, normal errors, radius-bound clipping or biased samples leave affected parameters unresolved despite low residual; an infinite fitted cylinder supplies no finite end locations.",
+          "failure_resume": "Keep candidate evidence and valid fit receipts; repair only the named region, normal mapping, estimator/settings or missing interface measurement. Refit changed support and invalidate dependent features without modifying the raw cloud.",
+          "resources": "Local point/normal checks and source-linked region sampling precede bounded optimization/consensus and sensitivity studies; cost depends on samples, normal neighborhoods and hypothesis limits. Precision checks use required retained samples/controls. Record remote interpretation and manual metrology separately."
+        },
+        {
+          "id": "CAD-11-A03",
+          "name": "Construct and validate supported CAD feature geometry",
+          "purpose": "Translate chosen evidence into actual supported CAD geometry without losing provenance.",
+          "intended_use": "Deliver measurement-set and cad-solid when the solid prerequisites are complete.",
+          "inputs": "Checked fitted parameters; explicit component/closure/hidden-feature decisions; CAD backend and criteria.",
+          "outputs": "Measurement-set plus actual valid cad-solid, source/fit mapping and native readback; incomplete surfaces retain typed intermediate state.",
+          "accuracy": "Source fit uncertainty, authored allowances, kernel criteria and saved comparison thresholds separate.",
+          "evidence": "Parameter-to-source and feature-to-native IDs; withheld cloud/interface checks.",
+          "software": "Construct through supported CAD-10 operations; query shape class, required dimensions, held-out distances and saved output.",
+          "agent": "Independent reviewer checks observed/fitted/authored distinctions and hidden-feature meaning.",
+          "user_decisions": "Supply geometry required to close a body or select intended idealization when observations cannot determine it.",
+          "dependencies": "Point03 native construction/readback; actual backend capability and source/feature persistence.",
+          "proposed_development": "Proposal: fitted-feature builder emits native solid and feature-measurement/uncertainty ledger.",
+          "procedure": [
+            "Construct source-linked supported features.",
+            "Check actual solid and functional dimensions.",
+            "Compare withheld samples and saved readback."
+          ],
+          "validation": "A plane or open surface alone does not fulfill cad-solid; every solid-defining assumption is explicit and required features checked.",
+          "failure_resume": "Preserve partial geometry and fit evidence; return to affected source/feature action without refitting unchanged regions.",
+          "resources": "Local CAD/kernel and regional distances follow surfaces/samples; remote semantics and manual missing data separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent identifies interfaces and fit/model meaning, directs construction.",
+        "hybrid": "Software fits/measures; agent interprets coverage and authored feature choices.",
+        "software_first": "Demonstrated sampled-feature classes fit/build with exception diagnostics.",
+        "deterministic": "Explicit metric regions, estimator, complete feature plan and checks produce typed measurements/solid."
+      },
+      "alternatives": [
+        "Direct independent interface measurements with scan context.",
+        "Source-linked analytic surface/axis fits.",
+        "Keep sampled mesh as declared context/collision reference.",
+        "Lower-detail context versus working interface receives distinct observation/uncertainty and closure requirements."
+      ],
+      "merge": {
+        "branches": "Observed-fit, drawing-nominal and authored-idealized branches retain separate meanings, criteria and resources.",
+        "evaluation": "VLM checks physical feature identity/source interpretation; software checks support, uncertainty and held-out differences.",
+        "combination": "Select sourced parameter meaning per feature; never average nominal and measured values without an explicit justified rule.",
+        "post_merge": "Rebuild new feature revision and repeat solid/interface/source/held-out/readback checks."
+      },
+      "software_migration": "Demonstrate partial coverage, biased sampling, mixed surfaces, uncertain radius/axis, missing closure and independent interface fixtures.",
+      "future_tests": [
+        "Low plane residual with insufficient body definition leaves cad-solid unfulfilled.",
+        "Partial cylinder radius uncertainty fails precision-interface readiness.",
+        "Nominal drawing value differs from observed fit; both persist with distinct source/status.",
+        "Source-mapped depth/mesh sampling retains original calibration and membership.",
+        "Cylinder fitter receives normals with stale point ordering or zero vectors; preflight rejects the candidate and preserves raw samples.",
+        "Radius bounds clipping an apparently low-residual cylinder cannot satisfy a working-interface criterion without independent parameter evidence.",
+        "A fitted cylinder's arbitrary axis point and sign cannot invent finite part ends; construction requires sourced extent/closure and checks axis equivalence in a common datum."
+      ]
+    },
+    {
+      "operation_id": "REC-12",
+      "name": "Register existing CAD to calibrated photographs or scan points",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "actions": [
+        {
+          "id": "REC-12-A01",
+          "name": "Bind exact CAD and observation-route evidence",
+          "purpose": "Choose compatible photo or surface registration inputs and actual CAD geometry.",
+          "intended_use": "Align known CAD to physical observation while retaining both sources.",
+          "inputs": "Measurement-set; one parametric-source/cad-solid; one photo-set/point-cloud/mesh; photo calibration when selected.",
+          "outputs": "Route manifest with materialized CAD revision, observation identities, units/frame and fit/check landmarks.",
+          "accuracy": "CAD nominal criteria and observation uncertainty separate; tessellation deviation is explicit.",
+          "evidence": "CAD source and generated shape hash, component IDs, derivative settings, capture/calibration records.",
+          "software": "Materialize parametric source through an authorized supported generator or consume its checked geometry receipt; query actual landmarks/surfaces.",
+          "agent": "Identify source correspondence and whether assembly configuration matches observed object.",
+          "user_decisions": "Resolve mismatched component/configuration, target route or authored CAD datum.",
+          "dependencies": "Point02 CAD identity, point03 generation, REC-02/07/08 appropriate branch.",
+          "proposed_development": "Proposal: CAD observation binder emits route-specific geometry/control manifests.",
+          "procedure": [
+            "Pin CAD/observation revisions.",
+            "Obtain actual CAD geometry and named landmarks.",
+            "Choose photo or surface branch and reserve controls."
+          ],
+          "validation": "Source text alone cannot provide queried CAD landmarks; photo intrinsics match actual preprocessing.",
+          "failure_resume": "Retain source records; block only route with unmet geometry/calibration prerequisites.",
+          "resources": "Local metadata/required landmarks before tessellation/full cloud; remote/manual association separate."
+        },
+        {
+          "id": "REC-12-A02",
+          "name": "Estimate route-specific CAD alignment candidates",
+          "purpose": "Compute camera pose or spatial registration from the declared evidence.",
+          "intended_use": "Produce alignment hypotheses without changing authoritative CAD.",
+          "inputs": "Route manifest; named photo correspondences or source/target sampled surfaces; controls.",
+          "outputs": "Photo CAD-to-camera pose candidates or scan-to-CAD spatial transform candidates with receipts.",
+          "accuracy": "Image pixel fit and surface-distance objectives have separate units/criteria; scale changes require explicit evidence.",
+          "evidence": "Exact CAD/tessellation/observation revisions, fit regions and exclusions.",
+          "software": "Photo route uses REC-02; scan/mesh route uses REC-07/08 with documented sampling and transform direction.",
+          "agent": "Review alternate symmetry poses, occlusion, partial overlap and wrong physical revision.",
+          "user_decisions": "Resolve controlling correspondence or scale/design discrepancy.",
+          "dependencies": "OpenCV PnP or Open3D registration actual supported interface.",
+          "proposed_development": "Proposal: route registrar preserves native CAD and emits conditional pose/spatial records.",
+          "procedure": [
+            "Run selected route with explicit roles.",
+            "Retain candidate transforms and diagnostics.",
+            "Check actual scale/handedness and matched component identity."
+          ],
+          "validation": "Rigid CAD alignment preserves geometry; scan route creates no camera parameters from absent observations.",
+          "failure_resume": "Retain hypotheses; diagnose source/model mismatch before new fitting branch.",
+          "resources": "Local pose or surface work follows chosen route; remote/manual evidence selection recorded."
+        },
+        {
+          "id": "REC-12-A03",
+          "name": "Validate alignment and publish conditional outputs",
+          "purpose": "Confirm route-specific alignment against independent physical/source features.",
+          "intended_use": "Deliver measurement-set and camera-solution only for camera-evidenced photo route.",
+          "inputs": "Alignment hypotheses; withheld landmarks/interfaces; fixed source revisions and criteria.",
+          "outputs": "Measurement-set with spatial registration/controls; photo branch also emits camera-solution. Scan-only branch records original camera-output mismatch explicitly.",
+          "accuracy": "Independent projection/interface checks remain distinct from fit; CAD tessellation error included in surface comparison interpretation.",
+          "evidence": "Actual query geometry and withheld sources; camera output traces actual calibration/image state.",
+          "software": "Reproject photo checks or compare fixed scan regions; inspect source/target transforms and required interfaces.",
+          "agent": "Independent reviewer checks matched component/configuration and visible/occluded evidence.",
+          "user_decisions": "Supply evidence resolving alternate poses or physical-versus-nominal differences.",
+          "dependencies": "REC-02/08 check reports; CAD-13 actual geometry queries.",
+          "proposed_development": "Proposal: conditional registration exporter emits supported branch artifacts and unmet original output labels.",
+          "procedure": [
+            "Evaluate withheld route-specific checks.",
+            "Review symmetry/identity and fit coverage.",
+            "Publish measured transform and actual camera evidence when present."
+          ],
+          "validation": "Original REC-12 output list is preserved as a finding; scan-only spatial records cannot satisfy a camera-consuming handoff.",
+          "failure_resume": "Keep failed reports and valid CAD; revisit affected route/association and invalidate dependent overlays.",
+          "resources": "Local selected-feature checks first; remote semantic review/manual metrology separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects route/landmarks and directs evidence-based registration.",
+        "hybrid": "Software estimates/checks transforms; agent interprets CAD-observation identity.",
+        "software_first": "Checked CAD/capture classes register; wrong revision, symmetry or insufficient controls enters review.",
+        "deterministic": "Explicit actual geometry, correspondences/surfaces and fixed checks produce route-specific output."
+      },
+      "alternatives": [
+        "Surveyed CAD fiducials with calibrated photo pose.",
+        "Known datum alignment to metric scan.",
+        "Global/ICP surface registration of declared CAD tessellation.",
+        "Context overlay versus working interface uses individual control/uncertainty requirements; conditional scan output is a proposal correcting the original broad output list."
+      ],
+      "merge": {
+        "branches": "Route candidates share exact CAD/observation revisions and source control meaning.",
+        "evaluation": "VLM reviews visible feature identity; software compares independent projection/surface evidence.",
+        "combination": "Select coherent route transform; combine complementary checks without inventing missing camera data.",
+        "post_merge": "Recheck control/interface alignment and all requested image/world conversions."
+      },
+      "software_migration": "Demonstrate stale CAD source, wrong assembly state, tessellation error, partial overlap, photo-grid mismatch and scan-only output cases.",
+      "future_tests": [
+        "Parametric source with no materialized geometry blocks landmark query.",
+        "Scan-only route publishes spatial evidence and blocks camera-consuming handoff.",
+        "Wrong but symmetric CAD pose fails independent interface controls.",
+        "Coarse tessellation error is retained in scan-distance interpretation."
+      ]
+    },
+    {
+      "operation_id": "REC-13",
+      "name": "Anchor a screen sketch to a 3D surface",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://docs.blender.org/api/current/bpy.types.Scene.html",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_scene_api.cc",
+        "https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_object_api.cc"
+      ],
+      "actions": [
+        {
+          "id": "REC-13-A01",
+          "name": "Bind sketch view, camera and hit surface",
+          "purpose": "Define the exact projection and selected geometry supplying calculated anchors.",
+          "intended_use": "Prepare a trace, projected curve or planar sketch interpretation.",
+          "inputs": "Raster-sketch; camera-solution; selected mesh/cad-solid; view/image mapping and units.",
+          "outputs": "Anchor manifest with camera/view/geometry revision, target components and stroke meaning.",
+          "accuracy": "Pixel localization, camera uncertainty and surface approximation remain separate from engineering allowance.",
+          "evidence": "Original strokes, pixel mapping, calibrated/evaluated view state and target surface IDs.",
+          "software": "Validate image/camera compatibility; materialize evaluated geometry and record transform/face-index mapping.",
+          "agent": "Interpret intended target surface versus visible occluder and whether projection is perspective or orthographic.",
+          "user_decisions": "Choose trace/projected-curve/plane meaning and hidden target when source evidence cannot decide.",
+          "dependencies": "Fresh official Blender RNA source documents Scene.ray_cast in world space and Object.ray_cast in object space on evaluated geometry; pin actual installed release/signature before use.",
+          "proposed_development": "Proposal: anchor intake emits camera/ray conventions, surface selection and feature prerequisites.",
+          "procedure": [
+            "Pin source stroke/camera/geometry.",
+            "Select target surface and stroke interpretation.",
+            "Check actual ray interface and view mapping."
+          ],
+          "validation": "View or geometry mismatch invalidates anchor prerequisites; a screenshot alone cannot establish intended depth.",
+          "failure_resume": "Retain stroke/selection alternatives; block ambiguous ray targets.",
+          "resources": "Local metadata/selected geometry first; remote/manual target interpretation recorded."
+        },
+        {
+          "id": "REC-13-A02",
+          "name": "Cast rays and record hit alternatives",
+          "purpose": "Calculate surface anchors from explicit camera rays and selected geometry.",
+          "intended_use": "Produce 3D anchor candidates with depth/occlusion evidence.",
+          "inputs": "Anchor manifest; supported ray query; mapped stroke samples.",
+          "outputs": "Hit/miss/ambiguous records with world/local position, object/primitive ID, depth and source pixel.",
+          "accuracy": "Anchor accuracy combines supplied camera/pixel/surface evidence; interpolation/curve simplification criteria separate.",
+          "evidence": "Ray origin/direction, selected target, geometry revision, hit primitive and evaluated-object transform.",
+          "software": "Construct camera-consistent rays, including distortion treatment; query actual supported target geometry; retain misses and competing surfaces. Scene rays use world coordinates; Object rays use object coordinates with explicit transforms. Preserve evaluated geometry identity; face index -1 is an unavailable primitive reference, not a valid face.",
+          "agent": "Review occlusion and whether frontmost hit is the intended feature; preserve disconnected stroke segments.",
+          "user_decisions": "Resolve competing target depth/surface meanings.",
+          "dependencies": "Selected Blender ray adapter or evidenced CAD intersection interface; mesh derivative error explicit.",
+          "proposed_development": "Proposal: ray-anchor adapter emits full ray/hit provenance, candidate ordering and validity states.",
+          "procedure": [
+            "Map stroke sample to camera ray.",
+            "Intersect declared evaluated geometry.",
+            "Retain all supported candidate/miss/occlusion evidence."
+          ],
+          "validation": "A hit is calculated from selected geometry; no-hit intervals are not bridged as measured surfaces.",
+          "failure_resume": "Keep partial anchors; retry only failed view/target query after state reconciliation.",
+          "resources": "Local ray cost follows samples/scene acceleration; remote ambiguity review and manual selection separate."
+        },
+        {
+          "id": "REC-13-A03",
+          "name": "Reproject anchors and publish measurement evidence",
+          "purpose": "Check source-view consistency and define any later sketch handoff.",
+          "intended_use": "Deliver measurement-set of calculated anchors.",
+          "inputs": "Hit candidates; original stroke; selected interpretation; source criteria.",
+          "outputs": "Anchor measurement-set with pixel/object/primitive lineage, residuals and downstream sketch prerequisites.",
+          "accuracy": "Reprojection residual validates view consistency; physical metric accuracy requires independent source measurements.",
+          "evidence": "Exact camera/geometry revision and hit evidence; any plane/constraint choices retained.",
+          "software": "Reproject world anchors; inspect residuals, target membership and discontinuities; test required plane conditions separately.",
+          "agent": "Independent reviewer checks chosen surface, occlusion and trace meaning.",
+          "user_decisions": "Specify sketch plane/constraints and feature intent before native sketch construction.",
+          "dependencies": "projectPoints or compatible selected-camera projection; point03 CAD-09 handoff when requested.",
+          "proposed_development": "Proposal: anchor verifier emits view residuals and explicit planar/nonplanar feature states.",
+          "procedure": [
+            "Reproject and compare source strokes.",
+            "Check target/primitive identity and curve continuity.",
+            "Publish calculated anchors and named sketch prerequisites."
+          ],
+          "validation": "Anchors do not themselves become independent physical measurements or constrained sketch; remeshing invalidates unstable primitive references.",
+          "failure_resume": "Retain failed anchors; update affected rays after camera/geometry changes and recheck downstream sketch links.",
+          "resources": "Local projection/plane checks bounded by anchors; separate remote semantic review/manual decisions."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent chooses surface/stroke meaning and directs ray queries.",
+        "hybrid": "Software casts/reprojects; agent resolves target/occlusion ambiguity.",
+        "software_first": "Checked camera/target classes anchor ordinary strokes; misses/multiple surfaces enter review.",
+        "deterministic": "Explicit calibrated view, target geometry, stroke samples and intersection rules produce calculated anchors."
+      },
+      "alternatives": [
+        "Draw on an explicit CAD datum plane.",
+        "Known orthographic view with declared scale/plane.",
+        "Calibrated perspective ray-to-surface trace.",
+        "Appearance annotation and working-feature anchor use distinct physical evidence and downstream constraint requirements."
+      ],
+      "merge": {
+        "branches": "Target/ray candidates share original stroke/camera/geometry revisions and use/criteria records.",
+        "evaluation": "VLM reviews full-view target meaning; software compares ray/target/reprojection evidence.",
+        "combination": "Select supported anchor segments by source sample; preserve depth/surface alternatives without averaging hits.",
+        "post_merge": "Reproject all merged anchors and recheck target identities, continuity and intended plane."
+      },
+      "software_migration": "Demonstrate occlusion, no-hit, multiple-depth, perspective/orthographic, preprocessing and remesh-index cases before routine anchoring.",
+      "future_tests": [
+        "Frontmost occluder hit fails intended-component association.",
+        "Correct reprojection with wrong-depth surface remains ambiguous.",
+        "Geometry modifier/remesh changes primitive IDs and invalidates old anchors.",
+        "Undistorted pixels with original distortion double-applied fail camera checks.",
+        "Nonplanar anchors cannot silently become a planar constrained sketch."
+      ]
+    },
+    {
+      "operation_id": "REC-14",
+      "name": "Remodel segmented scan evidence as parametric CAD",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "actions": [
+        {
+          "id": "REC-14-A01",
+          "name": "Define feature evidence and all required editable outputs",
+          "purpose": "Translate segmented measurements into a sourced parametric feature plan.",
+          "intended_use": "Create constrained-sketch, parametric-source and cad-solid as the three original outputs.",
+          "inputs": "Measurement-set plus selected point-cloud/mesh; registration/datum; segmented fits; component/use criteria.",
+          "outputs": "Feature/parameter provenance plan and backend combination capable of all three outputs.",
+          "accuracy": "Observed fit uncertainty, drawing nominal values and authored dimensions remain separate; interface allowance has its own source.",
+          "evidence": "Raw scan/segmentation IDs, fit records and each chosen feature's source/status.",
+          "software": "Check complete dimensions/closure and actual backend persistence for sketch constraints, source and solid.",
+          "agent": "Select source-supported features and identify hidden geometry/idealizations.",
+          "user_decisions": "Choose nominal versus observed/authored intent where task/evidence do not decide.",
+          "dependencies": "Point03 CAD-09/CAD-10/DOM-40; OCS native bodies alone do not establish all three outputs.",
+          "proposed_development": "Proposal: remodeling planner emits feature dependencies and required artifact/output capability matrix.",
+          "procedure": [
+            "Map measured/drawing/fitted values to features.",
+            "Declare hidden-feature decisions and required constraints.",
+            "Select backend route fulfilling all three representations."
+          ],
+          "validation": "Source evidence and output capability are explicit; unsupported editable artifact blocks full operation readiness.",
+          "failure_resume": "Retain evidence/feature plan; choose a supported route or keep actual partial-output status.",
+          "resources": "Local metadata/fit reuse first; remote higher reasoning for feature intent; manual missing measurements separate."
+        },
+        {
+          "id": "REC-14-A02",
+          "name": "Author constrained source and materialize geometry",
+          "purpose": "Construct editable feature geometry from the chosen evidence interpretation.",
+          "intended_use": "Produce actual sketch constraints, reproducible parametric source and native solid.",
+          "inputs": "Feature plan; supported backend; source parameter values; target revision/output scope.",
+          "outputs": "Constrained-sketch, parametric-source and actual cad-solid candidates with linked feature IDs.",
+          "accuracy": "Native constraints/operations use sourced values and separate solver/kernel criteria.",
+          "evidence": "Parameter→source→sketch/feature/body mappings and actual generation receipts.",
+          "software": "Use evidenced native sketch/feature backend and retained source program; generate actual shape and query output types.",
+          "agent": "Review stable feature references and scan-to-feature correspondence; diagnose missing backend output.",
+          "user_decisions": "Resolve geometry-changing repair or new hidden-feature intent.",
+          "dependencies": "FreeCAD documented sketch/Part and source route, or separately evidenced compatible adapters; OCS route typed by actual capability.",
+          "proposed_development": "Proposal: editable remodel composer emits three artifacts plus dependency and source mapping.",
+          "procedure": [
+            "Author source-linked constraints and parameters.",
+            "Generate supported features/solid.",
+            "Read actual output types and retain source/native identities."
+          ],
+          "validation": "CadQuery/source+solid without native constrained sketch remains partial; OCS native body without feature/source outputs remains partial.",
+          "failure_resume": "Preserve prior revisions/partial artifacts; reconcile mutations and resume failed feature only.",
+          "resources": "Local solver/kernel cost follows feature graph; remote/manual modeling interpretation separate."
+        },
+        {
+          "id": "REC-14-A03",
+          "name": "Verify editability, interfaces and fixed scan comparisons",
+          "purpose": "Validate all three representations and their source agreement.",
+          "intended_use": "Deliver checked remodeling outputs with observed/inferred distinction.",
+          "inputs": "Three candidate artifacts; immutable registered scan/controls; required interface criteria; supplied variant if requested.",
+          "outputs": "Validated constrained-sketch, parametric-source and cad-solid with regional residual and saved-readback reports.",
+          "accuracy": "Independent interfaces/held-out scan checks separate from fitting and solver/kernel tolerance.",
+          "evidence": "Actual saved artifacts, regenerated source evidence, scan region/mask/configuration and review identity.",
+          "software": "Check constraints/source persistence, actual solid validity and dimensions; compare fixed scan regions; test supplied variant when in scope.",
+          "agent": "Independent reviewer checks feature meaning, hidden assumptions and parameter dependency behavior.",
+          "user_decisions": "Resolve source conflict or supplied parameter variant expectations.",
+          "dependencies": "CAD-13 and REC-08/16 comparison contracts; actual independent reader where available.",
+          "proposed_development": "Proposal: editable-output verifier emits each representation's checks and cross-artifact lineage.",
+          "procedure": [
+            "Measure interfaces and fixed held-out regions.",
+            "Reopen saved native/source/solid artifacts.",
+            "Check supplied variant and publish each output's readiness."
+          ],
+          "validation": "All required outputs exist and retain intended editability; low scan error cannot replace interface/source checks.",
+          "failure_resume": "Retain failed representation/report; invalidate only affected feature/source descendants.",
+          "resources": "Local regeneration/readback/region distances follow features/samples; remote semantics and manual corrections separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent chooses source-supported feature interpretation and directs editable authoring.",
+        "hybrid": "Software fits/builds/checks explicit features; agent resolves nominal/observed meaning.",
+        "software_first": "Demonstrated feature families produce all required outputs; missing evidence/capability enters review.",
+        "deterministic": "Explicit evidence choices, supported source/sketch/solid generation and checks produce the three artifacts."
+      },
+      "alternatives": [
+        "FreeCAD source creating native constraints and solid with retained source.",
+        "Compatible evidenced composition of fit, sketch and procedural-solid adapters.",
+        "Actual partial native body or reference mesh as separately typed derivative.",
+        "Context remodeling and precision functional model have distinct source/coverage/editability requirements."
+      ],
+      "merge": {
+        "branches": "Observed, nominal and idealized models share evidence IDs but retain separate parameter meanings.",
+        "evaluation": "VLM compares source intent; software compares interfaces, fixed residuals and actual editable artifacts.",
+        "combination": "Select coherent parameter meaning per feature; combined source creates a new authored revision.",
+        "post_merge": "Regenerate all three outputs and repeat source, interface, editability and saved checks."
+      },
+      "software_migration": "Demonstrate feature-source mapping, hidden geometry, three-output completeness, unstable selectors, saved constraints and supplied variants before routine generation.",
+      "future_tests": [
+        "Native body alone fails full three-output readiness.",
+        "Source+solid route lacking actual constrained sketch reports partial outputs.",
+        "Fit value differs from nominal value and retains separate meaning.",
+        "Parameter change preserves source linkage and invalidates dependent geometry/checks."
+      ]
+    },
+    {
+      "operation_id": "REC-15",
+      "name": "Reconcile scan surfaces with dimensioned drawings",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
+      ],
+      "actions": [
+        {
+          "id": "REC-15-A01",
+          "name": "Bind source revisions, datums and discrepancy purpose",
+          "purpose": "Keep drawing nominal evidence and observed scan evidence distinct before comparison.",
+          "intended_use": "Compare as-drawn and as-observed features for stated use.",
+          "inputs": "Measurement-set; selected cloud/mesh; selected vector/raster drawing; known revisions/units; common datum evidence.",
+          "outputs": "Feature correspondence and datum/control manifest with nominal/observed evidence classes.",
+          "accuracy": "Drawing allowance, source uncertainty and scan/calibration uncertainty remain separate.",
+          "evidence": "Original drawing/scan, raster interpretation records when needed, control IDs and dates/configuration.",
+          "software": "Check units/revisions, materialize drawing feature records and identify matching scan regions.",
+          "agent": "Interpret nominal, tolerance, manufactured condition and fit meaning; avoid matching unrelated revisions.",
+          "user_decisions": "Choose intended comparison/target geometry meaning when not established by task.",
+          "dependencies": "Point04 drawing interpretation; REC-07/08 registration; source measurement ledger.",
+          "proposed_development": "Proposal: reconciliation intake emits paired feature sources, datum choices and separate fit/check roles.",
+          "procedure": [
+            "Pin drawing and scan revisions.",
+            "Identify corresponding features/datums.",
+            "State comparison purpose and reserve independent checks."
+          ],
+          "validation": "Revision/configuration mismatch is explicit; raster pixel estimates do not replace printed dimension values.",
+          "failure_resume": "Retain both sources; block affected association or acquire required revision/datums.",
+          "resources": "Local source/feature inventory first; remote/manual meaning review separate."
+        },
+        {
+          "id": "REC-15-A02",
+          "name": "Align evidence under fixed datum choices and measure differences",
+          "purpose": "Quantify disagreement without fitting it away.",
+          "intended_use": "Produce regional/feature comparison evidence.",
+          "inputs": "Paired features; declared datum registration; fit/check regions; immutable source data.",
+          "outputs": "Transform receipt and per-feature nominal-versus-observed differences with coverage.",
+          "accuracy": "Datum fit criteria and evaluated dimension allowance remain distinct; density/occlusion effects recorded.",
+          "evidence": "Actual scan samples, source drawing values and transform/control revisions.",
+          "software": "Apply supported registration; measure selected quantities and surfaces; reserve evaluation dimensions from alignment.",
+          "agent": "Review whether discrepancy stems from datum, interpretation, sampling, physical variation or drawing revision.",
+          "user_decisions": "Choose a new datum only with explicit purpose; record separate comparison branch.",
+          "dependencies": "REC-08 directional distance and independent control rules; source-linked measurement methods.",
+          "proposed_development": "Proposal: paired-feature comparator emits direction/method/uncertainty-specific discrepancies.",
+          "procedure": [
+            "Apply declared datum alignment.",
+            "Measure paired features and withheld dimensions.",
+            "Report regional coverage, excluded data and uncertainty."
+          ],
+          "validation": "Optimizer adjustment cannot silently remove a required nominal-versus-observed deviation.",
+          "failure_resume": "Retain discrepancy maps and transform; revise only named datum/association under new branch.",
+          "resources": "Local targeted measurements first; remote reasoning interprets source/context; manual metrology separate."
+        },
+        {
+          "id": "REC-15-A03",
+          "name": "Publish reconciliation choices and preserved conflicts",
+          "purpose": "Define which evidence controls a later modeled feature while retaining disagreement.",
+          "intended_use": "Deliver measurement-set for remodeling or documented comparison.",
+          "inputs": "Feature discrepancies; drawing/scan sources; stated target purpose; reviewer findings.",
+          "outputs": "Reconciled measurement-set with nominal, measured, fit and authored candidates, selected-use reason and open conflicts.",
+          "accuracy": "No averaging of incompatible quantity meanings; every chosen value keeps source and criterion.",
+          "evidence": "Selection evidence, alternatives and independent reviewer identity.",
+          "software": "Validate units/feature links and publish complete discrepancy/choice records without mutating source CAD.",
+          "agent": "VLM selects evidence-supported association within current intent; independent reviewer checks nominal/observed meaning.",
+          "user_decisions": "Resolve new intended design/as-built target when source/task cannot choose.",
+          "dependencies": "Point01 evidence records and REC-14 downstream parameter map.",
+          "proposed_development": "Proposal: reconciliation exporter emits source-separated values, reasons and downstream readiness.",
+          "procedure": [
+            "Review conflict causes and evidence.",
+            "Record supported selection or retained alternatives.",
+            "Publish measurement-set and owning next action."
+          ],
+          "validation": "Unresolved controlling choice blocks only dependent feature; source revision discrepancies remain visible.",
+          "failure_resume": "Preserve prior ledger; update changed source feature and its dependent models only.",
+          "resources": "Local record checks small; remote/manual decision review recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets source revisions/datums and discrepancy meaning.",
+        "hybrid": "Software aligns/measures; agent decides evidence-supported association.",
+        "software_first": "Checked datum/feature classes compare automatically; conflicts enter review.",
+        "deterministic": "Explicit paired features, datum, target meaning and criteria produce a reconciliation ledger."
+      },
+      "alternatives": [
+        "Drawing-nominal and observed variants retained separately.",
+        "Independent direct interface metrology.",
+        "Calibrated photo-to-CAD comparison for supported features.",
+        "Context mismatch map versus working-interface reconciliation retains distinct accuracy and intent requirements."
+      ],
+      "merge": {
+        "branches": "Datum/source interpretations share original revisions and preserved values.",
+        "evaluation": "VLM compares source meaning; software quantifies independent discrepancies.",
+        "combination": "Merge complementary evidence by feature ID while retaining nominal/observed alternatives.",
+        "post_merge": "Recompute affected comparisons and independently review value meaning."
+      },
+      "software_migration": "Demonstrate wrong revision, datum bias, printed-versus-pixel value, physical variation, missing coverage and conflicting target intent.",
+      "future_tests": [
+        "Best-fit alignment lowers surface residual but shifts functional datum and fails independent check.",
+        "Nominal and fitted diameter remain separate values.",
+        "Wrong drawing revision cannot be corrected by averaging scan dimensions.",
+        "Comparison-only output leaves CAD source unchanged."
+      ]
+    },
+    {
+      "operation_id": "REC-16",
+      "name": "Iterate CAD edits against registered evidence",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+      ],
+      "actions": [
+        {
+          "id": "REC-16-A01",
+          "name": "Freeze comparison baseline and bounded edit scope",
+          "purpose": "Define a reproducible before/after comparison with explicit edit intent.",
+          "intended_use": "Evaluate an authorized CAD change against unchanged scan/control evidence.",
+          "inputs": "Measurement-set; cad-solid or materialized parametric-source; cloud/mesh; immutable transform; edit plan/regions/criteria.",
+          "outputs": "Baseline CAD/scan/configuration receipt and exact edit/check dependencies.",
+          "accuracy": "Functional dimensions, source uncertainty and distance summary thresholds separate; baseline regions fixed.",
+          "evidence": "Prior CAD/source hash, scan hash, registration, masks and check configuration.",
+          "software": "Read actual geometry and baseline measurements; verify target revision and authorized feature edit.",
+          "agent": "Identify intended source-backed change and unaffected interfaces.",
+          "user_decisions": "Resolve new design intent or expanded edit scope before dependent mutation.",
+          "dependencies": "OCS revision-bound operations; point03 CAD-14 recovery; actual parametric generation route.",
+          "proposed_development": "Proposal: edit-baseline binder emits immutable comparison inputs and bounded feature plan.",
+          "procedure": [
+            "Bind baseline/source revisions.",
+            "Measure fixed controls/regions.",
+            "Specify exact edit and expected dependent changes."
+          ],
+          "validation": "No changed registration/mask/threshold can silently enter the before/after comparison.",
+          "failure_resume": "Retain baseline and block stale-revision edit; reconcile document state.",
+          "resources": "Local baseline regions first; remote/manual edit interpretation separate."
+        },
+        {
+          "id": "REC-16-A02",
+          "name": "Apply scoped edit and read actual resulting geometry",
+          "purpose": "Create a traceable model revision for the selected feature change.",
+          "intended_use": "Materialize edited CAD/source as ancillary result for measurement output.",
+          "inputs": "Baseline receipt; explicit edit parameters; target revision; supported editor.",
+          "outputs": "New CAD/source revision and readback/operation receipt; prior revision preserved.",
+          "accuracy": "Apply source values with actual solver/kernel criteria; unintended dimension changes checked.",
+          "evidence": "Exact request ID, edited feature/parameter IDs and before/after source lineage.",
+          "software": "Execute bounded supported edit; regenerate if source-driven; query actual shape and changed handles.",
+          "agent": "Diagnose feature dependency or selector failures from actual state.",
+          "user_decisions": "Approve a genuinely changed design objective only when the current scoped intent cannot decide.",
+          "dependencies": "OCS actual operation schema or selected source backend; output capability checks from point03.",
+          "proposed_development": "Proposal: revision edit executor emits actual changed geometry and dependency receipt.",
+          "procedure": [
+            "Verify target revision.",
+            "Apply declared edit/regeneration.",
+            "Read actual result and preserve prior artifact."
+          ],
+          "validation": "Successful command requires expected valid geometry and preserved intended interfaces.",
+          "failure_resume": "Reconcile uncertain request/partial state before retry; resume failed feature and retain completed independent work.",
+          "resources": "Local regeneration cost follows feature graph; remote/manual diagnosis separate."
+        },
+        {
+          "id": "REC-16-A03",
+          "name": "Compare fixed evidence and publish revision deltas",
+          "purpose": "Measure improvement or regression under unchanged evidence and criteria.",
+          "intended_use": "Deliver measurement-set tied to before/after CAD revisions.",
+          "inputs": "Both actual revisions; same scan/transform/regions; independent dimensions; fixed statistic rules.",
+          "outputs": "Per-region/feature delta report, affected invariants, saved-readback evidence and next bounded action.",
+          "accuracy": "Max/RMS/quantiles include direction/coverage/sample counts; no new threshold after seeing results.",
+          "evidence": "Both hashes, actual query method and fixed check config; registration changes are separate experiments.",
+          "software": "Measure both models against same evidence; verify functional dimensions and actual saved output; classify changed/unchanged features.",
+          "agent": "Independent reviewer checks source meaning and whether fit improvement conceals wrong nominal/functional change.",
+          "user_decisions": "Choose further edit only if supported by current task or specify new intent.",
+          "dependencies": "REC-08 comparison, CAD-13 read-only verification and source control ledger.",
+          "proposed_development": "Proposal: revision comparator emits comparable deltas, invariants and failed dependencies.",
+          "procedure": [
+            "Repeat identical regional/control checks.",
+            "Compare dimension and residual deltas.",
+            "Publish measurement-set and retained artifacts."
+          ],
+          "validation": "Geometry fit reduction cannot pass an interface violation; refitting alignment creates a separately labelled branch.",
+          "failure_resume": "Preserve failed edited revision/report; return bounded next action without overwriting baseline.",
+          "resources": "Local two-revision queries use fixed relevant samples; remote semantic review/manual follow-up separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects supported edit and interprets fixed-evidence deltas.",
+        "hybrid": "Software edits/regenerates/checks; agent diagnoses meaning and dependencies.",
+        "software_first": "Checked edit families compare automatically; stale revisions or unintended changes enter review.",
+        "deterministic": "Explicit edit, revisions, fixed scan/transform and criteria produce comparable deltas."
+      },
+      "alternatives": [
+        "Cross-section and direct functional metrology.",
+        "Bounded native edit or source parameter edit with regeneration.",
+        "Read-only comparison of supplied revisions when no edit is requested.",
+        "Context surface improvement and working-interface compliance keep distinct success criteria."
+      ],
+      "merge": {
+        "branches": "Edit candidates share baseline scan/transform/configuration and record purpose/resources.",
+        "evaluation": "VLM checks source/feature meaning; software compares fixed regional/functional results.",
+        "combination": "Select candidate or author compatible feature combination as new revision; preserve all prior results.",
+        "post_merge": "Rerun identical comparisons, invariants and saved readback on merged revision."
+      },
+      "software_migration": "Demonstrate stale revision, partial mutation, selector drift, hidden alignment change, interface regression and baseline retention cases.",
+      "future_tests": [
+        "Changed registration makes edited model look improved and is flagged as separate experiment.",
+        "Edit reduces global RMS but violates required interface.",
+        "Uncertain mutation resumes without duplicate edit.",
+        "Source-only edit must generate actual geometry before measurement."
+      ]
+    },
+    {
+      "operation_id": "DOM-19",
+      "name": "Register scan to building frame",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-19-A01",
+          "name": "Resolve scan, building and survey frame definitions",
+          "purpose": "Establish exact coordinate meaning before spatial alignment.",
+          "intended_use": "Register observed scan to the supplied IFC building frame.",
+          "inputs": "IFC; measurement-set distributed controls; point-cloud; sensor/scale evidence; project units, local placements and any supplied CRS/map conversion.",
+          "outputs": "Frame manifest naming scan, IFC local/building and survey/map frames with transform dependencies.",
+          "accuracy": "Control uncertainty, vertical datum and scale evidence explicit; project units and placement translation conventions separate.",
+          "evidence": "IFC revision/units/placement chain, control sources, CRS authority/axis order and source scan calibration.",
+          "software": "Read actual IFC placements/units; compose hierarchy and supplied map conversion; inspect control geometry/observable freedoms.",
+          "agent": "Identify intended building datum and matching physical features; distinguish local frame from geographic reference.",
+          "user_decisions": "Supply missing datum/CRS conversion or choose local-only target when task permits.",
+          "dependencies": "IfcOpenShell read/placement/georeference APIs; actual sensor calibration and REC-07 prerequisites.",
+          "proposed_development": "Proposal: building-frame resolver emits explicit unit/placement/map chains and control sufficiency.",
+          "procedure": [
+            "Pin IFC/scan/control revisions.",
+            "Resolve local placements, units and target datum.",
+            "Separate survey CRS/map conversion and test control geometry."
+          ],
+          "validation": "Blank georeference entities supply no coordinates; one datum plus insufficient control geometry cannot determine all pose freedoms.",
+          "failure_resume": "Retain local frame evidence; block only unresolved map/datum or registration claims.",
+          "resources": "Local IFC/control parsing first; remote/manual datum/source review separate."
+        },
+        {
+          "id": "DOM-19-A02",
+          "name": "Estimate supported scan-to-building transform",
+          "purpose": "Align static scan regions under the declared scale and datum model.",
+          "intended_use": "Produce building-frame registration without altering IFC semantics.",
+          "inputs": "Frame manifest; source cloud and IFC reference geometry/controls; static overlap; fit/check roles.",
+          "outputs": "Source-scan-to-building transform candidates with control/surface receipts.",
+          "accuracy": "Rigid mapping preserves metric scan scale; similarity requires explicitly supported scale evidence and criteria.",
+          "evidence": "IFC-derived target tessellation settings, scan IDs, control regions and transform order.",
+          "software": "Use control alignment or REC-07/08; preserve actual IFC geometry and record any numerical local-origin shift.",
+          "agent": "Review symmetry, partial façade coverage, moving objects and source revision discrepancies.",
+          "user_decisions": "Resolve ambiguous matching or new scale adjustment inconsistent with source evidence.",
+          "dependencies": "Open3D/CloudCompare supported registration; IFC geometry extraction adapter and its approximation limits.",
+          "proposed_development": "Proposal: building registrar returns transform candidates and source/target sampling/normalization receipts.",
+          "procedure": [
+            "Build explicit target/control reference.",
+            "Estimate permitted transform and refine when supported.",
+            "Retain hypotheses, scale and normalization transforms."
+          ],
+          "validation": "Local numerical shift has recorded inverse; no CRS, floor elevation or camera pose is inferred from fit.",
+          "failure_resume": "Preserve raw scan/IFC; rerun only failed alignment branch with new lineage.",
+          "resources": "Local coarse regions first; large-cloud memory/target tessellation explicit; remote/manual correspondence separate."
+        },
+        {
+          "id": "DOM-19-A03",
+          "name": "Validate controls and publish aligned derivative",
+          "purpose": "Confirm spatial registration and preserve scan lineage in the building frame.",
+          "intended_use": "Deliver registration-transform and aligned point-cloud.",
+          "inputs": "Chosen transform; immutable source cloud; withheld controls/regions; IFC frame manifest.",
+          "outputs": "Registration-transform plus transformed point-cloud derivative with original-index/source mapping and check report.",
+          "accuracy": "Independent local/regional control differences, surface fit and uncertainty remain separate.",
+          "evidence": "Exact original/output hashes, transform chain/direction, placement/CRS metadata and check IDs.",
+          "software": "Apply transform once to derivative; check held-out points/lengths, regions, units/vertical datum and inverse mapping.",
+          "agent": "Independent reviewer checks building/feature correspondence and observed-versus-design differences.",
+          "user_decisions": "Obtain missing independent controls for required regions/datums.",
+          "dependencies": "REC-08 metric protocol and actual cloud serializer; camera operations are separate scope.",
+          "proposed_development": "Proposal: building-registration publisher emits aligned cloud, transform chain and source/readback checks.",
+          "procedure": [
+            "Measure withheld controls and regional residuals.",
+            "Create separately identified aligned cloud.",
+            "Read back coordinates and publish both original output types."
+          ],
+          "validation": "Outputs are exactly registration-transform and point-cloud; IFC semantics and raw scan remain preserved.",
+          "failure_resume": "Keep failed derivative/report; return to named frame/fit action and invalidate affected downstream analyses.",
+          "resources": "Local transformed cloud cost follows points; required regions first; remote semantic/manual checks separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets building/survey datums and directs control alignment.",
+        "hybrid": "Software resolves placements/registers; agent reviews source correspondences.",
+        "software_first": "Checked frame/control classes align; unknown units/CRS, symmetry or low coverage enters review.",
+        "deterministic": "Explicit frame chains, controls, permitted model and check criteria produce aligned derivative."
+      },
+      "alternatives": [
+        "Surveyed target transformation.",
+        "Coarse control alignment followed by justified surface refinement.",
+        "Local building-frame registration without geographic claim when that is the supplied target.",
+        "Context scene versus precise opening/interface registration has distinct regional evidence requirements."
+      ],
+      "merge": {
+        "branches": "Candidates share IFC/scan/control revisions and explicit datum/CRS assumptions.",
+        "evaluation": "VLM reviews physical building features; software checks independent controls and frame chain.",
+        "combination": "Select coherent datum/transform; preserve alternate geographic interpretations and source-model discrepancies.",
+        "post_merge": "Reapply selected chain to fresh derivative and repeat regional/unit/datum/readback checks."
+      },
+      "software_migration": "Demonstrate nested placement, metre/millimetre difference, wrong vertical datum, blank CRS, large coordinate shift, partial façade and wrong symmetry fixtures.",
+      "future_tests": [
+        "IFC project units differ from placement is_si convention; explicit conversion preserves controls.",
+        "Blank CRS/map records fail geographic registration claim.",
+        "Façade plane cannot constrain all pose freedoms without other controls.",
+        "Aligned derivative accidentally transformed twice fails inverse/control checks.",
+        "DOM19 creates no camera-solution from scan-only inputs."
+      ]
+    },
+    {
+      "operation_id": "DOM-23",
+      "name": "Scan or mesh to parametric CAD remodeling",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "actions": [
+        {
+          "id": "DOM-23-A01",
+          "name": "Audit literal input contract and target remodeling meaning",
+          "purpose": "Bind all required source evidence and expose the original input-contract inconsistency.",
+          "intended_use": "Prepare source-linked parametric remodeling for the stated function.",
+          "inputs": "Literal existing record requires point-cloud, measurement-set and model-brief plus its mesh alternative entry: preserve all four supplied inputs for that contract.",
+          "outputs": "Input/lineage manifest, target use/interface criteria and explicit route status; proposed true cloud-or-mesh interpretation recorded separately.",
+          "accuracy": "Metric calibration and independent interface dimensions retained; source fit uncertainty and target allowance separate.",
+          "evidence": "Cloud/mesh hashes and relationship, measured controls, brief and source frame.",
+          "software": "Verify literal inputs; if explicit mesh-sampling conversion is scoped, produce source-indexed cloud derivative before satisfying cloud role; do not silently treat name as schema.",
+          "agent": "Interpret observed geometry, intended function and whether nominal/idealized feature source exists.",
+          "user_decisions": "Resolve actual intended cloud-or-mesh contract or missing source artifact before dependent route; no automatic meshing/sampling authorization.",
+          "dependencies": "Original DOM23 record, point02 identity, CAD11/REC14 evidence and source conversion scope.",
+          "proposed_development": "Proposal: remodeling intake distinguishes literal four-input route from separately proposed true alternative or explicit sampled-cloud route.",
+          "procedure": [
+            "Check exact original input roles.",
+            "Bind cloud/mesh provenance and target brief.",
+            "Record complete literal route or named proposed contract/conversion dependency."
+          ],
+          "validation": "Title 'scan or mesh' does not erase mandatory fields; each conversion retains original source and explicit information changes.",
+          "failure_resume": "Retain all supplied evidence; block affected literal handoff until missing artifact or separately scoped route decision exists.",
+          "resources": "Local manifests first; sampling if later authorized has explicit size/compute; remote/manual intent review separate."
+        },
+        {
+          "id": "DOM-23-A02",
+          "name": "Author parametric source and actual feature geometry",
+          "purpose": "Construct editable source and solid from chosen source-supported dimensions.",
+          "intended_use": "Produce parametric-source and cad-solid with measured/inferred distinctions.",
+          "inputs": "Complete route manifest; target brief; fit/measurement evidence; supported parametric backend.",
+          "outputs": "Parametric source and actual solid candidates with feature/source mapping and generation receipt.",
+          "accuracy": "Fit parameters, source nominal dimensions and authored assumptions remain distinct; solver/kernel thresholds separate.",
+          "evidence": "Raw cloud/mesh, fit masks/residuals and exact parameter provenance.",
+          "software": "Reuse CAD11/REC14 checked evidence; construct through supported source/feature backend and query actual solid.",
+          "agent": "Choose feature sequence and stable parameter references; inspect hidden-feature assumptions against intent.",
+          "user_decisions": "Resolve geometry-changing idealization/hidden dimensions needed by required solid.",
+          "dependencies": "Point03 DOM40/CAD10 supported source and geometry; OCS native body alone does not fulfill parametric-source.",
+          "proposed_development": "Proposal: remodeling composer emits parameter/source dependency graph and actual CAD output.",
+          "procedure": [
+            "Select source-supported parameter meaning.",
+            "Author retained parametric construction source.",
+            "Generate/read actual solid and feature IDs."
+          ],
+          "validation": "Both required output representations exist; arbitrary mesh wrapper is not a parametric feature family.",
+          "failure_resume": "Preserve candidates and source; resume failed feature from checked state and invalidate dependents only.",
+          "resources": "Local fitting/kernel work follows selected features; remote/manual feature interpretation separate."
+        },
+        {
+          "id": "DOM-23-A03",
+          "name": "Validate functional interfaces and saved parametric output",
+          "purpose": "Verify intended function geometry, source correspondence and retained editability.",
+          "intended_use": "Deliver checked parametric-source and cad-solid.",
+          "inputs": "Generated source/solid; original observations/controls; target interface criteria; fixed comparison setup.",
+          "outputs": "Checked source/solid with held-out regional distances, interface measurements and saved/rebuild receipts.",
+          "accuracy": "Independent interface criteria and source uncertainty remain separate from residual and numerical thresholds.",
+          "evidence": "Exact output/source hashes, immutable input scans/meshes, check regions and reviewer identity.",
+          "software": "Check solid validity and required interfaces; compare fixed held-out samples; reopen/rebuild from retained source and test supplied variant if requested.",
+          "agent": "Independent reviewer checks nominal/observed interpretation and hidden geometry assumptions.",
+          "user_decisions": "Resolve supplied variant expectations or source-design contradictions affecting target function.",
+          "dependencies": "CAD13 and REC16 fixed-evidence checks; actual backend persistence demonstrated in future cases.",
+          "proposed_development": "Proposal: remodel verifier emits output-specific editability/geometry/source reports.",
+          "procedure": [
+            "Measure independent interfaces and held-out regions.",
+            "Read back saved solid and source-driven result.",
+            "Publish both outputs with per-feature readiness."
+          ],
+          "validation": "Appearance agreement or aggregate fit cannot pass a failing functional interface; source reproduces intended geometry.",
+          "failure_resume": "Retain failed artifacts/reports; return to evidence/feature/contract action with affected-only invalidation.",
+          "resources": "Local required-feature checks first; large distance comparisons bounded; remote semantic/manual metrology separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets target function/source evidence and directs parametric reconstruction.",
+        "hybrid": "Software fits/builds/checks; agent resolves parameter meaning and contract exceptions.",
+        "software_first": "Demonstrated input/feature families generate outputs; missing literal inputs/coverage/capability enters review.",
+        "deterministic": "Explicit complete input contract, source choices, backend and checks produce source and solid."
+      },
+      "alternatives": [
+        "Literal original four-input route with linked cloud and mesh.",
+        "Proposal: true cloud-or-mesh contract retaining measurement-set and brief; original record stays unchanged.",
+        "Explicitly scoped mesh-to-cloud sampling with lineage before the literal cloud role; missing mesh remains its own prerequisite.",
+        "Reference mesh/context derivative or analytic surface route has separately declared outputs; working interfaces require parametric/metric checks."
+      ],
+      "merge": {
+        "branches": "Observed/nominal/idealized candidates share source identities and target function with distinct parameter meaning.",
+        "evaluation": "VLM reviews source/feature intent; software checks interfaces, held-out residuals and source persistence.",
+        "combination": "Select compatible source meanings or author a new combined source revision; preserve conflicts.",
+        "post_merge": "Regenerate required outputs and repeat functional, fixed-evidence, editability and saved checks."
+      },
+      "software_migration": "Demonstrate literal versus proposed input route, sampling lineage, hidden geometry, missing interfaces, parameter persistence and source-rebuild cases.",
+      "future_tests": [
+        "Cloud+measurements+brief without mesh exposes literal contract gap.",
+        "Mesh-only route cannot erase measurement-set/brief or cloud role; explicit sampled-cloud lineage is retained when scoped.",
+        "Source-less native body fails parametric-source output.",
+        "Valid fitted shape with wrong functional interface fails target criteria.",
+        "Rebuilt source changes hidden feature without source decision and fails semantic review."
+      ]
+    }
+  ],
+  "common_protocol": {
+    "references": [
+      "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+      "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+      "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md"
+    ],
+    "scope": "Prior common protocols govern evidence/revision/request identity, per-feature criteria, independent semantic review, native/remote uncertain completion, malformed outputs and affected-only invalidation. All action procedures/helpers and future tests remain proposals.",
+    "frames": "Every transform records source and destination frame IDs/revisions, coordinate units, handedness/axis order, matrix storage/application convention, direction, inverse and composition order. Rigid transform permits rotation/translation; similarity adds explicitly justified positive uniform scale. Unit conversion, origin shift and survey/map conversion retain separate records. Reflections and nonuniform deformation require their own explicit model rather than entering rigid/similarity fitting.",
+    "camera": "Intrinsics describe image projection and distortion for the exact camera/lens/focus/image grid; extrinsics describe pose. Store crop/resize/undistort mappings, actual new intrinsics/distortion convention and pixel-center convention. OpenCV pose maps object/world to camera; inverse is separately identified. Calibration target units set its pose translation scale and do not calibrate an unrelated reconstruction. Held-out calibration views require known pose or pose fitting from a designated subset with separate evaluation points and frozen intrinsics.",
+    "registration": "Source and target cloud roles have separate immutable revisions. Coarse and refined transforms map source to target; record whether an API returns full or incremental transform. Preserve sampled-to-original indices, masks/normals/tessellation settings, dynamic/occluded/non-overlap regions and source density. State which pose freedoms the observed geometry can constrain; unresolved freedoms retain alternatives.",
+    "metrics": "Source engineering allowance, measurement/sensor/control uncertainty, fit objective/threshold, parameter uncertainty and numerical/export threshold are separate quantities. The inspected Open3D 0.20.0 ICP tutorial defines fitness as inlier correspondences divided by source point count and inlier_rmse in coordinate-length units. Every selected adapter/version records its actual metric definition/denominator; other metrics retain their own definitions. Directed cloud/mesh differences name compared/reference order, sampling, search limits and valid/excluded counts. Signed distance needs supported orientation/geometry. Independent feature/control checks remain separate from fitting points, and same-capture withheld samples retain shared dependence.",
+    "branches": "Branch records share source revisions, feature/control IDs and frames while retaining intended use, required coverage/detail, source subset, criteria and local/remote/manual costs. VLM receives original full views/located regions, actual cloud/geometry views and numeric reports. It selects evidence-supported associations within current intent; nominal, observed and idealized dimensions retain distinct meanings. Merged artifact gets new revision and repeated independent metric/semantic/readback checks.",
+    "resources": "Begin with metadata, known controls, coarse/static regions and required interfaces before dense full-resolution distances or candidate sweeps. CPU/RAM estimates name images/points/features/faces/iterations; local GPU role belongs to the selected backend. Remote inference tokens/calls/latency/cost and manual landmark/segmentation/metrology effort are recorded separately. Actual benchmarks need hardware, versions, inputs and run receipts.",
+    "failure_resume": "Retain raw observations, last validated calibration/transform/model, all candidate/mask IDs and actual tool/model request identities. Reconcile uncertain mutation or remote response before retry; malformed model selections preserve previous artifact. On resume recheck source/calibration/CAD digests; source changes invalidate dependent poses/rays/fits/comparisons only. No automatic re-registration may conceal a CAD edit's changed geometry.",
+    "analytic_fits": "Proposed PCL normal-assisted cylinder adapter preserves point/normal index correspondence, normal-estimation neighborhood and original sample lineage. Select SACMODEL_CYLINDER and explicit consensus/settings; decode axis point [0–2], direction [3–5] and radius [6]. Cloud units apply to coordinates, threshold and radius bounds. Tutorial numbers remain example settings. Record normal-distance criterion separately from geometric residual checks. PCL 1.15.1-dev API, mutable master header and installed release are distinct evidence. Check angular/axial coverage, normals, bound clipping, sensitivity and independent controls; source identity, finite extent, engineering allowance and parameter uncertainty have separate records."
+  },
+  "common_future_tests": [
+    "Lost remote response and malformed feature selection preserve raw/request identity and previous merged artifact; changed source invalidates affected descendants.",
+    "Source-to-target/object-to-camera inversion, wrong axis handedness, stale crop intrinsics and double transform each fail known controls.",
+    "Rigid model applied to unknown-scale data emits a scale prerequisite; similarity fit cannot silently absorb physical deformation.",
+    "Shared target/scan samples produce correlated fit/check evidence; independent controls and their source dependence are recorded.",
+    "Context-only alignment passes its own coverage while precision interface remains unresolved; no cross-use status promotion."
+  ]
+}

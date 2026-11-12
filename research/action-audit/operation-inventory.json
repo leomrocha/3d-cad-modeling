@@ -151,8 +151,8 @@
       "family": "cad",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md",
         "/home/leo/projects/architecture/research/README.md"
@@ -207,8 +207,8 @@
       "family": "cad",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html",
         "https://docs.opencv.org/5.0/main_modules/calib.html"
@@ -261,8 +261,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
       ]
@@ -273,8 +273,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
       ]
@@ -337,8 +337,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html"
       ]
@@ -349,8 +349,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
@@ -362,8 +362,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://github.com/CloudCompare/CloudCompare"
@@ -403,8 +403,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
@@ -417,8 +417,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.blender.org/api/current/bpy.types.Scene.html",
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
@@ -430,8 +430,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
@@ -443,8 +443,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
@@ -456,8 +456,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
@@ -771,8 +771,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md",
         "/home/leo/projects/3dmodeling/research/domains-and-components.md"
@@ -820,8 +820,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md",
         "/home/leo/.codex/skills/ocs-engineering/SKILL.md"

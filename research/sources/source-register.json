@@ -80,6 +80,41 @@
       ]
     },
     {
+      "id": "SRC-00e7f773e988",
+      "url": "https://docs.opencv.org/4.13.0/d5/d1f/calib3d_solvePnP.html",
+      "local_source_path": null,
+      "title": "Perspective-n-Point (PnP) pose computation — OpenCV 4.13.0",
+      "summary": "OpenCV 4.13.0 documents solvePnP inputs as 3D object points, matching 2D image projections, camera intrinsic matrix and distortion coefficients. rvec/tvec transform object-frame points into camera-frame coordinates; camera axes are X right, Y down, Z forward. The page documents method-specific point-count and planarity conditions, alternative solutions returned by solvePnPGeneric, and RANSAC PnP for outliers. This is API capability evidence, not a local pose result or accuracy report.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-02 / CAD-02B / REC-12: solvePnP consumes 3D object points, 2D image points, intrinsics and distortion; rvec/tvec map object to camera coordinates",
+            "REC-02: pose methods have distinct point count/planarity prerequisites and may have multiple solutions"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/sources/round-05/point-05-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-00ef88b61c5d",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md",
@@ -367,6 +402,16 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -380,7 +425,8 @@
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -423,6 +469,42 @@
       ]
     },
     {
+      "id": "SRC-0374f064147a",
+      "url": "https://pointclouds.org/documentation/classpcl_1_1_s_a_c_segmentation_from_normals.html",
+      "local_source_path": null,
+      "title": "pcl::SACSegmentationFromNormals<PointT, PointNT> Class Template Reference — Point Cloud Library 1.15.1-dev",
+      "summary": "The PCL API documents normal-based sample-consensus segmentation, input point cloud and normal cloud, and segment(PointIndices&, ModelCoefficients&) outputs. It describes normal-distance weighting and inherited consensus controls including method, maximum iterations, probability, distance threshold, radius limits and axis/angle constraints. This is API documentation, not a local runtime result.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-11 / REC-09: cylinder segmentation requires a point cloud with corresponding normals and returns inlier indices plus model coefficients",
+            "CAD-11 / REC-09: configurable consensus, distance, radius, and axis/angle controls affect accepted candidates"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-independent.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/sources/round-05/point-05-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-03ea53a6f519",
       "url": "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
       "local_source_path": null,
@@ -459,7 +541,12 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
         "research/action-audit/reviews/point-04-visual.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -468,6 +555,32 @@
         "research/workflows/details/mix-r09.md",
         "research/workflows/details/rec-r01.md",
         "research/workflows/details/rec-r03.md"
+      ]
+    },
+    {
+      "id": "SRC-04350e8a74da",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/local-inventory.json",
+      "title": "local-inventory.json",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/local-inventory.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/local-inventory.json",
+          "access_date": "2026-11-12",
+          "sha256": "1a3d5f6a49c8181e462380b509819ba8c403c12d8056e0c992c5448d5f7c76ce",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -546,6 +659,32 @@
       ]
     },
     {
+      "id": "SRC-0724f34c3f7f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json",
+      "title": "reconstruction-detail-sources.json",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "4e6c99969a1a64f86fbaf17eb9077792f1d43bcd4d01096c689af0bde6cd83b8",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-0868c7d42c7e",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
@@ -587,12 +726,50 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-0910720e555c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md",
+      "title": "Point 05 independent procedure review — CAD, photographs and scans alignment",
+      "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md",
+          "access_date": "2026-11-12",
+          "sha256": "a272f1a451ad6c61343221fd8cabbf99d88c035d14a6f841de13a3d8771eb8cb",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -754,12 +931,23 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+          "access_date": "2026-11-12",
+          "sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -908,12 +1096,23 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+          "access_date": "2026-11-12",
+          "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/project-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -1280,10 +1479,21 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "2f3a21ddaed88b873d1d5522253617233f7ba7336b463a1d957288a9a2acdf95",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -1336,10 +1546,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "access_date": "2026-11-12",
+          "sha256": "23a6d64e95a799699232d15f06e86206862a3b7089d57e3e53d7856cb01bd320",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -1372,8 +1593,8 @@
       "id": "SRC-1f466f80fd41",
       "url": "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
       "local_source_path": null,
-      "title": "Open3D 0.20 point-cloud operations",
-      "summary": "Point-cloud API includes plane segmentation, clustering, normal estimation and returned inlier indices. Fits are sampled geometry evidence.",
+      "title": "Point cloud — Open3D 0.20.0 documentation",
+      "summary": "Open3D 0.20.0 documents `segment_plane(distance_threshold, ransac_n, num_iterations)` returning plane coefficients and inlier indices; the distance threshold is in point-cloud coordinate units. It also documents `cluster_dbscan(eps, min_points)` returning labels, with -1 for noise. These routines report sampled point subsets and geometric candidates; they do not classify engineering features or report parameter uncertainty.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -1404,11 +1625,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-09 / CAD-11 / REC-14: segment_plane returns a plane model and inlier indices under a length threshold",
+            "REC-09: cluster_dbscan returns cluster labels and marks noise as -1"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/mix-r03.md",
         "research/workflows/details/mix-r04.md",
         "research/workflows/details/mix-r07.md",
@@ -1628,6 +1870,16 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "access_date": "2026-11-12",
+          "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -1635,7 +1887,8 @@
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -1801,11 +2054,22 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "37b0d41ee65e7bcd60880920848e8a11a109e7483f55f3b679b5951fcceb0a2e",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -1846,6 +2110,7 @@
       "summary": "Official OpenCV tutorial maps known 3D object points to image points, detects/refines chessboard corners and uses calibrateCamera; square dimensions establish physical units.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -1864,6 +2129,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-05-visual.md",
         "research/sources/round-02/cad-sources.json"
       ]
     },
@@ -2089,13 +2355,24 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -2333,13 +2610,24 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -2816,6 +3104,7 @@
       "referring_documents": [
         "research/action-audit/reviews/point-04-designer.md",
         "research/action-audit/reviews/point-04-visual.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r03.md",
@@ -3047,6 +3336,35 @@
       ]
     },
     {
+      "id": "SRC-3bdbace92938",
+      "url": "https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html",
+      "local_source_path": null,
+      "title": "https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html",
+      "summary": "These sources provide an evidenced candidate fitter and adapter contract. The cylinder model still depends on valid corresponding normals, an adequately sampled and visible cylindrical surface, configured thresholds/radius range, and the selected consensus method. The fitted cylinder and inliers describe the supplied sampled cloud; they do not establish physical feature identity, design intent, or parameter uncertainty. A short arc can leave radius weakly constrained, so retain coverage and held-out residual checks. The attempted PCL Doxygen URL `https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html` returned “Internal Error / URL not accessible via this tool.” No claims rely on that failed page. There are 13 successfully inspected pages (ten initial plus three follow-up) and one recorded failed access attempt.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "local_original": null,
+          "sha256": null,
+          "content_type": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/sources/round-05/point-05-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-3cb645d27838",
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
       "local_source_path": null,
@@ -3103,6 +3421,7 @@
         "research/action-audit/reviews/point-04-designer.md",
         "research/action-audit/reviews/point-04-software.md",
         "research/action-audit/reviews/point-04-sources.md",
+        "research/action-audit/reviews/point-05-software.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
@@ -3144,11 +3463,22 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "access_date": "2026-11-12",
+          "sha256": "cd7642e848bdd6b6b71d72443bb1d1df25ab188f581ecd52e5bcc81db117f24b",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -3212,6 +3542,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-3e6c1657a06b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md",
+      "title": "rec-r02.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md",
+          "access_date": "2026-11-12",
+          "sha256": "3cedfdf2de640f56374ff7bbc896226d0ca8eba1308ad51fcf66019cc76e82a5",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -3493,6 +3849,32 @@
         "research/workflows/details/mix-r05.md",
         "research/workflows/details/mix-r06.md",
         "research/workflows/details/mix-r10.md"
+      ]
+    },
+    {
+      "id": "SRC-46011fa591f5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md",
+      "title": "cad-r07.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md",
+          "access_date": "2026-11-12",
+          "sha256": "35ceeeaad45cda4d88629b348df60c32a3e95d034e574d97eb666980c17f9423",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -4077,8 +4459,8 @@
       "id": "SRC-53486b514e1a",
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html",
       "local_source_path": null,
-      "title": "IfcOpenShell unit.assign_unit API",
-      "summary": "Official signature and examples for declaring IFC project units.",
+      "title": "ifcopenshell.api.unit.assign_unit — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 documents `assign_unit(file, units=None, length=None, area=None, volume=None)` for default project units. The page identifies defaults of millimetres for length, square metres for area and cubic metres for volume; explicit units can be assigned through supplied unit entities. Project unit assignment is separate from the placement API is_si choice.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -4094,12 +4476,31 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-19 / DOM-23: assign_unit defines default IFC project units and documents millimetre/metre defaults",
+            "DOM-19 / DOM-23: project unit assignment and placement-matrix translation convention are separate API inputs"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
         "research/action-audit/reviews/point-04-designer.md",
         "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-sources.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md"
       ]
     },
@@ -5048,6 +5449,32 @@
       ]
     },
     {
+      "id": "SRC-608f9d6fff1b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
+      "title": "dom-r04.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
+          "access_date": "2026-11-12",
+          "sha256": "cfc71cccdfa35e369ecc26fd5dfb2e978bb530ea3bdeb5058d4e19488068c54b",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-61c6ad4341d0",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
@@ -5259,6 +5686,16 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "access_date": "2026-11-12",
+          "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -5266,7 +5703,8 @@
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -5535,6 +5973,42 @@
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6a6bf0c0ce39",
+      "url": "https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/sample_consensus/include/pcl/sample_consensus/sac_model_cylinder.h",
+      "local_source_path": null,
+      "title": "PCL SampleConsensusModelCylinder header — master branch",
+      "summary": "The official PCL header defines seven cylinder coefficients in order: point on axis x,y,z; axis direction x,y,z; radius. It declares model size 7, sample size 2, and documents coefficient-based distance, inlier selection, optimization and point projection methods. The master-branch URL is mutable and does not pin a released PCL version; no local source or runtime version was checked.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-11 / REC-09: cylinder coefficient indices 0–2 encode axis point, 3–5 encode axis direction, and 6 encodes radius",
+            "CAD-11 / REC-09: coefficient length values inherit input-cloud coordinate units; PCL header defines fields but does not state a physical unit system"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/plain",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-independent.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/sources/round-05/point-05-web-sources.json"
       ]
     },
     {
@@ -5956,11 +6430,22 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+          "access_date": "2026-11-12",
+          "sha256": "4e321891af4b04a4afa57c634c2aac8e042c8e88d74a1c68b986b56bbb0eb05f",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -6226,6 +6711,32 @@
       ]
     },
     {
+      "id": "SRC-785d8cbc2541",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md",
+      "title": "rec-r07.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md",
+          "access_date": "2026-11-12",
+          "sha256": "c0b26923507650348f5f635161bcba9da63207dfaf974403a97c3c987bae75ac",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-789932d05ce2",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/reconstruction.md",
@@ -6234,7 +6745,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -6289,12 +6801,23 @@
           ],
           "sha256": null,
           "content_type": "text/markdown/json"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+          "access_date": "2026-11-12",
+          "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
-        "research/sources/round-03/domain-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -6370,6 +6893,32 @@
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7a9b6fde0c01",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "title": "reconstruction-paths.json",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "d89b7977ab3fa8013aaa1ffcfe097960f7ef6e4d3eb0db39331781a403190d2a",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -6716,7 +7265,8 @@
       "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -6729,10 +7279,21 @@
             "research/action-audit/point-04-raster-drawings.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "1296b41c61f425db0665ef9aa5b8479e5bf2a06173ec9d43a9f11f19738fd8c1",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -6849,6 +7410,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-840d8b69fd8f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md",
+      "title": "Software review: CAD, photographs and scans alignment",
+      "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md",
+          "access_date": "2026-11-12",
+          "sha256": "ab119cf7b2cd6f7649eeb34afc1fa9534656260deca33922ac1559496dc058d0",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -7330,6 +7918,16 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "access_date": "2026-11-12",
+          "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -7337,7 +7935,8 @@
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -7380,12 +7979,23 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "access_date": "2026-11-12",
+          "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -7521,6 +8131,33 @@
       ]
     },
     {
+      "id": "SRC-937929a512bd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md",
+      "title": "Point 05 designer notes — alignment and parametric remodeling",
+      "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md",
+          "access_date": "2026-11-12",
+          "sha256": "acc45e762ced2be7fae08999fe80e1d389ff5e50a48127bf3c2cd0165e244dfe",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-93942b7c50fd",
       "url": "https://api.github.com/repos/reyk/freecad-ai-skill",
       "local_source_path": null,
@@ -7565,6 +8202,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-93aef666d1eb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md",
+      "title": "rec-r10.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md",
+          "access_date": "2026-11-12",
+          "sha256": "759f4ea6469478842a5e3ce414e153abc5f4fcadb7e801b2590e14aa26901620",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -7732,8 +8395,8 @@
       "id": "SRC-95aacf0e0f5c",
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
       "local_source_path": null,
-      "title": "IfcOpenShell placement API",
-      "summary": "Official 4x4 local placement API; `is_si` declares whether matrix translations use SI units.",
+      "title": "ifcopenshell.api.geometry.edit_object_placement — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 documents `edit_object_placement(file, product, matrix=None, is_si=True, should_transform_children=False)` for a 4×4 local placement matrix. is_si=True means matrix translations are SI; False means project units. Only local placements are supported; the child flag controls whether nested children move with the parent or retain world position through rewritten local placements.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7749,13 +8412,32 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-19 / DOM-23: placement matrices are local 4×4 transforms; is_si selects SI versus project units and child-transform flag changes nested-placement behavior"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
         "research/action-audit/reviews/point-02-visual.md",
         "research/action-audit/reviews/point-04-designer.md",
         "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-sources.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md"
       ]
     },
@@ -7763,8 +8445,8 @@
       "id": "SRC-9641fd75954c",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
       "local_source_path": null,
-      "title": "Open3D 0.20 ICP registration",
-      "summary": "registration_icp refines a source-to-target transform from an initial transform and distance threshold; RegistrationResult reports fitness and inlier RMSE. Point-to-plane ICP requires useful normals.",
+      "title": "ICP registration — Open3D 0.20.0 documentation",
+      "summary": "Open3D 0.20.0 documents `evaluate_registration(source, target, threshold, trans_init)` and `registration_icp` with source, target, distance threshold, initial transformation and selected objective. ICP output maps source to target. The inspected 0.20.0 tutorial defines fitness as inlier correspondences divided by source point count; this record does not generalize that denominator to other releases or uninspected local implementations; inlier_rmse is the RMSE over inlier correspondences. Point-to-plane ICP uses point-to-plane residuals and requires normals; default ICP convergence uses up to 30 iterations. Metrics measure thresholded fit and overlap, not uncertainty or pose uniqueness.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7809,12 +8491,34 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-08 / REC-12 / REC-16 / DOM-23: ICP refines an initial source-to-target transform and outputs RegistrationResult",
+            "REC-08: fitness is overlap ratio and inlier_rmse is a length-unit correspondence residual, not uncertainty The inspected denominator is source point count in Open3D 0.20.0 tutorial only.",
+            "REC-15: registration and fit metrics do not assign causes to drawing-versus-scan disagreement or replace separate nominal, tolerance and measurement-uncertainty claims"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r04.md",
         "research/workflows/details/dom-r08.md",
@@ -7888,8 +8592,8 @@
       "id": "SRC-9794ead44d0e",
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
       "local_source_path": null,
-      "title": "IfcOpenShell georeference API",
-      "summary": "Official CRS/map-conversion API; creates georeference records but requires supplied CRS and transform values.",
+      "title": "ifcopenshell.api.georeference — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 documents `add_georeferencing` creating projected-CRS and map-conversion entities with blank parameters, and `edit_georeferencing` setting CRS and coordinate-operation attributes. CRS and transform values must be supplied; the API does not estimate a survey transform. IFC2X3 uses its map-conversion property-set route.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7905,10 +8609,30 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-19 / DOM-23: georeferencing separates projected CRS metadata from local-to-map conversion parameters",
+            "DOM-19 / DOM-23: add_georeferencing creates empty records; edit_georeferencing requires supplied values"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-sources.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md"
       ]
     },
@@ -8928,6 +9652,32 @@
       ]
     },
     {
+      "id": "SRC-a83674c889fd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json",
+      "title": "point-05-web-sources.json",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "9c512b5aa5e445523d777663f8cb420f63ea7aaf658bd6279272397745d4b4ae",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-ac24864ef496",
       "url": "https://github.com/blender/blender/blob/main/doc/license/GPL-license.txt",
       "local_source_path": null,
@@ -9288,6 +10038,32 @@
       ]
     },
     {
+      "id": "SRC-af8c2d79e989",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md",
+      "title": "cad-r06.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md",
+          "access_date": "2026-11-12",
+          "sha256": "2d0f6fd2fc24203d737e6c4bc662468db9199bd015390200bd68fe3def3b14a1",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-afa0b4d5a10b",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
@@ -9327,12 +10103,23 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -9476,6 +10263,67 @@
         "research/workflows/details/mix-r04.md",
         "research/workflows/details/mix-r07.md",
         "research/workflows/details/mix-r09.md"
+      ]
+    },
+    {
+      "id": "SRC-b238ff5da9a9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+      "title": "point-05-operations",
+      "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "6b5628396a5937608780b8dcf5a5df5fa035332b4cd5da07039b2a8ae35e22b1",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b254a6b0bd67",
+      "url": "https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_scene_api.cc",
+      "local_source_path": null,
+      "title": "Blender Scene API RNA source (main branch)",
+      "summary": "Official Blender RNA source defines Scene.ray_cast with a required depsgraph, world-space origin/direction and maximum distance. It documents evaluated geometry and outputs including hit boolean, location, normal, evaluated-mesh face index, original object and matrix. Location, normal and index correspond to the evaluated mesh; index can be -1 when original data is unavailable. The main-branch source does not identify an installed release.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-13 / DOM-19: Scene.ray_cast queries evaluated scene geometry in world-space and returns hit/location/normal/index/object/matrix"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/plain",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/sources/round-05/point-05-web-sources.json"
       ]
     },
     {
@@ -9629,6 +10477,16 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -9638,7 +10496,8 @@
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -9699,11 +10558,22 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -9739,6 +10609,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-05-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
@@ -9892,6 +10763,32 @@
         "research/workflows/details/mix-r08.md",
         "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-b914a224eaf5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+      "title": "rec-r01.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+          "access_date": "2026-11-12",
+          "sha256": "a2836c439267ad25194437da664bc6c17794dd6e4e834dc6a7df12ff0e7e40a5",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -10171,6 +11068,33 @@
       ]
     },
     {
+      "id": "SRC-bc59d9c5c5c8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+      "title": "Point 05 visual and evidence review — existing CAD with photographs and scans",
+      "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "6858e7ff19e2ae1b61d6c03f6fe1bb5a20dea262625fcc090352aaf94b334547",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-bcf9f8ff8137",
       "url": "https://github.com/solvespace/solvespace",
       "local_source_path": null,
@@ -10194,7 +11118,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "local_source_inspected",
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -10215,12 +11140,23 @@
           "local_original": "/home/leo/projects/architecture/research/README.md",
           "sha256": "f4040982c5baf0845c2be900e6892434dcb154cec111ef034e9a7d420f54dc41",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/architecture/research/README.md",
+          "local_original": "/home/leo/projects/architecture/research/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "f4040982c5baf0845c2be900e6892434dcb154cec111ef034e9a7d420f54dc41",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/local-baseline.md",
         "research/sources/local-evidence.json",
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -10449,8 +11385,8 @@
       "id": "SRC-bffa49b1e1cc",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
       "local_source_path": null,
-      "title": "Open3D global registration",
-      "summary": "Official registration methods provide a coarse alignment that may be refined by local ICP.",
+      "title": "Global registration — Open3D 0.20.0 documentation",
+      "summary": "Open3D 0.20.0 documents point-cloud downsampling, normal estimation, FPFH feature matching and RANSAC for coarse source/target registration. RANSAC checks distance, edge-length similarity and optionally normal affinity; it returns a transformation applied to the source cloud to align with the target. The documented coarse result is followed by ICP refinement. These are source-documented pipeline operations, not local registration measurements.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -10493,12 +11429,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-07 / REC-12: FPFH+RANSAC provides coarse source-to-target point-cloud transformation with correspondence pruning",
+            "REC-07: global registration uses downsampled point clouds and is a coarse alignment step"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r04.md",
         "research/workflows/details/dom-r08.md",
@@ -10548,12 +11505,23 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "53545e2c11a111e99430b5c9f1e5dc13cf0e06394a19c55d0095420c396501f4",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -11134,6 +12102,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/workflows/details/mix-r07.md",
         "research/workflows/details/rec-r07.md"
@@ -11147,7 +12117,8 @@
       "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -11160,10 +12131,21 @@
             "research/action-audit/point-04-raster-drawings.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "af73a1a2db04c8be42893f5b56df2292b64ad057b473a3d784dbc482e0e82245",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -11253,11 +12235,12 @@
       "id": "SRC-cad1c2a4c242",
       "url": "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
       "local_source_path": null,
-      "title": "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
-      "summary": "- CloudCompare command line: https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
+      "title": "Command line mode — CloudCompare wiki",
+      "summary": "The official CloudCompare CLI page states command-line mode exists since 2.3 and lists version 2.14.beta options. `-C2C_DIST` compares the first loaded/generated cloud against the second reference cloud; `-C2M_DIST` compares the first cloud against the first mesh. Results are distance scalar fields on compared cloud points; cloud-to-cloud `-SPLIT_XYZ` adds displacement components, and `-MAX_DIST` caps nearest-neighbor search. Distances inherit coordinate units and comparison direction from argument order.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -11284,12 +12267,34 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-16 / DOM-23: C2C and C2M CLI operations compare an ordered cloud to a reference cloud/mesh and save per-point scalar distances",
+            "REC-16: CloudCompare distance fields are directed sampled comparisons; preserve argument order and limits",
+            "REC-15 / DOM-23: directed C2C/C2M distance outputs support per-feature scan/drawing or scan/CAD comparison when frames and matched IDs are established; interpretation of disagreement remains separate"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/mix-r04.md",
         "research/workflows/details/mix-r07.md",
         "research/workflows/details/rec-r01.md",
@@ -11340,6 +12345,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-software.md",
+        "research/action-audit/reviews/point-05-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/mix-r04.md",
@@ -11415,6 +12423,33 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-cd8d24d026d3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "title": "Point 05 — Alignment and parametric remodeling",
+      "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "access_date": "2026-11-12",
+          "sha256": "52f9b20e4b160f7f982266244896ba6f2c7b0167ab3b23fa52d8bc9f454c4aad",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -12231,13 +13266,24 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "access_date": "2026-11-12",
+          "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -12287,6 +13333,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e24faff4c00b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md",
+      "title": "Point 05 source check: calibration, scan alignment and coordinate frames",
+      "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md",
+          "access_date": "2026-11-12",
+          "sha256": "1a9d1d50ab21c76c80d20057f9619dd22c9e66e5bc69f1c4a444416513bdd153",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -12812,6 +13885,16 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "access_date": "2026-11-12",
+          "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -12819,7 +13902,8 @@
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -12978,6 +14062,32 @@
       ]
     },
     {
+      "id": "SRC-ede9c64cd596",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
+      "title": "rec-r09.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
+          "access_date": "2026-11-12",
+          "sha256": "8dce7fbfb75b415f8d9782d4baf3a086e33d838f820cec0413998ea14782f464",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-ee88cef821b6",
       "url": "https://api.github.com/repos/earthtojake/text-to-cad",
       "local_source_path": null,
@@ -13022,6 +14132,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f06d3b316cfc",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md",
+      "title": "rec-r04.md",
+      "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md",
+          "access_date": "2026-11-12",
+          "sha256": "d700d25ad468a06c0a349d30d677186cc40e521f02a2f59207c228cf60f3c775",
+          "referring_documents": [
+            "research/action-audit/point-05-alignment-and-remodeling.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-05-local-sources.json"
       ]
     },
     {
@@ -13558,6 +14694,41 @@
       ]
     },
     {
+      "id": "SRC-f7e7cce18547",
+      "url": "https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_object_api.cc",
+      "local_source_path": null,
+      "title": "Blender Object API RNA source (main branch)",
+      "summary": "Official Blender RNA source defines Object.ray_cast with object-space origin/direction, maximum distance and optional depsgraph for evaluated mesh access. It returns hit boolean, location, normal and face index. This query is against evaluated object geometry in object-space, not a physical measurement; the mutable main-branch source does not pin an installed release.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-13 / DOM-19: Object.ray_cast inputs are in object-space and query evaluated geometry with optional depsgraph",
+            "REC-13: returned hit/location/normal/index are geometry-query outputs, not measured feature evidence"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/plain",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/sources/round-05/point-05-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f828b291cc6f",
       "url": null,
       "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
@@ -13801,6 +14972,7 @@
         "research/action-audit/reviews/point-03-sources.md",
         "research/action-audit/reviews/point-03-visual.md",
         "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/visual-review.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
@@ -13891,6 +15063,42 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ff0bc4de820c",
+      "url": "https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html",
+      "local_source_path": null,
+      "title": "Cylinder model segmentation — Point Cloud Library 1.15.1-dev documentation",
+      "summary": "The official PCL tutorial demonstrates SACSegmentationFromNormals<PointXYZ, Normal> with a point cloud and normals, SACMODEL_CYLINDER, RANSAC, normal-distance weight 0.1, 10000 iterations, 0.05 distance threshold, and radius limits 0 to 0.1. The example identifies the latter length settings as metres (5 cm threshold and 10 cm maximum radius). segment(inliers, coefficients) returns inlier indices and coefficients. Example evidence only; no project cloud was processed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-11 / REC-09: PCL documents a normal-based RANSAC cylinder fitter with corresponding point/normal inputs, inlier indices, coefficient output, threshold and radius controls",
+            "CAD-11 / REC-09: tutorial example uses metre-scale threshold and radius values; callers must keep cloud units and limits consistent"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-05-sources.md",
+            "research/action-audit/reviews/point-05-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-05-alignment-and-remodeling.md",
+        "research/action-audit/reviews/point-05-designer.md",
+        "research/action-audit/reviews/point-05-independent.md",
+        "research/action-audit/reviews/point-05-sources.md",
+        "research/sources/round-05/point-05-web-sources.json"
       ]
     },
     {

@@ -1,5 +1,12 @@
 # Research record
 
+## 12 November 2026 — Point 05 calibration, alignment and remodeling audit
+
+1. Checkpoint: `4037fd0`; point 04 result commit: `fdf7e68`. Scope: fourteen operations and 42 actions covering camera calibration/poses, cloud alignment, surface fitting, CAD/photo/scan comparison, annotation projection, remodeling and revision comparisons.
+2. [Readable procedures](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md) and [action contracts](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) define separate camera/scan outputs, fixed comparison evidence, transform direction, geometry and measurement lineage, four execution options and feature-specific validation. Original REC-12 camera-output and DOM-23 input-contract findings retain their literal original records.
+3. Luna inspected thirteen official documentation/source pages and recorded one failed PCL URL attempt separately. The cylinder-fit dependency now names PCL's matched point/normal inputs, seven coefficient fields and input-coordinate units; tutorial thresholds retain example status. The source records distinguish mutable development sources from installed software evidence.
+4. Independent review findings repaired held-out calibration-view pose requirements, DOM-19 output wording and the version-scoped Open3D fitness definition. The review records the actual rereads. Requested Astra/xhigh design, Terra/xhigh software, Sol/xhigh visual, Luna/high sources and separate Sol/xhigh independent review follow the plan. Coordinator model: gpt-6.1-sol; actual child runtime identities are unavailable. Static source/document checks are recorded in the [point 05 receipt](/home/leo/projects/3dmodeling/research/action-audit/point-05-checks.json); implementation fixtures retain future-test status.
+
 ## 12 November 2026 — Point04 raster drawing procedure audit
 
 1. Checkpoint: `47976ba`; point03 result commit: `9c3474f`. Scope: nine operations and30 actions for planar rectification, OCR, vector candidates, wall/opening graphs, orthographic registration/reconstruction, wall solids, constrained sketches and IFC composition.

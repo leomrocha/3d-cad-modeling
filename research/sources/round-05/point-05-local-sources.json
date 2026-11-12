@@ -1,0 +1,549 @@
+[
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+    "title": "Point 05 — Alignment and parametric remodeling",
+    "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "52f9b20e4b160f7f982266244896ba6f2c7b0167ab3b23fa52d8bc9f454c4aad",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+    "title": "point-05-operations",
+    "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "6b5628396a5937608780b8dcf5a5df5fa035332b4cd5da07039b2a8ae35e22b1",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md",
+    "title": "Point 05 designer notes — alignment and parametric remodeling",
+    "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "acc45e762ced2be7fae08999fe80e1d389ff5e50a48127bf3c2cd0165e244dfe",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md",
+    "title": "Point 05 independent procedure review — CAD, photographs and scans alignment",
+    "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "a272f1a451ad6c61343221fd8cabbf99d88c035d14a6f841de13a3d8771eb8cb",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md",
+    "title": "Software review: CAD, photographs and scans alignment",
+    "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "ab119cf7b2cd6f7649eeb34afc1fa9534656260deca33922ac1559496dc058d0",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md",
+    "title": "Point 05 source check: calibration, scan alignment and coordinate frames",
+    "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "1a9d1d50ab21c76c80d20057f9619dd22c9e66e5bc69f1c4a444416513bdd153",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+    "title": "Point 05 visual and evidence review — existing CAD with photographs and scans",
+    "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "6858e7ff19e2ae1b61d6c03f6fe1bb5a20dea262625fcc090352aaf94b334547",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "SKILL.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+    "title": "model-contract.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "title": "ocs-control.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "title": "AGENTS.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+    "title": "plan.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+    "title": "point-03-operations.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "37b0d41ee65e7bcd60880920848e8a11a109e7483f55f3b679b5951fcceb0a2e",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+    "title": "point-04-operations.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "af73a1a2db04c8be42893f5b56df2292b64ad057b473a3d784dbc482e0e82245",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+    "title": "point-02-visual.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+    "title": "point-03-visual.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+    "title": "point-04-visual.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "1296b41c61f425db0665ef9aa5b8479e5bf2a06173ec9d43a9f11f19738fd8c1",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+    "title": "sequence.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "cd7642e848bdd6b6b71d72443bb1d1df25ab188f581ecd52e5bcc81db117f24b",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "title": "cad-and-skills.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "title": "domains-and-components.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "title": "implementation-plan.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+    "title": "local-baseline.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/local-inventory.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/local-inventory.json",
+    "title": "local-inventory.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "1a3d5f6a49c8181e462380b509819ba8c403c12d8056e0c992c5448d5f7c76ce",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "title": "reconstruction.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+    "title": "cad-sources.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "53545e2c11a111e99430b5c9f1e5dc13cf0e06394a19c55d0095420c396501f4",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+    "title": "reconstruction-sources.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2f3a21ddaed88b873d1d5522253617233f7ba7336b463a1d957288a9a2acdf95",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json",
+    "title": "reconstruction-detail-sources.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "4e6c99969a1a64f86fbaf17eb9077792f1d43bcd4d01096c689af0bde6cd83b8",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json",
+    "title": "point-05-web-sources.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "9c512b5aa5e445523d777663f8cb420f63ea7aaf658bd6279272397745d4b4ae",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "title": "cad-paths.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "title": "composition-rules.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md",
+    "title": "cad-r06.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2d0f6fd2fc24203d737e6c4bc662468db9199bd015390200bd68fe3def3b14a1",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md",
+    "title": "cad-r07.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "35ceeeaad45cda4d88629b348df60c32a3e95d034e574d97eb666980c17f9423",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
+    "title": "dom-r04.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "cfc71cccdfa35e369ecc26fd5dfb2e978bb530ea3bdeb5058d4e19488068c54b",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+    "title": "dom-r05.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "4e321891af4b04a4afa57c634c2aac8e042c8e88d74a1c68b986b56bbb0eb05f",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+    "title": "dom-r06.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "23a6d64e95a799699232d15f06e86206862a3b7089d57e3e53d7856cb01bd320",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+    "title": "rec-r01.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "a2836c439267ad25194437da664bc6c17794dd6e4e834dc6a7df12ff0e7e40a5",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md",
+    "title": "rec-r02.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "3cedfdf2de640f56374ff7bbc896226d0ca8eba1308ad51fcf66019cc76e82a5",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md",
+    "title": "rec-r04.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "d700d25ad468a06c0a349d30d677186cc40e521f02a2f59207c228cf60f3c775",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md",
+    "title": "rec-r07.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "c0b26923507650348f5f635161bcba9da63207dfaf974403a97c3c987bae75ac",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
+    "title": "rec-r09.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "8dce7fbfb75b415f8d9782d4baf3a086e33d838f820cec0413998ea14782f464",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md",
+    "title": "rec-r10.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "759f4ea6469478842a5e3ce414e153abc5f4fcadb7e801b2590e14aa26901620",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "title": "domain-paths.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+    "title": "reconstruction-paths.json",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "d89b7977ab3fa8013aaa1ffcfe097960f7ef6e4d3eb0db39331781a403190d2a",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "title": "API-SPEC.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/architecture/research/README.md",
+    "local_original": "/home/leo/projects/architecture/research/README.md",
+    "title": "README.md",
+    "summary": "Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "f4040982c5baf0845c2be900e6892434dcb154cec111ef034e9a7d420f54dc41",
+    "referring_documents": [
+      "research/action-audit/point-05-alignment-and-remodeling.md"
+    ]
+  }
+]

@@ -28,6 +28,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
 
+<a id="src-00e7f773e988"></a>
+
+## SRC-00e7f773e988 — Perspective-n-Point (PnP) pose computation — OpenCV 4.13.0
+
+Original source: [https://docs.opencv.org/4.13.0/d5/d1f/calib3d_solvePnP.html](https://docs.opencv.org/4.13.0/d5/d1f/calib3d_solvePnP.html)
+
+Summary: OpenCV 4.13.0 documents solvePnP inputs as 3D object points, matching 2D image projections, camera intrinsic matrix and distortion coefficients. rvec/tvec transform object-frame points into camera-frame coordinates; camera axes are X right, Y down, Z forward. The page documents method-specific point-count and planarity conditions, alternative solutions returned by solvePnPGeneric, and RANSAC PnP for outliers. This is API capability evidence, not a local pose result or accuracy report.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
 <a id="src-00ef88b61c5d"></a>
 
 ## SRC-00ef88b61c5d — Independent procedure review — Point 01 model brief
@@ -98,7 +110,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -112,6 +124,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
+<a id="src-0374f064147a"></a>
+
+## SRC-0374f064147a — pcl::SACSegmentationFromNormals<PointT, PointNT> Class Template Reference — Point Cloud Library 1.15.1-dev
+
+Original source: [https://pointclouds.org/documentation/classpcl_1_1_s_a_c_segmentation_from_normals.html](https://pointclouds.org/documentation/classpcl_1_1_s_a_c_segmentation_from_normals.html)
+
+Summary: The PCL API documents normal-based sample-consensus segmentation, input point cloud and normal cloud, and segment(PointIndices&, ModelCoefficients&) outputs. It describes normal-distance weighting and inherited consensus controls including method, maximum iterations, probability, distance threshold, radius limits and axis/angle constraints. This is API documentation, not a local runtime result.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-independent.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
 <a id="src-03ea53a6f519"></a>
 
 ## SRC-03ea53a6f519 — OpenCV 4.13 Camera Calibration
@@ -122,7 +146,19 @@ Summary: Known target object coordinates and corresponding image detections supp
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
+
+<a id="src-04350e8a74da"></a>
+
+## SRC-04350e8a74da — local-inventory.json
+
+Original source: [/home/leo/projects/3dmodeling/research/local-inventory.json](/home/leo/projects/3dmodeling/research/local-inventory.json)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-056984789982"></a>
 
@@ -148,6 +184,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
 
+<a id="src-0724f34c3f7f"></a>
+
+## SRC-0724f34c3f7f — reconstruction-detail-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json](/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-0868c7d42c7e"></a>
 
 ## SRC-0868c7d42c7e — Point 02 visual, semantic and evidence-merge review
@@ -158,7 +206,19 @@ Summary: Point 02 Existing components and CAD reuse: authored procedure/action c
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+
+<a id="src-0910720e555c"></a>
+
+## SRC-0910720e555c — Point 05 independent procedure review — CAD, photographs and scans alignment
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md)
+
+Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-096e1d7af9e5"></a>
 
@@ -230,7 +290,7 @@ Summary: Inspected in this research turn; records OCS STEP representation findin
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-0c559ba0bc9f"></a>
 
@@ -290,7 +350,7 @@ Summary: Project proposal defining sequences, branches, evidence merges, compone
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/project-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-02/project-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-11b52766dd34"></a>
 
@@ -434,7 +494,7 @@ Summary: Existing local source cited by point 04 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-1b2c3957498a"></a>
 
@@ -470,7 +530,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-1f314fe4accc"></a>
 
@@ -486,15 +546,15 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-1f466f80fd41"></a>
 
-## SRC-1f466f80fd41 — Open3D 0.20 point-cloud operations
+## SRC-1f466f80fd41 — Point cloud — Open3D 0.20.0 documentation
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html](https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html)
 
-Summary: Point-cloud API includes plane segmentation, clustering, normal estimation and returned inlier indices. Fits are sampled geometry evidence.
+Summary: Open3D 0.20.0 documents `segment_plane(distance_threshold, ransac_n, num_iterations)` returning plane coefficients and inlier indices; the distance threshold is in point-cloud coordinate units. It also documents `cluster_dbscan(eps, min_points)` returning labels, with -1 for noise. These routines report sampled point subsets and geometric candidates; they do not classify engineering features or report parameter uncertainty.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r10.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r10.md.
 
 <a id="src-1fe1bf3380df"></a>
 
@@ -566,7 +626,7 @@ Summary: Inspected in this research turn; records OCS baseline, CAD representati
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-251464b38bc3"></a>
 
@@ -614,7 +674,7 @@ Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored proc
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-2759f46214ed"></a>
 
@@ -636,9 +696,9 @@ Original source: [https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.
 
 Summary: Official OpenCV tutorial maps known 3D object points to image points, detects/refines chessboard corners and uses calibrateCamera; square dimensions establish physical units.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/action-audit/reviews/point-05-visual.md, research/sources/round-02/cad-sources.json.
 
 <a id="src-2945aa520dc5"></a>
 
@@ -698,7 +758,7 @@ Summary: Authorized documentation method: fifteen fields per action, alternative
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-2d6abe7b467d"></a>
 
@@ -758,7 +818,7 @@ Summary: Source referenced for the stated workflow; see the owning documentation
 
 Evidence: existing_report_registered, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-2fe2fa4714a1"></a>
 
@@ -938,7 +998,7 @@ Summary: Official OpenCV reference describes camera calibration, pose estimation
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-05-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-39fee200cbbf"></a>
 
@@ -1024,6 +1084,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-3bdbace92938"></a>
+
+## SRC-3bdbace92938 — https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html
+
+Original source: [https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html](https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html)
+
+Summary: These sources provide an evidenced candidate fitter and adapter contract. The cylinder model still depends on valid corresponding normals, an adequately sampled and visible cylindrical surface, configured thresholds/radius range, and the selected consensus method. The fitted cylinder and inliers describe the supplied sampled cloud; they do not establish physical feature identity, design intent, or parameter uncertainty. A short arc can leave radius weakly constrained, so retain coverage and held-out residual checks. The attempted PCL Doxygen URL `https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html` returned “Internal Error / URL not accessible via this tool.” No claims rely on that failed page. There are 13 successfully inspected pages (ten initial plus three follow-up) and one recorded failed access attempt.
+
+Evidence: existing_report_registered, access_failed.
+
+Documents: research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
 <a id="src-3cb645d27838"></a>
 
 ## SRC-3cb645d27838 — Part scripting — FreeCAD documentation
@@ -1034,7 +1106,7 @@ Summary: The FreeCAD Part scripting page describes Part as an Open CASCADE B-rep
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-05-software.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-3d8ba9ae669c"></a>
 
@@ -1046,7 +1118,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-3e2691ad3057"></a>
 
@@ -1071,6 +1143,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-3e6c1657a06b"></a>
+
+## SRC-3e6c1657a06b — rec-r02.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-3ec7111d8cd7"></a>
 
@@ -1167,6 +1251,18 @@ Summary: Primary repository identifies MuJoCo source code under Apache-2.0 and p
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
+
+<a id="src-46011fa591f5"></a>
+
+## SRC-46011fa591f5 — cad-r07.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-46482507fc3a"></a>
 
@@ -1386,15 +1482,15 @@ Documents: research/sources/round-02/domain-sources.json, research/sources/round
 
 <a id="src-53486b514e1a"></a>
 
-## SRC-53486b514e1a — IfcOpenShell unit.assign_unit API
+## SRC-53486b514e1a — ifcopenshell.api.unit.assign_unit — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html)
 
-Summary: Official signature and examples for declaring IFC project units.
+Summary: IfcOpenShell 0.9.0post1 documents `assign_unit(file, units=None, length=None, area=None, volume=None)` for default project units. The page identifies defaults of millimetres for length, square metres for area and cubic metres for volume; explicit units can be assigned through supplied unit entities. Project unit assignment is separate from the placement API is_si choice.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-536bee2e3614"></a>
 
@@ -1720,6 +1816,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json.
 
+<a id="src-608f9d6fff1b"></a>
+
+## SRC-608f9d6fff1b — dom-r04.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-61c6ad4341d0"></a>
 
 ## SRC-61c6ad4341d0 — cad-r03.md
@@ -1778,7 +1886,7 @@ Summary: Existing archived source for OCS automation documentation and historica
 
 Evidence: archived_original_referenced, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/archive-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-02/archive-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-64196dacabad"></a>
 
@@ -1875,6 +1983,18 @@ Summary: Proposed ten-action source-to-model-brief procedure with software, AI a
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-6a6bf0c0ce39"></a>
+
+## SRC-6a6bf0c0ce39 — PCL SampleConsensusModelCylinder header — master branch
+
+Original source: [https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/sample_consensus/include/pcl/sample_consensus/sac_model_cylinder.h](https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/sample_consensus/include/pcl/sample_consensus/sac_model_cylinder.h)
+
+Summary: The official PCL header defines seven cylinder coefficients in order: point on axis x,y,z; axis direction x,y,z; radius. It declares model size 7, sample size 2, and documents coefficient-based distance, inlier selection, optimization and point projection methods. The master-branch URL is mutable and does not pin a released PCL version; no local source or runtime version was checked.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-independent.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
 
 <a id="src-6a8670ea9c90"></a>
 
@@ -2054,7 +2174,7 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-71dee9d2e674"></a>
 
@@ -2140,6 +2260,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
 
+<a id="src-785d8cbc2541"></a>
+
+## SRC-785d8cbc2541 — rec-r07.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-789932d05ce2"></a>
 
 ## SRC-789932d05ce2 — 3D reconstruction research report
@@ -2148,9 +2280,9 @@ Original source: [/home/leo/projects/3dmodeling/research/reconstruction.md](/hom
 
 Summary: Prior repository report assesses image/depth reconstruction methods, source terms and prerequisites. This batch references it for scan-to-CAD transition context and does not repeat that research.
 
-Evidence: existing_report_registered, local_source_inspected.
+Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-79f9dd42f446"></a>
 
@@ -2163,6 +2295,18 @@ Summary: Existing local source inspected in the initial research; its use is des
 Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
 Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+
+<a id="src-7a9b6fde0c01"></a>
+
+## SRC-7a9b6fde0c01 — reconstruction-paths.json
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-7b3c4ff0a101"></a>
 
@@ -2280,9 +2424,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/po
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-819035442c74"></a>
 
@@ -2331,6 +2475,18 @@ Summary: Existing archived source for OCS automation documentation and historica
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-840d8b69fd8f"></a>
+
+## SRC-840d8b69fd8f — Software review: CAD, photographs and scans alignment
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md)
+
+Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-856f00288f07"></a>
 
@@ -2474,7 +2630,7 @@ Summary: Prior project report compares reusable component sources and downstream
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-8f9b6f25cd0d"></a>
 
@@ -2486,7 +2642,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -2560,6 +2716,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
+<a id="src-937929a512bd"></a>
+
+## SRC-937929a512bd — Point 05 designer notes — alignment and parametric remodeling
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md)
+
+Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-93942b7c50fd"></a>
 
 ## SRC-93942b7c50fd — GitHub repository metadata or tree response
@@ -2571,6 +2739,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-93aef666d1eb"></a>
+
+## SRC-93aef666d1eb — rec-r10.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-93b47d856776"></a>
 
@@ -2622,27 +2802,27 @@ Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-95aacf0e0f5c"></a>
 
-## SRC-95aacf0e0f5c — IfcOpenShell placement API
+## SRC-95aacf0e0f5c — ifcopenshell.api.geometry.edit_object_placement — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html)
 
-Summary: Official 4x4 local placement API; `is_si` declares whether matrix translations use SI units.
+Summary: IfcOpenShell 0.9.0post1 documents `edit_object_placement(file, product, matrix=None, is_si=True, should_transform_children=False)` for a 4×4 local placement matrix. is_si=True means matrix translations are SI; False means project units. Only local placements are supported; the child flag controls whether nested children move with the parent or retain world position through rewritten local placements.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-9641fd75954c"></a>
 
-## SRC-9641fd75954c — Open3D 0.20 ICP registration
+## SRC-9641fd75954c — ICP registration — Open3D 0.20.0 documentation
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html](https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html)
 
-Summary: registration_icp refines a source-to-target transform from an initial transform and distance threshold; RegistrationResult reports fitness and inlier RMSE. Point-to-plane ICP requires useful normals.
+Summary: Open3D 0.20.0 documents `evaluate_registration(source, target, threshold, trans_init)` and `registration_icp` with source, target, distance threshold, initial transformation and selected objective. ICP output maps source to target. The inspected 0.20.0 tutorial defines fitness as inlier correspondences divided by source point count; this record does not generalize that denominator to other releases or uninspected local implementations; inlier_rmse is the RMSE over inlier correspondences. Point-to-plane ICP uses point-to-plane residuals and requires normals; default ICP convergence uses up to 30 iterations. Metrics measure thresholded fit and overlap, not uncertainty or pose uniqueness.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
 
 <a id="src-96ae0c43af7d"></a>
 
@@ -2658,15 +2838,15 @@ Documents: research/sources/round-02/archive-sources.json.
 
 <a id="src-9794ead44d0e"></a>
 
-## SRC-9794ead44d0e — IfcOpenShell georeference API
+## SRC-9794ead44d0e — ifcopenshell.api.georeference — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html)
 
-Summary: Official CRS/map-conversion API; creates georeference records but requires supplied CRS and transform values.
+Summary: IfcOpenShell 0.9.0post1 documents `add_georeferencing` creating projected-CRS and map-conversion entities with blank parameters, and `edit_georeferencing` setting CRS and coordinate-operation attributes. CRS and transform values must be supplied; the API does not estimate a survey transform. IFC2X3 uses its map-conversion property-set route.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-98a1a3cd7fd0"></a>
 
@@ -3016,6 +3196,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md.
 
+<a id="src-a83674c889fd"></a>
+
+## SRC-a83674c889fd — point-05-web-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-ac24864ef496"></a>
 
 ## SRC-ac24864ef496 — upstream GPL text
@@ -3148,6 +3340,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-af8c2d79e989"></a>
+
+## SRC-af8c2d79e989 — cad-r06.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-afa0b4d5a10b"></a>
 
 ## SRC-afa0b4d5a10b — domain-paths.json
@@ -3158,7 +3362,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-b00b92c70647"></a>
 
@@ -3195,6 +3399,30 @@ Summary: The CadQuery Shape API documents `isValid()` as true when no defect is 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
+
+<a id="src-b238ff5da9a9"></a>
+
+## SRC-b238ff5da9a9 — point-05-operations
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+
+Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
+<a id="src-b254a6b0bd67"></a>
+
+## SRC-b254a6b0bd67 — Blender Scene API RNA source (main branch)
+
+Original source: [https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_scene_api.cc](https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_scene_api.cc)
+
+Summary: Official Blender RNA source defines Scene.ray_cast with a required depsgraph, world-space origin/direction and maximum distance. It documents evaluated geometry and outputs including hit boolean, location, normal, evaluated-mesh face index, original object and matrix. Location, normal and index correspond to the evaluated mesh; index can be -1 when original data is unavailable. The main-branch source does not identify an installed release.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
 
 <a id="src-b30357886048"></a>
 
@@ -3242,7 +3470,7 @@ Summary: Prior project proposal identifies OCS as the interactive baseline, Free
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-b5b5f2bbfc67"></a>
 
@@ -3266,7 +3494,7 @@ Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored proc
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-b667bec43458"></a>
 
@@ -3278,7 +3506,7 @@ Summary: - CloudCompare repository and license: https://github.com/CloudCompare/
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r07.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r04.md.
+Documents: research/action-audit/reviews/point-05-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r07.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r04.md.
 
 <a id="src-b66eb65ce0b7"></a>
 
@@ -3339,6 +3567,18 @@ Summary: Curated robot MJCF models and asset files; repository states each model
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-b914a224eaf5"></a>
+
+## SRC-b914a224eaf5 — rec-r01.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-b9a7ffca5f8c"></a>
 
@@ -3436,6 +3676,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
+<a id="src-bc59d9c5c5c8"></a>
+
+## SRC-bc59d9c5c5c8 — Point 05 visual and evidence review — existing CAD with photographs and scans
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md)
+
+Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-bcf9f8ff8137"></a>
 
 ## SRC-bcf9f8ff8137 — source repository and GPL licence
@@ -3456,9 +3708,9 @@ Original source: [/home/leo/projects/architecture/research/README.md](/home/leo/
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
-Evidence: local_source_inspected, existing_report_registered.
+Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-bda744cda1c8"></a>
 
@@ -3546,15 +3798,15 @@ Documents: research/domains-and-components.md, research/sources/round-02/domain-
 
 <a id="src-bffa49b1e1cc"></a>
 
-## SRC-bffa49b1e1cc — Open3D global registration
+## SRC-bffa49b1e1cc — Global registration — Open3D 0.20.0 documentation
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html](https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html)
 
-Summary: Official registration methods provide a coarse alignment that may be refined by local ICP.
+Summary: Open3D 0.20.0 documents point-cloud downsampling, normal estimation, FPFH feature matching and RANSAC for coarse source/target registration. RANSAC checks distance, edge-length similarity and optionally normal affinity; it returns a transformation applied to the source cloud to align with the target. The documented coarse result is followed by ICP refinement. These are source-documented pipeline operations, not local registration measurements.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r04.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r09.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r04.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r09.md.
 
 <a id="src-c057807eb5f6"></a>
 
@@ -3566,7 +3818,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-c0ffb325c952"></a>
 
@@ -3746,7 +3998,7 @@ Summary: Search-indexed API identifies Scene.ray_cast and scene annotation prope
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r07.md, research/workflows/details/rec-r07.md.
+Documents: research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-visual.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r07.md, research/workflows/details/rec-r07.md.
 
 <a id="src-c9c4bd1b2994"></a>
 
@@ -3756,9 +4008,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-o
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-c9c50a504fb8"></a>
 
@@ -3786,15 +4038,15 @@ Documents: research/sources/round-02/archive-sources.json.
 
 <a id="src-cad1c2a4c242"></a>
 
-## SRC-cad1c2a4c242 — https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode
+## SRC-cad1c2a4c242 — Command line mode — CloudCompare wiki
 
 Original source: [https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode](https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode)
 
-Summary: - CloudCompare command line: https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode
+Summary: The official CloudCompare CLI page states command-line mode exists since 2.3 and lists version 2.14.beta options. `-C2C_DIST` compares the first loaded/generated cloud against the second reference cloud; `-C2M_DIST` compares the first cloud against the first mesh. Results are distance scalar fields on compared cloud points; cloud-to-cloud `-SPLIT_XYZ` adds displacement components, and `-MAX_DIST` caps nearest-neighbor search. Distances inherit coordinate units and comparison direction from argument order.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
 
 <a id="src-cb2c93b6107b"></a>
 
@@ -3806,7 +4058,7 @@ Summary: solvePnP estimates object/world-to-camera rotation and translation from
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md.
 
 <a id="src-ccbf0b22fcf6"></a>
 
@@ -3843,6 +4095,18 @@ Summary: `cad-modeling-fusion` (`Foster1202/cad-modeling-fusion-skill`) ; Archiv
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-cd8d24d026d3"></a>
+
+## SRC-cd8d24d026d3 — Point 05 — Alignment and parametric remodeling
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+
+Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-ce92c7f02e89"></a>
 
@@ -4130,7 +4394,7 @@ Summary: Requirements for units, frames, source corrections, parts, tolerances a
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-e1ca3a166ec3"></a>
 
@@ -4143,6 +4407,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-e24faff4c00b"></a>
+
+## SRC-e24faff4c00b — Point 05 source check: calibration, scan alignment and coordinate frames
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md)
+
+Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-e2aad65f4cd1"></a>
 
@@ -4334,7 +4610,7 @@ Summary: Source referenced for the stated workflow; see the owning documentation
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-ebd6e769a79a"></a>
 
@@ -4384,6 +4660,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-ede9c64cd596"></a>
+
+## SRC-ede9c64cd596 — rec-r09.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
+
 <a id="src-ee88cef821b6"></a>
 
 ## SRC-ee88cef821b6 — GitHub repository metadata or tree response
@@ -4395,6 +4683,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-f06d3b316cfc"></a>
+
+## SRC-f06d3b316cfc — rec-r04.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md)
+
+Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-05-local-sources.json.
 
 <a id="src-f088ec7f4848"></a>
 
@@ -4564,6 +4864,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json.
 
+<a id="src-f7e7cce18547"></a>
+
+## SRC-f7e7cce18547 — Blender Object API RNA source (main branch)
+
+Original source: [https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_object_api.cc](https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_object_api.cc)
+
+Summary: Official Blender RNA source defines Object.ray_cast with object-space origin/direction, maximum distance and optional depsgraph for evaluated mesh access. It returns hit boolean, location, normal and face index. This query is against evaluated object geometry in object-space, not a physical measurement; the mutable main-branch source does not pin an installed release.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
 <a id="src-f828b291cc6f"></a>
 
 ## SRC-f828b291cc6f — OpenCADStudio MCP automation guide
@@ -4634,7 +4946,7 @@ Summary: The FreeCAD scripting page shows `Sketcher::SketchObject`, `addGeometry
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/visual-review.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
+Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/visual-review.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
 
 <a id="src-fe66e203f22d"></a>
 
@@ -4659,6 +4971,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-ff0bc4de820c"></a>
+
+## SRC-ff0bc4de820c — Cylinder model segmentation — Point Cloud Library 1.15.1-dev documentation
+
+Original source: [https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html](https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html)
+
+Summary: The official PCL tutorial demonstrates SACSegmentationFromNormals<PointXYZ, Normal> with a point cloud and normals, SACMODEL_CYLINDER, RANSAC, normal-distance weight 0.1, 10000 iterations, 0.05 distance threshold, and radius limits 0 to 0.1. The example identifies the latter length settings as metres (5 cm threshold and 10 cm maximum radius). segment(inliers, coefficients) returns inlier indices and coefficients. Example evidence only; no project cloud was processed.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-independent.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
 
 <a id="src-ffac5faf4062"></a>
 

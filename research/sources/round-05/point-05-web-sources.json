@@ -1,0 +1,250 @@
+[
+  {
+    "url": "https://docs.opencv.org/4.13.0/d5/d1f/calib3d_solvePnP.html",
+    "title": "Perspective-n-Point (PnP) pose computation — OpenCV 4.13.0",
+    "summary": "OpenCV 4.13.0 documents solvePnP inputs as 3D object points, matching 2D image projections, camera intrinsic matrix and distortion coefficients. rvec/tvec transform object-frame points into camera-frame coordinates; camera axes are X right, Y down, Z forward. The page documents method-specific point-count and planarity conditions, alternative solutions returned by solvePnPGeneric, and RANSAC PnP for outliers. This is API capability evidence, not a local pose result or accuracy report.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-02 / CAD-02B / REC-12: solvePnP consumes 3D object points, 2D image points, intrinsics and distortion; rvec/tvec map object to camera coordinates",
+      "REC-02: pose methods have distinct point count/planarity prerequisites and may have multiple solutions"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+    "title": "Global registration — Open3D 0.20.0 documentation",
+    "summary": "Open3D 0.20.0 documents point-cloud downsampling, normal estimation, FPFH feature matching and RANSAC for coarse source/target registration. RANSAC checks distance, edge-length similarity and optionally normal affinity; it returns a transformation applied to the source cloud to align with the target. The documented coarse result is followed by ICP refinement. These are source-documented pipeline operations, not local registration measurements.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-07 / REC-12: FPFH+RANSAC provides coarse source-to-target point-cloud transformation with correspondence pruning",
+      "REC-07: global registration uses downsampled point clouds and is a coarse alignment step"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+    "title": "ICP registration — Open3D 0.20.0 documentation",
+    "summary": "Open3D 0.20.0 documents `evaluate_registration(source, target, threshold, trans_init)` and `registration_icp` with source, target, distance threshold, initial transformation and selected objective. ICP output maps source to target. The inspected 0.20.0 tutorial defines fitness as inlier correspondences divided by source point count; this record does not generalize that denominator to other releases or uninspected local implementations; inlier_rmse is the RMSE over inlier correspondences. Point-to-plane ICP uses point-to-plane residuals and requires normals; default ICP convergence uses up to 30 iterations. Metrics measure thresholded fit and overlap, not uncertainty or pose uniqueness.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-08 / REC-12 / REC-16 / DOM-23: ICP refines an initial source-to-target transform and outputs RegistrationResult",
+      "REC-08: fitness is overlap ratio and inlier_rmse is a length-unit correspondence residual, not uncertainty The inspected denominator is source point count in Open3D 0.20.0 tutorial only.",
+      "REC-15: registration and fit metrics do not assign causes to drawing-versus-scan disagreement or replace separate nominal, tolerance and measurement-uncertainty claims"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+    "title": "Point cloud — Open3D 0.20.0 documentation",
+    "summary": "Open3D 0.20.0 documents `segment_plane(distance_threshold, ransac_n, num_iterations)` returning plane coefficients and inlier indices; the distance threshold is in point-cloud coordinate units. It also documents `cluster_dbscan(eps, min_points)` returning labels, with -1 for noise. These routines report sampled point subsets and geometric candidates; they do not classify engineering features or report parameter uncertainty.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-09 / CAD-11 / REC-14: segment_plane returns a plane model and inlier indices under a length threshold",
+      "REC-09: cluster_dbscan returns cluster labels and marks noise as -1"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_scene_api.cc",
+    "title": "Blender Scene API RNA source (main branch)",
+    "summary": "Official Blender RNA source defines Scene.ray_cast with a required depsgraph, world-space origin/direction and maximum distance. It documents evaluated geometry and outputs including hit boolean, location, normal, evaluated-mesh face index, original object and matrix. Location, normal and index correspond to the evaluated mesh; index can be -1 when original data is unavailable. The main-branch source does not identify an installed release.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-13 / DOM-19: Scene.ray_cast queries evaluated scene geometry in world-space and returns hit/location/normal/index/object/matrix"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/plain",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_object_api.cc",
+    "title": "Blender Object API RNA source (main branch)",
+    "summary": "Official Blender RNA source defines Object.ray_cast with object-space origin/direction, maximum distance and optional depsgraph for evaluated mesh access. It returns hit boolean, location, normal and face index. This query is against evaluated object geometry in object-space, not a physical measurement; the mutable main-branch source does not pin an installed release.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-13 / DOM-19: Object.ray_cast inputs are in object-space and query evaluated geometry with optional depsgraph",
+      "REC-13: returned hit/location/normal/index are geometry-query outputs, not measured feature evidence"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/plain",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
+    "title": "Command line mode — CloudCompare wiki",
+    "summary": "The official CloudCompare CLI page states command-line mode exists since 2.3 and lists version 2.14.beta options. `-C2C_DIST` compares the first loaded/generated cloud against the second reference cloud; `-C2M_DIST` compares the first cloud against the first mesh. Results are distance scalar fields on compared cloud points; cloud-to-cloud `-SPLIT_XYZ` adds displacement components, and `-MAX_DIST` caps nearest-neighbor search. Distances inherit coordinate units and comparison direction from argument order.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-16 / DOM-23: C2C and C2M CLI operations compare an ordered cloud to a reference cloud/mesh and save per-point scalar distances",
+      "REC-16: CloudCompare distance fields are directed sampled comparisons; preserve argument order and limits",
+      "REC-15 / DOM-23: directed C2C/C2M distance outputs support per-feature scan/drawing or scan/CAD comparison when frames and matched IDs are established; interpretation of disagreement remains separate"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
+    "title": "ifcopenshell.api.geometry.edit_object_placement — IfcOpenShell 0.9.0post1 documentation",
+    "summary": "IfcOpenShell 0.9.0post1 documents `edit_object_placement(file, product, matrix=None, is_si=True, should_transform_children=False)` for a 4×4 local placement matrix. is_si=True means matrix translations are SI; False means project units. Only local placements are supported; the child flag controls whether nested children move with the parent or retain world position through rewritten local placements.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-19 / DOM-23: placement matrices are local 4×4 transforms; is_si selects SI versus project units and child-transform flag changes nested-placement behavior"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
+    "title": "ifcopenshell.api.georeference — IfcOpenShell 0.9.0post1 documentation",
+    "summary": "IfcOpenShell 0.9.0post1 documents `add_georeferencing` creating projected-CRS and map-conversion entities with blank parameters, and `edit_georeferencing` setting CRS and coordinate-operation attributes. CRS and transform values must be supplied; the API does not estimate a survey transform. IFC2X3 uses its map-conversion property-set route.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-19 / DOM-23: georeferencing separates projected CRS metadata from local-to-map conversion parameters",
+      "DOM-19 / DOM-23: add_georeferencing creates empty records; edit_georeferencing requires supplied values"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html",
+    "title": "ifcopenshell.api.unit.assign_unit — IfcOpenShell 0.9.0post1 documentation",
+    "summary": "IfcOpenShell 0.9.0post1 documents `assign_unit(file, units=None, length=None, area=None, volume=None)` for default project units. The page identifies defaults of millimetres for length, square metres for area and cubic metres for volume; explicit units can be assigned through supplied unit entities. Project unit assignment is separate from the placement API is_si choice.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-19 / DOM-23: assign_unit defines default IFC project units and documents millimetre/metre defaults",
+      "DOM-19 / DOM-23: project unit assignment and placement-matrix translation convention are separate API inputs"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html",
+    "title": "Cylinder model segmentation — Point Cloud Library 1.15.1-dev documentation",
+    "summary": "The official PCL tutorial demonstrates SACSegmentationFromNormals<PointXYZ, Normal> with a point cloud and normals, SACMODEL_CYLINDER, RANSAC, normal-distance weight 0.1, 10000 iterations, 0.05 distance threshold, and radius limits 0 to 0.1. The example identifies the latter length settings as metres (5 cm threshold and 10 cm maximum radius). segment(inliers, coefficients) returns inlier indices and coefficients. Example evidence only; no project cloud was processed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-11 / REC-09: PCL documents a normal-based RANSAC cylinder fitter with corresponding point/normal inputs, inlier indices, coefficient output, threshold and radius controls",
+      "CAD-11 / REC-09: tutorial example uses metre-scale threshold and radius values; callers must keep cloud units and limits consistent"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://pointclouds.org/documentation/classpcl_1_1_s_a_c_segmentation_from_normals.html",
+    "title": "pcl::SACSegmentationFromNormals<PointT, PointNT> Class Template Reference — Point Cloud Library 1.15.1-dev",
+    "summary": "The PCL API documents normal-based sample-consensus segmentation, input point cloud and normal cloud, and segment(PointIndices&, ModelCoefficients&) outputs. It describes normal-distance weighting and inherited consensus controls including method, maximum iterations, probability, distance threshold, radius limits and axis/angle constraints. This is API documentation, not a local runtime result.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-11 / REC-09: cylinder segmentation requires a point cloud with corresponding normals and returns inlier indices plus model coefficients",
+      "CAD-11 / REC-09: configurable consensus, distance, radius, and axis/angle controls affect accepted candidates"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/sample_consensus/include/pcl/sample_consensus/sac_model_cylinder.h",
+    "title": "PCL SampleConsensusModelCylinder header — master branch",
+    "summary": "The official PCL header defines seven cylinder coefficients in order: point on axis x,y,z; axis direction x,y,z; radius. It declares model size 7, sample size 2, and documents coefficient-based distance, inlier selection, optimization and point projection methods. The master-branch URL is mutable and does not pin a released PCL version; no local source or runtime version was checked.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-11 / REC-09: cylinder coefficient indices 0–2 encode axis point, 3–5 encode axis direction, and 6 encodes radius",
+      "CAD-11 / REC-09: coefficient length values inherit input-cloud coordinate units; PCL header defines fields but does not state a physical unit system"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/plain",
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md",
+      "research/action-audit/reviews/point-05-software.md"
+    ]
+  },
+  {
+    "url": "https://pointclouds.org/documentation/classpcl_1_1_sample_consensus_1_1_sample_consensus_model_cylinder.html",
+    "title": "PCL SampleConsensusModelCylinder class reference (attempted; page title unavailable)",
+    "summary": "Access attempt returned the web tool error: Internal Error / URL not accessible via this tool. Page contents and title were not inspected; no technical claims are based on this URL.",
+    "access_date": "2026-11-12",
+    "evidence_status": "access_failed",
+    "supporting_claims": [],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-05-sources.md"
+    ]
+  }
+]
