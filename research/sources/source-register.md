@@ -112,6 +112,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
 
+<a id="src-017b462fd1bf"></a>
+
+## SRC-017b462fd1bf — Stop-button source-readiness result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json)
+
+Summary: Existing source/hash gate returns NEEDS_INPUT foroperator/mounting body andcontact/terminal geometry.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-27/stop-button-sources.json.
+
 <a id="src-01a105b9ee75"></a>
 
 ## SRC-01a105b9ee75 — imported-records-24.json
@@ -592,6 +604,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-0a87ef91b4b8"></a>
+
+## SRC-0a87ef91b4b8 — Stop-button source findings
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md)
+
+Summary: Exact manufacturer variant,dimension leaders,panel mounting conditions andactual gated CAD routes.
+
+Evidence: delegated_source_review_record.
+
+Documents: research/sources/round-27/stop-button-sources.json.
+
 <a id="src-0aace313f4cb"></a>
 
 ## SRC-0aace313f4cb — Curtis 1243-4303 controller (C014) — CAD input sheet
@@ -832,6 +856,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-0fe51d659523"></a>
+
+## SRC-0fe51d659523 — Manufacturer Harmony XB5 catalogue
+
+Original source: [https://iportal.se.com/Contents/docs/HARMONY%20XB5_CATALOG.PDF](https://iportal.se.com/Contents/docs/HARMONY%20XB5_CATALOG.PDF)
+
+Summary: Printed44/PDF45 explicitly mapsXB5AS8445 toZB5AZ105 contact body andZB5AS844 head,1NO+1NC andturn release.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-27/stop-button-sources.json.
+
 <a id="src-106d47161026"></a>
 
 ## SRC-106d47161026 — Gland source feature contract
@@ -1035,6 +1071,30 @@ Summary: Existing local source cited by point 04 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-14d64147c232"></a>
+
+## SRC-14d64147c232 — XB5AS8445 mounting render
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png)
+
+Summary: Actual panel-cutout image givesØ22.3+0.4/0 recommended22.5,lug3.2+0.2/0,24.1+0.4/0 height,r≤0.8 andscrew-clamp40/30 spacing.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-27/stop-button-sources.json.
+
+<a id="src-15006ce1a525"></a>
+
+## SRC-15006ce1a525 — Stop-button source-stage report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c049-stop-button-source.md](/home/leo/projects/3dmodeling/execution/c049-stop-button-source.md)
+
+Summary: Documents exact assembly mapping,finished panel tolerances,source access outcomes andseparate panel/full-body actions.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-27/stop-button-sources.json.
 
 <a id="src-158c2c4848c2"></a>
 
@@ -1755,6 +1815,18 @@ Summary: Input sheet registered from the inspected ferme manifest: attachments; 
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-22fcdfd7f96a"></a>
+
+## SRC-22fcdfd7f96a — Exact XB5AS8445 manufacturer datasheet
+
+Original source: [https://iportal.se.com/Contents/docs/SQD-XB5AS8445.PDF](https://iportal.se.com/Contents/docs/SQD-XB5AS8445.PDF)
+
+Summary: Original exactpart data withpage3 operator/panel projections andpage4 finished cutout tolerances,screw-clamp spacing andclamping range.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-27/stop-button-sources.json.
 
 <a id="src-234298cb79b4"></a>
 
@@ -5908,6 +5980,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md.
 
+<a id="src-6e4167b03b67"></a>
+
+## SRC-6e4167b03b67 — Stop-button acquisition metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json)
+
+Summary: Retains original source URLs,redirect URL,time/MIME/hash,render metadata andactual verification/login/403 route outcomes.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-27/stop-button-sources.json.
+
 <a id="src-6e6b9cf6af3c"></a>
 
 ## SRC-6e6b9cf6af3c — https://alicevision.org/
@@ -6351,6 +6435,18 @@ Summary: Official OpenMVS usage guide on mutable develop branch inspected 2026-1
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r01.md, research/workflows/reconstruction-paths.md.
+
+<a id="src-76f855deeb5a"></a>
+
+## SRC-76f855deeb5a — XB5AS8445 dimension render
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png)
+
+Summary: Actual exactpart image givesØ40 operator,43 overall height,39.5 front and43 rear projections,1–6mm panel range.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-27/stop-button-sources.json.
 
 <a id="src-773aa3a5f61a"></a>
 
@@ -12532,6 +12628,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-ed1c06986d4c"></a>
+
+## SRC-ed1c06986d4c — Stop-button feature contract
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json)
+
+Summary: Pins finished panel-interface bounds andindividual required operator/contact body geometry questions.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-27/stop-button-sources.json.
+
 <a id="src-ede1a41b29c4"></a>
 
 ## SRC-ede1a41b29c4 — Caster head mounting plate (P06B) — CAD input sheet
@@ -13359,6 +13467,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-fe7b635af96d"></a>
+
+## SRC-fe7b635af96d — Stop-button source-stage result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json)
+
+Summary: Connects exactvariant,source-defined panel interface,unresolved full body features andseparate nominal/projection labels.
+
+Evidence: executed_component_stage_record.
+
+Documents: research/sources/round-27/stop-button-sources.json.
 
 <a id="src-fe876787e9e0"></a>
 

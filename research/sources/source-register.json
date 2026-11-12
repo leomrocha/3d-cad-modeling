@@ -326,6 +326,31 @@
       ]
     },
     {
+      "id": "SRC-017b462fd1bf",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json",
+      "title": "Stop-button source-readiness result",
+      "summary": "Existing source/hash gate returns NEEDS_INPUT foroperator/mounting body andcontact/terminal geometry.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_readiness_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_readiness_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "5fa03e2dc332f6c04f3fc77fca99bebc70566d1239b4e25267f9cb986adbd3e9",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
+      ]
+    },
+    {
       "id": "SRC-01a105b9ee75",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json",
@@ -1761,6 +1786,31 @@
       ]
     },
     {
+      "id": "SRC-0a87ef91b4b8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md",
+      "title": "Stop-button source findings",
+      "summary": "Exact manufacturer variant,dimension leaders,panel mounting conditions andactual gated CAD routes.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_source_review_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_source_review_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md",
+          "access_date": "2026-11-12",
+          "sha256": "f5540df6ace13248455ca482bfe9e498db0ec422a526e3c5caee14be1679342d",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
+      ]
+    },
+    {
       "id": "SRC-0aace313f4cb",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md",
@@ -2322,6 +2372,32 @@
       ]
     },
     {
+      "id": "SRC-0fe51d659523",
+      "url": "https://iportal.se.com/Contents/docs/HARMONY%20XB5_CATALOG.PDF",
+      "local_source_path": null,
+      "title": "Manufacturer Harmony XB5 catalogue",
+      "summary": "Printed44/PDF45 explicitly mapsXB5AS8445 toZB5AZ105 contact body andZB5AS844 head,1NO+1NC andturn release.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-harmony-xb5-catalog.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "db89a80739783ea1399ff12de13a65dd9073ed71028faaa5f17b29fa2efd263c",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ],
+          "supplied_url": "https://iportal.se.com/Contents/docs/HARMONY%20XB5_CATALOG.PDF"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
+      ]
+    },
+    {
       "id": "SRC-106d47161026",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json",
@@ -2790,6 +2866,56 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-14d64147c232",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png",
+      "title": "XB5AS8445 mounting render",
+      "summary": "Actual panel-cutout image givesØ22.3+0.4/0 recommended22.5,lug3.2+0.2/0,24.1+0.4/0 height,r≤0.8 andscrew-clamp40/30 spacing.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png",
+          "access_date": "2026-11-12",
+          "sha256": "3ff6e53dcbee2ad621070f52b9f259cfc16b81661722a433f2008d9cb580db06",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-15006ce1a525",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c049-stop-button-source.md",
+      "title": "Stop-button source-stage report",
+      "summary": "Documents exact assembly mapping,finished panel tolerances,source access outcomes andseparate panel/full-body actions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_work_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_work_report",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c049-stop-button-source.md",
+          "access_date": "2026-11-12",
+          "sha256": "c5ec8b1e6cd5fdd78b732fd7647e33c1a6fc5bf2705fe64179925eda59de0ac3",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
       ]
     },
     {
@@ -4657,6 +4783,32 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-22fcdfd7f96a",
+      "url": "https://iportal.se.com/Contents/docs/SQD-XB5AS8445.PDF",
+      "local_source_path": null,
+      "title": "Exact XB5AS8445 manufacturer datasheet",
+      "summary": "Original exactpart data withpage3 operator/panel projections andpage4 finished cutout tolerances,screw-clamp spacing andclamping range.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-product-datasheet.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "89078423fe39296339bf3767165b63edff2cb29a1caba090894ddfaceb629836",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ],
+          "supplied_url": "https://iportal2.schneider-electric.com/Contents/docs/SQD-XB5AS8445.PDF"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
       ]
     },
     {
@@ -15826,6 +15978,31 @@
       ]
     },
     {
+      "id": "SRC-6e4167b03b67",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json",
+      "title": "Stop-button acquisition metadata",
+      "summary": "Retains original source URLs,redirect URL,time/MIME/hash,render metadata andactual verification/login/403 route outcomes.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "1897427097c5f98d1229cecf808d9043ad9084bf08850af06fa9d13fff9f658a",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6e6b9cf6af3c",
       "url": "https://alicevision.org/",
       "local_source_path": null,
@@ -16994,6 +17171,31 @@
         "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r01.md",
         "research/workflows/reconstruction-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-76f855deeb5a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png",
+      "title": "XB5AS8445 dimension render",
+      "summary": "Actual exactpart image givesØ40 operator,43 overall height,39.5 front and43 rear projections,1–6mm panel range.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png",
+          "access_date": "2026-11-12",
+          "sha256": "e78230838e259f3e8df392dc1141d745bb63ec6879f04314cb653a673409a808",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
       ]
     },
     {
@@ -33782,6 +33984,31 @@
       ]
     },
     {
+      "id": "SRC-ed1c06986d4c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json",
+      "title": "Stop-button feature contract",
+      "summary": "Pins finished panel-interface bounds andindividual required operator/contact body geometry questions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "1d02f7a0d95596a04d0b4cae08ae7684bc6af71d94e2659807fe31e079c78b00",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
+      ]
+    },
+    {
       "id": "SRC-ede1a41b29c4",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md",
@@ -36160,6 +36387,31 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fe7b635af96d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json",
+      "title": "Stop-button source-stage result",
+      "summary": "Connects exactvariant,source-defined panel interface,unresolved full body features andseparate nominal/projection labels.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_component_stage_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_stage_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "cd20b41060ee5363306dfdeb0cb0f213fb6c5258cd7ef165ceb371dd226c4dd4",
+          "referring_documents": [
+            "execution/c049-stop-button-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-27/stop-button-sources.json"
       ]
     },
     {
