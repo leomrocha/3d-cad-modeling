@@ -38,7 +38,7 @@ Summary: Official example creates IfcOpeningElement geometry and relates it as a
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
 
 <a id="src-027053bdee43"></a>
 
@@ -98,7 +98,7 @@ Summary: Known target object coordinates and corresponding image detections supp
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
 
 <a id="src-056984789982"></a>
 
@@ -123,18 +123,6 @@ Summary: earthtojake/text-to-cad ; Code-defined parametric models with `cadgen`/
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
-
-<a id="src-069525d9d265"></a>
-
-## SRC-069525d9d265 — calibrate_camera.py
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py](/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py)
-
-Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/project-detail-sources.json.
 
 <a id="src-0a10e8f57dac"></a>
 
@@ -470,7 +458,7 @@ Summary: Primary usage examples for parameterized Python solid construction.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md.
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
 
 <a id="src-26ba505a1c89"></a>
 
@@ -598,7 +586,7 @@ Documents: research/sources/round-03/cad-detail-sources.json.
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html](https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html)
 
-Summary: 1. Name: Open3D RGB-D odometry; Role: Register RGB and depth frames and estimate sequence poses; Source urls: https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html; https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html; Dependency contract: Use the matching domain detail and code guide for the selected backend and version.
+Summary: 1. Name: Open3D RGB-D odometry; Role: Register RGB and depth frames and estimate sequence poses; Source urls: https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html; https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html; Dependency contract: Use the linked branch dossier and original software documentation for the selected backend and version.
 
 Evidence: existing_report_registered.
 
@@ -962,7 +950,7 @@ Summary: Primary repository identifies MuJoCo source code under Apache-2.0 and p
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/dom-r08.md.
+Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
 
 <a id="src-46482507fc3a"></a>
 
@@ -1022,7 +1010,7 @@ Summary: Official MJCF element reference for body, joints, inertial, mesh assets
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md.
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
 
 <a id="src-4afcbdb352d9"></a>
 
@@ -1216,18 +1204,6 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r02.md, research/workflows/details/dom-r07.md.
 
-<a id="src-556757dfc029"></a>
-
-## SRC-556757dfc029 — register_clouds.py
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py](/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py)
-
-Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/project-detail-sources.json.
-
 <a id="src-55a8e99c38e5"></a>
 
 ## SRC-55a8e99c38e5 — Assembly positioning and mating
@@ -1286,7 +1262,7 @@ Summary: Documents DXF import, STEP import/export and units; relevant profile an
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r04.md.
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
 
 <a id="src-587c68a13074"></a>
 
@@ -1454,7 +1430,7 @@ Summary: Documents COLMAP corner-based pixel coordinates, camera conventions and
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-6507a5c7f8da"></a>
 
@@ -1463,18 +1439,6 @@ Documents: research/sources/round-03/reconstruction-detail-sources.json, researc
 Original source: [/home/leo/projects/3dmodeling/research/workflows/details/contract.json](/home/leo/projects/3dmodeling/research/workflows/details/contract.json)
 
 Summary: Analyst classification contract: independent manual effort, software setup and computing classes; required evidence, input and output fields.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/project-detail-sources.json.
-
-<a id="src-651b6a16b16c"></a>
-
-## SRC-651b6a16b16c — check_control_distances.py
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py](/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py)
-
-Summary: Standard-library reference length checker with explicit units, model revision, source provenance and independent check-control residuals.
 
 Evidence: local_source_inspected.
 
@@ -1502,7 +1466,7 @@ Summary: Documents DXF $INSUNITS and unit conversion; DXF coordinates without a 
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md.
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-6b30ccb4447f"></a>
 
@@ -1538,7 +1502,7 @@ Summary: Documents ImageReader camera parameters, shared camera setup, pycolmap 
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md, research/workflows/details/rec-r01.md.
+Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md, research/workflows/details/rec-r01.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-6c6db30cba74"></a>
 
@@ -1658,7 +1622,7 @@ Summary: Official README command is `python run.py <image> --output-dir <dir>`; 
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r10.md.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r10.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-75dbfddac2b8"></a>
 
@@ -1682,7 +1646,7 @@ Summary: Documents COLMAP image_undistorter output as the input to InterfaceCOLM
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-773aa3a5f61a"></a>
 
@@ -1732,18 +1696,6 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
-<a id="src-7c5de1bf6cb6"></a>
-
-## SRC-7c5de1bf6cb6 — import_profile.py
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py](/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py)
-
-Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/project-detail-sources.json.
-
 <a id="src-7c623f2c8b68"></a>
 
 ## SRC-7c623f2c8b68 — FreeCAD Modeling Best Practices & TNP Mitigation
@@ -1767,18 +1719,6 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
-
-<a id="src-7ece9e98ed86"></a>
-
-## SRC-7ece9e98ed86 — build_part.py
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py](/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py)
-
-Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/project-detail-sources.json.
 
 <a id="src-8089d1901b4f"></a>
 
@@ -1874,7 +1814,7 @@ Summary: Documents `ns-process-data images;video --data ... --output-dir ...` an
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r08.md.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r08.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-86cdf9c119df"></a>
 
@@ -1886,7 +1826,7 @@ Summary: Documents Splatfacto training, Gaussian PLY output and memory variants;
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r09.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r09.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-885fe0a26a5e"></a>
 
@@ -1982,7 +1922,7 @@ Summary: Documents feature_extractor options including ImageReader camera model/
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md.
+Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-8f8532cac48e"></a>
 
@@ -2031,18 +1971,6 @@ Summary: Foster1202/cad-modeling-fusion-skill ; ModelSpec schema and code-genera
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
-
-<a id="src-92b1e01ee971"></a>
-
-## SRC-92b1e01ee971 — test_control_distances.py
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py](/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py)
-
-Summary: Six synthetic software tests for coordinate units, fit/check separation, finite values and explicit provenance.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/project-detail-sources.json.
 
 <a id="src-932141965717"></a>
 
@@ -2126,7 +2054,7 @@ Summary: registration_icp refines a source-to-target transform from an initial t
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
 
 <a id="src-96ae0c43af7d"></a>
 
@@ -2306,7 +2234,7 @@ Summary: Official Meshroom instructions document `meshroom_batch --input INPUT_I
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md, research/workflows/reconstruction-paths.md.
 
 <a id="src-a318f3e786ed"></a>
 
@@ -2554,11 +2482,11 @@ Documents: research/sources/round-02/archive-sources.json.
 
 Original source: [https://cadquery.readthedocs.io/en/stable/classreference.html](https://cadquery.readthedocs.io/en/stable/classreference.html)
 
-Summary: Documents shape validity, bounds, volume, closed wires and geometry transforms; supports checks in reference scripts.
+Summary: Documents shape validity, bounds, volume, closed wires and geometry transforms; supports the documented workflow checks.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r04.md.
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
 
 <a id="src-b30357886048"></a>
 
@@ -3064,6 +2992,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-d1c0e9f5deef"></a>
+
+## SRC-d1c0e9f5deef — Authorized cleanup of newly authored examples
+
+Original source: [/home/leo/projects/3dmodeling/research/cleanup-record.md](/home/leo/projects/3dmodeling/research/cleanup-record.md)
+
+Summary: Records the removal of 13 example files, verified original Git revision and SHA-256 values, prior scope finding and replacement of active example references with documented third-party APIs.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
+
 <a id="src-d25c92b0aebf"></a>
 
 ## SRC-d25c92b0aebf — PicoGK official repository page and README
@@ -3130,7 +3070,7 @@ Documents: research/domains-and-components.md.
 
 Original source: [/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py)
 
-Summary: Documentation renderer validating complete recipe coverage, source registration, ratings, code paths and Python syntax; builds independent sorted tables.
+Summary: Documentation renderer validating recipe coverage, classification values and source references; builds workflow pages and independent sorted tables.
 
 Evidence: local_source_inspected.
 
@@ -3207,18 +3147,6 @@ Summary: BOSL2 ; Parametric OpenSCAD shapes, masks and manipulators; OpenSCAD li
 Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
-
-<a id="src-dd02b514ff43"></a>
-
-## SRC-dd02b514ff43 — MJCF reference writer
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py](/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py)
-
-Summary: Bounded standard-library serializer for explicit MJCF data; no integration execution.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/project-detail-sources.json.
 
 <a id="src-dd1f5b2ca39f"></a>
 
@@ -3531,18 +3459,6 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
-
-<a id="src-f23a725cdea4"></a>
-
-## SRC-f23a725cdea4 — IFC reference author
-
-Original source: [/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py](/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py)
-
-Summary: Bounded IfcOpenShell IFC4 author from explicitly dimensioned JSON inputs; no integration execution.
-
-Evidence: local_source_inspected.
-
-Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/project-detail-sources.json.
 
 <a id="src-f2c662a213ab"></a>
 

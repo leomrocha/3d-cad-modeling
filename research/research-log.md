@@ -37,3 +37,10 @@ Final registration and document checks are recorded in `workflows/register-check
 10. Review corrected current OpenCV licence scope to Apache-2.0 for 4.5 and later, IFC opening relations/NumPy placement matrices, and MJCF fullinertia/body-axis handling. The final receipts distinguish syntax checks, synthetic helper tests and integration status.
 11. Historical snapshot finding: the round-two source record for `research/local-baseline.md` has a digest that differs from the live file. The live digest equals the starting checkpoint's file digest; the mismatch predates this batch. Preserve the historical source record and report it separately from round-three snapshot checks.
 12. Concurrent Git state: commit `530b9f4` appeared during this batch and contains intermediate documentation changes. Its history and contents are retained; the final commit follows that HEAD.
+
+## 12 November 2026 — Authorized example cleanup
+
+1. User instruction: “do apply the cleanup”.
+2. Starting checkpoint: `2b32e72`. All 13 example files match committed revision `0a0babb` before removal.
+3. Removed the newly authored executable examples, tests and adjacent example READMEs. Updated active workflow records to reference documented third-party APIs. Preserved historical execution facts in this log and the [cleanup record](/home/leo/projects/3dmodeling/research/cleanup-record.md).
+4. Preserved workflow classifications, graphs, original external sources and the implementation plan. Documentation checks concern the retained records. Actual coordinating model identity is unavailable.

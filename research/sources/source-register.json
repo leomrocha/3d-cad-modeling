@@ -104,7 +104,9 @@
       ],
       "referring_documents": [
         "research/sources/round-03/domain-detail-sources.json",
-        "research/workflows/details/dom-r01.md"
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r10.md"
       ]
     },
     {
@@ -335,6 +337,7 @@
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r01.md",
         "research/workflows/details/mix-r03.md",
         "research/workflows/details/mix-r09.md",
         "research/workflows/details/rec-r01.md",
@@ -414,29 +417,6 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "skills/README.md"
-      ]
-    },
-    {
-      "id": "SRC-069525d9d265",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-      "title": "calibrate_camera.py",
-      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-          "sha256": "f5937a811a3a36d98b6dc4d60fcd03e3d5a6f4cd7c9fa1d1648abc7f6808f61d",
-          "content_type": "text/x-python"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -1216,7 +1196,12 @@
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
-        "research/workflows/details/cad-r01.md"
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/mix-r09.md"
       ]
     },
     {
@@ -1614,7 +1599,7 @@
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
       "local_source_path": null,
       "title": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
-      "summary": "1. Name: Open3D RGB-D odometry; Role: Register RGB and depth frames and estimate sequence poses; Source urls: https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html; https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html; Dependency contract: Use the matching domain detail and code guide for the selected backend and version.",
+      "summary": "1. Name: Open3D RGB-D odometry; Role: Register RGB and depth frames and estimate sequence poses; Source urls: https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html; https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html; Dependency contract: Use the linked branch dossier and original software documentation for the selected backend and version.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered"
@@ -2610,8 +2595,14 @@
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r03.md",
-        "research/workflows/details/dom-r08.md"
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md"
       ]
     },
     {
@@ -2782,10 +2773,16 @@
       ],
       "referring_documents": [
         "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r03.md",
         "research/workflows/details/dom-r04.md",
         "research/workflows/details/dom-r07.md",
-        "research/workflows/details/dom-r08.md"
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md"
       ]
     },
     {
@@ -3248,29 +3245,6 @@
       ]
     },
     {
-      "id": "SRC-556757dfc029",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-      "title": "register_clouds.py",
-      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-          "sha256": "02b41b9977009ec75c63770d3b7fe6d010ae3f02b01911c1151fb252dbae2a06",
-          "content_type": "text/x-python"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/project-detail-sources.json"
-      ]
-    },
-    {
       "id": "SRC-55a8e99c38e5",
       "url": "https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/references/positioning.md",
       "local_source_path": null,
@@ -3494,7 +3468,12 @@
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r01.md",
-        "research/workflows/details/cad-r04.md"
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/mix-r09.md"
       ]
     },
     {
@@ -3967,7 +3946,8 @@
       ],
       "referring_documents": [
         "research/sources/round-03/reconstruction-detail-sources.json",
-        "research/workflows/details/rec-r01.md"
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -3985,31 +3965,8 @@
           "evidence_status": "local_source_inspected",
           "access_date": "2026-11-12",
           "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
-          "sha256": "df796ee29daf66914161830f381a069afc031eeb9b973acfb026e9cc568dda6d",
+          "sha256": "1e1f7a994b53b8f438f5d0407ace8ebe9aee8c75ce502d5ebc953c763458c818",
           "content_type": "application/json"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/project-detail-sources.json"
-      ]
-    },
-    {
-      "id": "SRC-651b6a16b16c",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-      "title": "check_control_distances.py",
-      "summary": "Standard-library reference length checker with explicit units, model revision, source provenance and independent check-control residuals.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "sha256": "449442c3cd0852dafb46930ae11e019002a4e3aa48b988a496e10d9d68c8eef4",
-          "content_type": "text/x-python"
         }
       ],
       "referring_documents": [
@@ -4088,7 +4045,8 @@
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
-        "research/workflows/details/cad-r04.md"
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -4160,7 +4118,8 @@
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r06.md",
-        "research/workflows/details/rec-r01.md"
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -4478,7 +4437,8 @@
       ],
       "referring_documents": [
         "research/sources/round-03/reconstruction-detail-sources.json",
-        "research/workflows/details/rec-r10.md"
+        "research/workflows/details/rec-r10.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -4541,7 +4501,8 @@
       ],
       "referring_documents": [
         "research/sources/round-03/reconstruction-detail-sources.json",
-        "research/workflows/details/rec-r01.md"
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -4733,29 +4694,6 @@
       ]
     },
     {
-      "id": "SRC-7c5de1bf6cb6",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
-      "title": "import_profile.py",
-      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
-          "sha256": "4be566f7240f1b77a6d52a4e85537e4e974eaa6b1bfd117a4dcaaab51e8affa2",
-          "content_type": "text/x-python"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/project-detail-sources.json"
-      ]
-    },
-    {
       "id": "SRC-7c623f2c8b68",
       "url": "https://raw.githubusercontent.com/glotoff/freecad-skills/main/skills/freecad-user/references/modeling_best_practices.md",
       "local_source_path": null,
@@ -4851,29 +4789,6 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
-      ]
-    },
-    {
-      "id": "SRC-7ece9e98ed86",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-      "title": "build_part.py",
-      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-          "sha256": "bebec6f7c34721490d7e2a0b5e305736b4bc2ed3ec0f8ba428849c08f9fbe02c",
-          "content_type": "text/x-python"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -5142,7 +5057,8 @@
       ],
       "referring_documents": [
         "research/sources/round-03/reconstruction-detail-sources.json",
-        "research/workflows/details/rec-r08.md"
+        "research/workflows/details/rec-r08.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -5193,7 +5109,8 @@
         "research/workflows/details/mix-r09.md",
         "research/workflows/details/rec-r05.md",
         "research/workflows/details/rec-r06.md",
-        "research/workflows/details/rec-r08.md"
+        "research/workflows/details/rec-r08.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -5439,7 +5356,8 @@
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/dom-r01.md",
-        "research/workflows/details/dom-r06.md"
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -5567,29 +5485,6 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "skills/README.md"
-      ]
-    },
-    {
-      "id": "SRC-92b1e01ee971",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
-      "title": "test_control_distances.py",
-      "summary": "Six synthetic software tests for coordinate units, fit/check separation, finite values and explicit provenance.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
-          "sha256": "d6199099c8875df335bdbbd4aed87f2cdab65b8b3c02b4ecccf11c33d13045df",
-          "content_type": "text/x-python"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -5841,8 +5736,10 @@
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r04.md",
         "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r01.md",
         "research/workflows/details/mix-r03.md",
         "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
         "research/workflows/details/mix-r07.md",
         "research/workflows/details/mix-r09.md",
         "research/workflows/details/rec-r01.md",
@@ -6363,7 +6260,8 @@
       ],
       "referring_documents": [
         "research/sources/round-03/reconstruction-detail-sources.json",
-        "research/workflows/details/rec-r01.md"
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/reconstruction-paths.md"
       ]
     },
     {
@@ -7021,7 +6919,7 @@
       "url": "https://cadquery.readthedocs.io/en/stable/classreference.html",
       "local_source_path": null,
       "title": "CadQuery API reference",
-      "summary": "Documents shape validity, bounds, volume, closed wires and geometry transforms; supports checks in reference scripts.",
+      "summary": "Documents shape validity, bounds, volume, closed wires and geometry transforms; supports the documented workflow checks.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7042,7 +6940,11 @@
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r01.md",
-        "research/workflows/details/cad-r04.md"
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/mix-r09.md"
       ]
     },
     {
@@ -8558,6 +8460,29 @@
       ]
     },
     {
+      "id": "SRC-d1c0e9f5deef",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/cleanup-record.md",
+      "title": "Authorized cleanup of newly authored examples",
+      "summary": "Records the removal of 13 example files, verified original Git revision and SHA-256 values, prior scope finding and replacement of active example references with documented third-party APIs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/cleanup-record.md",
+          "sha256": "716710accf15a1509eaef904dd267df0301b65c7a1c87fd06550ebc8e6bbcbb2",
+          "content_type": "text/markdown"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-d25c92b0aebf",
       "url": "https://github.com/leap71/PicoGK",
       "local_source_path": null,
@@ -8676,7 +8601,7 @@
           "evidence_status": "local_source_inspected",
           "access_date": "2026-11-12",
           "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
-          "sha256": "aa63e63f5645d01004f9be1d4a1429a3a96ac009c87f667ffc9917f6d959b044",
+          "sha256": "c0e93e1631fa570ec4dd8eac46ce23258bfcc3382eb28d889c9e958ee83296e5",
           "content_type": "application/json"
         }
       ],
@@ -8750,7 +8675,7 @@
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
       "title": "build_workflow_details.py",
-      "summary": "Documentation renderer validating complete recipe coverage, source registration, ratings, code paths and Python syntax; builds independent sorted tables.",
+      "summary": "Documentation renderer validating recipe coverage, classification values and source references; builds workflow pages and independent sorted tables.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "local_source_inspected"
@@ -8760,7 +8685,7 @@
           "evidence_status": "local_source_inspected",
           "access_date": "2026-11-12",
           "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
-          "sha256": "3b4e02bcb1f82cfa62eea1ba9573f68218da70a4fa8bebdc4c0ebf0d246a9c91",
+          "sha256": "bde729b3f2b3481f1d20704880ddbb446bef48857742c2ccc96d3aeff0d79e3a",
           "content_type": "text/x-python"
         }
       ],
@@ -8939,41 +8864,6 @@
       "observations": [],
       "referring_documents": [
         "research/domains-and-components.md"
-      ]
-    },
-    {
-      "id": "SRC-dd02b514ff43",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-      "title": "MJCF reference writer",
-      "summary": "Bounded standard-library serializer for explicit MJCF data; no integration execution.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "access_date": "2026-11-12",
-          "supporting_claims": [
-            "DOM-R02: Manufacturer STEP component to robot link",
-            "DOM-R03: CAD robot assembly to URDF and MJCF"
-          ],
-          "sha256": null,
-          "content_type": "text/markdown/json"
-        },
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "sha256": "91b402c896cbbb42e5f75f7367b15fa493402fc5a158b3ce56c8745cebf88391",
-          "content_type": "text/x-python"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/domain-detail-sources.json",
-        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -9869,40 +9759,6 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
-      ]
-    },
-    {
-      "id": "SRC-f23a725cdea4",
-      "url": null,
-      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-      "title": "IFC reference author",
-      "summary": "Bounded IfcOpenShell IFC4 author from explicitly dimensioned JSON inputs; no integration execution.",
-      "registered_at": "2026-11-12",
-      "evidence_statuses": [
-        "local_source_inspected"
-      ],
-      "observations": [
-        {
-          "evidence_status": "local_source_inspected",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-          "access_date": "2026-11-12",
-          "supporting_claims": [
-            "Reference source registered for the workflow and interoperability topic it documents."
-          ],
-          "sha256": null,
-          "content_type": "text/markdown/json"
-        },
-        {
-          "evidence_status": "local_source_inspected",
-          "access_date": "2026-11-12",
-          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-          "sha256": "672a3c834ca14216a37dfa30d4c02bafa97156a7f7bfe8668ffb1cac90dcebb4",
-          "content_type": "text/x-python"
-        }
-      ],
-      "referring_documents": [
-        "research/sources/round-03/domain-detail-sources.json",
-        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {

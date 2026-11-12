@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "scope": "Generic workflow requirements, reference code and relative effort/resource classification",
+  "scope": "Generic workflow requirements, documented third-party APIs and relative effort/resource classification",
   "rating_status": "Analyst classification under each workflow's stated conditions; runtime and memory benchmarks require measured runs.",
   "human_effort_scale": {
     "1": "Direct parameter entry or import of an identified, correctly scaled asset; little interpretation.",

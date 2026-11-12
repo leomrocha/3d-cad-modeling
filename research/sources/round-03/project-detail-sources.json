@@ -6,7 +6,7 @@
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
     "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
-    "sha256": "df796ee29daf66914161830f381a069afc031eeb9b973acfb026e9cc568dda6d",
+    "sha256": "1e1f7a994b53b8f438f5d0407ace8ebe9aee8c75ce502d5ebc953c763458c818",
     "content_type": "application/json"
   },
   {
@@ -16,37 +16,17 @@
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
     "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
-    "sha256": "aa63e63f5645d01004f9be1d4a1429a3a96ac009c87f667ffc9917f6d959b044",
+    "sha256": "c0e93e1631fa570ec4dd8eac46ce23258bfcc3382eb28d889c9e958ee83296e5",
     "content_type": "application/json"
-  },
-  {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-    "title": "check_control_distances.py",
-    "summary": "Standard-library reference length checker with explicit units, model revision, source provenance and independent check-control residuals.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-    "sha256": "449442c3cd0852dafb46930ae11e019002a4e3aa48b988a496e10d9d68c8eef4",
-    "content_type": "text/x-python"
-  },
-  {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
-    "title": "test_control_distances.py",
-    "summary": "Six synthetic software tests for coordinate units, fit/check separation, finite values and explicit provenance.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
-    "sha256": "d6199099c8875df335bdbbd4aed87f2cdab65b8b3c02b4ecccf11c33d13045df",
-    "content_type": "text/x-python"
   },
   {
     "url": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
     "title": "build_workflow_details.py",
-    "summary": "Documentation renderer validating complete recipe coverage, source registration, ratings, code paths and Python syntax; builds independent sorted tables.",
+    "summary": "Documentation renderer validating recipe coverage, classification values and source references; builds workflow pages and independent sorted tables.",
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
     "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
-    "sha256": "3b4e02bcb1f82cfa62eea1ba9573f68218da70a4fa8bebdc4c0ebf0d246a9c91",
+    "sha256": "bde729b3f2b3481f1d20704880ddbb446bef48857742c2ccc96d3aeff0d79e3a",
     "content_type": "text/x-python"
   },
   {
@@ -60,63 +40,13 @@
     "content_type": "text/x-python"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-    "title": "calibrate_camera.py",
-    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+    "url": "/home/leo/projects/3dmodeling/research/cleanup-record.md",
+    "title": "Authorized cleanup of newly authored examples",
+    "summary": "Records the removal of 13 example files, verified original Git revision and SHA-256 values, prior scope finding and replacement of active example references with documented third-party APIs.",
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-    "sha256": "f5937a811a3a36d98b6dc4d60fcd03e3d5a6f4cd7c9fa1d1648abc7f6808f61d",
-    "content_type": "text/x-python"
-  },
-  {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-    "title": "register_clouds.py",
-    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-    "sha256": "02b41b9977009ec75c63770d3b7fe6d010ae3f02b01911c1151fb252dbae2a06",
-    "content_type": "text/x-python"
-  },
-  {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-    "title": "ifc_model.py",
-    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-    "sha256": "672a3c834ca14216a37dfa30d4c02bafa97156a7f7bfe8668ffb1cac90dcebb4",
-    "content_type": "text/x-python"
-  },
-  {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-    "title": "robot_model.py",
-    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-    "sha256": "91b402c896cbbb42e5f75f7367b15fa493402fc5a158b3ce56c8745cebf88391",
-    "content_type": "text/x-python"
-  },
-  {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-    "title": "build_part.py",
-    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-    "sha256": "bebec6f7c34721490d7e2a0b5e305736b4bc2ed3ec0f8ba428849c08f9fbe02c",
-    "content_type": "text/x-python"
-  },
-  {
-    "url": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
-    "title": "import_profile.py",
-    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
-    "sha256": "4be566f7240f1b77a6d52a4e85537e4e974eaa6b1bfd117a4dcaaab51e8affa2",
-    "content_type": "text/x-python"
+    "local_original": "/home/leo/projects/3dmodeling/research/cleanup-record.md",
+    "sha256": "716710accf15a1509eaef904dd267df0301b65c7a1c87fd06550ebc8e6bbcbb2",
+    "content_type": "text/markdown"
   }
 ]

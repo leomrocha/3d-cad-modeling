@@ -33,7 +33,7 @@ PnP uses labeled pairs (X,Y,Z) in CAD/world frame and (u,v) pixels plus K/distor
 
 ## Procedure
 
-1. Step: 1; Action: Use calibrate_camera.py on measured calibration board views if no valid camera solution exists.
+1. Step: 1; Action: Use OpenCV calibrateCamera/projectPoints on measured calibration board views if no valid camera solution exists.
 2. Step: 2; Action: Create correspondences from known CAD coordinates and measured image pixels.
 3. Step: 3; Action: Run solvePnPRansac with camera matrix and distortion; save object-to-camera transform and inlier list.
 4. Step: 4; Action: Project withheld CAD landmarks/edges with projectPoints and report pixel residuals; preserve native CAD revision.
@@ -43,9 +43,9 @@ PnP uses labeled pairs (X,Y,Z) in CAD/world frame and (u,v) pixels plus K/distor
 1. Id: REC-01; Name: Calibrate camera intrinsics and distortion; Inputs: photo-set; measurement-set; Outputs: camera-solution; Tools: OpenCV calibrateCamera; checkerboard or Charuco target; Source urls: https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html; Prerequisites: Known target geometry and units; Images cover target orientations and image field; Camera/lens/focus state recorded; Preserves: Original images; Target dimensions and capture metadata; Changes or infers: Estimates intrinsics and lens-distortion coefficients; Undistorted images are derivatives; Checks: Calibration reprojection RMS and per-image residuals; Undistort a held-out target image and compare straight edges; Keep calibration target coordinates in declared units; Alternatives: COLMAP self-calibration for capture-derived focal/intrinsic estimates; Manufacturer calibration only when specific camera/lens state is known; Automation: scripted; Evidence status: documented_capability; Summary: Solve camera intrinsics/distortion from corresponding known target coordinates and detected image points; target size supplies metric length scale to later pose solutions.
 2. Id: REC-12; Name: Register existing CAD to calibrated photographs or scan points; Inputs: measurement-set; Outputs: camera-solution; measurement-set; Tools: CAD tessellation with named 3D landmarks; OpenCV solvePnPRansac; Open3D global registration and ICP; Source urls: https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html; https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html; https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html; Prerequisites: Known CAD units, component datum and exact CAD revision; Visible identifiable CAD landmarks or scan geometry; Camera calibration for photo route; Preserves: Authoritative CAD revision and its units; Photo/scan source and registration transform; Changes or infers: Estimates CAD-to-camera/world transform; Surface registration uses a tessellated derivative of CAD; Checks: Independent landmark reprojection residuals; Scan-to-CAD distance map and interface dimensions; Check symmetries/partial overlap for alternate poses; Alternatives: Surveyed fiducials; Manual datum alignment; Photogrammetric camera solve with control targets; Automation: mixed; Evidence status: proposed_composition; Summary: Register a known CAD revision to measured photo landmarks or sampled scan geometry; the source CAD and scan/photo remain separate evidence.; Input choice groups: parametric-source; cad-solid; photo-set; point-cloud; mesh
 
-## Code and tool entry points
+## Documented third-party tool and API entry points
 
-1. Path: [calibrate_camera.py](/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py); Status: reference_code; Entrypoint: `python calibrate_camera.py --images <glob-or-path> ... --inner-corners <cols> <rows> --square-size <measured> --unit <mm|cm|m|in> --output calibration.json`; Source urls: https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html
+1. Status: existing_tool_entrypoint; Entrypoint: `OpenCV findChessboardCornersSB, calibrateCamera and projectPoints: supply board object coordinates, detected image corners and image dimensions; retain intrinsics, distortion, poses and reprojection residuals.`; Source urls: https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html
 
 ## Output artifacts
 
@@ -65,7 +65,7 @@ For a plausible but wrong pose, verify correspondence labels and CAD revision; a
 2. **Setup:** 2
 3. **Compute:** 1
 4. **Human reason:** Landmark identification and correspondence checking need judgment; geometry is already known.
-5. **Setup reason:** One OpenCV script plus CAD landmark export.
+5. **Setup reason:** OpenCV environment plus CAD landmark export.
 6. **Compute reason:** PnP and projection are small CPU matrix operations; image resolution/count have low scaling cost.
 
 ## Resources and scaling

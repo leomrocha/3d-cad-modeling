@@ -4,17 +4,7 @@
   "source_references": "passed",
   "required_detail_fields": "passed",
   "complete_recipe_coverage": "passed",
-  "local_code_paths": "passed",
-  "python_syntax_checked": [
-    "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-    "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
-    "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-    "/home/leo/projects/3dmodeling/examples/workflows/common/test_control_distances.py",
-    "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-    "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-    "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-    "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
-  ],
+  "documented_entrypoint_references": "passed",
   "ordered_workflows": {
     "human": [
       "CAD-R10",
@@ -98,5 +88,5 @@
     ]
   },
   "errors": [],
-  "scope": "Documentation and reference-code syntax; tool integration checks are recorded separately."
+  "scope": "Workflow documentation, classification and source-reference consistency."
 }

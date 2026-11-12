@@ -706,33 +706,6 @@
   },
   {
     "url": null,
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-    "title": "MJCF reference writer",
-    "summary": "Bounded standard-library serializer for explicit MJCF data; no integration execution.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "supporting_claims": [
-      "DOM-R02: Manufacturer STEP component to robot link",
-      "DOM-R03: CAD robot assembly to URDF and MJCF"
-    ],
-    "sha256": null,
-    "content_type": "text/markdown/json"
-  },
-  {
-    "url": null,
-    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-    "title": "IFC reference author",
-    "summary": "Bounded IfcOpenShell IFC4 author from explicitly dimensioned JSON inputs; no integration execution.",
-    "access_date": "2026-11-12",
-    "evidence_status": "local_source_inspected",
-    "supporting_claims": [
-      "Reference source registered for the workflow and interoperability topic it documents."
-    ],
-    "sha256": null,
-    "content_type": "text/markdown/json"
-  },
-  {
-    "url": null,
     "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
     "title": "Installed OpenCADStudio engineering skill",
     "summary": "Local skill supplies explicit units, frames, component boundaries, source evidence and geometry validation. User reports partial success.",

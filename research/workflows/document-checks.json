@@ -1,14 +1,73 @@
 {
   "date": "2026-11-12",
-  "starting_checkpoint": "073521e",
-  "concurrent_commit_preserved": "530b9f4",
-  "scope": "38 generic workflow dossiers, independent effort rankings, reference code and source registration",
-  "source_records": 311,
+  "scope": "Authorized removal of newly authored examples and active references; retained research consistency",
+  "starting_checkpoint": "2b32e72",
+  "original_example_revision": "0a0babb",
+  "removed_files_verified_against_original_commit": [
+    {
+      "path": "examples/workflows/README.md",
+      "sha256": "dc0ecc1fd72e58e7c3f7fb3852aeabe5890dc81e1cf9d4b5c00c2ba2e1c6af5e"
+    },
+    {
+      "path": "examples/workflows/cad/README.md",
+      "sha256": "e3b55e6f14bddee987498c0508fe5d1eef6d9331c5aa7a343eb16e0b7166115d"
+    },
+    {
+      "path": "examples/workflows/cad/build_part.py",
+      "sha256": "bebec6f7c34721490d7e2a0b5e305736b4bc2ed3ec0f8ba428849c08f9fbe02c"
+    },
+    {
+      "path": "examples/workflows/cad/import_profile.py",
+      "sha256": "4be566f7240f1b77a6d52a4e85537e4e974eaa6b1bfd117a4dcaaab51e8affa2"
+    },
+    {
+      "path": "examples/workflows/common/README.md",
+      "sha256": "ec6432a25c2feecc194e86bc2697c5fbed73ec2d7a0c53e23aa4e99c0d01e5ea"
+    },
+    {
+      "path": "examples/workflows/common/check_control_distances.py",
+      "sha256": "449442c3cd0852dafb46930ae11e019002a4e3aa48b988a496e10d9d68c8eef4"
+    },
+    {
+      "path": "examples/workflows/common/test_control_distances.py",
+      "sha256": "d6199099c8875df335bdbbd4aed87f2cdab65b8b3c02b4ecccf11c33d13045df"
+    },
+    {
+      "path": "examples/workflows/domains/README.md",
+      "sha256": "76ce753eb4562db2ea102f9e60afdc3f97668366b802acaeeacf5904ab5bb34f"
+    },
+    {
+      "path": "examples/workflows/domains/ifc_model.py",
+      "sha256": "672a3c834ca14216a37dfa30d4c02bafa97156a7f7bfe8668ffb1cac90dcebb4"
+    },
+    {
+      "path": "examples/workflows/domains/robot_model.py",
+      "sha256": "91b402c896cbbb42e5f75f7367b15fa493402fc5a158b3ce56c8745cebf88391"
+    },
+    {
+      "path": "examples/workflows/reconstruction/README.md",
+      "sha256": "59b7d9c9d6e95eb88ced41ce71ca6899891a0364a73fe19be9f3fe24a108be02"
+    },
+    {
+      "path": "examples/workflows/reconstruction/calibrate_camera.py",
+      "sha256": "f5937a811a3a36d98b6dc4d60fcd03e3d5a6f4cd7c9fa1d1648abc7f6808f61d"
+    },
+    {
+      "path": "examples/workflows/reconstruction/register_clouds.py",
+      "sha256": "02b41b9977009ec75c63770d3b7fe6d010ae3f02b01911c1151fb252dbae2a06"
+    }
+  ],
+  "remaining_examples_directory": false,
+  "active_example_references": [],
+  "retained_workflows": 38,
   "operations": 77,
-  "recipes": 38,
   "registered_ideas": 105,
-  "detailed_workflows": 38,
-  "new_document_local_links_checked": 47,
+  "source_records": 304,
+  "original_external_sources_preserved": true,
+  "workflow_effort_values_and_ranking_tables_preserved": true,
+  "mermaid_graphs_preserved": true,
+  "implementation_plan_preserved": true,
+  "changed_markdown_files_checked": 46,
   "local_link_errors": [],
   "round_three_project_source_hashes": "passed",
   "historical_source_hash_mismatches": [
@@ -19,14 +78,7 @@
       "current_sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068"
     }
   ],
-  "reference_python_files_syntax_checked": 8,
-  "synthetic_distance_helper_tests": {
-    "passed": 6,
-    "command": "PYTHONDONTWRITEBYTECODE=1 python3 examples/workflows/common/test_control_distances.py"
-  },
-  "classification_evidence": "Analyst ordinal assessment under per-route conditions",
-  "modeling_reference_code_integration_status": "Statically reviewed; application integrations not executed",
-  "implementation_plan_preserved": true,
+  "documentation_builder_syntax": "passed",
   "deterministic_register_and_detail_rebuild": "passed",
   "actual_coordinating_model_identity": "unavailable"
 }

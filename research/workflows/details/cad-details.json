@@ -2,7 +2,7 @@
   "domain": "cad",
   "date": "2026-11-12",
   "contract": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
-  "evidence_note": "Effort and resource ratings are analyst classifications under the per-workflow conditions. No CAD script, executable, OCS session, photogrammetry job, or model was run in this batch. Reference scripts remain untested.",
+  "evidence_note": "Proposed qualitative classifications based on documented software capabilities and stated input/output conditions. Tool entry points refer to third-party software documentation.",
   "rankings": {
     "human_low_to_high": [
       "CAD-R10",
@@ -54,7 +54,7 @@
       ],
       "recipe_operation_count": 3,
       "output_scope": "One parameterized mechanical solid, editable native source and verified STEP derivative.",
-      "comparison_conditions": "One simple plate-like part; unambiguous text and dimension table; 0\u20138 separated through-holes; mm values; no strength/material analysis. OCS remains baseline; CadQuery script is a concrete code branch.",
+      "comparison_conditions": "One simple engineering part with explicit dimensions and unambiguous feature intent; a small B-rep and recorded units/datums. OCS is the existing baseline; FreeCAD and CadQuery are documented alternatives.",
       "inputs": [
         {
           "artifact": "text",
@@ -103,14 +103,12 @@
           "role": "Parameter-driven Python model using OCCT B-rep; STEP is geometry exchange, Python source is the parametric record.",
           "license": "Apache-2.0.",
           "apis": [
-            "cq.importers.importDXF(filename,tol=...,include=[layer])",
-            "imported.wires().vals(); Wire.Closed()/isValid()",
-            "cq.Matrix(scale); Wire.transformGeometry",
-            "Workplane.newObject([wire]).wires().toPending().extrude(height)",
-            "Shape.isValid/BoundingBox/Volume; Workplane.solids().size(); export(unit=\"MM\",outputUnit=\"MM\"); importers.importStep"
+            "Workplane sketch operations, extrude and cut",
+            "Shape.isValid, BoundingBox and Volume",
+            "STEP export and importers.importStep"
           ],
           "dependencies": [
-            "Python CadQuery, OCP Python bindings and OCCT; reference scripts require CadQuery and import_profile additionally requires ezdxf."
+            "Python CadQuery, OCP Python bindings and OCCT; DXF unit/layer inspection additionally uses ezdxf."
           ],
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
@@ -162,8 +160,8 @@
         },
         {
           "order": 4,
-          "action": "For code branch, supply dimensions in JSON, build plate/holes, check one valid solid and STEP readback.",
-          "tool_or_command": "build_part.py",
+          "action": "Construct the confirmed sketch/features in OCS or FreeCAD, or use documented CadQuery Workplane operations; inspect geometry and STEP readback.",
+          "tool_or_command": "OCS/FreeCAD native features or CadQuery Workplane API",
           "human_review": "Check feature-to-parameter mapping.",
           "status": "proposed_composition"
         },
@@ -177,15 +175,13 @@
       ],
       "code": [
         {
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters /absolute/part.json --step /absolute/out/part.step",
-          "status": "reference_code",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "CadQuery Workplane sketch operations, extrude and cut; inspect Shape.isValid, BoundingBox and Volume; use STEP export and importers.importStep for exchange readback. Preserve Python parameters or native CAD construction intent separately.",
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/quickstart.html",
-            "https://cadquery.readthedocs.io/en/stable/importexport.html",
-            "https://cadquery.readthedocs.io/en/stable/classreference.html"
-          ],
-          "notes": "Concrete reference script: required numeric parameters, source SHA256, B-rep checks and STEP reimport. Not executed.",
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+            "https://cadquery.readthedocs.io/en/stable/classreference.html",
+            "https://cadquery.readthedocs.io/en/stable/importexport.html"
+          ]
         },
         {
           "entrypoint": "python /home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py discover; read state/capabilities/commands using helper contract",
@@ -222,7 +218,7 @@
           "object": "solid",
           "quantity": "validity/solid count",
           "unit": "boolean/count",
-          "acceptance": "isValid and exactly one solid for sample plate",
+          "acceptance": "isValid and exactly one solid for the single-part baseline",
           "method": "CadQuery Shape.isValid/Workplane.solids; independent reader."
         },
         {
@@ -832,7 +828,7 @@
             "Shape.isValid/BoundingBox/Volume; Workplane.solids().size(); export(unit=\"MM\",outputUnit=\"MM\"); importers.importStep"
           ],
           "dependencies": [
-            "Python CadQuery, OCP Python bindings and OCCT; reference scripts require CadQuery and import_profile additionally requires ezdxf."
+            "Python CadQuery, OCP Python bindings and OCCT; DXF unit/layer inspection additionally uses ezdxf."
           ],
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
@@ -913,15 +909,12 @@
       ],
       "code": [
         {
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py --dxf /absolute/profile.dxf --layer PROFILE --scale-to-mm SCALE --extrusion-mm HEIGHT --merge-tolerance-source-units TOL --step /absolute/out/profile.step",
-          "status": "reference_code",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "Read DXF units/layers with ezdxf; use CadQuery importers.importDXF with explicit include layers and merge tolerance; select closed wires with wires().toPending(), apply confirmed scale and extrude with the required length. Inspect resulting topology and STEP readback. SVG uses the separately documented FreeCAD import route.",
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
-            "https://cadquery.readthedocs.io/en/stable/classreference.html",
             "https://ezdxf.readthedocs.io/en/stable/concepts/units.html"
-          ],
-          "notes": "Concrete script checks the selected layer, declared DXF units, one closed wire, validity, solid count and STEP readback; not executed.",
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py"
+          ]
         }
       ],
       "outputs": {
@@ -973,7 +966,7 @@
         "ram": "Scales with profile edges, nested contours and Boolean topology.",
         "storage": "Preserve DXF/SVG, parameters, generator and STEP.",
         "scaling_drivers": "profile edges, nested contours and Boolean topology",
-        "variants": "Single closed wire in supplied script; assign holes/multiple regions explicitly for richer profiles."
+        "variants": "Single closed wire in the single-profile baseline; assign holes/multiple regions explicitly for richer profiles."
       },
       "source_urls": [
         "https://cadquery.readthedocs.io/en/stable/importexport.html",

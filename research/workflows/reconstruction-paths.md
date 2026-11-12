@@ -223,3 +223,49 @@ Recipes `REC-R01`–`REC-R10` in JSON map separate operations to concrete combin
 ## Source record
 
 `reconstruction-paths.json` provides operation- and recipe-level source references. `../sources/round-02/reconstruction-sources.json` stores the source titles, original URLs, summaries, access dates and evidence statuses. No source file was downloaded as an original in this batch.
+
+## Documented third-party tool commands
+
+These commands and parameter mappings describe documented software procedures. Evidence status: source-supported workflow proposals.
+
+
+### OpenCV calibration parameters → COLMAP database → OpenMVS
+
+OpenCV `calibrateCamera` produces `K`, distortion coefficients `[k1,k2,p1,p2,k3]`, image dimensions and pixel residuals. COLMAP uses a corner-based image-pixel convention whose principal point is `+0.5 px` relative to OpenCV. For a matching camera model, map `K` and distortion to COLMAP `FULL_OPENCV` parameters:
+
+```text
+fx, fy, cx+0.5, cy+0.5, k1, k2, p1, p2, k3, 0, 0, 0
+```
+
+The zero values fill COLMAP `k4,k5,k6`; this adapter assumes OpenCV's five-coefficient calibration output and a compatible pinhole lens. Pass the resulting comma-separated values to `--ImageReader.camera_params` during feature extraction. Use `--ImageReader.single_camera 1` only when every image has the same physical camera, crop, resolution and focus state. Read the camera back with `pycolmap.Database.read_camera`, verify model/dimensions/parameter order, and select whether bundle adjustment may refine the values. COLMAP refines intrinsics by default. Do not edit its binary SQLite parameter blob manually. Sources: [COLMAP known-intrinsics FAQ](https://colmap.github.io/faq.html), [camera models](https://colmap.github.io/cameras.html).
+
+```sh
+colmap feature_extractor --database_path <database.db> --image_path <images> \
+  --ImageReader.single_camera 1 --ImageReader.camera_model FULL_OPENCV \
+  --ImageReader.camera_params '<adapter-produced-12-values>'
+colmap exhaustive_matcher --database_path <database.db>
+colmap mapper --database_path <database.db> --image_path <images> --output_path <sparse>
+colmap image_undistorter --image_path <images> --input_path <sparse/0> \
+  --output_path <dense> --output_type COLMAP
+InterfaceCOLMAP -i <dense> -o <scene.mvs> --image-folder <dense/images>
+DensifyPointCloud <scene.mvs>
+ReconstructMesh <scene_dense.mvs>
+```
+
+The COLMAP/OpenMVS handoff is `image_undistorter` → `InterfaceCOLMAP`; the importer consumes undistorted images, sparse camera poses and sparse points and writes an MVS scene. OpenMVG's `openMVG_main_openMVG2openMVS` is a separate exporter route documented by OpenMVS. These paths are not interchangeable adapters. Sources: [COLMAP CLI](https://colmap.github.io/cli.html), [OpenMVS usage](https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md).
+
+### Other documented CLI routes
+
+```sh
+# AliceVision Meshroom photogrammetry graph
+meshroom_batch --input <images-folder> --output <output-folder>
+
+# Nerfstudio image set → Gaussian scene; geometry remains separate
+ns-process-data images --data <images-folder> --output-dir <processed-data>
+ns-train splatfacto --data <processed-data>
+
+# TripoSR single-image mesh proxy
+python run.py <single-image> --output-dir <output-folder>
+```
+
+Meshroom saves graph intermediates and can reuse cached nodes. Nerfstudio uses COLMAP and FFmpeg in the image processing route. TripoSR's own README says its command writes a reconstructed model and reports about 6 GB VRAM for one image. These are documented invocation contracts, not commands executed in this batch. Sources: [Meshroom batch usage](https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md), [Nerfstudio custom data](https://docs.nerf.studio/quickstart/custom_dataset.html), [Nerfstudio Splatfacto](https://docs.nerf.studio/nerfology/methods/splat.html), [TripoSR README](https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md).

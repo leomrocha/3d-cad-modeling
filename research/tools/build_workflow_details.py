@@ -2,7 +2,6 @@
 """Render complete workflow dossiers and independent effort/resource orderings."""
 from __future__ import annotations
 import argparse
-import ast
 import json
 from pathlib import Path
 
@@ -119,7 +118,7 @@ def main():
             ('Reference points, datums and coordinate frames', 'reference_points'),
             ('Software, libraries and dependencies', 'software'), ('Procedure', 'steps'),
             ('Inputs, outputs and requirements at each registered operation', 'registered_operation_sequence'),
-            ('Code and tool entry points', 'code'), ('Output artifacts', 'outputs'),
+            ('Documented third-party tool and API entry points', 'code'), ('Output artifacts', 'outputs'),
             ('Checks', 'checks'), ('Failure recovery', 'failure_recovery'),
             ('Effort and computing classification', 'effort'), ('Resources and scaling', 'resources')]:
             lines += section(title, record[key])
@@ -148,16 +147,12 @@ def main():
             e = r['effort']
             lines += [f'| [{r["id"]} — {r["name"]}]({DETAILS / (r["id"].lower()+".md")}) | {e["human"]} | {e["setup"]} | {e["compute"]} | {r["recorded_operations"]} |']
         (DETAILS / f'by-{axis}.md').write_text('\n'.join(line.rstrip() for line in lines).rstrip() + '\n')
-    scripts = []
-    for path in sorted((ROOT / 'examples/workflows').rglob('*.py')):
-        ast.parse(path.read_text(), filename=str(path))
-        scripts.append(str(path))
     dump(DETAILS / 'detail-checks.json', {'date': args.date, 'workflow_count': len(records),
          'source_references': 'passed', 'required_detail_fields': 'passed',
-         'complete_recipe_coverage': 'passed', 'local_code_paths': 'passed',
-         'python_syntax_checked': scripts, 'ordered_workflows': sorted_records,
-         'errors': [], 'scope': 'Documentation and reference-code syntax; tool integration checks are recorded separately.'})
-    print(json.dumps({'workflows': len(records), 'python_scripts_syntax_checked': len(scripts), 'errors': []}, indent=2))
+         'complete_recipe_coverage': 'passed', 'documented_entrypoint_references': 'passed',
+         'ordered_workflows': sorted_records,
+         'errors': [], 'scope': 'Workflow documentation, classification and source-reference consistency.'})
+    print(json.dumps({'workflows': len(records), 'errors': []}, indent=2))
 
 
 if __name__ == '__main__':

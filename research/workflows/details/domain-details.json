@@ -197,7 +197,7 @@
           "api_or_entrypoint": "ifcopenshell.api.project.create_file; root.create_entity; unit.assign_unit; context.add_context; geometry.create_2pt_wall; feature.add_feature; aggregate.assign_object; spatial.assign_container; georeference.edit_georeferencing",
           "environment_dependencies": "Python + IfcOpenShell wheel/native geometry backend",
           "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
-          "limitations_and_asset_terms": "The sample script supports IFC4, straight walls and rectangular voids; no plan raster vectorization or general BIM classification. Imported asset rights remain separate.",
+          "limitations_and_asset_terms": "IFC creation uses explicitly supplied geometry and semantic classes; retain source-specific asset rights.",
           "source_urls": [
             "https://github.com/IfcOpenShell/IfcOpenShell",
             "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
@@ -260,12 +260,12 @@
         },
         {
           "action": "Create IFC project, units, contexts and spatial hierarchy.",
-          "tool": "If cOpenShell reference helper",
-          "command_or_api": "`python examples/workflows/domains/ifc_model.py <input.json> <new-model.ifc>`; APIs `project.create_file(version=\"IFC4\")`, `unit.assign_unit`, `root.create_entity`, `aggregate.assign_object`.",
+          "tool": "IfcOpenShell API",
+          "command_or_api": "IfcOpenShell project.create_file(version=\"IFC4\"), unit.assign_unit, root.create_entity and aggregate.assign_object.",
           "preserves": "Source plan, controls and IDs.",
           "changes_or_infers": "New IFC4 file and relationships.",
           "check": "Inspect schema, units, project/site/building/storey aggregates, unique GlobalIds.",
-          "code_status": "reference_code"
+          "code_status": "existing_tool_entrypoint"
         },
         {
           "action": "Author each wall from its measured endpoints; author rectangular openings only from explicit dimensions.",
@@ -315,41 +315,12 @@
       ],
       "code": [
         {
-          "status": "reference_code",
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-          "summary": "Bounded IFC4 authoring helper accepts explicit JSON metres, project/storey records, wall endpoints and rectangular openings; optional georeference is emitted only from a complete supplied CRS/map transform. It does not read plan pixels or infer wall/opening values. No integration run.",
-          "related_entrypoints": [
-            "COLMAP CLI",
-            "Open3D registration ICP",
-            "IfcOpenShell geometry iterator",
-            "Blender background Python"
-          ],
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "IfcOpenShell API: project.create_file, root.create_entity, unit.assign_unit, aggregate.assign_object, geometry.create_2pt_wall, geometry.edit_object_placement and feature.add_feature; author supplied building dimensions and semantic relationships.",
           "source_urls": [
-            "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
-            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
-            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html",
-            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
-            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
-            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
-            "https://github.com/IfcOpenShell/IfcOpenShell",
-            "https://docs.bonsaibim.org/guides/authoring/georeferencing.html",
-            "https://colmap.github.io/cli.html",
-            "https://colmap.github.io/faq.html",
-            "https://github.com/colmap/colmap/blob/main/doc/license.rst",
-            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
-            "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
-            "https://github.com/isl-org/Open3D/blob/main/LICENSE",
-            "https://docs.blender.org/manual/en/latest/advanced/command_line/",
-            "https://www.blender.org/features/pipeline/"
-          ],
-          "entrypoints": [
-            "ifcopenshell.api.project.create_file; root.create_entity; unit.assign_unit; context.add_context; geometry.create_2pt_wall; feature.add_feature; aggregate.assign_object; spatial.assign_container; georeference.edit_georeferencing",
-            "colmap feature_extractor; exhaustive_matcher; mapper; image_undistorter; patch_match_stereo; stereo_fusion",
-            "open3d.pipelines.registration.registration_icp; evaluate_registration",
-            "Blender `--background --python`; Bonsai IFC import/export UI; bpy scene/object APIs"
-          ],
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py <explicit-input.json> <new-output.ifc>"
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html"
+          ]
         }
       ],
       "outputs": [
@@ -690,7 +661,7 @@
         {
           "action": "Optional simulation handoff uses explicit MJCF equivalent and the supplied helper only if MJCF is requested.",
           "tool": "MuJoCo reference helper",
-          "command_or_api": "`python examples/workflows/domains/robot_model.py <robot.json> <new-model.xml>`; run `mujoco.MjModel.from_xml_path(\"new-model.xml\")` after authorized integration.",
+          "command_or_api": "Author explicit MJCF body/joint/inertial/geom records following the MuJoCo XML reference; use mujoco.MjModel.from_xml_path for model compilation.",
           "preserves": "Link/joint records, exact assets and source physical properties.",
           "changes_or_infers": "MJCF model tree; URDF is a separate source artifact.",
           "check": "MuJoCo compile and frame/joint/inertia/asset check; simulation alone does not validate physical parameters.",
@@ -699,38 +670,12 @@
       ],
       "code": [
         {
-          "status": "reference_code",
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "summary": "Reference MJCF serializer for a sourced component and explicit robot-body records. It does not import STEP or emit URDF; CAD/STEP and URDF adapters remain separate.",
-          "related_entrypoints": [
-            "FreeCAD STEP import",
-            "FreeCAD Assembly Workbench",
-            "CoACD CLI",
-            "ROS URDF XML/tutorial",
-            "MuJoCo MjModel.from_xml_path"
-          ],
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "MuJoCo MJCF body, joint, inertial, mesh and geom elements describe explicitly supplied frames, geometry and physical properties. MuJoCo MjModel.from_xml_path is the documented model compilation entry point.",
           "source_urls": [
-            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
-            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-            "https://github.com/SarahWeiii/CoACD",
-            "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
-            "https://github.com/kmammou/v-hacd/blob/master/README.md",
-            "https://github.com/ros/urdf_tutorial",
-            "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
-            "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
-            "https://github.com/boelnasr/CAD_TO_URDF",
-            "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
-          ],
-          "entrypoints": [
-            "Open STEP in GUI and inspect product tree/units; Assembly Workbench joints; `Part`/B-rep geometry inspect",
-            "Project component-record schema from implementation plan",
-            "`coacd -i <input.obj> -o <collision.obj> --threshold <reviewed-threshold>` (CLI spelling depends on pinned release; verify `--help`)",
-            "Write/convert URDF; `check_urdf <robot.urdf>` when urdfdom command is installed; ROS launch/RViz for display"
-          ],
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-input.json> <new-output.xml>"
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+            "https://github.com/google-deepmind/mujoco"
+          ]
         }
       ],
       "outputs": [
@@ -812,8 +757,7 @@
         "https://github.com/boelnasr/CAD_TO_URDF",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
       ],
       "branch_dossiers": [
         "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
@@ -996,8 +940,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
             "https://github.com/ros/urdf_tutorial",
             "https://github.com/google-deepmind/mujoco",
-            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
           ],
           "entrypoints": [
             "Assembly Workbench; inspect placements and constraints",
@@ -1065,8 +1008,7 @@
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/ros/urdf_tutorial",
         "https://github.com/google-deepmind/mujoco",
-        "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
-        "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+        "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
         "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md"

@@ -51,7 +51,7 @@
           "source_urls": [
             "https://docs.opencv.org/5.0/main_modules/calib.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "planar homography",
@@ -59,7 +59,7 @@
           "source_urls": [
             "https://docs.opencv.org/5.0/main_modules/calib.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Tesseract OCR TSV output",
@@ -67,7 +67,7 @@
           "source_urls": [
             "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "image crop/deskew",
@@ -75,7 +75,7 @@
           "source_urls": [
             "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "human transcription review",
@@ -83,7 +83,7 @@
           "source_urls": [
             "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCV thresholding",
@@ -93,7 +93,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "HoughLinesP",
@@ -103,7 +103,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "findContours",
@@ -113,7 +113,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "approxPolyDP",
@@ -123,7 +123,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "model brief schema",
@@ -132,7 +132,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "human review",
@@ -141,7 +141,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS engineering skill",
@@ -150,7 +150,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "floor-plan segmentation/vectorization model or manual trace",
@@ -160,7 +160,7 @@
             "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
             "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "graph consistency checks",
@@ -170,7 +170,7 @@
             "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
             "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS or FreeCAD Draft",
@@ -180,7 +180,7 @@
             "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
             "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell",
@@ -189,7 +189,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "component registry/schema proposal; source license review",
@@ -201,7 +201,7 @@
             "https://polyhaven.com/license",
             "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "documented adapter or explicit authoring step",
@@ -210,7 +210,7 @@
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
             "https://www.freecad.org/addons.php?lang=eng_EN"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "COLMAP/pycolmap",
@@ -220,7 +220,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "AliceVision/Meshroom",
@@ -230,7 +230,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVG",
@@ -240,7 +240,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVS DensifyPointCloud",
@@ -249,7 +249,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVS ReconstructMesh",
@@ -258,7 +258,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "COLMAP dense workspace",
@@ -267,7 +267,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference",
@@ -276,7 +276,7 @@
             "/home/leo/projects/3dmodeling/research/reconstruction.md",
             "/home/leo/projects/3dmodeling/research/domains-and-components.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "IfcOpenShell IfcConvert; Blender; GLB export",
@@ -286,7 +286,7 @@
             "https://www.blender.org/features/pipeline/",
             "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -758,39 +758,25 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "OpenCV findChessboardCornersSB, calibrateCamera and projectPoints: supply board object coordinates, detected image corners and image dimensions; retain intrinsics, distortion, poses and reprojection residuals.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+            "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py --images <target-images> --inner-corners <cols> <rows> --square-size <length> --unit <unit> --output <calibration.json>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "Open3D registration_icp(source, target, max_correspondence_distance, init, estimation_method): provide source/target clouds in compatible units and a source-to-target initialization; inspect transformation, fitness and inlier_rmse.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py"
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "IfcOpenShell API: project.create_file, root.create_entity, unit.assign_unit, aggregate.assign_object, geometry.create_2pt_wall, geometry.edit_object_placement and feature.add_feature; author supplied building dimensions and semantic relationships.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py <explicit-building.json> <new-building.ifc>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py"
+            "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html"
           ]
         },
         {
@@ -952,7 +938,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "human review",
@@ -961,7 +947,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS engineering skill",
@@ -970,7 +956,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCADStudio DWG/DXF/MCP",
@@ -982,7 +968,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD Draft DXF/SVG import",
@@ -994,7 +980,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "ezdxf",
@@ -1006,7 +992,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "geometry audit",
@@ -1018,7 +1004,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD Sketcher scripting",
@@ -1028,7 +1014,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD Draft-to-Sketch",
@@ -1038,7 +1024,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCADStudio sketch/constraint capability as discovered in session",
@@ -1048,7 +1034,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCADStudio kernel tools",
@@ -1060,7 +1046,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD PartDesign/Part",
@@ -1072,7 +1058,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d",
@@ -1084,7 +1070,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CadQuery",
@@ -1096,7 +1082,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "component registry/schema proposal; source license review",
@@ -1108,7 +1094,7 @@
             "https://polyhaven.com/license",
             "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD Assembly Workbench or explicit CAD assembly authoring",
@@ -1117,7 +1103,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
             "https://github.com/ros/urdf_tutorial"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS; FreeCAD Assembly Workbench; native CAD assembly API",
@@ -1126,7 +1112,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
             "/home/leo/projects/3dmodeling/research/domains-and-components.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "documented adapter or explicit authoring step",
@@ -1135,7 +1121,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
             "https://github.com/ros/urdf_tutorial"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD Assembly Workbench; explicit robot-description authoring; CAD-to-URDF scripts as candidates",
@@ -1145,7 +1131,7 @@
             "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
             "https://github.com/boelnasr/CAD_TO_URDF"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CAD mesh exporter; Blender; Open CASCADE tessellation",
@@ -1155,7 +1141,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
             "/home/leo/projects/3dmodeling/research/domains-and-components.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CoACD; V-HACD; primitive fitting",
@@ -1165,7 +1151,7 @@
             "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CAD kernel mass properties; MuJoCo compiler geom inference; measured scale",
@@ -1175,7 +1161,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
             "/home/leo/projects/3dmodeling/research/implementation-plan.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "MuJoCo MJCF XML and mjSpec API",
@@ -1185,7 +1171,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "URDF XML/Xacro authoring; ROS urdf_tutorial; CAD-to-URDF adapter proposal",
@@ -1195,7 +1181,7 @@
             "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
             "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -1776,39 +1762,28 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "Read DXF units/layers with ezdxf; use CadQuery importers.importDXF with explicit include layers and merge tolerance; select closed wires with wires().toPending(), apply confirmed scale and extrude with the required length. Inspect resulting topology and STEP readback. SVG uses the separately documented FreeCAD import route.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+            "https://cadquery.readthedocs.io/en/stable/importexport.html",
+            "https://ezdxf.readthedocs.io/en/stable/concepts/units.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py --dxf <profile.dxf> --layer <layer> --scale-to-mm <factor> --extrusion-mm <height> --merge-tolerance-source-units <tolerance> --step <new-part.step>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "CadQuery Workplane sketch operations, extrude and cut; inspect Shape.isValid, BoundingBox and Volume; use STEP export and importers.importStep for exchange readback. Preserve Python parameters or native CAD construction intent separately.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py"
+            "https://cadquery.readthedocs.io/en/stable/quickstart.html",
+            "https://cadquery.readthedocs.io/en/stable/classreference.html",
+            "https://cadquery.readthedocs.io/en/stable/importexport.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "MuJoCo MJCF body, joint, inertial, mesh and geom elements describe explicitly supplied frames, geometry and physical properties. MuJoCo MjModel.from_xml_path is the documented model compilation entry point.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+            "https://github.com/google-deepmind/mujoco"
           ]
         },
         {
@@ -1984,7 +1959,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "human review",
@@ -1993,7 +1968,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS engineering skill",
@@ -2002,7 +1977,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCV calibrateCamera",
@@ -2010,7 +1985,7 @@
           "source_urls": [
             "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "checkerboard or Charuco target",
@@ -2018,7 +1993,7 @@
           "source_urls": [
             "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "COLMAP/pycolmap",
@@ -2028,7 +2003,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "AliceVision/Meshroom",
@@ -2038,7 +2013,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVG",
@@ -2048,7 +2023,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVS DensifyPointCloud",
@@ -2057,7 +2032,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVS ReconstructMesh",
@@ -2066,7 +2041,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "COLMAP dense workspace",
@@ -2075,7 +2050,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D segment_plane",
@@ -2084,7 +2059,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://github.com/CloudCompare/CloudCompare"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D DBSCAN",
@@ -2093,7 +2068,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://github.com/CloudCompare/CloudCompare"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CloudCompare scalar-field and primitive tools",
@@ -2102,7 +2077,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://github.com/CloudCompare/CloudCompare"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D feature fits",
@@ -2111,7 +2086,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCADStudio OCS skill",
@@ -2120,7 +2095,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "parametric CAD backend",
@@ -2129,7 +2104,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "component registry/schema proposal; source license review",
@@ -2141,7 +2116,7 @@
             "https://polyhaven.com/license",
             "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS blocks/groups",
@@ -2151,7 +2126,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD App::Link/Assembly",
@@ -2161,7 +2136,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d/CadQuery Assembly",
@@ -2171,7 +2146,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "unit and frame mapping",
@@ -2181,7 +2156,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS read/measure/audit/save_verified",
@@ -2192,7 +2167,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD B-rep readback",
@@ -2203,7 +2178,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d/CadQuery shape checks",
@@ -2214,7 +2189,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "independent importer",
@@ -2225,7 +2200,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "mesh validation",
@@ -2236,7 +2211,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "documented adapter or explicit authoring step",
@@ -2245,7 +2220,7 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
             "https://github.com/ros/urdf_tutorial"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD Assembly Workbench; explicit robot-description authoring; CAD-to-URDF scripts as candidates",
@@ -2255,7 +2230,7 @@
             "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
             "https://github.com/boelnasr/CAD_TO_URDF"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CAD mesh exporter; Blender; Open CASCADE tessellation",
@@ -2265,7 +2240,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
             "/home/leo/projects/3dmodeling/research/domains-and-components.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CoACD; V-HACD; primitive fitting",
@@ -2275,7 +2250,7 @@
             "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CAD kernel mass properties; MuJoCo compiler geom inference; measured scale",
@@ -2285,7 +2260,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
             "/home/leo/projects/3dmodeling/research/implementation-plan.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "MuJoCo MJCF XML and mjSpec API",
@@ -2295,7 +2270,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -2938,48 +2913,34 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "OpenCV findChessboardCornersSB, calibrateCamera and projectPoints: supply board object coordinates, detected image corners and image dimensions; retain intrinsics, distortion, poses and reprojection residuals.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+            "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py --images <target-images> --inner-corners <cols> <rows> --square-size <length> --unit <unit> --output <calibration.json>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "Open3D registration_icp(source, target, max_correspondence_distance, init, estimation_method): provide source/target clouds in compatible units and a source-to-target initialization; inspect transformation, fitness and inlier_rmse.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py"
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "CadQuery Workplane sketch operations, extrude and cut; inspect Shape.isValid, BoundingBox and Volume; use STEP export and importers.importStep for exchange readback. Preserve Python parameters or native CAD construction intent separately.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
+            "https://cadquery.readthedocs.io/en/stable/quickstart.html",
+            "https://cadquery.readthedocs.io/en/stable/classreference.html",
+            "https://cadquery.readthedocs.io/en/stable/importexport.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "MuJoCo MJCF body, joint, inertial, mesh and geom elements describe explicitly supplied frames, geometry and physical properties. MuJoCo MjModel.from_xml_path is the documented model compilation entry point.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+            "https://github.com/google-deepmind/mujoco"
           ]
         },
         {
@@ -3153,7 +3114,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "sensor SDK calibration",
@@ -3162,7 +3123,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D camera intrinsics/trajectory",
@@ -3171,7 +3132,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D ScalableTSDFVolume",
@@ -3179,7 +3140,7 @@
           "source_urls": [
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D RGBDImage",
@@ -3187,7 +3148,7 @@
           "source_urls": [
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D marching-cubes extraction",
@@ -3195,7 +3156,7 @@
           "source_urls": [
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CAD tessellation with named 3D landmarks",
@@ -3205,7 +3166,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCV solvePnPRansac",
@@ -3215,7 +3176,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D global registration and ICP",
@@ -3225,7 +3186,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CAD drawing datums",
@@ -3234,7 +3195,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D/CloudCompare registration and distance map",
@@ -3243,7 +3204,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS constrained sketch",
@@ -3252,7 +3213,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D feature fits",
@@ -3261,7 +3222,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCADStudio OCS skill",
@@ -3270,7 +3231,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "parametric CAD backend",
@@ -3279,7 +3240,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS blocks/groups",
@@ -3289,7 +3250,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD App::Link/Assembly",
@@ -3299,7 +3260,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d/CadQuery Assembly",
@@ -3309,7 +3270,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "unit and frame mapping",
@@ -3319,7 +3280,7 @@
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS read/measure/audit/save_verified",
@@ -3330,7 +3291,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD B-rep readback",
@@ -3341,7 +3302,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d/CadQuery shape checks",
@@ -3352,7 +3313,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "independent importer",
@@ -3363,7 +3324,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "mesh validation",
@@ -3374,7 +3335,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "component registry/schema proposal; source license review",
@@ -3386,7 +3347,7 @@
             "https://polyhaven.com/license",
             "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "content-addressed files; Git metadata; source/license registry",
@@ -3395,7 +3356,7 @@
             "/home/leo/projects/3dmodeling/research/domains-and-components.md",
             "/home/leo/projects/3dmodeling/research/implementation-plan.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -3834,30 +3795,19 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "Open3D registration_icp(source, target, max_correspondence_distance, init, estimation_method): provide source/target clouds in compatible units and a source-to-target initialization; inspect transformation, fitness and inlier_rmse.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "CadQuery Workplane sketch operations, extrude and cut; inspect Shape.isValid, BoundingBox and Volume; use STEP export and importers.importStep for exchange readback. Preserve Python parameters or native CAD construction intent separately.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+            "https://cadquery.readthedocs.io/en/stable/quickstart.html",
+            "https://cadquery.readthedocs.io/en/stable/classreference.html",
+            "https://cadquery.readthedocs.io/en/stable/importexport.html"
           ]
         },
         {
@@ -4010,7 +3960,7 @@
             "https://polyhaven.com/license",
             "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D RGB-D odometry",
@@ -4019,7 +3969,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "sensor SDK calibration",
@@ -4028,7 +3978,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D camera intrinsics/trajectory",
@@ -4037,7 +3987,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D ScalableTSDFVolume",
@@ -4045,7 +3995,7 @@
           "source_urls": [
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D RGBDImage",
@@ -4053,7 +4003,7 @@
           "source_urls": [
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D marching-cubes extraction",
@@ -4061,7 +4011,7 @@
           "source_urls": [
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CoACD; V-HACD; primitive fitting",
@@ -4071,7 +4021,7 @@
             "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "documented adapter or explicit authoring step",
@@ -4080,7 +4030,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Blender Python API; Blender MCP; background Blender scripts",
@@ -4091,7 +4041,7 @@
             "https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst",
             "https://uxplanet.org/3d-modeling-with-claude-code-a-practical-blender-workflow-97e6e0b536b0"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -4360,30 +4310,18 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "Open3D registration_icp(source, target, max_correspondence_distance, init, estimation_method): provide source/target clouds in compatible units and a source-to-target initialization; inspect transformation, fitness and inlier_rmse.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "MuJoCo MJCF body, joint, inertial, mesh and geom elements describe explicitly supplied frames, geometry and physical properties. MuJoCo MjModel.from_xml_path is the documented model compilation entry point.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+            "https://github.com/google-deepmind/mujoco"
           ]
         },
         {
@@ -4514,7 +4452,7 @@
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
             "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CoACD; V-HACD; primitive fitting",
@@ -4524,7 +4462,7 @@
             "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "documented adapter or explicit authoring step",
@@ -4533,7 +4471,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "IfcOpenShell IfcConvert; Blender; GLB export",
@@ -4543,7 +4481,7 @@
             "https://www.blender.org/features/pipeline/",
             "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -4678,21 +4616,11 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "MuJoCo MJCF body, joint, inertial, mesh and geom elements describe explicitly supplied frames, geometry and physical properties. MuJoCo MjModel.from_xml_path is the documented model compilation entry point.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+            "https://github.com/google-deepmind/mujoco"
           ]
         },
         {
@@ -4826,7 +4754,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "human review",
@@ -4835,7 +4763,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS engineering skill",
@@ -4844,7 +4772,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Blender Scene.ray_cast",
@@ -4853,7 +4781,7 @@
             "https://docs.blender.org/api/current/bpy.types.Scene.html",
             "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "screen-to-camera ray projection",
@@ -4862,7 +4790,7 @@
             "https://docs.blender.org/api/current/bpy.types.Scene.html",
             "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCV projectPoints",
@@ -4871,7 +4799,7 @@
             "https://docs.blender.org/api/current/bpy.types.Scene.html",
             "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS constrained sketch",
@@ -4880,7 +4808,7 @@
             "https://docs.blender.org/api/current/bpy.types.Scene.html",
             "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D feature fits",
@@ -4889,7 +4817,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCADStudio OCS skill",
@@ -4898,7 +4826,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "parametric CAD backend",
@@ -4907,7 +4835,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS revision-bound edit/readback",
@@ -4916,7 +4844,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D distance queries",
@@ -4925,7 +4853,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CloudCompare distance command",
@@ -4934,7 +4862,7 @@
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS read/measure/audit/save_verified",
@@ -4945,7 +4873,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD B-rep readback",
@@ -4956,7 +4884,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d/CadQuery shape checks",
@@ -4967,7 +4895,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "independent importer",
@@ -4978,7 +4906,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "mesh validation",
@@ -4989,7 +4917,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Native CAD drawing/workbench; STEP/DXF/PDF exporters",
@@ -4998,7 +4926,7 @@
             "/home/leo/projects/3dmodeling/research/implementation-plan.md",
             "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -5309,21 +5237,12 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "CadQuery Workplane sketch operations, extrude and cut; inspect Shape.isValid, BoundingBox and Volume; use STEP export and importers.importStep for exchange readback. Preserve Python parameters or native CAD construction intent separately.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+            "https://cadquery.readthedocs.io/en/stable/quickstart.html",
+            "https://cadquery.readthedocs.io/en/stable/classreference.html",
+            "https://cadquery.readthedocs.io/en/stable/importexport.html"
           ]
         },
         {
@@ -5453,7 +5372,7 @@
           "source_urls": [
             "https://docs.opencv.org/5.0/main_modules/calib.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "planar homography",
@@ -5461,7 +5380,7 @@
           "source_urls": [
             "https://docs.opencv.org/5.0/main_modules/calib.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCV thresholding",
@@ -5471,7 +5390,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "HoughLinesP",
@@ -5481,7 +5400,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "findContours",
@@ -5491,7 +5410,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "approxPolyDP",
@@ -5501,7 +5420,7 @@
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "view segmentation",
@@ -5510,7 +5429,7 @@
             "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "projection-axis declaration",
@@ -5519,7 +5438,7 @@
             "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "line/vertex matching",
@@ -5528,7 +5447,7 @@
             "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "dimension reconciliation",
@@ -5537,7 +5456,7 @@
             "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "multi-view edge correspondence",
@@ -5546,7 +5465,7 @@
             "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "wireframe/face reconstruction",
@@ -5555,7 +5474,7 @@
             "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCASCADE or FreeCAD surface/solid creation",
@@ -5564,7 +5483,7 @@
             "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS read/measure/audit/save_verified",
@@ -5575,7 +5494,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD B-rep readback",
@@ -5586,7 +5505,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d/CadQuery shape checks",
@@ -5597,7 +5516,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "independent importer",
@@ -5608,7 +5527,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "mesh validation",
@@ -5619,7 +5538,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "component registry/schema proposal; source license review",
@@ -5631,7 +5550,7 @@
             "https://polyhaven.com/license",
             "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "content-addressed files; Git metadata; source/license registry",
@@ -5640,7 +5559,7 @@
             "/home/leo/projects/3dmodeling/research/domains-and-components.md",
             "/home/leo/projects/3dmodeling/research/implementation-plan.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -5949,15 +5868,6 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
-          ]
-        },
-        {
           "entrypoint": "Native application/API operations in the recorded recipe",
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
@@ -6085,7 +5995,7 @@
           "source_urls": [
             "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "checkerboard or Charuco target",
@@ -6093,7 +6003,7 @@
           "source_urls": [
             "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "COLMAP/pycolmap",
@@ -6103,7 +6013,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "AliceVision/Meshroom",
@@ -6113,7 +6023,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVG",
@@ -6123,7 +6033,7 @@
             "https://alicevision.org/",
             "https://github.com/openMVG/openMVG"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Nerfstudio Splatfacto / gsplat",
@@ -6131,7 +6041,7 @@
           "source_urls": [
             "https://docs.nerf.studio/nerfology/methods/splat.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Gaussian PLY export",
@@ -6139,7 +6049,7 @@
           "source_urls": [
             "https://docs.nerf.studio/nerfology/methods/splat.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVS DensifyPointCloud",
@@ -6148,7 +6058,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenMVS ReconstructMesh",
@@ -6157,7 +6067,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "COLMAP dense workspace",
@@ -6166,7 +6076,7 @@
             "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D segment_plane",
@@ -6175,7 +6085,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://github.com/CloudCompare/CloudCompare"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D DBSCAN",
@@ -6184,7 +6094,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://github.com/CloudCompare/CloudCompare"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CloudCompare scalar-field and primitive tools",
@@ -6193,7 +6103,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://github.com/CloudCompare/CloudCompare"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Open3D feature fits",
@@ -6202,7 +6112,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OpenCADStudio OCS skill",
@@ -6211,7 +6121,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "parametric CAD backend",
@@ -6220,7 +6130,7 @@
             "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "OCS read/measure/audit/save_verified",
@@ -6231,7 +6141,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "FreeCAD B-rep readback",
@@ -6242,7 +6152,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "build123d/CadQuery shape checks",
@@ -6253,7 +6163,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "independent importer",
@@ -6264,7 +6174,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "mesh validation",
@@ -6275,7 +6185,7 @@
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "Blender Python API; Blender MCP; background Blender scripts",
@@ -6286,7 +6196,7 @@
             "https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst",
             "https://uxplanet.org/3d-modeling-with-claude-code-a-practical-blender-workflow-97e6e0b536b0"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -6653,39 +6563,26 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "OpenCV findChessboardCornersSB, calibrateCamera and projectPoints: supply board object coordinates, detected image corners and image dimensions; retain intrinsics, distortion, poses and reprojection residuals.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+            "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py --images <target-images> --inner-corners <cols> <rows> --square-size <length> --unit <unit> --output <calibration.json>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "Open3D registration_icp(source, target, max_correspondence_distance, init, estimation_method): provide source/target clouds in compatible units and a source-to-target initialization; inspect transformation, fitness and inlier_rmse.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py"
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "CadQuery Workplane sketch operations, extrude and cut; inspect Shape.isValid, BoundingBox and Volume; use STEP export and importers.importStep for exchange readback. Preserve Python parameters or native CAD construction intent separately.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+            "https://cadquery.readthedocs.io/en/stable/quickstart.html",
+            "https://cadquery.readthedocs.io/en/stable/classreference.html",
+            "https://cadquery.readthedocs.io/en/stable/importexport.html"
           ]
         },
         {
@@ -6822,7 +6719,7 @@
             "https://polyhaven.com/license",
             "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "documented adapter or explicit authoring step",
@@ -6831,7 +6728,7 @@
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
             "https://www.freecad.org/addons.php?lang=eng_EN"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "IfcOpenShell geom.create_shape/iterator using OpenCASCADE kernel",
@@ -6840,7 +6737,7 @@
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
             "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CAD mesh exporter; Blender; Open CASCADE tessellation",
@@ -6850,7 +6747,7 @@
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
             "/home/leo/projects/3dmodeling/research/domains-and-components.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "CoACD; V-HACD; primitive fitting",
@@ -6860,7 +6757,7 @@
             "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
         {
           "name": "content-addressed files; Git metadata; source/license registry",
@@ -6869,7 +6766,7 @@
             "/home/leo/projects/3dmodeling/research/domains-and-components.md",
             "/home/leo/projects/3dmodeling/research/implementation-plan.md"
           ],
-          "dependency_contract": "Use the matching domain detail and code guide for the selected backend and version."
+          "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
       ],
       "steps": [
@@ -7112,30 +7009,19 @@
       ],
       "code": [
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
-          "status": "reference_code",
-          "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "IfcOpenShell API: project.create_file, root.create_entity, unit.assign_unit, aggregate.assign_object, geometry.create_2pt_wall, geometry.edit_object_placement and feature.add_feature; author supplied building dimensions and semantic relationships.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+            "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html"
           ]
         },
         {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py <explicit-building.json> <new-building.ifc>",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "MuJoCo MJCF body, joint, inertial, mesh and geom elements describe explicitly supplied frames, geometry and physical properties. MuJoCo MjModel.from_xml_path is the documented model compilation entry point.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py"
-          ]
-        },
-        {
-          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
-          "status": "reference_code",
-          "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
-          "source_urls": [
-            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+            "https://github.com/google-deepmind/mujoco"
           ]
         },
         {

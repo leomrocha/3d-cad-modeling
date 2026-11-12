@@ -83,7 +83,7 @@
   {
     "url": "https://cadquery.readthedocs.io/en/stable/classreference.html",
     "title": "CadQuery API reference",
-    "summary": "Documents shape validity, bounds, volume, closed wires and geometry transforms; supports checks in reference scripts.",
+    "summary": "Documents shape validity, bounds, volume, closed wires and geometry transforms; supports the documented workflow checks.",
     "access_date": "2026-11-12",
     "evidence_status": "web_inspected",
     "supporting_claims": [

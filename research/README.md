@@ -30,4 +30,4 @@ The workflow-research extension preserves the implementation plan and prior tool
 
 ## Detailed procedures and effort classification
 
-[Input requirements, code, software and all 38 ranked workflows](/home/leo/projects/3dmodeling/research/workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.
+[Input requirements, documented software APIs and all 38 ranked workflows](/home/leo/projects/3dmodeling/research/workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.

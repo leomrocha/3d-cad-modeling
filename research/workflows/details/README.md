@@ -5,7 +5,7 @@ Date: 12 November 2026. These are generic procedures for the 38 recorded routes.
 1. [All workflows ordered by manual effort](/home/leo/projects/3dmodeling/research/workflows/details/by-human.md).
 2. [All workflows ordered by computing demand](/home/leo/projects/3dmodeling/research/workflows/details/by-compute.md).
 3. [Structured dossiers](/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json) and [classification contract](/home/leo/projects/3dmodeling/research/workflows/details/contract.json).
-4. [Reference code and input contracts](/home/leo/projects/3dmodeling/examples/workflows/README.md).
+4. [Documented third-party operations and source links](/home/leo/projects/3dmodeling/research/workflows/operation-catalogue.md).
 5. [Reconstruction Mermaid graph](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.md) and [operation catalogue with source links](/home/leo/projects/3dmodeling/research/workflows/operation-catalogue.md).
 6. [Original source register with summaries](/home/leo/projects/3dmodeling/research/sources/source-register.md).
 
@@ -27,14 +27,13 @@ A known component or an explicitly dimensioned simple part starts with fewer int
 
 ## Content of each dossier
 
-Each page includes the original registered starting artifact types and full operation input/output requirements. Detailed artifact sections also describe prepared intermediates and optional existing data at the relevant stage. Every route records inputs, measured points and datums, coordinate frames, software and libraries, operation order, code/API entry points, outputs, checks, failure recovery, computing requirements and original evidence. Combined routes identify the reference-frame and evidence conditions for merging their branches. Their composition status remains a proposal.
+Each page includes the original registered starting artifact types and full operation input/output requirements. Detailed artifact sections also describe prepared intermediates and optional existing data at the relevant stage. Every route records inputs, measured points and datums, coordinate frames, software and libraries, operation order, documented third-party tool/API entry points, outputs, checks, failure recovery, computing requirements and original evidence. Combined routes identify the reference-frame and evidence conditions for merging their branches. Their composition status remains a proposal.
 
 ## Reproduce the documentation checks
 
 ```sh
 python3 research/tools/build_workflow_register.py --date 2026-11-12
 python3 research/tools/build_workflow_details.py --date 2026-11-12
-PYTHONDONTWRITEBYTECODE=1 python3 examples/workflows/common/test_control_distances.py
 ```
 
-The builder checks coverage, required fields, ratings, source registration, local code paths and Python syntax. The distance-helper tests exercise synthetic coordinate and unit checks. Individual code examples record their integration status beside the code.
+The builder checks workflow coverage, required fields, classification values, source registration and documented entry-point references. The procedures and rankings describe source-supported proposals.
