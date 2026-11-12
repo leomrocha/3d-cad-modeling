@@ -2122,6 +2122,31 @@
       ]
     },
     {
+      "id": "SRC-106d47161026",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json",
+      "title": "Gland source feature contract",
+      "summary": "Pins exactmanufacturer page findings through acquisition hash andnames three required geometry inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "1d94790b264d1284c4c165ee84d264bf56aad4c61907a1b75fa2e07d0e0a209d",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
       "id": "SRC-10fb35c8f807",
       "url": "https://docs.blender.org/api/current/info_quickstart.html",
       "local_source_path": null,
@@ -9306,6 +9331,31 @@
       ]
     },
     {
+      "id": "SRC-49f830258969",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md",
+      "title": "Gland variant and drawn-feature review",
+      "summary": "Separates exactLG page fromWH datasheet, assigns explicit dimension labels,retains variable length/clamp range meanings and actual CAD acquisition outcomes.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_source_review_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_source_review_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md",
+          "access_date": "2026-11-12",
+          "sha256": "a185a185e1d2e11a3b2d863886145363c195970dee3106adf251c04ef8b1fea5",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
       "id": "SRC-4a09800705cd",
       "url": "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
       "local_source_path": null,
@@ -13922,6 +13972,31 @@
       ]
     },
     {
+      "id": "SRC-6e7a85a22dae",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png",
+      "title": "WISKA-ESKV-25-page-3.png",
+      "summary": "RenderedWH datasheet page3:axialschematic withTL,L,D,SW/E leaders.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png",
+          "access_date": "2026-11-12",
+          "sha256": "ba9bab89a670631f376b9dd6fe03a4cbae3a4cf91554fa8877d762088a779bcd",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6e8a1b7fa38b",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json",
@@ -14217,6 +14292,31 @@
         "research/action-audit/reviews/point-06-designer.md",
         "research/action-audit/reviews/point-06-software.md",
         "research/sources/round-05/point-06-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-708aa14d658e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json",
+      "title": "Gland source acquisition metadata",
+      "summary": "Records original PDF and HTML hashes,URLs,retrieval outcomes,rendered images and exact-order CAD selector availability.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "bac6f9aec0b2eee2909a06d85838518a66b850ddcb35bc8cc73eb399600196b6",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
       ]
     },
     {
@@ -15894,6 +15994,31 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-80d86d504e13",
+      "url": "https://www.wiska.com/en/30/pde/10066413/eskv-25-lg.html",
+      "local_source_path": null,
+      "title": "Exact ESKV25 LG manufacturer product page",
+      "summary": "Original HTML identifies10066413,RAL7035 and matching dimensional values; links exact-order CAD selector and datasheet href.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-LG-10066413-product-page.html",
+          "access_date": "2026-11-12",
+          "sha256": "0742b9010066d3cb089ec3cd3491440f3044a400e60c7b31856ce7ee789e1289",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
       ]
     },
     {
@@ -19501,6 +19626,31 @@
       ]
     },
     {
+      "id": "SRC-9ce53648c6f9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png",
+      "title": "WISKA-ESKV-25-page3-detail.png",
+      "summary": "Detailed page3 rasterused for actual drawnfeatureassociation;no additional numerical segmentheights.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png",
+          "access_date": "2026-11-12",
+          "sha256": "bf86a2ece6e59182fcf49980fc023dfe5a792d459678d1415ccd9381d7cef78b",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9cfde96bb911",
       "url": "https://docs.python.org/3/library/csv.html",
       "local_source_path": null,
@@ -21981,6 +22131,31 @@
       ]
     },
     {
+      "id": "SRC-afba409b6281",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json",
+      "title": "Gland source-readiness result",
+      "summary": "Existing gate returns NEEDS_INPUT forcap/bodysegmentheights,assembledposition andpassagegeometry.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_readiness_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_readiness_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "44a2f66aa463ccdf6830293612e0c99116655e64c4567ee06bc076484a004c82",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
       "id": "SRC-b00b92c70647",
       "url": "https://github.com/ByteDance-Seed/Depth-Anything-3",
       "local_source_path": null,
@@ -23541,6 +23716,31 @@
         "research/action-audit/reviews/point-03-independent.md",
         "research/action-audit/reviews/point-03-sources.md",
         "research/sources/round-05/point-03-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-bb6e841ed0bc",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json",
+      "title": "Gland source-stage result",
+      "summary": "Connects exactLGidentity,familyWHdrawing,locatedCADselector andsourcegate.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_component_stage_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_stage_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "4e9eb2659809857ddf8b0c1b6e39eae7e46a4c05daf8e53dc866fcfaaf5b6f7b",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
       ]
     },
     {
@@ -27283,6 +27483,31 @@
       ]
     },
     {
+      "id": "SRC-db6151dedc21",
+      "url": "https://www.wiska.com/en/pdf/10102748/ESKV-25.pdf",
+      "local_source_path": null,
+      "title": "ESKV25 WH original manufacturer datasheet",
+      "summary": "Original WH10102748 sheet supplies M25 thread,10mm length,29mm flats,32mm collar and38–47mm total length. Family diagram associates TL,L,D,SW/E;exactLG identity stays with its own page.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-drawing.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "ca00136646d292e17def74cb40a1954954adf8e693989a788144fac07cd4b58e",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
       "id": "SRC-db98256a44dd",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md",
@@ -27965,6 +28190,31 @@
       ]
     },
     {
+      "id": "SRC-e11abaaead0b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c041-cable-gland-source.md",
+      "title": "Gland source-stage execution report",
+      "summary": "Documents exactvariant,dimensionedsourcefields,actualsourceinspection andnextdependentgeometryinputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_work_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_work_report",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c041-cable-gland-source.md",
+          "access_date": "2026-11-12",
+          "sha256": "31be8fbd4429a106159a36d4b087423251549119e53c7c570d39bb0122ea63bb",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
       "id": "SRC-e1ca3a166ec3",
       "url": "https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/references/inspection-and-validation.md",
       "local_source_path": null,
@@ -28493,6 +28743,31 @@
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e7c712c212f9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png",
+      "title": "WISKA-ESKV-25-page-1.png",
+      "summary": "RenderedWH datasheet page1:material,thread,length,flats,collar,TLrange andpartidentity.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png",
+          "access_date": "2026-11-12",
+          "sha256": "d6a77001e70b072224b47e8e5b444e32984fe148ad0af0d9dd3bc92c7eb2b4e2",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
       ]
     },
     {
@@ -29205,6 +29480,31 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ecdea17f6078",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png",
+      "title": "WISKA-ESKV-25-page-2.png",
+      "summary": "RenderedWH datasheet page2:accessoryordercodes andprinteddate.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png",
+          "access_date": "2026-11-12",
+          "sha256": "a3d57a4a2d27c75b4e995194fdfbb27cea9e427d44b259c9e6d2158c87a76c95",
+          "referring_documents": [
+            "execution/c041-cable-gland-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-22/gland-sources.json"
       ]
     },
     {

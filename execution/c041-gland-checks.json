@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "state": "NEEDS_INPUT",
+  "source_records": 12,
+  "original_models_preserved": 23,
+  "action_prefix_preserved": true,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "source_hash_validation": "PASS",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 4,
+    "receipt_included": true
+  },
+  "check_history": [
+    "First link check failed because the receipt target was checked before receipt creation.",
+    "Receipt created after source/model/graph checks; final receipt JSON reparsed and link target exists."
+  ]
+}

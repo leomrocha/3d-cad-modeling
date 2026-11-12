@@ -736,6 +736,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-106d47161026"></a>
+
+## SRC-106d47161026 — Gland source feature contract
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json)
+
+Summary: Pins exactmanufacturer page findings through acquisition hash andnames three required geometry inputs.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-22/gland-sources.json.
+
 <a id="src-10fb35c8f807"></a>
 
 ## SRC-10fb35c8f807 — Python API quickstart
@@ -3292,6 +3304,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-49f830258969"></a>
+
+## SRC-49f830258969 — Gland variant and drawn-feature review
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md)
+
+Summary: Separates exactLG page fromWH datasheet, assigns explicit dimension labels,retains variable length/clamp range meanings and actual CAD acquisition outcomes.
+
+Evidence: delegated_source_review_record.
+
+Documents: research/sources/round-22/gland-sources.json.
+
 <a id="src-4a09800705cd"></a>
 
 ## SRC-4a09800705cd — IfcOpenShell code examples
@@ -5008,6 +5032,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
 
+<a id="src-6e7a85a22dae"></a>
+
+## SRC-6e7a85a22dae — WISKA-ESKV-25-page-3.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png)
+
+Summary: RenderedWH datasheet page3:axialschematic withTL,L,D,SW/E leaders.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-22/gland-sources.json.
+
 <a id="src-6e8a1b7fa38b"></a>
 
 ## SRC-6e8a1b7fa38b — Resistor PDF acquisition metadata
@@ -5127,6 +5163,18 @@ Summary: Official FreeCAD documentation repository page inspected 2026-11-12 as 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/findings.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
+
+<a id="src-708aa14d658e"></a>
+
+## SRC-708aa14d658e — Gland source acquisition metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json)
+
+Summary: Records original PDF and HTML hashes,URLs,retrieval outcomes,rendered images and exact-order CAD selector availability.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-22/gland-sources.json.
 
 <a id="src-717a1bbd2f70"></a>
 
@@ -5703,6 +5751,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-80d86d504e13"></a>
+
+## SRC-80d86d504e13 — Exact ESKV25 LG manufacturer product page
+
+Original source: [https://www.wiska.com/en/30/pde/10066413/eskv-25-lg.html](https://www.wiska.com/en/30/pde/10066413/eskv-25-lg.html)
+
+Summary: Original HTML identifies10066413,RAL7035 and matching dimensional values; links exact-order CAD selector and datasheet href.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-22/gland-sources.json.
 
 <a id="src-80f9c2092927"></a>
 
@@ -6904,6 +6964,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-16/driver-sources.json.
 
+<a id="src-9ce53648c6f9"></a>
+
+## SRC-9ce53648c6f9 — WISKA-ESKV-25-page3-detail.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png)
+
+Summary: Detailed page3 rasterused for actual drawnfeatureassociation;no additional numerical segmentheights.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-22/gland-sources.json.
+
 <a id="src-9cfde96bb911"></a>
 
 ## SRC-9cfde96bb911 — csv — CSV file reading and writing — Python 3.15.2 documentation
@@ -7816,6 +7888,18 @@ Evidence: local_reference_registered, local_source_inspected.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-afba409b6281"></a>
+
+## SRC-afba409b6281 — Gland source-readiness result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json)
+
+Summary: Existing gate returns NEEDS_INPUT forcap/bodysegmentheights,assembledposition andpassagegeometry.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-22/gland-sources.json.
+
 <a id="src-b00b92c70647"></a>
 
 ## SRC-b00b92c70647 — Depth Anything 3 — official repository, main branch
@@ -8343,6 +8427,18 @@ Summary: The supplied dev.opencascade.org URL redirects to https://occt3d.com/de
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-03-independent.md, research/action-audit/reviews/point-03-sources.md, research/sources/round-05/point-03-web-sources.json.
+
+<a id="src-bb6e841ed0bc"></a>
+
+## SRC-bb6e841ed0bc — Gland source-stage result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json)
+
+Summary: Connects exactLGidentity,familyWHdrawing,locatedCADselector andsourcegate.
+
+Evidence: executed_component_stage_record.
+
+Documents: research/sources/round-22/gland-sources.json.
 
 <a id="src-bbe2770322c8"></a>
 
@@ -9664,6 +9760,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-03-software.md, research/cad-and-skills.md.
 
+<a id="src-db6151dedc21"></a>
+
+## SRC-db6151dedc21 — ESKV25 WH original manufacturer datasheet
+
+Original source: [https://www.wiska.com/en/pdf/10102748/ESKV-25.pdf](https://www.wiska.com/en/pdf/10102748/ESKV-25.pdf)
+
+Summary: Original WH10102748 sheet supplies M25 thread,10mm length,29mm flats,32mm collar and38–47mm total length. Family diagram associates TL,L,D,SW/E;exactLG identity stays with its own page.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-22/gland-sources.json.
+
 <a id="src-db98256a44dd"></a>
 
 ## SRC-db98256a44dd — Point 07 independent review — photographs, depth and learned reconstruction
@@ -9916,6 +10024,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-e11abaaead0b"></a>
+
+## SRC-e11abaaead0b — Gland source-stage execution report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c041-cable-gland-source.md](/home/leo/projects/3dmodeling/execution/c041-cable-gland-source.md)
+
+Summary: Documents exactvariant,dimensionedsourcefields,actualsourceinspection andnextdependentgeometryinputs.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-22/gland-sources.json.
+
 <a id="src-e1ca3a166ec3"></a>
 
 ## SRC-e1ca3a166ec3 — Inspecting and checking saved CAD in Python
@@ -10143,6 +10263,18 @@ Summary: Authored audit document recording Software review: descriptions and dim
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-e7c712c212f9"></a>
+
+## SRC-e7c712c212f9 — WISKA-ESKV-25-page-1.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png)
+
+Summary: RenderedWH datasheet page1:material,thread,length,flats,collar,TLrange andpartidentity.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-22/gland-sources.json.
 
 <a id="src-e7f1135e0337"></a>
 
@@ -10383,6 +10515,18 @@ Summary: Existing local source cited by point 06 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-06-local-sources.json.
+
+<a id="src-ecdea17f6078"></a>
+
+## SRC-ecdea17f6078 — WISKA-ESKV-25-page-2.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png)
+
+Summary: RenderedWH datasheet page2:accessoryordercodes andprinteddate.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-22/gland-sources.json.
 
 <a id="src-ece5f904e49d"></a>
 
