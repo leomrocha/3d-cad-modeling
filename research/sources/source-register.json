@@ -1763,6 +1763,31 @@
       ]
     },
     {
+      "id": "SRC-0acbe2450bde",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json",
+      "title": "SB50 source feature contract",
+      "summary": "Pins manufacturer dimensions/hash andtwo named required housing/contact geometry inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "304868f33e5b764c82c9d87b567a70485143c9f5e979fbd0e5cce8b091fd4e41",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
+      ]
+    },
+    {
       "id": "SRC-0ad259094c61",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json",
@@ -2545,6 +2570,31 @@
       "observations": [],
       "referring_documents": [
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-12a05a05db24",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png",
+      "title": "SB50 contact source image",
+      "summary": "Actual page2 shows30mm contact overall,11.1 axial segment,7.2 barrel profile and5900 A5.59 table row.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png",
+          "access_date": "2026-11-12",
+          "sha256": "8c82f4b16e53146267b570ec2d9c33208a9a690da7636721f03a53cf277048c5",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
       ]
     },
     {
@@ -3734,6 +3784,31 @@
       ],
       "referring_documents": [
         "research/sources/round-20/component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1d41a99d4236",
+      "url": "https://p1.aprimocdn.net/idealindustries/d7c0a682-e691-4b60-8e76-b3f000737d74/ap-web_product-assets_default_data-sheets_ds-sb50_Original%20file.pdf",
+      "local_source_path": null,
+      "title": "Anderson SB50 manufacturer datasheet",
+      "summary": "Original DS-SB50 revision9 maps blue992G4 andsilver high-force5900;dimensioned housing,mated pair andwire contacts.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/anderson-ds-sb50.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "081b33e45c89c5bfc5c4747b2d9ebd26863c5405a8fe87da1b230353f357f965",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
       ]
     },
     {
@@ -11203,6 +11278,31 @@
       ]
     },
     {
+      "id": "SRC-4fe9c9192b9b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c038-sb50-source.md",
+      "title": "SB50 source-stage report",
+      "summary": "Documents exactkit,reviewed dimensions,current sourcegate,actual source actions andmodel identities.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_work_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_work_report",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c038-sb50-source.md",
+          "access_date": "2026-11-12",
+          "sha256": "430276829ef83cf640b6c52037356a0bb9d30779c0c0134598f247bd16c7ffde",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
+      ]
+    },
+    {
       "id": "SRC-4ff31c35be7c",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl",
@@ -14319,6 +14419,31 @@
       ]
     },
     {
+      "id": "SRC-6523f7bc1fa7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md",
+      "title": "Reviewed SB50 source findings",
+      "summary": "Links exact blue kit mapping andactual dimension directions;separates mated view,wire contacts,yellow key family andPowerclaw alternative.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "reviewed_source_interpretation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "reviewed_source_interpretation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md",
+          "access_date": "2026-11-12",
+          "sha256": "126857abdaa67fb8640dd11c2d012f8611c985027ffb8dbb94d126deca409ddc",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
+      ]
+    },
+    {
       "id": "SRC-66546119d7fd",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json",
@@ -17203,6 +17328,31 @@
       ]
     },
     {
+      "id": "SRC-7bc0b8d43055",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json",
+      "title": "SB50 source-readiness result",
+      "summary": "Existing required-feature/hash gate returns NEEDS_INPUT forblue housing seating/key geometry andcontact transition/blade.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_readiness_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_readiness_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "c2f0f06d922dddb4083802ba41ae4eeaef109a8fff19bb69f639f931b274fb9d",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
+      ]
+    },
+    {
       "id": "SRC-7be225e2793e",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
@@ -17742,6 +17892,31 @@
         "research/action-audit/reviews/point-04-designer.md",
         "research/action-audit/reviews/point-04-sources.md",
         "research/sources/round-05/point-04-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7f797955889e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json",
+      "title": "Initial SB50 source metadata",
+      "summary": "Preserves original download metadata andsource classifications before drawingleader correction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_initial_source_review"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_initial_source_review",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json",
+          "access_date": "2026-11-12",
+          "sha256": "32265b7a3bd86281c9a7f8f662059704d93ca8ef9a3e1e93c7654a7275321d74",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
       ]
     },
     {
@@ -19292,6 +19467,31 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-8a9f0d7330ec",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json",
+      "title": "SB50 source-stage result",
+      "summary": "Retains exact6331G5 kit identity,source model roles anddependent geometry questions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_component_stage_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_stage_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "611144c972f9be0dd0b661a5fdf5ba64cec256e3e73d75e5d0e51b5e2c416c53",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
       ]
     },
     {
@@ -27903,6 +28103,31 @@
       ]
     },
     {
+      "id": "SRC-c3a52bea4793",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png",
+      "title": "SB50 housing source image",
+      "summary": "Actual manufacturer page1 shows housing bottom view and35.1 width/22.5+19.1+6.4 axial chain,Ø3.7 holes andmated81.3×15.9 view.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png",
+          "access_date": "2026-11-12",
+          "sha256": "29976ad0e9e0179737d9f117bec44c3086bc71fb15e85cafa07a916ca9a58a22",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c3c48b5318f8",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf",
@@ -28985,6 +29210,31 @@
         "research/workflows/details/rec-r03.md",
         "research/workflows/details/rec-r07.md",
         "research/workflows/details/rec-r09.md"
+      ]
+    },
+    {
+      "id": "SRC-cb4319e9559f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md",
+      "title": "Initial SB50 delegated notes",
+      "summary": "Preserves original kit mapping/source outcomes andinitial mistaken11.1 barrel-diameter interpretation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_initial_source_review"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_initial_source_review",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md",
+          "access_date": "2026-11-12",
+          "sha256": "9ecd0919d573b6655e80956a1b4673d6bb4ea9dae83ca19ccea14eb1ad4b8307",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
       ]
     },
     {
@@ -32091,6 +32341,31 @@
       ],
       "referring_documents": [
         "research/sources/round-05/audit-index-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e601a94ea182",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json",
+      "title": "Reviewed SB50 acquisition metadata",
+      "summary": "Records original PDF URL/time/MIME/hash,distributor mapping,login-gated manufacturer CAD route andcorrected axial11.1 dimension association.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "reviewed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "reviewed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "9946fccf9674db37845ecb986bcf5a31c0325134b0f68e8d92c9c607b1385b65",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
       ]
     },
     {
@@ -35466,6 +35741,31 @@
       ],
       "referring_documents": [
         "research/sources/round-23/enclosure-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fcfc3aa6479a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md",
+      "title": "SB50 leader andchain review",
+      "summary": "Actual source-image review corrects11.1 axial segment andcalculates48mm housing length fromdimension chain.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_coordinator_review"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_coordinator_review",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md",
+          "access_date": "2026-11-12",
+          "sha256": "8305530a586ffa0186d16994afaf3583983a575b3bd2b34f06a718238e564812",
+          "referring_documents": [
+            "execution/c038-sb50-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-25/connector-sources.json"
       ]
     },
     {

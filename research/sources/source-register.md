@@ -592,6 +592,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-0acbe2450bde"></a>
+
+## SRC-0acbe2450bde — SB50 source feature contract
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json)
+
+Summary: Pins manufacturer dimensions/hash andtwo named required housing/contact geometry inputs.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-25/connector-sources.json.
+
 <a id="src-0ad259094c61"></a>
 
 ## SRC-0ad259094c61 — Driver iteration — initial-state.json
@@ -927,6 +939,18 @@ Summary: 3D ContentCentral ; Supplier-certified and user library models in multi
 Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
+
+<a id="src-12a05a05db24"></a>
+
+## SRC-12a05a05db24 — SB50 contact source image
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png)
+
+Summary: Actual page2 shows30mm contact overall,11.1 axial segment,7.2 barrel profile and5900 A5.59 table row.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-25/connector-sources.json.
 
 <a id="src-1341a6b69ecb"></a>
 
@@ -1371,6 +1395,18 @@ Summary: New native battery file,source frame,21 definitions/39 instances,actual
 Evidence: executed_component_result.
 
 Documents: research/sources/round-20/component-sources.json.
+
+<a id="src-1d41a99d4236"></a>
+
+## SRC-1d41a99d4236 — Anderson SB50 manufacturer datasheet
+
+Original source: [https://p1.aprimocdn.net/idealindustries/d7c0a682-e691-4b60-8e76-b3f000737d74/ap-web_product-assets_default_data-sheets_ds-sb50_Original%20file.pdf](https://p1.aprimocdn.net/idealindustries/d7c0a682-e691-4b60-8e76-b3f000737d74/ap-web_product-assets_default_data-sheets_ds-sb50_Original%20file.pdf)
+
+Summary: Original DS-SB50 revision9 maps blue992G4 andsilver high-force5900;dimensioned housing,mated pair andwire contacts.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-25/connector-sources.json.
 
 <a id="src-1d9ccefff7d7"></a>
 
@@ -4132,6 +4168,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-4fe9c9192b9b"></a>
+
+## SRC-4fe9c9192b9b — SB50 source-stage report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c038-sb50-source.md](/home/leo/projects/3dmodeling/execution/c038-sb50-source.md)
+
+Summary: Documents exactkit,reviewed dimensions,current sourcegate,actual source actions andmodel identities.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-25/connector-sources.json.
+
 <a id="src-4ff31c35be7c"></a>
 
 ## SRC-4ff31c35be7c — Battery guarded native journal
@@ -5308,6 +5356,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-03/project-detail-sources.json.
 
+<a id="src-6523f7bc1fa7"></a>
+
+## SRC-6523f7bc1fa7 — Reviewed SB50 source findings
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md)
+
+Summary: Links exact blue kit mapping andactual dimension directions;separates mated view,wire contacts,yellow key family andPowerclaw alternative.
+
+Evidence: reviewed_source_interpretation.
+
+Documents: research/sources/round-25/connector-sources.json.
+
 <a id="src-66546119d7fd"></a>
 
 ## SRC-66546119d7fd — Driver iteration — persistence.json
@@ -6364,6 +6424,18 @@ Evidence: existing_report_registered, access_failed.
 
 Documents: research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
 
+<a id="src-7bc0b8d43055"></a>
+
+## SRC-7bc0b8d43055 — SB50 source-readiness result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json)
+
+Summary: Existing required-feature/hash gate returns NEEDS_INPUT forblue housing seating/key geometry andcontact transition/blade.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-25/connector-sources.json.
+
 <a id="src-7be225e2793e"></a>
 
 ## SRC-7be225e2793e — cad-detail-sources.json
@@ -6579,6 +6651,18 @@ Summary: Peter Selinger’s 2003 paper describes Potrace tracing black/white bit
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-sources.md, research/sources/round-05/point-04-web-sources.json.
+
+<a id="src-7f797955889e"></a>
+
+## SRC-7f797955889e — Initial SB50 source metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json)
+
+Summary: Preserves original download metadata andsource classifications before drawingleader correction.
+
+Evidence: delegated_initial_source_review.
+
+Documents: research/sources/round-25/connector-sources.json.
 
 <a id="src-7fb788503589"></a>
 
@@ -7143,6 +7227,18 @@ Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-8a9f0d7330ec"></a>
+
+## SRC-8a9f0d7330ec — SB50 source-stage result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json)
+
+Summary: Retains exact6331G5 kit identity,source model roles anddependent geometry questions.
+
+Evidence: executed_component_stage_record.
+
+Documents: research/sources/round-25/connector-sources.json.
 
 <a id="src-8ab7d0d86617"></a>
 
@@ -10264,6 +10360,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-c3a52bea4793"></a>
+
+## SRC-c3a52bea4793 — SB50 housing source image
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png)
+
+Summary: Actual manufacturer page1 shows housing bottom view and35.1 width/22.5+19.1+6.4 axial chain,Ø3.7 holes andmated81.3×15.9 view.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-25/connector-sources.json.
+
 <a id="src-c3c48b5318f8"></a>
 
 ## SRC-c3c48b5318f8 — Kelly archive member 48VCW.pdf
@@ -10599,6 +10707,18 @@ Summary: solvePnP estimates object/world-to-camera rotation and translation from
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-visual.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md.
+
+<a id="src-cb4319e9559f"></a>
+
+## SRC-cb4319e9559f — Initial SB50 delegated notes
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md)
+
+Summary: Preserves original kit mapping/source outcomes andinitial mistaken11.1 barrel-diameter interpretation.
+
+Evidence: delegated_initial_source_review.
+
+Documents: research/sources/round-25/connector-sources.json.
 
 <a id="src-cb44d69bba55"></a>
 
@@ -11848,6 +11968,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/audit-index-sources.json.
 
+<a id="src-e601a94ea182"></a>
+
+## SRC-e601a94ea182 — Reviewed SB50 acquisition metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json)
+
+Summary: Records original PDF URL/time/MIME/hash,distributor mapping,login-gated manufacturer CAD route andcorrected axial11.1 dimension association.
+
+Evidence: reviewed_acquisition_record.
+
+Documents: research/sources/round-25/connector-sources.json.
+
 <a id="src-e618fbde3a91"></a>
 
 ## SRC-e618fbde3a91 — https://fal.ai/models/fal-ai/sam-3/3d-objects/api
@@ -13047,6 +13179,18 @@ Summary: Read17STEPframesandgenerated16uniqueinverse-placementchangesagainstactu
 Evidence: executed_driver_source.
 
 Documents: research/sources/round-23/enclosure-sources.json.
+
+<a id="src-fcfc3aa6479a"></a>
+
+## SRC-fcfc3aa6479a — SB50 leader andchain review
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md)
+
+Summary: Actual source-image review corrects11.1 axial segment andcalculates48mm housing length fromdimension chain.
+
+Evidence: executed_coordinator_review.
+
+Documents: research/sources/round-25/connector-sources.json.
 
 <a id="src-fe0ed186d8d8"></a>
 
