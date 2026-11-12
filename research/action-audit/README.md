@@ -9,6 +9,15 @@ The instruction “THEN EXECUTE ALL FUCKGIN POINTS THAT WAS THE FUCKIGN ORDER ON
 
 [Completed point procedures and review records](/home/leo/projects/3dmodeling/research/action-audit/point-index.md).
 
+## Detailed coverage and implementation specifications
+
+1. [Seven point procedures and review/check records](/home/leo/projects/3dmodeling/research/action-audit/point-index.md): all 77 recorded operations, 245 action definitions; the two intake operations share ten actions.
+2. [Original routes linked to actions](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md): 38 routes and 220 ordered steps, plus eight audited operations outside those original route lists.
+3. [Proposed skill packaging](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md): fifteen existing catalogue names linked to operation/action and proposed helper contracts.
+4. [Source contract findings](/home/leo/projects/3dmodeling/research/action-audit/findings.md): literal inputs/outputs, representation/API conditions and documented contradictions.
+5. Every action supplies the plan's fifteen fields. The records distinguish software calculations/construction/checks, agent interpretation/selection and user design/source decisions. Four execution options are conditional on supported inputs and validation cases. Per-feature engineering allowance, measurement uncertainty, fitting differences and numerical thresholds retain separate meanings.
+6. [Full-sequence independent review](/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md) and [full-sequence check receipt](/home/leo/projects/3dmodeling/research/action-audit/full-sequence-checks.json): coverage comparisons, current source hashes, original graph preservation and reproducible documentation rebuild results.
+
 ## First completed batch
 
 1. **Authorization:** “execute plan AS GIVEN now, all must be documented written, explained and commited”. This batch executes the discussion plan as a documentation audit, in its specified order: define the first point before moving to the next point.

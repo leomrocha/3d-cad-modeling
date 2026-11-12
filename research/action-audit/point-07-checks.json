@@ -1,0 +1,150 @@
+{
+  "point": 7,
+  "status": "passed",
+  "scope": "Static source/document audit; implementation cases remain proposed future tests.",
+  "checkpoint": "0e3c0f9",
+  "coordinator_model": "gpt-6.1-sol",
+  "operations": [
+    "CAD-16",
+    "REC-03",
+    "REC-04",
+    "REC-05",
+    "REC-06",
+    "REC-10",
+    "REC-11",
+    "REC-17",
+    "REC-18",
+    "REC-19",
+    "REC-20",
+    "DOM-20",
+    "DOM-21",
+    "DOM-22",
+    "DOM-28",
+    "DOM-29",
+    "DOM-30"
+  ],
+  "actions": 51,
+  "required_fields_per_action": [
+    "purpose",
+    "intended_use",
+    "inputs",
+    "outputs",
+    "accuracy",
+    "evidence",
+    "software",
+    "agent",
+    "user_decisions",
+    "dependencies",
+    "proposed_development",
+    "procedure",
+    "validation",
+    "failure_resume",
+    "resources"
+  ],
+  "static_schema": "passed",
+  "four_modes_per_operation": "passed",
+  "review_files": [
+    "research/action-audit/reviews/point-07-designer.md",
+    "research/action-audit/reviews/point-07-independent.md",
+    "research/action-audit/reviews/point-07-software.md",
+    "research/action-audit/reviews/point-07-sources.md",
+    "research/action-audit/reviews/point-07-visual.md"
+  ],
+  "current_source_hashes": {
+    "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json": "2ee624b4776e4e7e7e09b1c46adfd8af0e04dcb17b701e8088e42f65ae18aac0",
+    "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md": "0a8a2a4f67c106c88227a7c9fde389de8750e68e5ab1cc810a54aae73fd44c9e",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md": "37da6f6930effe80e305dcec8c1e9cf1ab97c7232bc3578b8caec737e2c80684",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md": "151d87fabe78b305d8de877c655edd5127af4d470bdc29406d4159c2f4e1b251",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-software.md": "9c1092ff35c1f545ea4320270dc5c2a5809deb798bd7d68b741eda769a718ac4",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md": "bddcd46802c1e4b447c0d28a6140baaf8bb9dc2a7e092f0cc6a687bbbae2db18",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-visual.md": "92f2233830c2ff72596581f4dc39c416c8db3d4a33431a0e3ce9deabcf687cac",
+    "/home/leo/.codex/skills/ocs-engineering/SKILL.md": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+    "/home/leo/projects/3dmodeling/AGENTS.md": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+    "/home/leo/projects/3dmodeling/research/action-audit/plan.md": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+    "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md": "b38229c095af4c3cefbf2a422f31114bf58263b634ea309b4bfa77fbce0664dc",
+    "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md": "52f9b20e4b160f7f982266244896ba6f2c7b0167ab3b23fa52d8bc9f454c4aad",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md": "1296b41c61f425db0665ef9aa5b8479e5bf2a06173ec9d43a9f11f19738fd8c1",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md": "ab119cf7b2cd6f7649eeb34afc1fa9534656260deca33922ac1559496dc058d0",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md": "6858e7ff19e2ae1b61d6c03f6fe1bb5a20dea262625fcc090352aaf94b334547",
+    "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md": "13bd4075e184ed5f6784423fb43303c94300f7f3205cb504efead56a30c0ea93",
+    "/home/leo/projects/3dmodeling/research/implementation-plan.md": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+    "/home/leo/projects/3dmodeling/research/reconstruction.md": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
+    "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json": "2f3a21ddaed88b873d1d5522253617233f7ba7336b463a1d957288a9a2acdf95",
+    "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json": "26e3eca43c57087beb6bec8eca55fce6a20f9c3c7cd31ee0b7b5eec8c97e9467",
+    "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json": "4e6c99969a1a64f86fbaf17eb9077792f1d43bcd4d01096c689af0bde6cd83b8",
+    "/home/leo/projects/3dmodeling/research/sources/round-05/point-07-web-sources.json": "716db3d295a0830a073b609a051e306df3820e8a1ce465bb677d3c0f81d3e593",
+    "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+    "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md": "23a6d64e95a799699232d15f06e86206862a3b7089d57e3e53d7856cb01bd320",
+    "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md": "a2836c439267ad25194437da664bc6c17794dd6e4e834dc6a7df12ff0e7e40a5",
+    "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md": "3cedfdf2de640f56374ff7bbc896226d0ca8eba1308ad51fcf66019cc76e82a5",
+    "/home/leo/projects/3dmodeling/research/workflows/details/rec-r03.md": "75b44eed6ba0815fa18222ff53603a6bae2c922ecdd5a0073ec16e7b2fa27bd2",
+    "/home/leo/projects/3dmodeling/research/workflows/details/rec-r05.md": "cf70b4f4c3071859f8c52f2a994fa6db43c9ddd2307630b529dbd3f120f4a093",
+    "/home/leo/projects/3dmodeling/research/workflows/details/rec-r06.md": "ad7a5caa13f27feaaa382384132ba186930b7548cd70f7e5b5fb4765d09ee9bb",
+    "/home/leo/projects/3dmodeling/research/workflows/details/rec-r08.md": "f27fe0123065cbb0c2457d76d025300077d09d68705e55a458bc740dcd3d223e",
+    "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md": "759f4ea6469478842a5e3ce414e153abc5f4fcadb7e801b2590e14aa26901620",
+    "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+    "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json": "d89b7977ab3fa8013aaa1ffcfe097960f7ef6e4d3eb0db39331781a403190d2a"
+  },
+  "preserved_mermaid_blocks": 2,
+  "preserved_baseline": {
+    "AGENTS.md": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+    "research/implementation-plan.md": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+    "research/action-audit/plan.md": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+    "research/action-audit/point-01-model-brief.md": "67ce7477f22d31661ba8933b2cb6464782262af9c94c91b00726981f34b5ebae",
+    "research/workflows/document-checks.json": "d89976371e46b55eec8435e8f2b00dfe96b3c0dcd7595752d8dc0795f124282e",
+    "research/workflows/cad-paths.json": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+    "research/workflows/reconstruction-paths.json": "d89b7977ab3fa8013aaa1ffcfe097960f7ef6e4d3eb0db39331781a403190d2a",
+    "research/workflows/domain-paths.json": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+    "research/workflows/combined-paths.json": "0521f8e103c4a9fef0ae2222f9071d0775c2f7ef12d17335ba1f40a1b6185ec6",
+    "research/workflows/details/by-human.md": "654d5a330f0a4305a66d89917252222cba97e060e0ee7c18ad74661ae73cfffc",
+    "research/workflows/details/by-compute.md": "363debc68711f36619f01e717709074d26bd443d5b37b6c3f1417a739c07b73a"
+  },
+  "absolute_local_links": 38,
+  "registered_web_urls": 52,
+  "rebuild": "passed after comparison",
+  "compared_documents_before_receipt": 178,
+  "commands": [
+    [
+      "python3",
+      "research/tools/build_workflow_register.py",
+      "--date",
+      "2026-11-12"
+    ],
+    [
+      "python3",
+      "research/tools/build_workflow_details.py",
+      "--date",
+      "2026-11-12"
+    ]
+  ],
+  "register_counts": {
+    "date": "2026-11-12",
+    "sources": 481,
+    "operations": 77,
+    "recipes": 38,
+    "ideas": 188,
+    "candidate_handoffs": 879,
+    "errors": [],
+    "check_meaning": "Registration and declared type consistency, not tool execution or geometric validation"
+  },
+  "check_history": [
+    {
+      "check": "source/idea registration during point07 integration",
+      "result": "failed",
+      "reason": "New skill/action and workflow/action local source records had not yet been added for AUDIT-I07 and AUDIT-I08"
+    },
+    {
+      "check": "point07 verification first attempt",
+      "result": "failed before receipt creation",
+      "reason": "Documentation builder rejected those two unregistered local source references"
+    },
+    {
+      "check": "point07 registration and receipt-inclusive rebuild rerun",
+      "result": "passed",
+      "observation": "Both index sources registered;51-action point receipt written only after successful comparison, reparsed and included in final rebuild"
+    }
+  ]
+}

@@ -281,6 +281,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/reconstruction-sources.json",
@@ -435,6 +436,16 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -450,7 +461,8 @@
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -572,6 +584,7 @@
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-sources.md",
         "research/action-audit/reviews/point-05-visual.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -732,10 +745,21 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "4e6c99969a1a64f86fbaf17eb9077792f1d43bcd4d01096c689af0bde6cd83b8",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -800,6 +824,16 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -807,7 +841,8 @@
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -1384,6 +1419,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -1531,6 +1568,33 @@
       ]
     },
     {
+      "id": "SRC-17542ff2880d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/skills/README.md",
+      "title": "Project skill catalogue",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/skills/README.md",
+          "local_original": "/home/leo/projects/3dmodeling/skills/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "544dbac41b0e3854567cd310b4b6af0494f72ad0149e23a7c0ffa8a26cf8c117",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
+      ]
+    },
+    {
       "id": "SRC-19255db776eb",
       "url": "https://mcpmarket.com/tools/skills/3d-modeling-specialist",
       "local_source_path": null,
@@ -1659,11 +1723,22 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "2f3a21ddaed88b873d1d5522253617233f7ba7336b463a1d957288a9a2acdf95",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -1736,12 +1811,23 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "access_date": "2026-11-12",
+          "sha256": "23a6d64e95a799699232d15f06e86206862a3b7089d57e3e53d7856cb01bd320",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -1858,6 +1944,8 @@
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-sources.md",
         "research/action-audit/reviews/point-05-visual.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/sources/round-05/point-05-web-sources.json",
@@ -1895,6 +1983,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/workflows/details/mix-r01.md",
@@ -1911,11 +2001,12 @@
       "id": "SRC-20b61505fcba",
       "url": "https://github.com/facebookresearch/sam-3d-objects",
       "local_source_path": null,
-      "title": "https://github.com/facebookresearch/sam-3d-objects",
-      "summary": "- SAM 3D Objects official repository: https://github.com/facebookresearch/sam-3d-objects",
+      "title": "SAM 3D Objects — official repository, main branch",
+      "summary": "Official mutable main repository inspected 2026-11-12. Example loads image and segmentation mask, runs inference, and saves `output[\"gs\"]` as Gaussian splat PLY. The inspected example does not demonstrate triangle-mesh output. License is separately covered by an existing source-register record.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -1938,12 +2029,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-18",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r10.md"
       ]
     },
@@ -2492,6 +2603,45 @@
       ]
     },
     {
+      "id": "SRC-2a63549fb0bc",
+      "url": "https://docs.nerf.studio/quickstart/data_conventions.html",
+      "local_source_path": null,
+      "title": "Data conventions — Nerfstudio documentation",
+      "summary": "Current Nerfstudio data-conventions page inspected 2026-11-12; release not pinned. Defines OpenGL/Blender/NeRF camera axes, +Z-up world, pixel-centre convention, transforms.json camera basis columns and origin translation. Depth images are assumed 16/32-bit millimetres, zero means unknown, and `depth_unit_scale_factor` changes scale; depth images resize to RGB by default. Page does not specify selected parser auto-orientation/scale-normalization runtime config.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-04",
+            "REC-11",
+            "REC-20",
+            "DOM-22",
+            "DOM-30"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2ad28cfa19ba",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md",
@@ -2671,6 +2821,43 @@
       ]
     },
     {
+      "id": "SRC-2cf7a4eb3a5d",
+      "url": "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+      "local_source_path": null,
+      "title": "RGBDImageFactory.cpp — Open3D v0.20.0 source",
+      "summary": "Official raw source on tag v0.20.0 inspected 2026-11-12. `CreateFromColorAndDepth` accepts caller-provided depth_scale/depth_trunc/intensity flag, passes scale and truncation to `ConvertDepthToFloatImage`, and requires matching color/depth dimensions. Default arguments are declared in RGBDImage.h, not in this function definition.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-05",
+            "REC-06",
+            "DOM-21"
+          ],
+          "content_type": "text/plain",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2d331dacc4f0",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
@@ -2742,6 +2929,16 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -2750,7 +2947,8 @@
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -2839,6 +3037,35 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2db8e2fc7613",
+      "url": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+      "local_source_path": null,
+      "title": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+      "summary": "Four page attempts failed and support no technical claim: Open3D 0.20.0 `RGBDImage` API page `https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html` timed out; versioned API URL `https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html` was unavailable via the web tool; GitHub HTML for `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp` returned cache miss; and `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/pybind/geometry/image.cpp` returned cache miss. The default parameters were verified in the successful raw v0.20.0 `RGBDImage.h` declaration; conversion behavior was inspected in the raw `RGBDImageFactory.cpp` and `Image.cpp` sources recorded above. No further failed URLs support technical claims.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": null,
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -3048,6 +3275,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -3055,7 +3292,8 @@
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -3120,6 +3358,33 @@
       ]
     },
     {
+      "id": "SRC-31a38faa2037",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md",
+      "title": "Point 07 designer notes — reconstruction procedures",
+      "summary": "Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md",
+          "access_date": "2026-11-12",
+          "sha256": "37da6f6930effe80e305dcec8c1e9cf1ab97c7232bc3578b8caec737e2c80684",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-31cafb73df3e",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
       "local_source_path": null,
@@ -3155,6 +3420,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/mix-r04.md",
@@ -3273,6 +3540,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md"
       ]
     },
@@ -3396,7 +3664,8 @@
       "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -3409,10 +3678,21 @@
             "research/action-audit/point-02-component-reuse.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "access_date": "2026-11-12",
+          "sha256": "b38229c095af4c3cefbf2a422f31114bf58263b634ea309b4bfa77fbce0664dc",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -3574,6 +3854,32 @@
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r04.md",
         "research/workflows/details/mix-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-39a648fd2c2a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r03.md",
+      "title": "rec-r03.md",
+      "summary": "Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r03.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r03.md",
+          "access_date": "2026-11-12",
+          "sha256": "75b44eed6ba0815fa18222ff53603a6bae2c922ecdd5a0073ec16e7b2fa27bd2",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -3865,6 +4171,46 @@
       ]
     },
     {
+      "id": "SRC-3c3c9e360b9d",
+      "url": "https://docs.nerf.studio/quickstart/export_geometry.html",
+      "local_source_path": null,
+      "title": "Export geometry — Nerfstudio documentation",
+      "summary": "Current Nerfstudio export guide inspected 2026-11-12; release not pinned. Documents point-cloud PLY and textured mesh OBJ output; TSDF mesh export applies across models; Poisson mesh requires a model computing/predicting normals. Model-specific export stages remain distinct from Gaussian PLY export.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-11",
+            "REC-19",
+            "REC-20",
+            "DOM-29",
+            "DOM-30"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/findings.md",
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-3cb645d27838",
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
       "local_source_path": null,
@@ -4075,10 +4421,48 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md",
+          "access_date": "2026-11-12",
+          "sha256": "3cedfdf2de640f56374ff7bbc896226d0ca8eba1308ad51fcf66019cc76e82a5",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-3ea30e7b5209",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/verification-method.md",
+      "title": "Documentary verification method",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/verification-method.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/verification-method.md",
+          "access_date": "2026-11-12",
+          "sha256": "d241513dd7ac0e57eba39b8aeb7ff5e0bb4aa763cfc6dd778b51e341e182aeb3",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -4144,14 +4528,42 @@
       ]
     },
     {
+      "id": "SRC-402780a7bc37",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md",
+      "title": "Point 07 primary-source check: photographs, depth and learned reconstruction",
+      "summary": "Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md",
+          "access_date": "2026-11-12",
+          "sha256": "bddcd46802c1e4b447c0d28a6140baaf8bb9dc2a7e092f0cc6a687bbbae2db18",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-40579db9c7a7",
       "url": "https://huggingface.co/microsoft/TRELLIS.2-4B",
       "local_source_path": null,
-      "title": "https://huggingface.co/microsoft/TRELLIS.2-4B",
-      "summary": "- TRELLIS.2-4B model card (MIT): https://huggingface.co/microsoft/TRELLIS.2-4B",
+      "title": "microsoft/TRELLIS.2-4B — Hugging Face model card",
+      "summary": "Named TRELLIS.2-4B model card inspected 2026-11-12. Card labels this checkpoint MIT; this claim applies to this model card, not all associated datasets/assets or other model releases.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -4163,11 +4575,30 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-18",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r10.md"
       ]
     },
@@ -4197,6 +4628,109 @@
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r04.md"
+      ]
+    },
+    {
+      "id": "SRC-41bb93ea7d3f",
+      "url": "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py",
+      "local_source_path": null,
+      "title": "nerfstudio_dataparser.py — Nerfstudio main source",
+      "summary": "Official raw Nerfstudio main-branch parser inspected 2026-11-12; branch is mutable and installed version not checked. Exposes orientation_method=up, center_method=poses, auto_scale_poses=true, scale_factor=1 and scene_scale=1; computes pose transform/scale and emits dataparser_transform/dataparser_scale. Uses metadata orientation_override/applied_transform/applied_scale when supplied, with a fallback COLMAP axis mapping when COLMAP output exists. No runtime parser was executed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-04",
+            "REC-11",
+            "REC-20",
+            "DOM-22",
+            "DOM-30"
+          ],
+          "content_type": "text/plain",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-41c2058cbabf",
+      "url": "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImage.h",
+      "local_source_path": null,
+      "title": "RGBDImage.h — Open3D v0.20.0 API declaration",
+      "summary": "Official raw Open3D v0.20.0 header inspected 2026-11-12. Declares `CreateFromColorAndDepth` defaults depth_scale=1000.0, depth_trunc=3.0, convert_rgb_to_intensity=true and states scale occurs before truncation; equal-size registered color/depth images are required by RGBDImage contract.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-05",
+            "REC-06",
+            "DOM-21"
+          ],
+          "content_type": "text/plain",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-427835ebb48d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md",
+      "title": "Proposed skills linked to reviewed action procedures",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md",
+          "access_date": "2026-11-12",
+          "sha256": "f0672a74226e68bd85a93fa8b36e325cfabfe5770652584ca1fe376b9a21241f",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -4507,6 +5041,37 @@
       ]
     },
     {
+      "id": "SRC-487d52ab6ca8",
+      "url": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImage.cpp",
+      "local_source_path": null,
+      "title": "RGBDImage.cpp — Open3D v0.20.0 source",
+      "summary": "Official Open3D v0.20.0 source file inspected 2026-11-12. Contains RGBDImage container operations but not the color-depth conversion implementation; no depth-scale claim relies on this file.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-05",
+            "REC-06"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-49217bd84235",
       "url": "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
       "local_source_path": null,
@@ -4761,6 +5326,126 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-4d1602b2855e",
+      "url": "https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html",
+      "local_source_path": null,
+      "title": "https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html",
+      "summary": "Four page attempts failed and support no technical claim: Open3D 0.20.0 `RGBDImage` API page `https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html` timed out; versioned API URL `https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html` was unavailable via the web tool; GitHub HTML for `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp` returned cache miss; and `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/pybind/geometry/image.cpp` returned cache miss. The default parameters were verified in the successful raw v0.20.0 `RGBDImage.h` declaration; conversion behavior was inspected in the raw `RGBDImageFactory.cpp` and `Image.cpp` sources recorded above. No further failed URLs support technical claims.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": null,
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-4d88a7d32b7f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-index.md",
+      "title": "Detailed point procedures and reviews",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-index.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-index.md",
+          "access_date": "2026-11-12",
+          "sha256": "d6151fd14d29f6068e3cd857759483bfc3761721ec69ac59aaf87d0e53e91153",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-4dbc6baf3db1",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-visual.md",
+      "title": "Point 07 visual and evidence review — photographs, depth and learned reconstruction",
+      "summary": "Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "92f2233830c2ff72596581f4dc39c416c8db3d4a33431a0e3ce9deabcf687cac",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-4e718650fd66",
+      "url": "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/Image.cpp",
+      "local_source_path": null,
+      "title": "Image.cpp — Open3D v0.20.0 source",
+      "summary": "Official raw source on tag v0.20.0 inspected 2026-11-12. `ConvertDepthToFloatImage` creates float depth, divides by depth_scale, and sets samples >= depth_trunc to zero; raw zeros remain zero after division. This establishes source-code behavior for this pinned tag.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-05",
+            "REC-06",
+            "DOM-21"
+          ],
+          "content_type": "text/plain",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -5162,6 +5847,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/rec-r02.md"
@@ -5929,6 +6615,33 @@
       ]
     },
     {
+      "id": "SRC-5e0d7de82f1b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/research-log.md",
+      "title": "Research record",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/research-log.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/research-log.md",
+          "access_date": "2026-11-12",
+          "sha256": "e4a29a03b7a9df40284d86f9cdf88de4edb57072a39e57cf4e56b8f421c496cd",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
+      ]
+    },
+    {
       "id": "SRC-5e5932bb68e1",
       "url": "https://www.blender.org/features/pipeline/",
       "local_source_path": null,
@@ -5965,6 +6678,7 @@
         "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-06-software.md",
         "research/action-audit/reviews/point-06-visual.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -6104,6 +6818,33 @@
       ]
     },
     {
+      "id": "SRC-60e0a613e21d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-software.md",
+      "title": "Point 07 — reconstruction software and API review",
+      "summary": "Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-software.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-software.md",
+          "access_date": "2026-11-12",
+          "sha256": "9c1092ff35c1f545ea4320270dc5c2a5809deb798bd7d68b741eda769a718ac4",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-61c6ad4341d0",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
@@ -6176,6 +6917,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-620ff17ef7cd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json",
+      "title": "point-07-operations",
+      "summary": "Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "2ee624b4776e4e7e7e09b1c46adfd8af0e04dcb17b701e8088e42f65ae18aac0",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -6423,8 +7191,8 @@
       "id": "SRC-6436ad01395b",
       "url": "https://colmap.github.io/cameras.html",
       "local_source_path": null,
-      "title": "COLMAP camera models",
-      "summary": "Documents COLMAP corner-based pixel coordinates, camera conventions and model selection; OPENCV and FULL_OPENCV distortion model details.",
+      "title": "Camera Models — COLMAP",
+      "summary": "COLMAP camera-model reference inspected 2026-11-12. Page identifies version 4.3.0.dev0, commit 3c1a1b9 (2026-11-08), and says camera +Z is the look direction. Lists models of varying complexity; SIMPLE_PINHOLE and PINHOLE are for images already undistorted. Projection includes perspective division, distortion and intrinsic transform; COLMAP uses corner-based pixels with top-left pixel centre at (0.5,0.5).",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -6440,10 +7208,34 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-16",
+            "REC-03",
+            "REC-04",
+            "DOM-20",
+            "DOM-22"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r01.md",
         "research/workflows/reconstruction-paths.md"
       ]
@@ -6607,6 +7399,45 @@
       ]
     },
     {
+      "id": "SRC-695bf75cf83e",
+      "url": "https://colmap.github.io/format.html",
+      "local_source_path": null,
+      "title": "Output Format — COLMAP",
+      "summary": "COLMAP current documentation inspected 2026-11-12; no local executable version checked. `images.txt` stores camera world-to-camera projection as Hamilton quaternion QW,QX,QY,QZ and translation TX,TY,TZ, plus camera/image IDs and 2D observations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-16",
+            "REC-03",
+            "REC-17",
+            "DOM-20",
+            "DOM-22"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-69c044526e3f",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
@@ -6667,6 +7498,33 @@
         "research/action-audit/reviews/point-05-independent.md",
         "research/action-audit/reviews/point-05-sources.md",
         "research/sources/round-05/point-05-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6a6e188c27d3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.json",
+      "title": "skill-to-actions",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.json",
+          "access_date": "2026-11-12",
+          "sha256": "671305afd10bc9efba09d01d6301f5c45b891ea147372be7a824bb23eeac17ce",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -6739,6 +7597,8 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md"
       ]
     },
@@ -6746,8 +7606,8 @@
       "id": "SRC-6c38d73efa65",
       "url": "https://colmap.github.io/faq.html",
       "local_source_path": null,
-      "title": "COLMAP FAQ: known camera intrinsics",
-      "summary": "Documents ImageReader camera parameters, shared camera setup, pycolmap database read/update API, default bundle-adjustment intrinsic refinement, and the +0.5 pixel-center correction from OpenCV/Kalibr.",
+      "title": "Frequently Asked Questions — COLMAP",
+      "summary": "COLMAP current FAQ inspected 2026-11-12. For OpenCV/Kalibr calibration imported to COLMAP, add 0.5 to cx and cy only to convert integer-centred OpenCV/Kalibr coordinates into COLMAP's corner-based convention; fx, fy and distortion remain unchanged. OPENCV distortion order is k1,k2,p1,p2; FULL_OPENCV adds k3,k4,k5,k6.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -6774,11 +7634,36 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-16",
+            "REC-03",
+            "REC-04",
+            "DOM-20",
+            "DOM-22"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/findings.md",
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r06.md",
         "research/workflows/details/rec-r01.md",
@@ -6838,6 +7723,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/rec-r08.md"
@@ -6875,6 +7761,42 @@
         "research/workflows/details/mix-r01.md",
         "research/workflows/details/mix-r06.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-6cc50a6a40b8",
+      "url": "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
+      "local_source_path": null,
+      "title": "compute_rgbd_odometry — Open3D 0.20.0 documentation",
+      "summary": "Open3D 0.20.0 API inspected 2026-11-12. `compute_rgbd_odometry` estimates 6D rigid motion from source and target RGBDImage and returns success, 4x4 motion matrix and 6x6 information matrix. Local trajectory composition direction is not inferred from the pair API alone.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-05",
+            "DOM-21"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -6929,6 +7851,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/workflows/details/mix-r01.md",
@@ -7088,6 +8012,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/findings.md",
         "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-06-designer.md",
         "research/action-audit/reviews/point-06-software.md",
@@ -7223,11 +8148,12 @@
       "id": "SRC-724b2d11a6eb",
       "url": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
       "local_source_path": null,
-      "title": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
-      "summary": "- DA3 Streaming documentation (<12 GB GPU memory claim): https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+      "title": "DA3 Streaming README — main branch",
+      "summary": "Official mutable main README inspected 2026-11-12. Documents camera pose and intrinsic text files, combined point cloud PLY and optional per-frame RGB/depth/confidence outputs. Peak VRAM table depends on named datasets, resolutions, chunk sizes and overlap; it is not a universal resource requirement.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -7252,14 +8178,62 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-10",
+            "DOM-22",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r02.md",
         "research/workflows/details/rec-r05.md"
+      ]
+    },
+    {
+      "id": "SRC-74d5d4738857",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/findings.md",
+      "title": "Source contract findings and implementation conditions",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/findings.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/findings.md",
+          "access_date": "2026-11-12",
+          "sha256": "5851122bfe7cc2bc281d60cd1028ee0941de5501dcf750f5bf82801f35632faf",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -7286,6 +8260,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/rec-r10.md",
         "research/workflows/reconstruction-paths.md"
@@ -7336,6 +8312,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/findings.md",
         "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-06-designer.md",
         "research/action-audit/reviews/point-06-software.md",
@@ -7353,8 +8330,8 @@
       "id": "SRC-76b9efd76055",
       "url": "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md",
       "local_source_path": null,
-      "title": "OpenMVS usage and COLMAP importer",
-      "summary": "Documents COLMAP image_undistorter output as the input to InterfaceCOLMAP, then DensifyPointCloud and later mesh stages; OpenMVG is an alternate importer.",
+      "title": "OpenMVS Usage Guide — develop branch",
+      "summary": "Official OpenMVS usage guide on mutable develop branch inspected 2026-11-12. Documents COLMAP image_undistorter output, `InterfaceCOLMAP -i dense -o scene.mvs --image-folder dense/images`, DensifyPointCloud, ReconstructMesh, optional refinement/texturing, a CPU SGM route and memory sub-scene splitting that may leave seams.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7370,10 +8347,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-16",
+            "REC-17",
+            "DOM-28"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r01.md",
         "research/workflows/reconstruction-paths.md"
       ]
@@ -7448,10 +8447,22 @@
             "research/action-audit/README.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+          "access_date": "2026-11-12",
+          "sha256": "4a19c8fd10604f4138f79d5b59f30b9d7b2d16ea2b4c924a4b1ff13d04b7e8d4",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -7555,13 +8566,24 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+          "access_date": "2026-11-12",
+          "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -7686,10 +8708,21 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "d89b7977ab3fa8013aaa1ffcfe097960f7ef6e4d3eb0db39331781a403190d2a",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -7705,6 +8738,35 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-7baec7354391",
+      "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html",
+      "local_source_path": null,
+      "title": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html",
+      "summary": "Four page attempts failed and support no technical claim: Open3D 0.20.0 `RGBDImage` API page `https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html` timed out; versioned API URL `https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html` was unavailable via the web tool; GitHub HTML for `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp` returned cache miss; and `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/pybind/geometry/image.cpp` returned cache miss. The default parameters were verified in the successful raw v0.20.0 `RGBDImage.h` declaration; conversion behavior was inspected in the raw `RGBDImageFactory.cpp` and `Image.cpp` sources recorded above. No further failed URLs support technical claims.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": null,
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -8070,12 +9132,23 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "1296b41c61f425db0665ef9aa5b8479e5bf2a06173ec9d43a9f11f19738fd8c1",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -8134,12 +9207,23 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "26e3eca43c57087beb6bec8eca55fce6a20f9c3c7cd31ee0b7b5eec8c97e9467",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -8213,7 +9297,8 @@
       "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -8226,10 +9311,21 @@
             "research/action-audit/point-05-alignment-and-remodeling.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md",
+          "access_date": "2026-11-12",
+          "sha256": "ab119cf7b2cd6f7649eeb34afc1fa9534656260deca33922ac1559496dc058d0",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -8312,8 +9408,8 @@
       "id": "SRC-8611e98b9ce8",
       "url": "https://docs.nerf.studio/quickstart/custom_dataset.html",
       "local_source_path": null,
-      "title": "Nerfstudio custom image/video dataset",
-      "summary": "Documents `ns-process-data images;video --data ... --output-dir ...` and `ns-train nerfacto --data ...`; image/video processing uses COLMAP and FFmpeg.",
+      "title": "Using custom data — Nerfstudio documentation",
+      "summary": "Current Nerfstudio custom-data guide inspected 2026-11-12; release not pinned. States per-image camera poses are required; `ns-process-data images;video` uses COLMAP and FFmpeg; supplied pose paths include Metashape XML and RealityCapture CSV. The guide alone does not specify parser auto-orientation/scale settings.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -8329,10 +9425,34 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-04",
+            "REC-11",
+            "REC-20",
+            "DOM-22",
+            "DOM-30"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r08.md",
         "research/workflows/reconstruction-paths.md"
       ]
@@ -8341,8 +9461,8 @@
       "id": "SRC-86cdf9c119df",
       "url": "https://docs.nerf.studio/nerfology/methods/splat.html",
       "local_source_path": null,
-      "title": "Nerfstudio Splatfacto",
-      "summary": "Documents Splatfacto training, Gaussian PLY output and memory variants; FAQ states mesh/point-cloud export is unsupported.",
+      "title": "Splatfacto — Nerfstudio documentation",
+      "summary": "Current Nerfstudio Splatfacto guide inspected 2026-11-12; release not pinned. Documents trained Gaussian splat export to PLY via `ns-export gaussian-splat`; page says mesh and point-cloud export are currently unsupported for Splatfacto's own export path.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -8376,12 +9496,36 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-11",
+            "REC-19",
+            "DOM-29",
+            "DOM-30"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/findings.md",
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/mix-r09.md",
         "research/workflows/details/rec-r05.md",
         "research/workflows/details/rec-r06.md",
@@ -8634,8 +9778,8 @@
       "id": "SRC-8e6d7648b52e",
       "url": "https://colmap.github.io/cli.html",
       "local_source_path": null,
-      "title": "COLMAP command-line interface",
-      "summary": "Documents feature_extractor options including ImageReader camera model/parameters, mapper and image_undistorter command routes.",
+      "title": "Command-line Interface — COLMAP",
+      "summary": "COLMAP current CLI documentation inspected 2026-11-12; no local binary version checked. Shows sparse matching/mapper, image_undistorter, patch_match_stereo, stereo_fusion, poisson_mesher and delaunay_mesher stages. PatchMatch requires the undistorted workspace; fusion creates colored cloud. GPU backend support depends on selected build/options.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -8662,11 +9806,36 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-16",
+            "REC-03",
+            "REC-17",
+            "DOM-20",
+            "DOM-22",
+            "DOM-28"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r06.md",
         "research/workflows/reconstruction-paths.md"
@@ -8868,6 +10037,16 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "access_date": "2026-11-12",
+          "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -8875,7 +10054,8 @@
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -8912,6 +10092,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -9104,10 +10286,21 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md",
+          "access_date": "2026-11-12",
+          "sha256": "759f4ea6469478842a5e3ce414e153abc5f4fcadb7e801b2590e14aa26901620",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -9147,7 +10340,8 @@
       "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -9160,10 +10354,48 @@
             "research/action-audit/point-06-building-and-robot.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "13bd4075e184ed5f6784423fb43303c94300f7f3205cb504efead56a30c0ea93",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-94415df8565c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "title": "Point 07 — Capture, reconstruction and appearance scenes",
+      "summary": "Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "access_date": "2026-11-12",
+          "sha256": "0a8a2a4f67c106c88227a7c9fde389de8750e68e5ab1cc810a54aae73fd44c9e",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -9436,6 +10668,7 @@
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-sources.md",
         "research/action-audit/reviews/point-05-visual.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -9507,6 +10740,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-96e5bd9ad8ba",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md",
+      "title": "Full-sequence independent integration review",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md",
+          "access_date": "2026-11-12",
+          "sha256": "d1cac5c4e5ee19ab2c8c07c4e5bcc11bc2621ffb43e323727a32a424583b6d21",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -10277,6 +11537,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/rec-r01.md",
         "research/workflows/reconstruction-paths.md"
@@ -10286,15 +11547,37 @@
       "id": "SRC-a318f3e786ed",
       "url": "https://huggingface.co/depth-anything/DA3Metric-Large",
       "local_source_path": null,
-      "title": "https://huggingface.co/depth-anything/DA3Metric-Large",
-      "summary": "- DA3Metric-Large model card (Apache-2.0; depth/camera/point-cloud outputs): https://huggingface.co/depth-anything/DA3Metric-Large",
+      "title": "DA3Metric-Large — Hugging Face model card",
+      "summary": "DA3Metric-Large model card inspected 2026-11-12; URL redirected to uppercase repository slug. Card labels this specific checkpoint Apache 2.0, claims monocular metric depth with canonical depth multiplied by focal length, and shows inference depth/confidence maps, world-to-camera extrinsics, intrinsics and GLB/NPZ/PLY/Gaussian exports. The inspected card does not state a canonical focal reference or normalization divisor; do not generalize to every DA3 model.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-10",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
       "referring_documents": [
-        "research/reconstruction.md"
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
+        "research/reconstruction.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -10656,6 +11939,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
         "research/reconstruction.md"
       ]
     },
@@ -10786,6 +12070,35 @@
         "research/workflows/details/mix-r08.md",
         "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-ace3d4ff19ae",
+      "url": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/pybind/geometry/image.cpp",
+      "local_source_path": null,
+      "title": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/pybind/geometry/image.cpp",
+      "summary": "Four page attempts failed and support no technical claim: Open3D 0.20.0 `RGBDImage` API page `https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html` timed out; versioned API URL `https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html` was unavailable via the web tool; GitHub HTML for `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp` returned cache miss; and `https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/pybind/geometry/image.cpp` returned cache miss. The default parameters were verified in the successful raw v0.20.0 `RGBDImage.h` declaration; conversion behavior was inspected in the raw `RGBDImageFactory.cpp` and `Image.cpp` sources recorded above. No further failed URLs support technical claims.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": null,
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -11079,6 +12392,16 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -11086,18 +12409,20 @@
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
       "id": "SRC-b00b92c70647",
       "url": "https://github.com/ByteDance-Seed/Depth-Anything-3",
       "local_source_path": null,
-      "title": "https://github.com/ByteDance-Seed/Depth-Anything-3",
-      "summary": "- Depth Anything 3 repository/license and CLI/API: https://github.com/ByteDance-Seed/Depth-Anything-3",
+      "title": "Depth Anything 3 — official repository, main branch",
+      "summary": "Official mutable main repository page inspected 2026-11-12. Documents monocular/multi-view depth, pose-conditioned depth, camera intrinsics/extrinsics estimation and `da3 video` CLI example with fps and GLB export options. Repository page advertises Apache-2.0 code; checkpoint/model terms remain model-specific.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -11121,12 +12446,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-10",
+            "DOM-22",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r05.md"
       ]
     },
@@ -11209,6 +12555,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/findings.md",
         "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-06-designer.md",
         "research/action-audit/reviews/point-06-software.md",
@@ -11538,6 +12885,16 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -11549,7 +12906,34 @@
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b56bc21f14db",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r06.md",
+      "title": "rec-r06.md",
+      "summary": "Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r06.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r06.md",
+          "access_date": "2026-11-12",
+          "sha256": "ad7a5caa13f27feaaa382384132ba186930b7548cd70f7e5b5fb4765d09ee9bb",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -11630,13 +13014,24 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -11673,6 +13068,8 @@
       ],
       "referring_documents": [
         "research/action-audit/reviews/point-05-visual.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
@@ -11851,10 +13248,21 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+          "access_date": "2026-11-12",
+          "sha256": "a2836c439267ad25194437da664bc6c17794dd6e4e834dc6a7df12ff0e7e40a5",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -11954,10 +13362,22 @@
             "research/action-audit/README.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "0c8ad208553cea1bdc686f4d3908e58e48589cfac604613c8698604494eab154",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -12165,11 +13585,22 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "6858e7ff19e2ae1b61d6c03f6fe1bb5a20dea262625fcc090352aaf94b334547",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -12404,6 +13835,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -12533,6 +13965,7 @@
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-sources.md",
         "research/action-audit/reviews/point-05-visual.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -13065,6 +14498,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/rec-r08.md"
@@ -13126,6 +14561,32 @@
       ]
     },
     {
+      "id": "SRC-c748eeb196bb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r05.md",
+      "title": "rec-r05.md",
+      "summary": "Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r05.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r05.md",
+          "access_date": "2026-11-12",
+          "sha256": "cf70b4f4c3071859f8c52f2a994fa6db43c9ddd2307630b529dbd3f120f4a093",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c75f41a7dcd4",
       "url": "https://github.com/alicevision/Meshroom/blob/develop/COPYING.md",
       "local_source_path": null,
@@ -13154,14 +14615,41 @@
       ]
     },
     {
+      "id": "SRC-c7a5d7a2632d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r08.md",
+      "title": "rec-r08.md",
+      "summary": "Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r08.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/rec-r08.md",
+          "access_date": "2026-11-12",
+          "sha256": "f27fe0123065cbb0c2457d76d025300077d09d68705e55a458bc740dcd3d223e",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c84e8663456d",
       "url": "https://github.com/microsoft/TRELLIS.2",
       "local_source_path": null,
-      "title": "https://github.com/microsoft/TRELLIS.2",
-      "summary": "1. Id: REC-18; Name: Generate a single-image mesh proxy; Inputs: photo-set; Outputs: mesh; Tools: TripoSR; TRELLIS.2; SAM 3D Objects; Source urls: https://github.com/VAST-AI-Research/TripoSR; https://github.com/microsoft/TRELLIS.2; https://github.com/facebookresearch/sam-3d-objects; Prerequisites: Exactly one selected image and model revision recorded; Model weights and model terms recorded separately from source-code licence; Dimensions or measured controls supplied separately before dimensional CAD use; Preserves: Source image and model/checkpoint metadata; Changes or infers: Predicts backside and occluded geometry from learned priors; Mesh scale is not established by image appearance alone; Checks: Compare silhouette with additional views; Compare explicitly measured dimensions; Mark hidden surfaces as inferred before CAD remodeling; Alternatives: Multi-view photogrammetry or calibrated scan; Automation: scripted; Evidence status: existing_report_registered; Summary: Generate a v...",
+      "title": "TRELLIS.2 — official repository, main branch",
+      "summary": "Official mutable main repository inspected 2026-11-12. Example runs `pipeline.run(image)[0]` to produce a mesh and exports via O-Voxel `to_glb`. README says tested only on Linux, requires NVIDIA GPU with at least 24 GB memory, and recommends CUDA Toolkit 12.4. These are source setup conditions, not local measurements.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -13185,11 +14673,31 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-18",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r10.md"
       ]
     },
@@ -13407,6 +14915,7 @@
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-sources.md",
         "research/action-audit/reviews/point-05-visual.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -13464,6 +14973,7 @@
         "research/action-audit/point-05-alignment-and-remodeling.md",
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-visual.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/mix-r04.md",
@@ -13471,6 +14981,33 @@
         "research/workflows/details/rec-r03.md",
         "research/workflows/details/rec-r07.md",
         "research/workflows/details/rec-r09.md"
+      ]
+    },
+    {
+      "id": "SRC-cb5cec23d032",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
+      "title": "Workflow routes linked to detailed actions",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
+          "access_date": "2026-11-12",
+          "sha256": "2472101e0ed524b88e2cabdf346eac0eb62bd30b82410ec5e271d6ff9b0cd5a5",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -13520,10 +15057,22 @@
             "research/action-audit/README.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+          "access_date": "2026-11-12",
+          "sha256": "c81c889f099b8e56aa5b8a571c8ab996795a0d8b0163f7035de2e5a73c74deb6",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -13549,7 +15098,8 @@
       "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -13562,10 +15112,48 @@
             "research/action-audit/point-05-alignment-and-remodeling.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "access_date": "2026-11-12",
+          "sha256": "52f9b20e4b160f7f982266244896ba6f2c7b0167ab3b23fa52d8bc9f454c4aad",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ce70036fb35b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/README.md",
+      "title": "3D modeling",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/README.md",
+          "local_original": "/home/leo/projects/3dmodeling/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "fbfafe4a26a7db32bcff068d71d7268a752e0232707a04dff99ad8936bfe712f",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -13694,6 +15282,33 @@
       ]
     },
     {
+      "id": "SRC-d25b3e6e0e1d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
+      "title": "workflow-to-actions",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
+          "access_date": "2026-11-12",
+          "sha256": "0ed1c804ae7057eb9aadb234e0b5516b0a4fe730e97503cd37b7af210d704246",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
+      ]
+    },
+    {
       "id": "SRC-d25c92b0aebf",
       "url": "https://github.com/leap71/PicoGK",
       "local_source_path": null,
@@ -13797,6 +15412,44 @@
         "research/workflows/details/mix-r07.md",
         "research/workflows/details/mix-r08.md",
         "research/workflows/details/mix-r09.md"
+      ]
+    },
+    {
+      "id": "SRC-d3ede955b815",
+      "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
+      "local_source_path": null,
+      "title": "PointCloud API — Open3D 0.20.0 documentation",
+      "summary": "Open3D 0.20.0 API inspected 2026-11-12. Documents consistent tangent-plane normal orientation using a k-nearest-neighbour Riemannian graph and related normal orientation methods; consistency does not establish globally outward direction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-06",
+            "REC-17",
+            "DOM-28",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -14093,6 +15746,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/reconstruction-sources.json",
@@ -14126,18 +15780,67 @@
       ]
     },
     {
+      "id": "SRC-db98256a44dd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md",
+      "title": "Point 07 independent review — photographs, depth and learned reconstruction",
+      "summary": "Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md",
+          "access_date": "2026-11-12",
+          "sha256": "151d87fabe78b305d8de877c655edd5127af4d470bdc29406d4159c2f4e1b251",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-dc4ad193013b",
       "url": "https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md",
       "local_source_path": null,
-      "title": "https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md",
-      "summary": "- SAM 3D Objects setup (Linux/NVIDIA >=32 GB VRAM): https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md",
+      "title": "SAM 3D Objects setup — main branch",
+      "summary": "Official mutable main setup page inspected 2026-11-12. States Linux 64-bit and NVIDIA GPU with at least 32 GB VRAM; notes some PyTorch3D components require GPU-enabled compilation. These are setup claims for the documented route, not local measurements.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-18",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
+        }
+      ],
       "referring_documents": [
-        "research/reconstruction.md"
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
+        "research/reconstruction.md",
+        "research/sources/round-05/point-07-web-sources.json"
       ]
     },
     {
@@ -14445,6 +16148,16 @@
           "referring_documents": [
             "research/action-audit/point-06-building-and-robot.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "access_date": "2026-11-12",
+          "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -14453,7 +16166,34 @@
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
         "research/sources/round-05/point-05-local-sources.json",
-        "research/sources/round-05/point-06-local-sources.json"
+        "research/sources/round-05/point-06-local-sources.json",
+        "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-dfeba86ef6d2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-07-web-sources.json",
+      "title": "point-07-web-sources.json",
+      "summary": "Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-07-web-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-07-web-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "716db3d295a0830a073b609a051e306df3820e8a1ce465bb677d3c0f81d3e593",
+          "referring_documents": [
+            "research/action-audit/point-07-reconstruction.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-07-local-sources.json"
       ]
     },
     {
@@ -14558,6 +16298,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/workflows/details/rec-r05.md"
@@ -14612,10 +16354,22 @@
             "research/action-audit/README.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+          "access_date": "2026-11-12",
+          "sha256": "0267da688705d822a1b6bb581844aa95e80d35a18d210ffefa613a6c295ac671",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -14631,6 +16385,33 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-e5af12a0873d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/README.md",
+      "title": "Research and proposed implementation",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/README.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "86e69865f7b4067fa6732bec7a596cc8fcb8ce3eede239987a5a60015fef50cd",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {
@@ -14706,8 +16487,8 @@
       "id": "SRC-e8c6f17f90e5",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
       "local_source_path": null,
-      "title": "Open3D RGB-D integration tutorial",
-      "summary": "Documents RGB-D pose integration and TSDF volume integration workflow.",
+      "title": "RGBD integration — Open3D 0.20.0 documentation",
+      "summary": "Open3D 0.20.0 RGB-D tutorial inspected 2026-11-12. Describes UniformTSDFVolume and ScalableTSDFVolume, voxel length and SDF truncation examples; sample integrates with inverse(camera_poses[i].pose). Tutorial calls create_from_color_and_depth with depth_trunc 4.0; this example value differs from API defaults. No local integration was run.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -14747,13 +16528,36 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-05",
+            "REC-06",
+            "DOM-21",
+            "DOM-28"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/cad-r06.md",
         "research/workflows/details/mix-r04.md",
         "research/workflows/details/mix-r05.md",
@@ -14972,6 +16776,7 @@
       "summary": "Actual source implements preprocessing, single-image inference, mesh extraction and OBJ/GLB export; chunk size trades memory for runtime.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -14987,6 +16792,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/domain-detail-sources.json"
       ]
     },
@@ -15439,8 +17245,8 @@
       "id": "SRC-f08b8003c0e4",
       "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
       "local_source_path": null,
-      "title": "Open3D TriangleMesh API",
-      "summary": "Official Poisson and ball-pivoting reconstruction APIs; Poisson requires an oriented point cloud and produces inferred surface geometry.",
+      "title": "TriangleMesh API — Open3D 0.20.0 documentation",
+      "summary": "Open3D 0.20.0 API inspected 2026-11-12. Documents Poisson reconstruction from a point cloud (mesh plus density values), ball pivoting from oriented PointCloud and quadric decimation targeting triangle count with maximum-error/boundary-weight parameters.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -15456,10 +17262,33 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-06",
+            "REC-17",
+            "DOM-28",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-sources.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/dom-r06.md",
         "research/workflows/details/dom-r08.md"
       ]
@@ -15612,8 +17441,8 @@
       "id": "SRC-f4e7d302c752",
       "url": "https://github.com/VAST-AI-Research/TripoSR",
       "local_source_path": null,
-      "title": "TripoSR source repository",
-      "summary": "Single-image reconstruction code; command-line `run.py` outputs OBJ or GLB; README states approximately 6 GB VRAM default route and CPU fallback.",
+      "title": "TripoSR — official repository, main branch",
+      "summary": "Official mutable main README inspected 2026-11-12. Shows `python run.py examples/chair.png --output-dir output/`; default single-image route states about 6 GB VRAM, with optional texture baking. Code/checkpoint terms are separately registered; no inference was run.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -15651,13 +17480,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "REC-18",
+            "DOM-29"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-07-sources.md",
+            "research/action-audit/reviews/point-07-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-07-reconstruction.md",
+        "research/action-audit/reviews/point-07-designer.md",
+        "research/action-audit/reviews/point-07-software.md",
+        "research/action-audit/reviews/point-07-visual.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/dom-r06.md",
         "research/workflows/details/rec-r10.md"
       ]
@@ -15830,6 +17679,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-07-visual.md",
         "research/domains-and-components.md",
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json"
@@ -16319,6 +18169,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fe980d416f56",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.json",
+      "title": "sequence",
+      "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.json",
+          "access_date": "2026-11-12",
+          "sha256": "d3d8d6607a1940a6d652b05df28b5f3e22b506b4136ca4f4d12b74c5356dad37",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/research-log.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/audit-index-sources.json"
       ]
     },
     {

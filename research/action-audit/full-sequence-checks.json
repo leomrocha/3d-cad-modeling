@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-12",
+  "status": "passed",
+  "scope": "Complete recorded operation/proposed procedure documentation and source checks",
+  "coordinator_model": "gpt-6.1-sol",
+  "operations": 77,
+  "points": [
+    {
+      "point": 1,
+      "operations": 2,
+      "shared_actions": 10
+    },
+    {
+      "point": 2,
+      "operations": 6,
+      "actions": 24
+    },
+    {
+      "point": 3,
+      "operations": 10,
+      "actions": 31
+    },
+    {
+      "point": 4,
+      "operations": 9,
+      "actions": 30
+    },
+    {
+      "point": 5,
+      "operations": 14,
+      "actions": 42
+    },
+    {
+      "point": 6,
+      "operations": 19,
+      "actions": 57
+    },
+    {
+      "point": 7,
+      "operations": 17,
+      "actions": 51
+    }
+  ],
+  "distinct_action_definitions": 245,
+  "shared_intake_actions": 10,
+  "structured_action_definitions": 235,
+  "required_fields_per_structured_action": [
+    "purpose",
+    "intended_use",
+    "inputs",
+    "outputs",
+    "accuracy",
+    "evidence",
+    "software",
+    "agent",
+    "user_decisions",
+    "dependencies",
+    "proposed_development",
+    "procedure",
+    "validation",
+    "failure_resume",
+    "resources"
+  ],
+  "four_execution_options_per_structured_operation": "passed",
+  "original_recipe_routes": 38,
+  "proposed_skill_groups": 15,
+  "operations_in_original_routes": 69,
+  "additional_audited_operations": [
+    "CAD-02B",
+    "CAD-14",
+    "DOM-22",
+    "DOM-30",
+    "DOM-39",
+    "REC-02",
+    "REC-11",
+    "REC-20"
+  ],
+  "mapped_recipe_steps": 220,
+  "current_local_snapshot_hashes_checked": 252,
+  "source_observation_states": {
+    "point-02-web-sources.json": {
+      "web_inspected": 6
+    },
+    "point-03-web-sources.json": {
+      "web_inspected": 9
+    },
+    "point-04-web-sources.json": {
+      "web_inspected": 8
+    },
+    "point-05-web-sources.json": {
+      "web_inspected": 13,
+      "access_failed": 1
+    },
+    "point-06-web-sources.json": {
+      "web_inspected": 18,
+      "access_failed": 4
+    },
+    "point-07-web-sources.json": {
+      "web_inspected": 26,
+      "access_failed": 4
+    }
+  },
+  "absolute_local_link_occurrences": 1889,
+  "preserved_mermaid_blocks": 2,
+  "preserved_baseline": {
+    "head": "02a81ebe923faf9abf8f25422b9bede74702bf88",
+    "sha256": {
+      "AGENTS.md": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+      "research/implementation-plan.md": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+      "research/action-audit/plan.md": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+      "research/action-audit/point-01-model-brief.md": "67ce7477f22d31661ba8933b2cb6464782262af9c94c91b00726981f34b5ebae",
+      "research/workflows/document-checks.json": "d89976371e46b55eec8435e8f2b00dfe96b3c0dcd7595752d8dc0795f124282e",
+      "research/workflows/cad-paths.json": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+      "research/workflows/reconstruction-paths.json": "d89b7977ab3fa8013aaa1ffcfe097960f7ef6e4d3eb0db39331781a403190d2a",
+      "research/workflows/domain-paths.json": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+      "research/workflows/combined-paths.json": "0521f8e103c4a9fef0ae2222f9071d0775c2f7ef12d17335ba1f40a1b6185ec6",
+      "research/workflows/details/by-human.md": "654d5a330f0a4305a66d89917252222cba97e060e0ee7c18ad74661ae73cfffc",
+      "research/workflows/details/by-compute.md": "363debc68711f36619f01e717709074d26bd443d5b37b6c3f1417a739c07b73a"
+    }
+  },
+  "register_counts": {
+    "date": "2026-11-12",
+    "sources": 481,
+    "operations": 77,
+    "recipes": 38,
+    "ideas": 188,
+    "candidate_handoffs": 879,
+    "errors": [],
+    "check_meaning": "Registration and declared type consistency, not tool execution or geometric validation"
+  },
+  "rebuild": "passed after actual comparison",
+  "commands": [
+    [
+      "python3",
+      "research/tools/build_workflow_register.py",
+      "--date",
+      "2026-11-12"
+    ],
+    [
+      "python3",
+      "research/tools/build_workflow_details.py",
+      "--date",
+      "2026-11-12"
+    ]
+  ],
+  "runtime_modeling_cases": "Proposed future tests; point receipts record static document/source checks.",
+  "document_reviewer": "/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md",
+  "execution_history": [
+    {
+      "check": "workflow/action index generation",
+      "result": "failed",
+      "reason": "SyntaxError in temporary index writer f-string; no workflow index output written"
+    },
+    {
+      "check": "temporary writer repair",
+      "result": "applied",
+      "change": "Closed the point-number f-string expression; rerun follows"
+    },
+    {
+      "check": "workflow/action index generation rerun",
+      "result": "passed",
+      "routes": 38,
+      "mapped_steps": 220,
+      "distinct_route_operations": 69
+    },
+    {
+      "check": "source/idea registration during point07 integration",
+      "result": "failed",
+      "reason": "New skill/action and workflow/action local source records had not yet been added for AUDIT-I07 and AUDIT-I08"
+    },
+    {
+      "check": "point07 verification first attempt",
+      "result": "failed before receipt creation",
+      "reason": "Documentation builder rejected those two unregistered local source references"
+    },
+    {
+      "check": "point07 registration and receipt-inclusive rebuild rerun",
+      "result": "passed",
+      "observation": "Both index sources registered;51-action point receipt written only after successful comparison, reparsed and included in final rebuild"
+    }
+  ]
+}

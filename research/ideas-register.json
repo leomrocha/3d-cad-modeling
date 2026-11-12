@@ -2083,6 +2083,443 @@
       ]
     },
     {
+      "id": "AUDIT-I07",
+      "name": "Reuse reviewed action contracts across the fifteen workflow skills",
+      "summary": "Group existing operation/action/helper specifications under the fifteen catalogue skill names; preserve one operation definition where several skills reuse it. Include Gaussian and related NeRF view-synthesis branches with distinct payloads and backend conditions.",
+      "status": "proposal",
+      "origin": "authorized_full_action_audit",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/skill-to-actions.md",
+          "line": 1,
+          "section": "Reuse reviewed action contracts across the fifteen workflow skills"
+        }
+      ],
+      "next_check": "Use the linked supported-input, backend and future-case contracts when implementing or composing that workflow.",
+      "source_ids": [
+        "SRC-427835ebb48d",
+        "SRC-b47fffcd39a7"
+      ]
+    },
+    {
+      "id": "AUDIT-I08",
+      "name": "Link original routes to detailed actions and additional operations",
+      "summary": "Connect the 38 retained route step lists to 220 detailed operation references, and explicitly expose the eight audited operations outside those lists for conditional future compositions.",
+      "status": "proposal",
+      "origin": "authorized_full_action_audit",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/workflow-to-actions.md",
+          "line": 1,
+          "section": "Link original routes to detailed actions and additional operations"
+        }
+      ],
+      "next_check": "Use the linked supported-input, backend and future-case contracts when implementing or composing that workflow.",
+      "source_ids": [
+        "SRC-cb5cec23d032",
+        "SRC-b47fffcd39a7"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-04",
+      "name": "Convert video into an image reconstruction dataset — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Convert video into an image reconstruction dataset. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-03",
+      "name": "Estimate camera poses and sparse structure from overlapping photos — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate camera poses and sparse structure from overlapping photos. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-CAD-16",
+      "name": "Reconstruct camera poses and dense visible geometry from overlapping photos — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconstruct camera poses and dense visible geometry from overlapping photos. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-05",
+      "name": "Register RGB and depth frames and estimate sequence poses — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register RGB and depth frames and estimate sequence poses. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-06",
+      "name": "Integrate calibrated RGB-D frames into point cloud or TSDF mesh — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Integrate calibrated RGB-D frames into point cloud or TSDF mesh. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-21",
+      "name": "Depth frames to registered point cloud or mesh — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Depth frames to registered point cloud or mesh. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-17",
+      "name": "Build dense point cloud and mesh from SfM camera solution — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build dense point cloud and mesh from SfM camera solution. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-28",
+      "name": "Dense multi-view stereo to point cloud and mesh — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Dense multi-view stereo to point cloud and mesh. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-29",
+      "name": "Point cloud to surface mesh — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Point cloud to surface mesh. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-20",
+      "name": "Photos/video to camera solution, point cloud and mesh — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photos/video to camera solution, point cloud and mesh. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-10",
+      "name": "Estimate multi-view depth, camera poses and Gaussian outputs — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate multi-view depth, camera poses and Gaussian outputs. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-18",
+      "name": "Generate a single-image mesh proxy — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Generate a single-image mesh proxy. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-19",
+      "name": "Train and export a Gaussian splat scene — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train and export a Gaussian splat scene. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-20",
+      "name": "Train and export a NeRF scene — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train and export a NeRF scene. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-REC-11",
+      "name": "Train NeRF or Gaussian scene for view synthesis — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train NeRF or Gaussian scene for view synthesis. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-22",
+      "name": "Photographs to Gaussian/NeRF visual scene — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photographs to Gaussian/NeRF visual scene. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-30",
+      "name": "Photos to NeRF visual scene — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photos to NeRF visual scene. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-07-reconstruction.md",
+          "line": 1,
+          "section": "Photographs, depth and learned reconstruction"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-94415df8565c",
+        "SRC-620ff17ef7cd"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

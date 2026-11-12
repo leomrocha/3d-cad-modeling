@@ -1,0 +1,565 @@
+[
+  {
+    "url": "https://colmap.github.io/format.html",
+    "title": "Output Format — COLMAP",
+    "summary": "COLMAP current documentation inspected 2026-11-12; no local executable version checked. `images.txt` stores camera world-to-camera projection as Hamilton quaternion QW,QX,QY,QZ and translation TX,TY,TZ, plus camera/image IDs and 2D observations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-16",
+      "REC-03",
+      "REC-17",
+      "DOM-20",
+      "DOM-22"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://colmap.github.io/cameras.html",
+    "title": "Camera Models — COLMAP",
+    "summary": "COLMAP camera-model reference inspected 2026-11-12. Page identifies version 4.3.0.dev0, commit 3c1a1b9 (2026-11-08), and says camera +Z is the look direction. Lists models of varying complexity; SIMPLE_PINHOLE and PINHOLE are for images already undistorted. Projection includes perspective division, distortion and intrinsic transform; COLMAP uses corner-based pixels with top-left pixel centre at (0.5,0.5).",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-16",
+      "REC-03",
+      "REC-04",
+      "DOM-20",
+      "DOM-22"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://colmap.github.io/faq.html",
+    "title": "Frequently Asked Questions — COLMAP",
+    "summary": "COLMAP current FAQ inspected 2026-11-12. For OpenCV/Kalibr calibration imported to COLMAP, add 0.5 to cx and cy only to convert integer-centred OpenCV/Kalibr coordinates into COLMAP's corner-based convention; fx, fy and distortion remain unchanged. OPENCV distortion order is k1,k2,p1,p2; FULL_OPENCV adds k3,k4,k5,k6.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-16",
+      "REC-03",
+      "REC-04",
+      "DOM-20",
+      "DOM-22"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://colmap.github.io/cli.html",
+    "title": "Command-line Interface — COLMAP",
+    "summary": "COLMAP current CLI documentation inspected 2026-11-12; no local binary version checked. Shows sparse matching/mapper, image_undistorter, patch_match_stereo, stereo_fusion, poisson_mesher and delaunay_mesher stages. PatchMatch requires the undistorted workspace; fusion creates colored cloud. GPU backend support depends on selected build/options.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-16",
+      "REC-03",
+      "REC-17",
+      "DOM-20",
+      "DOM-22",
+      "DOM-28"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md",
+    "title": "OpenMVS Usage Guide — develop branch",
+    "summary": "Official OpenMVS usage guide on mutable develop branch inspected 2026-11-12. Documents COLMAP image_undistorter output, `InterfaceCOLMAP -i dense -o scene.mvs --image-folder dense/images`, DensifyPointCloud, ReconstructMesh, optional refinement/texturing, a CPU SGM route and memory sub-scene splitting that may leave seams.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-16",
+      "REC-17",
+      "DOM-28"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html",
+    "title": "RGBDImage API — Open3D 0.20.0 documentation (access failed)",
+    "summary": "Attempt returned web tool error: 400 timeout fetching page. Page contents were not inspected; no technical claims rely on this URL.",
+    "access_date": "2026-11-12",
+    "evidence_status": "access_failed",
+    "supporting_claims": [],
+    "content_type": null,
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
+    "title": "compute_rgbd_odometry — Open3D 0.20.0 documentation",
+    "summary": "Open3D 0.20.0 API inspected 2026-11-12. `compute_rgbd_odometry` estimates 6D rigid motion from source and target RGBDImage and returns success, 4x4 motion matrix and 6x6 information matrix. Local trajectory composition direction is not inferred from the pair API alone.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-05",
+      "DOM-21"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+    "title": "RGBD integration — Open3D 0.20.0 documentation",
+    "summary": "Open3D 0.20.0 RGB-D tutorial inspected 2026-11-12. Describes UniformTSDFVolume and ScalableTSDFVolume, voxel length and SDF truncation examples; sample integrates with inverse(camera_poses[i].pose). Tutorial calls create_from_color_and_depth with depth_trunc 4.0; this example value differs from API defaults. No local integration was run.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-05",
+      "REC-06",
+      "DOM-21",
+      "DOM-28"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
+    "title": "PointCloud API — Open3D 0.20.0 documentation",
+    "summary": "Open3D 0.20.0 API inspected 2026-11-12. Documents consistent tangent-plane normal orientation using a k-nearest-neighbour Riemannian graph and related normal orientation methods; consistency does not establish globally outward direction.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-06",
+      "REC-17",
+      "DOM-28",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+    "title": "TriangleMesh API — Open3D 0.20.0 documentation",
+    "summary": "Open3D 0.20.0 API inspected 2026-11-12. Documents Poisson reconstruction from a point cloud (mesh plus density values), ball pivoting from oriented PointCloud and quadric decimation targeting triangle count with maximum-error/boundary-weight parameters.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-06",
+      "REC-17",
+      "DOM-28",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.nerf.studio/quickstart/custom_dataset.html",
+    "title": "Using custom data — Nerfstudio documentation",
+    "summary": "Current Nerfstudio custom-data guide inspected 2026-11-12; release not pinned. States per-image camera poses are required; `ns-process-data images|video` uses COLMAP and FFmpeg; supplied pose paths include Metashape XML and RealityCapture CSV. The guide alone does not specify parser auto-orientation/scale settings.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-04",
+      "REC-11",
+      "REC-20",
+      "DOM-22",
+      "DOM-30"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.nerf.studio/nerfology/methods/splat.html",
+    "title": "Splatfacto — Nerfstudio documentation",
+    "summary": "Current Nerfstudio Splatfacto guide inspected 2026-11-12; release not pinned. Documents trained Gaussian splat export to PLY via `ns-export gaussian-splat`; page says mesh and point-cloud export are currently unsupported for Splatfacto's own export path.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-11",
+      "REC-19",
+      "DOM-29",
+      "DOM-30"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.nerf.studio/quickstart/export_geometry.html",
+    "title": "Export geometry — Nerfstudio documentation",
+    "summary": "Current Nerfstudio export guide inspected 2026-11-12; release not pinned. Documents point-cloud PLY and textured mesh OBJ output; TSDF mesh export applies across models; Poisson mesh requires a model computing/predicting normals. Model-specific export stages remain distinct from Gaussian PLY export.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-11",
+      "REC-19",
+      "REC-20",
+      "DOM-29",
+      "DOM-30"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/ByteDance-Seed/Depth-Anything-3",
+    "title": "Depth Anything 3 — official repository, main branch",
+    "summary": "Official mutable main repository page inspected 2026-11-12. Documents monocular/multi-view depth, pose-conditioned depth, camera intrinsics/extrinsics estimation and `da3 video` CLI example with fps and GLB export options. Repository page advertises Apache-2.0 code; checkpoint/model terms remain model-specific.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-10",
+      "DOM-22",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/depth-anything/DA3Metric-Large",
+    "title": "DA3Metric-Large — Hugging Face model card",
+    "summary": "DA3Metric-Large model card inspected 2026-11-12; URL redirected to uppercase repository slug. Card labels this specific checkpoint Apache 2.0, claims monocular metric depth with canonical depth multiplied by focal length, and shows inference depth/confidence maps, world-to-camera extrinsics, intrinsics and GLB/NPZ/PLY/Gaussian exports. The inspected card does not state a canonical focal reference or normalization divisor; do not generalize to every DA3 model.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-10",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+    "title": "DA3 Streaming README — main branch",
+    "summary": "Official mutable main README inspected 2026-11-12. Documents camera pose and intrinsic text files, combined point cloud PLY and optional per-frame RGB/depth/confidence outputs. Peak VRAM table depends on named datasets, resolutions, chunk sizes and overlap; it is not a universal resource requirement.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-10",
+      "DOM-22",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/facebookresearch/sam-3d-objects",
+    "title": "SAM 3D Objects — official repository, main branch",
+    "summary": "Official mutable main repository inspected 2026-11-12. Example loads image and segmentation mask, runs inference, and saves `output[\"gs\"]` as Gaussian splat PLY. The inspected example does not demonstrate triangle-mesh output. License is separately covered by an existing source-register record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-18",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md",
+    "title": "SAM 3D Objects setup — main branch",
+    "summary": "Official mutable main setup page inspected 2026-11-12. States Linux 64-bit and NVIDIA GPU with at least 32 GB VRAM; notes some PyTorch3D components require GPU-enabled compilation. These are setup claims for the documented route, not local measurements.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-18",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/VAST-AI-Research/TripoSR",
+    "title": "TripoSR — official repository, main branch",
+    "summary": "Official mutable main README inspected 2026-11-12. Shows `python run.py examples/chair.png --output-dir output/`; default single-image route states about 6 GB VRAM, with optional texture baking. Code/checkpoint terms are separately registered; no inference was run.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-18",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/microsoft/TRELLIS.2",
+    "title": "TRELLIS.2 — official repository, main branch",
+    "summary": "Official mutable main repository inspected 2026-11-12. Example runs `pipeline.run(image)[0]` to produce a mesh and exports via O-Voxel `to_glb`. README says tested only on Linux, requires NVIDIA GPU with at least 24 GB memory, and recommends CUDA Toolkit 12.4. These are source setup conditions, not local measurements.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-18",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://huggingface.co/microsoft/TRELLIS.2-4B",
+    "title": "microsoft/TRELLIS.2-4B — Hugging Face model card",
+    "summary": "Named TRELLIS.2-4B model card inspected 2026-11-12. Card labels this checkpoint MIT; this claim applies to this model card, not all associated datasets/assets or other model releases.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-18",
+      "DOM-29"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://www.open3d.org/docs/0.20.0/python_api/open3d.geometry.RGBDImage.html",
+    "title": "RGBDImage API — Open3D 0.20.0 documentation (access failed)",
+    "summary": "Version-pinned API URL attempt returned web tool message that the URL is not accessible via the tool. Page contents were not inspected; no claims rely on it.",
+    "access_date": "2026-11-12",
+    "evidence_status": "access_failed",
+    "supporting_claims": [],
+    "content_type": null,
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md"
+    ]
+  },
+  {
+    "url": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+    "title": "RGBDImageFactory.cpp — Open3D v0.20.0 GitHub source (access failed)",
+    "summary": "GitHub HTML page attempt returned web tool error `Cache miss`; page contents were not inspected. Successful raw source URL is recorded separately.",
+    "access_date": "2026-11-12",
+    "evidence_status": "access_failed",
+    "supporting_claims": [],
+    "content_type": null,
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md"
+    ]
+  },
+  {
+    "url": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImage.cpp",
+    "title": "RGBDImage.cpp — Open3D v0.20.0 source",
+    "summary": "Official Open3D v0.20.0 source file inspected 2026-11-12. Contains RGBDImage container operations but not the color-depth conversion implementation; no depth-scale claim relies on this file.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-05",
+      "REC-06"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/pybind/geometry/image.cpp",
+    "title": "pybind geometry image.cpp — Open3D v0.20.0 GitHub source (access failed)",
+    "summary": "GitHub HTML page attempt returned web tool error `Cache miss`; page contents were not inspected. No technical claims rely on this URL.",
+    "access_date": "2026-11-12",
+    "evidence_status": "access_failed",
+    "supporting_claims": [],
+    "content_type": null,
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+    "title": "RGBDImageFactory.cpp — Open3D v0.20.0 source",
+    "summary": "Official raw source on tag v0.20.0 inspected 2026-11-12. `CreateFromColorAndDepth` accepts caller-provided depth_scale/depth_trunc/intensity flag, passes scale and truncation to `ConvertDepthToFloatImage`, and requires matching color/depth dimensions. Default arguments are declared in RGBDImage.h, not in this function definition.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-05",
+      "REC-06",
+      "DOM-21"
+    ],
+    "content_type": "text/plain",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/Image.cpp",
+    "title": "Image.cpp — Open3D v0.20.0 source",
+    "summary": "Official raw source on tag v0.20.0 inspected 2026-11-12. `ConvertDepthToFloatImage` creates float depth, divides by depth_scale, and sets samples >= depth_trunc to zero; raw zeros remain zero after division. This establishes source-code behavior for this pinned tag.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-05",
+      "REC-06",
+      "DOM-21"
+    ],
+    "content_type": "text/plain",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.nerf.studio/quickstart/data_conventions.html",
+    "title": "Data conventions — Nerfstudio documentation",
+    "summary": "Current Nerfstudio data-conventions page inspected 2026-11-12; release not pinned. Defines OpenGL/Blender/NeRF camera axes, +Z-up world, pixel-centre convention, transforms.json camera basis columns and origin translation. Depth images are assumed 16/32-bit millimetres, zero means unknown, and `depth_unit_scale_factor` changes scale; depth images resize to RGB by default. Page does not specify selected parser auto-orientation/scale-normalization runtime config.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-04",
+      "REC-11",
+      "REC-20",
+      "DOM-22",
+      "DOM-30"
+    ],
+    "content_type": "text/html",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImage.h",
+    "title": "RGBDImage.h — Open3D v0.20.0 API declaration",
+    "summary": "Official raw Open3D v0.20.0 header inspected 2026-11-12. Declares `CreateFromColorAndDepth` defaults depth_scale=1000.0, depth_trunc=3.0, convert_rgb_to_intensity=true and states scale occurs before truncation; equal-size registered color/depth images are required by RGBDImage contract.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-05",
+      "REC-06",
+      "DOM-21"
+    ],
+    "content_type": "text/plain",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  },
+  {
+    "url": "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py",
+    "title": "nerfstudio_dataparser.py — Nerfstudio main source",
+    "summary": "Official raw Nerfstudio main-branch parser inspected 2026-11-12; branch is mutable and installed version not checked. Exposes orientation_method=up, center_method=poses, auto_scale_poses=true, scale_factor=1 and scene_scale=1; computes pose transform/scale and emits dataparser_transform/dataparser_scale. Uses metadata orientation_override/applied_transform/applied_scale when supplied, with a fallback COLMAP axis mapping when COLMAP output exists. No runtime parser was executed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-04",
+      "REC-11",
+      "REC-20",
+      "DOM-22",
+      "DOM-30"
+    ],
+    "content_type": "text/plain",
+    "local_original": null,
+    "sha256": null,
+    "referring_documents": [
+      "research/action-audit/reviews/point-07-sources.md",
+      "research/action-audit/reviews/point-07-software.md"
+    ]
+  }
+]

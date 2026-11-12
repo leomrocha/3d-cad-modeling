@@ -232,8 +232,8 @@
       "family": "cad",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md",
         "https://github.com/colmap/colmap",
@@ -285,8 +285,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://alicevision.org/",
@@ -299,8 +299,8 @@
       "family": "reconstruction",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
         "https://github.com/nerfstudio-project/nerfstudio"
@@ -312,8 +312,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
@@ -325,8 +325,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
       ]
@@ -375,8 +375,8 @@
       "family": "reconstruction",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/ByteDance-Seed/Depth-Anything-3",
         "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
@@ -389,8 +389,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
@@ -469,8 +469,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
@@ -482,8 +482,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/VAST-AI-Research/TripoSR",
         "https://github.com/microsoft/TRELLIS.2",
@@ -496,8 +496,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://docs.nerf.studio/nerfology/methods/splat.html"
       ]
@@ -508,8 +508,8 @@
       "family": "reconstruction",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md"
@@ -784,8 +784,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md"
       ]
@@ -796,8 +796,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md"
       ]
@@ -808,8 +808,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md"
       ]
@@ -887,8 +887,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md"
       ]
@@ -899,8 +899,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md"
       ]
@@ -911,8 +911,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/reconstruction.md"
       ]

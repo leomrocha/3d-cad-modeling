@@ -1,0 +1,812 @@
+{
+  "date": "2026-11-12",
+  "status": "proposed_packaging_map",
+  "source_catalogue": "/home/leo/projects/3dmodeling/skills/README.md",
+  "skills": [
+    {
+      "skill": "model-brief",
+      "status": "proposal",
+      "summary": "Bind purpose, source claims, dimensions, feature criteria and candidate branches.",
+      "operations": [
+        {
+          "operation_id": "CAD-01",
+          "name": "Extract a model brief from text and dimensions",
+          "point": 1,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md"
+        },
+        {
+          "operation_id": "DOM-01",
+          "name": "Normalize model brief",
+          "point": 1,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md"
+        }
+      ]
+    },
+    {
+      "skill": "ocs-engineering",
+      "status": "proposal",
+      "summary": "Reuse the existing session, native geometry, source/frame and readback contract for supported OCS capabilities. Alternate backend requirements retain their own procedure.",
+      "operations": [
+        {
+          "operation_id": "CAD-09",
+          "name": "Build and constrain an editable planar sketch",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-10",
+          "name": "Create a kernel solid and native model document from confirmed parameters",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-12",
+          "name": "Assemble existing CAD or source-library components",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "CAD-13",
+          "name": "Verify model geometry and saved output",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-14",
+          "name": "Recover from failed interpretation or geometry construction",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "DOM-05",
+          "name": "Export STEP solid",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "DOM-07",
+          "name": "Place reusable component in assembly",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "DOM-25",
+          "name": "Create fabrication package",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-26",
+          "name": "Version and reuse component revision",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "parametric-solid-modeling",
+      "status": "proposal",
+      "summary": "Build constrained/source-defined geometry and preserve actual native/source/solid outputs.",
+      "operations": [
+        {
+          "operation_id": "CAD-09",
+          "name": "Build and constrain an editable planar sketch",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-10",
+          "name": "Create a kernel solid and native model document from confirmed parameters",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-15",
+          "name": "Render source-defined CSG as a mesh",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "DOM-03",
+          "name": "DXF/SVG drawing to constrained profile",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "DOM-04",
+          "name": "Brief/profile to native CAD solid",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "DOM-25",
+          "name": "Create fabrication package",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "REC-14",
+          "name": "Remodel segmented scan evidence as parametric CAD",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "DOM-23",
+          "name": "Scan or mesh to parametric CAD remodeling",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "drawing-to-cad",
+      "status": "proposal",
+      "summary": "Rectify drawings, associate annotations/features, establish view correspondence and author checked profiles/solids.",
+      "operations": [
+        {
+          "operation_id": "CAD-02",
+          "name": "Rectify a raster drawing plane from known dimensions",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "CAD-03",
+          "name": "Recognize dimension text with OCR",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "CAD-04",
+          "name": "Extract raster edges, lines and contours",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "CAD-05",
+          "name": "Convert raster floor-plan candidates into a wall and opening graph",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "CAD-06",
+          "name": "Register orthographic drawing views in a shared coordinate frame",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "CAD-07",
+          "name": "Reconstruct a candidate 3D wireframe and surface from orthographic views",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "CAD-08",
+          "name": "Read and clean vector drawing geometry",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-09",
+          "name": "Build and constrain an editable planar sketch",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-17",
+          "name": "Build wall and opening solids from a confirmed floor-plan graph",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "DOM-02",
+          "name": "Raster sketch to constrained sketch",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "DOM-18",
+          "name": "Raster floor plan to IFC building",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "blender-modeling",
+      "status": "proposal",
+      "summary": "Compose supported scene/mesh/camera derivatives with explicit input adapters and asset identity.",
+      "operations": [
+        {
+          "operation_id": "DOM-12",
+          "name": "Export mesh assets for MuJoCo",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-17",
+          "name": "IFC to GLB display scene",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-24",
+          "name": "Assemble and inspect Blender scene",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "capture-and-calibration",
+      "status": "proposal",
+      "summary": "Prepare image/depth evidence, camera calibration, timing and explicit pose/control roles.",
+      "operations": [
+        {
+          "operation_id": "CAD-02B",
+          "name": "Calibrate camera poses from photographs and known controls",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-01",
+          "name": "Calibrate camera intrinsics and distortion",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-02",
+          "name": "Solve camera pose from known 3D-to-2D correspondences",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-04",
+          "name": "Convert video into an image reconstruction dataset",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-05",
+          "name": "Register RGB and depth frames and estimate sequence poses",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "DOM-21",
+          "name": "Depth frames to registered point cloud or mesh",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "photogrammetry",
+      "status": "proposal",
+      "summary": "Recover sparse/dense observed geometry with explicit scale controls and separate meshing.",
+      "operations": [
+        {
+          "operation_id": "CAD-16",
+          "name": "Reconstruct camera poses and dense visible geometry from overlapping photos",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-03",
+          "name": "Estimate camera poses and sparse structure from overlapping photos",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-17",
+          "name": "Build dense point cloud and mesh from SfM camera solution",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "DOM-20",
+          "name": "Photos/video to camera solution, point cloud and mesh",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "DOM-28",
+          "name": "Dense multi-view stereo to point cloud and mesh",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "point-cloud-and-mesh-processing",
+      "status": "proposal",
+      "summary": "Register samples, integrate depth, fit supported models, infer surfaces and check approximation.",
+      "operations": [
+        {
+          "operation_id": "CAD-11",
+          "name": "Fit analytic features to scans or image-derived point clouds",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-05",
+          "name": "Register RGB and depth frames and estimate sequence poses",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-06",
+          "name": "Integrate calibrated RGB-D frames into point cloud or TSDF mesh",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-07",
+          "name": "Estimate coarse transform between point clouds",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-08",
+          "name": "Refine registration and compare point-cloud surfaces",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-09",
+          "name": "Segment point clouds and fit candidate primitive evidence",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "DOM-19",
+          "name": "Register scan to building frame",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "DOM-21",
+          "name": "Depth frames to registered point cloud or mesh",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "DOM-29",
+          "name": "Point cloud to surface mesh",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "scan-to-cad",
+      "status": "proposal",
+      "summary": "Relate CAD, scans, drawings and camera annotations, then remodel or compare source-linked features.",
+      "operations": [
+        {
+          "operation_id": "CAD-11",
+          "name": "Fit analytic features to scans or image-derived point clouds",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-12",
+          "name": "Register existing CAD to calibrated photographs or scan points",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-13",
+          "name": "Anchor a screen sketch to a 3D surface",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-14",
+          "name": "Remodel segmented scan evidence as parametric CAD",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-15",
+          "name": "Reconcile scan surfaces with dimensioned drawings",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "REC-16",
+          "name": "Iterate CAD edits against registered evidence",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "DOM-23",
+          "name": "Scan or mesh to parametric CAD remodeling",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "generative-3d-reference",
+      "status": "proposal",
+      "summary": "Use the selected learned-depth or image-generated proxy branch with model-specific outputs, rights and scale evidence.",
+      "operations": [
+        {
+          "operation_id": "REC-10",
+          "name": "Estimate multi-view depth, camera poses and Gaussian outputs",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-18",
+          "name": "Generate a single-image mesh proxy",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "gaussian-scene-reference",
+      "status": "proposal",
+      "summary": "Reconstruct view-synthesis scenes; Gaussian and related NeRF branches retain separate payloads, renderers and geometry-extraction conditions.",
+      "operations": [
+        {
+          "operation_id": "REC-11",
+          "name": "Train NeRF or Gaussian scene for view synthesis",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-19",
+          "name": "Train and export a Gaussian splat scene",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "REC-20",
+          "name": "Train and export a NeRF scene",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "DOM-22",
+          "name": "Photographs to Gaussian/NeRF visual scene",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        },
+        {
+          "operation_id": "DOM-30",
+          "name": "Photos to NeRF visual scene",
+          "point": 7,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "architecture-ifc",
+      "status": "proposal",
+      "summary": "Author semantic building relationships and preserve element/frame identity through geometry/display/environment derivatives.",
+      "operations": [
+        {
+          "operation_id": "DOM-02",
+          "name": "Raster sketch to constrained sketch",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "DOM-15",
+          "name": "Author semantic IFC building",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-16",
+          "name": "Extract IFC geometry as triangles",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-17",
+          "name": "IFC to GLB display scene",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-18",
+          "name": "Raster floor plan to IFC building",
+          "point": 4,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        },
+        {
+          "operation_id": "DOM-19",
+          "name": "Register scan to building frame",
+          "point": 5,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        },
+        {
+          "operation_id": "DOM-27",
+          "name": "Extract IFC geometry as OpenCASCADE B-rep",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-34",
+          "name": "Author static MuJoCo environment from BIM mesh",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-35",
+          "name": "Place library component in semantic IFC",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "robot-model-handoff",
+      "status": "proposal",
+      "summary": "Author link/joint graphs and physical/collision roles, serialize robot descriptions and check the named consumer.",
+      "operations": [
+        {
+          "operation_id": "DOM-08",
+          "name": "CAD assembly to articulated robot structure",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-09",
+          "name": "Robot assembly to URDF package",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-10",
+          "name": "URDF import and MJCF conversion",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-11",
+          "name": "Author native MJCF simulation model",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-12",
+          "name": "Export mesh assets for MuJoCo",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-13",
+          "name": "Generate convex collision set",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-14",
+          "name": "Calculate or import physical mass properties",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-31",
+          "name": "Author assembly graph and joint set",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-32",
+          "name": "Map CAD link geometry to MJCF body tree",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-33",
+          "name": "Add environment collision geometry to MJCF",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-34",
+          "name": "Author static MuJoCo environment from BIM mesh",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-37",
+          "name": "Author robot assembly from CAD component",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "component-library",
+      "status": "proposal",
+      "summary": "Identify exact source assets/terms and revisions, import/place instances and retain reusable derivative manifests.",
+      "operations": [
+        {
+          "operation_id": "CAD-12",
+          "name": "Assemble existing CAD or source-library components",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "DOM-05",
+          "name": "Export STEP solid",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "DOM-06",
+          "name": "Library asset intake and rights record",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "DOM-07",
+          "name": "Place reusable component in assembly",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "DOM-26",
+          "name": "Version and reuse component revision",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "DOM-35",
+          "name": "Place library component in semantic IFC",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-37",
+          "name": "Author robot assembly from CAD component",
+          "point": 6,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        },
+        {
+          "operation_id": "DOM-38",
+          "name": "Import STEP solid into CAD representation",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "DOM-39",
+          "name": "Export STEP assembly",
+          "point": 2,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        },
+        {
+          "operation_id": "DOM-40",
+          "name": "Script-parametric CAD authoring",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        }
+      ]
+    },
+    {
+      "skill": "model-verification",
+      "status": "proposal",
+      "summary": "Check actual saved artifacts and recover affected descendants; action-specific validation is also present throughout all 77 operations.",
+      "operations": [
+        {
+          "operation_id": "CAD-13",
+          "name": "Verify model geometry and saved output",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        },
+        {
+          "operation_id": "CAD-14",
+          "name": "Recover from failed interpretation or geometry construction",
+          "point": 3,
+          "procedure": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "contract": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        }
+      ]
+    }
+  ]
+}

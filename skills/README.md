@@ -38,3 +38,7 @@ Detailed source, licence and dependency assessments: [CAD and skills](../researc
 The [implementation plan](../research/implementation-plan.md) defines each workflow's purpose, supporting software, inputs, deliverables and validation sequence. During implementation, package each exercised workflow with its `SKILL.md`, scripts, references and fixtures. Reuse the existing OCS contract across reconstruction and CAD handoffs.
 
 The [workflow operation catalogue](../research/workflows/operation-catalogue.md) maps the proposed skills to source-backed transformations and combined routes. The [source register](../research/sources/source-register.md) and [ideas register](../research/ideas-register.md) retain the original links, summaries and alternative proposals.
+
+## Detailed action and helper contracts
+
+The [skill-to-action map](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) links the fifteen catalogue entries to all 77 audited operations. Each operation's action records state proposed helper inputs/outputs, existing API dependencies, software and agent decisions, validation cases and recovery. The [workflow-to-action index](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md) preserves the original 38 routes and their ordered steps. The existing OCS skill retains its documented capability; the map records proposed packaging and supported-backend conditions.

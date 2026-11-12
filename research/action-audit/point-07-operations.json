@@ -1,0 +1,1839 @@
+{
+  "point": 7,
+  "status": "procedure_proposal",
+  "date": "2026-11-12",
+  "requested_dispatch": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh"
+  },
+  "actual_model_identity": "unavailable",
+  "operations": [
+    {
+      "operation_id": "REC-04",
+      "name": "Convert video into an image reconstruction dataset",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+        "https://github.com/nerfstudio-project/nerfstudio"
+      ],
+      "actions": [
+        {
+          "id": "REC-04-A01",
+          "name": "Inventory video timing camera state and coverage",
+          "purpose": "Preserve source timeline and identify usable capture intervals.",
+          "intended_use": "Prepare captured-image dataset.",
+          "inputs": "Original video, stream/timebase metadata, camera state, rights and intended scene/use.",
+          "outputs": "Source hash/stream manifest, scene intervals and frame-selection criteria.",
+          "accuracy": "Temporal precision, rolling-shutter/exposure effects and required view coverage recorded separately.",
+          "evidence": "Original bytes, presentation timestamps, stream metadata and source rights.",
+          "software": "Use supported ffprobe/decoder metadata inspection; inventory resolution/rate/rotation and variable timing.",
+          "agent": "Identify static scene, viewpoint changes, occlusion and moving content.",
+          "user_decisions": "Choose requested scene interval or resolve intended moving/static subject.",
+          "dependencies": "Pinned video metadata/decoder API; exact source inspection needed before adapter execution.",
+          "proposed_development": "Proposal: video intake emits stream/timebase/camera/rights records and selection plan.",
+          "procedure": [
+            "Pin original stream bytes and metadata.",
+            "Identify camera-state/scene intervals.",
+            "Define sharpness, redundancy and viewpoint coverage criteria."
+          ],
+          "validation": "Frame rate alone cannot reconstruct variable presentation timestamps; physical capture and synthetic frames remain labelled.",
+          "failure_resume": "Retain source manifest; revise only interval/camera classification.",
+          "resources": "Local metadata then low-resolution review before full decode; remote/manual scene review separately recorded."
+        },
+        {
+          "id": "REC-04-A02",
+          "name": "Extract selected frames with reversible timeline mapping",
+          "purpose": "Create image derivatives while preserving acquisition identity.",
+          "intended_use": "Produce photo-set candidate.",
+          "inputs": "Video/selection plan, decoder version and resize/rotation/colour policy.",
+          "outputs": "Frame images with original index/timestamp/source hash and pixel-processing map.",
+          "accuracy": "Resize/crop effects on calibration and image quality explicit; no invented temporal interval.",
+          "evidence": "Decoder/settings receipt and original-to-derived image mapping.",
+          "software": "Decode selected source frames with supported FFmpeg selection; retain exact timestamps and avoid synthesizing intermediate views.",
+          "agent": "Review selected viewpoints and omissions against complete interval.",
+          "user_decisions": "Choose alternate frame density when needed for stated coverage.",
+          "dependencies": "Exact selected FFmpeg build/options; build-dependent software licence separate from media rights.",
+          "proposed_development": "Proposal: frame extractor accepts timeline selections and outputs images plus frame/time/pixel manifest.",
+          "procedure": [
+            "Decode selected original frame events.",
+            "Apply only recorded image transforms.",
+            "Write images and exact source-frame/timestamp associations."
+          ],
+          "validation": "Derived frame label must identify original event; duplicates and interpolation retain explicit status.",
+          "failure_resume": "Keep successfully mapped images; reconcile partial output before retry selected intervals.",
+          "resources": "Local decode cost follows duration/resolution/codec and chosen frames; no dense reconstruction yet."
+        },
+        {
+          "id": "REC-04-A03",
+          "name": "Check dataset quality and camera compatibility",
+          "purpose": "Verify extracted images form a traceable reconstruction dataset.",
+          "intended_use": "Publish photo-set for sparse/learned routes.",
+          "inputs": "Extracted frames, source interval and camera/calibration state.",
+          "outputs": "Checked photo-set with coverage, quality and timing exceptions.",
+          "accuracy": "Coverage/blur criteria tied to target use; masks and shared capture dependence retained.",
+          "evidence": "Original views beside derivatives, source timeline and camera-state records.",
+          "software": "Check hashes, monotonic timestamps per stream, duplicate rates and compatible image/calibration dimensions.",
+          "agent": "Separate reviewer checks missed viewpoint bridges, dynamics and source/generated classification.",
+          "user_decisions": "Resolve recapture or scope where required viewpoints are absent.",
+          "dependencies": "Proposed dataset checker and point05 camera/preprocessing contract.",
+          "proposed_development": "Proposal: frame-set verifier emits per-image quality/camera/timeline readiness.",
+          "procedure": [
+            "Compare selected frames to source interval.",
+            "Check timing, viewpoint bridges and camera groups.",
+            "Publish dataset and retained source-quality issues."
+          ],
+          "validation": "Many adjacent images do not substitute geometric baseline; moving/blurred regions remain explicit.",
+          "failure_resume": "Retain valid groups; revise selected intervals/masks only and invalidate dependent feature/pose results.",
+          "resources": "Local quality summaries before remote image review; manual capture effort separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent reviews timeline/viewpoint evidence and directs selection.",
+        "hybrid": "Software extracts/filters; agent reviews coverage and dynamics.",
+        "software_first": "Checked capture classes select frames with quality/timing exceptions.",
+        "deterministic": "Explicit timestamps/transforms/criteria yield reproducible frame dataset."
+      },
+      "alternatives": [
+        "Manually selected original keyframes with exact timeline records.",
+        "Bounded automatic sharpness/redundancy selection followed by coverage review.",
+        "Low-detail context can use fewer views; metric reconstruction requires observed coverage and independent controls."
+      ],
+      "merge": {
+        "branches": "Frame-density/selection candidates share source stream and intended view coverage; camera groups/resources explicit.",
+        "evaluation": "VLM compares original interval/viewpoint evidence; software reports timing/quality/coverage statistics.",
+        "combination": "Combine unique original frames with exact source mapping; generated/interpolated views retain separate evidence class.",
+        "post_merge": "Recheck duplicates, timing, camera groups and coverage of the new dataset."
+      },
+      "software_migration": "Automate demonstrated codec/camera classes after variable-rate, rotated frames, motion, blur and lost-timeline fixtures.",
+      "future_tests": [
+        "Variable-rate clip preserves original presentation timestamps rather than index/fixed-fps guess.",
+        "Frame interpolation is labelled generated and cannot act as independent measured view.",
+        "Sparse sampling omits a viewpoint bridge and triggers dataset coverage exception."
+      ]
+    },
+    {
+      "operation_id": "REC-03",
+      "name": "Estimate camera poses and sparse structure from overlapping photos",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://alicevision.org/",
+        "https://github.com/openMVG/openMVG",
+        "https://colmap.github.io/format.html",
+        "https://colmap.github.io/cameras.html",
+        "https://colmap.github.io/faq.html",
+        "https://colmap.github.io/cli.html",
+        "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md"
+      ],
+      "actions": [
+        {
+          "id": "REC-03-A01",
+          "name": "Bind image identities calibration groups and sparse-solve settings",
+          "purpose": "Define source-consistent camera/feature inputs.",
+          "intended_use": "Prepare sparse structure-from-motion reconstruction.",
+          "inputs": "Photo-set with original/derived lineage, camera state/masks and optional calibration/control receipts.",
+          "outputs": "Dataset/camera-group manifest, fit/check split and sparse configuration.",
+          "accuracy": "Pixel/model convention and source uncertainty explicit; metric scale is conditional on controls.",
+          "evidence": "Image hashes, dimensions, camera/lens/crop/focus state and mask provenance.",
+          "software": "Inspect images and camera models; map calibration through verified adapter; group shared intrinsics only for documented shared state. COLMAP +0.5 principal-point correction is conditional on actual source/destination pixel conventions; read back saved camera model/parameters.",
+          "agent": "Identify feature-bearing static regions, symmetry and repeated texture.",
+          "user_decisions": "Supply missing metric controls only if intended use requires metric readiness.",
+          "dependencies": "COLMAP/pycolmap or separate Meshroom/OpenMVG branch; point05 calibration contract.",
+          "proposed_development": "Proposal: SfM intake emits per-image camera/model/mask records and explicit scale status.",
+          "procedure": [
+            "Pin dataset and camera groups.",
+            "Bind image transforms to intrinsic/distortion convention.",
+            "Reserve independent views/controls and choose sparse settings."
+          ],
+          "validation": "Photo-only input permits arbitrary-scale reconstruction; original scale-control checks apply only when linked metric evidence exists.",
+          "failure_resume": "Retain valid camera groups; changed image/calibration invalidates their feature/pose descendants.",
+          "resources": "Local metadata and bounded image review precede feature extraction; model calls/manual control capture separate."
+        },
+        {
+          "id": "REC-03-A02",
+          "name": "Estimate sparse cameras and points with retained hypotheses",
+          "purpose": "Recover camera geometry from image correspondences.",
+          "intended_use": "Produce camera-solution and sparse cloud candidates.",
+          "inputs": "Checked dataset/configuration and any sourced calibration priors.",
+          "outputs": "Feature/match database, camera poses/intrinsics, sparse points and reconstruction components. Store COLMAP image poses as world→camera Hamilton (qw,qx,qy,qz) plus translation and preserve source image/camera IDs.",
+          "accuracy": "Reprojection residuals are fit diagnostics; intrinsic/pose/scale uncertainty and metric allowances separate.",
+          "evidence": "Feature tracks, masks, image/camera IDs, solver settings and run lineage.",
+          "software": "Use documented feature_extractor, chosen matcher and mapper or selected equivalent; preserve raw components and bundle-adjustment calibration policy.",
+          "agent": "Review correspondence ambiguity, disconnected components and implausible camera paths.",
+          "user_decisions": "Choose supported branch or acquire bridge evidence where geometry is ambiguous.",
+          "dependencies": "Pinned sparse backend/build; exact CPU/GPU feature/matching options inspected.",
+          "proposed_development": "Proposal: sparse runner emits database/model/settings plus registered/unregistered-image and component reports.",
+          "procedure": [
+            "Extract features and match declared image pairs.",
+            "Estimate cameras/points under recorded calibration-refinement policy.",
+            "Retain components, track associations and alternative hypotheses."
+          ],
+          "validation": "Camera database/model readback matches image dimensions/model parameters; disconnected components keep independent frames.",
+          "failure_resume": "Resume only compatible source/config checkpoints; corrupt/stale database remains preserved and isolated.",
+          "resources": "Local CPU-capable sparse route where supported; cost follows images/resolution/features/pairs; GPU backend conditional."
+        },
+        {
+          "id": "REC-03-A03",
+          "name": "Validate camera coverage and scale evidence",
+          "purpose": "Determine supported camera/cloud use.",
+          "intended_use": "Publish camera-solution and sparse point-cloud with frame/scale status.",
+          "inputs": "Sparse candidates, reserved views/controls and optional scale/datum evidence.",
+          "outputs": "Checked sparse model, normalized pose convention, control/coverage report and scale transform if supported.",
+          "accuracy": "Metric check criteria use independent controls; fit residual and estimated scale uncertainty separate.",
+          "evidence": "Withheld physical controls/captured views, original tracks and source identities.",
+          "software": "Inspect registered-view/component coverage, residual distribution and poses; apply sourced similarity/scale only with sufficient controls and reserve independent checks.",
+          "agent": "Separate reviewer checks physical feature correspondence and repeated/symmetric alternatives.",
+          "user_decisions": "Resolve metric datum/control or missing view evidence needed by consumer.",
+          "dependencies": "Point05 pose/registration validation and sparse output reader.",
+          "proposed_development": "Proposal: sparse verifier emits per-camera/component readiness, control residuals and explicit arbitrary/metric scale state.",
+          "procedure": [
+            "Check camera/track coverage and source correspondence.",
+            "If metric use is requested, solve named control transform and test withheld controls.",
+            "Publish exact sparse outputs and remaining component/scale states."
+          ],
+          "validation": "Calibration target units alone do not scale an unrelated photo object; two scale lengths do not automatically determine full spatial datum.",
+          "failure_resume": "Retain valid components; changed scale/alignment invalidates dependent dense/trained coordinates only.",
+          "resources": "Local residual/control checks before dense work; remote semantic review/manual measurement separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets camera/source ambiguity and directs solve.",
+        "hybrid": "Software estimates/readbacks; agent reviews components/controls.",
+        "software_first": "Checked capture classes solve with disconnected/degenerate/calibration exceptions.",
+        "deterministic": "Pinned dataset/camera configuration and supported algorithm produce reproducible sparse candidate/check records."
+      },
+      "alternatives": [
+        "COLMAP sparse route with explicit calibration policy.",
+        "Separate Meshroom/OpenMVG route with its actual camera representation.",
+        "Arbitrary-scale context reconstruction versus metric working references uses distinct control requirements."
+      ],
+      "merge": {
+        "branches": "Sparse backend/camera-model candidates share captured dataset and reserved controls but retain solver/settings lineage.",
+        "evaluation": "VLM checks physical track/region meaning; software compares independent projections, connectivity and control residuals.",
+        "combination": "Select coherent camera model/component; cross-component merge requires explicit registration evidence.",
+        "post_merge": "Reproject retained observations and repeat independent control, camera-group and scale checks."
+      },
+      "software_migration": "Automate checked camera/capture classes after pixel convention, repeated texture, low baseline, calibration drift and disconnected-component fixtures.",
+      "future_tests": [
+        "Unrelated calibration board size cannot silently set scene scale.",
+        "All views rotate around one centre: weak depth observability remains explicit.",
+        "Two disconnected sparse components retain separate frames until supported registration.",
+        "Withheld control used in scale fit is detected as evaluation leakage."
+      ]
+    },
+    {
+      "operation_id": "CAD-16",
+      "name": "Reconstruct camera poses and dense visible geometry from overlapping photos",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://github.com/colmap/colmap",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://colmap.github.io/format.html",
+        "https://colmap.github.io/cameras.html",
+        "https://colmap.github.io/faq.html",
+        "https://colmap.github.io/cli.html",
+        "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-16-A01",
+          "name": "Bind complete photo and metric-control contract",
+          "purpose": "Prepare photo reconstruction with explicit dimensional evidence.",
+          "intended_use": "Plan camera, cloud and mesh outputs for CAD reference.",
+          "inputs": "Photo-set AND measurement-set; intended feature use, camera state and capture/control lineage.",
+          "outputs": "Dataset/control/frame plan selecting sparse and dense stages.",
+          "accuracy": "Feature allowances, control uncertainty and image/geometry thresholds separate.",
+          "evidence": "Image hashes, physical control identities and fit/check assignments.",
+          "software": "Validate capture/calibration through REC-03 intake and measurements through point01/05 contracts.",
+          "agent": "Associate controls with visible physical features and requested CAD-reference scope.",
+          "user_decisions": "Supply required independent scale/datum/feature controls or clarify geometry use.",
+          "dependencies": "REC-03, REC-17/DOM-28 and source-backed backend capabilities.",
+          "proposed_development": "Proposal: reconstruction planner emits source/control plan and prerequisites for all three outputs.",
+          "procedure": [
+            "Pin photos and measurement-set.",
+            "Map fit controls versus independent checks.",
+            "Set frame, feature coverage and camera/cloud/mesh output requirements."
+          ],
+          "validation": "Original contract requires all three outputs; inferred hidden geometry retains its evidence label.",
+          "failure_resume": "Retain validated dataset/controls; block affected dimensional handoff only.",
+          "resources": "Local input/control review first; expensive dense work waits for sparse/control checks."
+        },
+        {
+          "id": "CAD-16-A02",
+          "name": "Compose sparse and dense visible-surface reconstruction",
+          "purpose": "Create source-linked cameras and surface derivatives.",
+          "intended_use": "Produce camera-solution, point-cloud and mesh candidates.",
+          "inputs": "Checked photo/control plan; supported sparse/dense backend and settings.",
+          "outputs": "Stage receipts and all three actual output artifacts with common source/scale/frame lineage.",
+          "accuracy": "Dense geometry inherits camera/control uncertainty; mesh approximation separate.",
+          "evidence": "Sparse tracks/cameras, dense depth/confidence, fusion/meshing parameters and controls.",
+          "software": "Run REC-03 sparse checks, then REC-17/DOM-28 dense cloud and mesh stages only when prerequisites pass.",
+          "agent": "Review coverage exceptions and select supported visible-surface branch.",
+          "user_decisions": "Choose bounded recapture/alternate sensor route when required features are unobserved.",
+          "dependencies": "Actual dense backend/import bridge; CPU/GPU configuration and output support recorded.",
+          "proposed_development": "Proposal: stage composer links immutable sparse/dense/mesh receipts and common metric transform.",
+          "procedure": [
+            "Complete checked sparse camera/scale stage.",
+            "Compute selected dense/fusion surface route.",
+            "Retain separate cloud/mesh outputs and source/transform records."
+          ],
+          "validation": "Sparse cloud alone cannot satisfy dense/mesh target; meshing/filling cannot promote hidden regions to observations.",
+          "failure_resume": "Resume from latest source/settings-compatible stage; partial outputs retain typed status.",
+          "resources": "Sparse CPU-compatible subset first; dense GPU/RAM cost follows images/resolution/depth range/neighbors; remote review separate."
+        },
+        {
+          "id": "CAD-16-A03",
+          "name": "Validate metric reference and saved three-output package",
+          "purpose": "Check reconstruction before CAD modeling consumes it.",
+          "intended_use": "Publish complete photo-derived reference package.",
+          "inputs": "Saved cameras/cloud/mesh, physical withheld controls and source image regions.",
+          "outputs": "Camera-solution, point-cloud and mesh with per-feature metric/coverage/readback results.",
+          "accuracy": "Independent dimensional criteria versus reprojection, voxel/mesh and numeric thresholds distinguished.",
+          "evidence": "Actual files and independent physical controls; generated geometry masks retained.",
+          "software": "Reopen outputs; compare camera/image consistency, controls, cloud/mesh distances, holes/outliers and frame propagation.",
+          "agent": "Separate reviewer checks observed versus inferred feature correspondence.",
+          "user_decisions": "Resolve failed required feature measurement or preserve context-only readiness.",
+          "dependencies": "Point05 geometry comparison and proposed reconstruction-package checker.",
+          "proposed_development": "Proposal: package verifier emits each output's actual type/source/frame and feature-readiness report.",
+          "procedure": [
+            "Read all three saved artifacts.",
+            "Compare independent controls and source-supported geometry coverage.",
+            "Publish complete outputs with observed/inferred and use-specific states."
+          ],
+          "validation": "Appearance agreement alone cannot qualify working interfaces or hidden dimensions.",
+          "failure_resume": "Keep passed artifacts; repair affected capture/camera/dense/mesh stage and descendants only.",
+          "resources": "Local targeted controls before dense comparison/render review; manual measurements and remote VLM separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets controls/coverage and directs composed stages.",
+        "hybrid": "Software reconstructs/measures; agent reviews source and hidden-region meaning.",
+        "software_first": "Demonstrated capture/control classes run with camera/coverage/output exceptions.",
+        "deterministic": "Explicit supported dataset/settings/controls produce repeatable three-output package."
+      },
+      "alternatives": [
+        "Calibrated RGB-D with independent controls when suitable.",
+        "Separate COLMAP/OpenMVS or Meshroom reconstruction branches.",
+        "Context mesh can retain incomplete surfaces; working CAD reference requires per-feature dimensional/coverage evidence."
+      ],
+      "merge": {
+        "branches": "Camera/dense alternatives share photos and independent controls with explicit detail/resource targets.",
+        "evaluation": "VLM reviews observed feature association; software checks control residuals and surface consistency.",
+        "combination": "Select compatible camera/surface evidence; cross-backend merge needs common source/frame and retained uncertainty.",
+        "post_merge": "Reopen final three-output package and repeat camera, scale, feature and independent semantic checks."
+      },
+      "software_migration": "Automate checked capture/control/backend combinations after scale, missing mesh, occlusion, symmetry and partial-stage recovery fixtures.",
+      "future_tests": [
+        "Camera/cloud produced but mesh stage fails: complete CAD-16 handoff remains partial.",
+        "Mesh fills unseen underside; region stays inferred and cannot pass measurement evidence.",
+        "Dense result improves appearance while withheld interface error worsens; feature criterion controls readiness."
+      ]
+    },
+    {
+      "operation_id": "REC-05",
+      "name": "Register RGB and depth frames and estimate sequence poses",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+        "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImage.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/Image.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImage.h"
+      ],
+      "actions": [
+        {
+          "id": "REC-05-A01",
+          "name": "Bind sensor calibration timing and depth encoding",
+          "purpose": "Establish actual RGB/depth measurement convention.",
+          "intended_use": "Prepare registered RGB-D observations.",
+          "inputs": "Depth-frames with raw RGB/depth, timestamps, intrinsics, RGB-depth extrinsics, depth scale/invalid/range rules and pose source.",
+          "outputs": "Per-frame sensor/calibration/time manifest and alignment/validity plan.",
+          "accuracy": "Sensor/control uncertainty, timing error and algorithm thresholds separate.",
+          "evidence": "Raw frame hashes, calibration state, timestamp clock and measured range controls.",
+          "software": "Decode stated depth representation; inspect synchronization/image sizes; preserve invalid masks and calibrated registration parameters. Open3D v0.20.0 RGBDImage.h declares defaults; Image.cpp divides raw depth by depth_scale and zeros >= depth_trunc. Use sensor-specific settings, invalid mask and axial-versus-ray-range convention.",
+          "agent": "Identify dynamic regions, depth discontinuities and unsupported sensor assumptions.",
+          "user_decisions": "Supply missing calibration/timing/scale evidence needed by intended metric use.",
+          "dependencies": "Sensor SDK/calibration and pinned Open3D RGBDImage/odometry contracts.",
+          "proposed_development": "Proposal: RGB-D intake emits calibrated frame pairs, depth units/validity and source-to-target camera mapping.",
+          "procedure": [
+            "Pin raw frames/calibration and timing.",
+            "Decode depth scale/range/invalid conventions.",
+            "Check RGB-depth registration and pose-source prerequisites."
+          ],
+          "validation": "Depth numeric values require declared divisor/units; different clocks/extrinsics cannot be treated as aligned frames.",
+          "failure_resume": "Keep raw data; repair affected calibration/pairing only before odometry.",
+          "resources": "Local metadata/range samples first; full reprojection cost follows pixels/frames; manual calibration separate."
+        },
+        {
+          "id": "REC-05-A02",
+          "name": "Estimate or import sequence poses and projected samples",
+          "purpose": "Connect valid depth observations across time.",
+          "intended_use": "Produce camera-solution and source-linked point-cloud candidates.",
+          "inputs": "Calibrated frame pairs, pose initialization/trajectory and odometry settings.",
+          "outputs": "Per-frame poses, relative transforms, projected samples and success/overlap diagnostics.",
+          "accuracy": "Depth/range and pose uncertainty separate from photometric/geometric fit threshold.",
+          "evidence": "Source/target frame pair IDs, raw depth membership and pose receipts.",
+          "software": "Use supported RGB-D odometry or imported sensor/survey poses; project valid depth using matching intrinsics and preserve transform direction at each boundary. compute_rgbd_odometry returns success, pairwise 4x4 motion and 6x6 information; verify selected adapter direction before composing trajectory.",
+          "agent": "Review motion/overlap failures and physical correspondence.",
+          "user_decisions": "Choose supported pose source or acquire bridging evidence.",
+          "dependencies": "Pinned Open3D odometry direction and sensor pose convention; exact API checked before execution.",
+          "proposed_development": "Proposal: pose adapter emits pairwise/source-to-world transforms, sample IDs and failed intervals.",
+          "procedure": [
+            "Project valid calibrated depth samples.",
+            "Estimate/import named sequence transforms.",
+            "Compose trajectory under one documented convention and retain failures."
+          ],
+          "validation": "A successful local fit does not remove global drift; missing intervals remain explicit.",
+          "failure_resume": "Resume from valid source-compatible pose segment; changed calibration invalidates dependent projections/poses.",
+          "resources": "Local bounded frame pairs first; compute follows resolution/overlap/pyramid settings; GPU only actual selected backend."
+        },
+        {
+          "id": "REC-05-A03",
+          "name": "Validate trajectory and metric depth independently",
+          "purpose": "Check sensor geometry and accumulated pose error.",
+          "intended_use": "Publish camera-solution and point-cloud with fit/control evidence.",
+          "inputs": "Saved poses/samples, withheld depth/length/position controls and loop evidence.",
+          "outputs": "Checked outputs with scale/frame, drift, coverage and control results.",
+          "accuracy": "Metric criteria cite independent controls; loop/fit residuals remain separate.",
+          "evidence": "Known-range targets, reserved scene controls and captured frame evidence.",
+          "software": "Read back trajectory/points; test transform inverses, range bias, loop closure and distributed controls.",
+          "agent": "Separate reviewer checks physical sample identity, dynamic exclusions and plausible path alternatives.",
+          "user_decisions": "Resolve calibration bias or missing coverage affecting required geometry.",
+          "dependencies": "Point05 frame/registration checker and proposed RGB-D verifier.",
+          "proposed_development": "Proposal: trajectory verifier emits per-segment control/drift and output-readiness records.",
+          "procedure": [
+            "Compare independent range and scene controls.",
+            "Inspect trajectory/loop consistency and excluded regions.",
+            "Publish poses/cloud with supported intervals and uncertainty."
+          ],
+          "validation": "Sensor metric scale does not guarantee dimensional accuracy or drift-free trajectory.",
+          "failure_resume": "Keep valid segments; repair calibration/poses and invalidate only dependent fusion.",
+          "resources": "Local control tests precede fusion; remote review/manual target measurement separately recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets sensor evidence and directs pose recovery.",
+        "hybrid": "Software aligns/projects/estimates; agent reviews dynamic/overlap ambiguity.",
+        "software_first": "Checked sensor/capture classes process with calibration/timing exceptions.",
+        "deterministic": "Explicit calibration/pose inputs and supported algorithm yield repeatable source-linked outputs."
+      },
+      "alternatives": [
+        "Use recorded hardware trajectory with source convention.",
+        "Use surveyed poses or checked RGB-D odometry.",
+        "Context cloud versus working measurement reference has different control/drift requirements."
+      ],
+      "merge": {
+        "branches": "Pose/calibration candidates share raw frames and independent controls; source conditions/resources recorded.",
+        "evaluation": "VLM reviews physical/dynamic regions; software compares range, pose and control residuals.",
+        "combination": "Select compatible segments with explicit bridge transforms; preserve conflicting trajectories.",
+        "post_merge": "Reproject/recheck raw-frame samples, drift and independent controls under merged trajectory."
+      },
+      "software_migration": "Automate demonstrated sensors after unit divisor, invalid depth, asynchronous RGB/depth, pose inversion and drift fixtures.",
+      "future_tests": [
+        "Depth divisor error creates coherent but wrong scale; known-range check fails.",
+        "RGB and depth timestamps mismatch at moving edge; registration is rejected/segmented.",
+        "Source-to-target pose composed backwards fails independent trajectory/control check."
+      ]
+    },
+    {
+      "operation_id": "REC-06",
+      "name": "Integrate calibrated RGB-D frames into point cloud or TSDF mesh",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+        "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImage.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/Image.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImage.h"
+      ],
+      "actions": [
+        {
+          "id": "REC-06-A01",
+          "name": "Resolve fusion grid and pose convention",
+          "purpose": "Define calibrated samples and supported TSDF settings.",
+          "intended_use": "Prepare depth fusion and both cloud/mesh outputs.",
+          "inputs": "Depth-frames AND matching camera-solution; depth encoding/calibration, voxel length, signed-distance truncation and range policy.",
+          "outputs": "Integration manifest with frame order, world frame, validity masks and grid settings.",
+          "accuracy": "Voxel/truncation lengths are numerical resolution choices; sensor/pose uncertainty and feature allowance separate.",
+          "evidence": "Raw frame/pose hashes and independent controls excluded from fitting.",
+          "software": "Use explicit world→camera integration extrinsics. The tutorial uses inverse(camera_pose) for its camera-to-world input; invert only the actual opposite-direction input. Check matching image/intrinsic/pose revisions, depth units and bounded region.",
+          "agent": "Review observed coverage and effect of dynamic/invalid regions.",
+          "user_decisions": "Choose target surface detail or acquire source evidence for required features.",
+          "dependencies": "REC-05 checked poses and pinned Open3D TSDF/RGBDImage API.",
+          "proposed_development": "Proposal: fusion preflight emits per-frame integration transform and units/settings receipt.",
+          "procedure": [
+            "Match each frame to calibration/pose revision.",
+            "Convert poses to exact integration convention.",
+            "Set source-backed voxel/truncation/range criteria and protected features."
+          ],
+          "validation": "Depth truncation and signed-distance truncation are separate quantities; no implicit unit/default conversion.",
+          "failure_resume": "Retain manifest; reject mismatched frame/pose inputs before volume mutation.",
+          "resources": "Local metadata/bounded subset first; volume memory depends on occupied region and voxel length."
+        },
+        {
+          "id": "REC-06-A02",
+          "name": "Integrate observations and extract explicit geometry",
+          "purpose": "Fuse sensor samples while preserving observation lineage.",
+          "intended_use": "Produce point-cloud and mesh candidates.",
+          "inputs": "Checked integration manifest and selected Open3D volume/backend.",
+          "outputs": "TSDF state or replay receipt, extracted cloud and mesh, observation/support metadata.",
+          "accuracy": "Discretization/interpolation error separate from measured depth accuracy.",
+          "evidence": "Integrated frame IDs, masks, weights/settings and source-camera transforms.",
+          "software": "Use ScalableTSDFVolume integration and supported cloud/triangle extraction; retain exact grid/range/pose settings and filled/unobserved-region classification.",
+          "agent": "Review fusion artifacts at discontinuities and moving surfaces.",
+          "user_decisions": "Choose bounded alternative settings when required detail is lost.",
+          "dependencies": "Actual pinned integration/extraction methods and storage/checkpoint behavior.",
+          "proposed_development": "Proposal: fusion runner emits both geometry types and frame-to-surface/support evidence or documented mapping limits.",
+          "procedure": [
+            "Integrate valid frames in recorded order/convention.",
+            "Extract required cloud and mesh separately.",
+            "Retain source support, interpolation and excluded-region records."
+          ],
+          "validation": "Empty volume or cloud-only extraction leaves required outputs partial; interpolated closure remains inferred.",
+          "failure_resume": "Resume only compatible serialized state or replay immutable frame/settings manifest; avoid double-integrating acknowledged frames.",
+          "resources": "Local CPU-supported path where evidenced; cost follows pixels, frames, occupied voxels and extraction; GPU-specific path separate."
+        },
+        {
+          "id": "REC-06-A03",
+          "name": "Compare fusion candidates and independent controls",
+          "purpose": "Check dimensional support and surface approximation.",
+          "intended_use": "Publish both reconstructed outputs.",
+          "inputs": "Saved geometry, raw-frame projections, control set and bounded alternative voxel/settings results.",
+          "outputs": "Cloud/mesh metric, drift, coverage and source/readback report.",
+          "accuracy": "Per-feature control tolerance, sensor uncertainty and numerical grid error retained independently.",
+          "evidence": "Withheld lengths/targets, source depth samples and pre/post-fusion comparisons.",
+          "software": "Reopen outputs; compare independent controls and directed sample/surface residuals; inspect holes, double walls and protected features.",
+          "agent": "Separate reviewer checks observed/inferred regions and feature identity.",
+          "user_decisions": "Resolve required feature failure or retain context-only geometry.",
+          "dependencies": "Point05 comparison and proposed fusion verifier.",
+          "proposed_development": "Proposal: verifier reports per-feature/control error, coverage and approximation changes across settings.",
+          "procedure": [
+            "Measure saved outputs against independent controls.",
+            "Compare source-supported surfaces and bounded voxel alternatives.",
+            "Publish both artifacts with use-specific readiness."
+          ],
+          "validation": "Smaller voxel or lower fit residual does not automatically improve measured accuracy.",
+          "failure_resume": "Keep passing output/regions; revise affected settings/poses and dependent volume only.",
+          "resources": "Local regional checks before full dense comparisons; manual controls and remote review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects observation scope and directs fusion.",
+        "hybrid": "Software integrates/extracts/checks; agent reviews inferred surfaces.",
+        "software_first": "Checked calibrated sequences run with pose/range/coverage exceptions.",
+        "deterministic": "Complete compatible frames/poses/settings produce deterministic supported fusion outputs."
+      },
+      "alternatives": [
+        "Accumulate source-linked clouds without TSDF when surface interpolation is unnecessary.",
+        "Use sensor-native mesh with independent source/readback evidence.",
+        "Context surface and working interface mesh retain different coverage/accuracy requirements."
+      ],
+      "merge": {
+        "branches": "Voxel/truncation/pose candidates share raw data and reserved controls with declared detail/resource targets.",
+        "evaluation": "VLM checks source surface identity; software compares controls, coverage and regional residuals.",
+        "combination": "Choose coherent volume/settings or explicitly registered compatible regions with source lineage.",
+        "post_merge": "Recheck source projections, independent dimensions, holes and required two-output readback."
+      },
+      "software_migration": "Automate tested calibration/scene classes after inverse extrinsic, depth scale, empty volume, duplicate integration and thin-feature fixtures.",
+      "future_tests": [
+        "Wrong pose inverse creates double surface and fails raw-frame/control checks.",
+        "Depth range cutoff differs from TSDF truncation and remains separately configured.",
+        "Changing voxel size preserves controls for comparison; fine-grid noise can fail interface criterion.",
+        "Lost integration acknowledgement cannot replay a frame twice without reconciliation."
+      ]
+    },
+    {
+      "operation_id": "DOM-21",
+      "name": "Depth frames to registered point cloud or mesh",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+        "https://github.com/isl-org/Open3D/blob/v0.20.0/cpp/open3d/geometry/RGBDImage.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImageFactory.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/Image.cpp",
+        "https://raw.githubusercontent.com/isl-org/Open3D/v0.20.0/cpp/open3d/geometry/RGBDImage.h"
+      ],
+      "actions": [
+        {
+          "id": "DOM-21-A01",
+          "name": "Bind mandatory depth and measurement evidence",
+          "purpose": "Define metric registered-cloud delivery.",
+          "intended_use": "Prepare original depth-frames plus measurement-set contract.",
+          "inputs": "Depth-frames AND measurement-set, sensor calibration/timing and available pose source.",
+          "outputs": "Control/calibration/frame plan for registered point-cloud.",
+          "accuracy": "Feature allowance, sensor/control uncertainty and registration threshold separate.",
+          "evidence": "Original depth/color, measured controls and fit/check roles.",
+          "software": "Validate sensor data through REC-05 intake; resolve metric frame controls and required coverage.",
+          "agent": "Associate measurement targets with observed depth surfaces.",
+          "user_decisions": "Supply missing independent controls/pose evidence required for intended cloud use.",
+          "dependencies": "REC-05 and point05 control/frame procedures.",
+          "proposed_development": "Proposal: depth-domain intake emits mandatory-input receipt and point-cloud prerequisites.",
+          "procedure": [
+            "Pin frames and measurement-set.",
+            "Map physical controls and pose source.",
+            "Define registered-cloud frame and target features."
+          ],
+          "validation": "Original output is point-cloud; mesh title wording is recorded as a separate downstream branch.",
+          "failure_resume": "Retain complete evidence; unresolved frame/control blocks affected metric readiness.",
+          "resources": "Local metadata/control checks first; manual sensor/target acquisition separate."
+        },
+        {
+          "id": "DOM-21-A02",
+          "name": "Project register and publish source-linked cloud candidate",
+          "purpose": "Create the registered point-cloud without implicit mesh requirements.",
+          "intended_use": "Produce cloud candidate.",
+          "inputs": "Checked depth/control plan and compatible poses/settings.",
+          "outputs": "Registered point-cloud and point/frame/filter/transform lineage.",
+          "accuracy": "Filtering/fusion approximation separate from measurement uncertainty.",
+          "evidence": "Raw samples, calibration/pose revisions and registration receipt.",
+          "software": "Compose REC-05 projection/poses and supported cloud accumulation/fusion; optional REC-06 route retains its separate mesh output.",
+          "agent": "Review dynamic regions and filters affecting required features.",
+          "user_decisions": "Choose filtering/fusion policy within source-supported target.",
+          "dependencies": "Open3D or independently evidenced CloudCompare adapter; exact transform conventions.",
+          "proposed_development": "Proposal: depth-cloud composer emits actual cloud, source membership and removed/inferred-region ledger.",
+          "procedure": [
+            "Project and register valid samples.",
+            "Apply recorded filtering/accumulation or fusion.",
+            "Write cloud and calibration/pose/control mapping."
+          ],
+          "validation": "Filtered points remain traceable; mesh generation is not required to fulfill this typed output.",
+          "failure_resume": "Keep completed frames/segments; resume compatible stages without double-transforming or duplicate accumulation.",
+          "resources": "Local bounded cloud first; memory follows retained samples/frames; remote region review separate."
+        },
+        {
+          "id": "DOM-21-A03",
+          "name": "Check registered cloud controls and source coverage",
+          "purpose": "Validate metric cloud against supplied measurements.",
+          "intended_use": "Publish point-cloud readiness.",
+          "inputs": "Saved cloud, independent measurements and source frame/pose receipts.",
+          "outputs": "Control/drift/coverage report and registered point-cloud.",
+          "accuracy": "Required dimensions/control criteria separate from source registration residual.",
+          "evidence": "Actual saved cloud and withheld physical controls.",
+          "software": "Compare known lengths/targets, local residuals, loop/drift and excluded regions; verify units/transform application.",
+          "agent": "Separate reviewer checks physical correspondence and coverage for target use.",
+          "user_decisions": "Resolve required source/control discrepancy.",
+          "dependencies": "Point05 cloud comparator and proposed domain verifier.",
+          "proposed_development": "Proposal: registered-cloud checker emits per-feature metric/coverage and lineage results.",
+          "procedure": [
+            "Reopen cloud and verify frame/units.",
+            "Compare independent measured controls.",
+            "Publish cloud and explicit downstream mesh/appearance dependencies."
+          ],
+          "validation": "Sensor units or plausible bounds cannot replace independent dimensional checks.",
+          "failure_resume": "Repair affected calibration/registration/filter stage and invalidate dependent surfaces only.",
+          "resources": "Local control queries before dense analysis; remote/manual evidence review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent maps measurements and directs sensor/cloud stages.",
+        "hybrid": "Software projects/registers/checks; agent reviews control identity.",
+        "software_first": "Checked sensor/control classes process with uncertainty/coverage exceptions.",
+        "deterministic": "Complete calibrated frames/poses/controls produce checked point-cloud."
+      },
+      "alternatives": [
+        "Per-frame or accumulated cloud when fusion adds no required value.",
+        "REC-06 explicit TSDF mesh branch or DOM-29 cloud meshing.",
+        "Layout scan and working dimensional reference retain different control/coverage criteria."
+      ],
+      "merge": {
+        "branches": "Cloud processing candidates share raw depth and control revisions; filtering/detail targets recorded.",
+        "evaluation": "VLM examines sample/feature identity; software compares independent control/drift and coverage.",
+        "combination": "Combine compatible registered segments with retained source maps and overlap rules.",
+        "post_merge": "Recheck common frame, duplicate/removed points and independent controls."
+      },
+      "software_migration": "Automate demonstrated sensor/control pipelines after missing mandatory measurements, depth units, drift and source-loss fixtures.",
+      "future_tests": [
+        "Missing measurement-set cannot be silently bypassed by sensor metric claim.",
+        "Cloud succeeds without mesh and fulfills original typed output.",
+        "Filtering removes required small feature; coverage/feature check fails."
+      ]
+    },
+    {
+      "operation_id": "REC-17",
+      "name": "Build dense point cloud and mesh from SfM camera solution",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://colmap.github.io/format.html",
+        "https://colmap.github.io/cameras.html",
+        "https://colmap.github.io/faq.html",
+        "https://colmap.github.io/cli.html",
+        "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md"
+      ],
+      "actions": [
+        {
+          "id": "REC-17-A01",
+          "name": "Validate sparse-to-dense image and camera handoff",
+          "purpose": "Prepare compatible calibrated dense workspace.",
+          "intended_use": "Use supplied cameras for dense visible surfaces.",
+          "inputs": "Photo-set AND camera-solution, source sparse model, masks and desired geometry criteria.",
+          "outputs": "Undistorted image/camera workspace and dense-backend/settings plan.",
+          "accuracy": "Camera/source uncertainty and preprocessing error separate from dense criteria.",
+          "evidence": "Image/camera IDs, pixel maps, pose convention, scale transform and source hashes.",
+          "software": "Read sparse model and verify image/model pairing; use image_undistorter with documented output convention; inspect selected dense backend/build.",
+          "agent": "Review visible coverage, weak baseline and material regions.",
+          "user_decisions": "Choose required surface/precision scope or additional captured evidence.",
+          "dependencies": "COLMAP/OpenMVS interface and actual hardware/build capability.",
+          "proposed_development": "Proposal: dense intake emits source-to-undistorted image/camera map and compatible workspace receipt.",
+          "procedure": [
+            "Verify supplied image/camera revisions.",
+            "Create documented undistorted workspace without losing source mappings.",
+            "Select bounded dense settings and supported backend."
+          ],
+          "validation": "Undistorted intrinsics and pixels must agree; a sparse camera model carries its own arbitrary/metric scale status.",
+          "failure_resume": "Retain valid workspace; changed calibration/images invalidate affected dense maps.",
+          "resources": "Local metadata/sparse checks before dense work; cost plan names resolution/neighbors/depth range and memory."
+        },
+        {
+          "id": "REC-17-A02",
+          "name": "Estimate dense depth and fuse visible samples",
+          "purpose": "Recover dense sampled surface evidence from matched views.",
+          "intended_use": "Produce dense point-cloud candidate.",
+          "inputs": "Checked workspace, masks and depth/fusion settings.",
+          "outputs": "Per-view dense depth/confidence and fused cloud with camera/settings lineage.",
+          "accuracy": "Dense fit/filter threshold and control uncertainty separate; weak/occluded regions labelled.",
+          "evidence": "Depth-map/source-view associations, retained masks and fusion receipts.",
+          "software": "COLMAP patch_match_stereo then stereo_fusion, or InterfaceCOLMAP→DensifyPointCloud under documented image/camera bridge; preserve selected backend differences.",
+          "agent": "Review depth consistency and excluded reflective/dynamic/low-texture regions.",
+          "user_decisions": "Choose bounded alternative method/settings or recapture where required.",
+          "dependencies": "Actual selected dense API/CLI/build; source CPU/GPU support conditional.",
+          "proposed_development": "Proposal: dense runner emits depth/fusion artifacts and source support/coverage manifest.",
+          "procedure": [
+            "Estimate depth for declared view neighbors.",
+            "Check consistency and fuse supported samples.",
+            "Retain unfused/invalid regions and source-camera lineage."
+          ],
+          "validation": "Empty or sparse-only cloud cannot satisfy declared dense coverage; fusion creates no mesh output.",
+          "failure_resume": "Resume compatible depth maps/checkpoints; changed images/poses invalidate their dependent fusion.",
+          "resources": "Cost follows image pixels, depth range, neighbors and stored maps; bounded subset/CPU-supported alternative first where suitable."
+        },
+        {
+          "id": "REC-17-A03",
+          "name": "Mesh dense cloud and validate both outputs",
+          "purpose": "Fulfil mesh output and check inferred surface geometry.",
+          "intended_use": "Publish dense cloud and mesh.",
+          "inputs": "Fused cloud, selected mesher/normal settings, original photos and withheld controls.",
+          "outputs": "Actual cloud and triangle mesh plus source/approximation/readback report.",
+          "accuracy": "Meshing/cleanup error and physical feature criteria separate.",
+          "evidence": "Saved cloud, mesh, mesher settings and reserved controls/views.",
+          "software": "Use supported COLMAP poisson_mesher/delaunay_mesher or OpenMVS ReconstructMesh with actual cloud input; inspect normals/holes/components and compare mesh/cloud/controls.",
+          "agent": "Separate reviewer checks source feature association and filled/unsampled surfaces.",
+          "user_decisions": "Resolve unsupported closure or required geometry discrepancy.",
+          "dependencies": "Pinned meshing backend and DOM-29 comparison/cleanup conditions.",
+          "proposed_development": "Proposal: dense-output publisher emits both typed artifacts with per-feature observed/inferred status.",
+          "procedure": [
+            "Create mesh through explicit supported meshing stage.",
+            "Reopen cloud/mesh and compare source support, protected features and controls.",
+            "Publish both outputs with coverage and approximation records."
+          ],
+          "validation": "Successful fusion alone cannot satisfy mesh contract; same captures produce dependent evidence, not independent truth.",
+          "failure_resume": "Keep good cloud if meshing fails; repair only mesh stage unless source/camera changes.",
+          "resources": "Meshing cost follows points/normals/grid and triangles; local selected controls precede full comparisons, remote review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets coverage and directs dense/mesh stages.",
+        "hybrid": "Software reconstructs/checks; agent reviews inferred regions.",
+        "software_first": "Checked image/camera/backend classes run with hardware/coverage/mesh exceptions.",
+        "deterministic": "Explicit compatible workspace/settings produce repeatable supported cloud/mesh results."
+      },
+      "alternatives": [
+        "COLMAP stereo/fusion plus explicit mesher.",
+        "OpenMVS importer/densify/reconstruct route with actual camera bridge.",
+        "Measured RGB-D route where appropriate; context mesh and working surface reference have distinct feature criteria."
+      ],
+      "merge": {
+        "branches": "Dense backend/resolution candidates share camera/input/control revisions with separate resource/detail targets.",
+        "evaluation": "VLM reviews source-visible feature support; software compares controls, dense coverage and mesh residuals.",
+        "combination": "Choose compatible surfaces with common frames and lineage; keep seams and inferred regions explicit.",
+        "post_merge": "Recheck source projections, protected features, independent dimensions and both saved outputs."
+      },
+      "software_migration": "Automate tested dense/import/meshing classes after mismatched cameras, empty fusion, missing mesh, hardware and seam fixtures.",
+      "future_tests": [
+        "Cloud fusion succeeds but mesher fails: cloud retained, combined output partial.",
+        "Sub-scene meshing creates a seam at required interface and fails local comparison.",
+        "Image IDs match names but hashes/calibration differ; dense preflight rejects stale workspace."
+      ]
+    },
+    {
+      "operation_id": "DOM-28",
+      "name": "Dense multi-view stereo to point cloud and mesh",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://colmap.github.io/format.html",
+        "https://colmap.github.io/cameras.html",
+        "https://colmap.github.io/faq.html",
+        "https://colmap.github.io/cli.html",
+        "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-28-A01",
+          "name": "Bind supplied cameras and required surface outputs",
+          "purpose": "Define dense cloud/mesh contract without rerunning sparse solve implicitly.",
+          "intended_use": "Prepare domain dense reconstruction.",
+          "inputs": "Photo-set AND camera-solution, intended surface use and linked scale/control evidence.",
+          "outputs": "Camera/image/frame validation receipt and both-output requirements.",
+          "accuracy": "Required feature accuracy and source camera/scale uncertainty explicit.",
+          "evidence": "Original camera/image records and observed surface/control map.",
+          "software": "Reuse REC-17 workspace preflight; inspect backend output types and required coverage.",
+          "agent": "Associate requested surfaces with captured evidence.",
+          "user_decisions": "Supply metric controls for metric consumer or retain arbitrary-scale context status.",
+          "dependencies": "REC-17 documented dense/meshing routes.",
+          "proposed_development": "Proposal: domain dense planner emits image/camera/settings and cloud/mesh dependency graph.",
+          "procedure": [
+            "Bind exact photo/camera pair.",
+            "Record scale/frame and required features.",
+            "Select compatible dense and mesh stages."
+          ],
+          "validation": "Calibrated intrinsics alone do not establish unrelated scene scale.",
+          "failure_resume": "Retain valid inputs; unresolved scale blocks metric claim only.",
+          "resources": "Local manifest/control review before dense processing; remote/manual capture decisions separate."
+        },
+        {
+          "id": "DOM-28-A02",
+          "name": "Compose dense estimation fusion and meshing",
+          "purpose": "Materialize actual dense geometry under declared backend.",
+          "intended_use": "Produce point-cloud and mesh candidates.",
+          "inputs": "Checked dense plan and supported runtime/configuration.",
+          "outputs": "Both artifacts plus per-stage depth/fusion/mesh/settings receipts.",
+          "accuracy": "Approximation and interpolation status remain separate from independent dimensional evidence.",
+          "evidence": "Saved intermediate maps/clouds and source/camera transforms.",
+          "software": "Execute REC-17 supported stages; preserve exact mesher and nonempty/output-type checks.",
+          "agent": "Review coverage and method-dependent missing/filled regions.",
+          "user_decisions": "Choose bounded alternative backend/detail if required output unsupported.",
+          "dependencies": "Pinned COLMAP/OpenMVS or separately evidenced Meshroom graph.",
+          "proposed_development": "Proposal: domain composer links dense/cloud/mesh stages without treating one output as another.",
+          "procedure": [
+            "Run compatible dense depth/fusion.",
+            "Run explicit supported meshing.",
+            "Retain per-stage artifacts and common source/frame lineage."
+          ],
+          "validation": "Names/format suffixes cannot substitute actual dense samples and triangle faces.",
+          "failure_resume": "Resume only compatible stage receipts; retain typed partial results.",
+          "resources": "Local CPU-compatible stage choices first; dense GPU/RAM conditions and storage recorded per backend."
+        },
+        {
+          "id": "DOM-28-A03",
+          "name": "Check source geometry and independent controls",
+          "purpose": "Verify both saved domain outputs for stated use.",
+          "intended_use": "Publish dense point-cloud and mesh.",
+          "inputs": "Saved outputs, source images/cameras and reserved measurements/views.",
+          "outputs": "Coverage, frame, geometric residual and per-feature readiness report.",
+          "accuracy": "Physical tolerance versus dense/mesh threshold recorded per feature.",
+          "evidence": "Independent physical controls and source pixels; shared input dependencies explicit.",
+          "software": "Reopen and compare required interfaces, holes/components, source projection and cloud/mesh residuals.",
+          "agent": "Separate reviewer checks inferred/observed partition and feature identity.",
+          "user_decisions": "Resolve failing required control or retain limited context use.",
+          "dependencies": "REC-17/DOM-29 verifiers and point05 registration checks.",
+          "proposed_development": "Proposal: dense-domain verifier emits output-completeness and source/metric findings.",
+          "procedure": [
+            "Check actual saved geometry types and frame.",
+            "Compare independent controls/protected features.",
+            "Publish both outputs and their use-specific evidence."
+          ],
+          "validation": "Rendered surface plausibility cannot pass metric or occluded-feature requirement.",
+          "failure_resume": "Repair failed camera/dense/mesh stage and invalidate dependent records only.",
+          "resources": "Local selected controls before dense full-surface comparisons; remote review/manual metrology separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets domain surface requirements and directs stages.",
+        "hybrid": "Software reconstructs/reads/measures; agent reviews inference/coverage.",
+        "software_first": "Checked dense pipeline families process with explicit stage/output exceptions.",
+        "deterministic": "Compatible fixed inputs/settings yield reproducible two-output package."
+      },
+      "alternatives": [
+        "COLMAP dense chain with explicit mesh stage.",
+        "OpenMVS/Meshroom route with documented handoff and actual outputs.",
+        "Sensor-depth or appearance-scene branch has a separately typed contract."
+      ],
+      "merge": {
+        "branches": "Domain dense candidates share source/camera/control revisions and state distinct detail/resource criteria.",
+        "evaluation": "VLM evaluates source-visible features; software compares saved geometry and independent controls.",
+        "combination": "Select compatible cloud/mesh pair or source-linked regions; retain cross-method dependencies.",
+        "post_merge": "Repeat frame, two-output completeness, source and per-feature independent checks."
+      },
+      "software_migration": "Automate demonstrated data/backend classes after arbitrary scale, omitted mesher, disconnected coverage and source revision fixtures.",
+      "future_tests": [
+        "Sparse cloud mislabeled dense fails required coverage.",
+        "Mesh output absent retains partial domain handoff.",
+        "Scale transform applied to mesh but not cloud fails common-frame check."
+      ]
+    },
+    {
+      "operation_id": "DOM-29",
+      "name": "Point cloud to surface mesh",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-29-A01",
+          "name": "Inspect point evidence normals and meshing assumptions",
+          "purpose": "Determine supported surface reconstruction method.",
+          "intended_use": "Prepare geometric point-cloud for meshing.",
+          "inputs": "Point-cloud with actual field schema, source/frame/scale, density/noise and observed-region evidence.",
+          "outputs": "Method/normal/filter plan and source-point membership map.",
+          "accuracy": "Source sampling uncertainty, reconstruction resolution and feature tolerance separate.",
+          "evidence": "Raw point IDs, masks, normals/estimation source and capture lineage.",
+          "software": "Inspect PLY/other fields; reject Gaussian rendering parameters as measured surface cloud; estimate/orient normals where method requires and retain neighborhood settings. Open3D orient_normals_consistent_tangent_plane(k) propagates neighbour consistency; check outward/side orientation against capture evidence separately.",
+          "agent": "Review open boundaries, thin surfaces, gaps and physical feature association.",
+          "user_decisions": "Choose justified closure/detail intent or retain cloud where filling is unsupported.",
+          "dependencies": "Pinned Open3D surface/normal APIs; source-typed geometry adapter.",
+          "proposed_development": "Proposal: meshing intake emits validated geometric point set, normal lineage and method prerequisites.",
+          "procedure": [
+            "Inspect actual point representation and source evidence.",
+            "Select/filter regions with original IDs.",
+            "Prepare method-specific normals and closure assumptions."
+          ],
+          "validation": "Gaussian PLY centers/covariances/opacity require separately defined surface extraction before this geometry route.",
+          "failure_resume": "Retain raw cloud; repair normals/typing/coverage without silently synthesizing source measurements.",
+          "resources": "Local schema/density checks and bounded regions before full meshing; normal search scales with samples/neighborhood."
+        },
+        {
+          "id": "DOM-29-A02",
+          "name": "Reconstruct surface and retain every cleanup derivative",
+          "purpose": "Create a mesh under explicit interpolation assumptions.",
+          "intended_use": "Produce mesh candidates and pre/post-cleanup lineage.",
+          "inputs": "Checked point/normal plan and selected method/settings.",
+          "outputs": "Raw reconstructed mesh, optional cleaned/decimated variants and point/region source map.",
+          "accuracy": "Surface approximation/decimation threshold separate from physical/source uncertainty.",
+          "evidence": "Method settings, source support, hole filling/smoothing and triangle operations.",
+          "software": "Open3D create_from_point_cloud_poisson takes an oriented point cloud and returns mesh plus density; create_from_point_cloud_ball_pivoting takes oriented cloud and length-unit radii. simplify_quadric_decimation targets triangle count with stated maximum_error/boundary_weight; retain original mesh and measure actual feature deviation.",
+          "agent": "Review extrapolated/filled regions and required small-feature loss.",
+          "user_decisions": "Choose source-supported cleanup or explicit authored closure where required.",
+          "dependencies": "Actual Open3D method/version and prerequisites; decimation capability discovery.",
+          "proposed_development": "Proposal: surface adapter emits raw mesh plus independent cleanup derivatives and change/support ledger.",
+          "procedure": [
+            "Run selected reconstruction with recorded parameters.",
+            "Label supported versus extrapolated surface regions.",
+            "Apply explicitly scoped cleanup/decimation as new derivatives."
+          ],
+          "validation": "Closed-looking Poisson surface can include inferred empty-space closure; triangle target is not error guarantee.",
+          "failure_resume": "Keep raw mesh and failed derivatives; rerun affected cleanup stage before reconstruction.",
+          "resources": "Cost follows points, octree/grid/resolution or pivot neighborhoods and triangles; bounded detail first."
+        },
+        {
+          "id": "DOM-29-A03",
+          "name": "Compare surface and protected features to source",
+          "purpose": "Validate interpolation and simplification effects.",
+          "intended_use": "Publish mesh for a named geometry consumer.",
+          "inputs": "Saved raw/final mesh, source cloud/captures and independent controls.",
+          "outputs": "Directed residual, coverage, topology and feature-readback reports.",
+          "accuracy": "Feature/source allowance versus numerical distance and simplification criteria separate.",
+          "evidence": "Original samples, pre-cleanup mesh, actual saved faces and reserved controls.",
+          "software": "Compare cloud→mesh and mesh→cloud with sampling/direction reported; query holes/components/normals and required passages; reproject to original captures when available.",
+          "agent": "Separate reviewer checks source feature meaning and inferred-region status.",
+          "user_decisions": "Resolve failing geometry/closure criteria or retain reference-only use.",
+          "dependencies": "Point05 geometry comparator and proposed mesh verifier.",
+          "proposed_development": "Proposal: mesh checker emits per-feature before/after deviation, topology/coverage and downstream-readiness results.",
+          "procedure": [
+            "Read actual final mesh and compare with raw reconstruction.",
+            "Measure protected features and both directed source residuals.",
+            "Check independent controls/capture projection and publish evidence."
+          ],
+          "validation": "Bounds/volume and low one-way residual cannot pass overfilled gaps or lost thin features.",
+          "failure_resume": "Retain passing regions/raw mesh; revise affected normal/reconstruction/cleanup stage only.",
+          "resources": "Local selected-feature checks precede whole-surface distances; remote image review and manual metrology separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects surface meaning/method and directs cleanup.",
+        "hybrid": "Software reconstructs/measures; agent reviews inferred closure.",
+        "software_first": "Checked cloud/method classes run with normals/coverage/type exceptions.",
+        "deterministic": "Explicit geometric samples/settings/criteria produce supported mesh and change ledger."
+      },
+      "alternatives": [
+        "Poisson for suitable oriented coverage with extrapolation evidence.",
+        "Ball pivoting for supported sampled surfaces.",
+        "Retain cloud or separate measured CAD remodeling when surface fill lacks evidence; context/working meshes have distinct criteria."
+      ],
+      "merge": {
+        "branches": "Meshing/normal/cleanup candidates share source sample IDs and protected controls with different detail targets.",
+        "evaluation": "VLM reviews observed surface context; software compares directional residuals, topology and features.",
+        "combination": "Select compatible regions/mesh version with explicit seams and inference labels.",
+        "post_merge": "Repeat topology, source support, protected-feature and independent-control checks on saved mesh."
+      },
+      "software_migration": "Automate demonstrated sampling/method classes after normal flips, open gaps, Gaussian-type mismatch, thin features and cleanup regressions.",
+      "future_tests": [
+        "Gaussian PLY shares extension with point cloud but fails geometric source-type preflight.",
+        "Decimation preserves bounds yet closes a passage; feature check fails.",
+        "Inconsistent normals cause false surface sheet and fail source/coverage check.",
+        "Low cloud→mesh error with large inferred back surface is exposed by reverse coverage/inference records."
+      ]
+    },
+    {
+      "operation_id": "DOM-20",
+      "name": "Photos/video to camera solution, point cloud and mesh",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://colmap.github.io/format.html",
+        "https://colmap.github.io/cameras.html",
+        "https://colmap.github.io/faq.html",
+        "https://colmap.github.io/cli.html",
+        "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-20-A01",
+          "name": "Resolve literal photo input and cloud detail target",
+          "purpose": "Bind original domain contract to actual capture route.",
+          "intended_use": "Prepare camera/cloud reconstruction.",
+          "inputs": "Photo-set with provenance/camera state; optional explicitly linked controls and intended sparse/dense use.",
+          "outputs": "Input/quality/frame plan and camera/cloud output specification.",
+          "accuracy": "Scale/feature criteria conditional on independent evidence; source uncertainty retained.",
+          "evidence": "Original photo hashes and any REC-04 video-to-photo receipt.",
+          "software": "Validate images/camera model through REC-03; require prior video extraction if original source is video.",
+          "agent": "Interpret target scene/features and required cloud coverage.",
+          "user_decisions": "Choose sparse/dense use and supply metric controls only when required.",
+          "dependencies": "REC-03 and optional REC-17 dense stages.",
+          "proposed_development": "Proposal: domain photo intake distinguishes typed photo input from video upstream and mesh downstream dependencies.",
+          "procedure": [
+            "Verify actual photo-set input.",
+            "Declare sparse or dense cloud target.",
+            "Bind camera/scale evidence and output coverage criteria."
+          ],
+          "validation": "Title's video/mesh wording does not alter photo-set→camera-solution+point-cloud contract.",
+          "failure_resume": "Retain valid dataset; unresolved detail/scale blocks only dependent target.",
+          "resources": "Local metadata/source review first; remote/manual coverage choices separate."
+        },
+        {
+          "id": "DOM-20-A02",
+          "name": "Recover cameras and the declared cloud representation",
+          "purpose": "Produce source-linked domain cameras and cloud.",
+          "intended_use": "Create original two typed outputs.",
+          "inputs": "Checked photo plan, selected sparse/dense backend and settings.",
+          "outputs": "Camera-solution plus explicitly sparse/dense point-cloud with stage/source receipts.",
+          "accuracy": "Fit diagnostics separate from independent metric criteria.",
+          "evidence": "Image tracks/cameras/cloud membership and configuration history.",
+          "software": "Compose REC-03; add supported dense sampling only when declared, preserving actual cloud type; mesh remains explicit REC-17/DOM-28 branch.",
+          "agent": "Review disconnected/low-confidence regions and source correspondence.",
+          "user_decisions": "Choose bounded alternate capture/backend where required coverage fails.",
+          "dependencies": "Actual backend capability and point05 camera/frame checks.",
+          "proposed_development": "Proposal: photo-domain composer emits camera/cloud and typed optional-stage ledger.",
+          "procedure": [
+            "Estimate/check sparse camera geometry.",
+            "Generate declared cloud detail through supported stages.",
+            "Save exact camera/cloud artifacts and frame mappings."
+          ],
+          "validation": "Mesh is not required output; absent camera or cloud remains partial.",
+          "failure_resume": "Resume source-compatible sparse/dense stage; preserve failed outputs and settings.",
+          "resources": "Sparse CPU-compatible work first; dense GPU/RAM requirements conditional on actual chosen branch."
+        },
+        {
+          "id": "DOM-20-A03",
+          "name": "Validate saved domain outputs and downstream conditions",
+          "purpose": "Check source and metric readiness of cameras/cloud.",
+          "intended_use": "Publish camera-solution and point-cloud.",
+          "inputs": "Saved outputs, source views and reserved controls where metric use is required.",
+          "outputs": "Camera/coverage/source/frame report and use-specific outputs.",
+          "accuracy": "Per-feature/source criteria; no metric claim from image fit alone.",
+          "evidence": "Actual file readback and independent control/capture evidence.",
+          "software": "Verify image/pose mapping, component coverage, cloud detail and scale/frame; apply independent controls as required.",
+          "agent": "Separate reviewer checks scene/feature identity and visible versus inferred evidence.",
+          "user_decisions": "Resolve required source/control mismatch.",
+          "dependencies": "REC-03/17 validation and proposed domain output checker.",
+          "proposed_development": "Proposal: photo-domain verifier emits exact-output and downstream mesh/metric prerequisites.",
+          "procedure": [
+            "Reopen cameras and cloud.",
+            "Compare source/camera coverage and applicable independent controls.",
+            "Publish original outputs with explicit downstream transitions."
+          ],
+          "validation": "Cloud/file format cannot be substituted by Gaussian parameters or scene checkpoint.",
+          "failure_resume": "Repair affected camera/cloud stage; invalidate dependent surfaces/training only.",
+          "resources": "Local output/control checks before display review; remote/manual assessment separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets capture/detail target and directs reconstruction.",
+        "hybrid": "Software solves/checks; agent reviews source correspondence.",
+        "software_first": "Checked capture classes process with camera/coverage exceptions.",
+        "deterministic": "Explicit supported photo/configuration contract yields typed cameras/cloud."
+      },
+      "alternatives": [
+        "Sparse camera/cloud for initial context.",
+        "Dense cloud with explicit additional stage.",
+        "Video uses REC-04 first; mesh uses REC-17/DOM-28; working metric use requires its controls."
+      ],
+      "merge": {
+        "branches": "Sparse/dense/backend candidates share source photos and declared camera/control evidence.",
+        "evaluation": "VLM reviews captured feature associations; software compares coverage/pose/control reports.",
+        "combination": "Choose coherent camera/cloud representation at declared detail; preserve other branches separately.",
+        "post_merge": "Read saved outputs and repeat camera/source/frame and applicable metric checks."
+      },
+      "software_migration": "Automate demonstrated photo/dataset classes after video-input, cloud-detail, disconnected component and output-type fixtures.",
+      "future_tests": [
+        "Video file alone cannot satisfy photo-set without explicit extraction receipt.",
+        "Cameras+sparse cloud can satisfy declared sparse target without mesh.",
+        "A Gaussian PLY cannot silently satisfy point-cloud output semantics."
+      ]
+    },
+    {
+      "operation_id": "REC-10",
+      "name": "Estimate multi-view depth, camera poses and Gaussian outputs",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://github.com/ByteDance-Seed/Depth-Anything-3",
+        "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+        "https://github.com/xy-gao/DA3-blender",
+        "https://huggingface.co/depth-anything/DA3Metric-Large"
+      ],
+      "actions": [
+        {
+          "id": "REC-10-A01",
+          "name": "Bind learned reconstruction variant, images and camera roles",
+          "purpose": "Define the exact model/checkpoint and permitted input class for predicted camera/depth reconstruction.",
+          "intended_use": "Context layout may use a bounded image subset; interface work requires identified measured controls and regional criteria before predictions supply dimensional evidence.",
+          "inputs": "Photo-set OR video as the literal alternative; video first supplies REC-04 frame manifest; checkpoint/config, model card, image rights, masks and available calibration/control records.",
+          "outputs": "Inference manifest with source/generated origin, variant/checkpoint hash, processed image mapping, supplied-versus-estimated camera policy, output names and scale status.",
+          "accuracy": "Separate metric-model source claim, inferred scale, control uncertainty and feature allowance; model confidence keeps its documented meaning.",
+          "evidence": "DA3 repository and Streaming README describe multi-view depth/camera estimates; DA3Metric-Large is a separate card. Existing third-party add-on has its own provenance/licence record.",
+          "software": "Inspect selected DA3 entrypoint/version, export settings and checkpoint support; streaming configuration must actually emit intrinsics/poses plus cloud to fulfill this operation.",
+          "agent": "Reason about coverage, moving regions, candidate model variant and semantic feature/control associations using full views and mapped crops.",
+          "user_decisions": "Choose intended use or target feature when source descriptions conflict; choose acquisition or a changed design requirement when evidence cannot resolve it.",
+          "dependencies": "REC-04 for video; REC-01/02 camera checks and point-01 brief where supplied; model/code/checkpoint/input rights records.",
+          "proposed_development": "PROPOSAL learned-input planner: image/video manifest + selected model card/config → exact input/output manifest, camera policy, expected coordinate/scale record and blocked conditions.",
+          "procedure": [
+            "Identify the actual checkpoint and source input class.",
+            "Bind image transforms, masks, camera roles and control partitions.",
+            "Record the required camera/cloud exports and feature criteria."
+          ],
+          "validation": "Check literal one-of input, all files/revisions, rights references and actual model export contract; a GLB-only example cannot complete camera-solution plus point-cloud.",
+          "failure_resume": "Changed checkpoint/image preprocessing invalidates dependent estimates; unsupported camera/cloud export blocks that branch while retaining dataset preparation.",
+          "resources": "Metadata and a minimal representative subset first; record image count/resolution/chunk overlap and actual backend/GPU/VRAM conditions before full inference; remote VLM calls and manual masks separately."
+        },
+        {
+          "id": "REC-10-A02",
+          "name": "Estimate depth and cameras and materialize the declared cloud",
+          "purpose": "Produce version-bound predicted cameras and geometric samples with explicit scale and frame mapping.",
+          "intended_use": "Generate a context candidate or a control-evaluated reconstruction candidate with the same required regions.",
+          "inputs": "A01 manifest, selected input subset/checkpoint, actual invocation configuration, optional supplied pose policy and masks.",
+          "outputs": "Camera-solution, point-cloud, per-frame depth/confidence where enabled, raw model output and export receipt; optional Gaussian output stays a separate typed derivative.",
+          "accuracy": "Keep depth prediction, confidence, scale alignment residual and numerical projection threshold separate; no confidence-to-length conversion without validated calibration.",
+          "evidence": "DA3 Streaming source describes saved camera poses/intrinsics, combined PLY and optional RGB/depth/confidence; exact outputs depend on configuration.",
+          "software": "Use documented DA3 photo/video or streaming route; read raw camera arrays/conventions and cloud attributes, apply a recorded transform only once. Discover release-specific output schema before interpreting it. DA3Metric-Large card fields are depth/confidence [N,H,W], W2C extrinsics [N,3,4] and K [N,3,3]; actual selected API metric/focal conversion must be established without inventing a card-missing divisor or converting twice.",
+          "agent": "Review alternative pose/scale or foreground/background assignments; retain competing outputs when source/control evidence does not select one.",
+          "user_decisions": "Resolve physical feature identity or permissible region exclusion if evidence permits alternatives.",
+          "dependencies": "A01 output contract; per-image preprocessing/calibration mapping; actual selected backend export discovery.",
+          "proposed_development": "PROPOSAL DA3 result adapter: raw depth/camera/confidence exports + image/config manifest → named camera records, typed geometric cloud, frame/scale receipt and partial-output status.",
+          "procedure": [
+            "Run the scoped inference into a new result revision during future execution.",
+            "Decode actual output fields and retain depth/sample-to-image correspondence.",
+            "Materialize both camera and geometric-cloud artifacts with explicit frame/scale and optional-product separation."
+          ],
+          "validation": "Read back every camera/image match, matrix direction and finite valid sample; detect missing camera export, arbitrary scale and Gaussian attributes before classifying a PLY as geometric samples.",
+          "failure_resume": "Preserve completed chunks and raw responses; reconcile exported files/checkpoint before retry; failed chunks cannot silently disappear from coverage.",
+          "resources": "Local inference cost depends on variant, image resolution/count and chunk size/overlap; record peak RAM/VRAM and inference duration when tested; streaming chunks need overlap/seam checks."
+        },
+        {
+          "id": "REC-10-A03",
+          "name": "Compare predictions with independent controls and conventional candidates",
+          "purpose": "Assign source-supported readiness to the predicted camera/cloud features.",
+          "intended_use": "Layout readiness concerns arrangement/coverage; working interface readiness requires the task's dimensional and source criteria.",
+          "inputs": "A02 artifacts, independent control measurements/views with fit roles, optional REC-03/17 conventional candidate and same-revision comparison package.",
+          "outputs": "Per-feature comparison report, selected candidate or unresolved alternatives, camera/cloud handoff and independent semantic review.",
+          "accuracy": "Report regional dimensional residuals in units, angular errors, visibility and coverage; confidence is recorded independently from measured uncertainty and engineering allowance.",
+          "evidence": "Point-05 alignment/control protocol and point-07 visual review establish fixed evidence and shared-dependency reporting.",
+          "software": "Project/reproject sampled geometry through actual cameras; align only using designated fit controls; calculate withheld distances and source-region differences with typed cloud readers.",
+          "agent": "VLM compares feature associations and masks using full views, crops and numerical reports; a separate reviewer checks the selected interpretation and shared model/source dependencies.",
+          "user_decisions": "Choose between source-consistent intended uses or request an additional physical view/measurement where required evidence is absent.",
+          "dependencies": "A02 complete outputs; comparison candidates bound to same feature IDs/frame or explicit measured transform; withheld controls.",
+          "proposed_development": "PROPOSAL prediction comparison ledger: predicted and conventional candidates + fit/check partition → regional errors, selection reasons, common dependencies and per-feature readiness.",
+          "procedure": [
+            "Align candidates using named fit evidence and freeze the transform.",
+            "Compare withheld controls and captured-view features.",
+            "Select or retain alternatives, then independently validate the selected/new merged revision."
+          ],
+          "validation": "Both typed outputs exist; independent checks use reserved controls; inferred hidden regions retain inferred status; same-source predictions do not count as independent acquisitions. Card-only focal conversion ambiguity blocks a metric claim until the actual adapter's units/recipe are checked.",
+          "failure_resume": "Failed local region remains blocked for its downstream operation; preserve passing unrelated regions; source/control or model changes invalidate their descendants.",
+          "resources": "Numerical subset comparison before full-cloud distances; local projection/nearest-neighbour cost scales with samples, while VLM image/crop tokens and manual correspondence work are separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Reasoning agent proposes variants, masks and source-feature interpretations; software executes/checks the selected supported route.",
+        "hybrid": "Agent fixes identity/control associations; software performs inference, export decoding and numerical checks with exception review.",
+        "software_first": "A recognized model/input/export class runs automatically; ambiguous camera fields, missing output, scale or confidence meaning returns to the agent.",
+        "deterministic": "A pinned model/config/dataset reruns a tested adapter with reproducibility settings and numerical checks; model determinism is measured for that backend, not assumed."
+      },
+      "alternatives": [
+        "Sparse CPU photogrammetry for minimum camera/coverage evidence; DA3 predicted context for a selected subset; full learned multi-view candidate for stated regions; independent MVS or calibrated-depth surface for working features."
+      ],
+      "merge": {
+        "branches": "Give learned and conventional branches their exact variant, image subset, intended detail, feature coverage, scale/control and resource records.",
+        "evaluation": "VLM chooses supported feature correspondence using original images and measured report; independent reviewer checks semantic choice.",
+        "combination": "Combine camera/cloud revisions only through a documented common-frame mapping and compatible sample provenance; preserve learned and observed region labels.",
+        "post_merge": "Re-read cameras and cloud, repeat affected withheld controls/coverage and review seam/identity semantics."
+      },
+      "software_migration": "PROPOSAL migrate export decoding, camera convention and per-region checks after checked fixtures for each exact DA3 variant/output class; retain agent routing for unsupported schema, generated regions and ambiguous feature meanings.",
+      "future_tests": [
+        "Metric versus relative checkpoint on same data preserves separate scale claims; GLB-only export stays partial; confidence score with biased depth cannot become a dimensional error bound; streaming missing chunk and changed overlap preserve coverage gaps; Gaussian PLY presented as a cloud is rejected by typed adapter."
+      ]
+    },
+    {
+      "operation_id": "REC-18",
+      "name": "Generate a single-image mesh proxy",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://github.com/VAST-AI-Research/TripoSR",
+        "https://github.com/microsoft/TRELLIS.2",
+        "https://github.com/facebookresearch/sam-3d-objects",
+        "https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md",
+        "https://huggingface.co/microsoft/TRELLIS.2-4B"
+      ],
+      "actions": [
+        {
+          "id": "REC-18-A01",
+          "name": "Select one source image and a mesh-producing model contract",
+          "purpose": "Bind the single-image proxy source and an evidenced direct mesh output.",
+          "intended_use": "A proxy supports silhouette/context layout; a precision part uses independent dimensions and a separate CAD remodeling action.",
+          "inputs": "Photo-set containing the explicitly selected image, object/mask identity, image source/rights, chosen model/checkpoint and intended-use brief.",
+          "outputs": "Single-image generation manifest with mask/preprocessing, generated-region policy, model/output contract and resource conditions.",
+          "accuracy": "Visible silhouette criteria use original pixels; physical dimensions require measured controls; generated hidden geometry has separate inference status.",
+          "evidence": "TripoSR and TRELLIS.2 document mesh outputs; SAM 3D Objects example takes image+mask and saves output gs as Gaussian PLY.",
+          "software": "Inspect exact model interface/checkpoint/output and preprocessing; TRELLIS.2 pipeline returns mesh and optional GLB; keep SAM Gaussian route outside a direct mesh completion claim.",
+          "agent": "VLM selects source-supported foreground/mask and explains occlusion/shape ambiguities; inspect full image beside crops.",
+          "user_decisions": "Select target object, intended use and any design choice for invisible geometry if an authored model is required.",
+          "dependencies": "Photo-set source identity; mask lineage; code/checkpoint/dependency/input rights; actual GPU support.",
+          "proposed_development": "PROPOSAL proxy-input planner: chosen image/mask + model specification + intended use → generation request, output type and visible/inferred region map.",
+          "procedure": [
+            "Select and hash the one source image and mask.",
+            "Match the chosen model to a triangle-mesh output contract.",
+            "Record visible evidence, hidden-region interpretation and scope criteria."
+          ],
+          "validation": "Input selection remains explicit; actual source image rather than a rendered substitute is identified; unsupported Gaussian-only output cannot satisfy mesh.",
+          "failure_resume": "Missing mask/rights/output capability stops generation branch; preserve selected source and substitute a separately evidenced mesh model only as a recorded proposal.",
+          "resources": "Start with source/mask inspection; source claims TripoSR default about 6 GB VRAM, TRELLIS.2 Linux/NVIDIA>=24 GB and SAM Objects>=32 GB apply to exact setups, not local capacity results."
+        },
+        {
+          "id": "REC-18-A02",
+          "name": "Generate and preserve the proxy mesh and its coordinate frame",
+          "purpose": "Create a generated mesh derivative with model and source lineage.",
+          "intended_use": "Deliver a renderable proxy or a separately measured-and-aligned candidate for downstream remodeling.",
+          "inputs": "A01 request, selected model/config/checkpoint/seed, original image/mask and optional explicit alignment controls.",
+          "outputs": "Generated triangle mesh, optional texture/materials, raw model output, bounds/frame/unit-status and generation receipt.",
+          "accuracy": "Model normalization and arbitrary scale are retained; alignment scale uses sourced measurements; tessellation/decimation thresholds are computational settings.",
+          "evidence": "TripoSR README and TRELLIS.2 pipeline/GLB example establish the direct mesh branch; model output geometry is inferred from the image.",
+          "software": "Future adapter invokes selected documented model, records raw mesh and texture outputs, reads vertices/faces/material references and export axes; save derivative before optional cleanup.",
+          "agent": "Inspect visible silhouette and hidden geometry across labelled rendered views while keeping their common generated origin.",
+          "user_decisions": "Choose an authored hidden-shape interpretation or intended scale only when the task requires it and source evidence cannot determine it.",
+          "dependencies": "A01 mesh contract; new output path/revision; renderer can consume actual mesh format.",
+          "proposed_development": "PROPOSAL proxy exporter: raw model result + input/config receipt → mesh/material package, frame/normalization map and per-region generated lineage.",
+          "procedure": [
+            "Generate to a new revision under the selected configuration.",
+            "Save the original returned mesh before any editing.",
+            "Decode its actual topology, scale/frame and materials into a typed mesh receipt."
+          ],
+          "validation": "Read back face indices, finite coordinates, normals, bounds/material references and actual mesh payload; a preview image or Gaussian file is a partial output.",
+          "failure_resume": "Retain raw generated result on export/cleanup failure; reconcile remote request/result identity before rerun; checkpoint/model changes create a separate candidate.",
+          "resources": "Local inference depends on exact model resolution, variant and GPU memory; export/mesh checks depend on vertex/face count; remote model services and VLM reasoning have distinct request/cost records."
+        },
+        {
+          "id": "REC-18-A03",
+          "name": "Evaluate visible fit and gate geometric reuse by independent evidence",
+          "purpose": "Assign the proxy's permitted downstream use without converting inferred geometry into measurements.",
+          "intended_use": "Context branch uses stated silhouette/placement criteria; working geometry branch requires feature-specific dimensions and CAD remodeling/checks.",
+          "inputs": "A02 mesh, source image/camera information, independent additional captured views/measurements if supplied, and intended-use criteria.",
+          "outputs": "Proxy evaluation, visible/inferred feature map, selected candidate and scoped handoff to point-05 remodeling or visual context.",
+          "accuracy": "Measure silhouette residual with known/estimated camera dependency, and independent dimensional differences after controlled alignment; hidden parts retain coverage limits.",
+          "evidence": "Point-05 REC-14/15/16 remodeling/measurement procedures and point-07 visual source/generated distinctions.",
+          "software": "Render under the matched camera, compare original-pixel masks and measured controls; run mesh validity/local topology checks before reuse.",
+          "agent": "VLM compares competing generated candidates using actual visible evidence and required interfaces; separate semantic reviewer checks visible/inferred labels and source correspondence.",
+          "user_decisions": "Resolve new design details only as explicit design decisions, or supply real measurements when required precision cannot be checked.",
+          "dependencies": "A02 artifact hash; source pixel mapping; proposed CAD handoff preserves exact dimensional evidence and generated mesh.",
+          "proposed_development": "PROPOSAL proxy qualification ledger: mesh + actual capture/control evidence → feature readiness by intended use, candidate selection and remodeling requirements.",
+          "procedure": [
+            "Compare visible source projections and independent measurements separately.",
+            "Select source-supported candidates and retain hidden alternatives.",
+            "Recheck the selected mesh revision and issue a use-specific handoff."
+          ],
+          "validation": "Generated back views of the candidate count as internal visualization; independent capture/control IDs are preserved; mesh validity alone cannot pass dimensional requirements.",
+          "failure_resume": "Local feature failure blocks only that reuse; preserve proxy for a permitted context branch; new real view invalidates affected inferred regions and downstream checks.",
+          "resources": "Low-resolution renders and selected feature queries first; full mesh queries only for required regions; record manual interpretation and remote VLM evidence package separately."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets target/mask and compares proxy candidates; software generates mesh and computes checks.",
+        "hybrid": "Agent supplies source-feature and use decisions; software executes pinned generator, export/readback and projection checks.",
+        "software_first": "Recognized object/mask and direct mesh backend produce a candidate; unsupported output/occlusion/scale requirements trigger reasoning review.",
+        "deterministic": "Pinned image/mask/checkpoint/config supports a repeatable fixture-tested proxy adapter; numerical equality depends on tested inference/backend settings."
+      },
+      "alternatives": [
+        "Single-image context proxy; multi-image conventional reconstruction when real views exist; measured CAD remodeling for working interfaces; image+mask Gaussian appearance branch keeps its own output type."
+      ],
+      "merge": {
+        "branches": "Record exact source image, mask, variant, intended-use/detail and generated-region labels for each proxy; record common checkpoint dependencies.",
+        "evaluation": "VLM selects visible feature agreement supported by original source and controls; separate reviewer checks claims about hidden surfaces.",
+        "combination": "Compatible texture/geometry packaging preserves source mapping; cross-candidate geometry edits become a new authored mesh with explicit modeling scope and lineage.",
+        "post_merge": "Recheck topology, source projection, required dimensions and visible/inferred labels on the new revision."
+      },
+      "software_migration": "PROPOSAL automate validated input/mask/export types and use-specific checks after fixtures; keep new invisible-geometry design and unsupported model outputs with the reasoning agent.",
+      "future_tests": [
+        "SAM Objects Gaussian PLY cannot fulfill direct mesh; a generated backside conflicts with a newly supplied real view; equal silhouette but wrong depth fails working-interface checks; mesh export loses texture or flips frame; changed checkpoint invalidates candidate checks."
+      ]
+    },
+    {
+      "operation_id": "REC-19",
+      "name": "Train and export a Gaussian splat scene",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://docs.nerf.studio/quickstart/custom_dataset.html",
+        "https://docs.nerf.studio/quickstart/export_geometry.html",
+        "https://docs.nerf.studio/quickstart/data_conventions.html",
+        "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py"
+      ],
+      "actions": [
+        {
+          "id": "REC-19-A01",
+          "name": "Prepare a Gaussian training dataset with verified camera mapping",
+          "purpose": "Bind photos and supplied cameras to the selected Gaussian training method.",
+          "intended_use": "Train a viewing-context scene with declared viewpoints and feature coverage; precision surfaces use their separate measured geometry branch.",
+          "inputs": "Photo-set AND camera-solution, image/camera IDs, intrinsics/distortion/preprocessing, masks, train/evaluation roles, selected Splatfacto version/config and rights records.",
+          "outputs": "Dataset/parser receipt with original-to-training camera/world transforms, scale, image assignments, camera-optimization policy and feature evaluation plan.",
+          "accuracy": "Pixel conversion, camera numerical tolerance and appearance criteria are separate from measured dimensional allowances; camera uncertainty follows its source.",
+          "evidence": "Nerfstudio data conventions define camera axes and transforms.json layout; custom-data default image/video processing estimates cameras; Splatfacto method defines its scene route.",
+          "software": "Use an evidenced supplied-camera parser or prepared transforms.json pathway with version discovery; read actual parsed cameras, auto-orientation/centering/scale settings and output transform. Do not rerun default pose estimation unintentionally. Preserve actual dataparser_transform and dataparser_scale, applied metadata and orientation override; scene_scale is box extent. Use the recorded inverse composition for round trip, as specified in common_protocol.parser_contract.",
+          "agent": "Associate source regions/masks and camera groups, identify view gaps and choose supported training/evaluation partitions.",
+          "user_decisions": "Select required viewing range/appearance purpose and any disputed object identity; metric requirements come from the existing brief.",
+          "dependencies": "REC-03/05/10 camera source and preprocess mappings; common camera convention/partition protocol; actual parser capabilities.",
+          "proposed_development": "PROPOSAL Gaussian dataset adapter: photos + supplied cameras + selected parser/config → training dataset, camera/world normalization receipt, readback differences and participation table.",
+          "procedure": [
+            "Pair every image with its source camera and pixel convention.",
+            "Apply only the required camera-basis and world transforms, then read parsed values.",
+            "Freeze training, camera-refinement, tuning and evaluation participation."
+          ],
+          "validation": "Check camera projection against source before training; reject duplicate axis flip/scale normalization; evaluation images used in SfM retain their shared pose dependence.",
+          "failure_resume": "Unsupported parser/convention blocks training; preserve prepared source dataset; changed camera/mask/split invalidates training and evaluation descendants.",
+          "resources": "CPU metadata/projection preview first; record dataset images/resolution and anticipated Gaussian/training settings before GPU allocation; remote VLM and manual masks separate."
+        },
+        {
+          "id": "REC-19-A02",
+          "name": "Train and export the actual Gaussian scene representation",
+          "purpose": "Produce a renderable trained Gaussian artifact with complete training lineage.",
+          "intended_use": "Appearance/navigation context at specified viewpoints; geometric surface consumers require a separate extraction/reconstruction stage.",
+          "inputs": "A01 dataset/receipt, exact model/config/checkpoint schedule, selected backend and documented Gaussian export capability.",
+          "outputs": "Gaussian scene package with training config/checkpoint, renderer/version, exported Gaussian PLY when supported, bounds/frame mapping and artifact hashes.",
+          "accuracy": "Training loss/image similarity and Gaussian parameter precision remain appearance/numerical quantities; opacity/covariance/centres are learned rendering parameters.",
+          "evidence": "Splatfacto documents ns-export gaussian-splat; its method page says mesh/point-cloud export unsupported while the generic export page claims TSDF across models.",
+          "software": "Use selected Splatfacto training and Gaussian export; preserve checkpoint/config and inspect exported attributes expected by the chosen renderer. Record actual GPU/backend requirements and resumable state.",
+          "agent": "Inspect training-view/coverage artifacts and compare recorded candidate settings without interpreting rendered completion as observed surface evidence.",
+          "user_decisions": "Choose appearance/detail tradeoff within stated task criteria; new data acquisition or geometric requirements remain explicit task decisions.",
+          "dependencies": "A01 parsed cameras; actual renderer/export schema and compatible consumer; source rights/checkpoint terms.",
+          "proposed_development": "PROPOSAL Gaussian package adapter: trained state + parser transform + supported Gaussian export → typed gaussian-scene with renderer assets, attribute manifest and resume receipt.",
+          "procedure": [
+            "Train the chosen candidate into a separate checkpoint lineage during future execution.",
+            "Export only supported Gaussian representation and preserve raw state.",
+            "Read attributes and renderer/frame compatibility into the package receipt."
+          ],
+          "validation": "Load with the named Gaussian renderer; verify image/camera/frame associations and required attributes. Ordinary point-cloud readers cannot establish Gaussian-scene completeness.",
+          "failure_resume": "Resume only matching dataset/config/checkpoint state; keep last complete checkpoint and incomplete export separate; renderer/export failure preserves trained state as partial package.",
+          "resources": "Local GPU memory depends on method, image size/count, iterations and Gaussian count; source Splatfacto examples about 6/12 GB are setup-specific. Record actual duration/VRAM when tested, separate from remote VLM."
+        },
+        {
+          "id": "REC-19-A03",
+          "name": "Evaluate captured-view appearance and geometry handoff boundaries",
+          "purpose": "Select a source-supported Gaussian scene and establish its compatible consumers.",
+          "intended_use": "Viewing context evaluated from reserved real captures; optional composite scene keeps measured mesh/CAD roles independently checked.",
+          "inputs": "A02 scene, exact evaluation cameras and real images, participation table, feature/region criteria and optional independently reconstructed mesh/CAD.",
+          "outputs": "Appearance evaluation with shared dependencies, selected Gaussian revision, renderer receipt and explicit geometry/composite proposal.",
+          "accuracy": "Report image error by region and camera dependence, opacity/coverage artifacts and any independent control checks separately; rendered depth alone is not dimensional evidence.",
+          "evidence": "Splatfacto export source and point-07 visual review distinguish Gaussian PLY, surface mesh and independent captures.",
+          "software": "Render evaluation cameras using pinned renderer; compare captured regions under stated exposure/mask policy; verify scene transform by known source projections; typed-check any additional mesh.",
+          "agent": "VLM compares original capture/full-view/crops and numerical appearance report; independent reviewer checks object/region meanings and source/generated/evaluation roles.",
+          "user_decisions": "Choose permitted appearance tradeoffs or request additional real evidence where required viewpoints are absent.",
+          "dependencies": "A02 complete renderable package; heldout policy and camera provenance; separate geometry branch if a mesh/CAD composite is requested.",
+          "proposed_development": "PROPOSAL Gaussian evaluation/composition ledger: scene + captured checks + optional geometry transforms → region results, compatible scene layers and fresh composite validation.",
+          "procedure": [
+            "Render actual captured evaluation cameras and compare named regions.",
+            "Select the evidence-supported scene or retain conflicting alternatives.",
+            "Reopen selected package and validate any separately proposed mesh/CAD alignment on the new composition revision."
+          ],
+          "validation": "Generated novel views retain checkpoint lineage; training-heldout/SfM-used views are labelled accordingly; Splatfacto geometry export remains capability-gated despite generic TSDF wording.",
+          "failure_resume": "Failed viewpoint/region blocks its viewing claim; preserve compatible contexts; changed checkpoint/parser transform invalidates render and composite checks.",
+          "resources": "Small fixed evaluation set first, then required viewing coverage; renderer GPU cost and VLM image/token/manual review costs separately recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets coverage/masks and chooses supported scene candidates; software trains, exports and renders measured comparisons.",
+        "hybrid": "Agent sets evidence associations and exceptions; software handles parser readback, training/checkpoints and image comparisons.",
+        "software_first": "Recognized camera/parser/export contracts train and evaluate automatically; conflicting scale/roles or unsupported geometry export returns for review.",
+        "deterministic": "Pinned dataset/parser/config/backend supports tested replay and comparison; stochastic training reproducibility is measured for the chosen build."
+      },
+      "alternatives": [
+        "Minimal captured-view context; bounded Gaussian preview; full required viewing coverage; independently reconstructed mesh plus Gaussian appearance plus parametric CAD as a proposed layered composition."
+      ],
+      "merge": {
+        "branches": "Pin common photos/cameras and record branch image subsets/detail/Gaussian settings, required viewpoints and resources.",
+        "evaluation": "VLM selects with actual source/evaluation crops and numerical reports; shared SfM and checkpoint dependencies stay visible.",
+        "combination": "Compose compatible appearance and geometry layers through explicit transforms; Gaussian parameters remain their own typed layer, and conflicting appearance candidates remain separate.",
+        "post_merge": "Reopen renderable scene, check camera projection/world scale and every affected layer/interface; independent reviewer rechecks source-region interpretation."
+      },
+      "software_migration": "PROPOSAL migrate supplied-camera parsing, Gaussian package checks and region comparisons after fixtures for each method/version/renderer; retain unsupported-export and semantic-region exceptions for agent reasoning.",
+      "future_tests": [
+        "Already converted camera receives no second axis flip; hidden parser normalization changes scale and fails readback; heldout-from-training but SfM-used image reports shared pose dependency; Gaussian PLY passed as observed cloud fails; generic TSDF versus Splatfacto unsupported export stays a capability conflict; interrupted checkpoint/export resumes from complete lineage."
+      ]
+    },
+    {
+      "operation_id": "REC-20",
+      "name": "Train and export a NeRF scene",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
+        "https://docs.nerf.studio/quickstart/custom_dataset.html",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://docs.nerf.studio/quickstart/export_geometry.html",
+        "https://docs.nerf.studio/quickstart/data_conventions.html",
+        "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py"
+      ],
+      "actions": [
+        {
+          "id": "REC-20-A01",
+          "name": "Bind NeRF method, supplied cameras and training-space transforms",
+          "purpose": "Define the radiance-field training input and preserve the source-to-training coordinate chain.",
+          "intended_use": "Appearance scene for a bounded viewing region; geometric extraction is a separately checked optional output.",
+          "inputs": "Photo-set AND camera-solution, original/preprocessed images, calibration/pose mapping, masks, exact NeRF method/parser/config and evaluation roles.",
+          "outputs": "NeRF dataset receipt with camera basis/world orientation/centering/scale transforms, parser readback and source participation table.",
+          "accuracy": "Per-view image criteria and numerical projection tolerances remain separate from control uncertainty and physical feature allowances.",
+          "evidence": "Nerfstudio data-convention and custom-dataset pages support explicit camera axes and specific supplied-camera parsers; parser normalization needs selected-config inspection.",
+          "software": "Read selected parser inputs/settings and actual camera values; convert source camera basis only when required; preserve inverse world normalization and any camera-optimization changes. Preserve actual dataparser_transform and dataparser_scale, applied metadata and orientation override; scene_scale is box extent. Use the recorded inverse composition for round trip, as specified in common_protocol.parser_contract.",
+          "agent": "Reason about view coverage, dynamic regions and source feature associations; choose supported masked/excluded regions.",
+          "user_decisions": "Resolve intended viewing envelope and source identity ambiguity; choose a different acquisition when evidence coverage is required.",
+          "dependencies": "Existing camera-solution and calibration; exact selected method/parser entrypoint and source rights.",
+          "proposed_development": "PROPOSAL NeRF input adapter: photos/cameras/config → parsed dataset, reversible world transform, camera comparison and partition manifest.",
+          "procedure": [
+            "Bind source images to exact camera records and calibration.",
+            "Build the selected parser input and read its actual camera/world transforms.",
+            "Freeze appearance training, camera optimization, tuning and evaluation roles."
+          ],
+          "validation": "Projection agreement is checked before training; a generic processing route that re-estimates supplied poses must be explicitly requested and produce a new camera revision.",
+          "failure_resume": "Unrecognized camera basis/parser blocks training; changed source images, calibration or normalized-world mapping invalidates dependent state.",
+          "resources": "Low-cost CPU camera/projection audit first; image count/resolution/ray sampling/model architecture determine planned training demand; remote reasoning separate."
+        },
+        {
+          "id": "REC-20-A02",
+          "name": "Train and save a renderable NeRF state",
+          "purpose": "Materialize the required nerf-scene with the assets needed to render it.",
+          "intended_use": "Novel-view appearance with specified method and bounds; optional surface export carries its own method-specific contract.",
+          "inputs": "A01 parsed dataset and transforms, selected NeRF configuration/backend, training schedule, checkpoint/resume settings.",
+          "outputs": "NeRF scene package: config, weights/checkpoint, renderer/code version, bounds, camera/world map and hashes; conditional mesh export is a separate derivative.",
+          "accuracy": "Training loss and rendering resolution are appearance/computational settings; extracted-surface sampling thresholds require their own regional geometric validation.",
+          "evidence": "Nerfstudio export guide describes TSDF and Poisson, with Poisson requiring predicted normals; actual selected model/version support must be established.",
+          "software": "Use supported NeRF trainer/save/load route; preserve config/checkpoint and renderer dependencies. Before optional export, verify method supplies depth/normals/field needed by that exporter.",
+          "agent": "Inspect training progress/coverage evidence and compare actual region outputs, retaining source-dependent artifacts.",
+          "user_decisions": "Choose training/detail tradeoff within current purpose; new geometric design or output-class requirement is a separate decision.",
+          "dependencies": "A01 dataset; locally supported GPU/backend and checkpoint format; actual consumer renderer contract.",
+          "proposed_development": "PROPOSAL NeRF package adapter: training state/config + transform receipt → renderable nerf-scene and separately typed optional export with support/loss map.",
+          "procedure": [
+            "Train into a named checkpoint lineage under pinned inputs during future execution.",
+            "Save model/config/renderer dependencies and inspect complete state.",
+            "Record the actual supported consumer and gate optional surface extraction by method inputs."
+          ],
+          "validation": "Reopen checkpoint with selected renderer and render a recorded camera; an exported preview GLB alone is insufficient for a resumable NeRF-state claim.",
+          "failure_resume": "Partial checkpoints remain separate from complete state; reconcile interrupted save/request before restart; changed architecture/checkpoint or parser transform starts a new lineage.",
+          "resources": "Local training depends on ray batch/image resolution/iterations/model and hardware; renderer/extraction grids can add substantial memory; record actual observations separately from remote VLM/manual effort."
+        },
+        {
+          "id": "REC-20-A03",
+          "name": "Validate scene appearance and any separately extracted geometry",
+          "purpose": "Evaluate the trained scene and qualify optional geometry under its own evidence.",
+          "intended_use": "Source-linked appearance context; geometry reuse only for features with independent source/control checks.",
+          "inputs": "A02 scene and optional extracted mesh, real evaluation images/cameras/role table, feature criteria and independent measurements when geometry is requested.",
+          "outputs": "Region-based appearance report, actual scene consumer receipt, optional geometry validation and selected revision.",
+          "accuracy": "Appearance error under stated photometric conditions, projection error, measured dimension residual, extraction discretization and source uncertainty have separate fields.",
+          "evidence": "Generic Nerfstudio geometry export and point-07 visual review require representation-specific and independent checks.",
+          "software": "Render fixed captured evaluation cameras; compare named regions; if extraction is supported, read mesh topology/frame, reproject to sources and check withheld dimensions without replacing the trained state.",
+          "agent": "VLM chooses scene/extraction candidates from original images and numerical reports; separate semantic reviewer checks surface interpretation and generated regions.",
+          "user_decisions": "Choose a source-consistent appearance option or explicit new design for inferred surfaces; required measurement evidence controls working-feature readiness.",
+          "dependencies": "A02 complete state, evaluation partition and actual optional exporter capability; point-05 registration for CAD composition.",
+          "proposed_development": "PROPOSAL NeRF qualification adapter: trained scene + actual captures + optional extracted geometry/control evidence → appearance and geometry reports with independent readiness.",
+          "procedure": [
+            "Evaluate source-heldout appearance with its actual shared camera dependencies.",
+            "Validate optional extracted surface independently by required feature.",
+            "Select/package the scene and recheck any new geometry/CAD composition revision."
+          ],
+          "validation": "Field-derived meshes retain inference/extraction provenance; generated evaluation views are internal tests; Gaussian exports cannot substitute for nerf-scene state.",
+          "failure_resume": "Failed extraction preserves complete NeRF scene; failed local geometry blocks that downstream feature; source/control changes invalidate dependent reports.",
+          "resources": "Render small fixed comparison set first; extraction resolution/bounds determines local grid cost; full mesh checks only required regions, with VLM/manual review logged independently."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets view coverage and model-specific export eligibility; software trains, renders and measures.",
+        "hybrid": "Agent defines source-feature/evaluation roles; software performs camera readback, checkpointing and numerical comparisons.",
+        "software_first": "Recognized NeRF method/parser with checked output can run; unsupported normals/depth/export or camera semantics triggers exception review.",
+        "deterministic": "Pinned method/dataset/config uses tested replay and renderer checks; convergence and stochastic variation remain measured properties."
+      },
+      "alternatives": [
+        "Camera-only or captured-image context first; bounded NeRF preview; required-view appearance training; method-supported extracted mesh or independent MVS mesh plus CAD as a proposed composition."
+      ],
+      "merge": {
+        "branches": "Record exact method/parser/dataset/splits, required viewing/detail and resource observations; isolate checkpoints.",
+        "evaluation": "VLM compares captured source regions, actual renderer outputs and numerical evidence, with independent semantic review.",
+        "combination": "Compose separately typed NeRF, geometric mesh and CAD through checked transforms; editing or combining extracted surfaces creates a new geometry revision.",
+        "post_merge": "Reopen renderer state, compare source-camera projections and verify changed geometry/interfaces and semantic mappings."
+      },
+      "software_migration": "PROPOSAL automate each checked parser/method/checkpoint/renderer and export class separately; promote only after failures for scale/basis/splits/extraction and resume are detected on known cases.",
+      "future_tests": [
+        "Missing predicted normals blocks Poisson exporter while scene stays complete; changed world normalization misaligns CAD and is detected; training-view render cannot count as independent appearance test; field mesh passes global bounds but closes an opening and fails regional check; partial checkpoint/config mismatch cannot resume silently."
+      ]
+    },
+    {
+      "operation_id": "REC-11",
+      "name": "Train NeRF or Gaussian scene for view synthesis",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
+        "https://docs.nerf.studio/quickstart/custom_dataset.html",
+        "https://docs.nerf.studio/quickstart/export_geometry.html",
+        "https://docs.nerf.studio/quickstart/data_conventions.html",
+        "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py"
+      ],
+      "actions": [
+        {
+          "id": "REC-11-A01",
+          "name": "Choose the actual renderable scene subtype and consumer",
+          "purpose": "Resolve the generic visual-scene contract into an evidenced Gaussian or NeRF payload.",
+          "intended_use": "A viewing-context layer with defined viewpoints, required regions and a named compatible renderer.",
+          "inputs": "Photo-set AND camera-solution, intended viewing purpose, camera/preprocess receipt, target consumer and available method/version evidence.",
+          "outputs": "Scene dispatch record naming Gaussian or NeRF subtype, renderer, config/checkpoint/assets, camera route and optional separate geometry branch.",
+          "accuracy": "Use per-region appearance/coverage criteria; dimensional claims use independent controls and a separate geometry representation.",
+          "evidence": "Original REC-11 declares visual-scene; REC-19/20 supply typed routes; Splatfacto and Nerfstudio source pages define their actual products.",
+          "software": "Inspect chosen method and consumer interface; resolve whether visual-scene contains training state/renderer assets or a supported exported scene subtype.",
+          "agent": "Compare method capability, input coverage and required viewing behavior; interpret masks/features and document source-supported choice.",
+          "user_decisions": "Choose intended consumer/use or a source-consistent appearance tradeoff where the brief allows alternatives.",
+          "dependencies": "REC-19/20 input contracts; source/camera dataset; actual selected renderer; no generic GLB assumption.",
+          "proposed_development": "PROPOSAL scene dispatcher: photos/cameras + consumer requirements + capability evidence → typed method route and explicit visual-scene payload manifest.",
+          "procedure": [
+            "Identify the required visual consumer and source regions.",
+            "Select the evidenced Gaussian/NeRF subtype and payload.",
+            "Bind camera parsing and representation-specific output/validation actions."
+          ],
+          "validation": "Consumer supports the actual subtype and required assets; a generic visual-scene type cannot conceal missing renderer/checkpoint dependencies.",
+          "failure_resume": "Unsupported consumer/subtype blocks that handoff while source dataset remains reusable; a new requested representation starts its own branch.",
+          "resources": "Metadata and source projection preview first; method training costs are estimated from exact images/settings, separately from VLM selection/manual evidence review."
+        },
+        {
+          "id": "REC-11-A02",
+          "name": "Execute the selected typed training route and package its scene",
+          "purpose": "Produce the generic operation's visual-scene through the explicit selected subtype.",
+          "intended_use": "Appearance rendering under its own renderer and preserved frame mapping.",
+          "inputs": "A01 dispatch record and complete REC-19 or REC-20 dataset/training inputs.",
+          "outputs": "Visual-scene manifest referencing actual Gaussian or NeRF package, renderer/version, config/checkpoint/assets, world transform and export loss map.",
+          "accuracy": "Retain subtype-specific appearance metrics and numerical settings; surface extraction tolerances belong to an additional geometry derivative.",
+          "evidence": "REC-19 and REC-20 procedures; generic export versus Splatfacto-specific conflict remains recorded.",
+          "software": "Invoke the selected typed procedure in future execution; verify saved state and supported export; package actual renderer dependencies and raw source revisions.",
+          "agent": "Review typed route exceptions and incompatible output formats; retain evidence-supported alternatives rather than relabel one representation as another.",
+          "user_decisions": "Choose changed intended output or appearance requirements if the current consumer cannot consume the actual scene.",
+          "dependencies": "A01 dispatch; REC-19/20 complete package and source rights; target renderer adapter.",
+          "proposed_development": "PROPOSAL visual-scene manifest builder: checked Gaussian/NeRF package + consumer contract → generic visual-scene with exact subtype, dependency closure and load receipt.",
+          "procedure": [
+            "Run the selected typed training/package procedure.",
+            "Bind all saved scene assets and transforms into a manifest.",
+            "Load the manifest with its named renderer and retain the observed consumer receipt."
+          ],
+          "validation": "All referenced assets exist and hashes match; named consumer actually loads the scene; mesh/GLB expectations require their separate supported export branch.",
+          "failure_resume": "Partial trained state/export keeps partial status; replay only the failed packaging step after request/checkpoint reconciliation; changed source invalidates affected outputs.",
+          "resources": "Reuse the selected route's training cost record; manifest/asset validation is local I/O proportional to checkpoint size; renderer load and remote reasoning separately logged."
+        },
+        {
+          "id": "REC-11-A03",
+          "name": "Validate scene use and proposed appearance/mesh/CAD composition",
+          "purpose": "Establish the generic scene's actual rendering behavior and compatible geometric composition.",
+          "intended_use": "Context scene alone or a proposed layered appearance/mesh/CAD arrangement with explicit roles.",
+          "inputs": "A02 visual-scene, real evaluation captures/cameras/role table, optional independently reconstructed mesh and measured parametric CAD with their frames.",
+          "outputs": "Visual-scene evaluation and selected revision; optional composition manifest with typed layers, transforms, source mappings and independent checks.",
+          "accuracy": "Appearance criteria remain per source region; geometric alignment uses measured controls, uncertainty and feature allowances from point-05.",
+          "evidence": "REC-R06 describes appearance+independent MVS+CAD composition; point-05 registration and point-07 representation evidence support explicit handoffs.",
+          "software": "Render fixed captured views; if composition is in scope, calculate/read actual source→target transforms and compare projection and critical geometric controls for each layer.",
+          "agent": "VLM selects compatible layer associations using full captured views and numerical reports; independent semantic reviewer checks feature identity and generated/observed labels.",
+          "user_decisions": "Choose layer purpose and any new geometry design; evidence-supported alignment/selection follows existing task constraints.",
+          "dependencies": "A02 loadable scene; real evaluation sources; separate mesh/CAD artifact identities and supported renderer/composition adapter.",
+          "proposed_development": "PROPOSAL scene composition ledger: typed appearance package + optional mesh/CAD + measured transforms → layered scene manifest, affected checks and source-per-feature report.",
+          "procedure": [
+            "Validate rendering against named real evaluation captures.",
+            "Compose only explicitly requested compatible layers through checked transforms.",
+            "Reopen the new composition and repeat affected numerical and independent semantic checks."
+          ],
+          "validation": "Each layer preserves its representation and source role; shared camera/model dependencies are stated; a visual alignment cannot replace critical interface measurements.",
+          "failure_resume": "Conflicting layer transform or identity keeps candidates separate; failure preserves independently complete source scenes; changed checkpoint/CAD revision invalidates affected composition checks.",
+          "resources": "Small source-aligned preview before full rendering; geometry queries scale with required features; local rendering/geometry work, remote VLM and manual corrections remain separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent chooses subtype/consumer and resolves scene meaning; software executes the chosen typed route and checks its loadable package.",
+        "hybrid": "Agent sets source/consumer associations; software composes checked manifests, renders and measures.",
+        "software_first": "Supported subtype/consumer pair dispatches automatically; unsupported export/renderer or ambiguous source roles returns to reasoning.",
+        "deterministic": "A fixture-tested exact subtype/renderer/config package can be rebuilt/checked with recorded stochastic limitations."
+      },
+      "alternatives": [
+        "Camera/image context with minimal local preprocessing; Gaussian appearance; NeRF appearance; independent mesh+CAD with an appearance layer as an explicit compatible composition proposal."
+      ],
+      "merge": {
+        "branches": "Pin same source/camera revisions and record intended consumer, detail/viewpoint coverage, method and cost for each subtype.",
+        "evaluation": "VLM selects actual source/consumer fit using real captures and numerical evidence; separate reviewer checks semantics.",
+        "combination": "Combine typed layers only through explicit frame mapping and compatible renderer interfaces; checkpoints or learned primitives are not averaged.",
+        "post_merge": "Reload new scene revision and repeat source projection, required geometry checks and independent layer/feature interpretation."
+      },
+      "software_migration": "PROPOSAL automate supported subtype/consumer dispatch after fixtures for complete dependency manifests and camera transforms; keep new renderer/export combinations with reasoning review.",
+      "future_tests": [
+        "Gaussian scene declared GLB without supported export fails consumer check; missing checkpoint dependency keeps visual-scene partial; equal visual bounds but wrong CAD scale fails composition controls; compatible scene layers with changed parser scale trigger affected revalidation."
+      ]
+    },
+    {
+      "operation_id": "DOM-22",
+      "name": "Photographs to Gaussian/NeRF visual scene",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://docs.nerf.studio/quickstart/custom_dataset.html",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://docs.nerf.studio/quickstart/export_geometry.html",
+        "https://docs.nerf.studio/quickstart/data_conventions.html",
+        "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py"
+      ],
+      "actions": [
+        {
+          "id": "DOM-22-A01",
+          "name": "Bind the domain Gaussian scene contract",
+          "purpose": "Preserve the operation's gaussian-scene output despite its broad Gaussian/NeRF title.",
+          "intended_use": "Building/object appearance context with named required regions and viewing positions.",
+          "inputs": "Photo-set AND camera-solution, source/mask/camera lineage, domain feature IDs, intended visual consumer and optional measured-frame controls.",
+          "outputs": "Gaussian domain route receipt with feature-to-source mapping, camera policy and explicit link to REC-19; NeRF requests route separately to DOM-30.",
+          "accuracy": "Domain feature appearance criteria and control-based placement criteria remain separate; no rendered appearance supplies a fabrication tolerance.",
+          "evidence": "Original domain operation and REC-19/Splatfacto source establish the Gaussian output contract.",
+          "software": "Typed dispatcher verifies input camera coverage and exact Gaussian renderer/export support; preserves element/component IDs as a sidecar mapping.",
+          "agent": "Interpret building/part region identities and required view coverage with full source images and camera map.",
+          "user_decisions": "Choose intended context and required domain regions when not determined by the supplied brief.",
+          "dependencies": "REC-19 input conditions; domain source identity and optional registration controls.",
+          "proposed_development": "PROPOSAL domain Gaussian planner: photos/cameras + domain feature/use map → REC-19 request, typed gaussian-scene consumer and coverage criteria.",
+          "procedure": [
+            "Read the literal photo/camera inputs and Gaussian output.",
+            "Map domain regions to source pixels and intended views.",
+            "Select the supported Gaussian route and recorded frame handoff."
+          ],
+          "validation": "NeRF or mesh request is explicitly dispatched to its own operation; every required region has source/evaluation roles and consumer support.",
+          "failure_resume": "Ambiguous domain identity blocks only that mapping; unsupported subtype cannot silently fulfill Gaussian output; preserve photo/camera assets.",
+          "resources": "Local manifest/projection checks first; record image count/resolution and required viewing extent before training; manual identity and remote VLM costs separate."
+        },
+        {
+          "id": "DOM-22-A02",
+          "name": "Build the Gaussian scene and preserve domain mappings",
+          "purpose": "Materialize the typed Gaussian artifact while retaining source/domain identities.",
+          "intended_use": "Renderable domain context and a separately controlled optional geometry overlay.",
+          "inputs": "A01 request plus complete REC-19 training inputs and domain feature/source sidecar.",
+          "outputs": "Gaussian scene package and domain mapping sidecar with checkpoint, renderer, parsed-camera/world transform and export attributes.",
+          "accuracy": "Gaussian numerical/appearance settings and measured domain placement uncertainty remain independent.",
+          "evidence": "REC-19 exact training/export contract; Splatfacto Gaussian PLY meaning and source-specific export support.",
+          "software": "Use REC-19 A01/A02; preserve domain IDs through source region mapping and scene transform, rather than assuming each learned primitive has a physical component identity.",
+          "agent": "Review changed masks/coverage and feature association after training/export.",
+          "user_decisions": "Choose appearance tradeoff or revised domain coverage within task scope.",
+          "dependencies": "A01 mapping; REC-19 complete scene and renderer dependency manifest.",
+          "proposed_development": "PROPOSAL domain scene packager: Gaussian state + source/domain map → gaussian-scene with stable source feature references and actual renderer receipt.",
+          "procedure": [
+            "Execute the checked Gaussian procedure under the pinned domain request.",
+            "Attach source-region/domain IDs and actual world mapping.",
+            "Reopen the scene with its renderer and record required asset completeness."
+          ],
+          "validation": "Typed Gaussian attributes and renderer state match; source feature identity is retained through mappings; node/primitive order does not create semantic IDs.",
+          "failure_resume": "Partial export preserves trained state and sidecar separately; resume under matching checkpoint/config; changed domain mask invalidates affected training/mapping checks.",
+          "resources": "Reuse recorded training demand; sidecar checks are local metadata work; rendering cost follows scene size/viewpoints and remote reasoning separate."
+        },
+        {
+          "id": "DOM-22-A03",
+          "name": "Check domain appearance and explicit geometric overlays",
+          "purpose": "Qualify Gaussian context and optional measured-model alignment for the required domain use.",
+          "intended_use": "Viewing context for a building/robot/part; geometric analysis uses separately qualified mesh/CAD/IFC layers.",
+          "inputs": "A02 Gaussian scene/mapping, real evaluation captures and role table, optional domain geometry with controls and frame chain.",
+          "outputs": "Domain region report, selected Gaussian revision and optional checked composition manifest.",
+          "accuracy": "Captured-view appearance, source projection and measured overlay residuals each retain their criteria and uncertainty.",
+          "evidence": "REC-19 evaluation and point-05/06 frame/domain protocols; original output remains gaussian-scene.",
+          "software": "Render actual evaluation cameras; check source-region coverage; if geometry overlay is scoped, apply checked transforms and query required measured interfaces/placements.",
+          "agent": "VLM associates domain features using source images and numerical overlay evidence; separate reviewer checks physical identity and representation roles.",
+          "user_decisions": "Choose permitted context/view tradeoffs; new geometric interpretation is an explicit design decision.",
+          "dependencies": "A02 renderable output; independent source/control evidence; separate geometry identity for composition.",
+          "proposed_development": "PROPOSAL domain appearance report: Gaussian scene + captured checks + optional measured geometry → region readiness and compatible overlay receipt.",
+          "procedure": [
+            "Evaluate named domain regions against real captures.",
+            "Check any separate geometry overlay with independent controls.",
+            "Select and reopen the new package/composition, repeating affected checks."
+          ],
+          "validation": "Gaussian coverage cannot satisfy missing physical geometry; optional overlay requires actual feature/frame checks; generated views retain shared checkpoint lineage.",
+          "failure_resume": "Failing overlay preserves standalone appearance scene; changed source/camera/domain geometry invalidates affected evaluation/composition only.",
+          "resources": "Use selected region views and control queries before full scene traversal; log local render/query costs and remote VLM/manual associations separately."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets domain region/view needs; software runs REC-19 and checks actual output.",
+        "hybrid": "Agent supplies feature mappings; software packages Gaussian assets and quantitative comparisons.",
+        "software_first": "Recognized source/camera/domain mapping follows checked Gaussian route; subtype or identity exceptions return for review.",
+        "deterministic": "Pinned domain/source/map/config supports fixture-tested package creation and readback, retaining measured training variability."
+      },
+      "alternatives": [
+        "Camera-only/domain source inspection; bounded Gaussian context; full required-view Gaussian scene; independent geometric model with Gaussian appearance overlay; NeRF is the explicit DOM-30 alternative."
+      ],
+      "merge": {
+        "branches": "Record common photo/camera revisions plus domain coverage/detail/consumer and resource criteria per Gaussian candidate.",
+        "evaluation": "VLM selects source-supported domain associations and viewing results; independent reviewer checks semantic mapping.",
+        "combination": "Compose compatible domain geometry as a separate typed layer with measured transform; keep contradictory region identities as alternatives.",
+        "post_merge": "Reopen Gaussian renderer and any overlay, repeat region/camera and critical geometric checks."
+      },
+      "software_migration": "PROPOSAL migrate stable domain mappings, package/export and per-view checks by supported input/consumer class; preserve reasoning for semantic identity and new geometry choices.",
+      "future_tests": [
+        "Broad title cannot return NeRF as Gaussian output; learned primitive reordering preserves source sidecar identity; trained-heldout view used in camera fitting reports dependency; overlay mm/metre mismatch fails independent controls."
+      ]
+    },
+    {
+      "operation_id": "DOM-30",
+      "name": "Photos to NeRF visual scene",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://docs.nerf.studio/quickstart/custom_dataset.html",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://docs.nerf.studio/quickstart/export_geometry.html",
+        "https://docs.nerf.studio/quickstart/data_conventions.html",
+        "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py"
+      ],
+      "actions": [
+        {
+          "id": "DOM-30-A01",
+          "name": "Bind domain features and cameras to the NeRF route",
+          "purpose": "Define a nerf-scene using supplied photos/cameras and explicit domain viewing criteria.",
+          "intended_use": "Appearance context for identified object/building regions with required viewpoints.",
+          "inputs": "Photo-set AND camera-solution, source identity/rights, domain feature map, actual NeRF renderer/method and evaluation plan.",
+          "outputs": "Domain NeRF request referencing REC-20, input camera/parser mapping and required source/view coverage.",
+          "accuracy": "Appearance targets, numerical camera projection and measured placement criteria have separate source-backed records.",
+          "evidence": "Original DOM-30 contract; REC-20 and Nerfstudio custom data/data conventions support typed camera and renderer preparation.",
+          "software": "Inspect selected supplied-camera parser and renderer; validate feature/image links and actual normalization receipt requirements.",
+          "agent": "Interpret source-region/domain identities and view gaps; choose evidenced route within current purpose.",
+          "user_decisions": "Choose intended visual consumer or required viewing regions when ambiguous.",
+          "dependencies": "REC-20 input contract; source camera/calibration and domain feature evidence.",
+          "proposed_development": "PROPOSAL domain NeRF planner: source photos/cameras + domain/view goals → REC-20 request, parser/renderer contract and required region checks.",
+          "procedure": [
+            "Pair domain features with source images and cameras.",
+            "Select the NeRF method/consumer and explicit parser route.",
+            "Freeze source/evaluation roles and required region criteria."
+          ],
+          "validation": "Both inputs and camera coverage are present; actual renderer supports NeRF payload; parser coordinate/scale discovery is assigned before training.",
+          "failure_resume": "Unsupported parser/consumer blocks training while source mapping remains; source identity ambiguity retains alternatives.",
+          "resources": "Metadata/camera preview first; training demand based on exact image count/resolution/method rather than a universal GPU score; remote inference/manual separate."
+        },
+        {
+          "id": "DOM-30-A02",
+          "name": "Train and package the domain NeRF state",
+          "purpose": "Produce the exact nerf-scene while retaining domain source and frame mapping.",
+          "intended_use": "Domain viewing context with a named renderer; optional surface extraction remains a distinct derivative.",
+          "inputs": "A01 request, REC-20 dataset/config/training inputs and source-to-domain mapping.",
+          "outputs": "NeRF config/checkpoint/renderer package, domain source sidecar, parser transform/scale and complete/partial receipt.",
+          "accuracy": "Training and renderer settings remain computational/appearance fields; domain dimensions require independent geometric controls.",
+          "evidence": "REC-20 stage and Nerfstudio method-dependent export guide.",
+          "software": "Run REC-20 A01/A02 in future execution; attach domain/source references and actual parsed-camera/world mapping; preserve checkpoint/assets.",
+          "agent": "Review domain coverage/mask changes or invalid camera interpretations; select evidence-supported configuration alternatives.",
+          "user_decisions": "Choose intended detail tradeoff within domain viewing goals.",
+          "dependencies": "A01 request and REC-20 complete renderable-state requirements.",
+          "proposed_development": "PROPOSAL domain NeRF packager: trained NeRF + domain/source map → loadable nerf-scene manifest with renderer, frame chain and artifact dependencies.",
+          "procedure": [
+            "Execute the pinned NeRF preparation/training/package route.",
+            "Bind domain identities to source regions and training-world transforms.",
+            "Reopen saved state with the named renderer and record actual package completeness."
+          ],
+          "validation": "Checkpoint/config/renderer dependencies load; domain/source mappings remain revision-bound; an optional extracted mesh cannot replace NeRF state.",
+          "failure_resume": "Interrupted save/checkpoint preserves last complete state; reconcile actual files and request IDs before resuming; changed input map/config invalidates descendants.",
+          "resources": "Reuse actual NeRF training measurements when available; package hash/readback scales with checkpoint bytes; remote VLM/manual review is recorded separately."
+        },
+        {
+          "id": "DOM-30-A03",
+          "name": "Evaluate domain viewing results and optional surface reuse",
+          "purpose": "Assign per-region scene readiness and separately qualify any extracted geometry.",
+          "intended_use": "Appearance context, with working geometry only through a scoped and independently checked extraction/remodeling branch.",
+          "inputs": "A02 scene, real evaluation captures/cameras/roles, domain criteria and optional surface/control evidence.",
+          "outputs": "Domain appearance report, selected NeRF revision and optional separate geometry/composition validation receipt.",
+          "accuracy": "Image error, source projection, geometry residual, source uncertainty and feature allowance retain distinct units/meaning.",
+          "evidence": "REC-20 evaluation; point-05 remodeling/alignment and point-06 domain semantics for separate geometry.",
+          "software": "Render named captured evaluation views; compare domain regions; inspect supported optional extraction's geometry and frame against controls before geometric reuse.",
+          "agent": "VLM evaluates source-supported domain associations and alternative outputs; a separate semantic reviewer verifies feature meaning, observed/inferred status and evaluation dependencies.",
+          "user_decisions": "Select permitted appearance/view tradeoffs or supply additional independent evidence for required physical features.",
+          "dependencies": "A02 complete renderer state; exact optional exporter capability; domain measured controls for geometry use.",
+          "proposed_development": "PROPOSAL domain NeRF qualification: scene + source/check roles + optional geometry → per-region appearance/geometry readiness and affected dependency checks.",
+          "procedure": [
+            "Compare real captured domain views under recorded cameras.",
+            "Evaluate any supported extracted surface with independent physical controls.",
+            "Reopen the selected scene/composition and perform affected numerical and semantic checks."
+          ],
+          "validation": "Generated novel views retain derived status; NeRF geometry cannot inherit IFC/component semantics from appearance; new geometric layers preserve original identity evidence.",
+          "failure_resume": "Surface failure leaves scene result intact; source/camera/checkpoint changes invalidate affected checks; domain identity conflict retains candidate interpretations.",
+          "resources": "Fixed region/view sample first; extraction grid and mesh checks have separate local memory/compute costs; VLM evidence and manual correction effort separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent identifies domain regions and supported method/extraction; software trains/renders/measures.",
+        "hybrid": "Agent defines domain/source evidence; software performs parser, package and region checks.",
+        "software_first": "Supported NeRF/domain map/consumer class runs with exceptions for unresolved camera, identity or export support.",
+        "deterministic": "Pinned method/input/domain map allows checked package replay; reproducibility claims depend on tested backend settings."
+      },
+      "alternatives": [
+        "Minimal photos/cameras context; bounded NeRF preview; required-view scene training; independent measured mesh/CAD or supported extracted surface as separately checked geometry."
+      ],
+      "merge": {
+        "branches": "Pin common source/camera/domain IDs and record method/detail/view coverage/criteria/resources for each NeRF candidate.",
+        "evaluation": "VLM chooses captured-evidence-supported appearance and feature identity; separate reviewer checks meanings and shared dependencies.",
+        "combination": "Compatible appearance and geometry layers keep typed assets and explicit transform chain; conflicting inferred surfaces remain alternatives.",
+        "post_merge": "Reload trained state and optional composition, repeat source-view comparison and affected physical/domain checks."
+      },
+      "software_migration": "PROPOSAL migrate recognized domain parser/state/renderer and evaluation classes after fixtures; new surface extraction, geometry semantics and source ambiguity stay with reasoning.",
+      "future_tests": [
+        "NeRF checkpoint without renderer/config stays partial; parser world scale error changes geometry overlay and fails controls; field extraction fills a doorway despite similar render and fails domain geometry check; shared evaluation/camera dependencies are retained; changed domain geometry invalidates only its composition descendants."
+      ]
+    }
+  ],
+  "common_protocol": {
+    "scope": "PROPOSAL documentation/implementation design for the seventeen unchanged original operation contracts. Existing sources establish scoped capabilities; future helper, reconstruction, training, inference and test actions have not been executed in this batch. Acceptance is recorded only by MARK AS ACCEPTED. Requested dispatch gpt-6-astra/xhigh; actual runtime identity unavailable.",
+    "source_identity": "Hash original capture/video/depth bytes and each derivative. Record original path/URL, acquisition time/device/camera state, rights/consent/source restrictions, frame/timestamp IDs, mask/calibration revisions and preprocessing chain. Distinguish physical capture, generated image, rendered view and synthetic validation fixture. Preserve source code, dependency, checkpoint/model-weight, dataset and input/output-asset licence records separately with exact version and source evidence status.",
+    "camera_contract": "For each image retain dimensions, pixel-centre/grid convention, crop/resize/rotation/undistortion map and valid domain, camera/lens/focus/zoom group, intrinsic matrix and distortion model/parameters. Intrinsics describe imaging geometry; extrinsics describe camera position/orientation relative to a named frame. Record handedness/axes/units, quaternion order, transform source→target and whether scale is included. COLMAP inspected 4.3.0.dev0 camera page and format give +Z viewing and world→camera Hamilton (qw,qx,qy,qz) plus translation. Its top-left pixel centre is (0.5,0.5); the FAQ's +0.5 to cx/cy applies only to the stated OpenCV/Kalibr integer-centred source convention. Apply crop/resize mapping and any pixel-convention correction once, then compare projections and actual saved camera readback. Calibration-target units alone do not set unrelated scene scale.",
+    "parser_contract": "Nerfstudio camera basis is +X right,+Y up,+Z backward, viewing -Z; transforms.json columns hold camera axes and translation holds camera origin. Camera-basis conversion and world normalization are separate recorded transforms. Inspected mutable-main parser exposes orientation_method=up, center_method=poses, auto_scale_poses=true, scale_factor=1 and scene_scale=1 as source defaults, not project choices. scene_scale controls box bounds. Retain actual orientation_override, applied_transform/applied_scale, dataparser_transform and dataparser_scale. Source auto-scale uses reciprocal maximum absolute camera-origin coordinate times configured scale; metadata scale also contributes. The source fallback COLMAP mapping [[0,1,0,0],[1,0,0,0],[0,0,-1,0]] applies only under its documented dataset/metadata condition. Save the actual returned composition; map back by undoing scale separately and applying the inverse recorded frame transform in the adapter's verified order. Do not apply a second assumed axis or focal conversion. Test known camera origins/projections before training, including zero-extent/degenerate normalization inputs. PROPOSAL adapter contract: declare p_normalized = s*(R*p_source+t), with finite positive s and orthonormal rigid R; its reverse is p_source = R^T*(p_normalized/s-t). This equation defines the chosen adapter order and must be matched to the selected parser's actual composed metadata/output fields before use. Camera origins follow the position mapping; camera orientation/basis is converted separately. Test nontrivial translation and scale on known points and camera origins so applying inverse transform before undoing scale is detected.",
+    "depth_contract": "Record raw depth representation, physical units, axial-depth versus ray-range convention, invalid sentinel/mask, sensor intrinsics/distortion, RGB-depth extrinsics, registration/resampling, timestamp synchronization and per-frame pose source. Open3D v0.20.0 RGBDImage.h declares depth_scale=1000, depth_trunc=3, convert_rgb_to_intensity=true. RGBDImageFactory.cpp requires equal color/depth dimensions and forwards settings; Image.cpp divides raw depth by scale then zeros values >= truncation. Raw zero remains zero. Choose actual source-specific scale, invalid/range mask and grayscale policy; precheck negative/nonfinite data rather than assuming these are rejected. Tutorial truncation4 is its example. Pairwise odometry returns success,4x4 motion,6x6 information; selected adapter must establish trajectory direction and information meaning. TSDF adapter takes explicitly world→camera extrinsics; tutorial inverse(camera_pose) corresponds to its camera-to-world poses, so invert only when actual source direction requires it. Retain skipped-frame reasons, voxel length, signed-distance truncation, integration bounds/order/weights and valid support. Grid detail and information/confidence scores do not supply physical uncertainty.",
+    "learned_contract": "Bind exact model/checkpoint/hash, configuration, preprocessing, seed/backend and source rights. DA3Metric-Large card reports depth/confidence [N,H,W], world→camera extrinsics [N,3,4], intrinsics [N,3,3] and a canonical-metric-depth/focal-length claim without its reference/divisor. Discover actual selected API depth units/conversion before metric use; apply no invented or duplicate focal conversion. Preserve model confidence's documented meaning; independent measured controls establish dimensional residuals. SAM 3D Objects inspected image+mask example returns Gaussian PLY; TripoSR and TRELLIS.2 provide separate mesh-producing routes. Generated back/occluded surfaces retain inference lineage.",
+    "representation_contract": "Sparse points, dense MVS samples, calibrated depth samples, TSDF-extracted surfaces, generated mesh, Gaussian rendering parameters and NeRF state have distinct typed receipts. Inspect actual PLY attributes and faces; extension equality does not make Gaussian centres/covariances/opacity observed surface samples. COLMAP stereo_fusion outputs cloud; poisson_mesher/delaunay_mesher or supported OpenMVS ReconstructMesh creates the separate mesh. Open3D consistent-normal propagation uses neighbours and does not prove outward orientation; Poisson returns mesh+density and ball-pivoting needs oriented normals+radii in coordinate units. Preserve pre-edit meshes, region/sample/face maps and settings for smoothing/fill/decimation. Quadric target triangle count is checked against actual local shape changes. NeRF/Gaussian visual-scene packages retain actual config/checkpoint/renderer/assets and supported export subtype. Generic Nerfstudio TSDF and Splatfacto-specific unsupported mesh/cloud pages conflict; model/version capability gates that extraction. A proposed appearance+independent mesh+CAD composition keeps each layer and measured transform intact.",
+    "criteria": "For every named feature and downstream operation record intended use, required coverage/detail, source dimension/position/shape, units/frame and status. Engineering allowance, source measurement uncertainty, reconstruction/fit residual, approximation/discretization setting and computational comparison threshold each retain their own source and meaning. Context/layout, viewing appearance and working-interface/house/robot targets use their supplied criteria; no numeric default invents engineering acceptance. READY/BLOCKED names the feature, downstream operation and missing/failed criterion.",
+    "independence": "Freeze calibration, pose/SfM, scale/registration-fit, training, camera-optimization, tuning/selection and evaluation roles per source image/control. Heldout physical controls are excluded from the fit they evaluate; heldout calibration-view projection needs the point-05 independently defined pose procedure. An image excluded from radiance training but used for SfM retains shared pose/calibration dependence. Cross-method outputs list shared photos/masks/poses/measurements/checkpoints. Generated/rendered novel views are derived internal checks; real additional captures/measurements retain actual acquisition evidence. After repeated tuning on evaluation evidence, record its selection role and use a separately recorded evaluation source for a new independent claim.",
+    "branches_and_merge": "For each isolated candidate record source subset/revisions, intended use, requested detail, feature coverage, tolerance/uncertainty criteria, units/frame, method/version/seed and local/remote/manual resource fields. Give the VLM original full views plus mapped crops, camera/sample/feature IDs, source/control regions and numerical reports. Return evidence-linked whole-candidate choice, compatible region/layer selection, alternatives or source conflict. Do not average contradictory source dimensions or geometry meanings. Region/geometry edits or composition create a new revision with source-per-feature map and explicit scope. Reopen saved outputs and rerun affected numerical/source-projection/topology/control checks. A separate semantic review execution, distinct from the producing/selecting agent, checks original sources and the new revision; record both actual/requested identities and common source dependencies.",
+    "resource_policy": "Perform manifest/rights/type checks, selected-image camera projection, sparse or bounded-depth/mesh preview and selected-region comparison before dense reconstruction or full training. Record source bytes, images/frames and resolution, camera/track/point/face counts, voxel/grid extent, ray batches, iterations/Gaussian counts, checkpoint size, build/backend, CPU/GPU identity, RAM/VRAM and observed run cost when executed. OpenMVS develop documents CPU SGM and memory sub-scenes with seam checks; COLMAP dense backend support is build-dependent. TripoSR about6GB, TRELLIS.2 Linux/NVIDIA>=24GB (CUDA12.4 recommended), SAM Objects Linux64/NVIDIA>=32GB are exact repository setup claims. DA3 Streaming memory depends on dataset/resolution/chunk/overlap. Source claims do not measure this workstation. Remote VLM/model-service location, actual model when exposed, requested effort, request bytes, calls/tokens/latency/cost and manual interpretation/edit time are independent records. Proposed parallel branches share preparation but actual computational runs follow project concurrency scope.",
+    "recovery": "Give every future native/tool/remote request an ID, input hashes, exact configuration/version, intended output path/revision and validated boundary. On uncertain completion inspect actual outputs/job/checkpoint state before retry; retain partial files and completed stage receipts. Remote inference/VLM preserves request/prompt/input IDs, raw/partial responses and request status; reconcile provider completion before a bounded retry with lineage. Validate returned selection rows/IDs/types/evidence before changing a merged artifact. Interrupted writes use separate partial versus published-complete identities. Re-hash source/calibration/mask/model/control dependencies on resume; changed inputs invalidate affected descendants only. Preserve prior results and failures; do not silently overwrite or treat an empty/truncated output as success.",
+    "migration": "PROPOSAL migrate one supported input/model/parser/output/consumer class at a time after checked cases establish actual source/transform/output/exception behavior. First retain agent-selected evidence and compare software decisions with those checked cases. Automate deterministic parsing, mappings and numerical tests with explicit exception triggers; retain source interpretation/new design choices and unsupported classes with reasoning. Regressions restore the reviewed agent route for affected classes. Fixture results establish exercised behavior only, while physical/source correctness keeps independent controls."
+  },
+  "common_future_tests": [
+    "Camera preprocessing: known crop/resize/distortion and integer-centred versus corner-grid source with already-converted duplicate case; expected actual camera readback/projection and exactly one required convention conversion.",
+    "Nerfstudio parser: supplied applied_transform/applied_scale, orientation override, fallback condition and zero camera extent; expected recorded dataparser_transform/scale, separate scene_scale bounds, guarded degeneracy and known-point round trip without duplicate axes/scale. Include nonzero translation with nonunit scale under the declared p_normalized=s*(R*p_source+t) contract and verify reverse order with known points/origins.",
+    "Depth encoding: millimetre, metre, zero sentinel, negative/nonfinite and exact truncation boundary, mismatched RGB size/time/extrinsics; expected source-specific conversion/masks and correct >= truncation zeroing, with required calibration/timing failure identified.",
+    "Pose direction: camera-to-world and world-to-camera inputs with same physical scene, plus swapped pairwise motion; expected identical checked integration only after explicit conditional inversion and composition.",
+    "Independent evidence: train-heldout image used in SfM, fit control reused for evaluation and generated back view; expected exact participation/common-dependency report and no independent physical claim from derived evidence.",
+    "Typed PLY: geometric samples, face mesh and Gaussian parameter attributes under same extension; expected correct dispatch and blocked Gaussian-to-observed-cloud meshing.",
+    "Learned metric depth: raw canonical versus already-converted selected API outputs and ambiguous card-only focal rule; expected no invented/divisor or duplicate conversion, separate confidence and measured residual records.",
+    "Surface preservation: thin wall, opening, disconnected parts and uneven/biased normals; smoothing/fill/decimation may preserve bounds while changing required local topology; expected original derivative map and local failure.",
+    "Dense/chunk recovery: partial cloud with missing mesh, disconnected sparse components, GPU unsupported build, chunk seam and changed source calibration; expected precise partial output, bounded alternate branch and affected invalidation.",
+    "Scene export: generic TSDF claim versus selected Splatfacto unsupported route, missing NeRF renderer/config, direct SAM Gaussian output under requested mesh; expected representation-specific completion and capability-gated alternate route.",
+    "Remote interruption: lost inference/VLM response, malformed selection rows and changed source after resume; expected retained raw request/response, reconciled/retried lineage, no publication until valid complete selection and affected-only invalidation.",
+    "Compatible appearance+mesh+CAD composition and contradictory regional geometry: expected typed layers/common transforms, source-supported selection without averaging, new revision and separate numerical/semantic post-merge checks."
+  ]
+}

@@ -119,7 +119,7 @@
       ],
       "status": "completed_document_review",
       "checkpoint": "f833b2b",
-      "result_commit": null,
+      "result_commit": "a50954b",
       "result_commit_subject": "docs: audit point 06 procedures"
     },
     {
@@ -144,9 +144,10 @@
         "DOM-29",
         "DOM-30"
       ],
-      "status": "queued",
-      "checkpoint": null,
-      "result_commit": null
+      "status": "completed_document_review",
+      "checkpoint": "0e3c0f9",
+      "result_commit": null,
+      "result_commit_subject": "docs: audit point 07 procedures"
     }
   ]
 }
