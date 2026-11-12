@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "component_states": {
+    "C043": "NEEDS_INPUT",
+    "C045": "IN_PROGRESS"
+  },
+  "native_geometry_checks": 39,
+  "native_geometry_result": "PASS",
+  "visual_identity_result": "FAIL",
+  "source_revision_differences": 2,
+  "source_records": 86,
+  "original_models_preserved": 24,
+  "action_prefix_preserved": true,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "source_hashes": "PASS",
+  "capture_recovery_notes": [
+    "Original request identities recovered",
+    "Native activate completed",
+    "Installed REGEN completed",
+    "Captures still repeat prior enclosure image",
+    "Installed guide read returned Unknown operation;local source references inspected separately"
+  ],
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 4,
+    "receipt_included": true
+  }
+}

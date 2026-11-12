@@ -112,6 +112,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
 
+<a id="src-01a105b9ee75"></a>
+
+## SRC-01a105b9ee75 — imported-records-24.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json)
+
+Summary: imported native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-021178edf288"></a>
 
 ## SRC-021178edf288 — Driver iteration — header.json
@@ -231,6 +243,18 @@ Summary: The PCL API documents normal-based sample-consensus segmentation, input
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-independent.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
+<a id="src-038ae5e03363"></a>
+
+## SRC-038ae5e03363 — source-placement-plan.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json)
+
+Summary: 28 STEP source frames and27 unique inverse-matched native insert corrections.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-03adf43b9941"></a>
 
@@ -387,6 +411,18 @@ Summary: Existing local source cited by point 05 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-075213db418c"></a>
+
+## SRC-075213db418c — step-format.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json)
+
+Summary: Actual import dialog STEP-format selection result.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-081496ab4ae6"></a>
 
@@ -651,6 +687,18 @@ Summary: Completed top capture response binds document 76, camera and module ima
 Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-15/leaf-sources.json.
+
+<a id="src-0d1de3da8732"></a>
+
+## SRC-0d1de3da8732 — OCS capture/control source
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs)
+
+Summary: Local source describes deferred frame capture andnativeactivate routing;source inspection is separate from installed runtime evidence.
+
+Evidence: inspected_local_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-0d57f06ba877"></a>
 
@@ -1348,6 +1396,18 @@ Evidence: derived_pdf_render.
 
 Documents: research/sources/round-23/enclosure-sources.json.
 
+<a id="src-1df8ac8c2937"></a>
+
+## SRC-1df8ac8c2937 — imported-records-6.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json)
+
+Summary: imported native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-1e8dca4fc3d4"></a>
 
 ## SRC-1e8dca4fc3d4 — Axial motor failure regression cases
@@ -1371,6 +1431,18 @@ Summary: p01-build-03 persistence.json: DWG2018 save/reopen audit/hash/manifest 
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-1eb8186891cc"></a>
+
+## SRC-1eb8186891cc — reopened-records-6.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json)
+
+Summary: reopened native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-1f314fe4accc"></a>
 
@@ -1432,6 +1504,18 @@ Evidence: delegated_web_review_record.
 
 Documents: research/sources/round-21/fuse-sources.json.
 
+<a id="src-1f99e1c91c5c"></a>
+
+## SRC-1f99e1c91c5c — imported-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png)
+
+Summary: Actual converter capture attempt imported-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
+
+Evidence: executed_visual_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-1fe1bf3380df"></a>
 
 ## SRC-1fe1bf3380df — https://github.com/openMVG/openMVG
@@ -1443,6 +1527,18 @@ Summary: - OpenMVG repository and license: https://github.com/openMVG/openMVG
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
+
+<a id="src-1fe7a6d498a1"></a>
+
+## SRC-1fe7a6d498a1 — imported-records-18.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json)
+
+Summary: imported native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-20296fc40b95"></a>
 
@@ -1660,6 +1756,30 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
 
+<a id="src-25413f03b05d"></a>
+
+## SRC-25413f03b05d — source-job.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json)
+
+Summary: Pins C043 target identity to reviewed source metadata andnames required exact geometry/depth revision inputs.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-24/converter-sources.json.
+
+<a id="src-257da81e1cf3"></a>
+
+## SRC-257da81e1cf3 — repair_c045.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py)
+
+Summary: Applied existing tested placement helper to27 native inserts andchecked nine unchanged solid definitions.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-25f843f2d67d"></a>
 
 ## SRC-25f843f2d67d — Kelly archive member 48VCCW.pdf
@@ -1732,6 +1852,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
+<a id="src-27385cb38c95"></a>
+
+## SRC-27385cb38c95 — Initial delegated Orion metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json)
+
+Summary: Preserves initial assertion that retained manual includes48/12-30,subsequently contradicted by coordinator extraction;original download hashes retained.
+
+Evidence: delegated_initial_source_review.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-2752296f9685"></a>
 
 ## SRC-2752296f9685 — point-03-operations
@@ -1755,6 +1887,18 @@ Summary: Official repository page accessed 2026-11-12; mutable main branch, no c
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r08.md.
+
+<a id="src-27d968161e9f"></a>
+
+## SRC-27d968161e9f — OCS window-restore source
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/sys.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/sys.rs)
+
+Summary: Local source inspected for capture window-restore behavior;no application source edits made.
+
+Evidence: inspected_local_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-280cbbe6b531"></a>
 
@@ -1804,6 +1948,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
 
+<a id="src-296ae586672b"></a>
+
+## SRC-296ae586672b — persistence.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json)
+
+Summary: Recovered original reopen request withmatching savehash,manifest andzero-error audit.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-29c790174a58"></a>
 
 ## SRC-29c790174a58 — Robot tow-ball support plate (P07) — CAD input sheet
@@ -1828,6 +1984,18 @@ Evidence: existing_report_registered, local_reference_registered.
 
 Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-03-local-sources.json.
 
+<a id="src-2a3f02ebc764"></a>
+
+## SRC-2a3f02ebc764 — reopened-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json)
+
+Summary: Saved/reopened document87 identity andgeometry revision.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-2a63549fb0bc"></a>
 
 ## SRC-2a63549fb0bc — Data conventions — Nerfstudio documentation
@@ -1839,6 +2007,18 @@ Summary: Current Nerfstudio data-conventions page inspected 2026-11-12; release 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
+
+<a id="src-2aa9c1b61444"></a>
+
+## SRC-2aa9c1b61444 — start_c045.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py)
+
+Summary: Validated source-covered C045 feature contract,created isolated native document86 andimported pinned STEP.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-2ad28cfa19ba"></a>
 
@@ -2020,6 +2200,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
+<a id="src-2e1174c2d05e"></a>
+
+## SRC-2e1174c2d05e — activated-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png)
+
+Summary: Actual converter capture attempt activated-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
+
+Evidence: executed_visual_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-2e711cc8d780"></a>
 
 ## SRC-2e711cc8d780 — P01 p01-build-01 — rail-capabilities.json
@@ -2188,6 +2380,18 @@ Evidence: executed_native_observation.
 
 Documents: research/sources/round-23/enclosure-sources.json.
 
+<a id="src-319fc05dec23"></a>
+
+## SRC-319fc05dec23 — corrected-records-0.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json)
+
+Summary: corrected native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-31a38faa2037"></a>
 
 ## SRC-31a38faa2037 — Point 07 designer notes — reconstruction procedures
@@ -2235,6 +2439,18 @@ Summary: Input sheet registered from the inspected ferme manifest: connectors; C
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-31f850cbf25b"></a>
+
+## SRC-31f850cbf25b — step-source.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json)
+
+Summary: Actual import dialog exact family-STEP path binding.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-31fb748a20df"></a>
 
@@ -2392,6 +2608,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-34adb5d3d452"></a>
+
+## SRC-34adb5d3d452 — reopened-records-12.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json)
+
+Summary: reopened native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-34ed7ccfd827"></a>
 
 ## SRC-34ed7ccfd827 — Point 02 — Existing components and CAD files to inspected reusable inputs
@@ -2476,6 +2704,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-36ec74f82716"></a>
+
+## SRC-36ec74f82716 — readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json)
+
+Summary: Existing gate returns NEEDS_INPUT for exact48/12 mounting/terminal geometry andhousing depth revision.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-36fd06b4fde4"></a>
 
 ## SRC-36fd06b4fde4 — https://github.com/cdcseacave/openMVS
@@ -2548,6 +2788,18 @@ Evidence: existing_acquisition_record_reused.
 
 Documents: research/sources/round-20/component-sources.json.
 
+<a id="src-393afe62bdcb"></a>
+
+## SRC-393afe62bdcb — capture-identity-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json)
+
+Summary: Failed visual identity:previous enclosure remains visible andall new ISO/TOP/activate/REGEN image hashes are identical.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-39a648fd2c2a"></a>
 
 ## SRC-39a648fd2c2a — rec-r03.md
@@ -2619,6 +2871,30 @@ Summary: NopSCADlib ; OpenSCAD library and project framework with a `vitamins` c
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md.
+
+<a id="src-3a0be7d2ba98"></a>
+
+## SRC-3a0be7d2ba98 — Dimension Drawing - Orion-Large, Rev01
+
+Original source: [https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W.pdf](https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W.pdf)
+
+Summary: Manufacturer Rev01 drawing explicitly names24/12 ORI241236120;187 flange,174×71 slot pitches,86 depth reference andR4 open slots.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-24/converter-sources.json.
+
+<a id="src-3a1449ac8a6c"></a>
+
+## SRC-3a1449ac8a6c — Converter execution report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c043-c045-converters.md](/home/leo/projects/3dmodeling/execution/c043-c045-converters.md)
+
+Summary: Explains exact C045 CAD,39 checks,failed views,applied procedure,C043 source gate andretained manual correction.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-3a199df280ce"></a>
 
@@ -3076,6 +3352,18 @@ Evidence: existing_report_registered, web_inspected, installed_package_metadata_
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/workflows/details/cad-r04.md.
 
+<a id="src-41a47f716081"></a>
+
+## SRC-41a47f716081 — prior-model-hashes.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json)
+
+Summary: Pre-build hashes of24 saved DWGs used to confirm existing CAD preservation.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-41bb93ea7d3f"></a>
 
 ## SRC-41bb93ea7d3f — nerfstudio_dataparser.py — Nerfstudio main source
@@ -3132,9 +3420,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/
 
 Summary: Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.
 
-Evidence: executed_procedure_documentation, executed_case_procedure.
+Evidence: executed_procedure_documentation, executed_case_procedure, applied_case_procedure.
 
-Documents: research/sources/round-20/component-sources.json, research/sources/round-23/enclosure-sources.json.
+Documents: research/sources/round-20/component-sources.json, research/sources/round-23/enclosure-sources.json, research/sources/round-24/converter-sources.json.
 
 <a id="src-42c5c688de76"></a>
 
@@ -3400,6 +3688,30 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-4740401a7d90"></a>
+
+## SRC-4740401a7d90 — Initial Orion source transcription
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md)
+
+Summary: Records delegated product mapping,reported price-list row,source ranges andfamily applicability before coordinator manual review.
+
+Evidence: delegated_initial_source_review.
+
+Documents: research/sources/round-24/converter-sources.json.
+
+<a id="src-474e58a9c0ea"></a>
+
+## SRC-474e58a9c0ea — plan_c045.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py)
+
+Summary: Compared28 source frames withnative inserts andgenerated27 unique reversed-placement corrections.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-47d588ded00a"></a>
 
 ## SRC-47d588ded00a — source-linked guide
@@ -3556,6 +3868,18 @@ Evidence: local_source_inspected.
 
 Documents: research/local-baseline.md, research/sources/local-evidence.json.
 
+<a id="src-4b50dfc03e47"></a>
+
+## SRC-4b50dfc03e47 — imported-blocks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json)
+
+Summary: Initial source-covered converter block hierarchy,including heatsink,terminals,cover andhardware.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-4ba8cc4436be"></a>
 
 ## SRC-4ba8cc4436be — imported-records-18.json
@@ -3591,6 +3915,18 @@ Summary: `freecad-scripts` from `github/awesome-copilot` ; Archived skill docume
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-4cb8874a1a39"></a>
+
+## SRC-4cb8874a1a39 — pre-save-assembly-measurements.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json)
+
+Summary: 27 source-corrected instance paths andactual pre-save point geometry.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-4cbe441f37a2"></a>
 
@@ -3736,6 +4072,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
 
+<a id="src-4eb42ece1132"></a>
+
+## SRC-4eb42ece1132 — imported-records-0.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json)
+
+Summary: imported native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-4f0c8d392a38"></a>
 
 ## SRC-4f0c8d392a38 — component-work.json
@@ -3807,6 +4155,18 @@ Summary: Lists built-in OBJ/STL and optional USD mesh/scene decoders and extensi
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-502c2eec4519"></a>
+
+## SRC-502c2eec4519 — source-job.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json)
+
+Summary: Pre-import SOURCE_READY contract pins exact C045 drawing row andfamilySTEP hashes,mount labels andsource frame.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-5042379f8832"></a>
 
@@ -3903,6 +4263,18 @@ Summary: Required P02 feature coverage and all pinned source observations return
 Evidence: local_execution_source_inspected.
 
 Documents: research/sources/round-13/crossmember-sources.json.
+
+<a id="src-5219c6a1df9e"></a>
+
+## SRC-5219c6a1df9e — step-confirm.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json)
+
+Summary: Actual completed STEP import confirmation in the isolated converter document.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-522e8d24462e"></a>
 
@@ -4215,6 +4587,18 @@ Summary: Input sheet registered from the inspected ferme manifest: drive; BT; or
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-566a523ea815"></a>
+
+## SRC-566a523ea815 — OCS operation declaration source
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/mcp_ops.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/mcp_ops.rs)
+
+Summary: Local source describes activate as switching an open drawing tab;current native activate executed andcompleted in this case.
+
+Evidence: inspected_local_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-56813006b275"></a>
 
@@ -4612,6 +4996,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-5f744c173454"></a>
+
+## SRC-5f744c173454 — heatsink-analytic-features.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json)
+
+Summary: Existing SAB reader observes heatsink planes,cylinders,cones andloops;R4 slot centres identify174.3×71mm pattern.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-5f9c829cdfd0"></a>
 
 ## SRC-5f9c829cdfd0 — Existing manufacturer-source provenance index
@@ -4671,6 +5067,30 @@ Summary: Point 07 Photographs, depth and learned reconstruction: authored proced
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-611132c2602f"></a>
+
+## SRC-611132c2602f — Native converter plot attempt
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf)
+
+Summary: Actual OCS one-page plot output;subsequent Poppler inspection shows an entirelywhite page. Export completion andfailed visualcontent retained separately.
+
+Evidence: executed_plot_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
+
+<a id="src-618fca25dd4d"></a>
+
+## SRC-618fca25dd4d — corrected-records-30.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json)
+
+Summary: corrected native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-61c6ad4341d0"></a>
 
@@ -5056,6 +5476,18 @@ Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-6a20dc32784d"></a>
+
+## SRC-6a20dc32784d — reopened-blocks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json)
+
+Summary: Persisted converter block hierarchy fromsaved document87.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-6a6bf0c0ce39"></a>
 
 ## SRC-6a6bf0c0ce39 — PCL SampleConsensusModelCylinder header — master branch
@@ -5126,7 +5558,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: authored_document_or_code_inspected, authored_code_or_procedure_inspected, local_source_or_execution_record_inspected, implemented_skill_guidance.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-23/enclosure-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-23/enclosure-sources.json, research/sources/round-24/converter-sources.json.
 
 <a id="src-6b30ccb4447f"></a>
 
@@ -5199,6 +5631,18 @@ Summary: COLMAP current FAQ inspected 2026-11-12. For OpenCV/Kalibr calibration 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/findings.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md, research/workflows/details/rec-r01.md, research/workflows/reconstruction-paths.md.
+
+<a id="src-6c38f0dfe089"></a>
+
+## SRC-6c38f0dfe089 — saved-assembly-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json)
+
+Summary: 37 passing saved source-placement,definition point-set andnested-instance checks;source revision values remain separately attributed.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-6c6db30cba74"></a>
 
@@ -5392,6 +5836,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-02/project-sources.json, research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-6f5dbc4f4bd8"></a>
+
+## SRC-6f5dbc4f4bd8 — reopened-records-30.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json)
+
+Summary: reopened native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-6f832566dcde"></a>
 
 ## SRC-6f832566dcde — corrected-isometric.png
@@ -5511,6 +5967,18 @@ Summary: Records original PDF and HTML hashes,URLs,retrieval outcomes,rendered i
 Evidence: executed_acquisition_record.
 
 Documents: research/sources/round-22/gland-sources.json.
+
+<a id="src-70f3c3558125"></a>
+
+## SRC-70f3c3558125 — native-plot-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png)
+
+Summary: ActualnativeplotPDF render is entirelywhite;pixel extrema andvisualcheck recorded.
+
+Evidence: executed_visual_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-717a1bbd2f70"></a>
 
@@ -5908,6 +6376,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
+<a id="src-7c108255a4eb"></a>
+
+## SRC-7c108255a4eb — provenance.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json)
+
+Summary: Actual temporary driver paths,retained hashes andoriginal bootstrap dependency conditions.
+
+Evidence: execution_provenance_record.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-7c623f2c8b68"></a>
 
 ## SRC-7c623f2c8b68 — FreeCAD Modeling Best Practices & TNP Mitigation
@@ -5944,6 +6424,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-7c8bdf666637"></a>
+
+## SRC-7c8bdf666637 — mount-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json)
+
+Summary: Two passing R4-slot/count andvertical-pitch checks;records STEP174.3 vsdrawing174 pitch and186.6 vs187 flange observation.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-7cd4f7a294b2"></a>
 
 ## SRC-7cd4f7a294b2 — imported-records-24.json
@@ -5955,6 +6447,18 @@ Summary: importednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Inser
 Evidence: executed_native_record_read.
 
 Documents: research/sources/round-23/enclosure-sources.json.
+
+<a id="src-7d065c90de76"></a>
+
+## SRC-7d065c90de76 — Saved Victron24/12 native assembly
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg)
+
+Summary: New DWG2018 has9 solid definitions and27 source-corrected instances;39 numeric checks pass andvisual identity check remainsFAIL.
+
+Evidence: executed_native_cad_artifact.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-7d7038c13789"></a>
 
@@ -6003,6 +6507,18 @@ Summary: p01-build-01 rail-type-Solid3D.json: Retained native response with fiel
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-7e07ebce5d02"></a>
+
+## SRC-7e07ebce5d02 — check_c045_mounts.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py)
+
+Summary: Read fourR4 mount-slot ends,computed71/174.3mm pitches anddetected byte-identical captures.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-7e97117530b1"></a>
 
@@ -6376,6 +6892,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-8505da5fe91f"></a>
+
+## SRC-8505da5fe91f — read_c045.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py)
+
+Summary: Read imported manifest/records andrequested initial ISO capture,whose contents laterfailed identity review.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-856db78a1b1e"></a>
 
 ## SRC-856db78a1b1e — Drive support plate (P03) — CAD input sheet
@@ -6592,6 +7120,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
+<a id="src-8a94739a62eb"></a>
+
+## SRC-8a94739a62eb — native-plot-visual-check.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json)
+
+Summary: Actual Poppler rendering andpixel extrema show anentirelywhite page;visualcheck FAIL whileexport operationcompleted.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-8a9e1c41280d"></a>
 
 ## SRC-8a9e1c41280d — Brake caliper reaction bracket (P15) — CAD input sheet
@@ -6676,6 +7216,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
 
+<a id="src-8c3e1acbd99d"></a>
+
+## SRC-8c3e1acbd99d — check_c045_saved.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py)
+
+Summary: Computed37 actual persisted placement/point/instance checks andseparate source-dimension observations.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-8ce066c08d57"></a>
 
 ## SRC-8ce066c08d57 — Kelly ME0907 drawing/test-data archive
@@ -6699,6 +7251,18 @@ Summary: Reopened end-view capture shows the outer and inner rounded-square outl
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-8da82a2f23b9"></a>
+
+## SRC-8da82a2f23b9 — reopened-records-36.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json)
+
+Summary: reopened native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-8db7870af183"></a>
 
@@ -6844,6 +7408,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-90f352cc1a15"></a>
+
+## SRC-90f352cc1a15 — reopened-records-24.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json)
+
+Summary: reopened native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-9133612f3fad"></a>
 
 ## SRC-9133612f3fad — reopened-checkpoint.json
@@ -6916,6 +7492,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
 
+<a id="src-92f126438f43"></a>
+
+## SRC-92f126438f43 — reopened-records-18.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json)
+
+Summary: reopened native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-93087004fdb3"></a>
 
 ## SRC-93087004fdb3 — imported-audit.json
@@ -6964,6 +7552,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
+<a id="src-9345ab05320c"></a>
+
+## SRC-9345ab05320c — corrected-records-36.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json)
+
+Summary: corrected native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-937929a512bd"></a>
 
 ## SRC-937929a512bd — Point 05 designer notes — alignment and parametric remodeling
@@ -7011,6 +7611,18 @@ Summary: Decoder callbacks, numeric token handling and nonfinite/default behavio
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-93cc6c46876e"></a>
+
+## SRC-93cc6c46876e — imported-records-12.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json)
+
+Summary: imported native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-9409ef71b08a"></a>
 
@@ -7264,6 +7876,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-98e17e4710fb"></a>
+
+## SRC-98e17e4710fb — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json)
+
+Summary: C043 source-stage result retains target identity andlinks C045 reuse of acquired originals.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-993c97d817f0"></a>
 
 ## SRC-993c97d817f0 — P01 p01-build-01 — rail-record-schema-2.json
@@ -7275,6 +7899,18 @@ Summary: p01-build-01 rail-record-schema-2.json: Retained native response with f
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-994ff56f9968"></a>
+
+## SRC-994ff56f9968 — Orion-Tr Smart-rev00-3D
+
+Original source: [https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W-%28stp%29.STEP](https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W-%28stp%29.STEP)
+
+Summary: Manufacturer rev00/2019 AP214 model names24/12-30 hardware,contains9 solid definitions and27 placed solids;supports C045.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-9968cbf922d2"></a>
 
@@ -7372,6 +8008,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-01-model-brief.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-02/cad-sources.json, research/sources/round-04/intake-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
+<a id="src-9a847c6724b8"></a>
+
+## SRC-9a847c6724b8 — reopened-top.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png)
+
+Summary: Actual converter capture attempt reopened-top;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
+
+Evidence: executed_visual_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-9adef416e57c"></a>
 
 ## SRC-9adef416e57c — Retained SKF insert catalogue page image
@@ -7383,6 +8031,18 @@ Summary: Actual inspected catalogue page image shows YAR204-2F20mmbore,47mmouter
 Evidence: retained_source_render_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
+
+<a id="src-9b8eb3a2b709"></a>
+
+## SRC-9b8eb3a2b709 — corrected-records-24.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json)
+
+Summary: corrected native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-9b9b3c47b23f"></a>
 
@@ -7551,6 +8211,18 @@ Summary: Third-party source describes Python scripts exporting Assembly4 assembl
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
+
+<a id="src-9ec25a7b74a7"></a>
+
+## SRC-9ec25a7b74a7 — corrected-records-12.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json)
+
+Summary: corrected native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-9f577a14e903"></a>
 
@@ -7756,6 +8428,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-a2ddc249d60b"></a>
+
+## SRC-a2ddc249d60b — initial-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json)
+
+Summary: Native document85 andexisting open-document state before creating converter document86.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-a2e021f0ada1"></a>
 
 ## SRC-a2e021f0ada1 — Meshroom command-line batch usage
@@ -7959,6 +8643,18 @@ Summary: URDF / ROS tooling ; Official `urdf_tutorial` teaches visual geometry, 
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
+
+<a id="src-a6ae4a99861b"></a>
+
+## SRC-a6ae4a99861b — imported-records-30.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json)
+
+Summary: imported native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-a6e8373ba9d0"></a>
 
@@ -8464,6 +9160,18 @@ Evidence: executed_work_report.
 
 Documents: research/sources/round-21/fuse-sources.json.
 
+<a id="src-b123fa7af4ef"></a>
+
+## SRC-b123fa7af4ef — Orion Rev01 drawing render
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png)
+
+Summary: Actual dimensioned front/side/detail views explicitly listORI241236120 andits mounting-slot reference labels.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-b1451ce1d409"></a>
 
 ## SRC-b1451ce1d409 — License text
@@ -8764,6 +9472,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-b70a1a95f34d"></a>
+
+## SRC-b70a1a95f34d — reopened-records-0.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json)
+
+Summary: reopened native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-b739e4946d72"></a>
 
 ## SRC-b739e4946d72 — MuJoCo model editing and MJZ
@@ -8883,6 +9603,18 @@ Summary: CompletedoriginalSTEPimportconfirmationresultforthenewdocument.
 Evidence: executed_native_observation.
 
 Documents: research/sources/round-23/enclosure-sources.json.
+
+<a id="src-b884395f7485"></a>
+
+## SRC-b884395f7485 — c045_presave_measurements.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py)
+
+Summary: Traversed source-corrected instance paths andrecorded point-set geometry before saving.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-b914a224eaf5"></a>
 
@@ -9076,6 +9808,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-15/leaf-sources.json.
 
+<a id="src-bc6235b9e567"></a>
+
+## SRC-bc6235b9e567 — corrected-blocks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json)
+
+Summary: Block membership readback after27 source placement corrections.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-bcae1b9fb83c"></a>
 
 ## SRC-bcae1b9fb83c — P02 crossmember — initial-state.json
@@ -9267,6 +10011,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-bf7c144ea436"></a>
+
+## SRC-bf7c144ea436 — reopen_c045.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py)
+
+Summary: Recovered original reopen,verified hash/manifest/audit andretained saved records;capture laterfailed image identity.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-bfb6141184a2"></a>
 
@@ -9472,6 +10228,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-c30253c39c7d"></a>
+
+## SRC-c30253c39c7d — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json)
+
+Summary: C045 IN_PROGRESS result:39 native checks andpersistence pass,visual check fails;applied capture-identity procedure linked.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-c325f62a1a2e"></a>
 
 ## SRC-c325f62a1a2e — Python scripting tutorial
@@ -9507,6 +10275,18 @@ Summary: Retained original48V clockwise performance-curve PDF extracted with the
 Evidence: extracted_original_archive_member.
 
 Documents: research/sources/round-19/me0907-sources.json.
+
+<a id="src-c4427df066e7"></a>
+
+## SRC-c4427df066e7 — corrected-records-18.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json)
+
+Summary: corrected native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-c49f0a4410c4"></a>
 
@@ -9603,6 +10383,18 @@ Summary: Existing local component/action/skill/catalogue source reused by the co
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
+
+<a id="src-c69eb556dd4e"></a>
+
+## SRC-c69eb556dd4e — control-bootstrap-prefix.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py)
+
+Summary: Exact actual control bootstrap prefix loads existing guarded client/helper andexplicit session;private descriptor content omitted.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -9723,6 +10515,18 @@ Summary: Completed isometric capture response identifies document78 and actual c
 Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-16/driver-sources.json.
+
+<a id="src-ca19e3275b4b"></a>
+
+## SRC-ca19e3275b4b — native-plot-result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json)
+
+Summary: Completed native PDF plot response fordocument87,one297×210mm page;visual content checked separately.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-ca3076996fa5"></a>
 
@@ -10000,6 +10804,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-03-visual.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r10.md.
 
+<a id="src-cea6a9237427"></a>
+
+## SRC-cea6a9237427 — Integrated Orion source review
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md)
+
+Summary: Links coordinator correction to preserved initial interpretation andretains original links,dimension labels andC045 family applicability.
+
+Evidence: reviewed_source_interpretation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-cf13f71acbca"></a>
 
 ## SRC-cf13f71acbca — corrected-records-12.json
@@ -10024,6 +10840,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-16/driver-sources.json.
 
+<a id="src-cf410cec238a"></a>
+
+## SRC-cf410cec238a — Actual retained-manual model-table review
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md)
+
+Summary: PDF text extraction finds48/12-20 andno48/12-30;separates retained PDF,delegated price-list claim,project input andexact C045 drawing coverage.
+
+Evidence: executed_coordinator_review.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-cf6156d88759"></a>
 
 ## SRC-cf6156d88759 — P01 p01-build-02 — initial-state.json
@@ -10047,6 +10875,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; V
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-cfdbfbbc0d31"></a>
+
+## SRC-cfdbfbbc0d31 — imported-audit.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json)
+
+Summary: Initial nine-solid/29-block-reference manifest withzeroerrors/warnings.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-cfeb029989f0"></a>
 
@@ -10324,6 +11164,18 @@ Evidence: executed_native_observation.
 
 Documents: research/sources/round-23/enclosure-sources.json.
 
+<a id="src-d5c6dba4409f"></a>
+
+## SRC-d5c6dba4409f — document-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json)
+
+Summary: New isolated document86 binding,revision andrequest namespace before import.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-d5f6d3131aaa"></a>
 
 ## SRC-d5f6d3131aaa — Integrated Fibox drawing andvariant review
@@ -10479,6 +11331,18 @@ Summary: Current file SHA matches the earlier verified-save SHA. Opened native a
 Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-15/leaf-sources.json.
+
+<a id="src-da01bd7cde5d"></a>
+
+## SRC-da01bd7cde5d — imported-query.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json)
+
+Summary: Actual native imported entity handle/type inventory.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-da6cb18472ad"></a>
 
@@ -10756,6 +11620,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
 
+<a id="src-dfe4eca1f71a"></a>
+
+## SRC-dfe4eca1f71a — imported-records-36.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json)
+
+Summary: imported native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-dfe7c160f462"></a>
 
 ## SRC-dfe7c160f462 — OCS model contract
@@ -10864,6 +11740,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/audit-index-sources.json.
 
+<a id="src-e3d853f6ef1d"></a>
+
+## SRC-e3d853f6ef1d — views_c045.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py)
+
+Summary: Requested saved TOP/FRONT views;first TOP request hit polling bound andits repeated image wasretained.
+
+Evidence: executed_driver_source.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-e3d95e78d033"></a>
 
 ## SRC-e3d95e78d033 — https://github.com/Tencent-Hunyuan/Hunyuan3D-2
@@ -10875,6 +11763,18 @@ Summary: - Hunyuan3D-2 source and current community license: https://github.com/
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-e4073c405422"></a>
+
+## SRC-e4073c405422 — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl)
+
+Summary: Actual guarded import,CAS corrections,save/reopen,view/capture,recovery,activate andREGEN write/readback history.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-e4113edcaa23"></a>
 
@@ -10959,6 +11859,18 @@ Summary: - Underlying SAM 3D model service https://fal.ai/models/fal-ai/sam-3/3d
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-e632f00983a2"></a>
+
+## SRC-e632f00983a2 — reopened-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png)
+
+Summary: Actual converter capture attempt reopened-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
+
+Evidence: executed_visual_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-e635bf5bcf73"></a>
 
@@ -11236,6 +12148,18 @@ Evidence: extracted_original_archive_member.
 
 Documents: research/sources/round-19/me0907-sources.json.
 
+<a id="src-eb82077bb446"></a>
+
+## SRC-eb82077bb446 — Reviewed Orion acquisition metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json)
+
+Summary: Original PDF/STEP/manual URLs,times,MIME,hashes andactual price-list access outcomes;retained-manual attribution corrected with initial copy preserved.
+
+Evidence: reviewed_acquisition_record.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-eb880f7efbac"></a>
 
 ## SRC-eb880f7efbac — /home/leo/.codex/skills/ocs-engineering/references/ocs-control.md
@@ -11367,6 +12291,18 @@ Summary: Existing local source cited by point 05 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json.
+
+<a id="src-edf75a7ba1f0"></a>
+
+## SRC-edf75a7ba1f0 — placement-corrections.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json)
+
+Summary: Actual checked helper application:27 matrices corrected,nine ACIS definitions unchanged.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-ee88cef821b6"></a>
 
@@ -11632,6 +12568,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-f343e0d088b6"></a>
+
+## SRC-f343e0d088b6 — corrected-records-6.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json)
+
+Summary: corrected native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
+
+Evidence: executed_native_record_read.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-f3798f920e4f"></a>
 
 ## SRC-f3798f920e4f — Driven sprocket axle carrier (P12B) — CAD input sheet
@@ -11656,6 +12604,18 @@ Evidence: existing_report_registered, search_excerpt_inspected.
 
 Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
 
+<a id="src-f428be8d9008"></a>
+
+## SRC-f428be8d9008 — readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json)
+
+Summary: Existing source/hash gate SOURCE_READY result before native construction.
+
+Evidence: executed_native_observation.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-f47d7610aaad"></a>
 
 ## SRC-f47d7610aaad — Placementhelpertests
@@ -11679,6 +12639,18 @@ Summary: Component-led execution source: actual reusable implementation, source-
 Evidence: local_source_inspected, local_execution_evidence_inspected.
 
 Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-f4c2cf5fb241"></a>
+
+## SRC-f4c2cf5fb241 — Orion-Tr Smart DC-DC Charger Isolated
+
+Original source: [https://www.victronenergy.com/upload/documents/Orion-Tr_Smart_DC-DC_Charger_-_Isolated/34439-Orion-Tr_Smart_DC-DC_Charger-pdf-en.pdf](https://www.victronenergy.com/upload/documents/Orion-Tr_Smart_DC-DC_Charger_-_Isolated/34439-Orion-Tr_Smart_DC-DC_Charger-pdf-en.pdf)
+
+Summary: Retained manual page29 names48/12-20;higher-power table includes24/12-30 and130×186×80 nominal envelope. Coordinator separates this from the delegated48/12-30 price-list observation.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-f4e7d302c752"></a>
 
@@ -11836,6 +12808,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
 
+<a id="src-f80023f6c2fa"></a>
+
+## SRC-f80023f6c2fa — corrected-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png)
+
+Summary: Actual converter capture attempt corrected-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
+
+Evidence: executed_visual_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
+
 <a id="src-f828b291cc6f"></a>
 
 ## SRC-f828b291cc6f — OpenCADStudio MCP automation guide
@@ -11844,9 +12828,9 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/READ
 
 Summary: Local OCS guide describes stdio MCP and drawing inspection, mutation, measurements, audits and verified save. It supports application-level drawing workflow claims.
 
-Evidence: local_source_inspected, local_reference_registered.
+Evidence: local_source_inspected, local_reference_registered, inspected_local_source.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-24/converter-sources.json.
 
 <a id="src-f828ba9d8d3b"></a>
 
@@ -12027,6 +13011,18 @@ Summary: Append-only native request journal records isolated document creation, 
 Evidence: local_execution_source_inspected.
 
 Documents: research/sources/round-13/crossmember-sources.json.
+
+<a id="src-fcb5653f90bc"></a>
+
+## SRC-fcb5653f90bc — regen-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png)
+
+Summary: Actual converter capture attempt regen-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
+
+Evidence: executed_visual_failure.
+
+Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-fcdc74aed22e"></a>
 

@@ -326,6 +326,31 @@
       ]
     },
     {
+      "id": "SRC-01a105b9ee75",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json",
+      "title": "imported-records-24.json",
+      "summary": "imported native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json",
+          "access_date": "2026-11-12",
+          "sha256": "d9fdd4811883cdc0eae332e3cf9ec0eec9942a2b537b9f06b88f21b0af045d31",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-021178edf288",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json",
@@ -802,6 +827,31 @@
       ]
     },
     {
+      "id": "SRC-038ae5e03363",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json",
+      "title": "source-placement-plan.json",
+      "summary": "28 STEP source frames and27 unique inverse-matched native insert corrections.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json",
+          "access_date": "2026-11-12",
+          "sha256": "b4d55fb9ad3455abe19616e996411cdd061f6ef83ab00306316ee20731b3446d",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-03adf43b9941",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md",
@@ -1227,6 +1277,31 @@
       "referring_documents": [
         "research/sources/round-05/point-05-local-sources.json",
         "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-075213db418c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json",
+      "title": "step-format.json",
+      "summary": "Actual import dialog STEP-format selection result.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json",
+          "access_date": "2026-11-12",
+          "sha256": "b35efe2423956488d391914ecf0f0968d00773190547795be32a13b95e445d40",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -1906,6 +1981,31 @@
       ],
       "referring_documents": [
         "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-0d1de3da8732",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs",
+      "title": "OCS capture/control source",
+      "summary": "Local source describes deferred frame capture andnativeactivate routing;source inspection is separate from installed runtime evidence.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "inspected_local_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "inspected_local_source",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs",
+          "access_date": "2026-11-12",
+          "sha256": "2c1045eaaa5e396ae1400f8e8050cac6db8990238e6292b33f4dddae7fc1645b",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -3688,6 +3788,31 @@
       ]
     },
     {
+      "id": "SRC-1df8ac8c2937",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json",
+      "title": "imported-records-6.json",
+      "summary": "imported native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json",
+          "access_date": "2026-11-12",
+          "sha256": "9f1e7d4e26dcb2c9b2af8cf104f97093471e89aca2dadfa0da565ec1f766b16d",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-1e8dca4fc3d4",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/tests/test_axial_motor.py",
@@ -3737,6 +3862,31 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1eb8186891cc",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json",
+      "title": "reopened-records-6.json",
+      "summary": "reopened native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json",
+          "access_date": "2026-11-12",
+          "sha256": "8b26f910e792c2371ce76514b54bcc9c2683430bb44d819fd9ace4d482a11b64",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -3922,6 +4072,31 @@
       ]
     },
     {
+      "id": "SRC-1f99e1c91c5c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png",
+      "title": "imported-isometric.png",
+      "summary": "Actual converter capture attempt imported-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_visual_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_visual_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "53f6f7e99699c67c427f5c0fb3cb81ce281ec02e5527a22d7d35992755e454d0",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-1fe1bf3380df",
       "url": "https://github.com/openMVG/openMVG",
       "local_source_path": null,
@@ -3957,6 +4132,31 @@
         "research/workflows/details/rec-r05.md",
         "research/workflows/details/rec-r06.md",
         "research/workflows/details/rec-r08.md"
+      ]
+    },
+    {
+      "id": "SRC-1fe7a6d498a1",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json",
+      "title": "imported-records-18.json",
+      "summary": "imported native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json",
+          "access_date": "2026-11-12",
+          "sha256": "5c348afc9e44ae55bf44ffca570c83d3d1dca43f09e49623873231b220915a8c",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -4565,6 +4765,56 @@
       ]
     },
     {
+      "id": "SRC-25413f03b05d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json",
+      "title": "source-job.json",
+      "summary": "Pins C043 target identity to reviewed source metadata andnames required exact geometry/depth revision inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "a1af3f2b62b8b0abdc3cf8bd039bf4e7d58bc6dd4f5c4fe1b8b07c45316e7147",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-257da81e1cf3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py",
+      "title": "repair_c045.py",
+      "summary": "Applied existing tested placement helper to27 native inserts andchecked nine unchanged solid definitions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py",
+          "access_date": "2026-11-12",
+          "sha256": "d0c6722bec610e46e3d5590c4ce7e65312eda8ba0c4df1a9f5637f448aaa25ab",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-25f843f2d67d",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf",
@@ -4812,6 +5062,31 @@
       ]
     },
     {
+      "id": "SRC-27385cb38c95",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json",
+      "title": "Initial delegated Orion metadata",
+      "summary": "Preserves initial assertion that retained manual includes48/12-30,subsequently contradicted by coordinator extraction;original download hashes retained.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_initial_source_review"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_initial_source_review",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json",
+          "access_date": "2026-11-12",
+          "sha256": "ae409e9b6fa83e1375ddc72a63abc2d73cdd6c8555d0913d8b7a65838144a8e2",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2752296f9685",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
@@ -4939,6 +5214,31 @@
       ]
     },
     {
+      "id": "SRC-27d968161e9f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/sys.rs",
+      "title": "OCS window-restore source",
+      "summary": "Local source inspected for capture window-restore behavior;no application source edits made.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "inspected_local_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "inspected_local_source",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/sys.rs",
+          "access_date": "2026-11-12",
+          "sha256": "2c1289b4e79371e184904827b9c73bbf62723524959d8dc01c54f37e1cfee330",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-280cbbe6b531",
       "url": null,
       "local_source_path": "/tmp/opencode/skf-sy20tf-technical-page4.png",
@@ -5060,6 +5360,31 @@
       ]
     },
     {
+      "id": "SRC-296ae586672b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json",
+      "title": "persistence.json",
+      "summary": "Recovered original reopen request withmatching savehash,manifest andzero-error audit.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json",
+          "access_date": "2026-11-12",
+          "sha256": "969058495843ee47c70d2a3f481abc149a7c73e9374c8466b9a450eab56830eb",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-29c790174a58",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md",
@@ -5125,6 +5450,31 @@
       ]
     },
     {
+      "id": "SRC-2a3f02ebc764",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json",
+      "title": "reopened-checkpoint.json",
+      "summary": "Saved/reopened document87 identity andgeometry revision.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json",
+          "access_date": "2026-11-12",
+          "sha256": "536733b41b4afe1ccfba3d4d399496a1116d9dfc110db65747455bae35381524",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2a63549fb0bc",
       "url": "https://docs.nerf.studio/quickstart/data_conventions.html",
       "local_source_path": null,
@@ -5161,6 +5511,31 @@
         "research/action-audit/reviews/point-07-software.md",
         "research/action-audit/reviews/point-07-sources.md",
         "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2aa9c1b61444",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py",
+      "title": "start_c045.py",
+      "summary": "Validated source-covered C045 feature contract,created isolated native document86 andimported pinned STEP.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py",
+          "access_date": "2026-11-12",
+          "sha256": "0f80daf9ba68609025ae952fa04f5d61ecb1d7a0d42c651fba7e2debf5b7b962",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -5795,6 +6170,31 @@
       ]
     },
     {
+      "id": "SRC-2e1174c2d05e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png",
+      "title": "activated-isometric.png",
+      "summary": "Actual converter capture attempt activated-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_visual_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_visual_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "53f6f7e99699c67c427f5c0fb3cb81ce281ec02e5527a22d7d35992755e454d0",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2e711cc8d780",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json",
@@ -6301,6 +6701,31 @@
       ]
     },
     {
+      "id": "SRC-319fc05dec23",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json",
+      "title": "corrected-records-0.json",
+      "summary": "corrected native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json",
+          "access_date": "2026-11-12",
+          "sha256": "3160f57ba981a3fa1a0610af077c15ac9c7368f098a41c8366ee03e2a1e2e11b",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-31a38faa2037",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md",
@@ -6439,6 +6864,31 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-31f850cbf25b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json",
+      "title": "step-source.json",
+      "summary": "Actual import dialog exact family-STEP path binding.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json",
+          "access_date": "2026-11-12",
+          "sha256": "f53cf2a1acd0010ef787e8545aec49150e3526c180a341bfe89376545b97693f",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -6826,6 +7276,31 @@
       ]
     },
     {
+      "id": "SRC-34adb5d3d452",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json",
+      "title": "reopened-records-12.json",
+      "summary": "reopened native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json",
+          "access_date": "2026-11-12",
+          "sha256": "a3e43788dfce0ca6911d7f223502d06aceaea44f9ea079a57323fb40886ec762",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-34ed7ccfd827",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
@@ -7053,6 +7528,31 @@
       ]
     },
     {
+      "id": "SRC-36ec74f82716",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json",
+      "title": "readiness.json",
+      "summary": "Existing gate returns NEEDS_INPUT for exact48/12 mounting/terminal geometry andhousing depth revision.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_readiness_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_readiness_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "c3e46465c1156d5c4080632be976de0b63bbc897ab40d4cb98a55977362c95d5",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-36fd06b4fde4",
       "url": "https://github.com/cdcseacave/openMVS",
       "local_source_path": null,
@@ -7204,6 +7704,31 @@
       ],
       "referring_documents": [
         "research/sources/round-20/component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-393afe62bdcb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json",
+      "title": "capture-identity-checks.json",
+      "summary": "Failed visual identity:previous enclosure remains visible andall new ISO/TOP/activate/REGEN image hashes are identical.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "de78eeaa75c2c8f0d96be598f555b077c823fda51a3cbcb451311096312623b0",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -7368,6 +7893,56 @@
       "referring_documents": [
         "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-3a0be7d2ba98",
+      "url": "https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W.pdf",
+      "local_source_path": null,
+      "title": "Dimension Drawing - Orion-Large, Rev01",
+      "summary": "Manufacturer Rev01 drawing explicitly names24/12 ORI241236120;187 flange,174×71 slot pitches,86 depth reference andR4 open slots.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family-dimension-drawing.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "d97dab715a4813919127ce5e3b377776f024aaf8b6611a9bf9fdc169baa05c3a",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-3a1449ac8a6c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c043-c045-converters.md",
+      "title": "Converter execution report",
+      "summary": "Explains exact C045 CAD,39 checks,failed views,applied procedure,C043 source gate andretained manual correction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_work_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_work_report",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c043-c045-converters.md",
+          "access_date": "2026-11-12",
+          "sha256": "c548b625ea80d69dce1a5b697dc017f0ec7037f7ef714c8c4e55e095fc4f53ca",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -8631,6 +9206,31 @@
       ]
     },
     {
+      "id": "SRC-41a47f716081",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json",
+      "title": "prior-model-hashes.json",
+      "summary": "Pre-build hashes of24 saved DWGs used to confirm existing CAD preservation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json",
+          "access_date": "2026-11-12",
+          "sha256": "612d2e33f23a8b7461e06a2f39f71db796858297c90861800257c0b03d3fea3e",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-41bb93ea7d3f",
       "url": "https://raw.githubusercontent.com/nerfstudio-project/nerfstudio/main/nerfstudio/data/dataparsers/nerfstudio_dataparser.py",
       "local_source_path": null,
@@ -8773,7 +9373,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "executed_procedure_documentation",
-        "executed_case_procedure"
+        "executed_case_procedure",
+        "applied_case_procedure"
       ],
       "observations": [
         {
@@ -8793,11 +9394,21 @@
           "referring_documents": [
             "execution/c029-fibox-enclosure.md"
           ]
+        },
+        {
+          "evidence_status": "applied_case_procedure",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md",
+          "access_date": "2026-11-12",
+          "sha256": "c5c5caf78f743ad40f3725b3a0ad3dfbc1bf1c1f664799532cfdfa419e135542",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-20/component-sources.json",
-        "research/sources/round-23/enclosure-sources.json"
+        "research/sources/round-23/enclosure-sources.json",
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -9511,6 +10122,56 @@
       ]
     },
     {
+      "id": "SRC-4740401a7d90",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md",
+      "title": "Initial Orion source transcription",
+      "summary": "Records delegated product mapping,reported price-list row,source ranges andfamily applicability before coordinator manual review.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_initial_source_review"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_initial_source_review",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md",
+          "access_date": "2026-11-12",
+          "sha256": "75b12943e5ca0639b3c32fe9beb471c526bce58f4277b33b4f4cdde32d8f23a4",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-474e58a9c0ea",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py",
+      "title": "plan_c045.py",
+      "summary": "Compared28 source frames withnative inserts andgenerated27 unique reversed-placement corrections.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py",
+          "access_date": "2026-11-12",
+          "sha256": "b62553cc1cef5d61d5e734e88f45e680e2e86d75ba0174747cabfce24dd0bc66",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-47d588ded00a",
       "url": "https://majiayu000.github.io/claude-skill-registry/skills/3d-modeling-0127cdf66a41/",
       "local_source_path": null,
@@ -9900,6 +10561,31 @@
       ]
     },
     {
+      "id": "SRC-4b50dfc03e47",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json",
+      "title": "imported-blocks.json",
+      "summary": "Initial source-covered converter block hierarchy,including heatsink,terminals,cover andhardware.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json",
+          "access_date": "2026-11-12",
+          "sha256": "44b2f0b3e2f7a80152b50ee1a840d858dc5c6e3e05f9f64f9bf97198d604156d",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-4ba8cc4436be",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json",
@@ -9963,6 +10649,31 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-4cb8874a1a39",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json",
+      "title": "pre-save-assembly-measurements.json",
+      "summary": "27 source-corrected instance paths andactual pre-save point geometry.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json",
+          "access_date": "2026-11-12",
+          "sha256": "4be831f244f5e0721d97a0f1ff655cda232968c4e57bcc5c35045ce0ba73acf2",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -10305,6 +11016,31 @@
       ]
     },
     {
+      "id": "SRC-4eb42ece1132",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json",
+      "title": "imported-records-0.json",
+      "summary": "imported native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json",
+          "access_date": "2026-11-12",
+          "sha256": "590a7de650eb26c81fb7ed7ce6d5ad6f9e28c7589f24167202397ec58c7b6c02",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-4f0c8d392a38",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
@@ -10527,6 +11263,31 @@
         "research/workflows/details/mix-r03.md",
         "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-502c2eec4519",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json",
+      "title": "source-job.json",
+      "summary": "Pre-import SOURCE_READY contract pins exact C045 drawing row andfamilySTEP hashes,mount labels andsource frame.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "eaff562adbc0f18145ed72e3659ba88ffbd7b2da1289fb90e8e6f9a41779f00d",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -10759,6 +11520,31 @@
       ],
       "referring_documents": [
         "research/sources/round-13/crossmember-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5219c6a1df9e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json",
+      "title": "step-confirm.json",
+      "summary": "Actual completed STEP import confirmation in the isolated converter document.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json",
+          "access_date": "2026-11-12",
+          "sha256": "9b833c52f47cbbee01a68a564e9e4dfdd0d9659520f806992f34b0b301191293",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -11576,6 +12362,31 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-566a523ea815",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/mcp_ops.rs",
+      "title": "OCS operation declaration source",
+      "summary": "Local source describes activate as switching an open drawing tab;current native activate executed andcompleted in this case.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "inspected_local_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "inspected_local_source",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/mcp_ops.rs",
+          "access_date": "2026-11-12",
+          "sha256": "1ecac854c5e3fa5303550357cf6c9eeb92704b78d7808b0332b619ed704c0d3a",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -12666,6 +13477,31 @@
       ]
     },
     {
+      "id": "SRC-5f744c173454",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json",
+      "title": "heatsink-analytic-features.json",
+      "summary": "Existing SAB reader observes heatsink planes,cylinders,cones andloops;R4 slot centres identify174.3×71mm pattern.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json",
+          "access_date": "2026-11-12",
+          "sha256": "54125d04d57a57d01f93f69965c2d708a0705b10e3670f694310a151224c91c9",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-5f9c829cdfd0",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/README.md",
@@ -12804,6 +13640,56 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-611132c2602f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf",
+      "title": "Native converter plot attempt",
+      "summary": "Actual OCS one-page plot output;subsequent Poppler inspection shows an entirelywhite page. Export completion andfailed visualcontent retained separately.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_plot_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_plot_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "a1b454923aed2d32e4fe8669811525d64b8a8196b2909e5d6469fd909319ac55",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-618fca25dd4d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json",
+      "title": "corrected-records-30.json",
+      "summary": "corrected native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json",
+          "access_date": "2026-11-12",
+          "sha256": "d315b668f654ead7eb02fbfb8b245fbeb12d7b9720f0a9e5071c32588a3e8160",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -13883,6 +14769,31 @@
       ]
     },
     {
+      "id": "SRC-6a20dc32784d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json",
+      "title": "reopened-blocks.json",
+      "summary": "Persisted converter block hierarchy fromsaved document87.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json",
+          "access_date": "2026-11-12",
+          "sha256": "f4114690c2964fef45c16e057cc0a0bb2a4be220c7644bb67cbac075081faf99",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6a6bf0c0ce39",
       "url": "https://raw.githubusercontent.com/PointCloudLibrary/pcl/master/sample_consensus/include/pcl/sample_consensus/sac_model_cylinder.h",
       "local_source_path": null,
@@ -14087,6 +14998,15 @@
           "referring_documents": [
             "execution/c029-fibox-enclosure.md"
           ]
+        },
+        {
+          "evidence_status": "implemented_skill_guidance",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "86b6b892ee7aceec6997f90737746efa2ed3e9b11b382cf242ab1e3bca566b9f",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -14095,7 +15015,8 @@
         "research/sources/round-14/bearing-sources.json",
         "research/sources/round-15/leaf-sources.json",
         "research/sources/round-16/driver-sources.json",
-        "research/sources/round-23/enclosure-sources.json"
+        "research/sources/round-23/enclosure-sources.json",
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -14272,6 +15193,31 @@
         "research/workflows/details/dom-r06.md",
         "research/workflows/details/rec-r01.md",
         "research/workflows/reconstruction-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-6c38f0dfe089",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json",
+      "title": "saved-assembly-checks.json",
+      "summary": "37 passing saved source-placement,definition point-set andnested-instance checks;source revision values remain separately attributed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "a25a448a87e4cc02c6c6685d0fb5a31b5a1e8731286f8f533b7ef2c0f4edd052",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -14784,6 +15730,31 @@
       ]
     },
     {
+      "id": "SRC-6f5dbc4f4bd8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json",
+      "title": "reopened-records-30.json",
+      "summary": "reopened native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json",
+          "access_date": "2026-11-12",
+          "sha256": "e93ae1578457a4d39a1b972758413b29d166805a4e3b5839f113f1065d46fdff",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6f832566dcde",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png",
@@ -15039,6 +16010,31 @@
       ],
       "referring_documents": [
         "research/sources/round-22/gland-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-70f3c3558125",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png",
+      "title": "native-plot-isometric.png",
+      "summary": "ActualnativeplotPDF render is entirelywhite;pixel extrema andvisualcheck recorded.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_visual_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_visual_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "38e936bdd904f9bcbebcf127d44c7df5562c74779dbeb0ffeb5f1f97bf6894ae",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -16255,6 +17251,31 @@
       ]
     },
     {
+      "id": "SRC-7c108255a4eb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json",
+      "title": "provenance.json",
+      "summary": "Actual temporary driver paths,retained hashes andoriginal bootstrap dependency conditions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "execution_provenance_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "execution_provenance_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json",
+          "access_date": "2026-11-12",
+          "sha256": "b886962e611a8ff4830c107adaf7dd8d560fe8a5b491027962b1477134dd2f67",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-7c623f2c8b68",
       "url": "https://raw.githubusercontent.com/glotoff/freecad-skills/main/skills/freecad-user/references/modeling_best_practices.md",
       "local_source_path": null,
@@ -16357,6 +17378,31 @@
       ]
     },
     {
+      "id": "SRC-7c8bdf666637",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json",
+      "title": "mount-checks.json",
+      "summary": "Two passing R4-slot/count andvertical-pitch checks;records STEP174.3 vsdrawing174 pitch and186.6 vs187 flange observation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "36ad7a6303402c1bef96bee9129c3faebbec14c01b92e14d73b6878ca03f5fc1",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-7cd4f7a294b2",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json",
@@ -16379,6 +17425,31 @@
       ],
       "referring_documents": [
         "research/sources/round-23/enclosure-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7d065c90de76",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg",
+      "title": "Saved Victron24/12 native assembly",
+      "summary": "New DWG2018 has9 solid definitions and27 source-corrected instances;39 numeric checks pass andvisual identity check remainsFAIL.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_cad_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_cad_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg",
+          "access_date": "2026-11-12",
+          "sha256": "f0b416f53ac67066fa79affd47c3b5d2b69167185e1bf02fefbdcd45c39adc33",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -16506,6 +17577,31 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7e07ebce5d02",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py",
+      "title": "check_c045_mounts.py",
+      "summary": "Read fourR4 mount-slot ends,computed71/174.3mm pitches anddetected byte-identical captures.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py",
+          "access_date": "2026-11-12",
+          "sha256": "15b040e1724bea4803e48980340d8e005994ccad0934f15882195f54d52f6e0a",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -17460,6 +18556,31 @@
       ]
     },
     {
+      "id": "SRC-8505da5fe91f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py",
+      "title": "read_c045.py",
+      "summary": "Read imported manifest/records andrequested initial ISO capture,whose contents laterfailed identity review.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py",
+          "access_date": "2026-11-12",
+          "sha256": "a905aaf09782d17f0186335c84c83d87144ef86e2a33edc568620852f8f2352d",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-856db78a1b1e",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md",
@@ -18122,6 +19243,31 @@
       ]
     },
     {
+      "id": "SRC-8a94739a62eb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json",
+      "title": "native-plot-visual-check.json",
+      "summary": "Actual Poppler rendering andpixel extrema show anentirelywhite page;visualcheck FAIL whileexport operationcompleted.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json",
+          "access_date": "2026-11-12",
+          "sha256": "dbc13f10f6dc4ef6235a0ce4f0b89d2e5005c918b434eb066e03abe43c511f1f",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-8a9e1c41280d",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md",
@@ -18343,6 +19489,31 @@
       ]
     },
     {
+      "id": "SRC-8c3e1acbd99d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py",
+      "title": "check_c045_saved.py",
+      "summary": "Computed37 actual persisted placement/point/instance checks andseparate source-dimension observations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py",
+          "access_date": "2026-11-12",
+          "sha256": "b6ff337b5ef0a688c68d4fb1ae86d9360d819ada7e9d6170a8b41d6563e24fac",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-8ce066c08d57",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip",
@@ -18393,6 +19564,31 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-8da82a2f23b9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json",
+      "title": "reopened-records-36.json",
+      "summary": "reopened native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json",
+          "access_date": "2026-11-12",
+          "sha256": "fc6248fcf2caae73af6833dadfc202842026b968d341091a97f91314aa0c2f98",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -19008,6 +20204,31 @@
       ]
     },
     {
+      "id": "SRC-90f352cc1a15",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json",
+      "title": "reopened-records-24.json",
+      "summary": "reopened native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json",
+          "access_date": "2026-11-12",
+          "sha256": "f8071443fb93573419b412084af88ac3f2e8af59fb1ef464028c28d9e9e94c4e",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9133612f3fad",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json",
@@ -19145,6 +20366,31 @@
       ]
     },
     {
+      "id": "SRC-92f126438f43",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json",
+      "title": "reopened-records-18.json",
+      "summary": "reopened native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json",
+          "access_date": "2026-11-12",
+          "sha256": "f5106da1cb7a87e69925963741949312c7d4b97cc1a3865dccedadfa52990123",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-93087004fdb3",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json",
@@ -19226,6 +20472,31 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "research/user-supplied-links.md"
+      ]
+    },
+    {
+      "id": "SRC-9345ab05320c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json",
+      "title": "corrected-records-36.json",
+      "summary": "corrected native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json",
+          "access_date": "2026-11-12",
+          "sha256": "b33aebf70b3480c0341359e1ae28d2fe6d77ff8ad0b31d54c67f49b4f81f391b",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -19366,6 +20637,31 @@
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-93cc6c46876e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json",
+      "title": "imported-records-12.json",
+      "summary": "imported native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json",
+          "access_date": "2026-11-12",
+          "sha256": "fe4a2b584f6c378fddab4615899312f088ec98d10b491beccd1e4b8e3a191758",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -20178,6 +21474,31 @@
       ]
     },
     {
+      "id": "SRC-98e17e4710fb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json",
+      "title": "result.json",
+      "summary": "C043 source-stage result retains target identity andlinks C045 reuse of acquired originals.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_readiness_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_readiness_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "1acf16330ac38079e03c22186e528e6734316e381b2394efad965d27e2648f40",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-993c97d817f0",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json",
@@ -20201,6 +21522,31 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-994ff56f9968",
+      "url": "https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W-%28stp%29.STEP",
+      "local_source_path": null,
+      "title": "Orion-Tr Smart-rev00-3D",
+      "summary": "Manufacturer rev00/2019 AP214 model names24/12-30 hardware,contains9 solid definitions and27 placed solids;supports C045.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP",
+          "access_date": "2026-11-12",
+          "sha256": "fc14a78bdd73ca3fe5a6a429fb5e38aed4d2ee2d8d6358354c2dcf749dfa2b28",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -20505,6 +21851,31 @@
       ]
     },
     {
+      "id": "SRC-9a847c6724b8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png",
+      "title": "reopened-top.png",
+      "summary": "Actual converter capture attempt reopened-top;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_visual_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_visual_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png",
+          "access_date": "2026-11-12",
+          "sha256": "53f6f7e99699c67c427f5c0fb3cb81ce281ec02e5527a22d7d35992755e454d0",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9adef416e57c",
       "url": null,
       "local_source_path": "/tmp/opencode/skf-yar204-catalogue-page92.png",
@@ -20528,6 +21899,31 @@
       ],
       "referring_documents": [
         "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9b8eb3a2b709",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json",
+      "title": "corrected-records-24.json",
+      "summary": "corrected native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json",
+          "access_date": "2026-11-12",
+          "sha256": "2eda6289a8b1eba753bc3c78ae647a111590363d8e1fd7b263f7db72c89f2295",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -20968,6 +22364,31 @@
         "research/workflows/details/dom-r03.md",
         "research/workflows/details/mix-r02.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-9ec25a7b74a7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json",
+      "title": "corrected-records-12.json",
+      "summary": "corrected native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json",
+          "access_date": "2026-11-12",
+          "sha256": "c46be3888eb1f1aeeea5e7b11fd8c437851e3d3b700c8cb8315ccd4c5f771578",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -21568,6 +22989,31 @@
       ]
     },
     {
+      "id": "SRC-a2ddc249d60b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json",
+      "title": "initial-state.json",
+      "summary": "Native document85 andexisting open-document state before creating converter document86.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json",
+          "access_date": "2026-11-12",
+          "sha256": "fc92175bb864f7a03919282ee7214d22a4b5e483fcd6318f2c39fa19d39fda2d",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-a2e021f0ada1",
       "url": "https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md",
       "local_source_path": null,
@@ -22107,6 +23553,31 @@
         "research/workflows/details/dom-r03.md",
         "research/workflows/details/mix-r02.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-a6ae4a99861b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json",
+      "title": "imported-records-30.json",
+      "summary": "imported native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json",
+          "access_date": "2026-11-12",
+          "sha256": "81005bc7d72fa1b030f5c272241a0e5360134c6b01d3af7b2530768885f3f615",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -23392,6 +24863,31 @@
       ]
     },
     {
+      "id": "SRC-b123fa7af4ef",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png",
+      "title": "Orion Rev01 drawing render",
+      "summary": "Actual dimensioned front/side/detail views explicitly listORI241236120 andits mounting-slot reference labels.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png",
+          "access_date": "2026-11-12",
+          "sha256": "880954134585ae440f4baafd5161401fd74b5ddc43b2b9e6ea7b2312289b6547",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-b1451ce1d409",
       "url": "https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/LICENSE",
       "local_source_path": null,
@@ -24306,6 +25802,31 @@
       ]
     },
     {
+      "id": "SRC-b70a1a95f34d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json",
+      "title": "reopened-records-0.json",
+      "summary": "reopened native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json",
+          "access_date": "2026-11-12",
+          "sha256": "f1e13738cc57f32f27cd202166582f04057c32fd4ea0da88241e2f227b2fe283",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-b739e4946d72",
       "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst",
       "local_source_path": null,
@@ -24596,6 +26117,31 @@
       ],
       "referring_documents": [
         "research/sources/round-23/enclosure-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b884395f7485",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py",
+      "title": "c045_presave_measurements.py",
+      "summary": "Traversed source-corrected instance paths andrecorded point-set geometry before saving.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py",
+          "access_date": "2026-11-12",
+          "sha256": "7e671996a85edbd28c28931ba40faa0eca8aef979781d95d867f4fd70023d49e",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -25128,6 +26674,31 @@
       ]
     },
     {
+      "id": "SRC-bc6235b9e567",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json",
+      "title": "corrected-blocks.json",
+      "summary": "Block membership readback after27 source placement corrections.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json",
+          "access_date": "2026-11-12",
+          "sha256": "585be586237834c71ff691635ada61cd3a0516e5f25660de6810675d813e57af",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-bcae1b9fb83c",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json",
@@ -25569,6 +27140,31 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-bf7c144ea436",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py",
+      "title": "reopen_c045.py",
+      "summary": "Recovered original reopen,verified hash/manifest/audit andretained saved records;capture laterfailed image identity.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py",
+          "access_date": "2026-11-12",
+          "sha256": "8ce8829d3a05516851b12b9037efa6106241e837ca0c46f837e7980c7da69220",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -26241,6 +27837,31 @@
       ]
     },
     {
+      "id": "SRC-c30253c39c7d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json",
+      "title": "result.json",
+      "summary": "C045 IN_PROGRESS result:39 native checks andpersistence pass,visual check fails;applied capture-identity procedure linked.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "d3ebb31dd784905592ee5c746485844ad65393b05a0e2087fb49cd7acebc5642",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c325f62a1a2e",
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Python_scripting_tutorial.md",
       "local_source_path": null,
@@ -26304,6 +27925,31 @@
       ],
       "referring_documents": [
         "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c4427df066e7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json",
+      "title": "corrected-records-18.json",
+      "summary": "corrected native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json",
+          "access_date": "2026-11-12",
+          "sha256": "fd1df8933d0bf14ffa428126efe37f91722140c06be307b7eee1dd0b1c293959",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -26659,6 +28305,31 @@
         "research/sources/round-14/bearing-sources.json",
         "research/sources/round-15/leaf-sources.json",
         "research/sources/round-16/driver-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c69eb556dd4e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py",
+      "title": "control-bootstrap-prefix.py",
+      "summary": "Exact actual control bootstrap prefix loads existing guarded client/helper andexplicit session;private descriptor content omitted.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py",
+          "access_date": "2026-11-12",
+          "sha256": "4124942161c5b83359fd4dfd403e9af9e0ff7a87c5d5b6bf6402164e8e8c2fac",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -27032,6 +28703,31 @@
       ],
       "referring_documents": [
         "research/sources/round-16/driver-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ca19e3275b4b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json",
+      "title": "native-plot-result.json",
+      "summary": "Completed native PDF plot response fordocument87,one297×210mm page;visual content checked separately.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json",
+          "access_date": "2026-11-12",
+          "sha256": "20711257f0e988ee4a8de25519f918c051f48ec7f4054096eac47f32aafb273f",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -27790,6 +29486,31 @@
       ]
     },
     {
+      "id": "SRC-cea6a9237427",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md",
+      "title": "Integrated Orion source review",
+      "summary": "Links coordinator correction to preserved initial interpretation andretains original links,dimension labels andC045 family applicability.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "reviewed_source_interpretation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "reviewed_source_interpretation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md",
+          "access_date": "2026-11-12",
+          "sha256": "87f78c3ed261164f00cf19c524ddcd96e9613d06102bf62bfe38fa602f476032",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-cf13f71acbca",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json",
@@ -27838,6 +29559,31 @@
       ],
       "referring_documents": [
         "research/sources/round-16/driver-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-cf410cec238a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md",
+      "title": "Actual retained-manual model-table review",
+      "summary": "PDF text extraction finds48/12-20 andno48/12-30;separates retained PDF,delegated price-list claim,project input andexact C045 drawing coverage.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_coordinator_review"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_coordinator_review",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md",
+          "access_date": "2026-11-12",
+          "sha256": "e4a1fd68268ae5ac81d26362db34d4fe10b5fa07e7e44e0b52e3912c132b0c92",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -27891,6 +29637,31 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-cfdbfbbc0d31",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json",
+      "title": "imported-audit.json",
+      "summary": "Initial nine-solid/29-block-reference manifest withzeroerrors/warnings.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json",
+          "access_date": "2026-11-12",
+          "sha256": "258e81a65f315b300a58d34200721f80c3fadd8f3c1ce54061a84f2e65caa1a9",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -28626,6 +30397,31 @@
       ]
     },
     {
+      "id": "SRC-d5c6dba4409f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json",
+      "title": "document-checkpoint.json",
+      "summary": "New isolated document86 binding,revision andrequest namespace before import.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json",
+          "access_date": "2026-11-12",
+          "sha256": "04a6e46017c2a94c899055ca7fd055826d33f876e434a2945a27972ce1bc7471",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-d5f6d3131aaa",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md",
@@ -28952,6 +30748,31 @@
       ],
       "referring_documents": [
         "research/sources/round-15/leaf-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-da01bd7cde5d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json",
+      "title": "imported-query.json",
+      "summary": "Actual native imported entity handle/type inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json",
+          "access_date": "2026-11-12",
+          "sha256": "536f7581b22aa8226689c3bdbf3ecb78cb015b195d882be1498b7a9a225bf584",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -29665,6 +31486,31 @@
       ]
     },
     {
+      "id": "SRC-dfe4eca1f71a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json",
+      "title": "imported-records-36.json",
+      "summary": "imported native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json",
+          "access_date": "2026-11-12",
+          "sha256": "9c1fc127432591b3e849f5a76e2e915ec6b380b31c5e6f970a74adbaa2591add",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-dfe7c160f462",
       "url": null,
       "local_source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
@@ -30014,6 +31860,31 @@
       ]
     },
     {
+      "id": "SRC-e3d853f6ef1d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py",
+      "title": "views_c045.py",
+      "summary": "Requested saved TOP/FRONT views;first TOP request hit polling bound andits repeated image wasretained.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_driver_source"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_driver_source",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py",
+          "access_date": "2026-11-12",
+          "sha256": "8f80a61b6d947e9c239b966534b6931ad5f1b00617d99dfd41baf49c6dc60389",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-e3d95e78d033",
       "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2",
       "local_source_path": null,
@@ -30026,6 +31897,31 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-e4073c405422",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl",
+      "title": "ocs-journal.jsonl",
+      "summary": "Actual guarded import,CAS corrections,save/reopen,view/capture,recovery,activate andREGEN write/readback history.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl",
+          "access_date": "2026-11-12",
+          "sha256": "00eba12636b9344887ae019710919f7a5d652c90372483b42243cc094e91d2e1",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -30210,6 +32106,31 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-e632f00983a2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png",
+      "title": "reopened-isometric.png",
+      "summary": "Actual converter capture attempt reopened-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_visual_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_visual_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "53f6f7e99699c67c427f5c0fb3cb81ce281ec02e5527a22d7d35992755e454d0",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -30919,6 +32840,31 @@
       ]
     },
     {
+      "id": "SRC-eb82077bb446",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json",
+      "title": "Reviewed Orion acquisition metadata",
+      "summary": "Original PDF/STEP/manual URLs,times,MIME,hashes andactual price-list access outcomes;retained-manual attribution corrected with initial copy preserved.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "reviewed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "reviewed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "567dddef633b4797382f8dde8dd4a1217acecfb8929f841cb1942849d72c9022",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-eb880f7efbac",
       "url": null,
       "local_source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
@@ -31325,6 +33271,31 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-edf75a7ba1f0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json",
+      "title": "placement-corrections.json",
+      "summary": "Actual checked helper application:27 matrices corrected,nine ACIS definitions unchanged.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json",
+          "access_date": "2026-11-12",
+          "sha256": "0e7303b065edea6acc0ed6b36d3bcc95d98aa1649e14d69c70d82d39dd5b7520",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -32055,6 +34026,31 @@
       ]
     },
     {
+      "id": "SRC-f343e0d088b6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json",
+      "title": "corrected-records-6.json",
+      "summary": "corrected native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json",
+          "access_date": "2026-11-12",
+          "sha256": "be7c030fc148f50e8acd90ab689797c9991ca5b9d93c7a83182dcacf98303da2",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f3798f920e4f",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md",
@@ -32123,6 +34119,31 @@
       ]
     },
     {
+      "id": "SRC-f428be8d9008",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json",
+      "title": "readiness.json",
+      "summary": "Existing source/hash gate SOURCE_READY result before native construction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_observation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_observation",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "6de07b0ef13fe822b74a3ae31e0e8535f3a0a1fb310f9e2729d03732ce1e9d67",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f47d7610aaad",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/tests/test_assembly_repair.py",
@@ -32184,6 +34205,31 @@
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f4c2cf5fb241",
+      "url": "https://www.victronenergy.com/upload/documents/Orion-Tr_Smart_DC-DC_Charger_-_Isolated/34439-Orion-Tr_Smart_DC-DC_Charger-pdf-en.pdf",
+      "local_source_path": null,
+      "title": "Orion-Tr Smart DC-DC Charger Isolated",
+      "summary": "Retained manual page29 names48/12-20;higher-power table includes24/12-30 and130×186×80 nominal envelope. Coordinator separates this from the delegated48/12-30 price-list observation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-manual.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "902fd7c4a8bc28f6711de8875a4e25f4a3ab6015fe54f36684ba89c383154f2d",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -32692,6 +34738,31 @@
       ]
     },
     {
+      "id": "SRC-f80023f6c2fa",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png",
+      "title": "corrected-isometric.png",
+      "summary": "Actual converter capture attempt corrected-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_visual_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_visual_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "53f6f7e99699c67c427f5c0fb3cb81ce281ec02e5527a22d7d35992755e454d0",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f828b291cc6f",
       "url": null,
       "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
@@ -32700,7 +34771,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "local_source_inspected",
-        "local_reference_registered"
+        "local_reference_registered",
+        "inspected_local_source"
       ],
       "observations": [
         {
@@ -32746,13 +34818,23 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "inspected_local_source",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
@@ -33257,6 +35339,31 @@
       ],
       "referring_documents": [
         "research/sources/round-13/crossmember-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fcb5653f90bc",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png",
+      "title": "regen-isometric.png",
+      "summary": "Actual converter capture attempt regen-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_visual_failure"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_visual_failure",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "53f6f7e99699c67c427f5c0fb3cb81ce281ec02e5527a22d7d35992755e454d0",
+          "referring_documents": [
+            "execution/c043-c045-converters.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-24/converter-sources.json"
       ]
     },
     {
