@@ -1994,6 +1994,82 @@
         "prior_input_record": "COMP-I06 — Required tube corner-profile input"
       },
       "next_check": "Retain measurement locations, units, method and observed values when measurements are available."
+    },
+    {
+      "id": "COMP-I11",
+      "name": "Record source research as separate component actions",
+      "summary": "Four source-preparation definitions and their actual supplier/standard/access/calculation occurrences are implemented and linked to the original intake/solid-route actions. Each retains software/agent responsibilities and evidence.",
+      "status": "proposal",
+      "origin": "observed_rail_execution",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/p01-rail-build.md",
+          "line": 1,
+          "section": "Actual build attempts and applied improvements"
+        }
+      ],
+      "next_check": "Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions."
+    },
+    {
+      "id": "COMP-I12",
+      "name": "Check explicit native selections before dependent commands",
+      "summary": "Live P01 execution exposed clear-only selection semantics. A reusable adapter corrects nonempty explicit selection and verifies actual handles; live resumed extrusion and regression tests exercise the fix.",
+      "status": "proposal",
+      "origin": "observed_rail_execution",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/p01-rail-build.md",
+          "line": 1,
+          "section": "Actual build attempts and applied improvements"
+        }
+      ],
+      "next_check": "Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions."
+    },
+    {
+      "id": "COMP-I13",
+      "name": "Extrude the bounded hollow section directly",
+      "summary": "P01 solid subtraction and planar-region subtraction returned CutRefused. Direct bounded-area extrusion produced the source-defined hollow rail and passed five native feature check groups; preserve all three route outcomes.",
+      "status": "proposal",
+      "origin": "observed_rail_execution",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/p01-rail-build.md",
+          "line": 1,
+          "section": "Actual build attempts and applied improvements"
+        }
+      ],
+      "next_check": "Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions."
+    },
+    {
+      "id": "COMP-I14",
+      "name": "Read reopened binary solid features and resolve native bounds discrepancy",
+      "summary": "P01 saved/reopened DWG stores SAB binary while the current feature reader supports SAT text. Native API bounds are zero beside visible nonzero-volume mesh geometry. Next checker implementation should reuse a supported decoder/query route and repeat required saved-feature checks.",
+      "status": "proposal",
+      "origin": "observed_rail_execution",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/p01-rail-build.md",
+          "line": 1,
+          "section": "Actual build attempts and applied improvements"
+        }
+      ],
+      "next_check": "Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions."
     }
   ]
 }

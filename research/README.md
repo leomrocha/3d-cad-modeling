@@ -18,6 +18,7 @@ Research date: 12 November 2026.
 14. [Initial verification receipt](verification.json) — observations from the repository foundation.
 15. [Workflow registration checks](workflows/register-checks.json) and [document checks](workflows/document-checks.json) — current documentation consistency checks.
 16. [Square-tube corner standards for the main-frame rails and crossmembers](/home/leo/projects/3dmodeling/research/tube-corner-research.md) — EN 10219-2 and EN 10210-2 nominal calculation radii, external manufacturing limits, supplier evidence and proposed CAD representations; [individual source observations](/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json).
+17. [Main-frame rail execution and applied tooling improvements](/home/leo/projects/3dmodeling/execution/p01-rail-build.md) — source-first action records, actual OCS construction attempts, checked native rail geometry, saved model, reopened views and the SAB feature-reader issue; [four source-action definitions](/home/leo/projects/3dmodeling/research/action-audit/component-source-actions.json).
 
 ## Evidence and execution
 

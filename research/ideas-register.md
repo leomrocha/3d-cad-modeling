@@ -1874,6 +1874,54 @@ Original proposal: [research/tube-corner-research.md](/home/leo/projects/3dmodel
 
 Next check: Retain measurement locations, units, method and observed values when measurements are available.
 
+## COMP-I11 — Record source research as separate component actions
+
+Status: proposal.
+
+Four source-preparation definitions and their actual supplier/standard/access/calculation occurrences are implemented and linked to the original intake/solid-route actions. Each retains software/agent responsibilities and evidence.
+
+Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+
+Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+
+Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
+
+## COMP-I12 — Check explicit native selections before dependent commands
+
+Status: proposal.
+
+Live P01 execution exposed clear-only selection semantics. A reusable adapter corrects nonempty explicit selection and verifies actual handles; live resumed extrusion and regression tests exercise the fix.
+
+Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+
+Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+
+Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
+
+## COMP-I13 — Extrude the bounded hollow section directly
+
+Status: proposal.
+
+P01 solid subtraction and planar-region subtraction returned CutRefused. Direct bounded-area extrusion produced the source-defined hollow rail and passed five native feature check groups; preserve all three route outcomes.
+
+Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+
+Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+
+Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
+
+## COMP-I14 — Read reopened binary solid features and resolve native bounds discrepancy
+
+Status: proposal.
+
+P01 saved/reopened DWG stores SAB binary while the current feature reader supports SAT text. Native API bounds are zero beside visible nonzero-volume mesh geometry. Next checker implementation should reuse a supported decoder/query route and repeat required saved-feature checks.
+
+Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+
+Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+
+Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

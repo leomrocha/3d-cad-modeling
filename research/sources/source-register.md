@@ -112,6 +112,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/cad-sources.json, research/sources/round-02/reconstruction-sources.json, research/workflows/details/cad-r06.md.
 
+<a id="src-0308beb80af5"></a>
+
+## SRC-0308beb80af5 — P01 p01-build-01 — rail-doc-schema-0.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-0.json)
+
+Summary: p01-build-01 rail-doc-schema-0.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-03256efc5e07"></a>
 
 ## SRC-03256efc5e07 — SKILL.md
@@ -315,6 +327,18 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-06-local-sources.json.
+
+<a id="src-09f3c0537603"></a>
+
+## SRC-09f3c0537603 — P01 p01-build-01 — initial-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json)
+
+Summary: p01-build-01 initial-state.json: Observed document 52 revision 2 with open-document identities and camera/command state; used for write isolation or capture provenance.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-0a10e8f57dac"></a>
 
@@ -628,6 +652,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-16d2d9b6a0cb"></a>
+
+## SRC-16d2d9b6a0cb — P01 p01-build-01 — rail-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json)
+
+Summary: p01-build-01 rail-state.json: Observed document 52 revision 2 with open-document identities and camera/command state; used for write isolation or capture provenance.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-170cae45c8e7"></a>
 
 ## SRC-170cae45c8e7 — Leaf cassette support rail (P17R) — CAD input sheet
@@ -675,6 +711,18 @@ Summary: Full sequential audit integration record: exact operation/action, workf
 Evidence: authored_document_inspected, authored_document_or_code_inspected.
 
 Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json.
+
+<a id="src-17a777175a39"></a>
+
+## SRC-17a777175a39 — Four observed component-source action definitions
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/component-source-actions.json](/home/leo/projects/3dmodeling/research/action-audit/component-source-actions.json)
+
+Summary: Defines stock/supplier lookup, feature-standard search, per-claim access review and nominal feature calculation, including software/agent roles, units, preserved information, alternatives and downstream conditions. Links original intake/solid-route actions and the FERME occurrence registry.
+
+Evidence: authored_code_or_procedure_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-19255db776eb"></a>
 
@@ -760,6 +808,18 @@ Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json.
 
+<a id="src-1ae836243bfc"></a>
+
+## SRC-1ae836243bfc — P01 p01-build-01 — rail-after-cut-measure.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-measure.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-measure.json)
+
+Summary: p01-build-01 rail-after-cut-measure.json: Retained native response with fields document_id, geometry_revision, measurements, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-1b0d9fc7bcf8"></a>
 
 ## SRC-1b0d9fc7bcf8 — manifest.tsv
@@ -783,6 +843,18 @@ Summary: Primary sources: official OCCT overview, OCCT source repository/licence
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-1b3804492890"></a>
+
+## SRC-1b3804492890 — P01 p01-build-02 — document-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/document-checkpoint.json)
+
+Summary: p01-build-02 document-checkpoint.json: Binds partial/native stage to document 69, revision 0 and named part handles {}; supports inspected recovery.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-1be5a18aa751"></a>
 
@@ -819,6 +891,18 @@ Summary: Authored proposal: requested identity/standards/location/search fields,
 Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
+
+<a id="src-1eac959ecbf4"></a>
+
+## SRC-1eac959ecbf4 — P01 p01-build-03 — persistence.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json)
+
+Summary: p01-build-03 persistence.json: DWG2018 save/reopen audit/hash/manifest result PASS, one native solid, zero dropped entities. Detailed reopened geometry has its own separate receipt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-1f314fe4accc"></a>
 
@@ -952,6 +1036,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-234298cb79b4"></a>
+
+## SRC-234298cb79b4 — P01 p01-build-03 — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json)
+
+Summary: p01-build-03 result.json: Observed attempt state BUILT_REOPENED_FEATURE_CHECK_REQUIRED; Read/query reopened SAB feature geometry and repeat the source-linked dimension checks; investigate zero native bounds alongside nonzero mesh and visible geometry.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-240fe89d1198"></a>
 
 ## SRC-240fe89d1198 — EN 10210-2:2019 (E), SIST sample — Hot finished structural hollow sections, Part 2
@@ -999,6 +1095,18 @@ Summary: Primary usage examples for parameterized Python solid construction.
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
+
+<a id="src-26397bd1f7c2"></a>
+
+## SRC-26397bd1f7c2 — P01 p01-build-01 — rail-schema-3.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-3.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-3.json)
+
+Summary: p01-build-01 rail-schema-3.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-26ba505a1c89"></a>
 
@@ -1168,6 +1276,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
+<a id="src-2cea52720940"></a>
+
+## SRC-2cea52720940 — P01 p01-build-03 — reopened-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json)
+
+Summary: p01-build-03 reopened-checks.json: Feature/source check result UNKNOWN; Reopened record stores SAB binary; this feature reader supports SAT text
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-2cf7a4eb3a5d"></a>
 
 ## SRC-2cf7a4eb3a5d — RGBDImageFactory.cpp — Open3D v0.20.0 source
@@ -1252,6 +1372,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
+<a id="src-2e711cc8d780"></a>
+
+## SRC-2e711cc8d780 — P01 p01-build-01 — rail-capabilities.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json)
+
+Summary: p01-build-01 rail-capabilities.json: Retained native response with fields api, concurrency, editor, geometry, ok, operations, records; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-2e8d8f25e086"></a>
 
 ## SRC-2e8d8f25e086 — p02-source-job.json
@@ -1287,6 +1419,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; L
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-2f413e970d01"></a>
+
+## SRC-2f413e970d01 — P01 p01-build-02 — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/result.json)
+
+Summary: p01-build-02 result.json: Observed attempt state FAIL; Retains the definitive native subtraction error and the preserved recovery context.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-2fad977d4fe9"></a>
 
@@ -1324,6 +1468,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
 
+<a id="src-30936b6bad80"></a>
+
+## SRC-30936b6bad80 — P01 p01-build-03 — reopened-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-records.json)
+
+Summary: p01-build-03 reopened-records.json: 1 native entity records in document 71, revision 0; stores exact geometry encoding and properties for interpretation independently of PASS labels.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-3126762ba53b"></a>
 
 ## SRC-3126762ba53b — cad-workflow-findings.md — recorded_execution_summary
@@ -1335,6 +1491,18 @@ Summary: OCS 2026.42 component constructions, import/save results, failed reques
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
+
+<a id="src-3161922d5c21"></a>
+
+## SRC-3161922d5c21 — P01 p01-build-01 — readiness-r02.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/readiness-r02.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/readiness-r02.json)
+
+Summary: p01-build-01 readiness-r02.json: Retained native response with fields job_id, part_id, part_name, state, questions, source_observations, meaning; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-31a38faa2037"></a>
 
@@ -1456,6 +1624,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-33c6833035f2"></a>
+
+## SRC-33c6833035f2 — P01 p01-build-03 — pre-save-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-checks.json)
+
+Summary: p01-build-03 pre-save-checks.json: Feature/source check result PASS; 5 retained check groups with document/revision evidence.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-341c5dce719a"></a>
 
 ## SRC-341c5dce719a — raw source
@@ -1491,6 +1671,18 @@ Summary: - TRELLIS.2 Microsoft Research overview: https://www.microsoft.com/en-u
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-348e931a03fa"></a>
+
+## SRC-348e931a03fa — P01 p01-build-01 — schema-discovery-findings.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/schema-discovery-findings.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/schema-discovery-findings.json)
+
+Summary: p01-build-01 schema-discovery-findings.json: Retained native response with fields evidence, document_context, observations; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-34ed7ccfd827"></a>
 
@@ -1612,6 +1804,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-39a675ae7e31"></a>
+
+## SRC-39a675ae7e31 — P01 p01-build-01 — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/ocs-journal.jsonl)
+
+Summary: p01-build-01 append-only request journal retains 52 events across 22 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-39b9dbfcfb8e"></a>
 
 ## SRC-39b9dbfcfb8e — AFNOR Éditions — NF EN 10219-2
@@ -1659,6 +1863,18 @@ Summary: - CoACD: approximate convex decomposition implementation SarahWeiii/CoA
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-3a866415e567"></a>
+
+## SRC-3a866415e567 — P01 p01-build-03 — view-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/view-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/view-journal.jsonl)
+
+Summary: p01-build-03 append-only request journal retains 28 events across 5 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-3b28b3defd8a"></a>
 
@@ -1755,6 +1971,30 @@ Summary: The FreeCAD Part scripting page describes Part as an Open CASCADE B-rep
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-05-software.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+
+<a id="src-3d1d4ee7af09"></a>
+
+## SRC-3d1d4ee7af09 — P01 p01-build-01 — document-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/document-checkpoint.json)
+
+Summary: p01-build-01 document-checkpoint.json: Binds partial/native stage to document 68, revision 0 and named part handles {}; supports inspected recovery.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-3d2c6bb76580"></a>
+
+## SRC-3d2c6bb76580 — Main-frame rail native execution report
+
+Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+
+Summary: Records the source-first action registration, three native attempts, successful hollow-section dimensions and save/reopen identity, captured views, applied selection/script/skill improvements,28 passing helper tests and the next binary-feature readback issue.
+
+Evidence: authored_code_or_procedure_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-3d593dd6ed4a"></a>
 
@@ -2068,6 +2308,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
 
+<a id="src-44cb08ec63a1"></a>
+
+## SRC-44cb08ec63a1 — FERME save/reopen implementation reused by rail
+
+Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/verification.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/verification.py)
+
+Summary: Existing save_reopen checks audit manifests, dropped entities, output hash and reopened file identity. P01 passed those checks; its detailed reopened feature check separately reports SAB encoding and zero bounds beside a visible nonzero-volume mesh.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-4576a97efe3e"></a>
 
 ## SRC-4576a97efe3e — Battery removable hold-down (P20H) — CAD input sheet
@@ -2115,6 +2367,30 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
+
+<a id="src-465ffa6730dd"></a>
+
+## SRC-465ffa6730dd — P01 p01-build-01 — rail-record-schema-1.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-1.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-1.json)
+
+Summary: p01-build-01 rail-record-schema-1.json: Retained native response with fields annotation_scale_value, current_layer, current_text_style, insertion_units, ltscale, ok, pdmode; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-46a693242819"></a>
+
+## SRC-46a693242819 — Rounded hollow-section OCS helper
+
+Original source: [/home/leo/projects/3dmodeling/scripts/rounded_tube.py](/home/leo/projects/3dmodeling/scripts/rounded_tube.py)
+
+Summary: Source-bound nominal tube builder reuses FERME guarded runtime and geometry modules. The live P01 run established explicit selection readback and bounded-area extrusion; native pre-save checks pass. The reader returns UNKNOWN for reopened SAB records and preserves their raw bytes. Solid and planar subtraction attempts retain their failed routes.
+
+Evidence: authored_code_or_procedure_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-47401a0e9609"></a>
 
@@ -2188,6 +2464,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
+<a id="src-4a3c376f9a29"></a>
+
+## SRC-4a3c376f9a29 — P01 p01-build-01 — rail-schema-1.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-1.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-1.json)
+
+Summary: p01-build-01 rail-schema-1.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-4a6934063635"></a>
 
 ## SRC-4a6934063635 — hashlib — Secure hashes and message digests — Python 3.15.2 documentation
@@ -2223,6 +2511,18 @@ Summary: Existing local source inspected in the initial research; its use is des
 Evidence: local_source_inspected.
 
 Documents: research/local-baseline.md, research/sources/local-evidence.json.
+
+<a id="src-4bd0fe0b900a"></a>
+
+## SRC-4bd0fe0b900a — Local OCS automation selection implementation
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/app/automation.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/automation.rs)
+
+Summary: The local select implementation deselects all and selects supplied handles only when clear is not true. This source explains the rail’s observed empty selection; live readback confirms the adapter’s corrected nonempty pick.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-4c99f214f0b2"></a>
 
@@ -2271,6 +2571,30 @@ Summary: Four page attempts failed and support no technical claim: Open3D 0.20.0
 Evidence: existing_report_registered, access_failed.
 
 Documents: research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
+
+<a id="src-4d2254355a66"></a>
+
+## SRC-4d2254355a66 — P01 p01-build-01 — rail-first-measure.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-measure.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-measure.json)
+
+Summary: p01-build-01 rail-first-measure.json: Retained native response with fields document_id, geometry_revision, measurements, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-4d871dcad456"></a>
+
+## SRC-4d871dcad456 — P01 p01-build-01 — rail-schema-2.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json)
+
+Summary: p01-build-01 rail-schema-2.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-4d88a7d32b7f"></a>
 
@@ -2328,9 +2652,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-4f49d9c8767a"></a>
 
@@ -2596,6 +2920,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r02.md, research/workflows/details/dom-r07.md.
 
+<a id="src-556d712120d7"></a>
+
+## SRC-556d712120d7 — P01 p01-build-03 — isometric-capture.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-capture.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-capture.json)
+
+Summary: p01-build-03 isometric-capture.json: Completed original isometric capture response, recovered under the same request identity; ties the actual image to reopened document71 and camera state.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-55a8e99c38e5"></a>
 
 ## SRC-55a8e99c38e5 — Assembly positioning and mating
@@ -2704,6 +3040,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/domain-paths.md.
 
+<a id="src-599641f63e9d"></a>
+
+## SRC-599641f63e9d — P01 p01-build-03 — reopened-measure.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-measure.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-measure.json)
+
+Summary: p01-build-03 reopened-measure.json: Reopened native API returns zero bounds alongside nonzero mesh volume252167.41146658108mm³; this records the bounds/mesh discrepancy.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-59bd5a7cb61a"></a>
 
 ## SRC-59bd5a7cb61a — https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md
@@ -2736,9 +3084,9 @@ Original source: [/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py
 
 Summary: Session preflight and mutation transport helper for a later authorized live CAD operation.
 
-Evidence: local_source_inspected, local_reference_registered.
+Evidence: local_source_inspected, local_reference_registered, local_execution_evidence_inspected.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-06/implementation-queue-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-5b7a1024db32"></a>
 
@@ -3016,6 +3364,18 @@ Evidence: existing_report_registered, access_failed.
 
 Documents: research/action-audit/reviews/point-06-sources.md, research/sources/round-05/point-06-web-sources.json.
 
+<a id="src-6372bc22f3fc"></a>
+
+## SRC-6372bc22f3fc — P01 p01-build-03 — pre-save-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json)
+
+Summary: p01-build-03 pre-save-records.json: 1 native entity records in document 70, revision 8; stores exact geometry encoding and properties for interpretation independently of PASS labels.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-6398638998c9"></a>
 
 ## SRC-6398638998c9 — OpenCADStudio Automation API — Specification 1.1
@@ -3111,6 +3471,18 @@ Summary: Component-led execution source: actual reusable implementation, source-
 Evidence: authored_document_or_code_inspected.
 
 Documents: research/sources/round-09/component-execution-sources.json.
+
+<a id="src-672023a44bcd"></a>
+
+## SRC-672023a44bcd — Local OCS bounded-area construction implementation
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/scene/model/presspull_model.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/scene/model/presspull_model.rs)
+
+Summary: Local source describes nested planar boundary loops and direct region extrusion. It supported testing PRESSPULL at the wall-interior pick after solid and planar-region Boolean subtraction were refused. The P01 native checks established the actual result.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-6767227cb6dc"></a>
 
@@ -3252,9 +3624,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md](/
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: authored_document_or_code_inspected.
+Evidence: authored_document_or_code_inspected, authored_code_or_procedure_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-6b30ccb4447f"></a>
 
@@ -3312,9 +3684,9 @@ Original source: [/tmp/opencode/check_ngv064_wheel.py](/tmp/opencode/check_ngv06
 
 Summary: sat_features extracts selected SAT cylinders, planes, tori and points; verify checks the wheel. Applicability: Top-level import loads native-wrapper. Restricted SAT fields; one body transform, unit scale; SAB requires a separate supported reader.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-6ca9f8e9b9c2"></a>
 
@@ -3555,6 +3927,18 @@ Summary: Official mutable main README inspected 2026-11-12. Documents camera pos
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md.
+
+<a id="src-72fd254a4766"></a>
+
+## SRC-72fd254a4766 — P01 p01-build-01 — source-job-r02.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/source-job-r02.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/source-job-r02.json)
+
+Summary: p01-build-01 source-job-r02.json: Immutable source revision2 binds P01 proposed dimensions to the researched6/3mm nominal corner convention, pinned source hashes and local XY/+Z frame. It supersedes revision1 for this build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-7300061feed8"></a>
 
@@ -3807,6 +4191,30 @@ Summary: Individual delegated web observations, exact standard clauses, supplier
 Evidence: authored_research_document_inspected.
 
 Documents: research/sources/round-10/tube-corner-local-sources.json.
+
+<a id="src-7dbfb81bf992"></a>
+
+## SRC-7dbfb81bf992 — P01 p01-build-01 — rail-type-Solid3D.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-Solid3D.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-Solid3D.json)
+
+Summary: p01-build-01 rail-type-Solid3D.json: Retained native response with fields collection, definitions, editing, fields, notes, ok, record_type; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-7ec6b1588bb0"></a>
+
+## SRC-7ec6b1588bb0 — P01 p01-build-03 — reopened-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png)
+
+Summary: Reopened isometric capture shows the P01 rail longitudinal edges and hollow section. The original asynchronous capture request completed through same-ID recovery.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-7f544def9af7"></a>
 
@@ -4072,6 +4480,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-84c081bf3776"></a>
+
+## SRC-84c081bf3776 — P01 p01-build-03 — document-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/document-checkpoint.json)
+
+Summary: p01-build-03 document-checkpoint.json: Binds partial/native stage to document 70, revision 0 and named part handles {}; supports inspected recovery.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-856db78a1b1e"></a>
 
 ## SRC-856db78a1b1e — Drive support plate (P03) — CAD input sheet
@@ -4095,6 +4515,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-85767f154783"></a>
+
+## SRC-85767f154783 — P01 p01-build-03 — isometric-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-state.json)
+
+Summary: p01-build-03 isometric-state.json: Observed document 71 revision 0 with open-document identities and camera/command state; used for write isolation or capture provenance.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-85b949b4c1e5"></a>
 
@@ -4216,6 +4648,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-02/project-sources.json.
 
+<a id="src-8a3139cd3bdf"></a>
+
+## SRC-8a3139cd3bdf — P01 p01-build-03 — reopened-view-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-view-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-view-state.json)
+
+Summary: p01-build-03 reopened-view-state.json: Observed document 71 revision 0 with open-document identities and camera/command state; used for write isolation or capture provenance.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-8a5ee96b7077"></a>
 
 ## SRC-8a5ee96b7077 — SurLok SLPIPB50BSO0 cable plug (C036) — CAD input sheet
@@ -4312,6 +4756,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
 
+<a id="src-8d633a1cae00"></a>
+
+## SRC-8d633a1cae00 — P01 p01-build-03 — reopened-viewport.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-viewport.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-viewport.png)
+
+Summary: Reopened end-view capture shows the outer and inner rounded-square outlines of the P01 rail.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-8db7870af183"></a>
 
 ## SRC-8db7870af183 — Dave Snider, “Claude tips for 3D work”
@@ -4360,6 +4816,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
 
+<a id="src-8f7945ad1ed7"></a>
+
+## SRC-8f7945ad1ed7 — P01 p01-build-03 — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/ocs-journal.jsonl)
+
+Summary: p01-build-03 append-only request journal retains 35 events across 13 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-8f8532cac48e"></a>
 
 ## SRC-8f8532cac48e — Domain and component research report
@@ -4395,6 +4863,18 @@ Summary: Model card labels weights MIT and identifies single-image feed-forward 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r06.md, research/workflows/details/rec-r10.md.
+
+<a id="src-90d5093f2a51"></a>
+
+## SRC-90d5093f2a51 — P01 p01-build-01 — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/result.json)
+
+Summary: p01-build-01 result.json: Observed attempt state FAIL; Retains the definitive native subtraction error and the preserved recovery context.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-91466ed68e96"></a>
 
@@ -4527,6 +5007,18 @@ Summary: Decoder callbacks, numeric token handling and nonfinite/default behavio
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-9409ef71b08a"></a>
+
+## SRC-9409ef71b08a — P01 p01-build-01 — rail-schema-4.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-4.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-4.json)
+
+Summary: p01-build-01 rail-schema-4.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-940fb4ea2921"></a>
 
@@ -4684,6 +5176,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
+<a id="src-97ed6b862899"></a>
+
+## SRC-97ed6b862899 — P01 p01-build-01 — rail-schema-0.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-0.json)
+
+Summary: p01-build-01 rail-schema-0.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-98a1a3cd7fd0"></a>
 
 ## SRC-98a1a3cd7fd0 — Agent skill: freecad-power-user
@@ -4695,6 +5199,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-993c97d817f0"></a>
+
+## SRC-993c97d817f0 — P01 p01-build-01 — rail-record-schema-2.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json)
+
+Summary: p01-build-01 rail-record-schema-2.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-9969afca68d8"></a>
 
@@ -4731,6 +5247,18 @@ Summary: STEP / Open CASCADE ; STEP represents exchangeable CAD geometry; use AP
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-99fd15613b4b"></a>
+
+## SRC-99fd15613b4b — P01 p01-build-03 — initial-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/initial-state.json)
+
+Summary: p01-build-03 initial-state.json: Observed document 69 revision 7 with open-document identities and camera/command state; used for write isolation or capture provenance.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-9a40d7c5ca24"></a>
 
@@ -4804,6 +5332,18 @@ Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
 
+<a id="src-9e5cbb874a32"></a>
+
+## SRC-9e5cbb874a32 — P01 p01-build-01 — rail-doc-schema-1.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-1.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-1.json)
+
+Summary: p01-build-01 rail-doc-schema-1.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-9e9899193ac9"></a>
 
 ## SRC-9e9899193ac9 — Software review: confirmed dimensions and vector drawings to CAD
@@ -4848,9 +5388,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-a00bd3c7c755"></a>
 
@@ -4959,6 +5499,18 @@ Summary: Combines retained sources and round-specific evidence; checks operation
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-03/project-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
+
+<a id="src-a234ddd91071"></a>
+
+## SRC-a234ddd91071 — P01 p01-build-01 — rail-first-query.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-query.json)
+
+Summary: p01-build-01 rail-first-query.json: Retained native response with fields count, document_id, entities, geometry_revision, next_offset, ok, returned; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-a2e021f0ada1"></a>
 
@@ -5140,6 +5692,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json.
 
+<a id="src-a8b84ecb56bc"></a>
+
+## SRC-a8b84ecb56bc — P01 p01-build-02 — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/ocs-journal.jsonl)
+
+Summary: p01-build-02 append-only request journal retains 43 events across 19 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-ac24864ef496"></a>
 
 ## SRC-ac24864ef496 — upstream GPL text
@@ -5283,6 +5847,18 @@ Summary: FreeCAD add-on step.parts connector ; FreeCAD listing describes searchi
 Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
+
+<a id="src-adc1b41ef30c"></a>
+
+## SRC-adc1b41ef30c — P01 p01-build-01 — rail-entity_schema.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-entity_schema.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-entity_schema.json)
+
+Summary: p01-build-01 rail-entity_schema.json: Installed API response request_id_required: Supply a unique request_id (maximum 128 bytes); retained as a protocol/schema discovery failure for this rail build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-ae16b67b352c"></a>
 
@@ -5452,6 +6028,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
 
+<a id="src-b33d12d0b924"></a>
+
+## SRC-b33d12d0b924 — P01 p01-build-03 — body-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/body-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/body-checkpoint.json)
+
+Summary: p01-build-03 body-checkpoint.json: Binds partial/native stage to document 70, revision 8 and named part handles {'tube': '80'}; supports inspected recovery.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-b37df47b9e75"></a>
 
 ## SRC-b37df47b9e75 — Unitree Go1 model BSD-3-Clause license
@@ -5584,6 +6172,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
+<a id="src-b74bd207d260"></a>
+
+## SRC-b74bd207d260 — P01 p01-build-03 — reopened-audit.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-audit.json)
+
+Summary: p01-build-03 reopened-audit.json: Retained native response with fields bounds, document_id, issues, manifest, ok, source, status; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-b77d14bbded9"></a>
 
 ## SRC-b77d14bbded9 — TDK I1C2W010A120V converter board (C046) — CAD input sheet
@@ -5595,6 +6195,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; B
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-b794725381cf"></a>
+
+## SRC-b794725381cf — Rounded-tube helper regression tests
+
+Original source: [/home/leo/projects/3dmodeling/tests/test_rounded_tube.py](/home/leo/projects/3dmodeling/tests/test_rounded_tube.py)
+
+Summary: Ten regression tests cover native clear-only selection semantics and mismatched picks, exact quarter-circle profile encoding, incorrect wall/radius/length observations, unsupported transformed/incomplete SAT and explicit UNKNOWN classification for reopened SAB data. Together with the existing18 tests the suite passed28 cases.
+
+Evidence: authored_code_or_procedure_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-b7aa02d92193"></a>
 
@@ -5932,6 +6544,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r04.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r09.md.
 
+<a id="src-c01e327d09e4"></a>
+
+## SRC-c01e327d09e4 — P01 p01-build-01 — rail-profile-readback.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-profile-readback.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-profile-readback.json)
+
+Summary: p01-build-01 rail-profile-readback.json: Retained native response with fields collection, count, document_id, geometry_revision, next_offset, ok, records; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-c026420b57f4"></a>
 
 ## SRC-c026420b57f4 — ifcopenshell.api.geometry.add_representation — IfcOpenShell 0.9.0post1 documentation
@@ -6132,9 +6756,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/RE
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -6436,6 +7060,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-03-visual.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r10.md.
 
+<a id="src-cf6156d88759"></a>
+
+## SRC-cf6156d88759 — P01 p01-build-02 — initial-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/initial-state.json)
+
+Summary: p01-build-02 initial-state.json: Observed document 68 revision 8 with open-document identities and camera/command state; used for write isolation or capture provenance.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-cf83883aed8c"></a>
 
 ## SRC-cf83883aed8c — Victron smallBMS NG (C054) — CAD input sheet
@@ -6459,6 +7095,18 @@ Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-d08c92fa1104"></a>
+
+## SRC-d08c92fa1104 — P01 p01-build-01 — rail-after-cut-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-records.json)
+
+Summary: p01-build-01 rail-after-cut-records.json: 2 native entity records in document 68, revision 8; stores exact geometry encoding and properties for interpretation independently of PASS labels.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-d130021486e1"></a>
 
@@ -6556,6 +7204,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
 
+<a id="src-d4dbbb69bd1c"></a>
+
+## SRC-d4dbbb69bd1c — P01 p01-build-01 — rail-record-schema-0.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-0.json)
+
+Summary: p01-build-01 rail-record-schema-0.json: Retained native response with fields collection, collections, count, editing, next, next_offset, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-d52309ad63a6"></a>
 
 ## SRC-d52309ad63a6 — combined-details.json
@@ -6640,6 +7300,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
 
+<a id="src-d84e68b6a0ca"></a>
+
+## SRC-d84e68b6a0ca — P01 p01-build-03 — reopened-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checkpoint.json)
+
+Summary: p01-build-03 reopened-checkpoint.json: Binds partial/native stage to document 71, revision 0 and named part handles {'tube': '80'}; supports inspected recovery.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-d8bff2262475"></a>
 
 ## SRC-d8bff2262475 — XML Reference — MuJoCo Documentation
@@ -6687,6 +7359,18 @@ Summary: - Hunyuan3D-2.1 repository and model usage: https://github.com/Tencent-
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-da6cb18472ad"></a>
+
+## SRC-da6cb18472ad — P01 p01-build-01 — rail-doc-schema-2.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json)
+
+Summary: p01-build-01 rail-doc-schema-2.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-da7e7e83673f"></a>
 
@@ -7384,6 +8068,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-f22443c65bee"></a>
+
+## SRC-f22443c65bee — Source-first tube construction and recovery procedure
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md](/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md)
+
+Summary: Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.
+
+Evidence: authored_code_or_procedure_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
+
 <a id="src-f278cbf89b6d"></a>
 
 ## SRC-f278cbf89b6d — Victron NG25.6V100Ah battery (C023) — CAD input sheet
@@ -7476,9 +8172,9 @@ Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadto
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-f4e7d302c752"></a>
 
@@ -7527,6 +8223,18 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-f5d6cbd7ce2c"></a>
+
+## SRC-f5d6cbd7ce2c — P01 p01-build-01 — rail-type-LwPolyline.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-LwPolyline.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-LwPolyline.json)
+
+Summary: p01-build-01 rail-type-LwPolyline.json: Retained native response with fields collection, definitions, editing, fields, notes, ok, record_type; links this installed API/schema or geometry observation to the corresponding P01 attempt.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-f5feb81d0023"></a>
 
@@ -7584,9 +8292,9 @@ Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadto
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-f77f55667d7d"></a>
 
@@ -7656,9 +8364,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-f954ab80c148"></a>
 
@@ -7743,6 +8451,18 @@ Summary: The FreeCAD scripting page shows `Sketcher::SketchObject`, `addGeometry
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/visual-review.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
+
+<a id="src-fe0ed186d8d8"></a>
+
+## SRC-fe0ed186d8d8 — Main frame longitudinal rail nominal reference DWG
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg)
+
+Summary: Saved native DWG2018 contains one source-labelled P01 hollow rail with proposed40x40x3mm section,600mm length and EN10219 nominal6/3mm corner radii. Pre-save feature checks pass; save/hash/manifest and reopened views pass; detailed reopened SAB feature checks have UNKNOWN status.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-fe66e203f22d"></a>
 

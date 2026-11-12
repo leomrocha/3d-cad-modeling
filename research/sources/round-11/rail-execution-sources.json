@@ -1,0 +1,830 @@
+[
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/rounded_tube.py",
+    "title": "Rounded hollow-section OCS helper",
+    "summary": "Source-bound nominal tube builder reuses FERME guarded runtime and geometry modules. The live P01 run established explicit selection readback and bounded-area extrusion; native pre-save checks pass. The reader returns UNKNOWN for reopened SAB records and preserves their raw bytes. Solid and planar subtraction attempts retain their failed routes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_code_or_procedure_inspected",
+    "sha256": "be38f73d23c176abe2b15dee2b4ed61856a0002f52cc2b9e8a5d521ea85a8bfc",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_rounded_tube.py",
+    "title": "Rounded-tube helper regression tests",
+    "summary": "Ten regression tests cover native clear-only selection semantics and mismatched picks, exact quarter-circle profile encoding, incorrect wall/radius/length observations, unsupported transformed/incomplete SAT and explicit UNKNOWN classification for reopened SAB data. Together with the existing18 tests the suite passed28 cases.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_code_or_procedure_inspected",
+    "sha256": "f833553eff0f96bdf455cbffdd47946f66512e5d4ace39c23492e3a496a7534c",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "title": "Updated component CAD skill",
+    "summary": "Routes standard-defined feature questions through recorded supplier lookup, standards search, evidence review and calculation. Links the observed P01 selection/extrusion procedure and recovery before native component work.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_code_or_procedure_inspected",
+    "sha256": "b1778fa0d8e1163f7f2f540e6d1b6c90718c27ca30d18266f10bd5e539b94ba7",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md",
+    "title": "Source-first tube construction and recovery procedure",
+    "summary": "Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_code_or_procedure_inspected",
+    "sha256": "78ee0535480d6a122bf9bea5d1328971b2556eed27e25a92d03b3a76dfe39813",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/component-source-actions.json",
+    "title": "Four observed component-source action definitions",
+    "summary": "Defines stock/supplier lookup, feature-standard search, per-claim access review and nominal feature calculation, including software/agent roles, units, preserved information, alternatives and downstream conditions. Links original intake/solid-route actions and the FERME occurrence registry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_code_or_procedure_inspected",
+    "sha256": "6abe7072ea02033e2a8443dde1b3ffb0641d566e4ce098212295ed57c66e2bf7",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/p01-rail-build.md",
+    "title": "Main-frame rail native execution report",
+    "summary": "Records the source-first action registration, three native attempts, successful hollow-section dimensions and save/reopen identity, captured views, applied selection/script/skill improvements,28 passing helper tests and the next binary-feature readback issue.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_code_or_procedure_inspected",
+    "sha256": "fbccbd4a5ab54c0954a853aee3e9fbfaf012d79f508f9d49fa18dbe3bae9c815",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py",
+    "title": "FERME native geometry implementation reused by rail",
+    "summary": "Existing profile/extrusion/subtraction and metadata helpers are reused. Its select(clear=True,handles=...) behavior produced empty installed selections; the 3dmodeling adapter corrects nonempty picks and checks readback while preserving this module unchanged.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/verification.py",
+    "title": "FERME save/reopen implementation reused by rail",
+    "summary": "Existing save_reopen checks audit manifests, dropped entities, output hash and reopened file identity. P01 passed those checks; its detailed reopened feature check separately reports SAB encoding and zero bounds beside a visible nonzero-volume mesh.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "5863d2b586a0b696be6c5002270dc33b88c9d8c270e422580b0ec4bd2482b6f7",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/check_ngv064_wheel.py",
+    "title": "Existing FERME-session native SAT surface reader",
+    "summary": "Existing wheel checker supplies plane/cylinder/point token interpretation and a1e-7mm numerical readback threshold. Rounded-tube code adapts a strict untransformed subset; its regression tests exercise incomplete/transformed records and feature mismatches.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/automation.rs",
+    "title": "Local OCS automation selection implementation",
+    "summary": "The local select implementation deselects all and selects supplied handles only when clear is not true. This source explains the rail’s observed empty selection; live readback confirms the adapter’s corrected nonempty pick.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "86a5a127ed764305a237d6a5aa09b7e3702fec41b41b1733390be4126d98885f",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/scene/model/presspull_model.rs",
+    "title": "Local OCS bounded-area construction implementation",
+    "summary": "Local source describes nested planar boundary loops and direct region extrusion. It supported testing PRESSPULL at the wall-interior pick after solid and planar-region Boolean subtraction were refused. The P01 native checks established the actual result.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "7c8a97ee93f298161fefe563bd9ad6adf1eff007f6dafcd490d5ce2f41a4de61",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/runtime.py",
+    "title": "FERME guarded runtime reused for the rail",
+    "summary": "Existing Client and Journal bind each authorized mutation to document/revision/request identity, append intents before sending, and recover original operations after uncertain completion. The rail reuses this module unchanged; capture recovery exercised its same-ID path.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "42b90c0839d5bc12b292fccf771ee08f92f5c2c2fb542aca694c2d8ae5755d49",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+    "title": "Installed OCS control transport used by rail",
+    "summary": "Existing authenticated native helper discovers session descriptors without exposing tokens, enforces explicit write permission and document/revision preflight, and sends each mutation once. The rail used it for reads, isolated document construction and same-ID capture recovery.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg",
+    "title": "Main frame longitudinal rail nominal reference DWG",
+    "summary": "Saved native DWG2018 contains one source-labelled P01 hollow rail with proposed40x40x3mm section,600mm length and EN10219 nominal6/3mm corner radii. Pre-save feature checks pass; save/hash/manifest and reopened views pass; detailed reopened SAB feature checks have UNKNOWN status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "e7bd8c78f2bd07126b170becccc9475d9b9c80becde387d458dc048c2c755e90",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/document-checkpoint.json",
+    "title": "P01 p01-build-01 — document-checkpoint.json",
+    "summary": "p01-build-01 document-checkpoint.json: Binds partial/native stage to document 68, revision 0 and named part handles {}; supports inspected recovery.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "92752b5e45c9d49757e28cc59972d7f9a29411108638374819ec4120639997a0",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json",
+    "title": "P01 p01-build-01 — initial-state.json",
+    "summary": "p01-build-01 initial-state.json: Observed document 52 revision 2 with open-document identities and camera/command state; used for write isolation or capture provenance.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "93fcab51540e0b9ca5fb1081372f64164c3a9af907dbf4f173e6ea6adb68f987",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/ocs-journal.jsonl",
+    "title": "P01 p01-build-01 — ocs-journal.jsonl",
+    "summary": "p01-build-01 append-only request journal retains 52 events across 22 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "575890f87566f5a0b72b6c8364fe5bba07ca5ba6c3e4a473957d0e16ccc6eea6",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-measure.json",
+    "title": "P01 p01-build-01 — rail-after-cut-measure.json",
+    "summary": "p01-build-01 rail-after-cut-measure.json: Retained native response with fields document_id, geometry_revision, measurements, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "78dd392bee67a9e8c23b5bdfa449638683569619fa8cf262970633b95006ff87",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-records.json",
+    "title": "P01 p01-build-01 — rail-after-cut-records.json",
+    "summary": "p01-build-01 rail-after-cut-records.json: 2 native entity records in document 68, revision 8; stores exact geometry encoding and properties for interpretation independently of PASS labels.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "aeb6f8e1d0655f87cb3cd90822afe1e029c59ccbbd12eab4d3857876c9977a26",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json",
+    "title": "P01 p01-build-01 — rail-capabilities.json",
+    "summary": "p01-build-01 rail-capabilities.json: Retained native response with fields api, concurrency, editor, geometry, ok, operations, records; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "aa8bb19fe4a9b47ef2cbdc3b31b3c3646e6f8ebce4499ac0fa15265a30088e15",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-0.json",
+    "title": "P01 p01-build-01 — rail-doc-schema-0.json",
+    "summary": "p01-build-01 rail-doc-schema-0.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-1.json",
+    "title": "P01 p01-build-01 — rail-doc-schema-1.json",
+    "summary": "p01-build-01 rail-doc-schema-1.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json",
+    "title": "P01 p01-build-01 — rail-doc-schema-2.json",
+    "summary": "p01-build-01 rail-doc-schema-2.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-entity_schema.json",
+    "title": "P01 p01-build-01 — rail-entity_schema.json",
+    "summary": "p01-build-01 rail-entity_schema.json: Installed API response request_id_required: Supply a unique request_id (maximum 128 bytes); retained as a protocol/schema discovery failure for this rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "371339e5b10d8acd5eca283d87b5a677d054bbab41a0c19b4a05786610dfdfae",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-measure.json",
+    "title": "P01 p01-build-01 — rail-first-measure.json",
+    "summary": "p01-build-01 rail-first-measure.json: Retained native response with fields document_id, geometry_revision, measurements, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "0edbbba367cf59345eea6a1d203ccada1091bc6aa5a235bc0cdd1d354d890999",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-query.json",
+    "title": "P01 p01-build-01 — rail-first-query.json",
+    "summary": "p01-build-01 rail-first-query.json: Retained native response with fields count, document_id, entities, geometry_revision, next_offset, ok, returned; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "07e6c2661e893a6a254009e6247957143a301c6a048f433d26bd889a981dd554",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-profile-readback.json",
+    "title": "P01 p01-build-01 — rail-profile-readback.json",
+    "summary": "p01-build-01 rail-profile-readback.json: Retained native response with fields collection, count, document_id, geometry_revision, next_offset, ok, records; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "d36d735800a4f3f864093bb7bca1d525e77f887e4e94892ddc3a6960efee1f83",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-0.json",
+    "title": "P01 p01-build-01 — rail-record-schema-0.json",
+    "summary": "p01-build-01 rail-record-schema-0.json: Retained native response with fields collection, collections, count, editing, next, next_offset, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "15cca994a0571a73e64cd62c8b3d62a36079b71fb177b485b88f37124b129c4f",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-1.json",
+    "title": "P01 p01-build-01 — rail-record-schema-1.json",
+    "summary": "p01-build-01 rail-record-schema-1.json: Retained native response with fields annotation_scale_value, current_layer, current_text_style, insertion_units, ltscale, ok, pdmode; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json",
+    "title": "P01 p01-build-01 — rail-record-schema-2.json",
+    "summary": "p01-build-01 rail-record-schema-2.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "4a3cbf1642fbabdef9f96df70e36b7fcf2b36880241a8c990b6b6ce3dc23c9bc",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-0.json",
+    "title": "P01 p01-build-01 — rail-schema-0.json",
+    "summary": "p01-build-01 rail-schema-0.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-1.json",
+    "title": "P01 p01-build-01 — rail-schema-1.json",
+    "summary": "p01-build-01 rail-schema-1.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json",
+    "title": "P01 p01-build-01 — rail-schema-2.json",
+    "summary": "p01-build-01 rail-schema-2.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-3.json",
+    "title": "P01 p01-build-01 — rail-schema-3.json",
+    "summary": "p01-build-01 rail-schema-3.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "5a3990ad03f698d0cbd5728356d97f3dfc4ee56aeea7584cfc8fd0993e7a7df7",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-4.json",
+    "title": "P01 p01-build-01 — rail-schema-4.json",
+    "summary": "p01-build-01 rail-schema-4.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "edfbba10d377d41edced165be77041ce2e6d597698565886e51d5162fa6926e4",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json",
+    "title": "P01 p01-build-01 — rail-state.json",
+    "summary": "p01-build-01 rail-state.json: Observed document 52 revision 2 with open-document identities and camera/command state; used for write isolation or capture provenance.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "589aa13074d72f2fddbf315a76c5f02e63a8998ed48f8b4b660eaea3dd4ceb06",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-LwPolyline.json",
+    "title": "P01 p01-build-01 — rail-type-LwPolyline.json",
+    "summary": "p01-build-01 rail-type-LwPolyline.json: Retained native response with fields collection, definitions, editing, fields, notes, ok, record_type; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "587d75a938b164adaaa784de8adb1ef5e92d8f48063d868351812b84060809d2",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-Solid3D.json",
+    "title": "P01 p01-build-01 — rail-type-Solid3D.json",
+    "summary": "p01-build-01 rail-type-Solid3D.json: Retained native response with fields collection, definitions, editing, fields, notes, ok, record_type; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "eae4f702cd3b8654e6330664363b9a28166374a493ede5f71fa888016ac104d4",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/readiness-r02.json",
+    "title": "P01 p01-build-01 — readiness-r02.json",
+    "summary": "p01-build-01 readiness-r02.json: Retained native response with fields job_id, part_id, part_name, state, questions, source_observations, meaning; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "a11d317b36cfa49fe14e3b3b56c52edb461c56e27ae8b8c66f0069f846879b25",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/result.json",
+    "title": "P01 p01-build-01 — result.json",
+    "summary": "p01-build-01 result.json: Observed attempt state FAIL; Retains the definitive native subtraction error and the preserved recovery context.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "4e9c98483e6111ad1a328f1d9d7581a4bb6595d9f2b6b67dcf71f6f9166035cf",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/schema-discovery-findings.json",
+    "title": "P01 p01-build-01 — schema-discovery-findings.json",
+    "summary": "p01-build-01 schema-discovery-findings.json: Retained native response with fields evidence, document_context, observations; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "81979963ed959526dc42bff1cdcb328bc31152314c557033b54f9a21ce81d173",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/source-job-r02.json",
+    "title": "P01 p01-build-01 — source-job-r02.json",
+    "summary": "p01-build-01 source-job-r02.json: Immutable source revision2 binds P01 proposed dimensions to the researched6/3mm nominal corner convention, pinned source hashes and local XY/+Z frame. It supersedes revision1 for this build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "8f86700762ae70f2ee90a0e0cc5f00028e87fcc194f17f83fe4ff002969059e5",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/document-checkpoint.json",
+    "title": "P01 p01-build-02 — document-checkpoint.json",
+    "summary": "p01-build-02 document-checkpoint.json: Binds partial/native stage to document 69, revision 0 and named part handles {}; supports inspected recovery.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "c0c15d2038c2bd43d11f0e83eba928b4a0d2b370632dae420d4ba80f7b61663b",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/initial-state.json",
+    "title": "P01 p01-build-02 — initial-state.json",
+    "summary": "p01-build-02 initial-state.json: Observed document 68 revision 8 with open-document identities and camera/command state; used for write isolation or capture provenance.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "dcdd23db2cf00e8a4028d560c5ef4f5cda9ffb835dc7e9582c9a3d2dc947c76f",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/ocs-journal.jsonl",
+    "title": "P01 p01-build-02 — ocs-journal.jsonl",
+    "summary": "p01-build-02 append-only request journal retains 43 events across 19 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "a5a38b031408d9a358834f690dd9d742d1ebb56c859d4a1824de16d7cb81c7c4",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/result.json",
+    "title": "P01 p01-build-02 — result.json",
+    "summary": "p01-build-02 result.json: Observed attempt state FAIL; Retains the definitive native subtraction error and the preserved recovery context.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "bffca9d626a9bc4a4119a0858d4616006aad170f2d34f188abcfba975df80066",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/body-checkpoint.json",
+    "title": "P01 p01-build-03 — body-checkpoint.json",
+    "summary": "p01-build-03 body-checkpoint.json: Binds partial/native stage to document 70, revision 8 and named part handles {'tube': '80'}; supports inspected recovery.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "7e607d246c89ad09c11ea1b91756512c98f2d28bf5be2b6dcd5c7f5d36ea3365",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/document-checkpoint.json",
+    "title": "P01 p01-build-03 — document-checkpoint.json",
+    "summary": "p01-build-03 document-checkpoint.json: Binds partial/native stage to document 70, revision 0 and named part handles {}; supports inspected recovery.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "dd3168fc8697bbee25bd6af7aab1e875749d832de03a8a8a4f67765d72a0c2f6",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/initial-state.json",
+    "title": "P01 p01-build-03 — initial-state.json",
+    "summary": "p01-build-03 initial-state.json: Observed document 69 revision 7 with open-document identities and camera/command state; used for write isolation or capture provenance.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "5aead359e93b92649093bc504ec6a1882fe06a052e1607ab81fcbd1c0f6f207c",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-capture.json",
+    "title": "P01 p01-build-03 — isometric-capture.json",
+    "summary": "p01-build-03 isometric-capture.json: Completed original isometric capture response, recovered under the same request identity; ties the actual image to reopened document71 and camera state.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "a704900e10ffd570c0936a331a57a5bcaa6be5d3fda56f54818b4a4367ccd1e1",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-state.json",
+    "title": "P01 p01-build-03 — isometric-state.json",
+    "summary": "p01-build-03 isometric-state.json: Observed document 71 revision 0 with open-document identities and camera/command state; used for write isolation or capture provenance.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "fbf9bf5fed091ba3a9ce0bfe9b5f60e5bdfb3b72aa46899d14088d989f73e4e1",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/ocs-journal.jsonl",
+    "title": "P01 p01-build-03 — ocs-journal.jsonl",
+    "summary": "p01-build-03 append-only request journal retains 35 events across 13 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "511b9fa71fffeb3013b78de2425a5be7dda67163d4875429748276ef290bf81b",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json",
+    "title": "P01 p01-build-03 — persistence.json",
+    "summary": "p01-build-03 persistence.json: DWG2018 save/reopen audit/hash/manifest result PASS, one native solid, zero dropped entities. Detailed reopened geometry has its own separate receipt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "4011e97cdcd5e1f4f5aa289b4f5fcf25dc34076b365701ab316ceee4cdc22fd1",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-checks.json",
+    "title": "P01 p01-build-03 — pre-save-checks.json",
+    "summary": "p01-build-03 pre-save-checks.json: Feature/source check result PASS; 5 retained check groups with document/revision evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "5a93b1b1516db6961c6de77c66a54758f139d89612b0175de4fdc172e666e0e4",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json",
+    "title": "P01 p01-build-03 — pre-save-records.json",
+    "summary": "p01-build-03 pre-save-records.json: 1 native entity records in document 70, revision 8; stores exact geometry encoding and properties for interpretation independently of PASS labels.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "7a9368f69e43e7b33333ade722493ce03b3dd5e184a68191fc2b994f12925f9e",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-audit.json",
+    "title": "P01 p01-build-03 — reopened-audit.json",
+    "summary": "p01-build-03 reopened-audit.json: Retained native response with fields bounds, document_id, issues, manifest, ok, source, status; links this installed API/schema or geometry observation to the corresponding P01 attempt.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "362585030a5d4153458559d42eb6670114a50b160d421b613c08077cbcf1c07c",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checkpoint.json",
+    "title": "P01 p01-build-03 — reopened-checkpoint.json",
+    "summary": "p01-build-03 reopened-checkpoint.json: Binds partial/native stage to document 71, revision 0 and named part handles {'tube': '80'}; supports inspected recovery.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "058ad04ff4894ccd26c0e7536297f974b5b35cddc2dc97ca2b730c2db14cb63f",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json",
+    "title": "P01 p01-build-03 — reopened-checks.json",
+    "summary": "p01-build-03 reopened-checks.json: Feature/source check result UNKNOWN; Reopened record stores SAB binary; this feature reader supports SAT text",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "cb069ebe06bdcd0837d1f07c8dbdd7d3baed93f89c0a3be43fdc5901097b8330",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png",
+    "title": "P01 p01-build-03 — reopened-isometric.png",
+    "summary": "Reopened isometric capture shows the P01 rail longitudinal edges and hollow section. The original asynchronous capture request completed through same-ID recovery.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "979206d7bb9f12abd10de2e0d76240860854365480c3f76390483ea5637485b9",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-measure.json",
+    "title": "P01 p01-build-03 — reopened-measure.json",
+    "summary": "p01-build-03 reopened-measure.json: Reopened native API returns zero bounds alongside nonzero mesh volume252167.41146658108mm³; this records the bounds/mesh discrepancy.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "4ad10526c820378353ed69016ee15d66b250d57c38daf105d952062af97c735a",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-records.json",
+    "title": "P01 p01-build-03 — reopened-records.json",
+    "summary": "p01-build-03 reopened-records.json: 1 native entity records in document 71, revision 0; stores exact geometry encoding and properties for interpretation independently of PASS labels.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "cafe78c847f8be3ad37325eaf078909cf29da9b7e01d69b03632c3760b807c7c",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-view-state.json",
+    "title": "P01 p01-build-03 — reopened-view-state.json",
+    "summary": "p01-build-03 reopened-view-state.json: Observed document 71 revision 0 with open-document identities and camera/command state; used for write isolation or capture provenance.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "d0935a70ee2d854e20c0e27a855afcb6ceb0edd62f1bd1b656501f50ccc861bc",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-viewport.png",
+    "title": "P01 p01-build-03 — reopened-viewport.png",
+    "summary": "Reopened end-view capture shows the outer and inner rounded-square outlines of the P01 rail.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "0242270e6704f16d801f7218267bf1b0f92ae0c62d8dd01b3b4f3f49e8041aaf",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json",
+    "title": "P01 p01-build-03 — result.json",
+    "summary": "p01-build-03 result.json: Observed attempt state BUILT_REOPENED_FEATURE_CHECK_REQUIRED; Read/query reopened SAB feature geometry and repeat the source-linked dimension checks; investigate zero native bounds alongside nonzero mesh and visible geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "2ab3757762c02208291bd13649c77fd921e9635a1ed2e6e19abc411805ecbb00",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/view-journal.jsonl",
+    "title": "P01 p01-build-03 — view-journal.jsonl",
+    "summary": "p01-build-03 append-only request journal retains 28 events across 5 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "6ba9d70753671291c5c6a510562f72ee60fe44dc01a706b61bf3bdc210fea888",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "title": "action-occurrences.jsonl — rail execution links",
+    "summary": "Append-only component registry now contains the original two source occurrences plus thirteen new supplier/standard/evidence/calculation/route and native build/check/view outcomes. It retains failed attempts and the reopened feature UNKNOWN result.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "3b40510c005bcd041a270a823e0ff380aca827637ef07843ef0408dfd92e458e",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "title": "component-work.json — rail execution links",
+    "summary": "FERME job index links P01’s saved rail and current BUILT_REOPENED_FEATURE_CHECK_REQUIRED result. P02 retains its rail dependency; original component IDs and source index remain preserved.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "aff14ef25e9faa4261b351e013feffa2bbe4adf5e62c3792550a2e042df4fc4b",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "title": "README.md — rail execution links",
+    "summary": "FERME execution index retains the initial readiness batch and describes the current native rail, appended source actions, three attempts, verified dimensions and reopened binary-reader action.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "4fdf2c1ac1c1f8956c9d836f45c08a5099731b4888bfe733cd7b41cfffa42751",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "title": "README.md — rail execution links",
+    "summary": "FERME CAD index adds the P01 nominal reference DWG and its specific build/check-state link alongside all pre-existing component model references.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "4f1bfab163d6828aaf8d6ce9c71e01fdc4d4af6c23c7f7939325d2e2ad986fc7",
+    "referring_documents": [
+      "execution/p01-rail-build.md",
+      "skills/component-cad/references/source-first-and-tube.md"
+    ]
+  }
+]

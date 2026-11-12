@@ -1,0 +1,202 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "scope": "P01 main-frame rail source actions, native construction, applied helper/skill improvements and observed reopened reader issue",
+  "component_state": "BUILT_REOPENED_FEATURE_CHECK_REQUIRED",
+  "checks": {
+    "documentation_and_source_checks": "PASS",
+    "source_ready": "PASS",
+    "native_pre_save_groups": [
+      {
+        "name": "outer section and cut length",
+        "result": "PASS",
+        "observed": [
+          [
+            -20.0,
+            20.0
+          ],
+          [
+            -20.0,
+            20.0
+          ],
+          [
+            0.0,
+            600.0
+          ]
+        ]
+      },
+      {
+        "name": "wall planes X",
+        "result": "PASS",
+        "observed": [
+          -20.0,
+          -17.0,
+          17.0,
+          20.0
+        ]
+      },
+      {
+        "name": "wall planes Y",
+        "result": "PASS",
+        "observed": [
+          -20.0,
+          -17.0,
+          17.0,
+          20.0
+        ]
+      },
+      {
+        "name": "square end planes",
+        "result": "PASS",
+        "observed": [
+          0.0,
+          600.0
+        ]
+      },
+      {
+        "name": "four outer and four inner corner cylinders",
+        "result": "PASS",
+        "observed": [
+          {
+            "origin": [
+              14.0,
+              -14.0,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 5.999999999999999
+          },
+          {
+            "origin": [
+              14.0,
+              14.0,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 5.999999999999999
+          },
+          {
+            "origin": [
+              -14.0,
+              14.0,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 5.999999999999999
+          },
+          {
+            "origin": [
+              -14.0,
+              -14.0,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 5.999999999999999
+          },
+          {
+            "origin": [
+              -13.999999999999993,
+              -13.999999999999988,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 3.0000000000000124
+          },
+          {
+            "origin": [
+              -13.999999999999988,
+              13.999999999999993,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 3.0000000000000124
+          },
+          {
+            "origin": [
+              13.999999999999993,
+              13.999999999999988,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 3.0000000000000124
+          },
+          {
+            "origin": [
+              13.999999999999988,
+              -13.999999999999993,
+              0.0
+            ],
+            "axis": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "radius": 3.0000000000000124
+          }
+        ]
+      }
+    ],
+    "persistence_hash_manifest": "PASS",
+    "reopened_detailed_features": "UNKNOWN_SAB_READER",
+    "reopened_visual_content": "PASS_inspected_end_and_isometric",
+    "old_native_models_unchanged": 17,
+    "prior_action_prefix_preserved": true,
+    "total_action_occurrences": 15,
+    "new_action_occurrences": 13,
+    "new_source_definitions": 4,
+    "source_snapshots": 69,
+    "original_plan_and_graph": "PASS_unchanged",
+    "mermaid_blocks_found_and_preserved": 2,
+    "unrelated_wheel_document": "PASS_revision2_dirtytrue_preserved",
+    "helper_tests": {
+      "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+      "observed_result": "28 tests PASS"
+    },
+    "skill_validation": "PASS quick_validate.py skills/component-cad"
+  },
+  "native_issue_evidence": {
+    "solid_subtraction": "FAIL_CutRefused",
+    "planar_region_subtraction": "FAIL_CutRefused",
+    "bounded_area_construction": "PASS",
+    "reopened_encoding": "SAB",
+    "reopened_native_bounds": "zero",
+    "reopened_mesh_volume_mm3": 252167.41146658108
+  },
+  "checkpoints": {
+    "3dmodeling": "9c19f7b",
+    "FERME": "2745480"
+  },
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 15,
+    "receipt_included": true
+  }
+}

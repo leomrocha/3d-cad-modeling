@@ -1,0 +1,113 @@
+{
+  "scope": "Observed source-first preparation steps from the P01 main-frame rail; supplemental definitions preserve existing action boundaries",
+  "actions": [
+    {
+      "id": "COMP-SRC-A01",
+      "name": "Find an existing stock component and its supplier record",
+      "status": "observed_step_definition",
+      "original_graph_relationship": "Supplemental source-preparation actions; links to Preserve the input revision and state the job boundary (INTAKE-A01) and Select a supported solid feature route (CAD-10-A01). Original graph retained.",
+      "inputs": "Component input sheet, nominal section and existing project source manifest",
+      "outputs": "Exact supplier/product locator, source date and attributable dimensions",
+      "prerequisites": "Component identity and intended representation; external research uses the current project delegation/authorization rules.",
+      "procedure": "Read existing catalogue and source registers; for authorized research locate the exact stock item and retain its original URL. Record supplier dimensions as supplier claims.",
+      "tool_api": "Existing part_index.py and component_records.py; delegated research tools for external sources; explicit standard formula arithmetic.",
+      "automation": "Text/index search and identity/hash capture can be software steps; the agent checks variant correspondence and the meaning of the listing.",
+      "representation": "Source evidence and nominal geometry parameter records",
+      "units_frames": "Retain feature units; source research itself has no placement transform. P01 calculated dimensions use mm; local XY section and +Z length are bound at construction.",
+      "preserved": "Original documents, proposal labels, source edition, exact locator and prior observations",
+      "changed_or_inferred": "Exact supplier/product locator, source date and attributable dimensions",
+      "checks": "Variant/scope correspondence, source access status, clause attribution and source-pinned arithmetic as applicable.",
+      "alternatives": "Existing manufacturer drawing, product standard, supplier record or actual stock measurement, each retaining its evidence status.",
+      "downstream": {
+        "action": "Find standards for the component and feature",
+        "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
+      },
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+      ],
+      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "date": "2026-11-12"
+    },
+    {
+      "id": "COMP-SRC-A02",
+      "name": "Find standards for the component and feature",
+      "status": "observed_step_definition",
+      "original_graph_relationship": "Supplemental source-preparation actions; links to Preserve the input revision and state the job boundary (INTAKE-A01) and Select a supported solid feature route (CAD-10-A01). Original graph retained.",
+      "inputs": "Component kind, feature question and manufacturing-route possibilities",
+      "outputs": "Standard designation, edition, scope, feature clause and alternative process-specific branches",
+      "prerequisites": "Component identity and intended representation; external research uses the current project delegation/authorization rules.",
+      "procedure": "Find the feature in the relevant product standard; keep delivery-condition and dimension/property parts separate and retain the process-specific alternatives.",
+      "tool_api": "Existing part_index.py and component_records.py; delegated research tools for external sources; explicit standard formula arithmetic.",
+      "automation": "Software searches existing registered records; authorized delegated research locates sources; the reasoning agent matches scope and feature.",
+      "representation": "Source evidence and nominal geometry parameter records",
+      "units_frames": "Retain feature units; source research itself has no placement transform. P01 calculated dimensions use mm; local XY section and +Z length are bound at construction.",
+      "preserved": "Original documents, proposal labels, source edition, exact locator and prior observations",
+      "changed_or_inferred": "Standard designation, edition, scope, feature clause and alternative process-specific branches",
+      "checks": "Variant/scope correspondence, source access status, clause attribution and source-pinned arithmetic as applicable.",
+      "alternatives": "Existing manufacturer drawing, product standard, supplier record or actual stock measurement, each retaining its evidence status.",
+      "downstream": {
+        "action": "Check source access and attribute each technical claim",
+        "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
+      },
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+      ],
+      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "date": "2026-11-12"
+    },
+    {
+      "id": "COMP-SRC-A03",
+      "name": "Check source access and attribute each technical claim",
+      "status": "observed_step_definition",
+      "original_graph_relationship": "Supplemental source-preparation actions; links to Preserve the input revision and state the job boundary (INTAKE-A01) and Select a supported solid feature route (CAD-10-A01). Original graph retained.",
+      "inputs": "Returned source observations, retrieved document or indexed excerpt and technical claim",
+      "outputs": "Per-claim source location, access method, evidence status and retained failures/corrections",
+      "prerequisites": "Component identity and intended representation; external research uses the current project delegation/authorization rules.",
+      "procedure": "Check the actual visible content for each formula or clause. Attribute an indexed excerpt to that method and locator. Record page-access errors separately from readable evidence.",
+      "tool_api": "Existing part_index.py and component_records.py; delegated research tools for external sources; explicit standard formula arithmetic.",
+      "automation": "Software validates locators, hashes and record fields; the agent compares the technical claim with the returned source text.",
+      "representation": "Source evidence and nominal geometry parameter records",
+      "units_frames": "Retain feature units; source research itself has no placement transform. P01 calculated dimensions use mm; local XY section and +Z length are bound at construction.",
+      "preserved": "Original documents, proposal labels, source edition, exact locator and prior observations",
+      "changed_or_inferred": "Per-claim source location, access method, evidence status and retained failures/corrections",
+      "checks": "Variant/scope correspondence, source access status, clause attribution and source-pinned arithmetic as applicable.",
+      "alternatives": "Existing manufacturer drawing, product standard, supplier record or actual stock measurement, each retaining its evidence status.",
+      "downstream": {
+        "action": "Calculate nominal feature values from the standard",
+        "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
+      },
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+      ],
+      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "date": "2026-11-12"
+    },
+    {
+      "id": "COMP-SRC-A04",
+      "name": "Calculate nominal feature values from the standard",
+      "status": "observed_step_definition",
+      "original_graph_relationship": "Supplemental source-preparation actions; links to Preserve the input revision and state the job boundary (INTAKE-A01) and Select a supported solid feature route (CAD-10-A01). Original graph retained.",
+      "inputs": "Source-pinned nominal dimensions, units, standard formula, edition and applicability interval",
+      "outputs": "Calculated nominal feature values and separately recorded manufacturing limits",
+      "prerequisites": "Component identity and intended representation; external research uses the current project delegation/authorization rules.",
+      "procedure": "Apply the documented formula to the nominal input, retain units and applicability, and independently check the arithmetic. Label each calculated value by its standard convention.",
+      "tool_api": "Existing part_index.py and component_records.py; delegated research tools for external sources; explicit standard formula arithmetic.",
+      "automation": "Once formula, units and applicability are explicit, software can calculate and check the values; the agent interprets which formula applies to the requested representation.",
+      "representation": "Source evidence and nominal geometry parameter records",
+      "units_frames": "Retain feature units; source research itself has no placement transform. P01 calculated dimensions use mm; local XY section and +Z length are bound at construction.",
+      "preserved": "Original documents, proposal labels, source edition, exact locator and prior observations",
+      "changed_or_inferred": "Calculated nominal feature values and separately recorded manufacturing limits",
+      "checks": "Variant/scope correspondence, source access status, clause attribution and source-pinned arithmetic as applicable.",
+      "alternatives": "Existing manufacturer drawing, product standard, supplier record or actual stock measurement, each retaining its evidence status.",
+      "downstream": {
+        "action": "Select a supported solid feature route (CAD-10-A01)",
+        "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
+      },
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+      ],
+      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "date": "2026-11-12"
+    }
+  ]
+}
