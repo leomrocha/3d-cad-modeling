@@ -6,27 +6,13 @@ coplanar boundary cancellation. Numerical comparison is not a fit tolerance.
 """
 import math
 from component_records import require_ready
-from native_acis import sab_features
+from native_acis import named_parts
 
 
 def read_parts(record, job):
-    parts = {}
-    for row in record['records']:
-        prop = row['properties']
-        labels = [v['String'][11:] for app in prop['common']['extended_data']['records']
-                  if app['application_name'] == job['metadata_app']
-                  for v in app['values'] if v.get('String', '').startswith('Component: ')]
-        if len(labels) != 1:
-            raise ValueError('Each solid requires one source component label')
-        name = job.get('part_aliases', {}).get(labels[0], labels[0])
-        if name in parts:
-            raise ValueError('Duplicate component label')
-        parts[name] = sab_features(bytes(prop['acis_data']['sab_data']),
-                                  allow_rigid=True, allow_spheres=True,
-                                  allow_cones=True, include_loops=True)
-    if set(parts) != set(job['required_parts']):
-        raise ValueError('Native component set differs from the source job')
-    return parts
+    return named_parts(record, job['metadata_app'], job['required_parts'],
+                       job.get('part_aliases'), allow_rigid=True,
+                       allow_spheres=True, allow_cones=True, include_loops=True)
 
 
 def check(record, job, tolerance=1e-7):

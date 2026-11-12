@@ -6,6 +6,23 @@ model coordinates. ACIS header unit metadata is reported separately.
 import math
 
 
+def named_parts(record, metadata_app, required_parts, aliases=None, **reader_options):
+    """Read exact named solids; accept observed Component: labels with optional space."""
+    parts={}
+    for row in record['records']:
+        prop=row['properties']
+        labels=[v['String'].split(':',1)[1].strip()
+                for app in prop['common']['extended_data']['records']
+                if app['application_name']==metadata_app
+                for v in app['values'] if v.get('String','').startswith('Component:')]
+        if len(labels)!=1 or not labels[0]:raise ValueError('Each solid requires one source component label')
+        name=(aliases or {}).get(labels[0],labels[0])
+        if name in parts:raise ValueError('Duplicate component label')
+        parts[name]=sab_features(bytes(prop['acis_data']['sab_data']),**reader_options)
+    if set(parts)!=set(required_parts):raise ValueError('Native component set differs from the source job')
+    return parts
+
+
 def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,include_loops=False):
     from ezdxf.acis.sab import parse_sab,SabDataLoader
     from ezdxf.acis.const import Tags

@@ -89,4 +89,35 @@ class PillowBlockNativeTests(unittest.TestCase):
         next(f for f in job['features'] if f['name']=='shaft bore diameter')['value']=22
         self.assertEqual(check(self.after,job)['result'],'FAIL')
 
+@unittest.skipUnless(ezdxf is not None and (W/'c021-reuse-01/native-records.json').is_file(),'Requires saved Leaf native record')
+class BatteryModuleNativeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.job=json.loads((W/'c021-reuse-01/source-job.json').read_text())
+        cls.record=json.loads((W/'c021-reuse-01/native-records.json').read_text())
+    def test_saved_shells_mounting_and_terminal_features(self):
+        from battery_module import check
+        self.assertEqual(check(self.record,self.job)['result'],'PASS')
+    def test_wrong_terminal_pitch_is_rejected(self):
+        import copy
+        from battery_module import check
+        job=copy.deepcopy(self.job)
+        next(f for f in job['features'] if f['name']=='terminal pitch')['value']=40
+        self.assertEqual(check(self.record,job)['result'],'FAIL')
+    def test_missing_component_is_rejected(self):
+        import copy
+        from battery_module import check
+        record=copy.deepcopy(self.record);record['records'].pop()
+        with self.assertRaisesRegex(ValueError,'component set'):check(record,self.job)
+    def test_observed_component_colon_spacing_variants(self):
+        import copy
+        from battery_module import check
+        record=copy.deepcopy(self.record)
+        for row in record['records']:
+            for app in row['properties']['common']['extended_data']['records']:
+                for v in app['values']:
+                    if v.get('String','').startswith('Component:'):
+                        v['String']=v['String'].replace('Component:','Component: ')
+        self.assertEqual(check(record,self.job)['result'],'PASS')
+
 if __name__=='__main__':unittest.main()
