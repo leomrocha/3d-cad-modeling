@@ -2174,6 +2174,31 @@
       ]
     },
     {
+      "id": "SRC-194cc6d76652",
+      "url": null,
+      "local_source_path": "/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py",
+      "title": "ezdxf1.4.5 native SAB decoder source",
+      "summary": "MIT library source implements typed binary token decoding, versioned record construction and pointer resolution through parse_sab. Its existing parser reads the saved P01 binary record without changing CAD geometry.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py",
+          "access_date": "2026-11-12",
+          "sha256": "5ad571d3a72b94110087c09bfdc69cf9b04de207af009293f4b325670ac8981a",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
       "id": "SRC-19a03b5f035d",
       "url": "https://www.skills.sh/roble3/cc-blender-skill/blender-modeling",
       "local_source_path": null,
@@ -2581,6 +2606,31 @@
         "research/sources/round-05/point-05-local-sources.json",
         "research/sources/round-05/point-06-local-sources.json",
         "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1c03ba612505",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/requirements-native.txt",
+      "title": "Pinned native-reader dependency environment",
+      "summary": "Pins ezdxf1.4.5 and the observed fonttools4.68.0/numpy2.5.4/pyparsing3.3.3/typing_extensions4.16.0 dependencies installed in isolated temporary target. This pin set was exercised with Python3.12.9.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/requirements-native.txt",
+          "access_date": "2026-11-12",
+          "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -3267,6 +3317,31 @@
         "research/workflows/details/mix-r04.md",
         "research/workflows/details/mix-r07.md",
         "research/workflows/details/mix-r09.md"
+      ]
+    },
+    {
+      "id": "SRC-261ec2be4f36",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+      "title": "Body-linked native SAB feature adapter",
+      "summary": "Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+          "access_date": "2026-11-12",
+          "sha256": "1e7ecca99dbd6fb3ae5209f177c9f130df9e2f23a7bacc52d59150704901a927",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -6561,7 +6636,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
-        "web_inspected"
+        "web_inspected",
+        "installed_package_metadata_inspected"
       ],
       "observations": [
         {
@@ -6573,10 +6649,18 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "installed_package_metadata_inspected",
+          "access_date": "2026-11-12",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-12/saved-rail-reader-sources.json",
         "research/workflows/details/cad-r04.md"
       ]
     },
@@ -7152,7 +7236,8 @@
       "summary": "Source-bound nominal tube builder reuses FERME guarded runtime and geometry modules. The live P01 run established explicit selection readback and bounded-area extrusion; native pre-save checks pass. The reader returns UNKNOWN for reopened SAB records and preserves their raw bytes. Solid and planar subtraction attempts retain their failed routes.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_code_or_procedure_inspected"
+        "authored_code_or_procedure_inspected",
+        "local_execution_evidence_inspected"
       ],
       "observations": [
         {
@@ -7164,10 +7249,20 @@
             "execution/p01-rail-build.md",
             "skills/component-cad/references/source-first-and-tube.md"
           ]
+        },
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/rounded_tube.py",
+          "access_date": "2026-11-12",
+          "sha256": "b92a4c8c243723d294e5dcb981983349f2a1bdf877676cf08bc9a0af4319d66a",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-11/rail-execution-sources.json"
+        "research/sources/round-11/rail-execution-sources.json",
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -7635,6 +7730,31 @@
       ]
     },
     {
+      "id": "SRC-4d3746ad7211",
+      "url": null,
+      "local_source_path": "/tmp/3dmodeling-native-reader/ezdxf/acis/entities.py",
+      "title": "ezdxf ACIS body/entity reference definitions",
+      "summary": "Body/lump/shell/face/coedge definitions describe parent and partner relationships. These existing definitions and the observed record layout guide the adapter’s body traversal and reciprocal partner checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/entities.py",
+          "access_date": "2026-11-12",
+          "sha256": "61137e27746e3f3b3e32256aa2b3b2b01ebfa6f3da2e7b14cabe424004e73068",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
       "id": "SRC-4d871dcad456",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json",
@@ -7810,11 +7930,21 @@
             "execution/p01-rail-build.md",
             "skills/component-cad/references/source-first-and-tube.md"
           ]
+        },
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+          "access_date": "2026-11-12",
+          "sha256": "ccf24e37adf278047383674f32b9dc9c3981d5cc8ca383babfdfc67e3ce37f41",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
-        "research/sources/round-11/rail-execution-sources.json"
+        "research/sources/round-11/rail-execution-sources.json",
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -8141,6 +8271,31 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-5270d066fe0f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json",
+      "title": "Reopened rail document-unit observation",
+      "summary": "OCS header reports insertion_units4, millimetres, for the actual reopened rail document. This records the document coordinate unit independently from the ACIS header metadata.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json",
+          "access_date": "2026-11-12",
+          "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -8516,6 +8671,31 @@
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r07.md"
+      ]
+    },
+    {
+      "id": "SRC-5561868d066a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json",
+      "title": "Live reopened rail dimension and topology checks",
+      "summary": "Six native check groups PASS: source-defined section/length, X/Y walls, end planes, eight corner surfaces and one connected closed body with18 faces and reciprocal closed partners.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "e5e5cb9a64b19993228d2943d24984fe05d7e136f2c4d9606760d0052c3fe9dc",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -14308,6 +14488,31 @@
       ]
     },
     {
+      "id": "SRC-8fd31c82a6fe",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+      "title": "Recorded native binary regression tests",
+      "summary": "Four integration tests use FERME saved rail evidence: source dimensions pass, pre-save/reopened vertex and radius sets agree, wrong260mm expectation fails for600mm rail, and truncated binary is rejected.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+          "access_date": "2026-11-12",
+          "sha256": "07d5b76d02420213fadfc0d74834f0455c98556208d29616088dccdde82027f8",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
       "id": "SRC-90428f0f4c05",
       "url": "https://huggingface.co/stabilityai/TripoSR",
       "local_source_path": null,
@@ -15918,11 +16123,21 @@
             "execution/p01-rail-build.md",
             "skills/component-cad/references/source-first-and-tube.md"
           ]
+        },
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "32c4ce250829d514080f4a8b3b934b07db2231fd5a3e39d53d8df8da8eef84ff",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
-        "research/sources/round-11/rail-execution-sources.json"
+        "research/sources/round-11/rail-execution-sources.json",
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -20692,6 +20907,31 @@
       ]
     },
     {
+      "id": "SRC-cb939ff4c2d6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/p01-saved-verification.md",
+      "title": "Completed saved rail verification report",
+      "summary": "Reports live saved-body checks, unchanged DWG hash, body-derived versus zero API bounds, documented OCS/ACIS unit metadata, dependency installation results,32 passing tests and the eligible crossmember.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/execution/p01-saved-verification.md",
+          "access_date": "2026-11-12",
+          "sha256": "0847506bf7fd642ea7e70967d638256d466cc5b2b900731329a461c3a7d35410",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
       "id": "SRC-cc34a83be8f3",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md",
@@ -22176,6 +22416,31 @@
       ]
     },
     {
+      "id": "SRC-de7c1927c29d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json",
+      "title": "Saved rail hash and native API bounds observation",
+      "summary": "Actual reopened document audit identifies the saved DWG and its SHA256, one-solid manifest and zero-error audit; reported bounds are zero. Native decoded features provide the independent nonzero bounds.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json",
+          "access_date": "2026-11-12",
+          "sha256": "362585030a5d4153458559d42eb6670114a50b160d421b613c08077cbcf1c07c",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
       "id": "SRC-df6405fd9570",
       "url": null,
       "local_source_path": "/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md",
@@ -22684,6 +22949,31 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-e635bf5bcf73",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json",
+      "title": "Live reopened rail native entity record",
+      "summary": "Current OCS document71 native record contains the unchanged saved SAB body; its bytes match the earlier saved record. This record supplies the actual feature observations for the successful repeat check.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json",
+          "access_date": "2026-11-12",
+          "sha256": "cafe78c847f8be3ad37325eaf078909cf29da9b7e01d69b03632c3760b807c7c",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -23835,6 +24125,31 @@
       ]
     },
     {
+      "id": "SRC-f1ece207e03f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json",
+      "title": "Completed P01 component iteration result",
+      "summary": "P01 state DONE links saved native geometry, passed binary feature checks, original views, applied reader improvement and32 passing tests; records decoded bounds and contradictory API bounds.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "5db20f3494625a8fb18c8b50a03c8b816b4ffd653a8b8e93171484099c0f2bde",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f22443c65bee",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md",
@@ -23842,7 +24157,8 @@
       "summary": "Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_code_or_procedure_inspected"
+        "authored_code_or_procedure_inspected",
+        "local_execution_evidence_inspected"
       ],
       "observations": [
         {
@@ -23854,10 +24170,20 @@
             "execution/p01-rail-build.md",
             "skills/component-cad/references/source-first-and-tube.md"
           ]
+        },
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md",
+          "access_date": "2026-11-12",
+          "sha256": "95954624ac11393d00e47ec00235939266c3a81723c708d4a112895580ce9865",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-11/rail-execution-sources.json"
+        "research/sources/round-11/rail-execution-sources.json",
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -24780,11 +25106,21 @@
             "execution/p01-rail-build.md",
             "skills/component-cad/references/source-first-and-tube.md"
           ]
+        },
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+          "access_date": "2026-11-12",
+          "sha256": "eeeb86e5ef12a35c68fea8f9defab25e7f28f835b7ba44642614522ff08439a0",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
-        "research/sources/round-11/rail-execution-sources.json"
+        "research/sources/round-11/rail-execution-sources.json",
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {
@@ -24926,6 +25262,31 @@
       "referring_documents": [
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
+      "id": "SRC-fabfe00e465d",
+      "url": null,
+      "local_source_path": "/tmp/3dmodeling-native-reader/ezdxf/acis/hdr.py",
+      "title": "ezdxf ACIS header interpretation",
+      "summary": "Existing AcisHeader exposes units_in_mm and version fields. The P01 reader reports decoded metadata10.0 beside OCS document millimetres and preserves native coordinates; the same value occurs before saving.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_execution_evidence_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_execution_evidence_inspected",
+          "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/hdr.py",
+          "access_date": "2026-11-12",
+          "sha256": "8d143828dd1ec2b65659811df5cd8f0aeddf201406bdf90d34e64c005519328b",
+          "referring_documents": [
+            "execution/p01-saved-verification.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-12/saved-rail-reader-sources.json"
       ]
     },
     {

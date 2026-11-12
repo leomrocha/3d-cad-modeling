@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "component": "Main frame longitudinal rail (P01)",
+  "state": "DONE",
+  "native_check_groups": 6,
+  "native_geometry": "PASS",
+  "saved_bytes": "PASS_unchanged",
+  "source_records": 18,
+  "previous_models_preserved": 18,
+  "append_only_occurrence_prefix": "PASS",
+  "graph_plan_preserved": "PASS",
+  "mermaid_blocks_found_and_preserved": 2,
+  "tests": "32 PASS with isolated native-reader dependencies",
+  "skill_validation": "PASS",
+  "api_bounds_observation": "zero bounds retained; decoded native features establish required extents",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 15,
+    "receipt_included": true
+  }
+}

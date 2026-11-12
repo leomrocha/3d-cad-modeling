@@ -2,7 +2,7 @@
 """Source-bound rounded hollow-section construction using existing FERME OCS tools.
 
 Units: mm. Section is XY centred at origin; cut length is +Z. Native geometry
-checks read only the supported planar/cylindrical SAT surfaces and vertices.
+checks read supported planar/cylindrical SAT or SAB surfaces and vertices.
 """
 import argparse
 import importlib
@@ -196,14 +196,26 @@ def inspect(client,handle,job,record_path=None):
         Path(record_path).write_text(json.dumps(records,indent=2)+'\n')
     acis=records['records'][0]['properties']['acis_data']
     text=acis['sat_data']
-    if not text:
-        return records,{'result':'UNKNOWN','method':'native entity record inspection',
-                        'reason':'Reopened record stores SAB binary; this feature reader supports SAT text',
-                        'encoding':'SAB' if acis.get('sab_data') else 'empty',
-                        'document_id':records['document_id'],'revision':records['revision'],
-                        'geometry_revision':records['geometry_revision'],'handle':handle}
-    features=sat_features(text)
+    encoding='SAT'
+    if text:
+        features=sat_features(text)
+    else:
+        encoding='SAB'
+        try:
+            from native_acis import sab_features
+            features=sab_features(bytes(acis.get('sab_data',[])))
+        except Exception as error:
+            return records,{'result':'UNKNOWN','method':'native entity record inspection',
+                            'reason':'SAB feature read unavailable: '+type(error).__name__+': '+str(error),
+                            'encoding':'SAB' if acis.get('sab_data') else 'empty',
+                            'document_id':records['document_id'],'revision':records['revision'],
+                            'geometry_revision':records['geometry_revision'],'handle':handle}
     result=verify_features(features,dimensions(job))
+    result['method']='native '+encoding+' surface and vertex observations'
+    if encoding=='SAB':
+        topology=features['topology']
+        result['checks'].append({'name':'one closed connected hollow-section body','result':'PASS' if topology['lumps']==1 and topology['shells']==1 and topology['reciprocal_closed_partners'] else 'FAIL','observed':topology})
+        result['result']='PASS' if all(c['result']=='PASS' for c in result['checks']) else 'FAIL'
     result.update(document_id=records['document_id'],revision=records['revision'],
                   geometry_revision=records['geometry_revision'],handle=handle,features=features)
     return records,result

@@ -1,0 +1,199 @@
+[
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "title": "Body-linked native SAB feature adapter",
+    "summary": "Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "1e7ecca99dbd6fb3ae5209f177c9f130df9e2f23a7bacc52d59150704901a927",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/rounded_tube.py",
+    "title": "Tube verification extended for binary geometry",
+    "summary": "Saved-record inspection now decodes SAB through the existing parser adapter and repeats source-linked dimension checks, adding a connected closed-body check. The P01 live reopened record passes all six groups.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "b92a4c8c243723d294e5dcb981983349f2a1bdf877676cf08bc9a0af4319d66a",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "title": "Recorded native binary regression tests",
+    "summary": "Four integration tests use FERME saved rail evidence: source dimensions pass, pre-save/reopened vertex and radius sets agree, wrong260mm expectation fails for600mm rail, and truncated binary is rejected.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "07d5b76d02420213fadfc0d74834f0455c98556208d29616088dccdde82027f8",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/requirements-native.txt",
+    "title": "Pinned native-reader dependency environment",
+    "summary": "Pins ezdxf1.4.5 and the observed fonttools4.68.0/numpy2.5.4/pyparsing3.3.3/typing_extensions4.16.0 dependencies installed in isolated temporary target. This pin set was exercised with Python3.12.9.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/p01-saved-verification.md",
+    "title": "Completed saved rail verification report",
+    "summary": "Reports live saved-body checks, unchanged DWG hash, body-derived versus zero API bounds, documented OCS/ACIS unit metadata, dependency installation results,32 passing tests and the eligible crossmember.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "0847506bf7fd642ea7e70967d638256d466cc5b2b900731329a461c3a7d35410",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md",
+    "title": "Updated native verification procedure",
+    "summary": "Adds supported ACIS700 binary reading, native body traversal, dependency setup and saved-model regression; retains the failed Boolean and selection history from the first rail build.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "95954624ac11393d00e47ec00235939266c3a81723c708d4a112895580ce9865",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py",
+    "title": "ezdxf1.4.5 native SAB decoder source",
+    "summary": "MIT library source implements typed binary token decoding, versioned record construction and pointer resolution through parse_sab. Its existing parser reads the saved P01 binary record without changing CAD geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "5ad571d3a72b94110087c09bfdc69cf9b04de207af009293f4b325670ac8981a",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/entities.py",
+    "title": "ezdxf ACIS body/entity reference definitions",
+    "summary": "Body/lump/shell/face/coedge definitions describe parent and partner relationships. These existing definitions and the observed record layout guide the adapter’s body traversal and reciprocal partner checks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "61137e27746e3f3b3e32256aa2b3b2b01ebfa6f3da2e7b14cabe424004e73068",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/hdr.py",
+    "title": "ezdxf ACIS header interpretation",
+    "summary": "Existing AcisHeader exposes units_in_mm and version fields. The P01 reader reports decoded metadata10.0 beside OCS document millimetres and preserves native coordinates; the same value occurs before saving.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "8d143828dd1ec2b65659811df5cd8f0aeddf201406bdf90d34e64c005519328b",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json",
+    "title": "Live reopened rail native entity record",
+    "summary": "Current OCS document71 native record contains the unchanged saved SAB body; its bytes match the earlier saved record. This record supplies the actual feature observations for the successful repeat check.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "cafe78c847f8be3ad37325eaf078909cf29da9b7e01d69b03632c3760b807c7c",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json",
+    "title": "Live reopened rail dimension and topology checks",
+    "summary": "Six native check groups PASS: source-defined section/length, X/Y walls, end planes, eight corner surfaces and one connected closed body with18 faces and reciprocal closed partners.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "e5e5cb9a64b19993228d2943d24984fe05d7e136f2c4d9606760d0052c3fe9dc",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json",
+    "title": "Reopened rail document-unit observation",
+    "summary": "OCS header reports insertion_units4, millimetres, for the actual reopened rail document. This records the document coordinate unit independently from the ACIS header metadata.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json",
+    "title": "Saved rail hash and native API bounds observation",
+    "summary": "Actual reopened document audit identifies the saved DWG and its SHA256, one-solid manifest and zero-error audit; reported bounds are zero. Native decoded features provide the independent nonzero bounds.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "362585030a5d4153458559d42eb6670114a50b160d421b613c08077cbcf1c07c",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json",
+    "title": "Completed P01 component iteration result",
+    "summary": "P01 state DONE links saved native geometry, passed binary feature checks, original views, applied reader improvement and32 passing tests; records decoded bounds and contradictory API bounds.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "5db20f3494625a8fb18c8b50a03c8b816b4ffd653a8b8e93171484099c0f2bde",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "title": "Component execution index after rail completion",
+    "summary": "P01 state DONE now links its completed saved-verification result; P02 is READY_TO_PREPARE. Remaining component identities and original geometric dependencies are preserved.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "ccf24e37adf278047383674f32b9dc9c3981d5cc8ca383babfdfc67e3ce37f41",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "title": "Component action history with binary verification occurrence",
+    "summary": "Append-only registry preserves prior successful and failed research/build/readback events and adds the actual successful source-linked saved-binary verification under the existing native-solid check action.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "eeeb86e5ef12a35c68fea8f9defab25e7f28f835b7ba44642614522ff08439a0",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "title": "FERME rail iteration completion index",
+    "summary": "Adds a dated completion section linking successful live binary feature checks and the reusable reader improvement; identifies the now-eligible260mm crossmember while retaining earlier batch states.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_execution_evidence_inspected",
+    "sha256": "32c4ce250829d514080f4a8b3b934b07db2231fd5a3e39d53d8df8da8eef84ff",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  },
+  {
+    "url": "https://github.com/mozman/ezdxf",
+    "title": "ezdxf repository locator from installed1.4.5 metadata",
+    "summary": "Installed package metadata identifies this repository as the original ezdxf source. Its local MIT-labelled ACIS decoder files are the inspected implementation reused for P01 native binary reading.",
+    "access_date": "2026-11-12",
+    "evidence_status": "installed_package_metadata_inspected",
+    "referring_documents": [
+      "execution/p01-saved-verification.md"
+    ]
+  }
+]

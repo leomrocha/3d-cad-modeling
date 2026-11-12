@@ -1922,6 +1922,18 @@ Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/e
 
 Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
 
+## COMP-I15 — Reuse an existing SAB parser for saved-body measurements
+
+Status: proposal.
+
+Implemented ezdxf-backed reading of the source-linked saved P01 body graph. Native dimensions and closed topology pass; the prior binary-reader gap now has a successful occurrence while the OCS zero-bounds discrepancy remains attributed.
+
+Original source: [/home/leo/projects/3dmodeling/execution/p01-saved-verification.md](/home/leo/projects/3dmodeling/execution/p01-saved-verification.md)
+
+Original proposal: [execution/p01-saved-verification.md](/home/leo/projects/3dmodeling/execution/p01-saved-verification.md), line 1.
+
+Next check: Apply the supported reader to the next component’s saved geometry and preserve any new exceptions.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

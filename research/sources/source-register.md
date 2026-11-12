@@ -736,6 +736,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
+<a id="src-194cc6d76652"></a>
+
+## SRC-194cc6d76652 — ezdxf1.4.5 native SAB decoder source
+
+Original source: [/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py](/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py)
+
+Summary: MIT library source implements typed binary token decoding, versioned record construction and pointer resolution through parse_sab. Its existing parser reads the saved P01 binary record without changing CAD geometry.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
 <a id="src-19a03b5f035d"></a>
 
 ## SRC-19a03b5f035d — blender-modeling — roble3/cc-blender-skill
@@ -879,6 +891,18 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-1c03ba612505"></a>
+
+## SRC-1c03ba612505 — Pinned native-reader dependency environment
+
+Original source: [/home/leo/projects/3dmodeling/requirements-native.txt](/home/leo/projects/3dmodeling/requirements-native.txt)
+
+Summary: Pins ezdxf1.4.5 and the observed fonttools4.68.0/numpy2.5.4/pyparsing3.3.3/typing_extensions4.16.0 dependencies installed in isolated temporary target. This pin set was exercised with Python3.12.9.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-1c30dee16aac"></a>
 
@@ -1095,6 +1119,18 @@ Summary: Primary usage examples for parameterized Python solid construction.
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
+
+<a id="src-261ec2be4f36"></a>
+
+## SRC-261ec2be4f36 — Body-linked native SAB feature adapter
+
+Original source: [/home/leo/projects/3dmodeling/scripts/native_acis.py](/home/leo/projects/3dmodeling/scripts/native_acis.py)
+
+Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-26397bd1f7c2"></a>
 
@@ -2184,9 +2220,9 @@ Original source: [https://github.com/mozman/ezdxf](https://github.com/mozman/ezd
 
 Summary: Primary source repository and MIT licence metadata.
 
-Evidence: existing_report_registered, web_inspected.
+Evidence: existing_report_registered, web_inspected, installed_package_metadata_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/workflows/details/cad-r04.md.
 
 <a id="src-41bb93ea7d3f"></a>
 
@@ -2388,9 +2424,9 @@ Original source: [/home/leo/projects/3dmodeling/scripts/rounded_tube.py](/home/l
 
 Summary: Source-bound nominal tube builder reuses FERME guarded runtime and geometry modules. The live P01 run established explicit selection readback and bounded-area extrusion; native pre-save checks pass. The reader returns UNKNOWN for reopened SAB records and preserves their raw bytes. Solid and planar subtraction attempts retain their failed routes.
 
-Evidence: authored_code_or_procedure_inspected.
+Evidence: authored_code_or_procedure_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-11/rail-execution-sources.json.
+Documents: research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-47401a0e9609"></a>
 
@@ -2584,6 +2620,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-4d3746ad7211"></a>
+
+## SRC-4d3746ad7211 — ezdxf ACIS body/entity reference definitions
+
+Original source: [/tmp/3dmodeling-native-reader/ezdxf/acis/entities.py](/tmp/3dmodeling-native-reader/ezdxf/acis/entities.py)
+
+Summary: Body/lump/shell/face/coedge definitions describe parent and partner relationships. These existing definitions and the observed record layout guide the adapter’s body traversal and reciprocal partner checks.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
 <a id="src-4d871dcad456"></a>
 
 ## SRC-4d871dcad456 — P01 p01-build-01 — rail-schema-2.json
@@ -2654,7 +2702,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-4f49d9c8767a"></a>
 
@@ -2788,6 +2836,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-5270d066fe0f"></a>
+
+## SRC-5270d066fe0f — Reopened rail document-unit observation
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json)
+
+Summary: OCS header reports insertion_units4, millimetres, for the actual reopened rail document. This records the document coordinate unit independently from the ACIS header metadata.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
 <a id="src-529bea09ca56"></a>
 
 ## SRC-529bea09ca56 — Existing IFC-to-GLB provenance record
@@ -2919,6 +2979,18 @@ Summary: Repository identifies IfcOpenShell as LGPL-3.0-or-later and Bonsai as G
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r02.md, research/workflows/details/dom-r07.md.
+
+<a id="src-5561868d066a"></a>
+
+## SRC-5561868d066a — Live reopened rail dimension and topology checks
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json)
+
+Summary: Six native check groups PASS: source-defined section/length, X/Y walls, end planes, eight corner surfaces and one connected closed body with18 faces and reciprocal closed partners.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-556d712120d7"></a>
 
@@ -4852,6 +4924,18 @@ Evidence: local_reference_registered, local_source_inspected.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-8fd31c82a6fe"></a>
+
+## SRC-8fd31c82a6fe — Recorded native binary regression tests
+
+Original source: [/home/leo/projects/3dmodeling/tests/test_native_acis.py](/home/leo/projects/3dmodeling/tests/test_native_acis.py)
+
+Summary: Four integration tests use FERME saved rail evidence: source dimensions pass, pre-save/reopened vertex and radius sets agree, wrong260mm expectation fails for600mm rail, and truncated binary is rejected.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
 <a id="src-90428f0f4c05"></a>
 
 ## SRC-90428f0f4c05 — TripoSR model card and weights
@@ -5390,7 +5474,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-a00bd3c7c755"></a>
 
@@ -6952,6 +7036,18 @@ Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-08/component-plan-sources.json.
 
+<a id="src-cb939ff4c2d6"></a>
+
+## SRC-cb939ff4c2d6 — Completed saved rail verification report
+
+Original source: [/home/leo/projects/3dmodeling/execution/p01-saved-verification.md](/home/leo/projects/3dmodeling/execution/p01-saved-verification.md)
+
+Summary: Reports live saved-body checks, unchanged DWG hash, body-derived versus zero API bounds, documented OCS/ACIS unit metadata, dependency installation results,32 passing tests and the eligible crossmember.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
 <a id="src-cc34a83be8f3"></a>
 
 ## SRC-cc34a83be8f3 — Caster pin positive keeper (C020) — CAD input sheet
@@ -7516,6 +7612,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-de7c1927c29d"></a>
+
+## SRC-de7c1927c29d — Saved rail hash and native API bounds observation
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json)
+
+Summary: Actual reopened document audit identifies the saved DWG and its SHA256, one-solid manifest and zero-error audit; reported bounds are zero. Native decoded features provide the independent nonzero bounds.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
 <a id="src-df6405fd9570"></a>
 
 ## SRC-df6405fd9570 — computational-engineering.md
@@ -7695,6 +7803,18 @@ Summary: - Underlying SAM 3D model service https://fal.ai/models/fal-ai/sam-3/3d
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-e635bf5bcf73"></a>
+
+## SRC-e635bf5bcf73 — Live reopened rail native entity record
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json)
+
+Summary: Current OCS document71 native record contains the unchanged saved SAB body; its bytes match the earlier saved record. This record supplies the actual feature observations for the successful repeat check.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-e74aa94bbb50"></a>
 
@@ -8068,6 +8188,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-f1ece207e03f"></a>
+
+## SRC-f1ece207e03f — Completed P01 component iteration result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json)
+
+Summary: P01 state DONE links saved native geometry, passed binary feature checks, original views, applied reader improvement and32 passing tests; records decoded bounds and contradictory API bounds.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
 <a id="src-f22443c65bee"></a>
 
 ## SRC-f22443c65bee — Source-first tube construction and recovery procedure
@@ -8076,9 +8208,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/
 
 Summary: Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.
 
-Evidence: authored_code_or_procedure_inspected.
+Evidence: authored_code_or_procedure_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-11/rail-execution-sources.json.
+Documents: research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-f278cbf89b6d"></a>
 
@@ -8366,7 +8498,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-f954ab80c148"></a>
 
@@ -8415,6 +8547,18 @@ Summary: Primary source gives Open3D MIT licence; third-party dependencies remai
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
+<a id="src-fabfe00e465d"></a>
+
+## SRC-fabfe00e465d — ezdxf ACIS header interpretation
+
+Original source: [/tmp/3dmodeling-native-reader/ezdxf/acis/hdr.py](/tmp/3dmodeling-native-reader/ezdxf/acis/hdr.py)
+
+Summary: Existing AcisHeader exposes units_in_mm and version fields. The P01 reader reports decoded metadata10.0 beside OCS document millimetres and preserves native coordinates; the same value occurs before saving.
+
+Evidence: local_execution_evidence_inspected.
+
+Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 <a id="src-fae815d28e80"></a>
 

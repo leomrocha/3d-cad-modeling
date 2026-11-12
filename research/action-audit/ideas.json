@@ -2070,6 +2070,25 @@
         }
       ],
       "next_check": "Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions."
+    },
+    {
+      "id": "COMP-I15",
+      "name": "Reuse an existing SAB parser for saved-body measurements",
+      "summary": "Implemented ezdxf-backed reading of the source-linked saved P01 body graph. Native dimensions and closed topology pass; the prior binary-reader gap now has a successful occurrence while the OCS zero-bounds discrepancy remains attributed.",
+      "status": "proposal",
+      "origin": "executed_saved_rail_verification",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/p01-saved-verification.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/p01-saved-verification.md",
+          "line": 1,
+          "section": "Applied improvement"
+        }
+      ],
+      "next_check": "Apply the supported reader to the next component’s saved geometry and preserve any new exceptions."
     }
   ]
 }
