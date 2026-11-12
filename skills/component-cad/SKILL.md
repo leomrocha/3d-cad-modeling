@@ -18,6 +18,7 @@ Use this skill when a real component job develops the reusable tools in this rep
 1. Preserve original source bytes, proposal/source labels, required features, units, local datums and assembly frame. `scripts/component_records.py JOB.json` checks required feature coverage and pinned source revisions. Its code/output contract is described in [the procedure](references/component-procedure.md).
 2. A required feature with a named unresolved input produces `NEEDS_INPUT`. Resolve that feature before dependent construction. The first FERME tube case has supplied 40 x 40 x 3 mm nominal dimensions and separate cut lengths; its corner profile requires the recorded source or task input. Keep the exact question with that feature.
 3. `SOURCE_READY` records input coverage. Native construction, geometry readback, saved-file persistence and visual checks produce their own results.
+4. For standard-defined features, read the [source-first and hollow-section procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md). Record stock lookup, standards search, source-access review and formula calculation as individual actions before binding the construction inputs.
 
 ## Execute and improve
 
@@ -26,3 +27,4 @@ Use this skill when a real component job develops the reusable tools in this rep
 3. Record successful and failed occurrences. Document a repeated procedure with its supported conditions before extracting or extending its Python implementation. Reuse a matching function first.
 4. Every completed component iteration includes an applied, verified improvement to the current skill/procedure or script. A future task or confirmation of existing behavior supports the improvement's selection.
 5. Bind geometric observations to source expectations and actual document/geometry revisions. Verify save/reopen and captured component identity separately. Update component/part records in the owning project and tool/action definitions here, then commit the scoped results.
+6. For the exercised rounded hollow-section route, use the [native construction and recovery procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md). It records the installed selection semantics, direct bounded-area extrusion and the reopened SAB feature-reader result from the rail build.
