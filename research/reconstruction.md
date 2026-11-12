@@ -154,5 +154,3 @@ No reconstruction-specific skill or MCP wrapper was found in the project root. R
 | xy-gao DA3 Blender add-on | README and requirements opened; LICENSE URL returned 404 | Third-party add-on uses DA3 and downloads dependencies/models; README claims Blender 4.2/4.4/5.0 support and provides a low-VRAM batch example. Add-on licensing remains unknown. |
 | Microsoft TRELLIS.2 | Official README, LICENSE and Hugging Face card opened | Both source and 4B model card say MIT. Official minimum is Linux + NVIDIA GPU >=24 GB; tested on A100/H100. |
 | Tencent Hunyuan3D-2.1 / 2.0 | Official READMEs and community licenses opened | Model/code weights under Tencent custom agreement. Both exclude EU, UK and South Korea. 2.1 README reports 10/21/29 GB shape/texture/combined VRAM. |
-
-

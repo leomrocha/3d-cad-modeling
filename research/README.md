@@ -2,15 +2,20 @@
 
 Research date: 12 November 2026.
 
-1. [Implementation plan](implementation-plan.md) — input routes, model representations, software layers, 15 proposed workflow skills, component schema, six implementation stages and verification criteria.
-2. [CAD tools and available skills](cad-and-skills.md) — OCS, FreeCAD, CadQuery, build123d, OpenSCAD, Blender, SolveSpace, OCCT, drawing intake and existing skills.
-3. [Image, video and scan reconstruction](reconstruction.md) — photogrammetry, control points, point clouds, Gaussian scenes, learned reconstruction and CAD remodeling.
-4. [Architecture, robotics and components](domains-and-components.md) — IFC/Bonsai, MuJoCo/MJCF, URDF, collisions, source libraries, licences and metadata.
-5. [Local baseline](local-baseline.md) — existing OCS skill, prior research, tool versions and OCS exporter source inspection.
-6. [Local inventory receipt](local-inventory.json) and [existing-source hashes](sources/local-evidence.json).
-7. [User-supplied links](user-supplied-links.md) — all nine supplied URLs mapped to their assessment.
-8. [Skill catalogue](../skills/README.md) — reuse candidates and proposed project workflows.
-9. [Verification receipt](verification.json) — copied instructions, local source hashes, link coverage and document checks.
+1. [Workflow map](workflows/README.md) — individual operations, combined routes, representation handoffs and composition rules.
+2. [Original source register](sources/source-register.md) and [structured records](sources/source-register.json) — original links, summaries and evidence status, including referenced archived originals.
+3. [Ideas register](ideas-register.md) and [structured records](ideas-register.json) — retained plan proposals and new workflow research questions.
+4. [Documentation and checkpoint rules](documentation-policy.md) and [research record](research-log.md).
+5. [Implementation plan](implementation-plan.md) — input routes, model representations, software layers, 15 proposed workflow skills, component schema, six implementation stages and verification criteria.
+6. [CAD tools and available skills](cad-and-skills.md) — OCS, FreeCAD, CadQuery, build123d, OpenSCAD, Blender, SolveSpace, OCCT, drawing intake and existing skills.
+7. [Image, video and scan reconstruction](reconstruction.md) — photogrammetry, control points, point clouds, Gaussian scenes, learned reconstruction and CAD remodeling.
+8. [Architecture, robotics and components](domains-and-components.md) — IFC/Bonsai, MuJoCo/MJCF, URDF, collisions, source libraries, licences and metadata.
+9. [Local baseline](local-baseline.md) — existing OCS skill, prior research, tool versions and OCS exporter source inspection.
+10. [Local inventory receipt](local-inventory.json) and [existing-source hashes](sources/local-evidence.json).
+11. [User-supplied links](user-supplied-links.md) — all nine supplied URLs mapped to their assessment.
+12. [Skill catalogue](../skills/README.md) — reuse candidates and proposed project workflows.
+13. [Initial verification receipt](verification.json) — observations from the repository foundation.
+14. [Workflow registration checks](workflows/register-checks.json) and [document checks](workflows/document-checks.json) — current documentation consistency checks.
 
 ## Evidence and execution
 
@@ -19,3 +24,5 @@ Three research tasks were dispatched with model parameter `gpt-6-luna`: `cad_ski
 Primary-agent work includes local repository/source inspection, version and module-discovery probes, foundation creation, review of agent reports and synthesis of the proposed implementation plan. The existing OCS skill's partial runtime success is user-reported. Geometry experiments and installation steps in the plan describe proposed implementation work.
 
 Web pages were inspected by the delegated research agents. Existing local originals are referenced in place with hashes. A web inspection records access to the source content; downloaded-original status applies only to files actually saved with a source manifest.
+
+The workflow-research extension preserves the implementation plan and prior tool assessments. Its graphs and recipes record candidate routes and their specific handoff conditions. The source register distinguishes fresh inspection, earlier-report registration and preserved archived originals.

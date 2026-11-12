@@ -1,0 +1,2221 @@
+{
+  "domain": "domains",
+  "date": "2026-11-12",
+  "model_identity": "Luna as requested; exact model build identifier unavailable",
+  "type_definitions": {
+    "image-frame": "One selected raster image or video frame with source index and image-space coordinates.",
+    "joint-set": "Explicit joint records with parent/child links, type, origin, axis, limits, units and source status.",
+    "collision-set": "One or more primitive colliders or convex pieces with frame, source hash and approximation recipe.",
+    "material-set": "Material properties or densities with units, source and evidence status.",
+    "mass-properties": "Mass, center of mass and inertia tensor with units, frame and measured/claimed/calculated/assumed status.",
+    "component-record": "Versioned component identity, source/license records, geometry assets, units, frames, interfaces and physical properties.",
+    "assembly-graph": "Named parts/instances, parent relations, transforms, connection features and explicit joint records.",
+    "reconstruction-scene": "Camera solution and one or more point, mesh, Gaussian or NeRF representations linked to capture inputs.",
+    "control-network": "Measured image/model/world points and known lengths used for calibration, registration or scale, each with uncertainty and frame.",
+    "b-rep": "Boundary-representation solid or surface model with exact/spline faces and topological edges/vertices.",
+    "fabrication-package": "Native CAD, drawings, neutral solids, material/process notes and revision-linked manufacturing metadata.",
+    "source-library": "A library record or dataset pointer with original URL, per-asset licence/terms, version/revision and retrieval metadata.",
+    "text": "Original written description or requirement text, with source identity and revision.",
+    "dimensions": "Dimension values with units, datum/frame, source and status.",
+    "measurement-set": "Measurements with units, coordinate frame, method, source and uncertainty/status.",
+    "raster-sketch": "Raster image of a sketch, indexed by source file and pixel frame.",
+    "raster-plan": "Raster floor/site plan with source scale and image frame.",
+    "vector-drawing": "Vector drawing such as DXF/SVG with layer/entity identity, source units and frame.",
+    "cad-solid": "A CAD solid model with unit, frame and source lineage.",
+    "cad-assembly": "A CAD assembly containing named parts/instances and placements; articulation intent may be a separate joint-set.",
+    "parametric-source": "Editable CAD feature history or source script with named parameters.",
+    "ifc": "IFC building information model with entities, relationships, units and placements.",
+    "mesh": "Polygon mesh with units/frame, source hash and topology/quality metadata.",
+    "point-cloud": "Point coordinates with units/frame, registration and capture provenance.",
+    "photo-set": "Source still images with capture order, camera metadata where available, and licensing/provenance.",
+    "depth-frames": "Depth images or depth-camera frames with intrinsics, scale, timestamps and source frame.",
+    "camera-solution": "Camera poses/intrinsics and reconstruction scale, with controls and estimated uncertainty.",
+    "model-brief": "Normalized requirements and design intent with measurement/value provenance.",
+    "constrained-sketch": "Editable 2D profile with constraints/dimensions and source links.",
+    "robot-assembly": "Named robot links and their CAD geometry/placement with kinematic relation references.",
+    "mjcf": "MuJoCo XML model plus referenced assets, units convention, frames and model version.",
+    "urdf": "URDF robot description and referenced assets, units convention and package manifest.",
+    "visual-scene": "Presentation scene or geometry package with object identities and placements.",
+    "step-file": "Neutral STEP exchange file with schema, source identity, units, assembly structure status and importer/exporter provenance.",
+    "native-model-document": "Editable application-native CAD document with source identity, units, frames and revision; may contain direct geometry without feature history.",
+    "registration-transform": "Rigid or similarity transform from named source frame to target frame, with method, control set, residuals and units/axis convention.",
+    "physical-measurement-set": "Measured or source-reported mass, center of mass and/or inertia records with units, method, source, uncertainty/status and measurement frame; dimensions alone do not satisfy this type."
+  },
+  "operations": [
+    {
+      "id": "DOM-01",
+      "name": "Normalize model brief",
+      "inputs": [
+        "text"
+      ],
+      "outputs": [
+        "model-brief"
+      ],
+      "tools": [
+        "existing OCS engineering skill; structured project schema proposal"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "prerequisites": [
+        "Input sources retained with identity and access terms."
+      ],
+      "preserves": [
+        "Original wording, measurements, source units, source frame and evidence status."
+      ],
+      "changes_or_infers": [
+        "Normalize names and units; separate measured values, source claims, assumptions and calculated values."
+      ],
+      "checks": [
+        "Every required parameter has value/status/unit/source or a recorded ambiguity."
+      ],
+      "alternatives": [
+        "Manual brief review; schema-driven intake form."
+      ],
+      "automation": "mixed",
+      "evidence_status": "local_source_inspected",
+      "summary": "Create a source-linked requirements record before geometry operations.",
+      "source_ids": [
+        "DSRC-01",
+        "DSRC-02"
+      ],
+      "input_alternatives": [
+        [
+          "dimensions"
+        ],
+        [
+          "measurement-set"
+        ]
+      ]
+    },
+    {
+      "id": "DOM-02",
+      "name": "Raster sketch to constrained sketch",
+      "inputs": [
+        "raster-sketch"
+      ],
+      "outputs": [
+        "constrained-sketch"
+      ],
+      "tools": [
+        "OpenCADStudio; FreeCAD Sketcher; manual image tracing"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+      ],
+      "prerequisites": [
+        "Known scale or one or more dimension controls; sketch plane/orientation identified."
+      ],
+      "preserves": [
+        "Raster source, pixel coordinates, interpreted scale and dimension-to-pixel references."
+      ],
+      "changes_or_infers": [
+        "Pixels become line/arc geometry; undimensioned lengths remain image estimates."
+      ],
+      "checks": [
+        "Dimensions trace to source; closure/constraint state; view consistency; scale residual on independent controls."
+      ],
+      "alternatives": [
+        "Vectorization for clean line art; manual constrained sketch for engineering drawings."
+      ],
+      "automation": "assisted",
+      "evidence_status": "documented_capability",
+      "summary": "Turn a calibrated sketch image into constrained 2D geometry while retaining pixel evidence.",
+      "source_ids": [
+        "DSRC-01",
+        "DSRC-03"
+      ],
+      "input_alternatives": [
+        [
+          "dimensions"
+        ],
+        [
+          "measurement-set"
+        ]
+      ]
+    },
+    {
+      "id": "DOM-03",
+      "name": "DXF/SVG drawing to constrained profile",
+      "inputs": [
+        "vector-drawing"
+      ],
+      "outputs": [
+        "constrained-sketch"
+      ],
+      "tools": [
+        "OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "prerequisites": [
+        "Source units, layers/blocks, target sketch plane and intended entities identified."
+      ],
+      "preserves": [
+        "Source drawing, entity/layer IDs and original coordinates."
+      ],
+      "changes_or_infers": [
+        "Select/clean curves, convert units if needed, close profiles and apply constraints."
+      ],
+      "checks": [
+        "Open/closed profiles, self-intersections, holes, bounds/area and source dimension comparisons."
+      ],
+      "alternatives": [
+        "OCS-native DXF editing; FreeCAD sketch import; CadQuery DXF profile route."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Create editable profiles from vector drawing entities with explicit filtering and unit handling.",
+      "source_ids": [
+        "DSRC-03",
+        "DSRC-01"
+      ]
+    },
+    {
+      "id": "DOM-04",
+      "name": "Brief/profile to native CAD solid",
+      "inputs": [],
+      "outputs": [
+        "native-model-document",
+        "cad-solid"
+      ],
+      "tools": [
+        "OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+      ],
+      "prerequisites": [
+        "Dimensions, datums, units and component boundaries resolved; backend supports required solid features."
+      ],
+      "preserves": [
+        "Input geometry evidence, editable native document or script and parameter names."
+      ],
+      "changes_or_infers": [
+        "Construct features/booleans; any assumed design values remain labeled as assumptions."
+      ],
+      "checks": [
+        "Solid validity, feature/part counts, analytic surfaces, controlling dimensions, saved-file reopen."
+      ],
+      "alternatives": [
+        "Interactive OCS/FreeCAD; code-parametric CadQuery/build123d; OpenSCAD CSG source."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Author a CAD solid and save the editable native document. OCS documents/solids need not contain procedural feature history; use DOM-40 for script-based parametric source.",
+      "input_alternatives": [
+        [
+          "model-brief"
+        ],
+        [
+          "constrained-sketch"
+        ],
+        [
+          "parametric-source"
+        ]
+      ],
+      "source_ids": [
+        "DSRC-01",
+        "DSRC-03",
+        "DSRC-04",
+        "DSRC-05"
+      ]
+    },
+    {
+      "id": "DOM-05",
+      "name": "Export STEP solid",
+      "inputs": [],
+      "outputs": [
+        "step-file"
+      ],
+      "tools": [
+        "OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/local-baseline.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+      ],
+      "prerequisites": [
+        "Source/target frame and units declared; recipient supports the chosen STEP schema."
+      ],
+      "preserves": [
+        "Source native file, part identifiers and original STEP bytes."
+      ],
+      "changes_or_infers": [
+        "Exporter may tessellate or flatten feature history; OCS inspected writer emits planar faces from triangles."
+      ],
+      "checks": [
+        "Reopen in independent consumer; compare solids, bounds, volume, holes and analytic surface types."
+      ],
+      "alternatives": [
+        "Native document for feature history; STEP for geometry exchange; STL/OBJ for mesh-only exchange."
+      ],
+      "automation": "scripted",
+      "evidence_status": "local_source_inspected",
+      "summary": "Export a CAD solid or B-rep to a neutral STEP file; feature history and exactness depend on the source exporter.",
+      "input_alternatives": [
+        [
+          "cad-solid"
+        ],
+        [
+          "b-rep"
+        ]
+      ],
+      "source_ids": [
+        "DSRC-06",
+        "DSRC-03",
+        "DSRC-04",
+        "DSRC-05"
+      ]
+    },
+    {
+      "id": "DOM-06",
+      "name": "Library asset intake and rights record",
+      "inputs": [
+        "source-library"
+      ],
+      "outputs": [
+        "component-record"
+      ],
+      "tools": [
+        "component registry/schema proposal; source license review"
+      ],
+      "source_urls": [
+        "https://www.freecad.org/addons.php?lang=eng_EN",
+        "https://www.kicad.org/libraries/license/",
+        "https://github.com/google-deepmind/mujoco_menagerie",
+        "https://polyhaven.com/license",
+        "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
+      ],
+      "prerequisites": [
+        "Original source identity and item-level license/terms available or explicitly unknown."
+      ],
+      "preserves": [
+        "Original file, URL, retrieved date, hash, attribution, license text/terms and source claims."
+      ],
+      "changes_or_infers": [
+        "Normalize metadata; derived conversions become separate assets with lineage."
+      ],
+      "checks": [
+        "License status per file; duplicate hash; units/frame; source part number and revision when stated."
+      ],
+      "alternatives": [
+        "Keep external link only where local caching/redistribution terms are unclear."
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Create immutable, rights-aware component records instead of treating catalogs as a common license.",
+      "source_ids": [
+        "DSRC-07",
+        "DSRC-08",
+        "DSRC-09",
+        "DSRC-10",
+        "DSRC-11"
+      ]
+    },
+    {
+      "id": "DOM-07",
+      "name": "Place reusable component in assembly",
+      "inputs": [
+        "component-record",
+        "measurement-set"
+      ],
+      "outputs": [
+        "cad-assembly",
+        "assembly-graph"
+      ],
+      "tools": [
+        "OCS; FreeCAD Assembly Workbench; native CAD assembly API"
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+      ],
+      "prerequisites": [
+        "Component has named interface frames or measured mounting datums; target assembly frame known."
+      ],
+      "preserves": [
+        "Component revision/hash, source frame and local geometry."
+      ],
+      "changes_or_infers": [
+        "Adds occurrence transform and assembly connection relations."
+      ],
+      "checks": [
+        "Interface transform consistency; interference; component identities and revision pins."
+      ],
+      "alternatives": [
+        "Manual datum placement; constraint-driven assembly solver."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Reuse a component by transforming its named interfaces rather than editing source geometry.",
+      "source_ids": [
+        "DSRC-12",
+        "DSRC-13"
+      ],
+      "input_alternatives": [
+        [
+          "assembly-graph"
+        ]
+      ]
+    },
+    {
+      "id": "DOM-08",
+      "name": "CAD assembly to articulated robot structure",
+      "inputs": [
+        "cad-assembly",
+        "joint-set",
+        "measurement-set"
+      ],
+      "outputs": [
+        "robot-assembly"
+      ],
+      "tools": [
+        "FreeCAD Assembly Workbench; explicit robot-description authoring; CAD-to-URDF scripts as candidates"
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
+        "https://github.com/boelnasr/CAD_TO_URDF"
+      ],
+      "prerequisites": [
+        "Rigid link groups, parent-child relation, joint type, axis/frame/limits and fixed connections are explicit or reviewed."
+      ],
+      "preserves": [
+        "CAD part IDs, geometry, named joint frames, source measurements and assembly transforms."
+      ],
+      "changes_or_infers": [
+        "Groups occurrences into links; assembly constraints are mapped to robot joints; inferred joint types remain hypotheses."
+      ],
+      "checks": [
+        "Graph connectivity, tree/loop identification, frame transforms, axis signs and limit source."
+      ],
+      "alternatives": [
+        "Author URDF joint records directly; export FreeCAD Assembly4 through community script; inspect CAD_TO_URDF inferred tree."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Translate a mechanical assembly into explicit link and joint semantics; CAD hierarchy alone is insufficient.",
+      "source_ids": [
+        "DSRC-12",
+        "DSRC-14",
+        "DSRC-15"
+      ]
+    },
+    {
+      "id": "DOM-09",
+      "name": "Robot assembly to URDF package",
+      "inputs": [
+        "robot-assembly",
+        "joint-set",
+        "mass-properties"
+      ],
+      "outputs": [
+        "urdf",
+        "mesh"
+      ],
+      "tools": [
+        "URDF XML/Xacro authoring; ROS urdf_tutorial; CAD-to-URDF adapter proposal"
+      ],
+      "source_urls": [
+        "https://github.com/ros/urdf_tutorial",
+        "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
+        "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF"
+      ],
+      "prerequisites": [
+        "Robot link/joint tree defined; mesh units and origins known; mass/inertia records have source and frame."
+      ],
+      "preserves": [
+        "Part IDs, joint axes, limits, mesh lineage, mass/inertia provenance."
+      ],
+      "changes_or_infers": [
+        "CAD links become URDF links; supported tree joints are mapped; CAD history/material layers may be omitted."
+      ],
+      "checks": [
+        "Parse URDF; graph tree; positive mass and valid inertia; FK transforms; mesh path resolution and RViz/model consumer load."
+      ],
+      "alternatives": [
+        "URDF for ROS ecosystem; direct MJCF for simulator-rich model."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Export a reviewed robot assembly into ROS link/joint XML and mesh assets.",
+      "source_ids": [
+        "DSRC-16",
+        "DSRC-17",
+        "DSRC-18"
+      ],
+      "input_alternatives": [
+        [
+          "visual-scene"
+        ],
+        [
+          "collision-set"
+        ]
+      ]
+    },
+    {
+      "id": "DOM-10",
+      "name": "URDF import and MJCF conversion",
+      "inputs": [
+        "urdf",
+        "mesh"
+      ],
+      "outputs": [
+        "mjcf"
+      ],
+      "tools": [
+        "MuJoCo URDF parser/compiler; mjSpec API"
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst"
+      ],
+      "prerequisites": [
+        "URDF files and referenced meshes resolve; mass/inertia and units are coherent."
+      ],
+      "preserves": [
+        "Original URDF; input meshes; declared mapping and MuJoCo version."
+      ],
+      "changes_or_infers": [
+        "URDF subset compiles into MJCF/mjSpec; actuator model absent in URDF; unsupported features require authoring."
+      ],
+      "checks": [
+        "Load/compile; compare joint count/limits/axes and FK; inspect dropped or defaulted fields; validate XML extensions separately."
+      ],
+      "alternatives": [
+        "Author MJCF directly; retain URDF plus MJCF extension if ROS remains source consumer."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Use MuJoCo's URDF parser as a conversion bridge and record its subset/losses.",
+      "source_ids": [
+        "DSRC-19",
+        "DSRC-20",
+        "DSRC-21"
+      ]
+    },
+    {
+      "id": "DOM-11",
+      "name": "Author native MJCF simulation model",
+      "inputs": [
+        "robot-assembly",
+        "joint-set",
+        "collision-set",
+        "mass-properties",
+        "material-set"
+      ],
+      "outputs": [
+        "mjcf"
+      ],
+      "tools": [
+        "MuJoCo MJCF XML and mjSpec API"
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst"
+      ],
+      "prerequisites": [
+        "Consistent units chosen; body tree and element frames explicit; contact/actuation scope defined."
+      ],
+      "preserves": [
+        "Editable XML/spec, mesh assets, frame definitions, physical-property provenance."
+      ],
+      "changes_or_infers": [
+        "CAD components become bodies/geoms; density-based inertial calculation only where explicitly intended."
+      ],
+      "checks": [
+        "MJCF schema/parser compile; inertia validity; joints, contact pairs, solver/actuator parameters and asset paths."
+      ],
+      "alternatives": [
+        "URDF import as a starting point; MuJoCo Menagerie as licensed model/reference."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Maintain a native MuJoCo XML/spec model with explicit simulation-only information.",
+      "source_ids": [
+        "DSRC-19",
+        "DSRC-20",
+        "DSRC-21"
+      ]
+    },
+    {
+      "id": "DOM-12",
+      "name": "Export mesh assets for MuJoCo",
+      "inputs": [],
+      "outputs": [
+        "mesh"
+      ],
+      "tools": [
+        "CAD mesh exporter; Blender; Open CASCADE tessellation"
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+      ],
+      "prerequisites": [
+        "Tessellation settings and mesh local frame/units chosen."
+      ],
+      "preserves": [
+        "Source CAD/B-rep and conversion parameters."
+      ],
+      "changes_or_infers": [
+        "Surface geometry becomes triangles; MuJoCo supports OBJ and binary STL; material assignment is separate."
+      ],
+      "checks": [
+        "Bounds, scale, normals, topology, source/mesh overlay and referenced geom role."
+      ],
+      "alternatives": [
+        "MuJoCo primitives for simple geometry; custom decoder plugin for other asset formats."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Create simulation mesh files and retain their source frame and approximation settings.",
+      "input_alternatives": [
+        [
+          "cad-solid"
+        ],
+        [
+          "b-rep"
+        ],
+        [
+          "visual-scene"
+        ],
+        [
+          "robot-assembly"
+        ]
+      ],
+      "source_ids": [
+        "DSRC-20",
+        "DSRC-22",
+        "DSRC-13"
+      ]
+    },
+    {
+      "id": "DOM-13",
+      "name": "Generate convex collision set",
+      "inputs": [
+        "mesh"
+      ],
+      "outputs": [
+        "collision-set"
+      ],
+      "tools": [
+        "CoACD; V-HACD; primitive fitting"
+      ],
+      "source_urls": [
+        "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+        "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
+      ],
+      "prerequisites": [
+        "Input mesh local frame and scale known; collision features/contact regions identified."
+      ],
+      "preserves": [
+        "Input visual mesh, source hash, license, decomposition parameters and derived hull set."
+      ],
+      "changes_or_infers": [
+        "Nonconvex surface approximated by convex pieces; holes/passages may be filled or altered."
+      ],
+      "checks": [
+        "Hull finite bounds; compare envelope/volume; inspect missing passages; simulator contact fixtures."
+      ],
+      "alternatives": [
+        "Primitive colliders; single convex hull for coarse bounding; use original mesh only where supported and semantics understood."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Derive a collision-specific approximation and review topology-sensitive errors.",
+      "source_ids": [
+        "DSRC-23",
+        "DSRC-24",
+        "DSRC-20"
+      ]
+    },
+    {
+      "id": "DOM-14",
+      "name": "Calculate or import physical mass properties",
+      "inputs": [],
+      "outputs": [
+        "mass-properties"
+      ],
+      "tools": [
+        "CAD kernel mass properties; MuJoCo compiler geom inference; measured scale"
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "prerequisites": [
+        "Geometry scale/frame and density or measured mass stated; inertia reference frame defined."
+      ],
+      "preserves": [
+        "Raw input values, source evidence, units and chosen frame."
+      ],
+      "changes_or_infers": [
+        "Computes volume/COM/inertia from B-rep or mesh and density, or assigns measured values."
+      ],
+      "checks": [
+        "Mass positive; tensor symmetric/positive-definite and triangle inequalities; compare independent mass where available; confirm mesh watertightness."
+      ],
+      "alternatives": [
+        "Measured mass and center of gravity; manufacturer data; calculated mass with explicit density assumption."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Attach physical properties to the exact geometry revision and label calculation assumptions.",
+      "input_alternatives": [
+        [
+          "physical-measurement-set"
+        ],
+        [
+          "material-set",
+          "cad-solid"
+        ],
+        [
+          "material-set",
+          "b-rep"
+        ],
+        [
+          "material-set",
+          "mesh"
+        ],
+        [
+          "material-set",
+          "cad-assembly"
+        ]
+      ],
+      "source_ids": [
+        "DSRC-20",
+        "DSRC-19",
+        "DSRC-01"
+      ]
+    },
+    {
+      "id": "DOM-15",
+      "name": "Author semantic IFC building",
+      "inputs": [
+        "model-brief"
+      ],
+      "outputs": [
+        "ifc"
+      ],
+      "tools": [
+        "Bonsai; IfcOpenShell API"
+      ],
+      "source_urls": [
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_profile_representation/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/index.html"
+      ],
+      "prerequisites": [
+        "Storey/frame, element classes, openings, spatial relations and property requirements declared."
+      ],
+      "preserves": [
+        "Element IDs, semantic relationships, object placements, source dimensions, property values and geometry representation type."
+      ],
+      "changes_or_infers": [
+        "Creates IfcProduct relationships and representations; parametric profiles or mesh representations are distinct IFC options."
+      ],
+      "checks": [
+        "Schema validation, unique GlobalIds, placement, property-set and relationship checks, IDS requirements."
+      ],
+      "alternatives": [
+        "Bonsai authoring UI; scripted IfcOpenShell creation; IFC import followed by semantic enrichment."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Create building elements and semantics with explicit parametric or mesh geometry representation.",
+      "source_ids": [
+        "DSRC-25",
+        "DSRC-26",
+        "DSRC-27"
+      ]
+    },
+    {
+      "id": "DOM-16",
+      "name": "Extract IFC geometry as triangles",
+      "inputs": [
+        "ifc"
+      ],
+      "outputs": [
+        "mesh"
+      ],
+      "tools": [
+        "IfcOpenShell geom.create_shape/iterator; IfcConvert"
+      ],
+      "source_urls": [
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
+      ],
+      "prerequisites": [
+        "IFC schema and length units read; target representation chosen."
+      ],
+      "preserves": [
+        "IFC source, GlobalId/entity map, item/material IDs and object placement."
+      ],
+      "changes_or_infers": [
+        "Geometry API can emit tessellated triangles or OpenCASCADE B-rep; extraction is a derived geometry view."
+      ],
+      "checks": [
+        "Element ID mapping, bounds, face/solid count, volume and units against source; relationships remain in IFC."
+      ],
+      "alternatives": [
+        "Triangulation for display/clash; B-rep where analytic editing/surface inspection is required."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Extract IFC geometry as tessellated triangles and retain its element mapping.",
+      "source_ids": [
+        "DSRC-28",
+        "DSRC-29"
+      ]
+    },
+    {
+      "id": "DOM-17",
+      "name": "IFC to GLB display scene",
+      "inputs": [
+        "ifc"
+      ],
+      "outputs": [
+        "visual-scene"
+      ],
+      "tools": [
+        "IfcOpenShell IfcConvert; Blender; GLB export"
+      ],
+      "source_urls": [
+        "https://docs.ifcopenshell.org/introduction.html",
+        "https://www.blender.org/features/pipeline/",
+        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+      ],
+      "prerequisites": [
+        "Element-to-display mapping and length/orientation conversion are declared."
+      ],
+      "preserves": [
+        "IFC source/hash; stable element IDs; source properties in sidecar mapping where GLB cannot retain them."
+      ],
+      "changes_or_infers": [
+        "BIM objects become render nodes/meshes; semantic/relationship data may be reduced or remapped."
+      ],
+      "checks": [
+        "ID-to-node coverage, bounds, orientation, selected geometry hashes or residuals, output hashes."
+      ],
+      "alternatives": [
+        "Use IFC-native viewer when BIM relationships/properties are the primary task."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Create a visual GLB derivative with provenance and object mapping, not a replacement IFC.",
+      "source_ids": [
+        "DSRC-30",
+        "DSRC-31",
+        "DSRC-32"
+      ]
+    },
+    {
+      "id": "DOM-18",
+      "name": "Raster floor plan to IFC building",
+      "inputs": [
+        "raster-plan",
+        "dimensions",
+        "measurement-set",
+        "source-library",
+        "model-brief"
+      ],
+      "outputs": [
+        "ifc"
+      ],
+      "tools": [
+        "Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
+      ],
+      "prerequisites": [
+        "Known plan scale/control lengths, orientation, floor elevation and interpretation rules for walls/openings."
+      ],
+      "preserves": [
+        "Original raster, scale transform, interpreted linework, dimension sources and uncertain regions."
+      ],
+      "changes_or_infers": [
+        "Pixels interpreted as boundaries and building elements; semantic classification is human/model inference."
+      ],
+      "checks": [
+        "Wall thickness, openings, elevations, spatial containment, area/element checks and IFC validation."
+      ],
+      "alternatives": [
+        "Vector drawing to sketch if original CAD exists; manual IFC authoring for high-confidence boundaries."
+      ],
+      "automation": "assisted",
+      "evidence_status": "documented_capability",
+      "summary": "Build semantic IFC from a raster plan, normalized building brief, dimensions, measured controls and licensed component sources; document scale, axes, elevations and interpretation decisions.",
+      "source_ids": [
+        "DSRC-01",
+        "DSRC-25"
+      ]
+    },
+    {
+      "id": "DOM-19",
+      "name": "Register scan to building frame",
+      "inputs": [
+        "ifc",
+        "measurement-set",
+        "point-cloud"
+      ],
+      "outputs": [
+        "registration-transform",
+        "point-cloud"
+      ],
+      "tools": [
+        "COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+      ],
+      "prerequisites": [
+        "At least one common frame datum and distributed control points/lengths; scan sensor calibration available."
+      ],
+      "preserves": [
+        "Raw images/depth, capture settings, raw reconstruction and all transforms."
+      ],
+      "changes_or_infers": [
+        "Aligns the scan to IFC coordinates; registration adjusts pose/scale, not building semantics."
+      ],
+      "checks": [
+        "Registration residuals and held-out distances; check local regions separately and flag occlusion."
+      ],
+      "alternatives": [
+        "Surveyed control transformation; ICP refinement after coarse frame alignment."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Register the scan point cloud to the IFC/building frame using measured controls; output the transform and aligned point cloud. Camera poses are not created unless camera observations are supplied.",
+      "source_ids": [
+        "DSRC-33",
+        "DSRC-13"
+      ]
+    },
+    {
+      "id": "DOM-20",
+      "name": "Photos/video to camera solution, point cloud and mesh",
+      "inputs": [
+        "photo-set"
+      ],
+      "outputs": [
+        "camera-solution",
+        "point-cloud"
+      ],
+      "tools": [
+        "COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "prerequisites": [
+        "Overlapping sharp views, camera metadata/calibration where available, scene motion/lighting assessed and scale controls identified."
+      ],
+      "preserves": [
+        "Original frames, camera solution, control points, reconstruction settings, sparse/dense outputs."
+      ],
+      "changes_or_infers": [
+        "Videos sampled into images; camera poses and dense surfaces are estimated from image correspondences."
+      ],
+      "checks": [
+        "Registered-view coverage, reprojection residuals, independent scale distances, surface holes and withheld checks."
+      ],
+      "alternatives": [
+        "RGB-D/LiDAR for metric depth; single-image learned mesh only for visual proposal."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Reconstruct visible geometry and camera poses from image sequences; monocular scale requires external controls.",
+      "source_ids": [
+        "DSRC-33"
+      ]
+    },
+    {
+      "id": "DOM-21",
+      "name": "Depth frames to registered point cloud or mesh",
+      "inputs": [
+        "depth-frames",
+        "measurement-set"
+      ],
+      "outputs": [
+        "point-cloud"
+      ],
+      "tools": [
+        "Open3D; CloudCompare"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "prerequisites": [
+        "Sensor model, calibration, units, extrinsics and depth validity/range known."
+      ],
+      "preserves": [
+        "Raw depth/color, frame timestamps, sensor coordinates and transforms."
+      ],
+      "changes_or_infers": [
+        "Registration, filtering and surface fusion combine depth samples into new geometry."
+      ],
+      "checks": [
+        "Loop closure, registration residual, independent lengths, depth noise and coverage."
+      ],
+      "alternatives": [
+        "Photogrammetry for passive optical scenes; per-frame point cloud where fusion is inappropriate."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Fuse calibrated depth observations into metric geometry while retaining the raw sensor frames.",
+      "source_ids": [
+        "DSRC-33"
+      ]
+    },
+    {
+      "id": "DOM-22",
+      "name": "Photographs to Gaussian/NeRF visual scene",
+      "inputs": [
+        "photo-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "gaussian-scene"
+      ],
+      "tools": [
+        "Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "prerequisites": [
+        "Camera poses and training configuration available; GPU/runtime/weight license assessed for selected implementation."
+      ],
+      "preserves": [
+        "Original images, camera poses, training settings, checkpoints and output license provenance."
+      ],
+      "changes_or_infers": [
+        "Learns view-dependent appearance; extracted depth/mesh is a further inferred derivative."
+      ],
+      "checks": [
+        "Held-out viewpoints, appearance consistency, depth/geometry consistency and scale status."
+      ],
+      "alternatives": [
+        "COLMAP/MVS mesh for surface-oriented output; Blender scene reconstruction for manually authored context."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Build a navigable visual reconstruction and keep it separate from dimensional CAD evidence.",
+      "source_ids": [
+        "DSRC-33"
+      ]
+    },
+    {
+      "id": "DOM-23",
+      "name": "Scan or mesh to parametric CAD remodeling",
+      "inputs": [
+        "point-cloud",
+        "measurement-set",
+        "model-brief"
+      ],
+      "outputs": [
+        "parametric-source",
+        "cad-solid"
+      ],
+      "tools": [
+        "Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "prerequisites": [
+        "Source scan frame/scale calibrated; independent interface dimensions and target function stated."
+      ],
+      "preserves": [
+        "Source point cloud/mesh, control measurements, fits, residual map and authored feature dimensions."
+      ],
+      "changes_or_infers": [
+        "Selected observed regions are approximated by constrained planes/cylinders/features; hidden geometry is a proposal unless measured."
+      ],
+      "checks": [
+        "Held-out scan-to-CAD distances; functional interfaces; solid validity and saved-file reopen."
+      ],
+      "alternatives": [
+        "Retain mesh when only appearance/clearance context is needed; direct reverse-engineered surface B-rep if warranted."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Convert observed geometry into editable CAD features without promoting inferred regions to measured facts.",
+      "source_ids": [
+        "DSRC-33",
+        "DSRC-02"
+      ],
+      "input_alternatives": [
+        [
+          "mesh"
+        ]
+      ]
+    },
+    {
+      "id": "DOM-24",
+      "name": "Assemble and inspect Blender scene",
+      "inputs": [],
+      "outputs": [
+        "visual-scene"
+      ],
+      "tools": [
+        "Blender Python API; Blender MCP; background Blender scripts"
+      ],
+      "source_urls": [
+        "https://www.blender.org/features/pipeline/",
+        "https://projects.blender.org/lab/blender_mcp/src/branch/main",
+        "https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst",
+        "https://uxplanet.org/3d-modeling-with-claude-code-a-practical-blender-workflow-97e6e0b536b0"
+      ],
+      "prerequisites": [
+        "Input adapters resolve; transform, units, geometry role and licenses recorded."
+      ],
+      "preserves": [
+        "Source files, object/component IDs, import mapping, unit and axis transforms."
+      ],
+      "changes_or_infers": [
+        "Builds a render scene, materials/cameras, mesh derivatives; scene-only outputs can drop CAD/BIM/robot semantics."
+      ],
+      "checks": [
+        "Transform/numeric bounds, linked asset paths, representative camera views, exported GLB reopen and object mapping."
+      ],
+      "alternatives": [
+        "Direct scripted background processing for repeatability; MCP for iterative live inspection; OCS remains engineering baseline."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Use Blender for visual composition, mesh work and inspection while retaining native domain models; a camera-solution input alone can produce a camera-only scene.",
+      "source_ids": [
+        "DSRC-31",
+        "DSRC-34",
+        "DSRC-35",
+        "DSRC-39"
+      ],
+      "input_alternatives": [
+        [
+          "cad-solid"
+        ],
+        [
+          "mesh"
+        ],
+        [
+          "ifc"
+        ],
+        [
+          "robot-assembly"
+        ],
+        [
+          "camera-solution"
+        ]
+      ]
+    },
+    {
+      "id": "DOM-25",
+      "name": "Create fabrication package",
+      "inputs": [
+        "dimensions",
+        "material-set"
+      ],
+      "outputs": [
+        "fabrication-package"
+      ],
+      "tools": [
+        "Native CAD drawing/workbench; STEP/DXF/PDF exporters"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+      ],
+      "prerequisites": [
+        "Design revision, manufacturing process, required dimensions/tolerances and materials sourced."
+      ],
+      "preserves": [
+        "Native source, dimensions, drawing references, part IDs and export settings."
+      ],
+      "changes_or_infers": [
+        "Creates manufacturing views, annotations and derived exports; exports may omit feature history and tolerances."
+      ],
+      "checks": [
+        "Dimension source trace, drawing/model revision agreement, units, holes/bounds, recipient reopen."
+      ],
+      "alternatives": [
+        "2D DXF profile package for flat parts; STEP plus drawing for machined geometry."
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Produce drawings and exchange geometry tied to one authoritative model revision.",
+      "source_ids": [
+        "DSRC-01",
+        "DSRC-03"
+      ],
+      "input_alternatives": [
+        [
+          "cad-solid"
+        ],
+        [
+          "cad-assembly"
+        ]
+      ]
+    },
+    {
+      "id": "DOM-26",
+      "name": "Version and reuse component revision",
+      "inputs": [
+        "component-record"
+      ],
+      "outputs": [
+        "component-record"
+      ],
+      "tools": [
+        "content-addressed files; Git metadata; source/license registry"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "prerequisites": [
+        "Stable component ID, exact source bytes, item terms and conversion lineage recorded."
+      ],
+      "preserves": [
+        "Existing revisions and assemblies pinning them; original files are immutable."
+      ],
+      "changes_or_infers": [
+        "New source content or license produces a new revision/digest; derived files link to input/tool versions."
+      ],
+      "checks": [
+        "Hash consistency, dependency/license closure, revision pinning and reproducible export manifests."
+      ],
+      "alternatives": [
+        "Git for small source assets; LFS/content-addressed storage for large licensed assets after policy check."
+      ],
+      "automation": "scripted",
+      "evidence_status": "proposed_composition",
+      "summary": "Keep reusable assets immutable and project assemblies reproducible against pinned revisions.",
+      "source_ids": [
+        "DSRC-13",
+        "DSRC-01"
+      ]
+    },
+    {
+      "id": "DOM-27",
+      "name": "Extract IFC geometry as OpenCASCADE B-rep",
+      "inputs": [
+        "ifc"
+      ],
+      "outputs": [
+        "b-rep"
+      ],
+      "tools": [
+        "IfcOpenShell geom.create_shape/iterator using OpenCASCADE kernel"
+      ],
+      "source_urls": [
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
+      ],
+      "prerequisites": [
+        "IFC schema and length units read; target elements have geometry interpretable by selected kernel."
+      ],
+      "preserves": [
+        "IFC source, element GlobalIds, placements and mapping metadata."
+      ],
+      "changes_or_infers": [
+        "Extracts a kernel B-rep as a derived shape; IFC semantics remain in source IFC."
+      ],
+      "checks": [
+        "B-rep validity, face types, bounds, volume and entity-ID mapping."
+      ],
+      "alternatives": [
+        "DOM-16 tessellated extraction for display or mesh consumers."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Extract analytic/spline boundary representations from IFC where the kernel supports them.",
+      "source_ids": [
+        "DSRC-28",
+        "DSRC-29"
+      ]
+    },
+    {
+      "id": "DOM-28",
+      "name": "Dense multi-view stereo to point cloud and mesh",
+      "inputs": [
+        "photo-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "point-cloud",
+        "mesh"
+      ],
+      "tools": [
+        "COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "prerequisites": [
+        "Camera solution and image set correspond; scale/control transform is available for metric results."
+      ],
+      "preserves": [
+        "Sparse camera solution, source images, dense settings and intermediate depth maps where available."
+      ],
+      "changes_or_infers": [
+        "Estimates visible depth/surfaces and fuses points; mesh topology and texture are derived."
+      ],
+      "checks": [
+        "Coverage, holes, reprojection, independent dimensions and surface residuals."
+      ],
+      "alternatives": [
+        "Depth sensor integration via DOM-21; visual scene via DOM-22/30."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Compute dense surfaces from a previously estimated camera solution.",
+      "source_ids": [
+        "DSRC-33"
+      ]
+    },
+    {
+      "id": "DOM-29",
+      "name": "Point cloud to surface mesh",
+      "inputs": [
+        "point-cloud"
+      ],
+      "outputs": [
+        "mesh"
+      ],
+      "tools": [
+        "Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "prerequisites": [
+        "Point cloud has known frame, scale, normals if required, and density/noise characteristics."
+      ],
+      "preserves": [
+        "Input cloud, processing parameters, local frame and mesh lineage."
+      ],
+      "changes_or_infers": [
+        "Interpolates surfaces between samples; fills and smooths gaps depending on method."
+      ],
+      "checks": [
+        "Surface deviation to source cloud, holes, components, normals and over-smoothed features."
+      ],
+      "alternatives": [
+        "Keep point cloud if no surface fill is justified; direct CAD remodeling via DOM-23."
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Create a mesh surface from point samples and retain the interpolation as an inferred derivative.",
+      "source_ids": [
+        "DSRC-33"
+      ]
+    },
+    {
+      "id": "DOM-30",
+      "name": "Photos to NeRF visual scene",
+      "inputs": [
+        "photo-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "nerf-scene"
+      ],
+      "tools": [
+        "Nerfstudio; COLMAP camera input"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "prerequisites": [
+        "Camera poses, training parameters, model/checkpoint license and runtime requirements are recorded."
+      ],
+      "preserves": [
+        "Source images, poses, configuration, checkpoints and export lineage."
+      ],
+      "changes_or_infers": [
+        "Learns view-dependent scene appearance; extracted geometry is an additional inferred derivative."
+      ],
+      "checks": [
+        "Held-out view appearance, camera consistency and separate depth/mesh geometry checks."
+      ],
+      "alternatives": [
+        "DOM-22 Gaussian scene; DOM-28 photogrammetric surface reconstruction."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Train a NeRF-style visual scene while preserving capture and model provenance.",
+      "source_ids": [
+        "DSRC-33"
+      ]
+    },
+    {
+      "id": "DOM-31",
+      "name": "Author assembly graph and joint set",
+      "tools": [
+        "documented adapter or explicit authoring step"
+      ],
+      "prerequisites": [
+        "Assembly part identities and placements exist; brief states intended motion or records unresolved motion questions."
+      ],
+      "preserves": [
+        "Source CAD geometry and measured interface records."
+      ],
+      "changes_or_infers": [
+        "Creates explicit graph and joint records; interpretation of motion intent remains reviewable."
+      ],
+      "checks": [
+        "Each movable relation has parent/child, type, origin, axis, limits/units and source; graph topology is reported as tree or loop."
+      ],
+      "alternatives": [
+        "For a documented existing assembly/joint mapping, use the relevant source app/exporter adapter."
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "inputs": [
+        "cad-assembly",
+        "measurement-set",
+        "model-brief"
+      ],
+      "outputs": [
+        "assembly-graph",
+        "joint-set"
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/ros/urdf_tutorial"
+      ],
+      "summary": "Explicitly author parent-child links, joint types, origins, axes and limits from assembly geometry, measured interfaces and stated motion intent; software does not infer engineering intent.",
+      "source_ids": [
+        "DSRC-12",
+        "DSRC-16"
+      ]
+    },
+    {
+      "id": "DOM-32",
+      "name": "Map CAD link geometry to MJCF body tree",
+      "tools": [
+        "documented adapter or explicit authoring step"
+      ],
+      "prerequisites": [
+        "Selected MJCF model and per-asset rights record are identified; CAD part-to-body map and frame transforms are reviewed."
+      ],
+      "preserves": [
+        "MJCF joint topology, actuator/sensor declarations and model source revision."
+      ],
+      "changes_or_infers": [
+        "Adds/replaces geometry and may alter visual appearance or collision representation."
+      ],
+      "checks": [
+        "All mapped parts resolve; compare body transforms and bounds; compile model; inspect visual and collision roles separately."
+      ],
+      "alternatives": [
+        "Rebuild the MJCF body tree directly when the selected seed model cannot accept a geometry mapping."
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "inputs": [
+        "mjcf",
+        "cad-assembly",
+        "joint-set",
+        "measurement-set",
+        "component-record"
+      ],
+      "outputs": [
+        "mjcf"
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
+      ],
+      "summary": "Map a rights-recorded CAD component to existing MJCF bodies and replace/add geometry while preserving declared body/joint topology; require explicit part-to-body mapping.",
+      "source_ids": [
+        "DSRC-19",
+        "DSRC-20"
+      ]
+    },
+    {
+      "id": "DOM-33",
+      "name": "Add environment collision geometry to MJCF",
+      "tools": [
+        "documented adapter or explicit authoring step"
+      ],
+      "prerequisites": [
+        "Source MJCF/environment frames are named; collision-set approximation and transform are recorded."
+      ],
+      "preserves": [
+        "Robot body/joint graph and source scan/mesh."
+      ],
+      "changes_or_infers": [
+        "Adds static environment geoms and collision pieces."
+      ],
+      "checks": [
+        "Compile model; compare environment bounds and transforms; inspect passage openings and contact fixtures."
+      ],
+      "alternatives": [
+        "Use primitives, analytic shapes or simulator-native geoms when the environment does not need mesh colliders."
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "inputs": [
+        "mjcf",
+        "mesh",
+        "collision-set"
+      ],
+      "outputs": [
+        "mjcf"
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst"
+      ],
+      "summary": "Add registered environment geometry and colliders to an existing MJCF scene, preserving scene frame and explicit collision approximation.",
+      "source_ids": [
+        "DSRC-20",
+        "DSRC-19"
+      ]
+    },
+    {
+      "id": "DOM-34",
+      "name": "Author static MuJoCo environment from BIM mesh",
+      "tools": [
+        "documented adapter or explicit authoring step"
+      ],
+      "prerequisites": [
+        "Environment mesh and collision pieces share a known frame/scale; source IFC IDs are mapped."
+      ],
+      "preserves": [
+        "IFC source project and element IDs."
+      ],
+      "changes_or_infers": [
+        "Creates static MuJoCo geom assets from IFC-derived derivatives."
+      ],
+      "checks": [
+        "Compile model; compare element coverage, bounds, transforms and collision simplification."
+      ],
+      "alternatives": [
+        "Author a static MJCF environment directly from primitives or other verified mesh sources."
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "inputs": [
+        "mesh",
+        "collision-set"
+      ],
+      "outputs": [
+        "mjcf"
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
+      ],
+      "summary": "Create a static MuJoCo world from IFC-derived display mesh and collision representation; this operation does not author a robot.",
+      "source_ids": [
+        "DSRC-19",
+        "DSRC-20"
+      ]
+    },
+    {
+      "id": "DOM-35",
+      "name": "Place library component in semantic IFC",
+      "tools": [
+        "documented adapter or explicit authoring step"
+      ],
+      "prerequisites": [
+        "Component record identifies exact geometry bytes, per-asset terms and placement interfaces; IFC project units and target frame known."
+      ],
+      "preserves": [
+        "Existing IFC entity identities, component source provenance and original component bytes."
+      ],
+      "changes_or_infers": [
+        "Adds a placed instance and semantic class/properties supported by the selected IFC authoring adapter."
+      ],
+      "checks": [
+        "IFC validation; placement and classification; source component mapping and stable identity; rights record attached."
+      ],
+      "alternatives": [
+        "Author the IFC component instance directly with IfcOpenShell API or another IFC-authoring application."
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "inputs": [
+        "ifc",
+        "component-record",
+        "measurement-set"
+      ],
+      "outputs": [
+        "ifc"
+      ],
+      "source_urls": [
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://www.freecad.org/addons.php?lang=eng_EN"
+      ],
+      "summary": "Place a licensed component instance in an IFC project with source identity, placement and semantic classification retained where representable.",
+      "source_ids": [
+        "DSRC-25",
+        "DSRC-07"
+      ]
+    },
+    {
+      "id": "DOM-37",
+      "name": "Author robot assembly from CAD component",
+      "inputs": [
+        "cad-solid",
+        "measurement-set",
+        "model-brief",
+        "component-record"
+      ],
+      "outputs": [
+        "cad-assembly",
+        "assembly-graph",
+        "joint-set"
+      ],
+      "tools": [
+        "FreeCAD Assembly Workbench or explicit CAD assembly authoring"
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/ros/urdf_tutorial"
+      ],
+      "prerequisites": [
+        "The brief states the component role, parent link, motion intent, axis and limits or records an ambiguity."
+      ],
+      "preserves": [
+        "Source STEP/CAD identity, component placement evidence and units."
+      ],
+      "changes_or_infers": [
+        "Authors assembly occurrence, frame and joint records from explicit requirements and measurements."
+      ],
+      "checks": [
+        "Assembly placement and interfaces match measured controls; joint type/axis/limits are reviewed before export."
+      ],
+      "alternatives": [
+        "For an existing assembly, use DOM-08 with authored joint-set."
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "summary": "Create a robot assembly occurrence and explicit joints from the sourced CAD component, stated role and measured interfaces; no joint type is inferred from mesh shape.",
+      "source_ids": [
+        "DSRC-12",
+        "DSRC-16"
+      ]
+    },
+    {
+      "id": "DOM-38",
+      "name": "Import STEP solid into CAD representation",
+      "inputs": [
+        "step-file"
+      ],
+      "outputs": [
+        "cad-solid"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/local-baseline.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+      ],
+      "summary": "Import a supplied neutral STEP file to the project CAD representation; a faceted STEP source remains faceted after import. **Exact adapter fidelity depends on importer.**",
+      "tools": [
+        "FreeCAD/Open CASCADE STEP adapter"
+      ],
+      "prerequisites": [
+        "Source schema, units and assembly structure are inspected before import/export."
+      ],
+      "preserves": [
+        "Original STEP bytes and provenance; imported product identity and placement where available."
+      ],
+      "changes_or_infers": [
+        "Import creates a CAD representation; export creates a neutral exchange file that may lose native history."
+      ],
+      "checks": [
+        "Reopen in independent consumer; compare bounds/volume/part count and known interfaces."
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "source_ids": [
+        "DSRC-06",
+        "DSRC-04"
+      ],
+      "alternatives": [
+        "Use the receiving CAD application’s native STEP importer and preserve the source STEP file."
+      ]
+    },
+    {
+      "id": "DOM-39",
+      "name": "Export STEP assembly",
+      "inputs": [
+        "cad-assembly"
+      ],
+      "outputs": [
+        "step-file"
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+      ],
+      "summary": "Export named CAD assembly instances and placements to STEP exchange where the selected exporter preserves assembly structure; verify the exported part tree.",
+      "tools": [
+        "FreeCAD/Open CASCADE STEP adapter"
+      ],
+      "prerequisites": [
+        "Source schema, units and assembly structure are inspected before import/export."
+      ],
+      "preserves": [
+        "Original STEP bytes and provenance; imported product identity and placement where available."
+      ],
+      "changes_or_infers": [
+        "Import creates a CAD representation; export creates a neutral exchange file that may lose native history."
+      ],
+      "checks": [
+        "Reopen in independent consumer; compare bounds/volume/part count and known interfaces."
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "source_ids": [
+        "DSRC-12",
+        "DSRC-03"
+      ],
+      "alternatives": [
+        "Export individual solids separately when the target consumer cannot preserve assembly structure."
+      ]
+    },
+    {
+      "id": "DOM-40",
+      "name": "Script-parametric CAD authoring",
+      "inputs": [
+        "model-brief"
+      ],
+      "outputs": [
+        "parametric-source",
+        "cad-solid"
+      ],
+      "tools": [
+        "CadQuery; build123d; OpenSCAD; FreeCAD Python"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "prerequisites": [
+        "Parameters, units, datum and solid design intent are explicit."
+      ],
+      "preserves": [
+        "Executable source, package/version, parameter names and input provenance."
+      ],
+      "changes_or_infers": [
+        "Script defines feature/CSG operations; generated B-rep may differ by kernel/version."
+      ],
+      "checks": [
+        "Run source in declared environment; validate solid topology and controlling dimensions; compare saved export and source."
+      ],
+      "alternatives": [
+        "Use DOM-04 application-native solid authoring when feature/script history is not required."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Generate a CAD solid from a reviewed, editable parametric script; code source is retained as a separate product.",
+      "source_ids": [
+        "DSRC-03",
+        "DSRC-01"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "DOM-R01",
+      "name": "Raster plan and site survey to registered IFC",
+      "inputs": [
+        "text",
+        "raster-plan",
+        "photo-set",
+        "depth-frames",
+        "dimensions",
+        "measurement-set",
+        "source-library"
+      ],
+      "goal": "Create a semantic IFC building from a plan and brief; register photo/depth evidence to its frame; derive display geometry.",
+      "steps": [
+        "DOM-01",
+        "DOM-18",
+        "DOM-20",
+        "DOM-21",
+        "DOM-19",
+        "DOM-16",
+        "DOM-17"
+      ],
+      "handoffs": [
+        "Normalized brief and plan create one semantic IFC; photo/depth capture yields camera/point-cloud evidence; scan-to-IFC registration returns transform and aligned cloud with control residuals. Camera poses are separate outputs of photogrammetry, not scan registration."
+      ],
+      "source_urls": [
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/index.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Plan and written brief create IFC; image/depth capture yields camera and point-cloud evidence; registration and geometry extraction produce inspected derivatives."
+    },
+    {
+      "id": "DOM-R02",
+      "name": "Manufacturer STEP component to robot link",
+      "inputs": [
+        "step-file",
+        "measurement-set",
+        "material-set",
+        "source-library",
+        "model-brief"
+      ],
+      "goal": "Create a sourced component record and a robot link representation with explicit interfaces, joint intent and mass properties.",
+      "steps": [
+        "DOM-38",
+        "DOM-06",
+        "DOM-14",
+        "DOM-37",
+        "DOM-08",
+        "DOM-12",
+        "DOM-13",
+        "DOM-09"
+      ],
+      "handoffs": [
+        "The supplied neutral STEP file is the actual seed; import fidelity is checked. DOM-37 explicitly authors an assembly occurrence and joints from model brief and measured interfaces; software does not infer engineering intent."
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/ros/urdf_tutorial",
+        "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Intake records the file and terms; explicit assembly/joint authoring defines its robot role; physical properties, collision, and URDF package are separate checked products."
+    },
+    {
+      "id": "DOM-R03",
+      "name": "CAD robot assembly to URDF then MJCF",
+      "inputs": [
+        "cad-assembly",
+        "joint-set",
+        "measurement-set",
+        "material-set"
+      ],
+      "goal": "Produce a robot assembly representation, URDF package and MuJoCo MJCF derivative.",
+      "steps": [
+        "DOM-08",
+        "DOM-12",
+        "DOM-13",
+        "DOM-14",
+        "DOM-09",
+        "DOM-10"
+      ],
+      "handoffs": [
+        "The CAD assembly and joint set enter as actual sources. URDF conversion produces an MJCF candidate that must be checked for unsupported actuators, frame changes, collision approximations and physical parameters."
+      ],
+      "source_urls": [
+        "https://github.com/ros/urdf_tutorial",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
+      ],
+      "status": "proposed_composition",
+      "summary": "Explicit robot joints plus CAD geometry become a robot structure, collision and mass-property assets, URDF, and MJCF conversion."
+    },
+    {
+      "id": "DOM-R04",
+      "name": "CAD robot, Menagerie kinematics and scanned environment to MJCF",
+      "inputs": [
+        "mjcf",
+        "cad-assembly",
+        "joint-set",
+        "measurement-set",
+        "photo-set",
+        "depth-frames",
+        "source-library"
+      ],
+      "goal": "Use a real Menagerie MJCF model as a kinematic starting point, map CAD geometry to its bodies, and add scan-derived environment collision geometry.",
+      "steps": [
+        "DOM-06",
+        "DOM-08",
+        "DOM-12",
+        "DOM-20",
+        "DOM-21",
+        "DOM-28",
+        "DOM-29",
+        "DOM-13",
+        "DOM-32",
+        "DOM-33"
+      ],
+      "handoffs": [
+        "Seed MJCF must be an identified Menagerie model recorded through DOM-06 with its per-model licence. Mapping the sourced CAD component to MJCF body names and replacing visuals are explicit human-reviewed mappings; scanned surfaces become approximate collision meshes."
+      ],
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco_menagerie",
+        "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst"
+      ],
+      "status": "proposed_composition",
+      "summary": "A selected Menagerie MJCF supplies real kinematics; CAD geometry is mapped to its bodies; capture data supplies an environment mesh and collision set for an MJCF scene."
+    },
+    {
+      "id": "DOM-R05",
+      "name": "Sketch overlay on existing CAD model to controlled revision",
+      "inputs": [
+        "raster-sketch",
+        "vector-drawing",
+        "cad-solid",
+        "model-brief",
+        "dimensions",
+        "measurement-set"
+      ],
+      "goal": "Compare a sketch overlay with an existing CAD model and create an explicitly reviewed geometric revision.",
+      "steps": [
+        "DOM-02",
+        "DOM-03",
+        "DOM-04",
+        "DOM-05",
+        "DOM-24"
+      ],
+      "handoffs": [
+        "Existing CAD solid remains the starting model; do not overwrite. The resulting profile/solid is a proposed revision and STEP is an exchange derivative with recorded fidelity."
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "status": "proposed_composition",
+      "summary": "Calibrate sketch and drawing evidence, author a revision from a brief/profile, inspect it against the prior model, and export a separate exchange file."
+    },
+    {
+      "id": "DOM-R06",
+      "name": "Photo set to measured, reusable component",
+      "inputs": [
+        "photo-set",
+        "measurement-set",
+        "model-brief",
+        "source-library"
+      ],
+      "goal": "Build a traceable parametric component from a photo set and measurements, then register and export it for reuse.",
+      "steps": [
+        "DOM-06",
+        "DOM-20",
+        "DOM-28",
+        "DOM-23",
+        "DOM-40",
+        "DOM-12",
+        "DOM-13",
+        "DOM-26"
+      ],
+      "handoffs": [
+        "Photogrammetry mesh is reference evidence; measurements constrain CAD dimensions. Keep reconstructed mesh and parametric CAD as separate linked assets. Component licensing applies to source model/assets individually."
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+      ],
+      "status": "proposed_composition",
+      "summary": "Intake source rights, reconstruct a mesh reference, remodel measured geometry parametrically and create a versioned reusable component record."
+    },
+    {
+      "id": "DOM-R07",
+      "name": "BIM library component to semantic IFC, display scene and static MuJoCo environment",
+      "inputs": [
+        "source-library",
+        "model-brief",
+        "measurement-set"
+      ],
+      "goal": "Place a licensed BIM component in a semantic IFC building, generate display geometry and a static simulation world.",
+      "steps": [
+        "DOM-06",
+        "DOM-15",
+        "DOM-35",
+        "DOM-16",
+        "DOM-17",
+        "DOM-13",
+        "DOM-34"
+      ],
+      "handoffs": [
+        "IFC remains semantic source. Triangle mesh and collider are derivatives; a static MuJoCo world contains no articulated robot. Preserve library/source licensing on the component record."
+      ],
+      "source_urls": [
+        "https://www.freecad.org/addons.php?lang=eng_EN",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst"
+      ],
+      "status": "proposed_composition",
+      "summary": "A licensed BIM part is placed in a semantic IFC project; IFC geometry is converted to display mesh and collision representation for a static MuJoCo environment."
+    },
+    {
+      "id": "DOM-R08",
+      "name": "Scanned environment to collision geometry in an existing robot MJCF",
+      "inputs": [
+        "point-cloud",
+        "mjcf"
+      ],
+      "goal": "Add a scan-derived collider to an existing MJCF scene while retaining the source point cloud and explicit approximation record.",
+      "steps": [
+        "DOM-29",
+        "DOM-13",
+        "DOM-33"
+      ],
+      "handoffs": [
+        "The robot MJCF is an actual seed. Point-cloud triangulation and convex decomposition alter surface geometry; preserve originals, component frames and algorithm/version/settings."
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
+        "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE"
+      ],
+      "status": "proposed_composition",
+      "summary": "Convert registered scan points to a mesh, generate an explicit collision approximation and add it to an existing MJCF scene."
+    }
+  ],
+  "ideas": [
+    {
+      "id": "DOM-I01",
+      "name": "One canonical component schema with domain adapters",
+      "summary": "Store identity, source/license, geometry representations, units/frames and physical values once; generate IFC, URDF, MJCF and visual exports through explicit adapters.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+      ],
+      "status": "proposal",
+      "next_check": "Prototype one mechanical component and one IFC product; document representation loss in each export.",
+      "source_ids": [
+        "DSRC-01",
+        "DSRC-13"
+      ]
+    },
+    {
+      "id": "DOM-I02",
+      "name": "Assembly to URDF workflow",
+      "summary": "Use explicit joints and interface frames from CAD assembly as robot-description inputs; keep automated joint inference as a reviewable suggestion.",
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/ros/urdf_tutorial",
+        "https://github.com/boelnasr/CAD_TO_URDF"
+      ],
+      "status": "proposal",
+      "next_check": "Compare FreeCAD assembly joint records to a URDF fixture and inspect one STEP-inference converter without treating its output as verified.",
+      "source_ids": [
+        "DSRC-12",
+        "DSRC-16",
+        "DSRC-15"
+      ]
+    },
+    {
+      "id": "DOM-I03",
+      "name": "Open-chain and closed-chain robot models",
+      "summary": "Use URDF for link/joint tree consumers; investigate MJCF native constraints or a multibody formulation for closed loops and parallel mechanisms.",
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/ros/urdf_tutorial"
+      ],
+      "status": "research_question",
+      "next_check": "Find current primary documentation for closed-chain mechanisms in the chosen robot simulator and define a loop-conversion fixture.",
+      "source_ids": [
+        "DSRC-19",
+        "DSRC-16"
+      ]
+    },
+    {
+      "id": "DOM-I04",
+      "name": "CAD solid to visual/collision/inertial triple",
+      "summary": "Every robot link has separately authored high-detail visual geometry, simplified collision pieces and sourced mass/inertia attached to explicit frames.",
+      "source_urls": [
+        "https://github.com/ros/urdf_tutorial",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
+      ],
+      "status": "proposal",
+      "next_check": "Build a link with a non-convex opening and compare mesh collision, convex decomposition and primitive fit.",
+      "source_ids": [
+        "DSRC-16",
+        "DSRC-20"
+      ]
+    },
+    {
+      "id": "DOM-I05",
+      "name": "Plan plus scan to IFC as-built model",
+      "summary": "Use measured scan alignment as surface evidence, plan interpretation for semantic element boundaries and IFC relationships for the building model.",
+      "source_urls": [
+        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html"
+      ],
+      "status": "proposal",
+      "next_check": "Define registration-control/held-out-control split and document how uncertain wall/opening boundaries enter IFC.",
+      "source_ids": [
+        "DSRC-32",
+        "DSRC-28"
+      ]
+    },
+    {
+      "id": "DOM-I06",
+      "name": "CAD/STEP/B-rep fidelity gates",
+      "summary": "Use STEP for geometry exchange while comparing the actual exporter/importer pair; source formats differ in whether they preserve analytic faces, assemblies and parametric history.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/local-baseline.md",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html"
+      ],
+      "status": "proposal",
+      "next_check": "Use a cylinder, hole and two-part assembly fixture; report face types, names, bounds, volume and lost feature history.",
+      "source_ids": [
+        "DSRC-06",
+        "DSRC-28"
+      ]
+    },
+    {
+      "id": "DOM-I07",
+      "name": "IFC parametric element versus mesh representation",
+      "summary": "Use parametric profiles/sweeps for elements where editability and quantities matter; use IFC mesh representations for complex as-built/furniture shapes and keep classification/property mapping explicit.",
+      "source_urls": [
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/index.html"
+      ],
+      "status": "proposal",
+      "next_check": "Export profile-extrusion and mesh forms of one element and compare import fidelity and IDS/property retention.",
+      "source_ids": [
+        "DSRC-25",
+        "DSRC-27"
+      ]
+    },
+    {
+      "id": "DOM-I08",
+      "name": "Scan to CAD with evidence labels",
+      "summary": "Maintain scan, controls, fitted primitive/features, independent residuals and CAD source as separate linked representations.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "status": "proposal",
+      "next_check": "Test one manufactured mechanical component with held-out interface dimensions.",
+      "source_ids": [
+        "DSRC-33",
+        "DSRC-02"
+      ]
+    },
+    {
+      "id": "DOM-I09",
+      "name": "Menagerie robot model reuse",
+      "summary": "Reuse licensed MJCF structures and collision/visual examples as simulator fixtures or references, while checking each model's license and model-specific fidelity statement.",
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md"
+      ],
+      "status": "proposal",
+      "next_check": "Select a model whose license permits the intended use and inspect its README, assets and revision before intake.",
+      "source_ids": [
+        "DSRC-14"
+      ]
+    },
+    {
+      "id": "DOM-I10",
+      "name": "Rights-aware reusable asset catalog",
+      "summary": "Store vendor CAD and community models with item-level rights and immutable source hashes; separate asset licenses from tool licenses and project license.",
+      "source_urls": [
+        "https://www.freecad.org/addons.php?lang=eng_EN",
+        "https://www.kicad.org/libraries/license/",
+        "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
+      ],
+      "status": "proposal",
+      "next_check": "Create an intake record for one CC-BY component and one restricted manufacturer STEP download.",
+      "source_ids": [
+        "DSRC-07",
+        "DSRC-08",
+        "DSRC-11"
+      ]
+    },
+    {
+      "id": "DOM-I11",
+      "name": "Poly Haven visual environment library",
+      "summary": "Use CC0 assets and HDRIs to construct architectural and product rendering contexts; do not use asset dimensions as component specifications.",
+      "source_urls": [
+        "https://polyhaven.com/license"
+      ],
+      "status": "proposal",
+      "next_check": "Assess asset metadata, scale indicators and dependency size for a visual scene fixture.",
+      "source_ids": [
+        "DSRC-10"
+      ]
+    },
+    {
+      "id": "DOM-I12",
+      "name": "Blender scripting and MCP orchestration",
+      "summary": "Keep OCS as engineering baseline; use deterministic Blender background scripts for repeatable conversion and checks, with MCP live inspection as a later interactive layer.",
+      "source_urls": [
+        "https://projects.blender.org/lab/blender_mcp/src/branch/main",
+        "https://github.com/ahujasid/mcp-for-blender",
+        "https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst",
+        "/home/leo/projects/3dmodeling/research/local-baseline.md"
+      ],
+      "status": "proposal",
+      "next_check": "Compare scripted and MCP scene edits once the local Blender 5.0.1 compatibility constraint is resolved or a compatible integration chosen.",
+      "source_ids": [
+        "DSRC-34",
+        "DSRC-38",
+        "DSRC-35",
+        "DSRC-06"
+      ]
+    },
+    {
+      "id": "DOM-I13",
+      "name": "Menagerie robot plus scan environment simulation",
+      "summary": "Combine an articulated robot description with a registered room or terrain mesh, then derive a simplified collision scene while keeping source coordinates and body frames linked.",
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "status": "proposal",
+      "next_check": "Create a miniature scene with one articulated robot and one scanned obstacle; verify frame transforms and collision envelope.",
+      "source_ids": [
+        "DSRC-14",
+        "DSRC-33"
+      ]
+    },
+    {
+      "id": "DOM-I14",
+      "name": "Sketch-over-model revision workflow",
+      "summary": "Align new sketch/image dimensions to an existing model datum, revise its native source, and regenerate geometry and visual exports without losing unrelated component identity.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "status": "proposal",
+      "next_check": "Exercise a changed hole position against a pinned source model and compare a before/after measurement manifest.",
+      "source_ids": [
+        "DSRC-01",
+        "DSRC-02"
+      ]
+    },
+    {
+      "id": "DOM-I15",
+      "name": "Engineering asset quality classes",
+      "summary": "Distinguish visual-only assets, approximate component geometry, dimensioned supplier CAD, measured parts and verified simulation models with explicit source evidence.",
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
+        "https://polyhaven.com/license",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+      ],
+      "status": "proposal",
+      "next_check": "Define permitted downstream operations for each asset evidence class without presenting a license or visual source as engineering validation.",
+      "source_ids": [
+        "DSRC-14",
+        "DSRC-10",
+        "DSRC-13"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,490 @@
+[
+  {
+    "url": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "OCS Engineering skill",
+    "summary": "Installed OCS skill defines units, axes, frames, datums, part boundaries, revision-bound mutations, readback geometry checks, verified save and computational handoff. Existing local source; user reported prior partial runtime success in earlier conversation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "CAD-01",
+      "CAD-09",
+      "CAD-12",
+      "CAD-14",
+      "CAD-I01",
+      "CAD-R01",
+      "CAD-R07",
+      "CAD-R08"
+    ],
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "title": "3D modeling implementation plan",
+    "summary": "Prior project proposal identifies OCS as the interactive baseline, FreeCAD for constrained feature trees, code-CAD for scripted solids, raster plans, drawing conversion and verification routes. Used as existing project context, not as runtime evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-01",
+      "CAD-I04",
+      "CAD-R01"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "title": "3D reconstruction research report",
+    "summary": "Prior repository report assesses image/depth reconstruction methods, source terms and prerequisites. This batch references it for scan-to-CAD transition context and does not repeat that research.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-11",
+      "CAD-R06",
+      "CAD-R07"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "title": "Domain and component research report",
+    "summary": "Prior project report compares reusable component sources and downstream architecture/robotics domains. This batch uses it for source-library and assembly handoffs.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-12",
+      "CAD-R06",
+      "CAD-R07",
+      "CAD-R08"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/architecture/research/README.md",
+    "title": "Architecture research index",
+    "summary": "Existing architecture project source index and prior route context for building design. It is referenced as prior work, not newly web researched.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-11"
+    ],
+    "local_original": "/home/leo/projects/architecture/research/README.md",
+    "sha256": "f4040982c5baf0845c2be900e6892434dcb154cec111ef034e9a7d420f54dc41",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+    "title": "OpenCADStudio CAD harness findings",
+    "summary": "Prior read-only OCS inspection documents API capabilities and evidence limits, with source receipts. This workflow map reuses the findings and does not claim new runtime execution.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-14"
+    ],
+    "local_original": "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+    "sha256": "e2118a37d040ead069f9f464d0683c5e987db677a386ec2393d8de90f3ae18f2",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "title": "OpenCADStudio README",
+    "summary": "Local OCS source README lists supported drawing formats, MCP/automation entry point, solid commands and STEP AP203 export of mesh data. Local source was inspected in prior CAD research; this report registers that evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-08"
+    ],
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+    "title": "OpenCADStudio MCP automation guide",
+    "summary": "Local OCS guide describes stdio MCP and drawing inspection, mutation, measurements, audits and verified save. It supports application-level drawing workflow claims.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "CAD-08",
+      "CAD-12",
+      "CAD-13",
+      "CAD-17",
+      "CAD-R03"
+    ],
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+    "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+    "title": "OpenCADStudio kernel body path note",
+    "summary": "Local OCS design/implementation note describes supported kernel-body paths and history limitations; it does not establish STEP analytic-surface export.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-10"
+    ],
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+    "sha256": "64d940087bda6af3457406b07ed1595ddd974bd97256873a26ffaad6b40d48e4",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "title": "OpenCADStudio STEP writer source",
+    "summary": "Local Rust writer consumes mesh models and emits triangular planar faces in STEP closed-shell/manifold-solid structures. It supports the claim that this exporter produces faceted mesh-derived STEP geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "CAD-13",
+      "CAD-I04",
+      "CAD-R04"
+    ],
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "sha256": "2269911945e747b5ef30bbaaa8b656a0f6e4e348ed911af256034a612f3cd899",
+    "content_type": "text/plain"
+  },
+  {
+    "url": "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html",
+    "title": "OpenCV Python camera calibration tutorial",
+    "summary": "Official OpenCV tutorial maps known 3D object points to image points, detects/refines chessboard corners and uses calibrateCamera; square dimensions establish physical units.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-02",
+      "CAD-11",
+      "CAD-R02",
+      "CAD-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/5.0/main_modules/calib.html",
+    "title": "OpenCV calibration module overview",
+    "summary": "Official OpenCV reference describes camera calibration, pose estimation, calibration target correspondences and reprojection-error optimization. A planar homography relates points on a plane and does not recover depth.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-02"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
+    "title": "OpenCV image processing feature detection",
+    "summary": "Official API documents probabilistic HoughLinesP on binary images and returns line-segment endpoint coordinates in pixel space.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
+    "title": "OpenCV structural analysis and shape descriptors",
+    "summary": "Official API documents contours, curve lengths, bounding boxes and approxPolyDP; polygon simplification is bounded by a pixel-coordinate precision setting.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+    "title": "Tesseract command line usage",
+    "summary": "Official Tesseract documentation shows TSV output with text, hierarchical page/block/line/word identifiers, pixel bounding boxes and confidence values.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-03",
+      "CAD-R02",
+      "CAD-R03",
+      "CAD-I02"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+    "title": "Residential Floor Plan Recognition and Reconstruction",
+    "summary": "CVPR 2021 paper proposes residential floor-plan recognition/reconstruction, including segmentation and vectorization; paper reports tests on floor-plan imagery and method-specific results.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-04",
+      "CAD-05",
+      "CAD-17",
+      "CAD-I05",
+      "CAD-R03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
+    "title": "Vectorizing Building Blueprints",
+    "summary": "ACCV 2022 paper studies automatic vectorization of raster building blueprints and reviews primitive detection, floor-plan vectorization and structured reconstruction.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-05",
+      "CAD-17",
+      "CAD-R03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "application/pdf"
+  },
+  {
+    "url": "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
+    "title": "Raster-to-Graph floor-plan recognition",
+    "summary": "Computer Graphics Forum paper describes a learned raster-floorplan framework that predicts wall junctions and segments as an ordered graph representation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-05",
+      "CAD-17",
+      "CAD-R03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "application/pdf"
+  },
+  {
+    "url": "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
+    "title": "Coordinate transformations of engineering drawings for 3D reconstruction from orthographic views",
+    "summary": "Journal article describes segmenting engineering drawing views, linking coordinates with intermediate 2.5D frames, and establishing coordinate constraints between views.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-06",
+      "CAD-R05"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
+    "title": "Automatic 3D CAD models reconstruction from 2D orthographic drawings",
+    "summary": "Computers & Graphics 2023 paper describes matching projected edge features across views to create a 3D wireframe, then detecting loops/faces and trimming/stitching a watertight model; reported F-score is study-specific.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-07",
+      "CAD-R05",
+      "CAD-I03",
+      "CAD-I04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html",
+    "title": "PlankAssembly: Robust 3D Reconstruction from Three Orthographic Views with Learnt Shape Programs",
+    "summary": "ICCV 2023 paper proposes a transformer/shape-program mapping from three orthographic views to CAD models and evaluates noisy/incomplete views on a benchmark dataset.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-06",
+      "CAD-07",
+      "CAD-R05",
+      "CAD-I03",
+      "CAD-I05"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
+    "title": "FreeCAD Draft DXF documentation",
+    "summary": "Official FreeCAD docs list DXF entity support for C++ and legacy importers, format/version conditions, and note that 3D ACIS SAT blobs in DXF are not currently read by FreeCAD.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-08",
+      "CAD-R04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
+    "title": "FreeCAD Draft SVG documentation",
+    "summary": "Official FreeCAD docs list supported SVG paths/shapes, flattening of Z on import, use of viewBox/physical dimensions, and 90-DPI fallback when physical size is absent.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-08",
+      "CAD-R04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+    "title": "FreeCAD Sketcher scripting",
+    "summary": "Official FreeCAD docs show Python creation of Sketcher geometry and addition of geometric/dimensional constraints.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-09",
+      "CAD-R01",
+      "CAD-R02",
+      "CAD-I01"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
+    "title": "FreeCAD Part scripting",
+    "summary": "Official FreeCAD docs describe Python access to OpenCASCADE B-rep vertices, edges, wires, faces, solids, compounds and boolean operations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-10",
+      "CAD-I04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://ezdxf.readthedocs.io/en/stable/",
+    "title": "ezdxf documentation",
+    "summary": "Official ezdxf docs identify it as Python software to create/read/modify/write DXF, state supported DXF revisions, MIT licence and core dependencies.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-08",
+      "CAD-R04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://build123d.readthedocs.io/en/latest/operations.html",
+    "title": "build123d operations",
+    "summary": "Official build123d docs show extrusion of a 2D sketch/face into a 3D part and document Builder/Algebra operations over OCCT geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-10",
+      "CAD-I04",
+      "CAD-R01",
+      "CAD-R04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://build123d.readthedocs.io/en/stable/",
+    "title": "build123d stable documentation",
+    "summary": "Official build123d documentation for a Python parametric B-rep modeling framework over Open CASCADE; used as an implementation reference, not runtime result.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-13"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://cadquery.readthedocs.io/en/stable/",
+    "title": "CadQuery documentation",
+    "summary": "Official CadQuery documentation describes Python parametric CAD scripting and supported imports/exports; native Python source carries its parametric construction record.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-10",
+      "CAD-12"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openscad.org/documentation",
+    "title": "OpenSCAD documentation",
+    "summary": "Official OpenSCAD manual documents script-defined CSG, parameterization, 2D imports/extrusion, CLI use and mesh-oriented file exports.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-10",
+      "CAD-15",
+      "CAD-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "title": "3D reconstruction workflow findings",
+    "summary": "Existing project report records COLMAP/AliceVision/Meshroom photo-to-sparse/dense cloud and mesh routes, metric scaling from controls, and checks for camera coverage, reprojection, point clouds, mesh defects and withheld dimensions. Registered from the existing report; no current external page was reopened for this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-11",
+      "CAD-16",
+      "CAD-R06"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "https://github.com/colmap/colmap",
+    "title": "COLMAP source repository",
+    "summary": "Existing report identifies COLMAP as an SfM/MVS tool with GUI, CLI, Python bindings and BSD-3-Clause/new BSD licensing. This record traces the proposed photo reconstruction operation to the upstream project; the repository was not reopened in this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-16",
+      "CAD-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+    "title": "COLMAP CLI documentation",
+    "summary": "Existing report records command-line stages for database, feature extraction/matching, mapping, dense reconstruction and exports. This trace supports the scripted handoff proposal; exact current CLI behavior was not reopened in this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-16",
+      "CAD-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  }
+]

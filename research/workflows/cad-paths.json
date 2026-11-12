@@ -1,0 +1,1275 @@
+{
+  "domain": "cad",
+  "operations": [
+    {
+      "id": "CAD-01",
+      "name": "Extract a model brief from text and dimensions",
+      "inputs": [],
+      "outputs": [
+        "model-brief"
+      ],
+      "tools": [
+        "model brief schema",
+        "human review",
+        "OCS engineering skill"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "prerequisites": [
+        "Identify each value as supplied, measured, inferred, assumed, or calculated.",
+        "Declare units, origin, axes, component boundaries, intended output and source links."
+      ],
+      "preserves": [
+        "Original text",
+        "Value-to-source associations",
+        "Author's unresolved choices"
+      ],
+      "changes_or_infers": [
+        "Groups explicit requirements into named parameters and geometry constraints.",
+        "Does not infer hidden geometry from prose alone."
+      ],
+      "checks": [
+        "Every numerical parameter has units and provenance.",
+        "Ambiguities affecting geometry are listed separately."
+      ],
+      "alternatives": [
+        "Direct interactive OCS modeling after brief readback",
+        "Code-CAD generation from a validated brief"
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "summary": "Create a source-linked brief before changing geometry; keep source claims separate from constraints and design choices.",
+      "input_alternatives": [
+        [
+          "text"
+        ],
+        [
+          "dimensions"
+        ],
+        [
+          "text",
+          "dimensions"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-02",
+      "name": "Rectify a raster drawing plane from known dimensions",
+      "inputs": [],
+      "outputs": [
+        "measurement-set"
+      ],
+      "tools": [
+        "OpenCV point correspondences",
+        "planar homography"
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/5.0/main_modules/calib.html"
+      ],
+      "prerequisites": [
+        "For scale, provide known dimensions on the same plane.",
+        "A planar homography rectifies that plane and does not recover object depth."
+      ],
+      "preserves": [
+        "Original image coordinates",
+        "Known control lengths",
+        "Image-to-plane transform"
+      ],
+      "changes_or_infers": [
+        "Calculates a plane transform and metric image coordinates from matched points."
+      ],
+      "checks": [
+        "Check independent in-plane lengths after rectification.",
+        "Record controls, units and transformation."
+      ],
+      "alternatives": [
+        "Manual scale using a known dimension on a front-parallel scan"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Rectify a single drawing plane using matched control coordinates; this route does not calibrate a general 3D camera or infer depth.",
+      "input_alternatives": [
+        [
+          "raster-sketch",
+          "dimensions"
+        ],
+        [
+          "raster-plan",
+          "dimensions"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-03",
+      "name": "Recognize dimension text with OCR",
+      "inputs": [],
+      "outputs": [
+        "text"
+      ],
+      "tools": [
+        "Tesseract OCR TSV output",
+        "image crop/deskew",
+        "human transcription review"
+      ],
+      "source_urls": [
+        "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html"
+      ],
+      "prerequisites": [
+        "Retain original pixels and page transform.",
+        "Use OCR output as candidates; resolve glyphs, units, tolerance symbols and feature association against the source image."
+      ],
+      "preserves": [
+        "Text bounding boxes",
+        "OCR confidence values",
+        "Original image and crop coordinates"
+      ],
+      "changes_or_infers": [
+        "Produces candidate text strings and numeric dimension values from pixels."
+      ],
+      "checks": [
+        "Verify every dimension against the source crop.",
+        "Check decimal separator, diameter/radius symbols, tolerance, units and view association."
+      ],
+      "alternatives": [
+        "Manual dimension transcription",
+        "Vector drawing dimension records when available"
+      ],
+      "automation": "assisted",
+      "evidence_status": "documented_capability",
+      "summary": "Tesseract TSV can return text and word bounding boxes with confidence; engineering interpretation and dimension association remain review steps.",
+      "input_alternatives": [
+        [
+          "raster-sketch"
+        ],
+        [
+          "raster-plan"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-04",
+      "name": "Extract raster edges, lines and contours",
+      "inputs": [],
+      "outputs": [
+        "vector-drawing"
+      ],
+      "tools": [
+        "OpenCV thresholding",
+        "HoughLinesP",
+        "findContours",
+        "approxPolyDP"
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
+        "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
+      ],
+      "prerequisites": [
+        "Rectify or record the image transform before measuring extracted pixels.",
+        "Separate dimension lines, extension lines, text and object contours by layers or masks."
+      ],
+      "preserves": [
+        "Pixel coordinates and candidate segment endpoints",
+        "Source image identity"
+      ],
+      "changes_or_infers": [
+        "Approximates raster strokes as candidate vectors; line/contour algorithms do not classify engineering intent by themselves."
+      ],
+      "checks": [
+        "Overlay candidates on source raster.",
+        "Measure endpoint gaps and edge displacement in calibrated coordinates.",
+        "Retain uncertain or intersecting candidates for review."
+      ],
+      "alternatives": [
+        "Manual trace in OCS or FreeCAD",
+        "Learned wall/opening segmentation followed by vectorization"
+      ],
+      "automation": "scripted",
+      "evidence_status": "proposed_composition",
+      "summary": "Image-processing primitives and floor-plan reconstruction research support candidate line extraction, while symbol and feature meaning require separate interpretation.",
+      "input_alternatives": [
+        [
+          "raster-sketch"
+        ],
+        [
+          "raster-plan"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-05",
+      "name": "Convert raster floor-plan candidates into a wall and opening graph",
+      "inputs": [
+        "raster-plan",
+        "measurement-set"
+      ],
+      "outputs": [
+        "vector-drawing"
+      ],
+      "tools": [
+        "floor-plan segmentation/vectorization model or manual trace",
+        "graph consistency checks",
+        "OCS or FreeCAD Draft"
+      ],
+      "source_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+        "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
+        "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf"
+      ],
+      "prerequisites": [
+        "Establish plan scale and origin from a known control or explicit drawing dimensions.",
+        "Define wall centerline/edge convention and distinguish walls, openings, room labels and annotation."
+      ],
+      "preserves": [
+        "Raster source",
+        "Candidate pixel/vector locations",
+        "Wall/opening graph and confidence/status"
+      ],
+      "changes_or_infers": [
+        "Classifies walls/openings/rooms and infers graph connections from image patterns."
+      ],
+      "checks": [
+        "Room/wall graph connectivity",
+        "Opening endpoints attach to wall segments",
+        "Known lengths and orthogonality",
+        "Manual confirmation of ambiguous symbols"
+      ],
+      "alternatives": [
+        "Trace wall centerlines and openings manually",
+        "Use a learned detector to propose vector geometry"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Research papers demonstrate floor-plan segmentation, vectorization and structural graph reconstruction; exact measurements and semantics still need source-linked confirmation."
+    },
+    {
+      "id": "CAD-06",
+      "name": "Register orthographic drawing views in a shared coordinate frame",
+      "inputs": [
+        "vector-drawing"
+      ],
+      "outputs": [
+        "model-brief"
+      ],
+      "tools": [
+        "view segmentation",
+        "projection-axis declaration",
+        "line/vertex matching",
+        "dimension reconciliation"
+      ],
+      "source_urls": [
+        "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
+      ],
+      "prerequisites": [
+        "The vector drawing contains multiple identified orthographic views.",
+        "Identify front/top/side and first-angle/third-angle layout.",
+        "Identify view scales and shared datum from geometry or annotations.",
+        "Keep each source view 2D axes and projection direction.",
+        "Treat the input vector-drawing as a bundle containing at least two identified orthographic views, not as a single view."
+      ],
+      "preserves": [
+        "View labels and source coordinates",
+        "Per-view scales",
+        "Candidate feature correspondences"
+      ],
+      "changes_or_infers": [
+        "Maps 2D view coordinates into common 3D projection coordinates and proposes corresponding edges."
+      ],
+      "checks": [
+        "Projected edge coordinates agree across views within source resolution/tolerance.",
+        "Control dimensions agree across views.",
+        "Flag multiple possible correspondences."
+      ],
+      "alternatives": [
+        "Manual view alignment in OCS/FreeCAD",
+        "Orthographic line-matching reconstruction research methods"
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "summary": "Published methods establish coordinate-transform and cross-view matching routes; a learned reconstruction must still be checked against the actual drawing dimensions."
+    },
+    {
+      "id": "CAD-07",
+      "name": "Reconstruct a candidate 3D wireframe and surface from orthographic views",
+      "inputs": [
+        "vector-drawing",
+        "measurement-set",
+        "model-brief"
+      ],
+      "outputs": [
+        "cad-solid",
+        "measurement-set"
+      ],
+      "tools": [
+        "multi-view edge correspondence",
+        "wireframe/face reconstruction",
+        "OpenCASCADE or FreeCAD surface/solid creation"
+      ],
+      "source_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
+      ],
+      "prerequisites": [
+        "Register views and scale before matching.",
+        "Resolve edge and face ambiguity using dimensions, section views or author input.",
+        "Mark inferred surfaces and hidden features."
+      ],
+      "preserves": [
+        "Input views and cross-view correspondence graph",
+        "Explicitly traced dimensions"
+      ],
+      "changes_or_infers": [
+        "Creates candidate 3D edges, faces and a watertight solid; hidden surfaces are inferred from the view set and method."
+      ],
+      "checks": [
+        "Project generated model into each input view and compare edge residuals.",
+        "Check manifold/solid validity, dimensions and feature count.",
+        "Compare native feature history separately from imported shape."
+      ],
+      "alternatives": [
+        "Human-in-the-loop FreeCAD feature reconstruction",
+        "Construct a CSG feature program from confirmed views"
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "summary": "Proposed composition of published orthographic reconstruction methods and a CAD kernel: candidate edges/faces may be inferred from multiple views. This research does not document a deployable open reconstruction application."
+    },
+    {
+      "id": "CAD-08",
+      "name": "Read and clean vector drawing geometry",
+      "inputs": [
+        "vector-drawing"
+      ],
+      "outputs": [
+        "vector-drawing"
+      ],
+      "tools": [
+        "OpenCADStudio DWG/DXF/MCP",
+        "FreeCAD Draft DXF/SVG import",
+        "ezdxf",
+        "geometry audit"
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
+        "https://ezdxf.readthedocs.io/en/stable/",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+      ],
+      "prerequisites": [
+        "Preserve source file and hash.",
+        "Determine drawing units, model/paper space, layer selection, block transforms, origin and target sketch plane.",
+        "Read DXF/SVG import option and unsupported entity behavior."
+      ],
+      "preserves": [
+        "Original file",
+        "Entity types, layers, blocks, annotations and source coordinates where supported"
+      ],
+      "changes_or_infers": [
+        "Selects profile entities, normalizes transforms and may join, discretize, or repair curves."
+      ],
+      "checks": [
+        "Count input/output entities by type and layer.",
+        "Find duplicate/open/self-intersecting edges.",
+        "Compare profile bounds, area and source dimensions.",
+        "For SVG, verify viewBox and physical scale; FreeCAD importer flattens Z."
+      ],
+      "alternatives": [
+        "Use the source DXF unchanged in OCS",
+        "Use FreeCAD native DXF or legacy importer",
+        "Parse DXF with ezdxf and build clean geometry separately"
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "FreeCAD documents DXF/SVG entity coverage and import modes; ezdxf reads and writes DXF. Entity preservation and scale depend on the specific importer/settings."
+    },
+    {
+      "id": "CAD-09",
+      "name": "Build and constrain an editable planar sketch",
+      "inputs": [
+        "vector-drawing"
+      ],
+      "outputs": [
+        "constrained-sketch"
+      ],
+      "tools": [
+        "FreeCAD Sketcher scripting",
+        "FreeCAD Draft-to-Sketch",
+        "OpenCADStudio sketch/constraint capability as discovered in session"
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "prerequisites": [
+        "Specify units, support plane and datum.",
+        "Resolve profile closure/repair and record which source curves changed.",
+        "Associate each dimensional constraint with measured/source/inferred status."
+      ],
+      "preserves": [
+        "2D profile geometry",
+        "Named dimensions and geometric constraints",
+        "Constraint provenance in the project evidence ledger"
+      ],
+      "changes_or_infers": [
+        "Adds constraints and may alter underconstrained geometry to satisfy them."
+      ],
+      "checks": [
+        "Solver state/degrees of freedom",
+        "Residuals and overconstraints",
+        "Source-to-constraint numeric comparison",
+        "Profile closedness and intersections"
+      ],
+      "alternatives": [
+        "Keep vector geometry as non-parametric Draft/OCS drawing entities",
+        "Generate sketch geometry from code-CAD source"
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "FreeCAD documents Python creation of Sketcher geometry and constraints. Solver success tests consistency, not the truth of supplied or inferred measurements.",
+      "input_alternatives": [
+        [
+          "model-brief"
+        ],
+        [
+          "dimensions"
+        ],
+        [
+          "measurement-set"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-10",
+      "name": "Create a kernel solid and native model document from confirmed parameters",
+      "inputs": [],
+      "outputs": [
+        "cad-solid",
+        "native-model-document"
+      ],
+      "tools": [
+        "OpenCADStudio kernel tools",
+        "FreeCAD PartDesign/Part",
+        "build123d",
+        "CadQuery"
+      ],
+      "source_urls": [
+        "https://build123d.readthedocs.io/en/latest/operations.html",
+        "https://cadquery.readthedocs.io/en/stable/",
+        "https://openscad.org/documentation",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+      ],
+      "prerequisites": [
+        "Declare units, feature parameters, direction/axis and part boundary.",
+        "Use exact B-rep backend if exact surfaces/export are required.",
+        "Preserve native feature document or code source."
+      ],
+      "preserves": [
+        "Input dimensions and feature parameters",
+        "Native feature tree or executable parametric source",
+        "Part names and component boundaries",
+        "Editable native model document; feature history depends on the selected CAD application"
+      ],
+      "changes_or_infers": [
+        "Creates exact kernel geometry from the confirmed profile/feature instructions; unsupported features may require alternatives."
+      ],
+      "checks": [
+        "Kernel shape validity and solid count",
+        "Bounds, volume, hole/shaft dimensions and units",
+        "Recompute or regenerate after one parameter change",
+        "Save/reopen and independent import"
+      ],
+      "alternatives": [
+        "FreeCAD feature-history model",
+        "build123d/CadQuery Python source",
+        "OCS native body; separate exact STEP exporter if needed"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Build kernel CAD solids from a confirmed constrained sketch, parametric source, or explicit model brief plus dimensions. FreeCAD/build123d/CadQuery provide documented B-rep routes; OCS creates native geometry but its inspected STEP writer emits mesh-derived faceted STEP.",
+      "input_alternatives": [
+        [
+          "constrained-sketch"
+        ],
+        [
+          "parametric-source"
+        ],
+        [
+          "model-brief",
+          "dimensions"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-11",
+      "name": "Fit analytic features to scans or image-derived point clouds",
+      "inputs": [],
+      "outputs": [
+        "measurement-set",
+        "cad-solid"
+      ],
+      "tools": [
+        "point-cloud registration and segmentation",
+        "least-squares plane/cylinder/axis fits",
+        "FreeCAD/build123d"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/projects/architecture/research/README.md"
+      ],
+      "prerequisites": [
+        "Input is already a metric, registered point cloud, depth sequence, or mesh with a declared coordinate frame.",
+        "Identify functional interfaces and label unsampled/occluded surfaces.",
+        "Keep fit residuals and input samples with each analytic feature."
+      ],
+      "preserves": [
+        "Original images/depth/point samples",
+        "Camera solution and transforms",
+        "Feature-fit inputs and residual records"
+      ],
+      "changes_or_infers": [
+        "Fits planes, cylinders, axes or freeform surfaces from noisy samples; fits are calculated approximations."
+      ],
+      "checks": [
+        "Independent control distances",
+        "Registration and reprojection residuals",
+        "Fit residual distribution/outlier mask",
+        "Held-out cloud-to-CAD distances",
+        "Interface dimensions"
+      ],
+      "alternatives": [
+        "Manual measurements from calibrated views",
+        "Use mesh as visual/collision reference without analytic remodeling"
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "summary": "Fit analytic planes, cylinders and axes to an already calibrated/registered metric point cloud, depth sequence or mesh, retaining residuals and uncertain regions. Photograph-to-cloud reconstruction is a separate upstream operation.",
+      "input_alternatives": [
+        [
+          "depth-frames",
+          "measurement-set"
+        ],
+        [
+          "point-cloud",
+          "measurement-set"
+        ],
+        [
+          "mesh",
+          "measurement-set"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-12",
+      "name": "Assemble existing CAD or source-library components",
+      "inputs": [
+        "cad-solid"
+      ],
+      "outputs": [
+        "cad-assembly"
+      ],
+      "tools": [
+        "OCS blocks/groups",
+        "FreeCAD App::Link/Assembly",
+        "build123d/CadQuery Assembly",
+        "unit and frame mapping"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+        "https://cadquery.readthedocs.io/en/stable/"
+      ],
+      "prerequisites": [
+        "Record component source/license/hash and representation.",
+        "Establish local units, origin, axis directions and interface frames for each part.",
+        "Separate source components from placeholders.",
+        "Provide a distinct base cad-solid plus either a source-library component or one or more additional cad-solid component files; identify each occurrence separately."
+      ],
+      "preserves": [
+        "Component identities and source files",
+        "Occurrence transforms and assembly hierarchy",
+        "Native component boundaries"
+      ],
+      "changes_or_infers": [
+        "Places parts using declared mating frames; inferred contact or fastener geometry is proposal unless sourced."
+      ],
+      "checks": [
+        "Frame/transform consistency",
+        "Interface dimension agreement",
+        "Component counts and source hashes",
+        "Collision/clearance only with supported exact geometry and query"
+      ],
+      "alternatives": [
+        "Visual-only assembly in Blender",
+        "OCS block/group drawing arrangement",
+        "Full parametric assembly in FreeCAD or Python code-CAD"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Build an assembly from identified components and explicit transforms; preserve the difference between imported component geometry and inferred placeholders.",
+      "input_alternatives": [
+        [
+          "source-library"
+        ],
+        [
+          "cad-solid"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-13",
+      "name": "Verify model geometry and saved output",
+      "inputs": [],
+      "outputs": [
+        "measurement-set",
+        "verification-report"
+      ],
+      "tools": [
+        "OCS read/measure/audit/save_verified",
+        "FreeCAD B-rep readback",
+        "build123d/CadQuery shape checks",
+        "independent importer",
+        "mesh validation"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "https://build123d.readthedocs.io/en/stable/"
+      ],
+      "prerequisites": [
+        "Know the expected geometry representation and destination units.",
+        "Tie checks to the exact document revision and output file hash.",
+        "Set a check tolerance from source accuracy or explicit engineering requirement.",
+        "A fabrication-package is an input artifact to inspect, not an output created by verification."
+      ],
+      "preserves": [
+        "Source revision and hash",
+        "Output hash and conversion settings",
+        "Measured check results and failed checks"
+      ],
+      "changes_or_infers": [
+        "Reads or reopens derivatives and calculates verification measurements; does not repair by itself."
+      ],
+      "checks": [
+        "Bounds, solid count, face types, volume and key dimensions",
+        "Entity/semantic manifest and save audit",
+        "Reopen in independent application",
+        "Feature history versus geometry-only transfer",
+        "Persist operation IDs, artifact revision/hash, units, result values and failed checks in verification-report.",
+        "Persist operation IDs, artifact revision/hash, units, result values and failed checks in verification-report."
+      ],
+      "alternatives": [
+        "Visual review as a supplement",
+        "Application-native save audit",
+        "Separate neutral-file round-trip"
+      ],
+      "automation": "scripted",
+      "evidence_status": "proposed_composition",
+      "summary": "Read back the saved artifact, run applicable checks, and persist measured bounds/dimensions plus artifact identity and failed checks for downstream diagnosis.",
+      "input_alternatives": [
+        [
+          "cad-solid"
+        ],
+        [
+          "cad-assembly"
+        ],
+        [
+          "parametric-source"
+        ],
+        [
+          "constrained-sketch"
+        ],
+        [
+          "fabrication-package"
+        ],
+        [
+          "mesh"
+        ],
+        [
+          "native-model-document"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-14",
+      "name": "Recover from failed interpretation or geometry construction",
+      "inputs": [
+        "model-brief",
+        "verification-report"
+      ],
+      "outputs": [
+        "model-brief"
+      ],
+      "tools": [
+        "source overlay",
+        "operation logs",
+        "constraint residuals",
+        "OCS operation status/revision readback",
+        "CAD kernel validity reports"
+      ],
+      "source_urls": [
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md"
+      ],
+      "prerequisites": [
+        "Preserve previous revision and source geometry.",
+        "Include a verification report identifying failed transition and affected artifact."
+      ],
+      "preserves": [
+        "Previous saved revision",
+        "Failed output and logs for diagnosis",
+        "Unchanged source evidence"
+      ],
+      "changes_or_infers": [
+        "Returns to the earliest invalid interpretation or failed feature, then revises only that transition."
+      ],
+      "checks": [
+        "Confirm operation completion/status",
+        "Read back geometry after each small change",
+        "Do not replay timed-out mutations without querying the same operation identity",
+        "Verify repaired dimensions and topology before downstream steps"
+      ],
+      "alternatives": [
+        "Ask for missing reference information",
+        "Keep vector source and defer solid construction",
+        "Select a different documented backend"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Recover at the failing representation boundary, preserve the source and previous result, and rerun only downstream steps affected by the correction."
+    },
+    {
+      "id": "CAD-02B",
+      "name": "Calibrate camera poses from photographs and known controls",
+      "inputs": [
+        "photo-set",
+        "measurement-set"
+      ],
+      "outputs": [
+        "camera-solution"
+      ],
+      "tools": [
+        "OpenCV findChessboardCorners",
+        "OpenCV calibrateCamera",
+        "OpenCV solvePnP"
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html",
+        "https://docs.opencv.org/5.0/main_modules/calib.html"
+      ],
+      "prerequisites": [
+        "Use views of known calibration geometry or identified known 3D points.",
+        "Declare physical target dimensions and units."
+      ],
+      "preserves": [
+        "Original photos",
+        "Image feature coordinates",
+        "Known target dimensions"
+      ],
+      "changes_or_infers": [
+        "Estimates camera intrinsics, distortion, poses and reprojection residuals."
+      ],
+      "checks": [
+        "Reprojection residuals",
+        "Independent control lengths",
+        "Camera model and image resolution consistency"
+      ],
+      "alternatives": [
+        "Calibrate each camera with a target",
+        "Use documented photogrammetry camera-solution pipeline"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Estimate camera parameters and poses from known point correspondences; the OpenCV tutorial specifies real control dimensions to obtain metric scale."
+    },
+    {
+      "id": "CAD-15",
+      "name": "Render source-defined CSG as a mesh",
+      "inputs": [],
+      "outputs": [
+        "mesh"
+      ],
+      "tools": [
+        "OpenSCAD",
+        "STL/3MF mesh export"
+      ],
+      "source_urls": [
+        "https://openscad.org/documentation"
+      ],
+      "prerequisites": [
+        "Provide parametric-source in OpenSCAD syntax and resolve required parameters.",
+        "Choose a mesh export format and units; retain the source file as the editable parametric record."
+      ],
+      "preserves": [
+        "OpenSCAD source and its parameterized CSG construction"
+      ],
+      "changes_or_infers": [
+        "Tessellates the evaluated CSG surface into mesh facets; the resulting mesh does not carry editable B-rep feature history."
+      ],
+      "checks": [
+        "Regenerate after changing one source parameter.",
+        "Check mesh watertightness, normals, bounds, units and dimensional deviation against the source parameters."
+      ],
+      "alternatives": [
+        "Use FreeCAD/build123d/CadQuery for a B-rep output requirement."
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "OpenSCAD documents source-defined constructive solid geometry and mesh export. This operation guarantees mesh output, not a CAD B-rep.",
+      "input_alternatives": [
+        [
+          "parametric-source"
+        ]
+      ]
+    },
+    {
+      "id": "CAD-16",
+      "name": "Reconstruct camera poses and dense visible geometry from overlapping photos",
+      "inputs": [
+        "photo-set",
+        "measurement-set"
+      ],
+      "outputs": [
+        "camera-solution",
+        "point-cloud",
+        "mesh"
+      ],
+      "tools": [
+        "COLMAP or AliceVision/Meshroom",
+        "scale/control-point alignment"
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "https://github.com/colmap/colmap",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
+      ],
+      "prerequisites": [
+        "Provide overlapping, sharp views of a rigid scene and measured scale/control data.",
+        "Inspect image-registration coverage, camera solution and dense-stage output; each output is a reconstruction result, not a direct measurement of hidden surfaces."
+      ],
+      "preserves": [
+        "Input images and source IDs",
+        "Estimated camera poses and control-point associations",
+        "Raw sparse/dense reconstruction outputs"
+      ],
+      "changes_or_infers": [
+        "Estimates camera poses and visible 3D samples/surfaces from image correspondences; unobserved surfaces and metric values outside control data remain inferred.",
+        "Sparse reconstruction scale is fixed from supplied measurement-set controls; local surface detail between/behind views remains estimated or absent."
+      ],
+      "checks": [
+        "Review registered-view coverage, reprojection errors and camera poses.",
+        "Check control-point residuals and independent withheld dimensions.",
+        "Inspect cloud/mesh for holes, duplicate surfaces and outliers; record scale and frame transforms."
+      ],
+      "alternatives": [
+        "RGB-D/LiDAR point-cloud acquisition",
+        "Manual photogrammetry review and reconstruction"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Existing reconstruction research documents COLMAP and Meshroom photo-to-cloud/mesh paths and their quality gates. This operation is a proposed composition from those documented tools; no local runtime was exercised."
+    },
+    {
+      "id": "CAD-17",
+      "name": "Build wall and opening solids from a confirmed floor-plan graph",
+      "inputs": [
+        "vector-drawing",
+        "measurement-set",
+        "model-brief"
+      ],
+      "outputs": [
+        "cad-assembly"
+      ],
+      "tools": [
+        "FreeCAD Part/Sketcher or OCS native geometry",
+        "wall/opening graph interpretation",
+        "human confirmation"
+      ],
+      "source_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+        "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
+        "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md"
+      ],
+      "prerequisites": [
+        "vector-drawing contains the reviewed plan wall/opening graph from CAD-05.",
+        "measurement-set contains known in-plane controls; model-brief contains confirmed wall height, thickness convention, opening dimensions/heights, floor datum and units.",
+        "Represent unknown elevations or wall build-ups as explicit parameters and do not fill them from plan pixels."
+      ],
+      "preserves": [
+        "Wall/opening graph and source-vector references",
+        "Confirmed plan dimensions and model-brief parameter provenance",
+        "Separate wall/opening component identities"
+      ],
+      "changes_or_infers": [
+        "Extrudes confirmed plan graph into separate candidate wall/opening solids and groups them as a CAD assembly.",
+        "Does not assign IFC classifications or unobserved construction layers."
+      ],
+      "checks": [
+        "Check every generated opening attaches to its intended wall segment.",
+        "Check room graph/connectivity, wall lengths/thicknesses, opening positions and elevations.",
+        "Verify generated top/plan projections against the source plan and compare all known controls."
+      ],
+      "alternatives": [
+        "Manual wall/opening construction from the reviewed graph in OCS or FreeCAD."
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Compose a confirmed plan graph and explicit elevation/opening parameters into separate CAD wall/opening solids. Floor-plan papers describe research recognition/reconstruction methods; this operation proposes an editable CAD handoff and does not claim BIM/IFC semantics."
+    }
+  ],
+  "recipes": [
+    {
+      "id": "CAD-R01",
+      "name": "Text and explicit dimensions to an editable engineering part",
+      "inputs": [
+        "text",
+        "dimensions"
+      ],
+      "goal": "Create source-linked parametric geometry with a saved native model.",
+      "steps": [
+        "CAD-01",
+        "CAD-10",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "Every model value has declared units and evidence status.",
+        "CAD-10 builds from the model brief and dimensions.",
+        "Choose OCS for the established project session; choose FreeCAD/code-CAD when constrained feature history or analytic B-rep exchange is required.",
+        "The original brief remains linked to each controlling dimension."
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+        "https://build123d.readthedocs.io/en/latest/operations.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Brief → evidence ledger → constrained sketch/parameters → CAD features → independent readback and export check."
+    },
+    {
+      "id": "CAD-R02",
+      "name": "Raster sketch plus measured scale to a constrained part",
+      "inputs": [
+        "raster-sketch",
+        "dimensions"
+      ],
+      "goal": "Convert an image sketch into a constrained 2D profile and solid with traceable dimensions.",
+      "steps": [
+        "CAD-02",
+        "CAD-03",
+        "CAD-04",
+        "CAD-01",
+        "CAD-08",
+        "CAD-09",
+        "CAD-10",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "Known lengths define image scale; image-only proportions remain inferred.",
+        "OCR text and curve candidates are reviewed against source pixels.",
+        "CAD-01 builds the brief from recovered text and explicit dimensions.",
+        "Profile extraction is checked against the original image overlay."
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html",
+        "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md"
+      ],
+      "status": "proposed_composition",
+      "summary": "Scale controls + OCR/vector candidates + human reconciliation + constrained profile + solid checks."
+    },
+    {
+      "id": "CAD-R03",
+      "name": "Raster floor plan plus dimensions to a 3D building hypothesis",
+      "inputs": [
+        "raster-plan",
+        "dimensions",
+        "text"
+      ],
+      "goal": "Produce editable wall/opening geometry with explicit scale and uncertain vertical dimensions.",
+      "steps": [
+        "CAD-02",
+        "CAD-03",
+        "CAD-04",
+        "CAD-01",
+        "CAD-05",
+        "CAD-17",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "CAD-02 produces metric in-plane controls; CAD-03 produces text candidates; human review associates them to the geometry.",
+        "CAD-05 produces the reviewed wall/opening graph in vector-drawing.",
+        "CAD-17 requires confirmed height/opening/elevation values in the model brief; raster plan data does not supply missing vertical dimensions.",
+        "CAD-13 verifies walls, openings, dimensions, graph connections and saved artifact identity."
+      ],
+      "source_urls": [
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+        "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
+        "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Rectify and interpret the plan, review dimension OCR and wall/opening graph, then create separate candidate wall/opening solids from confirmed heights, thicknesses and elevations. The output is a CAD assembly, not an IFC model."
+    },
+    {
+      "id": "CAD-R04",
+      "name": "DXF or SVG drawing to a parametric solid",
+      "inputs": [
+        "vector-drawing",
+        "dimensions",
+        "model-brief"
+      ],
+      "goal": "Retain drawing evidence and construct a checked solid from a confirmed profile or feature layout.",
+      "steps": [
+        "CAD-08",
+        "CAD-09",
+        "CAD-10",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "Original drawing file and hash remain unchanged.",
+        "Units, layer/filter, plane and transformations are stated.",
+        "CAD-09 requires vector geometry plus a model brief, dimensions or measurement-set.",
+        "Use exact-solid exporter when analytic exchange is required; OCS current STEP route is faceted."
+      ],
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
+        "https://ezdxf.readthedocs.io/en/stable/",
+        "https://build123d.readthedocs.io/en/latest/operations.html",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+      ],
+      "status": "proposed_composition",
+      "summary": "Preserve source drawing → choose profiles → clean/constraint → feature generation → exact representation check."
+    },
+    {
+      "id": "CAD-R05",
+      "name": "Registered orthographic vector views + dimensions → candidate parametric part",
+      "inputs": [
+        "vector-drawing",
+        "measurement-set",
+        "model-brief"
+      ],
+      "goal": "Construct a model that projects consistently into every supplied view.",
+      "steps": [
+        "CAD-06",
+        "CAD-07",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "Projection standard and view axes are identified.",
+        "CAD-06 receives one vector drawing that contains all identified orthographic views.",
+        "Edge and vertex matches are checked across views.",
+        "CAD-01/06 retain ambiguity and dimensions in the brief.",
+        "Generated model views are compared with original views."
+      ],
+      "source_urls": [
+        "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+        "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
+        "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "The vector-drawing input contains several identified orthographic views; measurement-set supplies drawing dimensions/controls and model-brief records projection convention and confirmed feature intent. Reconstruct and compare a candidate against all views."
+    },
+    {
+      "id": "CAD-R06",
+      "name": "Photographs, one measured length and a library candidate to an assembly",
+      "inputs": [
+        "photo-set",
+        "measurement-set",
+        "source-library"
+      ],
+      "goal": "Combine measured scan geometry and identified library components while keeping uncertain body geometry labeled.",
+      "steps": [
+        "CAD-16",
+        "CAD-11",
+        "CAD-12",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "CAD-16 uses the photo set and measured control length to solve camera poses/scale and produce visible point-cloud/mesh outputs.",
+        "CAD-11 receives the reconstructed point cloud or mesh with measurement controls; it fits analytic interfaces and retains residuals.",
+        "CAD-12 combines the fitted scan geometry with identified library parts as separate components.",
+        "Unsampled/occluded surfaces remain inferred; do not warp library geometry silently."
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+      ],
+      "status": "proposed_composition",
+      "summary": "Reconstruct a scaled camera solution and visible point cloud/mesh from overlapping photos; fit analytic interface features; compare to a library component; assemble and verify. Photograph-derived hidden surfaces remain inferred."
+    },
+    {
+      "id": "CAD-R07",
+      "name": "Depth scan and existing housing CAD to a revised interface assembly",
+      "inputs": [
+        "depth-frames",
+        "cad-solid",
+        "measurement-set"
+      ],
+      "goal": "Remodel one scoped interface from scan data while preserving the existing CAD housing.",
+      "steps": [
+        "CAD-11",
+        "CAD-12",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "CAD-11 receives depth frames, a metric measurement set and returns one fitted component solid.",
+        "CAD-12 combines the fitted solid and existing housing solid.",
+        "Keep original housing file unchanged and record its hash.",
+        "Fit residuals and interface dimensions are checked independently."
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "status": "proposed_composition",
+      "summary": "Align measured scan to retained CAD → fit interface primitives → remodel only the scoped component → check assembly interfaces. CAD-12 receives the retained housing and the distinct fitted component as separate cad-solid occurrences."
+    },
+    {
+      "id": "CAD-R08",
+      "name": "Library assembly with an unresolved component envelope",
+      "inputs": [
+        "cad-solid",
+        "source-library"
+      ],
+      "goal": "Place identified source parts and isolate a placeholder for an unmodeled part.",
+      "steps": [
+        "CAD-12",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "Source components retain their native identity and transform.",
+        "Placeholder geometry is labeled and has a declared basis.",
+        "No unobserved interface or part number is invented."
+      ],
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "status": "proposed_composition",
+      "summary": "Assemble known components by interface frames and leave the unresolved envelope visibly attributable to its current evidence status. CAD-12 receives the CAD solid as base and the library component as a separate part."
+    },
+    {
+      "id": "CAD-R09",
+      "name": "Orthographic line research route → candidate solid and verification",
+      "inputs": [
+        "vector-drawing",
+        "measurement-set",
+        "model-brief"
+      ],
+      "goal": "Generate and verify candidate 3D geometry from registered views while retaining the algorithmic reconstruction as inferred geometry.",
+      "steps": [
+        "CAD-06",
+        "CAD-07",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "CAD-06 output retains view correspondences and reconstruction assumptions in the brief.",
+        "CAD-07 is a documented research method/composition, not a verified deployable backend in this repository.",
+        "If editable feature history is needed, reconstruct a constrained feature model separately from the verified candidate solid."
+      ],
+      "source_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "A proposed research-method route using orthographic line correspondence and learned shape-program papers to propose candidate geometry; the paper methods are not asserted to be an installed or validated runtime."
+    },
+    {
+      "id": "CAD-R10",
+      "name": "OpenSCAD CSG source → mesh derivative",
+      "inputs": [
+        "parametric-source"
+      ],
+      "goal": "Generate and validate a mesh derivative while retaining editable OpenSCAD source.",
+      "steps": [
+        "CAD-15",
+        "CAD-13"
+      ],
+      "handoffs": [
+        "CAD-13 verifies mesh identity, bounds, units, watertightness and saved-file readback; the mesh remains distinct from a CAD solid."
+      ],
+      "source_urls": [
+        "https://openscad.org/documentation"
+      ],
+      "status": "proposed_composition",
+      "summary": "Render source-defined CSG to a mesh, preserve the source, then record mesh checks in a verification report."
+    }
+  ],
+  "ideas": [
+    {
+      "id": "CAD-I01",
+      "name": "Feature-level evidence ledger",
+      "summary": "Link every model parameter and geometric feature to a source document, coordinate range, evidence status, units, transformation and uncertainty; keep solver constraints separate from measured inputs.",
+      "source_urls": [
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md"
+      ],
+      "status": "proposal",
+      "next_check": "Prototype a JSON schema that points from model parameter IDs to image/DXF entities and measured-value status."
+    },
+    {
+      "id": "CAD-I02",
+      "name": "Two-channel raster interpretation",
+      "summary": "Keep OCR outputs and line/contour outputs in separate layers so OCR cleanup cannot erase geometric evidence and line extraction cannot silently reinterpret dimension text.",
+      "source_urls": [
+        "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+        "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html"
+      ],
+      "status": "proposal",
+      "next_check": "Compare extracted OCR boxes and line candidates against a raster-sketch fixture with known scale and dimensions."
+    },
+    {
+      "id": "CAD-I03",
+      "name": "Orthographic reconstruction comparison fixture",
+      "summary": "Build a benchmark of simple prismatic, revolved and assembled parts with front/top/side views, dimensions, raster degradation and known CAD sources; compare rule-based, learned and human-assisted routes.",
+      "source_urls": [
+        "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
+      ],
+      "status": "proposal",
+      "next_check": "Check research repositories and dataset licences for redistributable fixtures and whether output preserves editable CAD feature history."
+    },
+    {
+      "id": "CAD-I04",
+      "name": "Representation-aware backend selection",
+      "summary": "Route each job using required outputs: OCS for the established session workflow, FreeCAD for constrained feature history, code-CAD for reproducible exact B-rep source, and Blender/OpenSCAD for mesh or scene routes; record when a format conversion changes representation.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
+        "https://build123d.readthedocs.io/en/latest/operations.html"
+      ],
+      "status": "proposal",
+      "next_check": "Run a controlled exact solid and mesh fixture through each installed backend and record representation and history outcomes."
+    },
+    {
+      "id": "CAD-I05",
+      "name": "Dimension and hidden-surface ambiguity queue",
+      "summary": "Keep inferred values, obscured surfaces, uncertain symbols and competing projection correspondences in a small question queue; proceed only on independent geometry that does not depend on those items.",
+      "source_urls": [
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html",
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html"
+      ],
+      "status": "proposal",
+      "next_check": "Design test cases where two distinct solids satisfy the same incomplete views and verify that the workflow reports both candidates."
+    }
+  ],
+  "representation_notes": [
+    "Inputs within inputs[] are all required. For operations with input_alternatives, every input[] item is required AND exactly one alternative group must be satisfied; each alternative group is itself an AND set. Outputs list only types guaranteed for every accepted input branch.",
+    "Additional type: verification-report is a saved set of check results, failed operation IDs, affected artifact IDs and artifact revision/hash; it is used to diagnose/recover a failed transition.",
+    "CAD-10 outputs an internal/kernel cad-solid; exact-format export is a separate handoff and OCS STEP is faceted in the inspected checkout. CAD-15 outputs mesh from OpenSCAD source. Mesh and cad-solid remain separate representation types.",
+    "Additional types: native-model-document is the editable saved model in its owning CAD application; it preserves available application features/history but does not imply a common editable feature tree across applications. CAD-16 makes the photo-set → camera-solution/point-cloud/mesh transition explicit before CAD-11 fitting.",
+    "native-model-document is an additional representation type: a saved editable document in its owning CAD application; available feature history depends on that application."
+  ]
+}

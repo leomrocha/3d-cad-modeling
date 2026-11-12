@@ -1,0 +1,70 @@
+[
+  {
+    "url": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "title": "Project workflow composition rules",
+    "summary": "Project proposal defining sequences, branches, evidence merges, component substitution, representation forks and revisioned edit/compare loops, with explicit handoff conditions and research questions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "Original project proposal and composition-rule research questions"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+    "title": "Project cross-domain workflow recipes and additional ideas",
+    "summary": "Original project proposals combining CAD, photogrammetry, controls, component libraries, IFC and robot models, with named artifact roles and explicit handoff conditions. Also records concept-image and procedural-field research questions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "Cross-domain workflow proposals and original project research questions"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+    "sha256": "0129dc668531453eaa924dea4499ed7475334e5a7a9e2a72d17653b3500a634f",
+    "content_type": "application/json"
+  },
+  {
+    "url": "https://github.com/leap71/PicoGK",
+    "title": "PicoGK repository",
+    "summary": "The earlier computational-engineering report registers PicoGK as a public geometry toolkit with Apache-2.0 licensing; runtime and OCS interchange experiments are separate proposed work.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Optional procedural geometry branch"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null,
+    "source_report": "/home/leo/projects/energy/eoliennes/research/cad-workflow/computational-engineering-findings.md"
+  },
+  {
+    "url": "https://github.com/leap71/LEAP71_ShapeKernel",
+    "title": "LEAP71 ShapeKernel repository",
+    "summary": "The earlier computational-engineering report registers the public ShapeKernel geometry library and its Apache-2.0 licence; a procedural-field branch is a project research proposal.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Optional procedural geometry branch"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null,
+    "source_report": "/home/leo/projects/energy/eoliennes/research/cad-workflow/computational-engineering-findings.md"
+  },
+  {
+    "url": "https://picogk.org/doc/",
+    "title": "PicoGK documentation",
+    "summary": "The earlier archived documentation describes a C# and NuGet setup; the recorded project file targets .NET 9. Platform and interchange suitability belong to the proposed geometry-branch assessment.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Optional procedural geometry branch"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null,
+    "source_report": "/home/leo/projects/energy/eoliennes/research/cad-workflow/computational-engineering-findings.md"
+  }
+]

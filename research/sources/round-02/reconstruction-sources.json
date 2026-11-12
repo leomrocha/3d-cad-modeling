@@ -1,0 +1,412 @@
+[
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+    "title": "Open3D 0.20 Global registration",
+    "summary": "Documents FPFH feature matching, RANSAC global registration, correspondence pruning by distance/edge length/normals, returned transform, fitness and inlier RMSE; a global initial pose can be refined by ICP.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-07",
+      "REC-R02",
+      "REC-R03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+    "title": "Open3D 0.20 ICP registration",
+    "summary": "Documents point-to-point and point-to-plane ICP, fitness as overlapping inlier fraction, inlier RMSE, transforms, thresholds and convergence iterations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-08",
+      "REC-12",
+      "REC-14",
+      "REC-16"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/openMVG/openMVG",
+    "title": "openMVG source repository",
+    "summary": "Existing report source: open-source photogrammetry library providing camera pose and sparse reconstruction stages; reused from reconstruction.md, not reopened in this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/CloudCompare/CloudCompare",
+    "title": "CloudCompare source repository",
+    "summary": "Existing report source: desktop point-cloud and mesh processing application used for interactive inspection and alignment alternatives; reused from reconstruction.md, not reopened in this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-09"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+    "title": "Open3D 0.20 point cloud operations",
+    "summary": "Documents point-cloud DBSCAN clustering and RANSAC plane segmentation, including `distance_threshold`, `ransac_n`, iterations and returned inlier indices/plane coefficients.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-09",
+      "REC-R04",
+      "REC-R05"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+    "title": "Open3D 0.20 RGB-D integration",
+    "summary": "Documents calibrated RGB-D integration into uniform or scalable TSDF using depth/color frames, camera intrinsics, camera poses, truncation and voxel length; mesh extraction uses marching cubes. Voxel size trades resolution against sensitivity to depth noise.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-05",
+      "REC-06",
+      "REC-R02",
+      "REC-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+    "title": "OpenCV 4.13 Camera Calibration",
+    "summary": "Documents intrinsic matrix and radial/tangential distortion estimation from known 3D pattern coordinates and corresponding image points, and image undistortion.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-01",
+      "REC-R01",
+      "REC-R03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+    "title": "OpenCV 4.13 Perspective-n-Point pose computation",
+    "summary": "Documents solving object/world-to-camera rotation and translation from known 3D points, 2D image projections, camera intrinsics and distortion; defines camera axes and reprojection-error objective.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-02",
+      "REC-12",
+      "REC-R01",
+      "REC-R03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+    "title": "Nerfstudio export geometry",
+    "summary": "Documents ns-export pointcloud to PLY, TSDF meshes as available for all models, Poisson meshes only for models predicting normals, OBJ textured meshes and NeRF texture transfer to existing meshes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-11",
+      "REC-20",
+      "REC-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.nerf.studio/nerfology/methods/splat.html",
+    "title": "Nerfstudio Splatfacto",
+    "summary": "Documents Splatfacto camera/image inputs, COLMAP sparse-point initialization, Gaussian PLY export, memory estimates, and FAQ statement that mesh/point-cloud export is currently unsupported; this conflicts with the generic export_geometry page's TSDF-for-all-models wording.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-10",
+      "REC-11",
+      "REC-19",
+      "REC-I05",
+      "REC-R05",
+      "REC-R06",
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
+    "title": "Nerfstudio custom dataset",
+    "summary": "Existing report source: describes image/video and camera-pose data processing through ns-process-data and COLMAP camera solving; reused as a documented handoff source, not reopened in this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-03",
+      "REC-04",
+      "REC-20",
+      "REC-R01",
+      "REC-R07"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+    "title": "COLMAP command-line interface",
+    "summary": "Existing report source: documents automated_reconstructor and command-line access to reconstruction operations for scripted camera and MVS workflows; reused from reconstruction.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-03",
+      "REC-04",
+      "REC-17",
+      "REC-R01",
+      "REC-R02",
+      "REC-R07",
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null
+  },
+  {
+    "url": "https://alicevision.org/",
+    "title": "AliceVision computer-vision framework",
+    "summary": "Existing report source: describes AliceVision/Meshroom image-to-3D photogrammetry templates and modular graph of nodes; reused from reconstruction.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-03",
+      "REC-04",
+      "REC-R01"
+    ],
+    "local_original": null,
+    "sha256": null
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
+    "title": "Open3D RGB-D odometry",
+    "summary": "Existing report source: documents estimating frame-to-frame motion from RGB-D input; reused as an alternate pose-estimation stage for registered depth sequences.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-05",
+      "REC-06",
+      "REC-R02"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://docs.nerf.studio/quickstart/installation.html",
+    "title": "Nerfstudio installation and supported inputs",
+    "summary": "Existing report source: project plan documents image/video processing with COLMAP and supplied pose routes; reused for visual-scene recipe prerequisites.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-10",
+      "REC-R07",
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/ByteDance-Seed/Depth-Anything-3",
+    "title": "Depth Anything 3 repository",
+    "summary": "Existing report source: DA3 estimates depth and camera poses from single/multiple views, has metric and relative series, and exports point-cloud/GLB/Gaussian formats; reused from reconstruction.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-10",
+      "REC-R05",
+      "REC-I03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/xy-gao/DA3-blender",
+    "title": "DA3 Blender add-on",
+    "summary": "Existing report source: community Blender add-on makes point-cloud Geometry Nodes from image folders; metric model and layered-mesh options are described by its README, with add-on license unresolved; reused from reconstruction.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-10",
+      "REC-13",
+      "REC-R05",
+      "REC-I03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
+    "title": "CloudCompare command-line mode",
+    "summary": "Existing report source: command-line operations open, process and save cloud/mesh files with ordered actions; source report documents CLI use. Reused for scripted cleanup/comparison alternatives.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-07",
+      "REC-08",
+      "REC-14",
+      "REC-16"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://docs.blender.org/api/current/bpy.types.Scene.html",
+    "title": "Blender Scene Python API",
+    "summary": "Search-indexed API identifies Scene.ray_cast and scene annotation properties for world-space surface picking; direct page retrieval returned HTTP 402 in this research session. Claim limited to the indexed API entry; exact signature should be checked from installed Blender API at implementation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "REC-13",
+      "REC-I04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/microsoft/TRELLIS.2",
+    "title": "Microsoft TRELLIS.2 image-to-3D repository",
+    "summary": "Existing report source: single-image mesh/GLB generation; used as an alternative visual-proxy adapter. It predicts hidden geometry and carries no measured-scale evidence by itself.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-15",
+      "REC-18",
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/VAST-AI-Research/TripoSR",
+    "title": "TripoSR image-to-3D repository",
+    "summary": "Existing report source: one-image model emits a mesh/texture for visual proxy generation; the output is generated geometry whose unseen sides and dimensions need external evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-15",
+      "REC-18",
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://www.blender.org/about/license/",
+    "title": "Blender license and artwork",
+    "summary": "Existing report source: Blender scripting/visualization use and artwork terms; reused as an adapter source.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-13",
+      "REC-14",
+      "REC-15",
+      "REC-16"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+    "title": "OpenMVG documentation: OpenMVS stages",
+    "summary": "Existing report source: describes the OpenMVG-to-OpenMVS MVS handoff and dense reconstruction stages; registered from reconstruction.md, not reopened in this audit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-17",
+      "REC-R01",
+      "REC-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+    "title": "Depth Anything 3 streaming README",
+    "summary": "Existing report source: describes streaming inference over long image sequences; registered from reconstruction.md, not reopened in this audit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-04",
+      "REC-10",
+      "REC-R02"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/nerfstudio-project/nerfstudio",
+    "title": "Nerfstudio source repository",
+    "summary": "Existing report source: project repository for NeRF/Gaussian view-synthesis pipelines; registered from reconstruction.md, not reopened in this audit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-04",
+      "REC-R08"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/facebookresearch/sam-3d-objects",
+    "title": "SAM 3D Objects source repository",
+    "summary": "Existing report source: single-image object reconstruction and mesh generation; registered from reconstruction.md, not reopened in this audit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-18",
+      "REC-R10"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  },
+  {
+    "url": "https://github.com/colmap/colmap",
+    "title": "COLMAP source repository",
+    "summary": "Existing report source: photogrammetry and multi-view stereo reconstruction; registered from reconstruction.md, not reopened in this audit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "REC-I03"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": null
+  }
+]

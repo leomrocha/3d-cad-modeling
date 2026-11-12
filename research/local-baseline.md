@@ -31,4 +31,6 @@ Sources inspected in place:
 
 ## Foundation files
 
-`AGENTS.md` is a byte-for-byte copy of `/home/leo/projects/ferme/AGENTS.md`. Its farm-robot and used-vehicle sourcing sections explicitly scope themselves to those tasks. The current request authorizes research spanning multiple open source applications; README records that project scope.
+At the initial foundation step, `AGENTS.md` was a byte-for-byte copy of `/home/leo/projects/ferme/AGENTS.md`. Its farm-robot and used-vehicle sourcing sections explicitly scope themselves to those tasks. The current request authorizes research spanning multiple open source applications; README records that project scope.
+
+The later workflow-research batch adds the user’s standing documentation and before/after commit instructions to the copied rules; see [documentation-policy.md](documentation-policy.md).

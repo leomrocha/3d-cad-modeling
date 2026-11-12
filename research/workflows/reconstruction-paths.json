@@ -1,0 +1,1362 @@
+{
+  "domain": "reconstruction",
+  "operations": [
+    {
+      "id": "REC-01",
+      "name": "Calibrate camera intrinsics and distortion",
+      "inputs": [
+        "photo-set",
+        "measurement-set"
+      ],
+      "outputs": [
+        "camera-solution"
+      ],
+      "tools": [
+        "OpenCV calibrateCamera",
+        "checkerboard or Charuco target"
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
+      ],
+      "prerequisites": [
+        "Known target geometry and units",
+        "Images cover target orientations and image field",
+        "Camera/lens/focus state recorded"
+      ],
+      "preserves": [
+        "Original images",
+        "Target dimensions and capture metadata"
+      ],
+      "changes_or_infers": [
+        "Estimates intrinsics and lens-distortion coefficients",
+        "Undistorted images are derivatives"
+      ],
+      "checks": [
+        "Calibration reprojection RMS and per-image residuals",
+        "Undistort a held-out target image and compare straight edges",
+        "Keep calibration target coordinates in declared units"
+      ],
+      "alternatives": [
+        "COLMAP self-calibration for capture-derived focal/intrinsic estimates",
+        "Manufacturer calibration only when specific camera/lens state is known"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Solve camera intrinsics/distortion from corresponding known target coordinates and detected image points; target size supplies metric length scale to later pose solutions."
+    },
+    {
+      "id": "REC-02",
+      "name": "Solve camera pose from known 3D-to-2D correspondences",
+      "inputs": [
+        "measurement-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "camera-solution"
+      ],
+      "tools": [
+        "OpenCV solvePnP / solvePnPRansac",
+        "projectPoints"
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
+      ],
+      "prerequisites": [
+        "Known world/CAD points and units",
+        "Corresponding image pixel locations",
+        "Intrinsics and distortion from REC-01 or a documented calibration"
+      ],
+      "preserves": [
+        "World point coordinates and point correspondence labels",
+        "Input camera calibration"
+      ],
+      "changes_or_infers": [
+        "Estimates rotation and translation from world/object frame to camera frame"
+      ],
+      "checks": [
+        "Pixel reprojection residuals",
+        "Independent target correspondences",
+        "Confirm transform direction and camera axes before downstream conversion"
+      ],
+      "alternatives": [
+        "COLMAP camera poses when point correspondences are not manually surveyed",
+        "CAD fiducial detection with PnP for CAD-to-photo registration"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Anchor a camera to metric world/CAD coordinates using PnP; output pose is a transform, not a reconstructed surface. OpenCV camera convention is x-right, y-down, z-forward."
+    },
+    {
+      "id": "REC-03",
+      "name": "Estimate camera poses and sparse structure from overlapping photos",
+      "inputs": [
+        "photo-set"
+      ],
+      "outputs": [
+        "camera-solution",
+        "point-cloud"
+      ],
+      "tools": [
+        "COLMAP/pycolmap",
+        "AliceVision/Meshroom",
+        "OpenMVG"
+      ],
+      "source_urls": [
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://alicevision.org/",
+        "https://github.com/openMVG/openMVG"
+      ],
+      "prerequisites": [
+        "Static scene or moving objects masked",
+        "Overlap and texture sufficient for feature matching",
+        "Camera model/preprocessing documented"
+      ],
+      "preserves": [
+        "Input images",
+        "Feature and match database, camera model, sparse reconstruction and settings"
+      ],
+      "changes_or_infers": [
+        "Estimates camera poses and sparse 3D points",
+        "Monocular reconstruction scale is arbitrary absent controls/metric sensor"
+      ],
+      "checks": [
+        "Registered image fraction and component connectivity",
+        "Reprojection residual distribution",
+        "Camera path and sparse outliers",
+        "At least two separated scale controls for local distortion detection"
+      ],
+      "alternatives": [
+        "OpenMVG+OpenMVS",
+        "Depth Anything 3 multi-view pose/depth estimate",
+        "Surveyed camera poses when available"
+      ],
+      "automation": "mixed",
+      "evidence_status": "existing_report_registered",
+      "summary": "Recover view geometry and camera poses from overlapping images; normalize all exported poses to a named frame and apply scale only from explicit evidence."
+    },
+    {
+      "id": "REC-04",
+      "name": "Convert video into an image reconstruction dataset",
+      "inputs": [
+        "video"
+      ],
+      "outputs": [
+        "photo-set"
+      ],
+      "tools": [
+        "ffmpeg frame extraction",
+        "blur/duplicate-frame filtering",
+        "COLMAP or Meshroom downstream"
+      ],
+      "source_urls": [
+        "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+        "https://github.com/nerfstudio-project/nerfstudio"
+      ],
+      "prerequisites": [
+        "Video stream has sufficient viewpoint change",
+        "Timestamps and frame rate retained",
+        "Avoid excessive adjacent near-duplicate frames"
+      ],
+      "preserves": [
+        "Original video",
+        "Frame index and presentation timestamp for every extracted image"
+      ],
+      "changes_or_infers": [
+        "Selects a frame subset; frame selection can omit views or moving events"
+      ],
+      "checks": [
+        "Frame sharpness and coverage by viewing direction",
+        "Image timestamp monotonicity",
+        "Motion/rolling-shutter and exposure consistency"
+      ],
+      "alternatives": [
+        "DA3-Streaming directly on long image sequences",
+        "RGB-D video route through REC-05"
+      ],
+      "automation": "assisted",
+      "evidence_status": "proposed_composition",
+      "summary": "Create a controlled photo-set from video while retaining original timeline provenance; selected frame sampling is an input transformation that affects camera coverage."
+    },
+    {
+      "id": "REC-05",
+      "name": "Register RGB and depth frames and estimate sequence poses",
+      "inputs": [
+        "depth-frames"
+      ],
+      "outputs": [
+        "camera-solution",
+        "point-cloud"
+      ],
+      "tools": [
+        "Open3D RGB-D odometry",
+        "sensor SDK calibration",
+        "Open3D camera intrinsics/trajectory"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
+      ],
+      "prerequisites": [
+        "Color/depth camera intrinsics",
+        "Depth scale and units",
+        "RGB-to-depth extrinsic transform",
+        "Pose convention recorded"
+      ],
+      "preserves": [
+        "Raw color/depth frames",
+        "Sensor calibration and per-frame transforms"
+      ],
+      "changes_or_infers": [
+        "Estimates frame-to-frame motion if poses are not provided",
+        "Depth samples are projected into camera coordinates"
+      ],
+      "checks": [
+        "Known-depth/range baseline residuals",
+        "Frame registration residuals and loop closure",
+        "Check synchronized frames and depth/color alignment"
+      ],
+      "alternatives": [
+        "Hardware SLAM trajectory",
+        "Surveyed poses",
+        "LiDAR/target registration"
+      ],
+      "automation": "scripted",
+      "evidence_status": "existing_report_registered",
+      "summary": "Associate color and depth in a shared camera model, then estimate or import frame poses for fusion. Sensor metric units do not remove calibration bias or trajectory drift."
+    },
+    {
+      "id": "REC-06",
+      "name": "Integrate calibrated RGB-D frames into point cloud or TSDF mesh",
+      "inputs": [
+        "depth-frames",
+        "camera-solution"
+      ],
+      "outputs": [
+        "point-cloud",
+        "mesh"
+      ],
+      "tools": [
+        "Open3D ScalableTSDFVolume",
+        "Open3D RGBDImage",
+        "Open3D marching-cubes extraction"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
+      ],
+      "prerequisites": [
+        "REC-05 calibration and pose trajectory",
+        "Depth units/range threshold",
+        "Voxel length and truncation distance chosen in stated units"
+      ],
+      "preserves": [
+        "Raw depth frames and integration trajectory",
+        "Color data and TSDF settings"
+      ],
+      "changes_or_infers": [
+        "Fuses samples into voxel representation and interpolated surface",
+        "Occluded regions remain unobserved or become algorithmically filled"
+      ],
+      "checks": [
+        "Independent dimensions and loop-closure drift",
+        "Compare two voxel lengths against the same controls",
+        "Report registration and surface residual distributions"
+      ],
+      "alternatives": [
+        "Point-cloud accumulation without TSDF",
+        "Sensor-native mesh",
+        "COLMAP/MVS surface from RGB"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Fuse RGB-D into a scalable TSDF and extract a triangle mesh; voxel length controls discretization and noise response, not measured accuracy."
+    },
+    {
+      "id": "REC-07",
+      "name": "Estimate coarse transform between point clouds",
+      "inputs": [],
+      "input_roles": [
+        {
+          "role": "source cloud",
+          "type": "point-cloud"
+        },
+        {
+          "role": "target cloud",
+          "type": "point-cloud"
+        }
+      ],
+      "outputs": [
+        "measurement-set"
+      ],
+      "tools": [
+        "Open3D FPFH",
+        "Open3D RANSAC global registration",
+        "CloudCompare alignment"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html"
+      ],
+      "prerequisites": [
+        "Same scale or explicitly estimated Sim(3) scale",
+        "Overlap with geometric features",
+        "Point coordinates and units documented"
+      ],
+      "preserves": [
+        "Both original clouds",
+        "Source/target identities"
+      ],
+      "changes_or_infers": [
+        "Estimates rigid or chosen similarity transform and correspondences"
+      ],
+      "checks": [
+        "RANSAC inlier set and correspondence checks",
+        "Fitness/inlier RMSE after transform",
+        "Control targets withheld from fitting"
+      ],
+      "alternatives": [
+        "Known targets/PnP",
+        "Manual three-point initialization",
+        "Feature registration from CAD datums"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Find a coarse point-cloud alignment from local features, then pass the transform and inliers to refinement; feature ambiguity and symmetry can produce a plausible wrong pose."
+    },
+    {
+      "id": "REC-08",
+      "name": "Refine registration and compare point-cloud surfaces",
+      "inputs": [
+        "measurement-set"
+      ],
+      "input_roles": [
+        {
+          "role": "source cloud",
+          "type": "point-cloud"
+        },
+        {
+          "role": "target cloud",
+          "type": "point-cloud"
+        }
+      ],
+      "outputs": [
+        "measurement-set"
+      ],
+      "tools": [
+        "Open3D point-to-plane ICP",
+        "Open3D evaluate_registration",
+        "CloudCompare cloud-to-cloud distance"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
+      ],
+      "prerequisites": [
+        "Coarse transform",
+        "Overlap and consistent units",
+        "ICP threshold selected from expected sampling/noise scale"
+      ],
+      "preserves": [
+        "Source clouds and original transforms",
+        "Correspondence threshold and final transform"
+      ],
+      "changes_or_infers": [
+        "Refines transform to minimize selected correspondence objective",
+        "Distance map depends on chosen correspondence and sampling rule"
+      ],
+      "checks": [
+        "Fitness and inlier RMSE with units",
+        "Independent control residuals",
+        "Inspect residual map and non-overlap separately"
+      ],
+      "alternatives": [
+        "Robust kernels",
+        "Multiway pose graph registration",
+        "Target-based transformation"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Refine an initialized transform and compute cloud distances; optimizer residual and overlap metrics describe fit to participating points, not absolute truth."
+    },
+    {
+      "id": "REC-09",
+      "name": "Segment point clouds and fit candidate primitive evidence",
+      "inputs": [
+        "point-cloud"
+      ],
+      "outputs": [
+        "point-cloud",
+        "measurement-set"
+      ],
+      "tools": [
+        "Open3D segment_plane",
+        "Open3D DBSCAN",
+        "CloudCompare scalar-field and primitive tools"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://github.com/CloudCompare/CloudCompare"
+      ],
+      "prerequisites": [
+        "Scale/units and cloud frame declared",
+        "Segmentation thresholds expressed in cloud units",
+        "Target regions have enough spatial coverage"
+      ],
+      "preserves": [
+        "Original cloud",
+        "Point indices for each segment and threshold parameters"
+      ],
+      "changes_or_infers": [
+        "Classifies points into plane inliers/clusters",
+        "Primitive parameters are estimates from sampled observations"
+      ],
+      "checks": [
+        "Plane/candidate feature residuals and inlier count",
+        "Repeat fit at alternative thresholds",
+        "Manual check for mixed surfaces and partial arcs"
+      ],
+      "alternatives": [
+        "CloudCompare interactive segmentation",
+        "RANSAC/least-squares feature-specific fitters",
+        "Manual CAD measurements"
+      ],
+      "automation": "mixed",
+      "evidence_status": "documented_capability",
+      "summary": "Partition a cloud and obtain candidate planes/clusters; parameters are evidence for a feature interpretation, not automatically semantic CAD."
+    },
+    {
+      "id": "REC-10",
+      "name": "Estimate multi-view depth, camera poses and Gaussian outputs",
+      "inputs": [],
+      "input_alternatives": [
+        [
+          "photo-set"
+        ],
+        [
+          "video"
+        ]
+      ],
+      "outputs": [
+        "camera-solution",
+        "point-cloud"
+      ],
+      "tools": [
+        "Depth Anything 3",
+        "DA3-Streaming",
+        "DA3 Blender add-on"
+      ],
+      "source_urls": [
+        "https://github.com/ByteDance-Seed/Depth-Anything-3",
+        "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+        "https://github.com/xy-gao/DA3-blender"
+      ],
+      "prerequisites": [
+        "Appropriate model variant/weights and GPU memory",
+        "Camera/image batch and scale metadata",
+        "DA3 Blender add-on currently has no LICENSE file at inspected upstream path"
+      ],
+      "preserves": [
+        "Input images/video and timestamps",
+        "Prediction confidence, camera poses/intrinsics and model revision"
+      ],
+      "changes_or_infers": [
+        "Network predicts depth/rays/poses and may estimate metric-scale depth",
+        "Splat and mesh outputs from learned model are generated estimates"
+      ],
+      "checks": [
+        "Compare metric depth to independent measured controls",
+        "Inspect confidence and cross-view consistency",
+        "Compare camera poses to COLMAP/targets",
+        "Record output model representation exactly"
+      ],
+      "alternatives": [
+        "COLMAP+MVS",
+        "Open3D RGB-D with sensor depth",
+        "Nerfstudio Splatfacto"
+      ],
+      "automation": "mixed",
+      "evidence_status": "existing_report_registered",
+      "summary": "Use DA3 for learned depth/pose/geometry and optional splats; its metric series remains an estimate that requires controls for dimensional claims."
+    },
+    {
+      "id": "REC-11",
+      "name": "Train NeRF or Gaussian scene for view synthesis",
+      "inputs": [
+        "photo-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "visual-scene"
+      ],
+      "tools": [
+        "Nerfstudio ns-process-data",
+        "ns-train nerfacto/splatfacto",
+        "ns-export gaussian-splat/tsdf/poisson/pointcloud"
+      ],
+      "source_urls": [
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md"
+      ],
+      "prerequisites": [
+        "Camera poses or COLMAP camera solve",
+        "GPU for Splatfacto/gsplat; exact memory depends on method and scene",
+        "Output command and Nerfstudio version recorded"
+      ],
+      "preserves": [
+        "Cameras, original images, training config/checkpoint and scene representation"
+      ],
+      "changes_or_infers": [
+        "Fits one selected NeRF or Gaussian representation",
+        "Any extracted mesh is a separate estimated surface derivative"
+      ],
+      "checks": [
+        "Novel-view coverage and reprojection/render metrics",
+        "Compare extracted geometry with controls and independent dense scan",
+        "Confirm Splatfacto export support in installed version; upstream pages conflict on mesh/pointcloud availability"
+      ],
+      "alternatives": [
+        "MVS mesh from COLMAP cameras",
+        "Open3D TSDF from measured RGB-D",
+        "Keep splat as visual reference only"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Train one selected NeRF or Gaussian scene. Mesh/point-cloud extraction is a separate model-dependent operation; generic TSDF documentation conflicts with the Splatfacto FAQ."
+    },
+    {
+      "id": "REC-12",
+      "name": "Register existing CAD to calibrated photographs or scan points",
+      "inputs": [
+        "measurement-set"
+      ],
+      "outputs": [
+        "camera-solution",
+        "measurement-set"
+      ],
+      "tools": [
+        "CAD tessellation with named 3D landmarks",
+        "OpenCV solvePnPRansac",
+        "Open3D global registration and ICP"
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "prerequisites": [
+        "Known CAD units, component datum and exact CAD revision",
+        "Visible identifiable CAD landmarks or scan geometry",
+        "Camera calibration for photo route"
+      ],
+      "preserves": [
+        "Authoritative CAD revision and its units",
+        "Photo/scan source and registration transform"
+      ],
+      "changes_or_infers": [
+        "Estimates CAD-to-camera/world transform",
+        "Surface registration uses a tessellated derivative of CAD"
+      ],
+      "checks": [
+        "Independent landmark reprojection residuals",
+        "Scan-to-CAD distance map and interface dimensions",
+        "Check symmetries/partial overlap for alternate poses"
+      ],
+      "alternatives": [
+        "Surveyed fiducials",
+        "Manual datum alignment",
+        "Photogrammetric camera solve with control targets"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Register a known CAD revision to measured photo landmarks or sampled scan geometry; the source CAD and scan/photo remain separate evidence.",
+      "input_choice_groups": [
+        [
+          [
+            "parametric-source"
+          ],
+          [
+            "cad-solid"
+          ]
+        ],
+        [
+          [
+            "photo-set"
+          ],
+          [
+            "point-cloud"
+          ],
+          [
+            "mesh"
+          ]
+        ]
+      ]
+    },
+    {
+      "id": "REC-13",
+      "name": "Anchor a screen sketch to a 3D surface",
+      "inputs": [
+        "raster-sketch",
+        "camera-solution"
+      ],
+      "input_alternatives": [
+        [
+          "mesh"
+        ],
+        [
+          "cad-solid"
+        ]
+      ],
+      "outputs": [
+        "measurement-set"
+      ],
+      "tools": [
+        "Blender Scene.ray_cast",
+        "screen-to-camera ray projection",
+        "OpenCV projectPoints",
+        "OCS constrained sketch"
+      ],
+      "source_urls": [
+        "https://docs.blender.org/api/current/bpy.types.Scene.html",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
+      ],
+      "prerequisites": [
+        "Active camera intrinsics and world transform",
+        "Named/selected hit surface and units",
+        "Semantic meaning chosen: trace, projected curve or planar sketch"
+      ],
+      "preserves": [
+        "Original image/stroke",
+        "Camera, hit object/component and hit primitive identifier"
+      ],
+      "changes_or_infers": [
+        "Maps pixel strokes to surface hits; occlusion and target surface define anchors",
+        "Curve fitting/simplification changes stroke geometry"
+      ],
+      "checks": [
+        "Reproject world anchors into source view",
+        "Report missed/ambiguous rays and anchor residual",
+        "Verify resulting OCS sketch plane and constraints"
+      ],
+      "alternatives": [
+        "Annotate a known orthographic view",
+        "Click measured fiducials and use PnP",
+        "Draw on a CAD datum plane"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Convert 2D screen strokes into 3D surface anchors by camera ray intersection. Ray hits are calculated anchors whose evidence follows the camera and hit geometry; a separate interpretation step must define sketch plane, constraints and feature meaning."
+    },
+    {
+      "id": "REC-14",
+      "name": "Remodel segmented scan evidence as parametric CAD",
+      "inputs": [
+        "measurement-set"
+      ],
+      "input_alternatives": [
+        [
+          "point-cloud"
+        ],
+        [
+          "mesh"
+        ]
+      ],
+      "outputs": [
+        "constrained-sketch",
+        "parametric-source",
+        "cad-solid"
+      ],
+      "tools": [
+        "Open3D feature fits",
+        "OpenCADStudio OCS skill",
+        "parametric CAD backend"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "prerequisites": [
+        "Registered scan and datum frame",
+        "Dimensions labeled measured/drawing/fit/assumed",
+        "Component boundaries and units stated"
+      ],
+      "preserves": [
+        "Raw scan, segmentation indices and fit report",
+        "Dimension provenance for every feature"
+      ],
+      "changes_or_infers": [
+        "Replaces noisy sampled boundaries with constrained feature model",
+        "Hidden surfaces/functional details require explicit assumptions"
+      ],
+      "checks": [
+        "OCS readback of geometry/revision",
+        "Solid validity and independent dimensions",
+        "Scan-to-CAD residual maps by surface and withheld controls"
+      ],
+      "alternatives": [
+        "Mesh kept as reference-only deliverable",
+        "Faceted mesh-derived solid when that is the required representation"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Use fitted scan geometry as evidence and reconstruct an editable feature history through the existing OCS workflow; fitted parameters must remain traceable and not silently become author dimensions."
+    },
+    {
+      "id": "REC-15",
+      "name": "Reconcile scan surfaces with dimensioned drawings",
+      "inputs": [
+        "measurement-set"
+      ],
+      "input_choice_groups": [
+        [
+          [
+            "point-cloud"
+          ],
+          [
+            "mesh"
+          ]
+        ],
+        [
+          [
+            "vector-drawing"
+          ],
+          [
+            "raster-plan"
+          ],
+          [
+            "raster-sketch"
+          ]
+        ]
+      ],
+      "outputs": [
+        "measurement-set"
+      ],
+      "tools": [
+        "CAD drawing datums",
+        "Open3D/CloudCompare registration and distance map",
+        "OCS constrained sketch"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
+      ],
+      "prerequisites": [
+        "Drawing units/scale and revision known",
+        "Common datums, features or control targets",
+        "Scan coordinate frame recorded"
+      ],
+      "preserves": [
+        "Drawing and scan as separate evidence sources",
+        "Source revision, units and alignment transform"
+      ],
+      "changes_or_infers": [
+        "Aligns evidence and constrains CAD candidate features",
+        "Discrepancies may reflect drawing, manufactured part, scan or interpretation differences"
+      ],
+      "checks": [
+        "Use some dimensions for fit and reserve others for validation",
+        "Report drawing-to-scan residuals and surface coverage",
+        "Inspect datum consistency and per-feature outliers"
+      ],
+      "alternatives": [
+        "Calibrated image-to-CAD registration",
+        "Direct measurements",
+        "Separate variant models by source revision"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Use a drawing as dimension evidence and a scan as surface evidence; preserve disagreements and provenance instead of averaging incompatible values without an explicit rule."
+    },
+    {
+      "id": "REC-16",
+      "name": "Iterate CAD edits against registered evidence",
+      "inputs": [
+        "measurement-set"
+      ],
+      "input_alternatives": [
+        [
+          "cad-solid"
+        ],
+        [
+          "parametric-source"
+        ]
+      ],
+      "input_choice_groups": [
+        [
+          [
+            "point-cloud"
+          ],
+          [
+            "mesh"
+          ]
+        ]
+      ],
+      "outputs": [
+        "measurement-set"
+      ],
+      "tools": [
+        "OCS revision-bound edit/readback",
+        "Open3D distance queries",
+        "CloudCompare distance command"
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
+      ],
+      "prerequisites": [
+        "Immutable source scan and transform",
+        "CAD revision identity",
+        "Comparison regions and thresholds with units"
+      ],
+      "preserves": [
+        "Prior CAD and scan revisions",
+        "Check configuration and dimensional source links"
+      ],
+      "changes_or_infers": [
+        "Applies bounded CAD edit and computes deltas"
+      ],
+      "checks": [
+        "Read back edited model",
+        "Compare same registered scan/controls across revisions",
+        "Report regional max/RMS/quantiles and functional dimension changes"
+      ],
+      "alternatives": [
+        "Manual visual compare",
+        "Independent target metrology",
+        "Cross-section comparison"
+      ],
+      "automation": "mixed",
+      "evidence_status": "proposed_composition",
+      "summary": "Use a repeatable scan-to-CAD comparison loop while preserving the source and tying every reported deviation to exact model revisions and regions."
+    },
+    {
+      "id": "REC-17",
+      "name": "Build dense point cloud and mesh from SfM camera solution",
+      "inputs": [
+        "photo-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "point-cloud",
+        "mesh"
+      ],
+      "tools": [
+        "OpenMVS DensifyPointCloud",
+        "OpenMVS ReconstructMesh",
+        "COLMAP dense workspace"
+      ],
+      "source_urls": [
+        "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
+      ],
+      "prerequisites": [
+        "REC-03 sparse camera solution or equivalent calibrated poses",
+        "Overlap, exposure and scene masks retained",
+        "Scale supplied by control or metric camera data for dimensional use"
+      ],
+      "preserves": [
+        "Sparse scene, images, camera poses and dense reconstruction settings"
+      ],
+      "changes_or_infers": [
+        "Estimates dense visible surface and interpolated mesh",
+        "Unseen and occluded surfaces are not recovered from images"
+      ],
+      "checks": [
+        "Image reprojection and dense coverage",
+        "Withheld control lengths and independent cloud residuals",
+        "Compare mesh-to-cloud distances and disconnected components"
+      ],
+      "alternatives": [
+        "Open3D TSDF from calibrated RGB-D",
+        "Nerfstudio geometry extraction only where model support is established"
+      ],
+      "automation": "scripted",
+      "evidence_status": "existing_report_registered",
+      "summary": "Run dense multi-view stereo after sparse camera recovery. Dense geometry inherits the camera scale and pose errors; triangulation does not itself create metric evidence."
+    },
+    {
+      "id": "REC-18",
+      "name": "Generate a single-image mesh proxy",
+      "inputs": [
+        "photo-set"
+      ],
+      "outputs": [
+        "mesh"
+      ],
+      "tools": [
+        "TripoSR",
+        "TRELLIS.2",
+        "SAM 3D Objects"
+      ],
+      "source_urls": [
+        "https://github.com/VAST-AI-Research/TripoSR",
+        "https://github.com/microsoft/TRELLIS.2",
+        "https://github.com/facebookresearch/sam-3d-objects"
+      ],
+      "prerequisites": [
+        "Exactly one selected image and model revision recorded",
+        "Model weights and model terms recorded separately from source-code licence",
+        "Dimensions or measured controls supplied separately before dimensional CAD use"
+      ],
+      "preserves": [
+        "Source image and model/checkpoint metadata"
+      ],
+      "changes_or_infers": [
+        "Predicts backside and occluded geometry from learned priors",
+        "Mesh scale is not established by image appearance alone"
+      ],
+      "checks": [
+        "Compare silhouette with additional views",
+        "Compare explicitly measured dimensions",
+        "Mark hidden surfaces as inferred before CAD remodeling"
+      ],
+      "alternatives": [
+        "Multi-view photogrammetry or calibrated scan"
+      ],
+      "automation": "scripted",
+      "evidence_status": "existing_report_registered",
+      "summary": "Generate a visual mesh proxy from one image. The output is inferred geometry with no independent metric scale."
+    },
+    {
+      "id": "REC-19",
+      "name": "Train and export a Gaussian splat scene",
+      "inputs": [
+        "photo-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "gaussian-scene"
+      ],
+      "tools": [
+        "Nerfstudio Splatfacto / gsplat",
+        "Gaussian PLY export"
+      ],
+      "source_urls": [
+        "https://docs.nerf.studio/nerfology/methods/splat.html"
+      ],
+      "prerequisites": [
+        "Camera poses and image transforms",
+        "GPU sized for the selected scene/model",
+        "Nerfstudio version and export command recorded"
+      ],
+      "preserves": [
+        "Images, poses, configuration, checkpoint and Gaussian PLY"
+      ],
+      "changes_or_infers": [
+        "Fits view-dependent Gaussian representation from capture images",
+        "Does not produce analytic CAD surfaces"
+      ],
+      "checks": [
+        "Novel-view coverage and held-out render comparison",
+        "Pose/image consistency",
+        "Keep dimensional claims tied to independent controls"
+      ],
+      "alternatives": [
+        "REC-20 NeRF scene"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Train one Gaussian scene and export its supported Gaussian representation. Current Splatfacto docs support Gaussian PLY; they state mesh/point-cloud export is unsupported."
+    },
+    {
+      "id": "REC-20",
+      "name": "Train and export a NeRF scene",
+      "inputs": [
+        "photo-set",
+        "camera-solution"
+      ],
+      "outputs": [
+        "nerf-scene"
+      ],
+      "tools": [
+        "Nerfstudio nerfacto",
+        "Nerfstudio checkpoint and viewer export"
+      ],
+      "source_urls": [
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md"
+      ],
+      "prerequisites": [
+        "Camera poses and image transforms",
+        "Training configuration and scene bounds",
+        "Nerfstudio version recorded"
+      ],
+      "preserves": [
+        "Images, poses, training configuration and checkpoint"
+      ],
+      "changes_or_infers": [
+        "Fits radiance field for view synthesis",
+        "Scene geometry extraction is a separate model-dependent process"
+      ],
+      "checks": [
+        "Novel-view coverage and held-out render comparison",
+        "Check extracted geometry separately against measured controls"
+      ],
+      "alternatives": [
+        "REC-19 Gaussian scene"
+      ],
+      "automation": "scripted",
+      "evidence_status": "documented_capability",
+      "summary": "Train one NeRF scene for view synthesis. A NeRF checkpoint is not itself an editable CAD surface."
+    }
+  ],
+  "recipes": [
+    {
+      "id": "REC-R01",
+      "name": "Calibrated photos and controls to editable CAD",
+      "inputs": [
+        "photo-set",
+        "measurement-set"
+      ],
+      "goal": "Recover camera poses, a dense surface, and an editable feature interpretation using measured controls.",
+      "steps": [
+        "REC-01",
+        "REC-03",
+        "REC-17",
+        "REC-14",
+        "REC-16"
+      ],
+      "handoffs": [
+        "REC-01 uses calibration-target images in the photo set and known target coordinates in the measurement set.",
+        "REC-03 supplies sparse poses/cloud; REC-17 supplies dense point cloud and mesh.",
+        "REC-14 and REC-16 use the supplied measurements and the dense surface; retain withheld controls for checks."
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Photo set and measured controls are the actual job inputs; sparse and dense geometry are produced by the listed stages before CAD remodeling."
+    },
+    {
+      "id": "REC-R02",
+      "name": "Video and RGB-D to registered metric scene",
+      "inputs": [
+        "video",
+        "depth-frames",
+        "measurement-set"
+      ],
+      "goal": "Align sampled video frames and calibrated depth geometry into one scene, then compare their surfaces.",
+      "steps": [
+        "REC-04",
+        "REC-03",
+        "REC-05",
+        "REC-07",
+        "REC-08",
+        "REC-06"
+      ],
+      "handoffs": [
+        "REC-04 makes the photo set; REC-03 estimates photo poses/cloud; REC-05 estimates depth poses/cloud.",
+        "REC-07 aligns those two clouds; REC-08 refines and reports residuals; REC-06 fuses depth frames with their trajectory.",
+        "Use sensor calibration and withheld measured controls for scale and drift checks."
+      ],
+      "source_urls": [
+        "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Video frames and calibrated depth frames are inputs; each registration and fusion stage consumes produced pose/cloud evidence."
+    },
+    {
+      "id": "REC-R03",
+      "name": "Existing CAD aligned to calibrated photos",
+      "inputs": [
+        "parametric-source",
+        "photo-set",
+        "measurement-set"
+      ],
+      "goal": "Place a known CAD revision into captured views and quantify projection residuals.",
+      "steps": [
+        "REC-01",
+        "REC-12"
+      ],
+      "handoffs": [
+        "Measurement set contains 3D CAD landmark coordinates and corresponding image pixels.",
+        "REC-12 uses the CAD source, calibrated photo set and correspondences; validate on withheld landmarks."
+      ],
+      "source_urls": [
+        "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Register a supplied CAD revision to calibrated photos; the result is a pose and residual set, not new hidden geometry."
+    },
+    {
+      "id": "REC-R04",
+      "name": "Scan and dimensioned drawing to constrained CAD",
+      "inputs": [
+        "point-cloud",
+        "vector-drawing",
+        "measurement-set"
+      ],
+      "goal": "Reconcile sampled surface and drawing dimensions into traceable parametric CAD.",
+      "steps": [
+        "REC-09",
+        "REC-15",
+        "REC-14",
+        "REC-16"
+      ],
+      "handoffs": [
+        "REC-09 segments the supplied cloud and records candidate fits.",
+        "REC-15 reconciles the supplied drawing and scan against datums; REC-14 creates CAD using resulting measurements.",
+        "REC-16 checks the CAD revision against the same source scan and reserved dimensions."
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
+      ],
+      "status": "proposed_composition",
+      "summary": "The scan and drawing are supplied evidence; registration and CAD authoring results are generated in listed stages."
+    },
+    {
+      "id": "REC-R05",
+      "name": "Photos, learned depth and view-synthesis comparison",
+      "inputs": [
+        "photo-set",
+        "measurement-set"
+      ],
+      "goal": "Compare DA3 depth/poses against SfM and use a Gaussian scene for visual context.",
+      "steps": [
+        "REC-03",
+        "REC-10",
+        "REC-19",
+        "REC-08"
+      ],
+      "handoffs": [
+        "REC-03 and REC-10 independently estimate camera/cloud geometry from photos.",
+        "REC-19 trains the Gaussian scene; REC-08 compares the two point clouds using supplied measurement controls."
+      ],
+      "source_urls": [
+        "https://github.com/ByteDance-Seed/Depth-Anything-3",
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Compare learned depth estimates with photogrammetry and measured controls; Gaussian scene is a visual representation, not surface truth."
+    },
+    {
+      "id": "REC-R06",
+      "name": "Gaussian context, independent mesh and CAD remodel",
+      "inputs": [
+        "photo-set",
+        "measurement-set"
+      ],
+      "goal": "Keep splat context separate from dense mesh evidence and editable CAD.",
+      "steps": [
+        "REC-03",
+        "REC-19",
+        "REC-17",
+        "REC-14",
+        "REC-16"
+      ],
+      "handoffs": [
+        "REC-19 provides Gaussian PLY for appearance; REC-17 independently provides MVS cloud/mesh.",
+        "REC-14 remodels using the dense mesh and measurement set; REC-16 compares CAD with the generated cloud/mesh."
+      ],
+      "source_urls": [
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "The splat supports rendered context; the separately generated and checked MVS mesh supplies visible-surface evidence for CAD."
+    },
+    {
+      "id": "REC-R07",
+      "name": "3D-anchored sketch and CAD edit comparison",
+      "inputs": [
+        "raster-sketch",
+        "camera-solution",
+        "mesh",
+        "measurement-set"
+      ],
+      "goal": "Turn screen strokes into surface anchors, then author and compare a constrained CAD interpretation.",
+      "steps": [
+        "REC-13",
+        "REC-14",
+        "REC-16"
+      ],
+      "handoffs": [
+        "REC-13 stores world-space ray hits and source element IDs in measurement-set.",
+        "REC-14 requires a separate sketch interpretation and produces editable CAD from mesh plus measurements.",
+        "REC-16 compares the CAD to the same mesh and measurements."
+      ],
+      "source_urls": [
+        "https://docs.blender.org/api/current/bpy.types.Scene.html",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Ray hits produce anchors only; the supplied measurements and mesh support a separately constrained CAD interpretation."
+    },
+    {
+      "id": "REC-R08",
+      "name": "Photogrammetry visual scene for downstream cameras",
+      "inputs": [
+        "photo-set"
+      ],
+      "goal": "Create navigable view synthesis while retaining camera and capture provenance.",
+      "steps": [
+        "REC-03",
+        "REC-19"
+      ],
+      "handoffs": [
+        "REC-03 estimates cameras from the photo set.",
+        "REC-19 trains and exports Gaussian PLY. REC-20 is the NeRF alternative with the same produced camera solution."
+      ],
+      "source_urls": [
+        "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+        "https://docs.nerf.studio/nerfology/methods/splat.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "The Gaussian recipe yields a view-synthesis scene; choosing the NeRF alternative replaces REC-19 with REC-20."
+    },
+    {
+      "id": "REC-R09",
+      "name": "RGB-D metric scan and CAD comparison",
+      "inputs": [
+        "depth-frames",
+        "cad-solid",
+        "measurement-set"
+      ],
+      "goal": "Fuse calibrated depth frames and compare the result to a known CAD revision.",
+      "steps": [
+        "REC-05",
+        "REC-06",
+        "REC-12",
+        "REC-16"
+      ],
+      "handoffs": [
+        "REC-05 produces camera trajectory and cloud; REC-06 produces TSDF mesh.",
+        "REC-12 aligns CAD to the scan cloud or mesh using supplied measurements; REC-16 compares that registration and CAD revision."
+      ],
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "status": "proposed_composition",
+      "summary": "Sensor calibration gives the scan scale and frame; controls test drift, and CAD comparison uses registered measured surfaces."
+    },
+    {
+      "id": "REC-R10",
+      "name": "Single-image mesh proxy and evidence-based remodel",
+      "inputs": [
+        "photo-set",
+        "measurement-set",
+        "model-brief"
+      ],
+      "goal": "Generate a visual proxy, then build CAD from independently supplied dimensions and measured evidence.",
+      "steps": [
+        "REC-18",
+        "REC-14",
+        "REC-16"
+      ],
+      "handoffs": [
+        "REC-18 generates the mesh proxy from the supplied single-image photo set.",
+        "REC-14 requires the measurement set and proxy mesh; dimensions and hidden geometry must retain their evidence labels.",
+        "REC-16 checks the CAD against the proxy and supplied controls; proxy agreement is not independent validation."
+      ],
+      "source_urls": [
+        "https://github.com/VAST-AI-Research/TripoSR",
+        "https://github.com/microsoft/TRELLIS.2",
+        "https://github.com/facebookresearch/sam-3d-objects"
+      ],
+      "status": "proposed_composition",
+      "summary": "The image generates a mesh proxy; measurement-set supplies dimensional evidence for any CAD remodeling."
+    }
+  ],
+  "ideas": [
+    {
+      "id": "REC-I01",
+      "name": "Pose and unit adapter fixture across tool frames",
+      "summary": "Create a small surveyed fixture with known 3D targets and images; round-trip pose matrices through OpenCV, COLMAP, Open3D, Blender and OCS, checking direction, handedness, units and projection error.",
+      "source_urls": [
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
+      ],
+      "status": "proposal",
+      "next_check": "Confirm exact conventions and transform serialization supported by the installed versions."
+    },
+    {
+      "id": "REC-I02",
+      "name": "Multi-sensor RGB-depth-LiDAR frame graph",
+      "summary": "Represent camera intrinsics, RGB-depth extrinsics, LiDAR-to-camera transform, world controls and frame timestamps as one provenance-linked transform graph before fusion.",
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html"
+      ],
+      "status": "proposal",
+      "next_check": "Define schema for transform direction, units, covariance/residual and calibration revision."
+    },
+    {
+      "id": "REC-I03",
+      "name": "DA3 metric and COLMAP/MVS comparison on control object",
+      "summary": "Capture an object with distributed measured controls and compare DA3 estimated depth/pose/cloud against COLMAP/MVS and independent lengths, reporting regional residuals.",
+      "source_urls": [
+        "https://github.com/ByteDance-Seed/Depth-Anything-3",
+        "https://github.com/colmap/colmap"
+      ],
+      "status": "proposal",
+      "next_check": "Select nonreflective textured object and set held-out control distances before capture."
+    },
+    {
+      "id": "REC-I04",
+      "name": "Camera-anchored stroke primitive semantics",
+      "summary": "Use ray hits to anchor strokes and offer separate interpretations: surface trace, projected curve, selected planar sketch, or dimensioned datum annotation; store source component/face and camera state.",
+      "source_urls": [
+        "https://docs.blender.org/api/current/bpy.types.Scene.html",
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
+      ],
+      "status": "proposal",
+      "next_check": "Specify user interaction for ambiguous occlusion and backface hits, then verify reprojected anchors."
+    },
+    {
+      "id": "REC-I05",
+      "name": "Nerfstudio Splatfacto geometry export version test",
+      "summary": "Resolve generic `ns-export tsdf` documentation (states all models) against Splatfacto FAQ (states mesh/pointcloud unsupported) for selected release and checkpoint.",
+      "source_urls": [
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
+        "https://docs.nerf.studio/nerfology/methods/splat.html"
+      ],
+      "status": "research_question",
+      "next_check": "At authorized implementation stage, identify version and test `ns-export tsdf` output existence, coverage, units and withheld control residuals."
+    },
+    {
+      "id": "REC-I06",
+      "name": "Primitive-fitting method selection",
+      "summary": "Compare plane, circle/cylinder/axis candidate fitters on known reference geometry, retain inlier point IDs and residual distribution, and compare fit stability under threshold changes.",
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
+        "https://github.com/CloudCompare/CloudCompare"
+      ],
+      "status": "research_question",
+      "next_check": "Choose feature classes needed by actual scan-to-CAD fixture and document each fitter's objective and units."
+    },
+    {
+      "id": "REC-I07",
+      "name": "CAD-to-cloud correspondence strategy",
+      "summary": "Compare CAD semantic landmarks/PnP against FPFH/RANSAC+ICP for aligning scan to an existing CAD revision, especially partial and symmetric shapes.",
+      "source_urls": [
+        "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+      ],
+      "status": "proposal",
+      "next_check": "Use withheld datum targets and report alternate pose failure cases."
+    },
+    {
+      "id": "REC-I08",
+      "name": "Splat plus independently checked mesh layered scene",
+      "summary": "Keep Gaussian splat for appearance, point cloud for sampled evidence, mesh for surface comparison and CAD solids for interpreted design as named layers carrying linked transforms and confidence/evidence labels.",
+      "source_urls": [
+        "https://docs.nerf.studio/nerfology/methods/splat.html",
+        "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md"
+      ],
+      "status": "proposal",
+      "next_check": "Define a scene manifest with representation role, transform, unit, source and checks for each layer."
+    }
+  ]
+}

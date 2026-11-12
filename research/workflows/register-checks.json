@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-12",
+  "sources": 254,
+  "operations": 77,
+  "recipes": 38,
+  "ideas": 98,
+  "candidate_handoffs": 879,
+  "errors": [],
+  "check_meaning": "Registration and declared type consistency, not tool execution or geometric validation"
+}

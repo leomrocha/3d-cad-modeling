@@ -1,5 +1,21 @@
 # Instructions for agents working in ferme
 
+## 3D modeling research, documentation and Git
+
+Standing project instructions from the user on 12 November 2026:
+
+> From now on ALL things all ideas all sources all is REGISTERED WRITTEN DOWN AND DOCUMENTED with real original links and summaries. apply if not done yet, always commit before and after changes
+
+1. Record every project idea, source, finding, workflow, alternative and combination in the repository. Include the readable subject, a concrete summary, original source links, evidence status and relationships to existing work. Apply this to the existing research as well as new findings.
+2. This instruction authorizes the project documentation required to register research and discussion. Keep implementation, installation, conversion, simulation, publication and purchases within their separately authorized scope.
+3. Keep a source register under `research/sources/`. Every source record needs its original URL or existing local source path, title, summary, observation or registration date, evidence status and referring documents. Preserve exact supplied URLs alongside any canonical source discovered later.
+4. Link each workflow operation to its supporting sources. Record inputs, outputs, prerequisites, tool/API, geometry representation, units/frames, metric evidence, preserved/changed information, checks, alternatives and compatible downstream operations. Record proposed combinations explicitly with their handoff conditions.
+5. Preserve downloaded originals unchanged with URL, retrieval date, content type, local path and SHA-256. Label web inspection, existing-report registration, downloaded original, source claim, user report, proposal and executed result according to actual evidence.
+6. Record ideas and decisions separately. Add alternatives and open research questions to the idea register; mark an item accepted only after the user's explicit `MARK AS ACCEPTED` instruction.
+7. Always create a checkpoint commit before an authorized logical change batch and a result commit afterward. If the worktree is clean, an empty checkpoint commit can mark the start. Inspect the worktree and stage only the authorized project files. Preserve unrelated changes. This user instruction authorizes local staging and commits for those batches; pushes remain separately scoped.
+8. Parallel research agents contribute to the same documented batch. Give each agent disjoint output paths and require sources and summaries. The coordinating agent owns the before/after commits and final source/graph consistency checks. Existing Luna delegation and external-research rules apply.
+9. Preserve the current implementation plan while extending research. Register new workflow possibilities as proposals, with source-backed transitions and explicit experiment questions. Keep source capability claims separate from locally exercised capability.
+
 ## Communication with the author
 
 Exact vocabulary, explicit context and unambiguous engineering communication are functional requirements. Apply these rules in the response itself.
