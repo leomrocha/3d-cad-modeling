@@ -1178,7 +1178,7 @@ Summary: Primary sources: build123d repository/licence, official docs, import/ex
 
 Evidence: existing_report_registered.
 
-Documents: research/cad-and-skills.md.
+Documents: research/cad-and-skills.md, research/next-step-proposal.md.
 
 <a id="src-5ef5b6f41faf"></a>
 
@@ -1274,7 +1274,7 @@ Summary: Primary sources: CadQuery repository/licence, official docs, import/exp
 
 Evidence: existing_report_registered.
 
-Documents: research/cad-and-skills.md.
+Documents: research/cad-and-skills.md, research/next-step-proposal.md.
 
 <a id="src-6ca9f8e9b9c2"></a>
 
@@ -1563,6 +1563,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-89c0679bdda3"></a>
+
+## SRC-89c0679bdda3 — Proposed next stages from the workflow research
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Summary: Seven proposed work packages: targeted route review, shared records, existing OCS pilot, text/drawing routes, measured reconstruction, architecture/robotics/component reuse, and packaging exercised workflows. Preserves the existing implementation plan.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-02/project-sources.json.
 
 <a id="src-8a7317b2bcc0"></a>
 
@@ -2750,7 +2762,7 @@ Summary: Primary sources: FreeCAD source/licence, Sketcher Python scripting, Par
 
 Evidence: existing_report_registered.
 
-Documents: research/cad-and-skills.md.
+Documents: research/cad-and-skills.md, research/next-step-proposal.md.
 
 <a id="src-ea4fc60c7176"></a>
 
@@ -2763,6 +2775,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-ea862cbd31ad"></a>
+
+## SRC-ea862cbd31ad — OCS source exporter
+
+Original source: [https://github.com/HakanSeven12/OpenCADStudio/blob/main/src/io/step.rs](https://github.com/HakanSeven12/OpenCADStudio/blob/main/src/io/step.rs)
+
+Summary: Evidence: local baseline, OCS source exporter.
+
+Evidence: existing_report_registered.
+
+Documents: research/next-step-proposal.md.
 
 <a id="src-ea9c2cdf1768"></a>
 

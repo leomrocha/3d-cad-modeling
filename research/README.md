@@ -2,20 +2,21 @@
 
 Research date: 12 November 2026.
 
-1. [Workflow map](workflows/README.md) — individual operations, combined routes, representation handoffs and composition rules.
-2. [Original source register](sources/source-register.md) and [structured records](sources/source-register.json) — original links, summaries and evidence status, including referenced archived originals.
-3. [Ideas register](ideas-register.md) and [structured records](ideas-register.json) — retained plan proposals and new workflow research questions.
-4. [Documentation and checkpoint rules](documentation-policy.md) and [research record](research-log.md).
-5. [Implementation plan](implementation-plan.md) — input routes, model representations, software layers, 15 proposed workflow skills, component schema, six implementation stages and verification criteria.
-6. [CAD tools and available skills](cad-and-skills.md) — OCS, FreeCAD, CadQuery, build123d, OpenSCAD, Blender, SolveSpace, OCCT, drawing intake and existing skills.
-7. [Image, video and scan reconstruction](reconstruction.md) — photogrammetry, control points, point clouds, Gaussian scenes, learned reconstruction and CAD remodeling.
-8. [Architecture, robotics and components](domains-and-components.md) — IFC/Bonsai, MuJoCo/MJCF, URDF, collisions, source libraries, licences and metadata.
-9. [Local baseline](local-baseline.md) — existing OCS skill, prior research, tool versions and OCS exporter source inspection.
-10. [Local inventory receipt](local-inventory.json) and [existing-source hashes](sources/local-evidence.json).
-11. [User-supplied links](user-supplied-links.md) — all nine supplied URLs mapped to their assessment.
-12. [Skill catalogue](../skills/README.md) — reuse candidates and proposed project workflows.
-13. [Initial verification receipt](verification.json) — observations from the repository foundation.
-14. [Workflow registration checks](workflows/register-checks.json) and [document checks](workflows/document-checks.json) — current documentation consistency checks.
+1. [Proposed next stages](next-step-proposal.md) — seven work packages derived from the retained workflow research.
+2. [Workflow map](workflows/README.md) — individual operations, combined routes, representation handoffs and composition rules.
+3. [Original source register](sources/source-register.md) and [structured records](sources/source-register.json) — original links, summaries and evidence status, including referenced archived originals.
+4. [Ideas register](ideas-register.md) and [structured records](ideas-register.json) — retained plan proposals and new workflow research questions.
+5. [Documentation and checkpoint rules](documentation-policy.md) and [research record](research-log.md).
+6. [Implementation plan](implementation-plan.md) — input routes, model representations, software layers, 15 proposed workflow skills, component schema, six implementation stages and verification criteria.
+7. [CAD tools and available skills](cad-and-skills.md) — OCS, FreeCAD, CadQuery, build123d, OpenSCAD, Blender, SolveSpace, OCCT, drawing intake and existing skills.
+8. [Image, video and scan reconstruction](reconstruction.md) — photogrammetry, control points, point clouds, Gaussian scenes, learned reconstruction and CAD remodeling.
+9. [Architecture, robotics and components](domains-and-components.md) — IFC/Bonsai, MuJoCo/MJCF, URDF, collisions, source libraries, licences and metadata.
+10. [Local baseline](local-baseline.md) — existing OCS skill, prior research, tool versions and OCS exporter source inspection.
+11. [Local inventory receipt](local-inventory.json) and [existing-source hashes](sources/local-evidence.json).
+12. [User-supplied links](user-supplied-links.md) — all nine supplied URLs mapped to their assessment.
+13. [Skill catalogue](../skills/README.md) — reuse candidates and proposed project workflows.
+14. [Initial verification receipt](verification.json) — observations from the repository foundation.
+15. [Workflow registration checks](workflows/register-checks.json) and [document checks](workflows/document-checks.json) — current documentation consistency checks.
 
 ## Evidence and execution
 

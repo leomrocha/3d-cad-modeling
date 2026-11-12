@@ -1,15 +1,12 @@
 {
   "date": "2026-11-12",
-  "starting_checkpoint": "f50c6f2",
-  "json_files_parsed": 18,
-  "local_link_errors": [],
-  "source_records": 254,
+  "starting_checkpoint": "6ef39be",
+  "scope": "Registration of the next-step proposal; retained workflow source/type checks; JSON syntax, local links, source-document hashes and deterministic register rebuild.",
+  "source_records": 256,
   "operations": 77,
   "recipes": 38,
-  "registered_ideas": 98,
-  "archive_records": 70,
-  "archived_hash_matches": 69,
-  "historical_live_source_hash_changes": 1,
-  "scope": "JSON syntax, source registration, required operation metadata, ID uniqueness and local document links; recipe type checks are in register-checks.json",
+  "registered_ideas": 105,
+  "local_link_errors": [],
+  "project_source_hashes": "passed",
   "deterministic_register_rebuild": "passed"
 }

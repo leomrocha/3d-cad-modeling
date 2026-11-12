@@ -428,6 +428,76 @@ Original source: [https://picogk.org/doc/](https://picogk.org/doc/)
 
 Next check: Use the existing archived sources to define runtime/platform, output representation and comparison experiments.
 
+## NEXT-I01 — Targeted first-pilot handoff review
+
+Status: proposal.
+
+Resolve exact tools, representations, editable sources, unit/frame mappings and prerequisites for four route cards before the pilot experiments.
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Next check: Produce four route cards and a bounded source-linked experiment list.
+
+## NEXT-I02 — Shared records and fixture briefs
+
+Status: proposal.
+
+Define model/evidence/artifact/component/check records and three dimensioned fixture briefs.
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Next check: Check representation, identity and evidence fields against the selected routes.
+
+## NEXT-I03 — OCS baseline pilot
+
+Status: proposal.
+
+Exercise the existing OCS skill on a bracket and mating plate, including a revision, native save/reopen and measured derivative checks.
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Next check: Record the actual installed capabilities and saved geometry for that fixture.
+
+## NEXT-I04 — Text and drawing CAD pilot
+
+Status: proposal.
+
+Compare text, raster sketch and DXF/SVG routes using the same dimensioned fixture and a complementary procedural-solid backend.
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Next check: Compare dimensions, topology, editable source and importer readback.
+
+## NEXT-I05 — Reconstruction and mixed-input pilot
+
+Status: proposal.
+
+Combine photographs, controls, drawings or identified components into registered references and source-linked CAD remodeling, including anchored annotations.
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Next check: Compare held-out measurements and regional scan-to-CAD deviations.
+
+## NEXT-I06 — Architecture robotics and component pilot
+
+Status: proposal.
+
+Exercise IFC building semantics, robot joint/physical-property handoffs and a pilot reusable component library.
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Next check: Check loaded domain models, frames, geometry roles and source identities.
+
+## NEXT-I07 — Package exercised skills and helpers
+
+Status: proposal.
+
+Package exercised workflows with skills, scripts, examples, dependency records and shared CLI operations.
+
+Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+
+Next check: Run the relevant fixture and preserve actual execution evidence for each supported route.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

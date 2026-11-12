@@ -14,3 +14,11 @@
 9. **Archive reuse:** registered 70 original manifest entries from existing CAD-skill, OCS-harness and procedural-geometry research. Hash checks matched 69 recorded originals. The live `/home/leo/projects/energy/AGENTS.md` differs from its historical recorded digest; both values and the original manifest record are retained.
 
 Final registration and document checks are recorded in `workflows/register-checks.json` and `workflows/document-checks.json`. Each receipt states the scope of its checks.
+
+## 12 November 2026 — Next-step proposal
+
+1. Request: propose a plan using the existing research.
+2. Starting checkpoint: `6ef39be`; the preceding worktree was clean.
+3. Scope: register the seven proposed work packages in `next-step-proposal.md`, add their original local source and idea records, and rebuild the documentation registers. Preserve `implementation-plan.md`.
+4. Evidence: reuse existing workflow/source records and the local OCS skill. The proposal describes targeted research and pilot experiments as proposed work packages.
+5. Documentation checks: recipe/source registration, JSON parsing, local links, source-document hashes and reproducible register generation are checked for this batch. Actual model identity of the coordinating agent is unavailable.

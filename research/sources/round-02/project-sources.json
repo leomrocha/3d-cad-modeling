@@ -22,8 +22,12 @@
       "Cross-domain workflow proposals and original project research questions"
     ],
     "local_original": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
-    "sha256": "0129dc668531453eaa924dea4499ed7475334e5a7a9e2a72d17653b3500a634f",
-    "content_type": "application/json"
+    "sha256": "0521f8e103c4a9fef0ae2222f9071d0775c2f7ef12d17335ba1f40a1b6185ec6",
+    "content_type": "application/json",
+    "prior_revision_observation": {
+      "revision": "d74a49a",
+      "sha256": "0129dc668531453eaa924dea4499ed7475334e5a7a9e2a72d17653b3500a634f"
+    }
   },
   {
     "url": "https://github.com/leap71/PicoGK",
@@ -66,5 +70,18 @@
     "sha256": null,
     "content_type": null,
     "source_report": "/home/leo/projects/energy/eoliennes/research/cad-workflow/computational-engineering-findings.md"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/next-step-proposal.md",
+    "title": "Proposed next stages from the workflow research",
+    "summary": "Seven proposed work packages: targeted route review, shared records, existing OCS pilot, text/drawing routes, measured reconstruction, architecture/robotics/component reuse, and packaging exercised workflows. Preserves the existing implementation plan.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "NEXT-I01 through NEXT-I07: original project proposals"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/next-step-proposal.md",
+    "sha256": "5a1a9a4d97e0c2229f7fa94613eff978d16f082158698b9a9da1eeaeade3c573",
+    "content_type": "text/markdown"
   }
 ]

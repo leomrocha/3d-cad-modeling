@@ -653,6 +653,76 @@
       ],
       "status": "proposal",
       "next_check": "Use the existing archived sources to define runtime/platform, output representation and comparison experiments."
+    },
+    {
+      "id": "NEXT-I01",
+      "name": "Targeted first-pilot handoff review",
+      "summary": "Resolve exact tools, representations, editable sources, unit/frame mappings and prerequisites for four route cards before the pilot experiments.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+      ],
+      "status": "proposal",
+      "next_check": "Produce four route cards and a bounded source-linked experiment list."
+    },
+    {
+      "id": "NEXT-I02",
+      "name": "Shared records and fixture briefs",
+      "summary": "Define model/evidence/artifact/component/check records and three dimensioned fixture briefs.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+      ],
+      "status": "proposal",
+      "next_check": "Check representation, identity and evidence fields against the selected routes."
+    },
+    {
+      "id": "NEXT-I03",
+      "name": "OCS baseline pilot",
+      "summary": "Exercise the existing OCS skill on a bracket and mating plate, including a revision, native save/reopen and measured derivative checks.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+      ],
+      "status": "proposal",
+      "next_check": "Record the actual installed capabilities and saved geometry for that fixture."
+    },
+    {
+      "id": "NEXT-I04",
+      "name": "Text and drawing CAD pilot",
+      "summary": "Compare text, raster sketch and DXF/SVG routes using the same dimensioned fixture and a complementary procedural-solid backend.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+      ],
+      "status": "proposal",
+      "next_check": "Compare dimensions, topology, editable source and importer readback."
+    },
+    {
+      "id": "NEXT-I05",
+      "name": "Reconstruction and mixed-input pilot",
+      "summary": "Combine photographs, controls, drawings or identified components into registered references and source-linked CAD remodeling, including anchored annotations.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+      ],
+      "status": "proposal",
+      "next_check": "Compare held-out measurements and regional scan-to-CAD deviations."
+    },
+    {
+      "id": "NEXT-I06",
+      "name": "Architecture robotics and component pilot",
+      "summary": "Exercise IFC building semantics, robot joint/physical-property handoffs and a pilot reusable component library.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+      ],
+      "status": "proposal",
+      "next_check": "Check loaded domain models, frames, geometry roles and source identities."
+    },
+    {
+      "id": "NEXT-I07",
+      "name": "Package exercised skills and helpers",
+      "summary": "Package exercised workflows with skills, scripts, examples, dependency records and shared CLI operations.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+      ],
+      "status": "proposal",
+      "next_check": "Run the relevant fixture and preserve actual execution evidence for each supported route."
     }
   ]
 }

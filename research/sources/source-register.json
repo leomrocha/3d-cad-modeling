@@ -2790,7 +2790,8 @@
       ],
       "observations": [],
       "referring_documents": [
-        "research/cad-and-skills.md"
+        "research/cad-and-skills.md",
+        "research/next-step-proposal.md"
       ]
     },
     {
@@ -3010,7 +3011,8 @@
       ],
       "observations": [],
       "referring_documents": [
-        "research/cad-and-skills.md"
+        "research/cad-and-skills.md",
+        "research/next-step-proposal.md"
       ]
     },
     {
@@ -3165,8 +3167,12 @@
             "Cross-domain workflow proposals and original project research questions"
           ],
           "local_original": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
-          "sha256": "0129dc668531453eaa924dea4499ed7475334e5a7a9e2a72d17653b3500a634f",
-          "content_type": "application/json"
+          "sha256": "0521f8e103c4a9fef0ae2222f9071d0775c2f7ef12d17335ba1f40a1b6185ec6",
+          "content_type": "application/json",
+          "prior_revision_observation": {
+            "revision": "d74a49a",
+            "sha256": "0129dc668531453eaa924dea4499ed7475334e5a7a9e2a72d17653b3500a634f"
+          }
         }
       ],
       "referring_documents": [
@@ -3861,6 +3867,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-89c0679bdda3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/next-step-proposal.md",
+      "title": "Proposed next stages from the workflow research",
+      "summary": "Seven proposed work packages: targeted route review, shared records, existing OCS pilot, text/drawing routes, measured reconstruction, architecture/robotics/component reuse, and packaging exercised workflows. Preserves the existing implementation plan.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "NEXT-I01 through NEXT-I07: original project proposals"
+          ],
+          "local_original": "/home/leo/projects/3dmodeling/research/next-step-proposal.md",
+          "sha256": "5a1a9a4d97e0c2229f7fa94613eff978d16f082158698b9a9da1eeaeade3c573",
+          "content_type": "text/markdown"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-02/project-sources.json"
       ]
     },
     {
@@ -6816,7 +6848,8 @@
       ],
       "observations": [],
       "referring_documents": [
-        "research/cad-and-skills.md"
+        "research/cad-and-skills.md",
+        "research/next-step-proposal.md"
       ]
     },
     {
@@ -6866,6 +6899,21 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ea862cbd31ad",
+      "url": "https://github.com/HakanSeven12/OpenCADStudio/blob/main/src/io/step.rs",
+      "local_source_path": null,
+      "title": "OCS source exporter",
+      "summary": "Evidence: local baseline, OCS source exporter.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [],
+      "referring_documents": [
+        "research/next-step-proposal.md"
       ]
     },
     {
