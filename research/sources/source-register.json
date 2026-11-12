@@ -1634,6 +1634,31 @@
       ]
     },
     {
+      "id": "SRC-09acefc0b51b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg",
+      "title": "Extracted Pilz SVG linework",
+      "summary": "Actual Poppler derivative retains47 paths,including side-profile linework andcase/cover endpoint offsets.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_source_conversion"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_source_conversion",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg",
+          "access_date": "2026-11-12",
+          "sha256": "5a85db1499093b894c51fff5e07018659f388031a5bd176e9f7083f6db68ff2a",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
+      ]
+    },
+    {
       "id": "SRC-09f3c0537603",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json",
@@ -3055,6 +3080,31 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-17d541c31dfa",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md",
+      "title": "Source-vector reconstruction proposal",
+      "summary": "Separates actual PDF-to-SVG extraction fromproposed source-view selection,unit checks,joining/part-boundary rules andnative extrusion.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "proposal_linked_to_executed_extraction"
+      ],
+      "observations": [
+        {
+          "evidence_status": "proposal_linked_to_executed_extraction",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md",
+          "access_date": "2026-11-12",
+          "sha256": "e8854b5ce5edf129c923c68290093b9adbaebfb76441be41f1f2db7bca129068",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {
@@ -4506,6 +4556,31 @@
       ]
     },
     {
+      "id": "SRC-2277b3d17f5b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json",
+      "title": "Pilz source-stage result",
+      "summary": "Connects source gate andexecuted PDF-vector extraction alternative.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_component_stage_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_stage_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "60161b3a329e03163bedac1f7d8da7326d8868fd96b9ad4a290d2fcee216df1e",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
+      ]
+    },
+    {
       "id": "SRC-228e61d4e7a6",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json",
@@ -4982,6 +5057,31 @@
         "research/sources/round-15/leaf-sources.json",
         "research/sources/round-16/driver-sources.json",
         "research/sources/round-20/component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2626ebf073f7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json",
+      "title": "Pilz source-readiness result",
+      "summary": "Existing gate returns NEEDS_INPUT forterminal bank andrail-clip interface geometry.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_readiness_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_readiness_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "d548347755b7c30240cd426b9302a732cb3d7b3cba27df4c50dd527bfe41cd21",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {
@@ -11915,6 +12015,31 @@
       ]
     },
     {
+      "id": "SRC-53588e078081",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json",
+      "title": "Pilz vector-source observations",
+      "summary": "Records exact conversion command,source/output hashes,47 paths andunit/join interpretations requiring verification before3D.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_vector_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_vector_inspection",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad19a9b55d3cf674882871045b1f00fe5cdcd2d0d83181021350b9bdd2b99cf6",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
+      ]
+    },
+    {
       "id": "SRC-536bee2e3614",
       "url": "https://docs.blender.org/manual/en/latest/advanced/command_line/",
       "local_source_path": null,
@@ -12668,6 +12793,31 @@
         "research/workflows/details/mix-r08.md",
         "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-580683a4cc41",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png",
+      "title": "Pilz dimension drawing render",
+      "summary": "Actual six-view drawing shows terminal banks andrail-clip profile;coordinator inspected dimension leaders.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_pdf_render"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_pdf_render",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png",
+          "access_date": "2026-11-12",
+          "sha256": "c298d52b0dad15a4bdfafdb04558701eab1c7fbd3ded88eac71366e3c27a193c",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {
@@ -16602,6 +16752,31 @@
       ]
     },
     {
+      "id": "SRC-7508372349a9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c048-pilz-source.md",
+      "title": "Pilz source/vector-stage report",
+      "summary": "Documents exact relay sources,dimensions,blocked STEP route andactual2D vector extraction withseparate reconstruction proposal.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_work_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_work_report",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c048-pilz-source.md",
+          "access_date": "2026-11-12",
+          "sha256": "20e64da23894dbd9f078b1883db517dfa85517f6a700c95a6eb5aa765bf0d88d",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
+      ]
+    },
+    {
       "id": "SRC-750882b224a7",
       "url": null,
       "local_source_path": "/tmp/opencode/battery_ocs_parts.py",
@@ -17206,6 +17381,31 @@
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7a5a898279b3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md",
+      "title": "Pilz source acquisition findings",
+      "summary": "Records exact774310 mapping,manufacturer source dimensions,STEP403 andbacked mirror route.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_source_review_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_source_review_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md",
+          "access_date": "2026-11-12",
+          "sha256": "30b4ba123e47c6f1a089c459f2ec6a2f405d8ac6210c52c95fa59b2bf4ccd236",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {
@@ -19103,6 +19303,31 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-885be68868de",
+      "url": "https://www.pilz.com/download/open/P9745_2009094_-.pdf",
+      "local_source_path": null,
+      "title": "Pilz manufacturer P97/45 drawing",
+      "summary": "Original drawing2009094/model2006038 gives45×87 front and120.6/115.4 side dimensions,dated30June2011.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "0c9ba5e48ab95734026c94cc883a524ef993027f1a0fd375ef688700940b4b83",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {
@@ -24169,6 +24394,31 @@
       ],
       "referring_documents": [
         "research/sources/round-23/enclosure-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ac15e16a45ad",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json",
+      "title": "Pilz source feature contract",
+      "summary": "Pins45/87/120.6 dimensions andnames terminal/rail-clip geometry inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "7c509aa12a86b2af00b8fe128b9c76fb6b11d70170cf6589c51fddd8aa228141",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {
@@ -29544,7 +29794,8 @@
       "evidence_statuses": [
         "authored_document_inspected",
         "local_source_inspected",
-        "registered_proposal_and_execution_evidence"
+        "registered_proposal_and_execution_evidence",
+        "registered_proposal"
       ],
       "observations": [
         {
@@ -29588,13 +29839,23 @@
           "referring_documents": [
             "execution/c030-fuse-source.md"
           ]
+        },
+        {
+          "evidence_status": "registered_proposal",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+          "access_date": "2026-11-12",
+          "sha256": "50453e61ad60231b3851f79755d5d0b641adec4da5800a4e106c4b25bacaa414",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/audit-index-sources.json",
         "research/sources/round-06/implementation-queue-sources.json",
-        "research/sources/round-21/fuse-sources.json"
+        "research/sources/round-21/fuse-sources.json",
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {
@@ -31368,6 +31629,31 @@
       "referring_documents": [
         "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-dcd239b413da",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json",
+      "title": "Pilz source provenance",
+      "summary": "Original PDF retrieval time,MIME/hash,derived render metadata andactual blocked STEP access outcome.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "63c6255d8517bb1b7060b543ef82ef11a427c4d28b698073ed510c881e1ce9d8",
+          "referring_documents": [
+            "execution/c048-pilz-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-26/relay-sources.json"
       ]
     },
     {

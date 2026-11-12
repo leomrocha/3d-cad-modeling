@@ -2222,6 +2222,26 @@
         }
       ],
       "next_check": "Acquire readable family geometry with appropriate access rights;compare mechanical interfaces against the shared manufacturer outline before any variant-specific CAD handoff."
+    },
+    {
+      "id": "COMP-I23",
+      "name": "Reconstruct source-labelled case profiles from retained PDF vectors",
+      "summary": "Pilz774310 manufacturer STEP download returned403. Existing Poppler extraction produced47SVG paths fromthe retained dimension drawing. Proposed next interpretation separates case/cover segments,verifies units against dimension leaders anddefines explicit joining rules before native extrusion;terminal andrail-clip features keep separate actions.",
+      "status": "proposal",
+      "origin": "executed_relay_pdf_vector_extraction",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c048-pilz-source.md",
+        "https://www.pilz.com/download/open/P9745_2009094_-.pdf"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c048-pilz-source.md",
+          "line": 1,
+          "section": "Actual source extraction andproposed reconstruction"
+        }
+      ],
+      "next_check": "Verify SVG units,part boundaries andendpoint treatment against the sourced dimensions before constructing any dependent native geometry."
     }
   ]
 }

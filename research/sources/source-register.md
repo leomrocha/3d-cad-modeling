@@ -532,6 +532,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
+<a id="src-09acefc0b51b"></a>
+
+## SRC-09acefc0b51b — Extracted Pilz SVG linework
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg)
+
+Summary: Actual Poppler derivative retains47 paths,including side-profile linework andcase/cover endpoint offsets.
+
+Evidence: executed_source_conversion.
+
+Documents: research/sources/round-26/relay-sources.json.
+
 <a id="src-09f3c0537603"></a>
 
 ## SRC-09f3c0537603 — P01 p01-build-01 — initial-state.json
@@ -1120,6 +1132,18 @@ Evidence: authored_code_or_procedure_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-17d541c31dfa"></a>
+
+## SRC-17d541c31dfa — Source-vector reconstruction proposal
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md)
+
+Summary: Separates actual PDF-to-SVG extraction fromproposed source-view selection,unit checks,joining/part-boundary rules andnative extrusion.
+
+Evidence: proposal_linked_to_executed_extraction.
+
+Documents: research/sources/round-26/relay-sources.json.
+
 <a id="src-18305cb33c69"></a>
 
 ## SRC-18305cb33c69 — Source-bound pillow-block checker
@@ -1684,6 +1708,18 @@ Evidence: executed_native_record_read.
 
 Documents: research/sources/round-23/enclosure-sources.json.
 
+<a id="src-2277b3d17f5b"></a>
+
+## SRC-2277b3d17f5b — Pilz source-stage result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json)
+
+Summary: Connects source gate andexecuted PDF-vector extraction alternative.
+
+Evidence: executed_component_stage_record.
+
+Documents: research/sources/round-26/relay-sources.json.
+
 <a id="src-228e61d4e7a6"></a>
 
 ## SRC-228e61d4e7a6 — Resistor source gate result
@@ -1839,6 +1875,18 @@ Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body gr
 Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected, implementation_artifact.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-20/component-sources.json.
+
+<a id="src-2626ebf073f7"></a>
+
+## SRC-2626ebf073f7 — Pilz source-readiness result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json)
+
+Summary: Existing gate returns NEEDS_INPUT forterminal bank andrail-clip interface geometry.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-26/relay-sources.json.
 
 <a id="src-26397bd1f7c2"></a>
 
@@ -4420,6 +4468,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
+<a id="src-53588e078081"></a>
+
+## SRC-53588e078081 — Pilz vector-source observations
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json)
+
+Summary: Records exact conversion command,source/output hashes,47 paths andunit/join interpretations requiring verification before3D.
+
+Evidence: executed_vector_inspection.
+
+Documents: research/sources/round-26/relay-sources.json.
+
 <a id="src-536bee2e3614"></a>
 
 ## SRC-536bee2e3614 — Blender command-line manual
@@ -4707,6 +4767,18 @@ Summary: Poly Haven ; Library of 3D models, materials and HDRI environments usef
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-580683a4cc41"></a>
+
+## SRC-580683a4cc41 — Pilz dimension drawing render
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png)
+
+Summary: Actual six-view drawing shows terminal banks andrail-clip profile;coordinator inspected dimension leaders.
+
+Evidence: derived_pdf_render.
+
+Documents: research/sources/round-26/relay-sources.json.
 
 <a id="src-582825becec4"></a>
 
@@ -6196,6 +6268,18 @@ Evidence: executed_native_observation.
 
 Documents: research/sources/round-23/enclosure-sources.json.
 
+<a id="src-7508372349a9"></a>
+
+## SRC-7508372349a9 — Pilz source/vector-stage report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c048-pilz-source.md](/home/leo/projects/3dmodeling/execution/c048-pilz-source.md)
+
+Summary: Documents exact relay sources,dimensions,blocked STEP route andactual2D vector extraction withseparate reconstruction proposal.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-26/relay-sources.json.
+
 <a id="src-750882b224a7"></a>
 
 ## SRC-750882b224a7 — battery_ocs_parts.py — existing_component_code
@@ -6375,6 +6459,18 @@ Summary: Existing local source inspected in the initial research; its use is des
 Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
 Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+
+<a id="src-7a5a898279b3"></a>
+
+## SRC-7a5a898279b3 — Pilz source acquisition findings
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md)
+
+Summary: Records exact774310 mapping,manufacturer source dimensions,STEP403 andbacked mirror route.
+
+Evidence: delegated_source_review_record.
+
+Documents: research/sources/round-26/relay-sources.json.
 
 <a id="src-7a9b6fde0c01"></a>
 
@@ -7095,6 +7191,18 @@ Summary: Input sheet registered from the inspected ferme manifest: battery; BMW;
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-885be68868de"></a>
+
+## SRC-885be68868de — Pilz manufacturer P97/45 drawing
+
+Original source: [https://www.pilz.com/download/open/P9745_2009094_-.pdf](https://www.pilz.com/download/open/P9745_2009094_-.pdf)
+
+Summary: Original drawing2009094/model2006038 gives45×87 front and120.6/115.4 side dimensions,dated30June2011.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-26/relay-sources.json.
 
 <a id="src-885fe0a26a5e"></a>
 
@@ -8931,6 +9039,18 @@ Summary: Adaptedretainedsaved-checktemplateforFiboxandwrote29actualpersistedchec
 Evidence: executed_driver_source.
 
 Documents: research/sources/round-23/enclosure-sources.json.
+
+<a id="src-ac15e16a45ad"></a>
+
+## SRC-ac15e16a45ad — Pilz source feature contract
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json)
+
+Summary: Pins45/87/120.6 dimensions andnames terminal/rail-clip geometry inputs.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-26/relay-sources.json.
 
 <a id="src-ac24864ef496"></a>
 
@@ -10860,9 +10980,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/ideas.json
 
 Summary: Authored audit document recording Ideas. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
-Evidence: authored_document_inspected, local_source_inspected, registered_proposal_and_execution_evidence.
+Evidence: authored_document_inspected, local_source_inspected, registered_proposal_and_execution_evidence, registered_proposal.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/audit-index-sources.json, research/sources/round-06/implementation-queue-sources.json, research/sources/round-21/fuse-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/audit-index-sources.json, research/sources/round-06/implementation-queue-sources.json, research/sources/round-21/fuse-sources.json, research/sources/round-26/relay-sources.json.
 
 <a id="src-cd7868332c03"></a>
 
@@ -11595,6 +11715,18 @@ Summary: BOSL2 ; Parametric OpenSCAD shapes, masks and manipulators; OpenSCAD li
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md.
+
+<a id="src-dcd239b413da"></a>
+
+## SRC-dcd239b413da — Pilz source provenance
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json)
+
+Summary: Original PDF retrieval time,MIME/hash,derived render metadata andactual blocked STEP access outcome.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-26/relay-sources.json.
 
 <a id="src-dd1f5b2ca39f"></a>
 

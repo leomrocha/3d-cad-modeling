@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "state": "NEEDS_INPUT",
+  "source_records": 12,
+  "original_models_preserved": 25,
+  "action_prefix_preserved": true,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "source_hashes": "PASS",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 7,
+    "receipt_included": true
+  }
+}

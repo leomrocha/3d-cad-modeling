@@ -2018,6 +2018,20 @@ Original proposal: [execution/c030-fuse-source.md](/home/leo/projects/3dmodeling
 
 Next check: Acquire readable family geometry with appropriate access rights;compare mechanical interfaces against the shared manufacturer outline before any variant-specific CAD handoff.
 
+## COMP-I23 — Reconstruct source-labelled case profiles from retained PDF vectors
+
+Status: proposal.
+
+Pilz774310 manufacturer STEP download returned403. Existing Poppler extraction produced47SVG paths fromthe retained dimension drawing. Proposed next interpretation separates case/cover segments,verifies units against dimension leaders anddefines explicit joining rules before native extrusion;terminal andrail-clip features keep separate actions.
+
+Original source: [/home/leo/projects/3dmodeling/execution/c048-pilz-source.md](/home/leo/projects/3dmodeling/execution/c048-pilz-source.md)
+
+Original source: [https://www.pilz.com/download/open/P9745_2009094_-.pdf](https://www.pilz.com/download/open/P9745_2009094_-.pdf)
+
+Original proposal: [execution/c048-pilz-source.md](/home/leo/projects/3dmodeling/execution/c048-pilz-source.md), line 1.
+
+Next check: Verify SVG units,part boundaries andendpoint treatment against the sourced dimensions before constructing any dependent native geometry.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

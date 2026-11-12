@@ -3266,6 +3266,30 @@
       ]
     },
     {
+      "id": "COMP-I23",
+      "name": "Reconstruct source-labelled case profiles from retained PDF vectors",
+      "summary": "Pilz774310 manufacturer STEP download returned403. Existing Poppler extraction produced47SVG paths fromthe retained dimension drawing. Proposed next interpretation separates case/cover segments,verifies units against dimension leaders anddefines explicit joining rules before native extrusion;terminal andrail-clip features keep separate actions.",
+      "status": "proposal",
+      "origin": "executed_relay_pdf_vector_extraction",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c048-pilz-source.md",
+        "https://www.pilz.com/download/open/P9745_2009094_-.pdf"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c048-pilz-source.md",
+          "line": 1,
+          "section": "Actual source extraction andproposed reconstruction"
+        }
+      ],
+      "next_check": "Verify SVG units,part boundaries andendpoint treatment against the sourced dimensions before constructing any dependent native geometry.",
+      "source_ids": [
+        "SRC-7508372349a9",
+        "SRC-885be68868de"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",
