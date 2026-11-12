@@ -19,10 +19,14 @@ Research includes OpenCADStudio, Blender, MuJoCo, FreeCAD, Open CASCADE tooling,
 
 ## Repository
 
-1. `AGENTS.md` — instructions copied unchanged from `../ferme/AGENTS.md`; farm-specific sections retain their stated scope. The current project scope is defined in this README and the current user request.
+1. `AGENTS.md` — instructions initially copied from `../ferme/AGENTS.md`, extended with this project’s documentation and commit rules; farm-specific sections retain their stated scope. The current project scope is defined in this README and the current user request.
 2. `skills/` — project skill catalogue and proposed workflow skills.
 3. `research/` — tool assessments, source evidence and the proposed implementation plan.
 
 ## Current stage
 
-Repository foundation and research are complete. The [research index](research/README.md), [skill catalogue](skills/README.md) and [proposed implementation plan](research/implementation-plan.md) cover the next stages. Research assessments distinguish documentation claims from locally exercised capabilities.
+The repository contains the initial tool assessments and the extended workflow research. The [research index](research/README.md), [skill catalogue](skills/README.md) and [proposed implementation plan](research/implementation-plan.md) cover the next stages. Research assessments distinguish documentation claims from locally exercised capabilities.
+
+## Research records and changes
+
+All project ideas, sources and workflow combinations are registered with original links and summaries. The [workflow map](research/workflows/README.md), [source register](research/sources/source-register.md) and [ideas register](research/ideas-register.md) provide the current records. Each authorized change batch has a starting checkpoint commit and a result commit; see [documentation policy](research/documentation-policy.md).

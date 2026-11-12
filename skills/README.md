@@ -36,3 +36,5 @@ Detailed source, licence and dependency assessments: [CAD and skills](../researc
 15. `model-verification` — numeric checks, save/reopen and importer comparisons.
 
 The [implementation plan](../research/implementation-plan.md) defines each workflow's purpose, supporting software, inputs, deliverables and validation sequence. During implementation, package each exercised workflow with its `SKILL.md`, scripts, references and fixtures. Reuse the existing OCS contract across reconstruction and CAD handoffs.
+
+The [workflow operation catalogue](../research/workflows/operation-catalogue.md) maps the proposed skills to source-backed transformations and combined routes. The [source register](../research/sources/source-register.md) and [ideas register](../research/ideas-register.md) retain the original links, summaries and alternative proposals.
