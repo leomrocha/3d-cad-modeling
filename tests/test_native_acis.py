@@ -159,4 +159,20 @@ class DriverNativeTests(unittest.TestCase):
         with self.assertRaises(ValueError):cylinder_pattern('invalid diameter',{'cylinders':[]},float('nan'),2,[[0,0]],1e-7)
         with self.assertRaises(ValueError):comparison('empty measurements',[],[],1e-7)
 
+@unittest.skipUnless(ezdxf is not None and (W/'c009-reuse-01/native-records.json').is_file(),'Requires retained transformed bearing screw')
+class StructureTransformTests(unittest.TestCase):
+    def data(self):
+        r=json.loads((W/'c009-reuse-01/native-records.json').read_text())
+        return bytes(next(v for v in r['records'] if v['handle']=='90')['properties']['acis_data']['sab_data'])
+    def test_structure_transform_requires_explicit_option(self):
+        from native_acis import sab_structure
+        with self.assertRaisesRegex(ValueError,'rigid-frame'):sab_structure(self.data())
+    def test_structure_and_analytic_world_vertices_agree(self):
+        from native_acis import sab_structure
+        a=sab_features(self.data(),allow_rigid=True)
+        b=sab_structure(self.data(),allow_rigid=True)
+        canon=lambda ps:sorted(tuple(round(x,8) for x in p) for p in ps)
+        self.assertEqual(canon(a['points']),canon(b['points']))
+        self.assertEqual(a['topology'],b['topology'])
+
 if __name__=='__main__':unittest.main()

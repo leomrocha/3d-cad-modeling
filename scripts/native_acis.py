@@ -6,7 +6,30 @@ model coordinates. ACIS header unit metadata is reported separately.
 import math
 
 
-def sab_structure(data):
+def _rigid_world(reachable,Tags,allow_rigid):
+    transforms=[e for e in reachable if e.name=='transform']
+    if transforms and not allow_rigid:
+        raise ValueError('Transformed SAB requires the rigid-frame reader option')
+    if len(transforms)>1:raise ValueError('Multiple native body transforms unsupported')
+    matrix=None;translation=None
+    if transforms:
+        tokens=transforms[0].data
+        if len(tokens)<5 or any(t.tag!=Tags.DIRECTION_VEC for t in tokens[:4]) or tokens[4].tag!=Tags.DOUBLE or abs(tokens[4].value-1)>1e-9:
+            raise ValueError('Only observed unit-scale native rigid transforms supported')
+        matrix=[list(t.value) for t in tokens[:3]];translation=list(tokens[3].value)
+        if not all(math.isfinite(v) for col in matrix+[translation] for v in col):raise ValueError('Nonfinite transform')
+        for i in range(3):
+            for j in range(3):
+                if abs(sum(matrix[i][k]*matrix[j][k] for k in range(3))-(1 if i==j else 0))>1e-9:raise ValueError('Nonrigid native transform')
+        det=sum(matrix[0][i]*(matrix[1][(i+1)%3]*matrix[2][(i+2)%3]-matrix[1][(i+2)%3]*matrix[2][(i+1)%3]) for i in range(3))
+        if abs(det-1)>1e-9:raise ValueError('Reflected or singular native transform unsupported')
+    def world(values,point=False):
+        if matrix is None:return list(values)
+        return [sum(matrix[j][i]*values[j] for j in range(3))+(translation[i] if point else 0) for i in range(3)]
+    return world, ({'column_major_rotation':matrix,'translation':translation,'scale':1} if transforms else None)
+
+
+def sab_structure(data,allow_rigid=False):
     """Read body connectivity and vertices independently of surface equations."""
     from ezdxf.acis.sab import parse_sab
     from ezdxf.acis.const import Tags
@@ -22,11 +45,10 @@ def sab_structure(data):
         seen[id(e)]=e
         pending.extend(t.value for t in e.data if t.tag==Tags.POINTER and t.value.name!='null-ptr')
     reachable=list(seen.values())
-    if any(e.name=='transform' for e in reachable):
-        raise ValueError('Structure-only reader currently requires untransformed body coordinates')
+    world,body_transform=_rigid_world(reachable,Tags,allow_rigid)
     coedges=[e for e in reachable if e.name=='coedge']
     closed=bool(coedges) and all(e.data[3].value.name=='coedge' and e.data[3].value.data[3].value is e for e in coedges)
-    points=[list(e.data[1].value) for e in reachable if e.name=='point']
+    points=[world(list(e.data[1].value),True) for e in reachable if e.name=='point']
     if not points or not all(len(p)==3 and all(math.isfinite(v) for v in p) for p in points):raise ValueError('Finite reachable vertices required')
     return {'points':points,'surface_types':sorted(set(e.name for e in reachable if e.name.endswith('-surface'))),
             'topology':{'bodies':1,'lumps':sum(e.name=='lump' for e in reachable),'shells':sum(e.name=='shell' for e in reachable),
@@ -68,25 +90,7 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
         if id(e) in seen:continue
         seen[id(e)]=e;pending.extend(refs(e))
     reachable=list(seen.values())
-    transforms=[e for e in reachable if e.name=='transform']
-    if transforms and not allow_rigid:
-        raise ValueError('Transformed SAB requires the rigid-frame reader option')
-    if len(transforms)>1:raise ValueError('Multiple native body transforms unsupported')
-    matrix=None;translation=None
-    if transforms:
-        tokens=transforms[0].data
-        if len(tokens)<5 or any(t.tag!=Tags.DIRECTION_VEC for t in tokens[:4]) or tokens[4].tag!=Tags.DOUBLE or abs(tokens[4].value-1)>1e-9:
-            raise ValueError('Only observed unit-scale native rigid transforms supported')
-        matrix=[list(t.value) for t in tokens[:3]];translation=list(tokens[3].value)
-        if not all(math.isfinite(v) for col in matrix+[translation] for v in col):raise ValueError('Nonfinite transform')
-        for i in range(3):
-            for j in range(3):
-                if abs(sum(matrix[i][k]*matrix[j][k] for k in range(3))-(1 if i==j else 0))>1e-9:raise ValueError('Nonrigid native transform')
-        det=sum(matrix[0][i]*(matrix[1][(i+1)%3]*matrix[2][(i+2)%3]-matrix[1][(i+2)%3]*matrix[2][(i+1)%3]) for i in range(3))
-        if abs(det-1)>1e-9:raise ValueError('Reflected or singular native transform unsupported')
-    def world(values,point=False):
-        if matrix is None:return list(values)
-        return [sum(matrix[j][i]*values[j] for j in range(3))+(translation[i] if point else 0) for i in range(3)]
+    world,body_transform=_rigid_world(reachable,Tags,allow_rigid)
     faces=[e for e in reachable if e.name=='face']
     if not faces:raise ValueError('Body has no reachable faces')
     surfaces={}
@@ -202,7 +206,7 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
     out['topology']={'bodies':1,'lumps':sum(e.name=='lump' for e in reachable),
                      'shells':sum(e.name=='shell' for e in reachable),'faces':len(faces),
                      'coedges':len(coedges),'reciprocal_closed_partners':closed}
-    if transforms:out['body_transform']={'column_major_rotation':matrix,'translation':translation,'scale':1}
+    if body_transform:out['body_transform']=body_transform
     out['encoding']='SAB';out['decoder']='ezdxf.acis.sab.parse_sab'
     out['acis_header_units_in_mm']=b.header.units_in_mm
     return out
