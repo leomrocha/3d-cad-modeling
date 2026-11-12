@@ -1,0 +1,117 @@
+{
+  "scope": "Four exercised shared comparison functions; implementation details preserve original action graph boundaries",
+  "actions": [
+    {
+      "id": "COMP-CHECK-A01",
+      "name": "Compare measured values with sourced expected values",
+      "status": "observed_implementation_detail",
+      "relationship": "Verify native solid and saved construction record (CAD-10-A03); original graph retained",
+      "inputs": "Finite measured numbers or lists; independently sourced expected values; unit and positive numerical threshold",
+      "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
+      "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
+      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::comparison",
+      "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
+      "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
+      "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
+      "preserved": "Source/reconstruction labels, expected values and raw native observations",
+      "changed_or_inferred": "Repeated comparison rules extracted into shared Python functions; component data remains external",
+      "conditions": "Expected values must contain measurements; both arrays retain component meaning and order.",
+      "checks": "Actual driver span116.85 versus116.7 fails; corrected span passes. Leaf uses the same comparator.",
+      "alternatives": "Agent interpretation or a separately supported geometric method for inputs outside the exercised conditions",
+      "downstream": {
+        "action": "Save/check the represented component and its mating interfaces",
+        "condition": "Use individual passed checks within their declared measurement scope and source revision"
+      },
+      "evidence": [
+        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
+        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+      ],
+      "date": "2026-11-12",
+      "executing_model": "gpt-6.1-sol"
+    },
+    {
+      "id": "COMP-CHECK-A02",
+      "name": "Check native body connectivity",
+      "status": "observed_implementation_detail",
+      "relationship": "Verify native solid and saved construction record (CAD-10-A03); original graph retained",
+      "inputs": "Native body/lump/shell counts and reciprocal coedge connectivity",
+      "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
+      "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
+      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::closed_body",
+      "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
+      "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
+      "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
+      "preserved": "Source/reconstruction labels, expected values and raw native observations",
+      "changed_or_inferred": "Repeated comparison rules extracted into shared Python functions; component data remains external",
+      "conditions": "The exercised closed single-body condition is one body,one lump,one shell and reciprocal coedge partners.",
+      "checks": "116driver solids and eightLeafsolids pass their source-defined separate-body conditions.",
+      "alternatives": "Agent interpretation or a separately supported geometric method for inputs outside the exercised conditions",
+      "downstream": {
+        "action": "Save/check the represented component and its mating interfaces",
+        "condition": "Use individual passed checks within their declared measurement scope and source revision"
+      },
+      "evidence": [
+        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
+        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+      ],
+      "date": "2026-11-12",
+      "executing_model": "gpt-6.1-sol"
+    },
+    {
+      "id": "COMP-CHECK-A03",
+      "name": "Compare native vertex coordinate ranges",
+      "status": "observed_implementation_detail",
+      "relationship": "Verify native solid and saved construction record (CAD-10-A03); original graph retained",
+      "inputs": "Actual native vertices; expected XYZ coordinate ranges; numerical threshold",
+      "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
+      "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
+      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::vertex_extrema",
+      "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
+      "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
+      "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
+      "preserved": "Source/reconstruction labels, expected values and raw native observations",
+      "changed_or_inferred": "Repeated comparison rules extracted into shared Python functions; component data remains external",
+      "conditions": "Measures vertices in their supplied frame. Curved-surface extrema between vertices retain a separate measurement requirement.",
+      "checks": "Driver baseplate and combinedLeafshell vertices pass their different source-bound coordinate ranges.",
+      "alternatives": "Agent interpretation or a separately supported geometric method for inputs outside the exercised conditions",
+      "downstream": {
+        "action": "Save/check the represented component and its mating interfaces",
+        "condition": "Use individual passed checks within their declared measurement scope and source revision"
+      },
+      "evidence": [
+        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
+        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+      ],
+      "date": "2026-11-12",
+      "executing_model": "gpt-6.1-sol"
+    },
+    {
+      "id": "COMP-CHECK-A04",
+      "name": "Compare Cartesian cylindrical hole patterns",
+      "status": "observed_implementation_detail",
+      "relationship": "Verify native solid and saved construction record (CAD-10-A03); original graph retained",
+      "inputs": "Native circular cylinder surfaces; diameter; Cartesian axis; expected projected centres; numerical threshold",
+      "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
+      "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
+      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::cylinder_pattern",
+      "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
+      "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
+      "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
+      "preserved": "Source/reconstruction labels, expected values and raw native observations",
+      "changed_or_inferred": "Repeated comparison rules extracted into shared Python functions; component data remains external",
+      "conditions": "Supports axes parallel to localX,YorZ; deduplicates coincident analytic patches. Source unit/frame interpretation precedes this function.",
+      "checks": "Samefunctionpasses driver13mmholes on168x98centres and Leaf9.1mmholes atX±138/Y±99; wrongdriverpitch fails.",
+      "alternatives": "Agent interpretation or a separately supported geometric method for inputs outside the exercised conditions",
+      "downstream": {
+        "action": "Save/check the represented component and its mating interfaces",
+        "condition": "Use individual passed checks within their declared measurement scope and source revision"
+      },
+      "evidence": [
+        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
+        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+      ],
+      "date": "2026-11-12",
+      "executing_model": "gpt-6.1-sol"
+    }
+  ]
+}

@@ -2146,6 +2146,25 @@
         }
       ],
       "next_check": "Keep exact required component sets and sourcebound features for each new assembly; reject unknown identities before reusing geometry checks."
+    },
+    {
+      "id": "COMP-I19",
+      "name": "Extract measured-feature checks across component families",
+      "summary": "Shared finite comparison, connectivity, vertex-range and Cartesian-cylinder-pattern functions now serve actual Sumitomo driver and Leaf module checks using separate source dimensions. The driver iteration detects and corrects a connector span error; all50 helper tests pass. Spline graph/vertex reading retains its explicit measurement scope.",
+      "status": "proposal",
+      "origin": "executed_driver_iteration",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c012-driver.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c012-driver.md",
+          "line": 1,
+          "section": "Applied generic improvement"
+        }
+      ],
+      "next_check": "Reuse only the documented measurement conditions; each next component supplies independent source expectations and native observations."
     }
   ]
 }

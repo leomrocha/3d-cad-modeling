@@ -4,6 +4,18 @@ Registered: 2026-11-12.
 
 Each entry preserves the original URL or local source path and records its summary, evidence status and referring documents. Detailed observations are retained in [source-register.json](/home/leo/projects/3dmodeling/research/sources/source-register.json).
 
+<a id="src-001b3a40cfd7"></a>
+
+## SRC-001b3a40cfd7 — Source-bound driver exterior checks
+
+Original source: [/home/leo/projects/3dmodeling/scripts/driver_checks.py](/home/leo/projects/3dmodeling/scripts/driver_checks.py)
+
+Summary: Uses the shared functions and pinned component expectations to check 116 separate solids, mounting features, terminal geometry and connector span. Original span fails; corrected saved derivative passes all141 checks.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-00a3a7e8697d"></a>
 
 ## SRC-00a3a7e8697d — Agent skill: openscad
@@ -27,6 +39,18 @@ Summary: Primary repository licence text for COLMAP.
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
+
+<a id="src-00b33c4777ca"></a>
+
+## SRC-00b33c4777ca — Driver iteration — opened-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json)
+
+Summary: Recovered original open state identifies driver document77 and original saved path.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-00e7f773e988"></a>
 
@@ -64,6 +88,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
 
+<a id="src-011a79e3f993"></a>
+
+## SRC-011a79e3f993 — Driver iteration — reopened-side.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png)
+
+Summary: Inspected side image shows housing taper, mounting base and separate projecting connector/terminal geometry against source side outline.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-011e8da740e4"></a>
 
 ## SRC-011e8da740e4 — ifcopenshell.api.feature.add_feature — IfcOpenShell 0.9.0post1 documentation
@@ -75,6 +111,18 @@ Summary: IfcOpenShell 0.9.0post1 documents `feature.add_feature(file, feature, e
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
+
+<a id="src-021178edf288"></a>
+
+## SRC-021178edf288 — Driver iteration — header.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json)
+
+Summary: Actual driver document header records its millimetre units.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-023374825488"></a>
 
@@ -159,6 +207,18 @@ Summary: FreeCAD BIM Library ; FreeCAD BIM can browse and insert FCStd, STEP and
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
+
+<a id="src-035204d4e7eb"></a>
+
+## SRC-035204d4e7eb — Driver iteration — reopened-audit.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json)
+
+Summary: Saved derivative audit preserves116 solids/eight text labels and zero errors/warnings.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-0374f064147a"></a>
 
@@ -316,6 +376,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-082d081b5a44"></a>
+
+## SRC-082d081b5a44 — Driver iteration — capture-front.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json)
+
+Summary: Completed front capture response binds actual driver document78 and its inspected front projection.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-0868c7d42c7e"></a>
 
 ## SRC-0868c7d42c7e — Point 02 visual, semantic and evidence-merge review
@@ -436,6 +508,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-0ad259094c61"></a>
+
+## SRC-0ad259094c61 — Driver iteration — initial-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json)
+
+Summary: Actual pre-open OCS state identifies prior Leaf document76 and other open work before driver inspection.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-0afc75d0368f"></a>
 
 ## SRC-0afc75d0368f — Blender repository/licence
@@ -555,6 +639,18 @@ Summary: Official CadQuery documentation describes Python parametric CAD scripti
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md.
+
+<a id="src-0ecb978bb734"></a>
+
+## SRC-0ecb978bb734 — Driver iteration — capture-side.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json)
+
+Summary: Completed side capture response binds document78 and inspected housing/connector height view.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-0f1f289478e2"></a>
 
@@ -1310,7 +1406,7 @@ Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body gr
 
 Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-26397bd1f7c2"></a>
 
@@ -1516,6 +1612,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
+<a id="src-2bdc86cc68a8"></a>
+
+## SRC-2bdc86cc68a8 — Checked Sumitomo driver derivative
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg)
+
+Summary: Separate native derivative retains116 solids/eight text labels and corrects connector-shell span to116.7mm by moving the complete X2 group -0.15mm in X; saved141 checks pass.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-2cea52720940"></a>
 
 ## SRC-2cea52720940 — P01 p01-build-03 — reopened-checks.json
@@ -1707,6 +1815,18 @@ Summary: Official FreeCAD source documentation accessed 2026-11-12. General Topo
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
+
+<a id="src-3083e6298cf7"></a>
+
+## SRC-3083e6298cf7 — Driver iteration — source-job.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json)
+
+Summary: Current source job pins15 manufacturer/reconstruction expectations, exact116-part handle mapping and explicit housing structure-only method; builder evidence uses durable retained copy.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-30936b6bad80"></a>
 
@@ -1984,6 +2104,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
 
+<a id="src-360ae57eba52"></a>
+
+## SRC-360ae57eba52 — Driver iteration — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl)
+
+Summary: Guarded request history preserves original open/reopen polling-bound results, same-ID recovery, whole-X2 translation, verified save and actual captures.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-368cf414765d"></a>
 
 ## SRC-368cf414765d — FreeCAD File Formats & Interoperability Guide
@@ -2079,6 +2211,18 @@ Summary: AFNOR catalogue lists NF EN 10219-2 as published May 2019 and in force,
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
+
+<a id="src-39d84cf3ce70"></a>
+
+## SRC-39d84cf3ce70 — Driver iteration — corrected-presave-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json)
+
+Summary: Actual post-translation records preserve the complete moved X2 group and all93 unaffected entity properties before save.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-39f868616f62"></a>
 
@@ -2235,6 +2379,18 @@ Summary: Current Nerfstudio export guide inspected 2026-11-12; release not pinne
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/findings.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
+
+<a id="src-3c5050fd6ac5"></a>
+
+## SRC-3c5050fd6ac5 — Driver iteration — reopened-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json)
+
+Summary: All141 saved native checks pass, with housing graph/vertex method separated from analytic measurement methods.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-3cb645d27838"></a>
 
@@ -2620,6 +2776,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
 
+<a id="src-4489f34f70ef"></a>
+
+## SRC-4489f34f70ef — Driver iteration — audit.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json)
+
+Summary: Original native audit reports116 solids/eight text labels, zero errors/warnings and original file SHA.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-44cb08ec63a1"></a>
 
 ## SRC-44cb08ec63a1 — FERME save/reopen implementation reused by rail
@@ -2727,6 +2895,18 @@ Summary: Source-bound nominal tube builder reuses FERME guarded runtime and geom
 Evidence: authored_code_or_procedure_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
+
+<a id="src-46f27524d072"></a>
+
+## SRC-46f27524d072 — Driver iteration — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json)
+
+Summary: DONE driver iteration records derivative SHA,141 saved checks, actual views, preserved original and shared-function improvement with50 tests.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-47401a0e9609"></a>
 
@@ -3026,7 +3206,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-4f49d9c8767a"></a>
 
@@ -3316,6 +3496,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
+<a id="src-551ba8137607"></a>
+
+## SRC-551ba8137607 — Retained Sumitomo ECO outline page1, CH52308G10
+
+Original source: [https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-eco.pdf](https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-eco.pdf)
+
+Summary: Actual page1 inspected visually:186x116 base,168x98 mounting centres, four13mm holes,84.25/69/72mm heights, nominalM6,19.2mm divider clear space and116.7mm connector span. Pins the independent driver expectations.
+
+Evidence: retained_manufacturer_outline_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-5537b62dfae7"></a>
 
 ## SRC-5537b62dfae7 — Sumitomo standard driver CH52308G10G10 (C012) — CAD input sheet
@@ -3324,9 +3516,21 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad-in
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo; original kind manufacturer outline reference. Detailed geometry review belongs to its component iteration.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-16/driver-sources.json.
+
+<a id="src-5545b27ec2a0"></a>
+
+## SRC-5545b27ec2a0 — Cross-component feature-check procedure
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/shared-feature-checks.md](/home/leo/projects/3dmodeling/skills/component-cad/references/shared-feature-checks.md)
+
+Summary: Explains how an action becomes shared software using independent expectations and actual native measurements. Driver and Leaf mounting-hole patterns exercise one function with different dimensions.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-554c43270f1b"></a>
 
@@ -3556,6 +3760,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-5b8f29b55228"></a>
+
+## SRC-5b8f29b55228 — Shared measured-feature comparisons
+
+Original source: [/home/leo/projects/3dmodeling/scripts/feature_checks.py](/home/leo/projects/3dmodeling/scripts/feature_checks.py)
+
+Summary: Adds source-independent numeric comparison, closed-body connectivity, vertex-range and Cartesian cylindrical-pattern functions. Driver and Leaf checks use the same functions with their own source values; invalid expectations are rejected.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-5c0d49b55a8f"></a>
 
 ## SRC-5c0d49b55a8f — Source-checked SKF bearing derivative
@@ -3590,7 +3806,7 @@ Summary: Adds 29 checks for actual saved Leaf shells, case envelope, mounting bo
 
 Evidence: local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-5d152842ea12"></a>
 
@@ -3711,6 +3927,18 @@ Summary: The separate community project ahujasid/mcp-for-blender is explicitly n
 Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
+
+<a id="src-5f9c829cdfd0"></a>
+
+## SRC-5f9c829cdfd0 — Existing manufacturer-source provenance index
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/README.md](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/README.md)
+
+Summary: Inspected Sumitomo entries identify original ECO/PRO drawing URLs, source descriptions and retained paths; these locate the exact local drawing reused by the iteration.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-6038042a0445"></a>
 
@@ -3940,6 +4168,30 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-03/project-detail-sources.json.
 
+<a id="src-66546119d7fd"></a>
+
+## SRC-66546119d7fd — Driver iteration — persistence.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json)
+
+Summary: Verified-save SHA, zero dropped entities, preserved manifest and recovered reopened audit all pass for the checked derivative.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
+<a id="src-665cfb1ddd3b"></a>
+
+## SRC-665cfb1ddd3b — Original Sumitomo driver drawing
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg)
+
+Summary: Preserved original contains116 solids and eight text labels. Its connector shells span116.85mm; the retained manufacturer drawing gives116.7mm.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-667b0ab089a4"></a>
 
 ## SRC-667b0ab089a4 — Side connector mounting panel (P23) — CAD input sheet
@@ -4096,6 +4348,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-03-local-sources.json.
 
+<a id="src-6aa38cb021a0"></a>
+
+## SRC-6aa38cb021a0 — Four observed shared comparison action details
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/shared-check-actions.json](/home/leo/projects/3dmodeling/research/action-audit/shared-check-actions.json)
+
+Summary: Registers functions, inputs, outputs, prerequisites, measurement limits, agent/software ownership and actual driver/Leaf evidence as implementation details of native verification; original graph boundaries remain.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-6ab8413122ee"></a>
 
 ## SRC-6ab8413122ee — redirect destination
@@ -4118,7 +4382,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: authored_document_or_code_inspected, authored_code_or_procedure_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-6b30ccb4447f"></a>
 
@@ -4131,6 +4395,18 @@ Summary: - Open3D repository/license: https://github.com/isl-org/Open3D
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-6b70d88d2033"></a>
+
+## SRC-6b70d88d2033 — Driver correction and generic-check iteration report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c012-driver.md](/home/leo/projects/3dmodeling/execution/c012-driver.md)
+
+Summary: Records manufacturer dimensions, original116.85mm versus116.7mm span failure, intact31-solid X2 translation,141 saved checks, actual views and shared-function adoption with50 tests.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-6bbd844182e8"></a>
 
@@ -4492,6 +4768,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-73c5c15a332f"></a>
+
+## SRC-73c5c15a332f — Driver iteration — source-job-r01.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json)
+
+Summary: Original pinned source-job revision retains temporary original-builder source paths used for the first check.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-740290c1bc47"></a>
 
 ## SRC-740290c1bc47 — SKF iteration — source-job.json
@@ -4851,6 +5139,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; N
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-7fe70bbaa630"></a>
+
+## SRC-7fe70bbaa630 — Driver iteration — original-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json)
+
+Summary: Original native model passes140 checks and fails connector-shell span116.85mm versus manufacturer116.7mm.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-8089d1901b4f"></a>
 
@@ -5248,6 +5548,18 @@ Evidence: local_source_inspected, local_execution_source_inspected.
 
 Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json, research/sources/round-13/crossmember-sources.json.
 
+<a id="src-8926d9c1e68c"></a>
+
+## SRC-8926d9c1e68c — Driver iteration — reopened-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png)
+
+Summary: Inspected isometric image shows tapered housing, separate studs/washers/dividers, recessed signal connectors and contacts.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-896c4a89c975"></a>
 
 ## SRC-896c4a89c975 — Agent skill: freecad-ai
@@ -5355,6 +5667,18 @@ Summary: Input sheet registered from the inspected ferme manifest: caster; Caste
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-8ba644c474b4"></a>
+
+## SRC-8ba644c474b4 — Driver iteration — native-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json)
+
+Summary: Raw original SAB solids and text records supply independent geometry observations and preserved baseline properties.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-8bf87f7a8c04"></a>
 
@@ -5498,7 +5822,7 @@ Summary: Four integration tests use FERME saved rail evidence: source dimensions
 
 Evidence: local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -5980,6 +6304,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-9c0fbe89719d"></a>
+
+## SRC-9c0fbe89719d — Driver iteration — correction.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json)
+
+Summary: Records source-derived -0.15mm X translation,31 owned X2 solids, original116.85mm span and target116.7mm; unaffected entities preserved.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-9cfde96bb911"></a>
 
 ## SRC-9cfde96bb911 — csv — CSV file reading and writing — Python 3.15.2 documentation
@@ -6110,7 +6446,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-a00bd3c7c755"></a>
 
@@ -6424,6 +6760,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
 
+<a id="src-a66a9495624e"></a>
+
+## SRC-a66a9495624e — Driver iteration — reopened-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json)
+
+Summary: Recovered derivative-open state identifies document78 and the separate checked driver path.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-a680edc6892e"></a>
 
 ## SRC-a680edc6892e — URDF model reference
@@ -6471,6 +6819,18 @@ Summary: Completed native front capture response binds derivative document75,cam
 Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
+
+<a id="src-a7aa934ff7de"></a>
+
+## SRC-a7aa934ff7de — Retained Sumitomo PRO outline page1 cross-check
+
+Original source: [https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-pro.pdf](https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-pro.pdf)
+
+Summary: Actual page1 rendered and inspected; shows the same CH52308G10 driver outline and dimensions as the ECO drawing. The bound job uses the ECO original to preserve existing construction attribution.
+
+Evidence: retained_manufacturer_outline_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-a83674c889fd"></a>
 
@@ -6688,6 +7048,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-sources.md, research/sources/round-05/point-03-web-sources.json.
 
+<a id="src-ae801910597e"></a>
+
+## SRC-ae801910597e — Original Sumitomo reconstruction source
+
+Original source: [/tmp/opencode/build_remaining_sumitomo.py](/tmp/opencode/build_remaining_sumitomo.py)
+
+Summary: Read existing driver construction and source attribution:186x116 base,168x98 mounting pattern, nominal terminals, loft and reconstructed connector positions. An unchanged copy is retained with the job.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-ae970b750172"></a>
 
 ## SRC-ae970b750172 — FreeCAD Topological Data Scripting (`Part` Module)
@@ -6843,6 +7215,18 @@ Summary: Official Blender RNA source defines Scene.ray_cast with a required deps
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
+<a id="src-b2e6a72711e2"></a>
+
+## SRC-b2e6a72711e2 — Driver iteration — source-outline-page1.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png)
+
+Summary: Inspected rendering of retained ECO page1 identifies exact CH52308G10 drawing dimensions and physical features.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-b30357886048"></a>
 
@@ -7516,6 +7900,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-02-local-sources.json.
 
+<a id="src-c19fa9da345e"></a>
+
+## SRC-c19fa9da345e — Driver iteration — readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json)
+
+Summary: All15 required source expectations and pinned hashes pass SOURCE_READY with durable retained reconstruction evidence.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-c1fccd6db551"></a>
 
 ## SRC-c1fccd6db551 — `freecad-power-user/SKILL.md`
@@ -7682,7 +8078,7 @@ Summary: Existing local component/action/skill/catalogue source reused by the co
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -7791,6 +8187,18 @@ Summary: Official Python documentation describes JSON decoding, default conversi
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-04/intake-sources.json.
+
+<a id="src-c9cb9090afed"></a>
+
+## SRC-c9cb9090afed — Driver iteration — capture-isometric.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json)
+
+Summary: Completed isometric capture response identifies document78 and actual component image.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-ca3076996fa5"></a>
 
@@ -8020,6 +8428,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-03-visual.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r10.md.
 
+<a id="src-cf30fb2ca81a"></a>
+
+## SRC-cf30fb2ca81a — Driver iteration — reopened-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json)
+
+Summary: Actual saved derivative SAB records supply all141 passing feature checks and regression inputs.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-cf6156d88759"></a>
 
 ## SRC-cf6156d88759 — P01 p01-build-02 — initial-state.json
@@ -8151,6 +8571,18 @@ Summary: Existing archived source for procedural geometry and computational-engi
 Evidence: archived_original_referenced, existing_report_registered.
 
 Documents: research/sources/round-02/archive-sources.json, research/sources/round-02/project-sources.json.
+
+<a id="src-d3096ede4e6f"></a>
+
+## SRC-d3096ede4e6f — Driver iteration — retained-source/original-construction-source.py
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py)
+
+Summary: Unchanged retained copy of the inspected original Sumitomo builder; used as reconstruction source evidence, with its original code and attribution preserved.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-d32e74eebf36"></a>
 
@@ -8416,6 +8848,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-dba1e4dff6ac"></a>
+
+## SRC-dba1e4dff6ac — Original driver component mapping
+
+Original source: [/tmp/opencode/sumitomo-smartris-driver-ch52308-state.json](/tmp/opencode/sumitomo-smartris-driver-ch52308-state.json)
+
+Summary: Existing mapping identifies116 component handles and their construction names, used to bind actual native records and select the complete31-solid X2 group. An unchanged copy is retained in FERME.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
+
 <a id="src-dbc7c88be85f"></a>
 
 ## SRC-dbc7c88be85f — test_cadtools.py
@@ -8535,6 +8979,18 @@ Summary: Actual reopened document audit identifies the saved DWG and its SHA256,
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json.
+
+<a id="src-df08a712232a"></a>
+
+## SRC-df08a712232a — Driver iteration — native-query.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json)
+
+Summary: Actual original query identifies116 solid entities and eight text labels, preserving all native handles.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-df6405fd9570"></a>
 
@@ -8979,6 +9435,18 @@ Summary: FreeCAD skills suite (`glotoff/freecad-skills`) ; Archived `freecad-use
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-ebe044688086"></a>
+
+## SRC-ebe044688086 — Driver iteration — retained-source/original-part-map.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json)
+
+Summary: Unchanged retained copy of the original116-part handle map, enabling source-to-native identity review and bounded X2 group selection.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-ebf77b364ed5"></a>
 
@@ -9518,7 +9986,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
 
 <a id="src-f954ab80c148"></a>
 
@@ -9699,6 +10167,18 @@ Summary: Full sequential audit integration record: exact operation/action, workf
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/audit-index-sources.json.
+
+<a id="src-fea7e6f61e34"></a>
+
+## SRC-fea7e6f61e34 — Driver iteration — reopened-front.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png)
+
+Summary: Inspected front image shows four mounting bores, six terminal assemblies, X1/X2 connectors and indicator details; X1/X2/W/B markings render visibly.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-16/driver-sources.json.
 
 <a id="src-ff0bc4de820c"></a>
 

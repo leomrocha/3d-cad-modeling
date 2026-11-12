@@ -3178,6 +3178,28 @@
       ]
     },
     {
+      "id": "COMP-I19",
+      "name": "Extract measured-feature checks across component families",
+      "summary": "Shared finite comparison, connectivity, vertex-range and Cartesian-cylinder-pattern functions now serve actual Sumitomo driver and Leaf module checks using separate source dimensions. The driver iteration detects and corrects a connector span error; all50 helper tests pass. Spline graph/vertex reading retains its explicit measurement scope.",
+      "status": "proposal",
+      "origin": "executed_driver_iteration",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c012-driver.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c012-driver.md",
+          "line": 1,
+          "section": "Applied generic improvement"
+        }
+      ],
+      "next_check": "Reuse only the documented measurement conditions; each next component supplies independent source expectations and native observations.",
+      "source_ids": [
+        "SRC-6b70d88d2033"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

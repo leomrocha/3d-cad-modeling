@@ -6,6 +6,7 @@ job. This module reads native records and creates no geometry or files.
 import math
 from component_records import require_ready
 from native_acis import named_parts
+from feature_checks import comparison,closed_body,vertex_extrema,cylinder_pattern
 
 
 def check(record,job,tolerance=1e-7):
@@ -15,24 +16,18 @@ def check(record,job,tolerance=1e-7):
     p=named_parts(record,job['metadata_app'],job['required_parts'],allow_rigid=True)
     v={f['name']:f['value'] for f in job['features']};checks=[]
     def compare(name,actual,expected,unit='mm'):
-        def flat(x):
-            if isinstance(x,(list,tuple)):return [a for y in x for a in flat(y)]
-            return [x]
-        a,b=flat(actual),flat(expected)
-        good=len(a)==len(b) and all(math.isfinite(x) and abs(x-y)<=tolerance for x,y in zip(a,b))
-        checks.append(dict(check=name,result='PASS' if good else 'FAIL',observed=actual,expected=expected,unit=unit,numeric_tolerance=tolerance))
+        checks.append(comparison(name,actual,expected,tolerance,unit))
     for name,part in p.items():
-        t=part['topology'];compare(name+' closed connected body',[t['bodies'],t['lumps'],t['shells'],int(t['reciprocal_closed_partners'])],[1,1,1,1],'count')
+        checks.append(closed_body(name+' closed connected body',part))
     shells=[p['upper_pressed_shell'],p['lower_pressed_shell']]
     points=[point for part in shells for point in part['points']]
-    compare('can envelope',[[min(a[i] for a in points),max(a[i] for a in points)] for i in range(3)],
-            [[-v['can length']/2,v['can length']/2],[-v['can width']/2,v['can width']/2],[0,v['can thickness']]])
+    checks.append(vertex_extrema('can envelope',{'points':points},
+            [[-v['can length']/2,v['can length']/2],[-v['can width']/2,v['can width']/2],[0,v['can thickness']]],tolerance))
     for name in ['upper_pressed_shell','lower_pressed_shell']:
         part=p[name]
         bores=[c for c in part['cylinders'] if abs(2*c['radius']-v['mount bore diameter'])<=tolerance]
-        positions=sorted(set((round(c['origin'][0],7),round(c['origin'][1],7)) for c in bores))
         expected=sorted((x,y) for x in [-v['mount X offset'],v['mount X offset']] for y in [-v['mount Y offset'],v['mount Y offset']])
-        compare(name+' mounting bore centres',positions,expected)
+        checks.append(cylinder_pattern(name+' mounting bore centres',part,v['mount bore diameter'],2,expected,tolerance))
         compare(name+' mounting bore axes',[int(bool(bores)),int(all(abs(abs(c['axis'][2])-1)<=tolerance for c in bores))],[1,1],'count')
         # Require actual inner wall planes separated from each outer straight wall.
         for axis,label,dimension in [(0,'X','can length'),(1,'Y','can width')]:

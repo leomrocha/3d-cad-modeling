@@ -1,0 +1,592 @@
+[
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/feature_checks.py",
+    "title": "Shared measured-feature comparisons",
+    "summary": "Adds source-independent numeric comparison, closed-body connectivity, vertex-range and Cartesian cylindrical-pattern functions. Driver and Leaf checks use the same functions with their own source values; invalid expectations are rejected.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "4f69169a1f5a454ca658d7e08c63d1441d7a7e9ecbecf447f23a93be9274e84d",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "title": "Native structure reader alongside strict analytic reader",
+    "summary": "Adds an explicit untransformed ACIS700 body-graph and vertex reader for the driver loft. Surface types are reported; the analytic reader continues to reject spline equations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "f16e84bf60d993f984e75d1e1008e21c800093ba1dbbaa8c99e277f8b0bcb093",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/driver_checks.py",
+    "title": "Source-bound driver exterior checks",
+    "summary": "Uses the shared functions and pinned component expectations to check 116 separate solids, mounting features, terminal geometry and connector span. Original span fails; corrected saved derivative passes all141 checks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "f1c8ec5b6075031048c0724c6eb40b9b69b94343a5f744e6f6000a9d5ef4adcd",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/battery_module.py",
+    "title": "Leaf checker adopting shared functions",
+    "summary": "Replaces repeated numerical, connectivity, vertex-range and mounting-pattern rules with shared functions while retaining the original Leaf source expectations and component procedure. Prior recorded-native cases pass.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "42857fd13f6afca4b6d84fcaeecf48ed058bdda3acc4e67782d56eb3b20cbbd4",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "title": "Recorded-native driver and shared-check regressions",
+    "summary": "Adds six driver cases for source failure, corrected derivative, explicit spline scope, wrong mounting pitch, actual cross-family reuse and invalid expectations. Entire helper suite passes50 tests.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "96d1c9822d5c4ad41d8cb99559dc3b5fc32e4134c5af157c2fd2f69b56a774fa",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "title": "Component skill routing to exercised shared checks",
+    "summary": "Adds the cross-component procedure with required source expectations, measurement methods, agent/software roles, failure cases and supported reuse conditions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "ba2a7ff12e5085545e7b9e230d51d59c0b3f2a59648cea464ebbccf0c815a618",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/shared-feature-checks.md",
+    "title": "Cross-component feature-check procedure",
+    "summary": "Explains how an action becomes shared software using independent expectations and actual native measurements. Driver and Leaf mounting-hole patterns exercise one function with different dimensions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "a967c27ea573ac78d26d0af6c963bb29b17b091bfabb3e193760ebb0f4931ecf",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/shared-check-actions.json",
+    "title": "Four observed shared comparison action details",
+    "summary": "Registers functions, inputs, outputs, prerequisites, measurement limits, agent/software ownership and actual driver/Leaf evidence as implementation details of native verification; original graph boundaries remain.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "67fc7e43f0ab18f50693db212eb36e55f02bdead7944c5cacae3aa72a4469b79",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c012-driver.md",
+    "title": "Driver correction and generic-check iteration report",
+    "summary": "Records manufacturer dimensions, original116.85mm versus116.7mm span failure, intact31-solid X2 translation,141 saved checks, actual views and shared-function adoption with50 tests.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "31f27ab3b2db87bde9e904c97d8adf4d218d27cee3eee0de36e4066e7ab8f50e",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md",
+    "title": "Sumitomo driver component input sheet",
+    "summary": "Links the existing driver and retained outline; requires mounting pattern, outline, terminal positions and cable interfaces. The iteration attributes exact CH52308G10 identity to the inspected drawing title.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "aab7a5c5f2bbe9bf73968a5895e231851a6ad996e4197f00b0bc32bbb1ddbabe",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg",
+    "title": "Original Sumitomo driver drawing",
+    "summary": "Preserved original contains116 solids and eight text labels. Its connector shells span116.85mm; the retained manufacturer drawing gives116.7mm.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "d18e0c186ddaabf0678f6c2ad065521ff5f1815c1f93cadc42d3fd0841314ee7",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg",
+    "title": "Checked Sumitomo driver derivative",
+    "summary": "Separate native derivative retains116 solids/eight text labels and corrects connector-shell span to116.7mm by moving the complete X2 group -0.15mm in X; saved141 checks pass.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "5fca02835cfea7da3160f254f784755c1b7f11082b8aeedf78ac3c37df4eb252",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/README.md",
+    "title": "Existing manufacturer-source provenance index",
+    "summary": "Inspected Sumitomo entries identify original ECO/PRO drawing URLs, source descriptions and retained paths; these locate the exact local drawing reused by the iteration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "f064e3457d21e84e477b58a15f3bac7bb2a51904a12e82f617b6ec1e86fb9f29",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/build_remaining_sumitomo.py",
+    "title": "Original Sumitomo reconstruction source",
+    "summary": "Read existing driver construction and source attribution:186x116 base,168x98 mounting pattern, nominal terminals, loft and reconstructed connector positions. An unchanged copy is retained with the job.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "196f77acce1f488a35289cbc81ca606b92ee65b43202ebb15df9ecfc3cb9255c",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/sumitomo-smartris-driver-ch52308-state.json",
+    "title": "Original driver component mapping",
+    "summary": "Existing mapping identifies116 component handles and their construction names, used to bind actual native records and select the complete31-solid X2 group. An unchanged copy is retained in FERME.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "26e437ef7db17d1f2f4363230cb9b761195d18bfc7c1b3498bddb5969b1b55a9",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "title": "Component iteration register after driver checks",
+    "summary": "All103 identities remain. Rail, crossmember, SKF bearing, Leaf module and Sumitomo driver have DONE results and applied improvements; other98 jobs keep their existing states.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "4de3ab52e2b9213b0fc83e1cd5840c5ef1f55664f7d4cd3aea1a83265f9f032d",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "title": "Component history including driver source failure and correction",
+    "summary": "Appends driver source attribution, initial span failure, whole-group revision, persistence/recovery, saved checks, views and shared-improvement regression observations; earlier bytes remain an unchanged prefix.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "592da9a7083a0b34785207c4dcd3529bb00b9fbf322f7c274c8100fcef6f02fc",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "title": "Component iteration index with driver result",
+    "summary": "Adds source correction, checked driver artifact, shared functions adopted by two families and final50-test result.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "64c208ef26aee9535fd0cd092a4f9bf0a081882a4bb3dc908cfc01cb3b8acd99",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "title": "CAD index with checked driver derivative",
+    "summary": "Adds distinct driver derivative and exact current iteration result while preserving existing original model links and historical entries.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "54de4c750e7c4f301a077936dd78205748f66a09c402e50b18715244e1e2176d",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Sumitomo-smartris-ECO-CAD.pdf",
+    "title": "Retained Sumitomo ECO outline page1, CH52308G10",
+    "summary": "Actual page1 inspected visually:186x116 base,168x98 mounting centres, four13mm holes,84.25/69/72mm heights, nominalM6,19.2mm divider clear space and116.7mm connector span. Pins the independent driver expectations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "retained_manufacturer_outline_inspected",
+    "sha256": "85f09df1d159caac541d4a59c35960785014a9beb715498e9d55b53fc0218c0e",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ],
+    "url": "https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-eco.pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Sumitomo-smartris-PRO-CAD.pdf",
+    "title": "Retained Sumitomo PRO outline page1 cross-check",
+    "summary": "Actual page1 rendered and inspected; shows the same CH52308G10 driver outline and dimensions as the ECO drawing. The bound job uses the ECO original to preserve existing construction attribution.",
+    "access_date": "2026-11-12",
+    "evidence_status": "retained_manufacturer_outline_inspected",
+    "sha256": "f3460858dc241eb9577eac7402950cf09394737b4b2f63a7e67553b67945b35d",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ],
+    "url": "https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-pro.pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json",
+    "title": "Driver iteration — audit.json",
+    "summary": "Original native audit reports116 solids/eight text labels, zero errors/warnings and original file SHA.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "3a26fa2ad1d7382fa18bbfcbad56c2a0e0d96670600dcfaeaa6bfb066b0d4e5c",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json",
+    "title": "Driver iteration — capture-front.json",
+    "summary": "Completed front capture response binds actual driver document78 and its inspected front projection.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "0f3a2147c71c0fa2e36279abfec9d4ed5435a388f93da89481f53976e37c0b8d",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json",
+    "title": "Driver iteration — capture-isometric.json",
+    "summary": "Completed isometric capture response identifies document78 and actual component image.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "89ea858bea4b953e042fb717fe2d22c6654685cb0efe019ddd9182ecc159df7f",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json",
+    "title": "Driver iteration — capture-side.json",
+    "summary": "Completed side capture response binds document78 and inspected housing/connector height view.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "bb5a4c70993ba8861e78d06fb84bcbb01ea69518644e6312955687c1f32ddcfb",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json",
+    "title": "Driver iteration — corrected-presave-records.json",
+    "summary": "Actual post-translation records preserve the complete moved X2 group and all93 unaffected entity properties before save.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "68b1bfaf36948eb5d87ec3efb19e23b2572506a8db7f928d2dd31bb089b531df",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json",
+    "title": "Driver iteration — correction.json",
+    "summary": "Records source-derived -0.15mm X translation,31 owned X2 solids, original116.85mm span and target116.7mm; unaffected entities preserved.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "1338241825163b2896bfd166e2f31bcd432b7e312d3fc4cbd61a64558a317df1",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json",
+    "title": "Driver iteration — header.json",
+    "summary": "Actual driver document header records its millimetre units.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "001bb19d41a04b8fbeeae80a2eb7d9c38c39f6653aff1a5e26bc9489d4663852",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json",
+    "title": "Driver iteration — initial-state.json",
+    "summary": "Actual pre-open OCS state identifies prior Leaf document76 and other open work before driver inspection.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "6ebcf928dfbab8a0bd33f38b4507750e05c753faf85555bb8c3c01b65cd0972b",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json",
+    "title": "Driver iteration — native-query.json",
+    "summary": "Actual original query identifies116 solid entities and eight text labels, preserving all native handles.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "5ac7d680a5039c3616af3b8d3497fb8309c100ba81991af02a02a3a06c2fedd0",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json",
+    "title": "Driver iteration — native-records.json",
+    "summary": "Raw original SAB solids and text records supply independent geometry observations and preserved baseline properties.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "5610dfeb2f0a4de02647cc9bda0c48f5c2bf6c6b3eb400ef5d833f1d5ce27325",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl",
+    "title": "Driver iteration — ocs-journal.jsonl",
+    "summary": "Guarded request history preserves original open/reopen polling-bound results, same-ID recovery, whole-X2 translation, verified save and actual captures.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "d10228fbd00a92c9035a57d4df851a203feb27d814ba27344b80b631b37ce539",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json",
+    "title": "Driver iteration — opened-state.json",
+    "summary": "Recovered original open state identifies driver document77 and original saved path.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "7769b284647ff97e32b7f9fd60af3b3eb7c9ba726028abae408717920946dc5f",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json",
+    "title": "Driver iteration — original-checks.json",
+    "summary": "Original native model passes140 checks and fails connector-shell span116.85mm versus manufacturer116.7mm.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "14e551ecc0f7c756c7a04a513f57102c2fed32da58d39551081be38b2fac0b98",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json",
+    "title": "Driver iteration — persistence.json",
+    "summary": "Verified-save SHA, zero dropped entities, preserved manifest and recovered reopened audit all pass for the checked derivative.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "dca6b6868e00c20da3ab8e75fa7440d3b8653116a8c6688f83579d620c0222e3",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json",
+    "title": "Driver iteration — readiness.json",
+    "summary": "All15 required source expectations and pinned hashes pass SOURCE_READY with durable retained reconstruction evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "da3389f1eb8495e977739a9e96d5108a2b14f2a5a948e9c502040a78d9062064",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json",
+    "title": "Driver iteration — reopened-audit.json",
+    "summary": "Saved derivative audit preserves116 solids/eight text labels and zero errors/warnings.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "2349f3e7fd3868183759a2f0fc3273518cdf772f1f61a89c55bd99d42eec9a48",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json",
+    "title": "Driver iteration — reopened-checks.json",
+    "summary": "All141 saved native checks pass, with housing graph/vertex method separated from analytic measurement methods.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "6389806ef93f1701725a6b7335ab0f864bfef092fe9bc975d1290b8d4a9eef61",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png",
+    "title": "Driver iteration — reopened-front.png",
+    "summary": "Inspected front image shows four mounting bores, six terminal assemblies, X1/X2 connectors and indicator details; X1/X2/W/B markings render visibly.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "ecc25c5d52c13e5a9dc4fe4c769f77aade1a6077091ea1b1744595d3f6d66231",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png",
+    "title": "Driver iteration — reopened-isometric.png",
+    "summary": "Inspected isometric image shows tapered housing, separate studs/washers/dividers, recessed signal connectors and contacts.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "37dc597908e70402149d0feb32b55f8e9319b225d7ef16c29dc705aca06faa1b",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json",
+    "title": "Driver iteration — reopened-records.json",
+    "summary": "Actual saved derivative SAB records supply all141 passing feature checks and regression inputs.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "dc914a0eb63c4b85b8fff9fe9b61279b5b612f1480d212db54ef85c2ca88af11",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png",
+    "title": "Driver iteration — reopened-side.png",
+    "summary": "Inspected side image shows housing taper, mounting base and separate projecting connector/terminal geometry against source side outline.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "b73184e2ce7c5044454a8adfcdf6020b99822f28c57230bad3b1d1c31de79604",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json",
+    "title": "Driver iteration — reopened-state.json",
+    "summary": "Recovered derivative-open state identifies document78 and the separate checked driver path.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "546c67ef20a34d59294166acff9231223226dd4360ae66648d7ef6f6cf8200fe",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json",
+    "title": "Driver iteration — result.json",
+    "summary": "DONE driver iteration records derivative SHA,141 saved checks, actual views, preserved original and shared-function improvement with50 tests.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "f2fdc84f0572a29df1e6842f2eb8ae1b4a63902b97bba07697eed6e1e5b21f27",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py",
+    "title": "Driver iteration — retained-source/original-construction-source.py",
+    "summary": "Unchanged retained copy of the inspected original Sumitomo builder; used as reconstruction source evidence, with its original code and attribution preserved.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "196f77acce1f488a35289cbc81ca606b92ee65b43202ebb15df9ecfc3cb9255c",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json",
+    "title": "Driver iteration — retained-source/original-part-map.json",
+    "summary": "Unchanged retained copy of the original116-part handle map, enabling source-to-native identity review and bounded X2 group selection.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "26e437ef7db17d1f2f4363230cb9b761195d18bfc7c1b3498bddb5969b1b55a9",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json",
+    "title": "Driver iteration — source-job-r01.json",
+    "summary": "Original pinned source-job revision retains temporary original-builder source paths used for the first check.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "95b09d288dce2567b1f3ffb7fcb72dfda90ab1e854f20ecd88463706c596e007",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json",
+    "title": "Driver iteration — source-job.json",
+    "summary": "Current source job pins15 manufacturer/reconstruction expectations, exact116-part handle mapping and explicit housing structure-only method; builder evidence uses durable retained copy.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "6c6b1dd46dfe1a76658904e2dbc8bb6158316ddbc553c1ac5afe74bafbdfa08d",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png",
+    "title": "Driver iteration — source-outline-page1.png",
+    "summary": "Inspected rendering of retained ECO page1 identifies exact CH52308G10 drawing dimensions and physical features.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_or_execution_record_inspected",
+    "sha256": "9fae6aa6372199d65570831d2293c4951e86cfa36f3544c1f89d0fec5c39b57d",
+    "referring_documents": [
+      "execution/c012-driver.md",
+      "skills/component-cad/references/shared-feature-checks.md"
+    ]
+  }
+]

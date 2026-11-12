@@ -1970,6 +1970,18 @@ Original proposal: [execution/c021-leaf-module.md](/home/leo/projects/3dmodeling
 
 Next check: Keep exact required component sets and sourcebound features for each new assembly; reject unknown identities before reusing geometry checks.
 
+## COMP-I19 — Extract measured-feature checks across component families
+
+Status: proposal.
+
+Shared finite comparison, connectivity, vertex-range and Cartesian-cylinder-pattern functions now serve actual Sumitomo driver and Leaf module checks using separate source dimensions. The driver iteration detects and corrects a connector span error; all50 helper tests pass. Spline graph/vertex reading retains its explicit measurement scope.
+
+Original source: [/home/leo/projects/3dmodeling/execution/c012-driver.md](/home/leo/projects/3dmodeling/execution/c012-driver.md)
+
+Original proposal: [execution/c012-driver.md](/home/leo/projects/3dmodeling/execution/c012-driver.md), line 1.
+
+Next check: Reuse only the documented measurement conditions; each next component supplies independent source expectations and native observations.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

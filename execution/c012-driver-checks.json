@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "component": "Sumitomo CH52308 driver (C012)",
+  "state": "DONE",
+  "native_checks": "141 PASS",
+  "saved_model": "Separate corrected derivative with 116 solids and eight text labels",
+  "saved_file_hash": "PASS",
+  "source_records": 49,
+  "previous_models_preserved": 20,
+  "append_only_occurrence_prefix": "PASS",
+  "graph_plan_preserved": "PASS",
+  "mermaid_blocks_found_and_preserved": 2,
+  "tests": "50 PASS",
+  "skill_validation": "PASS",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 16,
+    "receipt_included": true
+  },
+  "source_and_geometry_methods": {
+    "analytic_solids": 115,
+    "structure_and_vertex_solids": 1,
+    "housing_spline_outline": "Actual source/model views inspected"
+  }
+}
