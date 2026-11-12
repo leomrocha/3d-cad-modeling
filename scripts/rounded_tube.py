@@ -189,6 +189,27 @@ def verify_features(features,p,tol=1e-7):
             'method':'native SAT surface and vertex observations','numeric_tolerance_mm':tol,'checks':checks}
 
 
+def crossmember_checks(rail_features,cross_features,frame_width,source_length,tol=1e-7):
+    """Nominal parallel-rail gap and local midpoint datum, from native vertices.
+
+    The source frame layout supplies outside width. This is an interface-length
+    check; component-to-assembly placement remains a separate transform.
+    """
+    if not math.isfinite(tol) or tol<0:raise ValueError('Finite nonnegative numeric comparison tolerance required')
+    if not all(math.isfinite(v) and v>0 for v in [frame_width,source_length]):
+        raise ValueError('Positive source frame width and crossmember length required')
+    span=lambda features,k: max(p[k] for p in features['points'])-min(p[k] for p in features['points'])
+    rail_width=span(rail_features,0);actual_length=span(cross_features,2)
+    nominal_gap=frame_width-2*rail_width
+    midpoint=(min(p[2] for p in cross_features['points'])+max(p[2] for p in cross_features['points']))/2
+    return {'scope':'Nominal parallel-rail gap and local crossmember midpoint; mm',
+            'numeric_tolerance_mm':tol,'checks':[
+            {'name':'crossmember fits nominal rail gap','expected':nominal_gap,'observed':actual_length,
+             'result':'PASS' if nominal_gap>0 and abs(actual_length-nominal_gap)<=tol else 'FAIL'},
+            {'name':'local datum B midpoint plane','expected':source_length/2,'observed':midpoint,
+             'result':'PASS' if abs(midpoint-source_length/2)<=tol else 'FAIL'}]}
+
+
 def inspect(client,handle,job,record_path=None):
     records=client.read('records',collection='entities',handles=[handle],limit=1)
     if len(records.get('records',[]))!=1:raise ValueError('Expected one tube solid record')

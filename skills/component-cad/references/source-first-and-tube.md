@@ -53,3 +53,9 @@ python3 /home/leo/projects/3dmodeling/scripts/rounded_tube.py JOB_JSON \
 2. The [binary adapter](/home/leo/projects/3dmodeling/scripts/native_acis.py) supports the observed ACIS700 untransformed single body with circular cylindrical and planar surfaces. It follows actual pointers from the body and checks reciprocal coedge partners. Unsupported data returns an explicit UNKNOWN result through the component helper.
 3. Keep OCS document units and ACIS header metadata separately recorded. Required comparisons use the documented OCS coordinate frame. P01 retained its existing units metadata across saving.
 4. Run recorded-native regression checks against the owning component project; saved raw records and source/proposal dimensions have separate provenance.
+
+## Repeated section at a second cut length
+
+1. P02 exercises the same section at260 mm after the rail's600 mm case. Keep its own source job, origin mapping and centre-plane datum. [Observed crossmember iteration](/home/leo/projects/3dmodeling/execution/p02-crossmember.md).
+2. Use `crossmember_checks(rail_features, crossmember_features, frame_width, source_length)` for this sourced parallel-rail layout. It compares native crossmember span with outside frame width minus twice native rail width, and local midpoint with source cut length/2.
+3. The observed inputs are proposed outside frame width340 mm, actual rail width40 mm, actual crossmember length260 mm and midpoint Z130 mm. Recorded-native negative cases cover wrong frame width and shifted local origin. These checks retain their nominal-layout/local-frame scope.
