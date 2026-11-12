@@ -120,4 +120,43 @@ class BatteryModuleNativeTests(unittest.TestCase):
                         v['String']=v['String'].replace('Component:','Component: ')
         self.assertEqual(check(record,self.job)['result'],'PASS')
 
+@unittest.skipUnless(ezdxf is not None and (W/'c012-reuse-01/reopened-records.json').is_file(),'Requires driver native records')
+class DriverNativeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.job=json.loads((W/'c012-reuse-01/source-job.json').read_text())
+        cls.before=json.loads((W/'c012-reuse-01/native-records.json').read_text())
+        cls.after=json.loads((W/'c012-reuse-01/reopened-records.json').read_text())
+    def test_source_connector_span_error_is_detected(self):
+        from driver_checks import check
+        result=check(self.before,self.job)
+        self.assertEqual([c['check'] for c in result['checks'] if c['result']=='FAIL'],['connector shell outer span'])
+    def test_corrected_saved_driver_matches_source_checks(self):
+        from driver_checks import check
+        self.assertEqual(check(self.after,self.job)['result'],'PASS')
+    def test_spline_equation_support_stays_explicit(self):
+        from native_acis import sab_structure
+        r=next(r for r in self.before['records'] if r['handle']=='B0');data=bytes(r['properties']['acis_data']['sab_data'])
+        with self.assertRaisesRegex(ValueError,'spline-surface'):sab_features(data,allow_rigid=True)
+        f=sab_structure(data);self.assertIn('spline-surface',f['surface_types']);self.assertTrue(f['topology']['reciprocal_closed_partners'])
+    def test_wrong_mounting_pitch_fails(self):
+        import copy
+        from driver_checks import check
+        job=copy.deepcopy(self.job);next(f for f in job['features'] if f['name']=='mount X pitch')['value']=170
+        result=check(self.after,job)
+        self.assertEqual(next(c for c in result['checks'] if c['check']=='base mounting bore pattern')['result'],'FAIL')
+    def test_same_pattern_function_reads_driver_and_battery(self):
+        from native_acis import named_parts
+        from feature_checks import cylinder_pattern
+        r=next(r for r in self.after['records'] if r['handle']=='7F');driver=sab_features(bytes(r['properties']['acis_data']['sab_data']))
+        self.assertEqual(cylinder_pattern('driver',driver,13,2,[[-84,-49],[-84,49],[84,-49],[84,49]],1e-7)['result'],'PASS')
+        record=json.loads((W/'c021-reuse-01/native-records.json').read_text());job=json.loads((W/'c021-reuse-01/source-job.json').read_text())
+        battery=named_parts(record,job['metadata_app'],job['required_parts'],allow_rigid=True)['upper_pressed_shell']
+        self.assertEqual(cylinder_pattern('battery',battery,9.1,2,[[-138,-99],[-138,99],[138,-99],[138,99]],1e-7)['result'],'PASS')
+    def test_invalid_pattern_expectations_stop_before_comparison(self):
+        from feature_checks import cylinder_pattern,comparison
+        with self.assertRaises(ValueError):cylinder_pattern('missing expected holes',{'cylinders':[]},13,2,[],1e-7)
+        with self.assertRaises(ValueError):cylinder_pattern('invalid diameter',{'cylinders':[]},float('nan'),2,[[0,0]],1e-7)
+        with self.assertRaises(ValueError):comparison('empty measurements',[],[],1e-7)
+
 if __name__=='__main__':unittest.main()

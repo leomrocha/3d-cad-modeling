@@ -6,6 +6,34 @@ model coordinates. ACIS header unit metadata is reported separately.
 import math
 
 
+def sab_structure(data):
+    """Read body connectivity and vertices independently of surface equations."""
+    from ezdxf.acis.sab import parse_sab
+    from ezdxf.acis.const import Tags
+    if not isinstance(data,(bytes,bytearray)) or not data:raise ValueError('Nonempty native SAB bytes required')
+    b=parse_sab(data)
+    if b.header.version!=700:raise ValueError('This adapter supports observed ACIS700 records')
+    bodies=[e for e in b.entities if e.name=='body']
+    if len(bodies)!=1:raise ValueError('Exactly one body required for component checks')
+    pending=bodies.copy();seen={}
+    while pending:
+        e=pending.pop()
+        if id(e) in seen:continue
+        seen[id(e)]=e
+        pending.extend(t.value for t in e.data if t.tag==Tags.POINTER and t.value.name!='null-ptr')
+    reachable=list(seen.values())
+    if any(e.name=='transform' for e in reachable):
+        raise ValueError('Structure-only reader currently requires untransformed body coordinates')
+    coedges=[e for e in reachable if e.name=='coedge']
+    closed=bool(coedges) and all(e.data[3].value.name=='coedge' and e.data[3].value.data[3].value is e for e in coedges)
+    points=[list(e.data[1].value) for e in reachable if e.name=='point']
+    if not points or not all(len(p)==3 and all(math.isfinite(v) for v in p) for p in points):raise ValueError('Finite reachable vertices required')
+    return {'points':points,'surface_types':sorted(set(e.name for e in reachable if e.name.endswith('-surface'))),
+            'topology':{'bodies':1,'lumps':sum(e.name=='lump' for e in reachable),'shells':sum(e.name=='shell' for e in reachable),
+                        'faces':sum(e.name=='face' for e in reachable),'coedges':len(coedges),'reciprocal_closed_partners':closed},
+            'method':'native body graph and vertices; surface equations excluded','acis_header_units_in_mm':b.header.units_in_mm}
+
+
 def named_parts(record, metadata_app, required_parts, aliases=None, **reader_options):
     """Read exact named solids; accept observed Component: labels with optional space."""
     parts={}
