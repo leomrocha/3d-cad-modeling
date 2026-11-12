@@ -1,5 +1,12 @@
 # Research record
 
+## 12 November 2026 — Point03 vector, solid and verification procedure audit
+
+1. Checkpoint: `6e3c768`; point02 result commit: `6c56c4f`. Scope: ten operations,31 actions, all fifteen fields/action and four execution options/operation. [Procedures](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md) and [action contracts](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) define vector cleaning, constrained sketches, native solids, CSG mesh generation, export, verification and recovery.
+2. Design and review separate native OCS kernel/plugin operations, faceted STEP output, source-profile meaning, solver diagnostics and kernel validity. Independent findings addressed single-profile/open/Region extrusion, explicit operand/source retention flags and read-only verification. Original operation/recipe contracts retain their content; contradictions are documented in designer/software findings.
+3. Luna initially inspected eight official pages, then one exact OCCT writer page after the registration check found its URL absent. The source review records the initial pass and ninth-page addendum separately. The point receipt retains the failed URL-registration check and subsequent rerun.
+4. Requested model roles follow the existing plan. Coordinator identity: gpt-6.1-sol; actual child runtime identities reported unavailable. New helpers, modeling procedures and validation fixtures retain proposal status. Documentary checks and evidence are recorded in [point03 checks](/home/leo/projects/3dmodeling/research/action-audit/point-03-checks.json).
+
 ## 12 November 2026 — All-point sequential execution authorized
 
 1. **Instruction:** “THEN EXECUTE ALL FUCKGIN POINTS THAT WAS THE FUCKIGN ORDER ONE BY ONE IN THE DEFINED MODEL apply now,”. The [sequence](/home/leo/projects/3dmodeling/research/action-audit/sequence.md) maps all77 operations to seven ordered points; each point receives its full design/review/registration/check/commit cycle before the next starts.

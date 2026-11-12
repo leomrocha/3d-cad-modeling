@@ -887,6 +887,236 @@
       ]
     },
     {
+      "id": "AUDIT-CAD-08",
+      "name": "Read and clean vector drawing geometry — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Read and clean vector drawing geometry. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-CAD-09",
+      "name": "Build and constrain an editable planar sketch — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build and constrain an editable planar sketch. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-CAD-10",
+      "name": "Create a kernel solid and native model document from confirmed parameters — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Create a kernel solid and native model document from confirmed parameters. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-CAD-13",
+      "name": "Verify model geometry and saved output — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Verify model geometry and saved output. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-CAD-14",
+      "name": "Recover from failed interpretation or geometry construction — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Recover from failed interpretation or geometry construction. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-CAD-15",
+      "name": "Render source-defined CSG as a mesh — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Render source-defined CSG as a mesh. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-03",
+      "name": "DXF/SVG drawing to constrained profile — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for DXF/SVG drawing to constrained profile. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-04",
+      "name": "Brief/profile to native CAD solid — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Brief/profile to native CAD solid. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-05",
+      "name": "Export STEP solid — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP solid. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-40",
+      "name": "Script-parametric CAD authoring — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 03 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Script-parametric CAD authoring. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-03-vector-and-solid.md",
+          "line": 1,
+          "section": "Confirmed dimensions and vector drawings to CAD"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-bad31f6c036a",
+        "SRC-2752296f9685"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

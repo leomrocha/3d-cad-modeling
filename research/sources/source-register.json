@@ -299,6 +299,16 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -310,7 +320,8 @@
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/sources/round-04/audit-local-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -482,7 +493,8 @@
       "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -495,10 +507,21 @@
             "research/action-audit/point-02-component-reuse.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -650,11 +673,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+          "access_date": "2026-11-12",
+          "sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -793,11 +827,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+          "access_date": "2026-11-12",
+          "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/project-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -1357,6 +1402,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r02.md",
@@ -1412,12 +1459,23 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "access_date": "2026-11-12",
+          "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -1552,6 +1610,33 @@
       ]
     },
     {
+      "id": "SRC-2752296f9685",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+      "title": "point-03-operations",
+      "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "37b0d41ee65e7bcd60880920848e8a11a109e7483f55f3b679b5951fcceb0a2e",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2759f46214ed",
       "url": "https://github.com/SarahWeiii/CoACD",
       "local_source_path": null,
@@ -1645,7 +1730,8 @@
       "summary": "Local OCS design/implementation note describes supported kernel-body paths and history limitations; it does not establish STEP analytic-surface export.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -1657,10 +1743,21 @@
           "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
           "sha256": "64d940087bda6af3457406b07ed1595ddd974bd97256873a26ffaad6b40d48e4",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+          "access_date": "2026-11-12",
+          "sha256": "64d940087bda6af3457406b07ed1595ddd974bd97256873a26ffaad6b40d48e4",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -1777,11 +1874,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -1953,11 +2061,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -2400,6 +2519,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r04.md",
@@ -2697,6 +2818,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
@@ -3127,6 +3250,32 @@
       ]
     },
     {
+      "id": "SRC-4658b352c90f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-03-web-sources.json",
+      "title": "point-03-web-sources.json",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-03-web-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-03-web-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "57ee31d74f2bb9c99465a719a35fc91b729edc4639028cc779a0a2957feab552",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-47d588ded00a",
       "url": "https://majiayu000.github.io/claude-skill-registry/skills/3d-modeling-0127cdf66a41/",
       "local_source_path": null,
@@ -3329,6 +3478,32 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-4cbe441f37a2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
+      "title": "cad-r04.md",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
+          "access_date": "2026-11-12",
+          "sha256": "50e91a097841a0bb87c3421a7777506deca000c5350e644fa30708cbe5355463",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -3719,6 +3894,32 @@
       ]
     },
     {
+      "id": "SRC-5502cfd4bd53",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
+      "title": "cad-r05.md",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
+          "access_date": "2026-11-12",
+          "sha256": "08be3ff11690a00128e3a252a24da421068db26c7ba7ea86ce86965b41bfbbc7",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-554c43270f1b",
       "url": "https://github.com/IfcOpenShell/IfcOpenShell",
       "local_source_path": null,
@@ -3954,8 +4155,8 @@
       "id": "SRC-5860303c6b7e",
       "url": "https://cadquery.readthedocs.io/en/stable/importexport.html",
       "local_source_path": null,
-      "title": "CadQuery import/export documentation",
-      "summary": "Documents DXF import, STEP import/export and units; relevant profile and exchange operations.",
+      "title": "Importing and Exporting Files — CadQuery Documentation",
+      "summary": "Official CadQuery documentation gives `importers.importDXF(...).wires().toPending().extrude(10)` as a DXF-profile construction path; all DXF layers are imported by default with include/exclude options. `importStep(..., unit=...)` converts declared STEP units to millimetres by default or a selected unit. STEP export writes Workplane geometry; assembly export writes nested STEP with colors but default assembly object names are generated and per-object names are not preserved. Export unit and outputUnit settings can scale coordinates; STL, AMF and 3MF are identified as mesh formats. DXF/SVG/STEP are exchange formats and do not preserve CadQuery's parametric source history; the documented parametric representation is Python code.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -3972,13 +4173,36 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-08 / DOM-03: CadQuery importDXF parses DXF profile entities into a Workplane; the documentation's subsequent toPending().extrude() belongs to downstream CAD-10 / DOM-04 / DOM-40 profile extrusion",
+            "DOM-05: CadQuery STEP import/export has explicit unit behavior and STEP assembly output options",
+            "DOM-05: Default STEP assembly export preserves colors but replaces component names with generated names",
+            "CAD-15: STL/AMF/3MF are mesh exports while CadQuery Python is the documented parametric source format"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/point-03-vector-and-solid.md",
         "research/action-audit/reviews/point-02-designer.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-03-web-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/cad-r04.md",
         "research/workflows/details/mix-r02.md",
@@ -4051,6 +4275,32 @@
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-5a8b5891ac1d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/ocs_module.rs",
+      "title": "ocs_module.rs",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/ocs_module.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/ocs_module.rs",
+          "access_date": "2026-11-12",
+          "sha256": "64a681a65bcf28df1d241cb1710a9a29fecba674cb4b3697f2301754b2a830ed",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -4138,6 +4388,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5d152842ea12",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs",
+      "title": "solid3d.rs",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs",
+          "access_date": "2026-11-12",
+          "sha256": "2cfa32b5de6562187d90f4890686daecb500e5461a66838d826333e3cd188e53",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -4425,6 +4701,41 @@
       ]
     },
     {
+      "id": "SRC-62706c66f40b",
+      "url": "https://ezdxf.readthedocs.io/en/stable/tasks/query.html",
+      "local_source_path": null,
+      "title": "Query Entities — ezdxf 1.4.5 documentation",
+      "summary": "Official ezdxf documentation describes entity selection from layouts and entity sequences using `query()` with DXF type and attribute expressions. Query results are EntityQuery sequences; unsupported attributes do not match the entity, and assignment to unsupported attributes is silently ignored. This identifies document/entity inspection operations; query results do not normalize units, resolve block insert transforms or classify a profile as a constrained sketch.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-08 / DOM-03: ezdxf layout query() selects DXF entities by entity type and attributes",
+            "CAD-08 / DOM-03: EntityQuery returns matching entities; unsupported queried or assigned attributes are handled as documented"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-03-vector-and-solid.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/sources/round-05/point-03-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-62879528068d",
       "url": "https://github.com/reyk/freecad-ai-skill",
       "local_source_path": null,
@@ -4506,12 +4817,23 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "access_date": "2026-11-12",
+          "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -4671,8 +4993,8 @@
       "id": "SRC-68222de9fed6",
       "url": "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
       "local_source_path": null,
-      "title": "ezdxf units",
-      "summary": "Documents DXF $INSUNITS and unit conversion; DXF coordinates without a unit declaration require external scale evidence.",
+      "title": "DXF Units — ezdxf 1.4.5 documentation",
+      "summary": "Official ezdxf documentation states that DXF coordinate values are unitless; document/modelspace units are declared by `$INSUNITS`, and blocks can declare their own units. It states that ezdxf and CAD applications do not implicitly convert block units when inserting a block; the INSERT scaling must be applied explicitly. The documentation says these unit observations are based on BricsCAD experiments and may differ in other CAD applications. A unit declaration is source evidence, not a measured scale check.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -4688,10 +5010,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-08 / DOM-03: DXF coordinate values are unitless and document/modelspace units use $INSUNITS",
+            "CAD-08 / DOM-03: DXF block unit scaling must be applied explicitly when units differ",
+            "CAD-08 / DOM-03: ezdxf unit behavior notes are based on BricsCAD experiments and may vary across CAD applications"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-03-vector-and-solid.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-03-web-sources.json",
         "research/workflows/details/cad-r04.md",
         "research/workflows/details/mix-r02.md"
       ]
@@ -4728,6 +5072,8 @@
         "research/action-audit/point-02-component-reuse.md",
         "research/action-audit/reviews/point-02-designer.md",
         "research/action-audit/reviews/point-02-sources.md",
+        "research/action-audit/reviews/point-03-independent.md",
+        "research/action-audit/reviews/point-03-sources.md",
         "research/sources/round-05/point-02-web-sources.json"
       ]
     },
@@ -4756,6 +5102,49 @@
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6a8670ea9c90",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-independent.md",
+      "title": "Independent review — Point 03 vectors, sketches and solids",
+      "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-independent.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-independent.md",
+          "access_date": "2026-11-12",
+          "sha256": "486f80b241353f757d5fabf39ba3fac4ae0e65958776fcb72feb8464dc49003b",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6ab8413122ee",
+      "url": "https://occt3d.com/dev/doc/refman/html/class_s_t_e_p_control___writer.html",
+      "local_source_path": null,
+      "title": "redirect destination",
+      "summary": "2. The source observation retains the exact supplied OCCT URL and its redirect destination, identifying the served reference as OCCT 8.0.1. It attributes `Transfer(TopoDS_Shape, STEPControl_StepModelType, ...)`, model modes and `Write`/`WriteStream` to the shape-oriented writer. Separate transfer roots remain source API behavior; actual geometry, interpreted units and consumer fidelity retain their future readback requirements.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [],
+      "referring_documents": [
+        "research/action-audit/reviews/point-03-independent.md",
+        "research/action-audit/reviews/point-03-sources.md"
       ]
     },
     {
@@ -5102,6 +5491,32 @@
       "observations": [],
       "referring_documents": [
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-717a1bbd2f70",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+      "title": "dom-r05.md",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+          "access_date": "2026-11-12",
+          "sha256": "4e321891af4b04a4afa57c634c2aac8e042c8e88d74a1c68b986b56bbb0eb05f",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -5481,6 +5896,16 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+          "access_date": "2026-11-12",
+          "sha256": "2269911945e747b5ef30bbaaa8b656a0f6e4e348ed911af256034a612f3cd899",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -5488,7 +5913,8 @@
         "research/sources/local-evidence.json",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -5526,10 +5952,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "964063a30ad6777f74e0e6a8ce1851ae22d1b4a004c602a07ca20c1fd75219cb",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -6188,11 +6625,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "access_date": "2026-11-12",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -6324,10 +6772,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "access_date": "2026-11-12",
+          "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -6542,8 +7001,8 @@
       "id": "SRC-9463773b6a12",
       "url": "https://openscad.org/documentation",
       "local_source_path": null,
-      "title": "OpenSCAD documentation",
-      "summary": "Official OpenSCAD manual documents script-defined CSG, parameterization, 2D imports/extrusion, CLI use and mesh-oriented file exports.",
+      "title": "OpenSCAD Documentation index",
+      "summary": "The official OpenSCAD documentation page links to the User Manual, Language Reference, and the manual section 'Using OpenSCAD in a command line environment'. This inspected index confirms the official documentation route for scripted modeling and command-line use; it does not expose a command example or mesh-export flag on the index page. The project's existing source register records an earlier inspection of the official OpenSCAD manuals for command-line rendering/export and mesh-oriented formats.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -6561,11 +7020,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-15 / DOM-40: The official OpenSCAD documentation index links to the language reference, manual and command-line manual section",
+            "CAD-15 / DOM-40: The existing source register separately records prior manual inspection for CLI rendering/export and mesh formats"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md",
+            "research/sources/source-register.md#src-ce92c7f02e89"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-03-vector-and-solid.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
+        "research/sources/round-05/point-03-web-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r04.md",
@@ -6881,6 +7361,33 @@
       ]
     },
     {
+      "id": "SRC-99954d282c44",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md",
+      "title": "Point 03 designer notes — vector profiles and small solids",
+      "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md",
+          "access_date": "2026-11-12",
+          "sha256": "a1d6f8793a405bb6fbe3d7262707efe3fdee4087f7474ec7e881489c7a46acd1",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-99bfdb2d1a9e",
       "url": "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280",
       "local_source_path": null,
@@ -7103,6 +7610,33 @@
       ]
     },
     {
+      "id": "SRC-9e9899193ac9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md",
+      "title": "Software review: confirmed dimensions and vector drawings to CAD",
+      "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md",
+          "access_date": "2026-11-12",
+          "sha256": "2eeffb1d244c99b691627c8f3c3be1272fd29d922ee5f1c6a576d917c704e2c8",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9ea228a27dc2",
       "url": "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
       "local_source_path": null,
@@ -7160,6 +7694,33 @@
       ]
     },
     {
+      "id": "SRC-a07601074c08",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md",
+      "title": "Point 03 source check: confirmed dimensions and vector drawings",
+      "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md",
+          "access_date": "2026-11-12",
+          "sha256": "df6a1101bc27b28560d172aa6e5f2e151bcea0ca322a1cfe11a0f77a849b7b3f",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-a086c5a04ee4",
       "url": null,
       "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
@@ -7212,6 +7773,16 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -7219,7 +7790,8 @@
         "research/sources/local-evidence.json",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -7280,6 +7852,32 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-a1e82dcf8fcb",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py",
+      "title": "document_model.py",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py",
+          "access_date": "2026-11-12",
+          "sha256": "089e3138edbee9159157a5bf594827276308ea81b4ea3a0ae50621132038cf1f",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -7897,6 +8495,32 @@
       ]
     },
     {
+      "id": "SRC-ad3c319de0b3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+      "title": "plugin_host.rs",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+          "access_date": "2026-11-12",
+          "sha256": "972582cfc5aca8f71075210ceffe5e1693555fbbdd1f7b778d16d2d56e4ee325",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-adb5f990a3ee",
       "url": "https://www.freecad.org/addons.php?lang=en_EN",
       "local_source_path": null,
@@ -7909,6 +8533,41 @@
       "observations": [],
       "referring_documents": [
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-ae16b67b352c",
+      "url": "https://www.w3.org/TR/SVG2/coords.html",
+      "local_source_path": null,
+      "title": "Coordinate Systems, Transformations and Units — SVG 2",
+      "summary": "The W3C SVG 2 specification defines each SVG viewport as a width/height drawing region in abstract user units. A `viewBox` transforms the user coordinate system relative to the viewport, and nested viewports and element `transform` properties add coordinate mappings. Absolute lengths follow CSS units; the specification defines 1 inch as 96 CSS pixels. SVG pixel or user-unit values therefore need their viewport, viewBox, nested transforms and physical-size interpretation retained before they become model dimensions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-08 / DOM-03: SVG viewport geometry uses abstract user units and viewBox transforms the descendant coordinate system; CAD-09 consumes the derived profile",
+            "CAD-08 / DOM-03: SVG dimensions and coordinates are affected by nested viewports, transforms and CSS absolute-unit definitions"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-03-vector-and-solid.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/sources/round-05/point-03-web-sources.json"
       ]
     },
     {
@@ -7980,10 +8639,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -8080,8 +8750,8 @@
       "id": "SRC-b1ac5466cbd1",
       "url": "https://cadquery.readthedocs.io/en/stable/classreference.html",
       "local_source_path": null,
-      "title": "CadQuery API reference",
-      "summary": "Documents shape validity, bounds, volume, closed wires and geometry transforms; supports the documented workflow checks.",
+      "title": "CadQuery Class Summary — CadQuery Documentation",
+      "summary": "The CadQuery Shape API documents `isValid()` as true when no defect is detected on the shape or any subshape, referring to OCCT `BRepCheck_Analyzer::IsValid` for the checks performed. This is a kernel-shape integrity check and does not establish agreement with the source drawing, correct units, dimensional accuracy or manufacturing suitability.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -8097,11 +8767,30 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-13: CadQuery Shape.isValid() reports whether OCCT detects a defect on the shape or subshapes"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-03-vector-and-solid.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-03-web-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/mix-r02.md",
         "research/workflows/details/mix-r03.md",
@@ -8241,6 +8930,16 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -8248,7 +8947,61 @@
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b5b5f2bbfc67",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs",
+      "title": "host.rs",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs",
+          "access_date": "2026-11-12",
+          "sha256": "d2f877a50ed7b2e50905660cbad35d9b5d96ea885fc37b187a649f8bfc4b7a42",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b6504258277a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+      "title": "Point 03 visual and evidence review — vectors, sketches and small solids",
+      "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -8543,6 +9296,33 @@
       ]
     },
     {
+      "id": "SRC-bad31f6c036a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "title": "Point 03 — Confirmed dimensions and vector drawings to small CAD models",
+      "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "access_date": "2026-11-12",
+          "sha256": "86e7d8bca9f7bed88cb5356a46b1e2375dcf816970bf8ea428ba4ce2ec77ff09",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-bae586b9c767",
       "url": "https://raw.githubusercontent.com/Foster1202/cad-modeling-fusion-skill/main/references/model_spec_schema.md",
       "local_source_path": null,
@@ -8605,6 +9385,41 @@
       "referring_documents": [
         "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-bb1660749c18",
+      "url": "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_control___writer.html",
+      "local_source_path": null,
+      "title": "STEPControl_Writer Class Reference — Open CASCADE Technology Reference Manual 8.0.1",
+      "summary": "The supplied dev.opencascade.org URL redirects to https://occt3d.com/dev/doc/refman/html/class_s_t_e_p_control___writer.html. The served page identifies Open CASCADE Technology and its Reference Manual as version 8.0.1. It documents STEPControl_Writer::Transfer(TopoDS_Shape, STEPControl_StepModelType, ...) translating a shape to a STEP entity, with AsIs, ManifoldSolidBrep, FacetedBrep, ShellBasedSurfaceModel and GeometricCurveSet modes; each translation operation outputs a distinct root entity. Write(filename) writes the STEP model to a file and WriteStream(ostream) writes it to a stream. This is the shape-oriented STEPControl_Writer API; the separate STEPCAFControl_Writer reference documents CAF document/label and root-assembly transfer.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-05: OCCT STEPControl_Writer transfers a TopoDS_Shape to STEP entities in documented STEP model modes and writes the model to a file or stream",
+            "DOM-05: STEPControl_Writer translation operations emit distinct STEP root entities; the separate STEPCAFControl_Writer API is the documented CAF assembly/document path"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md",
+            "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-03-independent.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/sources/round-05/point-03-web-sources.json"
       ]
     },
     {
@@ -8996,10 +9811,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "53545e2c11a111e99430b5c9f1e5dc13cf0e06394a19c55d0095420c396501f4",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -9152,6 +9978,32 @@
       "referring_documents": [
         "research/sources/round-02/archive-sources.json",
         "research/sources/round-02/project-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c2f8f1ee81fd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/scene/convert/acis_export.rs",
+      "title": "acis_export.rs",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/scene/convert/acis_export.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/scene/convert/acis_export.rs",
+          "access_date": "2026-11-12",
+          "sha256": "b3893ff5a55f15b6935f7a8acc517b1d4fd06eb6643ef1e218afa93feb541145",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -9410,8 +10262,8 @@
       "id": "SRC-c70fd33bd9df",
       "url": "https://build123d.readthedocs.io/en/latest/operations.html",
       "local_source_path": null,
-      "title": "build123d operations",
-      "summary": "Official build123d docs show extrusion of a 2D sketch/face into a 3D part and document Builder/Algebra operations over OCCT geometry.",
+      "title": "Operations — build123d 0.13.1.dev341+gc0fb3a896 documentation",
+      "summary": "Official build123d documentation says operations accept existing objects and return new objects; `extrude()` creates a 3D Part from a Sketch or Face, using a specified amount/direction or an `until` target. Operations work through Algebra and Builder APIs over build123d objects. This is kernel-part construction documentation, not a constraint-solving sketch API claim or an observed validity result. The page's `latest` documentation reported a development version at access.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -9430,10 +10282,31 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-10 / DOM-04 / DOM-40: build123d extrude(to_extrude, amount, dir, until, target, both, taper, ...) accepts Sketch/Face and returns a Part",
+            "CAD-10 / DOM-04 / DOM-40: build123d operations are documented as Algebra and Builder functions that create new objects"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-03-vector-and-solid.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/sources/round-02/cad-sources.json",
+        "research/sources/round-05/point-03-web-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r04.md",
@@ -9722,6 +10595,32 @@
       ]
     },
     {
+      "id": "SRC-ccbf0b22fcf6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md",
+      "title": "cad-r10.md",
+      "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md",
+          "access_date": "2026-11-12",
+          "sha256": "9937d6b0309714e3ce25a5b6215c93628b0a96c36e2303412f2c670fb39891dc",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-03-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-cce96de57cbe",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
@@ -9787,6 +10686,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-03-visual.md",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r10.md"
       ]
@@ -9946,6 +10846,7 @@
       ],
       "referring_documents": [
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r01.md",
@@ -10207,6 +11108,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-03-software.md",
         "research/cad-and-skills.md"
       ]
     },
@@ -10298,6 +11200,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r04.md",
@@ -10460,11 +11364,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "access_date": "2026-11-12",
+          "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -11019,12 +11934,23 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "access_date": "2026-11-12",
+          "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-04/audit-local-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -11559,10 +12485,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+          "access_date": "2026-11-12",
+          "sha256": "045cdfca4dc54247411c17576d0c2abc2ce5babc8bcc4d3d59bef22029ec008b",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -11767,11 +12704,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
+          "referring_documents": [
+            "research/action-audit/point-03-vector-and-solid.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-03-local-sources.json"
       ]
     },
     {
@@ -11896,8 +12844,8 @@
       "id": "SRC-fcdc74aed22e",
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
       "local_source_path": null,
-      "title": "FreeCAD Sketcher scripting",
-      "summary": "Official documentation source for creating and constraining sketches through Python.",
+      "title": "FreeCAD Sketcher scripting documentation",
+      "summary": "The FreeCAD scripting page shows `Sketcher::SketchObject`, `addGeometry`, `addConstraint` with a Coincident constraint, and `doc.recompute()`. The example adds three line segments and one coincidence relation; it demonstrates API construction, not a closed or fully constrained profile or solver-status check. The page is in the FreeCAD documentation repository, which GitHub reports was archived on 2026-04-01.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -11929,13 +12877,35 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-09 / DOM-03: FreeCAD Sketcher Python creates a SketchObject, adds geometry and constraints, then recomputes the document",
+            "CAD-09 / DOM-03: The documented example does not establish a fully constrained profile or actual solver diagnostics",
+            "CAD-09 / DOM-03: The FreeCAD documentation repository is archived according to the inspected page"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-03-sources.md",
+            "research/action-audit/reviews/point-03-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-03-vector-and-solid.md",
+        "research/action-audit/reviews/point-03-designer.md",
+        "research/action-audit/reviews/point-03-software.md",
+        "research/action-audit/reviews/point-03-sources.md",
+        "research/action-audit/reviews/point-03-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-03-web-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r04.md",

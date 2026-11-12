@@ -654,6 +654,146 @@ Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
+## AUDIT-CAD-08 — Read and clean vector drawing geometry — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Read and clean vector drawing geometry. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-09 — Build and constrain an editable planar sketch — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build and constrain an editable planar sketch. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-10 — Create a kernel solid and native model document from confirmed parameters — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Create a kernel solid and native model document from confirmed parameters. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-13 — Verify model geometry and saved output — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Verify model geometry and saved output. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-14 — Recover from failed interpretation or geometry construction — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Recover from failed interpretation or geometry construction. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-15 — Render source-defined CSG as a mesh — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Render source-defined CSG as a mesh. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-03 — DXF/SVG drawing to constrained profile — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for DXF/SVG drawing to constrained profile. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-04 — Brief/profile to native CAD solid — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Brief/profile to native CAD solid. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-05 — Export STEP solid — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP solid. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-40 — Script-parametric CAD authoring — detailed execution options
+
+Status: proposal.
+
+Point 03 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Script-parametric CAD authoring. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

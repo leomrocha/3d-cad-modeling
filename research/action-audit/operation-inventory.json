@@ -105,8 +105,8 @@
       "family": "cad",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
@@ -121,8 +121,8 @@
       "family": "cad",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
@@ -135,8 +135,8 @@
       "family": "cad",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://build123d.readthedocs.io/en/latest/operations.html",
         "https://cadquery.readthedocs.io/en/stable/",
@@ -178,8 +178,8 @@
       "family": "cad",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
         "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
@@ -193,8 +193,8 @@
       "family": "cad",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
         "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
@@ -220,8 +220,8 @@
       "family": "cad",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://openscad.org/documentation"
       ]
@@ -547,8 +547,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
         "/home/leo/projects/3dmodeling/research/implementation-plan.md"
@@ -560,8 +560,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/implementation-plan.md",
         "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
@@ -575,8 +575,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/local-baseline.md",
         "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
@@ -1027,8 +1027,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
         "/home/leo/projects/3dmodeling/research/implementation-plan.md"

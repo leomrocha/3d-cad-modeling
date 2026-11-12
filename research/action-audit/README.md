@@ -28,6 +28,7 @@ The instruction “THEN EXECUTE ALL FUCKGIN POINTS THAT WAS THE FUCKIGN ORDER ON
 8. [Execution and review-resolution record](/home/leo/projects/3dmodeling/research/action-audit/execution-record.md).
 9. [Audit proposals](/home/leo/projects/3dmodeling/research/action-audit/ideas.json). These are imported into the [project ideas register](/home/leo/projects/3dmodeling/research/ideas-register.md).
 10. [Official library and OCR source checks](/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md).
+11. [Documentary verification method](/home/leo/projects/3dmodeling/research/action-audit/verification-method.md).
 
 ## Retained research
 

@@ -1,0 +1,477 @@
+[
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+    "title": "point-03-operations",
+    "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "37b0d41ee65e7bcd60880920848e8a11a109e7483f55f3b679b5951fcceb0a2e",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+    "title": "Point 03 — Confirmed dimensions and vector drawings to small CAD models",
+    "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "86e7d8bca9f7bed88cb5356a46b1e2375dcf816970bf8ea428ba4ce2ec77ff09",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md",
+    "title": "Point 03 designer notes — vector profiles and small solids",
+    "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "a1d6f8793a405bb6fbe3d7262707efe3fdee4087f7474ec7e881489c7a46acd1",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-independent.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-independent.md",
+    "title": "Independent review — Point 03 vectors, sketches and solids",
+    "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "486f80b241353f757d5fabf39ba3fac4ae0e65958776fcb72feb8464dc49003b",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md",
+    "title": "Software review: confirmed dimensions and vector drawings to CAD",
+    "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "2eeffb1d244c99b691627c8f3c3be1272fd29d922ee5f1c6a576d917c704e2c8",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md",
+    "title": "Point 03 source check: confirmed dimensions and vector drawings",
+    "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "df6a1101bc27b28560d172aa6e5f2e151bcea0ca322a1cfe11a0f77a849b7b3f",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+    "title": "Point 03 visual and evidence review — vectors, sketches and small solids",
+    "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md",
+      "research/action-audit/sequence.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "SKILL.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+    "title": "model-contract.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "title": "ocs-control.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "title": "AGENTS.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+    "title": "plan.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+    "title": "point-02-visual.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "title": "cad-and-skills.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "title": "implementation-plan.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+    "title": "local-baseline.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+    "title": "cad-sources.json",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "53545e2c11a111e99430b5c9f1e5dc13cf0e06394a19c55d0095420c396501f4",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+    "title": "cad-detail-sources.json",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "964063a30ad6777f74e0e6a8ce1851ae22d1b4a004c602a07ca20c1fd75219cb",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-03-web-sources.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-03-web-sources.json",
+    "title": "point-03-web-sources.json",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "57ee31d74f2bb9c99465a719a35fc91b729edc4639028cc779a0a2957feab552",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "title": "cad-paths.json",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "title": "composition-rules.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
+    "title": "cad-r04.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "50e91a097841a0bb87c3421a7777506deca000c5350e644fa30708cbe5355463",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
+    "title": "cad-r05.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "08be3ff11690a00128e3a252a24da421068db26c7ba7ea86ce86965b41bfbbc7",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md",
+    "title": "cad-r10.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "9937d6b0309714e3ce25a5b6215c93628b0a96c36e2303412f2c670fb39891dc",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+    "title": "dom-r05.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "4e321891af4b04a4afa57c634c2aac8e042c8e88d74a1c68b986b56bbb0eb05f",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "title": "domain-paths.json",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+    "title": "Cargo.toml",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "045cdfca4dc54247411c17576d0c2abc2ce5babc8bcc4d3d59bef22029ec008b",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "title": "LICENSE",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "title": "README.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs",
+    "title": "host.rs",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "d2f877a50ed7b2e50905660cbad35d9b5d96ea885fc37b187a649f8bfc4b7a42",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "title": "API-SPEC.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+    "title": "README.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+    "title": "cadkernel-body-path.md",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "64d940087bda6af3457406b07ed1595ddd974bd97256873a26ffaad6b40d48e4",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py",
+    "title": "document_model.py",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "089e3138edbee9159157a5bf594827276308ea81b4ea3a0ae50621132038cf1f",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/ocs_module.rs",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/ocs_module.rs",
+    "title": "ocs_module.rs",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "64a681a65bcf28df1d241cb1710a9a29fecba674cb4b3697f2301754b2a830ed",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs",
+    "title": "solid3d.rs",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2cfa32b5de6562187d90f4890686daecb500e5461a66838d826333e3cd188e53",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+    "title": "plugin_host.rs",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "972582cfc5aca8f71075210ceffe5e1693555fbbdd1f7b778d16d2d56e4ee325",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "title": "step.rs",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "2269911945e747b5ef30bbaaa8b656a0f6e4e348ed911af256034a612f3cd899",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/scene/convert/acis_export.rs",
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/scene/convert/acis_export.rs",
+    "title": "acis_export.rs",
+    "summary": "Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_reference_registered",
+    "sha256": "b3893ff5a55f15b6935f7a8acc517b1d4fd06eb6643ef1e218afa93feb541145",
+    "referring_documents": [
+      "research/action-audit/point-03-vector-and-solid.md"
+    ]
+  }
+]

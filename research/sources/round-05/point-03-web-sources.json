@@ -1,0 +1,169 @@
+[
+  {
+    "url": "https://ezdxf.readthedocs.io/en/stable/tasks/query.html",
+    "title": "Query Entities — ezdxf 1.4.5 documentation",
+    "summary": "Official ezdxf documentation describes entity selection from layouts and entity sequences using `query()` with DXF type and attribute expressions. Query results are EntityQuery sequences; unsupported attributes do not match the entity, and assignment to unsupported attributes is silently ignored. This identifies document/entity inspection operations; query results do not normalize units, resolve block insert transforms or classify a profile as a constrained sketch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-08 / DOM-03: ezdxf layout query() selects DXF entities by entity type and attributes",
+      "CAD-08 / DOM-03: EntityQuery returns matching entities; unsupported queried or assigned attributes are handled as documented"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md"
+    ]
+  },
+  {
+    "url": "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
+    "title": "DXF Units — ezdxf 1.4.5 documentation",
+    "summary": "Official ezdxf documentation states that DXF coordinate values are unitless; document/modelspace units are declared by `$INSUNITS`, and blocks can declare their own units. It states that ezdxf and CAD applications do not implicitly convert block units when inserting a block; the INSERT scaling must be applied explicitly. The documentation says these unit observations are based on BricsCAD experiments and may differ in other CAD applications. A unit declaration is source evidence, not a measured scale check.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-08 / DOM-03: DXF coordinate values are unitless and document/modelspace units use $INSUNITS",
+      "CAD-08 / DOM-03: DXF block unit scaling must be applied explicitly when units differ",
+      "CAD-08 / DOM-03: ezdxf unit behavior notes are based on BricsCAD experiments and may vary across CAD applications"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md"
+    ]
+  },
+  {
+    "url": "https://www.w3.org/TR/SVG2/coords.html",
+    "title": "Coordinate Systems, Transformations and Units — SVG 2",
+    "summary": "The W3C SVG 2 specification defines each SVG viewport as a width/height drawing region in abstract user units. A `viewBox` transforms the user coordinate system relative to the viewport, and nested viewports and element `transform` properties add coordinate mappings. Absolute lengths follow CSS units; the specification defines 1 inch as 96 CSS pixels. SVG pixel or user-unit values therefore need their viewport, viewBox, nested transforms and physical-size interpretation retained before they become model dimensions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-08 / DOM-03: SVG viewport geometry uses abstract user units and viewBox transforms the descendant coordinate system; CAD-09 consumes the derived profile",
+      "CAD-08 / DOM-03: SVG dimensions and coordinates are affected by nested viewports, transforms and CSS absolute-unit definitions"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+    "title": "FreeCAD Sketcher scripting documentation",
+    "summary": "The FreeCAD scripting page shows `Sketcher::SketchObject`, `addGeometry`, `addConstraint` with a Coincident constraint, and `doc.recompute()`. The example adds three line segments and one coincidence relation; it demonstrates API construction, not a closed or fully constrained profile or solver-status check. The page is in the FreeCAD documentation repository, which GitHub reports was archived on 2026-04-01.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-09 / DOM-03: FreeCAD Sketcher Python creates a SketchObject, adds geometry and constraints, then recomputes the document",
+      "CAD-09 / DOM-03: The documented example does not establish a fully constrained profile or actual solver diagnostics",
+      "CAD-09 / DOM-03: The FreeCAD documentation repository is archived according to the inspected page"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md"
+    ]
+  },
+  {
+    "url": "https://build123d.readthedocs.io/en/latest/operations.html",
+    "title": "Operations — build123d 0.13.1.dev341+gc0fb3a896 documentation",
+    "summary": "Official build123d documentation says operations accept existing objects and return new objects; `extrude()` creates a 3D Part from a Sketch or Face, using a specified amount/direction or an `until` target. Operations work through Algebra and Builder APIs over build123d objects. This is kernel-part construction documentation, not a constraint-solving sketch API claim or an observed validity result. The page's `latest` documentation reported a development version at access.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-10 / DOM-04 / DOM-40: build123d extrude(to_extrude, amount, dir, until, target, both, taper, ...) accepts Sketch/Face and returns a Part",
+      "CAD-10 / DOM-04 / DOM-40: build123d operations are documented as Algebra and Builder functions that create new objects"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md"
+    ]
+  },
+  {
+    "url": "https://cadquery.readthedocs.io/en/stable/importexport.html",
+    "title": "Importing and Exporting Files — CadQuery Documentation",
+    "summary": "Official CadQuery documentation gives `importers.importDXF(...).wires().toPending().extrude(10)` as a DXF-profile construction path; all DXF layers are imported by default with include/exclude options. `importStep(..., unit=...)` converts declared STEP units to millimetres by default or a selected unit. STEP export writes Workplane geometry; assembly export writes nested STEP with colors but default assembly object names are generated and per-object names are not preserved. Export unit and outputUnit settings can scale coordinates; STL, AMF and 3MF are identified as mesh formats. DXF/SVG/STEP are exchange formats and do not preserve CadQuery's parametric source history; the documented parametric representation is Python code.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-08 / DOM-03: CadQuery importDXF parses DXF profile entities into a Workplane; the documentation's subsequent toPending().extrude() belongs to downstream CAD-10 / DOM-04 / DOM-40 profile extrusion",
+      "DOM-05: CadQuery STEP import/export has explicit unit behavior and STEP assembly output options",
+      "DOM-05: Default STEP assembly export preserves colors but replaces component names with generated names",
+      "CAD-15: STL/AMF/3MF are mesh exports while CadQuery Python is the documented parametric source format"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md"
+    ]
+  },
+  {
+    "url": "https://cadquery.readthedocs.io/en/stable/classreference.html",
+    "title": "CadQuery Class Summary — CadQuery Documentation",
+    "summary": "The CadQuery Shape API documents `isValid()` as true when no defect is detected on the shape or any subshape, referring to OCCT `BRepCheck_Analyzer::IsValid` for the checks performed. This is a kernel-shape integrity check and does not establish agreement with the source drawing, correct units, dimensional accuracy or manufacturing suitability.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-13: CadQuery Shape.isValid() reports whether OCCT detects a defect on the shape or subshapes"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md"
+    ]
+  },
+  {
+    "url": "https://openscad.org/documentation",
+    "title": "OpenSCAD Documentation index",
+    "summary": "The official OpenSCAD documentation page links to the User Manual, Language Reference, and the manual section 'Using OpenSCAD in a command line environment'. This inspected index confirms the official documentation route for scripted modeling and command-line use; it does not expose a command example or mesh-export flag on the index page. The project's existing source register records an earlier inspection of the official OpenSCAD manuals for command-line rendering/export and mesh-oriented formats.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-15 / DOM-40: The official OpenSCAD documentation index links to the language reference, manual and command-line manual section",
+      "CAD-15 / DOM-40: The existing source register separately records prior manual inspection for CLI rendering/export and mesh formats"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md",
+      "research/sources/source-register.md#src-ce92c7f02e89"
+    ]
+  },
+  {
+    "url": "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_control___writer.html",
+    "title": "STEPControl_Writer Class Reference — Open CASCADE Technology Reference Manual 8.0.1",
+    "summary": "The supplied dev.opencascade.org URL redirects to https://occt3d.com/dev/doc/refman/html/class_s_t_e_p_control___writer.html. The served page identifies Open CASCADE Technology and its Reference Manual as version 8.0.1. It documents STEPControl_Writer::Transfer(TopoDS_Shape, STEPControl_StepModelType, ...) translating a shape to a STEP entity, with AsIs, ManifoldSolidBrep, FacetedBrep, ShellBasedSurfaceModel and GeometricCurveSet modes; each translation operation outputs a distinct root entity. Write(filename) writes the STEP model to a file and WriteStream(ostream) writes it to a stream. This is the shape-oriented STEPControl_Writer API; the separate STEPCAFControl_Writer reference documents CAF document/label and root-assembly transfer.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-05: OCCT STEPControl_Writer transfers a TopoDS_Shape to STEP entities in documented STEP model modes and writes the model to a file or stream",
+      "DOM-05: STEPControl_Writer translation operations emit distinct STEP root entities; the separate STEPCAFControl_Writer API is the documented CAF assembly/document path"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-03-sources.md",
+      "research/action-audit/reviews/point-03-software.md",
+      "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html"
+    ]
+  }
+]

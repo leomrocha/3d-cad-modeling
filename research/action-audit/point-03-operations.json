@@ -1,0 +1,1145 @@
+{
+  "point": 3,
+  "status": "proposal",
+  "date": "2026-11-12",
+  "requested_dispatch": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh"
+  },
+  "actual_model_identity": "unavailable",
+  "operations": [
+    {
+      "operation_id": "CAD-08",
+      "name": "Read and clean vector drawing geometry",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
+        "https://ezdxf.readthedocs.io/en/stable/",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
+        "https://ezdxf.readthedocs.io/en/stable/tasks/query.html",
+        "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
+        "https://www.w3.org/TR/SVG2/coords.html"
+      ],
+      "actions": [
+        {
+          "id": "CAD-08-A01",
+          "name": "Inspect source entities, units and drawing contexts",
+          "purpose": "Identify the drawing entities and source conventions before modifying a derivative.",
+          "intended_use": "Prepare a requested planar layout or dimensioned profile with traceable source entities.",
+          "inputs": "Original DXF/SVG; file hash; intended layers/entities; model/paper-space choice; physical dimensions and target plane.",
+          "outputs": "Entity/context inventory and source-to-target map prerequisites for CAD-08-A02.",
+          "accuracy": "Preserve original coordinates and curve types; source dimension accuracy and target profile allowance have separate records.",
+          "evidence": "DXF entity/layer/block IDs and declared units; SVG viewBox, physical width/height, transforms and source annotations.",
+          "software": "Use ezdxf.readfile/modelspace queries or inspected native reader; inventory nested INSERT transforms, entity coordinate systems and unsupported types.",
+          "agent": "Identify profile versus annotation/construction geometry and whether SVG path centreline or styled outline supplies the intended shape.",
+          "user_decisions": "Resolve unitless source, drawing-space choice, stroke interpretation or required nonplanar projection.",
+          "dependencies": "Documented FreeCAD DXF/SVG import and ezdxf APIs; OCS read/schema interfaces for the actual session.",
+          "proposed_development": "Proposal: drawing preflight retaining entity IDs, nested transforms, unit evidence and importer option receipt.",
+          "procedure": [
+            "Hash the original and inspect file/importer metadata.",
+            "Inventory entities by space, layer, type and block occurrence.",
+            "Record SVG physical/viewBox mapping or DXF unit/frame interpretation."
+          ],
+          "validation": "Compare source controls and entity inventory; independent semantic reviewer checks selected profile/context and unit meaning.",
+          "failure_resume": "Retain unsupported entities and ambiguity locations; block dependent transformation until the named unit/context decision is supplied.",
+          "resources": "Metadata/stream reading first; local CPU/RAM grows with entities/nesting. Remote VLM uses original views for selection; record manual source-review effort."
+        },
+        {
+          "id": "CAD-08-A02",
+          "name": "Create a mapped and explicitly cleaned derivative",
+          "purpose": "Transform selected source curves into the intended plane and apply only sourced repairs.",
+          "intended_use": "Supply a clean vector derivative for sketching while retaining original drawing evidence.",
+          "inputs": "Source inventory; selected entities; explicit unit/frame mapping; approved repair/approximation criteria.",
+          "outputs": "Clean vector derivative and per-entity preservation/change map for CAD-08-A03.",
+          "accuracy": "Gap closure, curve approximation and plane projection each have separate source-backed thresholds; repair limits preserve required holes/features.",
+          "evidence": "Every edited curve references source entity/occurrence and the reason for the change.",
+          "software": "Compose nested block transforms; apply object/world coordinates; preserve analytic curves where supported; detect duplicates/gaps/intersections before bounded joins or conversions.",
+          "agent": "Compare repair candidates using source curves and dimensions; VLM selects supported loop/feature interpretation.",
+          "user_decisions": "Decide a geometry-changing repair, projection or approximation when source intent permits several outcomes.",
+          "dependencies": "Native OCS/Draft edits or ezdxf derivative writer; actual supported entity behavior must be checked.",
+          "proposed_development": "Proposal: curve mapping/repair helper with reversible source transform and per-edit change ledger.",
+          "procedure": [
+            "Map selected entities with explicit transform order and units.",
+            "Detect and classify duplicate, open, crossing and nonplanar geometry.",
+            "Apply the permitted repair/conversion to a new derivative and retain mapping."
+          ],
+          "validation": "Nonuniform transforms preserve their actual curve result, such as circle-to-ellipse; compare repaired endpoints and source controls within their individual criteria.",
+          "failure_resume": "Preserve pre-edit derivative and failed mapping; return to the specific entity/repair rule and invalidate dependent loops.",
+          "resources": "Local transform/detection work scales with curve count and intersection candidates; expensive comparisons follow bounding filters. Remote review/manual edits address only ambiguous repairs."
+        },
+        {
+          "id": "CAD-08-A03",
+          "name": "Validate curve fidelity and publish the vector handoff",
+          "purpose": "Confirm the cleaned derivative preserves the requested profile meaning and dimensional evidence.",
+          "intended_use": "Provide CAD-09/DOM-03 with explicit curve topology, units and source associations.",
+          "inputs": "Original and derivative; change ledger; source controls; loop/hole intent; target plane.",
+          "outputs": "Checked vector-drawing revision and curve comparison receipt for CAD-09/DOM-03.",
+          "accuracy": "Check individual dimensions, endpoints and curve deviation using sourced criteria; bounds/area supplement critical-feature checks.",
+          "evidence": "Actual derivative measurements name artifact hash and entity IDs; source statements retain their evidence status.",
+          "software": "Count by type/layer; check open endpoints, self-intersections, loop nesting, bounds and area; reopen the derivative.",
+          "agent": "Independent reviewer checks outer/hole loops and excluded annotation against original source views.",
+          "user_decisions": "Resolve a remaining source conflict affecting a named profile or hole.",
+          "dependencies": "Selected geometry reader/curve checker; independent reader when its coverage supports the entity set.",
+          "proposed_development": "Proposal: source-to-curve fidelity reporter with feature-specific readiness and lost-entity findings.",
+          "procedure": [
+            "Compare entity/change manifests and named source controls.",
+            "Inspect closedness, crossings and nested-loop semantics.",
+            "Reopen derivative and publish ready/blocked profiles by target action."
+          ],
+          "validation": "Require numerical source correspondence and independent loop/feature review; unsupported entity losses remain explicit failures for required geometry.",
+          "failure_resume": "Retain failed derivative and exact missing/changed entity; resume the owning normalization/repair step.",
+          "resources": "Local topology checks scale with curves/intersections; views add display cost. Record remote review calls, source image size and manual correspondence corrections."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets unfamiliar drawing structure and selects source-supported entities/repairs; tools measure and preserve source mappings.",
+        "hybrid": "Parser handles units/entities/transforms; agent/VLM chooses profile associations and repair meaning.",
+        "software_first": "Known exporter/layer/entity families use checked normalization; unsupported entities or geometry-changing repairs enter review.",
+        "deterministic": "Explicit entity selection, transforms and tested repair rules replay against pinned source/importer revisions."
+      },
+      "alternatives": [
+        "Keep native source curves unchanged when the intended use needs no cleanup.",
+        "Layout profiles may use a labelled approximation with its deviation record; precision profiles preserve required curves and feature criteria.",
+        "Choose FreeCAD native/legacy DXF importer, OCS drawing workflow or ezdxf parser according to exercised entity coverage."
+      ],
+      "merge": {
+        "branches": "Separate importer/repair candidates retain one source hash, source subset, intended use/detail, per-feature criteria and resources.",
+        "evaluation": "VLM compares full source views and curve labels; software compares entity maps, critical dimensions and deviations.",
+        "combination": "Combine compatible mapped loops from the same source meaning; retain conflicting repairs and dimensions without averaging.",
+        "post_merge": "Recheck merged loop nesting, source mapping, units, critical dimensions and independent semantic correspondence."
+      },
+      "software_migration": "Automate known entity mappings and transform rules after checked nested blocks, SVG physical scaling, unsupported entities, gap/duplicate and nonuniform-transform cases; keep source/repair interpretation as an exception path.",
+      "future_tests": [
+        "Nested DXF blocks and mixed object/world coordinates reproduce checked control points.",
+        "SVG viewBox and physical units produce expected scale; centreline versus stroke outline requires the stated choice.",
+        "A nonuniformly scaled arc retains its transformed geometry instead of silently becoming a circle.",
+        "Near endpoints, duplicates and self-intersections preserve the original and the exact repair decision.",
+        "Required holes survive cleanup despite matching aggregate bounds."
+      ]
+    },
+    {
+      "operation_id": "CAD-09",
+      "name": "Build and constrain an editable planar sketch",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-09-A01",
+          "name": "Map curves and sourced constraints to a sketch plan",
+          "purpose": "Associate source geometry with the intended sketch elements and driving relationships.",
+          "intended_use": "Prepare an editable planar sketch for the requested geometry family.",
+          "inputs": "Vector-drawing plus model-brief, dimensions or measurement-set; support plane, datum and source-to-entity map.",
+          "outputs": "Sketch element/constraint plan for CAD-09-A02.",
+          "accuracy": "Dimensional allowances, source uncertainty and solver thresholds remain separate; no default tolerance or universal full-constraint requirement.",
+          "evidence": "Each proposed geometric/dimensional constraint cites source intent or explicit task decision.",
+          "software": "Resolve element IDs and plane coordinates; check curve support, loop closure and duplicate constraint candidates.",
+          "agent": "Distinguish driving dimensions, reference dimensions, construction geometry and intended free motion.",
+          "user_decisions": "Supply a missing design relation or intended degree of freedom when the source cannot determine it.",
+          "dependencies": "FreeCAD Sketcher addGeometry/addConstraint documentation; OCS sketch/constraint use requires discovered actual support.",
+          "proposed_development": "Proposal: source-to-sketch constraint mapper with stable geometry IDs and intended freedom records.",
+          "procedure": [
+            "Select support plane and named datum.",
+            "Map source curves and construction elements to sketch IDs.",
+            "Attach each driving/reference relation and intended freedom to its source."
+          ],
+          "validation": "Check every constraint references correct elements and units; independent reviewer verifies diameter/radius, centre/edge and hole-loop meaning.",
+          "failure_resume": "Preserve ambiguous constraints as candidates; resume the affected feature after the exact design/source decision.",
+          "resources": "Local mapping checks depend on entity/constraint count. High-reasoning/VLM review addresses ambiguous relation meaning; record manual decisions."
+        },
+        {
+          "id": "CAD-09-A02",
+          "name": "Create the sketch and solve bounded constraint groups",
+          "purpose": "Apply the planned constraints while recording solver changes and remaining freedoms.",
+          "intended_use": "Produce a native constraint-bearing sketch with explicit interpretation provenance.",
+          "inputs": "Checked sketch plan; target document/revision; chosen Sketcher or supported equivalent; solver configuration.",
+          "outputs": "Constrained-sketch candidate and solve history for CAD-09-A03.",
+          "accuracy": "Use the sourced dimension values; solver numerical tolerance controls solving only and does not replace feature allowance.",
+          "evidence": "Run receipts identify created geometry/constraints, document revisions, solver state and actual tool version.",
+          "software": "Create geometry; add constraints in diagnosable groups; solve/recompute and collect remaining degrees of freedom, redundancy and conflict reports. Record each diagnostic's actual API, value and supported status; an unavailable required diagnostic yields an unresolved check and blocks its dependent readiness claim.",
+          "agent": "Interpret whether remaining freedom is intended and diagnose the smallest conflicting constraint group.",
+          "user_decisions": "Resolve competing source dimensions or a newly needed constraint; avoid arbitrary fixation of free geometry.",
+          "dependencies": "FreeCAD Sketcher APIs/version; OCS equivalent only after installed capability inspection. The archived FreeCAD Sketcher example establishes addGeometry/addConstraint/recompute; the selected version's actual diagnostic API must be discovered for solver state, remaining degrees of freedom, conflicts and residuals.",
+          "proposed_development": "Proposal: incremental constraint adapter and conflict reporter preserving source-to-constraint relationships.",
+          "procedure": [
+            "Create native sketch geometry with stable readable associations.",
+            "Apply constraints in dependency order and record each solve result.",
+            "Retain intended free variables and isolate redundant/conflicting constraints."
+          ],
+          "validation": "Inspect solver state/residuals and movement from source geometry; a solved sketch must also satisfy source-to-constraint correspondence.",
+          "failure_resume": "Preserve last consistent revision and conflicting IDs; revise the owning source/constraint interpretation and rerun the affected solve group.",
+          "resources": "Local solver CPU/RAM scales with constraints and connectivity. Remote reasoning diagnoses semantics; manual work concerns exact conflict decisions."
+        },
+        {
+          "id": "CAD-09-A03",
+          "name": "Measure and reopen the constrained sketch",
+          "purpose": "Verify dimensional intent, topology and native editability on the resulting sketch.",
+          "intended_use": "Deliver a checked constrained profile for a compatible solid operation.",
+          "inputs": "Solved sketch; source curves/constraints; feature criteria; intended degrees of freedom; native save path.",
+          "outputs": "Native sketch revision and validation receipt for CAD-10/DOM-04.",
+          "accuracy": "Check each driving feature and curve deviation independently of solver residual; perturbation uses explicitly supplied variant values.",
+          "evidence": "Measurements bind to sketch/constraint IDs and revision; source-controlled variant expectations remain labeled.",
+          "software": "Measure critical dimensions, closure/nesting/intersections; save/reopen and, when authorized, recompute one declared parameter variant.",
+          "agent": "Independent reviewer compares source feature associations and intended free variables with the saved sketch.",
+          "user_decisions": "Provide a required variant value/expected response if parametric behavior testing is requested.",
+          "dependencies": "Native Sketcher measurements/recompute and save/reopen; separate reader for supported geometry checks.",
+          "proposed_development": "Proposal: sketch evidence validator linking solver, geometry and native parameter behavior.",
+          "procedure": [
+            "Read back constraint values and feature geometry.",
+            "Validate loop/region structure and intended freedom.",
+            "Save/reopen; exercise a supplied parameter variant when within scope."
+          ],
+          "validation": "Solver consistency, source correctness and saved editability are separate findings; detect a fully constrained wrong loop.",
+          "failure_resume": "Preserve failed sketch/variant; return to owning mapping or solve step and invalidate dependent solids.",
+          "resources": "Local readback precedes variant recompute; effort scales with sketch dependencies. Remote/manual source review and local graphics are recorded separately."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent chooses source-backed geometry/constraints and inspects each solve group.",
+        "hybrid": "Software creates and solves mapped constraints; agent reviews source associations and residual/conflict meaning.",
+        "software_first": "Checked sketch families use established constraint templates; unsupported curve/freedom/conflict cases enter review.",
+        "deterministic": "Pinned curves, source values and explicit constraints solve and validate using a fixed supported backend/version."
+      },
+      "alternatives": [
+        "Keep nonparametric vector curves when that is the requested editable artifact; label their output separately.",
+        "Use a native constraint-bearing FreeCAD sketch for editable dimensions.",
+        "Use a code-defined profile where procedural source is requested, with that output representation explicit."
+      ],
+      "merge": {
+        "branches": "Alternative constraint sets share source revision and intended use; record permitted freedom and per-feature accuracy for each.",
+        "evaluation": "VLM/source review compares geometric associations; software compares actual constraint values, residuals and remaining freedoms.",
+        "combination": "Merge compatible relation records only after checking duplicate/redundant/contradictory constraints; preserve competing interpretations.",
+        "post_merge": "Solve again and independently review merged source associations, loops, remaining freedom and saved sketch."
+      },
+      "software_migration": "Capture solved, source-correct sketch families; automate stable constraints after underconstraint, contradiction, redundancy, wrong-loop and supplied-variant fixtures pass.",
+      "future_tests": [
+        "A deliberately free degree of freedom remains free and is documented.",
+        "A redundant and a contradictory dimension produce distinct findings with source IDs.",
+        "A fully constrained wrong hole/edge association fails semantic review.",
+        "Saved/reopened sketch preserves constraint values and intended parameter response.",
+        "Selected sketch interface returns geometry but lacks a required degrees-of-freedom, conflict or residual diagnostic: preserve source constraints and actual supported readings, record the missing diagnostic as unavailable, and leave the affected validation unresolved until a supported query or explicitly justified independent check supplies it."
+      ]
+    },
+    {
+      "operation_id": "CAD-10",
+      "name": "Create a kernel solid and native model document from confirmed parameters",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+        "/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
+        "https://cadquery.readthedocs.io/en/stable/classreference.html",
+        "https://build123d.readthedocs.io/en/latest/operations.html",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs"
+      ],
+      "actions": [
+        {
+          "id": "CAD-10-A01",
+          "name": "Select a supported solid feature route",
+          "purpose": "Map confirmed profile/parameter intent to actual kernel operations and output requirements.",
+          "intended_use": "Construct the requested named B-rep solids and editable native representation.",
+          "inputs": "Constrained-sketch, compatible parametric-source, or model-brief plus dimensions; units, axes, part boundaries and feature criteria.",
+          "outputs": "Feature/backend plan for CAD-10-A02.",
+          "accuracy": "Feature dimensions and allowance come from sources; kernel operation tolerance, solver criteria and later export thresholds remain separate.",
+          "evidence": "Source profile and parameter records; installed capability evidence; prior OCS kernel note remains a historical source report.",
+          "software": "Inspect backend version/API and actual curve/solid support; verify closed profile, finite inputs, extrusion direction or revolution axis/sweep.",
+          "agent": "Choose primitive/extrude/revolve/Boolean sequence preserving separate parts and required surfaces.",
+          "user_decisions": "Resolve feature direction, body fusion or backend/representation change when task intent is ambiguous.",
+          "dependencies": "OCS SolidOperation enum/source implements create, rigid transform, region/surface, extrude and Boolean; REVOLVE uses its command path. FreeCAD/CadQuery/build123d are documented alternatives.",
+          "proposed_development": "Proposal: feature capability planner with explicit profile, operand and representation prerequisites.",
+          "procedure": [
+            "Identify the required solid and native editable output.",
+            "Bind each feature to source values/profile/axis and supported operation.",
+            "Record operand roles, component boundaries and per-feature checks."
+          ],
+          "validation": "Plan uses actual available operations and sourced dimensions. OCS plugin Extrude accepts one curve-profile handle and rejects Region; closed profile yields Solid3D and open profile yields Surface. A required solid from an open profile blocks construction until sourced closure or an evidenced alternate route exists. Outer/inner hole loops require an expressly supported operation sequence/backend.",
+          "failure_resume": "Preserve unsupported feature plan and query exact missing input; select an authorized supported alternative before dependent construction.",
+          "resources": "Metadata/profile checks first; local CPU/RAM scales with feature/operand complexity. High-reasoning agent handles ambiguous topology/sequence; record manual decisions."
+        },
+        {
+          "id": "CAD-10-A02",
+          "name": "Construct features with revision-bound readback",
+          "purpose": "Create the planned bodies without losing operands or obscuring partial failures.",
+          "intended_use": "Produce kernel geometry for the declared part/assembly boundaries.",
+          "inputs": "Feature plan; source profiles/operands; target document/revision; supported command/plugin interface.",
+          "outputs": "Body candidate, feature lineage and operation receipts for CAD-10-A03.",
+          "accuracy": "Apply exact supplied values; record kernel tolerances/healing and any approximation against feature-specific limits.",
+          "evidence": "Receipts include tool/build, document revision, input/output handles and source feature IDs; body creation differs from STEP export.",
+          "software": "Execute bounded primitive/extrude/revolve/Boolean operations and query each actual result. For OCS Python methods explicitly record and pass delete_source=False for region/surface/extrude when preserving the profile, and keep_operands=True for union/subtract/intersect when preserving operands. An explicitly selected deletion policy uses its recorded flags; the inspected Boolean default keep_operands=False consumes operands.",
+          "agent": "Diagnose profile, coincidence, Boolean refusal and changed history from actual returned errors.",
+          "user_decisions": "Decide a geometry-changing workaround, history loss or altered part boundary when it changes the requested result.",
+          "dependencies": "Installed OCS command/plugin path; FreeCAD Part/PartDesign or CadQuery/build123d selected API; native syntax discovered before use. OCS plugin single-profile extrusion, Region rejection and Boolean operand/profile deletion flags are checked explicitly; REVOLVE is a command path, not an inspected plugin enum variant.",
+          "proposed_development": "Proposal: bounded feature executor with stable request IDs, operand lineage and explicit result representation.",
+          "procedure": [
+            "Read target revision and operand handles; record the selected profile/operand preservation policy and explicit delete_source/keep_operands flags.",
+            "Create the next supported feature with those flags, identified operands and a stable request identity.",
+            "Read actual body/surface type, new handles and retained/deleted operand handles; stop dependent features on a failure."
+          ],
+          "validation": "Check finite bounds, resulting component count and required feature after each stage; detect open-profile surface result, invalid Boolean and unwanted fusion. Compare actual retained/deleted handles with the flag receipt; default Boolean behavior cannot stand in for an operand-preserving policy.",
+          "failure_resume": "Reconcile uncertain request status before retry; retain committed steps and refusal text such as CutRefused/Coincident/NoClosedForm where returned; resume from the first failed feature.",
+          "resources": "Local Boolean/kernel work can dominate simple profile checks; record actual face/feature counts and build mode. Remote agent diagnoses exceptions; GPU is display-only unless actual backend uses it."
+        },
+        {
+          "id": "CAD-10-A03",
+          "name": "Verify native solid and saved construction record",
+          "purpose": "Confirm actual shape validity, required dimensions and native artifact preservation.",
+          "intended_use": "Deliver cad-solid and native-model-document for further modeling or controlled exchange.",
+          "inputs": "Constructed bodies; feature plan; source controls; native representation contract; supplied variant if requested.",
+          "outputs": "Native model, actual solid classification and verification receipt consumed by CAD-13/DOM-04/DOM-05.",
+          "accuracy": "Use sourced per-feature criteria for sizes/axes/clearances; source uncertainty and computational comparison thresholds remain distinct.",
+          "evidence": "Actual geometry queries identify saved revision and handles; OCS same-kernel roundtrip is labeled with its shared dependency.",
+          "software": "Check validity, solids/shells/face types, critical dimensions and valid volume; save/reopen native result; retain parametric source or feature tree according to the chosen backend.",
+          "agent": "Independent reviewer checks cut direction, axes, component separation and source correspondence using same-revision views.",
+          "user_decisions": "Supply a variant value/expected response if parametric edit behavior must be tested.",
+          "dependencies": "Native CAD readback/save; CAD-13 validation contract; exact source exporter route checked separately.",
+          "proposed_development": "Proposal: native-body invariant report with source-to-feature IDs and editability classification.",
+          "procedure": [
+            "Measure actual controlling features and shape structure.",
+            "Save and reopen the native artifact.",
+            "Compare a supplied parameter variant when authorized and preserve its separate result."
+          ],
+          "validation": "Validate topology and critical interfaces beyond bounds/volume; report actual native history/source retention and independent-reader dependencies.",
+          "failure_resume": "Keep failed saved/variant artifact; return to the owning feature and invalidate its downstream exports/checks.",
+          "resources": "Local shape/reopen costs depend on faces and feature history; start with counts and required features. Remote/VLM semantic review uses bounded views; manual corrections logged."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent chooses source-backed feature sequence and drives supported native operations with readback.",
+        "hybrid": "Software constructs explicit features; agent interprets source intent and diagnoses Boolean/profile exceptions.",
+        "software_first": "Checked feature families execute with explicit parameters; unsupported curves, refusal or history mismatch enter review.",
+        "deterministic": "Pinned feature sequence, backend and parameters regenerate named bodies and validate native save/readback."
+      },
+      "alternatives": [
+        "OCS native kernel body via the actually exposed command/plugin interface.",
+        "FreeCAD feature-history model when native editable feature dependencies are required.",
+        "CadQuery/build123d source and B-rep when procedural parameters are the chosen editable record.",
+        "Simplified layout geometry may be a separate declared derivative; OpenSCAD CSG mesh uses CAD-15 and its own output type."
+      ],
+      "merge": {
+        "branches": "Candidate construction sequences preserve the same source parameters and part identities while recording detail/use/criteria/resources.",
+        "evaluation": "Source/VLM review compares feature meaning; kernel checks compare surfaces, critical dimensions and topology.",
+        "combination": "Select a checked body or compose separately intended parts; cross-branch feature copying creates a new authored revision with explicit lineage.",
+        "post_merge": "Recheck resulting body validity, component boundaries, interfaces, source correspondence and native reopen; separate reviewer evaluates semantics."
+      },
+      "software_migration": "Automate a feature family only after checked primitive, closed/open extrusion, axis/sign, Boolean refusal, saved readback and supplied-variant cases; capability gates remain version-specific.",
+      "future_tests": [
+        "Open-profile extrusion yields a surface and fails a requested closed-solid contract.",
+        "Closed-profile extrusion preserves sourced direction, voids and part boundary.",
+        "Wrong revolve axis/sign can preserve bounds yet fail source feature checks.",
+        "Boolean refusal preserves operands and resumes without duplicate mutations.",
+        "Native SAT/SAB byte changes retain checked geometry while source and saved hashes remain distinct.",
+        "Region input fails OCS plugin extrusion before mutation; an open profile blocks a required-solid route; an outer-plus-hole profile uses an evidenced supported feature sequence and preserves the hole.",
+        "OCS region/surface/extrude with recorded delete_source=False retain the profile; Boolean with recorded keep_operands=True retains both operands. A separately authorized deletion fixture uses explicit flags and verifies only the selected deletion. The fixture exposes the consuming Boolean default."
+      ]
+    },
+    {
+      "operation_id": "CAD-13",
+      "name": "Verify model geometry and saved output",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+        "https://cadquery.readthedocs.io/en/stable/classreference.html",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+      ],
+      "actions": [
+        {
+          "id": "CAD-13-A01",
+          "name": "Bind checks to actual artifacts and source criteria",
+          "purpose": "Define which factual claims can be checked from the supplied representation.",
+          "intended_use": "Inspect native models, sketches, solids, meshes, scripts or an existing fabrication package for the requested use.",
+          "inputs": "Artifact/revision/hash; model brief/source controls; intended use; per-feature criteria and representation.",
+          "outputs": "Check plan and evidence prerequisites for CAD-13-A02.",
+          "accuracy": "Keep feature allowance, source uncertainty, solver tolerance and file-comparison threshold distinct.",
+          "evidence": "Source controls and actual artifact identity; a parametric-source input alone supports source/provenance checks until geometry or an exercised generation receipt exists.",
+          "software": "Inventory artifact type and available measurements; map each check to source feature and supported query.",
+          "agent": "Select checks appropriate to curves/solids/mesh/native history and identify independent control evidence.",
+          "user_decisions": "Resolve a required acceptance criterion or source ambiguity that changes the named check.",
+          "dependencies": "Native measurement APIs and actual independent consumer; OCS numerical helper checks supplied point/axis/plane values only.",
+          "proposed_development": "Proposal: representation-aware validation planner with per-claim evidence requirements.",
+          "procedure": [
+            "Freeze artifact identity and intended-use requirements.",
+            "Associate each claim with its source criterion and measurable feature.",
+            "Separate available source checks from geometry checks needing an actual generated artifact."
+          ],
+          "validation": "Every planned numeric result has units, frame, criterion source and actual measurement route; reviewer checks feature identity.",
+          "failure_resume": "Record exact unavailable prerequisite and blocked check; preserve independent eligible checks and resume after the artifact/evidence arrives.",
+          "resources": "Metadata planning first; local CPU small relative to geometry queries for the same artifact. Remote/manual review concerns source associations and criteria."
+        },
+        {
+          "id": "CAD-13-A02",
+          "name": "Read actual geometry and compare required features",
+          "purpose": "Measure the named artifact using supported queries and retain failures.",
+          "intended_use": "Produce numerical and structural findings for the requested model use.",
+          "inputs": "Check plan; fixed document/artifact revision; geometry query route; source references.",
+          "outputs": "Measurement-set and check findings for CAD-13-A03.",
+          "accuracy": "Compare each feature against its own source-backed threshold; geometry precision and evidence uncertainty remain explicit.",
+          "evidence": "Measurements record artifact/document revision, handles/features, tool/version, units/frame, query and values.",
+          "software": "Measure critical dimensions/axes, shape counts/topology, validity and applicable volume; inspect mesh degeneracy/normals/closedness when relevant.",
+          "agent": "Independent reviewer checks that each numeric query addresses the intended feature; VLM compares same-revision views and source references.",
+          "user_decisions": "Resolve source/design conflicts revealed by checks; verification itself preserves existing geometry.",
+          "dependencies": "Native kernel/mesh query APIs; point/axis/plane helper only after actual measurement extraction.",
+          "proposed_development": "Proposal: measured-check recorder with supported-query classification and independent semantic association.",
+          "procedure": [
+            "Query required features from the fixed revision.",
+            "Run representation-specific validity/structure checks.",
+            "Compare sourced criteria and retain both pass and failed results."
+          ],
+          "validation": "Cross-check critical features using independent controls/readers where appropriate; equal bounds/volume do not replace local interface checks.",
+          "failure_resume": "Preserve actual failed values/query errors; geometry changes belong to the owning construction action after diagnosis.",
+          "resources": "Required-feature queries precede broad topology/mesh scans; local CPU/RAM scales with geometry size. Remote VLM and manual measurement review tracked separately."
+        },
+        {
+          "id": "CAD-13-A03",
+          "name": "Reopen saved artifacts and issue the verification report",
+          "purpose": "Associate verification with the actual saved output consumed downstream.",
+          "intended_use": "Deliver measurement-set and verification-report for the exact native/neutral artifact.",
+          "inputs": "Saved output and hash; check findings; native source revision; chosen reader; any authorized save scope.",
+          "outputs": "Verification-report with preserved failures, output identities and named downstream readiness.",
+          "accuracy": "Repeat required feature comparisons using export/readback thresholds; retain source engineering allowances separately.",
+          "evidence": "Output hash, reader/kernel version, source revision and field-loss findings identify the checked transition.",
+          "software": "Open saved artifact read-only; compare identities/units/frames/geometry; use OCS audit/save_verified only for its supported targets and authorized save.",
+          "agent": "Separate reviewer compares source-to-output semantic mapping and native editability/history versus actual exchange content.",
+          "user_decisions": "Resolve a changed delivery representation if a required field fails preservation.",
+          "dependencies": "Native reader and supported independent consumer; OCS verified DWG/DXF save scope; STEP checked through its actual importer.",
+          "proposed_development": "Proposal: saved-artifact verification receipt with shared-kernel dependency record and explicit per-check status.",
+          "procedure": [
+            "Reopen the named saved artifact.",
+            "Repeat required feature and representation checks.",
+            "Write actual values, failed checks, mappings and hashes into the report."
+          ],
+          "validation": "Report passes apply only to checked revisions; a fabrication package remains an inspected input and verification creates its report.",
+          "failure_resume": "Retain failed file/reader diagnostics; route to CAD-14 with the failed transition and affected feature IDs; rerun only affected checks after correction.",
+          "resources": "Local reopen/query costs follow file/geometry size; record reader CPU/RAM and I/O. Remote/manual review checks mappings, failures and intended use."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent builds a use-specific check plan and directs actual measurements; software records and compares values.",
+        "hybrid": "Software runs planned geometry checks; agent reviews feature correspondence and exceptions.",
+        "software_first": "Supported artifact/check families run automatically; unsupported queries, missing source criteria and semantic changes enter review.",
+        "deterministic": "Pinned artifact, criteria and supported queries produce a repeatable result; independent semantic evidence remains linked to its reviewed case."
+      },
+      "alternatives": [
+        "Native-only readback for the requested native artifact, recording its actual scope.",
+        "Neutral-file roundtrip through the intended consumer with source-to-output mapping.",
+        "Mesh-specific checks for a declared mesh deliverable; source-only verification for a supplied script until geometry evidence exists."
+      ],
+      "merge": {
+        "branches": "Readers/check methods share artifact/source identities, intended claim and criteria; record independent/shared kernel and resource conditions.",
+        "evaluation": "Reasoning/VLM review evaluates source-feature meaning; numerical results compare named quantities rather than model votes.",
+        "combination": "Combine compatible check findings by feature and exact revision; preserve conflicting measurements and query conditions.",
+        "post_merge": "Validate report references, units, criteria and source-to-feature associations; a different artifact requires its own measurements."
+      },
+      "software_migration": "Retain checked measurement mappings and expected failures; automate supported query families after wrong-feature, stale-view, source-only-script, faceted/analytic and saved-roundtrip cases.",
+      "future_tests": [
+        "A script without generated geometry yields only source checks and explicit geometry prerequisites.",
+        "Correct bounds with a wrong hole fails the required interface check.",
+        "A screenshot from another revision fails association even when visually similar.",
+        "Native and neutral-reader agreement records shared-kernel dependency.",
+        "Existing fabrication-package input produces inspection findings without generating replacement fabrication artifacts."
+      ]
+    },
+    {
+      "operation_id": "CAD-14",
+      "name": "Recover from failed interpretation or geometry construction",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-14-A01",
+          "name": "Reconcile the failed operation and preserve its evidence",
+          "purpose": "Determine the actual completion state before proposing a retry.",
+          "intended_use": "Recover the specific failed modeling transition while preserving existing work.",
+          "inputs": "Model-brief; verification-report naming failed transition/artifact; request/document/revision IDs; logs and partial outputs.",
+          "outputs": "Reconciled failure receipt and unchanged evidence set for CAD-14-A02.",
+          "accuracy": "Preserve actual failed values and their units/criteria; operation-completion identity requires exact matching.",
+          "evidence": "Native operation status, completed steps, output hashes and prior successful revision establish the diagnostic boundary.",
+          "software": "Query the same operation identity after timeout; read document revision/handles and partial output without replaying mutations.",
+          "agent": "Compare actual state with intended transition and locate which steps committed.",
+          "user_decisions": "Clarify an ambiguous requested recovery scope or changed source requirement.",
+          "dependencies": "OCS operation-status and revision protocol; backend logs; saved artifact/hash records.",
+          "proposed_development": "Proposal: failure-state collector linking request state, artifact revisions and affected feature IDs.",
+          "procedure": [
+            "Retain failed report, source inputs and partial outputs.",
+            "Query actual completion using the original identity.",
+            "Record completed and incomplete steps plus affected dependants."
+          ],
+          "validation": "Verify reported failure refers to the observed artifact/revision; independent reviewer checks the diagnostic source boundary.",
+          "failure_resume": "Unavailable completion state remains an explicit reconciliation prerequisite; retain outputs and resume query before any duplicate mutation.",
+          "resources": "Local logs/state/hash work precedes new geometry. Remote reasoning examines evidence; manual effort resolves only source/scope ambiguity."
+        },
+        {
+          "id": "CAD-14-A02",
+          "name": "Diagnose the earliest invalid source-to-geometry transition",
+          "purpose": "Identify the first interpretation, constraint, operation or export condition causing the failure.",
+          "intended_use": "Produce a source-backed correction proposal for the affected feature.",
+          "inputs": "Reconciled failure receipt; original source views/values; constraint residuals; kernel errors; importer/exporter findings.",
+          "outputs": "Diagnosis with candidate corrections and dependencies for CAD-14-A03.",
+          "accuracy": "Use the original per-feature criteria; changing solver/repair tolerances is a separate justified proposal.",
+          "evidence": "Source overlay, actual residual/error and operation lineage support each diagnosis; model confidence has its own status.",
+          "software": "Compare source entities, constraints and feature parameters; isolate minimal failing inputs and shape/query errors without changing source.",
+          "agent": "VLM reviews source-to-feature correspondence; reasoning agent distinguishes source ambiguity, wrong mapping, unsupported backend and invalid geometry.",
+          "user_decisions": "Resolve a new design choice or conflicting source evidence required by a correction.",
+          "dependencies": "Native diagnostics, source overlays and kernel validity reports; actual tool capability records.",
+          "proposed_development": "Proposal: causal transition map linking failed predicates to source/constraint/feature/export actions.",
+          "procedure": [
+            "Trace failed feature to its source/constraint/operation inputs.",
+            "Compare candidate causes against actual evidence.",
+            "Name the earliest affected action and its invalidated dependants."
+          ],
+          "validation": "Independent reviewer tests the diagnosis against preserved observations; a suggested tolerance increase must address the actual sourced requirement.",
+          "failure_resume": "Retain competing diagnoses; request the exact missing reference or create a scoped diagnostic experiment proposal.",
+          "resources": "Local comparison uses retained records first; geometry isolation is a separate authorized computation. Remote/VLM calls and manual diagnosis are measured separately."
+        },
+        {
+          "id": "CAD-14-A03",
+          "name": "Revise the brief and issue a bounded retry plan",
+          "purpose": "Record the correction and the smallest downstream sequence requiring renewed execution.",
+          "intended_use": "Return a revised model brief and recovery handoff to the owning modeling operation.",
+          "inputs": "Diagnosis; explicit correction/required user decision; previous brief; original evidence and source revisions.",
+          "outputs": "New model-brief revision with retry plan, consumed by the named CAD-08/09/10/15 or DOM operation.",
+          "accuracy": "Carry unchanged feature criteria; any revised tolerance or geometry intent cites its actual source/decision.",
+          "evidence": "Brief diff, exact correction and retained rejected alternatives establish decision provenance.",
+          "software": "Update source/feature mappings and dependency invalidation; preserve original models and failed artifacts.",
+          "agent": "Select evidence-supported correction within existing requirements; prepare new geometry execution through its owning operation.",
+          "user_decisions": "Decide new geometry intent/backend/output scope when the proposed recovery changes the task.",
+          "dependencies": "Existing brief/version records and owning-operation contracts; geometry mutation belongs to that operation's authorized action.",
+          "proposed_development": "Proposal: recovery-plan emitter with per-action prerequisites, restart boundary and required rechecks.",
+          "procedure": [
+            "Record the corrected source interpretation or explicit decision.",
+            "Name the retry action and affected downstream checks.",
+            "Issue the revised brief while retaining prior result and diagnosis."
+          ],
+          "validation": "Check the plan repairs the diagnosed transition and preserves unrelated features; later owning-operation execution must read back actual geometry.",
+          "failure_resume": "On failed correction retain its revision and return to diagnosis; stop retries at the named unresolved source/backend condition.",
+          "resources": "Local metadata/dependency work is bounded by affected records. Remote/manual effort records correction choices; actual rerun cost belongs to the owning operation."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets a novel failure from preserved sources and tool state, then issues a bounded correction brief.",
+        "hybrid": "Software reconciles states and localizes failed checks; agent identifies source/geometry meaning and recovery action.",
+        "software_first": "Known refusal/state/constraint patterns produce checked diagnoses; uncertain causes or new design intent enter review.",
+        "deterministic": "A verified recovery rule for exact failure/input conditions emits the bounded retry plan and required rechecks."
+      },
+      "alternatives": [
+        "Obtain the exact missing source/reference and preserve the current artifact.",
+        "Retain checked vector/profile output when the requested next shape route needs further input.",
+        "Propose an explicitly scoped supported backend when the original operation refuses the required feature."
+      ],
+      "merge": {
+        "branches": "Independent diagnoses share frozen failure/source evidence, intended result and feature criteria.",
+        "evaluation": "VLM/source review compares evidence associations; software verifies actual request state and failed predicates.",
+        "combination": "Combine compatible causal findings; retain competing source/design interpretations without changing values by consensus.",
+        "post_merge": "Review the revised brief/retry graph independently; rerun geometry only through the owning operation and validate the new revision."
+      },
+      "software_migration": "Build checked failure cases from actual refusals and source mistakes; automate state reconciliation/invalidation first, then only demonstrated diagnostic rules with an unknown-cause exception.",
+      "future_tests": [
+        "Lost response after successful mutation is reconciled before retry and creates no duplicate feature.",
+        "Conflicting constraints route to their exact source records rather than an arbitrary tolerance increase.",
+        "A backend refusal yields a correction/alternative proposal while preserving operands.",
+        "Recovery emits a revised brief and retry plan; it does not silently replace geometry or discard unrelated work.",
+        "A changed source during recovery invalidates only dependent records."
+      ]
+    },
+    {
+      "operation_id": "CAD-15",
+      "name": "Render source-defined CSG as a mesh",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://openscad.org/documentation",
+        "https://files.openscad.org/documentation/manual/The_OpenSCAD_Language.html",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-15-A01",
+          "name": "Inspect CSG source, parameters and mesh criteria",
+          "purpose": "Bind mesh generation to the exact source program and declared parameter values.",
+          "intended_use": "Produce a mesh for the task's appearance, layout or specified mesh-consumer use.",
+          "inputs": "OpenSCAD parametric-source; dependencies/licences; parameters; units; target mesh format; feature and approximation criteria.",
+          "outputs": "Render/export configuration and pinned source package for CAD-15-A02.",
+          "accuracy": "Source feature dimensions, tessellation deviation and consumer comparison thresholds have separate sources; preserve explicit units.",
+          "evidence": "Source program/version, includes/assets and parameter provenance; source syntax alone supplies no measured mesh result.",
+          "software": "Inspect source/dependency references, supported syntax/backend and resolution controls; record render versus preview route and export settings.",
+          "agent": "Confirm CSG operation meaning, separate parts and required holes/features before rendering.",
+          "user_decisions": "Supply a mesh approximation criterion or format choice when required by the intended use.",
+          "dependencies": "Documented OpenSCAD language/render/export interfaces; actual installed version/backend discovered in future execution.",
+          "proposed_development": "Proposal: source/render manifest and parameter/dependency validator.",
+          "procedure": [
+            "Freeze source, dependencies and parameter overrides.",
+            "Bind intended units and consumer format.",
+            "Record final-render and tessellation controls against required features."
+          ],
+          "validation": "Check parameter/dependency completeness and exact intended CSG interpretation; reviewer verifies source feature correspondence.",
+          "failure_resume": "Retain parse/dependency errors; resume after the actual missing source or parameter is supplied.",
+          "resources": "Local source inspection precedes rendering; complexity follows CSG tree and dependencies. Remote reasoning reviews ambiguous source intent; manual parameter decisions recorded."
+        },
+        {
+          "id": "CAD-15-A02",
+          "name": "Evaluate final CSG and export the mesh derivative",
+          "purpose": "Evaluate the source's actual constructive geometry into a saved mesh.",
+          "intended_use": "Create the specified STL/3MF or other supported mesh derivative.",
+          "inputs": "Pinned source/render configuration; isolated output path; actual OpenSCAD version/backend.",
+          "outputs": "Mesh bytes, source-to-output lineage and render log for CAD-15-A03.",
+          "accuracy": "Apply recorded resolution controls; keep source dimensions and allowed mesh deviation distinct.",
+          "evidence": "Actual run logs, warnings, settings, output hash and parameter values identify executed rendering.",
+          "software": "Use final geometry evaluation and mesh export; preserve source and record empty/invalid/nonmanifold warnings.",
+          "agent": "Interpret Boolean/contact warnings and whether required openings and separate components survive.",
+          "user_decisions": "Resolve a geometry-changing workaround or changed approximation criterion before modifying source.",
+          "dependencies": "Supported OpenSCAD final-render backend and chosen mesh exporter; no B-rep preservation is inferred.",
+          "proposed_development": "Proposal: resumable render wrapper with source/settings digest and explicit mesh result type.",
+          "procedure": [
+            "Recheck source/dependency hashes.",
+            "Evaluate final CSG with the recorded settings.",
+            "Export to a new derivative and retain logs and output identity."
+          ],
+          "validation": "Detect empty output or failed render; verify source unchanged and saved mesh can be parsed; preview appearance is a separate observation.",
+          "failure_resume": "Preserve partial output/logs; reconcile completion before retry; isolate failed CSG operation through CAD-14.",
+          "resources": "Local render/Boolean CPU/RAM scales with CSG/triangle complexity; resolution may dominate. GPU use depends on actual backend; remote/manual effort addresses failures."
+        },
+        {
+          "id": "CAD-15-A03",
+          "name": "Measure the mesh and check declared parametric behavior",
+          "purpose": "Verify the saved mesh against source dimensions and consumer requirements.",
+          "intended_use": "Deliver a checked mesh with its editable source retained.",
+          "inputs": "Mesh/hash; source/parameters; mesh criteria; reader; supplied variant value when editability testing is requested.",
+          "outputs": "Mesh verification plus source/render receipt for CAD-13 or the named mesh consumer.",
+          "accuracy": "Measure local feature deviation and bounds using the declared tessellation/consumer thresholds; source geometry allowance remains separate.",
+          "evidence": "Actual saved-mesh queries reference mesh hash and source/settings revisions; variant measurements retain separate identities.",
+          "software": "Check connected components, manifold/closedness where required, normals, degeneracy, finite bounds and critical feature dimensions; verify unit treatment.",
+          "agent": "Independent reviewer compares source-defined holes, cuts, part boundaries and orientation with measured mesh features.",
+          "user_decisions": "Supply a required variant and expected feature response if the task includes parametric regeneration.",
+          "dependencies": "Mesh parser/validator and OpenSCAD regeneration route; STL unit convention is recorded externally when format lacks a unit declaration.",
+          "proposed_development": "Proposal: source-to-mesh feature validator and variant comparison report.",
+          "procedure": [
+            "Reopen the mesh and inspect topology/units.",
+            "Measure required dimensions and approximation at named regions.",
+            "When authorized, regenerate one supplied variant and compare expected feature changes."
+          ],
+          "validation": "Check geometry and semantic source correspondence independently; mesh output remains mesh through this operation.",
+          "failure_resume": "Retain failed mesh and localized feature/error; return to render settings or sourced CSG correction as the evidence indicates.",
+          "resources": "Local mesh checks scale with vertices/faces; begin with parsing/counts then critical features. Remote VLM/manual review uses bounded same-output views."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets supplied CSG and chooses source-backed resolution/consumer checks; software renders and measures.",
+        "hybrid": "Software evaluates explicit source/settings; agent reviews warnings and feature correspondence.",
+        "software_first": "Checked CSG/source families render with known mesh criteria; unsupported syntax, invalid output or feature loss enter review.",
+        "deterministic": "Pinned source, dependencies, parameters and renderer/settings regenerate mesh and supported invariants."
+      },
+      "alternatives": [
+        "Lower-detail layout mesh with explicitly sourced approximation target and retained original source.",
+        "Precision mesh consumer uses local-feature deviation and required topology criteria.",
+        "A B-rep output requirement uses a compatible CAD-10/DOM-40 backend or a separately scoped modeling route."
+      ],
+      "merge": {
+        "branches": "Resolution/backend candidates preserve common source/parameters and record mesh purpose/detail/criteria/resources.",
+        "evaluation": "VLM compares source feature meaning; software compares critical dimensions, approximation and topology.",
+        "combination": "Select a checked mesh or assemble explicitly separate source-defined components; geometry edits create a new derivative with lineage.",
+        "post_merge": "Recheck units, connected parts, holes, normals, required closure and local feature deviation on the merged output hash."
+      },
+      "software_migration": "Automate source/settings validation and supported mesh checks after empty output, thin/open topology, missing holes, unit convention and supplied-variant cases; retain CSG interpretation as a reviewed boundary.",
+      "future_tests": [
+        "Final evaluated mesh differs from preview artifact and receives its own validation.",
+        "Resolution change preserves required holes and meets the sourced feature-deviation criterion.",
+        "An empty or nonmanifold result produces explicit output failure and retained source/logs.",
+        "Mesh format unit convention yields the checked dimension in the actual consumer.",
+        "A supplied parameter variant changes the expected local feature while preserving unrelated parameters."
+      ]
+    },
+    {
+      "operation_id": "DOM-03",
+      "name": "DXF/SVG drawing to constrained profile",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+        "https://cadquery.readthedocs.io/en/stable/importexport.html",
+        "https://ezdxf.readthedocs.io/en/stable/tasks/query.html",
+        "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
+        "https://www.w3.org/TR/SVG2/coords.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-03-A01",
+          "name": "Choose the profile target and source entity mapping",
+          "purpose": "Define whether the requested deliverable includes native constraint data.",
+          "intended_use": "Prepare a constrained profile from selected vector-drawing entities.",
+          "inputs": "Original vector-drawing; units/spaces/layers/blocks; target plane; model-brief or explicit source dimensions/relations.",
+          "outputs": "Profile/constraint contract and CAD-08/CAD-09 prerequisites for DOM-03-A02.",
+          "accuracy": "Attach source curve accuracy, permitted repair and per-constraint criteria separately.",
+          "evidence": "Source entity/layer IDs, unit mapping, loop meaning and dimensional evidence form the contract.",
+          "software": "Inspect source and importer coverage; map entity-to-loop IDs and explicit target constraint representation.",
+          "agent": "Select supported sketch route; identify profile-only import and CSG extrusion as alternatives with their actual output type.",
+          "user_decisions": "Resolve source units, loop interpretation or a different output target required by an alternative route.",
+          "dependencies": "CAD-08 vector preparation and CAD-09 constrained sketch; FreeCAD Sketcher documented route.",
+          "proposed_development": "Proposal: profile route selector exposing actual output type and required source/constraint inputs.",
+          "procedure": [
+            "Identify selected entities and intended outer/hole loops.",
+            "Record target plane, unit mapping and source constraints.",
+            "Select a route whose output contains the required native constraint data."
+          ],
+          "validation": "Confirm all promised constrained-sketch fields have an actual implementation path; CadQuery import/OpenSCAD extrusion alone is classified as profile/CSG.",
+          "failure_resume": "Preserve source and alternate route proposal; block dependent constrained output until required relation/route exists.",
+          "resources": "Local entity/metadata checks first; remote VLM handles loop/label meaning and manual output choices."
+        },
+        {
+          "id": "DOM-03-A02",
+          "name": "Normalize curves and construct the constrained profile",
+          "purpose": "Execute the checked vector-to-sketch composition without repeating completed transitions.",
+          "intended_use": "Create the declared native constrained profile.",
+          "inputs": "Profile contract; original drawing; completed CAD-08 receipt if available; CAD-09 constraint plan/backend.",
+          "outputs": "Constrained-sketch candidate with source-to-curve-to-constraint mapping for DOM-03-A03.",
+          "accuracy": "Respect separate source, repair, constraint and solver criteria on each feature.",
+          "evidence": "Composition receipt links original drawing hash, cleaned curve revision and native sketch revision.",
+          "software": "Reuse CAD-08 derivative; execute CAD-09 with sourced constraints; retain importer/entity changes and solver state.",
+          "agent": "Review loop/hole assignment, unsupported curves and constraint exceptions using original source evidence.",
+          "user_decisions": "Resolve only new geometry/constraint choices exposed by the transition.",
+          "dependencies": "Selected DXF/SVG reader plus actual constraint-bearing backend; direct extrusion tools produce a separately labeled alternative.",
+          "proposed_development": "Proposal: composed profile adapter joining existing curve and sketch receipts by stable feature IDs.",
+          "procedure": [
+            "Consume or create the checked vector derivative once.",
+            "Map selected curves into native sketch elements.",
+            "Apply sourced constraints and retain intermediate/solver receipts."
+          ],
+          "validation": "Check no required entity/loop is lost, source units are correct and actual constraint objects exist; independent semantic reviewer checks associations.",
+          "failure_resume": "Resume at failed importer, curve repair or constraint action using its last complete receipt; preserve all original/intermediate artifacts.",
+          "resources": "Local parsing/curve/solver workload depends on entities/constraints; remote/manual review concentrates on exceptions."
+        },
+        {
+          "id": "DOM-03-A03",
+          "name": "Verify profile semantics and constrained editability",
+          "purpose": "Confirm the profile's actual source meaning and native constraint content.",
+          "intended_use": "Provide a checked constrained-sketch to solid construction.",
+          "inputs": "Native sketch; source/curve/constraint maps; feature criteria; intended free variables.",
+          "outputs": "Profile verification and native sketch identity for CAD-10/DOM-04.",
+          "accuracy": "Measure source-critical dimensions and loop relationships with per-feature criteria; solver residual has its own criterion.",
+          "evidence": "Actual native constraint list, degrees of freedom, geometry and source mappings identify the checked result.",
+          "software": "Check closure, self-intersections, hole nesting, dimensions and actual constraints; save/reopen supported native sketch.",
+          "agent": "Independent reviewer compares source-selected loops and dimensional associations rather than relying on solver success.",
+          "user_decisions": "Resolve remaining source-defined profile ambiguity affecting a named solid feature.",
+          "dependencies": "Native sketch reader and geometric validators; CAD-09 check receipt reused at its exact revision.",
+          "proposed_development": "Proposal: profile handoff validator that distinguishes constrained-sketch from clean-wire or mesh outputs.",
+          "procedure": [
+            "Read actual geometry and constraint objects.",
+            "Compare selected source dimensions and loop/hole meaning.",
+            "Publish native constrained profile with ready/blocked downstream features."
+          ],
+          "validation": "Constrained output requires its actual constraint graph; a clean profile can pass curve checks while retaining its separate representation label.",
+          "failure_resume": "Retain failed profile and return to its owning mapping/constraint action; invalidate dependent solid features.",
+          "resources": "Local sketch/readback work precedes solid construction; remote VLM review and manual corrections are separate records."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets entity/loop/constraint meaning and selects an evidenced native sketch route.",
+        "hybrid": "Parser and sketch solver perform defined steps; agent reviews semantic associations and exceptions.",
+        "software_first": "Known vector export families and source-constraint mappings run automatically; unsupported geometry or target mismatch enters review.",
+        "deterministic": "Pinned vector selection, transformations and explicit constraints produce and validate a native sketch through tested adapters."
+      },
+      "alternatives": [
+        "OCS-native drawing edit for a vector output with its stated semantics.",
+        "FreeCAD native constraint-bearing sketch for the constrained-profile contract.",
+        "CadQuery DXF wire or OpenSCAD profile extrusion as explicitly changed-output routes.",
+        "Layout approximation retains source curves and deviation; precision profile preserves required curve/constraint evidence."
+      ],
+      "merge": {
+        "branches": "Importer/sketch candidates share source entity IDs and target use/criteria while retaining their actual output types.",
+        "evaluation": "VLM evaluates source loops and feature labels; software checks geometry/constraint values and native object type.",
+        "combination": "Merge mapped compatible loops/constraints; retain unsupported or conflicting source relations and exact alternatives.",
+        "post_merge": "Recheck actual constraint graph, loop semantics, source dimensions and native reopen on the merged revision."
+      },
+      "software_migration": "Automate composition only for checked importer/sketch families; include missing constraints, unsupported curve, unit, hole-nesting and partial-step fixtures.",
+      "future_tests": [
+        "Direct DXF-to-extrusion output is classified as wire/CSG or mesh and cannot fulfill constrained-sketch output.",
+        "A loop with a hole preserves inner/outer identity through import and solve.",
+        "A source with valid curves but absent required relations produces a precise constraint input question.",
+        "Existing CAD-08/CAD-09 receipts are reused without duplicating geometry."
+      ]
+    },
+    {
+      "operation_id": "DOM-04",
+      "name": "Brief/profile to native CAD solid",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-04-A01",
+          "name": "Define native artifact and solid prerequisites",
+          "purpose": "Bind the requested editable artifact and solid representation to supplied inputs.",
+          "intended_use": "Create an application-native model and CAD solid for the named use.",
+          "inputs": "Model-brief, constrained-sketch or compatible parametric-source; explicit dimensions/datums/parts; native editability requirement.",
+          "outputs": "Native/solid delivery contract and construction prerequisites for DOM-04-A02.",
+          "accuracy": "Carry source feature allowances and evidence uncertainty; record separate kernel/save criteria.",
+          "evidence": "Input source identities and actual output representation requirements govern backend selection.",
+          "software": "Inspect required feature support and native document capability; identify whether code source alone or a native document is requested.",
+          "agent": "Choose supported interactive or procedural construction while preserving source history and component boundaries.",
+          "user_decisions": "Resolve desired native editability or alternative representation when the supplied task permits several.",
+          "dependencies": "OCS native body/document; FreeCAD feature document; CAD-10 and DOM-40 routes with their actual outputs.",
+          "proposed_development": "Proposal: native-artifact contract mapper separating native document, parametric source, B-rep and mesh.",
+          "procedure": [
+            "Record the required editable artifact and geometry type.",
+            "Check dimensions/profile/parameter prerequisites.",
+            "Choose a supported construction path and its save/readback plan."
+          ],
+          "validation": "An OpenSCAD source/mesh route is explicitly CAD-15; it supplies no automatic cad-solid/native feature-history claim.",
+          "failure_resume": "Retain unsupported target and ask the exact missing output/geometry decision; preserve supplied source.",
+          "resources": "Local contract/capability reading precedes modeling. Remote agent/manual effort resolves intent and representation choices."
+        },
+        {
+          "id": "DOM-04-A02",
+          "name": "Construct or reuse the checked native body",
+          "purpose": "Produce the contracted solid through the selected construction route.",
+          "intended_use": "Populate the named native document without changing unrelated source objects.",
+          "inputs": "Delivery contract; checked inputs; CAD-10 result or DOM-40 generated geometry when already available; target document/revision.",
+          "outputs": "Native body/document candidate with source lineage for DOM-04-A03.",
+          "accuracy": "Preserve feature dimensions and component boundaries; construction tolerances are recorded per backend.",
+          "evidence": "Actual body/native document revision and source/feature mapping record construction evidence.",
+          "software": "Reuse an exact checked construction receipt or execute CAD-10; attach generated geometry to the supported native artifact where required.",
+          "agent": "Review whether actual result supports the requested native editing and feature semantics.",
+          "user_decisions": "Resolve a history loss, body fusion or new output change requiring design intent.",
+          "dependencies": "Chosen native CAD API and CAD-10/DOM-40 contracts; no duplicate creation when a receipt already matches inputs.",
+          "proposed_development": "Proposal: construction-to-native adapter that preserves source associations and labels actual editability.",
+          "procedure": [
+            "Match existing result revision to the required inputs.",
+            "Construct only missing bounded features or attach the checked body.",
+            "Read back document/parts and preserve source/parameter records."
+          ],
+          "validation": "Check required solids and separate parts exist and actual native source content matches the contract.",
+          "failure_resume": "Preserve partial document and completed feature receipts; resume the owning construction action after source/revision reconciliation.",
+          "resources": "Local kernel/attachment work scales with features and shape size. Remote/manual effort examines editing/history exceptions."
+        },
+        {
+          "id": "DOM-04-A03",
+          "name": "Save and validate the native model contract",
+          "purpose": "Deliver the actual native document and solid with recorded editing capability.",
+          "intended_use": "Provide a reusable native source for further modeling and export.",
+          "inputs": "Native candidate; source/feature map; save target; feature criteria; CAD-13 check plan.",
+          "outputs": "Native-model-document, cad-solid and validation receipt for DOM-05 or later operations.",
+          "accuracy": "Saved geometry checks use source-backed feature criteria; file conversion thresholds remain separate.",
+          "evidence": "Saved file hash, document revision, native object types and measured features establish the delivery evidence.",
+          "software": "Save/reopen native artifact; run CAD-13 shape/feature checks; inspect actual constraints/history/source references.",
+          "agent": "Independent reviewer compares editing capability and feature meaning with the supplied task.",
+          "user_decisions": "Resolve a required native feature/history field that the selected artifact cannot preserve.",
+          "dependencies": "Supported native save/readback and CAD-13; OCS save audit limited to its demonstrated target.",
+          "proposed_development": "Proposal: native-delivery receipt tying solid validity, source record and actual editable content.",
+          "procedure": [
+            "Save the specified native derivative.",
+            "Reopen and measure controlling features/parts.",
+            "Record exactly which parameters, constraints or history remain editable."
+          ],
+          "validation": "Both native artifact and actual solid are present; script-only source and mesh derivatives retain their own labels.",
+          "failure_resume": "Preserve failed native output; return to construction or save adapter and repeat affected checks only.",
+          "resources": "Local save/reopen and required-feature queries first; record CPU/RAM/I/O. Remote review and manual editing decisions separately."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets input and native editability needs, then drives supported CAD construction/save.",
+        "hybrid": "Software performs features and saves; agent reviews source/native capability and geometry exceptions.",
+        "software_first": "Known native-model families execute with explicit inputs; history, source or shape mismatches enter review.",
+        "deterministic": "Pinned native construction/save rules and supported parameters produce a checked native document/solid pair."
+      },
+      "alternatives": [
+        "OCS native document and supported kernel bodies.",
+        "FreeCAD native constrained/feature document when that editing model is required.",
+        "Procedural source and generated geometry via DOM-40; create any required native document through an explicit adapter.",
+        "OpenSCAD source/mesh via CAD-15 as a separately identified output route; layout derivatives have declared approximation criteria."
+      ],
+      "merge": {
+        "branches": "Native candidates record the same source intent, editing target, feature criteria and resource observations.",
+        "evaluation": "VLM/source review checks feature meaning; software checks native object content, shape and required dimensions.",
+        "combination": "Select a supported native artifact or compose separate parts with lineage; merging history/geometry creates a new revision with explicit mapping.",
+        "post_merge": "Reopen merged native artifact and independently validate editability, part identities, features and solid classification."
+      },
+      "software_migration": "Capture native editing/save cases per backend and version; automate explicit body families only after native-history, source-only, surface/solid and save-loss cases.",
+      "future_tests": [
+        "Native document preserves the requested editable feature/constraint content after reopen.",
+        "An OpenSCAD mesh candidate is routed to CAD-15 rather than declared a CAD solid.",
+        "A parametric script without required native document is identified as a different artifact.",
+        "Reused CAD-10 receipt avoids duplicate body creation."
+      ]
+    },
+    {
+      "operation_id": "DOM-05",
+      "name": "Export STEP solid",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "https://cadquery.readthedocs.io/en/stable/importexport.html",
+        "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_control___writer.html",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-05-A01",
+          "name": "Bind the solid export to representation and consumer criteria",
+          "purpose": "Select a STEP route that matches the source geometry and receiving use.",
+          "intended_use": "Exchange an identified solid while preserving the native source.",
+          "inputs": "Cad-solid or B-rep; native source revision/hash; units/frame; required surfaces/features; target consumer/schema and output path.",
+          "outputs": "Solid-export contract for DOM-05-A02.",
+          "accuracy": "Per-feature export deviation, source engineering allowance and source uncertainty have separate records.",
+          "evidence": "Actual source shape classification and native identity; original STEP is retained only when it genuinely exists in the lineage.",
+          "software": "Inspect source body/surface types and exporter options; record actual unit/precision and tessellation behavior.",
+          "agent": "Choose analytic-preserving or explicitly faceted route matching the task; identify native history and source identity preservation requirements.",
+          "user_decisions": "Resolve a changed output representation/schema when it alters the requested deliverable.",
+          "dependencies": "Selected FreeCAD/OCCT/CadQuery export capability; OCS mesh writer is a distinct inspected faceted route.",
+          "proposed_development": "Proposal: solid-export capability/criteria planner with source-to-output field mapping.",
+          "procedure": [
+            "Freeze source and native artifact identities.",
+            "Record consumer schema, units and required geometry properties.",
+            "Select actual exporter behavior and feature comparison criteria."
+          ],
+          "validation": "Exporter can satisfy required representation or reports the precise alternative; no source STEP bytes are invented for native-only input.",
+          "failure_resume": "Preserve source and contract when route is incompatible; select a supported alternative or obtain changed-output decision.",
+          "resources": "Local metadata/shape inspection first; export cost follows surfaces/triangles. Remote/manual review addresses consumer and representation requirements."
+        },
+        {
+          "id": "DOM-05-A02",
+          "name": "Write a separate STEP derivative with actual settings",
+          "purpose": "Export the frozen source geometry and preserve the resulting representation evidence.",
+          "intended_use": "Create a traceable STEP candidate for the named receiving consumer.",
+          "inputs": "Export contract; pinned body/native source; selected tool/version/settings; authorized output path.",
+          "outputs": "STEP artifact/hash, export diagnostics and mapping for DOM-05-A03.",
+          "accuracy": "Record precision/tessellation settings and unit declarations; source feature criteria constrain acceptable differences.",
+          "evidence": "Actual export receipt identifies source revision, tool/settings, output hash and warnings.",
+          "software": "Export to a new path; inspect file/schema/unit references and actual face representation; retain changed/dropped-field findings.",
+          "agent": "Assess warnings, shape flattening and whether required curved/interface geometry survives.",
+          "user_decisions": "Resolve a required representation loss before labeling the result suitable for the intended use.",
+          "dependencies": "Selected STEP writer; OCS source body collects triangles into one faceted shell with unreferenced millimetre entity and six-decimal coordinates.",
+          "proposed_development": "Proposal: solid export wrapper retaining actual representation and source/output lineage.",
+          "procedure": [
+            "Recheck frozen source revision.",
+            "Write the new STEP derivative with recorded settings.",
+            "Record output hash, errors and preserved/transformed/dropped fields."
+          ],
+          "validation": "Check nonempty parseable output and unchanged native source; STEP entity names alone do not establish valid closed analytic geometry.",
+          "failure_resume": "Preserve partial output/logs and reconcile completion before retry; a new candidate receives its own identity.",
+          "resources": "Local export CPU/RAM/I/O scales with faces/triangles; remote reasoning only examines warnings or loss decisions."
+        },
+        {
+          "id": "DOM-05-A03",
+          "name": "Reopen STEP and compare critical geometry",
+          "purpose": "Validate the exact saved STEP in the receiving path.",
+          "intended_use": "Deliver a checked solid exchange artifact and source-linked result.",
+          "inputs": "STEP hash; source solid/native revision; consumer/version; per-feature criteria and actual source measurements.",
+          "outputs": "STEP verification receipt and artifact for named consumer/CAD-13.",
+          "accuracy": "Compare required dimensions/axes and actual surface types using export thresholds; valid volume/bounds are additional checks.",
+          "evidence": "Independent consumer measurements cite output hash; source measurements cite original revision and feature IDs.",
+          "software": "Reimport in isolated consumer; inspect solids/shells/face types, units/frame and critical interfaces; compare with source.",
+          "agent": "Independent reviewer checks feature correspondence and same-output views, recording any shared kernel between readers.",
+          "user_decisions": "Resolve a required failed geometry/representation property through the owning export/construction decision.",
+          "dependencies": "Actual consumer STEP reader; native shape/feature queries; CAD-13 reporting.",
+          "proposed_development": "Proposal: solid exchange comparator with named-feature, unit and representation checks.",
+          "procedure": [
+            "Open the exact STEP in the consumer.",
+            "Measure required interfaces and inspect topology/surface types.",
+            "Publish residuals, failures, output hash and actual preserved content."
+          ],
+          "validation": "Source curved faces versus faceted output are explicit; wrong holes/axes fail even when aggregate bounds/volume agree.",
+          "failure_resume": "Retain consumer/source artifacts and diagnostics; return to exporter settings or source construction and recheck affected features.",
+          "resources": "Local reader/shape work scales with topology; required features precede broad checks. Remote/manual semantic review remains separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects source-supported export route/criteria and directs independent readback.",
+        "hybrid": "Software exports and measures; agent reviews actual surface preservation and source-to-output meaning.",
+        "software_first": "Tested source/exporter/consumer families run automatically; unit, topology and required-field failures enter review.",
+        "deterministic": "Pinned source, exporter settings and consumer contract produce a reproducible semantic result with actual file hashes."
+      },
+      "alternatives": [
+        "Analytic/B-rep STEP through a checked capable exporter.",
+        "Explicitly faceted STEP for a declared layout/display use with its own measured criteria.",
+        "Native document for editable source/history; mesh exchange uses its own representation and consumer checks."
+      ],
+      "merge": {
+        "branches": "Export candidates share source revision and required features but retain exporter/representation/settings/resources.",
+        "evaluation": "VLM compares source/output feature association; software compares units, surface types and critical geometry.",
+        "combination": "Select a checked complete derivative; any combination of separately exported parts has explicit identity/placement mapping.",
+        "post_merge": "Reopen the selected/combined artifact and repeat independent semantic and per-feature numerical checks on its exact hash."
+      },
+      "software_migration": "Promote exporter/consumer pairs after analytic/faceted, unit-context, critical-hole, invalid-shell and save/reopen cases; keep representation changes as explicit exceptions.",
+      "future_tests": [
+        "Native-only solid export preserves native source provenance without claiming an original STEP input.",
+        "Analytic source exported as facets fails a required analytic-surface contract.",
+        "Unreferenced unit entity is assessed through actual reader/control dimensions.",
+        "Wrong hole geometry is detected despite equal bounds and comparable volume.",
+        "Source changes during export invalidate the frozen plan and yield a new candidate."
+      ]
+    },
+    {
+      "operation_id": "DOM-40",
+      "name": "Script-parametric CAD authoring",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "https://cadquery.readthedocs.io/en/stable/classreference.html",
+        "https://build123d.readthedocs.io/en/latest/operations.html",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
+        "https://openscad.org/documentation"
+      ],
+      "actions": [
+        {
+          "id": "DOM-40-A01",
+          "name": "Define sourced parameters and the executable model contract",
+          "purpose": "Translate the model brief into explicit program inputs, feature dependencies and output representations.",
+          "intended_use": "Create editable parametric source and the requested generated geometry.",
+          "inputs": "Model-brief; sourced dimensions/units/datums; separate parts; output contract; dependency/licence requirements.",
+          "outputs": "Parameter/feature program specification for DOM-40-A02.",
+          "accuracy": "Each parameter and engineering allowance cites source/decision; numerical/kernel and export criteria remain distinct.",
+          "evidence": "Source-to-parameter/feature mapping retains supplied, measured, assumed and calculated statuses.",
+          "software": "Check parameter names/types/units and declared ranges where sourced; inspect chosen library/version capabilities.",
+          "agent": "Choose stable datums and source-supported feature sequence; distinguish B-rep backend from OpenSCAD CSG/mesh output.",
+          "user_decisions": "Supply missing intended parameter variation, design relation or changed representation.",
+          "dependencies": "CadQuery/build123d/FreeCAD documented APIs; OpenSCAD source route enters CAD-15 for mesh output.",
+          "proposed_development": "Proposal: parametric model-brief skill and contract validator with actual output-type gate.",
+          "procedure": [
+            "Map each source requirement to named parameters/features.",
+            "Record part boundaries, frames and expected artifact types.",
+            "Select supported library/version and source-preserving dependency policy."
+          ],
+          "validation": "Parameter coverage and output type match the brief; source code alone is not a generated cad-solid result.",
+          "failure_resume": "Preserve ambiguous parameters and block dependent features until the precise input/design decision is supplied.",
+          "resources": "Local metadata/API inspection first; high-reasoning model can interpret complex intent. Record remote calls and manual parameter decisions separately."
+        },
+        {
+          "id": "DOM-40-A02",
+          "name": "Author readable parametric source with stable feature references",
+          "purpose": "Express the checked feature program using reusable supported APIs.",
+          "intended_use": "Produce the editable source record for repeatable geometry construction.",
+          "inputs": "Program contract; reviewed reusable code/licences; chosen library APIs; explicit output paths and parameters.",
+          "outputs": "Parametric-source candidate and dependency manifest for DOM-40-A03.",
+          "accuracy": "Preserve source numeric meaning and units; geometry selectors and approximation settings have explicit criteria.",
+          "evidence": "Every controlling parameter maps to the brief; reused code retains source/version/licence attribution.",
+          "software": "Author bounded source modules/operations; perform syntax/static checks; prefer named datums/semantic selections over unqualified generated face indices.",
+          "agent": "Review feature ordering, selector stability, component identity and unintended defaults.",
+          "user_decisions": "Resolve new geometry intent or required code reuse terms affecting the chosen source.",
+          "dependencies": "Actual supported CadQuery/build123d/FreeCAD/OpenSCAD APIs; existing implementation patterns before replacement.",
+          "proposed_development": "Proposal: source-authoring skill with parameter provenance, dependency locking and explicit selector checks.",
+          "procedure": [
+            "Reuse reviewed supported construction patterns.",
+            "Write named parameter/feature relationships and output declarations.",
+            "Check syntax, dependency references and source-to-feature coverage."
+          ],
+          "validation": "Independent source review verifies operation meaning, units and part boundaries; syntax success is separate from generated geometry validity.",
+          "failure_resume": "Retain failed source/version and diagnostics; revise the smallest owning feature expression before generation.",
+          "resources": "Local syntax/static analysis scales with source/dependencies; remote reasoning authors/reviews semantic construction; manual choices remain recorded."
+        },
+        {
+          "id": "DOM-40-A03",
+          "name": "Generate geometry in the declared environment",
+          "purpose": "Execute the parametric source with pinned inputs and preserve actual results.",
+          "intended_use": "Produce B-rep CAD geometry through a compatible backend, or a separately typed CSG/mesh branch.",
+          "inputs": "Checked source/hash; dependency/runtime versions; parameters; output contract; bounded execution scope.",
+          "outputs": "Generated geometry, run receipt and parametric-source identity for DOM-40-A04.",
+          "accuracy": "Apply recorded kernel/resolution settings; preserve supplied parameters and feature-specific criteria.",
+          "evidence": "Actual environment, source/dependency hashes, parameters, logs, generated artifact hashes and result types establish execution.",
+          "software": "Run source in the selected supported environment; capture errors and actual geometry/part counts; preserve previous outputs.",
+          "agent": "Diagnose topology, Boolean, selector and output-type errors against source/brief.",
+          "user_decisions": "Resolve a geometry-changing workaround or a new backend choice that alters the task.",
+          "dependencies": "Pinned library/runtime/kernel; CAD-10 supported construction or CAD-15 OpenSCAD mesh route; installation remains separate scope.",
+          "proposed_development": "Proposal: reproducible generation adapter with bounded paths, source/configuration identity and resumable receipts.",
+          "procedure": [
+            "Verify source/dependency/parameter revisions.",
+            "Execute the selected supported construction route.",
+            "Record actual output types, identities and operation errors."
+          ],
+          "validation": "Successful process exit must accompany expected geometry; B-rep contract requires actual supported solid output; OpenSCAD mesh remains typed mesh.",
+          "failure_resume": "Preserve failed/partial artifacts and logs; reconcile completed outputs before retry; source changes create new run identity.",
+          "resources": "Local kernel/render CPU/RAM scales with feature/Boolean/mesh complexity; remote model time is separate. Record manual exception handling and actual build mode."
+        },
+        {
+          "id": "DOM-40-A04",
+          "name": "Validate generated geometry and a supplied parameter variant",
+          "purpose": "Demonstrate source-to-output fidelity and the requested parametric behavior.",
+          "intended_use": "Deliver checked parametric-source and actual geometry with retained lineage.",
+          "inputs": "Generated artifacts; source/brief mapping; per-feature criteria; supplied variant and expected response when requested.",
+          "outputs": "Validated parametric source, cad-solid for compatible B-rep route, and verification receipt for CAD-13/DOM-04/DOM-05.",
+          "accuracy": "Feature, kernel and saved-output comparison criteria remain separately sourced; variant inputs are explicit.",
+          "evidence": "Actual measured generated/saved geometry is tied to source/configuration revision; variant results have separate hashes.",
+          "software": "Check validity, part/feature counts, controlling dimensions and saved readback; regenerate the declared variant and compare expected dependency changes.",
+          "agent": "Independent reviewer checks source feature meaning and selector behavior across variants, using same-revision views.",
+          "user_decisions": "Provide required variant values/expected behavior; resolve source-design contradictions exposed by the test.",
+          "dependencies": "Native/independent shape queries, CAD-13 and selected backend regenerate/save APIs.",
+          "proposed_development": "Proposal: parametric family validator with source-feature mapping and variant dependency checks.",
+          "procedure": [
+            "Measure generated and saved critical features.",
+            "Regenerate only the supplied authorized variant.",
+            "Compare intended changes, unchanged invariants and selector associations."
+          ],
+          "validation": "Both source and actual geometry satisfy their contracts; a wrong face selection after parameter change fails even when the solid is valid.",
+          "failure_resume": "Preserve failed variant/source and return to the owning expression/selector; invalidate dependent outputs only.",
+          "resources": "Local regeneration may dominate readback; compare actual feature/face count and runtime. Remote/VLM review targets semantic variant changes; manual corrections recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "High-reasoning agent derives source-supported parameters/features and authors reviewed source; software generates and measures.",
+        "hybrid": "Software supplies parameter/dependency checks and geometry construction; agent reviews feature meaning and selector exceptions.",
+        "software_first": "Checked parametric families use fixed generators; out-of-range conditions, unsupported features and semantic changes enter review.",
+        "deterministic": "Pinned source/environment/parameters produce actual supported geometry and declared invariant/variant checks."
+      },
+      "alternatives": [
+        "CadQuery/build123d Python source with actual B-rep output.",
+        "FreeCAD Python source producing a declared native feature document and shape.",
+        "OpenSCAD parametric CSG source feeding CAD-15 mesh; this alternative has explicitly changed geometry output.",
+        "Lower-detail layout family and precision interface family retain separate parameters, purpose and criteria."
+      ],
+      "merge": {
+        "branches": "Source/backend candidates share brief and source parameter meanings; record output type, detail/use, per-feature criteria and local/remote/manual resources.",
+        "evaluation": "VLM/source review evaluates geometry intent; software compares actual generated features, topology and parameter responses.",
+        "combination": "Combine compatible source modules only with explicit dependency/feature lineage; new combined source is a new authored revision.",
+        "post_merge": "Regenerate from merged source and repeat actual shape, source correspondence, selector/variant and saved-output checks with separate reviewer."
+      },
+      "software_migration": "Record agent-authored feature patterns; implement reusable generators only for checked families with expected success/invalid/ambiguous/variant behavior; preserve exceptions and actual dependency versions.",
+      "future_tests": [
+        "Parameter provenance survives source authoring, generation and export.",
+        "A changed parameter reveals an unstable face-index selector despite valid resulting geometry.",
+        "Process success with empty or surface-only output fails the solid contract.",
+        "OpenSCAD output follows the mesh branch and does not satisfy the cad-solid output.",
+        "Re-running pinned source/environment preserves declared semantic invariants while each saved artifact retains its actual hash."
+      ]
+    }
+  ],
+  "common_protocol": {
+    "evidence_and_identity": "Each branch binds source hashes/revisions, intended use, target representation, feature IDs, units/frame, required detail/coverage and feature-specific criteria. Each action receipt records actual tool/API/build, input/output revisions, request/run ID and evidence status. A pinned revision is an explicitly fixed revision or content hash.",
+    "accuracy": "For every tested feature retain nominal value, unit, source locator/status, engineering allowance, measurement uncertainty, solver criterion where used and saved/export comparison threshold separately. A residual is the measured difference after a constraint or geometric comparison; its method, frame and unit are explicit. Topology describes connections among vertices, edges and faces. Source controls establish meaning; kernel or numerical checks establish their measured subset.",
+    "validation_roles": "The interpreting/producing agent and semantic reviewer use distinct execution instances. Record both actual exposed identities, requested configurations and shared source/model/kernel dependencies. A separate reader/query implementation is preferred for numerical readback when supported; same-kernel tests retain that shared dependency. Required unavailable diagnostics remain unresolved and block only named dependent readiness.",
+    "branch_merge": "Parallel branches write separate artifacts. Common source/feature/frame records allow comparisons even when layout detail and precision detail differ. Classify interpretation, units/frame, representation and geometry differences before VLM selection. VLM means vision-language model: it examines cited source regions, full views and actual query reports, then selects evidence-supported candidates or compatible contributions. Preserve conflicting values and branch lineage; incompatible dimensions are never averaged. Every combined artifact receives a new revision and repeated source, structure, feature and saved-output checks.",
+    "native_failure_resume": "Retain source, last checked native revision, action request identity, actual logs, partial artifacts and completed-step/next-step evidence. For uncertain native completion, query the same request/document/revision and actual handles before retry. Reconcile already completed changes and resume the first uncompleted action. A changed input invalidates only dependent descendants.",
+    "remote_failure_resume": "For interrupted or uncertain reasoning/VLM completion retain provider/request ID when exposed, exact prompt/input/source hashes, model settings and raw or partial response. Reconcile provider completion before retry when supported; otherwise record uncertainty and retry lineage under a new call identity. Parse and validate all selected feature IDs, source citations, units and output fields before changing the merged artifact. Malformed responses preserve the last validated boundary. On resume, recheck source digests; changed sources invalidate affected interpretations and descendants.",
+    "resources": "Use metadata/entity/feature checks before detailed curve intersection, kernel Boolean or tessellation work. Record local CPU/RAM and actual GPU role separately from remote model tokens/calls/latency/cost and manual effort. Qualitative estimates name entity/constraint/face/triangle count or operation complexity; measured values require fixture, machine, tool version, settings and run evidence. Parallel interpretation branches may be specified; local computational jobs follow the project scheduling rule.",
+    "migration": "Proposed helpers become software paths per action and supported input class after authorized implementation and tests on checked success, ambiguous, invalid and interrupted cases. Record expected results before testing; publish observed results and route exceptions back to bounded agent/source review."
+  },
+  "common_future_tests": [
+    "Lost reasoning/VLM response, malformed feature-selection rows and changed source on resume: retain request/raw evidence and retry lineage; preserve merged artifact until valid source-linked selections exist; invalidate only affected descendants.",
+    "Producing and reviewing agents share a model family and a CAD reader shares the writer kernel: record these dependencies and keep semantic agreement separate from independent dimensional evidence.",
+    "Low-detail branch omits a required precision interface: preserve its layout status while blocking the interface-dependent use; merge rechecks its own actual geometry.",
+    "Required shape or solver query is unavailable: preserve returned data and diagnostic status, report the named check unresolved, and prevent a successful-process exit from becoming a geometry-validation pass."
+  ]
+}
