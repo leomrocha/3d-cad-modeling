@@ -11,6 +11,163 @@ Research date: 2026-11-12. This map extends, and does not replace, [the reconstr
 - **Feature interpretation:** fitted planes, axes, cylinders, circles or other geometric hypotheses extracted from sampled surfaces. Record candidate parameters and fit residuals; a geometric fit is not automatically the intended CAD feature.
 - **Editable CAD:** constrained sketches, analytic faces/solids, component identities and assembly relations. Rebuild from accepted dimensions and labeled inferences; keep source scan and transform as comparison evidence.
 
+## Mermaid workflow graph
+
+This graph maps generic input, reconstruction, CAD, assembly and output operations. Combined routes and revision loops carry proposal status. Source-backed operation descriptions and local execution results retain their separate evidence labels in the linked records.
+
+```mermaid
+flowchart TD
+    subgraph INPUTS["INPUT SOURCES"]
+        TEXT["Text and dimensions"]
+        SKETCH["Sketches and scanned drawings"]
+        VECTOR["DXF / SVG drawings"]
+        VIEWS["Front / top / side views"]
+        PHOTOS["Photographs / video frames"]
+        DEPTH["Depth / LiDAR observations"]
+        EXISTING["Existing CAD"]
+        PARTS["Component libraries"]
+        MEASURE["Measurements and calibration"]
+    end
+
+    subgraph PREPARE["INTERPRET AND RECONSTRUCT"]
+        BRIEF["Identify parts, dimensions and relationships"]
+        TRACE["Rectify image → read dimensions → trace geometry"]
+        PROFILE["Read units/layers → clean profiles"]
+        MATCH["Match corresponding features across views"]
+        CAMERAS["Calibrate cameras → recover poses"]
+        SURFACE["Dense reconstruction → cloud / mesh"]
+        FUSION["Register and fuse depth observations"]
+        GENERATED["Image-conditioned generation → inferred mesh"]
+        SPLAT["Gaussian / NeRF visual reconstruction"]
+    end
+
+    TEXT --> BRIEF
+    SKETCH --> TRACE
+    VECTOR --> PROFILE
+    VIEWS --> MATCH
+    PHOTOS --> CAMERAS
+    PHOTOS --> GENERATED
+    CAMERAS --> SURFACE
+    CAMERAS --> SPLAT
+    DEPTH --> FUSION
+    FUSION --> SURFACE
+    MEASURE --> TRACE
+    MEASURE --> MATCH
+    MEASURE --> CAMERAS
+
+    subgraph MODEL["CONSTRUCT AND EDIT"]
+        CONSTRAINTS["Associate dimensions → constrain geometry"]
+        FIT["Align measured surfaces → fit geometric features"]
+        CAD["Editable CAD<br/>OCS / FreeCAD / build123d / CadQuery"]
+        CSG["Parameterized OpenSCAD geometry"]
+        MESH["Mesh processing<br/>Blender / Open3D / CloudCompare"]
+        ASSEMBLY["Place components using mounting frames"]
+        ANNOTATE["PROPOSED: anchor screen sketches to geometry"]
+        REVISE["PROPOSED: interpret changes → revised CAD"]
+    end
+
+    BRIEF --> CONSTRAINTS
+    TRACE --> CONSTRAINTS
+    PROFILE --> CONSTRAINTS
+    MATCH --> CONSTRAINTS
+    CONSTRAINTS --> CAD
+    BRIEF --> CSG
+    CSG --> MESH
+    SURFACE --> FIT
+    MEASURE --> FIT
+    FIT --> CONSTRAINTS
+    SURFACE --> MESH
+    GENERATED --> MESH
+    GENERATED -->|"independent dimensions and feature interpretation"| CONSTRAINTS
+
+    EXISTING --> ASSEMBLY
+    PARTS --> ASSEMBLY
+    CAD --> ASSEMBLY
+
+    CAD --> ANNOTATE
+    MESH --> ANNOTATE
+    CAMERAS --> ANNOTATE
+    SKETCH --> ANNOTATE
+    ANNOTATE --> REVISE
+    REVISE --> CAD
+
+    subgraph COMBINATIONS["PROPOSED COMBINED WORKFLOWS"]
+        ALIGN["Existing CAD + photographs / scan<br/>→ alignment and comparison"]
+        REPLACE["Assembly + scan + drawing<br/>→ replacement component"]
+        BUILDING["Plan + site reconstruction + library<br/>→ semantic building"]
+        ROBOT["CAD + components + explicit joints<br/>→ articulated robot"]
+        CONTEXT["Gaussian scene + measured mesh + CAD<br/>→ aligned visual and geometric references"]
+    end
+
+    EXISTING --> ALIGN
+    SURFACE --> ALIGN
+    CAMERAS --> ALIGN
+    ALIGN --> FIT
+
+    ASSEMBLY --> REPLACE
+    FIT --> REPLACE
+    PROFILE --> REPLACE
+    REPLACE --> REVISE
+
+    CAD --> BUILDING
+    ASSEMBLY --> BUILDING
+    SURFACE --> BUILDING
+    ASSEMBLY --> ROBOT
+    BRIEF --> ROBOT
+
+    SPLAT --> CONTEXT
+    MESH --> CONTEXT
+    CAD --> CONTEXT
+
+    subgraph OUTPUTS["OUTPUTS AND REUSE"]
+        IFC["IFC building<br/>IfcOpenShell / Bonsai"]
+        IFCMESH["Extract building triangles<br/>IfcOpenShell geometry API"]
+        COLLISION["Create collision geometry<br/>CoACD / V-HACD / primitives"]
+        PHYSICAL["Source-linked mass, centre of mass and inertia"]
+        SIM["MJCF / URDF / MuJoCo model"]
+        VISUAL["Blender / GLB visual scene"]
+        FAB["Drawings and fabrication geometry"]
+        LIBRARY["Reusable components<br/>sources, interfaces and revisions"]
+        CHECK["Check dimensions, units, identities,<br/>geometry and saved-file readback"]
+    end
+
+    BUILDING --> IFC
+    ROBOT --> COLLISION
+    ROBOT --> PHYSICAL
+    COLLISION --> SIM
+    PHYSICAL --> SIM
+
+    IFC -->|"DOM-16: retain element-ID and unit/frame mapping"| IFCMESH
+    IFCMESH -->|"DOM-13: check scale, bounds and opening clearance"| COLLISION
+    MESH -->|"registered scan; explicit approximation settings"| COLLISION
+
+    CAD --> FAB
+    CONTEXT --> VISUAL
+    IFC --> VISUAL
+    ASSEMBLY --> VISUAL
+
+    CAD --> CHECK
+    ASSEMBLY --> CHECK
+    IFC --> CHECK
+    SIM --> CHECK
+    CHECK --> LIBRARY
+    LIBRARY --> ASSEMBLY
+    CHECK -.->|"revision proposal"| REVISE
+```
+
+### Graph procedures and source references
+
+Each operation record contains its tool/API, required inputs, prerequisites, preserved information, changed or inferred information, checks and original source URLs. The [source register](../sources/source-register.md) provides the source summaries and evidence status.
+
+| Graph operations | Supporting procedures and records | Handoff conditions and checks |
+| --- | --- | --- |
+| Text, drawing interpretation, constraints, CAD and CSG | [CAD procedures](cad-paths.md); [CAD operation records](cad-paths.json), including CAD-01 through CAD-10 and CAD-15 | Preserve source dimensions, units, drawing planes and feature associations; check profiles, solid/mesh representation and saved-file readback. |
+| Cameras, dense surfaces, depth fusion, inferred meshes and view synthesis | [Reconstruction operation records](reconstruction-paths.json), REC-01 through REC-06 and REC-17 through REC-20 | Retain camera/sensor calibration, poses, scale controls and frame transforms; compare independent measurements and regional geometry. |
+| Feature fitting, CAD alignment, annotation and revision | [Reconstruction procedures](#operation-graph); [operation records](reconstruction-paths.json), REC-07 through REC-16 | Name source/target geometry and revisions; retain fit residuals, source point indices and calculated annotation anchors; define sketch intent and dimensions before CAD changes. |
+| Assembly, semantic buildings, robots and component reuse | [Domain procedures](domain-paths.md); [domain operation records](domain-paths.json) | Preserve component identities and mounting frames; author building relationships or robot joints explicitly; retain source-linked physical properties. |
+| IFC → triangles → collision geometry | [Domain operation records](domain-paths.json), DOM-16 IFC triangle extraction and DOM-13 collision generation | Use IfcOpenShell extraction and CoACD/V-HACD or explicit primitives; retain IFC element mapping and unit/frame conversion; check bounds, approximation settings, openings and contact geometry. |
+| Combined input branches and cross-domain outputs | [Combined workflow descriptions](combined-workflows.md); [recipe records](combined-paths.json), MIX-R01 through MIX-R10 | These are proposed compositions. Each recipe records the contributing artifacts, their roles, source URLs and handoff conditions. |
+
 ## Operation graph
 
 Operation identifiers and complete records are in `reconstruction-paths.json`. Important transitions:
