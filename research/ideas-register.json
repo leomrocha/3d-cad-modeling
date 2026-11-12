@@ -3200,6 +3200,72 @@
       ]
     },
     {
+      "id": "COMP-I20",
+      "name": "Measure axial interfaces from analytic surfaces and individual blind bottoms",
+      "summary": "Executed ME0907 recipe and18 saved checks use cylinder radii and planar stations. The observed rear cylinder has two seam vertices atX82mm; vertex transverse span alone cannot provide its164mm diameter. Eight focused cases verify success and wrong/missing features.",
+      "status": "proposal",
+      "origin": "executed_motor_iteration",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c005-me0907.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c005-me0907.md",
+          "line": 1,
+          "section": "Actual observations and reuse conditions"
+        }
+      ],
+      "next_check": "Reuse for source-bound axial cylinder/plane jobs with explicit nominal-thread and keyway representation.",
+      "source_ids": [
+        "SRC-c52a21c8147a"
+      ]
+    },
+    {
+      "id": "COMP-I21",
+      "name": "Compare imported assembly placements to original source matrices",
+      "summary": "Executed Victron battery import diagnosed13 reversed placements against original STEP frames,changed only native insertion fields and preserved21 solid definitions.35 saved checks preserve source placements,definition vertices and39 instance paths; current source limits and open-partner records remain explicit.",
+      "status": "proposal",
+      "origin": "executed_manufacturer_assembly_iteration",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c023-victron-battery.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c023-victron-battery.md",
+          "line": 1,
+          "section": "Actual observations and reuse conditions"
+        }
+      ],
+      "next_check": "Reuse only after exact source-frame/native-matrix comparison and supported unit-scale zero-base single-insert conditions.",
+      "source_ids": [
+        "SRC-59097305d36e"
+      ]
+    },
+    {
+      "id": "COMP-I22",
+      "name": "Reuse a shared mechanical family exterior while retaining exact target identity",
+      "summary": "Littelfuse20EV manufacturer datasheet provides one M6 outline for20EVxxx.ZXBDMC60–150A. The available adjacent60A STEP is a proposed exterior reference for the100A target; source identity,electrical properties and download rights remain separate fields.",
+      "status": "proposal",
+      "origin": "fuse_source_readiness",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/c030-fuse-source.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/c030-fuse-source.md",
+          "line": 1,
+          "section": "Actual observations and reuse conditions"
+        }
+      ],
+      "next_check": "Acquire readable family geometry with appropriate access rights;compare mechanical interfaces against the shared manufacturer outline before any variant-specific CAD handoff.",
+      "source_ids": [
+        "SRC-b08d4de19a31"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

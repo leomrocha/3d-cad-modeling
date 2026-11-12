@@ -1982,6 +1982,42 @@ Original proposal: [execution/c012-driver.md](/home/leo/projects/3dmodeling/exec
 
 Next check: Reuse only the documented measurement conditions; each next component supplies independent source expectations and native observations.
 
+## COMP-I20 — Measure axial interfaces from analytic surfaces and individual blind bottoms
+
+Status: proposal.
+
+Executed ME0907 recipe and18 saved checks use cylinder radii and planar stations. The observed rear cylinder has two seam vertices atX82mm; vertex transverse span alone cannot provide its164mm diameter. Eight focused cases verify success and wrong/missing features.
+
+Original source: [/home/leo/projects/3dmodeling/execution/c005-me0907.md](/home/leo/projects/3dmodeling/execution/c005-me0907.md)
+
+Original proposal: [execution/c005-me0907.md](/home/leo/projects/3dmodeling/execution/c005-me0907.md), line 1.
+
+Next check: Reuse for source-bound axial cylinder/plane jobs with explicit nominal-thread and keyway representation.
+
+## COMP-I21 — Compare imported assembly placements to original source matrices
+
+Status: proposal.
+
+Executed Victron battery import diagnosed13 reversed placements against original STEP frames,changed only native insertion fields and preserved21 solid definitions.35 saved checks preserve source placements,definition vertices and39 instance paths; current source limits and open-partner records remain explicit.
+
+Original source: [/home/leo/projects/3dmodeling/execution/c023-victron-battery.md](/home/leo/projects/3dmodeling/execution/c023-victron-battery.md)
+
+Original proposal: [execution/c023-victron-battery.md](/home/leo/projects/3dmodeling/execution/c023-victron-battery.md), line 1.
+
+Next check: Reuse only after exact source-frame/native-matrix comparison and supported unit-scale zero-base single-insert conditions.
+
+## COMP-I22 — Reuse a shared mechanical family exterior while retaining exact target identity
+
+Status: proposal.
+
+Littelfuse20EV manufacturer datasheet provides one M6 outline for20EVxxx.ZXBDMC60–150A. The available adjacent60A STEP is a proposed exterior reference for the100A target; source identity,electrical properties and download rights remain separate fields.
+
+Original source: [/home/leo/projects/3dmodeling/execution/c030-fuse-source.md](/home/leo/projects/3dmodeling/execution/c030-fuse-source.md)
+
+Original proposal: [execution/c030-fuse-source.md](/home/leo/projects/3dmodeling/execution/c030-fuse-source.md), line 1.
+
+Next check: Acquire readable family geometry with appropriate access rights;compare mechanical interfaces against the shared manufacturer outline before any variant-specific CAD handoff.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

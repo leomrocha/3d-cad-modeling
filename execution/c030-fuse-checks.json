@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "component": "C030 \u2014 Littelfuse20EV100.ZXBDMC M6 fuse",
+  "state": "NEEDS_INPUT",
+  "source_records": 10,
+  "required_geometry_inputs": 3,
+  "original_models_preserved": 23,
+  "action_prefix_preserved": true,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "registered_reuse_proposals": [
+    "COMP-I20",
+    "COMP-I21",
+    "COMP-I22"
+  ],
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 7,
+    "receipt_included": true
+  }
+}

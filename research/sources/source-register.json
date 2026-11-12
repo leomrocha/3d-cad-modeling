@@ -2452,6 +2452,31 @@
       ]
     },
     {
+      "id": "SRC-13e9587720a2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json",
+      "title": "Fuse source-readiness gate",
+      "summary": "Existing source/hash validation returns NEEDS_INPUT with thethree required geometry questions and actual retained-source observations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_readiness_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_readiness_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "570b99ca55537128de1f86744f859b792b520354344360a4d91eb3481429f9ba",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
+      ]
+    },
+    {
       "id": "SRC-13f08bab005f",
       "url": "https://github.com/openscad/openscad",
       "local_source_path": null,
@@ -3669,6 +3694,31 @@
         "research/workflows/details/rec-r06.md",
         "research/workflows/details/rec-r07.md",
         "research/workflows/details/rec-r10.md"
+      ]
+    },
+    {
+      "id": "SRC-1f8a84e3e367",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md",
+      "title": "Fuse exact-part outline lookup",
+      "summary": "Retains manufacturer datasheet URL/revision,shared M6 suffix applicability,reported dimension labels and exact acquisition outcomes.60/42 leader associations remain named geometry inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_web_review_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_web_review_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md",
+          "access_date": "2026-11-12",
+          "sha256": "6d7b6ab259f3c65a7e7a3080d32b2b83139f070fa9c0e3dfe7e6d726d9d417e0",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
       ]
     },
     {
@@ -10414,6 +10464,31 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5336889bffab",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md",
+      "title": "Shared M6 mechanical-family source and model terms",
+      "summary": "Manufacturer family table and common M6 drawing support proposed shared exterior reuse. Records DigiKey60A STEP listing and concrete internal-use/employer-binding terms; no download control accepted.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_web_review_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_web_review_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md",
+          "access_date": "2026-11-12",
+          "sha256": "7da0484486be896bca2c459c25039975cbe2b381952536a916b92dc3b636cb14",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
       ]
     },
     {
@@ -18628,6 +18703,31 @@
       ]
     },
     {
+      "id": "SRC-95f6c0cb869a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json",
+      "title": "Pinned fuse source labels and unresolved geometry inputs",
+      "summary": "Pins reader-reported overall length,hole diameter,strip thickness andend-circle label to the acquisition record/hash. Body length,hole pitch andcontact-plane association are explicit required inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "d4e101c88928ec9ffd9907581c18813f786066e4f4d38b7dd11ca8f33e5807d1",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9641fd75954c",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
       "local_source_path": null,
@@ -21506,6 +21606,31 @@
       ]
     },
     {
+      "id": "SRC-ad9e8b3c3670",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json",
+      "title": "Shared-family CAD follow-up metadata",
+      "summary": "Retains exact source pages,family inference and actual non-download status with license/access observations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "40cb4aeb92d1e93b46267a15a5d48741d4b17efa180ef7e79e026a10760df1a3",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
+      ]
+    },
+    {
       "id": "SRC-adb5f990a3ee",
       "url": "https://www.freecad.org/addons.php?lang=en_EN",
       "local_source_path": null,
@@ -21942,6 +22067,31 @@
       ],
       "referring_documents": [
         "research/sources/round-13/crossmember-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b08d4de19a31",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c030-fuse-source.md",
+      "title": "Fuse source-stage execution report",
+      "summary": "Explains exactpart source findings,shared M6 alternative,actual acquisition results and the named construction inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_work_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_work_report",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c030-fuse-source.md",
+          "access_date": "2026-11-12",
+          "sha256": "bed3640138cb5b319fcc7fc814920fbdac76d4bfa53d88de57a8fb9038768dc3",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
       ]
     },
     {
@@ -22623,6 +22773,31 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b64f05c5a931",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json",
+      "title": "Fuse component source-stage result",
+      "summary": "Connects shared-family exterior proposal,target100A identity,actual acquisition/access routes and dependent geometry evidence.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_component_stage_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_stage_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "abdcb6dae15b2d3d0f3621f91649a7b2f843dec5d389f7e25dd483c977b19c10",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
       ]
     },
     {
@@ -23662,6 +23837,31 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-be85a93a4c48",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json",
+      "title": "Fuse PDF and exact-model acquisition record",
+      "summary": "Records manufacturer403,Mouser transfer failure,reader-only dimensions and screenshot placeholder. Distinguishes PDF-reader observations from retained originals and exact target identity from adjacent60A CAD.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "332f8c504f69aafb8b97fd80b955377f7916584a505c9f448e65d7c09a775619",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
       ]
     },
     {
@@ -25825,7 +26025,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "authored_document_inspected",
-        "local_source_inspected"
+        "local_source_inspected",
+        "registered_proposal_and_execution_evidence"
       ],
       "observations": [
         {
@@ -25860,12 +26061,22 @@
             "research/action-audit/implementation-queue/README.md",
             "research/action-audit/implementation-queue/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "registered_proposal_and_execution_evidence",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+          "access_date": "2026-11-12",
+          "sha256": "0a9cea9881393dd52e2593b50c4f22c3adbd43e4957c2d164050307622df77d0",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/audit-index-sources.json",
-        "research/sources/round-06/implementation-queue-sources.json"
+        "research/sources/round-06/implementation-queue-sources.json",
+        "research/sources/round-21/fuse-sources.json"
       ]
     },
     {
@@ -30569,6 +30780,31 @@
       "referring_documents": [
         "research/sources/round-10/tube-corner-sources.json",
         "research/tube-corner-research.md"
+      ]
+    },
+    {
+      "id": "SRC-f85e4e244a2b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md",
+      "title": "Browser source-image route outcome",
+      "summary": "CUA inventory had no browser/app surface,so this exact-PDF route produced no raster or source bytes. Earlier source evidence remains preserved.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_tool_availability_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_tool_availability_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md",
+          "access_date": "2026-11-12",
+          "sha256": "3aa8d8ddfd6f784f9d0322c3e84ea63d2b7c913906b3d3a9772fa9d6271fa80e",
+          "referring_documents": [
+            "execution/c030-fuse-source.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-21/fuse-sources.json"
       ]
     },
     {

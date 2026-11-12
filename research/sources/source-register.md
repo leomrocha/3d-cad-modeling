@@ -868,6 +868,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-13e9587720a2"></a>
+
+## SRC-13e9587720a2 — Fuse source-readiness gate
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json)
+
+Summary: Existing source/hash validation returns NEEDS_INPUT with thethree required geometry questions and actual retained-source observations.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-21/fuse-sources.json.
+
 <a id="src-13f08bab005f"></a>
 
 ## SRC-13f08bab005f — source repository/licence
@@ -1311,6 +1323,18 @@ Summary: Open3D 0.20.0 documents `segment_plane(distance_threshold, ransac_n, nu
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r10.md.
+
+<a id="src-1f8a84e3e367"></a>
+
+## SRC-1f8a84e3e367 — Fuse exact-part outline lookup
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md)
+
+Summary: Retains manufacturer datasheet URL/revision,shared M6 suffix applicability,reported dimension labels and exact acquisition outcomes.60/42 leader associations remain named geometry inputs.
+
+Evidence: delegated_web_review_record.
+
+Documents: research/sources/round-21/fuse-sources.json.
 
 <a id="src-1fe1bf3380df"></a>
 
@@ -3723,6 +3747,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; 4
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-5336889bffab"></a>
+
+## SRC-5336889bffab — Shared M6 mechanical-family source and model terms
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md)
+
+Summary: Manufacturer family table and common M6 drawing support proposed shared exterior reuse. Records DigiKey60A STEP listing and concrete internal-use/employer-binding terms; no download control accepted.
+
+Evidence: delegated_web_review_record.
+
+Documents: research/sources/round-21/fuse-sources.json.
 
 <a id="src-53486b514e1a"></a>
 
@@ -6604,6 +6640,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
+<a id="src-95f6c0cb869a"></a>
+
+## SRC-95f6c0cb869a — Pinned fuse source labels and unresolved geometry inputs
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json)
+
+Summary: Pins reader-reported overall length,hole diameter,strip thickness andend-circle label to the acquisition record/hash. Body length,hole pitch andcontact-plane association are explicit required inputs.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-21/fuse-sources.json.
+
 <a id="src-9641fd75954c"></a>
 
 ## SRC-9641fd75954c — ICP registration — Open3D 0.20.0 documentation
@@ -7636,6 +7684,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-ad9e8b3c3670"></a>
+
+## SRC-ad9e8b3c3670 — Shared-family CAD follow-up metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json)
+
+Summary: Retains exact source pages,family inference and actual non-download status with license/access observations.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-21/fuse-sources.json.
+
 <a id="src-adb5f990a3ee"></a>
 
 ## SRC-adb5f990a3ee — Add-on listing
@@ -7779,6 +7839,18 @@ Summary: Completed end-view capture response identifies the reopened component c
 Evidence: local_execution_source_inspected.
 
 Documents: research/sources/round-13/crossmember-sources.json.
+
+<a id="src-b08d4de19a31"></a>
+
+## SRC-b08d4de19a31 — Fuse source-stage execution report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c030-fuse-source.md](/home/leo/projects/3dmodeling/execution/c030-fuse-source.md)
+
+Summary: Explains exactpart source findings,shared M6 alternative,actual acquisition results and the named construction inputs.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-21/fuse-sources.json.
 
 <a id="src-b1451ce1d409"></a>
 
@@ -7995,6 +8067,18 @@ Summary: Input sheet registered from the inspected ferme manifest: battery; BMW;
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-b64f05c5a931"></a>
+
+## SRC-b64f05c5a931 — Fuse component source-stage result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json)
+
+Summary: Connects shared-family exterior proposal,target100A identity,actual acquisition/access routes and dependent geometry evidence.
+
+Evidence: executed_component_stage_record.
+
+Documents: research/sources/round-21/fuse-sources.json.
 
 <a id="src-b6504258277a"></a>
 
@@ -8379,6 +8463,18 @@ Summary: Point 02 Existing components and CAD reuse: authored procedure/action c
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-02-local-sources.json.
+
+<a id="src-be85a93a4c48"></a>
+
+## SRC-be85a93a4c48 — Fuse PDF and exact-model acquisition record
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json)
+
+Summary: Records manufacturer403,Mouser transfer failure,reader-only dimensions and screenshot placeholder. Distinguishes PDF-reader observations from retained originals and exact target identity from adjacent60A CAD.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-21/fuse-sources.json.
 
 <a id="src-bea676f3a5b9"></a>
 
@@ -9096,9 +9192,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/ideas.json
 
 Summary: Authored audit document recording Ideas. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
-Evidence: authored_document_inspected, local_source_inspected.
+Evidence: authored_document_inspected, local_source_inspected, registered_proposal_and_execution_evidence.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/audit-index-sources.json, research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/audit-index-sources.json, research/sources/round-06/implementation-queue-sources.json, research/sources/round-21/fuse-sources.json.
 
 <a id="src-cd7868332c03"></a>
 
@@ -10803,6 +10899,18 @@ Summary: Readable EN 10219-2:2019 sample output exposed Clause 6.2 (rounded inte
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
+
+<a id="src-f85e4e244a2b"></a>
+
+## SRC-f85e4e244a2b — Browser source-image route outcome
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md)
+
+Summary: CUA inventory had no browser/app surface,so this exact-PDF route produced no raster or source bytes. Earlier source evidence remains preserved.
+
+Evidence: executed_tool_availability_record.
+
+Documents: research/sources/round-21/fuse-sources.json.
 
 <a id="src-f87051bef24f"></a>
 
