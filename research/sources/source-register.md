@@ -16,6 +16,30 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-00ae3f8da761"></a>
+
+## SRC-00ae3f8da761 — COLMAP LICENSE
+
+Original source: [https://github.com/colmap/colmap/blob/main/LICENSE](https://github.com/colmap/colmap/blob/main/LICENSE)
+
+Summary: Primary repository licence text for COLMAP.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
+
+<a id="src-011e8da740e4"></a>
+
+## SRC-011e8da740e4 — IfcOpenShell feature.add_feature API
+
+Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html)
+
+Summary: Official example creates IfcOpeningElement geometry and relates it as a void feature of a wall.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
 <a id="src-027053bdee43"></a>
 
 ## SRC-027053bdee43 — https://colmap.github.io/pycolmap/index.html
@@ -38,7 +62,7 @@ Summary: - COLMAP repository (scope and license): https://github.com/colmap/colm
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/cad-sources.json, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/cad-sources.json, research/sources/round-02/reconstruction-sources.json, research/workflows/details/cad-r06.md.
 
 <a id="src-03256efc5e07"></a>
 
@@ -50,7 +74,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -62,7 +86,7 @@ Summary: FreeCAD BIM Library ; FreeCAD BIM can browse and insert FCStd, STEP and
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-03ea53a6f519"></a>
 
@@ -72,21 +96,21 @@ Original source: [https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.htm
 
 Summary: Known target object coordinates and corresponding image detections support intrinsic/distortion calibration; tutorial recommends at least ten pattern views. Calibration does not set the scale of an unrelated monocular reconstruction.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
 
 <a id="src-056984789982"></a>
 
-## SRC-056984789982 — MuJoCo overview and mesh assets
+## SRC-056984789982 — MuJoCo overview
 
 Original source: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst)
 
-Summary: Documents system units, body/inertial frames, mesh file support, geom collision convexification and model structures.
+Summary: Primary descriptions of units, inertial/body frames, mesh inputs, convex collision geometry and model representations.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-05a74004d0aa"></a>
 
@@ -99,6 +123,18 @@ Summary: earthtojake/text-to-cad ; Code-defined parametric models with `cadgen`/
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
+
+<a id="src-069525d9d265"></a>
+
+## SRC-069525d9d265 — calibrate_camera.py
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py](/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py)
+
+Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
 
 <a id="src-0a10e8f57dac"></a>
 
@@ -182,7 +218,7 @@ Summary: Official CadQuery documentation describes Python parametric CAD scripti
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json.
+Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md.
 
 <a id="src-10fb35c8f807"></a>
 
@@ -254,7 +290,7 @@ Summary: OpenMVS imports an OpenMVG scene and runs DensifyPointCloud, Reconstruc
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r06.md.
 
 <a id="src-13f08bab005f"></a>
 
@@ -348,9 +384,9 @@ Original source: [https://www.open3d.org/docs/latest/tutorial/geometry/pointclou
 
 Summary: Point-cloud API includes plane segmentation, clustering, normal estimation and returned inlier indices. Fits are sampled geometry evidence.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r10.md.
 
 <a id="src-1fe1bf3380df"></a>
 
@@ -362,7 +398,7 @@ Summary: - OpenMVG repository and license: https://github.com/openMVG/openMVG
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
 
 <a id="src-20b61505fcba"></a>
 
@@ -374,7 +410,7 @@ Summary: - SAM 3D Objects official repository: https://github.com/facebookresear
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r10.md.
 
 <a id="src-20cfbd87583b"></a>
 
@@ -410,7 +446,7 @@ Summary: Official ezdxf docs identify it as Python software to create/read/modif
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json.
+Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-243b037b93ab"></a>
 
@@ -422,7 +458,19 @@ Summary: Inspected in this research turn; records OCS baseline, CAD representati
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-02/domain-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
+
+<a id="src-251464b38bc3"></a>
+
+## SRC-251464b38bc3 — CadQuery quickstart
+
+Original source: [https://cadquery.readthedocs.io/en/stable/quickstart.html](https://cadquery.readthedocs.io/en/stable/quickstart.html)
+
+Summary: Primary usage examples for parameterized Python solid construction.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md.
 
 <a id="src-26ba505a1c89"></a>
 
@@ -446,7 +494,7 @@ Summary: - V-HACD: convex decomposition implementation, with BSD-3-Clause at kma
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2759f46214ed"></a>
 
@@ -458,7 +506,7 @@ Summary: - CoACD: approximate convex decomposition implementation SarahWeiii/CoA
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md.
+Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r08.md.
 
 <a id="src-28f1e37fe3ab"></a>
 
@@ -492,9 +540,9 @@ Original source: [https://www.sciencedirect.com/science/article/pii/S00978493230
 
 Summary: Computers & Graphics 2023 paper describes matching projected edge features across views to create a 3D wireframe, then detecting loops/faces and trimming/stitching a watertight model; reported F-score is study-specific.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
 <a id="src-2bcc72542265"></a>
 
@@ -502,11 +550,11 @@ Documents: research/sources/round-02/cad-sources.json.
 
 Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html)
 
-Summary: Documents IFC parametric and mesh geometry authoring, object placement and profile-based geometry.
+Summary: Official API guidance for wall, profile and mesh representations, placements and SI-unit transforms.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2e05ef8b5192"></a>
 
@@ -514,11 +562,11 @@ Documents: research/sources/round-02/domain-sources.json, research/workflows/dom
 
 Original source: [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst)
 
-Summary: Documents MJCF, local frames, body tree, URDF subset/extensions and model compiler behavior.
+Summary: Primary MJCF/URDF model semantics, bodies, joints, frames, supported conversion subset and asset concepts.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2e92a48ed867"></a>
 
@@ -528,21 +576,33 @@ Original source: [https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.ht
 
 Summary: Official API documents contours, curve lengths, bounding boxes and approxPolyDP; polygon simplification is bounded by a pixel-coordinate precision setting.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
-<a id="src-31cafb73df3e"></a>
+<a id="src-2fad977d4fe9"></a>
 
-## SRC-31cafb73df3e — Open3D RGB-D odometry
+## SRC-2fad977d4fe9 — /home/leo/projects/3dmodeling/research/workflows/cad-paths.json
 
-Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html](https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html)
+Original source: [/home/leo/projects/3dmodeling/research/workflows/cad-paths.json](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json)
 
-Summary: Existing report source: documents estimating frame-to-frame motion from RGB-D input; reused as an alternate pose-estimation stage for registered depth sequences.
+Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json.
+
+<a id="src-31cafb73df3e"></a>
+
+## SRC-31cafb73df3e — https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html
+
+Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html](https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html)
+
+Summary: 1. Name: Open3D RGB-D odometry; Role: Register RGB and depth frames and estimate sequence poses; Source urls: https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html; https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html; Dependency contract: Use the matching domain detail and code guide for the selected backend and version.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r09.md.
 
 <a id="src-31fb748a20df"></a>
 
@@ -590,7 +650,7 @@ Summary: Blender also supports scripted background work using `blender --backgro
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-33a3c43268b3"></a>
 
@@ -628,6 +688,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-353e59cb2694"></a>
+
+## SRC-353e59cb2694 — Bonsai georeferencing guide
+
+Original source: [https://docs.bonsaibim.org/guides/authoring/georeferencing.html](https://docs.bonsaibim.org/guides/authoring/georeferencing.html)
+
+Summary: Official guidance for site CRS, coordinate transformations and project north; coordinate parameters must come from survey/engineering sources.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
 <a id="src-368cf414765d"></a>
 
 ## SRC-368cf414765d — FreeCAD File Formats & Interoperability Guide
@@ -660,9 +732,9 @@ Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wik
 
 Summary: Official FreeCAD docs list supported SVG paths/shapes, flattening of Z on import, use of viewBox/physical dimensions, and 90-DPI fallback when physical size is absent.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-39f868616f62"></a>
 
@@ -672,9 +744,9 @@ Original source: [https://docs.opencv.org/5.0/main_modules/calib.html](https://d
 
 Summary: Official OpenCV reference describes camera calibration, pose estimation, calibration target correspondences and reprojection-error optimization. A planar homography relates points on a plane and does not recover depth.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-39fee200cbbf"></a>
 
@@ -698,7 +770,7 @@ Summary: - CoACD: approximate convex decomposition implementation SarahWeiii/CoA
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-3b28b3defd8a"></a>
 
@@ -766,11 +838,11 @@ Documents: research/cad-and-skills.md.
 
 Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md)
 
-Summary: Official FreeCAD docs describe Python access to OpenCASCADE B-rep vertices, edges, wires, faces, solids, compounds and boolean operations.
+Summary: Official documentation source for Part workbench scripting and shape operations.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json.
+Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-3e2691ad3057"></a>
 
@@ -830,7 +902,31 @@ Summary: - TRELLIS.2-4B model card (MIT): https://huggingface.co/microsoft/TRELL
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r10.md.
+
+<a id="src-416cb87ab6bb"></a>
+
+## SRC-416cb87ab6bb — ezdxf repository
+
+Original source: [https://github.com/mozman/ezdxf](https://github.com/mozman/ezdxf)
+
+Summary: Primary source repository and MIT licence metadata.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md.
+
+<a id="src-427c3c0e8259"></a>
+
+## SRC-427c3c0e8259 — V-HACD repository status
+
+Original source: [https://github.com/kmammou/v-hacd/blob/master/README.md](https://github.com/kmammou/v-hacd/blob/master/README.md)
+
+Summary: Upstream repository says V-HACD is archived/end-of-life and directs new development to CoACD.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md.
 
 <a id="src-42ef176046c7"></a>
 
@@ -844,17 +940,29 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
-<a id="src-447a55563fd3"></a>
+<a id="src-43a296901978"></a>
 
-## SRC-447a55563fd3 — Repository
+## SRC-43a296901978 — https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html
 
-Original source: [https://github.com/google-deepmind/mujoco](https://github.com/google-deepmind/mujoco)
+Original source: [https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html](https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html)
 
-Summary: MuJoCo / MJCF ; MJCF is MuJoCo's native XML model format; bodies form a kinematic tree, local spatial frames are relative to parents, and inertial frames are centered at center of mass and aligned to principal inertia axes. MuJoCo leaves base units to the user and requires internal consistency; its docs recommend MKS. Geoms combine appearance/collision concepts and nonconvex meshes are internally replaced by convex hulls, so nonconvex collision shapes should be decomposed into convex pieces. Modeling, overview ; MuJoCo repository declares Apache-2.0. Model files/assets retain their own terms. Repository ; Target simulation adapter and simulation validation. Store source MJCF and package assets; treat compiled MJB as disposable/version-specific output because it cannot be decompiled to XML.
+Summary: 1. Name: OpenCV; Role: Planar image rectification and raster line candidates.; License: Apache-2.0 upstream.; Apis: cv2.getPerspectiveTransform(4 point pairs); cv2.warpPerspective; cv2.HoughLinesP; cv2.findContours/cv2.approxPolyDP; Dependencies: Python 3, OpenCV Python bindings (opencv-python or system package), NumPy; image file raster source.; Source urls: https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html; https://github.com/opencv/opencv/blob/4.x/LICENSE
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md.
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
+
+<a id="src-447a55563fd3"></a>
+
+## SRC-447a55563fd3 — MuJoCo software repository and licence
+
+Original source: [https://github.com/google-deepmind/mujoco](https://github.com/google-deepmind/mujoco)
+
+Summary: Primary repository identifies MuJoCo source code under Apache-2.0 and provides Python bindings; source/docs licences are separately described.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/dom-r08.md.
 
 <a id="src-46482507fc3a"></a>
 
@@ -866,7 +974,7 @@ Summary: Describes assembly insertion, constraints/joints, simulation and assemb
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-47d588ded00a"></a>
 
@@ -892,6 +1000,30 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-4a09800705cd"></a>
+
+## SRC-4a09800705cd — IfcOpenShell code examples
+
+Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html](https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html)
+
+Summary: Official end-to-end API examples for creating an IFC project, assigning units, creating contexts and spatial hierarchy, creating a wall and writing IFC.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
+<a id="src-4a6c22d94dd3"></a>
+
+## SRC-4a6c22d94dd3 — MuJoCo XML reference
+
+Original source: [https://mujoco.readthedocs.io/en/latest/XMLreference.html](https://mujoco.readthedocs.io/en/latest/XMLreference.html)
+
+Summary: Official MJCF element reference for body, joints, inertial, mesh assets, geoms and compiler behavior.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md.
+
 <a id="src-4afcbdb352d9"></a>
 
 ## SRC-4afcbdb352d9 — skills-findings.md
@@ -916,6 +1048,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-4f8a40b0e12a"></a>
+
+## SRC-4f8a40b0e12a — TripoSR source licence
+
+Original source: [https://github.com/VAST-AI-Research/TripoSR/blob/main/LICENSE](https://github.com/VAST-AI-Research/TripoSR/blob/main/LICENSE)
+
+Summary: Repository code is MIT licensed; check weights/dependencies and input/output rights separately.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json.
+
 <a id="src-4fe74310edd3"></a>
 
 ## SRC-4fe74310edd3 — Part Design concepts
@@ -938,7 +1082,7 @@ Summary: Lists built-in OBJ/STL and optional USD mesh/scene decoders and extensi
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-5042379f8832"></a>
 
@@ -986,7 +1130,31 @@ Summary: Existing artifact pattern: source hashes, declared mm-to-m conversion, 
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-02/domain-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
+
+<a id="src-53486b514e1a"></a>
+
+## SRC-53486b514e1a — IfcOpenShell unit.assign_unit API
+
+Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html)
+
+Summary: Official signature and examples for declaring IFC project units.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
+<a id="src-536bee2e3614"></a>
+
+## SRC-536bee2e3614 — Blender command-line manual
+
+Original source: [https://docs.blender.org/manual/en/latest/advanced/command_line/](https://docs.blender.org/manual/en/latest/advanced/command_line/)
+
+Summary: Official Blender manual covers background/CLI automation and Python script operation.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r05.md, research/workflows/details/dom-r07.md.
 
 <a id="src-5374d3ebf57e"></a>
 
@@ -1006,11 +1174,11 @@ Documents: research/cad-and-skills.md.
 
 Original source: [https://github.com/nerfstudio-project/nerfstudio](https://github.com/nerfstudio-project/nerfstudio)
 
-Summary: Existing report source: project repository for NeRF/Gaussian view-synthesis pipelines; registered from reconstruction.md, not reopened in this audit.
+Summary: Nerfstudio includes NeRF/Gaussian methods, Apache-2.0 code, and its repository describes CUDA/NVIDIA stack prerequisites.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/rec-r02.md.
 
 <a id="src-53f84ab8112a"></a>
 
@@ -1020,9 +1188,9 @@ Original source: [https://xnjdxb.swjtu.edu.cn/en/article/id/9616](https://xnjdxb
 
 Summary: Journal article describes segmenting engineering drawing views, linking coordinates with intermediate 2.5D frames, and establishing coordinate constraints between views.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
 <a id="src-5458b9b0d8db"></a>
 
@@ -1035,6 +1203,30 @@ Summary: - MCP Market: “Generate 3D Model” https://mcpmarket.com/tools/skill
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-554c43270f1b"></a>
+
+## SRC-554c43270f1b — IfcOpenShell repository and software licences
+
+Original source: [https://github.com/IfcOpenShell/IfcOpenShell](https://github.com/IfcOpenShell/IfcOpenShell)
+
+Summary: Repository identifies IfcOpenShell as LGPL-3.0-or-later and Bonsai as GPL-3.0-or-later; tool software licences do not license imported assets.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r02.md, research/workflows/details/dom-r07.md.
+
+<a id="src-556757dfc029"></a>
+
+## SRC-556757dfc029 — register_clouds.py
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py](/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py)
+
+Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
 
 <a id="src-55a8e99c38e5"></a>
 
@@ -1070,7 +1262,7 @@ Summary: Poly Haven ; Library of 3D models, materials and HDRI environments usef
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-582825becec4"></a>
 
@@ -1084,6 +1276,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-5860303c6b7e"></a>
+
+## SRC-5860303c6b7e — CadQuery import/export documentation
+
+Original source: [https://cadquery.readthedocs.io/en/stable/importexport.html](https://cadquery.readthedocs.io/en/stable/importexport.html)
+
+Summary: Documents DXF import, STEP import/export and units; relevant profile and exchange operations.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r04.md.
+
 <a id="src-587c68a13074"></a>
 
 ## SRC-587c68a13074 — ahujasid/mcp-for-blender
@@ -1094,7 +1298,19 @@ Summary: The separate community project ahujasid/mcp-for-blender is explicitly n
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/domain-paths.md.
+
+<a id="src-59bd5a7cb61a"></a>
+
+## SRC-59bd5a7cb61a — https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md
+
+Original source: [https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md](https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md)
+
+Summary: 2. Name: Tesseract; Role: Dimension text candidates with boxes/confidence; humans verify engineering notation.; License: Apache-2.0 upstream.; Apis: tesseract image outputbase -l eng tsv; TSV bbox/confidence review; Dependencies: Tesseract OCR binary plus eng traineddata; TSV output is text candidates only.; Source urls: https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md; https://github.com/tesseract-ocr/tesseract
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
 
 <a id="src-5c5742981c2f"></a>
 
@@ -1130,7 +1346,7 @@ Summary: FreeCAD Parts Library ; Community library distributed in FCStd, STEP, S
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-5e5932bb68e1"></a>
 
@@ -1142,7 +1358,7 @@ Summary: Blender ; Supports interchange including glTF, USD, OBJ, PLY, STL and A
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r05.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-5e95b95a8287"></a>
 
@@ -1224,9 +1440,9 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-
 
 Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: OpenCADStudio Automation API — Specification 1.1. Source class: local primary product documentation; exact byte copy from local source repository. Original reuse terms: GPL-3.0-or-later repository license; see /home/leo/projects/3rdparty/OpenCADStudio/LICENSE
 
-Evidence: archived_original_referenced.
+Evidence: archived_original_referenced, local_source_inspected.
 
-Documents: research/sources/round-02/archive-sources.json.
+Documents: research/sources/round-02/archive-sources.json, research/sources/round-03/cad-detail-sources.json.
 
 <a id="src-6436ad01395b"></a>
 
@@ -1236,9 +1452,9 @@ Original source: [https://colmap.github.io/cameras.html](https://colmap.github.i
 
 Summary: Documents COLMAP corner-based pixel coordinates, camera conventions and model selection; OPENCV and FULL_OPENCV distortion model details.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md.
 
 <a id="src-6507a5c7f8da"></a>
 
@@ -1276,6 +1492,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-68222de9fed6"></a>
+
+## SRC-68222de9fed6 — ezdxf units
+
+Original source: [https://ezdxf.readthedocs.io/en/stable/concepts/units.html](https://ezdxf.readthedocs.io/en/stable/concepts/units.html)
+
+Summary: Documents DXF $INSUNITS and unit conversion; DXF coordinates without a unit declaration require external scale evidence.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md.
+
 <a id="src-6b30ccb4447f"></a>
 
 ## SRC-6b30ccb4447f — https://github.com/isl-org/Open3D
@@ -1308,9 +1536,9 @@ Original source: [https://colmap.github.io/faq.html](https://colmap.github.io/fa
 
 Summary: Documents ImageReader camera parameters, shared camera setup, pycolmap database read/update API, default bundle-adjustment intrinsic refinement, and the +0.5 pixel-center correction from OpenCV/Kalibr.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md, research/workflows/details/rec-r01.md.
 
 <a id="src-6c6db30cba74"></a>
 
@@ -1326,15 +1554,15 @@ Documents: research/cad-and-skills.md, research/next-step-proposal.md.
 
 <a id="src-6ca9f8e9b9c2"></a>
 
-## SRC-6ca9f8e9b9c2 — Nerfstudio custom dataset
+## SRC-6ca9f8e9b9c2 — https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md
 
 Original source: [https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md](https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md)
 
-Summary: Existing report source: describes image/video and camera-pose data processing through ns-process-data and COLMAP camera solving; reused as a documented handoff source, not reopened in this batch.
+Summary: 2. https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r08.md.
 
 <a id="src-6cbca4f9761c"></a>
 
@@ -1346,7 +1574,19 @@ Summary: Bonsai / IfcOpenShell ; Bonsai is a native IFC authoring and analysis p
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r06.md, research/workflows/domain-paths.md.
+
+<a id="src-6e28384e1b5f"></a>
+
+## SRC-6e28384e1b5f — CadQuery LICENSE
+
+Original source: [https://github.com/CadQuery/cadquery/blob/master/LICENSE](https://github.com/CadQuery/cadquery/blob/master/LICENSE)
+
+Summary: Repository license text: Apache-2.0.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md.
 
 <a id="src-6e6b9cf6af3c"></a>
 
@@ -1358,7 +1598,7 @@ Summary: - AliceVision official project (MPL-2.0; workflows): https://alicevisio
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
 
 <a id="src-6e951925cbb7"></a>
 
@@ -1406,7 +1646,7 @@ Summary: - DA3 Streaming documentation (<12 GB GPU memory claim): https://github
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md.
 
 <a id="src-75511277c637"></a>
 
@@ -1416,9 +1656,9 @@ Original source: [https://github.com/VAST-AI-Research/TripoSR/blob/main/README.m
 
 Summary: Official README command is `python run.py <image> --output-dir <dir>`; it states about 6 GB VRAM per single image and MIT terms for code and pretrained models.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r10.md.
 
 <a id="src-75dbfddac2b8"></a>
 
@@ -1430,7 +1670,7 @@ Summary: Documents IFC geometry decoding into tessellated geometry or OpenCASCAD
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-76b9efd76055"></a>
 
@@ -1440,9 +1680,9 @@ Original source: [https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/U
 
 Summary: Documents COLMAP image_undistorter output as the input to InterfaceCOLMAP, then DensifyPointCloud and later mesh stages; OpenMVG is an alternate importer.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md.
 
 <a id="src-773aa3a5f61a"></a>
 
@@ -1466,7 +1706,7 @@ Summary: Prior repository report assesses image/depth reconstruction methods, so
 
 Evidence: existing_report_registered, local_source_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
 
 <a id="src-79f9dd42f446"></a>
 
@@ -1492,6 +1732,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-7c5de1bf6cb6"></a>
+
+## SRC-7c5de1bf6cb6 — import_profile.py
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py](/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py)
+
+Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
+
 <a id="src-7c623f2c8b68"></a>
 
 ## SRC-7c623f2c8b68 — FreeCAD Modeling Best Practices & TNP Mitigation
@@ -1515,6 +1767,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-7ece9e98ed86"></a>
+
+## SRC-7ece9e98ed86 — build_part.py
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py](/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py)
+
+Summary: Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
 
 <a id="src-8089d1901b4f"></a>
 
@@ -1608,9 +1872,9 @@ Original source: [https://docs.nerf.studio/quickstart/custom_dataset.html](https
 
 Summary: Documents `ns-process-data images;video --data ... --output-dir ...` and `ns-train nerfacto --data ...`; image/video processing uses COLMAP and FFmpeg.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r08.md.
 
 <a id="src-86cdf9c119df"></a>
 
@@ -1622,7 +1886,7 @@ Summary: Documents Splatfacto training, Gaussian PLY output and memory variants;
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r09.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
 
 <a id="src-885fe0a26a5e"></a>
 
@@ -1670,7 +1934,19 @@ Summary: Repository describes conversion of mesh plus YAML joints or STEP/IGES a
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+
+<a id="src-8c216bd07f9d"></a>
+
+## SRC-8c216bd07f9d — Franka Emika Panda MJCF file
+
+Original source: [https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/panda.xml](https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/panda.xml)
+
+Summary: Actual example robot model source file for the Menagerie Panda; use only at a pinned revision and with model-specific rights.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
 
 <a id="src-8db7870af183"></a>
 
@@ -1684,6 +1960,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
+<a id="src-8de314785eed"></a>
+
+## SRC-8de314785eed — /home/leo/projects/3rdparty/OpenCADStudio/LICENSE
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/LICENSE](/home/leo/projects/3rdparty/OpenCADStudio/LICENSE)
+
+Summary: Source referenced for the stated workflow; see the owning documentation or research item.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-03/cad-detail-sources.json.
+
 <a id="src-8e6d7648b52e"></a>
 
 ## SRC-8e6d7648b52e — COLMAP command-line interface
@@ -1692,9 +1980,9 @@ Original source: [https://colmap.github.io/cli.html](https://colmap.github.io/cl
 
 Summary: Documents feature_extractor options including ImageReader camera model/parameters, mapper and image_undistorter command routes.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md.
 
 <a id="src-8f8532cac48e"></a>
 
@@ -1706,19 +1994,19 @@ Summary: Prior project report compares reusable component sources and downstream
 
 Evidence: existing_report_registered, local_source_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
-## SRC-90428f0f4c05 — https://huggingface.co/stabilityai/TripoSR
+## SRC-90428f0f4c05 — TripoSR model card and weights
 
 Original source: [https://huggingface.co/stabilityai/TripoSR](https://huggingface.co/stabilityai/TripoSR)
 
-Summary: - TripoSR model card (MIT code and pretrained weights): https://huggingface.co/stabilityai/TripoSR
+Summary: Model card labels weights MIT and identifies single-image feed-forward reconstruction; trained using Objaverse renders.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r06.md, research/workflows/details/rec-r10.md.
 
 <a id="src-91466ed68e96"></a>
 
@@ -1802,7 +2090,7 @@ Summary: Official OpenSCAD manual documents script-defined CSG, parameterization
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json.
+Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r10.md, research/workflows/details/mix-r02.md.
 
 <a id="src-952bf146bbc5"></a>
 
@@ -1816,6 +2104,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-95aacf0e0f5c"></a>
+
+## SRC-95aacf0e0f5c — IfcOpenShell placement API
+
+Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html)
+
+Summary: Official 4x4 local placement API; `is_si` declares whether matrix translations use SI units.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
 <a id="src-9641fd75954c"></a>
 
 ## SRC-9641fd75954c — Open3D 0.20 ICP registration
@@ -1824,9 +2124,9 @@ Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/icp_regi
 
 Summary: registration_icp refines a source-to-target transform from an initial transform and distance threshold; RegistrationResult reports fitness and inlier RMSE. Point-to-plane ICP requires useful normals.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
 
 <a id="src-96ae0c43af7d"></a>
 
@@ -1839,6 +2139,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-9794ead44d0e"></a>
+
+## SRC-9794ead44d0e — IfcOpenShell georeference API
+
+Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html)
+
+Summary: Official CRS/map-conversion API; creates georeference records but requires supplied CRS and transform values.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-98a1a3cd7fd0"></a>
 
@@ -1862,7 +2174,19 @@ Summary: STEP / Open CASCADE ; STEP represents exchangeable CAD geometry; use AP
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-9a40d7c5ca24"></a>
+
+## SRC-9a40d7c5ca24 — MuJoCo model editing API
+
+Original source: [https://mujoco.readthedocs.io/en/stable/programming/modeledit.html](https://mujoco.readthedocs.io/en/stable/programming/modeledit.html)
+
+Summary: Official mjSpec XML/URDF parsing and compile API; `MjModel.from_xml_path` parses/compiles XML or MJZ.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md.
 
 <a id="src-9a4cc68545a8"></a>
 
@@ -1872,9 +2196,9 @@ Original source: [https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.htm
 
 Summary: Official Tesseract documentation shows TSV output with text, hierarchical page/block/line/word identifiers, pixel bounding boxes and confidence values.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
 <a id="src-9bffb9dff56b"></a>
 
@@ -1902,15 +2226,15 @@ Documents: research/sources/round-02/archive-sources.json.
 
 <a id="src-9ea228a27dc2"></a>
 
-## SRC-9ea228a27dc2 — FreeCAD Assembly4 to URDF exporter
+## SRC-9ea228a27dc2 — FreeCAD Assembly4-to-URDF exporter
 
 Original source: [https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF](https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF)
 
-Summary: Repository describes Python scripts using FreeCAD API to export Assembly4 robot assemblies to URDF with meshes and inertial data.
+Summary: Third-party source describes Python scripts exporting Assembly4 assemblies to URDF; feature support and licence must be checked at the pinned revision.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
 
 <a id="src-9f9c7199168b"></a>
 
@@ -1944,9 +2268,9 @@ Original source: [https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAs
 
 Summary: ICCV 2023 paper proposes a transformer/shape-program mapping from three orthographic views to CAD models and evaluates noisy/incomplete views on a benchmark dataset.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
 <a id="src-a1b86705dc1b"></a>
 
@@ -1960,6 +2284,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-a22f0b43932b"></a>
+
+## SRC-a22f0b43932b — Workflow and source register builder
+
+Original source: [/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py)
+
+Summary: Combines retained sources and round-specific evidence; checks operation inputs and recipe types; parses Markdown-link destinations separately from bare URLs to preserve original source addresses.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/project-detail-sources.json.
+
 <a id="src-a2e021f0ada1"></a>
 
 ## SRC-a2e021f0ada1 — Meshroom command-line batch usage
@@ -1968,9 +2304,9 @@ Original source: [https://github.com/alicevision/Meshroom/blob/develop/INSTALL.m
 
 Summary: Official Meshroom instructions document `meshroom_batch --input INPUT_IMAGES_FOLDER --output OUTPUT_FOLDER`; the executable also accepts a saved pipeline graph.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r01.md.
 
 <a id="src-a318f3e786ed"></a>
 
@@ -2028,9 +2364,9 @@ Original source: [https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vec
 
 Summary: ACCV 2022 paper studies automatic vectorization of raster building blueprints and reviews primitive detection, floor-plan vectorization and structured reconstruction.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
 <a id="src-a539aa71a816"></a>
 
@@ -2044,6 +2380,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-a5ea2c11ee81"></a>
+
+## SRC-a5ea2c11ee81 — Franka Emika Panda Menagerie model README
+
+Original source: [https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/README.md](https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/README.md)
+
+Summary: Identifies the Panda MJCF model, states MuJoCo 2.3.3 or later, Apache-2.0 model licence and documented derivation/geometry/inertia work.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
+
 <a id="src-a680edc6892e"></a>
 
 ## SRC-a680edc6892e — URDF model reference
@@ -2054,7 +2402,19 @@ Summary: URDF / ROS tooling ; Official `urdf_tutorial` teaches visual geometry, 
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
+
+<a id="src-a764655900e1"></a>
+
+## SRC-a764655900e1 — FreeCAD contributing and licensing
+
+Original source: [https://www.freecad.org/contributing.php?lang=eng](https://www.freecad.org/contributing.php?lang=eng)
+
+Summary: Project license information; primary FreeCAD project page.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md.
 
 <a id="src-ac24864ef496"></a>
 
@@ -2080,6 +2440,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-ac77c9e8c1c8"></a>
+
+## SRC-ac77c9e8c1c8 — https://github.com/opencv/opencv/blob/4.x/LICENSE
+
+Original source: [https://github.com/opencv/opencv/blob/4.x/LICENSE](https://github.com/opencv/opencv/blob/4.x/LICENSE)
+
+Summary: 1. Name: OpenCV; Role: Planar image rectification and raster line candidates.; License: Apache-2.0 upstream.; Apis: cv2.getPerspectiveTransform(4 point pairs); cv2.warpPerspective; cv2.HoughLinesP; cv2.findContours/cv2.approxPolyDP; Dependencies: Python 3, OpenCV Python bindings (opencv-python or system package), NumPy; image file raster source.; Source urls: https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html; https://github.com/opencv/opencv/blob/4.x/LICENSE
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
+
 <a id="src-ac94df9079cf"></a>
 
 ## SRC-ac94df9079cf — Parts Library repository
@@ -2090,7 +2462,7 @@ Summary: FreeCAD BIM Library ; FreeCAD BIM can browse and insert FCStd, STEP and
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-accaca72881d"></a>
 
@@ -2102,7 +2474,7 @@ Summary: KiCad 3D library ; Board-footprint-linked 3D models for electronic comp
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-ad068197fdc2"></a>
 
@@ -2114,7 +2486,7 @@ Summary: Documents a profile extrusion IFC representation, depth in metres and p
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-ad1f82234be8"></a>
 
@@ -2162,7 +2534,7 @@ Summary: - Depth Anything 3 repository/license and CLI/API: https://github.com/B
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r05.md.
 
 <a id="src-b1451ce1d409"></a>
 
@@ -2176,6 +2548,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-b1ac5466cbd1"></a>
+
+## SRC-b1ac5466cbd1 — CadQuery API reference
+
+Original source: [https://cadquery.readthedocs.io/en/stable/classreference.html](https://cadquery.readthedocs.io/en/stable/classreference.html)
+
+Summary: Documents shape validity, bounds, volume, closed wires and geometry transforms; supports checks in reference scripts.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r04.md.
+
 <a id="src-b30357886048"></a>
 
 ## SRC-b30357886048 — https://github.com/microsoft/TRELLIS
@@ -2187,6 +2571,18 @@ Summary: - TRELLIS repository (repository declares MIT; dataset/model-weight ter
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-b32f7db38a9b"></a>
+
+## SRC-b32f7db38a9b — https://github.com/tesseract-ocr/tesseract
+
+Original source: [https://github.com/tesseract-ocr/tesseract](https://github.com/tesseract-ocr/tesseract)
+
+Summary: 2. Name: Tesseract; Role: Dimension text candidates with boxes/confidence; humans verify engineering notation.; License: Apache-2.0 upstream.; Apis: tesseract image outputbase -l eng tsv; TSV bbox/confidence review; Dependencies: Tesseract OCR binary plus eng traineddata; TSV output is text candidates only.; Source urls: https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md; https://github.com/tesseract-ocr/tesseract
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
 
 <a id="src-b37df47b9e75"></a>
 
@@ -2210,7 +2606,7 @@ Summary: Prior project proposal identifies OCS as the interactive baseline, Free
 
 Evidence: existing_report_registered, local_source_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json.
 
 <a id="src-b667bec43458"></a>
 
@@ -2222,7 +2618,7 @@ Summary: - CloudCompare repository and license: https://github.com/CloudCompare/
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r07.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r04.md.
 
 <a id="src-b66eb65ce0b7"></a>
 
@@ -2246,7 +2642,7 @@ Summary: Documents mjSpec editing, XML/URDF parsing, compilation, MJCF and asset
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-b81d432f6f0a"></a>
 
@@ -2262,15 +2658,15 @@ Documents: research/domains-and-components.md.
 
 <a id="src-b82677ad8889"></a>
 
-## SRC-b82677ad8889 — Repository and model table
+## SRC-b82677ad8889 — MuJoCo Menagerie repository
 
 Original source: [https://github.com/google-deepmind/mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie)
 
-Summary: MuJoCo Menagerie ; Curated MuJoCo robot simulation assets include MJCF, scene XML, visual and collision meshes, README generation notes and per-model LICENSE files; examples include Unitree Go2 quadruped, Franka Emika Panda arm and Boston Dynamics Spot. Repository and model table, model structure ; Licensing is per model: the repository table lists Go2 and Spot BSD-3-Clause, Panda Apache-2.0; each model directory has its own license. The top-level project content is Apache-2.0. The README says model fidelity is ongoing and identifies intended quality grades from system-identified to conditionally stable. This is a strong simulation-description source, but the assets are simulation meshes/models, not verified manufacturing CAD for commercial hardware.
+Summary: Curated robot MJCF models and asset files; repository states each model directory has its own licence.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-b9a7ffca5f8c"></a>
 
@@ -2283,6 +2679,18 @@ Summary: Skill catalogue sources inspected 2026-11-12: skills.sh leaderboard, gl
 Evidence: existing_report_registered, archived_original_referenced.
 
 Documents: research/cad-and-skills.md, research/sources/round-02/archive-sources.json.
+
+<a id="src-ba1c34303c57"></a>
+
+## SRC-ba1c34303c57 — https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md
+
+Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md)
+
+Summary: 3. https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md.
 
 <a id="src-bae586b9c767"></a>
 
@@ -2316,9 +2724,9 @@ Original source: [https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_
 
 Summary: Computer Graphics Forum paper describes a learned raster-floorplan framework that predicts wall junctions and segments as an ordered graph representation.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
 <a id="src-bcf9f8ff8137"></a>
 
@@ -2402,31 +2810,31 @@ Summary: Official install guide documents CLI environment and a video-processing
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r08.md.
 
 <a id="src-bfe06f8511b1"></a>
 
-## SRC-bfe06f8511b1 — Tutorial repository
+## SRC-bfe06f8511b1 — ROS URDF tutorial
 
 Original source: [https://github.com/ros/urdf_tutorial](https://github.com/ros/urdf_tutorial)
 
-Summary: URDF / ROS tooling ; Official `urdf_tutorial` teaches visual geometry, movable joints, collision and inertial properties, and Xacro; it is BSD-3-Clause. Tutorial repository. URDF model guidance states metres/radians and kilograms for position/mass conventions. URDF model reference ; URDF is a format; package and mesh licenses are independent. Tutorial: BSD-3-Clause. ; Robot kinematic interchange and ROS visualization/control workflows. URDF does not express all closed-chain or advanced dynamics semantics; preserve source domain model and report unsupported fields.
+Summary: Primary tutorial covers links, visual, movable joints, collision and inertial properties; repository declares BSD-3-Clause.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-bffa49b1e1cc"></a>
 
-## SRC-bffa49b1e1cc — Open3D 0.20 Global registration
+## SRC-bffa49b1e1cc — Open3D global registration
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html](https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html)
 
-Summary: Documents FPFH feature matching, RANSAC global registration, correspondence pruning by distance/edge length/normals, returned transform, fitness and inlier RMSE; a global initial pose can be refined by ICP.
+Summary: Official registration methods provide a coarse alignment that may be refined by local ICP.
 
-Evidence: web_inspected, existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r04.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r09.md.
 
 <a id="src-c0ffb325c952"></a>
 
@@ -2532,9 +2940,9 @@ Original source: [https://github.com/nerfstudio-project/nerfstudio/blob/main/doc
 
 Summary: Documents ns-export pointcloud to PLY, TSDF meshes as available for all models, Poisson meshes only for models predicting normals, OBJ textured meshes and NeRF texture transfer to existing meshes.
 
-Evidence: web_inspected, existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r08.md.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -2544,9 +2952,9 @@ Original source: [https://build123d.readthedocs.io/en/latest/operations.html](ht
 
 Summary: Official build123d docs show extrusion of a 2D sketch/face into a 3D part and document Builder/Algebra operations over OCCT geometry.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-c75f41a7dcd4"></a>
 
@@ -2558,19 +2966,19 @@ Summary: - Meshroom copying/licenses: https://github.com/alicevision/Meshroom/bl
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md.
+Documents: research/reconstruction.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
 
 <a id="src-c84e8663456d"></a>
 
-## SRC-c84e8663456d — Microsoft TRELLIS.2 image-to-3D repository
+## SRC-c84e8663456d — https://github.com/microsoft/TRELLIS.2
 
 Original source: [https://github.com/microsoft/TRELLIS.2](https://github.com/microsoft/TRELLIS.2)
 
-Summary: Existing report source: single-image mesh/GLB generation; used as an alternative visual-proxy adapter. It predicts hidden geometry and carries no measured-scale evidence by itself.
+Summary: 1. Id: REC-18; Name: Generate a single-image mesh proxy; Inputs: photo-set; Outputs: mesh; Tools: TripoSR; TRELLIS.2; SAM 3D Objects; Source urls: https://github.com/VAST-AI-Research/TripoSR; https://github.com/microsoft/TRELLIS.2; https://github.com/facebookresearch/sam-3d-objects; Prerequisites: Exactly one selected image and model revision recorded; Model weights and model terms recorded separately from source-code licence; Dimensions or measured controls supplied separately before dimensional CAD use; Preserves: Source image and model/checkpoint metadata; Changes or infers: Predicts backside and occluded geometry from learned priors; Mesh scale is not established by image appearance alone; Checks: Compare silhouette with additional views; Compare explicitly measured dimensions; Mark hidden surfaces as inferred before CAD remodeling; Alternatives: Multi-view photogrammetry or calibrated scan; Automation: scripted; Evidence status: existing_report_registered; Summary: Generate a v...
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/rec-r10.md.
 
 <a id="src-c98a5b96ef0d"></a>
 
@@ -2580,9 +2988,9 @@ Original source: [https://docs.blender.org/api/current/bpy.types.Scene.html](htt
 
 Summary: Search-indexed API identifies Scene.ray_cast and scene annotation properties for world-space surface picking; direct page retrieval returned HTTP 402 in this research session. Claim limited to the indexed API entry; exact signature should be checked from installed Blender API at implementation.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r07.md, research/workflows/details/rec-r07.md.
 
 <a id="src-ca3076996fa5"></a>
 
@@ -2606,7 +3014,7 @@ Summary: - CloudCompare command line: https://cloudcompare.org/doc/wiki/index.ph
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r04.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md, research/workflows/details/rec-r10.md.
 
 <a id="src-cb2c93b6107b"></a>
 
@@ -2616,9 +3024,9 @@ Original source: [https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html](http
 
 Summary: solvePnP estimates object/world-to-camera rotation and translation from 3D/2D correspondences, intrinsics and distortion; camera axes are X right, Y down, Z forward.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md.
 
 <a id="src-cd7868332c03"></a>
 
@@ -2631,6 +3039,18 @@ Summary: `cad-modeling-fusion` (`Foster1202/cad-modeling-fusion-skill`) ; Archiv
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-ce92c7f02e89"></a>
+
+## SRC-ce92c7f02e89 — OpenSCAD documentation
+
+Original source: [https://openscad.org/documentation.html](https://openscad.org/documentation.html)
+
+Summary: Documents OpenSCAD source and command-line usage for rendering/exporting geometry.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r10.md.
 
 <a id="src-d130021486e1"></a>
 
@@ -2666,7 +3086,7 @@ Summary: Official build123d documentation for a Python parametric B-rep modeling
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json.
+Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/cad-r09.md, research/workflows/details/cad-r10.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r09.md.
 
 <a id="src-d52309ad63a6"></a>
 
@@ -2738,7 +3158,7 @@ Summary: COLMAP documents command-line reconstruction; reused as the SfM/camera 
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/cad-sources.json, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/cad-sources.json, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/cad-r06.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
 
 <a id="src-db5de105c935"></a>
 
@@ -2774,7 +3194,7 @@ Summary: The assigned UX Planet article, “3D Modeling with Claude Code: A Prac
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/user-supplied-links.md, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/user-supplied-links.md, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-dcc824a0bc1a"></a>
 
@@ -2788,6 +3208,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-dd02b514ff43"></a>
+
+## SRC-dd02b514ff43 — MJCF reference writer
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py](/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py)
+
+Summary: Bounded standard-library serializer for explicit MJCF data; no integration execution.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/project-detail-sources.json.
+
 <a id="src-dd1f5b2ca39f"></a>
 
 ## SRC-dd1f5b2ca39f — FreeCAD Draft DXF documentation
@@ -2796,9 +3228,9 @@ Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wik
 
 Summary: Official FreeCAD docs list DXF entity support for C++ and legacy importers, format/version conditions, and note that 3D ACIS SAT blobs in DXF are not currently read by FreeCAD.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-ddc04ee3002f"></a>
 
@@ -2846,7 +3278,7 @@ Summary: - DA3 Blender add-on source (third-party): https://github.com/xy-gao/DA
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/rec-r05.md.
 
 <a id="src-e304a1483122"></a>
 
@@ -2858,7 +3290,7 @@ Summary: - Meshroom install/automation docs: https://meshroom.readthedocs.io/en/
 
 Evidence: existing_report_registered.
 
-Documents: research/reconstruction.md.
+Documents: research/reconstruction.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
 
 <a id="src-e3d95e78d033"></a>
 
@@ -2886,15 +3318,15 @@ Documents: research/reconstruction.md.
 
 <a id="src-e8c6f17f90e5"></a>
 
-## SRC-e8c6f17f90e5 — Open3D 0.20 RGB-D integration
+## SRC-e8c6f17f90e5 — Open3D RGB-D integration tutorial
 
 Original source: [https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html](https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html)
 
-Summary: Documents calibrated RGB-D integration into uniform or scalable TSDF using depth/color frames, camera intrinsics, camera poses, truncation and voxel length; mesh extraction uses marching cubes. Voxel size trades resolution against sensitivity to depth noise.
+Summary: Documents RGB-D pose integration and TSDF volume integration workflow.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/cad-r06.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r09.md.
 
 <a id="src-e8fb08827bf0"></a>
 
@@ -2907,6 +3339,30 @@ Summary: Primary sources: FreeCAD source/licence, Sketcher Python scripting, Par
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/next-step-proposal.md.
+
+<a id="src-e935d3ebe64f"></a>
+
+## SRC-e935d3ebe64f — https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md
+
+Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md)
+
+Summary: 1. Name: FreeCAD + Open CASCADE; Role: STEP import inspection and assembly/CAD geometry; Software license: FreeCAD LGPL-2.0-or-later as applicable to project version; supplier STEP remains separately licensed; Api or entrypoint: Open STEP in GUI and inspect product tree/units; Assembly Workbench joints; `Part`/B-rep geometry inspect; Environment dependencies: FreeCAD build with Open CASCADE; STEP import/export modules; Version status: documented source current at 2026-11-12; project install/runtime not exercised; Limitations and asset terms: Import healing/tessellation may alter topology; preserve source STEP. Exporter capability is version-specific.; Source urls: https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md; https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md.
+
+<a id="src-ea12fb9678d8"></a>
+
+## SRC-ea12fb9678d8 — COLMAP licence
+
+Original source: [https://github.com/colmap/colmap/blob/main/doc/license.rst](https://github.com/colmap/colmap/blob/main/doc/license.rst)
+
+Summary: Primary COLMAP BSD-3-Clause licence statement; third-party dependencies have separate licences.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-ea4fc60c7176"></a>
 
@@ -2944,6 +3400,30 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-eb24664fc3c0"></a>
+
+## SRC-eb24664fc3c0 — TripoSR inference entry point
+
+Original source: [https://github.com/VAST-AI-Research/TripoSR/blob/main/run.py](https://github.com/VAST-AI-Research/TripoSR/blob/main/run.py)
+
+Summary: Actual source implements preprocessing, single-image inference, mesh extraction and OBJ/GLB export; chunk size trades memory for runtime.
+
+Evidence: web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json.
+
+<a id="src-eb880f7efbac"></a>
+
+## SRC-eb880f7efbac — /home/leo/.codex/skills/ocs-engineering/references/ocs-control.md
+
+Original source: [/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md](/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md)
+
+Summary: Source referenced for the stated workflow; see the owning documentation or research item.
+
+Evidence: existing_report_registered.
+
+Documents: research/sources/round-03/cad-detail-sources.json.
+
 <a id="src-ebd6e769a79a"></a>
 
 ## SRC-ebd6e769a79a — `freecad-user/SKILL.md`
@@ -2964,9 +3444,9 @@ Original source: [https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.
 
 Summary: Official API documents probabilistic HoughLinesP on binary images and returns line-segment endpoint coordinates in pixel space.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-ece5f904e49d"></a>
 
@@ -3006,15 +3486,27 @@ Documents: research/sources/round-02/archive-sources.json.
 
 <a id="src-f088ec7f4848"></a>
 
-## SRC-f088ec7f4848 — model structure
+## SRC-f088ec7f4848 — MuJoCo Menagerie model catalogue
 
 Original source: [https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md](https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md)
 
-Summary: MuJoCo Menagerie ; Curated MuJoCo robot simulation assets include MJCF, scene XML, visual and collision meshes, README generation notes and per-model LICENSE files; examples include Unitree Go2 quadruped, Franka Emika Panda arm and Boston Dynamics Spot. Repository and model table, model structure ; Licensing is per model: the repository table lists Go2 and Spot BSD-3-Clause, Panda Apache-2.0; each model directory has its own license. The top-level project content is Apache-2.0. The README says model fidelity is ongoing and identifies intended quality grades from system-identified to conditionally stable. This is a strong simulation-description source, but the assets are simulation meshes/models, not verified manufacturing CAD for commercial hardware.
+Summary: Primary catalogue reports robot model identities, DoF counts, preview XML files and per-model license references.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+
+<a id="src-f08b8003c0e4"></a>
+
+## SRC-f08b8003c0e4 — Open3D TriangleMesh API
+
+Original source: [https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html](https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html)
+
+Summary: Official Poisson and ball-pivoting reconstruction APIs; Poisson requires an oriented point cloud and produces inferred surface geometry.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r06.md, research/workflows/details/dom-r08.md.
 
 <a id="src-f1c693b775e0"></a>
 
@@ -3040,6 +3532,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-f23a725cdea4"></a>
+
+## SRC-f23a725cdea4 — IFC reference author
+
+Original source: [/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py](/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py)
+
+Summary: Bounded IfcOpenShell IFC4 author from explicitly dimensioned JSON inputs; no integration execution.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/project-detail-sources.json.
+
 <a id="src-f2c662a213ab"></a>
 
 ## SRC-f2c662a213ab — GitHub Copilot FreeCAD scripting skill
@@ -3058,23 +3562,23 @@ Documents: skills/README.md.
 
 Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html)
 
-Summary: Documents geometry extraction settings, kernels, shape creation and geometry iterator interfaces.
+Summary: Official geometry processing and representation conversion API.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-f4e7d302c752"></a>
 
-## SRC-f4e7d302c752 — https://github.com/VAST-AI-Research/TripoSR
+## SRC-f4e7d302c752 — TripoSR source repository
 
 Original source: [https://github.com/VAST-AI-Research/TripoSR](https://github.com/VAST-AI-Research/TripoSR)
 
-Summary: - TripoSR source: https://github.com/VAST-AI-Research/TripoSR
+Summary: Single-image reconstruction code; command-line `run.py` outputs OBJ or GLB; README states approximately 6 GB VRAM default route and CPU fallback.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r06.md, research/workflows/details/rec-r10.md.
 
 <a id="src-f51b1cc13707"></a>
 
@@ -3086,7 +3590,7 @@ Summary: The Blender-hosted Blender Lab MCP repository is the Blender project's 
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-f5feb81d0023"></a>
 
@@ -3096,9 +3600,9 @@ Original source: [https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residen
 
 Summary: CVPR 2021 paper proposes residential floor-plan recognition/reconstruction, including segmentation and vectorization; paper reports tests on floor-plan imagery and method-specific results.
 
-Evidence: web_inspected.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-f6203f32e04a"></a>
 
@@ -3160,6 +3664,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-fa8c58e8c7a1"></a>
+
+## SRC-fa8c58e8c7a1 — Open3D licence
+
+Original source: [https://github.com/isl-org/Open3D/blob/main/LICENSE](https://github.com/isl-org/Open3D/blob/main/LICENSE)
+
+Summary: Primary source gives Open3D MIT licence; third-party dependencies remain separately governed.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
 <a id="src-fbf7ed489d76"></a>
 
 ## SRC-fbf7ed489d76 — https://arxiv.org/abs/2403.02151
@@ -3178,11 +3694,11 @@ Documents: research/reconstruction.md.
 
 Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md)
 
-Summary: Official FreeCAD docs show Python creation of Sketcher geometry and addition of geometric/dimensional constraints.
+Summary: Official documentation source for creating and constraining sketches through Python.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json.
+Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
 
 <a id="src-fe66e203f22d"></a>
 
@@ -3194,7 +3710,7 @@ Summary: Lists IFC geometry creation helpers including profiles, meshes, doors a
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/domain-paths.md.
+Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-fe69883eeede"></a>
 

@@ -6,7 +6,7 @@
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
     "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
-    "sha256": "3bfa102c217a207e694e648b517f1d29997cb203e7b8e0b048331888d62b28e5",
+    "sha256": "df796ee29daf66914161830f381a069afc031eeb9b973acfb026e9cc568dda6d",
     "content_type": "application/json"
   },
   {
@@ -16,7 +16,7 @@
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
     "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
-    "sha256": "c0b1ef07990b07aa70a2949a7e4b1662a11f7586727398301a531b84dbf31f85",
+    "sha256": "aa63e63f5645d01004f9be1d4a1429a3a96ac009c87f667ffc9917f6d959b044",
     "content_type": "application/json"
   },
   {
@@ -46,7 +46,77 @@
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
     "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
-    "sha256": "cf3288bf2098757b8fa41103cea3e426cbea12e1fc26dbfd610fc9ec81b9e310",
+    "sha256": "3b4e02bcb1f82cfa62eea1ba9573f68218da70a4fa8bebdc4c0ebf0d246a9c91",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "title": "Workflow and source register builder",
+    "summary": "Combines retained sources and round-specific evidence; checks operation inputs and recipe types; parses Markdown-link destinations separately from bare URLs to preserve original source addresses.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "sha256": "6548c1bac0a6162684045b47470fe4f8378cdad96dd18c1af7ad8a4d44077afd",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
+    "title": "calibrate_camera.py",
+    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
+    "sha256": "f5937a811a3a36d98b6dc4d60fcd03e3d5a6f4cd7c9fa1d1648abc7f6808f61d",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+    "title": "register_clouds.py",
+    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+    "sha256": "02b41b9977009ec75c63770d3b7fe6d010ae3f02b01911c1151fb252dbae2a06",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
+    "title": "ifc_model.py",
+    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
+    "sha256": "672a3c834ca14216a37dfa30d4c02bafa97156a7f7bfe8668ffb1cac90dcebb4",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
+    "title": "robot_model.py",
+    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
+    "sha256": "91b402c896cbbb42e5f75f7367b15fa493402fc5a158b3ce56c8745cebf88391",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
+    "title": "build_part.py",
+    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
+    "sha256": "bebec6f7c34721490d7e2a0b5e305736b4bc2ed3ec0f8ba428849c08f9fbe02c",
+    "content_type": "text/x-python"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
+    "title": "import_profile.py",
+    "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
+    "sha256": "4be566f7240f1b77a6d52a4e85537e4e974eaa6b1bfd117a4dcaaab51e8affa2",
     "content_type": "text/x-python"
   }
 ]

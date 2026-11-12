@@ -759,31 +759,39 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py --images <target-images> --inner-corners <cols> <rows> --square-size <length> --unit <unit> --output <calibration.json>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py <explicit-building.json> <new-building.ifc>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -1769,31 +1777,39 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py --dxf <profile.dxf> --layer <layer> --scale-to-mm <factor> --extrusion-mm <height> --merge-tolerance-source-units <tolerance> --step <new-part.step>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -2923,38 +2939,48 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py --images <target-images> --inner-corners <cols> <rows> --square-size <length> --unit <unit> --output <calibration.json>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -3809,24 +3835,30 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -4329,24 +4361,30 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -4641,17 +4679,21 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -5268,17 +5310,21 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -5904,10 +5950,12 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -6606,31 +6654,39 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py --images <target-images> --inner-corners <cols> <rows> --square-size <length> --unit <unit> --output <calibration.json>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py --source <source.ply> --target <target.ply> --initial-transform <init.json> --max-correspondence-distance <distance> --unit <unit> --output-report <report.json> --output-source-ply <aligned.ply>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py --parameters <explicit-mm-parameters.json> --step <new-part.step>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",
@@ -7057,24 +7113,30 @@
       "code": [
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py",
-          "entrypoint": "compare_distances(references, model, require_check_controls=True)",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py --references <lengths.json> --model-points <points.json> --out <report.json> --require-check-controls",
           "status": "reference_code",
           "role": "Check supplied reference lengths against exported model points; six local numerical tests cover the helper.",
-          "source_urls": []
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/common/check_control_distances.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py <explicit-building.json> <new-building.ifc>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py"
+          ]
         },
         {
           "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
           "status": "reference_code",
           "role": "Bounded shared operation; use its documented supported subset and required arguments.",
-          "entrypoint": "See script --help and the adjacent domain README.",
-          "source_urls": []
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-robot.json> <new-model.xml>",
+          "source_urls": [
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+          ]
         },
         {
           "entrypoint": "Native application/API operations in the recorded recipe",

@@ -1,0 +1,2282 @@
+{
+  "domain": "domains",
+  "workflows": [
+    {
+      "id": "DOM-R01",
+      "name": "Raster plan and site survey to registered IFC",
+      "output_scope": "IFC4 project with site/building/storey hierarchy, explicit IfcWall and IfcOpeningElement records, a scan-to-building registration transform, IFC-derived mesh, and optional Blender/GLB inspection derivative.",
+      "comparison_conditions": "Full route assumes a correctly scaled plan, a modest static site, overlapped photos, calibrated depth frames, and surveyed controls in shared frames. IFC-only from a clean vector plan skips SfM/MVS and scan registration. The image/mesh route supplies appearance/surface evidence; it does not create valid building semantics without authored classifications.",
+      "inputs": [
+        {
+          "type": "text",
+          "formats": [
+            "UTF-8 text/Markdown/JSON"
+          ],
+          "minimum_quality": "Named project, building use and intended elements; ambiguities recorded.",
+          "required_evidence": [
+            "original text",
+            "revision/source"
+          ],
+          "handling": "Normalize into model-brief; preserve wording and revisions."
+        },
+        {
+          "type": "raster-plan",
+          "formats": [
+            "PDF",
+            "PNG",
+            "TIFF"
+          ],
+          "minimum_quality": "Readable plan view with known scale or surveyed control lengths, north/orientation and floor datum.",
+          "required_evidence": [
+            "original page/image",
+            "scale source",
+            "control IDs"
+          ],
+          "handling": "Do not scale from page display size."
+        },
+        {
+          "type": "dimensions",
+          "formats": [
+            "JSON/CSV/field notes"
+          ],
+          "minimum_quality": "Units and datum beside each value; dimensions can be traced to plan pixels or survey.",
+          "required_evidence": [
+            "value",
+            "unit",
+            "point/feature IDs",
+            "status",
+            "source"
+          ],
+          "handling": "Input to geometry; no silent defaults."
+        },
+        {
+          "type": "photo-set",
+          "formats": [
+            "JPG/PNG/HEIC converted with source retained"
+          ],
+          "minimum_quality": "Static scene with overlap, sharp exposure and sufficient texture; camera/lens metadata retained.",
+          "required_evidence": [
+            "image IDs",
+            "timestamps",
+            "camera intrinsics if known",
+            "rights"
+          ],
+          "handling": "Frames can be sampled from video but retain original frame mapping."
+        },
+        {
+          "type": "depth-frames",
+          "formats": [
+            "sensor-native images",
+            "depth TIFF/PNG",
+            "PLY/PCD exports"
+          ],
+          "minimum_quality": "Depth scale, intrinsics, sensor-to-rig extrinsics, invalid-depth mask and capture pose/time.",
+          "required_evidence": [
+            "sensor model",
+            "units",
+            "calibration",
+            "frame IDs"
+          ],
+          "handling": "Preserve raw depth frames."
+        },
+        {
+          "type": "measurement-set",
+          "formats": [
+            "JSON/CSV"
+          ],
+          "minimum_quality": "Independent control point coordinates and lengths in named frames, with uncertainty/status.",
+          "required_evidence": [
+            "control IDs",
+            "source/target coordinates",
+            "units",
+            "uncertainty"
+          ],
+          "handling": "Separate registration controls and held-out checks."
+        },
+        {
+          "type": "source-library",
+          "formats": [
+            "IFC asset",
+            "native CAD",
+            "library record"
+          ],
+          "minimum_quality": "Exact asset file/revision and item-level terms.",
+          "required_evidence": [
+            "URL/path",
+            "hash",
+            "licence/terms",
+            "part identity",
+            "units/frame"
+          ],
+          "handling": "Do not treat catalog access as a blanket content licence."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "project origin",
+          "fields": [
+            "origin identifier",
+            "project-local XYZ",
+            "north direction",
+            "vertical datum"
+          ],
+          "frame": "Project-local engineering frame; X east, Y north, Z up only when explicitly selected.",
+          "source_status": "author/surveyor supplied"
+        },
+        {
+          "kind": "site control point",
+          "fields": [
+            "point ID",
+            "E/N/H or local XYZ",
+            "uncertainty",
+            "survey method"
+          ],
+          "frame": "survey/map frame \u2194 project frame",
+          "source_status": "measured control"
+        },
+        {
+          "kind": "storey datum",
+          "fields": [
+            "storey name",
+            "elevation_m",
+            "vertical datum"
+          ],
+          "frame": "project Z",
+          "source_status": "measured or plan source"
+        },
+        {
+          "kind": "wall axis",
+          "fields": [
+            "p1/p2 XYZ",
+            "height",
+            "thickness",
+            "local +X and +Y directions"
+          ],
+          "frame": "project plan frame and wall-local frame",
+          "source_status": "dimensioned input"
+        },
+        {
+          "kind": "opening frame",
+          "fields": [
+            "host wall ID",
+            "station along wall",
+            "sill elevation",
+            "width/height/depth"
+          ],
+          "frame": "host wall-local frame",
+          "source_status": "dimensioned input"
+        },
+        {
+          "kind": "camera/sensor transform",
+          "fields": [
+            "intrinsics",
+            "camera-to-rig",
+            "rig-to-world pose",
+            "timestamps"
+          ],
+          "frame": "camera optical \u2192 rig \u2192 project/world",
+          "source_status": "calibrated or estimated; store residual/status"
+        },
+        {
+          "kind": "IFC georeference",
+          "fields": [
+            "projected CRS",
+            "map conversion eastings/northings/height",
+            "X-axis abscissa/ordinate",
+            "scale"
+          ],
+          "frame": "project engineering frame \u2192 map frame",
+          "source_status": "survey/CRS authority; never inferred from image appearance"
+        }
+      ],
+      "software": [
+        {
+          "name": "IfcOpenShell",
+          "role": "semantic IFC creation, geometry and unit API",
+          "software_license": "LGPL-3.0-or-later for Python library per repository; Bonsai add-on is GPL-3.0-or-later",
+          "api_or_entrypoint": "ifcopenshell.api.project.create_file; root.create_entity; unit.assign_unit; context.add_context; geometry.create_2pt_wall; feature.add_feature; aggregate.assign_object; spatial.assign_container; georeference.edit_georeferencing",
+          "environment_dependencies": "Python + IfcOpenShell wheel/native geometry backend",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "The sample script supports IFC4, straight walls and rectangular voids; no plan raster vectorization or general BIM classification. Imported asset rights remain separate.",
+          "source_urls": [
+            "https://github.com/IfcOpenShell/IfcOpenShell",
+            "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
+            "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html"
+          ]
+        },
+        {
+          "name": "COLMAP",
+          "role": "image feature matching, camera solution, sparse and dense reconstruction",
+          "software_license": "BSD-3-Clause software; dependencies separately licensed",
+          "api_or_entrypoint": "colmap feature_extractor; exhaustive_matcher; mapper; image_undistorter; patch_match_stereo; stereo_fusion",
+          "environment_dependencies": "COLMAP binary; CUDA GPU for dense PatchMatch route; CPU feature/matching options",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Monocular camera solve has arbitrary scale until external control. Dense route increases GPU-memory and storage demand.",
+          "source_urls": [
+            "https://colmap.github.io/cli.html",
+            "https://colmap.github.io/faq.html",
+            "https://github.com/colmap/colmap/blob/main/doc/license.rst"
+          ]
+        },
+        {
+          "name": "Open3D",
+          "role": "point-cloud I/O and scan registration/refinement",
+          "software_license": "MIT software",
+          "api_or_entrypoint": "open3d.pipelines.registration.registration_icp; evaluate_registration",
+          "environment_dependencies": "Python Open3D + NumPy; initial transform must be supplied",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "ICP is local refinement and may converge to wrong surface without a good initial alignment and held-out controls.",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+            "https://github.com/isl-org/Open3D/blob/main/LICENSE"
+          ]
+        },
+        {
+          "name": "Blender + Bonsai",
+          "role": "IFC display/authoring inspection and scene view",
+          "software_license": "Blender GPL-3.0-or-later; Bonsai GPL-3.0-or-later; asset licences independent",
+          "api_or_entrypoint": "Blender `--background --python`; Bonsai IFC import/export UI; bpy scene/object APIs",
+          "environment_dependencies": "Blender build, matching Bonsai add-on and compatible IfcOpenShell",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "GLB is display-oriented and can omit/remap IFC classifications, relationships and property sets.",
+          "source_urls": [
+            "https://docs.blender.org/manual/en/latest/advanced/command_line/",
+            "https://github.com/IfcOpenShell/IfcOpenShell",
+            "https://www.blender.org/features/pipeline/"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Normalize the source brief; resolve explicit units, local axis convention, storeys and source IDs.",
+          "tool": "Project intake",
+          "command_or_api": "DOM-01 model-brief contract; preserve original text and dimensions.",
+          "preserves": "Raw wording, measurement provenance.",
+          "changes_or_infers": "Typed requirements, names and unit normalization.",
+          "check": "Reject required values without source/unit/status; record questions instead of assigning geometry.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Create IFC project, units, contexts and spatial hierarchy.",
+          "tool": "If cOpenShell reference helper",
+          "command_or_api": "`python examples/workflows/domains/ifc_model.py <input.json> <new-model.ifc>`; APIs `project.create_file(version=\"IFC4\")`, `unit.assign_unit`, `root.create_entity`, `aggregate.assign_object`.",
+          "preserves": "Source plan, controls and IDs.",
+          "changes_or_infers": "New IFC4 file and relationships.",
+          "check": "Inspect schema, units, project/site/building/storey aggregates, unique GlobalIds.",
+          "code_status": "reference_code"
+        },
+        {
+          "action": "Author each wall from its measured endpoints; author rectangular openings only from explicit dimensions.",
+          "tool": "IfcOpenShell API",
+          "command_or_api": "`geometry.create_2pt_wall(..., is_si=True)`, `geometry.add_wall_representation`, `geometry.assign_representation`, `feature.add_feature`, `spatial.assign_container`.",
+          "preserves": "Dimension records and named wall/opening IDs.",
+          "changes_or_infers": "Parametric wall-like extrusion and void relationship.",
+          "check": "Compare wall axes, thickness and opening station/sill/clear dimensions to source.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Solve image cameras and dense surface evidence when photos are in scope.",
+          "tool": "COLMAP CLI",
+          "command_or_api": "`colmap feature_extractor --database_path <db> --image_path <images>`; `colmap exhaustive_matcher --database_path <db>`; `colmap mapper --database_path <db> --image_path <images> --output_path <sparse>`; `colmap image_undistorter --image_path <images> --input_path <sparse-model> --output_path <dense>`; `colmap patch_match_stereo --workspace_path <dense>`; `colmap stereo_fusion --workspace_path <dense> --output_path <dense>/fused.ply`.",
+          "preserves": "Original images, frame IDs, camera metadata and sparse reconstruction.",
+          "changes_or_infers": "Camera poses and dense point cloud; monocular scale remains unknown absent controls.",
+          "check": "Reprojection, component coverage, independent scale controls, holes and withheld dimensions.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Register depth/image cloud to the project/building frame from measured controls, then refine only with a checked initialization.",
+          "tool": "Open3D",
+          "command_or_api": "`registration_icp(source, target, max_correspondence_distance, init)`; record `RegistrationResult.transformation`, fitness and inlier RMSE.",
+          "preserves": "Original clouds, control IDs and frame names.",
+          "changes_or_infers": "Registration transform and aligned cloud.",
+          "check": "Use held-out point/length controls, local residual maps and frame/unit readback.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Convert IFC elements to triangle geometry or B-rep for downstream visualization/analysis.",
+          "tool": "IfcOpenShell geometry API / IfcConvert",
+          "command_or_api": "`ifcopenshell.geom.iterator(settings, ifc_file)` or `ifcopenshell.geom.create_shape(settings, element)`; retain IFC GlobalId-to-output mapping.",
+          "preserves": "IFC source and element identities.",
+          "changes_or_infers": "Tessellated or B-rep derivative; semantics are not carried as full IFC relations.",
+          "check": "Compare element count, bounds, units and placement against source IFC.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Inspect semantic model and visual derivatives.",
+          "tool": "Blender/Bonsai",
+          "command_or_api": "Open IFC in Bonsai; or `blender --background --python <review_scene.py>` for a scripted display scene.",
+          "preserves": "IFC source and conversion manifest.",
+          "changes_or_infers": "Scene/render/GLB derivative.",
+          "check": "Reopen exported file; retain element IDs and transform manifest.",
+          "code_status": "existing_tool_entrypoint"
+        }
+      ],
+      "code": [
+        {
+          "status": "reference_code",
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
+          "summary": "Bounded IFC4 authoring helper accepts explicit JSON metres, project/storey records, wall endpoints and rectangular openings; optional georeference is emitted only from a complete supplied CRS/map transform. It does not read plan pixels or infer wall/opening values. No integration run.",
+          "related_entrypoints": [
+            "COLMAP CLI",
+            "Open3D registration ICP",
+            "IfcOpenShell geometry iterator",
+            "Blender background Python"
+          ],
+          "source_urls": [
+            "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
+            "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
+            "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
+            "https://github.com/IfcOpenShell/IfcOpenShell",
+            "https://docs.bonsaibim.org/guides/authoring/georeferencing.html",
+            "https://colmap.github.io/cli.html",
+            "https://colmap.github.io/faq.html",
+            "https://github.com/colmap/colmap/blob/main/doc/license.rst",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+            "https://github.com/isl-org/Open3D/blob/main/LICENSE",
+            "https://docs.blender.org/manual/en/latest/advanced/command_line/",
+            "https://www.blender.org/features/pipeline/"
+          ],
+          "entrypoints": [
+            "ifcopenshell.api.project.create_file; root.create_entity; unit.assign_unit; context.add_context; geometry.create_2pt_wall; feature.add_feature; aggregate.assign_object; spatial.assign_container; georeference.edit_georeferencing",
+            "colmap feature_extractor; exhaustive_matcher; mapper; image_undistorter; patch_match_stereo; stereo_fusion",
+            "open3d.pipelines.registration.registration_icp; evaluate_registration",
+            "Blender `--background --python`; Bonsai IFC import/export UI; bpy scene/object APIs"
+          ],
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py <explicit-input.json> <new-output.ifc>"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "ifc",
+          "format": "IFC4 STEP physical file",
+          "retained": "IfcProject/site/building/storeys, IfcWall entities, IfcOpeningElement voids, placements, declared metre units, GlobalIds and optional supplied CRS/map conversion.",
+          "loss_or_inference": "This helper lacks material/property sets, room/space topology, door/window fillings, arbitrary wall polygons, plan interpretation and IFC validation report."
+        },
+        {
+          "type": "point-cloud",
+          "format": "PLY/PCD or sensor-native",
+          "retained": "Measured/scanned XYZ and registered source transform.",
+          "loss_or_inference": "Registration refines but does not change source point observations; filtering/fusion must be a separately versioned derivative."
+        },
+        {
+          "type": "visual-scene",
+          "format": "Blender .blend or GLB/glTF",
+          "retained": "Displayed IFC-derived object IDs and scene transforms when adapter records them.",
+          "loss_or_inference": "Display meshes do not retain complete IFC semantic graph; GLB material/render settings may differ."
+        }
+      ],
+      "checks": [
+        "IFC schema parse and expected IFC4 file header.",
+        "Project length/area/volume units equal declared inputs.",
+        "Every wall has a unique GlobalId and storey containment; each opening has a unique GlobalId and expected representation.",
+        "`IfcRelVoidsElement` connects each opening to exactly its host wall; opening/wall local transforms agree.",
+        "Bonsai/IfcConvert independent reopen; compare bounds, volume, orientation and IDs.",
+        "Registration controls vs held-out control residuals, in local regions and units.",
+        "COLMAP camera reprojection and depth/photogrammetry overlap; metric scale only with source controls."
+      ],
+      "failure_recovery": [
+        "Plan scale or north conflict: keep input unchanged; fix the calibration record, regenerate a new IFC path and compare reports.",
+        "Missing openings or invalid IFC feature relation: inspect per-wall opening dimensions and rerun against new target, not the old file.",
+        "COLMAP disconnected camera clusters: separate reconstruction components, add overlap images or supply known camera poses; do not merge by visual guess.",
+        "ICP drift: return to survey control correspondences and global registration; do not accept local RMSE alone.",
+        "Low memory: reduce image resolution/patch source count or omit MVS; keep the sparse camera solve and label result as surface-incomplete."
+      ],
+      "effort": {
+        "human": 5,
+        "setup": 5,
+        "compute": 4,
+        "human_reason": "Plan interpretation, element classification, multi-source registration and georeferencing require expert decisions. IFC-only from an already vectorized/dimensioned plan is substantially easier.",
+        "setup_reason": "Combines IFC authoring, camera solve/MVS, point-cloud registration, model licensing and geometry/display adapters.",
+        "compute_reason": "Sparse reconstruction and IFC creation are CPU/modest; dense multi-view stereo, multiple image batches and large point clouds dominate. DOM contract rates the complete plan+survey+registered IFC path."
+      },
+      "resources": {
+        "cpu": "CPU for API/IFC parsing and controls; multithreading for geometry/reconstruction.",
+        "gpu": "COLMAP dense PatchMatch benefits from CUDA-capable GPU; CPU-only feature/matching path exists; depth registration can remain CPU.",
+        "ram": "IFC graph size, raster dimensions, number of cameras, dense depth maps and point count drive RAM.",
+        "storage": "Original images/depth frames, SfM database, dense depth maps, clouds, IFC and display derivatives; preserve separate source and output trees.",
+        "scaling_drivers": [
+          "pixel dimensions and photo count",
+          "depth frame count/resolution",
+          "mesh/cloud points and IFC element count",
+          "camera graph connectedness",
+          "stored copies of intermediate depth maps"
+        ],
+        "variants": [
+          "Vectorized plan and no survey MVS lower effort and compute.",
+          "Photos without control points yield reconstruction with arbitrary scale.",
+          "Depth frames calibrated to survey frame reduce SfM workload.",
+          "BIM semantics remain human-authored even with high-quality surfaces."
+        ]
+      },
+      "source_urls": [
+        "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
+        "https://github.com/IfcOpenShell/IfcOpenShell",
+        "https://docs.bonsaibim.org/guides/authoring/georeferencing.html",
+        "https://colmap.github.io/cli.html",
+        "https://colmap.github.io/faq.html",
+        "https://github.com/colmap/colmap/blob/main/doc/license.rst",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://github.com/isl-org/Open3D/blob/main/LICENSE",
+        "https://docs.blender.org/manual/en/latest/advanced/command_line/",
+        "https://www.blender.org/features/pipeline/"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    },
+    {
+      "id": "DOM-R02",
+      "name": "Manufacturer STEP component to robot link",
+      "output_scope": "One sourced supplier component imported as CAD solid; explicit component record, robot parent/link role and reviewed joint; separate visual and collision mesh; sourced mass/inertial fields; URDF link package. An MJCF source/alternative is produced by the local reference writer, not by the URDF export stage.",
+      "comparison_conditions": "Comparison condition: one small-to-medium supplier STEP solid, source revision and rights located, mounting datums measured, target parent frame/joint intent stated, mass and inertia sourced or calculated from volume+density with assumptions. Multi-part gearboxes, closed kinematic loops and uncertain vendor data increase human effort. The output is a robot-description link, not physical qualification.",
+      "inputs": [
+        {
+          "type": "step-file",
+          "formats": [
+            "STEP AP203/AP214/AP242; verify schema in file"
+          ],
+          "minimum_quality": "Importable, named solid/part with units, source model revision and no uninspected healing.",
+          "required_evidence": [
+            "file bytes/hash",
+            "vendor model/part number",
+            "schema",
+            "units",
+            "supplier terms"
+          ],
+          "handling": "Preserve immutable original and import settings."
+        },
+        {
+          "type": "measurement-set",
+          "formats": [
+            "JSON/CSV/drawing records"
+          ],
+          "minimum_quality": "Measured mounting datums, bolt pattern, axis centre and interface dimensions in source/target frames.",
+          "required_evidence": [
+            "point IDs",
+            "unit",
+            "frame",
+            "measurement method/status",
+            "uncertainty"
+          ],
+          "handling": "Use interfaces to place body/joint; do not infer rotational axis solely from visual appearance."
+        },
+        {
+          "type": "material-set",
+          "formats": [
+            "supplier specification",
+            "test report",
+            "JSON record"
+          ],
+          "minimum_quality": "Density/material values with conditions and source identity.",
+          "required_evidence": [
+            "material",
+            "density unit",
+            "source URL/document",
+            "claim/calculated status"
+          ],
+          "handling": "Only use for computed mass/inertia when the solid volume and density are applicable."
+        },
+        {
+          "type": "source-library",
+          "formats": [
+            "source record + file"
+          ],
+          "minimum_quality": "Asset terms permit the intended storage and distribution.",
+          "required_evidence": [
+            "URL",
+            "licence/terms",
+            "retrieval date",
+            "hash",
+            "attribution"
+          ],
+          "handling": "Software/tool licence does not grant rights to supplier model."
+        },
+        {
+          "type": "model-brief",
+          "formats": [
+            "text/JSON"
+          ],
+          "minimum_quality": "Named robot parent, component role and explicit joint type/axis/limits or recorded ambiguity.",
+          "required_evidence": [
+            "kinematic parent",
+            "motion intent",
+            "joint coordinates",
+            "design source"
+          ],
+          "handling": "Human-authored intent remains a required input."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "supplier CAD origin",
+          "fields": [
+            "part origin and axes",
+            "unit scale",
+            "assembly placement if supplied"
+          ],
+          "frame": "STEP product frame \u2192 CAD import frame",
+          "source_status": "manufacturer file"
+        },
+        {
+          "kind": "mounting interface",
+          "fields": [
+            "face/plane datum",
+            "hole-center points",
+            "shaft/bore axis",
+            "bolt-circle data"
+          ],
+          "frame": "component frame \u2192 parent link frame",
+          "source_status": "drawing/measurement"
+        },
+        {
+          "kind": "joint origin/axis",
+          "fields": [
+            "origin XYZ",
+            "axis unit vector",
+            "joint type",
+            "limits and limit units"
+          ],
+          "frame": "child link frame; URDF joint origin relates parent/child; MJCF joint belongs to body frame",
+          "source_status": "explicit design or measured fixture"
+        },
+        {
+          "kind": "COM/inertia",
+          "fields": [
+            "mass kg",
+            "COM xyz",
+            "symmetric inertia tensor kg m^2",
+            "inertial axes/quaternion"
+          ],
+          "frame": "link frame \u2194 inertial frame",
+          "source_status": "manufacturer/test/calculation provenance"
+        },
+        {
+          "kind": "asset local origin",
+          "fields": [
+            "mesh origin, scale and transform"
+          ],
+          "frame": "CAD part local \u2192 robot link local",
+          "source_status": "export transform checked against solid"
+        }
+      ],
+      "software": [
+        {
+          "name": "FreeCAD + Open CASCADE",
+          "role": "STEP import inspection and assembly/CAD geometry",
+          "software_license": "FreeCAD LGPL-2.0-or-later as applicable to project version; supplier STEP remains separately licensed",
+          "api_or_entrypoint": "Open STEP in GUI and inspect product tree/units; Assembly Workbench joints; `Part`/B-rep geometry inspect",
+          "environment_dependencies": "FreeCAD build with Open CASCADE; STEP import/export modules",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Import healing/tessellation may alter topology; preserve source STEP. Exporter capability is version-specific.",
+          "source_urls": [
+            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md"
+          ]
+        },
+        {
+          "name": "IfcOpenShell / unit and component registry pattern",
+          "role": "source and unit-aware reusable metadata",
+          "software_license": "IfcOpenShell LGPL-3.0-or-later; asset rights separate",
+          "api_or_entrypoint": "Project component-record schema from implementation plan",
+          "environment_dependencies": "Python JSON + hashing; no runtime invoked",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Registry is proposed project data, not a supplied runtime tool.",
+          "source_urls": [
+            "https://github.com/IfcOpenShell/IfcOpenShell",
+            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+          ]
+        },
+        {
+          "name": "CoACD",
+          "role": "derive convex collision pieces from visual/engineering mesh",
+          "software_license": "MIT code per repository license; source mesh terms separate",
+          "api_or_entrypoint": "`coacd -i <input.obj> -o <collision.obj> --threshold <reviewed-threshold>` (CLI spelling depends on pinned release; verify `--help`)",
+          "environment_dependencies": "Pinned CoACD, Python/trimesh CLI or native executable",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Approximates concave geometry. V-HACD is archived/end-of-life; CoACD output is not a manufacturing mesh.",
+          "source_urls": [
+            "https://github.com/SarahWeiii/CoACD",
+            "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+            "https://github.com/kmammou/v-hacd/blob/master/README.md"
+          ]
+        },
+        {
+          "name": "ROS URDF tooling",
+          "role": "package XML link/joint/visual/collision/inertial representation",
+          "software_license": "URDF tutorial repository BSD-3-Clause; target package/assets can have separate terms",
+          "api_or_entrypoint": "Write/convert URDF; `check_urdf <robot.urdf>` when urdfdom command is installed; ROS launch/RViz for display",
+          "environment_dependencies": "ROS 2 and urdfdom/robot_state_publisher if required by consumer",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "URDF kinematic graph is a tree; exporter must map separate collision/visual/inertial frames; do not infer joints.",
+          "source_urls": [
+            "https://github.com/ros/urdf_tutorial",
+            "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
+            "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Inspect original STEP header, vendor part identity, unit, assembly/product structure and terms; hash original file.",
+          "tool": "FreeCAD and component registry",
+          "command_or_api": "FreeCAD `File > Open` STEP; inspect import tree and unit/size before saving an editable derivative.",
+          "preserves": "Exact supplier file and source URL/terms.",
+          "changes_or_infers": "CAD kernel representation, possible healing.",
+          "check": "Compare file-unit declaration, part names/count, bounds and measured interfaces.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Create immutable component record with source, licence, version/hash and geometry/units.",
+          "tool": "Project component schema",
+          "command_or_api": "Record `component_id`, source URL/revision/SHA-256, per-file licence, native/neutral assets and local frame in the component record.",
+          "preserves": "Supplier asset identity and rights.",
+          "changes_or_infers": "Adds project metadata only.",
+          "check": "Recompute file hash; reject missing source/rights status or duplicate file confusion.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Define part placement, parent link and joint explicitly from measurement/model brief.",
+          "tool": "FreeCAD Assembly Workbench / explicit joint-set",
+          "command_or_api": "Author grounded/fixed/revolute/slider relation with its origin/axis/limits; for one part, create a declared robot link and attachment joint.",
+          "preserves": "Supplier geometry and all datum IDs.",
+          "changes_or_infers": "Robot link/joint semantics.",
+          "check": "Review parent-child transform and axis direction against measured fixture; do not infer from shape.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Prepare separate visual and collision mesh assets with local frame and manifest.",
+          "tool": "CAD mesh export + CoACD",
+          "command_or_api": "Export OBJ/STL from the selected CAD application, then `coacd --input <visual-mesh> --output <collision-mesh>` (confirm pinned CLI).",
+          "preserves": "Original B-rep and exporter/mesh settings.",
+          "changes_or_infers": "Tessellation and approximate convex collision surfaces.",
+          "check": "Overlay mesh with CAD; compare dimensions/bounds; inspect bores, gaps and clearances.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Use manufacturer/test mass properties where available; otherwise calculate only with a sourced material density and validated solid volume.",
+          "tool": "CAD physical properties + measurement record",
+          "command_or_api": "Record mass, COM and full inertia with units, frame and `evidence_status`; do not substitute visual mesh density.",
+          "preserves": "Supplier/test report, CAD source and material source.",
+          "changes_or_infers": "Potential calculated physical properties.",
+          "check": "Check tensor symmetry/positive-definiteness and independent mass evidence; calculate relative to named link frame.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Export URDF link/joint with separate origins for mesh visual/collision and inertia; preserve input files.",
+          "tool": "URDF authoring/export adapter",
+          "command_or_api": "Follow ROS URDF tutorial link/joint/visual/collision/inertial XML fields; selected FreeCAD Assembly4 exporter or manual adapter must be version-pinned.",
+          "preserves": "Robot assembly graph, explicit joint record, asset manifest and mass data.",
+          "changes_or_infers": "URDF package; CAD feature history and unsupported joint semantics may be lost.",
+          "check": "`check_urdf <robot.urdf>` where available; load in RViz/robot_state_publisher and compare transform tree/units.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Optional simulation handoff uses explicit MJCF equivalent and the supplied helper only if MJCF is requested.",
+          "tool": "MuJoCo reference helper",
+          "command_or_api": "`python examples/workflows/domains/robot_model.py <robot.json> <new-model.xml>`; run `mujoco.MjModel.from_xml_path(\"new-model.xml\")` after authorized integration.",
+          "preserves": "Link/joint records, exact assets and source physical properties.",
+          "changes_or_infers": "MJCF model tree; URDF is a separate source artifact.",
+          "check": "MuJoCo compile and frame/joint/inertia/asset check; simulation alone does not validate physical parameters.",
+          "code_status": "existing_tool_entrypoint"
+        }
+      ],
+      "code": [
+        {
+          "status": "reference_code",
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
+          "summary": "Reference MJCF serializer for a sourced component and explicit robot-body records. It does not import STEP or emit URDF; CAD/STEP and URDF adapters remain separate.",
+          "related_entrypoints": [
+            "FreeCAD STEP import",
+            "FreeCAD Assembly Workbench",
+            "CoACD CLI",
+            "ROS URDF XML/tutorial",
+            "MuJoCo MjModel.from_xml_path"
+          ],
+          "source_urls": [
+            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+            "https://github.com/SarahWeiii/CoACD",
+            "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+            "https://github.com/kmammou/v-hacd/blob/master/README.md",
+            "https://github.com/ros/urdf_tutorial",
+            "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
+            "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
+            "https://github.com/boelnasr/CAD_TO_URDF",
+            "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+            "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
+            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+          ],
+          "entrypoints": [
+            "Open STEP in GUI and inspect product tree/units; Assembly Workbench joints; `Part`/B-rep geometry inspect",
+            "Project component-record schema from implementation plan",
+            "`coacd -i <input.obj> -o <collision.obj> --threshold <reviewed-threshold>` (CLI spelling depends on pinned release; verify `--help`)",
+            "Write/convert URDF; `check_urdf <robot.urdf>` when urdfdom command is installed; ROS launch/RViz for display"
+          ],
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py <explicit-input.json> <new-output.xml>"
+        }
+      ],
+      "outputs": [
+        {
+          "type": "component-record",
+          "format": "JSON manifest + original STEP",
+          "retained": "Original file hash, vendor identity/revision, per-asset terms, units/frame, interface datums and property sources.",
+          "loss_or_inference": "Metadata does not upgrade supplier licence or establish actual part mass/condition."
+        },
+        {
+          "type": "cad-solid",
+          "format": "FreeCAD native document + original STEP",
+          "retained": "B-rep if importer yields one; STEP unchanged.",
+          "loss_or_inference": "Native feature history usually absent; importer healing may change faces/edges."
+        },
+        {
+          "type": "urdf",
+          "format": "URDF XML plus referenced mesh package",
+          "retained": "Link/joint tree, joint origins/axes/limits, visual, collision and inertial descriptions.",
+          "loss_or_inference": "URDF consumers may ignore package-specific fields; closed loops and MJCF-only actuators do not map to plain URDF tree."
+        },
+        {
+          "type": "collision-set",
+          "format": "OBJ/STL convex meshes or primitives",
+          "retained": "Collision hull identities, frames and approximation settings.",
+          "loss_or_inference": "Concave holes/passages and fine details may be lost; visual source remains separate."
+        }
+      ],
+      "checks": [
+        "STEP file revision/hash and units.",
+        "CAD import bounds, mass/volume and mounting dimensions against vendor drawing/measurement.",
+        "Joint graph tree and axis/origin/limit source.",
+        "URDF parses; every relative mesh path resolves; joint transforms match FreeCAD assembly.",
+        "Inertial values are sourced, framed and pass numerical tensor checks.",
+        "Visual and collision files are separate and generated from the same source revision.",
+        "Asset redistribution terms are attached to file; packaging does not silently relicense vendor geometry."
+      ],
+      "failure_recovery": [
+        "STEP importer fails or units wrong: keep original, inspect AP schema/units and import in independent kernel before conversion.",
+        "No usable mass/inertia: preserve unknown fields as unknown; do not use arbitrary geometry density.",
+        "Mounting axis ambiguous: request measured datum or author an explicit design datum; do not fit it visually.",
+        "URDF importer rejects joint type or loop: use a documented tree adapter or native MJCF with explicit constraint topology.",
+        "Collision creates false contact: go back to visual CAD; split per-link collision bodies or choose primitives using contact needs."
+      ],
+      "effort": {
+        "human": 3,
+        "setup": 4,
+        "compute": 2,
+        "human_reason": "A single supplier part is quick to import, but choosing its parent, motion, interfaces, tolerance, mass and license requires human evidence.",
+        "setup_reason": "CAD import, rights registry, mesh/collider tool and URDF adapter are separate.",
+        "compute_reason": "For one part, mesh export, URDF parsing and mass data are small; large assemblies are outside the comparison condition."
+      },
+      "resources": {
+        "cpu": "CAD kernel CPU; one-link package is modest.",
+        "gpu": "No GPU needed for STEP/URDF; collision decomposition is CPU and can scale with mesh triangles.",
+        "ram": "Assembly feature count and triangle count drive memory.",
+        "storage": "STEP plus native file and separate visual/collision meshes; archive hashes/terms.",
+        "scaling_drivers": [
+          "STEP B-rep face/edge count",
+          "tessellation density",
+          "number of links and collision pieces",
+          "collision decomposition settings"
+        ],
+        "variants": [
+          "Clean STEP + already known joint and sourced inertial values is lowest manual path.",
+          "CAD_TO_URDF joint guesses reduce entry effort but increase review; treat as proposal only.",
+          "Multi-solid supplier STEP requires product-tree assembly handling."
+        ]
+      },
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/SarahWeiii/CoACD",
+        "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+        "https://github.com/kmammou/v-hacd/blob/master/README.md",
+        "https://github.com/ros/urdf_tutorial",
+        "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
+        "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
+        "https://github.com/boelnasr/CAD_TO_URDF",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    },
+    {
+      "id": "DOM-R03",
+      "name": "CAD robot assembly to URDF and MJCF",
+      "output_scope": "Editable source CAD assembly plus URDF tree package and a separately authored MJCF model when simulation is required.",
+      "comparison_conditions": "Known rigid links and explicit tree joints, clean CAD assembly and sourced mass properties. Closed-loop mechanisms need a separate constraint model; conversion is not automatic.",
+      "inputs": [
+        {
+          "type": "cad-assembly",
+          "formats": [
+            "FreeCAD FCStd",
+            "STEP assembly + assembly manifest"
+          ],
+          "minimum_quality": "Distinct parts, units and placements, with stable part IDs.",
+          "required_evidence": [
+            "source revision/hash",
+            "part tree",
+            "units",
+            "placements"
+          ],
+          "handling": "Keep neutral original immutable."
+        },
+        {
+          "type": "measurement-set",
+          "formats": [
+            "CSV/JSON/drawings"
+          ],
+          "minimum_quality": "Joint centers, axes, limits and link interfaces tied to datum IDs.",
+          "required_evidence": [
+            "frame",
+            "axis",
+            "range/unit",
+            "measurement evidence"
+          ],
+          "handling": "No visual joint inference."
+        },
+        {
+          "type": "robot-assembly",
+          "formats": [
+            "JSON joint graph"
+          ],
+          "minimum_quality": "Parent-child tree and joint types explicitly authored.",
+          "required_evidence": [
+            "links",
+            "joints",
+            "source IDs"
+          ],
+          "handling": "Do not infer missing joints."
+        },
+        {
+          "type": "material-set",
+          "formats": [
+            "supplier/test record"
+          ],
+          "minimum_quality": "Mass, COM and inertia tensor expressed in stated link/body frames.",
+          "required_evidence": [
+            "units",
+            "frame",
+            "source/status"
+          ],
+          "handling": "Never fill absent properties with guessed defaults."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "CAD assembly datum",
+          "fields": [
+            "part origin",
+            "placement transform"
+          ],
+          "frame": "part-local \u2192 assembly frame",
+          "source_status": "CAD source"
+        },
+        {
+          "kind": "joint frame",
+          "fields": [
+            "origin, axis, limits"
+          ],
+          "frame": "child link \u2192 parent link",
+          "source_status": "joint authoring record"
+        },
+        {
+          "kind": "inertial frame",
+          "fields": [
+            "mass, COM, tensor"
+          ],
+          "frame": "body frame; SI",
+          "source_status": "supplier/test/calculation evidence"
+        }
+      ],
+      "software": [
+        {
+          "name": "FreeCAD Assembly Workbench",
+          "role": "review rigid parts and authored joint graph",
+          "software_license": "LGPL project; imported asset rights separate",
+          "api_or_entrypoint": "Assembly Workbench; inspect placements and constraints",
+          "environment_dependencies": "FreeCAD build and assembly workbench",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Exchange exporters may not preserve all assembly semantics.",
+          "source_urls": [
+            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md"
+          ]
+        },
+        {
+          "name": "ROS URDF/urdfdom",
+          "role": "tree robot description",
+          "software_license": "Tutorial BSD-3-Clause; asset rights separate",
+          "api_or_entrypoint": "URDF XML; `check_urdf <robot.urdf>`",
+          "environment_dependencies": "urdfdom/ROS consumer as applicable",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "URDF is a tree; richer loops/extensions are consumer-specific.",
+          "source_urls": [
+            "https://github.com/ros/urdf_tutorial"
+          ]
+        },
+        {
+          "name": "MuJoCo",
+          "role": "compile and simulate explicit MJCF",
+          "software_license": "Apache-2.0 software; each asset separate",
+          "api_or_entrypoint": "`mujoco.MjModel.from_xml_path(path)`",
+          "environment_dependencies": "MuJoCo Python/C runtime",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "MJCF and URDF have different semantics.",
+          "source_urls": [
+            "https://github.com/google-deepmind/mujoco",
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Inspect CAD units, tree and transforms.",
+          "tool": "FreeCAD",
+          "command_or_api": "Open source assembly; record each part local frame.",
+          "preserves": "Original CAD",
+          "changes_or_infers": "Assembly metadata.",
+          "check": "Part count/bounds vs source.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Author joints and limits from design or measurements.",
+          "tool": "Assembly graph authoring",
+          "command_or_api": "Enter parent/child, joint origin/axis/type/range explicitly.",
+          "preserves": "Datum evidence",
+          "changes_or_infers": "Robot assembly graph.",
+          "check": "Graph connectedness, cycles and axis frame review.",
+          "code_status": "manual"
+        },
+        {
+          "action": "Export URDF tree and mesh package.",
+          "tool": "URDF adapter",
+          "command_or_api": "Write visual/collision/inertial separately; run `check_urdf`.",
+          "preserves": "Graph and meshes",
+          "changes_or_infers": "URDF tree; CAD feature history lost.",
+          "check": "Parse, resolve mesh URI, compare FK transforms.",
+          "code_status": "assisted"
+        },
+        {
+          "action": "Author equivalent MJCF when needed.",
+          "tool": "MuJoCo XML/API",
+          "command_or_api": "Create `<body>`, `<joint>`, `<inertial>`, `<geom>` with frames and sourced values; compile using `MjModel.from_xml_path`.",
+          "preserves": "Same graph and data",
+          "changes_or_infers": "MJCF model; actuators/contact options are new model choices.",
+          "check": "Compile, compare body/joint transforms and mass properties.",
+          "code_status": "assisted"
+        }
+      ],
+      "code": [
+        {
+          "status": "existing_tool_entrypoint",
+          "path": null,
+          "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
+          "related_entrypoints": [],
+          "source_urls": [
+            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+            "https://github.com/ros/urdf_tutorial",
+            "https://github.com/google-deepmind/mujoco",
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+            "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+          ],
+          "entrypoints": [
+            "Assembly Workbench; inspect placements and constraints",
+            "URDF XML; `check_urdf <robot.urdf>`",
+            "`mujoco.MjModel.from_xml_path(path)`"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "type": "cad-assembly",
+          "format": "FCStd + immutable STEP",
+          "retained": "Editable source assembly and part identifiers.",
+          "loss_or_inference": "Neutral formats may omit feature history."
+        },
+        {
+          "type": "urdf",
+          "format": "URDF + meshes",
+          "retained": "Tree links, joints, visuals, collisions and sourced inertia.",
+          "loss_or_inference": "Closed loops, CAD feature history and some joint semantics may be lost."
+        },
+        {
+          "type": "mjcf",
+          "format": "MJCF XML + external assets",
+          "retained": "Explicit MuJoCo body/joint/geom/inertial tree.",
+          "loss_or_inference": "Not guaranteed equivalent to URDF physics or controls."
+        }
+      ],
+      "checks": [
+        "CAD part units and placements; graph parent uniqueness; all movable axes/ranges have evidence.",
+        "URDF parse, mesh URIs and forward-kinematics check.",
+        "MJCF compile, assets resolve, inertia tensor and frame checks.",
+        "Cross-compare selected joint configurations and source CAD datum locations."
+      ],
+      "failure_recovery": [
+        "CAD importer changes units: revert to source and set units explicitly.",
+        "Graph has cycle: identify closed-chain method or select supported tree submodel with documented omitted links.",
+        "URDF/MJCF differs: compare frame transforms and axis conventions, correct adapter mapping, preserve source.",
+        "No inertia evidence: leave model as kinematic-only where consumer supports, or stop physical simulation."
+      ],
+      "effort": {
+        "human": 4,
+        "setup": 4,
+        "compute": 2,
+        "human_reason": "Joint graph authoring and cross-format semantics require review.",
+        "setup_reason": "CAD, URDF and simulator tooling plus adapters.",
+        "compute_reason": "Small tree and XML operations; large meshes dominate."
+      },
+      "resources": {
+        "cpu": "CPU geometry/XML operations.",
+        "gpu": "No GPU for format conversion.",
+        "ram": "Part count, mesh triangles and CAD tessellation.",
+        "storage": "Native CAD, URDF/MJCF and meshes; retain source and hashes.",
+        "scaling_drivers": [
+          "link count",
+          "mesh triangles",
+          "collision hulls"
+        ],
+        "variants": [
+          "Known tree easiest.",
+          "Closed loop requires specialized modeling."
+        ]
+      },
+      "source_urls": [
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/ros/urdf_tutorial",
+        "https://github.com/google-deepmind/mujoco",
+        "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+        "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    },
+    {
+      "id": "DOM-R04",
+      "name": "CAD robot plus Menagerie model and scan environment to MJCF scene",
+      "output_scope": "MJCF scene with a selected articulated robot, sourced environment collision geometry, cameras/visuals and explicit frame map.",
+      "comparison_conditions": "One named Menagerie robot at a pinned revision, compatible MuJoCo version, environment cloud registered to a measured scene frame, explicit robot-to-world placement.",
+      "inputs": [
+        {
+          "type": "cad-assembly",
+          "formats": [
+            "FCStd",
+            "STEP + joint manifest"
+          ],
+          "minimum_quality": "Robot interface geometry and explicit frame records.",
+          "required_evidence": [
+            "revision",
+            "mounting datums",
+            "units"
+          ],
+          "handling": "Keep separate from Menagerie baseline."
+        },
+        {
+          "type": "robot-assembly",
+          "formats": [
+            "Menagerie model folder/XML"
+          ],
+          "minimum_quality": "Per-model license and model revision retained.",
+          "required_evidence": [
+            "robot ID",
+            "revision",
+            "license",
+            "MuJoCo version"
+          ],
+          "handling": "Copy only under its terms."
+        },
+        {
+          "type": "point-cloud",
+          "formats": [
+            "PLY/PCD"
+          ],
+          "minimum_quality": "Registered, metric environment cloud and transform provenance.",
+          "required_evidence": [
+            "units",
+            "source frame",
+            "registration transform"
+          ],
+          "handling": "Cloud alignment error recorded."
+        },
+        {
+          "type": "measurement-set",
+          "formats": [
+            "JSON/CSV"
+          ],
+          "minimum_quality": "Robot mounting location and control points.",
+          "required_evidence": [
+            "datum IDs",
+            "uncertainty",
+            "frame"
+          ],
+          "handling": "Use independent checks."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "robot base frame",
+          "fields": [
+            "base pose",
+            "mounting datum"
+          ],
+          "frame": "robot base \u2192 world",
+          "source_status": "survey/design"
+        },
+        {
+          "kind": "environment frame",
+          "fields": [
+            "point cloud origin",
+            "registration matrix"
+          ],
+          "frame": "sensor/cloud \u2192 world",
+          "source_status": "measured registration"
+        },
+        {
+          "kind": "joint frames",
+          "fields": [
+            "Menagerie joint bodies/axes"
+          ],
+          "frame": "model-local joint \u2192 world via base pose",
+          "source_status": "pinned XML"
+        }
+      ],
+      "software": [
+        {
+          "name": "MuJoCo Menagerie",
+          "role": "reuse a model-specific robot MJCF",
+          "software_license": "Apache-2.0 only for Franka Panda model; library is per-model licensed",
+          "api_or_entrypoint": "Pinned `franka_emika_panda/panda.xml`; README requires MuJoCo >=2.3.3",
+          "environment_dependencies": "MuJoCo compatible release and licensed model assets",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Example Panda is only an example identity, not a selected robot.",
+          "source_urls": [
+            "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/README.md",
+            "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/panda.xml"
+          ]
+        },
+        {
+          "name": "Open3D",
+          "role": "cloud alignment and mesh/collision preparation",
+          "software_license": "MIT code; cloud ownership remains separate",
+          "api_or_entrypoint": "Global registration then ICP refine; inspect `RegistrationResult.transformation`",
+          "environment_dependencies": "Open3D + NumPy",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Registration cannot infer robot mounting intent.",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
+          ]
+        },
+        {
+          "name": "MuJoCo",
+          "role": "compose scene and compile MJCF",
+          "software_license": "Apache-2.0 software; assets per-item",
+          "api_or_entrypoint": "`MjSpec.from_file(...)` / XML model composition; `MjModel.from_xml_path(...)`",
+          "environment_dependencies": "MuJoCo matching selected MJCF",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Check include/asset paths and namespaces for pinned version.",
+          "source_urls": [
+            "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Pin Menagerie model revision and read its per-model terms/version.",
+          "tool": "Menagerie",
+          "command_or_api": "Use Panda `panda.xml` as a documented sample only, or select another permitted model explicitly.",
+          "preserves": "Upstream XML and source license",
+          "changes_or_infers": "Robot MJCF base.",
+          "check": "Verify XML, mesh hashes and revision.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Register environment scan and robot mount to measured world controls.",
+          "tool": "Open3D + survey data",
+          "command_or_api": "Global registration then ICP with explicit initial transform; record matrix.",
+          "preserves": "Point cloud and controls",
+          "changes_or_infers": "Transform and aligned cloud.",
+          "check": "Held-out controls and residual map.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Create collision environment geometry separately from visual surface.",
+          "tool": "Open3D / CoACD",
+          "command_or_api": "Downsample/simplify; decompose concave environment objects only if collision needs it.",
+          "preserves": "Registered cloud",
+          "changes_or_infers": "Collision meshes approximate; keep visual cloud/mesh.",
+          "check": "Bounds, scale, watertightness and contact test cases.",
+          "code_status": "assisted"
+        },
+        {
+          "action": "Compose MJCF and compile.",
+          "tool": "MuJoCo",
+          "command_or_api": "Add robot at measured base pose, environment geoms and explicit assets; `MjModel.from_xml_path`.",
+          "preserves": "Pinned robot and transforms",
+          "changes_or_infers": "MJCF scene.",
+          "check": "Compile, asset resolution, base/joint frame checks.",
+          "code_status": "assisted"
+        }
+      ],
+      "code": [
+        {
+          "status": "existing_tool_entrypoint",
+          "path": null,
+          "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
+          "related_entrypoints": [],
+          "source_urls": [
+            "https://github.com/google-deepmind/mujoco_menagerie",
+            "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/README.md",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+          ],
+          "entrypoints": [
+            "Pinned `franka_emika_panda/panda.xml`; README requires MuJoCo >=2.3.3",
+            "Global registration then ICP refine; inspect `RegistrationResult.transformation`",
+            "`MjSpec.from_file(...)` / XML model composition; `MjModel.from_xml_path(...)`"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "type": "mjcf",
+          "format": "MJCF XML + asset directory",
+          "retained": "Robot body tree and environment collision/visual geometry.",
+          "loss_or_inference": "Mesh environment loses IFC semantics and scan uncertainty unless retained in manifest."
+        },
+        {
+          "type": "visual-scene",
+          "format": "MJCF viewer/render scene",
+          "retained": "Camera and rendered surfaces.",
+          "loss_or_inference": "Appearance does not prove collision or physical accuracy."
+        },
+        {
+          "type": "collision-set",
+          "format": "OBJ/STL/primitive collision geoms",
+          "retained": "Explicit collision objects in registered frame.",
+          "loss_or_inference": "Simplification may remove narrow openings and surface detail."
+        }
+      ],
+      "checks": [
+        "Pinned robot model and license record.",
+        "Frame transform composition and held-out survey residuals.",
+        "MJCF compiles; all mesh assets resolve.",
+        "Robot mount pose matches survey datums; collision geometry visually overlays source cloud.",
+        "Check contact geometry separately from visual geometry."
+      ],
+      "failure_recovery": [
+        "Model/version mismatch: pin compatible MuJoCo and Menagerie revision.",
+        "Registration ambiguous: add measured controls or keep cloud in separate frame.",
+        "Collision mesh too dense: simplify/decompose as versioned derivative and compare against source.",
+        "Asset terms disallow packaging: reference permitted source or replace with rights-cleared asset."
+      ],
+      "effort": {
+        "human": 5,
+        "setup": 4,
+        "compute": 3,
+        "human_reason": "Combines robotics frames, registration, collision and rights decisions.",
+        "setup_reason": "Multiple data and model tools but existing robot XML reduces authoring.",
+        "compute_reason": "Moderate scene clouds and collision meshes; very dense scans increase memory."
+      },
+      "resources": {
+        "cpu": "CPU registration and MuJoCo compile.",
+        "gpu": "No GPU required; GPU optional for scan/model route.",
+        "ram": "Cloud points, mesh triangles and robot assets.",
+        "storage": "Robot assets, scan originals, registered cloud, collisions and MJCF.",
+        "scaling_drivers": [
+          "point count",
+          "mesh complexity",
+          "robot asset count"
+        ],
+        "variants": [
+          "Existing registered cloud reduces setup.",
+          "Panda sample is model example only."
+        ]
+      },
+      "source_urls": [
+        "https://github.com/google-deepmind/mujoco_menagerie",
+        "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/README.md",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    },
+    {
+      "id": "DOM-R05",
+      "name": "Sketch overlay on existing model to controlled revision",
+      "output_scope": "New native CAD revision with sketch-derived constraints and updated exports linked to source revision.",
+      "comparison_conditions": "Existing editable native model, sketch/image with at least two measured references, explicit requested edit and source datum mapping.",
+      "inputs": [
+        {
+          "type": "native-model-document",
+          "formats": [
+            "OCS native document",
+            "FCStd",
+            "Blender .blend"
+          ],
+          "minimum_quality": "Opens in owning application; source hash/revision and units known.",
+          "required_evidence": [
+            "file hash",
+            "application/version",
+            "unit/frame"
+          ],
+          "handling": "Never overwrite source."
+        },
+        {
+          "type": "raster-sketch",
+          "formats": [
+            "PNG/JPEG/PDF"
+          ],
+          "minimum_quality": "Unoccluded lines and at least two independent dimensions/anchors in model frame.",
+          "required_evidence": [
+            "anchor IDs",
+            "dimensions",
+            "source/status"
+          ],
+          "handling": "Overlay is evidence for constraints, not geometry by itself."
+        },
+        {
+          "type": "model-brief",
+          "formats": [
+            "text/JSON"
+          ],
+          "minimum_quality": "Exact changed features and retained constraints.",
+          "required_evidence": [
+            "feature IDs",
+            "scope",
+            "tolerances/status"
+          ],
+          "handling": "Ambiguities remain explicit."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "overlay anchors",
+          "fields": [
+            "pixel coordinate",
+            "model coordinate",
+            "uncertainty"
+          ],
+          "frame": "sketch pixels \u2192 model plane/frame",
+          "source_status": "measured dimensions/model datums"
+        },
+        {
+          "kind": "edit constraints",
+          "fields": [
+            "dimension and feature references"
+          ],
+          "frame": "new sketch plane \u2192 model coordinates",
+          "source_status": "author instruction"
+        }
+      ],
+      "software": [
+        {
+          "name": "OCS engineering workflow",
+          "role": "native geometry revision with frames/provenance",
+          "software_license": "Local engineering skill / tool-specific terms",
+          "api_or_entrypoint": "OCS skill: explicit units, axes, boundaries, checks; project file opened in OCS",
+          "environment_dependencies": "Installed OCS environment",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Native editor/runtime remains required; helper code does not issue application commands.",
+          "source_urls": [
+            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+          ]
+        },
+        {
+          "name": "Blender Python",
+          "role": "mesh/sculpt/rendering route when source is a Blender scene",
+          "software_license": "GPL-3.0-or-later application; asset licenses separate",
+          "api_or_entrypoint": "Background Python `bpy` or UI edit; `blender --background source.blend --python edit.py`",
+          "environment_dependencies": "Blender-compatible Python and version",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Mesh edits do not create parametric feature history.",
+          "source_urls": [
+            "https://docs.blender.org/manual/en/latest/advanced/command_line/"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Duplicate source document and record revision/hash.",
+          "tool": "Native CAD application",
+          "command_or_api": "Save a new revision path; retain source and provenance manifest.",
+          "preserves": "Original model",
+          "changes_or_infers": "Revision branch.",
+          "check": "Reopen source and derivative; compare hashes.",
+          "code_status": "manual"
+        },
+        {
+          "action": "Register sketch anchors to existing datums.",
+          "tool": "OCS/FreeCAD/Blender",
+          "command_or_api": "Use measured anchors; constrain scale, rotation and plane; record residuals.",
+          "preserves": "Sketch and source model",
+          "changes_or_infers": "Transform only.",
+          "check": "Check remaining anchors and dimension residuals.",
+          "code_status": "assisted"
+        },
+        {
+          "action": "Edit native feature or mesh using explicit feature scope.",
+          "tool": "Native modeler",
+          "command_or_api": "Apply only named edits and constraints; record changed objects/features.",
+          "preserves": "Original constraints",
+          "changes_or_infers": "Native revised model.",
+          "check": "Measure changed and retained dimensions; inspect topology.",
+          "code_status": "manual"
+        },
+        {
+          "action": "Export requested neutral/display format as derivative.",
+          "tool": "Owning application",
+          "command_or_api": "Use format exporter and record settings/mapping.",
+          "preserves": "Native revised file",
+          "changes_or_infers": "STEP/IFC/glTF/OBJ derivatives; semantics vary.",
+          "check": "Round-trip reopen and compare bounds/units/IDs.",
+          "code_status": "existing_tool_entrypoint"
+        }
+      ],
+      "code": [
+        {
+          "status": "existing_tool_entrypoint",
+          "path": null,
+          "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
+          "related_entrypoints": [],
+          "source_urls": [
+            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+            "https://docs.blender.org/manual/en/latest/advanced/command_line/"
+          ],
+          "entrypoints": [
+            "OCS skill: explicit units, axes, boundaries, checks; project file opened in OCS",
+            "Background Python `bpy` or UI edit; `blender --background source.blend --python edit.py`"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "type": "native-model-document",
+          "format": "Native application file",
+          "retained": "Editable document and retained supported feature history.",
+          "loss_or_inference": "Mesh routes may lack parametric history."
+        },
+        {
+          "type": "cad-solid",
+          "format": "STEP/IFC/mesh export as requested",
+          "retained": "Exchange geometry.",
+          "loss_or_inference": "Neutral conversion may lose constraints, names, materials and history."
+        }
+      ],
+      "checks": [
+        "Source revision preserved and edit IDs recorded.",
+        "Anchor transform residual below authored tolerance.",
+        "Changed and retained dimensions checked.",
+        "Native document reopens; export independently reopens."
+      ],
+      "failure_recovery": [
+        "Anchor residual excessive: remeasure/identify sketch plane; do not distort model.",
+        "Topology breaks: revert derivative, use datum-based feature edit or adjust upstream feature.",
+        "Only image exists: treat reconstruction as proposal and require dimensions before manufacturing geometry."
+      ],
+      "effort": {
+        "human": 2,
+        "setup": 2,
+        "compute": 1,
+        "human_reason": "With measured anchors and specified edit, little interpretation is needed.",
+        "setup_reason": "One existing application or script.",
+        "compute_reason": "Transform and a few geometry edits are light CPU work."
+      },
+      "resources": {
+        "cpu": "CPU native CAD and file parsing.",
+        "gpu": "No GPU for constrained sketch; optional Blender rendering.",
+        "ram": "Model feature/mesh count and image size.",
+        "storage": "Native revisions and exported derivatives.",
+        "scaling_drivers": [
+          "image resolution",
+          "feature count",
+          "mesh density"
+        ],
+        "variants": [
+          "Clean sketch and native source easiest.",
+          "Raster-only outline requires tracing and more effort."
+        ]
+      },
+      "source_urls": [
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "https://docs.blender.org/manual/en/latest/advanced/command_line/"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    },
+    {
+      "id": "DOM-R06",
+      "name": "Photo set to measured reusable component",
+      "output_scope": "Metric mesh plus a reusable component record with source images, frame, dimensions, rights and uncertainty; editable CAD remodel remains a separate stage.",
+      "comparison_conditions": "Overlapping calibrated photos of a static object, scales or measured controls, visible interfaces, neutral background; reconstruction route has no guaranteed feature tree.",
+      "inputs": [
+        {
+          "type": "photo-set",
+          "formats": [
+            "JPG/PNG/HEIC with metadata"
+          ],
+          "minimum_quality": "Many overlapping viewpoints, sharp detail and known lens calibration where possible.",
+          "required_evidence": [
+            "image IDs",
+            "camera model",
+            "rights",
+            "capture sequence"
+          ],
+          "handling": "Preserve originals."
+        },
+        {
+          "type": "measurement-set",
+          "formats": [
+            "CSV/JSON/drawing"
+          ],
+          "minimum_quality": "Scale bars and interface measurements in named frame.",
+          "required_evidence": [
+            "point IDs",
+            "units",
+            "method",
+            "uncertainty"
+          ],
+          "handling": "Metric scale tied to measured controls."
+        },
+        {
+          "type": "source-library",
+          "formats": [
+            "per-file record"
+          ],
+          "minimum_quality": "Photo and resulting model storage/distribution rights explicitly recorded.",
+          "required_evidence": [
+            "license/terms",
+            "source attribution"
+          ],
+          "handling": "Separate code/model rights."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "camera solution",
+          "fields": [
+            "camera intrinsics/extrinsics",
+            "reprojection error"
+          ],
+          "frame": "camera \u2192 object frame",
+          "source_status": "COLMAP output"
+        },
+        {
+          "kind": "scale controls",
+          "fields": [
+            "control lengths/points"
+          ],
+          "frame": "object local \u2192 metric frame",
+          "source_status": "measured scale/targets"
+        },
+        {
+          "kind": "component interfaces",
+          "fields": [
+            "mount faces/axes/holes"
+          ],
+          "frame": "mesh frame \u2192 component frame",
+          "source_status": "measurement set"
+        }
+      ],
+      "software": [
+        {
+          "name": "COLMAP",
+          "role": "multi-view camera solve and dense cloud",
+          "software_license": "BSD-3-Clause software; input photo/model rights separate",
+          "api_or_entrypoint": "`colmap feature_extractor`, `exhaustive_matcher`, `mapper`, `image_undistorter`, `patch_match_stereo`, `stereo_fusion`",
+          "environment_dependencies": "COLMAP; dense GPU recommended",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Reconstruction is surface evidence; scale requires measured controls.",
+          "source_urls": [
+            "https://colmap.github.io/cli.html",
+            "https://colmap.github.io/faq.html"
+          ]
+        },
+        {
+          "name": "Open3D",
+          "role": "cloud cleanup and surface reconstruction",
+          "software_license": "MIT code; input rights separate",
+          "api_or_entrypoint": "point cloud normals; Poisson or ball pivoting `TriangleMesh` APIs",
+          "environment_dependencies": "Open3D Python",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Poisson is inferred surface and requires oriented normals.",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html"
+          ]
+        },
+        {
+          "name": "TripoSR optional",
+          "role": "single-image appearance mesh route",
+          "software_license": "MIT code and model card; image/output rights independent",
+          "api_or_entrypoint": "`python run.py <image> --output-dir <dir>` per pinned README",
+          "environment_dependencies": "PyTorch; source says default ~6 GB VRAM and CPU fallback",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Single image does not establish dimensions, back faces, interfaces or mechanical fit.",
+          "source_urls": [
+            "https://github.com/VAST-AI-Research/TripoSR",
+            "https://huggingface.co/stabilityai/TripoSR"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Capture/curate overlapping viewpoints and scale controls.",
+          "tool": "Camera/photo acquisition",
+          "command_or_api": "Record camera/lens, frame order, control dimensions and object orientation.",
+          "preserves": "Original object and photos",
+          "changes_or_infers": "Evidence dataset.",
+          "check": "Coverage, blur, repeated texture and control visibility.",
+          "code_status": "manual"
+        },
+        {
+          "action": "Solve camera poses and dense surface.",
+          "tool": "COLMAP CLI",
+          "command_or_api": "Run `feature_extractor`, `exhaustive_matcher`, `mapper`; then `image_undistorter`, `patch_match_stereo`, `stereo_fusion`.",
+          "preserves": "Source photos",
+          "changes_or_infers": "Sparse cameras and fused cloud.",
+          "check": "Reprojection error, connected camera graph and control residuals.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Scale and inspect cloud; reconstruct mesh if needed.",
+          "tool": "Open3D",
+          "command_or_api": "Apply control scale/registration; estimate normals and create a documented mesh.",
+          "preserves": "Cloud + controls",
+          "changes_or_infers": "Metric mesh; holes/invisible underside remain inferred.",
+          "check": "Independent dimensions and surface coverage.",
+          "code_status": "assisted"
+        },
+        {
+          "action": "Author native reusable record or remodel measured interfaces.",
+          "tool": "FreeCAD/OCS",
+          "command_or_api": "Build a component record and optional clean parametric CAD around measured datums.",
+          "preserves": "Mesh, controls and interface measurements",
+          "changes_or_infers": "Native remodel is new authored geometry.",
+          "check": "Interface dimensions and fit checks against measurements.",
+          "code_status": "manual"
+        }
+      ],
+      "code": [
+        {
+          "status": "existing_tool_entrypoint",
+          "path": null,
+          "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
+          "related_entrypoints": [],
+          "source_urls": [
+            "https://colmap.github.io/cli.html",
+            "https://colmap.github.io/faq.html",
+            "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+            "https://github.com/VAST-AI-Research/TripoSR",
+            "https://huggingface.co/stabilityai/TripoSR"
+          ],
+          "entrypoints": [
+            "`colmap feature_extractor`, `exhaustive_matcher`, `mapper`, `image_undistorter`, `patch_match_stereo`, `stereo_fusion`",
+            "point cloud normals; Poisson or ball pivoting `TriangleMesh` APIs",
+            "`python run.py <image> --output-dir <dir>` per pinned README"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "type": "mesh",
+          "format": "PLY/OBJ/GLB",
+          "retained": "Observed surface triangles with scale/transform manifest.",
+          "loss_or_inference": "Hidden surfaces, exact analytic features, tolerances and semantics are absent/inferred."
+        },
+        {
+          "type": "native-model-document",
+          "format": "FCStd/OCS source if remodeled",
+          "retained": "Editable parametric or native representation as authored.",
+          "loss_or_inference": "Remodel is a derivative, not the photo reconstruction itself."
+        },
+        {
+          "type": "source-library",
+          "format": "Manifest + asset files",
+          "retained": "Per-file source, license, hash, revision, frame and units.",
+          "loss_or_inference": "Rights depend on source and derivative terms."
+        }
+      ],
+      "checks": [
+        "Camera graph connected; controls constrain scale; held-out dimensions recorded.",
+        "Surface coverage and mesh holes inspected.",
+        "Metric dimensions match independent measurements within stated uncertainty.",
+        "Source/hash/license and transforms attach to each asset.",
+        "Native remodel opens and features reference stable datums."
+      ],
+      "failure_recovery": [
+        "Low overlap/disconnected solve: capture bridge images or split views.",
+        "Specular/textureless surface: add coded targets/measurement-led CAD.",
+        "No scale control: mark mesh arbitrary scale and do not call it measured.",
+        "Image model looks plausible but interface unknown: retain only visual role."
+      ],
+      "effort": {
+        "human": 4,
+        "setup": 4,
+        "compute": 4,
+        "human_reason": "Capture coverage, scale and mechanical interpretation need review.",
+        "setup_reason": "Calibration, SfM and geometry tools plus asset registry.",
+        "compute_reason": "Dense reconstruction uses substantial CPU/RAM and GPU acceleration when enabled."
+      },
+      "resources": {
+        "cpu": "CPU feature and mesh stages; multithreaded.",
+        "gpu": "COLMAP dense route GPU-accelerated; TripoSR source quotes ~6 GB VRAM default.",
+        "ram": "Image count/resolution and dense depth maps dominate.",
+        "storage": "Original photos, sparse model, depth maps, point cloud, mesh and manifests.",
+        "scaling_drivers": [
+          "image count/resolution",
+          "surface texture",
+          "camera graph",
+          "mesh triangles"
+        ],
+        "variants": [
+          "TripoSR is faster-to-author visual route but not metric component CAD.",
+          "Measured multi-view route supports dimensions with controls."
+        ]
+      },
+      "source_urls": [
+        "https://colmap.github.io/cli.html",
+        "https://colmap.github.io/faq.html",
+        "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+        "https://github.com/VAST-AI-Research/TripoSR",
+        "https://huggingface.co/stabilityai/TripoSR"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    },
+    {
+      "id": "DOM-R07",
+      "name": "BIM library component to IFC, Blender display or static MuJoCo obstacle",
+      "output_scope": "Rights-cleared BIM family/IFC asset placed in semantic IFC, with optional Blender display mesh or static collision derivative.",
+      "comparison_conditions": "Asset has explicit license, units, object classification and local origin; intended use is building element or static obstacle, not articulated robot hardware.",
+      "inputs": [
+        {
+          "type": "source-library",
+          "formats": [
+            "IFC",
+            "FCStd",
+            "library family/object"
+          ],
+          "minimum_quality": "Asset-level terms allow intended reuse and storage.",
+          "required_evidence": [
+            "URL",
+            "version/hash",
+            "license",
+            "attribution"
+          ],
+          "handling": "Do not infer license from library application."
+        },
+        {
+          "type": "ifc",
+          "formats": [
+            "IFC2x3/IFC4"
+          ],
+          "minimum_quality": "Valid source entity with units and object placement.",
+          "required_evidence": [
+            "schema",
+            "GlobalId",
+            "units",
+            "class"
+          ],
+          "handling": "Preserve source."
+        },
+        {
+          "type": "model-brief",
+          "formats": [
+            "JSON/text"
+          ],
+          "minimum_quality": "Named storey and placement/orientation.",
+          "required_evidence": [
+            "target storey",
+            "datum",
+            "rotation"
+          ],
+          "handling": "Explicit target frame."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "component origin",
+          "fields": [
+            "local origin/axes",
+            "dimensions"
+          ],
+          "frame": "asset-local \u2192 building frame",
+          "source_status": "library source"
+        },
+        {
+          "kind": "storey datum",
+          "fields": [
+            "elevation and placement"
+          ],
+          "frame": "storey \u2192 project frame",
+          "source_status": "IFC source"
+        },
+        {
+          "kind": "world origin",
+          "fields": [
+            "MuJoCo obstacle transform"
+          ],
+          "frame": "building frame \u2192 simulation world",
+          "source_status": "authored mapping"
+        }
+      ],
+      "software": [
+        {
+          "name": "FreeCAD BIM Library",
+          "role": "catalogue of BIM objects",
+          "software_license": "Library asset terms vary; check each file",
+          "api_or_entrypoint": "BIM library insertion and IFC export",
+          "environment_dependencies": "FreeCAD/BIM workbench",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Community library download is not a blanket open license.",
+          "source_urls": [
+            "https://reqrefusion.github.io/FreeCAD-Documentation-html/wiki/BIM_Library.html",
+            "https://github.com/FreeCAD/FreeCAD-library"
+          ]
+        },
+        {
+          "name": "IfcOpenShell/Bonsai",
+          "role": "place, inspect and export semantic IFC",
+          "software_license": "IfcOpenShell LGPL-3.0-or-later; Bonsai GPL-3.0-or-later; asset terms separate",
+          "api_or_entrypoint": "IFC API or Bonsai placement/classification UI",
+          "environment_dependencies": "IFC version and matching Bonsai",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Mesh-only import may discard semantic object class.",
+          "source_urls": [
+            "https://github.com/IfcOpenShell/IfcOpenShell"
+          ]
+        },
+        {
+          "name": "Blender",
+          "role": "display IFC-derived geometry",
+          "software_license": "GPL-3.0-or-later app; assets separate",
+          "api_or_entrypoint": "Bonsai or Blender import; bpy scene",
+          "environment_dependencies": "Compatible add-on and Blender",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Display scene is not semantic IFC authority.",
+          "source_urls": [
+            "https://docs.blender.org/manual/en/latest/advanced/command_line/"
+          ]
+        },
+        {
+          "name": "MuJoCo",
+          "role": "static obstacle geometry only",
+          "software_license": "Apache-2.0 engine; asset license separate",
+          "api_or_entrypoint": "MJCF `<geom>` or mesh asset",
+          "environment_dependencies": "MuJoCo",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Static obstacle mapping discards IFC relationships/property sets.",
+          "source_urls": [
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Inspect asset file and per-file terms.",
+          "tool": "Library intake",
+          "command_or_api": "Record file hash, URL/revision, license, attribution and units.",
+          "preserves": "Asset original",
+          "changes_or_infers": "Rights-bearing manifest.",
+          "check": "Check license beside actual file.",
+          "code_status": "manual"
+        },
+        {
+          "action": "Import and place component on named storey.",
+          "tool": "FreeCAD/Bonsai/IfcOpenShell",
+          "command_or_api": "Set object class and storey containment; use explicit transform.",
+          "preserves": "IFC graph and storey datum",
+          "changes_or_infers": "Semantic IFC instance.",
+          "check": "GlobalId uniqueness, containment and dimensions.",
+          "code_status": "assisted"
+        },
+        {
+          "action": "Make Blender visualization derivative.",
+          "tool": "Bonsai/Blender",
+          "command_or_api": "Import IFC or derive meshes retaining GlobalId mapping.",
+          "preserves": "IFC source",
+          "changes_or_infers": "Display mesh/scene.",
+          "check": "Compare placements and element IDs.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Optional static collision object.",
+          "tool": "MuJoCo",
+          "command_or_api": "Export simplified collision mesh and set fixed/world geom transform.",
+          "preserves": "IFC geometry",
+          "changes_or_infers": "MJCF static geom.",
+          "check": "Frame, units and collision bounds.",
+          "code_status": "assisted"
+        }
+      ],
+      "code": [
+        {
+          "status": "existing_tool_entrypoint",
+          "path": null,
+          "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
+          "related_entrypoints": [],
+          "source_urls": [
+            "https://reqrefusion.github.io/FreeCAD-Documentation-html/wiki/BIM_Library.html",
+            "https://github.com/FreeCAD/FreeCAD-library",
+            "https://github.com/IfcOpenShell/IfcOpenShell",
+            "https://docs.blender.org/manual/en/latest/advanced/command_line/",
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+          ],
+          "entrypoints": [
+            "BIM library insertion and IFC export",
+            "IFC API or Bonsai placement/classification UI",
+            "Bonsai or Blender import; bpy scene",
+            "MJCF `<geom>` or mesh asset"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "type": "ifc",
+          "format": "IFC instance",
+          "retained": "Semantic class, storey relationship and properties when preserved.",
+          "loss_or_inference": "Neutral mesh export drops semantic graph."
+        },
+        {
+          "type": "visual-scene",
+          "format": "Blend/GLB",
+          "retained": "Display geometry/material and transforms.",
+          "loss_or_inference": "BIM properties may be lost."
+        },
+        {
+          "type": "collision-set",
+          "format": "MJCF mesh/primitive",
+          "retained": "Static collision proxy.",
+          "loss_or_inference": "IFC semantics and detail lost."
+        }
+      ],
+      "checks": [
+        "Per-asset source and rights record.",
+        "IFC class, GlobalId, storey and unit validation.",
+        "Blender transforms agree with IFC.",
+        "MJCF static transform and bounds agree with IFC."
+      ],
+      "failure_recovery": [
+        "No reuse license: restrict to local reference or use a permissively licensed alternative.",
+        "Bad origin/units: inspect source coordinates and re-place using measured dimensions.",
+        "IFC class lost: return to semantic source, not mesh.",
+        "Collision proxy inaccurate: produce a separately reviewed simplified mesh."
+      ],
+      "effort": {
+        "human": 2,
+        "setup": 2,
+        "compute": 1,
+        "human_reason": "Identified library item with explicit placement is low interpretation.",
+        "setup_reason": "One IFC/BIM tool; display or simulator adapter optional.",
+        "compute_reason": "Single asset transformation is light."
+      },
+      "resources": {
+        "cpu": "CPU import/placement.",
+        "gpu": "No GPU.",
+        "ram": "Asset mesh size and IFC graph size.",
+        "storage": "Original library asset, IFC and display/collision derivatives.",
+        "scaling_drivers": [
+          "mesh triangles",
+          "IFC property graph",
+          "asset count"
+        ],
+        "variants": [
+          "Already semantic IFC easiest.",
+          "Generic mesh requires authored classification."
+        ]
+      },
+      "source_urls": [
+        "https://reqrefusion.github.io/FreeCAD-Documentation-html/wiki/BIM_Library.html",
+        "https://github.com/FreeCAD/FreeCAD-library",
+        "https://github.com/IfcOpenShell/IfcOpenShell",
+        "https://docs.blender.org/manual/en/latest/advanced/command_line/",
+        "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    },
+    {
+      "id": "DOM-R08",
+      "name": "Scanned environment to collision geometry in existing MJCF",
+      "output_scope": "New collision geometry package and MJCF scene revision overlaid on the registered scan; source MJCF remains untouched.",
+      "comparison_conditions": "Existing MJCF scene and scale-registered scan in same named world frame; static environment objects, with measured transform and boundaries.",
+      "inputs": [
+        {
+          "type": "mjcf",
+          "formats": [
+            "MJCF XML + asset package"
+          ],
+          "minimum_quality": "Compiles and current asset paths resolve.",
+          "required_evidence": [
+            "MuJoCo version",
+            "model hash",
+            "world frame"
+          ],
+          "handling": "Preserve base XML."
+        },
+        {
+          "type": "point-cloud",
+          "formats": [
+            "PLY/PCD/depth fusion"
+          ],
+          "minimum_quality": "Metric registered cloud; noise/outlier and sensor origin retained.",
+          "required_evidence": [
+            "units",
+            "transform",
+            "scan coverage",
+            "source sensors"
+          ],
+          "handling": "Keep raw and filtered clouds."
+        },
+        {
+          "type": "measurement-set",
+          "formats": [
+            "survey control JSON/CSV"
+          ],
+          "minimum_quality": "Independent frame checks and extents.",
+          "required_evidence": [
+            "control IDs",
+            "unit",
+            "uncertainty"
+          ],
+          "handling": "Do not use scan alignment score alone."
+        }
+      ],
+      "reference_points": [
+        {
+          "kind": "scan transform",
+          "fields": [
+            "4x4 registration transform"
+          ],
+          "frame": "scan sensor \u2192 MJCF world",
+          "source_status": "survey control/registration"
+        },
+        {
+          "kind": "collision proxy frame",
+          "fields": [
+            "mesh origin/scale"
+          ],
+          "frame": "mesh-local \u2192 world",
+          "source_status": "export manifest"
+        },
+        {
+          "kind": "sensor pose",
+          "fields": [
+            "camera/lidar extrinsics"
+          ],
+          "frame": "sensor \u2192 scan frame",
+          "source_status": "calibration record"
+        }
+      ],
+      "software": [
+        {
+          "name": "Open3D",
+          "role": "registration, filtering and mesh conversion",
+          "software_license": "MIT software; scan rights separate",
+          "api_or_entrypoint": "Global registration; ICP refinement; point cloud and TriangleMesh API",
+          "environment_dependencies": "Open3D Python + NumPy",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "ICP needs initial transform; meshing infers unobserved surfaces.",
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+            "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html"
+          ]
+        },
+        {
+          "name": "CoACD",
+          "role": "convex pieces for concave obstacle collision",
+          "software_license": "MIT code; scan-derived geometry terms separate",
+          "api_or_entrypoint": "Pinned CLI per repo `--help`; record all settings",
+          "environment_dependencies": "CoACD executable/library",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Approximation changes geometry; validate contact clearances.",
+          "source_urls": [
+            "https://github.com/SarahWeiii/CoACD",
+            "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE"
+          ]
+        },
+        {
+          "name": "MuJoCo",
+          "role": "add collision-only obstacle geoms",
+          "software_license": "Apache-2.0 engine; assets separate",
+          "api_or_entrypoint": "MJCF `<asset><mesh>` and `<worldbody><geom>`; compile model",
+          "environment_dependencies": "MuJoCo Python/XML",
+          "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
+          "limitations_and_asset_terms": "Visual and collision geoms should remain distinct.",
+          "source_urls": [
+            "https://github.com/google-deepmind/mujoco",
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "action": "Load existing model and scan; verify shared units/frame.",
+          "tool": "MuJoCo/Open3D",
+          "command_or_api": "Read MJCF via `MjModel.from_xml_path`; load cloud and manifest.",
+          "preserves": "Existing XML and raw cloud",
+          "changes_or_infers": "Review scene only.",
+          "check": "Check bounds and coordinate convention.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Register or validate cloud in world frame.",
+          "tool": "Open3D + controls",
+          "command_or_api": "Use survey transform or global-registration initialization; refine with ICP.",
+          "preserves": "Cloud and controls",
+          "changes_or_infers": "Registration matrix.",
+          "check": "Held-out residuals and overlap.",
+          "code_status": "existing_tool_entrypoint"
+        },
+        {
+          "action": "Prepare distinct visual and collision representations.",
+          "tool": "Open3D/CoACD",
+          "command_or_api": "Filter noise; choose primitives or convex decomposition; record settings.",
+          "preserves": "Registered cloud",
+          "changes_or_infers": "Collision proxy.",
+          "check": "Bounds, holes, contact envelopes and source overlay.",
+          "code_status": "assisted"
+        },
+        {
+          "action": "Add collision asset and visual overlay in new MJCF.",
+          "tool": "MuJoCo",
+          "command_or_api": "Add external mesh geom with explicit world transform; keep visual scan separately.",
+          "preserves": "Base MJCF, asset package",
+          "changes_or_infers": "New XML and assets.",
+          "check": "Compile and inspect contact locations and frame IDs.",
+          "code_status": "assisted"
+        }
+      ],
+      "code": [
+        {
+          "status": "existing_tool_entrypoint",
+          "path": null,
+          "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
+          "related_entrypoints": [],
+          "source_urls": [
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+            "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+            "https://github.com/SarahWeiii/CoACD",
+            "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+            "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+          ],
+          "entrypoints": [
+            "Global registration; ICP refinement; point cloud and TriangleMesh API",
+            "Pinned CLI per repo `--help`; record all settings",
+            "MJCF `<asset><mesh>` and `<worldbody><geom>`; compile model"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "type": "mjcf",
+          "format": "MJCF revision",
+          "retained": "Original articulated robot plus new static obstacle geometry.",
+          "loss_or_inference": "No scan semantics; collision simplification loses surface detail."
+        },
+        {
+          "type": "collision-set",
+          "format": "OBJ/STL convex pieces or primitives",
+          "retained": "Approximation settings, local frame and source scan hash.",
+          "loss_or_inference": "Unobserved/occluded surfaces are inferred."
+        },
+        {
+          "type": "visual-scene",
+          "format": "PLY/OBJ overlay or viewer scene",
+          "retained": "Observed scan visualization.",
+          "loss_or_inference": "Visual surface is not collision-authoritative."
+        }
+      ],
+      "checks": [
+        "Existing MJCF compiles before change.",
+        "Scan and model use same unit/frame, held-out control residuals pass.",
+        "Collision mesh paths resolve and compilation succeeds.",
+        "Visual overlay and collision proxies align with scan and clearances.",
+        "Run authored static/dynamic contact cases as software checks only."
+      ],
+      "failure_recovery": [
+        "Poor alignment: add independent controls or re-register; preserve source scan.",
+        "Noisy cloud: filter a derivative and compare against raw before collision generation.",
+        "Collision penetrates robot or misses obstacle: adjust proxy from measured boundaries and rerun contact case.",
+        "Compile failure: revert new XML derivative, inspect asset path/mesh scale."
+      ],
+      "effort": {
+        "human": 3,
+        "setup": 3,
+        "compute": 2,
+        "human_reason": "Registered scan and existing robot reduce authoring; collision review remains needed.",
+        "setup_reason": "Point cloud and simulator tools plus asset packaging.",
+        "compute_reason": "Moderate geometry CPU; large scans/collision decomposition scale with triangles."
+      },
+      "resources": {
+        "cpu": "CPU registration and model compilation.",
+        "gpu": "No GPU necessary for registration/decomposition; optional scan acceleration.",
+        "ram": "Point count, mesh triangles and collision hull count.",
+        "storage": "Raw scan, filtered cloud, visual mesh, collision parts and MJCF assets.",
+        "scaling_drivers": [
+          "scan point count",
+          "mesh triangles",
+          "decomposition hulls",
+          "model contacts"
+        ],
+        "variants": [
+          "Clean scan and primitive obstacles reduce work.",
+          "Dense unstructured scan requires cleanup and decomposition."
+        ]
+      },
+      "source_urls": [
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+        "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+        "https://github.com/SarahWeiii/CoACD",
+        "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+        "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
+    }
+  ]
+}

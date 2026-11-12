@@ -52,6 +52,62 @@
       ]
     },
     {
+      "id": "SRC-00ae3f8da761",
+      "url": "https://github.com/colmap/colmap/blob/main/LICENSE",
+      "local_source_path": null,
+      "title": "COLMAP LICENSE",
+      "summary": "Primary repository licence text for COLMAP.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-R06"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r06.md"
+      ]
+    },
+    {
+      "id": "SRC-011e8da740e4",
+      "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
+      "local_source_path": null,
+      "title": "IfcOpenShell feature.add_feature API",
+      "summary": "Official example creates IfcOpeningElement geometry and relates it as a void feature of a wall.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
       "id": "SRC-027053bdee43",
       "url": "https://colmap.github.io/pycolmap/index.html",
       "local_source_path": null,
@@ -102,7 +158,8 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/workflows/details/cad-r06.md"
       ]
     },
     {
@@ -155,6 +212,27 @@
           "content_type": "text/markdown"
         },
         {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part",
+            "Raster sketch and measured scale to constrained profile and solid"
+          ],
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R05: Sketch overlay on existing model to controlled revision"
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
+        },
+        {
           "evidence_status": "local_source_inspected",
           "access_date": "2026-11-12",
           "supporting_claims": [
@@ -175,6 +253,8 @@
         "research/sources/local-evidence.json",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json"
       ]
     },
@@ -196,11 +276,23 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r07.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -212,6 +304,7 @@
       "summary": "Known target object coordinates and corresponding image detections support intrinsic/distortion calibration; tutorial recommends at least ten pattern views. Calibration does not set the scale of an unrelated monocular reconstruction.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -241,15 +334,19 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r03.md"
       ]
     },
     {
       "id": "SRC-056984789982",
       "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
       "local_source_path": null,
-      "title": "MuJoCo overview and mesh assets",
-      "summary": "Documents system units, body/inertial frames, mesh file support, geom collision convexification and model structures.",
+      "title": "MuJoCo overview",
+      "summary": "Primary descriptions of units, inertial/body frames, mesh inputs, convex collision geometry and model representations.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -273,11 +370,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -295,6 +414,29 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "skills/README.md"
+      ]
+    },
+    {
+      "id": "SRC-069525d9d265",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
+      "title": "calibrate_camera.py",
+      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/calibrate_camera.py",
+          "sha256": "f5937a811a3a36d98b6dc4d60fcd03e3d5a6f4cd7c9fa1d1648abc7f6808f61d",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -456,7 +598,16 @@
       ],
       "referring_documents": [
         "research/cad-and-skills.md",
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/cad-r06.md",
+        "research/workflows/details/cad-r07.md",
+        "research/workflows/details/cad-r08.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md"
       ]
     },
     {
@@ -596,7 +747,12 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r06.md"
       ]
     },
     {
@@ -810,6 +966,7 @@
       "summary": "Point-cloud API includes plane segmentation, clustering, normal estimation and returned inlier indices. Fits are sampled geometry evidence.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -841,7 +998,16 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r04.md",
+        "research/workflows/details/rec-r06.md",
+        "research/workflows/details/rec-r07.md",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -868,7 +1034,15 @@
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r05.md",
+        "research/workflows/details/rec-r06.md",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
@@ -907,7 +1081,8 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -966,7 +1141,10 @@
       ],
       "referring_documents": [
         "research/cad-and-skills.md",
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -996,10 +1174,49 @@
           ],
           "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R05: Sketch overlay on existing model to controlled revision"
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-251464b38bc3",
+      "url": "https://cadquery.readthedocs.io/en/stable/quickstart.html",
+      "local_source_path": null,
+      "title": "CadQuery quickstart",
+      "summary": "Primary usage examples for parameterized Python solid construction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r01.md"
       ]
     },
     {
@@ -1070,11 +1287,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -1088,9 +1327,24 @@
       "evidence_statuses": [
         "existing_report_registered"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link",
+            "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
       "referring_documents": [
-        "research/domains-and-components.md"
+        "research/domains-and-components.md",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r08.md"
       ]
     },
     {
@@ -1156,6 +1410,7 @@
       "summary": "Computers & Graphics 2023 paper describes matching projected edge features across views to create a 3D wireframe, then detecting loops/faces and trimming/stitching a watertight model; reported F-score is study-specific.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -1174,7 +1429,10 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r05.md",
+        "research/workflows/details/cad-r09.md",
+        "research/workflows/details/mix-r08.md"
       ]
     },
     {
@@ -1182,7 +1440,7 @@
       "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
       "local_source_path": null,
       "title": "IfcOpenShell geometry creation",
-      "summary": "Documents IFC parametric and mesh geometry authoring, object placement and profile-based geometry.",
+      "summary": "Official API guidance for wall, profile and mesh representations, placements and SI-unit transforms.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -1202,10 +1460,25 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -1214,7 +1487,7 @@
       "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
       "local_source_path": null,
       "title": "MuJoCo modeling guide",
-      "summary": "Documents MJCF, local frames, body tree, URDF subset/extensions and model compiler behavior.",
+      "summary": "Primary MJCF/URDF model semantics, bodies, joints, frames, supported conversion subset and asset concepts.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -1239,11 +1512,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -1255,6 +1549,7 @@
       "summary": "Official API documents contours, curve lengths, bounding boxes and approxPolyDP; polygon simplification is bounded by a pixel-coordinate precision setting.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -1267,18 +1562,59 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster sketch and measured scale to constrained profile and solid"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r08.md"
+      ]
+    },
+    {
+      "id": "SRC-2fad977d4fe9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "title": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+          "content_type": "text/markdown"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json"
       ]
     },
     {
       "id": "SRC-31cafb73df3e",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
       "local_source_path": null,
-      "title": "Open3D RGB-D odometry",
-      "summary": "Existing report source: documents estimating frame-to-frame motion from RGB-D input; reused as an alternate pose-estimation stage for registered depth sequences.",
+      "title": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
+      "summary": "1. Name: Open3D RGB-D odometry; Role: Register RGB and depth frames and estimate sequence poses; Source urls: https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html; https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html; Dependency contract: Use the matching domain detail and code guide for the selected backend and version.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered"
@@ -1310,7 +1646,11 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r09.md"
       ]
     },
     {
@@ -1451,6 +1791,9 @@
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r05.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r09.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -1534,6 +1877,34 @@
       ]
     },
     {
+      "id": "SRC-353e59cb2694",
+      "url": "https://docs.bonsaibim.org/guides/authoring/georeferencing.html",
+      "local_source_path": null,
+      "title": "Bonsai georeferencing guide",
+      "summary": "Official guidance for site CRS, coordinate transformations and project north; coordinate parameters must come from survey/engineering sources.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
       "id": "SRC-368cf414765d",
       "url": "https://raw.githubusercontent.com/glotoff/freecad-skills/main/skills/freecad-user/references/file_formats_interop.md",
       "local_source_path": null,
@@ -1605,6 +1976,7 @@
       "summary": "Official FreeCAD docs list supported SVG paths/shapes, flattening of Z on import, use of viewBox/physical dimensions, and 90-DPI fallback when physical size is absent.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -1621,7 +1993,10 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -1632,6 +2007,7 @@
       "summary": "Official OpenCV reference describes camera calibration, pose estimation, calibration target correspondences and reprojection-error optimization. A planar homography relates points on a plane and does not recover depth.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -1647,7 +2023,11 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r08.md"
       ]
     },
     {
@@ -1686,11 +2066,34 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link",
+            "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -1854,7 +2257,7 @@
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
       "local_source_path": null,
       "title": "FreeCAD Part scripting",
-      "summary": "Official FreeCAD docs describe Python access to OpenCASCADE B-rep vertices, edges, wires, faces, solids, compounds and boolean operations.",
+      "summary": "Official documentation source for Part workbench scripting and shape operations.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -1871,11 +2274,29 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part",
+            "Raster sketch and measured scale to constrained profile and solid",
+            "Raster floor plan to semantic layout and 3D building"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/cad-and-skills.md",
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -2027,7 +2448,64 @@
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r10.md"
+      ]
+    },
+    {
+      "id": "SRC-416cb87ab6bb",
+      "url": "https://github.com/mozman/ezdxf",
+      "local_source_path": null,
+      "title": "ezdxf repository",
+      "summary": "Primary source repository and MIT licence metadata.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-R04"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r04.md"
+      ]
+    },
+    {
+      "id": "SRC-427c3c0e8259",
+      "url": "https://github.com/kmammou/v-hacd/blob/master/README.md",
+      "local_source_path": null,
+      "title": "V-HACD repository status",
+      "summary": "Upstream repository says V-HACD is archived/end-of-life and directs new development to CoACD.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md"
       ]
     },
     {
@@ -2080,18 +2558,60 @@
       ]
     },
     {
-      "id": "SRC-447a55563fd3",
-      "url": "https://github.com/google-deepmind/mujoco",
+      "id": "SRC-43a296901978",
+      "url": "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
       "local_source_path": null,
-      "title": "Repository",
-      "summary": "MuJoCo / MJCF ; MJCF is MuJoCo's native XML model format; bodies form a kinematic tree, local spatial frames are relative to parents, and inertial frames are centered at center of mass and aligned to principal inertia axes. MuJoCo leaves base units to the user and requires internal consistency; its docs recommend MKS. Geoms combine appearance/collision concepts and nonconvex meshes are internally replaced by convex hulls, so nonconvex collision shapes should be decomposed into convex pieces. Modeling, overview ; MuJoCo repository declares Apache-2.0. Model files/assets retain their own terms. Repository ; Target simulation adapter and simulation validation. Store source MJCF and package assets; treat compiled MJB as disposable/version-specific output because it cannot be decompiled to XML.",
+      "title": "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
+      "summary": "1. Name: OpenCV; Role: Planar image rectification and raster line candidates.; License: Apache-2.0 upstream.; Apis: cv2.getPerspectiveTransform(4 point pairs); cv2.warpPerspective; cv2.HoughLinesP; cv2.findContours/cv2.approxPolyDP; Dependencies: Python 3, OpenCV Python bindings (opencv-python or system package), NumPy; image file raster source.; Source urls: https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html; https://github.com/opencv/opencv/blob/4.x/LICENSE",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster sketch and measured scale to constrained profile and solid"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
       "referring_documents": [
-        "research/domains-and-components.md"
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-447a55563fd3",
+      "url": "https://github.com/google-deepmind/mujoco",
+      "local_source_path": null,
+      "title": "MuJoCo software repository and licence",
+      "summary": "Primary repository identifies MuJoCo source code under Apache-2.0 and provides Python bindings; source/docs licences are separately described.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R03: CAD robot assembly to URDF and MJCF"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/domains-and-components.md",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r08.md"
       ]
     },
     {
@@ -2120,10 +2640,27 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link",
+            "DOM-R03: CAD robot assembly to URDF and MJCF"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -2190,6 +2727,68 @@
       ]
     },
     {
+      "id": "SRC-4a09800705cd",
+      "url": "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
+      "local_source_path": null,
+      "title": "IfcOpenShell code examples",
+      "summary": "Official end-to-end API examples for creating an IFC project, assigning units, creating contexts and spatial hierarchy, creating a wall and writing IFC.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
+      "id": "SRC-4a6c22d94dd3",
+      "url": "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+      "local_source_path": null,
+      "title": "MuJoCo XML reference",
+      "summary": "Official MJCF element reference for body, joints, inertial, mesh assets, geoms and compiler behavior.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R03: CAD robot assembly to URDF and MJCF",
+            "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene",
+            "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle",
+            "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/dom-r08.md"
+      ]
+    },
+    {
       "id": "SRC-4afcbdb352d9",
       "url": null,
       "local_source_path": "/home/leo/projects/energy/eoliennes/research/cad-workflow/skills-findings.md",
@@ -2228,6 +2827,32 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-4f8a40b0e12a",
+      "url": "https://github.com/VAST-AI-Research/TripoSR/blob/main/LICENSE",
+      "local_source_path": null,
+      "title": "TripoSR source licence",
+      "summary": "Repository code is MIT licensed; check weights/dependencies and input/output rights separately.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json"
       ]
     },
     {
@@ -2270,6 +2895,13 @@
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -2395,10 +3027,81 @@
           ],
           "sha256": "abd9482074580f19c97f622ca8542f37e13ea117d89b98b01af5b323e1d102bd",
           "content_type": "application/json"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-53486b514e1a",
+      "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html",
+      "local_source_path": null,
+      "title": "IfcOpenShell unit.assign_unit API",
+      "summary": "Official signature and examples for declaring IFC project units.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
+      "id": "SRC-536bee2e3614",
+      "url": "https://docs.blender.org/manual/en/latest/advanced/command_line/",
+      "local_source_path": null,
+      "title": "Blender command-line manual",
+      "summary": "Official Blender manual covers background/CLI automation and Python script operation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC",
+            "DOM-R05: Sketch overlay on existing model to controlled revision",
+            "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r05.md",
+        "research/workflows/details/dom-r07.md"
       ]
     },
     {
@@ -2421,10 +3124,11 @@
       "url": "https://github.com/nerfstudio-project/nerfstudio",
       "local_source_path": null,
       "title": "Nerfstudio source repository",
-      "summary": "Existing report source: project repository for NeRF/Gaussian view-synthesis pipelines; registered from reconstruction.md, not reopened in this audit.",
+      "summary": "Nerfstudio includes NeRF/Gaussian methods, Apache-2.0 code, and its repository describes CUDA/NVIDIA stack prerequisites.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -2437,10 +3141,22 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/rec-r02.md"
       ]
     },
     {
@@ -2451,6 +3167,7 @@
       "summary": "Journal article describes segmenting engineering drawing views, linking coordinates with intermediate 2.5D frames, and establishing coordinate constraints between views.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -2464,10 +3181,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Research reconstruction from orthographic projections"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r05.md",
+        "research/workflows/details/cad-r09.md",
+        "research/workflows/details/mix-r08.md"
       ]
     },
     {
@@ -2483,6 +3214,60 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-554c43270f1b",
+      "url": "https://github.com/IfcOpenShell/IfcOpenShell",
+      "local_source_path": null,
+      "title": "IfcOpenShell repository and software licences",
+      "summary": "Repository identifies IfcOpenShell as LGPL-3.0-or-later and Bonsai as GPL-3.0-or-later; tool software licences do not license imported assets.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC",
+            "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r07.md"
+      ]
+    },
+    {
+      "id": "SRC-556757dfc029",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+      "title": "register_clouds.py",
+      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/reconstruction/register_clouds.py",
+          "sha256": "02b41b9977009ec75c63770d3b7fe6d010ae3f02b01911c1151fb252dbae2a06",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -2603,11 +3388,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r08.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -2661,6 +3468,36 @@
       ]
     },
     {
+      "id": "SRC-5860303c6b7e",
+      "url": "https://cadquery.readthedocs.io/en/stable/importexport.html",
+      "local_source_path": null,
+      "title": "CadQuery import/export documentation",
+      "summary": "Documents DXF import, STEP import/export and units; relevant profile and exchange operations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part",
+            "Clean DXF or SVG profile to editable extrusion"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r04.md"
+      ]
+    },
+    {
       "id": "SRC-587c68a13074",
       "url": "https://github.com/ahujasid/mcp-for-blender",
       "local_source_path": null,
@@ -2678,12 +3515,50 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-59bd5a7cb61a",
+      "url": "https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md",
+      "local_source_path": null,
+      "title": "https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md",
+      "summary": "2. Name: Tesseract; Role: Dimension text candidates with boxes/confidence; humans verify engineering notation.; License: Apache-2.0 upstream.; Apis: tesseract image outputbase -l eng tsv; TSV bbox/confidence review; Dependencies: Tesseract OCR binary plus eng traineddata; TSV output is text candidates only.; Source urls: https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md; https://github.com/tesseract-ocr/tesseract",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster sketch and measured scale to constrained profile and solid"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r02.md"
       ]
     },
     {
@@ -2801,11 +3676,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r08.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -2830,11 +3727,29 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r05.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r09.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -2973,7 +3888,8 @@
       "summary": "Existing archived source for OCS automation documentation and historical installed-capability receipts: OpenCADStudio Automation API — Specification 1.1. Source class: local primary product documentation; exact byte copy from local source repository. Original reuse terms: GPL-3.0-or-later repository license; see /home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "archived_original_referenced"
+        "archived_original_referenced",
+        "local_source_inspected"
       ],
       "observations": [
         {
@@ -3007,10 +3923,23 @@
             "license_or_reuse": "GPL-3.0-or-later repository license; see /home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
             "status": "saved local original or runtime observation; hash verified"
           }
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part",
+            "Known library parts to placed assembly",
+            "OpenSCAD source to mesh and checked CAD handoff"
+          ],
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+          "content_type": "text/markdown"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/archive-sources.json"
+        "research/sources/round-02/archive-sources.json",
+        "research/sources/round-03/cad-detail-sources.json"
       ]
     },
     {
@@ -3021,6 +3950,7 @@
       "summary": "Documents COLMAP corner-based pixel coordinates, camera conventions and model selection; OPENCV and FULL_OPENCV distortion model details.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -3036,7 +3966,8 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r01.md"
       ]
     },
     {
@@ -3054,7 +3985,7 @@
           "evidence_status": "local_source_inspected",
           "access_date": "2026-11-12",
           "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
-          "sha256": "3bfa102c217a207e694e648b517f1d29997cb203e7b8e0b048331888d62b28e5",
+          "sha256": "df796ee29daf66914161830f381a069afc031eeb9b973acfb026e9cc568dda6d",
           "content_type": "application/json"
         }
       ],
@@ -3133,6 +4064,34 @@
       ]
     },
     {
+      "id": "SRC-68222de9fed6",
+      "url": "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
+      "local_source_path": null,
+      "title": "ezdxf units",
+      "summary": "Documents DXF $INSUNITS and unit conversion; DXF coordinates without a unit declaration require external scale evidence.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Clean DXF or SVG profile to editable extrusion"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r04.md"
+      ]
+    },
+    {
       "id": "SRC-6b30ccb4447f",
       "url": "https://github.com/isl-org/Open3D",
       "local_source_path": null,
@@ -3170,9 +4129,21 @@
       "summary": "Documents ImageReader camera parameters, shared camera setup, pycolmap database read/update API, default bundle-adjustment intrinsic refinement, and the +0.5 pixel-center correction from OpenCV/Kalibr.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC",
+            "DOM-R06: Photo set to measured reusable component"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        },
         {
           "evidence_status": "web_inspected",
           "access_date": "2026-11-12",
@@ -3185,7 +4156,11 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/rec-r01.md"
       ]
     },
     {
@@ -3208,8 +4183,8 @@
       "id": "SRC-6ca9f8e9b9c2",
       "url": "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
       "local_source_path": null,
-      "title": "Nerfstudio custom dataset",
-      "summary": "Existing report source: describes image/video and camera-pose data processing through ns-process-data and COLMAP camera solving; reused as a documented handoff source, not reopened in this batch.",
+      "title": "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
+      "summary": "2. https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered"
@@ -3242,7 +4217,8 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
@@ -3270,7 +4246,39 @@
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r06.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-6e28384e1b5f",
+      "url": "https://github.com/CadQuery/cadquery/blob/master/LICENSE",
+      "local_source_path": null,
+      "title": "CadQuery LICENSE",
+      "summary": "Repository license text: Apache-2.0.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r01.md"
       ]
     },
     {
@@ -3298,7 +4306,15 @@
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r05.md",
+        "research/workflows/details/rec-r06.md",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
@@ -3432,7 +4448,9 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r05.md"
       ]
     },
     {
@@ -3443,6 +4461,7 @@
       "summary": "Official README command is `python run.py <image> --output-dir <dir>`; it states about 6 GB VRAM per single image and MIT terms for code and pretrained models.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -3458,7 +4477,8 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -3489,6 +4509,10 @@
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -3500,6 +4524,7 @@
       "summary": "Documents COLMAP image_undistorter output as the input to InterfaceCOLMAP, then DensifyPointCloud and later mesh stages; OpenMVG is an alternate importer.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -3515,7 +4540,8 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r01.md"
       ]
     },
     {
@@ -3621,11 +4647,22 @@
           ],
           "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json"
       ]
     },
     {
@@ -3693,6 +4730,29 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-7c5de1bf6cb6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
+      "title": "import_profile.py",
+      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py",
+          "sha256": "4be566f7240f1b77a6d52a4e85537e4e974eaa6b1bfd117a4dcaaab51e8affa2",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -3791,6 +4851,29 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7ece9e98ed86",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
+      "title": "build_part.py",
+      "summary": "Project reference implementation of the bounded procedure documented in the adjacent README; explicit inputs and original API sources are linked by the workflow dossiers. Syntax checked and statically reviewed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py",
+          "sha256": "bebec6f7c34721490d7e2a0b5e305736b4bc2ed3ec0f8ba428849c08f9fbe02c",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
       ]
     },
     {
@@ -4042,6 +5125,7 @@
       "summary": "Documents `ns-process-data images;video --data ... --output-dir ...` and `ns-train nerfacto --data ...`; image/video processing uses COLMAP and FFmpeg.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -4057,7 +5141,8 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
@@ -4104,7 +5189,11 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r05.md",
+        "research/workflows/details/rec-r06.md",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
@@ -4219,11 +5308,55 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-8c216bd07f9d",
+      "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/panda.xml",
+      "local_source_path": null,
+      "title": "Franka Emika Panda MJCF file",
+      "summary": "Actual example robot model source file for the Menagerie Panda; use only at a pinned revision and with model-specific rights.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r04.md"
       ]
     },
     {
@@ -4243,6 +5376,32 @@
       ]
     },
     {
+      "id": "SRC-8de314785eed",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+      "title": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+      "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "content_type": "text/markdown"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-8e6d7648b52e",
       "url": "https://colmap.github.io/cli.html",
       "local_source_path": null,
@@ -4250,9 +5409,21 @@
       "summary": "Documents feature_extractor options including ImageReader camera model/parameters, mapper and image_undistorter command routes.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC",
+            "DOM-R06: Photo set to measured reusable component"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        },
         {
           "evidence_status": "web_inspected",
           "access_date": "2026-11-12",
@@ -4265,7 +5436,10 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r06.md"
       ]
     },
     {
@@ -4305,24 +5479,46 @@
           ],
           "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json"
       ]
     },
     {
       "id": "SRC-90428f0f4c05",
       "url": "https://huggingface.co/stabilityai/TripoSR",
       "local_source_path": null,
-      "title": "https://huggingface.co/stabilityai/TripoSR",
-      "summary": "- TripoSR model card (MIT code and pretrained weights): https://huggingface.co/stabilityai/TripoSR",
+      "title": "TripoSR model card and weights",
+      "summary": "Model card labels weights MIT and identifies single-image feed-forward reconstruction; trained using Objaverse renders.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R06: Photo set to measured reusable component"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        },
         {
           "evidence_status": "existing_report_registered",
           "access_date": "2026-11-12",
@@ -4336,7 +5532,10 @@
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -4498,7 +5697,12 @@
       ],
       "referring_documents": [
         "research/cad-and-skills.md",
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/cad-r10.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -4551,6 +5755,34 @@
       ]
     },
     {
+      "id": "SRC-95aacf0e0f5c",
+      "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
+      "local_source_path": null,
+      "title": "IfcOpenShell placement API",
+      "summary": "Official 4x4 local placement API; `is_si` declares whether matrix translations use SI units.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
       "id": "SRC-9641fd75954c",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
       "local_source_path": null,
@@ -4558,6 +5790,7 @@
       "summary": "registration_icp refines a source-to-target transform from an initial transform and distance threshold; RegistrationResult reports fitness and inlier RMSE. Point-to-plane ICP requires useful normals.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -4571,6 +5804,18 @@
             "REC-16"
           ],
           "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC",
+            "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene",
+            "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+          ],
           "sha256": null,
           "content_type": "text/html"
         },
@@ -4591,7 +5836,24 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r03.md",
+        "research/workflows/details/rec-r04.md",
+        "research/workflows/details/rec-r05.md",
+        "research/workflows/details/rec-r06.md",
+        "research/workflows/details/rec-r07.md",
+        "research/workflows/details/rec-r09.md",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -4641,6 +5903,34 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9794ead44d0e",
+      "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
+      "local_source_path": null,
+      "title": "IfcOpenShell georeference API",
+      "summary": "Official CRS/map-conversion API; creates georeference records but requires supplied CRS and transform values.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
       ]
     },
     {
@@ -4717,7 +6007,47 @@
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r08.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-9a40d7c5ca24",
+      "url": "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
+      "local_source_path": null,
+      "title": "MuJoCo model editing API",
+      "summary": "Official mjSpec XML/URDF parsing and compile API; `MjModel.from_xml_path` parses/compiles XML or MJZ.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r04.md"
       ]
     },
     {
@@ -4728,6 +6058,7 @@
       "summary": "Official Tesseract documentation shows TSV output with text, hierarchical page/block/line/word identifiers, pixel bounding boxes and confidence values.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -4746,7 +6077,10 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/mix-r01.md"
       ]
     },
     {
@@ -4817,8 +6151,8 @@
       "id": "SRC-9ea228a27dc2",
       "url": "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
       "local_source_path": null,
-      "title": "FreeCAD Assembly4 to URDF exporter",
-      "summary": "Repository describes Python scripts using FreeCAD API to export Assembly4 robot assemblies to URDF with meshes and inertial data.",
+      "title": "FreeCAD Assembly4-to-URDF exporter",
+      "summary": "Third-party source describes Python scripts exporting Assembly4 assemblies to URDF; feature support and licence must be checked at the pinned revision.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -4834,10 +6168,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/mix-r02.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -4915,6 +6263,7 @@
       "summary": "ICCV 2023 paper proposes a transformer/shape-program mapping from three orthographic views to CAD models and evaluates noisy/incomplete views on a benchmark dataset.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -4931,10 +6280,24 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Orthographic views to manually reconstructed part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r05.md",
+        "research/workflows/details/cad-r09.md",
+        "research/workflows/details/mix-r08.md"
       ]
     },
     {
@@ -4953,6 +6316,29 @@
       ]
     },
     {
+      "id": "SRC-a22f0b43932b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+      "title": "Workflow and source register builder",
+      "summary": "Combines retained sources and round-specific evidence; checks operation inputs and recipe types; parses Markdown-link destinations separately from bare URLs to preserve original source addresses.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+          "sha256": "6548c1bac0a6162684045b47470fe4f8378cdad96dd18c1af7ad8a4d44077afd",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-a2e021f0ada1",
       "url": "https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md",
       "local_source_path": null,
@@ -4960,6 +6346,7 @@
       "summary": "Official Meshroom instructions document `meshroom_batch --input INPUT_IMAGES_FOLDER --output OUTPUT_FOLDER`; the executable also accepts a saved pipeline graph.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -4975,7 +6362,8 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r01.md"
       ]
     },
     {
@@ -5079,6 +6467,7 @@
       "summary": "ACCV 2022 paper studies automatic vectorization of raster building blueprints and reviews primitive detection, floor-plan vectorization and structured reconstruction.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -5093,10 +6482,23 @@
           "local_original": null,
           "sha256": null,
           "content_type": "application/pdf"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster floor plan to semantic layout and 3D building"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/mix-r01.md"
       ]
     },
     {
@@ -5149,6 +6551,34 @@
       ]
     },
     {
+      "id": "SRC-a5ea2c11ee81",
+      "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/README.md",
+      "local_source_path": null,
+      "title": "Franka Emika Panda Menagerie model README",
+      "summary": "Identifies the Panda MJCF model, states MuJoCo 2.3.3 or later, Apache-2.0 model licence and documented derivation/geometry/inertia work.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r04.md"
+      ]
+    },
+    {
       "id": "SRC-a680edc6892e",
       "url": "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
       "local_source_path": null,
@@ -5169,12 +6599,55 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/mix-r02.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-a764655900e1",
+      "url": "https://www.freecad.org/contributing.php?lang=eng",
+      "local_source_path": null,
+      "title": "FreeCAD contributing and licensing",
+      "summary": "Project license information; primary FreeCAD project page.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r02.md"
       ]
     },
     {
@@ -5208,6 +6681,33 @@
       ]
     },
     {
+      "id": "SRC-ac77c9e8c1c8",
+      "url": "https://github.com/opencv/opencv/blob/4.x/LICENSE",
+      "local_source_path": null,
+      "title": "https://github.com/opencv/opencv/blob/4.x/LICENSE",
+      "summary": "1. Name: OpenCV; Role: Planar image rectification and raster line candidates.; License: Apache-2.0 upstream.; Apis: cv2.getPerspectiveTransform(4 point pairs); cv2.warpPerspective; cv2.HoughLinesP; cv2.findContours/cv2.approxPolyDP; Dependencies: Python 3, OpenCV Python bindings (opencv-python or system package), NumPy; image file raster source.; Source urls: https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html; https://github.com/opencv/opencv/blob/4.x/LICENSE",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster sketch and measured scale to constrained profile and solid"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r02.md"
+      ]
+    },
+    {
       "id": "SRC-ac94df9079cf",
       "url": "https://github.com/FreeCAD/FreeCAD-library",
       "local_source_path": null,
@@ -5225,11 +6725,23 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r07.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -5258,6 +6770,17 @@
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r08.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -5286,6 +6809,7 @@
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r07.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -5439,7 +6963,8 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r05.md"
       ]
     },
     {
@@ -5492,6 +7017,35 @@
       ]
     },
     {
+      "id": "SRC-b1ac5466cbd1",
+      "url": "https://cadquery.readthedocs.io/en/stable/classreference.html",
+      "local_source_path": null,
+      "title": "CadQuery API reference",
+      "summary": "Documents shape validity, bounds, volume, closed wires and geometry transforms; supports checks in reference scripts.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r04.md"
+      ]
+    },
+    {
       "id": "SRC-b30357886048",
       "url": "https://github.com/microsoft/TRELLIS",
       "local_source_path": null,
@@ -5504,6 +7058,33 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-b32f7db38a9b",
+      "url": "https://github.com/tesseract-ocr/tesseract",
+      "local_source_path": null,
+      "title": "https://github.com/tesseract-ocr/tesseract",
+      "summary": "2. Name: Tesseract; Role: Dimension text candidates with boxes/confidence; humans verify engineering notation.; License: Apache-2.0 upstream.; Apis: tesseract image outputbase -l eng tsv; TSV bbox/confidence review; Dependencies: Tesseract OCR binary plus eng traineddata; TSV output is text candidates only.; Source urls: https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md; https://github.com/tesseract-ocr/tesseract",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster sketch and measured scale to constrained profile and solid"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r02.md"
       ]
     },
     {
@@ -5564,11 +7145,33 @@
           ],
           "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+          "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-03/domain-detail-sources.json"
       ]
     },
     {
@@ -5591,11 +7194,26 @@
           "local_original": null,
           "sha256": null,
           "content_type": null
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Depth scan aligned to existing housing"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r07.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r04.md"
       ]
     },
     {
@@ -5639,6 +7257,9 @@
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -5661,11 +7282,12 @@
       "id": "SRC-b82677ad8889",
       "url": "https://github.com/google-deepmind/mujoco_menagerie",
       "local_source_path": null,
-      "title": "Repository and model table",
-      "summary": "MuJoCo Menagerie ; Curated MuJoCo robot simulation assets include MJCF, scene XML, visual and collision meshes, README generation notes and per-model LICENSE files; examples include Unitree Go2 quadruped, Franka Emika Panda arm and Boston Dynamics Spot. Repository and model table, model structure ; Licensing is per model: the repository table lists Go2 and Spot BSD-3-Clause, Panda Apache-2.0; each model directory has its own license. The top-level project content is Apache-2.0. The README says model fidelity is ongoing and identifies intended quality grades from system-identified to conditionally stable. This is a strong simulation-description source, but the assets are simulation meshes/models, not verified manufacturing CAD for commercial hardware.",
+      "title": "MuJoCo Menagerie repository",
+      "summary": "Curated robot MJCF models and asset files; repository states each model directory has its own licence.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -5678,11 +7300,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r08.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -5733,6 +7377,33 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ba1c34303c57",
+      "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md",
+      "local_source_path": null,
+      "title": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md",
+      "summary": "3. https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Clean DXF or SVG profile to editable extrusion"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r04.md"
       ]
     },
     {
@@ -5807,6 +7478,7 @@
       "summary": "Computer Graphics Forum paper describes a learned raster-floorplan framework that predicts wall junctions and segments as an ordered graph representation.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -5824,7 +7496,9 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/mix-r01.md"
       ]
     },
     {
@@ -6000,6 +7674,16 @@
         },
         {
           "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
           "access_date": "2026-11-12",
           "supporting_claims": [
             "REC-R08"
@@ -6011,18 +7695,21 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
       "id": "SRC-bfe06f8511b1",
       "url": "https://github.com/ros/urdf_tutorial",
       "local_source_path": null,
-      "title": "Tutorial repository",
-      "summary": "URDF / ROS tooling ; Official `urdf_tutorial` teaches visual geometry, movable joints, collision and inertial properties, and Xacro; it is BSD-3-Clause. Tutorial repository. URDF model guidance states metres/radians and kilograms for position/mass conventions. URDF model reference ; URDF is a format; package and mesh licenses are independent. Tutorial: BSD-3-Clause. ; Robot kinematic interchange and ROS visualization/control workflows. URDF does not express all closed-chain or advanced dynamics semantics; preserve source domain model and report unsupported fields.",
+      "title": "ROS URDF tutorial",
+      "summary": "Primary tutorial covers links, visual, movable joints, collision and inertial properties; repository declares BSD-3-Clause.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -6038,11 +7725,27 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link",
+            "DOM-R03: CAD robot assembly to URDF and MJCF"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -6050,12 +7753,12 @@
       "id": "SRC-bffa49b1e1cc",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
       "local_source_path": null,
-      "title": "Open3D 0.20 Global registration",
-      "summary": "Documents FPFH feature matching, RANSAC global registration, correspondence pruning by distance/edge length/normals, returned transform, fitness and inlier RMSE; a global initial pose can be refined by ICP.",
+      "title": "Open3D global registration",
+      "summary": "Official registration methods provide a coarse alignment that may be refined by local ICP.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "web_inspected",
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -6067,6 +7770,18 @@
             "REC-R03"
           ],
           "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC",
+            "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene",
+            "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+          ],
           "sha256": null,
           "content_type": "text/html"
         },
@@ -6086,7 +7801,15 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/dom-r08.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r03.md",
+        "research/workflows/details/rec-r09.md"
       ]
     },
     {
@@ -6432,8 +8155,8 @@
       "summary": "Documents ns-export pointcloud to PLY, TSDF meshes as available for all models, Poisson meshes only for models predicting normals, OBJ textured meshes and NeRF texture transfer to existing meshes.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "web_inspected",
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -6462,7 +8185,8 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
@@ -6473,6 +8197,7 @@
       "summary": "Official build123d docs show extrusion of a 2D sketch/face into a 3D part and document Builder/Algebra operations over OCCT geometry.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -6491,7 +8216,11 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -6504,17 +8233,30 @@
       "evidence_statuses": [
         "existing_report_registered"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Photographs plus scale controls to remodeled part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
       "referring_documents": [
-        "research/reconstruction.md"
+        "research/reconstruction.md",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r06.md"
       ]
     },
     {
       "id": "SRC-c84e8663456d",
       "url": "https://github.com/microsoft/TRELLIS.2",
       "local_source_path": null,
-      "title": "Microsoft TRELLIS.2 image-to-3D repository",
-      "summary": "Existing report source: single-image mesh/GLB generation; used as an alternative visual-proxy adapter. It predicts hidden geometry and carries no measured-scale evidence by itself.",
+      "title": "https://github.com/microsoft/TRELLIS.2",
+      "summary": "1. Id: REC-18; Name: Generate a single-image mesh proxy; Inputs: photo-set; Outputs: mesh; Tools: TripoSR; TRELLIS.2; SAM 3D Objects; Source urls: https://github.com/VAST-AI-Research/TripoSR; https://github.com/microsoft/TRELLIS.2; https://github.com/facebookresearch/sam-3d-objects; Prerequisites: Exactly one selected image and model revision recorded; Model weights and model terms recorded separately from source-code licence; Dimensions or measured controls supplied separately before dimensional CAD use; Preserves: Source image and model/checkpoint metadata; Changes or infers: Predicts backside and occluded geometry from learned priors; Mesh scale is not established by image appearance alone; Checks: Compare silhouette with additional views; Compare explicitly measured dimensions; Mark hidden surfaces as inferred before CAD remodeling; Alternatives: Multi-view photogrammetry or calibrated scan; Automation: scripted; Evidence status: existing_report_registered; Summary: Generate a v...",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered"
@@ -6545,7 +8287,8 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -6556,6 +8299,7 @@
       "summary": "Search-indexed API identifies Scene.ray_cast and scene annotation properties for world-space surface picking; direct page retrieval returned HTTP 402 in this research session. Claim limited to the indexed API entry; exact signature should be checked from installed Blender API at implementation.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -6572,7 +8316,9 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/rec-r07.md"
       ]
     },
     {
@@ -6662,7 +8408,17 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r04.md",
+        "research/workflows/details/rec-r05.md",
+        "research/workflows/details/rec-r06.md",
+        "research/workflows/details/rec-r07.md",
+        "research/workflows/details/rec-r09.md",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -6673,6 +8429,7 @@
       "summary": "solvePnP estimates object/world-to-camera rotation and translation from 3D/2D correspondences, intrinsics and distortion; camera axes are X right, Y down, Z forward.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -6703,7 +8460,12 @@
       ],
       "referring_documents": [
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/rec-r03.md",
+        "research/workflows/details/rec-r07.md",
+        "research/workflows/details/rec-r09.md"
       ]
     },
     {
@@ -6719,6 +8481,34 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-ce92c7f02e89",
+      "url": "https://openscad.org/documentation.html",
+      "local_source_path": null,
+      "title": "OpenSCAD documentation",
+      "summary": "Documents OpenSCAD source and command-line usage for rendering/exporting geometry.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "OpenSCAD source to mesh and checked CAD handoff"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r10.md"
       ]
     },
     {
@@ -6853,7 +8643,22 @@
       ],
       "referring_documents": [
         "research/cad-and-skills.md",
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/cad-r05.md",
+        "research/workflows/details/cad-r06.md",
+        "research/workflows/details/cad-r07.md",
+        "research/workflows/details/cad-r08.md",
+        "research/workflows/details/cad-r09.md",
+        "research/workflows/details/cad-r10.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r07.md",
+        "research/workflows/details/mix-r08.md",
+        "research/workflows/details/mix-r09.md"
       ]
     },
     {
@@ -6871,7 +8676,7 @@
           "evidence_status": "local_source_inspected",
           "access_date": "2026-11-12",
           "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
-          "sha256": "c0b1ef07990b07aa70a2949a7e4b1662a11f7586727398301a531b84dbf31f85",
+          "sha256": "aa63e63f5645d01004f9be1d4a1429a3a96ac009c87f667ffc9917f6d959b044",
           "content_type": "application/json"
         }
       ],
@@ -6955,7 +8760,7 @@
           "evidence_status": "local_source_inspected",
           "access_date": "2026-11-12",
           "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
-          "sha256": "cf3288bf2098757b8fa41103cea3e426cbea12e1fc26dbfd610fc9ec81b9e310",
+          "sha256": "3b4e02bcb1f82cfa62eea1ba9573f68218da70a4fa8bebdc4c0ebf0d246a9c91",
           "content_type": "text/x-python"
         }
       ],
@@ -7020,6 +8825,16 @@
           "evidence_status": "web_inspected",
           "access_date": "2026-11-12",
           "supporting_claims": [
+            "Photographs plus scale controls to remodeled part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
             "REC-R01",
             "REC-R02",
             "REC-R04",
@@ -7036,7 +8851,17 @@
         "research/reconstruction.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/cad-r06.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r03.md",
+        "research/workflows/details/mix-r09.md",
+        "research/workflows/details/rec-r01.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r05.md",
+        "research/workflows/details/rec-r06.md",
+        "research/workflows/details/rec-r08.md"
       ]
     },
     {
@@ -7095,6 +8920,9 @@
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/user-supplied-links.md",
+        "research/workflows/details/dom-r05.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r09.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -7114,6 +8942,41 @@
       ]
     },
     {
+      "id": "SRC-dd02b514ff43",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
+      "title": "MJCF reference writer",
+      "summary": "Bounded standard-library serializer for explicit MJCF data; no integration execution.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link",
+            "DOM-R03: CAD robot assembly to URDF and MJCF"
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
+          "sha256": "91b402c896cbbb42e5f75f7367b15fa493402fc5a158b3ce56c8745cebf88391",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-dd1f5b2ca39f",
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
       "local_source_path": null,
@@ -7121,6 +8984,7 @@
       "summary": "Official FreeCAD docs list DXF entity support for C++ and legacy importers, format/version conditions, and note that 3D ACIS SAT blobs in DXF are not currently read by FreeCAD.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -7137,7 +9001,10 @@
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -7312,7 +9179,8 @@
       ],
       "referring_documents": [
         "research/reconstruction.md",
-        "research/sources/round-02/reconstruction-sources.json"
+        "research/sources/round-02/reconstruction-sources.json",
+        "research/workflows/details/rec-r05.md"
       ]
     },
     {
@@ -7325,9 +9193,22 @@
       "evidence_statuses": [
         "existing_report_registered"
       ],
-      "observations": [],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-R06"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
       "referring_documents": [
-        "research/reconstruction.md"
+        "research/reconstruction.md",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r06.md"
       ]
     },
     {
@@ -7364,8 +9245,8 @@
       "id": "SRC-e8c6f17f90e5",
       "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
       "local_source_path": null,
-      "title": "Open3D 0.20 RGB-D integration",
-      "summary": "Documents calibrated RGB-D integration into uniform or scalable TSDF using depth/color frames, camera intrinsics, camera poses, truncation and voxel length; mesh extraction uses marching cubes. Voxel size trades resolution against sensitivity to depth noise.",
+      "title": "Open3D RGB-D integration tutorial",
+      "summary": "Documents RGB-D pose integration and TSDF volume integration workflow.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7386,6 +9267,16 @@
           "content_type": "text/html"
         },
         {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Photographs plus scale controls to remodeled part"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
+        },
+        {
           "evidence_status": "existing_report_registered",
           "access_date": "2026-11-12",
           "supporting_claims": [
@@ -7400,7 +9291,13 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/cad-r06.md",
+        "research/workflows/details/mix-r04.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/rec-r02.md",
+        "research/workflows/details/rec-r09.md"
       ]
     },
     {
@@ -7417,6 +9314,61 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "research/next-step-proposal.md"
+      ]
+    },
+    {
+      "id": "SRC-e935d3ebe64f",
+      "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+      "local_source_path": null,
+      "title": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+      "summary": "1. Name: FreeCAD + Open CASCADE; Role: STEP import inspection and assembly/CAD geometry; Software license: FreeCAD LGPL-2.0-or-later as applicable to project version; supplier STEP remains separately licensed; Api or entrypoint: Open STEP in GUI and inspect product tree/units; Assembly Workbench joints; `Part`/B-rep geometry inspect; Environment dependencies: FreeCAD build with Open CASCADE; STEP import/export modules; Version status: documented source current at 2026-11-12; project install/runtime not exercised; Limitations and asset terms: Import healing/tessellation may alter topology; preserve source STEP. Exporter capability is version-specific.; Source urls: https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md; https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R02: Manufacturer STEP component to robot link"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-ea12fb9678d8",
+      "url": "https://github.com/colmap/colmap/blob/main/doc/license.rst",
+      "local_source_path": null,
+      "title": "COLMAP licence",
+      "summary": "Primary COLMAP BSD-3-Clause licence statement; third-party dependencies have separate licences.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
       ]
     },
     {
@@ -7531,6 +9483,58 @@
       ]
     },
     {
+      "id": "SRC-eb24664fc3c0",
+      "url": "https://github.com/VAST-AI-Research/TripoSR/blob/main/run.py",
+      "local_source_path": null,
+      "title": "TripoSR inference entry point",
+      "summary": "Actual source implements preprocessing, single-image inference, mesh extraction and OBJ/GLB export; chunk size trades memory for runtime.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-eb880f7efbac",
+      "url": null,
+      "local_source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+      "title": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+      "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part"
+          ],
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+          "content_type": "text/markdown"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/cad-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-ebd6e769a79a",
       "url": "https://github.com/glotoff/freecad-skills/blob/main/skills/freecad-user/SKILL.md",
       "local_source_path": null,
@@ -7553,6 +9557,7 @@
       "summary": "Official API documents probabilistic HoughLinesP on binary images and returns line-segment endpoint coordinates in pixel space.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -7565,10 +9570,25 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster sketch and measured scale to constrained profile and solid"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r08.md"
       ]
     },
     {
@@ -7716,11 +9736,12 @@
       "id": "SRC-f088ec7f4848",
       "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
       "local_source_path": null,
-      "title": "model structure",
-      "summary": "MuJoCo Menagerie ; Curated MuJoCo robot simulation assets include MJCF, scene XML, visual and collision meshes, README generation notes and per-model LICENSE files; examples include Unitree Go2 quadruped, Franka Emika Panda arm and Boston Dynamics Spot. Repository and model table, model structure ; Licensing is per model: the repository table lists Go2 and Spot BSD-3-Clause, Panda Apache-2.0; each model directory has its own license. The top-level project content is Apache-2.0. The README says model fidelity is ongoing and identifies intended quality grades from system-identified to conditionally stable. This is a strong simulation-description source, but the assets are simulation meshes/models, not verified manufacturing CAD for commercial hardware.",
+      "title": "MuJoCo Menagerie model catalogue",
+      "summary": "Primary catalogue reports robot model identities, DoF counts, preview XML files and per-model license references.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -7733,12 +9754,57 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r02.md",
+        "research/workflows/details/dom-r03.md",
+        "research/workflows/details/dom-r04.md",
+        "research/workflows/details/mix-r02.md",
+        "research/workflows/details/mix-r03.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-f08b8003c0e4",
+      "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+      "local_source_path": null,
+      "title": "Open3D TriangleMesh API",
+      "summary": "Official Poisson and ball-pivoting reconstruction APIs; Poisson requires an oriented point cloud and produces inferred surface geometry.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R06: Photo set to measured reusable component"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/dom-r08.md"
       ]
     },
     {
@@ -7806,6 +9872,40 @@
       ]
     },
     {
+      "id": "SRC-f23a725cdea4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
+      "title": "IFC reference author",
+      "summary": "Bounded IfcOpenShell IFC4 author from explicitly dimensioned JSON inputs; no integration execution.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/markdown/json"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
+          "sha256": "672a3c834ca14216a37dfa30d4c02bafa97156a7f7bfe8668ffb1cac90dcebb4",
+          "content_type": "text/x-python"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f2c662a213ab",
       "url": "https://github.com/github/awesome-copilot",
       "local_source_path": null,
@@ -7825,7 +9925,7 @@
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
       "local_source_path": null,
       "title": "IfcOpenShell geometry API",
-      "summary": "Documents geometry extraction settings, kernels, shape creation and geometry iterator interfaces.",
+      "summary": "Official geometry processing and representation conversion API.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7842,10 +9942,25 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md",
+        "research/workflows/details/dom-r07.md",
+        "research/workflows/details/mix-r06.md",
+        "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -7853,11 +9968,12 @@
       "id": "SRC-f4e7d302c752",
       "url": "https://github.com/VAST-AI-Research/TripoSR",
       "local_source_path": null,
-      "title": "https://github.com/VAST-AI-Research/TripoSR",
-      "summary": "- TripoSR source: https://github.com/VAST-AI-Research/TripoSR",
+      "title": "TripoSR source repository",
+      "summary": "Single-image reconstruction code; command-line `run.py` outputs OBJ or GLB; README states approximately 6 GB VRAM default route and CPU fallback.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -7873,6 +9989,16 @@
           "content_type": null
         },
         {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R06: Photo set to measured reusable component"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        },
+        {
           "evidence_status": "existing_report_registered",
           "access_date": "2026-11-12",
           "supporting_claims": [
@@ -7886,7 +10012,10 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/sources/round-02/reconstruction-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/workflows/details/dom-r06.md",
+        "research/workflows/details/rec-r10.md"
       ]
     },
     {
@@ -7909,11 +10038,25 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Reference source registered for the workflow and interoperability topic it documents."
+          ],
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r05.md",
+        "research/workflows/details/mix-r05.md",
+        "research/workflows/details/mix-r09.md",
         "research/workflows/domain-paths.md"
       ]
     },
@@ -7925,6 +10068,7 @@
       "summary": "CVPR 2021 paper proposes residential floor-plan recognition/reconstruction, including segmentation and vectorization; paper reports tests on floor-plan imagery and method-specific results.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
+        "existing_report_registered",
         "web_inspected"
       ],
       "observations": [
@@ -7941,10 +10085,25 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "existing_report_registered",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Raster floor plan to semantic layout and 3D building"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r03.md",
+        "research/workflows/details/mix-r01.md",
+        "research/workflows/details/mix-r08.md"
       ]
     },
     {
@@ -8122,6 +10281,34 @@
       ]
     },
     {
+      "id": "SRC-fa8c58e8c7a1",
+      "url": "https://github.com/isl-org/Open3D/blob/main/LICENSE",
+      "local_source_path": null,
+      "title": "Open3D licence",
+      "summary": "Primary source gives Open3D MIT licence; third-party dependencies remain separately governed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "local_original": null,
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-R01: Raster plan and site survey to registered IFC"
+          ],
+          "sha256": null,
+          "content_type": "text/html"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
       "id": "SRC-fbf7ed489d76",
       "url": "https://arxiv.org/abs/2403.02151",
       "local_source_path": null,
@@ -8141,7 +10328,7 @@
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
       "local_source_path": null,
       "title": "FreeCAD Sketcher scripting",
-      "summary": "Official FreeCAD docs show Python creation of Sketcher geometry and addition of geometric/dimensional constraints.",
+      "summary": "Official documentation source for creating and constraining sketches through Python.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -8160,11 +10347,31 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Text and explicit dimensions to an editable engineering part",
+            "Raster sketch and measured scale to constrained profile and solid",
+            "Orthographic views to manually reconstructed part",
+            "Research reconstruction from orthographic projections"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html"
         }
       ],
       "referring_documents": [
         "research/cad-and-skills.md",
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/workflows/details/cad-r01.md",
+        "research/workflows/details/cad-r02.md",
+        "research/workflows/details/cad-r04.md",
+        "research/workflows/details/cad-r05.md",
+        "research/workflows/details/cad-r09.md",
+        "research/workflows/details/mix-r02.md"
       ]
     },
     {
@@ -8193,6 +10400,7 @@
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
+        "research/workflows/details/dom-r07.md",
         "research/workflows/domain-paths.md"
       ]
     },

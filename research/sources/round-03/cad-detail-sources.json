@@ -1,0 +1,440 @@
+[
+  {
+    "url": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part",
+      "Raster sketch and measured scale to constrained profile and solid"
+    ],
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "title": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "title": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "title": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "title": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "title": "OpenCADStudio automation API specification",
+    "summary": "Local source documents MCP commands and entity/record schemas; inspected from local checkout.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part",
+      "Known library parts to placed assembly",
+      "OpenSCAD source to mesh and checked CAD handoff"
+    ],
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+    "content_type": "text/markdown"
+  },
+  {
+    "url": "https://cadquery.readthedocs.io/en/stable/classreference.html",
+    "title": "CadQuery API reference",
+    "summary": "Documents shape validity, bounds, volume, closed wires and geometry transforms; supports checks in reference scripts.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://cadquery.readthedocs.io/en/stable/importexport.html",
+    "title": "CadQuery import/export documentation",
+    "summary": "Documents DXF import, STEP import/export and units; relevant profile and exchange operations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part",
+      "Clean DXF or SVG profile to editable extrusion"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://cadquery.readthedocs.io/en/stable/quickstart.html",
+    "title": "CadQuery quickstart",
+    "summary": "Primary usage examples for parameterized Python solid construction.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
+    "title": "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster sketch and measured scale to constrained profile and solid"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
+    "title": "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster sketch and measured scale to constrained profile and solid"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
+    "title": "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster sketch and measured scale to constrained profile and solid"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
+    "title": "ezdxf units",
+    "summary": "Documents DXF $INSUNITS and unit conversion; DXF coordinates without a unit declaration require external scale evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Clean DXF or SVG profile to editable extrusion"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/CadQuery/cadquery/blob/master/LICENSE",
+    "title": "CadQuery LICENSE",
+    "summary": "Repository license text: Apache-2.0.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/CloudCompare/CloudCompare",
+    "title": "CloudCompare source repository",
+    "summary": "Primary repository for the point-cloud/mesh inspection application and licensing metadata.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Depth scan aligned to existing housing"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md",
+    "title": "FreeCAD import/export documentation",
+    "summary": "Official documentation index for import/export formats, including SVG/DXF pathways.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Clean DXF or SVG profile to editable extrusion"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
+    "title": "FreeCAD Part scripting",
+    "summary": "Official documentation source for Part workbench scripting and shape operations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part",
+      "Raster sketch and measured scale to constrained profile and solid",
+      "Raster floor plan to semantic layout and 3D building"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
+    "title": "FreeCAD Sketcher scripting",
+    "summary": "Official documentation source for creating and constraining sketches through Python.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part",
+      "Raster sketch and measured scale to constrained profile and solid",
+      "Orthographic views to manually reconstructed part",
+      "Research reconstruction from orthographic projections"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/alicevision/Meshroom/blob/develop/COPYING.md",
+    "title": "Meshroom COPYING",
+    "summary": "Primary repository license information for Meshroom.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Photographs plus scale controls to remodeled part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/colmap/colmap/blob/main/LICENSE",
+    "title": "COLMAP LICENSE",
+    "summary": "Primary repository licence text for COLMAP.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
+    "title": "COLMAP command-line interface documentation",
+    "summary": "Documents the SfM/MVS command line, automatic reconstruction and dense fusion stages.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Photographs plus scale controls to remodeled part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/mozman/ezdxf",
+    "title": "ezdxf repository",
+    "summary": "Primary source repository and MIT licence metadata.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-R04"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/opencv/opencv/blob/4.x/LICENSE",
+    "title": "https://github.com/opencv/opencv/blob/4.x/LICENSE",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster sketch and measured scale to constrained profile and solid"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md",
+    "title": "https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster sketch and measured scale to constrained profile and solid"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/tesseract-ocr/tesseract",
+    "title": "https://github.com/tesseract-ocr/tesseract",
+    "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster sketch and measured scale to constrained profile and solid"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://meshroom.readthedocs.io/en/latest/",
+    "title": "Meshroom documentation",
+    "summary": "Documents Meshroom node-based photogrammetry workflow.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "CAD-R06"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
+    "title": "Vectorizing Building Blueprints (ACCV 2022)",
+    "summary": "Research paper on converting blueprint imagery into vector structure; use as method evidence, not a turnkey CAD tool claim.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster floor plan to semantic layout and 3D building"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+    "title": "Residential Floor Plan Recognition and Reconstruction (CVPR 2021)",
+    "summary": "Research paper on floor-plan interpretation and reconstruction; documents a method, not a packaged general-purpose CAD application.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Raster floor plan to semantic layout and 3D building"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html",
+    "title": "PlankAssembly: Robust 3D Reconstruction from Three Orthographic Views",
+    "summary": "Research method for reconstruction from three orthographic views; not a deployable general CAD package by itself.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Orthographic views to manually reconstructed part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://openscad.org/documentation.html",
+    "title": "OpenSCAD documentation",
+    "summary": "Documents OpenSCAD source and command-line usage for rendering/exporting geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "OpenSCAD source to mesh and checked CAD handoff"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.freecad.org/contributing.php?lang=eng",
+    "title": "FreeCAD contributing and licensing",
+    "summary": "Project license information; primary FreeCAD project page.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Text and explicit dimensions to an editable engineering part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
+    "title": "Open3D RGB-D integration tutorial",
+    "summary": "Documents RGB-D pose integration and TSDF volume integration workflow.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Photographs plus scale controls to remodeled part"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
+    "title": "Orthographic reconstruction research article",
+    "summary": "Method-level research reference for constructing 3D geometry from orthographic drawings.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Research reconstruction from orthographic projections"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html"
+  }
+]

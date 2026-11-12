@@ -27,7 +27,7 @@ A known component or an explicitly dimensioned simple part starts with fewer int
 
 ## Content of each dossier
 
-Every route records inputs, measured points and datums, coordinate frames, software and libraries, operation order, code/API entry points, outputs, checks, failure recovery, computing requirements and original evidence. Combined routes identify the reference-frame and evidence conditions for merging their branches. Their composition status remains a proposal.
+Each page includes the original registered starting artifact types and full operation input/output requirements. Detailed artifact sections also describe prepared intermediates and optional existing data at the relevant stage. Every route records inputs, measured points and datums, coordinate frames, software and libraries, operation order, code/API entry points, outputs, checks, failure recovery, computing requirements and original evidence. Combined routes identify the reference-frame and evidence conditions for merging their branches. Their composition status remains a proposal.
 
 ## Reproduce the documentation checks
 

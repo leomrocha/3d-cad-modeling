@@ -24,7 +24,7 @@
       "software": [
         {
           "name": "OpenCV",
-          "licence_scope": "BSD-3-Clause",
+          "licence_scope": "Apache-2.0 for OpenCV >=4.5 (including current 4.x); older releases retain their release-specific BSD-3-Clause terms",
           "role_and_api": "calibrateCamera, projectPoints",
           "dependencies": "Python cv2 + NumPy"
         },
@@ -283,7 +283,7 @@
       "software": [
         {
           "name": "OpenCV",
-          "licence_scope": "BSD-3-Clause",
+          "licence_scope": "Apache-2.0 for OpenCV >=4.5 (including current 4.x); older releases retain their release-specific BSD-3-Clause terms",
           "role_and_api": "calibrateCamera; solvePnPRansac; projectPoints",
           "dependencies": "Python cv2 + NumPy"
         },
@@ -744,7 +744,7 @@
         },
         {
           "name": "OpenCV",
-          "licence_scope": "BSD-3-Clause",
+          "licence_scope": "Apache-2.0 for OpenCV >=4.5 (including current 4.x); older releases retain their release-specific BSD-3-Clause terms",
           "role_and_api": "projectPoints/PnP for pose calibration or reprojection",
           "dependencies": "Python cv2"
         },
@@ -773,7 +773,17 @@
           "action": "Read back CAD revision and compare with same mesh and independent controls."
         }
       ],
-      "code": [],
+      "code": [
+        {
+          "path": "Blender Python Console (native bpy API; no project script)",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "depsgraph = bpy.context.evaluated_depsgraph_get(); hit, location, normal, face_index, obj, matrix = bpy.context.scene.ray_cast(depsgraph, origin, direction); origin/direction are world-space rays computed from the calibrated camera and stroke pixel.",
+          "source_urls": [
+            "https://docs.blender.org/api/current/bpy.types.Scene.html",
+            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+          ]
+        }
+      ],
       "outputs": [
         {
           "representation": "Calculated screen-stroke anchors, interpreted constrained CAD feature and revision-bound comparison report.",
@@ -870,7 +880,17 @@
           "action": "Inspect held-out novel views and preserve the checkpoint, processed transforms and original photo set. Any mesh must come from a separate documented geometry extraction step."
         }
       ],
-      "code": [],
+      "code": [
+        {
+          "path": "Nerfstudio CLI (native tool entrypoint; no project script)",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "ns-process-data images --data <images-folder> --output-dir <processed-data> && ns-train splatfacto --data <processed-data> ; use ns-train nerfacto --data <processed-data> for the separate NeRF branch.",
+          "source_urls": [
+            "https://docs.nerf.studio/quickstart/custom_dataset.html",
+            "https://docs.nerf.studio/nerfology/methods/splat.html"
+          ]
+        }
+      ],
       "outputs": [
         {
           "representation": "Navigable Gaussian-splat scene with camera poses and original capture provenance; NeRF alternative tracked separately.",
@@ -1098,7 +1118,17 @@
           "action": "Read back CAD and compare to independent measurements, not proxy surface alone."
         }
       ],
-      "code": [],
+      "code": [
+        {
+          "path": "TripoSR CLI (native tool entrypoint; no project script)",
+          "status": "existing_tool_entrypoint",
+          "entrypoint": "python run.py <single-image> --output-dir <output-folder>",
+          "source_urls": [
+            "https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md",
+            "https://huggingface.co/stabilityai/TripoSR"
+          ]
+        }
+      ],
       "outputs": [
         {
           "representation": "Learned single-view mesh proxy, followed by constrained CAD built from supplied independent dimensions and measured data.",

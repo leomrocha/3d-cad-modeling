@@ -1,0 +1,760 @@
+[
+  {
+    "url": "https://docs.ifcopenshell.org/ifcopenshell-python/code_examples.html",
+    "local_original": null,
+    "title": "IfcOpenShell code examples",
+    "summary": "Official end-to-end API examples for creating an IFC project, assigning units, creating contexts and spatial hierarchy, creating a wall and writing IFC.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+    "local_original": null,
+    "title": "IfcOpenShell geometry creation",
+    "summary": "Official API guidance for wall, profile and mesh representations, placements and SI-unit transforms.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
+    "local_original": null,
+    "title": "IfcOpenShell feature.add_feature API",
+    "summary": "Official example creates IfcOpeningElement geometry and relates it as a void feature of a wall.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html",
+    "local_original": null,
+    "title": "IfcOpenShell unit.assign_unit API",
+    "summary": "Official signature and examples for declaring IFC project units.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
+    "local_original": null,
+    "title": "IfcOpenShell placement API",
+    "summary": "Official 4x4 local placement API; `is_si` declares whether matrix translations use SI units.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
+    "local_original": null,
+    "title": "IfcOpenShell georeference API",
+    "summary": "Official CRS/map-conversion API; creates georeference records but requires supplied CRS and transform values.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
+    "local_original": null,
+    "title": "IfcOpenShell geometry API",
+    "summary": "Official geometry processing and representation conversion API.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/IfcOpenShell/IfcOpenShell",
+    "local_original": null,
+    "title": "IfcOpenShell repository and software licences",
+    "summary": "Repository identifies IfcOpenShell as LGPL-3.0-or-later and Bonsai as GPL-3.0-or-later; tool software licences do not license imported assets.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC",
+      "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.bonsaibim.org/guides/authoring/georeferencing.html",
+    "local_original": null,
+    "title": "Bonsai georeferencing guide",
+    "summary": "Official guidance for site CRS, coordinate transformations and project north; coordinate parameters must come from survey/engineering sources.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://colmap.github.io/cli.html",
+    "local_original": null,
+    "title": "COLMAP command-line interface",
+    "summary": "Official supported commands for feature extraction/matching, mapping, image undistortion, dense stereo and fusion; documents resume behavior.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC",
+      "DOM-R06: Photo set to measured reusable component"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://colmap.github.io/faq.html",
+    "local_original": null,
+    "title": "COLMAP FAQ",
+    "summary": "Official dense reconstruction advice, source image selection, depth ranges, GPU memory and supported CPU feature/matching route.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC",
+      "DOM-R06: Photo set to measured reusable component"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/colmap/colmap/blob/main/doc/license.rst",
+    "local_original": null,
+    "title": "COLMAP licence",
+    "summary": "Primary COLMAP BSD-3-Clause licence statement; third-party dependencies have separate licences.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
+    "local_original": null,
+    "title": "Open3D ICP registration",
+    "summary": "Official ICP API example requires a rough initial transform and reports fitness and inlier RMSE.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC",
+      "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene",
+      "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
+    "local_original": null,
+    "title": "Open3D global registration",
+    "summary": "Official registration methods provide a coarse alignment that may be refined by local ICP.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC",
+      "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene",
+      "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html",
+    "local_original": null,
+    "title": "Open3D TriangleMesh API",
+    "summary": "Official Poisson and ball-pivoting reconstruction APIs; Poisson requires an oriented point cloud and produces inferred surface geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R06: Photo set to measured reusable component"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/isl-org/Open3D/blob/main/LICENSE",
+    "local_original": null,
+    "title": "Open3D licence",
+    "summary": "Primary source gives Open3D MIT licence; third-party dependencies remain separately governed.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+    "local_original": null,
+    "title": "MuJoCo modeling guide",
+    "summary": "Primary MJCF/URDF model semantics, bodies, joints, frames, supported conversion subset and asset concepts.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+    "local_original": null,
+    "title": "MuJoCo overview",
+    "summary": "Primary descriptions of units, inertial/body frames, mesh inputs, convex collision geometry and model representations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
+    "local_original": null,
+    "title": "MuJoCo model editing API",
+    "summary": "Official mjSpec XML/URDF parsing and compile API; `MjModel.from_xml_path` parses/compiles XML or MJZ.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://mujoco.readthedocs.io/en/latest/XMLreference.html",
+    "local_original": null,
+    "title": "MuJoCo XML reference",
+    "summary": "Official MJCF element reference for body, joints, inertial, mesh assets, geoms and compiler behavior.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R03: CAD robot assembly to URDF and MJCF",
+      "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene",
+      "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle",
+      "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco",
+    "local_original": null,
+    "title": "MuJoCo software repository and licence",
+    "summary": "Primary repository identifies MuJoCo source code under Apache-2.0 and provides Python bindings; source/docs licences are separately described.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R03: CAD robot assembly to URDF and MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/ros/urdf_tutorial",
+    "local_original": null,
+    "title": "ROS URDF tutorial",
+    "summary": "Primary tutorial covers links, visual, movable joints, collision and inertial properties; repository declares BSD-3-Clause.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link",
+      "DOM-R03: CAD robot assembly to URDF and MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
+    "local_original": null,
+    "title": "Choreonoid URDF format documentation",
+    "summary": "Consumer documentation for URDF model import and frame semantics.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
+    "local_original": null,
+    "title": "FreeCAD Assembly4-to-URDF exporter",
+    "summary": "Third-party source describes Python scripts exporting Assembly4 assemblies to URDF; feature support and licence must be checked at the pinned revision.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/boelnasr/CAD_TO_URDF",
+    "local_original": null,
+    "title": "CAD_TO_URDF converter",
+    "summary": "Third-party project describes mesh/YAML and STEP/IGES-to-URDF routes; automated joint inference needs review and package licence is per source revision.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco_menagerie",
+    "local_original": null,
+    "title": "MuJoCo Menagerie repository",
+    "summary": "Curated robot MJCF models and asset files; repository states each model directory has its own licence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
+    "local_original": null,
+    "title": "MuJoCo Menagerie model catalogue",
+    "summary": "Primary catalogue reports robot model identities, DoF counts, preview XML files and per-model license references.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/README.md",
+    "local_original": null,
+    "title": "Franka Emika Panda Menagerie model README",
+    "summary": "Identifies the Panda MJCF model, states MuJoCo 2.3.3 or later, Apache-2.0 model licence and documented derivation/geometry/inertia work.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R04: CAD robot plus Menagerie model and scan environment to MJCF scene"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/franka_emika_panda/panda.xml",
+    "local_original": null,
+    "title": "Franka Emika Panda MJCF file",
+    "summary": "Actual example robot model source file for the Menagerie Panda; use only at a pinned revision and with model-specific rights.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/SarahWeiii/CoACD",
+    "local_original": null,
+    "title": "CoACD repository",
+    "summary": "Collision-aware convex decomposition tool; CLI accepts common mesh formats and exposes concavity/remesh controls.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link",
+      "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+    "local_original": null,
+    "title": "CoACD licence",
+    "summary": "Primary license file used by prior project research identifies the code licence; imported meshes have their own terms.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link",
+      "DOM-R08: Scanned environment to collision geometry in existing MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/kmammou/v-hacd/blob/master/README.md",
+    "local_original": null,
+    "title": "V-HACD repository status",
+    "summary": "Upstream repository says V-HACD is archived/end-of-life and directs new development to CoACD.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
+    "local_original": null,
+    "title": "V-HACD licence",
+    "summary": "Primary repository licence link, retained for older projects using V-HACD.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/VAST-AI-Research/TripoSR",
+    "local_original": null,
+    "title": "TripoSR source repository",
+    "summary": "Single-image reconstruction code; command-line `run.py` outputs OBJ or GLB; README states approximately 6 GB VRAM default route and CPU fallback.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R06: Photo set to measured reusable component"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/VAST-AI-Research/TripoSR/blob/main/run.py",
+    "local_original": null,
+    "title": "TripoSR inference entry point",
+    "summary": "Actual source implements preprocessing, single-image inference, mesh extraction and OBJ/GLB export; chunk size trades memory for runtime.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/VAST-AI-Research/TripoSR/blob/main/LICENSE",
+    "local_original": null,
+    "title": "TripoSR source licence",
+    "summary": "Repository code is MIT licensed; check weights/dependencies and input/output rights separately.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://huggingface.co/stabilityai/TripoSR",
+    "local_original": null,
+    "title": "TripoSR model card and weights",
+    "summary": "Model card labels weights MIT and identifies single-image feed-forward reconstruction; trained using Objaverse renders.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R06: Photo set to measured reusable component"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/nerfstudio-project/nerfstudio",
+    "local_original": null,
+    "title": "Nerfstudio source repository",
+    "summary": "Nerfstudio includes NeRF/Gaussian methods, Apache-2.0 code, and its repository describes CUDA/NVIDIA stack prerequisites.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.nerf.studio/quickstart/installation.html",
+    "local_original": null,
+    "title": "Nerfstudio installation requirements",
+    "summary": "Official install requirements include Python/conda and CUDA-enabled PyTorch/Tiny-CUDA-NN for the documented route.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+    "local_original": null,
+    "title": "FreeCAD Assembly Workbench documentation",
+    "summary": "Official FreeCAD project documentation lists assembly joints and assembly authoring interface.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link",
+      "DOM-R03: CAD robot assembly to URDF and MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-library",
+    "local_original": null,
+    "title": "FreeCAD component library repository",
+    "summary": "Actual community part library source; inspect each asset file and licence before redistribution.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://reqrefusion.github.io/FreeCAD-Documentation-html/wiki/BIM_Library.html",
+    "local_original": null,
+    "title": "FreeCAD BIM Library documentation",
+    "summary": "Documentation describes BIM component library usage; content terms remain item-specific.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.freecad.org/addons.php?lang=eng_EN",
+    "local_original": null,
+    "title": "FreeCAD Addons catalogue",
+    "summary": "Software/addon catalogue, not blanket evidence of a common licence for downloaded component assets.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://polyhaven.com/license",
+    "local_original": null,
+    "title": "Poly Haven licence",
+    "summary": "Poly Haven states asset licence terms; use visual/environment assets only within the stated CC0 scope.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://www.blender.org/features/pipeline/",
+    "local_original": null,
+    "title": "Blender pipeline format support",
+    "summary": "Official Blender feature page identifies supported import/export pipeline formats; format support alone does not preserve domain semantics.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://docs.blender.org/manual/en/latest/advanced/command_line/",
+    "local_original": null,
+    "title": "Blender command-line manual",
+    "summary": "Official Blender manual covers background/CLI automation and Python script operation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-R01: Raster plan and site survey to registered IFC",
+      "DOM-R05: Sketch overlay on existing model to controlled revision",
+      "DOM-R07: BIM library component to IFC, Blender display or static MuJoCo obstacle"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://projects.blender.org/lab/blender_mcp/src/branch/main",
+    "local_original": null,
+    "title": "Blender Foundation MCP project repository",
+    "summary": "Official-hosted MCP source and setup requirements were registered in earlier project research; version compatibility must be pinned.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/ahujasid/mcp-for-blender",
+    "local_original": null,
+    "title": "Community Blender MCP repository",
+    "summary": "Separate community bridge implementation; repo licence and supported Blender versions differ from Blender Foundation project.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+    "local_original": null,
+    "title": "FreeCAD import/export documentation",
+    "summary": "FreeCAD import/export preference controls and neutral-format routes; exact importer/exporter fidelity depends on version and format.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/html"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "title": "Existing domains/components research",
+    "summary": "Existing project report compares OCS, IFC, robotics, physical properties, collision generation and component-library terms.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link"
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "title": "Existing CAD and skills assessment",
+    "summary": "Existing project report documents OCS baseline, CAD alternatives and representation fidelity.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "DOM-R05: Sketch overlay on existing model to controlled revision"
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "title": "Existing reconstruction research",
+    "summary": "Existing project report documents COLMAP, Meshroom, Open3D, OpenMVS, Gaussian/NeRF and scan-to-CAD routes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "title": "Existing implementation plan",
+    "summary": "Proposed project software architecture and stage plan; proposal rather than executed integrations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/robot_model.py",
+    "title": "MJCF reference writer",
+    "summary": "Bounded standard-library serializer for explicit MJCF data; no integration execution.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "DOM-R02: Manufacturer STEP component to robot link",
+      "DOM-R03: CAD robot assembly to URDF and MJCF"
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/projects/3dmodeling/examples/workflows/domains/ifc_model.py",
+    "title": "IFC reference author",
+    "summary": "Bounded IfcOpenShell IFC4 author from explicitly dimensioned JSON inputs; no integration execution.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "Installed OpenCADStudio engineering skill",
+    "summary": "Local skill supplies explicit units, frames, component boundaries, source evidence and geometry validation. User reports partial success.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "DOM-R05: Sketch overlay on existing model to controlled revision"
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  },
+  {
+    "url": null,
+    "local_original": "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+    "title": "Existing IFC-to-GLB provenance example",
+    "summary": "Local provenance manifest records source IFC and conversion details including unit transform; reuse as process pattern only.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_report_registered",
+    "supporting_claims": [
+      "Reference source registered for the workflow and interoperability topic it documents."
+    ],
+    "sha256": null,
+    "content_type": "text/markdown/json"
+  }
+]

@@ -30,7 +30,7 @@ def plain(value):
     if value is None:
         return 'See the selected tool/variant contract.'
     if isinstance(value, dict):
-        return '; '.join(f'{label(k)}: {plain(v)}' for k, v in value.items())
+        return '; '.join(f'{label(k)}: ' + (f'`{v}`' if k in {'entrypoint', 'command'} and isinstance(v, str) else plain(v)) for k, v in value.items())
     if isinstance(value, list):
         return '; '.join(plain(item) for item in value)
     return str(value)
@@ -53,8 +53,11 @@ def main():
     args = parser.parse_args()
     contract = load(DETAILS / 'contract.json')
     recipes = {}
+    operations = {}
     for name in ['cad', 'reconstruction', 'domain', 'combined']:
-        for item in load(ROOT / f'research/workflows/{name}-paths.json')['recipes']:
+        domain = load(ROOT / f'research/workflows/{name}-paths.json')
+        operations.update({o['id']: o for o in domain.get('operations', [])})
+        for item in domain['recipes']:
             recipes[item['id']] = item
     records = []
     for path in [DETAILS / f'{name}-details.json' for name in ['cad', 'reconstruction', 'domain', 'combined']]:
@@ -97,6 +100,8 @@ def main():
                 errors.append(f'{record["id"]}: source not registered: {ref}')
             else:
                 record['source_ids'].append(source_ids[ref])
+        record['registered_recipe_inputs'] = recipes[record['id']]['inputs']
+        record['registered_operation_sequence'] = [operations[i] for i in recipes[record['id']]['steps']]
         record['recorded_operations'] = len(recipes[record['id']]['steps'])
     if errors:
         dump(DETAILS / 'detail-checks.json', {'date': args.date, 'errors': errors})
@@ -110,9 +115,10 @@ def main():
                  f'**Manual effort {score["human"]}/5; setup {score["setup"]}/5; computing {score["compute"]}/5.**', '',
                  f'Output: {plain(record["output_scope"])}', '']
         for title, key in [
-            ('Comparison conditions', 'comparison_conditions'), ('Input artifacts', 'inputs'),
+            ('Comparison conditions', 'comparison_conditions'), ('Registered starting artifact types', 'registered_recipe_inputs'), ('Detailed source and preparation artifacts', 'inputs'),
             ('Reference points, datums and coordinate frames', 'reference_points'),
             ('Software, libraries and dependencies', 'software'), ('Procedure', 'steps'),
+            ('Inputs, outputs and requirements at each registered operation', 'registered_operation_sequence'),
             ('Code and tool entry points', 'code'), ('Output artifacts', 'outputs'),
             ('Checks', 'checks'), ('Failure recovery', 'failure_recovery'),
             ('Effort and computing classification', 'effort'), ('Resources and scaling', 'resources')]:
@@ -124,7 +130,7 @@ def main():
         lines += ['## Original sources', '']
         lines += [f'{i}. [{url}]({url})' for i, url in enumerate(record['source_urls'], 1)]
         lines += ['', f'Full source summaries: [source register]({ROOT / "research/sources/source-register.md"}).', '']
-        (DETAILS / f'{record["id"].lower()}.md').write_text('\n'.join(lines).rstrip() + '\n')
+        (DETAILS / f'{record["id"].lower()}.md').write_text('\n'.join(line.rstrip() for line in lines).rstrip() + '\n')
     dump(DETAILS / 'workflow-details.json', {'schema_version': 1, 'date': args.date,
          'classification_status': contract['rating_status'], 'workflows': records})
     names = {'human': 'manual effort', 'compute': 'computing demand'}
@@ -141,7 +147,7 @@ def main():
         for r in order:
             e = r['effort']
             lines += [f'| [{r["id"]} — {r["name"]}]({DETAILS / (r["id"].lower()+".md")}) | {e["human"]} | {e["setup"]} | {e["compute"]} | {r["recorded_operations"]} |']
-        (DETAILS / f'by-{axis}.md').write_text('\n'.join(lines).rstrip() + '\n')
+        (DETAILS / f'by-{axis}.md').write_text('\n'.join(line.rstrip() for line in lines).rstrip() + '\n')
     scripts = []
     for path in sorted((ROOT / 'examples/workflows').rglob('*.py')):
         ast.parse(path.read_text(), filename=str(path))

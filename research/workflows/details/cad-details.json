@@ -82,21 +82,18 @@
         {
           "name": "OpenCADStudio",
           "role": "Project baseline: native drawing/solid geometry controlled through editor/MCP; installed skill supplies geometry contract, readback and save rules. Inspected sources establish Solid3D/ACIS and mesh schemas, not general parametric feature history.",
-          "license": "GPL-3.0 per local LICENSE file",
+          "license": "GPL-3.0 (local LICENSE file).",
           "apis": [
             "OpenCADStudio --mcp",
-            "ocs_sessions",
-            "ocs_read",
-            "ocs_execute",
-            "ocs_capture",
-            "command/entity/record schemas"
+            "ocs_control.py discover/read",
+            "ocs_execute after inspecting command schema",
+            "ocs_read geometry/entity records"
           ],
           "dependencies": [
-            "Installed native application with integrated MCP; existing helper talks to authenticated local session."
+            "OpenCADStudio desktop build with MCP enabled; Python 3 helper plus local session credentials/config."
           ],
           "source_urls": [
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE"
           ]
@@ -104,15 +101,16 @@
         {
           "name": "CadQuery",
           "role": "Parameter-driven Python model using OCCT B-rep; STEP is geometry exchange, Python source is the parametric record.",
-          "license": "Apache-2.0",
+          "license": "Apache-2.0.",
           "apis": [
-            "Workplane.box/center/circle/extrude/cut",
-            "Shape.isValid/BoundingBox/Volume",
-            "Workplane.solids/export",
-            "importers.importStep/importDXF"
+            "cq.importers.importDXF(filename,tol=...,include=[layer])",
+            "imported.wires().vals(); Wire.Closed()/isValid()",
+            "cq.Matrix(scale); Wire.transformGeometry",
+            "Workplane.newObject([wire]).wires().toPending().extrude(height)",
+            "Shape.isValid/BoundingBox/Volume; Workplane.solids().size(); export(unit=\"MM\",outputUnit=\"MM\"); importers.importStep"
           ],
           "dependencies": [
-            "Python CadQuery plus OCP/OCCT binding; official install docs recommend Conda/conda-forge."
+            "Python CadQuery, OCP Python bindings and OCCT; reference scripts require CadQuery and import_profile additionally requires ezdxf."
           ],
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
@@ -124,13 +122,14 @@
         {
           "name": "FreeCAD",
           "role": "Complementary native feature-history and constrained-sketch backend.",
-          "license": "LGPL-2.1-or-later (LGPL2+)",
+          "license": "LGPL-2.1-or-later per project licensing page.",
           "apis": [
-            "Sketcher scripting",
-            "Part/PartDesign Python APIs"
+            "FreeCAD Python console/macros; App.newDocument; Sketcher::SketchObject.addGeometry/addConstraint",
+            "Part::Feature.Shape or PartDesign::Body/Feature for solids",
+            "ViewPart/TechDraw orthographic projection; import/export via Draft/Part"
           ],
           "dependencies": [
-            "FreeCAD application Python and its OCCT build; system Python may not share its modules."
+            "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
@@ -185,7 +184,7 @@
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
             "https://cadquery.readthedocs.io/en/stable/classreference.html"
           ],
-          "notes": "No default dimensions; reference code not executed.",
+          "notes": "Concrete reference script: required numeric parameters, source SHA256, B-rep checks and STEP reimport. Not executed.",
           "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/build_part.py"
         },
         {
@@ -204,9 +203,9 @@
           "cad-solid",
           "native-model-document",
           "parametric-source",
-          "STEP fabrication-package"
+          "STEP"
         ],
-        "editable_source": "CadQuery .py + JSON, OCS native document or FreeCAD native feature-history document. STEP does not store those source histories.",
+        "editable_source": "CadQuery .py plus dimensions JSON, OCS native document, or FreeCAD feature-history document; STEP is neutral exchange geometry.",
         "preserves": [
           "source text and value provenance",
           "units/datum",
@@ -326,7 +325,7 @@
       "inputs": [
         {
           "artifact": "raster-sketch",
-          "format": "PNG/JPEG/TIFF",
+          "format": "PNG/TIFF/JPEG or raster PDF page",
           "requirement": "One planar view.",
           "quality": "Sharp, high contrast, no folds over dimensions or profile.",
           "provenance": "Original image retained."
@@ -350,33 +349,30 @@
         {
           "name": "OpenCV",
           "role": "Planar image rectification and raster line candidates.",
-          "license": "Apache-2.0",
+          "license": "Apache-2.0 upstream.",
           "apis": [
-            "cv.getPerspectiveTransform",
-            "cv.warpPerspective",
-            "cv.HoughLinesP",
-            "cv.findContours",
-            "cv.approxPolyDP"
+            "cv2.getPerspectiveTransform(4 point pairs)",
+            "cv2.warpPerspective",
+            "cv2.HoughLinesP",
+            "cv2.findContours/cv2.approxPolyDP"
           ],
           "dependencies": [
-            "Python bindings and NumPy; interpolation changes raster pixels."
+            "Python 3, OpenCV Python bindings (opencv-python or system package), NumPy; image file raster source."
           ],
           "source_urls": [
             "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
-            "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
-            "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://github.com/opencv/opencv/blob/4.x/LICENSE"
           ]
         },
         {
           "name": "Tesseract",
           "role": "Dimension text candidates with boxes/confidence; humans verify engineering notation.",
-          "license": "Apache-2.0",
+          "license": "Apache-2.0 upstream.",
           "apis": [
-            "tesseract image outbase -l eng tsv"
+            "tesseract image outputbase -l eng tsv; TSV bbox/confidence review"
           ],
           "dependencies": [
-            "Tesseract binary and traineddata language file."
+            "Tesseract OCR binary plus eng traineddata; TSV output is text candidates only."
           ],
           "source_urls": [
             "https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md",
@@ -386,13 +382,14 @@
         {
           "name": "FreeCAD",
           "role": "Complementary native feature-history and constrained-sketch backend.",
-          "license": "LGPL-2.1-or-later (LGPL2+)",
+          "license": "LGPL-2.1-or-later per project licensing page.",
           "apis": [
-            "Sketcher scripting",
-            "Part/PartDesign Python APIs"
+            "FreeCAD Python console/macros; App.newDocument; Sketcher::SketchObject.addGeometry/addConstraint",
+            "Part::Feature.Shape or PartDesign::Body/Feature for solids",
+            "ViewPart/TechDraw orthographic projection; import/export via Draft/Part"
           ],
           "dependencies": [
-            "FreeCAD application Python and its OCCT build; system Python may not share its modules."
+            "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
@@ -403,21 +400,18 @@
         {
           "name": "OpenCADStudio",
           "role": "Project baseline: native drawing/solid geometry controlled through editor/MCP; installed skill supplies geometry contract, readback and save rules. Inspected sources establish Solid3D/ACIS and mesh schemas, not general parametric feature history.",
-          "license": "GPL-3.0 per local LICENSE file",
+          "license": "GPL-3.0 (local LICENSE file).",
           "apis": [
             "OpenCADStudio --mcp",
-            "ocs_sessions",
-            "ocs_read",
-            "ocs_execute",
-            "ocs_capture",
-            "command/entity/record schemas"
+            "ocs_control.py discover/read",
+            "ocs_execute after inspecting command schema",
+            "ocs_read geometry/entity records"
           ],
           "dependencies": [
-            "Installed native application with integrated MCP; existing helper talks to authenticated local session."
+            "OpenCADStudio desktop build with MCP enabled; Python 3 helper plus local session credentials/config."
           ],
           "source_urls": [
             "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
             "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE"
           ]
@@ -477,7 +471,7 @@
       "code": [
         {
           "entrypoint": "cv2.getPerspectiveTransform(src_pts,dst_pts); cv2.warpPerspective(image,H,size)",
-          "status": "reference_code",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html"
           ],
@@ -485,7 +479,7 @@
         },
         {
           "entrypoint": "tesseract calibrated.png - -l eng tsv > dimensions.tsv",
-          "status": "reference_code",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://github.com/tesseract-ocr/tessdoc/blob/main/Command-Line-Usage.md"
           ],
@@ -493,7 +487,7 @@
         },
         {
           "entrypoint": "cv2.HoughLinesP(...); cv2.findContours(...); cv2.approxPolyDP(...)",
-          "status": "reference_code",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html"
@@ -634,7 +628,7 @@
       "inputs": [
         {
           "artifact": "raster-plan",
-          "format": "source-native file plus provenance",
+          "format": "PNG/TIFF/JPEG or raster PDF page",
           "requirement": "reviewed wall/opening graph + vertical dimensions",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -650,12 +644,12 @@
         {
           "name": "CVPR2021",
           "role": "CVPR2021 floorplan",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "Paper only; no software licence implied.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "Published algorithm: blueprint semantic/geometry inference in paper; manual graph interpretation; no CLI claim"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Paper has no asserted installable dependency; reproducing method requires research implementation/dataset."
           ],
           "source_urls": [
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
@@ -665,12 +659,12 @@
         {
           "name": "ACCV2022",
           "role": "ACCV2022 vectorization",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "Paper only; no software licence implied.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "Published vectorization method: raster blueprint to vector structure; no CLI claim"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Paper has no asserted installable dependency; reproducing method requires research implementation/dataset."
           ],
           "source_urls": [
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
@@ -680,12 +674,14 @@
         {
           "name": "FreeCAD",
           "role": "FreeCAD Draft/Part",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "LGPL-2.1-or-later per project licensing page.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "FreeCAD Python console/macros; App.newDocument; Sketcher::SketchObject.addGeometry/addConstraint",
+            "Part::Feature.Shape or PartDesign::Body/Feature for solids",
+            "ViewPart/TechDraw orthographic projection; import/export via Draft/Part"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
@@ -725,14 +721,14 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
-          "status": "reference_code",
+          "entrypoint": "cv2.getPerspectiveTransform(src_pts,dst_pts); cv2.warpPerspective(plan,H,size); human trace wall/opening graph; FreeCAD PartDesign/Sketcher model from reviewed graph",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
             "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Paper methods inform interpretation but provide no claimed general-purpose CLI; OpenCV rectification and FreeCAD feature creation are documented tools. Paper code not installed or run."
         }
       ],
       "outputs": {
@@ -752,11 +748,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "floor layout",
+          "quantity": "wall/opening lengths and opening positions",
+          "unit": "mm",
+          "acceptance": "reviewed graph closes and supplied dimensions agree",
+          "method": "Compare traced vector graph and CAD walls/openings against calibrated plan and source dimensions."
         }
       ],
       "failure_recovery": [
@@ -779,24 +775,21 @@
       },
       "resources": {
         "cpu": "CPU image processing plus moderate geometry; larger plans and semantic extraction increase cost.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "CPU geometry baseline; graphics display acceleration is separate.",
+        "ram": "Scales with plan pixels, walls, openings and floors.",
+        "storage": "Preserve plan originals, rectified plan, reviewed graph and building CAD.",
+        "scaling_drivers": "plan pixels, walls, openings and floors",
+        "variants": "Manual/CPU baseline; learned plan parser requires its documented model environment."
       },
       "source_urls": [
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md"
-      ]
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
     {
       "id": "CAD-R04",
@@ -814,7 +807,7 @@
       "inputs": [
         {
           "artifact": "vector-drawing",
-          "format": "source-native file plus provenance",
+          "format": "DXF or SVG with registered orthographic views where required",
           "requirement": "selected closed profile, layer, scale, extrusion",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -830,12 +823,16 @@
         {
           "name": "CadQuery",
           "role": "CadQuery importexport",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "Apache-2.0.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "cq.importers.importDXF(filename,tol=...,include=[layer])",
+            "imported.wires().vals(); Wire.Closed()/isValid()",
+            "cq.Matrix(scale); Wire.transformGeometry",
+            "Workplane.newObject([wire]).wires().toPending().extrude(height)",
+            "Shape.isValid/BoundingBox/Volume; Workplane.solids().size(); export(unit=\"MM\",outputUnit=\"MM\"); importers.importStep"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Python CadQuery, OCP Python bindings and OCCT; reference scripts require CadQuery and import_profile additionally requires ezdxf."
           ],
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
@@ -845,27 +842,31 @@
         {
           "name": "ezdxf",
           "role": "ezdxf units",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "MIT.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "ezdxf.readfile(path)",
+            "doc.header[\"$INSUNITS\"]",
+            "doc.modelspace().query(\"*\") and entity.dxf.layer"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Python 3 and ezdxf; importer reference combines it with CadQuery/OCP."
           ],
           "source_urls": [
-            "https://cadquery.readthedocs.io/en/stable/importexport.html",
-            "https://ezdxf.readthedocs.io/en/stable/concepts/units.html"
+            "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
+            "https://github.com/mozman/ezdxf"
           ]
         },
         {
           "name": "FreeCAD",
           "role": "FreeCAD Draft SVG importer",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "LGPL-2.1-or-later per project licensing page.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "FreeCAD Python console/macros; App.newDocument; Sketcher::SketchObject.addGeometry/addConstraint",
+            "Part::Feature.Shape or PartDesign::Body/Feature for solids",
+            "ViewPart/TechDraw orthographic projection; import/export via Draft/Part"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
@@ -912,14 +913,15 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
+          "entrypoint": "python /home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py --dxf /absolute/profile.dxf --layer PROFILE --scale-to-mm SCALE --extrusion-mm HEIGHT --merge-tolerance-source-units TOL --step /absolute/out/profile.step",
           "status": "reference_code",
           "source_urls": [
             "https://cadquery.readthedocs.io/en/stable/importexport.html",
-            "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
-            "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md"
+            "https://cadquery.readthedocs.io/en/stable/classreference.html",
+            "https://ezdxf.readthedocs.io/en/stable/concepts/units.html"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Concrete script checks the selected layer, declared DXF units, one closed wire, validity, solid count and STEP readback; not executed.",
+          "path": "/home/leo/projects/3dmodeling/examples/workflows/cad/import_profile.py"
         }
       ],
       "outputs": {
@@ -940,11 +942,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "DXF extrusion",
+          "quantity": "closed loops, XY bounds and Z height",
+          "unit": "mm",
+          "acceptance": "one selected closed wire; solid valid; Z equals supplied height",
+          "method": "CadQuery isValid/Closed/solids/BBox and STEP reread."
         }
       ],
       "failure_recovery": [
@@ -967,18 +969,11 @@
       },
       "resources": {
         "cpu": "Small CPU topology and extrusion; nested loops increase review.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "CPU geometry baseline; graphics display acceleration is separate.",
+        "ram": "Scales with profile edges, nested contours and Boolean topology.",
+        "storage": "Preserve DXF/SVG, parameters, generator and STEP.",
+        "scaling_drivers": "profile edges, nested contours and Boolean topology",
+        "variants": "Single closed wire in supplied script; assign holes/multiple regions explicitly for richer profiles."
       },
       "source_urls": [
         "https://cadquery.readthedocs.io/en/stable/importexport.html",
@@ -1000,8 +995,8 @@
       "comparison_conditions": "One bounded input artifact set with the stated minimum quality; no unmeasured dimensions are promoted to fact. Ratings compare complete workflow under current contract scales.",
       "inputs": [
         {
-          "artifact": "raster-sketch",
-          "format": "source-native file plus provenance",
+          "artifact": "vector-drawing",
+          "format": "DXF or SVG with registered orthographic views where required",
           "requirement": "matched front/top/side views and dimensions",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -1017,12 +1012,14 @@
         {
           "name": "FreeCAD",
           "role": "FreeCAD Sketcher/Part",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "LGPL-2.1-or-later per project licensing page.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "FreeCAD Python console/macros; App.newDocument; Sketcher::SketchObject.addGeometry/addConstraint",
+            "Part::Feature.Shape or PartDesign::Body/Feature for solids",
+            "ViewPart/TechDraw orthographic projection; import/export via Draft/Part"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
@@ -1032,12 +1029,12 @@
         {
           "name": "orthographic",
           "role": "orthographic reconstruction methods",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "Research paper only; no software licence implied.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "Published reconstruction formulation; no general-purpose software API claimed"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Paper reproduction requires its research code/data if available plus a compatible ML environment; proposed manual CAD route needs FreeCAD only."
           ],
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
@@ -1084,13 +1081,13 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
-          "status": "reference_code",
+          "entrypoint": "FreeCAD Sketcher::SketchObject.addGeometry/addConstraint; FreeCAD Part Design workbench: invoke Pad/Pocket on reviewed sketches; TechDraw orthographic views; manual correspondence review",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
       ],
       "outputs": {
@@ -1111,11 +1108,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "orthographic reconstruction",
+          "quantity": "projected outlines and explicit dimensions",
+          "unit": "source drawing units",
+          "acceptance": "front/top/side projections align with source within stated drawing tolerance",
+          "method": "Render CAD views from same projection and overlay/compare dimensions."
         }
       ],
       "failure_recovery": [
@@ -1138,18 +1135,11 @@
       },
       "resources": {
         "cpu": "Moderate CPU B-rep; view count/features dominate, no GPU.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "CPU geometry baseline; graphics display acceleration is separate.",
+        "ram": "Scales with view count, matched edges and candidate B-rep topology.",
+        "storage": "Preserve vector views, feature matches, native CAD and projection checks.",
+        "scaling_drivers": "view count, matched edges and candidate B-rep topology",
+        "variants": "Vector baseline; raster views add tracing and rectification."
       },
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
@@ -1172,7 +1162,7 @@
       "inputs": [
         {
           "artifact": "photo-set",
-          "format": "source-native file plus provenance",
+          "format": "Original JPEG/PNG plus camera metadata",
           "requirement": "overlapping calibrated images, scale controls, visible access",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -1188,42 +1178,45 @@
         {
           "name": "COLMAP",
           "role": "COLMAP CLI",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "BSD-3-Clause.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "colmap automatic_reconstructor --workspace_path W --image_path I --quality medium",
+            "image_undistorter; patch_match_stereo; stereo_fusion; poisson_mesher"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "COLMAP binary, camera/image inputs; dense MVS often uses CUDA-capable GPU, although sparse reconstruction can be CPU."
           ],
           "source_urls": [
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
-            "https://github.com/alicevision/Meshroom/blob/develop/COPYING.md"
+            "https://github.com/colmap/colmap/blob/main/LICENSE"
           ]
         },
         {
           "name": "Meshroom/AliceVision",
           "role": "Meshroom/AliceVision",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "Meshroom MPL-2.0; AliceVision licensing should be checked for exact component/build.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "Meshroom GUI photogrammetry graph (CameraInit, FeatureExtraction, ImageMatching, FeatureMatching, StructureFromMotion, PrepareDenseScene, DepthMap, DepthMapFilter, Meshing, Texturing); AliceVision CLI nodes"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Meshroom plus AliceVision binaries and supported feature/depth nodes; dense stages depend on installed CPU/GPU backend and drivers."
           ],
           "source_urls": [
-            "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
-            "https://github.com/alicevision/Meshroom/blob/develop/COPYING.md"
+            "https://github.com/alicevision/Meshroom/blob/develop/COPYING.md",
+            "https://meshroom.readthedocs.io/en/latest/"
           ]
         },
         {
           "name": "Open3D",
           "role": "Open3D",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "MIT.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "open3d.pipelines.integration.ScalableTSDFVolume",
+            "RGBDImage.create_from_color_and_depth",
+            "TSDFVolume.integrate(rgbd,intrinsic,extrinsic)"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Python Open3D, NumPy; RGB-D integration needs calibrated intrinsics and per-frame poses/depth scale."
           ],
           "source_urls": [
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
@@ -1233,12 +1226,14 @@
         {
           "name": "OCS/FreeCAD",
           "role": "OCS/FreeCAD",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "OCS GPL-3.0; FreeCAD LGPL-2.1-or-later.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "OCS --mcp: ocs_sessions/ocs_read/ocs_execute",
+            "FreeCAD Part::Feature/PartDesign::Body",
+            "Point-cloud alignment in Open3D/CloudCompare then explicit transform"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "OCS desktop+MCP and existing ocs-engineering helper or FreeCAD application Python."
           ],
           "source_urls": [
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
@@ -1285,14 +1280,14 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
-          "status": "reference_code",
+          "entrypoint": "colmap automatic_reconstructor --workspace_path W --image_path I --quality medium; inspect dense cloud/mesh; register scale controls; remodel in FreeCAD/OCS",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
             "https://github.com/alicevision/Meshroom/blob/develop/COPYING.md",
             "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
       ],
       "outputs": {
@@ -1313,11 +1308,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "photogrammetry/remodel",
+          "quantity": "camera reprojection, scale control and interface dimensions",
+          "unit": "pixels plus mm controls",
+          "acceptance": "registered controls agree within declared measurement uncertainty",
+          "method": "Inspect COLMAP reprojection/registered cameras and compare cloud/remodel to scale targets."
         }
       ],
       "failure_recovery": [
@@ -1340,24 +1335,21 @@
       },
       "resources": {
         "cpu": "Dense reconstruction is compute-heavy; GPU accelerates common dense-MVS routes; CPU/RAM/storage rise with images.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "Selected reconstruction backend requirement.",
+        "ram": "Scales with image count/resolution, depth maps and dense points.",
+        "storage": "Preserve photographs, camera solution, dense workspace, mesh and CAD.",
+        "scaling_drivers": "image count/resolution, depth maps and dense points",
+        "variants": "COLMAP dense acceleration follows its source requirements; explicit OpenMVS alternative bridge in REC-R01."
       },
       "source_urls": [
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://github.com/alicevision/Meshroom/blob/develop/COPYING.md",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
-      ]
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
     {
       "id": "CAD-R07",
@@ -1374,7 +1366,7 @@
       "inputs": [
         {
           "artifact": "depth-frames",
-          "format": "source-native file plus provenance",
+          "format": "Raw depth/RGB images, intrinsics, depth scale, poses/extrinsics",
           "requirement": "calibrated depth frames and known housing datum/features",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -1390,12 +1382,14 @@
         {
           "name": "Open3D",
           "role": "Open3D RGB-D/TSDF",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "MIT.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "open3d.pipelines.integration.ScalableTSDFVolume",
+            "RGBDImage.create_from_color_and_depth",
+            "TSDFVolume.integrate(rgbd,intrinsic,extrinsic)"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Python Open3D, NumPy; RGB-D integration needs calibrated intrinsics and per-frame poses/depth scale."
           ],
           "source_urls": [
             "https://github.com/CloudCompare/CloudCompare"
@@ -1404,12 +1398,12 @@
         {
           "name": "CloudCompare",
           "role": "CloudCompare",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "GPL-2.0-or-later application; CCLib LGPL-2.0 per repository.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "CloudCompare CLI: CloudCompare -O cloud.ply -C_EXPORT_FMT PLY -SAVE_CLOUDS; GUI align/register tools"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "CloudCompare desktop/CLI; plugins optional for specialized formats."
           ],
           "source_urls": [
             "https://github.com/CloudCompare/CloudCompare"
@@ -1418,12 +1412,14 @@
         {
           "name": "OCS/FreeCAD",
           "role": "OCS/FreeCAD",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "OCS GPL-3.0; FreeCAD LGPL-2.1-or-later.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "OCS --mcp: ocs_sessions/ocs_read/ocs_execute",
+            "FreeCAD Part::Feature/PartDesign::Body",
+            "Point-cloud alignment in Open3D/CloudCompare then explicit transform"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "OCS desktop+MCP and existing ocs-engineering helper or FreeCAD application Python."
           ],
           "source_urls": [
             "https://github.com/CloudCompare/CloudCompare"
@@ -1469,12 +1465,12 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
-          "status": "reference_code",
+          "entrypoint": "Open3D ScalableTSDFVolume.integrate(rgbd,intrinsic,extrinsic); CloudCompare registration/alignment; FreeCAD Part::Feature remodeling",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://github.com/CloudCompare/CloudCompare"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
       ],
       "outputs": {
@@ -1495,11 +1491,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "scan registration",
+          "quantity": "control-point residuals, interface distances and bounds",
+          "unit": "mm",
+          "acceptance": "residuals below declared sensor/measurement tolerance",
+          "method": "Open3D/CloudCompare registration report and independent caliper/control check."
         }
       ],
       "failure_recovery": [
@@ -1522,22 +1518,19 @@
       },
       "resources": {
         "cpu": "Moderate-to-high CPU/RAM by frame count/resolution; GPU optional by backend.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "CPU geometry baseline; graphics display acceleration is separate.",
+        "ram": "Scales with depth frame count, TSDF voxels and cloud points.",
+        "storage": "Preserve depth/RGB, calibration, poses, fused cloud and housing CAD.",
+        "scaling_drivers": "depth frame count, TSDF voxels and cloud points",
+        "variants": "Registered cloud skips upstream fusion; raw frames need calibration and fusion."
       },
       "source_urls": [
         "https://github.com/CloudCompare/CloudCompare"
-      ]
+      ],
+      "branch_dossiers": [
+        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md"
+      ],
+      "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
     {
       "id": "CAD-R08",
@@ -1553,7 +1546,7 @@
       "inputs": [
         {
           "artifact": "source-library",
-          "format": "source-native file plus provenance",
+          "format": "Native CAD/STEP/IFC/mesh assets with per-file manifest and interfaces",
           "requirement": "identified parts with interface datums and placement constraints",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -1569,12 +1562,14 @@
         {
           "name": "FreeCAD",
           "role": "FreeCAD assembly/workbench or OCS assembly entities",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "LGPL-2.1-or-later per project licensing page.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "App.newDocument; import STEP/library document",
+            "Placement(Base=Vector(x,y,z),Rotation=Rotation(axis,angle))",
+            "Part::Feature.Shape; Assembly workbench constraints if selected and version-matched"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
@@ -1620,12 +1615,12 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
-          "status": "reference_code",
+          "entrypoint": "FreeCAD import STEP; set Placement(Base=Vector(...),Rotation=Rotation(...)); apply selected assembly workbench constraints; run solve and interference review",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
       ],
       "outputs": {
@@ -1646,11 +1641,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "assembly",
+          "quantity": "interface transforms, clearances and interference",
+          "unit": "mm/degrees",
+          "acceptance": "mating datums coincide and required clearance holds",
+          "method": "Assembly constraint solve plus bounding-box/interference review."
         }
       ],
       "failure_recovery": [
@@ -1673,18 +1668,11 @@
       },
       "resources": {
         "cpu": "Small assembly CPU; part count and tessellation/detail drive RAM/storage.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "CPU geometry baseline; graphics display acceleration is separate.",
+        "ram": "Scales with part count, source B-rep detail and assembly constraints.",
+        "storage": "Preserve component originals, manifests, placements and assembly.",
+        "scaling_drivers": "part count, source B-rep detail and assembly constraints",
+        "variants": "Simplified envelopes reduce working memory; retain detailed originals."
       },
       "source_urls": [
         "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
@@ -1704,8 +1692,8 @@
       "comparison_conditions": "One bounded input artifact set with the stated minimum quality; no unmeasured dimensions are promoted to fact. Ratings compare complete workflow under current contract scales.",
       "inputs": [
         {
-          "artifact": "raster-sketch",
-          "format": "source-native file plus provenance",
+          "artifact": "vector-drawing",
+          "format": "DXF or SVG with registered orthographic views where required",
           "requirement": "calibrated orthographic views with sufficient overlap/features",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -1721,12 +1709,12 @@
         {
           "name": "Published",
           "role": "Published orthographic reconstruction methods",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "Research paper only; no software licence implied.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "Published orthographic reconstruction method; no general-purpose CLI; use as mathematical method reference"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "Paper does not assert an installable dependency; manual implementation uses FreeCAD Sketcher and Part."
           ],
           "source_urls": [
             "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
@@ -1736,12 +1724,14 @@
         {
           "name": "FreeCAD",
           "role": "FreeCAD Sketcher/Part",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "LGPL-2.1-or-later per project licensing page.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "FreeCAD Python console/macros; App.newDocument; Sketcher::SketchObject.addGeometry/addConstraint",
+            "Part::Feature.Shape or PartDesign::Body/Feature for solids",
+            "ViewPart/TechDraw orthographic projection; import/export via Draft/Part"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
             "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
@@ -1788,13 +1778,13 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
-          "status": "reference_code",
+          "entrypoint": "Human match corresponding edges across calibrated views; FreeCAD Sketcher::SketchObject.addGeometry/addConstraint; FreeCAD Part Design workbench: invoke Pad/Pocket on reviewed sketches; render aligned orthographic views for comparison",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Published methods guide view correspondence; all feature choices remain manually reviewed. No research code was installed or executed."
         }
       ],
       "outputs": {
@@ -1815,11 +1805,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "orthographic reconstruction",
+          "quantity": "projected outlines and explicit dimensions",
+          "unit": "source drawing units",
+          "acceptance": "front/top/side projections align with source within stated drawing tolerance",
+          "method": "Render CAD views from same projection and overlay/compare dimensions."
         }
       ],
       "failure_recovery": [
@@ -1842,18 +1832,11 @@
       },
       "resources": {
         "cpu": "CPU geometry moderate; solving complexity scales with features/views; papers describe methods rather than ready-to-run tools.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "CPU geometry baseline; graphics display acceleration is separate.",
+        "ram": "Scales with projection views, correspondence candidates and solid hypotheses.",
+        "storage": "Preserve projection originals, correspondence graph, method code and candidate solids.",
+        "scaling_drivers": "projection views, correspondence candidates and solid hypotheses",
+        "variants": "Manual CAD baseline; learned research variants need their own model environment."
       },
       "source_urls": [
         "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
@@ -1874,7 +1857,7 @@
       "inputs": [
         {
           "artifact": "parametric-source",
-          "format": "source-native file plus provenance",
+          "format": "OpenSCAD .scad and includes, parameters and unit convention",
           "requirement": "OpenSCAD .scad source and declared unit convention",
           "quality": "Readable/registered input with explicit units and known provenance.",
           "provenance": "Keep original unchanged; record measurements and source page/frame."
@@ -1890,12 +1873,12 @@
         {
           "name": "OpenSCAD",
           "role": "OpenSCAD CLI",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "GPL-2.0-or-later with linking exception in upstream repository.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "openscad -o output.stl source.scad; source units are numeric convention, STL carries no unit declaration"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "OpenSCAD executable; CGAL-backed render/export; no external runtime needed for ordinary CLI STL export."
           ],
           "source_urls": [
             "https://openscad.org/documentation.html",
@@ -1905,12 +1888,13 @@
         {
           "name": "mesh",
           "role": "mesh inspection in OCS/CloudCompare",
-          "license": "See registered primary source; verify exact version/package terms before deployment.",
+          "license": "Selected viewer/license applies; OCS GPL-3.0 or CloudCompare GPL-2.0-or-later.",
           "apis": [
-            "Documented CLI/API identified in source"
+            "CloudCompare GUI: align/register; compute cloud/mesh statistics and bounding box",
+            "OCS --mcp: read mesh entities and bounds"
           ],
           "dependencies": [
-            "Install/runtime and format dependencies follow the selected version/backend."
+            "OCS mesh support or CloudCompare; input PLY/STL mesh with recorded unit convention."
           ],
           "source_urls": [
             "https://openscad.org/documentation.html",
@@ -1950,13 +1934,13 @@
       ],
       "code": [
         {
-          "entrypoint": "Reference workflow; no project command executed",
-          "status": "reference_code",
+          "entrypoint": "openscad -o output.stl source.scad; inspect STL bounds/components; retain .scad and declared units",
+          "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://openscad.org/documentation.html",
             "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
           ],
-          "notes": "Research composition only; no runtime validation claimed."
+          "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
       ],
       "outputs": {
@@ -1977,11 +1961,11 @@
       },
       "checks": [
         {
-          "object": "geometry",
-          "quantity": "units, bounds, topology and source correspondence",
-          "unit": "declared model units",
-          "acceptance": "Measured controls and required representation checks pass",
-          "method": "Compare against retained source measurements and an independent viewer."
+          "object": "OpenSCAD export",
+          "quantity": "mesh watertightness/components and source bounds",
+          "unit": "declared source units",
+          "acceptance": "mesh parses and dimensions match explicit source-derived checks",
+          "method": "OpenSCAD render/export; inspect mesh and compare bounds to source parameters."
         }
       ],
       "failure_recovery": [
@@ -2004,18 +1988,11 @@
       },
       "resources": {
         "cpu": "Small model CPU; CGAL Boolean complexity and mesh resolution drive cost, no GPU.",
-        "gpu": "None unless a selected dense-reconstruction backend documents GPU acceleration.",
-        "ram": "Scales with image/cloud/mesh size and selected geometry kernel.",
-        "storage": "Preserve source plus derived cloud/mesh/CAD artifacts.",
-        "scaling_drivers": [
-          "input resolution and count",
-          "feature/part count",
-          "mesh/cloud density"
-        ],
-        "variants": [
-          "CPU/manual low-scale branch",
-          "accelerated or denser branch where tool supports it"
-        ]
+        "gpu": "CPU geometry baseline; graphics display acceleration is separate.",
+        "ram": "Scales with CSG Boolean complexity, subdivision and triangles.",
+        "storage": "Preserve SCAD/includes, parameter set and mesh.",
+        "scaling_drivers": "CSG Boolean complexity, subdivision and triangles",
+        "variants": "Small valid SCAD baseline; high tessellation and complex CSG increase CPU/RAM."
       },
       "source_urls": [
         "https://openscad.org/documentation.html",

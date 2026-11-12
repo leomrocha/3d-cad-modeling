@@ -1,12 +1,32 @@
 {
   "date": "2026-11-12",
-  "starting_checkpoint": "6ef39be",
-  "scope": "Registration of the next-step proposal; retained workflow source/type checks; JSON syntax, local links, source-document hashes and deterministic register rebuild.",
-  "source_records": 256,
+  "starting_checkpoint": "073521e",
+  "concurrent_commit_preserved": "530b9f4",
+  "scope": "38 generic workflow dossiers, independent effort rankings, reference code and source registration",
+  "source_records": 311,
   "operations": 77,
   "recipes": 38,
   "registered_ideas": 105,
+  "detailed_workflows": 38,
+  "new_document_local_links_checked": 47,
   "local_link_errors": [],
-  "project_source_hashes": "passed",
-  "deterministic_register_rebuild": "passed"
+  "round_three_project_source_hashes": "passed",
+  "historical_source_hash_mismatches": [
+    {
+      "source_record": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
+      "path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+      "recorded_sha256": "cefd57403dfa1a89b304ee8ec22ea56cc9d1d60ce4177745c2fbc0877ec3440c",
+      "current_sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068"
+    }
+  ],
+  "reference_python_files_syntax_checked": 8,
+  "synthetic_distance_helper_tests": {
+    "passed": 6,
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 examples/workflows/common/test_control_distances.py"
+  },
+  "classification_evidence": "Analyst ordinal assessment under per-route conditions",
+  "modeling_reference_code_integration_status": "Statically reviewed; application integrations not executed",
+  "implementation_plan_preserved": true,
+  "deterministic_register_and_detail_rebuild": "passed",
+  "actual_coordinating_model_identity": "unavailable"
 }

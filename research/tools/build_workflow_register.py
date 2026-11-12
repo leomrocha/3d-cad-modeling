@@ -34,7 +34,7 @@ def clean(text):
 
 def urls(text):
     found = {m.group(2) for m in LINK.finditer(text)}
-    for match in BARE.finditer(text):
+    for match in BARE.finditer(LINK.sub("", text)):
         value = match.group().rstrip('.,;:')
         # Markdown link syntax closes outside the URL; supplied URLs contain no
         # literal parentheses in the retained reports.
