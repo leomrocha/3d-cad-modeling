@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "component": "Main frame crossmember (P02)",
+  "state": "DONE",
+  "native_check_groups": 6,
+  "native_geometry": "PASS",
+  "saved_file_hash": "PASS",
+  "source_records": 31,
+  "previous_models_preserved": 18,
+  "append_only_occurrence_prefix": "PASS",
+  "graph_plan_preserved": "PASS",
+  "mermaid_blocks_found_and_preserved": 2,
+  "tests": "35 PASS with isolated native-reader dependencies",
+  "skill_validation": "PASS",
+  "nominal_interface_checks": "PASS_260mm_gap_and_Z130mm_midpoint",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 13,
+    "receipt_included": true
+  }
+}

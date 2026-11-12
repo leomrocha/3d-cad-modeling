@@ -3112,6 +3112,28 @@
       ]
     },
     {
+      "id": "COMP-I16",
+      "name": "Check repeated section lengths against their mating layout and local datum",
+      "summary": "Implemented a nominal rail-gap and crossmember-midpoint check using actual saved native P01/P02 features and the sourced340mm frame outside width. The260mm gap and Z130mm midpoint pass; wrong-width and shifted-origin regression cases fail.",
+      "status": "proposal",
+      "origin": "executed_crossmember_iteration",
+      "registered_at": "2026-11-12",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/execution/p02-crossmember.md"
+      ],
+      "source_documents": [
+        {
+          "path": "execution/p02-crossmember.md",
+          "line": 1,
+          "section": "Applied improvement"
+        }
+      ],
+      "next_check": "Reuse the check only for the documented parallel-rail/local-frame conditions and keep assembly transforms separate.",
+      "source_ids": [
+        "SRC-06c5ba590bdd"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

@@ -196,6 +196,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json.
 
+<a id="src-045e4e413150"></a>
+
+## SRC-045e4e413150 — P02 crossmember — interface-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json)
+
+Summary: Actual saved crossmember span260mm equals340mm sourced outside frame width minus twice actual rail width40mm; local midpoint Z130mm also passes.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-047ea9576020"></a>
 
 ## SRC-047ea9576020 — dom-r03.md
@@ -243,6 +255,18 @@ Summary: Component-led execution source: actual reusable implementation, source-
 Evidence: authored_document_or_code_inspected.
 
 Documents: research/sources/round-09/component-execution-sources.json.
+
+<a id="src-06c5ba590bdd"></a>
+
+## SRC-06c5ba590bdd — Completed crossmember iteration report
+
+Original source: [/home/leo/projects/3dmodeling/execution/p02-crossmember.md](/home/leo/projects/3dmodeling/execution/p02-crossmember.md)
+
+Summary: Records source-ready260mm crossmember, isolated document72/reopened73, five pre-save and six reopened groups, two nominal interface/datum checks, inspected views and the applied shared-helper improvement.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-071deb628e4d"></a>
 
@@ -1144,6 +1168,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-26613ca599a7"></a>
+
+## SRC-26613ca599a7 — Main frame crossmember nominal native model
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg)
+
+Summary: New DWG2018 contains one hollow260mm crossmember with proposed40x40x3mm section and standard-calculation outer6mm/inner3mm corner radii. Native pre-save/reopened dimensions, persistence and inspected views pass.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-26ba505a1c89"></a>
 
 ## SRC-26ba505a1c89 — GitHub repository metadata or tree response
@@ -1756,6 +1792,18 @@ Evidence: access_failed.
 
 Documents: research/sources/round-10/tube-corner-sources.json.
 
+<a id="src-35a34c26c8e5"></a>
+
+## SRC-35a34c26c8e5 — P02 crossmember — reopened-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json)
+
+Summary: Raw native SAB body in reopened document73 supplies independent persisted-geometry observations.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-35cca1cb0d7e"></a>
 
 ## SRC-35cca1cb0d7e — blender_gltf.py — Blender glTF importer source, main branch
@@ -1971,6 +2019,18 @@ Summary: License observed locally: project `LICENSE` begins with GNU Affero Gene
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-3bc1484f7601"></a>
+
+## SRC-3bc1484f7601 — P02 crossmember — source-job-r02.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json)
+
+Summary: Immutable P02 source revision2 pins proposed section/length, standard calculation radii,340mm outside frame width, source hashes and explicit local midpoint datum mapping.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-3bdbace92938"></a>
 
@@ -2424,9 +2484,9 @@ Original source: [/home/leo/projects/3dmodeling/scripts/rounded_tube.py](/home/l
 
 Summary: Source-bound nominal tube builder reuses FERME guarded runtime and geometry modules. The live P01 run established explicit selection readback and bounded-area extrusion; native pre-save checks pass. The reader returns UNKNOWN for reopened SAB records and preserves their raw bytes. Solid and planar subtraction attempts retain their failed routes.
 
-Evidence: authored_code_or_procedure_inspected, local_execution_evidence_inspected.
+Evidence: authored_code_or_procedure_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-47401a0e9609"></a>
 
@@ -2451,6 +2511,18 @@ Summary: Skills Directory `majiayu000` 3D Modeling ; Directory displays a copied
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-484ebea9c7f7"></a>
+
+## SRC-484ebea9c7f7 — P02 crossmember — pre-save-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json)
+
+Summary: Five source-linked native dimension check groups PASS for the260mm crossmember before saving.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-487d52ab6ca8"></a>
 
@@ -2680,6 +2752,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-4e6ff41dcd81"></a>
+
+## SRC-4e6ff41dcd81 — P02 crossmember — view-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl)
+
+Summary: Retains guarded end/isometric camera commands and actual capture requests for the reopened crossmember.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-4e718650fd66"></a>
 
 ## SRC-4e718650fd66 — Image.cpp — Open3D v0.20.0 source
@@ -2700,9 +2784,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-4f49d9c8767a"></a>
 
@@ -2811,6 +2895,18 @@ Summary: Retained feature/audit observations for the named component. Applicabil
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
+
+<a id="src-5211764e8dfb"></a>
+
+## SRC-5211764e8dfb — P02 crossmember — readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json)
+
+Summary: Required P02 feature coverage and all pinned source observations return SOURCE_READY before native construction.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-522e8d24462e"></a>
 
@@ -3724,6 +3820,18 @@ Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md.
 
+<a id="src-6c1f23fbb942"></a>
+
+## SRC-6c1f23fbb942 — P02 crossmember — reopened-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png)
+
+Summary: Inspected reopened isometric view shows the260mm crossmember longitudinal edges and hollow end section.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-6c38d73efa65"></a>
 
 ## SRC-6c38d73efa65 — Frequently Asked Questions — COLMAP
@@ -4192,6 +4300,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-7b3f397d3342"></a>
+
+## SRC-7b3f397d3342 — P02 crossmember — iso-capture.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json)
+
+Summary: Completed isometric capture response binds the actual crossmember image to its native document and camera.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-7baec7354391"></a>
 
 ## SRC-7baec7354391 — https://www.open3d.org/docs/latest/python_api/open3d.geometry.RGBDImage.html
@@ -4276,6 +4396,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-7e97117530b1"></a>
+
+## SRC-7e97117530b1 — P02 crossmember — reopened-end.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png)
+
+Summary: Inspected reopened end view shows the outer and inner rounded-square section of the P02 hollow crossmember.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-7ec6b1588bb0"></a>
 
 ## SRC-7ec6b1588bb0 — P01 p01-build-03 — reopened-isometric.png
@@ -4359,6 +4491,18 @@ Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-80af5eb42a78"></a>
+
+## SRC-80af5eb42a78 — P02 crossmember — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json)
+
+Summary: Current P02 iteration result is DONE with saved DWG hash, native/persistence/view passes, midpoint130mm, nominal gap260mm and applied helper SHA.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-80d56f29af4a"></a>
 
@@ -4692,9 +4836,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad-in
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-896c4a89c975"></a>
 
@@ -4776,9 +4920,9 @@ Original source: [/home/leo/projects/ferme/research/base-component-completion-20
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-8ae740d518bb"></a>
 
@@ -4932,9 +5076,9 @@ Original source: [/home/leo/projects/3dmodeling/tests/test_native_acis.py](/home
 
 Summary: Four integration tests use FERME saved rail evidence: source dimensions pass, pre-save/reopened vertex and radius sets agree, wrong260mm expectation fails for600mm rail, and truncated binary is rejected.
 
-Evidence: local_execution_evidence_inspected.
+Evidence: local_execution_evidence_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -5404,6 +5548,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-9e3aa6c6cce6"></a>
+
+## SRC-9e3aa6c6cce6 — P02 crossmember — body-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json)
+
+Summary: Checkpoint identifies the P02 native hollow body before dimension inspection and saving.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-9e57d453372b"></a>
 
 ## SRC-9e57d453372b — queue
@@ -5472,9 +5628,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-a00bd3c7c755"></a>
 
@@ -5788,6 +5944,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-aa5f4c33e807"></a>
+
+## SRC-aa5f4c33e807 — P02 crossmember — persistence.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json)
+
+Summary: DWG2018 save/hash/audit-manifest and reopened identity checks PASS with one solid and zero dropped entities.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-ac24864ef496"></a>
 
 ## SRC-ac24864ef496 — upstream GPL text
@@ -6015,6 +6183,18 @@ Summary: Official mutable main repository page inspected 2026-11-12. Documents m
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r05.md.
+
+<a id="src-b079e75fd12d"></a>
+
+## SRC-b079e75fd12d — P02 crossmember — end-capture.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json)
+
+Summary: Completed end-view capture response identifies the reopened component camera/document context.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-b1451ce1d409"></a>
 
@@ -6364,6 +6544,18 @@ Evidence: existing_report_registered, archived_original_referenced.
 
 Documents: research/cad-and-skills.md, research/sources/round-02/archive-sources.json.
 
+<a id="src-b9f01467bce4"></a>
+
+## SRC-b9f01467bce4 — P02 crossmember — document-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json)
+
+Summary: Initial isolated P02 document identity/revision checkpoint supports inspected stage recovery without touching prior models.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-ba1c34303c57"></a>
 
 ## SRC-ba1c34303c57 — https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export.md
@@ -6459,6 +6651,18 @@ Summary: Point 05 CAD, photographs and scans alignment: authored procedure/actio
 Evidence: authored_document_inspected, local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-bcae1b9fb83c"></a>
+
+## SRC-bcae1b9fb83c — P02 crossmember — initial-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json)
+
+Summary: Pre-build OCS state identifies the active rail document and all open work; later new-document construction preserves unrelated documents.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-bce7d3359ed2"></a>
 
@@ -6840,9 +7044,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/RE
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -7036,6 +7240,18 @@ Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-08/component-plan-sources.json.
 
+<a id="src-cb92cde3eea0"></a>
+
+## SRC-cb92cde3eea0 — P02 crossmember — reopened-checkpoint.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json)
+
+Summary: Reopened checkpoint binds the saved P02 component handle and document/revision to its completed body.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-cb939ff4c2d6"></a>
 
 ## SRC-cb939ff4c2d6 — Completed saved rail verification report
@@ -7191,6 +7407,18 @@ Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-d0312b87a2c9"></a>
+
+## SRC-d0312b87a2c9 — P02 crossmember — pre-save-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json)
+
+Summary: Raw native SAT record of the actual P02 solid in document72 supplies the original surface/vertex observations.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-d08c92fa1104"></a>
 
@@ -7816,6 +8044,30 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
+<a id="src-e6c61c3caf92"></a>
+
+## SRC-e6c61c3caf92 — P02 crossmember — view-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json)
+
+Summary: Actual OCS view state identifies reopened document73 and preserves unrelated original wheel document52 revision2.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
+<a id="src-e7211c15cdf1"></a>
+
+## SRC-e7211c15cdf1 — P02 crossmember — reopened-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json)
+
+Summary: Six native SAB groups PASS: section/length, X/Y walls, ends, eight corner surfaces and a connected closed body.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
+
 <a id="src-e74aa94bbb50"></a>
 
 ## SRC-e74aa94bbb50 — Procedure-design review notes — Point 01 model brief
@@ -8208,9 +8460,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/
 
 Summary: Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.
 
-Evidence: authored_code_or_procedure_inspected, local_execution_evidence_inspected.
+Evidence: authored_code_or_procedure_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-f278cbf89b6d"></a>
 
@@ -8496,9 +8748,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
 
 <a id="src-f954ab80c148"></a>
 
@@ -8583,6 +8835,18 @@ Summary: - TripoSR research paper: https://arxiv.org/abs/2403.02151
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-fc97ce67556a"></a>
+
+## SRC-fc97ce67556a — P02 crossmember — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl)
+
+Summary: Append-only native request journal records isolated document creation, exact rounded profiles, bounded-area extrusion, temporary-profile cleanup, metadata, save and reopen with stable identities.
+
+Evidence: local_execution_source_inspected.
+
+Documents: research/sources/round-13/crossmember-sources.json.
 
 <a id="src-fcdc74aed22e"></a>
 

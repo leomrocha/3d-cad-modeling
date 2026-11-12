@@ -1934,6 +1934,18 @@ Original proposal: [execution/p01-saved-verification.md](/home/leo/projects/3dmo
 
 Next check: Apply the supported reader to the next component’s saved geometry and preserve any new exceptions.
 
+## COMP-I16 — Check repeated section lengths against their mating layout and local datum
+
+Status: proposal.
+
+Implemented a nominal rail-gap and crossmember-midpoint check using actual saved native P01/P02 features and the sourced340mm frame outside width. The260mm gap and Z130mm midpoint pass; wrong-width and shifted-origin regression cases fail.
+
+Original source: [/home/leo/projects/3dmodeling/execution/p02-crossmember.md](/home/leo/projects/3dmodeling/execution/p02-crossmember.md)
+
+Original proposal: [execution/p02-crossmember.md](/home/leo/projects/3dmodeling/execution/p02-crossmember.md), line 1.
+
+Next check: Reuse the check only for the documented parallel-rail/local-frame conditions and keep assembly transforms separate.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.
