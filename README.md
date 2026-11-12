@@ -25,7 +25,7 @@ Research includes OpenCADStudio, Blender, MuJoCo, FreeCAD, Open CASCADE tooling,
 
 ## Current stage
 
-The repository contains the initial tool assessments and the extended workflow research. The [research index](research/README.md), [skill catalogue](skills/README.md) and [proposed implementation plan](research/implementation-plan.md) cover the next stages. Research assessments distinguish documentation claims from locally exercised capabilities.
+The repository contains tool assessments and 245 action definitions covering all 77 recorded operations. The [seven-point procedure index](/home/leo/projects/3dmodeling/research/action-audit/point-index.md), [38 routes linked to actions](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md), [15 proposed skill groups](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) and [source contract findings](/home/leo/projects/3dmodeling/research/action-audit/findings.md) connect the research to detailed implementation specifications. Each action states existing software/API dependencies, agent and software responsibilities, inputs/outputs, checks, recovery and resource conditions. Review records and receipts identify the executed document/source checks; helper implementations and modeling cases retain proposal status.
 
 ## Research records and changes
 
