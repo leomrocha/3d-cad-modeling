@@ -1,5 +1,12 @@
 # Research record
 
+## 12 November 2026 — All-point sequential execution authorized
+
+1. **Instruction:** “THEN EXECUTE ALL FUCKGIN POINTS THAT WAS THE FUCKIGN ORDER ONE BY ONE IN THE DEFINED MODEL apply now,”. The [sequence](/home/leo/projects/3dmodeling/research/action-audit/sequence.md) maps all77 operations to seven ordered points; each point receives its full design/review/registration/check/commit cycle before the next starts.
+2. **Point02 checkpoint:** `02a81eb`. Scope: six component-reuse/import/placement/version/export operations. Requested model roles follow the existing audit plan: Astra/xhigh design, Terra/xhigh software, Sol/xhigh visual and independent review, Luna/high source lookup. Coordinator identity is gpt-6.1-sol; child reports record unavailable runtime identities separately from requested dispatch.
+3. **Point02 result:** six operations and 24 actions; all fifteen action fields; four execution modes per operation. Three independent findings resolved and reread: target-assembly prerequisite cases, remote-response recovery and staged intake/import dependency. Six original web documentation pages inspected by Luna. Registration and receipt-inclusive rebuild checks passed; details are in [point02 checks](/home/leo/projects/3dmodeling/research/action-audit/point-02-checks.json).
+4. **Evidence:** original operation/recipe records and existing implementation plan are preserved. New action and helper designs and implementation tests retain proposal status. The first-point batch remains recorded separately in its original execution record.
+
 ## 12 November 2026 — Authorized action-by-action audit, first point
 
 1. **Instruction:** “execute plan AS GIVEN now, all must be documented written, explained and commited”. Starting checkpoint: `04ba3deaa489a836da6daef47daab5b30eea168e`. The plan defines one point before moving to the next, in order of local computing requirements.

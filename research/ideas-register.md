@@ -570,6 +570,90 @@ Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling
 
 Next check: Record actual task execution, source findings and reviewer dispositions separately from dispatch settings.
 
+## AUDIT-CAD-12 — Assemble existing CAD or source-library components — detailed execution options
+
+Status: proposal.
+
+Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Assemble existing CAD or source-library components. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+
+Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-06 — Library asset intake and rights record — detailed execution options
+
+Status: proposal.
+
+Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Library asset intake and rights record. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+
+Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-07 — Place reusable component in assembly — detailed execution options
+
+Status: proposal.
+
+Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Place reusable component in assembly. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+
+Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-26 — Version and reuse component revision — detailed execution options
+
+Status: proposal.
+
+Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Version and reuse component revision. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+
+Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-38 — Import STEP solid into CAD representation — detailed execution options
+
+Status: proposal.
+
+Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Import STEP solid into CAD representation. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+
+Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-39 — Export STEP assembly — detailed execution options
+
+Status: proposal.
+
+Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP assembly. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+
+Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

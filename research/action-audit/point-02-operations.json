@@ -1,0 +1,819 @@
+{
+  "point": 2,
+  "status": "proposal",
+  "date": "2026-11-12",
+  "requested_dispatch": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh"
+  },
+  "actual_model_identity": "unavailable",
+  "operations": [
+    {
+      "operation_id": "CAD-12",
+      "name": "Assemble existing CAD or source-library components",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://cadquery.readthedocs.io/en/stable/importexport.html"
+      ],
+      "actions": [
+        {
+          "id": "CAD-12-A01",
+          "name": "Pin source definitions and assembly roles",
+          "purpose": "Identify the base and additional component definitions before creating occurrences.",
+          "intended_use": "Prepare a named CAD assembly for the brief's declared arrangement, interface or engineering use.",
+          "inputs": "Base cad-solid; distinct additional cad-solid or source-library item; brief; original files, hashes, units and rights records.",
+          "outputs": "Component-definition manifest with base/additional roles, consumed by CAD-12-A02.",
+          "accuracy": "Preserve exact identity/revision and source units; each required interface carries its own sourced geometric allowance and measurement uncertainty.",
+          "evidence": "Source component records and geometry provenance from DOM-06/DOM-38; manufacturer's dimensions remain attributed claims.",
+          "software": "Read files/metadata and hashes; count definitions and occurrences separately; inspect geometry representation with the selected reader.",
+          "agent": "Resolve component names and choose existing assets within the brief; distinguish sourced parts and proposed placeholders.",
+          "user_decisions": "Resolve conflicting part/configuration identity or any new component choice required by the task.",
+          "dependencies": "Existing source records, native CAD reader and OCS skill; operation sources document reuse and assembly alternatives.",
+          "proposed_development": "Proposal: definition intake helper preserving identity, unit/frame and representation with a source/occurrence distinction.",
+          "procedure": [
+            "Read base and additional source identities.",
+            "Map each required component to its exact source revision.",
+            "Record every proposed occurrence and its source definition."
+          ],
+          "validation": "Recompute source hashes; check a distinct additional input exists; independent semantic review compares configuration/part identity to the brief.",
+          "failure_resume": "Retain every candidate on identity conflict; block dependent occurrences and resume after the precise part/configuration decision.",
+          "resources": "Local metadata/hash CPU and file I/O first; geometry inspection scales with file size. Remote reasoning only for ambiguous identity; log model calls and active source review."
+        },
+        {
+          "id": "CAD-12-A02",
+          "name": "Define interface frames and placement relations",
+          "purpose": "Translate the assembly brief into explicit component-to-assembly placement requirements.",
+          "intended_use": "Supply occurrence transforms or constraints for the requested assembly pose.",
+          "inputs": "Pinned definitions; sourced component frames; target assembly frame; interface measurements; allowed placements and motion.",
+          "outputs": "Named interface correspondence and placement plan, consumed by CAD-12-A03 or DOM-07.",
+          "accuracy": "Record positional/angular allowances per interface, measurement uncertainty, solver stopping rule and later readback threshold separately.",
+          "evidence": "Source interface measurements tied to component revision/handles; source-derived mating intent and supplied corrections.",
+          "software": "Normalize explicit units; calculate frame composition and constraint consistency with a checked matrix/assembly backend.",
+          "agent": "Associate measured planes/axes with intended interfaces; use a VLM to compare source views and candidate correspondences.",
+          "user_decisions": "Decide a mating relation, clearance, orientation or motion when it requires new design intent.",
+          "dependencies": "OCS model contract; FreeCAD Assembly documented joints; existing measurement API only where installed support is discovered.",
+          "proposed_development": "Proposal: interface mapping helper and placement-plan checker with feature-level source and tolerance records.",
+          "procedure": [
+            "Name the assembly datum and each component's mating frame.",
+            "Separate source-unit conversion from rigid placement.",
+            "Build a rooted occurrence tree and record declared connection/constraint relations."
+          ],
+          "validation": "Check frame direction, units, right-handed rigid rotation after explicit convention mapping, and graph parent identities; reviewer rereads semantic correspondences.",
+          "failure_resume": "Preserve competing frame/constraint plans; a missing datum blocks only dependent transforms; restart from changed interface records.",
+          "resources": "Small matrix/graph checks use local CPU/RAM. CAD measurements depend on shape size. VLM calls use cited views; record manual relation decisions and latency."
+        },
+        {
+          "id": "CAD-12-A03",
+          "name": "Create bounded native occurrences",
+          "purpose": "Instantiate the planned component occurrences while preserving source definitions.",
+          "intended_use": "Create the native assembly or explicitly scoped drawing arrangement required by the job.",
+          "inputs": "Checked placement plan; source definitions; chosen native representation; authorized document/revision and save scope.",
+          "outputs": "Native occurrence tree with definition references and transforms, consumed by CAD-12-A04.",
+          "accuracy": "Place each occurrence within its sourced interface criteria; keep solver criteria separate from engineering allowance.",
+          "evidence": "Execution evidence later records actual document revision, source hashes, occurrence IDs, commands and result states.",
+          "software": "Use the inspected native assembly API; OCS block_define/group_create only for their declared drawing semantics; FreeCAD/CadQuery assembly alternatives require checked adapter support.",
+          "agent": "Choose the matching native representation, orchestrate bounded creation and examine partial results.",
+          "user_decisions": "Resolve a requested representation or new constraint choice beyond the supplied brief.",
+          "dependencies": "OCS API-SPEC revision/request protocol; FreeCAD Assembly or CadQuery assembly route per recorded tool/version.",
+          "proposed_development": "Proposal: occurrence adapter with immutable definition references, explicit IDs and revision-aware restart.",
+          "procedure": [
+            "Inspect current document and operation schemas.",
+            "Create occurrences in dependency order using named frames/constraints.",
+            "Read back each completed occurrence before creating dependants."
+          ],
+          "validation": "Verify source component hashes remain unchanged; read occurrence IDs/counts/transforms; inspect same-revision views and connection relations.",
+          "failure_resume": "On timeout reconcile request/operation identity; retain completed_steps and next_step; refresh after stale-state rejection and resume only the incomplete bounded action.",
+          "resources": "Local CPU/RAM scales with occurrence count and geometry; graphics only for native display. Remote agent directs exceptions; record manual constraint edits."
+        },
+        {
+          "id": "CAD-12-A04",
+          "name": "Validate and preserve assembly structure",
+          "purpose": "Confirm the created assembly matches source identities, placements and required interfaces.",
+          "intended_use": "Deliver the native assembly revision for reuse, downstream export or the specifically requested engineering checks.",
+          "inputs": "Created assembly; placement plan; source definitions; per-feature criteria; supported geometry measurement API.",
+          "outputs": "Revision-bound assembly validation and native artifact, consumed by DOM-26/DOM-39 or a named downstream operation.",
+          "accuracy": "Compare each interface's measured length/angle/clearance using its own criterion; source uncertainty and computational thresholds remain separate.",
+          "evidence": "Actual measurements include document/revision/handles; visual findings cite views from that same revision.",
+          "software": "Check definition/occurrence counts, transforms and native save/reopen; use bounding boxes only to select candidate interference pairs, then a supported exact query for actual clearance.",
+          "agent": "Independent reviewer examines component meaning, datum association and permitted contact against source views; diagnose failed numerical checks.",
+          "user_decisions": "Resolve a source/design conflict exposed by validation; apply existing requirements directly.",
+          "dependencies": "Native CAD measurement/save facilities; OCS save audit applies only to supported targets; independent reader where available.",
+          "proposed_development": "Proposal: assembly invariant reporter recording representation-specific checks and unsupported queries per feature.",
+          "procedure": [
+            "Measure named interfaces and inspect hierarchy.",
+            "Save the native derivative within scope and reopen it.",
+            "Recheck identities, placements and affected features on the reopened revision."
+          ],
+          "validation": "Numerical checks and independent semantic review both reference the saved revision; report actual solid/shell/mesh status and shared-kernel dependencies of the second reader.",
+          "failure_resume": "Preserve failed output and logs; return to the owning placement/definition action; invalidate only dependent transforms/exports.",
+          "resources": "Local shape checks may dominate CPU/RAM for large assemblies; begin with hashes/counts/transforms. Remote review uses bounded views; record review time and corrections."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "High-reasoning agent interprets unfamiliar component/interface evidence and directs installed native tools; software records identity and geometry checks.",
+        "hybrid": "Software imports pinned definitions and solves explicit transforms; agent/VLM associates interfaces and chooses evidence-supported candidate arrangements.",
+        "software_first": "A checked component/frame family is assembled automatically; ambiguous identities, unsupported constraints or failed clearances enter agent review.",
+        "deterministic": "Replay an explicitly pinned occurrence tree and tested placement rules with the same source/configuration revisions; validate native save/reopen."
+      },
+      "alternatives": [
+        "OCS blocks/groups for a drawing arrangement with their supported entity semantics.",
+        "FreeCAD Assembly for documented joint/constraint authoring through an independently tested adapter.",
+        "CadQuery assembly source for explicit scripted instances where that artifact is requested.",
+        "Blender visual assembly when the task requests appearance/layout, with its own mesh/frame checks.",
+        "A sketch arrangement may use clearly identified envelopes/display representations with layout criteria; a precision assembly requires measured mating interfaces, actual shape representation and supported clearance queries."
+      ],
+      "merge": {
+        "branches": "Pinned component candidates or placement interpretations may run separately with the same controlling brief; record each use/detail/accuracy target, source subset and resources.",
+        "evaluation": "A VLM compares sourced interface views and numerical measurements; select supported part/placement interpretation within task constraints. Compare the common required features even when branch detail differs; retain per-branch purpose, criteria, input subset, local/remote resource and manual review records.",
+        "combination": "Combine whole definitions with occurrence transforms; keep placeholder and sourced geometry identities separate. Retain conflicting interfaces and required decisions. Evidence enrichment of the same item/feature differs from whole-component substitution. Copying geometry features across parts/revisions creates a new authored hybrid requiring its own identity and scoped modeling action. Conflicting dimensions remain explicit; they are not averaged.",
+        "post_merge": "Revalidate the merged occurrence tree, source hashes, transformed interfaces and supported clearance checks; independent semantic reviewer is separate from producing/merging interpretation."
+      },
+      "software_migration": "Capture successful agent-selected interface mappings as checked cases; implement only stable definition/frame/constraint families; test mirrored frames, repeated instances, stale revisions and incompatible interfaces before moving that family to software-first.",
+      "future_tests": [
+        "A base and two occurrences of one definition preserve one source identity and distinct occurrence IDs/transforms.",
+        "Mixed declared units normalize without changing source geometry; an ambiguous unit blocks its dependent placement.",
+        "A reflected frame and a mistaken axis association produce distinct numerical/semantic failures.",
+        "A failed sequential create resumes from recorded committed steps and preserves existing user work.",
+        "Native reopen retains occurrence count and interfaces; a visual overlap is checked using the supported geometry query."
+      ]
+    },
+    {
+      "operation_id": "DOM-06",
+      "name": "Library asset intake and rights record",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "https://www.kicad.org/libraries/license/",
+        "https://github.com/google-deepmind/mujoco_menagerie",
+        "https://polyhaven.com/license",
+        "https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280"
+      ],
+      "actions": [
+        {
+          "id": "DOM-06-A01",
+          "name": "Identify the exact library item and retained files",
+          "purpose": "Bind a reusable component to an exact item/configuration and source revision.",
+          "intended_use": "Create provenance for the specific component's requested project use.",
+          "inputs": "Supplied source-library item; exact URL/local original; configuration/part number; retrieved files and dates where already acquired.",
+          "outputs": "Item/file inventory and source identity, consumed by DOM-06-A02.",
+          "accuracy": "Identity and bytes require exact correspondence; dimensional accuracy is carried from item evidence and assessed per future feature.",
+          "evidence": "Preserve exact supplied URL beside canonical URL; record actual link-only, inspected or downloaded-original status.",
+          "software": "Read retained metadata, file types and SHA-256; detect identical bytes across different names.",
+          "agent": "Match the item/configuration to the brief using original labels; use VLM views only to resolve visible identifying details with source corroboration.",
+          "user_decisions": "Resolve a source item/configuration choice that the task has not already made.",
+          "dependencies": "Existing library/source records and standard file/hash tools; catalogue entries link to item sources.",
+          "proposed_development": "Proposal: item intake helper with separate item, file, source and occurrence identities.",
+          "procedure": [
+            "Read the exact selected item page/local record.",
+            "List original files and their actual retention state.",
+            "Record hashes only for retained original bytes."
+          ],
+          "validation": "Check every inventoried file against its recorded digest/type; semantic review checks part/configuration names and supplied corrections.",
+          "failure_resume": "Retain conflicting source identities; resume when the exact item is clarified or an authorized source becomes accessible.",
+          "resources": "Local metadata/hash work first; source inspection/manual identity effort recorded separately. Remote model work uses item labels/views; external retrieval remains its authorized research action."
+        },
+        {
+          "id": "DOM-06-A02",
+          "name": "Attach item-level terms and permitted operations",
+          "purpose": "Associate each retained asset and derivative plan with its actual terms.",
+          "intended_use": "Determine the documented basis for the requested local use, modification or distribution.",
+          "inputs": "Item inventory; actual asset LICENSE/terms text and URL/revision; attribution; requested usage operations.",
+          "outputs": "Per-file identity/terms receipt with intake-draft status, consumed directly by DOM-38-A01 when STEP inspection is required, then by DOM-06-A03.",
+          "accuracy": "Preserve exact terms/version and applicability; this action carries categorical permission evidence rather than geometric tolerances.",
+          "evidence": "Attribute claims to original KiCad terms, Menagerie per-model LICENSE, Poly Haven terms or the actual vendor/item terms; software licence has its own record.",
+          "software": "Preserve terms file/hash and link each asset to its applicable notice; compare changes in terms and attribution.",
+          "agent": "Read scope/conditions and distinguish collection, software and individual-model terms; identify the exact clause requiring a decision.",
+          "user_decisions": "Clarify intended distribution/modification or choose an asset when the documented terms change the feasible route.",
+          "dependencies": "Existing original terms or registered source documents; source-specific rights review.",
+          "proposed_development": "Proposal: rights evidence attachment and operation-permission checklist driven by actual terms, with manual ambiguity review.",
+          "procedure": [
+            "Identify the terms applying to each file.",
+            "Quote or locate the applicable clause and record its operation scope.",
+            "Attach notices and a permitted-use conclusion with evidence status."
+          ],
+          "validation": "Independent source-reading reviewer checks clause/file applicability and notices; verify each proposed derivative has a recorded terms basis.",
+          "failure_resume": "Keep an external item link and precise question when the terms prevent or leave the requested operation unclear; resume that operation after a supported resolution.",
+          "resources": "Local text comparison/hash CPU is small relative to geometry work. Manual terms interpretation dominates; remote reasoning calls use source passages and are recorded."
+        },
+        {
+          "id": "DOM-06-A03",
+          "name": "Classify component representations and interface evidence",
+          "purpose": "Describe what each asset contains and which named uses its evidence supports.",
+          "intended_use": "Prepare reusable geometry for arrangement, interfaces, appearance or a later domain handoff.",
+          "inputs": "DOM-06-A01/A02 identity/rights receipt; actual assets and source evidence; DOM-38 checked representation receipt when STEP transfer is required for the requested use.",
+          "outputs": "Representation and feature-evidence records, consumed by DOM-06-A04 and DOM-38/DOM-07. Preserve source IFC element or MJCF body identities and frame links when supplied; later domain operations own their semantic transformations.",
+          "accuracy": "Record per-feature engineering allowance, source accuracy/uncertainty and later numerical criteria; retain actual analytic/faceted/mesh distinctions.",
+          "evidence": "Geometry inspection is source-level until a reader is exercised; catalogue specifications stay attributed; inferred visual dimensions keep inference status.",
+          "software": "Read file signatures and actual geometry entity types using a selected reader; inventory units, hierarchy, bounds and named interfaces.",
+          "agent": "Associate source documents with feature identities; choose the representation matching the requested use and identify an evidence-supported alternative.",
+          "user_decisions": "Supply a required datum, feature criterion or new use decision when the source does not determine it.",
+          "dependencies": "Native CAD/mesh readers; DOM-38 accepts the partial identity/rights receipt before a completed component record and returns checked representation evidence; OCS model contract for parts/interfaces.",
+          "proposed_development": "Proposal: representation inspector linking source claims and measured feature records without promoting visual proxies to dimensional evidence.",
+          "procedure": [
+            "Classify each retained representation and its role.",
+            "Attach declared/measured units and frames.",
+            "Link required interface features to their source evidence and criteria."
+          ],
+          "validation": "Check representation labels against actual reader findings; independent reviewer verifies the feature/source mapping and intended-use fit.",
+          "failure_resume": "Preserve an unreadable/unsupported file and reader error; route another supported representation or obtain the exact required source evidence.",
+          "resources": "Start with file metadata; load geometry only for required features. CPU/RAM scales with entities/triangles; GPU only for view inspection. Record VLM inputs and manual associations."
+        },
+        {
+          "id": "DOM-06-A04",
+          "name": "Register the component record and handoff conditions",
+          "purpose": "Publish a traceable component record referencing preserved originals and item terms.",
+          "intended_use": "Provide reusable input to versioning, import and placement operations.",
+          "inputs": "Identity/rights receipt plus required representation/feature evidence, including DOM-38 verification when the target use requires imported STEP geometry.",
+          "outputs": "Component-record with source/terms/geometry references, consumed by DOM-26, DOM-38 and DOM-07.",
+          "accuracy": "Retain each feature's evidence/criterion and exact source hashes; record action-specific readiness.",
+          "evidence": "Registry content distinguishes original bytes, source claims, inspected metadata and actual measured results.",
+          "software": "Validate references/digests, duplicate identities, required terms and recorded frame mappings; emit the readable record.",
+          "agent": "Independent reviewer checks that intended-use claims follow the retained evidence and source terms.",
+          "user_decisions": "Resolve only outstanding choices that affect the named downstream operation.",
+          "dependencies": "Existing source registry and proposed component-record organization in implementation-plan; actual storage policy remains task-specific.",
+          "proposed_development": "Proposal: component registration validator with per-operation prerequisite status and immutable original references.",
+          "procedure": [
+            "Assemble identity, terms and representation records.",
+            "Validate each required reference and source digest.",
+            "Mark readiness for the specific import/placement/version action."
+          ],
+          "validation": "Reopen the record and resolve every retained file/terms reference; independent semantic check compares it with the original selected item. Keep intake-draft/readiness per target action until its required representation evidence exists.",
+          "failure_resume": "Preserve failed record as a draft; fix the owning source/terms/representation entry and revalidate dependent handoffs.",
+          "resources": "Local metadata/reference checks first; storage scales with retained originals. Remote/manual review addresses source meaning and decisions, with actual effort recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent reads an unfamiliar item's identity, terms and representations; software hashes and inventories retained assets.",
+        "hybrid": "Software extracts known catalogue fields and file metadata; agent checks item-level terms and feature associations.",
+        "software_first": "A tested source family imports explicit item metadata and known terms revision; changed terms, configuration conflicts and unsupported geometry enter review.",
+        "deterministic": "Re-register the exact checked item/file/terms revisions using fixed rules and digest checks; new terms or use conditions trigger reassessment."
+      },
+      "alternatives": [
+        "Retain an external link with source/terms summary where the intended route uses remote reference only.",
+        "Preserve vendor native file and a separately identified authorized derivative.",
+        "Use a specifically licensed library alternative matching sourced interfaces when the task authorizes component choice.",
+        "Layout/appearance reuse can select a labelled envelope or display mesh with item provenance; precision/interface reuse requires sourced interface geometry and per-feature criteria. Retain original IFC/MJCF identities and frames for later domain operations."
+      ],
+      "merge": {
+        "branches": "Separate candidates by exact item/configuration and intended use; record terms/geometry evidence and resource observations per candidate.",
+        "evaluation": "Agent/VLM compares visible identity/features against source labels and dimensions; rights conclusion comes from the applicable terms passage. Compare the common required features even when branch detail differs; retain per-branch purpose, criteria, input subset, local/remote resource and manual review records.",
+        "combination": "Combine complementary metadata only for the same identified item/revision; preserve differing part/configuration and licence records as separate candidates. Evidence enrichment of the same item/feature differs from whole-component substitution. Copying geometry features across parts/revisions creates a new authored hybrid requiring its own identity and scoped modeling action. Conflicting dimensions remain explicit; they are not averaged.",
+        "post_merge": "Recheck identity, byte hashes, terms applicability and each feature-source association using a separate reviewer."
+      },
+      "software_migration": "Retain checked intake examples per catalogue/item family; automate stable metadata/terms attachment and duplicate hashing; exercise configuration changes, mixed asset licences and restricted derivatives before software-first promotion.",
+      "future_tests": [
+        "One package contains models with different applicable terms; every file retains its own association.",
+        "Two names contain identical bytes; digest deduplication preserves both source provenance records.",
+        "Changed vendor terms creates a new rights review without rewriting retained originals.",
+        "A visual mesh and analytic CAD representation receive distinct roles and feature evidence.",
+        "A configured item whose preview resembles another model remains associated with its actual part/configuration ID."
+      ]
+    },
+    {
+      "operation_id": "DOM-07",
+      "name": "Place reusable component in assembly",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-07-A01",
+          "name": "Resolve source and target interface identities",
+          "purpose": "Bind a component occurrence to the intended assembly interface.",
+          "intended_use": "Prepare placement of one reusable component in the specified assembly pose.",
+          "inputs": "Component-record; required assembly-graph; measurement-set; source/target datum IDs, geometry revisions and stated mating relation.",
+          "outputs": "Interface correspondence and placement prerequisites, consumed by DOM-07-A02.",
+          "accuracy": "Attach position/angle/clearance criteria per interface with sources; carry measurement uncertainty independently.",
+          "evidence": "Measurements name document/revision/handles or source drawing annotations; supplied mating intent determines relation.",
+          "software": "Read pinned component and assembly revisions; resolve graph nodes and measurement references; check units.",
+          "agent": "Interpret feature correspondence using source views; VLM selects the source-supported mapping while preserving alternative interpretations.",
+          "user_decisions": "Resolve a genuinely new mating relation, ambiguous datum or target occurrence.",
+          "dependencies": "Native measurement/frame APIs; OCS contract; existing assembly-graph records.",
+          "proposed_development": "Proposal: datum resolver requiring explicit source/target frame direction and occurrence identity.",
+          "procedure": [
+            "Resolve the component definition and target occurrence.",
+            "Read the exact interface observations.",
+            "Associate the supplied mating relation with the intended feature pair."
+          ],
+          "validation": "Verify all measurement references belong to pinned revisions; separate semantic reviewer checks centre/edge, axis sign and component occurrence.",
+          "failure_resume": "Retain candidate datums on ambiguity; block dependent transform and resume after the exact correspondence is established.",
+          "resources": "Local identity/measurement queries first; CPU/RAM depends on queried geometry. Remote VLM uses bounded cited views; record manual datum decisions."
+        },
+        {
+          "id": "DOM-07-A02",
+          "name": "Compute the occurrence transform",
+          "purpose": "Compose the sourced frames into one explicit placement transform.",
+          "intended_use": "Supply an auditable rigid placement after explicit source-unit/convention normalization.",
+          "inputs": "Checked source and target interface frames; declared mating offset; source-unit conversion; per-interface criteria.",
+          "outputs": "Component-to-assembly transform with derivation and residual checks, consumed by DOM-07-A03.",
+          "accuracy": "Rotation/translation checks use supplied numerical thresholds; engineering interface tolerances and measurement uncertainty remain separate.",
+          "evidence": "Each frame and offset cites its measurement/source or explicit task decision; transform is a calculated result.",
+          "software": "Use column-vector convention: T_A_C = T_A_I × T_I_J × inverse(T_C_J), with A assembly, C component, I target interface and J component interface; apply declared unit/convention mapping separately.",
+          "agent": "Check transform direction, mating offset meaning and source conventions; compare candidate mappings with intended geometry.",
+          "user_decisions": "Provide a required mating offset/orientation when new design intent determines it.",
+          "dependencies": "Checked matrix arithmetic and native placement API; representation conventions from composition rules.",
+          "proposed_development": "Proposal: frame-composition helper exposing units, map direction and per-feature residuals.",
+          "procedure": [
+            "Normalize explicit length units and coordinate conventions.",
+            "Compose the three named transforms in the stated direction.",
+            "Apply the result to interface control observations and compare the target relation."
+          ],
+          "validation": "Verify inverse/round-trip consistency, orthonormal rigid rotation and determinant +1 after explicit convention conversion; test independent control points and named axes within their sourced criteria.",
+          "failure_resume": "Reject singular/incompatible frame mappings and preserve operands; resume from the corrected frame/offset and invalidate dependent placements.",
+          "resources": "Small local matrix computations need CPU/RAM; no GPU requirement. Remote reasoning only for semantic exceptions; record human frame corrections."
+        },
+        {
+          "id": "DOM-07-A03",
+          "name": "Insert the component occurrence and connection edge",
+          "purpose": "Apply the checked transform while preserving reusable source geometry.",
+          "intended_use": "Create one identified occurrence and its assembly relationship.",
+          "inputs": "Pinned component definition; checked transform; target document/revision; assembly-graph; native API capabilities.",
+          "outputs": "Occurrence plus graph edge and actual transform readback, consumed by DOM-07-A04.",
+          "accuracy": "Preserve source geometry exactly; compare applied placement with the transform and per-interface criteria.",
+          "evidence": "Execution result records document/revision, definition digest, occurrence ID, request identity and completed operation.",
+          "software": "Use supported native placement/assembly API; read current schema/state; write occurrence and relationship within a bounded operation sequence.",
+          "agent": "Choose the supported placement representation and reconcile partial native/graph results.",
+          "user_decisions": "Resolve a representation choice if the requested relationship exceeds the supported native API.",
+          "dependencies": "OCS block/group semantics only where appropriate; FreeCAD Assembly/other native APIs require inspected capabilities.",
+          "proposed_development": "Proposal: placement adapter with stable occurrence IDs and recoverable native-document/graph update ordering. Preserve target assembly revision, required graph and graph revision explicitly.",
+          "procedure": [
+            "Create or reference the definition without editing its original.",
+            "Insert one occurrence with the checked transform.",
+            "Record its connection edge and read back both identities."
+          ],
+          "validation": "Check exactly one intended occurrence was added, graph endpoints resolve and source hash is unchanged; compare actual and intended transforms.",
+          "failure_resume": "On uncertain completion query the same request; reconcile native occurrence and graph before retry; preserve partial results and avoid duplicate instances.",
+          "resources": "Local insertion cost scales with source shape/display complexity; rendering GPU use recorded if observed. Agent/manual work diagnoses interface or state exceptions."
+        },
+        {
+          "id": "DOM-07-A04",
+          "name": "Measure placed interfaces and preserve the result",
+          "purpose": "Validate the occurrence's actual position and assembly relation.",
+          "intended_use": "Deliver a checked placement for assembly reuse or export.",
+          "inputs": "Placed occurrence, graph edge, source measurements, saved revision and feature-specific validation criteria.",
+          "outputs": "Placement verification and pinned assembly update, consumed by CAD-12/DOM-26/DOM-39.",
+          "accuracy": "Compare actual interface offsets/angles/clearance using the named feature's engineering criterion and separate measurement/numerical conditions.",
+          "evidence": "Measurement evidence binds to actual occurrence handles and revision; semantic view review cites the same geometry.",
+          "software": "Measure named interfaces; validate graph transform composition; perform supported exact interference query where required; save/reopen within scope.",
+          "agent": "Independent reviewer checks that the measured feature is the intended interface and that allowed contact matches the supplied relationship.",
+          "user_decisions": "Resolve an exposed design/source conflict, preserving existing required placements.",
+          "dependencies": "Native measurement and save/reopen interface; OCS contract checker only for its supplied point/axis/plane subset.",
+          "proposed_development": "Proposal: occurrence validation report linking each measured relation, criterion and downstream dependency.",
+          "procedure": [
+            "Read back placed interface features.",
+            "Compare numerical and semantic relations with the source.",
+            "Reopen the saved assembly and recheck occurrence identity/placement."
+          ],
+          "validation": "Require both revision-bound numerical checks and separate semantic review; bounding-box intersection remains a candidate pair classification.",
+          "failure_resume": "Retain the failed placement; return to correspondence, calculation or insertion as indicated; invalidate only dependent occurrence checks.",
+          "resources": "Local bounded measurements precede expensive pair checks; record CPU/RAM and candidate-pair count. Remote review and manual corrections receive separate effort records."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent/VLM interprets unfamiliar interfaces and directs measured placement; software supplies explicit transform arithmetic and readback.",
+        "hybrid": "Agent selects sourced datums/mating relation; software composes and applies the transform and checks residuals.",
+        "software_first": "Known component/interface families use tested placement rules; missing or inconsistent frames enter evidence review.",
+        "deterministic": "Pinned source/target frames, mating offset and occurrence graph drive repeatable insertion and validation with stable request identities."
+      },
+      "alternatives": [
+        "Manual datum selection followed by explicit transform calculation and numeric readback.",
+        "Constraint-driven native assembly for sourced mating relations; solver result retains actual constraints and degrees of freedom.",
+        "Explicit placement for a static arrangement when that is the requested use.",
+        "For a sketch arrangement, place the sourced envelope using declared layout anchors; for a working interface, require sourced mating frames, axis identity and feature tolerances."
+      ],
+      "merge": {
+        "branches": "Candidate datum correspondences share pinned component/assembly revisions; each records intended pose, feature accuracy and resources.",
+        "evaluation": "VLM compares source views, feature names and numerical residuals to select a supported correspondence; model agreement is recorded separately. Compare the common required features even when branch detail differs; retain per-branch purpose, criteria, input subset, local/remote resource and manual review records.",
+        "combination": "Merge complementary measured datums only when their identities/frames agree; preserve conflicting transforms and source evidence. Evidence enrichment of the same item/feature differs from whole-component substitution. Copying geometry features across parts/revisions creates a new authored hybrid requiring its own identity and scoped modeling action. Conflicting dimensions remain explicit; they are not averaged.",
+        "post_merge": "Recalculate the merged transform, reapply to named control features, then independently check actual placed geometry and graph."
+      },
+      "software_migration": "Automate frame composition first; retain semantic datum selection until checked family cases support it. Promote only mappings tested with mirrored axes, repeated occurrences, unit changes, stale sources and partial commits.",
+      "future_tests": [
+        "Known source/target frames and mating offset yield the checked occurrence transform and preserved source geometry.",
+        "Swapped transform direction fails named control-point checks.",
+        "Unit conversion and a coordinate reflection are recorded separately from rigid placement.",
+        "Repeated component definitions produce distinct occurrence and graph IDs.",
+        "Native insertion succeeds but graph update fails; resume reconciles the existing occurrence instead of duplicating it.",
+        "Component plus measurements with an absent, stale or wrong target assembly revision/graph blocks placement before any mutation; source and target identities must match the declared graph prerequisites."
+      ]
+    },
+    {
+      "operation_id": "DOM-26",
+      "name": "Version and reuse component revision",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-26-A01",
+          "name": "Classify the component change and identify new bytes",
+          "purpose": "Determine which source, metadata, terms or derived artifact changed.",
+          "intended_use": "Create a new reusable revision while preserving assemblies pinned to earlier revisions.",
+          "inputs": "Component-record whose required intake/representation references exist; prior revisions; changed source/terms/metadata; original and derivative byte hashes. Preliminary file digests remain intake evidence until component publication prerequisites pass.",
+          "outputs": "Change classification and candidate revision identity, consumed by DOM-26-A02.",
+          "accuracy": "Digest and revision references require exact equality; feature accuracy criteria stay attached to the geometry revision they assessed.",
+          "evidence": "Source changes, terms changes and metadata corrections retain their own evidence and dates.",
+          "software": "Hash source/derivative bytes; compare normalized metadata without rewriting originals; list changed dependency references.",
+          "agent": "Classify identity-preserving revision versus a different component/configuration and identify affected feature evidence.",
+          "user_decisions": "Decide component identity when a new configuration changes the intended reusable item.",
+          "dependencies": "Existing content hashes and completed required intake references; proposed registry/version organization in implementation plan. Partial intake records retain their draft/action-readiness status.",
+          "proposed_development": "Proposal: revision-diff helper separating source bytes, rights evidence, metadata and geometry derivatives.",
+          "procedure": [
+            "Compare candidate and previous source/terms digests.",
+            "List changed fields and affected feature checks.",
+            "Assign a candidate revision linked to its predecessor.",
+            "Create a new metadata/rights revision for changed terms or frame meaning even when geometry bytes are equal."
+          ],
+          "validation": "Recompute digests and confirm earlier revisions resolve unchanged; independent reviewer checks revision-versus-new-component classification.",
+          "failure_resume": "Retain the candidate change and original records on conflict; resume after exact identity or source correction.",
+          "resources": "Local hashing/I/O first; cost scales with asset bytes. Remote/manual work is limited to identity and semantic change classification."
+        },
+        {
+          "id": "DOM-26-A02",
+          "name": "Resolve the complete dependency and rights set",
+          "purpose": "Find every pinned input required to reproduce and reuse the candidate revision.",
+          "intended_use": "Prepare reproducible component reuse and its stated export/distribution route.",
+          "inputs": "Candidate revision; referenced source assets, child components, terms, adapter versions, parameters and derivative manifests.",
+          "outputs": "Closed dependency manifest and impacted-consumer list, consumed by DOM-26-A03.",
+          "accuracy": "Every dependency is pinned by identity/revision/digest; retain feature-specific accuracy/evidence instead of inheriting superseded checks.",
+          "evidence": "Original terms and generation lineage are linked per asset; reproducibility claim names actual tool/configuration evidence.",
+          "software": "Traverse dependency references, detect missing pins/cycles according to allowed graph semantics, recompute hashes and compare rights applicability.",
+          "agent": "Interpret derivative lineage and identify which downstream checks require repetition after a change.",
+          "user_decisions": "Resolve a requested reuse/distribution route affected by changed source terms or dependencies.",
+          "dependencies": "Existing source/terms registry, file hashing and reference graph; storage choice follows measured size and rights.",
+          "proposed_development": "Proposal: dependency-closure and invalidation helper with explicit asset/tool/configuration edges.",
+          "procedure": [
+            "Traverse all source and derivative dependencies.",
+            "Verify each immutable target and applicable terms record.",
+            "List downstream assemblies/exports affected by each changed edge."
+          ],
+          "validation": "Every referenced artifact resolves to the recorded bytes; independent reviewer checks semantic dependency completeness and terms scope.",
+          "failure_resume": "Preserve unresolved edge names and affected consumers; resume from repaired pins or restored originals, then repeat closure.",
+          "resources": "Local graph/hash work scales with dependency count/bytes; no geometry regeneration. Remote review handles lineage/terms ambiguities; record manual effort."
+        },
+        {
+          "id": "DOM-26-A03",
+          "name": "Publish a new immutable revision and explicit reuse pins",
+          "purpose": "Make the checked revision addressable without changing earlier consumers.",
+          "intended_use": "Allow assemblies and future exports to select an exact component revision.",
+          "inputs": "Closed candidate manifest; storage policy; existing revision namespace; explicitly requested consumer updates.",
+          "outputs": "New component revision and separately updated consumer pins, consumed by DOM-26-A04.",
+          "accuracy": "Revision/digest pinning is exact; any geometric upgrade carries new feature validation requirements.",
+          "evidence": "Publication receipt records actual paths, bytes and selected consumer changes; prior revisions retain original provenance.",
+          "software": "Write new immutable artifact/metadata locations using checked storage facilities; update only named consumer references; retain old pins elsewhere.",
+          "agent": "Review the exact change set and choose bounded update order with recovery points.",
+          "user_decisions": "Choose which existing assembly consumes a new revision when the task requires that selection.",
+          "dependencies": "Existing repository/content-addressed storage policy; Git/LFS are candidate storage choices requiring their actual authorization and setup.",
+          "proposed_development": "Proposal: revision publisher with collision detection, atomic metadata replacement and recoverable consumer pin updates.",
+          "procedure": [
+            "Persist the new revision under a new identity.",
+            "Verify its bytes and manifest.",
+            "Update only the explicitly selected consumers and record their new revisions."
+          ],
+          "validation": "Old pins still resolve unchanged; new pins resolve the new digest; compare the intended and actual consumer change set.",
+          "failure_resume": "On partial publication retain temporary/new artifacts and old authoritative pins; reconcile actual state before completing metadata or consumer updates.",
+          "resources": "Local storage and hash I/O dominate; record bytes written and checks. Remote/manual work reviews consumer selection and exceptions."
+        },
+        {
+          "id": "DOM-26-A04",
+          "name": "Reopen pinned artifacts and check reuse reproducibility",
+          "purpose": "Verify that the revision can be resolved with its original dependency identities.",
+          "intended_use": "Deliver a reproducible component reference for placement or export.",
+          "inputs": "Published revision, dependency manifest, consumers and existing validation reports.",
+          "outputs": "Revision resolution report and downstream test obligations, consumed by DOM-07/DOM-39.",
+          "accuracy": "Hash/revision checks are exact; repeated geometry/export checks use their separately sourced per-feature criteria.",
+          "evidence": "Record actual reopened bytes and tool versions; retain historical check results on their original revisions.",
+          "software": "Resolve every pin; validate source/derivative hashes; compare a future controlled regeneration only when that execution is authorized.",
+          "agent": "Independent reviewer checks that a passing old report is not assigned to changed geometry and that required downstream checks are named.",
+          "user_decisions": "Resolve consumer migration scope if new geometry changes the requested assembly behavior.",
+          "dependencies": "Existing readers and manifest records; supported exporter/adapter needed for any future reproducibility execution.",
+          "proposed_development": "Proposal: revision-resolution report and affected-check scheduler scoped to changed dependencies.",
+          "procedure": [
+            "Reopen all pinned metadata/artifact references.",
+            "Compare hashes and check-report revision identities.",
+            "Record which downstream placements/exports need new checks."
+          ],
+          "validation": "All pins resolve correctly; source/terms closure holds; changed geometry has explicit pending validation for its named use.",
+          "failure_resume": "Preserve unresolved/corrupt artifact evidence; restore exact bytes from permitted retained originals or create a new corrected revision; recheck dependent pins.",
+          "resources": "Local hash/read cost scales with selected dependency closure. Remote/manual review examines semantic invalidation and migration scope."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets unfamiliar revision/identity and terms changes; software computes digests and dependency differences.",
+        "hybrid": "Software builds change/dependency manifests; agent classifies semantic impacts and selects task-authorized consumer updates.",
+        "software_first": "Known immutable record families publish through checked rules; identity changes, terms changes and broken references enter review.",
+        "deterministic": "Resolve and republish exact pinned inputs/configurations under a tested content-addressed policy with collision and integrity checks."
+      },
+      "alternatives": [
+        "Git-tracked metadata and small licensed sources under the established repository policy.",
+        "Git LFS for versioned binaries when the repository supports it and use is authorized.",
+        "Content-addressed asset storage with immutable digests and readable retrieval manifests.",
+        "Version layout and precision derivatives separately with their purpose, lineage and feature criteria; a source revision change selectively invalidates the affected derivative checks."
+      ],
+      "merge": {
+        "branches": "Candidate revisions retain separate source/terms/dependency identities and intended consumer targets.",
+        "evaluation": "Agent compares source changes and actual geometry evidence; VLM may compare source-linked previews for semantic change while hashes identify bytes. Compare the common required features even when branch detail differs; retain per-branch purpose, criteria, input subset, local/remote resource and manual review records.",
+        "combination": "Merge compatible metadata/lineage contributions into a new revision; retain geometry and terms identities explicitly; earlier pinned revisions remain addressable. Evidence enrichment of the same item/feature differs from whole-component substitution. Copying geometry features across parts/revisions creates a new authored hybrid requiring its own identity and scoped modeling action. Conflicting dimensions remain explicit; they are not averaged.",
+        "post_merge": "Repeat digest, dependency, rights and impacted-check closure; independent reviewer verifies consumer pin changes."
+      },
+      "software_migration": "Start with agent-reviewed revision classifications; automate digest and dependency closure; promote publication rules after checked terms-only changes, dependency loss, partial writes, corrupt files and unchanged consumer pin cases.",
+      "future_tests": [
+        "A source-byte change creates a new revision while an existing assembly keeps its old pin.",
+        "A terms-only change produces a new rights/revision record with unchanged geometry bytes.",
+        "Missing derivative dependency fails closure with exact edge/consumer identification.",
+        "Interrupted metadata publication leaves the previous revision readable and resumes without overwriting it.",
+        "A changed interface invalidates its placement/export checks while unrelated feature evidence stays linked to its original revision."
+      ]
+    },
+    {
+      "operation_id": "DOM-38",
+      "name": "Import STEP solid into CAD representation",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/local-baseline.md",
+        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "https://cadquery.readthedocs.io/en/stable/importexport.html",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+        "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-38-A01",
+          "name": "Inspect STEP identity, structure and unit evidence",
+          "purpose": "Determine the supplied STEP file's representation and the import requirements.",
+          "intended_use": "Prepare a CAD representation suitable for the brief's named geometry/assembly use.",
+          "inputs": "Original STEP bytes plus DOM-06-A01/A02 identity/rights receipt or equivalent retained source record; schema/header, declared units/product structure and known interface dimensions. A completed component-record is not an import prerequisite.",
+          "outputs": "STEP intake manifest and expected invariants, consumed by DOM-38-A02.",
+          "accuracy": "Record source uncertainty and feature allowances; unit interpretation must reproduce sourced control dimensions within separate import-comparison thresholds.",
+          "evidence": "Header/entity observations are file evidence; supplier dimensional claims and prior measured checks retain their status.",
+          "software": "Read header/schema and entity references using a supported STEP parser; inventory product/occurrence structure and referenced unit contexts.",
+          "agent": "Interpret whether the task needs analytic faces, faceted geometry, individual solids or product hierarchy.",
+          "user_decisions": "Resolve ambiguous source units/configuration or select an alternative representation when required.",
+          "dependencies": "Existing original STEP and partial identity/rights receipt; selected parser/reader with known schema support; OCS step.rs is exporter source evidence.",
+          "proposed_development": "Proposal: STEP preflight inspector reporting referenced unit contexts, topology/entity families and product structure.",
+          "procedure": [
+            "Preserve original bytes and hash.",
+            "Inspect schema, product structure and actual unit references.",
+            "Record expected part/interface/representation checks from the source."
+          ],
+          "validation": "Validate header/entity references and control dimensions; classify analytic, faceted and mixed data from actual entities, retaining uncertainty on unsupported entities.",
+          "failure_resume": "Preserve parser diagnostics and source bytes; pause dependent import on ambiguous units or unsupported schema and resume with a supported reader/source decision.",
+          "resources": "Local file/header inspection first; full entity parsing scales with file size. Remote review handles schema/use or source ambiguity; record manual interpretation."
+        },
+        {
+          "id": "DOM-38-A02",
+          "name": "Choose and configure an isolated importer",
+          "purpose": "Bind import to an actual tool/version and the source information it must preserve.",
+          "intended_use": "Create the requested CAD derivative while protecting existing native work.",
+          "inputs": "STEP preflight manifest; target native representation; importer capabilities/settings; authorized destination.",
+          "outputs": "Import plan and isolated target context, consumed by DOM-38-A03.",
+          "accuracy": "Record unit conversion, healing precision and geometry comparison criteria separately from source feature tolerances.",
+          "evidence": "Importer documentation is capability evidence; installed support and output fidelity require an actual future run.",
+          "software": "Inspect native importer and documented OCCT STEPCAFControl_Reader: assembly-shape, name/color modes and root transfer into a DECAF document. A pinned local adapter must establish its actual calls and output; record FreeCAD import-structure preferences and importer settings.",
+          "agent": "Select the supported route for the intended use, explaining expected names/hierarchy/colour/topology treatment.",
+          "user_decisions": "Choose a representation loss or alternate tool only where it changes the requested deliverable.",
+          "dependencies": "OCCT 8.0.1 STEPCAFControl_Reader documentation inspected by Luna; archived FreeCAD preference documentation; an installed runtime/adapter still requires discovery and tests. OCS README documents OBJ import and mesh-derived STEP export.",
+          "proposed_development": "Proposal: importer adapter with capability discovery, isolated destination and explicit healing/unit settings.",
+          "procedure": [
+            "Record importer/version and supported schema.",
+            "Select target representation and preservation requirements.",
+            "Create the bounded import destination and record settings."
+          ],
+          "validation": "Check the plan accounts for every required identity/shape/frame field; preserve existing document state and explicit source-to-target unit rule.",
+          "failure_resume": "Unsupported field/schema returns to importer choice; stale or occupied destination requires a fresh state read without overwriting unrelated work.",
+          "resources": "Local capability/settings inspection precedes full import. Import CPU/RAM estimates follow file/entity size; remote/manual effort concerns route choice."
+        },
+        {
+          "id": "DOM-38-A03",
+          "name": "Transfer geometry and classify actual output",
+          "purpose": "Create the CAD derivative and record what the importer produced.",
+          "intended_use": "Provide inspected reusable geometry with explicit analytic/faceted/solid/assembly properties.",
+          "inputs": "Isolated import context; original STEP; configured importer; expected invariants.",
+          "outputs": "Imported native geometry and transfer mapping/diagnostics, consumed by DOM-38-A04.",
+          "accuracy": "Preserve declared scale and per-feature controls; record healing/tessellation changes and their numerical parameters.",
+          "evidence": "Actual transfer logs, tool/version, input hash, target revision and entity mappings establish run evidence.",
+          "software": "Run the selected import; inventory solids, shells, face types, occurrences, names and placements; retain transfer warnings and healing reports.",
+          "agent": "Compare expected and actual representation; identify semantic losses and whether a faceted source remains suitable for the requested use.",
+          "user_decisions": "Resolve a required repair/remodeling or changed output scope as a separate design action.",
+          "dependencies": "Selected native/OCCT STEP reader; shape inspection APIs; source-faceted STEP remains source-faceted geometry after ordinary import.",
+          "proposed_development": "Proposal: transfer result recorder retaining entity mapping, shape classification and per-field preservation/change findings.",
+          "procedure": [
+            "Execute import into the isolated destination.",
+            "Capture diagnostics and actual resulting structure.",
+            "Classify representation and map source products to imported objects."
+          ],
+          "validation": "Detect empty result, invalid/open topology and dropped products; validate finite bounds and actual scale; compare expected occurrence identities.",
+          "failure_resume": "Retain failed/partial target and logs; reconcile operation state before retry; a healing or remodel proposal creates a separately identified derivative.",
+          "resources": "Local import/healing CPU and RAM scale with entity/face count; begin without optional costly healing. Display GPU only if used. Agent reviews transfer exceptions."
+        },
+        {
+          "id": "DOM-38-A04",
+          "name": "Measure and independently reopen imported geometry",
+          "purpose": "Check the actual imported representation against source controls and requested use.",
+          "intended_use": "Deliver a checked CAD input for assembly, measurement or later conversion.",
+          "inputs": "Imported revision; original STEP; known source/control dimensions; feature tolerances; independent reader route.",
+          "outputs": "Import verification and native artifact identity, returned to DOM-06-A03/A04 for component-record completion and then consumed by CAD-12/DOM-07/DOM-26.",
+          "accuracy": "Compare interface dimensions, placements, bounds and valid-solid volume using their source-backed thresholds; source precision and numerical thresholds remain distinct.",
+          "evidence": "Measurements bind to actual native objects/revision; an independent reader records its kernel/version and shared dependencies.",
+          "software": "Measure required features; check solid/shell/face counts; reopen saved derivative and read original with a second supported consumer.",
+          "agent": "Separate semantic reviewer checks feature/product association and analytic/faceted claims against source evidence and same-revision views.",
+          "user_decisions": "Resolve conflicting source controls or a requested use that requires further geometry work.",
+          "dependencies": "Native shape validity/measurement APIs and second reader; OCS check_contract supplies only its point/axis/plane numerical subset.",
+          "proposed_development": "Proposal: import invariant report with per-feature residuals and explicit product/placement mapping.",
+          "procedure": [
+            "Measure source controls on imported geometry.",
+            "Save and reopen the derivative within the named scope.",
+            "Compare independent reader observations and investigate discrepancies."
+          ],
+          "validation": "Report identity/scale/feature residuals, topology and face types; valid-solid volume comparisons use comparable closed shapes; same-kernel agreement records that dependency. Match product definitions and occurrences by stable mapping/parent path, including local and world placements; equal bounds/volume still require critical-interface checks.",
+          "failure_resume": "Preserve both reader results and artifacts; classify importer, unit, topology or source discrepancy and resume the owning step.",
+          "resources": "Metadata/count checks precede detailed face/feature measurements; CPU/RAM scales with shape complexity. Remote VLM views support identity review; manual discrepancy work is logged."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent inspects unfamiliar schema/units and chooses a supported importer; software records transfer and geometry measurements.",
+        "hybrid": "Importer performs transfer; agent interprets representation/semantic losses and VLM compares source-linked geometry views.",
+        "software_first": "Tested STEP schema/exporter families use pinned importer settings; ambiguous units, failed solids and hierarchy losses enter review.",
+        "deterministic": "A checked input/exporter family and explicit target contract drive repeatable import and invariant checks with pinned tool/settings."
+      },
+      "alternatives": [
+        "Receiving CAD application's native STEP importer with its actual representation report.",
+        "FreeCAD/Open CASCADE assembly-aware import when product/occurrence preservation is required.",
+        "Geometry-only STEP import for a task explicitly requiring individual shape geometry; retain original product metadata separately.",
+        "A layout consumer may use inspected faceted/display geometry with its declared approximation; an interface consumer requires the relevant source surface/edge identity and measured feature criteria."
+      ],
+      "merge": {
+        "branches": "Independent importers retain separate targets, tool/settings, intended use, source hash and resource records.",
+        "evaluation": "VLM compares source product identity and views while numerical readers compare dimensions, placements, topology and representation; source controls govern selection. Compare the common required features even when branch detail differs; retain per-branch purpose, criteria, input subset, local/remote resource and manual review records.",
+        "combination": "Select a checked complete import or combine separately identified product records only through explicit source-object mapping; retain original source and all candidate reports. Evidence enrichment of the same item/feature differs from whole-component substitution. Copying geometry features across parts/revisions creates a new authored hybrid requiring its own identity and scoped modeling action. Conflicting dimensions remain explicit; they are not averaged.",
+        "post_merge": "Recheck the selected/combined artifact's product identities, unit/frame mapping, shape validity, feature controls and independent semantic associations."
+      },
+      "software_migration": "Automate preflight/invariants for exercised STEP producer/schema families; retain source/semantic exceptions. Test analytic/faceted/mixed solids, assembly products, unit variants, invalid shells and healing changes before expanding support.",
+      "future_tests": [
+        "An analytic curved-face STEP retains the expected surface types and sourced dimensions.",
+        "A faceted STEP is reported with planar facets after import.",
+        "Repeated product occurrences preserve separate placements when the target contract requires hierarchy.",
+        "A missing or unreferenced unit entity triggers a source-control/unit decision instead of an inferred scale.",
+        "Invalid/open shell input yields an explicit result and preserved source; healing is a new derivative.",
+        "Two readers with a shared kernel record that dependency beside matching results."
+      ]
+    },
+    {
+      "operation_id": "DOM-39",
+      "name": "Export STEP assembly",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://cadquery.readthedocs.io/en/stable/importexport.html",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+        "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-39-A01",
+          "name": "Freeze the native assembly and export contract",
+          "purpose": "Define the assembly revision and information that the STEP derivative must carry.",
+          "intended_use": "Exchange named components and placements with the specified receiving consumer.",
+          "inputs": "Native assembly revision; component pins; output schema/consumer; item terms; required names, occurrence hierarchy, units and geometry properties.",
+          "outputs": "Export manifest and per-field preservation requirements, consumed by DOM-39-A02.",
+          "accuracy": "Record per-interface geometry allowance and separate export/readback thresholds; identity and occurrence cardinality requirements are exact.",
+          "evidence": "Native assembly/source records and actual consumer requirements define expected structure; terms apply to each exported asset.",
+          "software": "Read component/occurrence tree, transforms, units, shape types and rights dependencies; freeze source revision/hashes.",
+          "agent": "Map required native fields to STEP product/geometry fields and identify representation-specific changes.",
+          "user_decisions": "Decide an output schema or loss of a required semantic field when the task has not specified it.",
+          "dependencies": "Native assembly reader; component/version records; selected consumer's supported STEP route.",
+          "proposed_development": "Proposal: export contract builder with exact definition/occurrence and per-feature invariant sets.",
+          "procedure": [
+            "Freeze source revision and all component pins.",
+            "List required product tree, placements, geometry and names.",
+            "Attach consumer/schema and feature-comparison criteria."
+          ],
+          "validation": "Check manifest matches the native assembly and every required component has rights/provenance; independent reviewer checks occurrence versus definition meaning.",
+          "failure_resume": "Source changes invalidate the frozen export plan; retain old manifest and resume on the selected new revision.",
+          "resources": "Local tree/hash inspection first; no geometry conversion. Remote/manual review addresses consumer meaning and export scope."
+        },
+        {
+          "id": "DOM-39-A02",
+          "name": "Select the assembly-aware exporter and settings",
+          "purpose": "Choose an exporter whose exercised behavior can satisfy the required STEP structure.",
+          "intended_use": "Produce a product/occurrence-preserving exchange artifact or the explicitly requested alternative.",
+          "inputs": "Frozen export contract; actual exporter/version capabilities; target schema; unit/healing/tessellation settings.",
+          "outputs": "Exporter configuration and capability mapping, consumed by DOM-39-A03.",
+          "accuracy": "Representation/rounding settings must meet the source-backed per-feature export criteria; computational precision has its own record.",
+          "evidence": "Registered FreeCAD/CadQuery documentation provides capability leads; OCS step.rs locally shows triangle collection into one shell/solid/representation with six-decimal coordinates. The writer body supplies this finding; its opening comments describe a different organization.",
+          "software": "Inspect OCCT STEPCAFControl_Writer document/label/root-assembly transfer and name/color options; record root-label length unit or Cascade fallback and actual schema settings. Use the selected tested assembly-aware adapter; compare actual consumer readback.",
+          "agent": "Choose a route matching hierarchy and analytic/faceted requirements; compare alternatives using actual consumer checks.",
+          "user_decisions": "Resolve a requested alternative such as separate-part exports when hierarchy cannot meet the required target.",
+          "dependencies": "OCCT 8.0.1 STEPCAFControl_Writer source documentation and archived FreeCAD preferences. The inspected OCS writer emits one faceted shell and an SI millimetre entity unreferenced by its geometric context; consumer unit interpretation requires an exercised fixture.",
+          "proposed_development": "Proposal: exporter capability adapter that declares preserved product structure and blocks mismatched route selection.",
+          "procedure": [
+            "Inspect actual installed exporter capabilities.",
+            "Choose schema and geometry/product preservation mode.",
+            "Record unit, precision and representation settings against the export contract."
+          ],
+          "validation": "Trace every required invariant to an actual exporter capability or future fixture check; unit declaration must be referenced and verified by consumer readback.",
+          "failure_resume": "Retain the contract and rejected route evidence; select another supported exporter or obtain the exact changed-deliverable decision.",
+          "resources": "Local capability inspection precedes export; CPU/RAM estimate follows component/face count. Remote/manual work compares consumer and representation constraints."
+        },
+        {
+          "id": "DOM-39-A03",
+          "name": "Write the STEP derivative and preservation mapping",
+          "purpose": "Create a new STEP artifact from the frozen assembly revision.",
+          "intended_use": "Deliver a traceable exchange candidate for independent consumer checks.",
+          "inputs": "Frozen source; selected exporter/configuration; authorized derivative path; preservation contract.",
+          "outputs": "STEP bytes/hash, export log and native-to-STEP mapping, consumed by DOM-39-A04.",
+          "accuracy": "Record actual export precision/settings; preserve per-feature source criteria and declared analytic/faceted representation.",
+          "evidence": "Execution receipt names source revision/hashes, tool/settings, output hash and warnings.",
+          "software": "Export to a new path; capture product/occurrence labels and placement mapping where provided; retain dropped/changed-field report.",
+          "agent": "Inspect warnings and determine whether a loss affects the named consumer use.",
+          "user_decisions": "Resolve an unexpected required-field loss before representing the candidate as meeting that use.",
+          "dependencies": "Selected STEP exporter and native assembly API; destination writing follows existing project scope.",
+          "proposed_development": "Proposal: export transaction/report wrapper with stable operation identity and source/output lineage.",
+          "procedure": [
+            "Recheck the frozen source hashes/revision.",
+            "Export the assembly to the named derivative path.",
+            "Record output digest, diagnostics and preserved/transformed/dropped fields."
+          ],
+          "validation": "Verify nonempty readable STEP, unchanged native source and completed output bytes; inspect schema/unit/product entities before consumer import.",
+          "failure_resume": "Retain partial artifact/logs; reconcile completion using output identity and tool state; retry to a separately identified candidate after diagnosis.",
+          "resources": "Local export CPU/RAM/storage depends on faces/products; no reconstruction inference. Agent reviews warnings; record manual intervention and any remote review."
+        },
+        {
+          "id": "DOM-39-A04",
+          "name": "Reopen and compare the exported assembly",
+          "purpose": "Verify the STEP artifact in the actual receiving path.",
+          "intended_use": "Deliver checked product structure, placements and geometry for the named consumer.",
+          "inputs": "Exported STEP/hash; frozen native manifest; feature criteria; actual consumer and optional second reader.",
+          "outputs": "Export verification, checked derivative and field-loss report, consumed by the intended receiver/DOM-26.",
+          "accuracy": "Compare occurrence positions/angles and interface dimensions with sourced export thresholds; preserve measurement uncertainty and source engineering allowances separately.",
+          "evidence": "Actual consumer measurements bind to output hash and importer/version; native source measurements bind to frozen revision.",
+          "software": "Import into an isolated consumer; compare definition/occurrence counts, parent relationships, names, transforms, surface types and required interfaces.",
+          "agent": "Independent reviewer checks semantic part/occurrence mapping and same-geometry views; assess whether required details survive.",
+          "user_decisions": "Resolve a required loss by choosing a documented alternate representation or changed consumer scope.",
+          "dependencies": "Actual receiving importer and shape/assembly inspection APIs; second reader's shared kernel dependencies recorded.",
+          "proposed_development": "Proposal: assembly exchange comparator using stable source-object mappings plus explicit failure localization.",
+          "procedure": [
+            "Read STEP through the actual consumer.",
+            "Compare native and imported product trees and named feature measurements.",
+            "Record preserved, changed and lost fields and retain the checked output hash."
+          ],
+          "validation": "Numerical invariants and independent semantic mapping must both pass for the named use; compare per-part closed-shape volume only where applicable and distinguish union from occurrence totals. Compare parent paths and both local and composed world transforms; identical geometry hashes and aggregate counts cannot identify repeated occurrences alone.",
+          "failure_resume": "Preserve both native and imported results; locate exporter/importer/unit/representation fault and reopen the owning action; rerun affected checks on a new derivative.",
+          "resources": "Begin with structure/units/transforms; detailed topology/features scale with entity count. Remote VLM review is supplementary evidence; log latency and manual mapping effort."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets unfamiliar consumer/assembly requirements and selects an exporter; software exports and measures actual readback.",
+        "hybrid": "Agent maps required semantics and settings; software performs assembly export and structural/numerical comparisons.",
+        "software_first": "A tested source/exporter/consumer pair exports known assembly classes; changed schema, warnings or failed invariants enter review.",
+        "deterministic": "Pinned native tree, exporter configuration and consumer contract drive export and readback checks; output bytes may include timestamps, so compare semantic invariants alongside recorded hashes."
+      },
+      "alternatives": [
+        "Assembly-aware STEP export preserving named definitions/occurrences when exercised for the target consumer.",
+        "Individual-solid STEP files plus explicit placement/identity manifest when that deliverable is requested.",
+        "Native assembly delivery plus a separately labeled faceted display derivative when both artifacts serve the requested use.",
+        "Layout exchange can carry an explicitly labelled faceted derivative with its approximation criteria; precision exchange retains required analytic/other source geometry and per-feature consumer checks."
+      ],
+      "merge": {
+        "branches": "Exporter/consumer candidates use the same frozen native assembly and required feature set; each records representation/detail target and resources.",
+        "evaluation": "VLM checks product/feature meaning against native views while software compares tree/transform/surface invariants; select the source-supported route meeting the consumer contract. Compare the common required features even when branch detail differs; retain per-branch purpose, criteria, input subset, local/remote resource and manual review records.",
+        "combination": "Combine separately exported components only through an explicit manifest with preserved source identities/placements and a requested deliverable; retain each candidate artifact and loss report. Evidence enrichment of the same item/feature differs from whole-component substitution. Copying geometry features across parts/revisions creates a new authored hybrid requiring its own identity and scoped modeling action. Conflicting dimensions remain explicit; they are not averaged.",
+        "post_merge": "Reopen the combined/selected deliverable in its actual consumer and repeat structural, per-feature numerical and independent semantic checks."
+      },
+      "software_migration": "Capture agent-chosen export settings and failures per source/exporter/consumer pair; automate only checked mappings. Test repeated parts, nested occurrences, mixed units, mirrored placement, analytic versus faceted geometry and dropped names before promotion.",
+      "future_tests": [
+        "Repeated and nested occurrences retain required definition/occurrence distinction and transforms after target import.",
+        "An analytic assembly export preserves required curved surfaces; faceted output reports its planar representation.",
+        "The OCS mesh writer is tested separately for actual unit and single-shell structure; it cannot be assumed to preserve an assembly tree.",
+        "A consumer dropping names or flattening hierarchy produces an explicit required-field failure.",
+        "A changing source during export invalidates the frozen revision and yields a distinct retry artifact.",
+        "Semantically equal exports with different timestamp bytes retain separate hashes while passing declared invariants."
+      ]
+    }
+  ],
+  "shared_failure_resume": "For remote reasoning/VLM work, preserve request/call identity, input package and source hashes, partial/raw response, parser/evaluation error and last complete validated record. Reconcile uncertain completion through available provider response state before retry; associate every retry with the earlier identity. Recheck source digests at resume; validate remaining selection rows against the frozen evidence, and publish one identified completed review result. Malformed or partial responses remain retained evidence and do not alter the current merged artifact. CAD document mutation uses its separate native request/document/revision reconciliation protocol.",
+  "shared_future_tests": [
+    "Shared remote-review interruption case: lose a remote/VLM response, receive malformed selection rows on a linked retry, and change one source before resuming. Expected result: retain raw request/response evidence and retry lineage, reconcile completion, recheck source digests, preserve the current merged artifact until complete valid rows exist, and invalidate only records dependent on the changed source."
+  ]
+}

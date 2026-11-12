@@ -200,7 +200,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "local_source_inspected",
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -288,6 +289,16 @@
             "research/action-audit/reviews/independent-review.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -298,7 +309,8 @@
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -332,6 +344,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -462,6 +475,59 @@
       ]
     },
     {
+      "id": "SRC-0868c7d42c7e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+      "title": "Point 02 visual, semantic and evidence-merge review",
+      "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-096e1d7af9e5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
+      "title": "dom-r07.md",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
+          "access_date": "2026-11-12",
+          "sha256": "f0e8ce4904198d651d947255be25de7ebee2055077867e67e0ed128fdec4c827",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-0a10e8f57dac",
       "url": "https://dev.opencascade.org/doc/overview/html/index.html",
       "local_source_path": null,
@@ -560,7 +626,8 @@
       "summary": "Inspected in this research turn; records OCS STEP representation finding and environment/source inspection.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -573,10 +640,21 @@
           ],
           "sha256": "cefd57403dfa1a89b304ee8ec22ea56cc9d1d60ce4177745c2fbc0877ec3440c",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+          "access_date": "2026-11-12",
+          "sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -592,6 +670,41 @@
       "observations": [],
       "referring_documents": [
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-0d57f06ba877",
+      "url": "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html",
+      "local_source_path": null,
+      "title": "Open CASCADE Technology Reference Manual 8.0.1: STEPCAFControl_Reader Class Reference",
+      "summary": "The official OCCT API reference describes STEPCAFControl_Reader as importing STEP shapes including assemblies and supporting colors and part names. The documented ReadFile and Transfer operations load STEP content into a DECAF document; Transfer can read all roots or one root and can compose multiple results as an assembly. Name and color modes are enabled by default in the documented constructor and can be controlled. The dev.opencascade.org URL redirected to the OCCT3D-hosted 8.0.1 manual. This documents API capability, not a local build, unit outcome, or tested preservation result.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "STEPCAFControl_Reader documents STEP import of assemblies, colors and names into a DECAF document",
+            "Reader Transfer can select roots or compose multiple results as an assembly"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-02-sources.md",
+            "research/action-audit/reviews/point-02-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-sources.md",
+        "research/sources/round-05/point-02-web-sources.json"
       ]
     },
     {
@@ -619,6 +732,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-software.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r01.md",
@@ -655,7 +770,8 @@
       "summary": "Project proposal defining sequences, branches, evidence merges, component substitution, representation forks and revisioned edit/compare loops, with explicit handoff conditions and research questions.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -667,10 +783,21 @@
           "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
           "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+          "access_date": "2026-11-12",
+          "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/project-sources.json"
+        "research/sources/round-02/project-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -681,7 +808,8 @@
       "summary": "Documented byte hashing and SHA-256 constructors used as source evidence for input revision identity.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -696,10 +824,21 @@
             "research/action-audit/reviews/independent-review.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/usr/lib/python3.14/hashlib.py",
+          "local_original": "/usr/lib/python3.14/hashlib.py",
+          "access_date": "2026-11-12",
+          "sha256": "88fa624821fbdee7eb2ef87c2437b207afe328cf117c7463367e2db5eb1af492",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -1010,6 +1149,32 @@
       ]
     },
     {
+      "id": "SRC-1bf6e9a12d73",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+      "title": "dom-r06.md",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "access_date": "2026-11-12",
+          "sha256": "23a6d64e95a799699232d15f06e86206862a3b7089d57e3e53d7856cb01bd320",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-1f466f80fd41",
       "url": "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
       "local_source_path": null,
@@ -1163,6 +1328,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md"
       ]
     },
@@ -1206,7 +1372,8 @@
       "summary": "Inspected in this research turn; records OCS baseline, CAD representation tradeoffs and alternate authoring backends.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -1235,11 +1402,22 @@
           ],
           "sha256": null,
           "content_type": "text/markdown/json"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "access_date": "2026-11-12",
+          "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
-        "research/sources/round-03/domain-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -1556,6 +1734,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -1574,7 +1753,8 @@
       "summary": "Authorized documentation method: fifteen fields per action, alternative software/agent modes, evidence-based merges, feature-specific accuracy and local-compute-first definition order.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -1587,10 +1767,21 @@
             "research/action-audit/README.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -1671,6 +1862,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
@@ -1738,7 +1930,8 @@
       "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -1750,10 +1943,21 @@
           "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
           "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/cad-detail-sources.json"
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -2053,6 +2257,33 @@
       ]
     },
     {
+      "id": "SRC-34ed7ccfd827",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+      "title": "Point 02 — Existing components and CAD files to inspected reusable inputs",
+      "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+          "access_date": "2026-11-12",
+          "sha256": "b38229c095af4c3cefbf2a422f31114bf58263b634ea309b4bfa77fbce0664dc",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-353e59cb2694",
       "url": "https://docs.bonsaibim.org/guides/authoring/georeferencing.html",
       "local_source_path": null,
@@ -2218,6 +2449,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md"
       ]
     },
@@ -2473,6 +2705,32 @@
         "research/workflows/details/cad-r03.md",
         "research/workflows/details/cad-r04.md",
         "research/workflows/details/mix-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-3d8ba9ae669c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+      "title": "sequence.md",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "access_date": "2026-11-12",
+          "sha256": "cd7642e848bdd6b6b71d72443bb1d1df25ab188f581ecd52e5bcc81db117f24b",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -2802,7 +3060,7 @@
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
       "local_source_path": null,
       "title": "FreeCAD Assembly Workbench documentation",
-      "summary": "Describes assembly insertion, constraints/joints, simulation and assembly structure.",
+      "summary": "The FreeCAD documentation describes creating root and nested assemblies, inserting components, and grounding/linking objects. It lists fixed, revolute, cylindrical, slider, ball, distance, parallel, perpendicular, angle, rack-and-pinion, screw, gear and belt joints. The link-based workflow leaves source objects outside the assembly and creates links. This is documented assembly behavior; it does not demonstrate the current FreeCAD runtime or STEP round-trip preservation. The documentation repository page reports that its repository was archived on 2026-04-01.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -2834,11 +3092,32 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "FreeCAD Assembly Workbench documents component insertion, links, assembly structure and joint types",
+            "The inspected FreeCAD documentation repository is archived as of 2026-04-01"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-02-sources.md",
+            "research/action-audit/reviews/point-02-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-software.md",
+        "research/action-audit/reviews/point-02-sources.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-02-web-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r03.md",
         "research/workflows/details/dom-r04.md",
@@ -3601,6 +3880,10 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-software.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -3692,6 +3975,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/cad-r04.md",
@@ -3775,7 +4061,8 @@
       "summary": "Session preflight and mutation transport helper for a later authorized live CAD operation.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -3790,10 +4077,21 @@
             "research/action-audit/reviews/independent-review.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+          "access_date": "2026-11-12",
+          "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -3924,6 +4222,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -4051,6 +4350,32 @@
       ]
     },
     {
+      "id": "SRC-6038042a0445",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json",
+      "title": "point-02-web-sources.json",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "49d94463fce706e38eb8fb094627175be034593413352b73534f9d2bad253cc4",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-61f08f559e99",
       "url": "https://raw.githubusercontent.com/glotoff/freecad-skills/main/skills/freecad-developer/SKILL.md",
       "local_source_path": null,
@@ -4124,7 +4449,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "archived_original_referenced",
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -4170,11 +4496,76 @@
           "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
           "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "access_date": "2026-11-12",
+          "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json",
-        "research/sources/round-03/cad-detail-sources.json"
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-64196dacabad",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md",
+      "title": "Independent review — Point 02 component and CAD reuse",
+      "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md",
+          "access_date": "2026-11-12",
+          "sha256": "311e3d34d77d0d6bc2f0c2649c8e0d5d831fa33f022f661e12e98f95f02f7a6f",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-64327fe17901",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md",
+      "title": "Point 02 source check: existing components and CAD files",
+      "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md",
+          "access_date": "2026-11-12",
+          "sha256": "7ae6a438e144cd2c170dcb6846d399b0b25c35a5a13fab8c4703265b7c5e3240",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -4303,6 +4694,41 @@
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r04.md",
         "research/workflows/details/mix-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-68f329d41232",
+      "url": "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html",
+      "local_source_path": null,
+      "title": "Open CASCADE Technology Reference Manual 8.0.1: STEPCAFControl_Writer Class Reference",
+      "summary": "The official OCCT API reference describes STEPCAFControl_Writer as exporting a DECAF document to STEP, including assembly shapes, colors and part names. Transfer accepts a document, a label or a sequence of root assemblies; Write emits the produced models. The documented unit helper looks for a length unit on the root label and otherwise uses the Cascade length unit. Name and color output modes are configurable. The dev.opencascade.org URL redirected to the OCCT3D-hosted 8.0.1 manual. This documents API capability, not local behavior or cross-consumer unit and assembly preservation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "STEPCAFControl_Writer documents STEP export of document/label/root assembly content with configurable names and colors",
+            "Writer unit preparation reads a root-label length unit or falls back to the Cascade length unit"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-02-sources.md",
+            "research/action-audit/reviews/point-02-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-sources.md",
+        "research/sources/round-05/point-02-web-sources.json"
       ]
     },
     {
@@ -4638,6 +5064,32 @@
       ]
     },
     {
+      "id": "SRC-6fdd6f04d055",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md",
+      "title": "cad-r08.md",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md",
+          "access_date": "2026-11-12",
+          "sha256": "910ecfa0e53a77c66e97bd64548b9b3a028358b6f026ffbb1085756a5c3a236b",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-7018bc2fbb81",
       "url": "https://www.noritake-elec.com/support/3d-cad-data?id=cu22042-y1a&part=CU22042-Y100",
       "local_source_path": null,
@@ -4660,7 +5112,8 @@
       "summary": "Authored audit document recording Visual interpretation review — descriptions and explicit dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -4673,10 +5126,21 @@
             "research/action-audit/README.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+          "access_date": "2026-11-12",
+          "sha256": "28f95615402d203fd686e7bca21218a083261e42ea6d5713e2d94e06f3d9f3de",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -4972,7 +5436,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "local_source_inspected",
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -5006,13 +5471,24 @@
           ],
           "sha256": "2269911945e747b5ef30bbaaa8b656a0f6e4e348ed911af256034a612f3cd899",
           "content_type": "text/plain"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+          "access_date": "2026-11-12",
+          "sha256": "2269911945e747b5ef30bbaaa8b656a0f6e4e348ed911af256034a612f3cd899",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/local-baseline.md",
         "research/sources/local-evidence.json",
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -5028,6 +5504,32 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-7be225e2793e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+      "title": "cad-detail-sources.json",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "964063a30ad6777f74e0e6a8ce1851ae22d1b4a004c602a07ca20c1fd75219cb",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -5255,6 +5757,32 @@
       "referring_documents": [
         "research/reconstruction.md",
         "research/user-supplied-links.md"
+      ]
+    },
+    {
+      "id": "SRC-82d9fa8ce417",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+      "title": "domain-detail-sources.json",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "26e3eca43c57087beb6bec8eca55fce6a20f9c3c7cd31ee0b7b5eec8c97e9467",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -5637,7 +6165,8 @@
       "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -5649,10 +6178,21 @@
           "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
           "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "access_date": "2026-11-12",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/cad-detail-sources.json"
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -5706,7 +6246,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -5744,12 +6285,49 @@
           ],
           "sha256": null,
           "content_type": "text/markdown/json"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "access_date": "2026-11-12",
+          "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
-        "research/sources/round-03/domain-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-8f9b6f25cd0d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+      "title": "AGENTS.md",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "access_date": "2026-11-12",
+          "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -6045,6 +6623,33 @@
       ]
     },
     {
+      "id": "SRC-9557e8c0e378",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+      "title": "point-02-operations",
+      "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "ddfbcade5ba55cf336eb6452330672dfb2da69322ed17ad4d3157ce7db74ca1b",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-95aacf0e0f5c",
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
       "local_source_path": null,
@@ -6068,6 +6673,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md"
       ]
@@ -6297,6 +6903,10 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-software.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/workflows/details/dom-r02.md",
@@ -6558,7 +7168,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "local_source_inspected",
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -6591,13 +7202,24 @@
           ],
           "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/local-baseline.md",
         "research/sources/local-evidence.json",
         "research/sources/round-02/cad-sources.json",
-        "research/sources/round-02/domain-sources.json"
+        "research/sources/round-02/domain-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -7127,6 +7749,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -7138,11 +7761,12 @@
       "id": "SRC-accaca72881d",
       "url": "https://www.kicad.org/libraries/license/",
       "local_source_path": null,
-      "title": "Official terms",
-      "summary": "KiCad 3D library ; Board-footprint-linked 3D models for electronic components; the official package library is available through the KiCad library repositories. ; Library data is CC-BY-SA-4.0 with a specific exception: use in a design does not itself force licensing the design under CC-BY-SA; redistribution of the library or parts as a collection retains the library license and attribution. Official terms",
+      "title": "KiCad Libraries License",
+      "summary": "KiCad states that its library data is licensed under CC-BY-SA 4.0 with an exception for electronic designs and generated files that use the data. The exception permits use in a project without relicensing that project under CC-BY-SA; redistribution of the libraries or parts as a collection retains the library license and attribution. This statement applies to KiCad library data, not every third-party CAD asset.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -7154,11 +7778,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "KiCad library collection terms are CC-BY-SA 4.0 with a stated design-use exception and collection-redistribution conditions",
+            "Library terms do not define terms for unrelated assets"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-02-sources.md",
+            "research/action-audit/reviews/point-02-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-software.md",
+        "research/action-audit/reviews/point-02-sources.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-05/point-02-web-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r04.md",
         "research/workflows/details/dom-r06.md",
@@ -7316,6 +7961,32 @@
       ]
     },
     {
+      "id": "SRC-afa0b4d5a10b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "title": "domain-paths.json",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-b00b92c70647",
       "url": "https://github.com/ByteDance-Seed/Depth-Anything-3",
       "local_source_path": null,
@@ -7429,6 +8100,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/mix-r02.md",
@@ -7504,7 +8176,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -7558,13 +8231,24 @@
           ],
           "sha256": null,
           "content_type": "text/markdown/json"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
-        "research/sources/round-03/domain-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -7735,6 +8419,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-software.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -7916,6 +8603,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md"
       ]
     },
@@ -8016,6 +8704,33 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-be135dffe792",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md",
+      "title": "Point 02 — Procedure designer notes",
+      "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md",
+          "access_date": "2026-11-12",
+          "sha256": "aa4ef33a563deb7a249320a3d13499e5a180910658e09383ea1dc1647cb5194a",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -8262,6 +8977,32 @@
       ]
     },
     {
+      "id": "SRC-c057807eb5f6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+      "title": "cad-sources.json",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "53545e2c11a111e99430b5c9f1e5dc13cf0e06394a19c55d0095420c396501f4",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c0ffb325c952",
       "url": "https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/references/snapshot-review.md",
       "local_source_path": null,
@@ -8308,6 +9049,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c14ca78d0641",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md",
+      "title": "Software review: existing components and CAD files to inspected reusable inputs",
+      "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md",
+          "access_date": "2026-11-12",
+          "sha256": "d53cafe15e7464758907a883eaf7de3563e4691d9065e1d8c30cecf667f3c071",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -9177,6 +9945,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r01.md",
@@ -9500,6 +10269,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md"
       ]
     },
@@ -9582,6 +10352,32 @@
       ]
     },
     {
+      "id": "SRC-df6405fd9570",
+      "url": null,
+      "local_source_path": "/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md",
+      "title": "computational-engineering.md",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md",
+          "access_date": "2026-11-12",
+          "sha256": "b663c895b6dae3f9dfbbed454e20f15066863484a0449daca1d16423cb22ca2f",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-dfb07e5c3d9b",
       "url": "https://raw.githubusercontent.com/Foster1202/cad-modeling-fusion-skill/main/references/manufacturing_rules.md",
       "local_source_path": null,
@@ -9638,7 +10434,8 @@
       "summary": "Requirements for units, frames, source corrections, parts, tolerances and supplied numerical check observations.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -9653,10 +10450,21 @@
             "research/action-audit/reviews/independent-review.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "access_date": "2026-11-12",
+          "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -9957,11 +10765,12 @@
       "id": "SRC-e935d3ebe64f",
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
       "local_source_path": null,
-      "title": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
-      "summary": "1. Name: FreeCAD + Open CASCADE; Role: STEP import inspection and assembly/CAD geometry; Software license: FreeCAD LGPL-2.0-or-later as applicable to project version; supplier STEP remains separately licensed; Api or entrypoint: Open STEP in GUI and inspect product tree/units; Assembly Workbench joints; `Part`/B-rep geometry inspect; Environment dependencies: FreeCAD build with Open CASCADE; STEP import/export modules; Version status: documented source current at 2026-11-12; project install/runtime not exercised; Limitations and asset terms: Import healing/tessellation may alter topology; preserve source STEP. Exporter capability is version-specific.; Source urls: https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md; https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+      "title": "FreeCAD Import Export Preferences documentation",
+      "summary": "The FreeCAD documentation describes STEP import structure choices including assembly per document and object per document, options for link groups, instance names and compound expansion, and export settings for STEP length units and application protocol. It identifies AP203 as mechanical parts and assemblies and AP214 as automotive mechanical design. It states that single-object placement can be embedded in shape geometry on reimport. These are documented UI preferences; the archived documentation page does not prove a selected FreeCAD build, Python API behavior, or lossless unit and hierarchy transfer.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -9973,10 +10782,30 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "FreeCAD STEP preferences expose import structure, link/name/compound options, export length units and STEP AP selection",
+            "FreeCAD documents placement encoding in geometry when reimporting an exported single object"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-02-sources.md",
+            "research/action-audit/reviews/point-02-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-software.md",
+        "research/action-audit/reviews/point-02-sources.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-02-web-sources.json",
         "research/workflows/details/dom-r02.md"
       ]
     },
@@ -10154,7 +10983,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -10179,11 +11009,22 @@
             "research/action-audit/reviews/independent-review.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "access_date": "2026-11-12",
+          "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -10388,8 +11229,8 @@
       "id": "SRC-f088ec7f4848",
       "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
       "local_source_path": null,
-      "title": "MuJoCo Menagerie model catalogue",
-      "summary": "Primary catalogue reports robot model identities, DoF counts, preview XML files and per-model license references.",
+      "title": "MuJoCo Menagerie README",
+      "summary": "The repository catalogue associates each listed robot model with a license. Its terms section says XML and asset files in individual model directories can have different terms and directs users to the LICENSE file in the specific model subdirectory; remaining repository content is Apache-2.0. This supports per-model/per-asset license lookup before reuse. The repository says it is not an officially supported Google product.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -10416,12 +11257,32 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "MuJoCo Menagerie lists model-specific licenses and directs users to each model directory LICENSE for XML and assets",
+            "The top-level Apache-2.0 notice applies to remaining repository content, not automatically to model assets"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-02-sources.md",
+            "research/action-audit/reviews/point-02-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/reviews/point-02-designer.md",
+        "research/action-audit/reviews/point-02-sources.md",
+        "research/action-audit/reviews/point-02-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-02-web-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r03.md",
         "research/workflows/details/dom-r04.md",
@@ -10679,6 +11540,32 @@
       ]
     },
     {
+      "id": "SRC-f5b26686d5af",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+      "title": "Cargo.toml",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+          "access_date": "2026-11-12",
+          "sha256": "045cdfca4dc54247411c17576d0c2abc2ce5babc8bcc4d3d59bef22029ec008b",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f5feb81d0023",
       "url": "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
       "local_source_path": null,
@@ -10820,6 +11707,32 @@
       ]
     },
     {
+      "id": "SRC-f77f55667d7d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
+      "title": "domain-sources.json",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "20012aeb48eb5d100abbaca03421bad4c3a79fdc08fcbaea9e17d9ac2fa38f98",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f828b291cc6f",
       "url": null,
       "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
@@ -10827,7 +11740,8 @@
       "summary": "Local OCS guide describes stdio MCP and drawing inspection, mutation, measurements, audits and verified save. It supports application-level drawing workflow claims.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_source_inspected"
+        "local_source_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -10843,10 +11757,21 @@
           "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
           "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-02/cad-sources.json"
+        "research/sources/round-02/cad-sources.json",
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {
@@ -10896,6 +11821,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f9e1dbc024e2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
+      "title": "dom-r02.md",
+      "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
+          "access_date": "2026-11-12",
+          "sha256": "040016860a3df4ef3130531f5e5128faac7f6c22581279bea055cbbc00a49884",
+          "referring_documents": [
+            "research/action-audit/point-02-component-reuse.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-02-local-sources.json"
       ]
     },
     {

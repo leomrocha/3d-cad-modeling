@@ -164,8 +164,8 @@
       "family": "cad",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/domains-and-components.md",
         "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
@@ -590,8 +590,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "https://www.freecad.org/addons.php?lang=eng_EN",
         "https://www.kicad.org/libraries/license/",
@@ -606,8 +606,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "/home/leo/projects/3dmodeling/research/domains-and-components.md"
@@ -861,8 +861,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/domains-and-components.md",
         "/home/leo/projects/3dmodeling/research/implementation-plan.md"
@@ -1001,8 +1001,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/local-baseline.md",
         "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
@@ -1014,8 +1014,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "/home/leo/projects/3dmodeling/research/cad-and-skills.md"

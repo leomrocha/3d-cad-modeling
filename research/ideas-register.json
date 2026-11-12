@@ -749,6 +749,144 @@
       ]
     },
     {
+      "id": "AUDIT-CAD-12",
+      "name": "Assemble existing CAD or source-library components — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Assemble existing CAD or source-library components. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-02-component-reuse.md",
+          "line": 1,
+          "section": "Existing components and CAD reuse"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-34ed7ccfd827",
+        "SRC-9557e8c0e378"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-06",
+      "name": "Library asset intake and rights record — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Library asset intake and rights record. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-02-component-reuse.md",
+          "line": 1,
+          "section": "Existing components and CAD reuse"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-34ed7ccfd827",
+        "SRC-9557e8c0e378"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-07",
+      "name": "Place reusable component in assembly — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Place reusable component in assembly. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-02-component-reuse.md",
+          "line": 1,
+          "section": "Existing components and CAD reuse"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-34ed7ccfd827",
+        "SRC-9557e8c0e378"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-26",
+      "name": "Version and reuse component revision — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Version and reuse component revision. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-02-component-reuse.md",
+          "line": 1,
+          "section": "Existing components and CAD reuse"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-34ed7ccfd827",
+        "SRC-9557e8c0e378"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-38",
+      "name": "Import STEP solid into CAD representation — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Import STEP solid into CAD representation. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-02-component-reuse.md",
+          "line": 1,
+          "section": "Existing components and CAD reuse"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-34ed7ccfd827",
+        "SRC-9557e8c0e378"
+      ]
+    },
+    {
+      "id": "AUDIT-DOM-39",
+      "name": "Export STEP assembly — detailed execution options",
+      "status": "proposal",
+      "origin": "authorized_sequential_action_audit",
+      "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP assembly. Detailed contracts and conditions are retained in the linked operation record.",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/point-02-component-reuse.md",
+          "line": 1,
+          "section": "Existing components and CAD reuse"
+        }
+      ],
+      "next_check": "Exercise the specified implementation cases under the corresponding implementation scope.",
+      "source_ids": [
+        "SRC-34ed7ccfd827",
+        "SRC-9557e8c0e378"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

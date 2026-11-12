@@ -2,6 +2,15 @@
 
 Date: 12 November 2026.
 
+## Sequential execution of all points
+
+The instruction “THEN EXECUTE ALL FUCKGIN POINTS THAT WAS THE FUCKIGN ORDER ONE BY ONE IN THE DEFINED MODEL apply now,” authorizes the complete sequence. The [sequence and point scopes](/home/leo/projects/3dmodeling/research/action-audit/sequence.md) and [operation-to-point execution state](/home/leo/projects/3dmodeling/research/action-audit/sequence.json) record all seven points. Each point receives its procedure, action contracts, software/visual/source reviews, independent review, source/idea registration, checks and result commit before the next point begins.
+
+
+[Completed point procedures and review records](/home/leo/projects/3dmodeling/research/action-audit/point-index.md).
+
+## First completed batch
+
 1. **Authorization:** “execute plan AS GIVEN now, all must be documented written, explained and commited”. This batch executes the discussion plan as a documentation audit, in its specified order: define the first point before moving to the next point.
 2. **First point:** descriptions and explicit dimensions → model brief. Existing operations CAD-01 and DOM-01 describe this shared task. Its detailed procedure and review findings are linked below.
 3. **Inventory:** the existing map contains 77 operations and 38 recipes. The inventory records every operation's current label and detailed-review state. A recorded operation is a starting reference for breaking work into smaller actions.

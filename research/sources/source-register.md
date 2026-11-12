@@ -84,9 +84,9 @@ Original source: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.c
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
-Evidence: local_source_inspected, existing_report_registered.
+Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -98,7 +98,7 @@ Summary: FreeCAD BIM Library ; FreeCAD BIM can browse and insert FCStd, STEP and
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-03ea53a6f519"></a>
 
@@ -135,6 +135,30 @@ Summary: earthtojake/text-to-cad ; Code-defined parametric models with `cadgen`/
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
+
+<a id="src-0868c7d42c7e"></a>
+
+## SRC-0868c7d42c7e — Point 02 visual, semantic and evidence-merge review
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md)
+
+Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
+<a id="src-096e1d7af9e5"></a>
+
+## SRC-096e1d7af9e5 — dom-r07.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-0a10e8f57dac"></a>
 
@@ -192,9 +216,9 @@ Original source: [/home/leo/projects/3dmodeling/research/local-baseline.md](/hom
 
 Summary: Inspected in this research turn; records OCS STEP representation finding and environment/source inspection.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/domain-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-0c559ba0bc9f"></a>
 
@@ -208,6 +232,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-0d57f06ba877"></a>
+
+## SRC-0d57f06ba877 — Open CASCADE Technology Reference Manual 8.0.1: STEPCAFControl_Reader Class Reference
+
+Original source: [https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html)
+
+Summary: The official OCCT API reference describes STEPCAFControl_Reader as importing STEP shapes including assemblies and supporting colors and part names. The documented ReadFile and Transfer operations load STEP content into a DECAF document; Transfer can read all roots or one root and can compose multiple results as an assembly. Name and color modes are enabled by default in the documented constructor and can be controlled. The dev.opencascade.org URL redirected to the OCCT3D-hosted 8.0.1 manual. This documents API capability, not a local build, unit outcome, or tested preservation result.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-sources.md, research/sources/round-05/point-02-web-sources.json.
+
 <a id="src-0e057ef39322"></a>
 
 ## SRC-0e057ef39322 — CadQuery documentation
@@ -218,7 +254,7 @@ Summary: Official CadQuery documentation describes Python parametric CAD scripti
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md.
+Documents: research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md.
 
 <a id="src-10fb35c8f807"></a>
 
@@ -240,9 +276,9 @@ Original source: [/home/leo/projects/3dmodeling/research/workflows/composition-r
 
 Summary: Project proposal defining sequences, branches, evidence merges, component substitution, representation forks and revisioned edit/compare loops, with explicit handoff conditions and research questions.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/project-sources.json.
+Documents: research/sources/round-02/project-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-11b52766dd34"></a>
 
@@ -252,9 +288,9 @@ Original source: [/usr/lib/python3.14/hashlib.py](/usr/lib/python3.14/hashlib.py
 
 Summary: Documented byte hashing and SHA-256 constructors used as source evidence for input revision identity.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-11f42e602b33"></a>
 
@@ -388,6 +424,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-1bf6e9a12d73"></a>
+
+## SRC-1bf6e9a12d73 — dom-r06.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-1f466f80fd41"></a>
 
 ## SRC-1f466f80fd41 — Open3D 0.20 point-cloud operations
@@ -446,7 +494,7 @@ Summary: NopSCADlib ; OpenSCAD library and project framework with a `vitamins` c
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md.
 
 <a id="src-20e32f7b4337"></a>
 
@@ -468,9 +516,9 @@ Original source: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/hom
 
 Summary: Inspected in this research turn; records OCS baseline, CAD representation tradeoffs and alternate authoring backends.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-251464b38bc3"></a>
 
@@ -578,7 +626,7 @@ Summary: Official API guidance for wall, profile and mesh representations, place
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2d331dacc4f0"></a>
 
@@ -588,9 +636,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/
 
 Summary: Authorized documentation method: fifteen fields per action, alternative software/agent modes, evidence-based merges, feature-specific accuracy and local-compute-first definition order.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-2d6abe7b467d"></a>
 
@@ -614,7 +662,7 @@ Summary: Primary MJCF/URDF model semantics, bodies, joints, frames, supported co
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2e92a48ed867"></a>
 
@@ -636,9 +684,9 @@ Original source: [/home/leo/projects/3dmodeling/research/workflows/cad-paths.jso
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-2fe2fa4714a1"></a>
 
@@ -748,6 +796,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-34ed7ccfd827"></a>
+
+## SRC-34ed7ccfd827 — Point 02 — Existing components and CAD files to inspected reusable inputs
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+
+Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-353e59cb2694"></a>
 
 ## SRC-353e59cb2694 — Bonsai georeferencing guide
@@ -818,7 +878,7 @@ Summary: NopSCADlib ; OpenSCAD library and project framework with a `vitamins` c
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md.
 
 <a id="src-3a199df280ce"></a>
 
@@ -903,6 +963,18 @@ Summary: Official documentation source for Part workbench scripting and shape op
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+
+<a id="src-3d8ba9ae669c"></a>
+
+## SRC-3d8ba9ae669c — sequence.md
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/sequence.md](/home/leo/projects/3dmodeling/research/action-audit/sequence.md)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-3e2691ad3057"></a>
 
@@ -1030,11 +1102,11 @@ Documents: research/domains-and-components.md, research/sources/round-03/domain-
 
 Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md)
 
-Summary: Describes assembly insertion, constraints/joints, simulation and assembly structure.
+Summary: The FreeCAD documentation describes creating root and nested assemblies, inserting components, and grounding/linking objects. It lists fixed, revolute, cylindrical, slider, ball, distance, parallel, perpendicular, angle, rack-and-pinion, screw, gear and belt joints. The link-based workflow leaves source objects outside the assembly and creates links. This is documented assembly behavior; it does not demonstrate the current FreeCAD runtime or STEP round-trip preservation. The documentation repository page reports that its repository was archived on 2026-04-01.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-sources.md, research/action-audit/reviews/point-02-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-47d588ded00a"></a>
 
@@ -1322,7 +1394,7 @@ Summary: Poly Haven ; Library of 3D models, materials and HDRI environments usef
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-582825becec4"></a>
 
@@ -1346,7 +1418,7 @@ Summary: Documents DXF import, STEP import/export and units; relevant profile an
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-visual.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
 
 <a id="src-587c68a13074"></a>
 
@@ -1380,9 +1452,9 @@ Original source: [/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py
 
 Summary: Session preflight and mutation transport helper for a later authorized live CAD operation.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-5c5742981c2f"></a>
 
@@ -1418,7 +1490,7 @@ Summary: FreeCAD Parts Library ; Community library distributed in FCStd, STEP, S
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-5e5932bb68e1"></a>
 
@@ -1480,6 +1552,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-6038042a0445"></a>
+
+## SRC-6038042a0445 — point-02-web-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-61f08f559e99"></a>
 
 ## SRC-61f08f559e99 — Agent skill: freecad-developer
@@ -1512,9 +1596,33 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-
 
 Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: OpenCADStudio Automation API — Specification 1.1. Source class: local primary product documentation; exact byte copy from local source repository. Original reuse terms: GPL-3.0-or-later repository license; see /home/leo/projects/3rdparty/OpenCADStudio/LICENSE
 
-Evidence: archived_original_referenced, local_source_inspected.
+Evidence: archived_original_referenced, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/archive-sources.json, research/sources/round-03/cad-detail-sources.json.
+Documents: research/sources/round-02/archive-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json.
+
+<a id="src-64196dacabad"></a>
+
+## SRC-64196dacabad — Independent review — Point 02 component and CAD reuse
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md)
+
+Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
+<a id="src-64327fe17901"></a>
+
+## SRC-64327fe17901 — Point 02 source check: existing components and CAD files
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md)
+
+Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-6436ad01395b"></a>
 
@@ -1563,6 +1671,18 @@ Summary: Documents DXF $INSUNITS and unit conversion; DXF coordinates without a 
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+
+<a id="src-68f329d41232"></a>
+
+## SRC-68f329d41232 — Open CASCADE Technology Reference Manual 8.0.1: STEPCAFControl_Writer Class Reference
+
+Original source: [https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html)
+
+Summary: The official OCCT API reference describes STEPCAFControl_Writer as exporting a DECAF document to STEP, including assembly shapes, colors and part names. Transfer accepts a document, a label or a sequence of root assemblies; Write emits the produced models. The documented unit helper looks for a length unit on the root label and otherwise uses the Cascade length unit. Name and color output modes are configurable. The dev.opencascade.org URL redirected to the OCCT3D-hosted 8.0.1 manual. This documents API capability, not local behavior or cross-consumer unit and assembly preservation.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-sources.md, research/sources/round-05/point-02-web-sources.json.
 
 <a id="src-69c044526e3f"></a>
 
@@ -1696,6 +1816,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-02/project-sources.json.
 
+<a id="src-6fdd6f04d055"></a>
+
+## SRC-6fdd6f04d055 — cad-r08.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-7018bc2fbb81"></a>
 
 ## SRC-7018bc2fbb81 — Product CAD
@@ -1716,9 +1848,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/vi
 
 Summary: Authored audit document recording Visual interpretation review — descriptions and explicit dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-724b2d11a6eb"></a>
 
@@ -1812,9 +1944,9 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/hom
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
-Evidence: local_source_inspected, existing_report_registered.
+Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-7b3c4ff0a101"></a>
 
@@ -1827,6 +1959,18 @@ Summary: Skills Directory `majiayu000` 3D Modeling ; Directory displays a copied
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-7be225e2793e"></a>
+
+## SRC-7be225e2793e — cad-detail-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json](/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-7c623f2c8b68"></a>
 
@@ -1899,6 +2043,18 @@ Summary: - MCP Market: “Generate 3D Model” https://mcpmarket.com/tools/skill
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md, research/user-supplied-links.md.
+
+<a id="src-82d9fa8ce417"></a>
+
+## SRC-82d9fa8ce417 — domain-detail-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json](/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-837950156e9e"></a>
 
@@ -2040,9 +2196,9 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/LICENSE](/home/leo/p
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-8e6d7648b52e"></a>
 
@@ -2064,9 +2220,21 @@ Original source: [/home/leo/projects/3dmodeling/research/domains-and-components.
 
 Summary: Prior project report compares reusable component sources and downstream architecture/robotics domains. This batch uses it for source-library and assembly handoffs.
 
-Evidence: existing_report_registered, local_source_inspected.
+Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json.
+
+<a id="src-8f9b6f25cd0d"></a>
+
+## SRC-8f9b6f25cd0d — AGENTS.md
+
+Original source: [/home/leo/projects/3dmodeling/AGENTS.md](/home/leo/projects/3dmodeling/AGENTS.md)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -2188,6 +2356,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-9557e8c0e378"></a>
+
+## SRC-9557e8c0e378 — point-02-operations
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+
+Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-95aacf0e0f5c"></a>
 
 ## SRC-95aacf0e0f5c — IfcOpenShell placement API
@@ -2198,7 +2378,7 @@ Summary: Official 4x4 local placement API; `is_si` declares whether matrix trans
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-9641fd75954c"></a>
 
@@ -2258,7 +2438,7 @@ Summary: STEP / Open CASCADE ; STEP represents exchangeable CAD geometry; use AP
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-9a40d7c5ca24"></a>
 
@@ -2352,9 +2532,9 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
-Evidence: local_source_inspected, existing_report_registered.
+Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-a0ba78259618"></a>
 
@@ -2570,19 +2750,19 @@ Summary: FreeCAD BIM Library ; FreeCAD BIM can browse and insert FCStd, STEP and
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-accaca72881d"></a>
 
-## SRC-accaca72881d — Official terms
+## SRC-accaca72881d — KiCad Libraries License
 
 Original source: [https://www.kicad.org/libraries/license/](https://www.kicad.org/libraries/license/)
 
-Summary: KiCad 3D library ; Board-footprint-linked 3D models for electronic components; the official package library is available through the KiCad library repositories. ; Library data is CC-BY-SA-4.0 with a specific exception: use in a design does not itself force licensing the design under CC-BY-SA; redistribution of the library or parts as a collection retains the library license and attribution. Official terms
+Summary: KiCad states that its library data is licensed under CC-BY-SA 4.0 with an exception for electronic designs and generated files that use the data. The exception permits use in a project without relicensing that project under CC-BY-SA; redistribution of the libraries or parts as a collection retains the library license and attribution. This statement applies to KiCad library data, not every third-party CAD asset.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-sources.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-ad068197fdc2"></a>
 
@@ -2632,6 +2812,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-afa0b4d5a10b"></a>
+
+## SRC-afa0b4d5a10b — domain-paths.json
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/domain-paths.json](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-b00b92c70647"></a>
 
 ## SRC-b00b92c70647 — https://github.com/ByteDance-Seed/Depth-Anything-3
@@ -2666,7 +2858,7 @@ Summary: Documents shape validity, bounds, volume, closed wires and geometry tra
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
 
 <a id="src-b30357886048"></a>
 
@@ -2712,9 +2904,9 @@ Original source: [/home/leo/projects/3dmodeling/research/implementation-plan.md]
 
 Summary: Prior project proposal identifies OCS as the interactive baseline, FreeCAD for constrained feature trees, code-CAD for scripted solids, raster plans, drawing conversion and verification routes. Used as existing project context, not as runtime evidence.
 
-Evidence: existing_report_registered, local_source_inspected.
+Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-b667bec43458"></a>
 
@@ -2786,7 +2978,7 @@ Summary: Curated robot MJCF models and asset files; repository states each model
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-b9a7ffca5f8c"></a>
 
@@ -2846,7 +3038,7 @@ Summary: BOSL2 ; Parametric OpenSCAD shapes, masks and manipulators; OpenSCAD li
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md.
 
 <a id="src-bc2defd7afa9"></a>
 
@@ -2895,6 +3087,18 @@ Summary: `cad` from `earthtojake/text-to-cad` ; Archived `skills/cad/SKILL.md` u
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-be135dffe792"></a>
+
+## SRC-be135dffe792 — Point 02 — Procedure designer notes
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md)
+
+Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-bec1fb0c7b0c"></a>
 
@@ -2968,6 +3172,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r04.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r09.md.
 
+<a id="src-c057807eb5f6"></a>
+
+## SRC-c057807eb5f6 — cad-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json](/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-c0ffb325c952"></a>
 
 ## SRC-c0ffb325c952 — Snapshot review
@@ -2979,6 +3195,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-c14ca78d0641"></a>
+
+## SRC-c14ca78d0641 — Software review: existing components and CAD files to inspected reusable inputs
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md)
+
+Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-c1fccd6db551"></a>
 
@@ -3254,7 +3482,7 @@ Summary: Official build123d documentation for a Python parametric B-rep modeling
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/cad-r09.md, research/workflows/details/cad-r10.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r09.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r06.md, research/workflows/details/cad-r07.md, research/workflows/details/cad-r08.md, research/workflows/details/cad-r09.md, research/workflows/details/cad-r10.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r09.md.
 
 <a id="src-d52309ad63a6"></a>
 
@@ -3386,7 +3614,7 @@ Summary: BOSL2 ; Parametric OpenSCAD shapes, masks and manipulators; OpenSCAD li
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md.
 
 <a id="src-dd1f5b2ca39f"></a>
 
@@ -3412,6 +3640,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-df6405fd9570"></a>
+
+## SRC-df6405fd9570 — computational-engineering.md
+
+Original source: [/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md](/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-dfb07e5c3d9b"></a>
 
 ## SRC-dfb07e5c3d9b — Manufacturing Rules
@@ -3432,9 +3672,9 @@ Original source: [/home/leo/.codex/skills/ocs-engineering/references/model-contr
 
 Summary: Requirements for units, frames, source corrections, parts, tolerances and supplied numerical check observations.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-e1ca3a166ec3"></a>
 
@@ -3558,15 +3798,15 @@ Documents: research/cad-and-skills.md, research/next-step-proposal.md.
 
 <a id="src-e935d3ebe64f"></a>
 
-## SRC-e935d3ebe64f — https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md
+## SRC-e935d3ebe64f — FreeCAD Import Export Preferences documentation
 
 Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md)
 
-Summary: 1. Name: FreeCAD + Open CASCADE; Role: STEP import inspection and assembly/CAD geometry; Software license: FreeCAD LGPL-2.0-or-later as applicable to project version; supplier STEP remains separately licensed; Api or entrypoint: Open STEP in GUI and inspect product tree/units; Assembly Workbench joints; `Part`/B-rep geometry inspect; Environment dependencies: FreeCAD build with Open CASCADE; STEP import/export modules; Version status: documented source current at 2026-11-12; project install/runtime not exercised; Limitations and asset terms: Import healing/tessellation may alter topology; preserve source STEP. Exporter capability is version-specific.; Source urls: https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md; https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md
+Summary: The FreeCAD documentation describes STEP import structure choices including assembly per document and object per document, options for link groups, instance names and compound expansion, and export settings for STEP length units and application protocol. It identifies AP203 as mechanical parts and assemblies and AP214 as automotive mechanical design. It states that single-object placement can be embedded in shape geometry on reimport. These are documented UI preferences; the archived documentation page does not prove a selected FreeCAD build, Python API behavior, or lossless unit and hierarchy transfer.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md.
 
 <a id="src-ea12fb9678d8"></a>
 
@@ -3636,9 +3876,9 @@ Original source: [/home/leo/.codex/skills/ocs-engineering/references/ocs-control
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
-Evidence: existing_report_registered, local_source_inspected.
+Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-ebd6e769a79a"></a>
 
@@ -3702,15 +3942,15 @@ Documents: research/sources/round-02/archive-sources.json.
 
 <a id="src-f088ec7f4848"></a>
 
-## SRC-f088ec7f4848 — MuJoCo Menagerie model catalogue
+## SRC-f088ec7f4848 — MuJoCo Menagerie README
 
 Original source: [https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md](https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md)
 
-Summary: Primary catalogue reports robot model identities, DoF counts, preview XML files and per-model license references.
+Summary: The repository catalogue associates each listed robot model with a license. Its terms section says XML and asset files in individual model directories can have different terms and directs users to the LICENSE file in the specific model subdirectory; remaining repository content is Apache-2.0. This supports per-model/per-asset license lookup before reuse. The repository says it is not an officially supported Google product.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-sources.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-f08b8003c0e4"></a>
 
@@ -3796,6 +4036,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
+<a id="src-f5b26686d5af"></a>
+
+## SRC-f5b26686d5af — Cargo.toml
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml](/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-f5feb81d0023"></a>
 
 ## SRC-f5feb81d0023 — Residential Floor Plan Recognition and Reconstruction
@@ -3844,6 +4096,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-f77f55667d7d"></a>
+
+## SRC-f77f55667d7d — domain-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json](/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
+
 <a id="src-f828b291cc6f"></a>
 
 ## SRC-f828b291cc6f — OpenCADStudio MCP automation guide
@@ -3852,9 +4116,9 @@ Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/READ
 
 Summary: Local OCS guide describes stdio MCP and drawing inspection, mutation, measurements, audits and verified save. It supports application-level drawing workflow claims.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-f954ab80c148"></a>
 
@@ -3867,6 +4131,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-f9e1dbc024e2"></a>
+
+## SRC-f9e1dbc024e2 — dom-r02.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md)
+
+Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-02-local-sources.json.
 
 <a id="src-fa8c58e8c7a1"></a>
 

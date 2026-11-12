@@ -1,0 +1,110 @@
+[
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+    "title": "FreeCAD Assembly Workbench documentation",
+    "summary": "The FreeCAD documentation describes creating root and nested assemblies, inserting components, and grounding/linking objects. It lists fixed, revolute, cylindrical, slider, ball, distance, parallel, perpendicular, angle, rack-and-pinion, screw, gear and belt joints. The link-based workflow leaves source objects outside the assembly and creates links. This is documented assembly behavior; it does not demonstrate the current FreeCAD runtime or STEP round-trip preservation. The documentation repository page reports that its repository was archived on 2026-04-01.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "FreeCAD Assembly Workbench documents component insertion, links, assembly structure and joint types",
+      "The inspected FreeCAD documentation repository is archived as of 2026-04-01"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-02-sources.md",
+      "research/action-audit/reviews/point-02-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
+    "title": "FreeCAD Import Export Preferences documentation",
+    "summary": "The FreeCAD documentation describes STEP import structure choices including assembly per document and object per document, options for link groups, instance names and compound expansion, and export settings for STEP length units and application protocol. It identifies AP203 as mechanical parts and assemblies and AP214 as automotive mechanical design. It states that single-object placement can be embedded in shape geometry on reimport. These are documented UI preferences; the archived documentation page does not prove a selected FreeCAD build, Python API behavior, or lossless unit and hierarchy transfer.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "FreeCAD STEP preferences expose import structure, link/name/compound options, export length units and STEP AP selection",
+      "FreeCAD documents placement encoding in geometry when reimporting an exported single object"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-02-sources.md",
+      "research/action-audit/reviews/point-02-software.md"
+    ]
+  },
+  {
+    "url": "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html",
+    "title": "Open CASCADE Technology Reference Manual 8.0.1: STEPCAFControl_Reader Class Reference",
+    "summary": "The official OCCT API reference describes STEPCAFControl_Reader as importing STEP shapes including assemblies and supporting colors and part names. The documented ReadFile and Transfer operations load STEP content into a DECAF document; Transfer can read all roots or one root and can compose multiple results as an assembly. Name and color modes are enabled by default in the documented constructor and can be controlled. The dev.opencascade.org URL redirected to the OCCT3D-hosted 8.0.1 manual. This documents API capability, not a local build, unit outcome, or tested preservation result.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "STEPCAFControl_Reader documents STEP import of assemblies, colors and names into a DECAF document",
+      "Reader Transfer can select roots or compose multiple results as an assembly"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-02-sources.md",
+      "research/action-audit/reviews/point-02-software.md"
+    ]
+  },
+  {
+    "url": "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html",
+    "title": "Open CASCADE Technology Reference Manual 8.0.1: STEPCAFControl_Writer Class Reference",
+    "summary": "The official OCCT API reference describes STEPCAFControl_Writer as exporting a DECAF document to STEP, including assembly shapes, colors and part names. Transfer accepts a document, a label or a sequence of root assemblies; Write emits the produced models. The documented unit helper looks for a length unit on the root label and otherwise uses the Cascade length unit. Name and color output modes are configurable. The dev.opencascade.org URL redirected to the OCCT3D-hosted 8.0.1 manual. This documents API capability, not local behavior or cross-consumer unit and assembly preservation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "STEPCAFControl_Writer documents STEP export of document/label/root assembly content with configurable names and colors",
+      "Writer unit preparation reads a root-label length unit or falls back to the Cascade length unit"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-02-sources.md",
+      "research/action-audit/reviews/point-02-software.md"
+    ]
+  },
+  {
+    "url": "https://www.kicad.org/libraries/license/",
+    "title": "KiCad Libraries License",
+    "summary": "KiCad states that its library data is licensed under CC-BY-SA 4.0 with an exception for electronic designs and generated files that use the data. The exception permits use in a project without relicensing that project under CC-BY-SA; redistribution of the libraries or parts as a collection retains the library license and attribution. This statement applies to KiCad library data, not every third-party CAD asset.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "KiCad library collection terms are CC-BY-SA 4.0 with a stated design-use exception and collection-redistribution conditions",
+      "Library terms do not define terms for unrelated assets"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-02-sources.md",
+      "research/action-audit/reviews/point-02-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
+    "title": "MuJoCo Menagerie README",
+    "summary": "The repository catalogue associates each listed robot model with a license. Its terms section says XML and asset files in individual model directories can have different terms and directs users to the LICENSE file in the specific model subdirectory; remaining repository content is Apache-2.0. This supports per-model/per-asset license lookup before reuse. The repository says it is not an officially supported Google product.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "MuJoCo Menagerie lists model-specific licenses and directs users to each model directory LICENSE for XML and assets",
+      "The top-level Apache-2.0 notice applies to remaining repository content, not automatically to model assets"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-02-sources.md",
+      "research/action-audit/reviews/point-02-software.md"
+    ]
+  }
+]

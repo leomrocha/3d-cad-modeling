@@ -1,0 +1,148 @@
+{
+  "authorization": "THEN EXECUTE ALL FUCKGIN POINTS THAT WAS THE FUCKIGN ORDER ONE BY ONE IN THE DEFINED MODEL apply now,",
+  "date": "2026-11-12",
+  "scope": "Sequential documentation audit of all77 operations; each point reviewed and committed before the next starts. Component/helper designs and future tests retain proposal status.",
+  "points": [
+    {
+      "point": 1,
+      "name": "Descriptions and dimensions to a model brief",
+      "operations": [
+        "CAD-01",
+        "DOM-01"
+      ],
+      "status": "completed_document_review",
+      "checkpoint": "04ba3de",
+      "result_commit": "eb1cfa4"
+    },
+    {
+      "point": 2,
+      "name": "Existing components and CAD reuse",
+      "operations": [
+        "CAD-12",
+        "DOM-06",
+        "DOM-07",
+        "DOM-26",
+        "DOM-38",
+        "DOM-39"
+      ],
+      "status": "completed_document_review",
+      "checkpoint": "02a81eb",
+      "result_commit": null,
+      "result_commit_subject": "docs: audit point 02 procedures"
+    },
+    {
+      "point": 3,
+      "name": "Confirmed dimensions and vector drawings to CAD",
+      "operations": [
+        "CAD-08",
+        "CAD-09",
+        "CAD-10",
+        "CAD-13",
+        "CAD-14",
+        "CAD-15",
+        "DOM-03",
+        "DOM-04",
+        "DOM-05",
+        "DOM-40"
+      ],
+      "status": "queued",
+      "checkpoint": null,
+      "result_commit": null
+    },
+    {
+      "point": 4,
+      "name": "Raster drawings and interpreted dimensions",
+      "operations": [
+        "CAD-02",
+        "CAD-03",
+        "CAD-04",
+        "CAD-05",
+        "CAD-06",
+        "CAD-07",
+        "CAD-17",
+        "DOM-02",
+        "DOM-18"
+      ],
+      "status": "queued",
+      "checkpoint": null,
+      "result_commit": null
+    },
+    {
+      "point": 5,
+      "name": "CAD, photographs and scans alignment",
+      "operations": [
+        "CAD-11",
+        "CAD-02B",
+        "REC-01",
+        "REC-02",
+        "REC-07",
+        "REC-08",
+        "REC-09",
+        "REC-12",
+        "REC-13",
+        "REC-14",
+        "REC-15",
+        "REC-16",
+        "DOM-19",
+        "DOM-23"
+      ],
+      "status": "queued",
+      "checkpoint": null,
+      "result_commit": null
+    },
+    {
+      "point": 6,
+      "name": "Building and robot structure and properties",
+      "operations": [
+        "DOM-08",
+        "DOM-09",
+        "DOM-10",
+        "DOM-11",
+        "DOM-12",
+        "DOM-13",
+        "DOM-14",
+        "DOM-15",
+        "DOM-16",
+        "DOM-17",
+        "DOM-24",
+        "DOM-25",
+        "DOM-27",
+        "DOM-31",
+        "DOM-32",
+        "DOM-33",
+        "DOM-34",
+        "DOM-35",
+        "DOM-37"
+      ],
+      "status": "queued",
+      "checkpoint": null,
+      "result_commit": null
+    },
+    {
+      "point": 7,
+      "name": "Photographs, depth and learned reconstruction",
+      "operations": [
+        "CAD-16",
+        "REC-03",
+        "REC-04",
+        "REC-05",
+        "REC-06",
+        "REC-10",
+        "REC-11",
+        "REC-17",
+        "REC-18",
+        "REC-19",
+        "REC-20",
+        "DOM-20",
+        "DOM-21",
+        "DOM-22",
+        "DOM-28",
+        "DOM-29",
+        "DOM-30"
+      ],
+      "status": "queued",
+      "checkpoint": null,
+      "result_commit": null
+    }
+  ]
+}
