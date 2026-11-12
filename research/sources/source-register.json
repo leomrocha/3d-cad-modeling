@@ -897,7 +897,8 @@
       "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_source_inspected"
       ],
       "observations": [
         {
@@ -910,10 +911,22 @@
             "research/action-audit/implementation-queue/README.md",
             "research/action-audit/implementation-queue/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "e452fcb1441b0a2abfd88dfbf477b31fb6b7ef14cbde41be294113108eeb19b2",
+          "referring_documents": [
+            "research/action-audit/parts-catalogue-proposal.md",
+            "research/action-audit/ideas.json"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-06/implementation-queue-sources.json"
+        "research/sources/round-06/implementation-queue-sources.json",
+        "research/sources/round-07/parts-catalogue-sources.json"
       ]
     },
     {
@@ -1955,6 +1968,33 @@
         "research/sources/round-05/point-05-local-sources.json",
         "research/sources/round-05/point-06-local-sources.json",
         "research/sources/round-05/point-07-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1c30dee16aac",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
+      "title": "Shared parts catalogue discussion",
+      "summary": "Authored proposal: requested identity/standards/location/search fields, storage alternatives and explicit future material/resistance/work-domain extensions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
+          "access_date": "2026-11-12",
+          "sha256": "e68a751643467239dce45f839b26f3c77c965850fad622d92576e877e5ab1a01",
+          "referring_documents": [
+            "research/action-audit/parts-catalogue-proposal.md",
+            "research/action-audit/ideas.json"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-07/parts-catalogue-sources.json"
       ]
     },
     {
@@ -4581,7 +4621,8 @@
       "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_source_inspected"
       ],
       "observations": [
         {
@@ -4594,10 +4635,22 @@
             "research/action-audit/implementation-queue/README.md",
             "research/action-audit/implementation-queue/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "8c8ecc9231663aeac5a2a6c7147df65d81cef0b998c87fbe345ad073a17d8b34",
+          "referring_documents": [
+            "research/action-audit/parts-catalogue-proposal.md",
+            "research/action-audit/ideas.json"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-06/implementation-queue-sources.json"
+        "research/sources/round-06/implementation-queue-sources.json",
+        "research/sources/round-07/parts-catalogue-sources.json"
       ]
     },
     {
@@ -4977,6 +5030,33 @@
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/sources/round-05/point-07-web-sources.json",
         "research/workflows/details/rec-r10.md"
+      ]
+    },
+    {
+      "id": "SRC-41482c223014",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+      "title": "Ferme part manifest",
+      "summary": "Existing 103 part records and their identity, route, dependency, source and model-reference fields; proposed catalogue seed.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+          "access_date": "2026-11-12",
+          "sha256": "6df3aa47d6949a7b1760d7cdc4f2a5493c62c62b96253373812ee3f4f772a7f0",
+          "referring_documents": [
+            "research/action-audit/parts-catalogue-proposal.md",
+            "research/action-audit/ideas.json"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-07/parts-catalogue-sources.json"
       ]
     },
     {
@@ -8617,6 +8697,33 @@
       ]
     },
     {
+      "id": "SRC-71c2ebea0058",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md",
+      "title": "Ferme component input index",
+      "summary": "Existing component sheet and source/model dependency index; relationship to proposed catalogue.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "ed6db21f660d040ed504b794eeef2e1a52d05cebba2b954aaeb09db9c1d81ece",
+          "referring_documents": [
+            "research/action-audit/parts-catalogue-proposal.md",
+            "research/action-audit/ideas.json"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-07/parts-catalogue-sources.json"
+      ]
+    },
+    {
       "id": "SRC-71dee9d2e674",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
@@ -11905,7 +12012,8 @@
       "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_source_inspected"
       ],
       "observations": [
         {
@@ -11918,10 +12026,22 @@
             "research/action-audit/implementation-queue/README.md",
             "research/action-audit/implementation-queue/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+          "access_date": "2026-11-12",
+          "sha256": "a32c803b5dabb0762423de33cc276078acf6f7e544fc45e1a7f69e583a945e46",
+          "referring_documents": [
+            "research/action-audit/parts-catalogue-proposal.md",
+            "research/action-audit/ideas.json"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-06/implementation-queue-sources.json"
+        "research/sources/round-06/implementation-queue-sources.json",
+        "research/sources/round-07/parts-catalogue-sources.json"
       ]
     },
     {
@@ -14531,10 +14651,22 @@
             "research/action-audit/implementation-queue/assets.md",
             "research/action-audit/implementation-queue/queue.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+          "local_original": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "bc45db50ee1ee9ddbc1a39e10cc9de3dedd372698d5309f9f5bacfacb76bf3db",
+          "referring_documents": [
+            "research/action-audit/parts-catalogue-proposal.md",
+            "research/action-audit/ideas.json"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-06/implementation-queue-sources.json"
+        "research/sources/round-06/implementation-queue-sources.json",
+        "research/sources/round-07/parts-catalogue-sources.json"
       ]
     },
     {

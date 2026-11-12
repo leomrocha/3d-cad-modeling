@@ -2583,6 +2583,141 @@
       ]
     },
     {
+      "id": "PARTS-I01",
+      "name": "Shared reusable parts catalogue",
+      "summary": "Register stable item identity, readable/formal names, descriptions, manufacturer/supplier/project codes, attributed standards and source/CAD/physical locations; connect parts to component outputs and action/tool records.",
+      "status": "proposal",
+      "origin": "parts_catalogue_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "user_proposal",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/parts-catalogue-proposal.md",
+          "line": 1,
+          "section": "Shared reusable parts catalogue"
+        }
+      ],
+      "relationships": {
+        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+      },
+      "next_check": "Review the documented catalogue structure and relationships before catalogue implementation.",
+      "source_ids": [
+        "SRC-1c30dee16aac"
+      ]
+    },
+    {
+      "id": "PARTS-I02",
+      "name": "Text-file catalogue storage alternatives",
+      "summary": "Compare one CSV plus descriptions, linked CSV files plus generated Markdown, and Markdown-first pages; linked files preserve multiple standards, aliases and artifact revisions.",
+      "status": "proposal",
+      "origin": "parts_catalogue_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "proposed_design_alternative",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/parts-catalogue-proposal.md",
+          "line": 1,
+          "section": "Text-file catalogue storage alternatives"
+        }
+      ],
+      "relationships": {
+        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+      },
+      "next_check": "Review the documented catalogue structure and relationships before catalogue implementation.",
+      "source_ids": [
+        "SRC-1c30dee16aac"
+      ]
+    },
+    {
+      "id": "PARTS-I03",
+      "name": "Parts field search and future database import",
+      "summary": "Propose initial name/code/standard/category search over text records; retain IDs/relationships for future SQLite/DuckDB import and separately specified vector similarity indexing.",
+      "status": "proposal",
+      "origin": "parts_catalogue_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "proposed_design_alternative",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/parts-catalogue-proposal.md",
+          "line": 1,
+          "section": "Parts field search and future database import"
+        }
+      ],
+      "relationships": {
+        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+      },
+      "next_check": "Review the documented catalogue structure and relationships before catalogue implementation.",
+      "source_ids": [
+        "SRC-1c30dee16aac"
+      ]
+    },
+    {
+      "id": "PARTS-I04",
+      "name": "Future part material and resistance properties",
+      "summary": "Future work requested by the user: add material and resistance properties to each part with sourced values, units and applicability conditions.",
+      "status": "future_work",
+      "origin": "parts_catalogue_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "user_proposal",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/parts-catalogue-proposal.md",
+          "line": 1,
+          "section": "Future part material and resistance properties"
+        }
+      ],
+      "relationships": {
+        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+      },
+      "next_check": "Define this extension when future work is taken up.",
+      "source_ids": [
+        "SRC-1c30dee16aac"
+      ]
+    },
+    {
+      "id": "PARTS-I05",
+      "name": "Future classification by kind of work",
+      "summary": "Future work requested by the user: classification including wood, metal, architecture, mechanical and industrial; define taxonomy and multi-domain relationships in that future extension.",
+      "status": "future_work",
+      "origin": "parts_catalogue_discussion",
+      "registered_at": "2026-11-12",
+      "evidence_status": "user_proposal",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/parts-catalogue-proposal.md",
+          "line": 1,
+          "section": "Future classification by kind of work"
+        }
+      ],
+      "relationships": {
+        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+      },
+      "next_check": "Define this extension when future work is taken up.",
+      "source_ids": [
+        "SRC-1c30dee16aac"
+      ]
+    },
+    {
       "id": "PLAN-4689b53189",
       "name": "Native editable source",
       "summary": "**Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.",

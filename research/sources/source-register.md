@@ -240,9 +240,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementa
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
 
 <a id="src-0910720e555c"></a>
 
@@ -639,6 +639,18 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-1c30dee16aac"></a>
+
+## SRC-1c30dee16aac — Shared parts catalogue discussion
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+
+Summary: Authored proposal: requested identity/standards/location/search fields, storage alternatives and explicit future material/resistance/work-domain extensions.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-07/parts-catalogue-sources.json.
 
 <a id="src-1f314fe4accc"></a>
 
@@ -1428,9 +1440,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementa
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
 
 <a id="src-3d8ba9ae669c"></a>
 
@@ -1563,6 +1575,18 @@ Summary: Named TRELLIS.2-4B model card inspected 2026-11-12. Card labels this ch
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r10.md.
+
+<a id="src-41482c223014"></a>
+
+## SRC-41482c223014 — Ferme part manifest
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json](/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json)
+
+Summary: Existing 103 part records and their identity, route, dependency, source and model-reference fields; proposed catalogue seed.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-07/parts-catalogue-sources.json.
 
 <a id="src-416cb87ab6bb"></a>
 
@@ -2812,6 +2836,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
 
+<a id="src-71c2ebea0058"></a>
+
+## SRC-71c2ebea0058 — Ferme component input index
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md)
+
+Summary: Existing component sheet and source/model dependency index; relationship to proposed catalogue.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-07/parts-catalogue-sources.json.
+
 <a id="src-71dee9d2e674"></a>
 
 ## SRC-71dee9d2e674 — Visual interpretation review — descriptions and explicit dimensions to a model brief
@@ -3756,9 +3792,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementa
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
 
 <a id="src-9e9899193ac9"></a>
 
@@ -4598,7 +4634,7 @@ Summary: Reusable source, component/frame, construction, feature-check and saved
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json.
 
 <a id="src-bec1fb0c7b0c"></a>
 

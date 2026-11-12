@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-12",
+  "status": "passed",
+  "model": "gpt-6.1-sol",
+  "scope": "Parts-catalogue proposal and future-work registration",
+  "checkpoint": "9c3f38c",
+  "new_ideas": 5,
+  "proposal_ideas": 3,
+  "future_work_ideas": 2,
+  "preserved_existing_ideas": 86,
+  "preserved_existing_files": 186,
+  "source_snapshots_checked": 7,
+  "local_links": "passed",
+  "json_parsing": "passed",
+  "source_and_idea_registration": "passed",
+  "rebuild_comparison": "passed after actual hash comparison",
+  "register": {
+    "date": "2026-11-12",
+    "sources": 510,
+    "operations": 77,
+    "recipes": 38,
+    "ideas": 196,
+    "candidate_handoffs": 879,
+    "errors": [],
+    "check_meaning": "Registration and declared type consistency, not tool execution or geometric validation"
+  }
+}

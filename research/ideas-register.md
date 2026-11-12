@@ -1684,6 +1684,66 @@ Original proposal: [research/action-audit/implementation-queue/first-action-plan
 
 Next check: Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch.
 
+## PARTS-I01 — Shared reusable parts catalogue
+
+Status: proposal.
+
+Register stable item identity, readable/formal names, descriptions, manufacturer/supplier/project codes, attributed standards and source/CAD/physical locations; connect parts to component outputs and action/tool records.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+
+Next check: Review the documented catalogue structure and relationships before catalogue implementation.
+
+## PARTS-I02 — Text-file catalogue storage alternatives
+
+Status: proposal.
+
+Compare one CSV plus descriptions, linked CSV files plus generated Markdown, and Markdown-first pages; linked files preserve multiple standards, aliases and artifact revisions.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+
+Next check: Review the documented catalogue structure and relationships before catalogue implementation.
+
+## PARTS-I03 — Parts field search and future database import
+
+Status: proposal.
+
+Propose initial name/code/standard/category search over text records; retain IDs/relationships for future SQLite/DuckDB import and separately specified vector similarity indexing.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+
+Next check: Review the documented catalogue structure and relationships before catalogue implementation.
+
+## PARTS-I04 — Future part material and resistance properties
+
+Status: future_work.
+
+Future work requested by the user: add material and resistance properties to each part with sourced values, units and applicability conditions.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+
+Next check: Define this extension when future work is taken up.
+
+## PARTS-I05 — Future classification by kind of work
+
+Status: future_work.
+
+Future work requested by the user: classification including wood, metal, architecture, mechanical and industrial; define taxonomy and multi-domain relationships in that future extension.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+
+Next check: Define this extension when future work is taken up.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.
