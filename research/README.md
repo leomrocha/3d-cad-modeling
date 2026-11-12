@@ -31,3 +31,7 @@ The workflow-research extension preserves the implementation plan and prior tool
 ## Detailed procedures and effort classification
 
 [Input requirements, documented software APIs and all 38 ranked workflows](/home/leo/projects/3dmodeling/research/workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.
+
+## Action-by-action software and AI audit
+
+[Authorized audit plan, first-point definition, operation inventory and reviews](/home/leo/projects/3dmodeling/research/action-audit/README.md). The current point is descriptions and explicit dimensions to a model brief. The inventory retains all 77 original operations and their review state.

@@ -498,6 +498,78 @@ Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](
 
 Next check: Run the relevant fixture and preserve actual execution evidence for each supported route.
 
+## AUDIT-I01 — Per-action software and AI options
+
+Status: proposal.
+
+Define agent-led, hybrid, software-first exception and deterministic alternatives per action and supported input class.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+
+Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 5.
+
+Next check: Review the point-01 assignment of software, model and user responsibilities.
+
+## AUDIT-I02 — Evidence-based candidate comparison and merge
+
+Status: proposal.
+
+Run alternative interpretations or software routes where useful; align their records, compare evidence and preserve per-feature provenance when a reasoning VLM proposes selection or combination.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+
+Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 40.
+
+Next check: Review conflict, source-precedence and post-merge validation cases.
+
+## AUDIT-I03 — Per-feature tolerance and intended-use requirements
+
+Status: proposal.
+
+Separate dimensional accuracy, geometry detail, appearance, function, simulation and manufacturing requirements; attach tolerances to individual features and relationships.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+
+Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 50.
+
+Next check: Review the first-point requirement and tolerance record without introducing a sample design.
+
+## AUDIT-I04 — Tested replacement of specific agent actions
+
+Status: proposal.
+
+Specify and test repeatable software functions for particular input classes while preserving agent-assisted exception routes.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+
+Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 58.
+
+Next check: Review proposed representative and failure cases before any implementation.
+
+## AUDIT-I05 — Local-compute-first point order
+
+Status: proposal.
+
+Define source briefs and existing geometry before processing-heavy reconstruction; record local and remote resources separately.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+
+Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 83.
+
+Next check: Review each point in the plan order with its stated data size and output purpose.
+
+## AUDIT-I06 — Procedure design and independent review roles
+
+Status: proposal.
+
+Use the requested Astra, Sol, Terra and Luna assignments for design, visual reasoning, independent review, software assessment and primary-source lookup.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+
+Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 68.
+
+Next check: Record actual task execution, source findings and reviewer dispositions separately from dispatch settings.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

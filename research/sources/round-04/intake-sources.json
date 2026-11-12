@@ -1,0 +1,91 @@
+[
+  {
+    "url": "https://docs.python.org/3/library/json.html",
+    "title": "json — JSON encoder and decoder — Python 3.15.2 documentation",
+    "summary": "Official Python documentation describes JSON decoding, default conversions, custom parse_float and parse_int callbacks receiving numeric token strings, parse_constant for NaN/Infinity tokens, object_pairs_hook receiving ordered object pairs, and JSONDecodeError for malformed documents. By default, the decoder accepts NaN/Infinity extensions and repeated object names, keeping only the last repeated value. For strict intake, a caller can reject constants and inspect pairs to detect duplicate names. Decoding exposes structure and syntax; it does not assign units, feature identity or engineering meaning.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "JSON parsing exposes structured fields and reports malformed documents",
+      "JSON parse_float and parse_int callbacks receive numeric token strings and can select numeric representations",
+      "JSON defaults accept NaN/Infinity and repeated names with last value retained; parse_constant and object_pairs_hook allow intake checks to change that behavior"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/source-check.md",
+      "research/action-audit/reviews/software-review.md"
+    ]
+  },
+  {
+    "url": "https://docs.python.org/3/library/csv.html",
+    "title": "csv — CSV file reading and writing — Python 3.15.2 documentation",
+    "summary": "Official Python documentation describes CSV readers and writers, configurable dialects and formatting parameters, and reader rows returned as strings by default. The QUOTE_NONNUMERIC option converts unquoted fields to floats. For intake, a declared dialect preserves field boundaries and reading as strings preserves source spellings for later interpretation. Parsing does not determine units, numeric locale or the meaning of a column.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CSV field boundaries depend on the selected dialect and formatting parameters",
+      "CSV reader rows remain strings by default; QUOTE_NONNUMERIC converts unquoted fields to floats"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/source-check.md",
+      "research/action-audit/reviews/software-review.md"
+    ]
+  },
+  {
+    "url": "https://docs.python.org/3/library/hashlib.html",
+    "title": "hashlib — Secure hashes and message digests — Python 3.15.2 documentation",
+    "summary": "Official Python documentation describes hash objects that accept bytes-like input and return a digest for the concatenated bytes; SHA-256 is a documented constructor. For intake, a SHA-256 digest can identify and compare the exact byte content recorded for an input revision. A digest does not establish who supplied the bytes, source authority, correctness or semantic equivalence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "SHA-256 digest identifies byte content for intake provenance and change comparison"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/source-check.md",
+      "research/action-audit/reviews/software-review.md"
+    ]
+  },
+  {
+    "url": "https://docs.python.org/3/library/decimal.html",
+    "title": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.15.2 documentation",
+    "summary": "Official Python documentation describes Decimal construction from strings and exact representation of decimal values, while Decimal construction from a binary float preserves that float's binary approximation. For intake, passing a source numeric string directly to Decimal preserves its decimal value and spelling-significance digits for subsequent controlled arithmetic. Decimal does not assign units, distinguish engineering tolerances from measurement uncertainty or validate feature association; arithmetic context and rounding still govern calculations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Decimal constructed from a string represents that decimal value exactly",
+      "Decimal constructed from float preserves the float's binary approximation"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/source-check.md",
+      "research/action-audit/reviews/software-review.md"
+    ]
+  },
+  {
+    "url": "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+    "title": "Command Line Usage — Tesseract documentation",
+    "summary": "Official Tesseract command-line documentation shows TSV output selected by adding the tsv config and includes hierarchy identifiers, left/top/width/height pixel boxes, confidence values and recognized text in its example output. This supports recording OCR text candidates and image regions for later source review. Confidence and recognized text remain OCR output and do not establish engineering glyph, unit or feature meaning. The same URL is already present in the project source register; this observation records the fresh bounded inspection.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "Tesseract TSV output provides hierarchy identifiers, pixel bounding boxes, confidence and recognized text"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/source-check.md",
+      "research/action-audit/reviews/software-review.md"
+    ]
+  }
+]

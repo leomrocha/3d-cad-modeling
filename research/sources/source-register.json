@@ -80,6 +80,33 @@
       ]
     },
     {
+      "id": "SRC-00ef88b61c5d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md",
+      "title": "Independent procedure review — Point 01 model brief",
+      "summary": "Authored audit document recording Independent procedure review — Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md",
+          "sha256": "a33db55308a1310d52af04329f46594c337321b15bcaa43bd4aebb773eaf5941",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-011e8da740e4",
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
       "local_source_path": null,
@@ -248,6 +275,19 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -257,7 +297,8 @@
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
-        "research/sources/round-03/reconstruction-detail-sources.json"
+        "research/sources/round-03/reconstruction-detail-sources.json",
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -335,6 +376,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/workflows/details/mix-r01.md",
@@ -629,6 +671,35 @@
       ],
       "referring_documents": [
         "research/sources/round-02/project-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-11b52766dd34",
+      "url": null,
+      "local_source_path": "/usr/lib/python3.14/hashlib.py",
+      "title": "Local Python 3.14 hashlib source",
+      "summary": "Documented byte hashing and SHA-256 constructors used as source evidence for input revision identity.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/usr/lib/python3.14/hashlib.py",
+          "access_date": "2026-11-12",
+          "local_original": "/usr/lib/python3.14/hashlib.py",
+          "sha256": "88fa624821fbdee7eb2ef87c2437b207afe328cf117c7463367e2db5eb1af492",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -1362,6 +1433,33 @@
       ]
     },
     {
+      "id": "SRC-2945aa520dc5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/execution-record.md",
+      "title": "Authorized action-audit execution record",
+      "summary": "Observed dispatch, actual identity reports, review dispositions, scope finding and source-registration integration for this authorized documentation batch.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/execution-record.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/execution-record.md",
+          "sha256": "89dcdc6fa6a31078a34701d7b38b2460853f7389c2524a3946eaca0b066e0d11",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-29e05b3b3047",
       "url": null,
       "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
@@ -1458,6 +1556,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md",
@@ -1465,6 +1564,68 @@
         "research/workflows/details/mix-r01.md",
         "research/workflows/details/mix-r10.md",
         "research/workflows/domain-paths.md"
+      ]
+    },
+    {
+      "id": "SRC-2d331dacc4f0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+      "title": "Execution plan: define one workflow point at a time",
+      "summary": "Authorized documentation method: fifteen fields per action, alternative software/agent modes, evidence-based merges, feature-specific accuracy and local-compute-first definition order.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2d6abe7b467d",
+      "url": "https://docs.python.org/3/library/decimal.html",
+      "local_source_path": null,
+      "title": "decimal — Decimal fixed-point and floating-point arithmetic — Python 3.15.2 documentation",
+      "summary": "Official Python documentation describes Decimal construction from strings and exact representation of decimal values, while Decimal construction from a binary float preserves that float's binary approximation. For intake, passing a source numeric string directly to Decimal preserves its decimal value and spelling-significance digits for subsequent controlled arithmetic. Decimal does not assign units, distinguish engineering tolerances from measurement uncertainty or validate feature association; arithmetic context and rounding still govern calculations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Decimal constructed from a string represents that decimal value exactly",
+            "Decimal constructed from float preserves the float's binary approximation"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/source-check.md",
+            "research/action-audit/reviews/software-review.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-01-model-brief.md",
+        "research/action-audit/reviews/software-review.md",
+        "research/action-audit/reviews/source-check.md",
+        "research/sources/round-04/intake-sources.json"
       ]
     },
     {
@@ -1510,6 +1671,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/visual-review.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -1592,6 +1754,35 @@
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2fe2fa4714a1",
+      "url": null,
+      "local_source_path": "/usr/lib/python3.14/decimal.py",
+      "title": "Local Python 3.14 decimal interface source",
+      "summary": "Decimal interface source inspected by software reviewer; official decimal documentation separately supports exact string construction.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/usr/lib/python3.14/decimal.py",
+          "access_date": "2026-11-12",
+          "local_original": "/usr/lib/python3.14/decimal.py",
+          "sha256": "af29fa99aa720a68cab5a6384c7beba4c8e9480a6c1d53a512efeeb5a7e5c781",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -2565,6 +2756,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/visual-review.md",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r02.md"
       ]
@@ -2743,6 +2935,40 @@
       "referring_documents": [
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
+      "id": "SRC-4a6934063635",
+      "url": "https://docs.python.org/3/library/hashlib.html",
+      "local_source_path": null,
+      "title": "hashlib — Secure hashes and message digests — Python 3.15.2 documentation",
+      "summary": "Official Python documentation describes hash objects that accept bytes-like input and return a digest for the concatenated bytes; SHA-256 is a documented constructor. For intake, a SHA-256 digest can identify and compare the exact byte content recorded for an input revision. A digest does not establish who supplied the bytes, source authority, correctness or semantic equivalence.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "SHA-256 digest identifies byte content for intake provenance and change comparison"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/source-check.md",
+            "research/action-audit/reviews/software-review.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-01-model-brief.md",
+        "research/action-audit/reviews/software-review.md",
+        "research/action-audit/reviews/source-check.md",
+        "research/sources/round-04/intake-sources.json"
       ]
     },
     {
@@ -3536,8 +3762,38 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/visual-review.md",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-5afc1d03b483",
+      "url": null,
+      "local_source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+      "title": "OCS session control helper source",
+      "summary": "Session preflight and mutation transport helper for a later authorized live CAD operation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+          "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -4050,6 +4306,33 @@
       ]
     },
     {
+      "id": "SRC-69c044526e3f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+      "title": "Point 01 — Descriptions and explicit dimensions to a model brief",
+      "summary": "Proposed ten-action source-to-model-brief procedure with software, AI and user assignments, four execution modes, per-feature requirements, candidate comparison/merge, eight development components and thirteen future validation cases.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+          "sha256": "67ce7477f22d31661ba8933b2cb6464782262af9c94c91b00726981f34b5ebae",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6b30ccb4447f",
       "url": "https://github.com/isl-org/Open3D",
       "local_source_path": null,
@@ -4370,6 +4653,33 @@
       ]
     },
     {
+      "id": "SRC-71dee9d2e674",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+      "title": "Visual interpretation review — descriptions and explicit dimensions to a model brief",
+      "summary": "Authored audit document recording Visual interpretation review — descriptions and explicit dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+          "sha256": "28f95615402d203fd686e7bca21218a083261e42ea6d5713e2d94e06f3d9f3de",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-724b2d11a6eb",
       "url": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
       "local_source_path": null,
@@ -4552,6 +4862,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-77594e51ac89",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+      "title": "Existing operation inventory and detailed-review state",
+      "summary": "Authored audit document recording Existing operation inventory and detailed-review state. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+          "sha256": "3d3d43629047c75c6d5a68a0510c588735382d1b4bd81ab62a41ed1c6924e8e1",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -5488,6 +5825,35 @@
       ]
     },
     {
+      "id": "SRC-92b7a09b7e3a",
+      "url": null,
+      "local_source_path": "/usr/lib/python3.14/csv.py",
+      "title": "Local Python 3.14 CSV source",
+      "summary": "CSV dialect/field parsing source inspected by the software reviewer; retain source strings and explicit dialect.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/usr/lib/python3.14/csv.py",
+          "access_date": "2026-11-12",
+          "local_original": "/usr/lib/python3.14/csv.py",
+          "sha256": "7604e007804bef2693cb9705257a4ab18ab9b7a188fa3c1eb21a8a55f6ae1ddf",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-932141965717",
       "url": "https://www.blender.org/lab/mcp-server/",
       "local_source_path": null,
@@ -5563,6 +5929,35 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-93b47d856776",
+      "url": null,
+      "local_source_path": "/usr/lib/python3.14/json/__init__.py",
+      "title": "Local Python 3.14 JSON interface source",
+      "summary": "Decoder callbacks, numeric token handling and nonfinite/default behavior inspected as intake design evidence.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/usr/lib/python3.14/json/__init__.py",
+          "access_date": "2026-11-12",
+          "local_original": "/usr/lib/python3.14/json/__init__.py",
+          "sha256": "95022d150a27a2bfd54ac21bfce35812c96b53c420bb7b018dcb573f13e52da0",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -5951,8 +6346,8 @@
       "id": "SRC-9a4cc68545a8",
       "url": "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
       "local_source_path": null,
-      "title": "Tesseract command line usage",
-      "summary": "Official Tesseract documentation shows TSV output with text, hierarchical page/block/line/word identifiers, pixel bounding boxes and confidence values.",
+      "title": "Command Line Usage — Tesseract documentation",
+      "summary": "Official Tesseract command-line documentation shows TSV output selected by adding the tsv config and includes hierarchy identifiers, left/top/width/height pixel boxes, confidence values and recognized text in its example output. This supports recording OCR text candidates and image regions for later source review. Confidence and recognized text remain OCR output and do not establish engineering glyph, unit or feature meaning. The same URL is already present in the project source register; this observation records the fresh bounded inspection.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -5971,10 +6366,28 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "Tesseract TSV output provides hierarchy identifiers, pixel bounding boxes, confidence and recognized text"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/source-check.md",
+            "research/action-audit/reviews/software-review.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-01-model-brief.md",
+        "research/action-audit/reviews/software-review.md",
+        "research/action-audit/reviews/source-check.md",
         "research/sources/round-02/cad-sources.json",
+        "research/sources/round-04/intake-sources.json",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r03.md",
         "research/workflows/details/mix-r01.md"
@@ -5993,6 +6406,41 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-9cfde96bb911",
+      "url": "https://docs.python.org/3/library/csv.html",
+      "local_source_path": null,
+      "title": "csv — CSV file reading and writing — Python 3.15.2 documentation",
+      "summary": "Official Python documentation describes CSV readers and writers, configurable dialects and formatting parameters, and reader rows returned as strings by default. The QUOTE_NONNUMERIC option converts unquoted fields to floats. For intake, a declared dialect preserves field boundaries and reading as strings preserves source spellings for later interpretation. Parsing does not determine units, numeric locale or the meaning of a column.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CSV field boundaries depend on the selected dialect and formatting parameters",
+            "CSV reader rows remain strings by default; QUOTE_NONNUMERIC converts unquoted fields to floats"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/source-check.md",
+            "research/action-audit/reviews/software-review.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-01-model-brief.md",
+        "research/action-audit/reviews/software-review.md",
+        "research/action-audit/reviews/source-check.md",
+        "research/sources/round-04/intake-sources.json"
       ]
     },
     {
@@ -6229,10 +6677,24 @@
           "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
           "sha256": "6548c1bac0a6162684045b47470fe4f8378cdad96dd18c1af7ad8a4d44077afd",
           "content_type": "text/x-python"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+          "sha256": "e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/project-detail-sources.json"
+        "research/sources/round-03/project-detail-sources.json",
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -6474,6 +6936,35 @@
       "referring_documents": [
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r04.md"
+      ]
+    },
+    {
+      "id": "SRC-a635c02f99cb",
+      "url": null,
+      "local_source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+      "title": "OCS numerical contract checker source",
+      "summary": "Reads supplied point/axis/plane observations with one length/angular threshold pair per invocation; later adapter must preserve feature-specific applicability.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+          "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -7166,6 +7657,35 @@
       ]
     },
     {
+      "id": "SRC-b7aa02d92193",
+      "url": null,
+      "local_source_path": "/usr/lib/python3.14/json/decoder.py",
+      "title": "Local Python 3.14 JSON decoder source",
+      "summary": "Independent review inspected ordered pairs, dictionary conversion and nonfinite constants, supporting duplicate/nonfinite guards.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/usr/lib/python3.14/json/decoder.py",
+          "access_date": "2026-11-12",
+          "local_original": "/usr/lib/python3.14/json/decoder.py",
+          "sha256": "302ce57cb6f411122d7ef2ad2997c1fc0f184849fab3f1f585752f18f2195c73",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-b81d432f6f0a",
       "url": "https://github.com/KiCad/kicad-packages3D",
       "local_source_path": null,
@@ -7306,6 +7826,33 @@
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r04.md"
+      ]
+    },
+    {
+      "id": "SRC-ba79f85a852f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+      "title": "Action-by-action workflow audit",
+      "summary": "Authored audit document recording Action-by-action workflow audit. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+          "sha256": "f4b8b7d9082728a314f35362cf434d22a31bde2bce2c510aa233403770c33584",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -8224,6 +8771,42 @@
       ]
     },
     {
+      "id": "SRC-c9c50a504fb8",
+      "url": "https://docs.python.org/3/library/json.html",
+      "local_source_path": null,
+      "title": "json — JSON encoder and decoder — Python 3.15.2 documentation",
+      "summary": "Official Python documentation describes JSON decoding, default conversions, custom parse_float and parse_int callbacks receiving numeric token strings, parse_constant for NaN/Infinity tokens, object_pairs_hook receiving ordered object pairs, and JSONDecodeError for malformed documents. By default, the decoder accepts NaN/Infinity extensions and repeated object names, keeping only the last repeated value. For strict intake, a caller can reject constants and inspect pairs to detect duplicate names. Decoding exposes structure and syntax; it does not assign units, feature identity or engineering meaning.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "JSON parsing exposes structured fields and reports malformed documents",
+            "JSON parse_float and parse_int callbacks receive numeric token strings and can select numeric representations",
+            "JSON defaults accept NaN/Infinity and repeated names with last value retained; parse_constant and object_pairs_hook allow intake checks to change that behavior"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/source-check.md",
+            "research/action-audit/reviews/software-review.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-01-model-brief.md",
+        "research/action-audit/reviews/software-review.md",
+        "research/action-audit/reviews/source-check.md",
+        "research/sources/round-04/intake-sources.json"
+      ]
+    },
+    {
       "id": "SRC-ca3076996fa5",
       "url": "https://api.github.com/repos/Foster1202/cad-modeling-fusion-skill",
       "local_source_path": null,
@@ -8368,6 +8951,33 @@
         "research/workflows/details/rec-r03.md",
         "research/workflows/details/rec-r07.md",
         "research/workflows/details/rec-r09.md"
+      ]
+    },
+    {
+      "id": "SRC-cce96de57cbe",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+      "title": "Ideas",
+      "summary": "Authored audit document recording Ideas. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+          "sha256": "0d91b6b6fddc032d2ad8dcd2fee9065d9748f23ef50406f5088a30462156cd8d",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -8607,6 +9217,33 @@
       ],
       "referring_documents": [
         "research/sources/round-03/project-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d526125ac341",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md",
+      "title": "Source check: intake operations",
+      "summary": "Authored audit document recording Source check: intake operations. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md",
+          "sha256": "8f861fd9fec733748e728273f8a8ef71c8ff15a19b11b6b744d88ce0e455114b",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -8994,6 +9631,35 @@
       ]
     },
     {
+      "id": "SRC-dfe7c160f462",
+      "url": null,
+      "local_source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+      "title": "OCS model contract",
+      "summary": "Requirements for units, frames, source corrections, parts, tolerances and supplied numerical check observations.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-e1ca3a166ec3",
       "url": "https://raw.githubusercontent.com/earthtojake/text-to-cad/main/skills/cad/references/inspection-and-validation.md",
       "local_source_path": null,
@@ -9102,6 +9768,33 @@
       ]
     },
     {
+      "id": "SRC-e3ba6f17358b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+      "title": "Operation Inventory",
+      "summary": "Authored audit document recording Operation Inventory. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+          "sha256": "174fe3708bc33192fa58ad82a784ecb9e7e65fcd28680672e575fe3ea2240243",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-e3d95e78d033",
       "url": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2",
       "local_source_path": null,
@@ -9129,6 +9822,60 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-e74aa94bbb50",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md",
+      "title": "Procedure-design review notes — Point 01 model brief",
+      "summary": "Authored audit document recording Procedure-design review notes — Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md",
+          "sha256": "3ad0074bfdb016fdafd0a9051db38ba4650024b89163297160eb355ab178321b",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e796d575e829",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md",
+      "title": "Software review: descriptions and dimensions to a model brief",
+      "summary": "Authored audit document recording Software review: descriptions and dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md",
+          "sha256": "77e60b9c7f66b7744dd0aa774d639fa3f7d5ed0ec3d74b0b589df1d422f30811",
+          "referring_documents": [
+            "research/action-audit/README.md",
+            "research/action-audit/execution-record.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -9406,7 +10153,8 @@
       "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_source_inspected"
       ],
       "observations": [
         {
@@ -9418,10 +10166,24 @@
           "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
           "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
           "content_type": "text/markdown"
+        },
+        {
+          "evidence_status": "local_source_inspected",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "access_date": "2026-11-12",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+          "referring_documents": [
+            "research/action-audit/point-01-model-brief.md",
+            "research/action-audit/reviews/software-review.md",
+            "research/action-audit/reviews/independent-review.md",
+            "research/action-audit/execution-record.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-03/cad-detail-sources.json"
+        "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-04/audit-local-sources.json"
       ]
     },
     {
@@ -10219,6 +10981,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/visual-review.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",

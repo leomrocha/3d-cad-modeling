@@ -1,0 +1,323 @@
+[
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+    "title": "Action-by-action workflow audit",
+    "summary": "Authored audit document recording Action-by-action workflow audit. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+    "sha256": "f4b8b7d9082728a314f35362cf434d22a31bde2bce2c510aa233403770c33584",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/execution-record.md",
+    "title": "Authorized action-audit execution record",
+    "summary": "Observed dispatch, actual identity reports, review dispositions, scope finding and source-registration integration for this authorized documentation batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/execution-record.md",
+    "sha256": "89dcdc6fa6a31078a34701d7b38b2460853f7389c2524a3946eaca0b066e0d11",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "title": "Ideas",
+    "summary": "Authored audit document recording Ideas. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "sha256": "0d91b6b6fddc032d2ad8dcd2fee9065d9748f23ef50406f5088a30462156cd8d",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+    "title": "Operation Inventory",
+    "summary": "Authored audit document recording Operation Inventory. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+    "sha256": "174fe3708bc33192fa58ad82a784ecb9e7e65fcd28680672e575fe3ea2240243",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+    "title": "Existing operation inventory and detailed-review state",
+    "summary": "Authored audit document recording Existing operation inventory and detailed-review state. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+    "sha256": "3d3d43629047c75c6d5a68a0510c588735382d1b4bd81ab62a41ed1c6924e8e1",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+    "title": "Execution plan: define one workflow point at a time",
+    "summary": "Authorized documentation method: fifteen fields per action, alternative software/agent modes, evidence-based merges, feature-specific accuracy and local-compute-first definition order.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+    "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+    "title": "Point 01 \u2014 Descriptions and explicit dimensions to a model brief",
+    "summary": "Proposed ten-action source-to-model-brief procedure with software, AI and user assignments, four execution modes, per-feature requirements, candidate comparison/merge, eight development components and thirteen future validation cases.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+    "sha256": "67ce7477f22d31661ba8933b2cb6464782262af9c94c91b00726981f34b5ebae",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md",
+    "title": "Procedure-design review notes \u2014 Point 01 model brief",
+    "summary": "Authored audit document recording Procedure-design review notes \u2014 Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md",
+    "sha256": "3ad0074bfdb016fdafd0a9051db38ba4650024b89163297160eb355ab178321b",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md",
+    "title": "Independent procedure review \u2014 Point 01 model brief",
+    "summary": "Authored audit document recording Independent procedure review \u2014 Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md",
+    "sha256": "a33db55308a1310d52af04329f46594c337321b15bcaa43bd4aebb773eaf5941",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md",
+    "title": "Software review: descriptions and dimensions to a model brief",
+    "summary": "Authored audit document recording Software review: descriptions and dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md",
+    "sha256": "77e60b9c7f66b7744dd0aa774d639fa3f7d5ed0ec3d74b0b589df1d422f30811",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md",
+    "title": "Source check: intake operations",
+    "summary": "Authored audit document recording Source check: intake operations. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md",
+    "sha256": "8f861fd9fec733748e728273f8a8ef71c8ff15a19b11b6b744d88ce0e455114b",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+    "title": "Visual interpretation review \u2014 descriptions and explicit dimensions to a model brief",
+    "summary": "Authored audit document recording Visual interpretation review \u2014 descriptions and explicit dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+    "sha256": "28f95615402d203fd686e7bca21218a083261e42ea6d5713e2d94e06f3d9f3de",
+    "referring_documents": [
+      "research/action-audit/README.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "OCS engineering skill",
+    "summary": "Source-linked modeling contract, frames, parts, measurable invariants and model readback instructions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+    "title": "OCS model contract",
+    "summary": "Requirements for units, frames, source corrections, parts, tolerances and supplied numerical check observations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+    "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+    "title": "OCS numerical contract checker source",
+    "summary": "Reads supplied point/axis/plane observations with one length/angular threshold pair per invocation; later adapter must preserve feature-specific applicability.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+    "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+    "title": "OCS session control helper source",
+    "summary": "Session preflight and mutation transport helper for a later authorized live CAD operation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+    "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "title": "OCS control reference",
+    "summary": "Session/schema inspection, mutation and recovery requirements for later CAD operations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/usr/lib/python3.14/hashlib.py",
+    "title": "Local Python 3.14 hashlib source",
+    "summary": "Documented byte hashing and SHA-256 constructors used as source evidence for input revision identity.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/usr/lib/python3.14/hashlib.py",
+    "sha256": "88fa624821fbdee7eb2ef87c2437b207afe328cf117c7463367e2db5eb1af492",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/usr/lib/python3.14/csv.py",
+    "title": "Local Python 3.14 CSV source",
+    "summary": "CSV dialect/field parsing source inspected by the software reviewer; retain source strings and explicit dialect.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/usr/lib/python3.14/csv.py",
+    "sha256": "7604e007804bef2693cb9705257a4ab18ab9b7a188fa3c1eb21a8a55f6ae1ddf",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/usr/lib/python3.14/json/__init__.py",
+    "title": "Local Python 3.14 JSON interface source",
+    "summary": "Decoder callbacks, numeric token handling and nonfinite/default behavior inspected as intake design evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/usr/lib/python3.14/json/__init__.py",
+    "sha256": "95022d150a27a2bfd54ac21bfce35812c96b53c420bb7b018dcb573f13e52da0",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/usr/lib/python3.14/json/decoder.py",
+    "title": "Local Python 3.14 JSON decoder source",
+    "summary": "Independent review inspected ordered pairs, dictionary conversion and nonfinite constants, supporting duplicate/nonfinite guards.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/usr/lib/python3.14/json/decoder.py",
+    "sha256": "302ce57cb6f411122d7ef2ad2997c1fc0f184849fab3f1f585752f18f2195c73",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/usr/lib/python3.14/decimal.py",
+    "title": "Local Python 3.14 decimal interface source",
+    "summary": "Decimal interface source inspected by software reviewer; official decimal documentation separately supports exact string construction.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/usr/lib/python3.14/decimal.py",
+    "sha256": "af29fa99aa720a68cab5a6384c7beba4c8e9480a6c1d53a512efeeb5a7e5c781",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  },
+  {
+    "source_path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "title": "Current documentation register builder",
+    "summary": "Targeted additions scan audit Markdown and import six audit proposals. Current source snapshot is separate from earlier historical hashes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "sha256": "e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e",
+    "referring_documents": [
+      "research/action-audit/point-01-model-brief.md",
+      "research/action-audit/reviews/software-review.md",
+      "research/action-audit/reviews/independent-review.md",
+      "research/action-audit/execution-record.md"
+    ]
+  }
+]

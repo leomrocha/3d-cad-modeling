@@ -76,6 +76,7 @@ def main():
     paths += sorted(RESEARCH.glob('*.md'))
     paths += sorted((RESEARCH / 'workflows').glob('*-paths.md'))
     paths += sorted((RESEARCH / 'workflows/details').glob('*.md'))
+    paths += sorted((RESEARCH / 'action-audit').rglob('*.md'))
     for path in paths:
         if path.name in {'source-register.md', 'workflow-map.md', 'ideas-register.md'}:
             continue
@@ -129,6 +130,9 @@ def main():
         combined = read_json(combined_path)
         recipes += combined.get('recipes', [])
         ideas += combined.get('ideas', [])
+    audit_ideas = RESEARCH / 'action-audit/ideas.json'
+    if audit_ideas.exists():
+        ideas += read_json(audit_ideas)['ideas']
     op_index = {op['id']: op for op in operations}
     errors = []
     if len(op_index) != len(operations):

@@ -28,6 +28,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
 
+<a id="src-00ef88b61c5d"></a>
+
+## SRC-00ef88b61c5d — Independent procedure review — Point 01 model brief
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md)
+
+Summary: Authored audit document recording Independent procedure review — Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-011e8da740e4"></a>
 
 ## SRC-011e8da740e4 — IfcOpenShell feature.add_feature API
@@ -74,7 +86,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -98,7 +110,7 @@ Summary: Known target object coordinates and corresponding image detections supp
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
+Documents: research/action-audit/reviews/visual-review.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
 
 <a id="src-056984789982"></a>
 
@@ -231,6 +243,18 @@ Summary: Project proposal defining sequences, branches, evidence merges, compone
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-02/project-sources.json.
+
+<a id="src-11b52766dd34"></a>
+
+## SRC-11b52766dd34 — Local Python 3.14 hashlib source
+
+Original source: [/usr/lib/python3.14/hashlib.py](/usr/lib/python3.14/hashlib.py)
+
+Summary: Documented byte hashing and SHA-256 constructors used as source evidence for input revision identity.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-11f42e602b33"></a>
 
@@ -508,6 +532,18 @@ Evidence: web_inspected.
 
 Documents: research/sources/round-02/cad-sources.json.
 
+<a id="src-2945aa520dc5"></a>
+
+## SRC-2945aa520dc5 — Authorized action-audit execution record
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/execution-record.md](/home/leo/projects/3dmodeling/research/action-audit/execution-record.md)
+
+Summary: Observed dispatch, actual identity reports, review dispositions, scope finding and source-registration integration for this authorized documentation batch.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-29e05b3b3047"></a>
 
 ## SRC-29e05b3b3047 — OpenCADStudio kernel body path note
@@ -542,7 +578,31 @@ Summary: Official API guidance for wall, profile and mesh representations, place
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+
+<a id="src-2d331dacc4f0"></a>
+
+## SRC-2d331dacc4f0 — Execution plan: define one workflow point at a time
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+
+Summary: Authorized documentation method: fifteen fields per action, alternative software/agent modes, evidence-based merges, feature-specific accuracy and local-compute-first definition order.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-2d6abe7b467d"></a>
+
+## SRC-2d6abe7b467d — decimal — Decimal fixed-point and floating-point arithmetic — Python 3.15.2 documentation
+
+Original source: [https://docs.python.org/3/library/decimal.html](https://docs.python.org/3/library/decimal.html)
+
+Summary: Official Python documentation describes Decimal construction from strings and exact representation of decimal values, while Decimal construction from a binary float preserves that float's binary approximation. For intake, passing a source numeric string directly to Decimal preserves its decimal value and spelling-significance digits for subsequent controlled arithmetic. Decimal does not assign units, distinguish engineering tolerances from measurement uncertainty or validate feature association; arithmetic context and rounding still govern calculations.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-04/intake-sources.json.
 
 <a id="src-2e05ef8b5192"></a>
 
@@ -554,7 +614,7 @@ Summary: Primary MJCF/URDF model semantics, bodies, joints, frames, supported co
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2e92a48ed867"></a>
 
@@ -579,6 +639,18 @@ Summary: Source referenced for the stated workflow; see the owning documentation
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-03/cad-detail-sources.json.
+
+<a id="src-2fe2fa4714a1"></a>
+
+## SRC-2fe2fa4714a1 — Local Python 3.14 decimal interface source
+
+Original source: [/usr/lib/python3.14/decimal.py](/usr/lib/python3.14/decimal.py)
+
+Summary: Decimal interface source inspected by software reviewer; official decimal documentation separately supports exact string construction.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-31cafb73df3e"></a>
 
@@ -938,7 +1010,7 @@ Summary: 1. Name: OpenCV; Role: Planar image rectification and raster line candi
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
+Documents: research/action-audit/reviews/visual-review.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
 
 <a id="src-447a55563fd3"></a>
 
@@ -999,6 +1071,18 @@ Summary: Official end-to-end API examples for creating an IFC project, assigning
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
+<a id="src-4a6934063635"></a>
+
+## SRC-4a6934063635 — hashlib — Secure hashes and message digests — Python 3.15.2 documentation
+
+Original source: [https://docs.python.org/3/library/hashlib.html](https://docs.python.org/3/library/hashlib.html)
+
+Summary: Official Python documentation describes hash objects that accept bytes-like input and return a digest for the concatenated bytes; SHA-256 is a documented constructor. For intake, a SHA-256 digest can identify and compare the exact byte content recorded for an input revision. A digest does not establish who supplied the bytes, source authority, correctness or semantic equivalence.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-04/intake-sources.json.
 
 <a id="src-4a6c22d94dd3"></a>
 
@@ -1286,7 +1370,19 @@ Summary: 2. Name: Tesseract; Role: Dimension text candidates with boxes/confiden
 
 Evidence: existing_report_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
+Documents: research/action-audit/reviews/visual-review.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
+
+<a id="src-5afc1d03b483"></a>
+
+## SRC-5afc1d03b483 — OCS session control helper source
+
+Original source: [/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py](/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py)
+
+Summary: Session preflight and mutation transport helper for a later authorized live CAD operation.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-5c5742981c2f"></a>
 
@@ -1468,6 +1564,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
+<a id="src-69c044526e3f"></a>
+
+## SRC-69c044526e3f — Point 01 — Descriptions and explicit dimensions to a model brief
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md)
+
+Summary: Proposed ten-action source-to-model-brief procedure with software, AI and user assignments, four execution modes, per-feature requirements, candidate comparison/merge, eight development components and thirteen future validation cases.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-6b30ccb4447f"></a>
 
 ## SRC-6b30ccb4447f — https://github.com/isl-org/Open3D
@@ -1600,6 +1708,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-71dee9d2e674"></a>
+
+## SRC-71dee9d2e674 — Visual interpretation review — descriptions and explicit dimensions to a model brief
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md)
+
+Summary: Authored audit document recording Visual interpretation review — descriptions and explicit dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-724b2d11a6eb"></a>
 
 ## SRC-724b2d11a6eb — https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md
@@ -1659,6 +1779,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-77594e51ac89"></a>
+
+## SRC-77594e51ac89 — Existing operation inventory and detailed-review state
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md](/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md)
+
+Summary: Authored audit document recording Existing operation inventory and detailed-review state. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-789932d05ce2"></a>
 
@@ -1972,6 +2104,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
 
+<a id="src-92b7a09b7e3a"></a>
+
+## SRC-92b7a09b7e3a — Local Python 3.14 CSV source
+
+Original source: [/usr/lib/python3.14/csv.py](/usr/lib/python3.14/csv.py)
+
+Summary: CSV dialect/field parsing source inspected by the software reviewer; retain source strings and explicit dialect.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-932141965717"></a>
 
 ## SRC-932141965717 — Blender Lab MCP page
@@ -2007,6 +2151,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-93b47d856776"></a>
+
+## SRC-93b47d856776 — Local Python 3.14 JSON interface source
+
+Original source: [/usr/lib/python3.14/json/__init__.py](/usr/lib/python3.14/json/__init__.py)
+
+Summary: Decoder callbacks, numeric token handling and nonfinite/default behavior inspected as intake design evidence.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-9463773b6a12"></a>
 
@@ -2118,15 +2274,15 @@ Documents: research/sources/round-03/domain-detail-sources.json, research/workfl
 
 <a id="src-9a4cc68545a8"></a>
 
-## SRC-9a4cc68545a8 — Tesseract command line usage
+## SRC-9a4cc68545a8 — Command Line Usage — Tesseract documentation
 
 Original source: [https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html](https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html)
 
-Summary: Official Tesseract documentation shows TSV output with text, hierarchical page/block/line/word identifiers, pixel bounding boxes and confidence values.
+Summary: Official Tesseract command-line documentation shows TSV output selected by adding the tsv config and includes hierarchy identifiers, left/top/width/height pixel boxes, confidence values and recognized text in its example output. This supports recording OCR text candidates and image regions for later source review. Confidence and recognized text remain OCR output and do not establish engineering glyph, unit or feature meaning. The same URL is already present in the project source register; this observation records the fresh bounded inspection.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
+Documents: research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-02/cad-sources.json, research/sources/round-04/intake-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
 <a id="src-9bffb9dff56b"></a>
 
@@ -2139,6 +2295,18 @@ Summary: License observed locally: project `LICENSE` begins with GNU Affero Gene
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-9cfde96bb911"></a>
+
+## SRC-9cfde96bb911 — csv — CSV file reading and writing — Python 3.15.2 documentation
+
+Original source: [https://docs.python.org/3/library/csv.html](https://docs.python.org/3/library/csv.html)
+
+Summary: Official Python documentation describes CSV readers and writers, configurable dialects and formatting parameters, and reader rows returned as strings by default. The QUOTE_NONNUMERIC option converts unquoted fields to floats. For intake, a declared dialect preserves field boundaries and reading as strings preserves source spellings for later interpretation. Parsing does not determine units, numeric locale or the meaning of a column.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-04/intake-sources.json.
 
 <a id="src-9df6cac46941"></a>
 
@@ -2222,7 +2390,7 @@ Summary: Combines retained sources and round-specific evidence; checks operation
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-03/project-detail-sources.json.
+Documents: research/sources/round-03/project-detail-sources.json, research/sources/round-04/audit-local-sources.json.
 
 <a id="src-a2e021f0ada1"></a>
 
@@ -2319,6 +2487,18 @@ Summary: Identifies the Panda MJCF model, states MuJoCo 2.3.3 or later, Apache-2
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
+
+<a id="src-a635c02f99cb"></a>
+
+## SRC-a635c02f99cb — OCS numerical contract checker source
+
+Original source: [/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py)
+
+Summary: Reads supplied point/axis/plane observations with one length/angular threshold pair per invocation; later adapter must preserve feature-specific applicability.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-a680edc6892e"></a>
 
@@ -2572,6 +2752,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
+<a id="src-b7aa02d92193"></a>
+
+## SRC-b7aa02d92193 — Local Python 3.14 JSON decoder source
+
+Original source: [/usr/lib/python3.14/json/decoder.py](/usr/lib/python3.14/json/decoder.py)
+
+Summary: Independent review inspected ordered pairs, dictionary conversion and nonfinite constants, supporting duplicate/nonfinite guards.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-b81d432f6f0a"></a>
 
 ## SRC-b81d432f6f0a — KiCad library repositories
@@ -2619,6 +2811,18 @@ Summary: 3. https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Impo
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r04.md.
+
+<a id="src-ba79f85a852f"></a>
+
+## SRC-ba79f85a852f — Action-by-action workflow audit
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/README.md](/home/leo/projects/3dmodeling/research/action-audit/README.md)
+
+Summary: Authored audit document recording Action-by-action workflow audit. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-bae586b9c767"></a>
 
@@ -2920,6 +3124,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r07.md, research/workflows/details/rec-r07.md.
 
+<a id="src-c9c50a504fb8"></a>
+
+## SRC-c9c50a504fb8 — json — JSON encoder and decoder — Python 3.15.2 documentation
+
+Original source: [https://docs.python.org/3/library/json.html](https://docs.python.org/3/library/json.html)
+
+Summary: Official Python documentation describes JSON decoding, default conversions, custom parse_float and parse_int callbacks receiving numeric token strings, parse_constant for NaN/Infinity tokens, object_pairs_hook receiving ordered object pairs, and JSONDecodeError for malformed documents. By default, the decoder accepts NaN/Infinity extensions and repeated object names, keeping only the last repeated value. For strict intake, a caller can reject constants and inspect pairs to detect duplicate names. Decoding exposes structure and syntax; it does not assign units, feature identity or engineering meaning.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-04/intake-sources.json.
+
 <a id="src-ca3076996fa5"></a>
 
 ## SRC-ca3076996fa5 — GitHub repository metadata or tree response
@@ -2955,6 +3171,18 @@ Summary: solvePnP estimates object/world-to-camera rotation and translation from
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r07.md, research/workflows/details/rec-r09.md.
+
+<a id="src-cce96de57cbe"></a>
+
+## SRC-cce96de57cbe — Ideas
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/ideas.json](/home/leo/projects/3dmodeling/research/action-audit/ideas.json)
+
+Summary: Authored audit document recording Ideas. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-cd7868332c03"></a>
 
@@ -3039,6 +3267,18 @@ Summary: Ten proposed combined workflow dossiers with source-backed operations, 
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-03/project-detail-sources.json.
+
+<a id="src-d526125ac341"></a>
+
+## SRC-d526125ac341 — Source check: intake operations
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md)
+
+Summary: Authored audit document recording Source check: intake operations. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-d5265b630533"></a>
 
@@ -3184,6 +3424,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-dfe7c160f462"></a>
+
+## SRC-dfe7c160f462 — OCS model contract
+
+Original source: [/home/leo/.codex/skills/ocs-engineering/references/model-contract.md](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md)
+
+Summary: Requirements for units, frames, source corrections, parts, tolerances and supplied numerical check observations.
+
+Evidence: local_source_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-e1ca3a166ec3"></a>
 
 ## SRC-e1ca3a166ec3 — Inspecting and checking saved CAD in Python
@@ -3220,6 +3472,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r06.md.
 
+<a id="src-e3ba6f17358b"></a>
+
+## SRC-e3ba6f17358b — Operation Inventory
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json](/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json)
+
+Summary: Authored audit document recording Operation Inventory. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
 <a id="src-e3d95e78d033"></a>
 
 ## SRC-e3d95e78d033 — https://github.com/Tencent-Hunyuan/Hunyuan3D-2
@@ -3243,6 +3507,30 @@ Summary: - Underlying SAM 3D model service https://fal.ai/models/fal-ai/sam-3/3d
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-e74aa94bbb50"></a>
+
+## SRC-e74aa94bbb50 — Procedure-design review notes — Point 01 model brief
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md)
+
+Summary: Authored audit document recording Procedure-design review notes — Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-e796d575e829"></a>
+
+## SRC-e796d575e829 — Software review: descriptions and dimensions to a model brief
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md)
+
+Summary: Authored audit document recording Software review: descriptions and dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-e8c6f17f90e5"></a>
 
@@ -3348,9 +3636,9 @@ Original source: [/home/leo/.codex/skills/ocs-engineering/references/ocs-control
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_source_inspected.
 
-Documents: research/sources/round-03/cad-detail-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json.
 
 <a id="src-ebd6e769a79a"></a>
 
@@ -3614,7 +3902,7 @@ Summary: Official documentation source for creating and constraining sketches th
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
+Documents: research/action-audit/reviews/visual-review.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
 
 <a id="src-fe66e203f22d"></a>
 

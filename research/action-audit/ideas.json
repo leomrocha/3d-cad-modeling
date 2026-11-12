@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-12",
+  "ideas": [
+    {
+      "id": "AUDIT-I01",
+      "name": "Per-action software and AI options",
+      "summary": "Define agent-led, hybrid, software-first exception and deterministic alternatives per action and supported input class.",
+      "status": "proposal",
+      "origin": "authorized_action_audit_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/plan.md",
+          "line": 5,
+          "section": "1. Required action record"
+        }
+      ],
+      "next_check": "Review the point-01 assignment of software, model and user responsibilities."
+    },
+    {
+      "id": "AUDIT-I02",
+      "name": "Evidence-based candidate comparison and merge",
+      "summary": "Run alternative interpretations or software routes where useful; align their records, compare evidence and preserve per-feature provenance when a reasoning VLM proposes selection or combination.",
+      "status": "proposal",
+      "origin": "authorized_action_audit_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/plan.md",
+          "line": 40,
+          "section": "3. Parallel branches, comparison and merging"
+        }
+      ],
+      "next_check": "Review conflict, source-precedence and post-merge validation cases."
+    },
+    {
+      "id": "AUDIT-I03",
+      "name": "Per-feature tolerance and intended-use requirements",
+      "summary": "Separate dimensional accuracy, geometry detail, appearance, function, simulation and manufacturing requirements; attach tolerances to individual features and relationships.",
+      "status": "proposal",
+      "origin": "authorized_action_audit_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/plan.md",
+          "line": 50,
+          "section": "4. Goal-specific accuracy and completeness"
+        }
+      ],
+      "next_check": "Review the first-point requirement and tolerance record without introducing a sample design."
+    },
+    {
+      "id": "AUDIT-I04",
+      "name": "Tested replacement of specific agent actions",
+      "summary": "Specify and test repeatable software functions for particular input classes while preserving agent-assisted exception routes.",
+      "status": "proposal",
+      "origin": "authorized_action_audit_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/plan.md",
+          "line": 58,
+          "section": "5. Replacing particular agent actions with software"
+        }
+      ],
+      "next_check": "Review proposed representative and failure cases before any implementation."
+    },
+    {
+      "id": "AUDIT-I05",
+      "name": "Local-compute-first point order",
+      "summary": "Define source briefs and existing geometry before processing-heavy reconstruction; record local and remote resources separately.",
+      "status": "proposal",
+      "origin": "authorized_action_audit_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/plan.md",
+          "line": 83,
+          "section": "7. Local-compute-first definition order"
+        }
+      ],
+      "next_check": "Review each point in the plan order with its stated data size and output purpose."
+    },
+    {
+      "id": "AUDIT-I06",
+      "name": "Procedure design and independent review roles",
+      "summary": "Use the requested Astra, Sol, Terra and Luna assignments for design, visual reasoning, independent review, software assessment and primary-source lookup.",
+      "status": "proposal",
+      "origin": "authorized_action_audit_plan",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/plan.md",
+          "line": 68,
+          "section": "6. Model roles and validation responsibilities"
+        }
+      ],
+      "next_check": "Record actual task execution, source findings and reviewer dispositions separately from dispatch settings."
+    }
+  ]
+}
