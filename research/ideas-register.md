@@ -1838,6 +1838,42 @@ Original proposal: [execution/2026-11-12-component-led.md](/home/leo/projects/3d
 
 Next check: Resolve the named feature input and exercise the matching native component actions with their own checks.
 
+## COMP-I08 — Cold-formed tube nominal corner geometry
+
+Status: proposal.
+
+For the proposed 40×40×3 mm main-frame rail and crossmember, EN 10219-2:2019 Annex A.3 provides nominal section-property radii of 6 mm outside and 3 mm inside. Table 3 separately gives the 4.8–7.2 mm external manufacturing profile interval. A CAD reference representation can carry this named calculation basis; supplier conformity requires its own product evidence.
+
+Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+
+Original proposal: [research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md), line 1.
+
+Next check: Use the source-defined nominal model label when this calculation convention is the chosen representation; preserve supplier process evidence separately.
+
+## COMP-I09 — Hot-finished tube nominal corner geometry
+
+Status: proposal.
+
+EN 10210-2:2019 Annex A.3 supplies the alternative nominal section-property radii of 4.5 mm outside and 3 mm inside at 3 mm nominal wall thickness. Table 2 supplies a 9 mm default external maximum, with a 6 mm maximum under order option 2.2. Keep this process-specific branch linked to the same rail/crossmember source sheets.
+
+Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+
+Original proposal: [research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md), line 1.
+
+Next check: Match the hot-finished branch to product evidence before assigning it as actual supply geometry.
+
+## COMP-I10 — Measured tube corner geometry
+
+Status: proposal.
+
+For a model representing actual stock geometry, EN 10219-2:2019 clause 7.7 describes external profile measurement using a radius gauge or corner offsets. Record actual stock measurements as a separate input revision linked to the supplier item and the main-frame component records.
+
+Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+
+Original proposal: [research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md), line 1.
+
+Next check: Retain measurement locations, units, method and observed values when measurements are available.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-12",
+  "scope": "Tube corner standards research, source registration and nominal/measured geometry proposals for P01 main-frame rail and P02 crossmember",
+  "state": "PASS",
+  "coordinator_model": "gpt-6.1-sol",
+  "research_agent": {
+    "requested_model": "gpt-6-luna",
+    "actual_runtime_model": "unavailable"
+  },
+  "checkpoint_commit": "5aa5a4f",
+  "check_history": [
+    {
+      "check": "staged whitespace check",
+      "state": "FAILED",
+      "observation": "Report observation-date line contained two trailing spaces; initial unstaged diff check omitted this then-untracked file."
+    },
+    {
+      "check": "correction",
+      "state": "APPLIED",
+      "observation": "Removed trailing whitespace, refreshed report hash and rebuilt registers; final checks cover both staged and unstaged files against HEAD."
+    }
+  ],
+  "source_evidence": "Delegated source observations distinguish readable PDF content, indexed standard excerpts, metadata and failed page access. Arithmetic and registration were checked locally.",
+  "checks": {
+    "state": "PASS",
+    "sources_checked": 13,
+    "prior_ideas_preserved": 98,
+    "new_proposals": 3,
+    "mermaid_blocks_preserved": 2,
+    "baseline_files_checked": 153,
+    "arithmetic_mm": {
+      "cold_outer_nominal": "6.0",
+      "cold_inner_nominal": "3.0",
+      "cold_external_min": "4.8",
+      "cold_external_max": "7.2",
+      "hot_outer_nominal": "4.5",
+      "hot_inner_nominal": "3.0",
+      "hot_external_max": "9",
+      "hot_external_option_max": "6"
+    },
+    "register_counts": {
+      "date": "2026-11-12",
+      "sources": 652,
+      "operations": 77,
+      "recipes": 38,
+      "ideas": 206,
+      "candidate_handoffs": 879,
+      "errors": [],
+      "check_meaning": "Registration and declared type consistency, not tool execution or geometric validation"
+    }
+  },
+  "rebuild_check": {
+    "state": "PASS",
+    "files_compared": 11,
+    "receipt_included": true
+  }
+}

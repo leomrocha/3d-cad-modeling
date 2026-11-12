@@ -770,7 +770,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json.
 
 <a id="src-1b2c3957498a"></a>
 
@@ -951,6 +951,18 @@ Summary: Input sheet registered from the inspected ferme manifest: attachments; 
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-240fe89d1198"></a>
+
+## SRC-240fe89d1198 — EN 10210-2:2019 (E), SIST sample — Hot finished structural hollow sections, Part 2
+
+Original source: [https://cdn.standards.iteh.ai/samples/38061/b2cb736a37f94d2f8a72c739a042aa44/SIST-EN-10210-2-2019.pdf](https://cdn.standards.iteh.ai/samples/38061/b2cb736a37f94d2f8a72c739a042aa44/SIST-EN-10210-2-2019.pdf)
+
+Summary: EN 10210-2:2019 sample observations exposed rounded internal corners and the stated weld-corner exception in Clause6.2, Table2 default external maximum3T and Clause5.2 Option2.2 purchaser maximum2T. The PDF search-result excerpt exposed AnnexA.3 nominal calculation formulas ro=1.5T and ri=1.0T. At T=3mm the calculation radii are4.5mm/3mm, default external maximum9mm and optional maximum6mm.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
 
 <a id="src-243b037b93ab"></a>
 
@@ -1504,6 +1516,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
+<a id="src-3555fbfacefa"></a>
+
+## SRC-3555fbfacefa — iTeh catalogue access for EN 10219-2:2019
+
+Original source: [https://standards.iteh.ai/catalog/standards/cen/073cb87d-d24a-4cde-b626-79d9b01cb537/en-10219-2-2019](https://standards.iteh.ai/catalog/standards/cen/073cb87d-d24a-4cde-b626-79d9b01cb537/en-10219-2-2019)
+
+Summary: Direct open attempt returned HTTP 502. Standard content was instead inspected from the linked SIST-EN-10219-2-2019 PDF sample and AFNOR catalogue record. This catalogue failure is recorded without supporting claims.
+
+Evidence: access_failed.
+
+Documents: research/sources/round-10/tube-corner-sources.json.
+
 <a id="src-35cca1cb0d7e"></a>
 
 ## SRC-35cca1cb0d7e — blender_gltf.py — Blender glTF importer source, main branch
@@ -1587,6 +1611,18 @@ Summary: Existing local source cited by point 07 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-39b9dbfcfb8e"></a>
+
+## SRC-39b9dbfcfb8e — AFNOR Éditions — NF EN 10219-2
+
+Original source: [https://www.boutique.afnor.org/fr-fr/norme/nf-en-102192/profils-creux-de-construction-soudes-formes-a-froid-en-aciers-partie-2-tole/fa177343/83616](https://www.boutique.afnor.org/fr-fr/norme/nf-en-102192/profils-creux-de-construction-soudes-formes-a-froid-en-aciers-partie-2-tole/fa177343/83616)
+
+Summary: AFNOR catalogue lists NF EN 10219-2 as published May 2019 and in force, identifies European parent EN 10219-2:2019, describes coverage of cold-formed welded circular/square/rectangular/elliptical hollow sections, and says Annex A contains section-property formulas for structural design and Annex B gives properties for a limited common-size range. The 2006 NF edition is marked annulée/replaced.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
 
 <a id="src-39f868616f62"></a>
 
@@ -1826,7 +1862,7 @@ Summary: Existing local component/action/skill/catalogue source reused by the co
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json.
 
 <a id="src-3ec7111d8cd7"></a>
 
@@ -1959,6 +1995,18 @@ Summary: Upstream repository says V-HACD is archived/end-of-life and directs new
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md.
+
+<a id="src-42c5c688de76"></a>
+
+## SRC-42c5c688de76 — NEN — NEN-EN 10210-1:2026 Ontw. en (draft) catalogue entry
+
+Original source: [https://www.nen.nl/nen-en-10210-1-2026-ontw-en-350480](https://www.nen.nl/nen-en-10210-1-2026-ontw-en-350480)
+
+Summary: NEN identifies a 2026 Part 1 delivery-condition text as draft and dates it 1 April 2026. Its scope covers hot-finished hollow sections, including cold-formed product subsequently heat-treated above 580 °C to obtain equivalent properties. Its note says the sectional properties in EN 10210-2 and EN 10219-2 are not equivalent. This is 2026 draft-edition context; the corner-property evidence here comes from the separately inspected 2019 Part 2 documents.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
 
 <a id="src-42ef176046c7"></a>
 
@@ -3748,6 +3796,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-7db7da4f6264"></a>
+
+## SRC-7db7da4f6264 — Tube-corner source observations
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json](/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json)
+
+Summary: Individual delegated web observations, exact standard clauses, supplier listing details, catalogue edition evidence, access failures and existing FERME sheet relationships underpin the tube-corner report. Each source retains its own concrete summary and evidence status.
+
+Evidence: authored_research_document_inspected.
+
+Documents: research/sources/round-10/tube-corner-local-sources.json.
+
 <a id="src-7f544def9af7"></a>
 
 ## SRC-7f544def9af7 — Robot tow ball (C025) — CAD input sheet
@@ -3976,6 +4036,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-840b108e75da"></a>
+
+## SRC-840b108e75da — iTeh catalogue access for EN 10210-2:2019
+
+Original source: [https://standards.iteh.ai/catalog/standards/cen/7f06ebee-2a61-4278-a970-6bf6ad05e1ab/en-10210-2-2019](https://standards.iteh.ai/catalog/standards/cen/7f06ebee-2a61-4278-a970-6bf6ad05e1ab/en-10210-2-2019)
+
+Summary: Direct open attempt returned HTTP 502. Standard content was instead inspected from the linked SIST-EN-10210-2-2019 PDF sample. This catalogue failure is recorded without supporting claims.
+
+Evidence: access_failed.
+
+Documents: research/sources/round-10/tube-corner-sources.json.
+
 <a id="src-840d8b69fd8f"></a>
 
 ## SRC-840d8b69fd8f — Software review: CAD, photographs and scans alignment
@@ -4118,7 +4190,7 @@ Summary: Existing local component/action/skill/catalogue source reused by the co
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json.
 
 <a id="src-896c4a89c975"></a>
 
@@ -4190,7 +4262,7 @@ Summary: Component-led execution source: actual reusable implementation, source-
 
 Evidence: local_source_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-10/tube-corner-sources.json.
 
 <a id="src-8ae740d518bb"></a>
 
@@ -4215,6 +4287,18 @@ Summary: Input sheet registered from the inspected ferme manifest: caster; Caste
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-8bf87f7a8c04"></a>
+
+## SRC-8bf87f7a8c04 — AENOR — DIN EN 10210-1:2026-03 catalogue entry for prEN 10210-1:2026
+
+Original source: [https://tienda.aenor.com/p/norma-din-en-10210-1-2026-03-399626373](https://tienda.aenor.com/p/norma-din-en-10210-1-2026-03-399626373)
+
+Summary: AENOR page identifies the March 2026 German/English prEN 10210-1:2026 text as intended to replace DIN EN 10210-1:2006 and DIN EN 10210-3:2020, and its description covers hot-finished structural hollow sections. Used only as cross-check on the 2026 Part 1 edition transition; no corner claims are drawn from this source.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
 
 <a id="src-8c216bd07f9d"></a>
 
@@ -5920,6 +6004,18 @@ Evidence: archived_original_referenced, existing_report_registered.
 
 Documents: research/sources/round-02/archive-sources.json, research/sources/round-02/project-sources.json.
 
+<a id="src-c2bf631e3721"></a>
+
+## SRC-c2bf631e3721 — Square-tube corner research for main-frame rails and crossmembers
+
+Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+
+Summary: Luna report compares EN 10219-2:2019 cold-formed and EN 10210-2:2019 hot-finished nominal section-property corner radii, external manufacturing profile limits and seller evidence for item040819. It links these findings to P01/P02 and records reference-model and measured-stock alternatives as proposals.
+
+Evidence: authored_research_document_inspected.
+
+Documents: research/sources/round-10/tube-corner-local-sources.json.
+
 <a id="src-c2f8f1ee81fd"></a>
 
 ## SRC-c2f8f1ee81fd — acis_export.rs
@@ -6375,6 +6471,18 @@ Summary: Existing archived source for procedural geometry and computational-engi
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-d19d818a7706"></a>
+
+## SRC-d19d818a7706 — Perrin / Fers & Métaux — Tube carré 40×40×3, item 040819
+
+Original source: [https://www.fers-metaux.com/mes-produits/fer/tubes-carres/3004g-tube-carre](https://www.fers-metaux.com/mes-produits/fer/tubes-carres/3004g-tube-carre)
+
+Summary: Seller page identifies product 040819 as TUBE CARRE 40X40X3, lists 5.62 EUR TTC per metre and 19.8 kg, states bars are 6 m, dimensions are exterior, standard or cut lengths are available, and cutting tolerance is +5 mm. The inspected page provides no manufacturing route, EN standard, grade or corner-radius measurement.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
 
 <a id="src-d1c0e9f5deef"></a>
 
@@ -7348,6 +7456,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-f3ceeaee0041"></a>
+
+## SRC-f3ceeaee0041 — supplier-hosted standard PDF
+
+Original source: [https://www.botopsteelpipes.com/wp-content/uploads/2024/08/EN-10219-2-2019.pdf](https://www.botopsteelpipes.com/wp-content/uploads/2024/08/EN-10219-2-2019.pdf)
+
+Summary: For a 40 × 40 × 3 mm cold-formed welded structural hollow section using the EN 10219-2:2019 corner and property conventions, the standard distinguishes two corner values. The applicable delivery-condition requirements belong to the corresponding Part 1; the corner evidence below combines the readable EN 10219-2:2019 sample for Clause 6.2 and Table 3 with the indexed Annex A.3 excerpt of the supplier-hosted standard PDF for the calculation radii:
+
+Evidence: existing_report_registered, search_excerpt_inspected.
+
+Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
+
 <a id="src-f4b8da3b384e"></a>
 
 ## SRC-f4b8da3b384e — runtime.py
@@ -7503,6 +7623,18 @@ Summary: Local OCS guide describes stdio MCP and drawing inspection, mutation, m
 Evidence: local_source_inspected, local_reference_registered.
 
 Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-f828ba9d8d3b"></a>
+
+## SRC-f828ba9d8d3b — EN 10219-2:2019 (E), SIST sample — Cold formed welded structural hollow sections, Part 2
+
+Original source: [https://cdn.standards.iteh.ai/samples/38063/99682514fcf94faabd079f41b1a7854e/SIST-EN-10219-2-2019.pdf](https://cdn.standards.iteh.ai/samples/38063/99682514fcf94faabd079f41b1a7854e/SIST-EN-10219-2-2019.pdf)
+
+Summary: Readable EN 10219-2:2019 sample output exposed Clause 6.2 (rounded internal corners, internal profile unspecified), Table 3 (external corner profile 1.6T–2.4T for T≤6 mm) and Clause 7.7 (radius gauge or corner-offset measurement). At nominal T=3 mm the external interval calculates to 4.8–7.2 mm. The Annex A.3 nominal radii are attributed separately to the indexed supplier-hosted standard excerpt.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/sources/round-10/tube-corner-sources.json, research/tube-corner-research.md.
 
 <a id="src-f87051bef24f"></a>
 
