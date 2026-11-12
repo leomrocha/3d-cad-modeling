@@ -186,6 +186,8 @@
         "research/action-audit/reviews/point-04-software.md",
         "research/action-audit/reviews/point-04-sources.md",
         "research/action-audit/reviews/point-04-visual.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-04-web-sources.json",
         "research/workflows/details/dom-r01.md",
@@ -213,10 +215,21 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
+          "access_date": "2026-11-12",
+          "sha256": "19d591fc7c1e88f96122080986338afec5c94177b04abf954674094d40681450",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -412,6 +425,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -426,7 +449,8 @@
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -461,6 +485,7 @@
       ],
       "referring_documents": [
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -584,6 +609,32 @@
       ]
     },
     {
+      "id": "SRC-047ea9576020",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md",
+      "title": "dom-r03.md",
+      "summary": "Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md",
+          "access_date": "2026-11-12",
+          "sha256": "7efb6713eec7da0ffad1bad03c49c4c5126a59b07009b8a5a41475fe8a57b756",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-056984789982",
       "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
       "local_source_path": null,
@@ -625,6 +676,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -736,13 +790,24 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -792,10 +857,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
+          "access_date": "2026-11-12",
+          "sha256": "f0e8ce4904198d651d947255be25de7ebee2055077867e67e0ed128fdec4c827",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -998,6 +1074,64 @@
         "research/action-audit/reviews/point-02-designer.md",
         "research/action-audit/reviews/point-02-sources.md",
         "research/sources/round-05/point-02-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-0d6d9bc1a30b",
+      "url": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html",
+      "local_source_path": null,
+      "title": "https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html",
+      "summary": "Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-06-sources.md",
+        "research/sources/round-05/point-06-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-0df55f79b2d5",
+      "url": "https://www.ros.org/reps/rep-0103.html",
+      "local_source_path": null,
+      "title": "https://www.ros.org/reps/rep-0103.html",
+      "summary": "Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-06-sources.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -1460,6 +1594,42 @@
       ]
     },
     {
+      "id": "SRC-1a05e425438e",
+      "url": "https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst",
+      "local_source_path": null,
+      "title": "REP-103: Standard Units of Measure and Coordinate Conventions — ros-infrastructure/rep master",
+      "summary": "ROS REP source page accessed 2026-11-12. Repository page says archived October 23, 2025; REP text labels itself Active/Informational. Specifies SI metre, kilogram, second; radian; right-handed frames; body x-forward/y-left/z-up; optical z-forward/x-right/y-down. Branch is mutable.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-08",
+            "DOM-09",
+            "DOM-31",
+            "DOM-37"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/sources/round-05/point-06-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-1a10c8033611",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
@@ -1556,11 +1726,22 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+          "access_date": "2026-11-12",
+          "sha256": "23a6d64e95a799699232d15f06e86206862a3b7089d57e3e53d7856cb01bd320",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -1587,6 +1768,35 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1f4431787dd4",
+      "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html",
+      "local_source_path": null,
+      "title": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html",
+      "summary": "Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": null,
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-06-sources.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -1880,6 +2090,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "access_date": "2026-11-12",
+          "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -1888,7 +2108,8 @@
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -2005,6 +2226,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -2064,23 +2287,35 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "37b0d41ee65e7bcd60880920848e8a11a109e7483f55f3b679b5951fcceb0a2e",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
       "id": "SRC-2759f46214ed",
       "url": "https://github.com/SarahWeiii/CoACD",
       "local_source_path": null,
-      "title": "SarahWeiii/CoACD",
-      "summary": "- CoACD: approximate convex decomposition implementation SarahWeiii/CoACD. Its LICENSE is MIT, copyright Xinyue Wei and Minghua Liu (2022). Pin the reviewed revision and retain its notice when distributing the tool.",
+      "title": "SarahWeiii/CoACD README and repository page",
+      "summary": "Official repository page accessed 2026-11-12; mutable main branch, no commit pin inspected. README documents OBJ input, OBJ/WRL output, convex components, `-i/--input`, `-o/--output`, `-t/--threshold` default 0.05, metre-scale `-rm/--real-metric`, and `-sp/--split` individual pieces. Existing source register separately records MIT license and 2022 copyright.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -2093,13 +2328,71 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-13",
+            "DOM-32",
+            "DOM-33",
+            "DOM-34"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-06-web-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r08.md"
+      ]
+    },
+    {
+      "id": "SRC-28c1ea6ca46e",
+      "url": "https://dev.opencascade.org/doc/refman/html/class_g_prop___g_props.html",
+      "local_source_path": null,
+      "title": "GProp_GProps Class Reference — Open CASCADE Technology Reference Manual 8.0.1",
+      "summary": "Official OCCT reference accessed 2026-11-12. Requested dev.opencascade.org URL redirected to occt3d.com. GProp_GProps provides mass, absolute-frame centre of mass and central inertia tensor; Add(component,density) composes properties and automatically applies Huygens parallel-axis shifts. The docs warn to use coherent geometry/density units and avoid applying density twice.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-14",
+            "DOM-11",
+            "DOM-32"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -2199,6 +2492,33 @@
       ]
     },
     {
+      "id": "SRC-2ad28cfa19ba",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md",
+      "title": "Point 06 — software and API review",
+      "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md",
+          "access_date": "2026-11-12",
+          "sha256": "984f3da77991b6f189e3bf2bc412582a66e38b49a7b388459fc8518265379590",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2b16462315c1",
       "url": "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
       "local_source_path": null,
@@ -2235,11 +2555,38 @@
       ]
     },
     {
+      "id": "SRC-2b834d92a1e6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "title": "Point 06 — Building and robot structure and properties",
+      "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+          "access_date": "2026-11-12",
+          "sha256": "ac05de553e7acc4ed7387a2502eb70096bece8db96bc549aa60b48915e7002cb",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2bcc72542265",
       "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
       "local_source_path": null,
       "title": "Geometry creation — IfcOpenShell 0.9.0post1 documentation",
-      "summary": "IfcOpenShell 0.9.0post1 documents wall-like representations and `geometry.create_2pt_wall` with endpoints p1/p2, elevation, height and thickness. The representation follows the object placement along local +X, with thickness along local +Y; placement and rotation set plan endpoints. Examples use metre dimensions; `geometry.edit_object_placement(..., is_si=True)` selects SI translation units instead of project units. The guide also documents profile representations extruded along +Z. These are API examples, not executed geometry.",
+      "summary": "IfcOpenShell 0.9.0post1 guide accessed 2026-11-12. Records representation creation examples and placement/unit distinction; used as background source for separating IFC geometric representation authoring from semantic product creation.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -2284,18 +2631,38 @@
             "research/action-audit/reviews/point-04-sources.md",
             "research/action-audit/reviews/point-04-software.md"
           ]
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-15",
+            "DOM-35"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-02-visual.md",
         "research/action-audit/reviews/point-04-designer.md",
         "research/action-audit/reviews/point-04-software.md",
         "research/action-audit/reviews/point-04-visual.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-04-web-sources.json",
+        "research/sources/round-05/point-06-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r07.md",
         "research/workflows/details/mix-r01.md",
@@ -2365,6 +2732,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -2372,7 +2749,35 @@
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2d407c9d997c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json",
+      "title": "point-06-operations",
+      "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "661707f4a64fc4dacfc5734cdb4200b5dceda04b587608356e88359223c66e8f",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -2440,8 +2845,8 @@
       "id": "SRC-2e05ef8b5192",
       "url": "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
       "local_source_path": null,
-      "title": "MuJoCo modeling guide",
-      "summary": "Primary MJCF/URDF model semantics, bodies, joints, frames, supported conversion subset and asset concepts.",
+      "title": "MuJoCo modeling guide — main branch",
+      "summary": "Official repository guide on mutable main, accessed 2026-11-12. Documents spatial frames, right-handed orientation handling, quaternion/frame serialization and angle conventions; source branch is not a pinned runtime version.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -2476,14 +2881,37 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-08",
+            "DOM-10",
+            "DOM-11",
+            "DOM-31",
+            "DOM-32"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-06-web-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r03.md",
         "research/workflows/details/dom-r04.md",
@@ -2657,6 +3085,38 @@
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-3018a0ce5798",
+      "url": "https://freecad.github.io/SourceDoc/d8/ded/classPart_1_1TopoShape.html",
+      "local_source_path": null,
+      "title": "FreeCAD Part::TopoShape Class Reference",
+      "summary": "Official FreeCAD source documentation accessed 2026-11-12. General TopoShape reference lists read/write/import/export/validity APIs but did not expose mass, centre-of-mass or inertia methods in the inspected page; no mass-property claim relies on this page.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-14"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -2839,6 +3299,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/workflows/details/dom-r05.md",
@@ -2977,8 +3439,44 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md"
+      ]
+    },
+    {
+      "id": "SRC-35cca1cb0d7e",
+      "url": "https://github.com/blender/blender/blob/main/scripts/addons_core/io_scene_gltf2/blender/imp/blender_gltf.py",
+      "local_source_path": null,
+      "title": "blender_gltf.py — Blender glTF importer source, main branch",
+      "summary": "Official Blender source on mutable main, accessed 2026-11-12. Import code maps glTF Y-up to Blender Z-up `(x,-z,y)` and scales locations by `1 / scene.unit_settings.scale_length` as Blender units per metre. Does not pin installed Blender version or prove local import output.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-17",
+            "DOM-24"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -3163,6 +3661,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -3473,12 +3973,23 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "access_date": "2026-11-12",
+          "sha256": "cd7642e848bdd6b6b71d72443bb1d1df25ab188f581ecd52e5bcc81db117f24b",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -3712,6 +4223,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r02.md"
       ]
@@ -3933,10 +4447,13 @@
       ],
       "referring_documents": [
         "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-02-designer.md",
         "research/action-audit/reviews/point-02-software.md",
         "research/action-audit/reviews/point-02-sources.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-web-sources.json",
@@ -3987,6 +4504,43 @@
       "observations": [],
       "referring_documents": [
         "research/cad-and-skills.md"
+      ]
+    },
+    {
+      "id": "SRC-49217bd84235",
+      "url": "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
+      "local_source_path": null,
+      "title": "urdf_model/joint.hpp — ros/urdfdom_headers rolling branch",
+      "summary": "Official ROS URDFDOM header on mutable rolling branch, accessed 2026-11-12. Defines joint axis meaning by type, parent-to-joint transform, parent/child link identifiers, and child frame equal to joint frame. No commit pin or runtime parser version checked.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-08",
+            "DOM-09",
+            "DOM-31",
+            "DOM-37"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -4060,6 +4614,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md"
       ]
@@ -4125,6 +4681,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r03.md",
@@ -4270,6 +4828,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-software.md",
         "research/sources/round-02/domain-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r03.md",
@@ -4426,7 +4986,8 @@
       "summary": "Existing artifact pattern: source hashes, declared mm-to-m conversion, identity status, runtime and geometry mapping.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -4448,11 +5009,22 @@
           ],
           "sha256": null,
           "content_type": "text/markdown/json"
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+          "local_original": "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+          "access_date": "2026-11-12",
+          "sha256": "abd9482074580f19c97f622ca8542f37e13ea117d89b98b01af5b323e1d102bd",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
-        "research/sources/round-03/domain-detail-sources.json"
+        "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -4499,6 +5071,8 @@
         "research/action-audit/reviews/point-04-software.md",
         "research/action-audit/reviews/point-05-designer.md",
         "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md"
@@ -4530,6 +5104,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r05.md",
@@ -4713,6 +5289,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r02.md",
@@ -4766,6 +5343,41 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5641ae68d50e",
+      "url": "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/link.hpp",
+      "local_source_path": null,
+      "title": "urdf_model/link.hpp — ros/urdfdom_headers rolling branch",
+      "summary": "Official ROS URDFDOM header on mutable rolling branch, accessed 2026-11-12. `Link::Inertial` contains an origin pose, mass and six symmetric inertia tensor terms. No unit system is declared by the C++ data structure; ROS SI convention is separately recorded in REP-103.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-09",
+            "DOM-14",
+            "DOM-31"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -5039,6 +5651,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -5295,7 +5908,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -5347,6 +5962,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -5468,10 +6086,21 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
+          "access_date": "2026-11-12",
+          "sha256": "cfc71cccdfa35e369ecc26fd5dfb2e978bb530ea3bdeb5058d4e19488068c54b",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -5598,6 +6227,35 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "skills/README.md"
+      ]
+    },
+    {
+      "id": "SRC-6350270f836a",
+      "url": "https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html",
+      "local_source_path": null,
+      "title": "https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html",
+      "summary": "Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "access_failed"
+      ],
+      "observations": [
+        {
+          "evidence_status": "access_failed",
+          "access_date": "2026-11-12",
+          "supporting_claims": [],
+          "content_type": null,
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/reviews/point-06-sources.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -6208,6 +6866,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/workflows/details/dom-r01.md",
@@ -6401,6 +7061,40 @@
       ]
     },
     {
+      "id": "SRC-70879a2c2cb0",
+      "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/TechDraw_ExportPageSVG.md",
+      "local_source_path": null,
+      "title": "TechDraw ExportPageSVG — FreeCAD documentation main branch",
+      "summary": "Official FreeCAD documentation repository page inspected 2026-11-12 as targeted DOM-25 follow-up. Documents `TechDrawGui.exportPageAsSvg(DrawPageObject, FilePath)` for macros/Python console when the FreeCAD GUI module is active. The page states hatch patterns are not exported and text positions/sizes may be inaccurate. Repository was archived 2026-04-01; documentation page does not pin a FreeCAD release.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-25"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-717a1bbd2f70",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
@@ -6499,6 +7193,33 @@
       ]
     },
     {
+      "id": "SRC-71df4a24323d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-sources.md",
+      "title": "Point 06 primary-source check: building and robot structure and properties",
+      "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-sources.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-sources.md",
+          "access_date": "2026-11-12",
+          "sha256": "7f809711f2b2ed5906468c03b06ea463ba2e9c3e1dcf5f7049ba7e3493e317c5",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-724b2d11a6eb",
       "url": "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
       "local_source_path": null,
@@ -6574,8 +7295,8 @@
       "id": "SRC-75dbfddac2b8",
       "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
       "local_source_path": null,
-      "title": "IfcOpenShell geometry processing",
-      "summary": "Documents IFC geometry decoding into tessellated geometry or OpenCASCADE B-reps, including iterator-based bulk processing.",
+      "title": "Geometry processing — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 documentation accessed 2026-11-12. Documents create_shape element/representation processing, triangle and OpenCASCADE B-rep routes, geometry iterator, local vertices plus transformation matrix, opening subtraction defaults, and GLB serializer settings including meter unit declaration and optional element GUIDs.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -6594,10 +7315,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-16",
+            "DOM-17",
+            "DOM-27",
+            "DOM-34",
+            "DOM-35"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
+        "research/sources/round-05/point-06-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r07.md",
         "research/workflows/details/mix-r06.md",
@@ -6818,6 +7562,33 @@
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-05-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7986969c7a59",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-designer.md",
+      "title": "Point 06 designer notes — building and robot structure and properties",
+      "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-designer.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-designer.md",
+          "access_date": "2026-11-12",
+          "sha256": "6ab7cc32f7305128ff36f3b2cc5cf4e8d3a007f1e96416948f1fee30e7debff5",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -7289,11 +8060,22 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "1296b41c61f425db0665ef9aa5b8479e5bf2a06173ec9d43a9f11f19738fd8c1",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -7342,11 +8124,22 @@
           "referring_documents": [
             "research/action-audit/point-04-raster-drawings.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "26e3eca43c57087beb6bec8eca55fce6a20f9c3c7cd31ee0b7b5eec8c97e9467",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-04-local-sources.json"
+        "research/sources/round-05/point-04-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -7486,6 +8279,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-85b949b4c1e5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-independent.md",
+      "title": "Point 06 independent review — building and robot structure and properties",
+      "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-independent.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-independent.md",
+          "access_date": "2026-11-12",
+          "sha256": "17399ab81473cb5acc11d8567729e2295121efac8cf090061262653505b73017",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -7694,6 +8514,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r02.md",
@@ -7851,6 +8673,42 @@
       ]
     },
     {
+      "id": "SRC-8f369f8f1381",
+      "url": "https://mujoco.readthedocs.io/en/stable/python.html",
+      "local_source_path": null,
+      "title": "Python — MuJoCo Documentation",
+      "summary": "Stable MuJoCo Python binding documentation accessed 2026-11-12. Establishes the Python bindings are close to the C API; used alongside the model-editing page for Python method names. No local package version was checked.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-10",
+            "DOM-32",
+            "DOM-33",
+            "DOM-34"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/sources/round-05/point-06-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-8f8532cac48e",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
@@ -7928,6 +8786,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "access_date": "2026-11-12",
+          "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -7936,7 +8804,8 @@
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -7989,13 +8858,24 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "access_date": "2026-11-12",
+          "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -8260,6 +9140,33 @@
       ]
     },
     {
+      "id": "SRC-940fb4ea2921",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md",
+      "title": "Point 06 visual and evidence review — building and robot structure and properties",
+      "summary": "Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "13bd4075e184ed5f6784423fb43303c94300f7f3205cb504efead56a30c0ea93",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9463773b6a12",
       "url": "https://openscad.org/documentation",
       "local_source_path": null,
@@ -8372,7 +9279,8 @@
       "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -8385,10 +9293,21 @@
             "research/action-audit/point-02-component-reuse.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "ddfbcade5ba55cf336eb6452330672dfb2da69322ed17ad4d3157ce7db74ca1b",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -8436,6 +9355,8 @@
         "research/action-audit/reviews/point-05-designer.md",
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md"
@@ -8631,6 +9552,8 @@
         "research/action-audit/reviews/point-05-designer.md",
         "research/action-audit/reviews/point-05-software.md",
         "research/action-audit/reviews/point-05-sources.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-05-web-sources.json",
         "research/workflows/details/dom-r01.md"
@@ -8786,8 +9709,8 @@
       "id": "SRC-9a40d7c5ca24",
       "url": "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
       "local_source_path": null,
-      "title": "MuJoCo model editing API",
-      "summary": "Official mjSpec XML/URDF parsing and compile API; `MjModel.from_xml_path` parses/compiles XML or MJZ.",
+      "title": "Model Editing — MuJoCo Documentation",
+      "summary": "Stable MuJoCo documentation accessed 2026-11-12; page does not pin an installed release. Documents mjSpec parsing of MJCF/URDF through Python from_file/from_string, compilation to mjModel, and mj_saveXML/mj_saveXMLString/mj_encode serialization. XML output flattens spec; savecompiled controls source-spec versus compilation-made values and parser-expansion losses.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -8803,10 +9726,33 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-10",
+            "DOM-11",
+            "DOM-32",
+            "DOM-33",
+            "DOM-34"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-06-web-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r04.md"
       ]
@@ -9043,6 +9989,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r02.md",
@@ -9546,6 +10494,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r04.md"
       ]
@@ -9613,6 +10562,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -9766,6 +10718,8 @@
       ],
       "referring_documents": [
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -9858,6 +10812,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/workflows/details/dom-r07.md",
         "research/workflows/domain-paths.md"
@@ -10113,13 +11069,24 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -10213,6 +11180,68 @@
       ]
     },
     {
+      "id": "SRC-b165af8a4b88",
+      "url": "https://docs.ifcopenshell.org/ifcconvert/usage.html",
+      "local_source_path": null,
+      "title": "Usage — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcConvert documentation accessed 2026-11-12; embedded CLI manual identifies example build 0.8.4-158fe92 with OCC 7.8.1. Lists GLB as binary glTF 2.0, metre default and convert-back-units, placement baking option, GlobalId filtering, serializer ID-name limits, and separate Z-up node option.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-16",
+            "DOM-17",
+            "DOM-34"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b18991f27bde",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md",
+      "title": "dom-r08.md",
+      "summary": "Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md",
+          "access_date": "2026-11-12",
+          "sha256": "4e0576c2f225065e338017f3a17118f15de80b78586ec8bb1c580f52f3055c76",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-b1ac5466cbd1",
       "url": "https://cadquery.readthedocs.io/en/stable/classreference.html",
       "local_source_path": null,
@@ -10273,7 +11302,8 @@
       "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -10286,10 +11316,21 @@
             "research/action-audit/point-05-alignment-and-remodeling.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "6b5628396a5937608780b8dcf5a5df5fa035332b4cd5da07039b2a8ae35e22b1",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -10487,6 +11528,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -10497,7 +11548,8 @@
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -10568,12 +11620,23 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -10659,6 +11722,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/workflows/details/dom-r03.md",
         "research/workflows/details/mix-r02.md",
@@ -10748,6 +11813,7 @@
         "research/action-audit/point-02-component-reuse.md",
         "research/action-audit/reviews/point-02-software.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -11075,7 +12141,8 @@
       "summary": "Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -11088,10 +12155,21 @@
             "research/action-audit/point-05-alignment-and-remodeling.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "6858e7ff19e2ae1b61d6c03f6fe1bb5a20dea262625fcc090352aaf94b334547",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -11371,6 +12449,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -11463,6 +12544,41 @@
         "research/workflows/details/rec-r02.md",
         "research/workflows/details/rec-r03.md",
         "research/workflows/details/rec-r09.md"
+      ]
+    },
+    {
+      "id": "SRC-c026420b57f4",
+      "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_representation/index.html",
+      "local_source_path": null,
+      "title": "ifcopenshell.api.geometry.add_representation — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 API reference accessed 2026-11-12. `add_representation` takes an IFC context and Blender object/data geometry, optional SI offset and unit scale, and returns an IfcShapeRepresentation or None. API dependency and output do not amount to product classification, placement or relationship creation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-15",
+            "DOM-35"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -12803,6 +13919,7 @@
       ],
       "observations": [],
       "referring_documents": [
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md"
       ]
     },
@@ -12831,6 +13948,46 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d8bff2262475",
+      "url": "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
+      "local_source_path": null,
+      "title": "XML Reference — MuJoCo Documentation",
+      "summary": "Stable XML reference accessed 2026-11-12; exact local release not checked. Documents MJCF angle default degrees versus URDF radians, compiler defaults, inertia fields/frames, mesh file types and inference modes, kinematic tree and equality constraints. `fullinertia` order is M11,M22,M33,M12,M13,M23 and is diagonalized by compilation. Compiler centers meshes and aligns principal axes; `mjModel.mesh_pos`, `mesh_quat` and `mesh_scale` preserve asset transforms to compose with geom pose.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-10",
+            "DOM-11",
+            "DOM-12",
+            "DOM-14",
+            "DOM-32",
+            "DOM-33",
+            "DOM-34"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {
@@ -13006,6 +14163,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/user-supplied-links.md",
@@ -13276,6 +14435,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "access_date": "2026-11-12",
+          "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -13283,7 +14452,8 @@
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -13895,6 +15065,16 @@
           "referring_documents": [
             "research/action-audit/point-05-alignment-and-remodeling.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "access_date": "2026-11-12",
+          "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -13903,7 +15083,8 @@
         "research/sources/round-05/point-02-local-sources.json",
         "research/sources/round-05/point-03-local-sources.json",
         "research/sources/round-05/point-04-local-sources.json",
-        "research/sources/round-05/point-05-local-sources.json"
+        "research/sources/round-05/point-05-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -13965,6 +15146,32 @@
         "research/workflows/details/cad-r03.md",
         "research/workflows/details/mix-r01.md",
         "research/workflows/details/mix-r08.md"
+      ]
+    },
+    {
+      "id": "SRC-ecc97be7318c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-06-web-sources.json",
+      "title": "point-06-web-sources.json",
+      "summary": "Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-06-web-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-06-web-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "378270229e9ae139f8c4486bb63684fbf06a1fd6b8cc26368653c526eec56a32",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -14211,9 +15418,11 @@
       ],
       "referring_documents": [
         "research/action-audit/point-02-component-reuse.md",
+        "research/action-audit/point-06-building-and-robot.md",
         "research/action-audit/reviews/point-02-designer.md",
         "research/action-audit/reviews/point-02-sources.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -14338,8 +15547,8 @@
       "id": "SRC-f2c7a1c3b5b3",
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
       "local_source_path": null,
-      "title": "IfcOpenShell geometry API",
-      "summary": "Official geometry processing and representation conversion API.",
+      "title": "ifcopenshell.geom — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 API reference accessed 2026-11-12. Inspected as the registered geometry API reference; detailed documented return forms/settings used here are from the geometry-processing page in this same version.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -14366,11 +15575,32 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-16",
+            "DOM-27",
+            "DOM-34"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-06-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r07.md",
         "research/workflows/details/mix-r06.md",
@@ -14465,6 +15695,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/domains-and-components.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
@@ -14687,10 +15919,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "20012aeb48eb5d100abbaca03421bad4c3a79fdc08fcbaea9e17d9ac2fa38f98",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -14861,10 +16104,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
+          "access_date": "2026-11-12",
+          "sha256": "040016860a3df4ef3130531f5e5128faac7f6c22581279bea055cbbc00a49884",
+          "referring_documents": [
+            "research/action-audit/point-06-building-and-robot.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-06-local-sources.json"
       ]
     },
     {
@@ -15011,6 +16265,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-visual.md",
         "research/sources/round-02/domain-sources.json",
         "research/workflows/details/dom-r07.md",
         "research/workflows/domain-paths.md"
@@ -15099,6 +16355,42 @@
         "research/action-audit/reviews/point-05-independent.md",
         "research/action-audit/reviews/point-05-sources.md",
         "research/sources/round-05/point-05-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ff22572efb1e",
+      "url": "https://occt3d.com/dev/doc/refman/html/class_b_rep_g_prop.html",
+      "local_source_path": null,
+      "title": "BRepGProp Class Reference — Open CASCADE Technology Reference Manual 8.0.1",
+      "summary": "Official OCCT 8.0.1 reference inspected 2026-11-12 as targeted mass-property follow-up. `BRepGProp::VolumeProperties` computes volume properties into `GProp_GProps` for finite solid(s), no density attached; requires no free boundary and coherent orientation, which the API does not check. `UseTriangulation` selects triangulated or exact surfaces. Epsilon overload uses adaptive 2D Gauss integration and returns estimated relative error; Eps > 0.001 uses non-adaptive integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-14",
+            "DOM-11",
+            "DOM-32"
+          ],
+          "content_type": "text/html",
+          "local_original": null,
+          "sha256": null,
+          "referring_documents": [
+            "research/action-audit/reviews/point-06-sources.md",
+            "research/action-audit/reviews/point-06-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-06-building-and-robot.md",
+        "research/action-audit/reviews/point-06-designer.md",
+        "research/action-audit/reviews/point-06-software.md",
+        "research/sources/round-05/point-06-web-sources.json"
       ]
     },
     {

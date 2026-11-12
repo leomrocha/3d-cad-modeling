@@ -1,5 +1,12 @@
 # Research record
 
+## 12 November 2026 — Point 06 building and robot procedure audit
+
+1. Checkpoint: `f833b2b`; point 05 result commit: `87e3bbd`. Scope: nineteen operations and 57 actions for assembly/joint graphs, robot packages, native and imported MJCF, mesh/collision/physical properties, semantic IFC and geometry derivatives, scenes, library instances and fabrication packages.
+2. [Readable procedures](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md) and [action contracts](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) define source-backed APIs and proposed helpers, shared prerequisites from earlier points, four execution options and goal/feature-specific checks. Visual, collision and physical data retain separate identities and frames; geometry and semantic relationships retain separate validation.
+3. Luna inspected eighteen official pages/source files and recorded four failed attempts separately. Findings specify MuJoCo parsing/compilation/serialization/defaults and mesh transforms, IfcOpenShell extraction/GLB identity branches, CoACD CLI aliases and metric conditions, OCCT BRepGProp/GProp integration and unit-density handling, and an optional GUI-dependent TechDraw SVG path with documented export losses.
+4. Independent findings address tensor ordering/signs and density/length scaling, consumer-specific URDF geometry roles, distinct CLI/serializer GLB identity mechanisms, and type-specific joint axis/limit checks. The review records repaired fields and the final reread. Requested model roles follow the audit plan; coordinator model is gpt-6.1-sol, while child reports record unavailable actual runtime identities. The [point 06 receipt](/home/leo/projects/3dmodeling/research/action-audit/point-06-checks.json) records static source/document checks. Modeling, simulation and helper fixtures specify future expected outcomes.
+
 ## 12 November 2026 — Point 05 calibration, alignment and remodeling audit
 
 1. Checkpoint: `4037fd0`; point 04 result commit: `fdf7e68`. Scope: fourteen operations and 42 actions covering camera calibration/poses, cloud alignment, surface fitting, CAD/photo/scan comparison, annotation projection, remodeling and revision comparisons.

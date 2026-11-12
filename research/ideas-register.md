@@ -1116,6 +1116,272 @@ Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
+## AUDIT-DOM-31 — Author assembly graph and joint set — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author assembly graph and joint set. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-37 — Author robot assembly from CAD component — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author robot assembly from CAD component. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-08 — CAD assembly to articulated robot structure — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for CAD assembly to articulated robot structure. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-14 — Calculate or import physical mass properties — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calculate or import physical mass properties. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-12 — Export mesh assets for MuJoCo — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export mesh assets for MuJoCo. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-13 — Generate convex collision set — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Generate convex collision set. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-09 — Robot assembly to URDF package — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Robot assembly to URDF package. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-10 — URDF import and MJCF conversion — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for URDF import and MJCF conversion. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-11 — Author native MJCF simulation model — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author native MJCF simulation model. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-15 — Author semantic IFC building — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author semantic IFC building. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-16 — Extract IFC geometry as triangles — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract IFC geometry as triangles. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-27 — Extract IFC geometry as OpenCASCADE B-rep — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract IFC geometry as OpenCASCADE B-rep. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-17 — IFC to GLB display scene — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for IFC to GLB display scene. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-32 — Map CAD link geometry to MJCF body tree — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Map CAD link geometry to MJCF body tree. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-33 — Add environment collision geometry to MJCF — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Add environment collision geometry to MJCF. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-34 — Author static MuJoCo environment from BIM mesh — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author static MuJoCo environment from BIM mesh. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-24 — Assemble and inspect Blender scene — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Assemble and inspect Blender scene. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-35 — Place library component in semantic IFC — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Place library component in semantic IFC. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-25 — Create fabrication package — detailed execution options
+
+Status: proposal.
+
+Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Create fabrication package. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

@@ -1,0 +1,2063 @@
+{
+  "point": 6,
+  "status": "procedure_proposal",
+  "date": "2026-11-12",
+  "requested_dispatch": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh"
+  },
+  "actual_model_identity": "unavailable",
+  "operations": [
+    {
+      "operation_id": "DOM-31",
+      "name": "Author assembly graph and joint set",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/ros/urdf_tutorial",
+        "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
+        "https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst"
+      ],
+      "actions": [
+        {
+          "id": "DOM-31-A01",
+          "name": "Bind assembly occurrences and motion evidence",
+          "purpose": "Identify rigid groups and source motion requirements.",
+          "intended_use": "Prepare an explicit assembly graph and joint-set.",
+          "inputs": "CAD assembly, measurement-set and model-brief; occurrence IDs/placements and component revisions.",
+          "outputs": "Occurrence-to-rigid-group candidates and named motion/interface evidence.",
+          "accuracy": "Interface allowance, measured datum uncertainty and transform comparison threshold remain separate.",
+          "evidence": "CAD occurrence placements, brief statements and measurement IDs.",
+          "software": "Read OCS native occurrence/placement data where supported; use the point02 assembly adapter contract for richer assembly records.",
+          "agent": "Associate actual rigid parts and intended movable relations; preserve alternatives when geometry admits several meanings.",
+          "user_decisions": "Supply motion intent or grounded reference where evidence cannot determine it.",
+          "dependencies": "Point02 component/assembly records; actual selected application's occurrence capability.",
+          "proposed_development": "Proposal: graph intake maps occurrence IDs, source evidence and candidate rigid groups without editing source geometry.",
+          "procedure": [
+            "Read source assembly revision and placements.",
+            "Associate each occurrence with measured interfaces and brief motion claims.",
+            "Mark candidate rigid groups and unresolved moving connections."
+          ],
+          "validation": "Every occurrence is mapped or explicitly excluded; fixed relation needs evidence.",
+          "failure_resume": "Retain occurrence manifest; revise only affected grouping after evidence changes.",
+          "resources": "Local metadata/transform reads scale with occurrences; remote interpretation and manual joint identification recorded separately."
+        },
+        {
+          "id": "DOM-31-A02",
+          "name": "Author named joint records and graph topology",
+          "purpose": "Express supported motion relations in explicit frames.",
+          "intended_use": "Create assembly-graph and joint-set for robot conversion.",
+          "inputs": "Checked rigid groups; joint source points/axes, ranges and reference configuration.",
+          "outputs": "Joint records with parent/child, type, joint-frame origin/axis, limits/units and tree/loop classification.",
+          "accuracy": "Axis location/orientation criteria cite interfaces; range uncertainty and numerical normalization separate.",
+          "evidence": "Source joint IDs, measured axis controls and intended motion statements.",
+          "software": "Build adjacency/connected-component/cycle reports; compose frame transforms. Validate fields by actual joint type: revolute/continuous/prismatic motion axis and planar plane normal are nonzero and normalized; fixed/floating axis fields are inapplicable. Apply range/effort/velocity rules required by the selected type/consumer.",
+          "agent": "Choose evidence-supported relation mapping; distinguish fixed group, tree joint and loop closure.",
+          "user_decisions": "Choose unresolved motion type/range or loop representation; preserve supplied requirements directly.",
+          "dependencies": "Graph authoring proposal; FreeCAD Assembly source capability when alternate app is explicitly scoped.",
+          "proposed_development": "Proposal: joint author emits typed records and cycle edges, validates unique names, type-applicable axes/normals and limit fields; preserves inapplicable fields explicitly and never invents placeholder axes.",
+          "procedure": [
+            "Record each relation in named parent and child frames.",
+            "Set joint type and sourced position plus type-applicable axis/plane normal and limits/units; retain fixed/floating axis fields as inapplicable.",
+            "Report connectivity, roots and every cycle or disconnected component."
+          ],
+          "validation": "Required revolute/continuous/prismatic axes and planar normals are nonzero/unit-normalized in their stated frame; fixed/floating joints require no invented axis. Type-specific units and limit fields agree, and closed loops retain explicit edges. Continuous rotation keeps its sourced axis while omitting finite lower/upper travel bounds; consumer-specific effort/velocity rules remain explicit.",
+          "failure_resume": "Conflicting relations remain candidates; block only consumers requiring resolved topology.",
+          "resources": "Local graph traversal and matrix checks are low compute by link count; manual motion decisions dominate ambiguous cases."
+        },
+        {
+          "id": "DOM-31-A03",
+          "name": "Check reference and moved configurations",
+          "purpose": "Verify graph interpretation against independent assembly controls.",
+          "intended_use": "Publish graph/joints with per-relation readiness.",
+          "inputs": "Authored graph; reference configuration; sourced test configurations and interface controls.",
+          "outputs": "Assembly-graph and joint-set with forward-transform and semantic review receipts.",
+          "accuracy": "Position/angular residuals use feature criteria; solver thresholds do not replace allowances.",
+          "evidence": "Independent datum comparisons, source assembly revision and reviewer identity.",
+          "software": "Compose forward kinematics at reference and specified range samples; compare joint centres/axes and loop residuals.",
+          "agent": "Separate reviewer checks parent/child meaning, positive motion and preserved fixed groups.",
+          "user_decisions": "Resolve physical range/closure discrepancies supported by checks.",
+          "dependencies": "Proposed kinematic checker; loop solver separately capability-gated.",
+          "proposed_development": "Proposal: graph verifier emits per-joint pose residuals, unresolved closure conditions and downstream readiness.",
+          "procedure": [
+            "Compare reference transforms to CAD placements.",
+            "Evaluate specified motion directions/ranges and loop closure conditions.",
+            "Publish graph/joints with supported configurations and exceptions."
+          ],
+          "validation": "A tree check cannot discharge loop closure; moving-part identity and source limits pass separately.",
+          "failure_resume": "Keep last checked graph; invalidate only dependent exports after graph edits.",
+          "resources": "Local transform checks precede any collision/loop solve; remote semantic review and manual fixtures separately recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets rigid groups and authors relations from evidence.",
+        "hybrid": "Software traverses/transforms; agent resolves motion interpretation.",
+        "software_first": "Checked joint families map automatically; cycles, missing axes or conflicting limits enter review.",
+        "deterministic": "Explicit groups, relations, frames and checks produce deterministic graph records."
+      },
+      "alternatives": [
+        "Use existing source application's joint mapping with versioned semantics.",
+        "Author measured relation records beside OCS geometry.",
+        "Retain a layout assembly with unresolved motion; working robot requires sourced joints/closure."
+      ],
+      "merge": {
+        "branches": "Independent grouping/joint candidates share occurrence revisions and reference configuration, while declaring layout versus motion targets.",
+        "evaluation": "VLM compares source interfaces and motion evidence with numerical transform reports.",
+        "combination": "Select consistent complete relations; preserve incompatible axes/types rather than averaging.",
+        "post_merge": "New graph revision repeats connectivity, source-interface and configured-motion checks with separate semantic review."
+      },
+      "software_migration": "Automate demonstrated occurrence/joint classes after direction, limit, duplicate ID, disconnected graph and loop cases.",
+      "future_tests": [
+        "Swapped parent/child yields reference/motion disagreement.",
+        "A closed four-link loop remains explicit and blocks a tree-only export until a scoped representation is supplied.",
+        "Symmetric geometry permits two axis interpretations; source motion evidence selects or retains alternatives.",
+        "Fixed/floating joints with inapplicable axis fields pass their supported consumer checks; a planar joint requires its sourced nonzero plane normal. Placeholder axes are never synthesized to satisfy schema.",
+        "Continuous joint requires a sourced nonzero normalized rotation axis and omits finite lower/upper travel bounds; selected-consumer effort/velocity requirements are checked separately."
+      ]
+    },
+    {
+      "operation_id": "DOM-37",
+      "name": "Author robot assembly from CAD component",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/ros/urdf_tutorial",
+        "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
+        "https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst"
+      ],
+      "actions": [
+        {
+          "id": "DOM-37-A01",
+          "name": "Bind sourced component to target robot role",
+          "purpose": "Identify exact CAD occurrence and required attachment.",
+          "intended_use": "Prepare single-component assembly authoring.",
+          "inputs": "Cad-solid, measurement-set, model-brief and component-record; target parent/frame from brief or supplied assembly context.",
+          "outputs": "Component/target manifest and sourced attachment plan.",
+          "accuracy": "Mounting dimensions/axis uncertainty and fit allowance retain separate sources.",
+          "evidence": "Component hash/rights, actual solid identity and brief parent/motion statements.",
+          "software": "Read solid geometry and component metadata; check target frame/parent references exist.",
+          "agent": "Match named mount faces/axes to required component role.",
+          "user_decisions": "Supply target parent or external attachment context when required for the stated role.",
+          "dependencies": "Point02 intake/placement and native OCS geometry; alternate assembly backend requires scoped capability.",
+          "proposed_development": "Proposal: attachment intake emits source component, parent context and unresolved interface dependencies.",
+          "procedure": [
+            "Pin component bytes and solid revision.",
+            "Resolve target parent and required interfaces.",
+            "Bind source measurements and intended motion to attachment."
+          ],
+          "validation": "A standalone component cannot silently invent the remainder of a robot or its parent transform.",
+          "failure_resume": "Preserve source; pause only unresolved attachment while retaining intake evidence.",
+          "resources": "Local identity/bounds queries precede modeling; remote/manual interface interpretation recorded."
+        },
+        {
+          "id": "DOM-37-A02",
+          "name": "Create separate occurrence and authored joint relation",
+          "purpose": "Place component without changing its source geometry.",
+          "intended_use": "Create cad-assembly plus graph/joint candidates.",
+          "inputs": "Attachment plan; target assembly context or explicit new root; measured placement transform.",
+          "outputs": "New native occurrence/assembly revision, occurrence-source map and joint candidates.",
+          "accuracy": "Placement residuals and angular criteria cite mounting evidence.",
+          "evidence": "Source-to-occurrence transforms and DOM-31 joint records.",
+          "software": "Use supported OCS placement/native grouping path; capability-gated assembly adapter preserves richer occurrences/constraints.",
+          "agent": "Direct explicit placement and relation authoring; distinguish a rigid group from parametric assembly constraints.",
+          "user_decisions": "Select any unresolved grounded/moving connection within task scope.",
+          "dependencies": "Point02 DOM-07 and DOM-31 graph procedure.",
+          "proposed_development": "Proposal: component inserter takes source/target revision and explicit transform and returns native handles plus graph relations.",
+          "procedure": [
+            "Create a distinct source-linked occurrence at the measured transform.",
+            "Author fixed/movable relations through DOM-31.",
+            "Record actual native representation and all three required output identities."
+          ],
+          "validation": "Source geometry stays pinned; new assembly occurrence IDs and measured interfaces correspond.",
+          "failure_resume": "Reconcile native request/revision before retry; retain partial graph/native outputs with dependency state.",
+          "resources": "Local one-component placement is bounded; large target assembly query cost depends on occurrences; remote decisions separate."
+        },
+        {
+          "id": "DOM-37-A03",
+          "name": "Validate attachment and publish three outputs",
+          "purpose": "Verify placed geometry and motion records agree.",
+          "intended_use": "Deliver cad-assembly, assembly-graph and joint-set together.",
+          "inputs": "New assembly and graph/joints; independent mount controls and actual saved native revision.",
+          "outputs": "Three checked outputs with interface, frame and source receipts.",
+          "accuracy": "Required mounting/axis/clearance criteria per feature; comparison threshold separate.",
+          "evidence": "Readback native transforms, source IDs and independent reviewer evidence.",
+          "software": "Query saved occurrence placement and required geometry; compare graph forward transforms and specified motion configurations.",
+          "agent": "Separate reviewer confirms component role and evidence-supported joint semantics.",
+          "user_decisions": "Resolve conflicting attachment or required motion evidence.",
+          "dependencies": "Point02 readback and DOM-31 verifier.",
+          "proposed_development": "Proposal: attachment publisher checks cross-artifact IDs/transforms and emits per-output readiness.",
+          "procedure": [
+            "Read actual saved native assembly.",
+            "Compare mount interfaces and graph/reference transforms.",
+            "Publish all three outputs with required checks."
+          ],
+          "validation": "Geometry grouping alone cannot fulfill joint semantics; all output references match one revision.",
+          "failure_resume": "Keep valid source/placement; revise only failed joint or interface and affected exports.",
+          "resources": "Local focused measurements before broad collision work; remote semantic review and manual controls recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects source-supported attachment and directs insertion.",
+        "hybrid": "Software places/checks; agent authors component role and motion.",
+        "software_first": "Repeated checked attachment families run with exceptions for unknown parent or interfaces.",
+        "deterministic": "Complete component/parent/transform/joint records produce checked outputs."
+      },
+      "alternatives": [
+        "Insert into an existing explicitly supplied assembly.",
+        "Create a declared root/body when the brief defines one.",
+        "Use layout occurrence without motion readiness for arrangement; working attachment requires joint/interface evidence."
+      ],
+      "merge": {
+        "branches": "Attachment alternatives share component bytes, parent revision and sourced interfaces with target detail/criteria.",
+        "evaluation": "VLM reviews source mount/role evidence; software compares transforms and dimensions.",
+        "combination": "Select a coherent placement/relation pair; combine compatible evidence only.",
+        "post_merge": "Repeat native readback, cross-output mapping and motion/interface checks."
+      },
+      "software_migration": "Demonstrate parent resolution, repeated occurrence identity, source immutability and all-three-output cases before automation.",
+      "future_tests": [
+        "Missing target parent retains intake but blocks dependent placement.",
+        "Identical source geometry inserted twice preserves two occurrence IDs.",
+        "Native assembly exists but joint-set is absent: three-output handoff remains partial."
+      ]
+    },
+    {
+      "operation_id": "DOM-08",
+      "name": "CAD assembly to articulated robot structure",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
+        "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
+        "https://github.com/boelnasr/CAD_TO_URDF",
+        "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
+        "https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst"
+      ],
+      "actions": [
+        {
+          "id": "DOM-08-A01",
+          "name": "Resolve rigid links from authored assembly relations",
+          "purpose": "Translate CAD occurrence groups into rigid robot bodies.",
+          "intended_use": "Prepare robot-assembly with source identity.",
+          "inputs": "Cad-assembly, joint-set and measurement-set; source transforms and rigid grouping evidence.",
+          "outputs": "Occurrence-to-link map and expected graph/geometry coverage.",
+          "accuracy": "Measured joint/interface criteria remain separate from transform arithmetic thresholds.",
+          "evidence": "CAD and joint revisions, group membership and measured controls.",
+          "software": "Read occurrence hierarchy; expand instances and compare joint references; preserve definition and occurrence IDs.",
+          "agent": "Interpret supported rigid grouping and distinguish CAD hierarchy from motion graph.",
+          "user_decisions": "Resolve group membership where source relation records conflict.",
+          "dependencies": "DOM-31 authored graph and point02 assembly capability.",
+          "proposed_development": "Proposal: link mapper accepts occurrences/joints/measurements and emits link memberships plus unmapped references.",
+          "procedure": [
+            "Resolve all joint endpoints to occurrences.",
+            "Group only explicitly rigidly connected parts.",
+            "Record link local frames and geometry roles."
+          ],
+          "validation": "Every moving occurrence belongs to its declared link; repeated instances remain distinct.",
+          "failure_resume": "Retain source hierarchy; repair mismatched grouping/reference only.",
+          "resources": "Local metadata work scales with parts/joints; remote interpretation handles ambiguous grouping."
+        },
+        {
+          "id": "DOM-08-A02",
+          "name": "Build articulated link and joint representation",
+          "purpose": "Produce consistent robot-local frames and relations.",
+          "intended_use": "Create robot-assembly candidate for URDF/MJCF consumers.",
+          "inputs": "Link map; authored joint types/axes/limits; reference pose.",
+          "outputs": "Robot assembly with links, joints, geometry transforms and explicit loop edges.",
+          "accuracy": "Axis/origin/range criteria cite source; unit conversion and pose comparison recorded.",
+          "evidence": "Source CAD-to-link and joint-to-link transform chains.",
+          "software": "Compose local transforms; validate tree/loop structure and preserve source geometry links.",
+          "agent": "Map application constraints only where physical joint meaning is evidenced.",
+          "user_decisions": "Select supported closure representation for a loop consumer or retain it unresolved.",
+          "dependencies": "Documented source assembly adapter or proposed explicit mapper; consumer capability discovery.",
+          "proposed_development": "Proposal: articulation adapter emits joint/geometry frame maps and supported/unsupported relation ledger.",
+          "procedure": [
+            "Compose occurrence-to-link and joint transforms.",
+            "Map each authored relation to its explicit robot type.",
+            "Preserve loops and unsupported constraints in a named ledger."
+          ],
+          "validation": "Source joint type and degrees of freedom survive; arbitrary spanning-tree reduction cannot discard closure.",
+          "failure_resume": "Keep mapped subset and relation ledger; resume after specific capability/source repair.",
+          "resources": "Local matrices/graph checks low relative to mesh processing; model calls only for semantics."
+        },
+        {
+          "id": "DOM-08-A03",
+          "name": "Validate robot assembly against measured configurations",
+          "purpose": "Check articulated representation before format export.",
+          "intended_use": "Publish robot-assembly readiness by consumer/use.",
+          "inputs": "Candidate robot assembly, CAD measurements and specified configuration controls.",
+          "outputs": "Checked robot-assembly with link/joint coverage and reference/moved-state reports.",
+          "accuracy": "Per-interface linear/angular tolerances and measurement uncertainty remain explicit.",
+          "evidence": "Native CAD query and independent control records; separate semantic reviewer.",
+          "software": "Compare reference and supplied test poses via forward transforms; check axes/limits and geometry placement.",
+          "agent": "Review source part/link identity, motion sign and loop treatment independently.",
+          "user_decisions": "Resolve unsupported motion or conflicting source measurements.",
+          "dependencies": "DOM-31 verifier and actual selected CAD readback.",
+          "proposed_development": "Proposal: robot-assembly checker reports per-link/joint residuals and format-specific prerequisites.",
+          "procedure": [
+            "Compare reference geometry and joint frames.",
+            "Evaluate specified motion samples and closure evidence.",
+            "Publish per-consumer readiness and retained limitations."
+          ],
+          "validation": "A visually coincident reference pose cannot pass reversed motion axis or missing closure.",
+          "failure_resume": "Revise failed relation only; invalidate downstream URDF/MJCF and affected meshes by dependency.",
+          "resources": "Local transform/control tests first; collision queries only for requested interfaces; review effort separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets link grouping and directs explicit mapping.",
+        "hybrid": "Software maps frames and traverses graph; agent reviews mechanical meaning.",
+        "software_first": "Demonstrated source-app joint classes map automatically; loops/unknown semantics enter review.",
+        "deterministic": "Complete grouping/joints/frames yield reproducible robot-assembly."
+      },
+      "alternatives": [
+        "Preserve source app assembly and explicit external joint records.",
+        "Inspect community CAD_TO_URDF inference as a candidate with independent checks.",
+        "Layout link geometry can retain unresolved joints; working robot requires consumer-supported relations."
+      ],
+      "merge": {
+        "branches": "Alternative rigid grouping and source-app mappings retain common occurrence IDs and pose controls.",
+        "evaluation": "VLM checks mechanical correspondence; software reports graph/frame/motion residuals.",
+        "combination": "Select coherent grouping and relations; preserve competing motion interpretations.",
+        "post_merge": "New robot revision repeats link coverage, measured pose and loop/semantic checks."
+      },
+      "software_migration": "Automate only source-app constraint classes demonstrated against rigid grouping, reversed axes, duplicate occurrences and closed-loop fixtures.",
+      "future_tests": [
+        "CAD hierarchy differs from physical link grouping; retain correct grouping evidence.",
+        "Wrong axis sign matches zero pose but fails a sourced moved configuration.",
+        "Closed-loop source retains closure edge and blocks unsupported tree consumer."
+      ]
+    },
+    {
+      "operation_id": "DOM-14",
+      "name": "Calculate or import physical mass properties",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "https://dev.opencascade.org/doc/refman/html/class_g_prop___g_props.html",
+        "https://occt3d.com/dev/doc/refman/html/class_b_rep_g_prop.html",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
+        "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/link.hpp"
+      ],
+      "actions": [
+        {
+          "id": "DOM-14-A01",
+          "name": "Select physical-property evidence per rigid body",
+          "purpose": "Bind each physical quantity to its source and body.",
+          "intended_use": "Prepare measured or calculated mass-property branch.",
+          "inputs": "Physical-measurement-set OR material-set plus cad-solid/B-rep/mesh/cad-assembly; target body map. Each tensor field supplies raw component ordering, matrix off-diagonal versus signed/unsigned product convention, reference point and axes.",
+          "outputs": "Per-body mass/COM/tensor field status and calculation eligibility.",
+          "accuracy": "Mass, length, density and tensor uncertainty retain source units/conditions.",
+          "evidence": "Measurement reports, material density applicability, body geometry/revision.",
+          "software": "Read supplied fields; inventory solids, cavities, overlapping occurrences and mesh closure/orientation.",
+          "agent": "Distinguish measured scalar mass, supplied COM/tensor and geometry-density assumptions.",
+          "user_decisions": "Supply required physical distribution evidence or explicitly chosen calculation assumptions.",
+          "dependencies": "DOM-08 rigid grouping; actual geometry integration capability.",
+          "proposed_development": "Proposal: property intake emits per-field provenance, reference point/axes and required calculation inputs.",
+          "procedure": [
+            "Resolve each quantity to a rigid body.",
+            "Select measured or geometry-density branch.",
+            "Check distribution, geometry validity and field completeness."
+          ],
+          "validation": "Scalar mass supports only mass; visual material labels alone supply no density. Geometry-integration branch first checks finite closed solid(s), coherent orientation and absence of free boundaries; the volume integration API assumes these conditions.",
+          "failure_resume": "Retain valid measured fields; block dependent tensor/COM operations until their evidence exists.",
+          "resources": "Metadata checks first; mesh validity cost follows triangles; manual metrology separate."
+        },
+        {
+          "id": "DOM-14-A02",
+          "name": "Calculate and transform sourced mass properties",
+          "purpose": "Express properties consistently at body COM and target axes.",
+          "intended_use": "Produce calculated/imported body property candidates.",
+          "inputs": "Eligible geometry/density or supplied mass/COM/tensor, reference point/frame, unit conversion and rigid-group membership.",
+          "outputs": "Mass, COM and symmetric tensor with raw source values, method and transform receipt.",
+          "accuracy": "Tensor units mass×length²; density/volume uncertainty and integration error separate. OCCT integration error estimate is numerical method evidence, distinct from density/shape/measurement uncertainty; retain the epsilon/adaptive setting and source coordinate length powers.",
+          "evidence": "Selected integration algorithm/kernel version and frame/aggregation lineage.",
+          "software": "Source-backed candidate: OCCT 8.0.1 BRepGProp::VolumeProperties fills GProp_GProps with no-density volume integrals. Validate finite closed coherently oriented solids first. Record exact-surface versus UseTriangulation setting and integration-error method. Apply coherent material density once; GProp Mass may initially mean volume, CentreOfMass is absolute and MatrixOfInertia is central with axes parallel to absolute axes. Decode raw tensor order/sign/reference into a common symmetric matrix before shifts/rotations; GProp Add(component,density) can aggregate with parallel-axis shifts when frames/reference conventions match.",
+          "agent": "Review hollow/heterogeneous distribution and source assumptions; prevent counting repeated geometry twice.",
+          "user_decisions": "Choose supported density distribution or retain partial measurements.",
+          "dependencies": "Documented kernel mass-property API and selected format inertia convention; exact API discovery required.",
+          "proposed_development": "Proposal: physical-property adapter accepts measured fields or validated shapes/density plus raw component/sign/reference/unit metadata. It emits no-density geometric integrals, density application count, physical mass/COM/central tensor and frame/aggregation ledger. Length scaling uses volume L³, geometric inertia L⁵ and physical inertia mass×L²; mass/length/density units convert coherently. Reject an unknown source off-diagonal/product convention rather than copy field names.",
+          "procedure": [
+            "Validate solid prerequisites or supplied measurement field conventions; decode tensor ordering/sign/reference into a common matrix and convert units.",
+            "For geometry, integrate no-density properties under recorded surface/triangulation/error settings and apply material density exactly once; preserve central tensor and absolute COM conventions.",
+            "Shift any noncentral source tensor to COM with stated direction, rotate each central tensor into target axes, aggregate via parallel-axis terms at a common origin and shift the aggregate to its weighted COM."
+          ],
+          "validation": "Compare mass/COM and tensor independently; use I_about_point = I_COM + m((d·d)Identity − d dᵀ) in one frame and I_rotated = R I Rᵀ; inverse shift subtracts that term.",
+          "failure_resume": "Invalid integration or uncertain reference retains source values; repair representation/frame only before recalculation.",
+          "resources": "Local analytic/solid integration before dense mesh integration; cost follows bodies/faces; remote review/manual density data separate."
+        },
+        {
+          "id": "DOM-14-A03",
+          "name": "Check admissibility and consumer-specific completeness",
+          "purpose": "Validate numerical properties and their physical evidence separately.",
+          "intended_use": "Publish mass-properties for named links and consumer.",
+          "inputs": "Candidate properties, independent measurements and target format requirements.",
+          "outputs": "Per-field checked mass-properties with source, reference, uncertainty and readiness.",
+          "accuracy": "Symmetry/eigenvalue/triangle checks use numerical tolerance; physical agreement uses source criteria.",
+          "evidence": "Independent mass/COM/tensor evidence when available and integration/readback receipts.",
+          "software": "Check applicable positive mass, tensor symmetry, principal moments and triangle inequalities; compare known analytic fixtures and converted output.",
+          "agent": "Separate reviewer confirms body membership, mass distribution meaning and uncertainty labels.",
+          "user_decisions": "Resolve required physical evidence discrepancy; static world geometry follows its separate consumer requirements.",
+          "dependencies": "Proposed numerical property checker; downstream URDF/MJCF readback.",
+          "proposed_development": "Proposal: validator emits field-level admissibility, physical-evidence comparison and consumer readiness.",
+          "procedure": [
+            "Run units/reference and tensor admissibility checks.",
+            "Compare independent supplied measurements and analytic fixture expectations.",
+            "Publish complete or partial fields for the named consumer."
+          ],
+          "validation": "Admissible tensor values alone establish numerical consistency; supplied physical accuracy has its own evidence.",
+          "failure_resume": "Keep passed fields; invalidate affected body exports when mass/distribution/frame changes.",
+          "resources": "Small matrix checks low compute; independent physical measurement/manual review separately costed."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects source meaning/distribution and directs calculations.",
+        "hybrid": "Software integrates/transforms; agent reviews applicability and partial evidence.",
+        "software_first": "Checked material/body classes calculate with exceptions for cavities, mixed density or incomplete measurements.",
+        "deterministic": "Explicit valid geometry/distribution or complete measured fields produce repeatable properties."
+      },
+      "alternatives": [
+        "Use independently measured/manufacturer mass, COM and tensor fields.",
+        "Calculate supported closed-solid/mesh volume with sourced density distribution.",
+        "Context bodies can retain partial properties; working dynamics requires consumer-required fields."
+      ],
+      "merge": {
+        "branches": "Measured, manufacturer and calculated candidates retain body revision, reference frame and source uncertainty.",
+        "evaluation": "VLM reviews body/distribution evidence; software compares physically equivalent COM-frame tensors and measurements.",
+        "combination": "Select source-backed fields with consistent reference; preserve conflicting mass/distribution claims.",
+        "post_merge": "Recheck aggregate membership, units, tensor admissibility and downstream compiled/readback properties."
+      },
+      "software_migration": "Demonstrate analytic solids, offset/rotated tensors, composite bodies, hollow geometry and partial measured fields before routine computation.",
+      "future_tests": [
+        "Scalar mass record preserves mass and leaves COM/tensor consumers unresolved.",
+        "Off-centre rotated tensor catches wrong parallel-axis sign and squared-length conversion.",
+        "Duplicate assembly occurrence or overlapping volume cannot be counted twice without distribution evidence.",
+        "Negative principal moment or triangle violation fails admissibility; static world geom is classified separately.",
+        "A source products-of-inertia convention with opposite off-diagonal signs is explicitly decoded; copying raw names fails a rotated-tensor reference fixture.",
+        "Unit-density GProp Mass is volume until applicable density is applied exactly once; millimetre geometry plus SI density catches L³/L⁵ conversion and double-density errors.",
+        "Open or incoherently oriented shape fails preflight before VolumeProperties; integration error estimate cannot stand in for physical uncertainty."
+      ]
+    },
+    {
+      "operation_id": "DOM-12",
+      "name": "Export mesh assets for MuJoCo",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
+        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-12-A01",
+          "name": "Select geometry occurrence and mesh role",
+          "purpose": "Define exact source and export frame for each asset.",
+          "intended_use": "Prepare MuJoCo mesh derivatives.",
+          "inputs": "One cad-solid/B-rep/visual-scene/robot-assembly route; occurrence selection and intended visual/collision role.",
+          "outputs": "Per-asset source-to-target frame, unit and approximation plan.",
+          "accuracy": "Tessellation criterion cites required surface/interface error; source uncertainty separate.",
+          "evidence": "Native geometry revision, occurrence/body IDs and format requirements.",
+          "software": "Query supported shape/scene geometry; inventory existing mesh data and required tessellation.",
+          "agent": "Select relevant source surfaces and role without merging movable links.",
+          "user_decisions": "Choose approximation target for context versus working contact/appearance.",
+          "dependencies": "Point03 native geometry; supported exporter and selected MuJoCo format/version discovery.",
+          "proposed_development": "Proposal: mesh planner emits source occurrences, target body frames and role-specific export settings.",
+          "procedure": [
+            "Resolve source route and selected occurrences.",
+            "Assign asset role and target frame.",
+            "Set source-backed approximation and format requirements."
+          ],
+          "validation": "Assembly/scene input resolves actual geometry; camera-only/no-geometry objects retain explicit state.",
+          "failure_resume": "Retain selections; replace unsupported exporter only through scoped capability route.",
+          "resources": "Metadata/selected regions precede full tessellation; remote/manual role review separate."
+        },
+        {
+          "id": "DOM-12-A02",
+          "name": "Export source-linked mesh assets",
+          "purpose": "Create supported triangle assets with exact placement lineage.",
+          "intended_use": "Deliver mesh candidates per body/occurrence.",
+          "inputs": "Selected geometry, unit/frame transforms, tessellation settings and format.",
+          "outputs": "Meshes with hashes, per-piece source maps and export receipt.",
+          "accuracy": "Chord/angular/surface error criterion and numerical serialization precision recorded separately.",
+          "evidence": "Exporter/version/options, native source and output bytes.",
+          "software": "Use supported OCS mesh export/native triangulation where adequate; capability-gated CAD/Blender adapter for required formats; retain local coordinates and explicit transforms.",
+          "agent": "Review any material/normal/surface interpretation changes.",
+          "user_decisions": "Choose permitted fallback when target encoding or source representation requires conversion.",
+          "dependencies": "Selected actual exporter and target mesh loader; no unsupported API assumed. Inspected MuJoCo accepts STL, OBJ and MSH; verify selected version/encoding. Keep raw asset coordinates, mesh scale and effective compiler mesh_pos/mesh_quat transforms.",
+          "proposed_development": "Proposal: mesh exporter accepts occurrence/frame/role settings and returns meshes plus approximation/loss ledger.",
+          "procedure": [
+            "Tessellate selected occurrences at declared settings.",
+            "Apply recorded unit/frame conversion exactly once.",
+            "Write separate assets and source/transform manifests."
+          ],
+          "validation": "Movable body assets preserve distinct frames; serialization records actual supported encoding.",
+          "failure_resume": "Partial assets keep status/hash; retry only failed source occurrence after reconciling written files.",
+          "resources": "Local cost follows faces, tessellation density and asset count; GPU only if actual exporter uses it."
+        },
+        {
+          "id": "DOM-12-A03",
+          "name": "Compare meshes to source and reopen",
+          "purpose": "Verify geometry and parser compatibility.",
+          "intended_use": "Publish checked mesh assets for downstream geoms.",
+          "inputs": "Exported meshes, source geometry and independent interface controls.",
+          "outputs": "Mesh set with loader/readback, deviation and role-readiness reports.",
+          "accuracy": "Interface deviations compare source-backed tolerances; mesh topology/error reported per role.",
+          "evidence": "Actual file readback and source geometry queries.",
+          "software": "Load target-supported mesh format; compare bounds, selected interfaces, orientation and surface deviations. For MuJoCo load, compare effective placed surfaces using recorded mesh_scale, mesh_pos/mesh_quat and geom/body/world transforms; validate composition against the selected version's reader.",
+          "agent": "Independent reviewer checks part identity, omissions and intended role.",
+          "user_decisions": "Resolve excessive approximation at required contact or visual features.",
+          "dependencies": "Proposed mesh comparator and target loader fixture.",
+          "proposed_development": "Proposal: asset checker emits source-to-mesh residuals, frame/unit checks and parser outcomes.",
+          "procedure": [
+            "Read saved mesh independently.",
+            "Measure required source/mesh features and transforms.",
+            "Publish role-specific asset readiness."
+          ],
+          "validation": "Bounds alone cannot verify a bore or passage; collision and mass suitability have separate downstream checks.",
+          "failure_resume": "Keep valid assets; revise tessellation or encoding for failed features only.",
+          "resources": "Local selected-feature checks before dense distances; remote view review/manual controls separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects source/role and directs exporter.",
+        "hybrid": "Software tessellates and compares; agent reviews omitted features.",
+        "software_first": "Checked source/export families run; unsupported geometry/encoding enters review.",
+        "deterministic": "Explicit occurrences/settings/frames and target loader produce repeatable mesh assets."
+      },
+      "alternatives": [
+        "Use native simulator primitives for simple supported geometry.",
+        "Reuse an existing mesh with source/frame/error evidence.",
+        "Context display mesh uses its own detail criterion; working collision/mass uses separately qualified geometry."
+      ],
+      "merge": {
+        "branches": "Coarse/display and detailed/interface meshes share source IDs and frame with different declared error targets.",
+        "evaluation": "VLM reviews labelled source/output views; software reports per-feature deviation and parser results.",
+        "combination": "Select per-role assets; preserve separate body frames and incompatible approximation candidates.",
+        "post_merge": "Reopen selected package and repeat source mapping, frame and required-feature checks."
+      },
+      "software_migration": "Automate tested source types/formats after scale, mirrored axes, missing faces and separate-link fixtures.",
+      "future_tests": [
+        "Millimetre geometry exported without scale fails independent dimension check.",
+        "Two moving links retain separate asset transforms.",
+        "Bounds match but a bore is filled; feature comparison fails.",
+        "Compiler mesh centering/principal-axis alignment changes raw coordinates but full transformed world surfaces match; omitting mesh transform fails."
+      ]
+    },
+    {
+      "operation_id": "DOM-13",
+      "name": "Generate convex collision set",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
+        "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/SarahWeiii/CoACD",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-13-A01",
+          "name": "Define collision scope and contact features",
+          "purpose": "Bind collision approximation to the physical body/environment.",
+          "intended_use": "Prepare convex decomposition or primitive selection.",
+          "inputs": "Mesh, source/body IDs, local frame/scale and intended contact/passages criteria.",
+          "outputs": "Per-body collision plan with source mesh and protected regions.",
+          "accuracy": "Contact envelope/clearance allowance and mesh uncertainty remain separate.",
+          "evidence": "Source mesh hash, body map, contact feature IDs and criteria.",
+          "software": "Check finite geometry, connected pieces, source scale and algorithm prerequisites.",
+          "agent": "Identify contact-relevant passages and independent moving bodies.",
+          "user_decisions": "Choose contact/detail target and resolve inferred/unobserved surfaces.",
+          "dependencies": "DOM-12 asset records; CoACD repository and selected-version prerequisite inspection.",
+          "proposed_development": "Proposal: collision intake partitions by rigid body and emits protected-feature/criteria records.",
+          "procedure": [
+            "Partition source by body or static obstacle.",
+            "Mark contact regions and passages.",
+            "Select primitive, convex hull or decomposition candidate method."
+          ],
+          "validation": "A moving assembly cannot become one rigid collider; source licence pages do not establish algorithm API.",
+          "failure_resume": "Preserve raw mesh and rejected regions; revise only affected collision plan.",
+          "resources": "Local bounds/topology checks first; detailed source inspection and remote/manual interpretation separate."
+        },
+        {
+          "id": "DOM-13-A02",
+          "name": "Generate independently framed convex pieces",
+          "purpose": "Produce collision-specific approximations.",
+          "intended_use": "Create collision-set candidates.",
+          "inputs": "Per-body mesh/plan, selected algorithm/version and sourced approximation settings.",
+          "outputs": "Convex pieces with original body ID, transforms, settings and source hashes.",
+          "accuracy": "Algorithm normalized threshold and physical deviation metric are recorded separately; no tutorial defaults imposed.",
+          "evidence": "Actual command/API receipt and all generated piece bytes.",
+          "software": "Use source-backed CoACD CLI adapter with split individual components, or supported primitive fitting. Record -t/--threshold normalized concavity versus -rm/--real-metric metre error mode (input must be metre scale), and merge/max-convex-hull interaction; hull-count limiting may exceed threshold. The source default 0.05 is an example/default, never a project criterion.",
+          "agent": "Review candidate decomposition meaning and protect narrow gaps.",
+          "user_decisions": "Choose bounded alternative approximation where criteria conflict.",
+          "dependencies": "Inspected current CoACD README: -i/--input OBJ, -o/--output OBJ or WRL; -sp/--split writes individual components under output_parts. Pin selected version before execution. Older short/long dossier spellings are aliases in this inspected source.",
+          "proposed_development": "Proposal: decomposition adapter accepts mesh/frame/settings and emits individually addressable pieces plus errors/loss map.",
+          "procedure": [
+            "Generate pieces per rigid body with explicit settings.",
+            "Retain piece-local to body/world transforms.",
+            "Record approximation changes and candidate lineage."
+          ],
+          "validation": "Piece transforms and convexity/finite geometry checked; decomposition does not assign mass properties.",
+          "failure_resume": "Keep partial pieces and source; bounded parameter retry creates new candidate, never overwrites source.",
+          "resources": "Local cost follows triangles, hull count and search settings; coarse/protected-region option first; remote review separate."
+        },
+        {
+          "id": "DOM-13-A03",
+          "name": "Validate passages and intended contact behavior",
+          "purpose": "Test approximation where contact matters.",
+          "intended_use": "Publish collision-set with purpose-specific readiness.",
+          "inputs": "Candidate pieces, source mesh, protected features and future target-contact fixtures.",
+          "outputs": "Approximation report and checked collision-set.",
+          "accuracy": "Directional envelope error, gap/clearance and contact placement criteria cite source; solver settings separate.",
+          "evidence": "Source comparison and named simulator/contact fixture results when actually executed.",
+          "software": "Measure piece/source deviations and passage dimensions; future target fixture checks expected contact/non-contact at named poses.",
+          "agent": "Separate reviewer checks body association and retained contact meaning.",
+          "user_decisions": "Resolve failed required passages or authorize another representation class.",
+          "dependencies": "Geometric comparator and selected simulator fixture adapter proposals.",
+          "proposed_development": "Proposal: collision verifier reports per-feature envelope, penetration/clearance and contact outcomes.",
+          "procedure": [
+            "Compare protected source features and hull coverage.",
+            "Evaluate named contact/non-contact fixtures in selected consumer when execution is scoped.",
+            "Publish passed use classes and retained approximation limits."
+          ],
+          "validation": "Volume/bounds alone cannot pass passage/contact criteria; compile and runtime contact checks have distinct results.",
+          "failure_resume": "Keep valid bodies; revise failed pieces/settings and recheck affected contacts.",
+          "resources": "Local geometry checks before consumer fixtures; fixture cost follows piece/pair counts, remote/manual assessment separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent identifies contact features and directs approximation.",
+        "hybrid": "Software decomposes/measures; agent reviews contact meaning.",
+        "software_first": "Demonstrated shape classes run with exceptions for passages, open meshes or excessive hull counts.",
+        "deterministic": "Explicit body meshes/settings/contact criteria yield deterministic supported candidates and reports."
+      },
+      "alternatives": [
+        "Primitives for measured simple contact shapes.",
+        "Single convex hull for declared coarse envelope use.",
+        "CoACD convex pieces for required concavity; detailed contact checks distinguish working robot from layout."
+      ],
+      "merge": {
+        "branches": "Primitive/single-hull/decomposed candidates share mesh/body/frame and protected-feature evidence.",
+        "evaluation": "VLM compares contact-feature association; software reports directional geometry and named contact checks.",
+        "combination": "Choose per-body collider set; combine compatible pieces without crossing rigid-body boundaries.",
+        "post_merge": "New collision revision repeats body/frame, passage and consumer contact checks."
+      },
+      "software_migration": "Automate only shape/contact classes demonstrated on concavity, units, independent links, openings and error-control cases.",
+      "future_tests": [
+        "A convex hull fills a required passage and fails its clearance fixture.",
+        "Two moving links decomposed together fail body ownership checks.",
+        "Threshold changes yield similar volume but different contact; feature/contact criteria select the supported candidate.",
+        "Normalized threshold mistaken for metre error fails settings validation; real-metric mode requires metre input and independent feature-error checks.",
+        "Hull-count limit with merge can exceed requested threshold; measured passage/envelope criteria still govern."
+      ]
+    },
+    {
+      "operation_id": "DOM-09",
+      "name": "Robot assembly to URDF package",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/ros/urdf_tutorial",
+        "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
+        "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
+        "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
+        "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/link.hpp",
+        "https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst"
+      ],
+      "actions": [
+        {
+          "id": "DOM-09-A01",
+          "name": "Check literal package inputs and supported URDF tree",
+          "purpose": "Resolve robot, physics and geometry roles before export.",
+          "intended_use": "Prepare URDF package for a named consumer.",
+          "inputs": "Robot-assembly, joint-set, mass-properties AND one visual-scene OR collision-set adjunct; assets and target consumer.",
+          "outputs": "Link/joint/asset/inertia mapping and consumer-specific missing-role report.",
+          "accuracy": "URDF metre/radian/kilogram convention; mesh unit transforms explicit; source allowances/uncertainties separate.",
+          "evidence": "Original graph/joint/body properties and exact asset revisions.",
+          "software": "Validate unique rooted tree, joint types and applicable limits; detect loops; resolve visual/collision/inertial frames independently.",
+          "agent": "Interpret adjunct geometry role and source mapping; preserve source literal contract.",
+          "user_decisions": "Supply any additional role required by intended consumer or choose supported loop route.",
+          "dependencies": "DOM-08, DOM-12/13/14; selected urdfdom/consumer version.",
+          "proposed_development": "Proposal: URDF preflight emits literal-input receipt, supported tree and per-role readiness.",
+          "procedure": [
+            "Verify all common inputs plus stated adjunct.",
+            "Map joint types and frames to supported tree representation.",
+            "Check required geometry/physics roles and asset paths."
+          ],
+          "validation": "Visual adjunct cannot silently become collision data; fixed/continuous joints receive type-specific range rules.",
+          "failure_resume": "Retain resolved package mapping; repair unsupported relation/role before serialization.",
+          "resources": "Local tree/path/units checks precede mesh reads; remote/manual semantic review separate."
+        },
+        {
+          "id": "DOM-09-A02",
+          "name": "Serialize links joints and distinct asset origins",
+          "purpose": "Create URDF XML and its mesh package.",
+          "intended_use": "Deliver explicit robot-description candidate.",
+          "inputs": "Checked tree, sourced inertial records, visual/collision assets and relative paths.",
+          "outputs": "URDF plus mesh files, link-to-source map and serialization/loss receipt.",
+          "accuracy": "SI conversion includes inertia kg·m² and tensor off-diagonal convention; mesh scale applied once.",
+          "evidence": "Source-to-link, joint, visual, collision and inertial frame chains.",
+          "software": "Proposed exporter writes link/joint/geometry/inertial fields; Xacro source if used retains expansion receipt and resulting URDF.",
+          "agent": "Review mapping of names, motion sign and physical-field conventions.",
+          "user_decisions": "Choose explicitly scoped format extensions where basic URDF lacks required semantics.",
+          "dependencies": "URDF format documentation; actual XML/Xacro/asset adapter capability.",
+          "proposed_development": "Proposal: package writer accepts checked graph/role/tensor records and emits URDF, meshes and mapped omission list.",
+          "procedure": [
+            "Write links/joints with source-derived frame/type/range data.",
+            "Write visual, collision and inertial origins separately.",
+            "Package referenced meshes and source/units/loss records."
+          ],
+          "validation": "Do not copy unsigned CAD products into tensor entries; tree export preserves all supported relation meaning.",
+          "failure_resume": "Write candidate package separately; retain partial output hashes and retry only failed writer stage.",
+          "resources": "Local XML work low compute; mesh conversion cost separately inherited from DOM-12."
+        },
+        {
+          "id": "DOM-09-A03",
+          "name": "Parse reopen and compare robot poses and physics",
+          "purpose": "Check saved package against source requirements.",
+          "intended_use": "Publish URDF and mesh readiness for named consumer.",
+          "inputs": "Saved package, source graph/properties and independent pose/interface controls.",
+          "outputs": "Parser/consumer receipt and source-to-target pose/physics/asset report.",
+          "accuracy": "Pose criteria per joint/interface; parsed mass/tensor comparison numerical threshold separate.",
+          "evidence": "Actual saved XML/assets and independent source controls.",
+          "software": "Use check_urdf when installed and target consumer load; compare forward transforms at named states, axes/ranges and inertial data.",
+          "agent": "Separate reviewer verifies link identity, asset roles and documented losses.",
+          "user_decisions": "Resolve required unsupported consumer features.",
+          "dependencies": "Target parser/consumer and proposed semantic/diff checker.",
+          "proposed_development": "Proposal: package verifier emits type/asset/tree, kinematic and property equivalence results.",
+          "procedure": [
+            "Parse saved URDF and resolve meshes.",
+            "Compare named reference/moved states and properties.",
+            "Load intended consumer and publish per-role results."
+          ],
+          "validation": "Successful parsing cannot pass wrong axis, missing consumer-required visual/collision role or incorrect inertia. Absent roles remain explicit; a visualization consumer may accept its declared visual-only package.",
+          "failure_resume": "Retain package; fix the responsible source mapping and invalidate exports only.",
+          "resources": "Local parsing/FK before display; consumer graphics and manual review separately recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent maps source roles and directs package authoring.",
+        "hybrid": "Software serializes/parses/checks; agent reviews motion and field meaning.",
+        "software_first": "Checked tree/asset classes export automatically; loops/unsupported types enter review.",
+        "deterministic": "Complete supported graph, roles and properties yield reproducible package."
+      },
+      "alternatives": [
+        "URDF for a specified ROS consumer.",
+        "Direct MJCF for explicitly richer closures/contact scope.",
+        "Layout visual URDF and working dynamics package have different required roles; literal adjunct input remains recorded."
+      ],
+      "merge": {
+        "branches": "Consumer-specific packages share graph/property/source hashes and declare detail/role requirements.",
+        "evaluation": "VLM checks source/link correspondence; software compares saved poses, fields and assets.",
+        "combination": "Select a consistent complete mapping; preserve incompatible loop/extension alternatives.",
+        "post_merge": "Reparse and reload new package; repeat pose, property and role checks."
+      },
+      "software_migration": "Demonstrate supported joint types, moved poses, asset units, tensor conventions and consumer load before routine export.",
+      "future_tests": [
+        "Continuous joint receives no invented finite travel limits.",
+        "Closed loop cannot silently lose closure in tree export.",
+        "Visual/collision origins differ and remain separately placed.",
+        "Mass in grams or inertia in kg·mm² fails SI conversion fixture.",
+        "The same visual-only package passes a visualization consumer's declared role checks and fails a consumer requiring collision geometry; visual geometry is never promoted automatically."
+      ]
+    },
+    {
+      "operation_id": "DOM-10",
+      "name": "URDF import and MJCF conversion",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
+        "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
+        "https://mujoco.readthedocs.io/en/stable/python.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-10-A01",
+          "name": "Inventory URDF import policy and expected losses",
+          "purpose": "Define exact source-to-MuJoCo semantics before conversion.",
+          "intended_use": "Prepare editable MJCF conversion.",
+          "inputs": "URDF and mesh inputs, source mapping, selected MuJoCo version/compiler settings.",
+          "outputs": "Import contract with expected body/geom/joint/property mappings and defaults.",
+          "accuracy": "URDF SI versus selected MJCF unit/angle/compiler conventions explicit.",
+          "evidence": "Source package/hash, importer version and per-field capability evidence.",
+          "software": "Resolve assets and inspect URDF/extensions; record discardvisual/fusestatic and inertia inference policy.",
+          "agent": "Review source semantics and whether fixed-body fusion preserves required identity mapping.",
+          "user_decisions": "Choose visual/fusion policy and separately scoped unsupported dynamics authoring.",
+          "dependencies": "DOM-09 package; documented MuJoCo decoder/compiler APIs for selected version.",
+          "proposed_development": "Proposal: conversion preflight emits effective compiler options and field/default/loss expectations.",
+          "procedure": [
+            "Read source graph/assets and extension fields.",
+            "Record effective compiler flags including importer defaults.",
+            "Define identity and property checks across any body fusion."
+          ],
+          "validation": "Changed counts need explicit mapping; source unsupported fields remain visible.",
+          "failure_resume": "Preserve source; stop conversion at unsupported required field rather than inventing defaults.",
+          "resources": "Local XML/assets inventory precedes compile; semantic review separate."
+        },
+        {
+          "id": "DOM-10-A02",
+          "name": "Parse compile and serialize editable MJCF",
+          "purpose": "Materialize the registered MJCF output.",
+          "intended_use": "Create generated editable MJCF with conversion receipt.",
+          "inputs": "Source package and checked import settings; output path and asset policy.",
+          "outputs": "Editable MJCF XML and assets, compiled receipt and field/default/loss map.",
+          "accuracy": "Compiled/saved values compared at declared thresholds; source uncertainty unchanged.",
+          "evidence": "Actual spec/compiler/save API and version, diagnostics and output hashes.",
+          "software": "Use the selected binding's documented MjSpec.from_file/from_string parse into mjSpec; compile via supported spec.compile/mj_compile route; serialize with evidenced mj_saveXML/mj_saveXMLString or mj_encode XML route. Record compiler/savecompiled: true saves compilation-made canonical values; false saves parsed/authored spec values. Passing compiled model to mj_encode copies model modifications into spec. Pin exact callable/language/version before execution.",
+          "agent": "Review dropped/defaulted fields and explicit new simulator parameters.",
+          "user_decisions": "Supply any required actuator/contact model absent from source through separately scoped authoring.",
+          "dependencies": "Pinned MuJoCo spec/compile/XML-save capability; compiled MJB alone cannot satisfy MJCF output.",
+          "proposed_development": "Proposal: converter emits source/spec/compiled/saved stage receipts and generated flattened XML with mapping.",
+          "procedure": [
+            "Parse source into editable specification using recorded flags.",
+            "Compile and retain errors/defaulted values.",
+            "Serialize specification to editable MJCF and retain asset dependencies."
+          ],
+          "validation": "Generated XML expands/applies defaults; source text identity and original hierarchy remain in source/mapping ledger. Save report identifies expanded/omitted include/replicate/attach/flexcomp/actuator shortcut constructs and comments, plus attached compiler-setting conflicts.",
+          "failure_resume": "Retain partial spec/diagnostics; reconcile save completion before retry; no output success without actual XML bytes.",
+          "resources": "Local compile cost follows bodies/geoms/meshes; no dynamics run implied; remote exception interpretation separate."
+        },
+        {
+          "id": "DOM-10-A03",
+          "name": "Reopen MJCF and compare supported semantics",
+          "purpose": "Validate saved conversion independently of initial compile.",
+          "intended_use": "Publish MJCF with explicit preservation/loss results.",
+          "inputs": "Saved MJCF/assets, source URDF and mapped reference/moved states.",
+          "outputs": "Recompile/readback report with joint, geometry, inertia and identity comparison.",
+          "accuracy": "Per-feature pose criteria plus tensor/value thresholds; physical evidence kept separately.",
+          "evidence": "Actual saved output and original source pose/property records.",
+          "software": "Reopen/compile saved XML; compare mapped body/joint poses, ranges, assets and inertials; inspect effective actuators/contact fields.",
+          "agent": "Separate reviewer evaluates source-supported identity and any extra modeling choices.",
+          "user_decisions": "Resolve required semantic losses or choose direct MJCF branch.",
+          "dependencies": "Source-target checker and selected MuJoCo reader.",
+          "proposed_development": "Proposal: conversion verifier emits per-field equivalence, fusion mapping and consumer readiness.",
+          "procedure": [
+            "Recompile actual saved MJCF.",
+            "Compare mapped states/properties including fused bodies.",
+            "Publish conversion outcomes and required authoring dependencies."
+          ],
+          "validation": "Compile success cannot replace editable output, source equivalence or physical data.",
+          "failure_resume": "Repair only failed import/save/mapping stage; source changes invalidate descendants.",
+          "resources": "Local FK/field comparisons precede any requested contact fixture; manual semantics separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent reviews import losses and directs conversion.",
+        "hybrid": "Software parses/compiles/saves; agent resolves unsupported semantics.",
+        "software_first": "Checked URDF subsets convert with explicit exception reports.",
+        "deterministic": "Pinned supported subset/settings produces reproducible generated MJCF."
+      },
+      "alternatives": [
+        "Direct DOM-11 MJCF authoring from full source records.",
+        "Preserve URDF with versioned MJCF extension/derivative.",
+        "Context visual conversion and working simulation require different retained role/physics checks."
+      ],
+      "merge": {
+        "branches": "Importer-policy candidates share original package and intended consumer; fusion/visual choices declared.",
+        "evaluation": "VLM reviews link/field identity with source views; software compares mapped configurations/properties.",
+        "combination": "Select one coherent settings/representation branch; preserve unsupported source semantics in mapping.",
+        "post_merge": "Reopen saved selected MJCF and repeat mapped pose/property/asset checks."
+      },
+      "software_migration": "Demonstrate import defaults, fixed-body fusion, unsupported extensions, XML serialization and reopen fixtures before automation.",
+      "future_tests": [
+        "Default discarded visual geometry appears explicitly in loss map.",
+        "Fixed-body fusion changes count but mapped poses/mass remain checked.",
+        "Compiled model with failed XML save leaves MJCF output incomplete.",
+        "Unsupported actuator/contact intent enters authoring dependency rather than silent invention.",
+        "savecompiled true versus false preserves distinct authored/canonical value receipts and successful reopened MJCF; original include/comment text remains in source."
+      ]
+    },
+    {
+      "operation_id": "DOM-11",
+      "name": "Author native MJCF simulation model",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
+        "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
+        "https://mujoco.readthedocs.io/en/stable/python.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-11-A01",
+          "name": "Bind native model roles and compiler policy",
+          "purpose": "Define source-backed MuJoCo body, contact and physical meaning.",
+          "intended_use": "Prepare native MJCF authoring.",
+          "inputs": "Robot-assembly, joint-set, collision-set, mass-properties, material-set and intended simulation scope.",
+          "outputs": "Body/joint/geom/inertial mapping and explicit compiler/unit/closure policy.",
+          "accuracy": "Metre-kilogram-second choice or other consistent units declared; compiler angle settings explicit.",
+          "evidence": "Source graph, role assets, physical quantities and contact/actuation requirements.",
+          "software": "Validate body tree and role maps; inventory closure edges and effective inertiafromgeom/default settings. Record MJCF compiler/angle default degrees versus URDF radians and selected consistent physical units.",
+          "agent": "Interpret physical versus visual material and requested dynamics semantics.",
+          "user_decisions": "Choose unresolved contact/actuator scope and supported closure relation.",
+          "dependencies": "DOM-08/13/14 and pinned MJCF XML reference.",
+          "proposed_development": "Proposal: MJCF intake emits complete role/physical/source map and required model decisions.",
+          "procedure": [
+            "Bind every source link and geom role.",
+            "Record units, compiler angle/inertia options and closure requirements.",
+            "Check sourced physics/contact/actuation fields."
+          ],
+          "validation": "Required physical fields have evidence; visual/collision replacements cannot silently alter inferred mass.",
+          "failure_resume": "Retain mapped subset; block only required unresolved physical/closure features.",
+          "resources": "Local graph/property checks first; remote/manual modeling choices separately recorded."
+        },
+        {
+          "id": "DOM-11-A02",
+          "name": "Author body tree geoms and explicit closure constraints",
+          "purpose": "Create native XML/spec with source-linked semantics.",
+          "intended_use": "Deliver MJCF candidate and assets.",
+          "inputs": "Checked mapping, geometry transforms, physical properties and requested contact/actuator settings.",
+          "outputs": "Editable MJCF/spec source with source-to-body/joint/geom map.",
+          "accuracy": "Joint origins/axes/ranges, COM/tensors and contact approximations retain separate criteria.",
+          "evidence": "Serialized parameter sources and asset hashes.",
+          "software": "Use supported MJCF body/joint/inertial/geom elements or mjSpec API; encode supported equality connect/weld closure only when its constrained freedoms match the source mechanism. For MJCF fullinertia decode order M11,M22,M33,M12,M13,M23 and inertial frame convention; compiler diagonalization/diaginertia and any boundinertia adjustment are read back. inertiafromgeom auto uses geom inference only without inertial element; true overrides explicit fields.",
+          "agent": "Choose evidence-supported parameter/constraint mappings; retain physics assumptions explicitly.",
+          "user_decisions": "Resolve any closure or actuation design choice beyond source data.",
+          "dependencies": "Selected XML/spec API; fullinertia/diaginertia and compiler settings checked against actual version.",
+          "proposed_development": "Proposal: MJCF author maps graph/roles/properties into editable source with explicit inferred/declared field ledger.",
+          "procedure": [
+            "Create tree bodies and source-linked geometry roles.",
+            "Assign joints and inertials with exact frame/tensor conventions.",
+            "Add sourced closure/contact/actuation declarations and retain defaults."
+          ],
+          "validation": "Body tree alone does not close a loop; soft equality behavior and constrained freedoms require their own criterion.",
+          "failure_resume": "Keep source/spec revisions and native requests; reconcile partial writes before retry.",
+          "resources": "Local XML generation low compute; compilation/mesh cost tracked separately; reasoning effort rises for closures."
+        },
+        {
+          "id": "DOM-11-A03",
+          "name": "Compile read back and check model meaning",
+          "purpose": "Validate syntax, compiled values and intended relationships.",
+          "intended_use": "Publish native MJCF readiness for specified use.",
+          "inputs": "Saved source/assets, expected body/joint/physical records and named future fixtures.",
+          "outputs": "Compile/readback, pose/property and closure/contact reports.",
+          "accuracy": "Numerical/solver criteria, geometric clearances and physical evidence remain separate.",
+          "evidence": "Actual compiled model fields, saved source and independent measurements.",
+          "software": "Compile with MjModel.from_xml_path or supported spec route; compare effective body/joint/inertial/geom data; run bounded closure/contact fixtures only when authorized.",
+          "agent": "Separate reviewer checks role mapping and physical assumptions against source.",
+          "user_decisions": "Resolve failing required closure/contact or source physical data.",
+          "dependencies": "Pinned compiler and proposed source-to-compiled checker.",
+          "proposed_development": "Proposal: model verifier reports effective defaults, kinematics, inertials and named fixture outcomes.",
+          "procedure": [
+            "Compile saved source and inspect effective values.",
+            "Compare source frames, roles and physical records.",
+            "Check specified closure/contact conditions and publish use readiness."
+          ],
+          "validation": "Valid compile is distinct from matched physical model; equality residual/force behavior uses sourced criteria. Any compiler-adjusted inertia is a changed model value with explicit provenance; it cannot satisfy a source-property criterion merely by becoming numerically admissible.",
+          "failure_resume": "Preserve last checked source/model; invalidate affected fixture/output after edits.",
+          "resources": "Local compile/FK before dynamic fixtures; runtime cost depends on geoms/contacts/constraints; remote/manual review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent authors semantics and directs compiler/checks.",
+        "hybrid": "Software creates/checks XML; agent interprets contact/closure/physics choices.",
+        "software_first": "Demonstrated model families author with exceptions for new closures or physical roles.",
+        "deterministic": "Complete supported mapping/settings/criteria generate and check native MJCF."
+      },
+      "alternatives": [
+        "DOM-10 URDF conversion followed by explicit MJCF additions.",
+        "Reuse a per-item licensed pinned model under DOM-32.",
+        "Layout/kinematic model and working dynamic model retain different property/contact readiness."
+      ],
+      "merge": {
+        "branches": "Native and imported/pinned candidates share source requirements and target tests but retain different defaults/losses.",
+        "evaluation": "VLM compares source/body/role semantics; numerical checks inspect compiled poses, inertia and constraints.",
+        "combination": "Select coherent source-linked fields and compatible assets; any combined source is a new model revision.",
+        "post_merge": "Recompile/reopen and repeat pose, role, physical, closure and contact checks."
+      },
+      "software_migration": "Automate only demonstrated graph/geom/physical/constraint classes after compiler-default, frame, inertia and closure fixtures.",
+      "future_tests": [
+        "inertiafromgeom=true changes explicit inertial intent and is detected in compiled readback.",
+        "A loop represented by a weld with wrong constrained freedoms fails its sourced motion fixture.",
+        "Changing only visual geom cannot alter intended collision or mass behavior without an explicit recorded effect."
+      ]
+    },
+    {
+      "operation_id": "DOM-15",
+      "name": "Author semantic IFC building",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_profile_representation/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/index.html",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_representation/index.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-15-A01",
+          "name": "Resolve building schema units hierarchy and element evidence",
+          "purpose": "Define explicit semantic building requirements.",
+          "intended_use": "Prepare IFC authoring from model-brief.",
+          "inputs": "Model-brief with source dimensions, element classes/properties, spatial hierarchy, frames and representation requirements.",
+          "outputs": "IFC schema/context/unit/spatial plan and source-element mapping.",
+          "accuracy": "Element dimensions/placements cite allowances and uncertainty; representation precision separate.",
+          "evidence": "Brief/source IDs, storey/datum evidence and required delivery properties.",
+          "software": "Validate required brief fields; plan project/site/building/storey aggregation, containment and geometric contexts.",
+          "agent": "Associate source geometry with supported IFC classes and relationships.",
+          "user_decisions": "Supply unresolved class/property/height or target schema decisions required by intended delivery.",
+          "dependencies": "Point01 brief; IfcOpenShell/Bonsai capability for selected schema.",
+          "proposed_development": "Proposal: semantic intake emits required element/property/relationship records and per-element readiness.",
+          "procedure": [
+            "Read target schema and brief element requirements.",
+            "Record explicit units, contexts and local/site frames.",
+            "Map spatial hierarchy, properties and representation choices."
+          ],
+          "validation": "Shape appearance cannot supply semantic class or hidden dimensions; CRS values require source survey evidence.",
+          "failure_resume": "Retain complete elements; unresolved fields block only dependent authoring.",
+          "resources": "Local metadata/schema checks first; remote/manual semantic interpretation separate."
+        },
+        {
+          "id": "DOM-15-A02",
+          "name": "Author IFC elements placements and relationships",
+          "purpose": "Create geometry and semantic records with shared identity.",
+          "intended_use": "Produce editable IFC candidate.",
+          "inputs": "Checked brief plan, sourced geometry/material/property values and placement chains.",
+          "outputs": "IFC project/elements with GlobalId/source map, geometry and semantic relationships.",
+          "accuracy": "Geometry dimensional criteria and schema/relationship requirements separately recorded.",
+          "evidence": "Parameter-to-source links, representation types, local/project placement and units.",
+          "software": "Use supported project.create_file, root.create_entity, unit.assign_unit, context and aggregate/spatial APIs; create/assign geometry and placements. Create/represent/place opening first, then feature.add_feature to host; filling uses its own supported relation.",
+          "agent": "Review source-supported classes, containment, materials and opening/filling meaning.",
+          "user_decisions": "Resolve any new semantic classification or authored geometric choice beyond brief.",
+          "dependencies": "Selected IfcOpenShell schema/API version; point04 opening sequence and point05 unit/CRS contract.",
+          "proposed_development": "Proposal: IFC author emits element/representation/relationship identities plus source/placement ledger.",
+          "procedure": [
+            "Create project units, contexts and spatial hierarchy.",
+            "Create source-linked elements and place their representations.",
+            "Add required containment, properties, material and void/filling relationships."
+          ],
+          "validation": "Geometric hole and semantic opening are separate records; avoid duplicate transform/unit application.",
+          "failure_resume": "Preserve candidate file and completed entity map; reconcile request/entity IDs before resume.",
+          "resources": "Local entity work scales with elements/relations; geometry evaluation dominates complex solids; remote semantics separate."
+        },
+        {
+          "id": "DOM-15-A03",
+          "name": "Validate semantic graph and evaluated geometry",
+          "purpose": "Check IFC meaning and actual produced shapes.",
+          "intended_use": "Publish IFC readiness for named building use.",
+          "inputs": "Saved IFC, source requirements and independent geometry/property controls.",
+          "outputs": "Schema/IDS when supplied, semantic graph and geometry readback reports.",
+          "accuracy": "Per-element geometric tolerance separate from schema/property completeness.",
+          "evidence": "Actual saved GlobalIds/relations, evaluated shapes and original measurements.",
+          "software": "Reopen IFC; run supported validation and requested IDS checks; inspect uniqueness, hierarchy/containment, placements, void/fill and properties; measure geometry.",
+          "agent": "Separate reviewer checks element meaning, source trace and relationship interpretation.",
+          "user_decisions": "Resolve source/property conflicts or unsupported required schema feature.",
+          "dependencies": "Pinned validator/geometry engine and proposed semantic checker.",
+          "proposed_development": "Proposal: IFC verifier emits per-element semantic, geometry and delivery-requirement results.",
+          "procedure": [
+            "Reopen saved IFC and validate entities/relationships.",
+            "Evaluate geometry and compare dimensions, placements and openings.",
+            "Publish use-specific semantic and geometric readiness."
+          ],
+          "validation": "Valid schema and plausible rendering cannot substitute required property or opening-host evidence.",
+          "failure_resume": "Retain passed entities; repair affected source/representation/relation and descendants only.",
+          "resources": "Local schema checks precede selected-element geometry; whole-building processing follows required coverage, review effort separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets brief and authors semantics.",
+        "hybrid": "Software creates/validates entities; agent resolves class/property meaning.",
+        "software_first": "Checked building element families author with exceptions for unsupported schema or missing dimensions.",
+        "deterministic": "Complete semantic/geometry records and supported schema produce reproducible IFC."
+      },
+      "alternatives": [
+        "Bonsai UI authoring with explicit source maps.",
+        "Scripted IfcOpenShell API authoring proposal.",
+        "Context building geometry and working semantic delivery retain different property/detail requirements."
+      ],
+      "merge": {
+        "branches": "Element/representation alternatives share brief/source IDs and target schema while declaring geometry/detail/delivery criteria.",
+        "evaluation": "VLM checks plan/source-to-element meaning; software reports schema, placements, dimensions and relationships.",
+        "combination": "Combine compatible elements with stable IDs; conflicts retain alternative semantic/geometry records.",
+        "post_merge": "Validate new file's GlobalIds, hierarchy, relationships, geometry and source requirements independently."
+      },
+      "software_migration": "Automate demonstrated schema/element/property classes after hierarchy, opening, units, IDs and incomplete-brief fixtures.",
+      "future_tests": [
+        "Rotated wall/opening maintains host relationship and world-space void geometry.",
+        "Duplicate GlobalId fails identity check.",
+        "A geometric hole without required IfcOpeningElement/void relation fails semantic requirement.",
+        "Missing height in brief blocks dependent solid without invented default."
+      ]
+    },
+    {
+      "operation_id": "DOM-16",
+      "name": "Extract IFC geometry as triangles",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
+        "https://docs.ifcopenshell.org/ifcconvert/usage.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-16-A01",
+          "name": "Select IFC elements and triangle extraction policy",
+          "purpose": "Bind derived meshes to actual IFC geometry and identity.",
+          "intended_use": "Prepare triangle extraction.",
+          "inputs": "IFC source, selected elements, target use and geometry settings.",
+          "outputs": "Element/representation inventory, units/placement/opening policy and mesh criteria.",
+          "accuracy": "Tessellation deviation per required feature; source geometric uncertainty separate.",
+          "evidence": "Schema, GlobalIds/entity IDs, representations and local/project/map frames.",
+          "software": "Read IFC units/placements; choose create_shape or iterator and explicit geometry settings.",
+          "agent": "Review selection, absent representations and intended opening evaluation.",
+          "user_decisions": "Choose display/collision target and any scoped omission of elements.",
+          "dependencies": "IfcOpenShell selected build/settings; point05 coordinate chain.",
+          "proposed_development": "Proposal: extraction planner emits element IDs, settings and expected output frame/unit contract.",
+          "procedure": [
+            "Inventory selected representations and identities.",
+            "Record opening evaluation and local/world output policy.",
+            "Set triangle detail/error requirements."
+          ],
+          "validation": "DOM-16 output is mesh; DOM-27 owns B-rep route despite original broad capability prose.",
+          "failure_resume": "Retain inventory; unsupported representation stays explicit per element.",
+          "resources": "Local metadata first; selected-element extraction precedes full building; remote review separate."
+        },
+        {
+          "id": "DOM-16-A02",
+          "name": "Extract triangles with source and transform mapping",
+          "purpose": "Create triangle derivative without losing element association.",
+          "intended_use": "Produce mesh candidates.",
+          "inputs": "Selected IFC/settings, source IDs and target-frame policy.",
+          "outputs": "Vertices/faces and available material/item IDs, element map and placement/settings receipt.",
+          "accuracy": "Approximation and numeric coordinate precision explicit; convert units once.",
+          "evidence": "IFC bytes, geometry engine/version and shape transformation records.",
+          "software": "Use geom.create_shape or iterator; record actual vertices/faces, shape.id and transformation; apply declared local/world placement exactly once and preserve opening settings. create_shape supports selected elements/representations/items/profiles; iterator processes whole elements. Preserve available local vertex/material/item arrays and actual result matrix; Python vertices have no unit tag, so verify settings/project scale through controls. Element-level opening subtraction is documented default.",
+          "agent": "Inspect unsupported or missing geometry responses.",
+          "user_decisions": "Choose alternate supported representation route for failed elements.",
+          "dependencies": "Pinned IfcOpenShell 0.9.0post1-documented API; runtime version inspected before execution.",
+          "proposed_development": "Proposal: triangle adapter emits per-element meshes, identity/material map and baked-versus-external transform flag.",
+          "procedure": [
+            "Evaluate selected element geometry including chosen openings.",
+            "Extract triangles and available identity/material mapping.",
+            "Write derivative with explicit unit/frame and source manifest."
+          ],
+          "validation": "Element geometry must not be double-transformed; generated IDs retain their namespace and source relation.",
+          "failure_resume": "Keep completed element outputs; failed items resume from their source/settings after digest check.",
+          "resources": "Local cost follows element geometry and tessellation density; iterator parallelism only when authorized, remote interpretation separate."
+        },
+        {
+          "id": "DOM-16-A03",
+          "name": "Check element coverage placements and openings",
+          "purpose": "Validate derivative geometry against IFC evidence.",
+          "intended_use": "Publish mesh with per-element readiness.",
+          "inputs": "Saved triangles, source IFC and independent selected geometry controls.",
+          "outputs": "Coverage/loss map, frame/bounds/interface/opening checks and readback report.",
+          "accuracy": "Per-feature deviation/source criteria; bounds provide only coarse check.",
+          "evidence": "Saved mesh query, source geometry and semantic identity map.",
+          "software": "Reopen mesh; compare selected dimensions/world placements and opening passages; record elements without output and unsupported metadata.",
+          "agent": "Separate reviewer checks visual/source identity and intentional omissions.",
+          "user_decisions": "Resolve required missing element or changed opening behavior.",
+          "dependencies": "Proposed mesh/IFC comparator; independent source controls.",
+          "proposed_development": "Proposal: extraction verifier reports element-level geometry/identity results and eligible downstream roles.",
+          "procedure": [
+            "Compare required element coverage.",
+            "Measure saved world geometry and protected openings.",
+            "Publish mesh and mapping with source IFC retained."
+          ],
+          "validation": "Triangle extraction does not carry complete IFC relationships; source/sidecar identity stays explicit.",
+          "failure_resume": "Re-extract affected element only after settings/source repair; invalidate downstream scene/collider descendants.",
+          "resources": "Local selected-feature tests first; dense comparison scales with triangles, manual/remote review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects representations and reviews output meaning.",
+        "hybrid": "Software extracts/measures; agent reviews omissions and identity.",
+        "software_first": "Checked schema/representation classes extract with exceptions.",
+        "deterministic": "Explicit selection/settings/frame policy produces deterministic mesh derivative."
+      },
+      "alternatives": [
+        "Selected-element create_shape for bounded work.",
+        "Iterator bulk extraction for required coverage.",
+        "DOM-27 B-rep branch for kernel shape consumers; layout triangles and contact meshes keep different criteria."
+      ],
+      "merge": {
+        "branches": "Detail/kernel/settings candidates share IFC source and element IDs with named output frames.",
+        "evaluation": "VLM compares full element context and opening identity; software compares dimensions/coverage.",
+        "combination": "Select per-element supported output at common frame; preserve representation exceptions.",
+        "post_merge": "Recheck identity coverage, transforms, dimensions and openings in new mesh package."
+      },
+      "software_migration": "Demonstrate local/world placements, unit conversion, openings, absent geometry and element mapping before automation.",
+      "future_tests": [
+        "World-coordinate output plus repeated placement fails double-transform fixture.",
+        "Millimetre project and metre output retain one explicit conversion.",
+        "Missing representation produces a named coverage exception.",
+        "Opening subtraction setting change triggers protected-passage failure."
+      ]
+    },
+    {
+      "operation_id": "DOM-27",
+      "name": "Extract IFC geometry as OpenCASCADE B-rep",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-27-A01",
+          "name": "Resolve IFC kernel shape extraction requirements",
+          "purpose": "Select source representations that the chosen B-rep backend can evaluate.",
+          "intended_use": "Prepare distinct kernel geometry derivative.",
+          "inputs": "IFC source, element selection, required shape class and kernel/settings.",
+          "outputs": "Element-to-kernel plan with source schema/units/placements and dependencies.",
+          "accuracy": "Required analytic/surface/interface accuracy and kernel tolerance separate.",
+          "evidence": "Source representation type, GlobalId and native placement records.",
+          "software": "Inspect selected geometry library and non-triangulated/PythonOCC return capability for actual build.",
+          "agent": "Review whether faceted source can satisfy requested shape meaning.",
+          "user_decisions": "Choose supported alternative if analytic editing requires additional authored geometry.",
+          "dependencies": "IfcOpenShell geometry settings and selected OpenCASCADE/PythonOCC dependencies.",
+          "proposed_development": "Proposal: B-rep preflight emits supported shape classes and explicit backend/import dependencies.",
+          "procedure": [
+            "Inspect representations and target use.",
+            "Select supported non-triangulated kernel route.",
+            "Record units, opening evaluation and placement policy."
+          ],
+          "validation": "B-rep may remain faceted; extraction cannot restore missing source analytic intent.",
+          "failure_resume": "Retain source inventory; unsupported element routes to explicit triangle alternative or separately scoped remodeling.",
+          "resources": "Local capability/metadata checks precede shape evaluation; manual interpretation separate."
+        },
+        {
+          "id": "DOM-27-A02",
+          "name": "Extract and retain native kernel shapes",
+          "purpose": "Materialize kernel shapes with element identity.",
+          "intended_use": "Produce B-rep candidate set.",
+          "inputs": "Checked extraction settings and selected IFC representations.",
+          "outputs": "Kernel B-reps with per-element source/placement map and type/face metadata.",
+          "accuracy": "Kernel precision and source criteria retained separately; unit conversion explicit.",
+          "evidence": "Actual geometry-library/version, return type and transformation receipt.",
+          "software": "Use supported create_shape/iterator non-triangulated/OpenCASCADE route; preserve returned shape ownership/lifetime and serialize using evidenced backend path. Source API documents use-python-opencascade and non-triangulated settings; inspect actual build's PythonOCC availability and return type. Iterator whole-element scope differs from single representation/item/profile create_shape.",
+          "agent": "Review exceptions, healing or altered representation report.",
+          "user_decisions": "Choose permitted handling of unsupported/healed shapes.",
+          "dependencies": "Exact selected IfcOpenShell/build/shape binding and serializer.",
+          "proposed_development": "Proposal: B-rep adapter emits typed shapes, source maps and evaluation/healing settings.",
+          "procedure": [
+            "Evaluate selected shapes under recorded opening/settings policy.",
+            "Record actual shape/face types and transforms.",
+            "Retain serialized shape derivative and source manifest."
+          ],
+          "validation": "A triangle payload cannot be labelled B-rep; validity and analytic-face claims query actual output.",
+          "failure_resume": "Retain successful element shapes; re-evaluate failed element after bounded repair.",
+          "resources": "Local kernel memory/time follows representation complexity; bulk work after selected fixtures."
+        },
+        {
+          "id": "DOM-27-A03",
+          "name": "Validate shape class and source feature agreement",
+          "purpose": "Check native geometry before editing/exchange consumers.",
+          "intended_use": "Publish B-rep with actual supported properties.",
+          "inputs": "Saved/reopened shapes, source IFC and independent feature checks.",
+          "outputs": "Validity, topology/face-type, dimensional/placement and identity reports.",
+          "accuracy": "Source feature criteria, kernel validity tolerance and export threshold separate.",
+          "evidence": "Native readback and source control measurements.",
+          "software": "Query shape validity, solid/shell status, face types, bounds and applicable volume; compare openings and transforms.",
+          "agent": "Separate reviewer checks source-element meaning and faceted/analytic classification.",
+          "user_decisions": "Resolve missing required surface or solid capability.",
+          "dependencies": "Selected kernel checker and proposed IFC shape comparator.",
+          "proposed_development": "Proposal: shape verifier emits per-element class, metric, source and downstream-readiness records.",
+          "procedure": [
+            "Reopen retained kernel shapes.",
+            "Check class/validity and required interfaces/openings.",
+            "Publish actual representation and source mapping."
+          ],
+          "validation": "Valid shell differs from closed solid; equal bounds/volume cannot substitute interface checks.",
+          "failure_resume": "Keep valid source shapes; isolate failing element/settings and invalidate affected exports.",
+          "resources": "Local kernel checks first; detailed comparisons follow selected features, remote review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects representation/backend and interprets exceptions.",
+        "hybrid": "Software extracts/queries shapes; agent reviews source meaning.",
+        "software_first": "Demonstrated IFC geometry classes run with explicit failures.",
+        "deterministic": "Supported representation/settings/backend yields typed B-rep derivative."
+      },
+      "alternatives": [
+        "DOM-16 triangles for display/collision consumers.",
+        "Preserve source IFC for semantics while retaining B-rep for geometry queries.",
+        "Faceted context B-rep versus analytic working shape has explicit per-face requirements."
+      ],
+      "merge": {
+        "branches": "Kernel/representation candidates share element/source/frame and required face/shape class.",
+        "evaluation": "VLM reviews source/element associations; software checks actual face types, validity and dimensions.",
+        "combination": "Select compatible per-element shapes without claiming restored source history.",
+        "post_merge": "Reopen/check aggregate mappings, placements, openings and required shape classes."
+      },
+      "software_migration": "Demonstrate faceted IFC, analytic surfaces, shells, unsupported entities and placement/opening cases.",
+      "future_tests": [
+        "Faceted IFC becomes planar-face B-rep and retains that classification.",
+        "Open shell cannot pass a required closed-solid handoff.",
+        "PythonOCC dependency or return-type mismatch produces explicit adapter failure."
+      ]
+    },
+    {
+      "operation_id": "DOM-17",
+      "name": "IFC to GLB display scene",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://docs.ifcopenshell.org/introduction.html",
+        "https://www.blender.org/features/pipeline/",
+        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
+        "https://docs.ifcopenshell.org/ifcconvert/usage.html",
+        "https://github.com/blender/blender/blob/main/scripts/addons_core/io_scene_gltf2/blender/imp/blender_gltf.py"
+      ],
+      "actions": [
+        {
+          "id": "DOM-17-A01",
+          "name": "Define IFC-to-display identity and unit policy",
+          "purpose": "Preserve source trace through GLB representation changes.",
+          "intended_use": "Prepare display derivative.",
+          "inputs": "IFC, selected elements/materials, target display frame and identity requirements.",
+          "outputs": "Source-to-node/property mapping plan and unit/axis policy.",
+          "accuracy": "Display/detail criteria separate from source engineering criteria.",
+          "evidence": "IFC GlobalIds or explicitly named converted-ID namespace and source hashes.",
+          "software": "Inspect selected IfcConvert CLI or Python GLB serializer separately. CLI supports GLB and GlobalId filtering, but its documented use-element-guids naming flag covers OBJ/DAE/STEP/SVG. Serializer example has explicit optional GUID configuration. Define a checked many-to-many source-element/node/primitive/occurrence map.",
+          "agent": "Select meaningful display coverage and sidecar properties.",
+          "user_decisions": "Choose intended display omissions or property subset.",
+          "dependencies": "IfcOpenShell/IfcConvert GLB source capability; optional Blender chain is separate adapter.",
+          "proposed_development": "Proposal: scene planner emits element selection, node identity policy and preserved/lost field map.",
+          "procedure": [
+            "Read source identities and target frame.",
+            "Choose supported conversion chain/settings.",
+            "Specify node/sidecar mapping and detail criteria."
+          ],
+          "validation": "Generated fixture IDs are recorded as converted IDs; geometric holes do not imply opening relationships.",
+          "failure_resume": "Keep IFC source and plan; unsupported output policy triggers named alternative.",
+          "resources": "Local mapping preflight first; remote/manual display semantics separate."
+        },
+        {
+          "id": "DOM-17-A02",
+          "name": "Write GLB and semantic sidecar",
+          "purpose": "Create a render scene with source-linked nodes.",
+          "intended_use": "Produce visual-scene candidate.",
+          "inputs": "Checked IFC selection, triangle/settings policy and unit/axis transform.",
+          "outputs": "GLB, asset/output hashes and element-node/property sidecar.",
+          "accuracy": "Geometry approximation, glTF metre convention and axis conversion explicit.",
+          "evidence": "Converter/version/options and source-node mapping receipt.",
+          "software": "Choose one evidenced branch: IfcConvert .glb with explicit metre/default or convert-back-units and use-world-coords settings plus separately checked element-to-node sidecar; OR Python GLB serializer with explicit GUID policy, dimensionality/material settings and setUnitNameAndMagnitude('METER',1.0). Do not claim CLI use-element-guids naming for GLB. Optional Blender chain records its own coordinate/unit conversion.",
+          "agent": "Review representation/material simplification and identifier coverage.",
+          "user_decisions": "Choose supported material/detail fallback where required.",
+          "dependencies": "Pinned converter/serializer and DOM-16 geometry semantics.",
+          "proposed_development": "Proposal: GLB writer emits scene plus ID/property/loss map; preserves original IFC independently.",
+          "procedure": [
+            "Convert through the selected CLI or Python serializer with branch-specific unit/frame settings.",
+            "Obtain actual element-to-node/primitive/occurrence mapping through the serializer GUID policy or independently checked CLI sidecar; preserve one-to-many and shared-mesh occurrences.",
+            "Write GLB and matching sidecar/loss record; required identity remains partial when mapping cannot be established."
+          ],
+          "validation": "Geometry placement and identity map correspond to same source; IFC relationships remain source records.",
+          "failure_resume": "Keep converted geometry with partial identity status if mapping fails; no node-order/name guessing can publish required identity. Reconcile GLB/sidecar hashes and rerun only failed conversion/mapping stage.",
+          "resources": "Local tessellation/serialization scales with triangles/materials; display GPU optional and recorded."
+        },
+        {
+          "id": "DOM-17-A03",
+          "name": "Reopen scene and compare identity coverage",
+          "purpose": "Check saved visual derivative and mapping.",
+          "intended_use": "Publish scene readiness for intended viewer.",
+          "inputs": "Saved GLB/sidecar, IFC controls and target viewer.",
+          "outputs": "Readback identity, orientation, dimensions and mapping report.",
+          "accuracy": "Selected feature/display error criteria and numerical transform threshold separate.",
+          "evidence": "Actual viewer/reader result, mapped source elements and geometry checks.",
+          "software": "Reopen GLB independently; inspect node IDs, transforms, bounds, selected openings/materials and sidecar references.",
+          "agent": "Separate reviewer compares labelled source/full-context views to display nodes.",
+          "user_decisions": "Resolve required omitted elements or source mapping conflict.",
+          "dependencies": "Target GLB reader and proposed IFC-display comparator.",
+          "proposed_development": "Proposal: scene verifier reports coverage, frame/units and visual/source correspondence.",
+          "procedure": [
+            "Open saved GLB and sidecar.",
+            "Compare required nodes and world geometry to source.",
+            "Publish display use with retained IFC reference."
+          ],
+          "validation": "Plausible rendering cannot substitute correct node identity or source semantic preservation.",
+          "failure_resume": "Retain valid nodes; re-export affected source/settings then recheck new package.",
+          "resources": "Local coverage/transform checks before render review; remote/manual image review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent chooses display semantics and directs conversion.",
+        "hybrid": "Software converts/reopens; agent reviews mapping/appearance.",
+        "software_first": "Checked IFC/GLB settings run with identity/geometry exceptions.",
+        "deterministic": "Explicit selection, supported converter and mapping policy produce reproducible visual scene."
+      },
+      "alternatives": [
+        "IFC-native viewer for semantic relationships.",
+        "Direct IfcConvert GLB or separately evidenced Blender chain.",
+        "Context display can simplify surfaces; working selection/measurement interface needs stable IDs and required geometry criteria."
+      ],
+      "merge": {
+        "branches": "Display detail/material candidates share IFC revision and element mapping; branch goals differ explicitly.",
+        "evaluation": "VLM checks source-to-node correspondence using labelled views; software checks transforms and coverage.",
+        "combination": "Select compatible per-element display assets at one unit/frame policy.",
+        "post_merge": "Reopen final GLB/sidecar and repeat identity, source geometry and viewer checks."
+      },
+      "software_migration": "Demonstrate ID namespaces, absent geometry, local/world conversion, repeated instances and reader behavior before routine export.",
+      "future_tests": [
+        "Converted source-part IDs are retained without relabelling as original GlobalIds.",
+        "Rotated millimetre IFC exports/reopens with correct metre-scale orientation.",
+        "GLB exists but sidecar points at older IFC revision: package readiness fails.",
+        "Renamed, reordered or missing GLB nodes invalidate guessed index/name matching; required identity needs actual element→node/primitive/occurrence evidence, including shared meshes."
+      ]
+    },
+    {
+      "operation_id": "DOM-32",
+      "name": "Map CAD link geometry to MJCF body tree",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
+        "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-32-A01",
+          "name": "Pin seed model and map CAD occurrences to bodies",
+          "purpose": "Scope geometry replacement within an existing MJCF.",
+          "intended_use": "Prepare source-preserving model revision.",
+          "inputs": "MJCF, CAD assembly, joint-set, measurement-set and component-record; per-asset rights and body map.",
+          "outputs": "Seed topology/actuator/sensor/physics snapshot and CAD-to-body mapping.",
+          "accuracy": "Mount/interface transform criteria cite measurements; source body physics provenance separate.",
+          "evidence": "Seed XML/assets/settings hashes, CAD occurrences and measured interfaces.",
+          "software": "Parse seed and inspect effective compiled mappings; record inertia inference, fusion and mesh transforms.",
+          "agent": "Match exact robot configuration and source occurrence to body; identify visual/collision replacement role.",
+          "user_decisions": "Resolve geometry role or incompatible configuration; topology change requires separate scope.",
+          "dependencies": "Pinned model/source terms; DOM-08/12/14 evidence and selected compiler.",
+          "proposed_development": "Proposal: seed mapper emits body/occurrence correspondence, invariants and affected physics dependencies.",
+          "procedure": [
+            "Pin existing model and its complete assets.",
+            "Map CAD occurrences to named bodies and required frames.",
+            "Record preserved graph/actuator/sensor declarations and mass-inference dependencies."
+          ],
+          "validation": "DOM-32 preserves existing topology; seed mismatch cannot silently route to a rebuilt model.",
+          "failure_resume": "Keep seed read-only; unresolved map blocks only affected replacements.",
+          "resources": "Local parse/frame checks first; source geometry queries by mapped bodies; remote/manual association separate."
+        },
+        {
+          "id": "DOM-32-A02",
+          "name": "Replace mapped role-specific geometry",
+          "purpose": "Add supported geometry while retaining seed model structure.",
+          "intended_use": "Create revised MJCF candidate.",
+          "inputs": "Checked body map, source-linked mesh/primitive assets, role settings and preservation policy.",
+          "outputs": "New XML/assets with geom-to-source and transform map; explicit physics-effect report.",
+          "accuracy": "Geometry error, placement allowance and compiler comparison thresholds separate.",
+          "evidence": "Changed geom declarations, body frames, asset transforms and source checks.",
+          "software": "Replace/add only mapped geoms; preserve body/joint/actuator/sensor definitions; control inertia inference and contact roles explicitly.",
+          "agent": "Review intended replacement and any geometry-driven physical effects.",
+          "user_decisions": "Resolve required mass/contact changes as explicit sourced decisions.",
+          "dependencies": "DOM-12/13 assets; selected MJCF API and immutable seed snapshot.",
+          "proposed_development": "Proposal: geometry patcher accepts body/role/asset transforms and emits changed fields plus preservation diff.",
+          "procedure": [
+            "Write new geometry assets in mapped body frames.",
+            "Patch only authorized geom/asset declarations.",
+            "Record effective mass/contact consequences and source lineage."
+          ],
+          "validation": "Automatic inertia recomputation cannot silently change preserved physical intent; collider replacement receives contact checks.",
+          "failure_resume": "Retain candidate patch and seed; reconcile partial XML/assets before retry.",
+          "resources": "Local asset generation cost follows selected geometry; remote semantics/manual mass data separate."
+        },
+        {
+          "id": "DOM-32-A03",
+          "name": "Compare preserved semantics and effective geometry",
+          "purpose": "Verify replacement obeys preservation contract.",
+          "intended_use": "Publish revised MJCF with source and checks.",
+          "inputs": "Saved candidate, seed snapshot, independent interface/pose controls.",
+          "outputs": "Source-to-result graph/actuator/sensor/physics diff and effective placed-geometry report.",
+          "accuracy": "Pose/interface criteria and mass/tensor numerical comparisons separately sourced.",
+          "evidence": "Actual recompiled/readback model and raw/compiled mesh/frame mappings.",
+          "software": "Reopen/compile; compare preserved declarations and mapped kinematics, inertials, collision roles and effective surfaces including compiler mesh offsets/rotation.",
+          "agent": "Separate reviewer checks body/part correspondence and intended role.",
+          "user_decisions": "Resolve changed source physics/contact behavior or reject incompatible candidate.",
+          "dependencies": "DOM-10/11 readback and proposed seed-diff checker.",
+          "proposed_development": "Proposal: replacement verifier emits preserved-field diff, world-geometry residuals and affected contact results.",
+          "procedure": [
+            "Recompile saved candidate.",
+            "Compare seed invariants and effective placed geometry at named configurations.",
+            "Publish mapping and independent semantic/metric findings."
+          ],
+          "validation": "Raw mesh vertices or geom_pos alone cannot substitute full compiled mesh→geom→body transform comparison.",
+          "failure_resume": "Keep seed and failed candidate; revise only affected map/geom then recheck dependent properties.",
+          "resources": "Local compiled/FK checks before selected contact fixtures; large mesh comparisons bounded by required regions."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets seed/CAD correspondence and directs replacement.",
+        "hybrid": "Software patches/compiles/diffs; agent reviews role and physics effects.",
+        "software_first": "Demonstrated seed/body/asset families update with exceptions for changed topology or inference.",
+        "deterministic": "Complete compatible body map and explicit role/settings yield checked replacement."
+      },
+      "alternatives": [
+        "Replace visual geometry while retaining sourced collisions/physics.",
+        "Replace collision representation with separate approximation/contact checks.",
+        "Rebuild incompatible robot through DOM-11 as a separately scoped alternative; layout versus working dynamics criteria remain explicit."
+      ],
+      "merge": {
+        "branches": "Replacement candidates share immutable seed and CAD revisions; roles/detail and permitted physical effects declared.",
+        "evaluation": "VLM compares source body/configuration evidence; software reports invariants, placed geometry and properties.",
+        "combination": "Select compatible body-specific replacements preserving whole seed invariants.",
+        "post_merge": "Compile/reopen combined revision and recheck graph, actuators/sensors, inertials, frames and affected contacts."
+      },
+      "software_migration": "Automate known seed/body mappings after geometry-centering, inference, topology-preservation and asset-revision fixtures.",
+      "future_tests": [
+        "Visual replacement unexpectedly changes inferred body inertia; diff fails preservation.",
+        "Compiler recentres mesh but effective world geometry matches; comparison uses full transform chain.",
+        "Wrong CAD configuration matches bounds but fails critical mounting interface."
+      ]
+    },
+    {
+      "operation_id": "DOM-33",
+      "name": "Add environment collision geometry to MJCF",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-33-A01",
+          "name": "Bind environment to existing robot world frame",
+          "purpose": "Define static obstacle placement without changing robot structure.",
+          "intended_use": "Prepare environment addition.",
+          "inputs": "Existing MJCF, environment mesh and collision-set with registration/source map.",
+          "outputs": "Seed robot invariants and environment-to-world transform/contact plan.",
+          "accuracy": "Registration uncertainty, passage allowance and collider error separate.",
+          "evidence": "Source mesh/collider hashes, world controls and robot base frame.",
+          "software": "Read seed graph/settings; validate per-piece transforms and common scale; inventory contact filters/pairs.",
+          "agent": "Associate obstacles and required passage/contact regions.",
+          "user_decisions": "Supply environment pose/contact intent where source controls leave ambiguity.",
+          "dependencies": "Point05 registration; DOM-13 colliders and seed compiler.",
+          "proposed_development": "Proposal: environment intake emits frame/contact dependencies and seed preservation snapshot.",
+          "procedure": [
+            "Pin seed and environment sources.",
+            "Resolve source-to-world transform once.",
+            "Define static roles and required contact/passages."
+          ],
+          "validation": "Mesh and collider source frames must agree; scene appearance alone cannot establish registration.",
+          "failure_resume": "Retain seed/registration; repair affected source/frame before insertion.",
+          "resources": "Local transforms/bounds first; detailed passage queries selected; remote/manual evidence review separate."
+        },
+        {
+          "id": "DOM-33-A02",
+          "name": "Add static geoms with separate visual and collision roles",
+          "purpose": "Compose environment assets into a new scene revision.",
+          "intended_use": "Create MJCF candidate retaining existing robot.",
+          "inputs": "Checked environment plan and per-piece assets/settings.",
+          "outputs": "Revised MJCF with static geom/source map and seed-preservation diff.",
+          "accuracy": "Piece approximation/placement criteria and contact solver settings distinct.",
+          "evidence": "Geom assets, world transforms, collision masks/pairs and source IDs.",
+          "software": "Add supported worldbody/fixed static geoms; retain original robot graph; keep visual roles distinct from active colliders.",
+          "agent": "Review intended obstacle coverage and contact filters.",
+          "user_decisions": "Choose documented contact policy where required beyond source.",
+          "dependencies": "Pinned MJCF API and DOM-13 piece records.",
+          "proposed_development": "Proposal: static-geom composer emits new XML/assets and per-piece world placement/role ledger.",
+          "procedure": [
+            "Insert source-linked static environment geoms.",
+            "Assign visual/contact roles and explicit filtering.",
+            "Save new scene with original robot declarations retained."
+          ],
+          "validation": "Adding static obstacles does not invent dynamic-body mass or robot joints.",
+          "failure_resume": "Reconcile written asset/XML state; retry incomplete addition by stable source IDs.",
+          "resources": "Local XML/asset work follows geom count; graphics and contact compute separate."
+        },
+        {
+          "id": "DOM-33-A03",
+          "name": "Check robot preservation and obstacle contacts",
+          "purpose": "Validate scene geometry and intended contact cases.",
+          "intended_use": "Publish revised MJCF for specified environment use.",
+          "inputs": "Saved candidate, source seed, frame controls and passage/contact fixtures.",
+          "outputs": "Compile/readback, seed invariant and environment/contact reports.",
+          "accuracy": "Independent placement/gap criteria plus simulator numerical settings.",
+          "evidence": "Actual compiled world surfaces and source/robot reference states.",
+          "software": "Reopen/compile; compare robot graph/poses, effective obstacle geometry and source mapping; evaluate named contact/no-contact fixtures when scoped.",
+          "agent": "Separate reviewer checks environment identity and required passage meaning.",
+          "user_decisions": "Resolve required collision/placement discrepancy.",
+          "dependencies": "Proposed scene diff and selected consumer fixture adapter.",
+          "proposed_development": "Proposal: environment verifier reports seed invariants, frame/coverage and per-fixture outcomes.",
+          "procedure": [
+            "Compare seed robot after saved-scene compile.",
+            "Measure obstacle placement/passages and effective collision geometry.",
+            "Check declared fixtures and publish use readiness."
+          ],
+          "validation": "Compile and aggregate bounds cannot pass blocked required opening or wrong collision filter.",
+          "failure_resume": "Retain seed and passed obstacles; revise affected pieces/transforms and rerun dependent fixtures.",
+          "resources": "Local graph/geometry checks precede contact fixtures; effort scales with relevant geom pairs, remote review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent identifies obstacle/source meaning and directs insertion.",
+        "hybrid": "Software composes/checks; agent interprets passage/contact intent.",
+        "software_first": "Checked registered environment classes run with frame/contact exceptions.",
+        "deterministic": "Explicit static assets/transforms/filter policy produce repeatable scene addition."
+      },
+      "alternatives": [
+        "Analytic primitives for measured simple obstacles.",
+        "Convex pieces for required concave passages.",
+        "Context visual environment versus working contact environment retains separate required checks."
+      ],
+      "merge": {
+        "branches": "Environment collider/detail candidates share seed robot/world controls and contact feature IDs.",
+        "evaluation": "VLM reviews source obstacle/passage association; software compares frames and fixtures.",
+        "combination": "Select compatible static objects and preserve seed invariants.",
+        "post_merge": "Recompile/reopen whole scene and repeat robot, geometry and contact checks."
+      },
+      "software_migration": "Demonstrate static roles, transforms, passages, filters and seed preservation before routine insertion.",
+      "future_tests": [
+        "Environment transform applied twice fails independent world control.",
+        "Contact filter accidentally disables required obstacle and fails positive-contact fixture.",
+        "Robot joint/actuator changed by environment composer fails preservation."
+      ]
+    },
+    {
+      "operation_id": "DOM-34",
+      "name": "Author static MuJoCo environment from BIM mesh",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
+        "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
+        "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-34-A01",
+          "name": "Bind BIM-derived mesh and collider identities",
+          "purpose": "Carry building provenance into static simulation geometry.",
+          "intended_use": "Prepare standalone environment MJCF.",
+          "inputs": "Mesh and collision-set with IFC source/element mapping, units and frame lineage.",
+          "outputs": "Element-to-mesh-to-piece map and simulation-world placement/coverage plan.",
+          "accuracy": "Building/registration uncertainty and contact approximation allowance separate.",
+          "evidence": "IFC source revision, GlobalId or converted-ID namespace, extraction settings.",
+          "software": "Check mesh/collider lineage and element coverage; resolve local/project/map-to-world chain.",
+          "agent": "Associate building elements, geometric holes and required passage/contact regions.",
+          "user_decisions": "Supply simulation-world placement and contact goal where needed.",
+          "dependencies": "DOM-16/17 source maps, DOM-13 colliders and point05 frame evidence.",
+          "proposed_development": "Proposal: BIM-environment intake emits static role/coverage and source-frame contract.",
+          "procedure": [
+            "Resolve both required inputs to same building source.",
+            "Record exact element identifiers and transformation chain.",
+            "Define static geometry and protected contact features."
+          ],
+          "validation": "BIM lineage is required for this operation's stated provenance; generic mesh can use a separately declared generic environment route.",
+          "failure_resume": "Retain valid map; repair missing source/element or transform evidence before publication.",
+          "resources": "Local metadata/frame checks first; remote/manual element interpretation separate."
+        },
+        {
+          "id": "DOM-34-A02",
+          "name": "Author static world geoms and source sidecar",
+          "purpose": "Create environment-only MuJoCo source.",
+          "intended_use": "Deliver static MJCF candidate.",
+          "inputs": "Checked mesh/collider map, world frame, role/contact settings and assets.",
+          "outputs": "MJCF world geoms plus IFC-element/asset sidecar and loss map.",
+          "accuracy": "Geometry/contact criteria explicit; unit and angle/compiler policy recorded.",
+          "evidence": "Source IFC/map chain and per-geom asset transforms.",
+          "software": "Create static worldbody geometry with separate visual/collision roles; retain per-piece transforms and selected material appearance/contact meaning.",
+          "agent": "Review source coverage and static designation.",
+          "user_decisions": "Choose any new contact parameter supported by intended test scope.",
+          "dependencies": "Pinned MJCF XML/spec API; DOM-13/16 geometry contracts.",
+          "proposed_development": "Proposal: static-world writer emits XML/assets with source-element and approximation mapping.",
+          "procedure": [
+            "Create explicit world/unit/compiler context.",
+            "Attach static visual and collision assets.",
+            "Write source/element mapping and retained semantic-source references."
+          ],
+          "validation": "Environment output creates no robot or invented inertial body requirements; IFC semantics stay source-linked.",
+          "failure_resume": "Keep partial XML/assets and mappings; reconcile completeness before retry.",
+          "resources": "Local creation low compute relative to building mesh size; memory/assets scale with elements/hulls."
+        },
+        {
+          "id": "DOM-34-A03",
+          "name": "Validate static coverage and working passages",
+          "purpose": "Check building-to-world geometry and contact meaning.",
+          "intended_use": "Publish static-environment MJCF.",
+          "inputs": "Saved environment, IFC-derived controls and named contact/passage fixtures.",
+          "outputs": "Compile/readback, coverage/placement and contact approximation results.",
+          "accuracy": "Feature dimensions and passage allowance source-backed; numerical/solver settings separate.",
+          "evidence": "Actual saved geoms and source building element checks.",
+          "software": "Compile/reopen; compare element coverage, effective world geometry and static roles; test protected contact/no-contact configurations.",
+          "agent": "Separate reviewer verifies source element identity and preserved required openings.",
+          "user_decisions": "Resolve required omitted/blocked building feature.",
+          "dependencies": "Proposed BIM-to-world verifier and target fixture runner.",
+          "proposed_development": "Proposal: verifier emits per-element geometry/identity and per-contact readiness.",
+          "procedure": [
+            "Read compiled static scene.",
+            "Compare building controls, IDs and required openings.",
+            "Evaluate named fixtures and publish use-specific results."
+          ],
+          "validation": "A geometric passage check and IFC opening relationship check remain distinct; static scene carries only declared derivative semantics.",
+          "failure_resume": "Rebuild affected elements/pieces after source/settings change; preserve unaffected source evidence.",
+          "resources": "Local selected controls before detailed world contacts; remote review and manual survey evidence separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent maps building elements/world intent and directs authoring.",
+        "hybrid": "Software writes/checks static scene; agent reviews coverage/contact meaning.",
+        "software_first": "Checked BIM extraction/collider classes run with source/placement exceptions.",
+        "deterministic": "Complete mesh/collider/map/frame contract produces reproducible static environment."
+      },
+      "alternatives": [
+        "Analytic primitives for sourced building contact surfaces.",
+        "Convex parts for complex source-derived obstacles.",
+        "Layout building scene and working contact scene retain separate passage/geometry requirements."
+      ],
+      "merge": {
+        "branches": "Static representations share IFC revision, element IDs and world controls with different detail/contact targets.",
+        "evaluation": "VLM checks element/source context; software measures coverage, placements and fixtures.",
+        "combination": "Select per-element compatible geometry/colliders without merging semantic identities.",
+        "post_merge": "New environment revision repeats source mapping, world geometry and contact checks."
+      },
+      "software_migration": "Automate demonstrated building geometry classes after ID, openings, unit, local/world and contact fixtures.",
+      "future_tests": [
+        "IFC metadata absent from mesh prevents BIM provenance claim while retaining geometry evidence.",
+        "Storey placement applied twice fails source-to-world controls.",
+        "Coarse hull fills doorway and fails working-passage criterion."
+      ]
+    },
+    {
+      "operation_id": "DOM-24",
+      "name": "Assemble and inspect Blender scene",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://www.blender.org/features/pipeline/",
+        "https://projects.blender.org/lab/blender_mcp/src/branch/main",
+        "https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst",
+        "https://uxplanet.org/3d-modeling-with-claude-code-a-practical-blender-workflow-97e6e0b536b0",
+        "https://github.com/blender/blender/blob/main/scripts/addons_core/io_scene_gltf2/blender/imp/blender_gltf.py"
+      ],
+      "actions": [
+        {
+          "id": "DOM-24-A01",
+          "name": "Resolve scene input branch and actual adapter",
+          "purpose": "Select a supported import/composition path.",
+          "intended_use": "Prepare visual scene or camera-only scene.",
+          "inputs": "One cad-solid/mesh/IFC/robot-assembly/camera-solution route, source assets and requested composition.",
+          "outputs": "Adapter/role/source map with unit, frame and camera conventions.",
+          "accuracy": "Display/placement/camera criteria cite intended use; engineering source uncertainty retained.",
+          "evidence": "Input revisions, per-asset rights, geometry/semantic/camera records.",
+          "software": "Inspect actual Blender/add-on versions and supported input adapters; pin scene units and transform policy.",
+          "agent": "Identify required scene content and source object/element/link associations.",
+          "user_decisions": "Choose visual composition beyond supplied intent or resolve unsupported adapter route.",
+          "dependencies": "Blender import/scene API; OCS remains engineering source; domain geometry adapters as needed.",
+          "proposed_development": "Proposal: scene intake emits selected variant, object/camera map and importer prerequisites.",
+          "procedure": [
+            "Identify exact input route and source assets.",
+            "Select supported adapter with recorded version.",
+            "Define scene unit/axis, object and camera mappings."
+          ],
+          "validation": "Camera-solution alone validly yields camera-only scene; geometry is required only for dependent checks.",
+          "failure_resume": "Retain source map; repair unsupported adapter/version without altering source domain file.",
+          "resources": "Local metadata/adapter check first; remote/manual composition interpretation separate."
+        },
+        {
+          "id": "DOM-24-A02",
+          "name": "Compose source-linked scene objects and cameras",
+          "purpose": "Create requested display representation.",
+          "intended_use": "Produce visual-scene candidate.",
+          "inputs": "Checked import map, assets, frame transforms and camera/render intent.",
+          "outputs": "Scene with object/source IDs, linked assets, transforms and domain-sidecar references.",
+          "accuracy": "Placement/camera consistency and chosen mesh error explicit.",
+          "evidence": "Actual import settings, evaluated geometry and camera mappings.",
+          "software": "Use supported bpy import/scene operators or version-compatible bridge; glTF import records Y-up to Z-up and scene scale; preserve evaluated versus source geometry identity.",
+          "agent": "Review framing, visibility and appearance decisions using source context.",
+          "user_decisions": "Choose requested visual edits/lighting where task requires new decisions.",
+          "dependencies": "Actual Blender operator/add-on API; bridge version compatibility checked independently.",
+          "proposed_development": "Proposal: scene composer accepts typed imports/transforms/cameras and emits scene plus source/loss manifest.",
+          "procedure": [
+            "Import or create only required objects/cameras.",
+            "Apply explicit transforms/units and retain source association.",
+            "Save candidate scene and resolved asset links."
+          ],
+          "validation": "Scene hierarchy does not replace IFC relationships or robot physical semantics; maps link to those sources.",
+          "failure_resume": "Reconcile object IDs/request completion before retry; partial scene remains identified.",
+          "resources": "Local mesh/memory scales with geometry; GPU display/render only when needed; model calls separately logged."
+        },
+        {
+          "id": "DOM-24-A03",
+          "name": "Reopen and inspect scene content numerically and visually",
+          "purpose": "Verify saved composition and source association.",
+          "intended_use": "Publish visual-scene readiness.",
+          "inputs": "Saved scene/optional requested GLB, source map and feature/camera criteria.",
+          "outputs": "Readback object/camera/asset, transform and representative-view report.",
+          "accuracy": "Numeric placement and appearance/detail criteria separate.",
+          "evidence": "Actual saved scene, source full views and labelled matched crops.",
+          "software": "Reopen actual output; query object/world transforms, bounds where geometry exists, camera projection and linked paths.",
+          "agent": "Separate reviewer compares full context and source-labelled views; camera-only branch checks camera data without invented geometry.",
+          "user_decisions": "Resolve missing requested content or composition conflicts.",
+          "dependencies": "Selected scene/GLB reader and proposed source-map checker.",
+          "proposed_development": "Proposal: scene verifier emits role-specific checks and source/derivative coverage.",
+          "procedure": [
+            "Reopen saved artifact and resolve assets.",
+            "Check applicable object/camera transforms and content.",
+            "Review source-linked representative views and publish results."
+          ],
+          "validation": "Camera-only branch can pass; absent geometry-dependent checks are inapplicable rather than failed.",
+          "failure_resume": "Retain passed content; revise failed import/camera/material stage and invalidate affected views.",
+          "resources": "Local numerical checks precede renders; render size/samples and remote image review effort recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets source/composition and directs scene operations.",
+        "hybrid": "Software imports/queries; agent reviews appearance and source association.",
+        "software_first": "Checked import classes run with adapter/asset exceptions.",
+        "deterministic": "Complete supported scene/camera inputs and transforms produce reproducible scene."
+      },
+      "alternatives": [
+        "Direct Blender background/scripted adapter proposal.",
+        "Version-compatible interactive bridge for iterative source inspection.",
+        "Camera-only scene is valid; layout view and working geometry inspection use different content criteria."
+      ],
+      "merge": {
+        "branches": "Scene/camera alternatives share source revisions and intended view while declaring detail/render targets.",
+        "evaluation": "VLM compares labelled source/scene views with numerical transform receipts.",
+        "combination": "Combine compatible scene objects/cameras retaining IDs and source roles.",
+        "post_merge": "Reopen merged scene and repeat object/camera/asset, transform and source-view checks."
+      },
+      "software_migration": "Automate supported import/camera classes after axis, scale, asset, camera-only and version mismatch fixtures.",
+      "future_tests": [
+        "Camera-only input produces checked camera scene without fabricated geometry.",
+        "glTF Y-up/metre import with non-unit scene scale preserves world dimensions.",
+        "Scene references stale source ID despite matching appearance; coverage check fails."
+      ]
+    },
+    {
+      "operation_id": "DOM-35",
+      "name": "Place library component in semantic IFC",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://www.freecad.org/addons.php?lang=eng_EN",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_representation/index.html",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-35-A01",
+          "name": "Bind library asset and target IFC placement meaning",
+          "purpose": "Resolve reusable source and semantic insertion requirements.",
+          "intended_use": "Prepare distinct IFC occurrence.",
+          "inputs": "IFC, component-record and measurement-set; target class/type/storey/host and placement evidence.",
+          "outputs": "Asset-to-IFC representation/semantic plan with rights/source map.",
+          "accuracy": "Mounting/placement dimensions and unit/frame uncertainty separate.",
+          "evidence": "Exact source bytes/terms/configuration and IFC target revision.",
+          "software": "Inspect asset format and applicable geometry adapter; read target project units/context/placement hierarchy.",
+          "agent": "Associate source component role with evidence-supported class and target relationships.",
+          "user_decisions": "Supply required semantic class, storey/host or placement intent when absent from original typed inputs.",
+          "dependencies": "Point02 library intake; selected IFC representation adapter.",
+          "proposed_development": "Proposal: component-to-IFC planner emits source/target identities, required semantics and representation capability.",
+          "procedure": [
+            "Pin component and target IFC revisions.",
+            "Resolve source-to-target measurement/frame mapping.",
+            "Identify class/type/occurrence and supported geometry representation."
+          ],
+          "validation": "Original inputs do not guarantee target semantics; record linked dependency rather than invent class.",
+          "failure_resume": "Retain intake; unresolved semantic/adapter field blocks dependent insertion only.",
+          "resources": "Local source/metadata checks first; remote/manual role interpretation separate."
+        },
+        {
+          "id": "DOM-35-A02",
+          "name": "Create placed semantic occurrence with source mapping",
+          "purpose": "Insert component geometry and required IFC relations.",
+          "intended_use": "Create revised IFC candidate.",
+          "inputs": "Checked representation/class/placement plan and target context.",
+          "outputs": "New occurrence/entity, source mapping, representation and spatial/host relations; existing identities retained.",
+          "accuracy": "Geometric placement criteria and semantic requirements independent.",
+          "evidence": "New GlobalId/occurrence ID, source asset identity and explicit transform.",
+          "software": "Create product/type as required, create or import supported representation, assign placement and containment; openings/fillings use separate supported relations. add_representation alone supplies only representation.",
+          "agent": "Review actual source-to-class/type meaning and instance overrides.",
+          "user_decisions": "Choose necessary instance-specific properties beyond library data.",
+          "dependencies": "Selected IfcOpenShell/Bonsai capability; Blender-dependent add_representation applies only to its supported input.",
+          "proposed_development": "Proposal: library inserter emits new entity/representation/relation IDs and source/placement ledger.",
+          "procedure": [
+            "Create distinct semantic occurrence and representation.",
+            "Apply source-to-project placement once.",
+            "Assign required spatial/host/property relations and preserve source terms."
+          ],
+          "validation": "Repeated instances have distinct occurrence identity; source definition and existing IFC IDs stay traceable.",
+          "failure_resume": "Retain partial entity map; reconcile actual file/IDs before retry to prevent duplicates.",
+          "resources": "Local entity writes low compute; geometry import complexity varies by asset; remote semantics separate."
+        },
+        {
+          "id": "DOM-35-A03",
+          "name": "Check new occurrence and preserved IFC relationships",
+          "purpose": "Validate inserted component and unchanged source context.",
+          "intended_use": "Publish revised IFC.",
+          "inputs": "Saved candidate, original IFC, component measurements and semantic requirements.",
+          "outputs": "Validation/readback, placement/interface and identity/relationship diff.",
+          "accuracy": "Feature placement criteria, source uncertainty and numerical threshold separated.",
+          "evidence": "Actual saved entity graph and source component/control records.",
+          "software": "Reopen/validate; compare new geometry/placement, class/type/containment and required opening/fill relations; diff existing IDs/relationships.",
+          "agent": "Separate reviewer checks source configuration and intended component meaning.",
+          "user_decisions": "Resolve source classification or interface mismatch.",
+          "dependencies": "DOM-15 verifier and proposed library-source comparator.",
+          "proposed_development": "Proposal: insertion verifier emits source identity, occurrence geometry and preserved-context checks.",
+          "procedure": [
+            "Reopen/validate candidate IFC.",
+            "Compare inserted interfaces and semantic relations.",
+            "Publish source/occurrence map and preserved-context diff."
+          ],
+          "validation": "Visual placement cannot pass wrong class/host; library geometry does not certify product specifications.",
+          "failure_resume": "Keep source/target originals; repair affected occurrence only and invalidate derived scenes/colliders.",
+          "resources": "Local graph/selected geometry checks before whole-building derivatives; manual/remote review separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets asset/target meaning and directs insertion.",
+        "hybrid": "Software imports/places/validates; agent reviews class/host correspondence.",
+        "software_first": "Checked library-format/class families insert with semantic/adapter exceptions.",
+        "deterministic": "Complete asset/representation/class/frame inputs produce reproducible occurrence."
+      },
+      "alternatives": [
+        "Native IFC library representation with explicit type/occurrence reuse.",
+        "Supported Blender/geometry adapter for source asset with separate product/relationship authoring.",
+        "Context furniture display and working building element require different semantic/interface evidence."
+      ],
+      "merge": {
+        "branches": "Library/placement candidates share target IFC revision and source asset/configuration; detail/class targets explicit.",
+        "evaluation": "VLM compares item/host evidence; software checks interfaces, IDs and relationships.",
+        "combination": "Select compatible instances with distinct occurrence IDs and source mappings.",
+        "post_merge": "Validate new IFC and repeat placement, classification, host and preserved-context checks."
+      },
+      "software_migration": "Automate only demonstrated asset/class/representation types after duplicates, units, host, rights and source revision fixtures.",
+      "future_tests": [
+        "Two placements of one asset preserve two IFC occurrence identities.",
+        "add_representation returns geometry but missing product/containment keeps insertion partial.",
+        "Library source configuration differs from required interface and fails measurement comparison."
+      ]
+    },
+    {
+      "operation_id": "DOM-25",
+      "name": "Create fabrication package",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/TechDraw_ExportPageSVG.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-25-A01",
+          "name": "Bind model revision to fabrication requirements",
+          "purpose": "Define exact recipient/process artifact requirements.",
+          "intended_use": "Prepare manufacturing documentation package.",
+          "inputs": "Dimensions and material-set AND cad-solid OR cad-assembly; process/recipient requirements and sourced tolerances.",
+          "outputs": "Part/drawing/export plan with datum, feature, material and revision mapping.",
+          "accuracy": "Every required dimension/tolerance has source/unit; manufacturing allowance differs from model/query precision.",
+          "evidence": "Native model hash, measurement/drawing requirements and material/process evidence.",
+          "software": "Inspect actual native geometry and OCS drawing/export capabilities; inventory recipient formats and annotation support.",
+          "agent": "Associate dimension/tolerance/material notation with actual manufacturing feature and process.",
+          "user_decisions": "Supply required process, tolerance or material choices absent from inputs.",
+          "dependencies": "Point03 native/readback; actual OCS exporter capability; optional CAD drawing adapter separately scoped.",
+          "proposed_development": "Proposal: fabrication planner emits part/feature/datum/requirement coverage and supported output matrix.",
+          "procedure": [
+            "Pin authoritative model and part revisions.",
+            "Bind sourced dimensions/materials/process requirements to features.",
+            "Select supported drawing/exchange outputs and receiving checks."
+          ],
+          "validation": "Source geometry and materials alone cannot complete missing process/tolerance requirements.",
+          "failure_resume": "Retain complete requirements; block only dependent package items pending evidence/capability.",
+          "resources": "Local feature/requirement inventory first; manual engineering decisions separate."
+        },
+        {
+          "id": "DOM-25-A02",
+          "name": "Produce linked drawings and exchange geometry",
+          "purpose": "Create recipient-specific documentation from one revision.",
+          "intended_use": "Produce fabrication-package candidate.",
+          "inputs": "Checked plan, native parts, source annotations/materials and selected exporters.",
+          "outputs": "Drawings and requested STEP/DXF/PDF or other supported files plus part/revision/source manifest.",
+          "accuracy": "Annotation rounding, projection convention and export precision separate from design tolerances.",
+          "evidence": "View/section-to-feature links and exact exporter/version/options.",
+          "software": "OCS supported native drawing/export remains baseline with exact runtime capability discovery. Optional separately scoped FreeCAD candidate: TechDrawGui.exportPageAsSvg(DrawPageObject,FilePath) requires active GUI and an existing populated DrawPage; source says hatch patterns omitted and text placement/size may be inaccurate. This source proves SVG export only; PDF/DXF/STEP paths retain their own capability requirements and point03 representation checks.",
+          "agent": "Review view/section selection, datum references and source dimension interpretation.",
+          "user_decisions": "Choose process-relevant view/notation where several valid deliverables exist.",
+          "dependencies": "Actual OCS exporter evidence; optional inspected TechDraw SVG API with active GUI/DrawPage prerequisites; page construction/dimension association is separate supported UI/API work.",
+          "proposed_development": "Proposal: package producer maps native feature IDs to views/dimensions and emits files plus lost-annotation/representation ledger.",
+          "procedure": [
+            "Create required views/sections and sourced annotations.",
+            "Export supported geometry/documents with explicit units/representation.",
+            "Bundle files, materials, revisions and feature/source mapping."
+          ],
+          "validation": "Faceted mesh STEP cannot silently satisfy required analytic-solid exchange; exported geometry may need companion tolerance drawing.",
+          "failure_resume": "Keep candidate files and generation receipts; reconcile partial output manifest before retry.",
+          "resources": "Local drawing/solid export cost follows parts/views/faces; PDF rendering and manual annotation review separately recorded."
+        },
+        {
+          "id": "DOM-25-A03",
+          "name": "Reopen recipient artifacts and audit feature coverage",
+          "purpose": "Verify delivered files express the requested manufacturing information.",
+          "intended_use": "Publish fabrication-package with actual recipient checks.",
+          "inputs": "Saved files/manifest, source model/requirements and chosen receiving reader.",
+          "outputs": "Revision, dimension/material/tolerance coverage and recipient readback report.",
+          "accuracy": "Feature allowance versus readback/export error threshold explicit.",
+          "evidence": "Actual reopened geometry/drawings, source feature values and reviewer findings.",
+          "software": "Reopen using designated reader; query scale/holes/profiles/shape class and inspect drawing dimensions/datums/materials against model revision.",
+          "agent": "Separate reviewer verifies annotation-feature meaning and required process coverage.",
+          "user_decisions": "Resolve a required missing manufacturing detail or recipient incompatibility.",
+          "dependencies": "Selected recipient/reader and proposed coverage checker.",
+          "proposed_development": "Proposal: fabrication verifier emits per-feature requirement coverage, format losses and readback results.",
+          "procedure": [
+            "Check all package revision/source identities.",
+            "Reopen geometry/drawings and compare required features/annotations.",
+            "Publish actual checks and process-specific package readiness."
+          ],
+          "validation": "Successful export does not establish manufacturability; required process evidence and recipient compatibility have their own results.",
+          "failure_resume": "Preserve source/package; regenerate only failed deliverable and invalidate dependent manifest/checks.",
+          "resources": "Local file/feature checks first; graphics/document review and recipient manual effort separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets fabrication requirements and directs drawings.",
+        "hybrid": "Software derives views/exports/checks; agent reviews annotations and process meaning.",
+        "software_first": "Demonstrated part/process/delivery classes package with missing-requirement/export exceptions.",
+        "deterministic": "Complete sourced requirements and supported exporters/readers produce reproducible package."
+      },
+      "alternatives": [
+        "Flat-part DXF plus sourced dimension/material drawing.",
+        "Analytic STEP plus companion dimensional/process drawing.",
+        "Layout documentation and fabrication package have distinct tolerance/material/process coverage."
+      ],
+      "merge": {
+        "branches": "Recipient/drawing/export alternatives share authoritative model and source requirements.",
+        "evaluation": "VLM associates annotations with source features using complete views/crops; software checks actual geometry and values.",
+        "combination": "Select compatible deliverables for one revision; preserve representation/annotation loss records.",
+        "post_merge": "Reopen final package and repeat revision, feature/material/tolerance coverage and recipient checks."
+      },
+      "software_migration": "Automate demonstrated process/part/export classes after revision, missing tolerance, unit, faceted/analytic and reader fixtures.",
+      "future_tests": [
+        "Drawing dimension comes from older model revision and fails package coherence.",
+        "Required analytic STEP receives mesh-faceted export and fails representation contract.",
+        "Recipient reopens DXF at wrong scale and fails reference length.",
+        "Material name exists but required grade/process evidence is absent: affected package item remains incomplete.",
+        "Optional TechDraw SVG lacks hatch or shifts text: compare saved annotations/feature association and reject affected recipient requirement; inactive GUI is an explicit export failure."
+      ]
+    }
+  ],
+  "common_protocol": {
+    "references": [
+      "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+      "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+      "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+      "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md"
+    ],
+    "status": "All helper/interfaces/procedures/test cases are proposals. Current execution is document authoring/static review; original operation contracts and implementation plan remain unchanged. Acceptance labels require MARK AS ACCEPTED.",
+    "frames": "Record source/target revisions, units, axes, handedness, matrix storage/application convention and direction p_target = T_target_source p_source. Separate unit scale, rigid placement, numerical-origin shift and CRS/map conversion. URDF uses ROS SI/right-handed conventions; MJCF units are selected consistently and compiler angle is explicit. Joint axis is expressed in the stated joint/body frame with type-specific meaning/limits. Compare named reference and moved states; a zero pose alone does not validate motion.",
+    "physical": "Per rigid body, record source fields, component ordering, off-diagonal matrix versus product-of-inertia sign convention, tensor reference point/axes and units. Decode to a common symmetric matrix before shift/rotation. Mass, COM and tensor completeness are independent. Geometry branch validates finite closed coherent solids before BRepGProp VolumeProperties; its no-density volume/inertia integrals require coherent length powers and density exactly once. GProp COM is absolute and tensor central/parallel to absolute axes. Rotate central tensor, shift to common aggregation origin, sum and shift to weighted COM; record each step and uncertainty. Numerical symmetry/eigenvalue/triangle checks, integration error and physical measurements remain distinct.",
+    "geometry_roles": "Occurrence, rigid body, visual asset, collision piece and mass-distribution geometry have separate IDs/roles even when coincident. Required contacts/passages compare feature geometry and named target fixtures. MuJoCo compiler recenter/principal-axis processing retains raw asset frame, mesh_scale, mesh_pos/mesh_quat and geom/body/world composition; compare effective placed surfaces. Explicit/defaulted inertia inference and collision filters are part of model provenance.",
+    "building": "IFC schema/context/units, spatial hierarchy/containment, element/type/occurrence identities, placements, host/void/filling relations and CRS/map/datum sources remain separate. Triangle, B-rep and display derivatives retain source mapping and actual opening/unit/local/world settings. A geometric hole differs from a semantic opening record. Source example converted IDs retain their namespace. GLB identity is an actual many-to-many element/node/primitive/occurrence relation, with separately checked CLI sidecar or serializer GUID policy.",
+    "accuracy": "For each feature/relationship/physical quantity record intended use, source engineering allowance, source/measurement uncertainty, geometric approximation/integration/solver threshold and numerical/readback comparison threshold separately. No invented dimensions, material density, wall thickness, joint limit or universal error score. Readiness names downstream consumer and required role/feature.",
+    "branches": "Each branch records input/source subset and digests, intended use, component/feature coverage, representation/detail, per-feature criteria, units/frame, exact requested model/effort and exposed actual identity. Ambiguous source interpretation can use higher reasoning effort; explicit checked inputs support software paths. VLM receives original full views and located crops with coordinate/source mapping, source fields and actual query receipts. It selects source-supported associations or complete candidates, or combines compatible fields with provenance; new design choices remain user decisions. Preserve contradictory semantics/dimensions rather than average them.",
+    "review": "A separate semantic reviewer execution receives original sources, candidate/merge revision, mappings, source-linked views and numerical findings. Record producer/merger/reviewer identities and shared dependencies. Numerical checks identify actual saved artifact, reader/kernel, controls and criteria. Compile/schema/parse success, source correspondence, physical agreement and model agreement have separate evidence.",
+    "merge": "Selected branch fields/assets produce a new revision with explicit lineage. Recheck required geometry, identities/graph/relationships, frame/units, physical properties and exact saved/compiled consumer artifact; repeat dependent contact/closure fixtures where applicable. Preserve source evidence and rejected candidates.",
+    "resources": "Start with metadata, graph/units and required interfaces before dense tessellation, whole-building extraction or contact evaluation. Local CPU/RAM/GPU estimates state input element/face/link/hull counts, detail and algorithm settings; estimates are qualitative until actual run records exist. Remote model calls/tokens/latency/cost and manual interpretation/metrology/recipient effort are separate. Parallel candidate analysis uses isolated revisions/settings; computational jobs obey current authorization.",
+    "failure_resume": "Retain input hashes, action/request IDs, native/spec/file revision, output hashes, diagnostics and last validated boundary. For uncertain native mutation/serialization, inspect document/entity/output state before retry to avoid duplicate occurrences. For interrupted/uncertain remote VLM calls, retain prompt/input/source digests, request/response identity, raw/partial reply and retry lineage; reconcile completion where available, validate required selection rows before any merge. Malformed response or partial sidecar/XML cannot change published artifact. Recheck source digests on resume; invalidate affected descendants only, including physics after geometry/material edits and scenes/colliders after IFC placement/opening changes.",
+    "migration": "Per action/input class, implement proposed helpers only under separately authorized scope after fixture expected results exist. Compare against checked agent-led cases and independent sources; automate demonstrated ordinary cases with explicit exception route. Preserve source/capability/version evidence and actual execution results separately."
+  },
+  "common_future_tests": [
+    "Lost VLM response, malformed selection rows and changed source at resume retain raw/request evidence, retry lineage and affected-only invalidation; merged artifact changes only after valid new selection and checks.",
+    "Native insertion or file save succeeds but acknowledgement is lost; reconcile IDs/hashes before retry and avoid duplicate IFC occurrences/MJCF assets.",
+    "Two branches pass their own checks but merged frame/identity/property dependencies conflict; merged revision remains unresolved until repeated numerical and independent semantic checks.",
+    "Context layout passes its declared placement/detail criteria while the same data cannot claim working joint/contact/house/fabrication readiness without required feature/property evidence.",
+    "Source IFC opening placement change invalidates derived triangles, GLB identity/geometry checks and associated environment collision fixtures; unrelated component evidence remains retained.",
+    "Changed collision geometry under inertia inference invalidates affected body physical properties and dynamics checks while preserving immutable source mass evidence."
+  ]
+}

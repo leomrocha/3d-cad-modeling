@@ -62,7 +62,7 @@ Summary: IfcOpenShell 0.9.0post1 documents `feature.add_feature(file, feature, e
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
 
 <a id="src-023374825488"></a>
 
@@ -74,7 +74,7 @@ Summary: Existing local source cited by point 04 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-027053bdee43"></a>
 
@@ -110,7 +110,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -122,7 +122,7 @@ Summary: FreeCAD BIM Library ; FreeCAD BIM can browse and insert FCStd, STEP and
 
 Evidence: existing_report_registered.
 
-Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-0374f064147a"></a>
 
@@ -160,6 +160,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json.
 
+<a id="src-047ea9576020"></a>
+
+## SRC-047ea9576020 — dom-r03.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md)
+
+Summary: Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
+
 <a id="src-056984789982"></a>
 
 ## SRC-056984789982 — MuJoCo overview
@@ -170,7 +182,7 @@ Summary: Primary descriptions of units, inertial/body frames, mesh inputs, conve
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-05a74004d0aa"></a>
 
@@ -206,7 +218,7 @@ Summary: Point 02 Existing components and CAD reuse: authored procedure/action c
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-0910720e555c"></a>
 
@@ -230,7 +242,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-0a10e8f57dac"></a>
 
@@ -315,6 +327,30 @@ Summary: The official OCCT API reference describes STEPCAFControl_Reader as impo
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-sources.md, research/sources/round-05/point-02-web-sources.json.
+
+<a id="src-0d6d9bc1a30b"></a>
+
+## SRC-0d6d9bc1a30b — https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html
+
+Original source: [https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html](https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html)
+
+Summary: Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.
+
+Evidence: existing_report_registered, access_failed.
+
+Documents: research/action-audit/reviews/point-06-sources.md, research/sources/round-05/point-06-web-sources.json.
+
+<a id="src-0df55f79b2d5"></a>
+
+## SRC-0df55f79b2d5 — https://www.ros.org/reps/rep-0103.html
+
+Original source: [https://www.ros.org/reps/rep-0103.html](https://www.ros.org/reps/rep-0103.html)
+
+Summary: Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.
+
+Evidence: existing_report_registered, access_failed.
+
+Documents: research/action-audit/reviews/point-06-sources.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-0e057ef39322"></a>
 
@@ -484,6 +520,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-1a05e425438e"></a>
+
+## SRC-1a05e425438e — REP-103: Standard Units of Measure and Coordinate Conventions — ros-infrastructure/rep master
+
+Original source: [https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst](https://github.com/ros-infrastructure/rep/blob/master/rep-0103.rst)
+
+Summary: ROS REP source page accessed 2026-11-12. Repository page says archived October 23, 2025; REP text labels itself Active/Informational. Specifies SI metre, kilogram, second; radian; right-handed frames; body x-forward/y-left/z-up; optical z-forward/x-right/y-down. Branch is mutable.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
+
 <a id="src-1a10c8033611"></a>
 
 ## SRC-1a10c8033611 — reconstruction-sources.json
@@ -530,7 +578,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-1f314fe4accc"></a>
 
@@ -543,6 +591,18 @@ Summary: Existing local source cited by point 04 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-1f4431787dd4"></a>
+
+## SRC-1f4431787dd4 — https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html
+
+Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html)
+
+Summary: Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.
+
+Evidence: existing_report_registered, access_failed.
+
+Documents: research/action-audit/reviews/point-06-sources.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-1f466f80fd41"></a>
 
@@ -626,7 +686,7 @@ Summary: Inspected in this research turn; records OCS baseline, CAD representati
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-251464b38bc3"></a>
 
@@ -662,7 +722,7 @@ Summary: - V-HACD: convex decomposition implementation, with BSD-3-Clause at kma
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2752296f9685"></a>
 
@@ -674,19 +734,31 @@ Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored proc
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-2759f46214ed"></a>
 
-## SRC-2759f46214ed — SarahWeiii/CoACD
+## SRC-2759f46214ed — SarahWeiii/CoACD README and repository page
 
 Original source: [https://github.com/SarahWeiii/CoACD](https://github.com/SarahWeiii/CoACD)
 
-Summary: - CoACD: approximate convex decomposition implementation SarahWeiii/CoACD. Its LICENSE is MIT, copyright Xinyue Wei and Minghua Liu (2022). Pin the reviewed revision and retain its notice when distributing the tool.
+Summary: Official repository page accessed 2026-11-12; mutable main branch, no commit pin inspected. README documents OBJ input, OBJ/WRL output, convex components, `-i/--input`, `-o/--output`, `-t/--threshold` default 0.05, metre-scale `-rm/--real-metric`, and `-sp/--split` individual pieces. Existing source register separately records MIT license and 2022 copyright.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r08.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r08.md.
+
+<a id="src-28c1ea6ca46e"></a>
+
+## SRC-28c1ea6ca46e — GProp_GProps Class Reference — Open CASCADE Technology Reference Manual 8.0.1
+
+Original source: [https://dev.opencascade.org/doc/refman/html/class_g_prop___g_props.html](https://dev.opencascade.org/doc/refman/html/class_g_prop___g_props.html)
+
+Summary: Official OCCT reference accessed 2026-11-12. Requested dev.opencascade.org URL redirected to occt3d.com. GProp_GProps provides mass, absolute-frame centre of mass and central inertia tensor; Add(component,density) composes properties and automatically applies Huygens parallel-axis shifts. The docs warn to use coherent geometry/density units and avoid applying density twice.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-28f1e37fe3ab"></a>
 
@@ -724,6 +796,18 @@ Evidence: existing_report_registered, local_reference_registered.
 
 Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-03-local-sources.json.
 
+<a id="src-2ad28cfa19ba"></a>
+
+## SRC-2ad28cfa19ba — Point 06 — software and API review
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md)
+
+Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
+
 <a id="src-2b16462315c1"></a>
 
 ## SRC-2b16462315c1 — Automatic 3D CAD models reconstruction from 2D orthographic drawings
@@ -736,17 +820,29 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
+<a id="src-2b834d92a1e6"></a>
+
+## SRC-2b834d92a1e6 — Point 06 — Building and robot structure and properties
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+
+Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
+
 <a id="src-2bcc72542265"></a>
 
 ## SRC-2bcc72542265 — Geometry creation — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html)
 
-Summary: IfcOpenShell 0.9.0post1 documents wall-like representations and `geometry.create_2pt_wall` with endpoints p1/p2, elevation, height and thickness. The representation follows the object placement along local +X, with thickness along local +Y; placement and rotation set plan endpoints. Examples use metre dimensions; `geometry.edit_object_placement(..., is_si=True)` selects SI translation units instead of project units. The guide also documents profile representations extruded along +Z. These are API examples, not executed geometry.
+Summary: IfcOpenShell 0.9.0post1 guide accessed 2026-11-12. Records representation creation examples and placement/unit distinction; used as background source for separating IFC geometric representation authoring from semantic product creation.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2d331dacc4f0"></a>
 
@@ -758,7 +854,19 @@ Summary: Authorized documentation method: fifteen fields per action, alternative
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
+
+<a id="src-2d407c9d997c"></a>
+
+## SRC-2d407c9d997c — point-06-operations
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+
+Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-2d6abe7b467d"></a>
 
@@ -786,15 +894,15 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-2e05ef8b5192"></a>
 
-## SRC-2e05ef8b5192 — MuJoCo modeling guide
+## SRC-2e05ef8b5192 — MuJoCo modeling guide — main branch
 
 Original source: [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst)
 
-Summary: Primary MJCF/URDF model semantics, bodies, joints, frames, supported conversion subset and asset concepts.
+Summary: Official repository guide on mutable main, accessed 2026-11-12. Documents spatial frames, right-handed orientation handling, quaternion/frame serialization and angle conventions; source branch is not a pinned runtime version.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/action-audit/reviews/visual-review.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2e92a48ed867"></a>
 
@@ -831,6 +939,18 @@ Summary: Decimal interface source inspected by software reviewer; official decim
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
+
+<a id="src-3018a0ce5798"></a>
+
+## SRC-3018a0ce5798 — FreeCAD Part::TopoShape Class Reference
+
+Original source: [https://freecad.github.io/SourceDoc/d8/ded/classPart_1_1TopoShape.html](https://freecad.github.io/SourceDoc/d8/ded/classPart_1_1TopoShape.html)
+
+Summary: Official FreeCAD source documentation accessed 2026-11-12. General TopoShape reference lists read/write/import/export/validity APIs but did not expose mass, centre-of-mass or inertia methods in the inspected page; no mass-property claim relies on this page.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-31cafb73df3e"></a>
 
@@ -890,7 +1010,7 @@ Summary: Blender also supports scripted background work using `blender --backgro
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-33a3c43268b3"></a>
 
@@ -950,7 +1070,19 @@ Summary: Official guidance for site CRS, coordinate transformations and project 
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+
+<a id="src-35cca1cb0d7e"></a>
+
+## SRC-35cca1cb0d7e — blender_gltf.py — Blender glTF importer source, main branch
+
+Original source: [https://github.com/blender/blender/blob/main/scripts/addons_core/io_scene_gltf2/blender/imp/blender_gltf.py](https://github.com/blender/blender/blob/main/scripts/addons_core/io_scene_gltf2/blender/imp/blender_gltf.py)
+
+Summary: Official Blender source on mutable main, accessed 2026-11-12. Import code maps glTF Y-up to Blender Z-up `(x,-z,y)` and scales locations by `1 / scene.unit_settings.scale_length` as Blender units per metre. Does not pin installed Blender version or prove local import output.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-368cf414765d"></a>
 
@@ -1022,7 +1154,7 @@ Summary: - CoACD: approximate convex decomposition implementation SarahWeiii/CoA
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-3b28b3defd8a"></a>
 
@@ -1118,7 +1250,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-3e2691ad3057"></a>
 
@@ -1214,7 +1346,7 @@ Summary: Upstream repository says V-HACD is archived/end-of-life and directs new
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md.
+Documents: research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md.
 
 <a id="src-42ef176046c7"></a>
 
@@ -1274,7 +1406,7 @@ Summary: The FreeCAD documentation describes creating root and nested assemblies
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-sources.md, research/action-audit/reviews/point-02-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-sources.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-4658b352c90f"></a>
 
@@ -1300,6 +1432,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-49217bd84235"></a>
+
+## SRC-49217bd84235 — urdf_model/joint.hpp — ros/urdfdom_headers rolling branch
+
+Original source: [https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp](https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp)
+
+Summary: Official ROS URDFDOM header on mutable rolling branch, accessed 2026-11-12. Defines joint axis meaning by type, parent-to-joint transform, parent/child link identifiers, and child frame equal to joint frame. No commit pin or runtime parser version checked.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
+
 <a id="src-49d1aa4fd35a"></a>
 
 ## SRC-49d1aa4fd35a — GitHub repository metadata or tree response
@@ -1322,7 +1466,7 @@ Summary: Official end-to-end API examples for creating an IFC project, assigning
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-4a6934063635"></a>
 
@@ -1346,7 +1490,7 @@ Summary: Official MJCF element reference for body, joints, inertial, mesh assets
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
+Documents: research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r07.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md.
 
 <a id="src-4afcbdb352d9"></a>
 
@@ -1418,7 +1562,7 @@ Summary: Lists built-in OBJ/STL and optional USD mesh/scene decoders and extensi
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-5042379f8832"></a>
 
@@ -1476,9 +1620,9 @@ Original source: [/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenanc
 
 Summary: Existing artifact pattern: source hashes, declared mm-to-m conversion, identity status, runtime and geometry mapping.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_reference_registered.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-53486b514e1a"></a>
 
@@ -1490,7 +1634,7 @@ Summary: IfcOpenShell 0.9.0post1 documents `assign_unit(file, units=None, length
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-536bee2e3614"></a>
 
@@ -1502,7 +1646,7 @@ Summary: Official Blender manual covers background/CLI automation and Python scr
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r05.md, research/workflows/details/dom-r07.md.
+Documents: research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r05.md, research/workflows/details/dom-r07.md.
 
 <a id="src-5374d3ebf57e"></a>
 
@@ -1574,7 +1718,7 @@ Summary: Repository identifies IfcOpenShell as LGPL-3.0-or-later and Bonsai as G
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r02.md, research/workflows/details/dom-r07.md.
+Documents: research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r02.md, research/workflows/details/dom-r07.md.
 
 <a id="src-55a8e99c38e5"></a>
 
@@ -1587,6 +1731,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-5641ae68d50e"></a>
+
+## SRC-5641ae68d50e — urdf_model/link.hpp — ros/urdfdom_headers rolling branch
+
+Original source: [https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/link.hpp](https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/link.hpp)
+
+Summary: Official ROS URDFDOM header on mutable rolling branch, accessed 2026-11-12. `Link::Inertial` contains an origin pose, mass and six symmetric inertia tensor terms. No unit system is declared by the C++ data structure; ROS SI convention is separately recorded in REP-103.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-56b9d47414e7"></a>
 
@@ -1658,7 +1814,7 @@ Summary: The separate community project ahujasid/mcp-for-blender is explicitly n
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/domain-paths.md.
 
 <a id="src-59bd5a7cb61a"></a>
 
@@ -1742,7 +1898,7 @@ Summary: FreeCAD Parts Library ; Community library distributed in FCStd, STEP, S
 
 Evidence: existing_report_registered.
 
-Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-5e5932bb68e1"></a>
 
@@ -1754,7 +1910,7 @@ Summary: Blender ; Supports interchange including glTF, USD, OBJ, PLY, STL and A
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r05.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r05.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-5e95b95a8287"></a>
 
@@ -1826,7 +1982,7 @@ Summary: Existing local source cited by point 05 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-61c6ad4341d0"></a>
 
@@ -1875,6 +2031,18 @@ Summary: reyk/freecad-ai-skill ; Terminal-to-running-FreeCAD Python bridge ; Com
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, skills/README.md.
+
+<a id="src-6350270f836a"></a>
+
+## SRC-6350270f836a — https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html
+
+Original source: [https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html](https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html)
+
+Summary: Four direct page attempts did not yield page contents: ROS Rolling URDF tutorial (`https://docs.ros.org/en/rolling/Tutorials/Intermediate/URDF/Building-a-Movable-Robot-Model-with-URDF.html`, access denied by Anubis); ROS REP-103 mirror (`https://www.ros.org/reps/rep-0103.html`, access denied by Anubis; the source-controlled REP page was inspected successfully instead); Blender glTF manual (`https://docs.blender.org/manual/en/latest/addons/import_export/scene_gltf2.html`, HTTP 402); and guessed IfcOpenShell geometry-settings URL (`https://docs.ifcopenshell.org/ifcopenshell-python/geometry_settings.html`, unavailable via the web tool). These failed attempts support no technical claim. Existing source-register records were reused for MuJoCo/IfcOpenShell/CoACD licensing and earlier workflow descriptions; they are not counted as fresh inspection. No local runtime or implementation capability is established by this source audit.
+
+Evidence: existing_report_registered, access_failed.
+
+Documents: research/action-audit/reviews/point-06-sources.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-6398638998c9"></a>
 
@@ -2090,7 +2258,7 @@ Summary: Bonsai / IfcOpenShell ; Bonsai is a native IFC authoring and analysis p
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r06.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r06.md, research/workflows/domain-paths.md.
 
 <a id="src-6e28384e1b5f"></a>
 
@@ -2164,6 +2332,18 @@ Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
 
+<a id="src-70879a2c2cb0"></a>
+
+## SRC-70879a2c2cb0 — TechDraw ExportPageSVG — FreeCAD documentation main branch
+
+Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/TechDraw_ExportPageSVG.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/TechDraw_ExportPageSVG.md)
+
+Summary: Official FreeCAD documentation repository page inspected 2026-11-12 as targeted DOM-25 follow-up. Documents `TechDrawGui.exportPageAsSvg(DrawPageObject, FilePath)` for macros/Python console when the FreeCAD GUI module is active. The page states hatch patterns are not exported and text positions/sizes may be inaccurate. Repository was archived 2026-04-01; documentation page does not pin a FreeCAD release.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
+
 <a id="src-717a1bbd2f70"></a>
 
 ## SRC-717a1bbd2f70 — dom-r05.md
@@ -2187,6 +2367,18 @@ Summary: Authored audit document recording Visual interpretation review — desc
 Evidence: authored_document_inspected, local_reference_registered.
 
 Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-71df4a24323d"></a>
+
+## SRC-71df4a24323d — Point 06 primary-source check: building and robot structure and properties
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-sources.md)
+
+Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-724b2d11a6eb"></a>
 
@@ -2214,15 +2406,15 @@ Documents: research/sources/round-03/reconstruction-detail-sources.json, researc
 
 <a id="src-75dbfddac2b8"></a>
 
-## SRC-75dbfddac2b8 — IfcOpenShell geometry processing
+## SRC-75dbfddac2b8 — Geometry processing — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html)
 
-Summary: Documents IFC geometry decoding into tessellated geometry or OpenCASCADE B-reps, including iterator-based bulk processing.
+Summary: IfcOpenShell 0.9.0post1 documentation accessed 2026-11-12. Documents create_shape element/representation processing, triangle and OpenCASCADE B-rep routes, geometry iterator, local vertices plus transformation matrix, opening subtraction defaults, and GLB serializer settings including meter unit declaration and optional element GUIDs.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-76b9efd76055"></a>
 
@@ -2283,6 +2475,18 @@ Summary: Prior repository report assesses image/depth reconstruction methods, so
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
 Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-local-sources.json.
+
+<a id="src-7986969c7a59"></a>
+
+## SRC-7986969c7a59 — Point 06 designer notes — building and robot structure and properties
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-designer.md)
+
+Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-79f9dd42f446"></a>
 
@@ -2426,7 +2630,7 @@ Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-819035442c74"></a>
 
@@ -2450,7 +2654,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-837950156e9e"></a>
 
@@ -2499,6 +2703,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-85b949b4c1e5"></a>
+
+## SRC-85b949b4c1e5 — Point 06 independent review — building and robot structure and properties
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-independent.md)
+
+Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-8611e98b9ce8"></a>
 
@@ -2570,7 +2786,7 @@ Summary: Repository describes conversion of mesh plus YAML joints or STEP/IGES a
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-8c216bd07f9d"></a>
 
@@ -2620,6 +2836,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r06.md, research/workflows/reconstruction-paths.md.
 
+<a id="src-8f369f8f1381"></a>
+
+## SRC-8f369f8f1381 — Python — MuJoCo Documentation
+
+Original source: [https://mujoco.readthedocs.io/en/stable/python.html](https://mujoco.readthedocs.io/en/stable/python.html)
+
+Summary: Stable MuJoCo Python binding documentation accessed 2026-11-12. Establishes the Python bindings are close to the C API; used alongside the model-editing page for Python method names. No local package version was checked.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/sources/round-05/point-06-web-sources.json.
+
 <a id="src-8f8532cac48e"></a>
 
 ## SRC-8f8532cac48e — Domain and component research report
@@ -2630,7 +2858,7 @@ Summary: Prior project report compares reusable component sources and downstream
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-8f9b6f25cd0d"></a>
 
@@ -2642,7 +2870,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -2764,6 +2992,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json.
 
+<a id="src-940fb4ea2921"></a>
+
+## SRC-940fb4ea2921 — Point 06 visual and evidence review — building and robot structure and properties
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md)
+
+Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
+
 <a id="src-9463773b6a12"></a>
 
 ## SRC-9463773b6a12 — OpenSCAD Documentation index
@@ -2796,9 +3036,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-o
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-95aacf0e0f5c"></a>
 
@@ -2810,7 +3050,7 @@ Summary: IfcOpenShell 0.9.0post1 documents `edit_object_placement(file, product,
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-9641fd75954c"></a>
 
@@ -2846,7 +3086,7 @@ Summary: IfcOpenShell 0.9.0post1 documents `add_georeferencing` creating project
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-98a1a3cd7fd0"></a>
 
@@ -2898,15 +3138,15 @@ Documents: research/action-audit/point-02-component-reuse.md, research/action-au
 
 <a id="src-9a40d7c5ca24"></a>
 
-## SRC-9a40d7c5ca24 — MuJoCo model editing API
+## SRC-9a40d7c5ca24 — Model Editing — MuJoCo Documentation
 
 Original source: [https://mujoco.readthedocs.io/en/stable/programming/modeledit.html](https://mujoco.readthedocs.io/en/stable/programming/modeledit.html)
 
-Summary: Official mjSpec XML/URDF parsing and compile API; `MjModel.from_xml_path` parses/compiles XML or MJZ.
+Summary: Stable MuJoCo documentation accessed 2026-11-12; page does not pin an installed release. Documents mjSpec parsing of MJCF/URDF through Python from_file/from_string, compilation to mjModel, and mj_saveXML/mj_saveXMLString/mj_encode serialization. XML output flattens spec; savecompiled controls source-spec versus compilation-made values and parser-expansion losses.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md.
 
 <a id="src-9a4cc68545a8"></a>
 
@@ -2978,7 +3218,7 @@ Summary: Third-party source describes Python scripts exporting Assembly4 assembl
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
 
 <a id="src-9f9c7199168b"></a>
 
@@ -3158,7 +3398,7 @@ Summary: Identifies the Panda MJCF model, states MuJoCo 2.3.3 or later, Apache-2
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
+Documents: research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
 
 <a id="src-a635c02f99cb"></a>
 
@@ -3182,7 +3422,7 @@ Summary: URDF / ROS tooling ; Official `urdf_tutorial` teaches visual geometry, 
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/domain-paths.md.
 
 <a id="src-a764655900e1"></a>
 
@@ -3254,7 +3494,7 @@ Summary: FreeCAD BIM Library ; FreeCAD BIM can browse and insert FCStd, STEP and
 
 Evidence: existing_report_registered.
 
-Documents: research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-accaca72881d"></a>
 
@@ -3278,7 +3518,7 @@ Summary: Documents a profile extrusion IFC representation, depth in metres and p
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-ad1f82234be8"></a>
 
@@ -3362,7 +3602,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-b00b92c70647"></a>
 
@@ -3388,6 +3628,30 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-b165af8a4b88"></a>
+
+## SRC-b165af8a4b88 — Usage — IfcOpenShell 0.9.0post1 documentation
+
+Original source: [https://docs.ifcopenshell.org/ifcconvert/usage.html](https://docs.ifcopenshell.org/ifcconvert/usage.html)
+
+Summary: IfcConvert documentation accessed 2026-11-12; embedded CLI manual identifies example build 0.8.4-158fe92 with OCC 7.8.1. Lists GLB as binary glTF 2.0, metre default and convert-back-units, placement baking option, GlobalId filtering, serializer ID-name limits, and separate Z-up node option.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
+
+<a id="src-b18991f27bde"></a>
+
+## SRC-b18991f27bde — dom-r08.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md)
+
+Summary: Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
+
 <a id="src-b1ac5466cbd1"></a>
 
 ## SRC-b1ac5466cbd1 — CadQuery Class Summary — CadQuery Documentation
@@ -3408,9 +3672,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-o
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-b254a6b0bd67"></a>
 
@@ -3470,7 +3734,7 @@ Summary: Prior project proposal identifies OCS as the interactive baseline, Free
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-b5b5f2bbfc67"></a>
 
@@ -3494,7 +3758,7 @@ Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored proc
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-b667bec43458"></a>
 
@@ -3530,7 +3794,7 @@ Summary: Documents mjSpec editing, XML/URDF parsing, compilation, MJCF and asset
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-b7aa02d92193"></a>
 
@@ -3566,7 +3830,7 @@ Summary: Curated robot MJCF models and asset files; repository states each model
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-software.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r06.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r08.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-b914a224eaf5"></a>
 
@@ -3684,9 +3948,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/po
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-bcf9f8ff8137"></a>
 
@@ -3794,7 +4058,7 @@ Summary: Primary tutorial covers links, visual, movable joints, collision and in
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-bffa49b1e1cc"></a>
 
@@ -3807,6 +4071,18 @@ Summary: Open3D 0.20.0 documents point-cloud downsampling, normal estimation, FP
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-software.md, research/action-audit/reviews/point-05-sources.md, research/action-audit/reviews/point-05-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-05-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r04.md, research/workflows/details/dom-r08.md, research/workflows/details/mix-r04.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r03.md, research/workflows/details/rec-r09.md.
+
+<a id="src-c026420b57f4"></a>
+
+## SRC-c026420b57f4 — ifcopenshell.api.geometry.add_representation — IfcOpenShell 0.9.0post1 documentation
+
+Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_representation/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_representation/index.html)
+
+Summary: IfcOpenShell 0.9.0post1 API reference accessed 2026-11-12. `add_representation` takes an IFC context and Blender object/data geometry, optional SI offset and unit scale, and returns an IfcShapeRepresentation or None. API dependency and output do not amount to product classification, placement or relationship creation.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-c057807eb5f6"></a>
 
@@ -4226,7 +4502,7 @@ Summary: The Blender-hosted Blender Lab MCP repository is the Blender project's 
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md.
+Documents: research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md.
 
 <a id="src-d7af850e4bd9"></a>
 
@@ -4239,6 +4515,18 @@ Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-d8bff2262475"></a>
+
+## SRC-d8bff2262475 — XML Reference — MuJoCo Documentation
+
+Original source: [https://mujoco.readthedocs.io/en/stable/XMLreference.html](https://mujoco.readthedocs.io/en/stable/XMLreference.html)
+
+Summary: Stable XML reference accessed 2026-11-12; exact local release not checked. Documents MJCF angle default degrees versus URDF radians, compiler defaults, inertia fields/frames, mesh file types and inference modes, kinematic tree and equality constraints. `fullinertia` order is M11,M22,M33,M12,M13,M23 and is diagonalized by compilation. Compiler centers meshes and aligns principal axes; `mjModel.mesh_pos`, `mesh_quat` and `mesh_scale` preserve asset transforms to compose with geom pose.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-d928392d886f"></a>
 
@@ -4310,7 +4598,7 @@ Summary: The assigned UX Planet article, “3D Modeling with Claude Code: A Prac
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/user-supplied-links.md, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/user-supplied-links.md, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-dcc824a0bc1a"></a>
 
@@ -4394,7 +4682,7 @@ Summary: Requirements for units, frames, source corrections, parts, tolerances a
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-e1ca3a166ec3"></a>
 
@@ -4610,7 +4898,7 @@ Summary: Source referenced for the stated workflow; see the owning documentation
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-ebd6e769a79a"></a>
 
@@ -4635,6 +4923,18 @@ Summary: Official API documents probabilistic HoughLinesP on binary images and r
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
+
+<a id="src-ecc97be7318c"></a>
+
+## SRC-ecc97be7318c — point-06-web-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-06-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-06-web-sources.json)
+
+Summary: Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-ece5f904e49d"></a>
 
@@ -4706,7 +5006,7 @@ Summary: The repository catalogue associates each listed robot model with a lice
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-sources.md, research/action-audit/reviews/point-02-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-02-component-reuse.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-02-designer.md, research/action-audit/reviews/point-02-sources.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r03.md, research/workflows/details/dom-r04.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/domain-paths.md.
 
 <a id="src-f08b8003c0e4"></a>
 
@@ -4758,15 +5058,15 @@ Documents: skills/README.md.
 
 <a id="src-f2c7a1c3b5b3"></a>
 
-## SRC-f2c7a1c3b5b3 — IfcOpenShell geometry API
+## SRC-f2c7a1c3b5b3 — ifcopenshell.geom — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html)
 
-Summary: Official geometry processing and representation conversion API.
+Summary: IfcOpenShell 0.9.0post1 API reference accessed 2026-11-12. Inspected as the registered geometry API reference; detailed documented return forms/settings used here are from the geometry-processing page in this same version.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r06.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-f4e7d302c752"></a>
 
@@ -4790,7 +5090,7 @@ Summary: The Blender-hosted Blender Lab MCP repository is the Blender project's 
 
 Evidence: existing_report_registered.
 
-Documents: research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r05.md, research/workflows/details/mix-r05.md, research/workflows/details/mix-r09.md, research/workflows/domain-paths.md.
 
 <a id="src-f5b26686d5af"></a>
 
@@ -4862,7 +5162,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-f7e7cce18547"></a>
 
@@ -4910,7 +5210,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-06-local-sources.json.
 
 <a id="src-fa8c58e8c7a1"></a>
 
@@ -4958,7 +5258,7 @@ Summary: Lists IFC geometry creation helpers including profiles, meshes, doors a
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/domain-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
 <a id="src-fe69883eeede"></a>
 
@@ -4983,6 +5283,18 @@ Summary: The official PCL tutorial demonstrates SACSegmentationFromNormals<Point
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/action-audit/reviews/point-05-designer.md, research/action-audit/reviews/point-05-independent.md, research/action-audit/reviews/point-05-sources.md, research/sources/round-05/point-05-web-sources.json.
+
+<a id="src-ff22572efb1e"></a>
+
+## SRC-ff22572efb1e — BRepGProp Class Reference — Open CASCADE Technology Reference Manual 8.0.1
+
+Original source: [https://occt3d.com/dev/doc/refman/html/class_b_rep_g_prop.html](https://occt3d.com/dev/doc/refman/html/class_b_rep_g_prop.html)
+
+Summary: Official OCCT 8.0.1 reference inspected 2026-11-12 as targeted mass-property follow-up. `BRepGProp::VolumeProperties` computes volume properties into `GProp_GProps` for finite solid(s), no density attached; requires no free boundary and coherent orientation, which the API does not check. `UseTriangulation` selects triangulated or exact surfaces. Epsilon overload uses adaptive 2D Gauss integration and returns estimated relative error; Eps > 0.001 uses non-adaptive integration.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
 
 <a id="src-ffac5faf4062"></a>
 

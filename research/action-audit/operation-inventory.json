@@ -619,8 +619,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
@@ -633,8 +633,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/ros/urdf_tutorial",
         "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
@@ -647,8 +647,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
@@ -661,8 +661,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
@@ -675,8 +675,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
@@ -689,8 +689,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
         "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
@@ -703,8 +703,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
@@ -717,8 +717,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_profile_representation/index.html",
@@ -731,8 +731,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
@@ -744,8 +744,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/introduction.html",
         "https://www.blender.org/features/pipeline/",
@@ -833,8 +833,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://www.blender.org/features/pipeline/",
         "https://projects.blender.org/lab/blender_mcp/src/branch/main",
@@ -848,8 +848,8 @@
       "family": "domain",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/implementation-plan.md",
         "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
@@ -874,8 +874,8 @@
       "family": "domain",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
@@ -923,8 +923,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/ros/urdf_tutorial"
@@ -936,8 +936,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
@@ -949,8 +949,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst"
@@ -962,8 +962,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
@@ -975,8 +975,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://www.freecad.org/addons.php?lang=eng_EN"
@@ -988,8 +988,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/ros/urdf_tutorial"
