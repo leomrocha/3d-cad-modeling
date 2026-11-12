@@ -27,8 +27,8 @@
       "family": "cad",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://docs.opencv.org/5.0/main_modules/calib.html"
       ]
@@ -39,8 +39,8 @@
       "family": "cad",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html"
       ]
@@ -51,8 +51,8 @@
       "family": "cad",
       "original_automation_label": "scripted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
         "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
@@ -65,8 +65,8 @@
       "family": "cad",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
@@ -79,8 +79,8 @@
       "family": "cad",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
         "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
@@ -92,8 +92,8 @@
       "family": "cad",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
         "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
@@ -246,8 +246,8 @@
       "family": "cad",
       "original_automation_label": "mixed",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
@@ -534,8 +534,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/implementation-plan.md",
         "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
@@ -758,8 +758,8 @@
       "family": "domain",
       "original_automation_label": "assisted",
       "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-      "definition_state": "existing_operation_inventoried",
-      "point_document": null,
+      "definition_state": "proposed_action_definition_reviewed",
+      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "/home/leo/projects/3dmodeling/research/implementation-plan.md",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"

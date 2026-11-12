@@ -1,5 +1,12 @@
 # Research record
 
+## 12 November 2026 — Point04 raster drawing procedure audit
+
+1. Checkpoint: `47976ba`; point03 result commit: `9c3474f`. Scope: nine operations and30 actions for planar rectification, OCR, vector candidates, wall/opening graphs, orthographic registration/reconstruction, wall solids, constrained sketches and IFC composition.
+2. [Readable procedures](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md) and [action contracts](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) retain source-coordinate maps, independent metric controls, raw/recognized/associated annotation states, hidden-feature alternatives and feature-specific criteria. DOM18 retains all five original input categories; source/graph/geometry/semantics remain distinct.
+3. Eight primary documentation pages were inspected by Luna. Independent source review corrected the summary of `feature.add_feature`: element creation, representation and placement precede attachment of the existing opening to its host. The source records and procedure were reread for consistency; the review records the finding and disposition.
+4. Requested design/software/visual/source/independent roles follow the existing plan. Coordinator identity is gpt-6.1-sol; child tasks report unavailable actual runtime identities. Source/document checks are recorded in [point04 receipt](/home/leo/projects/3dmodeling/research/action-audit/point-04-checks.json); modeling and helper test cases retain future-test status.
+
 ## 12 November 2026 — Point03 vector, solid and verification procedure audit
 
 1. Checkpoint: `6e3c768`; point02 result commit: `6c56c4f`. Scope: ten operations,31 actions, all fifteen fields/action and four execution options/operation. [Procedures](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md) and [action contracts](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) define vector cleaning, constrained sketches, native solids, CSG mesh generation, export, verification and recovery.

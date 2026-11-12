@@ -42,15 +42,27 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 <a id="src-011e8da740e4"></a>
 
-## SRC-011e8da740e4 — IfcOpenShell feature.add_feature API
+## SRC-011e8da740e4 — ifcopenshell.api.feature.add_feature — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html)
 
-Summary: Official example creates IfcOpeningElement geometry and relates it as a void feature of a wall.
+Summary: IfcOpenShell 0.9.0post1 documents `feature.add_feature(file, feature, element)` for projecting, voiding or surface features. Its example first creates a wall and its geometry, then separately creates an IfcOpeningElement, assigns opening geometry and placement, and finally calls add_feature with the existing opening and wall. For the voiding opening shown, the call returns an IfcRelVoidsElement; the documentation describes voiding features as cutting host geometry but does not specify when the Boolean geometry is evaluated. The function does not create the opening element or assign its geometry/placement; the result depends on the selected feature type. The page says semantic openings should be represented distinctly when they have their own meaning.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md.
+
+<a id="src-023374825488"></a>
+
+## SRC-023374825488 — dom-r01.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md)
+
+Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-027053bdee43"></a>
 
@@ -86,7 +98,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-0347392e2577"></a>
 
@@ -110,7 +122,7 @@ Summary: Known target object coordinates and corresponding image detections supp
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/visual-review.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
+Documents: research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r03.md.
 
 <a id="src-056984789982"></a>
 
@@ -146,7 +158,7 @@ Summary: Point 02 Existing components and CAD reuse: authored procedure/action c
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-096e1d7af9e5"></a>
 
@@ -352,6 +364,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-144b4a816641"></a>
+
+## SRC-144b4a816641 — cad-r09.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md)
+
+Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-158c2c4848c2"></a>
 
 ## SRC-158c2c4848c2 — AGENTS.md — energy project instructions
@@ -400,6 +424,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-1a10c8033611"></a>
+
+## SRC-1a10c8033611 — reconstruction-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json](/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json)
+
+Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-1b2c3957498a"></a>
 
 ## SRC-1b2c3957498a — OCCT source repository/licence
@@ -435,6 +471,18 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json.
+
+<a id="src-1f314fe4accc"></a>
+
+## SRC-1f314fe4accc — raster_image.rs
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs)
+
+Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-1f466f80fd41"></a>
 
@@ -518,7 +566,7 @@ Summary: Inspected in this research turn; records OCS baseline, CAD representati
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-251464b38bc3"></a>
 
@@ -564,9 +612,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-o
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-2759f46214ed"></a>
 
@@ -626,19 +674,19 @@ Summary: Computers & Graphics 2023 paper describes matching projected edge featu
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
 <a id="src-2bcc72542265"></a>
 
-## SRC-2bcc72542265 — IfcOpenShell geometry creation
+## SRC-2bcc72542265 — Geometry creation — IfcOpenShell 0.9.0post1 documentation
 
 Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html)
 
-Summary: Official API guidance for wall, profile and mesh representations, placements and SI-unit transforms.
+Summary: IfcOpenShell 0.9.0post1 documents wall-like representations and `geometry.create_2pt_wall` with endpoints p1/p2, elevation, height and thickness. The representation follows the object placement along local +X, with thickness along local +Y; placement and rotation set plan endpoints. Examples use metre dimensions; `geometry.edit_object_placement(..., is_si=True)` selects SI translation units instead of project units. The guide also documents profile representations extruded along +Z. These are API examples, not executed geometry.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/dom-r01.md, research/workflows/details/dom-r07.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r10.md, research/workflows/domain-paths.md.
 
 <a id="src-2d331dacc4f0"></a>
 
@@ -650,7 +698,7 @@ Summary: Authorized documentation method: fifteen fields per action, alternative
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-2d6abe7b467d"></a>
 
@@ -663,6 +711,18 @@ Summary: Official Python documentation describes Decimal construction from strin
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-04/intake-sources.json.
+
+<a id="src-2d95a53e76b4"></a>
+
+## SRC-2d95a53e76b4 — cad-r02.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md)
+
+Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-2e05ef8b5192"></a>
 
@@ -678,15 +738,15 @@ Documents: research/action-audit/reviews/point-02-visual.md, research/action-aud
 
 <a id="src-2e92a48ed867"></a>
 
-## SRC-2e92a48ed867 — OpenCV structural analysis and shape descriptors
+## SRC-2e92a48ed867 — Structural Analysis and Shape Descriptors — OpenCV 4.13.0
 
 Original source: [https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html](https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html)
 
-Summary: Official API documents contours, curve lengths, bounding boxes and approxPolyDP; polygon simplification is bounded by a pixel-coordinate precision setting.
+Summary: OpenCV 4.13.0 documents `findContours` on an 8-bit single-channel binary image; nonzero pixels are foreground and the API returns contour coordinates and hierarchy. Contours support shape analysis but are pixel-derived boundaries, not engineering feature classes.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-2fad977d4fe9"></a>
 
@@ -698,7 +758,7 @@ Summary: Source referenced for the stated workflow; see the owning documentation
 
 Evidence: existing_report_registered, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-2fe2fa4714a1"></a>
 
@@ -878,7 +938,7 @@ Summary: Official OpenCV reference describes camera calibration, pose estimation
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-39fee200cbbf"></a>
 
@@ -966,15 +1026,15 @@ Documents: research/cad-and-skills.md.
 
 <a id="src-3cb645d27838"></a>
 
-## SRC-3cb645d27838 — FreeCAD Part scripting
+## SRC-3cb645d27838 — Part scripting — FreeCAD documentation
 
 Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md)
 
-Summary: Official documentation source for Part workbench scripting and shape operations.
+Summary: The FreeCAD Part scripting page describes Part as an Open CASCADE B-rep module with Python-accessible geometric primitives and TopoShapes including vertices, edges, wires, faces, solids and compounds. It shows creating a primitive, converting it to a shape, assigning the shape to a Part::Feature and recomputing. The inspected rendered GitHub page was paired with its raw view at https://raw.githubusercontent.com/FreeCAD/FreeCAD-documentation/main/wiki/Part_scripting.md to read the content. This documents native B-rep construction, not image interpretation or a validity check.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
 <a id="src-3d8ba9ae669c"></a>
 
@@ -986,7 +1046,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-3e2691ad3057"></a>
 
@@ -1086,15 +1146,15 @@ Documents: research/sources/round-02/archive-sources.json.
 
 <a id="src-43a296901978"></a>
 
-## SRC-43a296901978 — https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html
+## SRC-43a296901978 — Geometric Image Transformations — OpenCV 4.13.0
 
 Original source: [https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html](https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html)
 
-Summary: 1. Name: OpenCV; Role: Planar image rectification and raster line candidates.; License: Apache-2.0 upstream.; Apis: cv2.getPerspectiveTransform(4 point pairs); cv2.warpPerspective; cv2.HoughLinesP; cv2.findContours/cv2.approxPolyDP; Dependencies: Python 3, OpenCV Python bindings (opencv-python or system package), NumPy; image file raster source.; Source urls: https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html; https://github.com/opencv/opencv/blob/4.x/LICENSE
+Summary: OpenCV 4.13.0 documents getPerspectiveTransform from four corresponding source/destination quadrangle points and warpPerspective using a 3×3 transform, output size, interpolation and border modes. The page states that geometric image transforms sample in reverse from destination pixels to source pixels; warpPerspective can take an inverse-map flag. These APIs transform pixel grids and do not establish metric calibration or independent validation.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/visual-review.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r02.md.
 
 <a id="src-447a55563fd3"></a>
 
@@ -1276,6 +1336,18 @@ Evidence: local_source_inspected, existing_report_registered.
 
 Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json.
 
+<a id="src-50e5314209fb"></a>
+
+## SRC-50e5314209fb — Camera Calibration and 3D Reconstruction — OpenCV 4.13.0
+
+Original source: [https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html](https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html)
+
+Summary: OpenCV 4.13.0 documents findHomography as a perspective transform between two planes from paired source/target points, with least-squares and robust methods (RANSAC, LMeDS, RHO), a reprojection threshold and inlier mask. The robust algorithms use four-pair subsets and discard collinear subsets; an unestimable homography returns an empty matrix. The same calib3d reference documents undistort(src, cameraMatrix, distCoeffs, ...) as compensation for radial and tangential lens distortion, implemented through a remap. These are geometric API claims, not measured calibration or accuracy results.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-sources.md, research/sources/round-05/point-04-web-sources.json.
+
 <a id="src-522e8d24462e"></a>
 
 ## SRC-522e8d24462e — FreeCAD AI Agent Skills Suite
@@ -1322,7 +1394,7 @@ Summary: Official signature and examples for declaring IFC project units.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-536bee2e3614"></a>
 
@@ -1370,7 +1442,7 @@ Summary: Journal article describes segmenting engineering drawing views, linking
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
 <a id="src-5458b9b0d8db"></a>
 
@@ -1394,7 +1466,7 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-554c43270f1b"></a>
 
@@ -1419,6 +1491,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-56b9d47414e7"></a>
+
+## SRC-56b9d47414e7 — Point 04 — Raster drawings and interpreted dimensions
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-56c822eef16f"></a>
 
@@ -1490,7 +1574,7 @@ Summary: 2. Name: Tesseract; Role: Dimension text candidates with boxes/confiden
 
 Evidence: existing_report_registered.
 
-Documents: research/action-audit/reviews/visual-review.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
+Documents: research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/visual-review.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md.
 
 <a id="src-5a8b5891ac1d"></a>
 
@@ -1636,6 +1720,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json.
 
+<a id="src-61c6ad4341d0"></a>
+
+## SRC-61c6ad4341d0 — cad-r03.md
+
+Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md)
+
+Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-61f08f559e99"></a>
 
 ## SRC-61f08f559e99 — Agent skill: freecad-developer
@@ -1682,7 +1778,7 @@ Summary: Existing archived source for OCS automation documentation and historica
 
 Evidence: archived_original_referenced, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/archive-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-02/archive-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-64196dacabad"></a>
 
@@ -1958,7 +2054,7 @@ Summary: Existing local source cited by point 03 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-71dee9d2e674"></a>
 
@@ -1970,7 +2066,7 @@ Summary: Authored audit document recording Visual interpretation review — desc
 
 Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-724b2d11a6eb"></a>
 
@@ -2090,7 +2186,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-7c623f2c8b68"></a>
 
@@ -2116,6 +2212,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-7f7508ffab83"></a>
+
+## SRC-7f7508ffab83 — Potrace: a polygon-based tracing algorithm
+
+Original source: [https://potrace.sourceforge.net/potrace.pdf](https://potrace.sourceforge.net/potrace.pdf)
+
+Summary: Peter Selinger’s 2003 paper describes Potrace tracing black/white bitmaps into smooth Bezier contours, using polygons internally. It explicitly notes that several outlines can generate the same bitmap and that tracing cannot generate information absent from the input. This supports a vectorization capability and its information limit; it does not identify a locally selected executable, version or license.
+
+Evidence: existing_report_registered, web_inspected.
+
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-sources.md, research/sources/round-05/point-04-web-sources.json.
+
 <a id="src-8089d1901b4f"></a>
 
 ## SRC-8089d1901b4f — Asset catalog
@@ -2127,6 +2235,18 @@ Summary: Poly Haven ; Library of 3D models, materials and HDRI environments usef
 Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
+
+<a id="src-80962f129a41"></a>
+
+## SRC-80962f129a41 — Software review: raster drawings and interpreted dimensions
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-software.md)
+
+Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-80d56f29af4a"></a>
 
@@ -2152,6 +2272,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-816d7accc0c5"></a>
+
+## SRC-816d7accc0c5 — Point 04 visual and evidence review — raster drawings and orthographic views
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md)
+
+Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-819035442c74"></a>
 
 ## SRC-819035442c74 — https://mcpmarket.com/tools/skills/generate-3d-model
@@ -2174,7 +2306,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-837950156e9e"></a>
 
@@ -2318,7 +2450,7 @@ Summary: Source referenced for the stated workflow; see the owning documentation
 
 Evidence: existing_report_registered, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-8e6d7648b52e"></a>
 
@@ -2342,7 +2474,7 @@ Summary: Prior project report compares reusable component sources and downstream
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-8f9b6f25cd0d"></a>
 
@@ -2354,7 +2486,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -2498,7 +2630,7 @@ Summary: Official 4x4 local placement API; `is_si` declares whether matrix trans
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/reviews/point-02-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
+Documents: research/action-audit/reviews/point-02-visual.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r01.md.
 
 <a id="src-9641fd75954c"></a>
 
@@ -2548,6 +2680,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-9969afca68d8"></a>
+
+## SRC-9969afca68d8 — Point 04 designer notes — raster drawings and interpreted dimensions
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md)
+
+Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-99954d282c44"></a>
 
 ## SRC-99954d282c44 — Point 03 designer notes — vector profiles and small solids
@@ -2590,11 +2734,11 @@ Documents: research/sources/round-03/domain-detail-sources.json, research/workfl
 
 Original source: [https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html](https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html)
 
-Summary: Official Tesseract command-line documentation shows TSV output selected by adding the tsv config and includes hierarchy identifiers, left/top/width/height pixel boxes, confidence values and recognized text in its example output. This supports recording OCR text candidates and image regions for later source review. Confidence and recognized text remain OCR output and do not establish engineering glyph, unit or feature meaning. The same URL is already present in the project source register; this observation records the fresh bounded inspection.
+Summary: The official command page shows `tsv` output with page/block/paragraph/line/word identifiers, pixel left/top/width/height, confidence and recognized text. Its hOCR example uses word boxes and `x_wconf`; the page describes available engines in Tesseract 5 and one sample output identifies an example build `5.0.1-64-g3c22`. The page does not identify a local binary or traineddata version; OCR values and confidence remain candidates for source review.
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-01-model-brief.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-02/cad-sources.json, research/sources/round-04/intake-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
+Documents: research/action-audit/point-01-model-brief.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-02/cad-sources.json, research/sources/round-04/intake-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
 <a id="src-9bffb9dff56b"></a>
 
@@ -2690,7 +2834,7 @@ Summary: Existing local source inspected in the initial research; its use is des
 
 Evidence: local_source_inspected, existing_report_registered, local_reference_registered.
 
-Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/local-baseline.md, research/sources/local-evidence.json, research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-a0ba78259618"></a>
 
@@ -2702,7 +2846,7 @@ Summary: ICCV 2023 paper proposes a transformer/shape-program mapping from three
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
 
 <a id="src-a1b86705dc1b"></a>
 
@@ -2810,7 +2954,7 @@ Summary: ACCV 2022 paper studies automatic vectorization of raster building blue
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
 <a id="src-a539aa71a816"></a>
 
@@ -3014,7 +3158,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-b00b92c70647"></a>
 
@@ -3098,7 +3242,7 @@ Summary: Prior project proposal identifies OCS as the interactive baseline, Free
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-02/domain-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-b5b5f2bbfc67"></a>
 
@@ -3120,9 +3264,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/po
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-b667bec43458"></a>
 
@@ -3240,9 +3384,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-v
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-bae586b9c767"></a>
 
@@ -3290,7 +3434,7 @@ Summary: Computer Graphics Forum paper describes a learned raster-floorplan fram
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
 <a id="src-bcf9f8ff8137"></a>
 
@@ -3422,7 +3566,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-c0ffb325c952"></a>
 
@@ -3604,6 +3748,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r07.md, research/workflows/details/rec-r07.md.
 
+<a id="src-c9c4bd1b2994"></a>
+
+## SRC-c9c4bd1b2994 — point-04-operations
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-c9c50a504fb8"></a>
 
 ## SRC-c9c50a504fb8 — json — JSON encoder and decoder — Python 3.15.2 documentation
@@ -3700,6 +3856,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-03-visual.md, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r10.md.
 
+<a id="src-cfeb029989f0"></a>
+
+## SRC-cfeb029989f0 — Point 04 source check: raster interpretation, orthographic views and IFC
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-sources.md)
+
+Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-d130021486e1"></a>
 
 ## SRC-d130021486e1 — PicoGK upstream LICENSE file
@@ -3768,9 +3936,9 @@ Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/so
 
 Summary: Authored audit document recording Source check: intake operations. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
-Evidence: authored_document_inspected.
+Evidence: authored_document_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-d5265b630533"></a>
 
@@ -3795,6 +3963,18 @@ Summary: The Blender-hosted Blender Lab MCP repository is the Blender project's 
 Evidence: existing_report_registered.
 
 Documents: research/domains-and-components.md.
+
+<a id="src-d7af850e4bd9"></a>
+
+## SRC-d7af850e4bd9 — Independent review — Point 04 raster drawings and interpreted dimensions
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-independent.md)
+
+Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
+
+Evidence: authored_document_inspected.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-d928392d886f"></a>
 
@@ -3928,6 +4108,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-dfbf09c1f151"></a>
+
+## SRC-dfbf09c1f151 — point-04-web-sources.json
+
+Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json)
+
+Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
+
+Evidence: local_reference_registered.
+
+Documents: research/sources/round-05/point-04-local-sources.json.
+
 <a id="src-dfe7c160f462"></a>
 
 ## SRC-dfe7c160f462 — OCS model contract
@@ -3938,7 +4130,7 @@ Summary: Requirements for units, frames, source corrections, parts, tolerances a
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-e1ca3a166ec3"></a>
 
@@ -4142,7 +4334,7 @@ Summary: Source referenced for the stated workflow; see the owning documentation
 
 Evidence: existing_report_registered, local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-03/cad-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-ebd6e769a79a"></a>
 
@@ -4166,7 +4358,7 @@ Summary: Official API documents probabilistic HoughLinesP on binary images and r
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-ece5f904e49d"></a>
 
@@ -4310,7 +4502,7 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 
 Evidence: local_reference_registered.
 
-Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-f5feb81d0023"></a>
 
@@ -4322,7 +4514,7 @@ Summary: CVPR 2021 paper proposes residential floor-plan recognition/reconstruct
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
+Documents: research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md, research/workflows/details/mix-r08.md.
 
 <a id="src-f6203f32e04a"></a>
 
@@ -4382,7 +4574,7 @@ Summary: Local OCS guide describes stdio MCP and drawing inspection, mutation, m
 
 Evidence: local_source_inspected, local_reference_registered.
 
-Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json.
+Documents: research/sources/round-02/cad-sources.json, research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json.
 
 <a id="src-f954ab80c148"></a>
 
@@ -4442,7 +4634,7 @@ Summary: The FreeCAD scripting page shows `Sketcher::SketchObject`, `addGeometry
 
 Evidence: existing_report_registered, web_inspected.
 
-Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/visual-review.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
+Documents: research/action-audit/point-03-vector-and-solid.md, research/action-audit/reviews/point-03-designer.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-sources.md, research/action-audit/reviews/point-03-visual.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/visual-review.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/sources/round-05/point-03-web-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r02.md.
 
 <a id="src-fe66e203f22d"></a>
 

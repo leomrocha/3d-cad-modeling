@@ -1,0 +1,1073 @@
+{
+  "point": 4,
+  "status": "proposal",
+  "date": "2026-11-12",
+  "requested_dispatch": {
+    "model": "gpt-6-astra",
+    "reasoning_effort": "xhigh"
+  },
+  "actual_model_identity": "unavailable",
+  "operations": [
+    {
+      "operation_id": "CAD-02",
+      "name": "Rectify a raster drawing plane from known dimensions",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://docs.opencv.org/5.0/main_modules/calib.html",
+        "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
+        "https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html"
+      ],
+      "actions": [
+        {
+          "id": "CAD-02-A01",
+          "name": "Identify plane evidence and independent metric controls",
+          "purpose": "Establish one drawing plane and adequate control geometry before choosing a transformation.",
+          "intended_use": "Prepare dimensional plane measurements or a declared arrangement reference.",
+          "inputs": "Original raster/page hash; known coplanar coordinates/lengths; unit/frame; intended plane; independent controls.",
+          "outputs": "Plane/control manifest and selected scale/projective model for CAD-02-A02.",
+          "accuracy": "Control uncertainty, fitting error, withheld-check threshold and engineering allowance retain separate sources.",
+          "evidence": "Original pixel coordinates, dimension/survey records, known lens corrections and page condition.",
+          "software": "Read image orientation/size; inventory control pairs; detect repeated, collinear or clustered configurations.",
+          "agent": "Distinguish lens distortion, page perspective/deformation, drawing-to-object scale and freehand proportions.",
+          "user_decisions": "Supply adequate control geometry or choose the relevant plane when ambiguity affects metric results.",
+          "dependencies": "OpenCV perspective APIs; CAD-R02 conditions; point01 source/unit intake.",
+          "proposed_development": "Proposal: plane preflight consumes image/control evidence and emits model sufficiency, control roles and check IDs.",
+          "procedure": [
+            "Preserve source pixels/orientation.",
+            "Locate controls in original pixels and target-plane units.",
+            "Separate fitting and withheld controls; record transformation prerequisites."
+          ],
+          "validation": "One length supports uniform scale only with justified front-parallel/isotropic conditions; projective correction requires sufficient nondegenerate correspondences.",
+          "failure_resume": "Retain alternatives; block named dependent metric features until their control prerequisites exist.",
+          "resources": "Local metadata/few-point work first; remote high reasoning for plane ambiguity; manual point selection and uncertainty recorded."
+        },
+        {
+          "id": "CAD-02-A02",
+          "name": "Estimate plane mapping and rectified derivative",
+          "purpose": "Map the selected plane to coordinates while retaining original pixel locations.",
+          "intended_use": "Supply rectified reference pixels and coordinate mapping for OCR/tracing.",
+          "inputs": "Plane/control manifest; selected model; output sampling/interpolation; target units/frame.",
+          "outputs": "Transform, coordinate inverse where defined, ancillary rectified derivative and fit report.",
+          "accuracy": "Per-control residuals and sampling effects remain separate from dimensional uncertainty and engineering allowance.",
+          "evidence": "Matrix/settings connect original image, target plane and derivative; preserve control IDs and valid mapping domain.",
+          "software": "Use getPerspectiveTransform for four suitable point pairs or documented estimator; warpPerspective samples derivative.",
+          "agent": "Inspect control order, spatial coverage, stretching and unsupported plane assumptions.",
+          "user_decisions": "Resolve conflicting controlling dimensions or geometry-changing control selection.",
+          "dependencies": "Selected OpenCV signatures; image/crop pixel-center and coordinate conventions.",
+          "proposed_development": "Proposal: rectification adapter emits matrix/inverse, valid domain, fit diagnostics and sampling receipt.",
+          "procedure": [
+            "Validate point order and coordinate conventions.",
+            "Estimate selected transformation.",
+            "Create derivative and retain original coordinates/settings."
+          ],
+          "validation": "Check finite/invertible mapping and residual distribution across feature regions; inverse maps coordinates, while source pixels remain preserved separately.",
+          "failure_resume": "Preserve failed matrix/settings; revise the named controls/model and invalidate affected derived coordinates.",
+          "resources": "Small matrix fit precedes pixel-scale warping; CPU/RAM follows output resolution; remote review uses source+derivative."
+        },
+        {
+          "id": "CAD-02-A03",
+          "name": "Check independent controls and publish measurements",
+          "purpose": "Determine feature-specific dimensional readiness after rectification.",
+          "intended_use": "Deliver CAD-02 measurement-set for tracing, sketch and building actions.",
+          "inputs": "Mapping; withheld checks; source uncertainty and per-feature criteria.",
+          "outputs": "Measurement-set with original/transformed coordinates, units/frame, method, uncertainty and readiness; derivative is ancillary.",
+          "accuracy": "Independent length differences use distinct uncertainty and computational threshold; every required feature retains engineering allowance.",
+          "evidence": "Check IDs excluded from fitting; source values, units and spatial coverage accompany results.",
+          "software": "Transform withheld endpoints and compare dimensions; verify regional scale and frame signs.",
+          "agent": "Independent reviewer checks feature/control correspondence and residual page/lens distortion.",
+          "user_decisions": "Supply extra controls or select a supported lower-detail use when precision evidence cannot be obtained.",
+          "dependencies": "Actual mapping implementation, independent controls, model-contract fields.",
+          "proposed_development": "Proposal: planar checker consumes mapping/checks/criteria and emits residual rows and named downstream readiness.",
+          "procedure": [
+            "Measure withheld controls.",
+            "Compare differences and regional consistency.",
+            "Publish measurement-set with ancillary mapping/derivative receipt."
+          ],
+          "validation": "Fitted-control agreement and independent-check agreement remain separate; failures block only affected metric uses.",
+          "failure_resume": "Retain failed rows; revisit CAD-02-A01/A02 for that plane while retaining independent views.",
+          "resources": "Few-point checks precede dense sampling; local numerical work and remote/manual review recorded separately."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects plane/control associations and directs transform checks for ambiguous drawings.",
+        "hybrid": "Software fits and measures; agent evaluates controls and model suitability.",
+        "software_first": "Checked scan/plane classes use fixed rules; insufficient controls or regional distortion enters review.",
+        "deterministic": "Explicit plane, nondegenerate controls, settings and withheld criteria produce a checked measurement-set."
+      },
+      "alternatives": [
+        "Justified front-parallel scan with uniform scale.",
+        "Projective planar mapping from adequate point correspondences.",
+        "Manual point selection followed by numerical fitting/checks.",
+        "Lower-detail arrangement and precision dimensional uses retain distinct controls/criteria."
+      ],
+      "merge": {
+        "branches": "Candidates share image/plane/check IDs and record use, coverage, criteria and resources.",
+        "evaluation": "VLM reviews full/crop control evidence; software compares independent residuals.",
+        "combination": "Select one coherent mapping per plane; preserve conflicting dimensions and separate planes.",
+        "post_merge": "Recompute retained coordinates and independent checks; separate reviewer checks meaning."
+      },
+      "software_migration": "Automate demonstrated scan/planar-photo classes after control sufficiency, degeneracy, wrong-unit, regional-distortion and withheld-check fixtures.",
+      "future_tests": [
+        "Single length with perspective skew leaves general homography blocked.",
+        "Collinear/repeated or incorrectly ordered controls fail before derivative publication.",
+        "Fit controls pass but withheld length fails from page deformation.",
+        "Image axis signs, target units and coordinate inverse mapping survive; original pixels remain unchanged."
+      ]
+    },
+    {
+      "operation_id": "CAD-03",
+      "name": "Recognize dimension text with OCR",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+        "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-03-A01",
+          "name": "Locate annotations and retain crop mappings",
+          "purpose": "Prepare legible annotation regions with their original drawing context.",
+          "intended_use": "Read dimension candidates for later feature association.",
+          "inputs": "Original raster/hash; view regions; orientation; optional plane transform; language hints.",
+          "outputs": "Text-region crops with full-view references, pixel boxes and crop/deskew/resize mapping.",
+          "accuracy": "Reading resolution affects legibility; resizing text does not supply dimensional accuracy.",
+          "evidence": "Full image, crop coordinates, source view and preprocessing settings.",
+          "software": "Create bounded reading derivatives; preserve original image and valid coordinate mappings.",
+          "agent": "Identify dimensions, leaders, notes and legends; include adjacent arrow/extension endpoints.",
+          "user_decisions": "Resolve illegible source or uncertain view identity affecting the required annotation.",
+          "dependencies": "Documented OCR preparation and image-transform interfaces.",
+          "proposed_development": "Proposal: annotation-region helper emits mapped crops and contextual source locations.",
+          "procedure": [
+            "Locate candidate annotations.",
+            "Produce recorded reading derivatives.",
+            "Retain full view and leader/extension context."
+          ],
+          "validation": "Crop/rotation coordinates map to original pixels; masks preserve inspectable glyph evidence.",
+          "failure_resume": "Keep original/failed settings; retry only affected region or use manual transcription.",
+          "resources": "Local work scales with crop pixels; remote VLM receives full view plus selected crops; manual region selection recorded."
+        },
+        {
+          "id": "CAD-03-A02",
+          "name": "Recognize glyphs and parse engineering notation",
+          "purpose": "Separate character recognition from interpretation of numerical quantities.",
+          "intended_use": "Produce located text and dimension candidates.",
+          "inputs": "Mapped crops; traineddata/language/version; OCR settings; notation/unit evidence.",
+          "outputs": "Raw TSV and parsed candidates retaining literal strings, boxes, hierarchy, confidence and alternatives.",
+          "accuracy": "OCR confidence is recognizer evidence; nominal value, tolerance, unit and count retain distinct fields.",
+          "evidence": "Original glyph regions and raw OCR rows; parser corrections retain previous token sequence.",
+          "software": "Run documented TSV recognition; parse signs, decimal separators, fractions, radius/diameter and plus-minus symbols conservatively.",
+          "agent": "Compare 0/O, 1/I, punctuation, diameter and tolerance symbols with source pixels.",
+          "user_decisions": "Resolve controlling unreadable values or conflicting notation conventions.",
+          "dependencies": "Pinned Tesseract/traineddata; engineering parser is proposed.",
+          "proposed_development": "Proposal: annotation parser consumes raw TSV/source context and emits typed candidates with unsupported/ambiguous flags.",
+          "procedure": [
+            "Recognize and preserve raw TSV.",
+            "Parse literal tokens into separate quantity fields.",
+            "Retain alternative reads and diagnostics."
+          ],
+          "validation": "Every interpreted field traces to literal source tokens; uncertainty remains explicit.",
+          "failure_resume": "Retain raw outputs; bounded recognizer/crop retry or source-linked manual reading.",
+          "resources": "Local OCR follows pixels/languages; remote/manual review targets ambiguous glyphs."
+        },
+        {
+          "id": "CAD-03-A03",
+          "name": "Associate text with geometric features",
+          "purpose": "Connect each annotation to the intended feature and quantity.",
+          "intended_use": "Supply dimensions for sketch, orthographic or wall/opening work.",
+          "inputs": "Text candidates; full view; object/dimension/extension/leader candidates or manual anchors; frame.",
+          "outputs": "Association records with label region, feature IDs, endpoints/axis, quantity kind and alternatives.",
+          "accuracy": "Diameter/radius, centre/edge distance, angle and count use their own source semantics and criteria.",
+          "evidence": "Label plus leader/extension endpoints and full-view locator; inferred association retains reason.",
+          "software": "Test incidence, direction and endpoint consistency; enumerate compatible links instead of nearest-text selection.",
+          "agent": "VLM selects supported feature associations using source context and candidate geometry.",
+          "user_decisions": "Resolve conflicting controlling interpretations or dimension-chain meanings.",
+          "dependencies": "CAD-04 candidates are optional enrichment; manually located anchors permit association before vectorization.",
+          "proposed_development": "Proposal: association helper returns candidate links, source locators and selected/ambiguous states.",
+          "procedure": [
+            "Locate annotation line/leader and endpoints.",
+            "Enumerate compatible feature links.",
+            "Select supported association or retain alternatives."
+          ],
+          "validation": "Independent reviewer checks meaning; software checks endpoint/axis and quantity consistency.",
+          "failure_resume": "Keep valid transcription while blocking unresolved association; new geometry evidence changes only affected links.",
+          "resources": "Local spatial comparisons follow labels/segments; higher reasoning for chains; remote/manual effort recorded separately."
+        },
+        {
+          "id": "CAD-03-A04",
+          "name": "Publish reviewed text and association evidence",
+          "purpose": "Deliver source-verified transcription with named downstream readiness.",
+          "intended_use": "Provide CAD-03 text output and companion annotation records.",
+          "inputs": "Raw/parsed candidates; associations; source views; review and feature requirements.",
+          "outputs": "Reviewed text with source/crop IDs, units/tolerances, associations and unresolved alternatives.",
+          "accuracy": "Explicit dimensions retain source accuracy; image estimates and OCR confidence remain separate.",
+          "evidence": "Reviewer identity, actual source regions and candidate correction lineage.",
+          "software": "Check field completeness, units, duplicate IDs and conflicting repeated values.",
+          "agent": "Independent reviewer verifies literal text and feature associations against source.",
+          "user_decisions": "Supply replacement image or controlling value for unreadable required annotations.",
+          "dependencies": "Point01 brief intake and original text output contract.",
+          "proposed_development": "Proposal: evidence exporter emits reviewed text plus structured companion records.",
+          "procedure": [
+            "Verify controlling glyphs and associations.",
+            "Record corrections/alternatives.",
+            "Publish text and per-feature readiness."
+          ],
+          "validation": "Each usable controlling dimension has source-linked literal and association checks.",
+          "failure_resume": "Retain prior text revision; invalidate only changed annotation descendants.",
+          "resources": "Record validation is small local work; remote review/manual correction tracked per annotation set."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent transcribes and associates source annotations using software evidence.",
+        "hybrid": "OCR proposes tokens; agent reviews notation/links; software checks fields.",
+        "software_first": "Demonstrated annotation classes run fixed parsing; ambiguous symbols/links enter review.",
+        "deterministic": "Verified text/anchors plus explicit notation rules permit deterministic normalization and export."
+      },
+      "alternatives": [
+        "Manual transcription with independent source check.",
+        "Mapped Tesseract crop candidates with raw TSV.",
+        "Revision-matched vector dimension records when available.",
+        "Arrangement labels and controlling precision dimensions retain distinct required review/coverage."
+      ],
+      "merge": {
+        "branches": "Recognizer, manual and VLM candidates share source/view/annotation IDs and record purpose/criteria/resources.",
+        "evaluation": "VLM compares original glyphs and line context; software compares quantities and endpoint associations.",
+        "combination": "Combine complementary text/feature evidence; preserve conflicting values without averaging or confidence voting.",
+        "post_merge": "Independently recheck every controlling merged annotation before downstream use."
+      },
+      "software_migration": "Automate checked notation/association classes after glyph, decimal, tolerance, repeated-count, leader and ambiguous-feature fixtures; evaluate text and semantic association separately.",
+      "future_tests": [
+        "Diameter glyph read as digit or decimal lost blocks dependent dimension until review.",
+        "Correct text attached to wrong hole fails association check.",
+        "Crop transforms preserve annotation and leader endpoint locations.",
+        "Nominal value, tolerance, count and unit remain separate; confidence never becomes dimensional uncertainty.",
+        "Unreadable feature leaves independent reviewed annotations usable."
+      ]
+    },
+    {
+      "operation_id": "CAD-04",
+      "name": "Extract raster edges, lines and contours",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
+        "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+        "https://potrace.sourceforge.net/potrace.pdf"
+      ],
+      "actions": [
+        {
+          "id": "CAD-04-A01",
+          "name": "Separate stroke classes and inspect source regions",
+          "purpose": "Distinguish geometric strokes from drawing annotations before vector extraction.",
+          "intended_use": "Prepare profile/plan candidates with pixel provenance.",
+          "inputs": "Original/rectified raster; mapping; text/view masks; intended geometry and drawing convention.",
+          "outputs": "Candidate masks for object, annotation, extension, centre and hidden strokes.",
+          "accuracy": "Stroke width/localization uncertainty remain image evidence, separate from repair allowances.",
+          "evidence": "Original pixels, mask/settings and class evidence from full view/crops.",
+          "software": "Threshold/detect edges with recorded settings; preserve crossing and overlapping class candidates.",
+          "agent": "Interpret boundary versus centreline and hidden-line convention; retain uncertain class alternatives.",
+          "user_decisions": "Resolve convention when line style/source context permits several meanings.",
+          "dependencies": "OpenCV image primitives; OCR masks are optional evidence.",
+          "proposed_development": "Proposal: stroke preflight emits source-mapped class masks and ambiguous regions.",
+          "procedure": [
+            "Inspect classes in full view.",
+            "Create candidate masks.",
+            "Preserve uncertain/overlapping strokes."
+          ],
+          "validation": "Overlay masks and confirm required features survive preprocessing.",
+          "failure_resume": "Keep settings/masks; redo only affected regions and invalidate their vector candidates.",
+          "resources": "Local work scales with pixels; coarse inspection precedes original-resolution feature work; remote/manual classification tracked."
+        },
+        {
+          "id": "CAD-04-A02",
+          "name": "Fit source-supported vector candidates",
+          "purpose": "Convert selected strokes into explicit line/contour/curve proposals.",
+          "intended_use": "Supply vector proposals for sketch or wall graph interpretation.",
+          "inputs": "Masks; pixel mapping; plane measurement receipt; curve classes and per-feature approximation limits.",
+          "outputs": "Segments/contours and separately typed arc candidates with support pixels and fit residuals.",
+          "accuracy": "Pixel residual, metric deviation and engineering allowance remain distinct; thresholds cite feature/source requirements.",
+          "evidence": "Hough support, contour chains, fit settings and pre-fit evidence.",
+          "software": "Use HoughLinesP/findContours/approxPolyDP; arc fitting is a separately selected documented or proposed method.",
+          "agent": "Choose stroke centreline/boundary and line/arc hypothesis; interpret gaps using source context.",
+          "user_decisions": "Decide geometry-changing join or curvature assumption when evidence cannot decide.",
+          "dependencies": "Pinned OpenCV primitives; arc estimator and class interpretation have separate capability records.",
+          "proposed_development": "Proposal: curve fitter consumes support pixels/class/criteria and emits typed alternatives, support sets and residuals.",
+          "procedure": [
+            "Extract line and contour candidates.",
+            "Fit permitted geometry types.",
+            "Map to plane coordinates with transform and uncertainty."
+          ],
+          "validation": "Review local residual distribution and overlays; short/noisy arcs can retain multiple centres/radii.",
+          "failure_resume": "Keep unfit pixels; retry bounded model or manual trace without automatic gap closure.",
+          "resources": "Local extraction follows pixels/support; curve fitting limited to relevant regions; remote/manual choice recorded."
+        },
+        {
+          "id": "CAD-04-A03",
+          "name": "Check geometry and publish vector evidence",
+          "purpose": "Identify usable vector features while retaining source deviations and ambiguity.",
+          "intended_use": "Provide vector-drawing for CAD-05/CAD-06/DOM-02 and point03 checks.",
+          "inputs": "Candidates/support pixels; control measurements; selected roles and feature criteria.",
+          "outputs": "Vector-drawing with IDs, pixel mapping, topology findings and operation-specific readiness.",
+          "accuracy": "Endpoint gaps, curve deviation and control dimensions retain separate sourced criteria.",
+          "evidence": "Source overlays, measured differences and repair/classification reasons.",
+          "software": "Check duplicates, crossings, endpoints, loop containment and independent controls; serialize supported curves.",
+          "agent": "Independent semantic review checks holes, feature presence and annotation separation.",
+          "user_decisions": "Resolve ambiguous loop/hidden-edge meaning or source-changing repair.",
+          "dependencies": "CAD-08/CAD-09 downstream contract; actual vector writer curve support.",
+          "proposed_development": "Proposal: raster-vector audit outputs typed geometry, source map, change ledger and named check results.",
+          "procedure": [
+            "Measure geometry/control differences.",
+            "Review original-source overlays.",
+            "Publish selected vector revision and handoff."
+          ],
+          "validation": "Check required holes/openings individually; silhouette agreement accompanies feature checks.",
+          "failure_resume": "Retain failed vectors; revisit class/fit for affected region and invalidate dependent graph/sketch only.",
+          "resources": "Local checks follow curve/intersection count; remote semantic review and manual repair recorded separately."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent selects strokes and geometry types, directs fitting and checks.",
+        "hybrid": "Software proposes curves; agent resolves classes/repairs.",
+        "software_first": "Checked line-art classes use fixed processing; uncertain roles/curves/gaps enter review.",
+        "deterministic": "Explicit masks, mapping, curve classes and thresholds produce checked vector candidates."
+      },
+      "alternatives": [
+        "Manual source-mapped OCS/FreeCAD trace.",
+        "OpenCV line/contour extraction with explicit semantic review.",
+        "Documented learned segmentation as a separate model/weights/resource branch.",
+        "Reduced arrangement outline and precision feature trace retain individual coverage/limits.",
+        "Potrace's published binary-bitmap-to-Bezier-contour method supplies another curve-candidate branch; the paper supplies algorithm evidence and the future run identifies its actual executable, terms and settings."
+      ],
+      "merge": {
+        "branches": "Trace/extraction candidates share source pixels and plane mapping with use/criteria/resource records.",
+        "evaluation": "VLM compares source overlays and class meaning; software measures controls/residuals/topology.",
+        "combination": "Select compatible curves per feature; new joins retain lineage and explicit criteria.",
+        "post_merge": "Recheck merged topology, independent dimensions and feature meaning before handoff."
+      },
+      "software_migration": "Automate demonstrated stroke/curve classes after crossings, double strokes, hidden lines, short arcs, gaps and resolution fixtures.",
+      "future_tests": [
+        "Double strokes preserve centreline-versus-boundary alternatives.",
+        "Annotation crossing never silently creates an object branch/opening.",
+        "Short arc retains uncertain centre/radius fits.",
+        "Threshold removes required narrow slot and fails source review.",
+        "Gap repair exceeding its source criterion blocks that loop."
+      ]
+    },
+    {
+      "operation_id": "CAD-05",
+      "name": "Convert raster floor-plan candidates into a wall and opening graph",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+        "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
+        "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-05-A01",
+          "name": "Declare plan conventions and wall/opening candidates",
+          "purpose": "Give raster/vector candidates explicit building-feature roles.",
+          "intended_use": "Prepare a source-linked planar wall/opening arrangement.",
+          "inputs": "Raster-plan; CAD-02 measurement-set; CAD-04 candidates or manual traces; plan legend/conventions.",
+          "outputs": "Wall edge/centreline convention, candidate walls/openings and source locations.",
+          "accuracy": "Plan coordinates retain calibration uncertainty; thickness/width evidence has feature-specific source status.",
+          "evidence": "Original raster, candidate pixels/vectors, symbols and dimension annotations.",
+          "software": "Inventory candidate wall traces, junctions, opening spans and labels with persistent IDs.",
+          "agent": "Interpret wall boundaries, centreline, door/window symbols and curved/nonorthogonal geometry.",
+          "user_decisions": "Resolve boundary convention or ambiguous symbol that changes element identity.",
+          "dependencies": "Research floor-plan methods provide proposals; manual OCS/FreeCAD trace is a documented alternative.",
+          "proposed_development": "Proposal: plan candidate ledger accepts traced vectors/measurements and returns wall/opening roles and convention alternatives.",
+          "procedure": [
+            "Choose source-supported wall representation.",
+            "Locate wall/junction/opening candidates.",
+            "Retain ambiguous roles with source regions."
+          ],
+          "validation": "Semantic review checks each role against full plan/legend; orthogonality is conditional on source constraints.",
+          "failure_resume": "Retain candidates; block only connections/features whose roles remain ambiguous.",
+          "resources": "Local indexed vectors first; remote VLM/manual interpretation for symbols; learned segmentation adds separately recorded weights/runtime/compute."
+        },
+        {
+          "id": "CAD-05-A02",
+          "name": "Construct dimensioned wall and opening relationships",
+          "purpose": "Create explicit planar connectivity and host relationships from supported candidates.",
+          "intended_use": "Supply an interpretable graph for CAD wall solids or semantic building authoring.",
+          "inputs": "Wall/opening candidates; measurement-set; dimension associations; selected convention and criteria.",
+          "outputs": "Graph nodes/wall edges/opening-host records encoded with vector-drawing metadata.",
+          "accuracy": "Endpoint joins, wall thickness, opening span and angle each use their own criteria; source right angles are optional constraints.",
+          "evidence": "Each relationship cites wall/opening IDs and image/dimension anchors; inferred junctions remain labelled.",
+          "software": "Build adjacency and containment; attach opening intervals to host wall paths; apply explicit dimensions with recorded residuals.",
+          "agent": "Resolve T/cross junctions, breaks, duplicate strokes and wall boundary/centreline offsets.",
+          "user_decisions": "Decide conflicting dimensions, host ambiguity or topology change unsupported by evidence.",
+          "dependencies": "Proposed graph builder over actual supported line/arc geometry; point03 curve/unit checks.",
+          "proposed_development": "Proposal: graph builder consumes candidates/conventions/criteria and emits nodes, wall paths, opening host/intervals and residuals.",
+          "procedure": [
+            "Assign stable node/wall/opening IDs.",
+            "Connect only supported junctions and attach openings.",
+            "Apply source dimensions and retain changes/constraints."
+          ],
+          "validation": "Check host existence and interval containment, coincident endpoints within criteria, room boundaries where meaningful and sourced angular relations.",
+          "failure_resume": "Keep conflicting graph variants; revisit only failed adjacency/dimension and invalidate dependent walls/openings.",
+          "resources": "Local graph operations follow vertices/edges; intersection cost follows candidates; remote/manual work resolves topology exceptions."
+        },
+        {
+          "id": "CAD-05-A03",
+          "name": "Verify plan graph and publish vector handoff",
+          "purpose": "Confirm graph geometry and relationships match the plan and required dimensions.",
+          "intended_use": "Deliver vector-drawing encoding the reviewed wall/opening graph to CAD-17/DOM-18.",
+          "inputs": "Graph; original plan; independent controls; selected convention and required feature coverage.",
+          "outputs": "Checked vector-drawing plus graph/source metadata, measurements and per-element readiness.",
+          "accuracy": "Independent lengths/opening offsets use separate uncertainty and comparison thresholds; no assumed global right angles.",
+          "evidence": "Plan overlays, wall/opening IDs, control rows and reviewer evidence.",
+          "software": "Measure wall lengths/thicknesses, opening stations/spans; test graph integrity, IDs and selected room connectivity.",
+          "agent": "Independent reviewer checks real openings, host selection, symbol interpretation and required coverage.",
+          "user_decisions": "Supply source clarification for blocked host/geometry relationships.",
+          "dependencies": "Versioned graph serializer and dimensional checks; original CAD-05 output remains vector-drawing.",
+          "proposed_development": "Proposal: plan-graph verifier emits geometric/semantic findings and downstream element readiness.",
+          "procedure": [
+            "Check geometry and relationships numerically.",
+            "Compare source overlay and interpreted roles.",
+            "Publish vector graph with retained alternatives and dimensions."
+          ],
+          "validation": "Curved/nonorthogonal walls retain actual geometry; unsupported downstream curves are explicit route exceptions.",
+          "failure_resume": "Preserve failed graph and unaffected elements; update affected source nodes/edges and recheck dependents.",
+          "resources": "Local graph checks first; full-resolution source regions for critical openings; remote/manual review cost tracked separately."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets plan symbols/junctions and directs graph construction/checks.",
+        "hybrid": "Software proposes adjacency/hosts; agent resolves roles and source dimensions.",
+        "software_first": "Demonstrated plan conventions process ordinary cases; ambiguous junctions/curves/openings enter review.",
+        "deterministic": "Explicit wall paths, opening hosts, conventions and dimensions produce a checked graph."
+      },
+      "alternatives": [
+        "Manual wall/opening trace with source IDs.",
+        "Line-candidate graph construction from CAD-04.",
+        "Research segmentation/vectorization model with declared training/domain/runtime evidence.",
+        "Arrangement graph preserves essential boundaries; dimensioned building graph requires each wall/opening criterion."
+      ],
+      "merge": {
+        "branches": "Graph candidates share source/frame and comparable feature IDs, with convention/use/coverage/criteria recorded.",
+        "evaluation": "VLM compares source symbols and candidate relationships; software checks controls/connectivity/hosts.",
+        "combination": "Combine compatible wall/opening subgraphs through explicit junction remapping; preserve conflicting topology.",
+        "post_merge": "Recheck graph integrity, source dimensions, required rooms/openings and independent semantics."
+      },
+      "software_migration": "Migrate checked plan conventions after T/cross junction, curved wall, ambiguous door, nonorthogonal room, host conflict and missing dimension cases.",
+      "future_tests": [
+        "Nonorthogonal or curved wall keeps sourced geometry; no automatic right-angle snapping.",
+        "Opening lies on two candidate hosts: retain alternatives until resolved.",
+        "Centreline-to-edge convention changes thickness placement and must be explicit.",
+        "Broken dimension stroke does not create a doorway.",
+        "Merged subgraphs create duplicate node/host IDs and fail integrity checks."
+      ]
+    },
+    {
+      "operation_id": "CAD-06",
+      "name": "Register orthographic drawing views in a shared coordinate frame",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html",
+        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-06-A01",
+          "name": "Identify views and declare their projection frames",
+          "purpose": "Establish per-view axes, scale and projection convention before matching features.",
+          "intended_use": "Prepare multiview evidence for candidate 3D reconstruction.",
+          "inputs": "Vector-drawing bundle containing at least two identified orthographic views; original source mappings; labels/dimensions and control metadata.",
+          "outputs": "View inventory with plane axes, viewing direction, scale, datum and convention evidence.",
+          "accuracy": "Per-view scale/coordinate uncertainty retained; separate drawing dimensions from traced estimates.",
+          "evidence": "View labels, first-angle/third-angle symbol/layout evidence and source entity IDs.",
+          "software": "Inventory view regions and declared transforms; reject accidental mixing of detail/section/perspective views.",
+          "agent": "Determine source-supported front/top/side and projection convention; retain view alternatives where ambiguous.",
+          "user_decisions": "Resolve missing/contradictory convention or view identity before dependent depth inference.",
+          "dependencies": "Original CAD-06 vector bundle contract; documented orthographic methods; manual OCS/FreeCAD alignment.",
+          "proposed_development": "Proposal: view manifest accepts vector bundle/metadata and outputs explicit view-to-model projection definitions.",
+          "procedure": [
+            "Identify view regions and labels.",
+            "Declare each view axes/direction/scale.",
+            "Attach control and convention evidence."
+          ],
+          "validation": "At least two identified views are available; auxiliary/section views have their own projection definition.",
+          "failure_resume": "Retain valid view evidence; block only registration depending on unresolved view identity.",
+          "resources": "Local manifest/control checks first; remote high reasoning for labels/conventions; manual view association recorded."
+        },
+        {
+          "id": "CAD-06-A02",
+          "name": "Match source features and solve registration candidates",
+          "purpose": "Relate view features through shared model axes and source dimensions.",
+          "intended_use": "Provide candidate correspondences without inventing hidden depth.",
+          "inputs": "View manifest; vector entities; dimension associations; common datum and comparison criteria.",
+          "outputs": "Per-view transforms and feature-correspondence alternatives with residuals.",
+          "accuracy": "Coordinate alignment uses sourced tolerances and traced uncertainty; it does not replace explicit dimension values.",
+          "evidence": "Each correspondence cites entities from every contributing view and dimension/section support.",
+          "software": "Project common-axis coordinates, compare compatible vertices/edges and solve declared scale/offset transforms; retain multiple matches.",
+          "agent": "VLM uses complete labelled views to interpret repeated/symmetric features and hidden/visible line roles.",
+          "user_decisions": "Resolve ambiguous matching that changes geometry when other evidence cannot choose.",
+          "dependencies": "Proposed line/vertex matcher plus numeric transform checks; research methods are evidence for algorithms, not an exercised project adapter.",
+          "proposed_development": "Proposal: correspondence solver emits candidate links, transform receipts and contradictions from view manifests/vectors.",
+          "procedure": [
+            "Identify shared axes and candidate feature pairs.",
+            "Estimate permitted view transforms.",
+            "Compare dimensions and preserve alternate correspondences."
+          ],
+          "validation": "Independent controls and shared-axis residuals check registration; equal projections can retain several 3D interpretations.",
+          "failure_resume": "Keep candidates and contradictions; revisit view definition or correspondence only and invalidate downstream geometry.",
+          "resources": "Local candidate matching scales with features/repetition; prune by source class before comparison; remote/manual interpretation cost separate."
+        },
+        {
+          "id": "CAD-06-A03",
+          "name": "Verify registration and publish reconstruction brief",
+          "purpose": "Give 3D reconstruction explicit view constraints and unresolved alternatives.",
+          "intended_use": "Deliver model-brief with registered views for CAD-07.",
+          "inputs": "View transforms/correspondences; independent controls; source dimensional evidence and intended part features.",
+          "outputs": "Model-brief containing projection frames, correspondences, known dimensions, inferred/ambiguous fields and readiness.",
+          "accuracy": "Per-axis/view checks retain source uncertainties and thresholds; no depth precision assigned from appearance alone.",
+          "evidence": "Control checks and source-labelled correspondence graph with producing/reviewing identities.",
+          "software": "Compare projected control coordinates across views and validate transform chains and feature IDs.",
+          "agent": "Independent reviewer checks convention, visible/hidden/section roles and source meaning.",
+          "user_decisions": "Supply depth/section/feature evidence needed by blocked 3D claims.",
+          "dependencies": "Point01 brief evidence contract; CAD-07 explicit vector/measurement/brief inputs.",
+          "proposed_development": "Proposal: registered-view brief exporter preserves frames, alternate matches and exact downstream prerequisites.",
+          "procedure": [
+            "Validate cross-view controls and identities.",
+            "Review feature correspondence semantics.",
+            "Publish registered-view brief and unresolved dependencies."
+          ],
+          "validation": "Reconstruction readiness names features and source constraints; successful registration alone cannot choose among equal-projection shapes.",
+          "failure_resume": "Retain prior brief revision; changed view scale invalidates its correspondences and affected 3D descendants.",
+          "resources": "Local projection checks are bounded by feature count; remote review uses full views plus located regions; manual missing-source work recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets view conventions and competing correspondences, directing projection checks.",
+        "hybrid": "Software matches axis-compatible features; agent reviews symmetry, hidden edges and sections.",
+        "software_first": "Checked view conventions/feature classes run registration; repeated features or conflicting scales enter review.",
+        "deterministic": "Explicit view frames, feature correspondences and controls produce a checked registration brief."
+      },
+      "alternatives": [
+        "Manual alignment with exact view/source controls.",
+        "Geometric axis/vertex matching for explicit conventions.",
+        "Registered learned orthographic-reconstruction candidate method within its demonstrated object class.",
+        "Arrangement view constraints and precision part correspondence retain different required features/criteria."
+      ],
+      "merge": {
+        "branches": "Candidates share source view revisions; record convention, frame, feature coverage and target use.",
+        "evaluation": "VLM examines full view set and source annotations; software compares independent coordinates/dimensions.",
+        "combination": "Select coherent view/convention mapping; compatible correspondence evidence joins by source feature ID.",
+        "post_merge": "Recheck all per-view transforms, controls and source associations before CAD-07."
+      },
+      "software_migration": "Automate checked view-layout classes after convention reversal, mixed scale, repeated features, auxiliary views and contradictory dimension fixtures.",
+      "future_tests": [
+        "First-angle/third-angle swap reverses interpretation and fails sourced convention checks.",
+        "Mixed view scale passes appearance but fails control dimensions.",
+        "Repeated symmetric features retain multiple correspondences.",
+        "Single view fails the multiple-identified-view prerequisite.",
+        "Auxiliary/section view cannot silently inherit front/top/side axes."
+      ]
+    },
+    {
+      "operation_id": "CAD-07",
+      "name": "Reconstruct a candidate 3D wireframe and surface from orthographic views",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
+        "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-07-A01",
+          "name": "Enumerate source-constrained 3D feature candidates",
+          "purpose": "Translate registered view constraints into explicit candidate 3D interpretations.",
+          "intended_use": "Reconstruct a part while retaining underdetermined depth and hidden features.",
+          "inputs": "Vector view bundle; measurement-set; CAD-06 model-brief; feature criteria and component boundaries.",
+          "outputs": "Candidate vertex/edge/feature hypotheses with source-view links and unresolved degrees of freedom.",
+          "accuracy": "Explicit dimensions control their quantities; traced positions retain uncertainty; inferred hidden features retain status.",
+          "evidence": "Cross-view correspondence graph, visible/hidden/section evidence and source measurements.",
+          "software": "Solve compatible projection-coordinate constraints; enumerate distinct solutions where data underdetermine geometry.",
+          "agent": "Interpret feature meaning and supported hidden surfaces; compare candidates with dimensions and task purpose.",
+          "user_decisions": "Supply missing depth/section/design intent when alternatives affect required geometry.",
+          "dependencies": "Registered view transforms; proposed geometric reconstruction; supported kernel route from point03.",
+          "proposed_development": "Proposal: reconstruction hypothesis builder emits source-linked candidate edges/features and unresolved dependencies.",
+          "procedure": [
+            "Collect constraints from all views.",
+            "Construct compatible 3D hypotheses.",
+            "Retain dimension/hidden-feature alternatives and readiness."
+          ],
+          "validation": "Every required coordinate/feature has source or explicit inference status; equal projections preserve alternatives.",
+          "failure_resume": "Keep candidate graph; block geometry features lacking required depth evidence without discarding supported features.",
+          "resources": "Local constraint/candidate search depends on repetition/ambiguity; high-reasoning remote review targets hidden-feature interpretation."
+        },
+        {
+          "id": "CAD-07-A02",
+          "name": "Construct candidate edges and bounded surfaces",
+          "purpose": "Create candidate boundary geometry from selected source-supported relationships.",
+          "intended_use": "Prepare a kernel-compatible body candidate for validity checks.",
+          "inputs": "Selected hypothesis; explicit geometry/feature sequence; kernel capabilities; per-feature criteria.",
+          "outputs": "Candidate wireframe/faces with feature IDs, source links and construction receipt.",
+          "accuracy": "Curve/surface approximations and kernel criteria separate from source allowance and uncertainty.",
+          "evidence": "Constructed entities map to view edges, dimensions and inferred surface decisions.",
+          "software": "Use supported sketch/edge/face operations or source-backed feature construction; retain each intermediate representation.",
+          "agent": "Diagnose inconsistent edges, face orientation and hidden-surface assumptions.",
+          "user_decisions": "Decide source-changing repair or new surface intent needed for construction.",
+          "dependencies": "CAD-09/CAD-10 supported backend subset; research method output may require a proposed adapter.",
+          "proposed_development": "Proposal: reconstruction adapter consumes hypothesis/sequence and emits typed edges/faces plus lineage.",
+          "procedure": [
+            "Create mapped edges/curves.",
+            "Construct supported faces or explicit features.",
+            "Query actual intermediate representation and failed boundaries."
+          ],
+          "validation": "Check projected edges and dimensions before sealing; open surface remains an intermediate artifact.",
+          "failure_resume": "Preserve failed edges/faces and prior valid step; use CAD-14 bounded diagnosis and operation reconciliation.",
+          "resources": "Local kernel cost follows curves/faces and intersections; remote agent diagnoses semantic or kernel exceptions."
+        },
+        {
+          "id": "CAD-07-A03",
+          "name": "Form and inspect the required solid",
+          "purpose": "Determine whether reconstructed boundaries satisfy the cad-solid output contract.",
+          "intended_use": "Deliver an actual closed supported solid candidate with separate source assumptions.",
+          "inputs": "Candidate faces/features; body/component intent; kernel closure/validity capabilities.",
+          "outputs": "Actual solid candidate or retained incomplete surface state, with structure/geometry check report.",
+          "accuracy": "Closure/healing criteria cite the relevant feature and kernel settings; no automatic gap filling from appearance.",
+          "evidence": "Body type, boundary checks, face orientation and component counts linked to exact revision.",
+          "software": "Use supported sewing/solid/feature operations; query closedness, validity, volumes where meaningful and required part boundaries.",
+          "agent": "Review whether a repair changes hidden geometry or merges intended parts.",
+          "user_decisions": "Resolve geometry-changing closure/part fusion or choose a supported alternative representation.",
+          "dependencies": "Selected FreeCAD/Open CASCADE or OCS supported construction; CAD-10 capability gates.",
+          "proposed_development": "Proposal: solid readiness checker accepts candidate boundary/criteria and reports actual class and blocking boundaries.",
+          "procedure": [
+            "Attempt the supported body formation.",
+            "Query actual shape/solid structure.",
+            "Compare required holes, interfaces and part count."
+          ],
+          "validation": "CAD-07 cad-solid readiness requires a closed valid supported shape; a surface/mesh alone retains its actual class.",
+          "failure_resume": "Keep incomplete candidate and errors; return only to affected boundary/hypothesis; preserve original views and measurements.",
+          "resources": "Local validity/solid operations scale with topology and surfaces; remote/manual repair effort recorded separately."
+        },
+        {
+          "id": "CAD-07-A04",
+          "name": "Project back to every view and publish checked geometry",
+          "purpose": "Test candidate geometry against independent drawing evidence and actual saved output.",
+          "intended_use": "Deliver cad-solid plus measurement-set with per-feature provenance.",
+          "inputs": "Actual candidate solid; all view projections; source dimensions; withheld checks and native artifact scope.",
+          "outputs": "Checked cad-solid and measured feature set; source projections and saved-readback receipt accompany them.",
+          "accuracy": "Per-view edge residuals, dimensional differences and export/readback thresholds are separately sourced.",
+          "evidence": "Actual model revision and view transforms; independent source controls excluded from candidate fitting where available.",
+          "software": "Project geometry into each view, compare corresponding visible/hidden edges and controls; save/reopen only within construction scope via CAD-13.",
+          "agent": "Independent semantic reviewer checks missing/extra features, visibility and source associations.",
+          "user_decisions": "Resolve remaining equal-projection alternatives requiring new design intent.",
+          "dependencies": "Supported projection and CAD-13 read-only verification interfaces; independent query/reader records.",
+          "proposed_development": "Proposal: multiview verifier emits located edge/dimension residuals, feature coverage and unresolved alternatives.",
+          "procedure": [
+            "Project the actual candidate into every view.",
+            "Compare independent dimensions and feature coverage.",
+            "Read back saved output and publish typed geometry/measurements."
+          ],
+          "validation": "A kernel-valid body with wrong hole/depth fails source checks; equal projections alone cannot resolve unseen geometry.",
+          "failure_resume": "Preserve failed projections/checks; invalidate affected hypothesis descendants and return to CAD-07-A01 or owning construction.",
+          "resources": "Local projection scales with edges/faces; high-detail checks focus required features; remote semantic review uses source+projected overlays."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets competing 3D hypotheses and directs supported feature construction/checks.",
+        "hybrid": "Software solves projections and constructs explicit features; agent interprets hidden geometry.",
+        "software_first": "Demonstrated object/view classes reconstruct candidates; ambiguity, invalid boundaries or missing depth enters review.",
+        "deterministic": "Explicit correspondences, dimensions and supported feature sequence produce a validated solid with all-view checks."
+      },
+      "alternatives": [
+        "Manual constrained feature reconstruction in supported CAD.",
+        "Geometric wireframe/face reconstruction with typed intermediate states.",
+        "Learned reconstruction candidate within its documented shape class followed by source checks.",
+        "Lower-detail arrangement candidate and precision part model retain separate hidden-feature and interface requirements."
+      ],
+      "merge": {
+        "branches": "Hypotheses retain same view/measurement revisions and feature IDs, plus use/accuracy/coverage/resource records.",
+        "evaluation": "VLM evaluates source interpretation; software measures all-view projections and required dimensions.",
+        "combination": "Select a coherent shape or explicitly author compatible feature composition; retain equal-projection alternatives.",
+        "post_merge": "New revision repeats solid validity, all-view dimensions/edges, feature semantics and saved readback."
+      },
+      "software_migration": "Migrate demonstrated object classes after hidden-depth ambiguity, missing view, incorrect correspondence, open shell, wrong hole and projection-equivalent alternative cases.",
+      "future_tests": [
+        "Two distinct shapes share all supplied projections: retain hypotheses and block the unresolved required feature.",
+        "Open surface fails cad-solid readiness.",
+        "Wrong hidden hole yields valid solid but fails section/dimension evidence.",
+        "A construction repair closes a gap beyond allowed feature criterion and is rejected.",
+        "Merged feature candidate repeats all-view and native checks under its new revision."
+      ]
+    },
+    {
+      "operation_id": "CAD-17",
+      "name": "Build wall and opening solids from a confirmed floor-plan graph",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
+        "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
+        "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md"
+      ],
+      "actions": [
+        {
+          "id": "CAD-17-A01",
+          "name": "Bind graph elements to sourced vertical parameters",
+          "purpose": "Complete wall/opening geometry prerequisites using plan and elevation evidence.",
+          "intended_use": "Prepare a dimensioned CAD wall/opening assembly.",
+          "inputs": "Reviewed CAD-05 vector graph; measurement-set; model-brief with floor datum, wall height/thickness convention and opening widths/heights/sills.",
+          "outputs": "Per-wall/opening feature plan with units/frame, host IDs and complete or blocked parameter states.",
+          "accuracy": "Each length, thickness, height, offset and angle has its own source/allowance; plan accuracy cannot supply vertical uncertainty.",
+          "evidence": "Graph/dimension IDs, elevation/section/source values and actual component identities.",
+          "software": "Check mandatory values, host IDs, unit conversions, wall-local frames and supported curve types.",
+          "agent": "Interpret edge/centreline offsets and opening meaning; distinguish void/cutter representation from a physical component.",
+          "user_decisions": "Supply required elevations, thickness or opening parameters absent from source; choose geometry-changing junction conventions.",
+          "dependencies": "CAD-05 graph and point01 brief; CAD-10 supported native features and point02 assembly identity rules.",
+          "proposed_development": "Proposal: wall feature planner emits explicit wall/cutter construction records and feature-level blocking dependencies.",
+          "procedure": [
+            "Read graph/source parameter revisions.",
+            "Bind wall/opening local frames and vertical values.",
+            "Check route support and named prerequisites."
+          ],
+          "validation": "Required heights/thicknesses/opening parameters come from sources or explicit decisions; no values are filled from plan appearance.",
+          "failure_resume": "Retain valid graph/parameter records; block affected element construction until required source values exist.",
+          "resources": "Local graph/parameter checks first; remote interpretation for junctions/offsets; manual missing-parameter acquisition separate."
+        },
+        {
+          "id": "CAD-17-A02",
+          "name": "Construct walls and opening voids with retained identities",
+          "purpose": "Materialize supported wall bodies and cut the specified openings.",
+          "intended_use": "Produce separate identified CAD wall elements and their opening relationships.",
+          "inputs": "Complete feature plan; target document/revision; supported native kernel and explicit operand-retention policy.",
+          "outputs": "Wall solids, retained opening cutter/void records and assembly mapping with operation receipts.",
+          "accuracy": "Kernel construction/healing thresholds remain separate from engineering dimensions; curved/nonorthogonal routes use actual supplied geometry.",
+          "evidence": "Every native handle maps to wall/opening source IDs and source parameter revision.",
+          "software": "Construct supported wall profiles/solids; create separately identified opening cutters; subtract with explicit preservation flags and query result type.",
+          "agent": "Diagnose junction overlaps, reversed offset/sill direction and unsupported curve/Boolean cases.",
+          "user_decisions": "Resolve a source-changing repair, wall fusion or altered opening treatment.",
+          "dependencies": "CAD-10 native capability gates; OCS explicit delete_source/keep_operands flags; FreeCAD alternative when selected.",
+          "proposed_development": "Proposal: wall assembly executor accepts feature records and emits wall/cutter handles, Boolean receipts and source mappings.",
+          "procedure": [
+            "Construct supported wall body in its declared frame.",
+            "Create/place identified opening cutter and apply supported void operation.",
+            "Read back actual wall/void geometry and group separate elements."
+          ],
+          "validation": "Each opening affects only intended host geometry; assembly/group representation records actual available identity semantics.",
+          "failure_resume": "Preserve source and pre-cut body; reconcile partial calls before retry; invalidate only affected wall/opening descendants.",
+          "resources": "Local cost follows walls/faces/cuts; curved Booleans may dominate; remote/manual diagnosis and display GPU role separate."
+        },
+        {
+          "id": "CAD-17-A03",
+          "name": "Validate plan, elevation and saved assembly",
+          "purpose": "Verify source dimensions and host relationships in the actual CAD result.",
+          "intended_use": "Deliver cad-assembly for dimensioned layout or semantic authoring input.",
+          "inputs": "Actual assembly revision; wall/opening mapping; source plan and elevations; per-feature criteria.",
+          "outputs": "Checked CAD assembly with geometry/source manifest and readiness for named downstream use.",
+          "accuracy": "Plan and vertical differences use their independent source criteria; readback numerical thresholds retained separately.",
+          "evidence": "Actual queries, plan/section overlays, output hash and semantic review against graph/source.",
+          "software": "Measure wall lengths/thickness/heights and opening station/sill/clear size; check part identity and save/reopen via point03 rules.",
+          "agent": "Independent reviewer checks host identity, junction meaning and required opening coverage.",
+          "user_decisions": "Resolve source/design contradictions exposed by actual geometry.",
+          "dependencies": "CAD-13 dimensional/readback checks; CAD assembly representation supports only documented identities.",
+          "proposed_development": "Proposal: wall assembly verifier emits plan/elevation/host comparisons and saved-revision mapping.",
+          "procedure": [
+            "Compare plan projection and controls.",
+            "Measure vertical and opening features directly.",
+            "Read back saved assembly and publish element-specific checks."
+          ],
+          "validation": "Plan projection alone cannot pass height/sill checks; separate wall/opening identity persists after save.",
+          "failure_resume": "Retain failed artifact and check rows; return to relevant parameter/feature and invalidate its descendants.",
+          "resources": "Local required-feature checks precede whole-model comparisons; remote full/section review and manual work tracked."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets sourced wall/opening parameters and directs native construction.",
+        "hybrid": "Software constructs explicit wall/cutter records; agent resolves junction/Boolean exceptions.",
+        "software_first": "Checked wall/curve classes use fixed construction; missing vertical values or unsupported joins enter review.",
+        "deterministic": "Explicit graph, elevations, frame and supported feature sequence produce a checked assembly."
+      },
+      "alternatives": [
+        "Manual native wall/opening construction from the same graph.",
+        "Parameterized supported wall/cutter family with explicit source values.",
+        "Curved/nonorthogonal wall route through an evidenced backend or a named unsupported-feature exception.",
+        "Plan-only arrangement remains a separate artifact; 3D building geometry requires its vertical parameters."
+      ],
+      "merge": {
+        "branches": "Wall candidates share graph/parameter revisions and element identities; each records detail/use/criteria/resources.",
+        "evaluation": "VLM compares plan/elevation meaning; software checks local geometry, hosts and dimensions.",
+        "combination": "Combine compatible wall elements with explicit junction/opening mapping; fusion creates a new authored result.",
+        "post_merge": "Recheck affected junctions, all openings, plan/elevation controls and saved identity mapping."
+      },
+      "software_migration": "Automate demonstrated wall families after centreline/edge, curved junction, missing elevation, reversed sill, wrong-host cut and partial-Boolean cases.",
+      "future_tests": [
+        "Plan dimensions complete but wall/opening height absent blocks affected 3D feature.",
+        "Reversed wall axis changes thickness/sill placement and fails source frame checks.",
+        "Opening cutter intersects adjacent wall; host scope check detects unintended cut.",
+        "Plan projection agrees while sill height fails independent vertical measurement.",
+        "Saved group loses required wall identity and fails assembly handoff."
+      ]
+    },
+    {
+      "operation_id": "DOM-02",
+      "name": "Raster sketch to constrained sketch",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md"
+      ],
+      "actions": [
+        {
+          "id": "DOM-02-A01",
+          "name": "Specify raster-backed sketch requirements",
+          "purpose": "Define source geometry, scale evidence and required native editability.",
+          "intended_use": "Prepare a constrained 2D sketch from a supplied raster.",
+          "inputs": "Raster-sketch plus dimension/measurement prerequisites; source plane/orientation; intended profiles/features and criteria.",
+          "outputs": "Sketch intake record with source hash, controls, required constraints and route selection.",
+          "accuracy": "Explicit dimensions and freehand/image estimates keep distinct uncertainty/status; required feature allowance has its own source.",
+          "evidence": "Original raster and controlling annotations/measurements; plane and transform prerequisites.",
+          "software": "Check raster presence and whether scale model/control geometry suffice; inspect selected sketch backend capabilities.",
+          "agent": "Determine which source features need constraints and which strokes are schematic.",
+          "user_decisions": "Resolve absent plane/scale/design intent or required feature dimensions.",
+          "dependencies": "CAD-02/03/04 and CAD-09 contracts; original DOM-02 raster input plus stated control prerequisite.",
+          "proposed_development": "Proposal: raster-sketch intake emits feature/constraint requirements and source-evidence prerequisites.",
+          "procedure": [
+            "Preserve raster and locate intended profile.",
+            "Record controls and constraint sources.",
+            "Select actual native constraint route."
+          ],
+          "validation": "Dimension-only material routes to point01/point03; this raster procedure retains actual raster evidence.",
+          "failure_resume": "Retain source/input record; block only dependent metric/sketch features awaiting inputs.",
+          "resources": "Local metadata first; higher reasoning for freehand intent; manual controls and remote effort recorded."
+        },
+        {
+          "id": "DOM-02-A02",
+          "name": "Compose calibrated vectors and source-linked constraints",
+          "purpose": "Connect raster evidence to actual native sketch geometry and constraints.",
+          "intended_use": "Create the declared constrained-sketch representation.",
+          "inputs": "Intake; valid CAD-02 measurements when required; CAD-03 annotations; CAD-04 vectors or manual trace; sketch parameters.",
+          "outputs": "Native sketch revision with pixel-to-curve-to-constraint map and reused action receipts.",
+          "accuracy": "Trace deviations, source uncertainties, constraint values and solver criteria retain separate fields.",
+          "evidence": "Each geometry/constraint ID links to source pixels/annotation or explicit inference; reused receipts match source revisions.",
+          "software": "Reuse valid calibration/OCR/vector results; invoke CAD-09 supported geometry/constraint operations and read actual diagnostics.",
+          "agent": "Select source-supported line/arc/profile meaning and intended remaining degrees of freedom.",
+          "user_decisions": "Resolve constraint meaning or repair that changes design intent.",
+          "dependencies": "FreeCAD Sketcher documented construction and discovered diagnostics; OCS route only with evidenced native constraint output.",
+          "proposed_development": "Proposal: raster-sketch composer maps source feature records into native geometry/constraints and retains all upstream receipts.",
+          "procedure": [
+            "Reuse matching source-processing receipts.",
+            "Map curves/dimensions to native IDs.",
+            "Apply explicit constraints and query supported solver diagnostics."
+          ],
+          "validation": "Actual constraint data and source map are present; unavailable required diagnostics remain unresolved.",
+          "failure_resume": "Keep valid upstream evidence and last sketch revision; revisit only failed association/constraint through CAD-14.",
+          "resources": "Local tracing/solver cost follows curves/relations; remote/manual work resolves semantic association."
+        },
+        {
+          "id": "DOM-02-A03",
+          "name": "Verify solved geometry and saved editability",
+          "purpose": "Confirm constrained sketch still represents source dimensions and required features.",
+          "intended_use": "Deliver constrained-sketch with per-feature readiness for construction.",
+          "inputs": "Solved sketch; original raster; independent controls; source requirements and saved artifact scope.",
+          "outputs": "Checked native constrained-sketch, source map and solver/dimensional/semantic report.",
+          "accuracy": "Independent source comparisons and solver residuals retain separate criteria; no blanket fully-constrained requirement.",
+          "evidence": "Same-revision native queries, source overlays, constraint diagnostics and save/readback records.",
+          "software": "Check dimensions, closure/intersections, intended degrees of freedom and retained constraints on reopen.",
+          "agent": "Independent reviewer checks annotation-to-feature meaning and solved movements against source.",
+          "user_decisions": "Supply controlling value/intent when solver exposes contradictory source requirements.",
+          "dependencies": "CAD-09/CAD-13; actual native save/readback interfaces.",
+          "proposed_development": "Proposal: raster-sketch verifier outputs source, solver and saved-editability results separately.",
+          "procedure": [
+            "Measure solved features and independent controls.",
+            "Review source overlay and constraints.",
+            "Save/reopen within construction scope and publish checks."
+          ],
+          "validation": "Correct solver state with wrong association fails semantic/dimensional source check; native constraints survive save.",
+          "failure_resume": "Retain failed sketch and evidence; invalidate only changed features/dependents.",
+          "resources": "Local required-feature checks first; remote reviewer sees source/full sketch and located discrepancies; manual corrections recorded."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets raster/freehand intent and directs calibrated tracing/constraints.",
+        "hybrid": "Software proposes OCR/vectors and solves explicit constraints; agent associates features.",
+        "software_first": "Checked raster/notation classes compose existing receipts; ambiguous geometry or unsupported diagnostics enters review.",
+        "deterministic": "Verified pixels/measurements/feature links and explicit constraints produce a checked native sketch."
+      },
+      "alternatives": [
+        "Manual source-mapped constrained tracing.",
+        "OpenCV/OCR-assisted extraction followed by native constraints.",
+        "Existing source vector route through DOM-03 when that artifact is actually supplied.",
+        "Arrangement sketch retains freehand estimates; precision profile requires its controlling source dimensions."
+      ],
+      "merge": {
+        "branches": "Trace/constraint candidates share source/controls and feature IDs with purpose/detail/criteria/resources.",
+        "evaluation": "VLM reviews full-view and constraint/source links; software compares dimensions and solver movement.",
+        "combination": "Combine compatible feature evidence/constraints with recorded IDs; contradictory values remain alternatives.",
+        "post_merge": "Recompute solver/closure, independent controls, source semantics and native saved editability."
+      },
+      "software_migration": "Migrate checked raster/constraint families after freehand scale, ambiguous glyph, wrong feature association, contradictory constraints and missing diagnostics cases.",
+      "future_tests": [
+        "Freehand proportions conflict with explicit annotation: preserve source values and label image estimate disagreement.",
+        "Dimension-only input routes away from raster-dependent operation.",
+        "Correct OCR plus wrong constraint target fails source review.",
+        "Required solver diagnostic unavailable blocks its readiness result.",
+        "Native reopen retains geometry but loses constraint data and fails editability contract."
+      ]
+    },
+    {
+      "operation_id": "DOM-18",
+      "name": "Raster floor plan to IFC building",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
+        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
+        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
+        "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html"
+      ],
+      "actions": [
+        {
+          "id": "DOM-18-A01",
+          "name": "Bind all five inputs and element-level building requirements",
+          "purpose": "Establish complete source, metric, semantic and reuse inputs for building authoring.",
+          "intended_use": "Prepare an IFC building with source-linked walls/openings and spatial placement.",
+          "inputs": "Raster-plan, dimensions, measurement-set, source-library and model-brief; plan orientation, floor datum and interpretation rules.",
+          "outputs": "Building intake manifest with all five input revisions, element requirements and source-asset terms.",
+          "accuracy": "Plan/vertical/control criteria per feature; source uncertainty and computational thresholds remain distinct.",
+          "evidence": "Source hashes/locations, graph candidates, elevation sources and item-level asset licences/revisions.",
+          "software": "Check input presence/revisions, unit/frame conversions, controls and referenced source-library items.",
+          "agent": "Interpret wall/opening/spatial roles against source and intended building use; identify usable CAD-05/CAD-17 receipts.",
+          "user_decisions": "Resolve required storey/elevation/classification or conflicting dimensions; source-library use follows stated task.",
+          "dependencies": "Point01 brief, point02 source-library checks, CAD-02/05 evidence; original five-input contract.",
+          "proposed_development": "Proposal: building intake binder emits linked source/control/asset/element manifest and feature prerequisites.",
+          "procedure": [
+            "Register all five input records.",
+            "Bind plan/vertical dimensions and reused asset terms.",
+            "Select compatible graph/geometry receipts or named construction route."
+          ],
+          "validation": "Each required element has source-backed geometry/semantic prerequisites; library terms attach to actual reused items.",
+          "failure_resume": "Retain valid input branches; missing source/elevation blocks only dependent element authoring.",
+          "resources": "Local manifests first; remote semantic interpretation and manual evidence acquisition recorded separately."
+        },
+        {
+          "id": "DOM-18-A02",
+          "name": "Create explicit IFC identity, units and spatial structure",
+          "purpose": "Establish the semantic hierarchy and coordinate contexts consumed by building elements.",
+          "intended_use": "Author schema-valid project/building/storey structure for the requested IFC deliverable.",
+          "inputs": "Building manifest; explicit schema/unit choice; project/site/building/storey records and placements.",
+          "outputs": "IFC document with unique identities, units, representation contexts and spatial hierarchy.",
+          "accuracy": "Project/storey placement and elevations cite their source; local frames and map coordinates remain distinct.",
+          "evidence": "IFC IDs map to source element/storey records; hierarchy choices and actual API/version retained.",
+          "software": "Use documented project/root/unit/context APIs and aggregate/spatial relationships; read created IDs and placements.",
+          "agent": "Review semantic classes and hierarchy against source use; avoid inferring geographic registration from plan appearance.",
+          "user_decisions": "Choose spatial classification or coordinate datum when the supplied sources leave competing meanings.",
+          "dependencies": "Selected IfcOpenShell/Bonsai schema/API version; DOM-R01 documented entrypoints.",
+          "proposed_development": "Proposal: IFC context builder consumes semantic/placement records and emits identity/units/context hierarchy receipts.",
+          "procedure": [
+            "Create named schema document, units and contexts.",
+            "Create source-linked spatial elements.",
+            "Assign declared hierarchy/placements and inspect relationships."
+          ],
+          "validation": "Schema/unit and unique-ID checks pass; source storey elevations and local/world transforms match declared frames.",
+          "failure_resume": "Preserve partial IFC revision and ID map; reconcile completed elements before retry to avoid duplicate identities.",
+          "resources": "Local metadata/relationship creation scales with elements; remote review covers semantic decisions; manual hierarchy corrections recorded."
+        },
+        {
+          "id": "DOM-18-A03",
+          "name": "Author placed wall/opening geometry and host relations",
+          "purpose": "Attach source-backed geometry and semantic void relationships to building elements.",
+          "intended_use": "Produce walls/openings that preserve both physical placement and IFC meaning.",
+          "inputs": "Reviewed wall/opening graph; dimensions/elevations; IFC context; source-library items; compatible CAD-17 geometry where used.",
+          "outputs": "Placed IfcWall/IfcOpeningElement records, representations and explicit host void relationships with source mapping.",
+          "accuracy": "Wall thickness/height and opening station/sill/width/height have per-feature criteria; local axes and units explicit.",
+          "evidence": "Source graph/parameter IDs, geometry origin, element identity and each placement/relationship receipt.",
+          "software": "Create element identities, assign supported geometry and local placement; then call feature.add_feature with existing opening and host to obtain IfcRelVoidsElement. Use source-backed create_2pt_wall only within its supported geometry class. Record whether placement translations use SI units or project units, including the actual is_si setting; geometry evaluation timing is recorded from the selected implementation.",
+          "agent": "Interpret host, wall-local +X direction and thickness-side +Y; choose separate supported route for curved/nonconforming walls.",
+          "user_decisions": "Resolve host ambiguity, geometry-changing wall convention or semantic class conflict.",
+          "dependencies": "IfcOpenShell geometry/placement/feature APIs; existing CAD geometry transfer needs an evidenced adapter and preservation checks.",
+          "proposed_development": "Proposal: building element adapter accepts wall/opening/placement records and emits geometry, identity and host-relation receipts.",
+          "procedure": [
+            "Create/place wall and opening elements with source-linked representations.",
+            "Attach existing opening to intended host through explicit void relation.",
+            "Query geometry, placements, containment and relationship identities."
+          ],
+          "validation": "Element creation, representation/placement and host relation are separately checked; relation API consumes an existing opening. Actual opening geometry is evaluated/queried using the selected supported implementation.",
+          "failure_resume": "Keep pre-action IFC and ID/receipt map; reconcile partial element/relation creation; repair only affected element or host relation.",
+          "resources": "Local geometry cost follows walls/openings and Boolean evaluation; semantic record work separate; remote/manual host review recorded."
+        },
+        {
+          "id": "DOM-18-A04",
+          "name": "Validate saved IFC geometry and semantics",
+          "purpose": "Verify the actual exchange file against source dimensions and required building relationships.",
+          "intended_use": "Deliver IFC with explicit geometry, semantic and provenance checks.",
+          "inputs": "Authored IFC revision; all source manifests; per-feature criteria; intended schema/consumer.",
+          "outputs": "Saved IFC hash, reopened geometry/relationship findings, source/ID map and downstream readiness.",
+          "accuracy": "Geometry differences, schema/semantic checks and source measurement uncertainty remain separately reported.",
+          "evidence": "Actual output bytes, reader/version/shared dependencies, measured dimensions and independent semantic review.",
+          "software": "Write within scoped authoring output; reopen read-only; validate schema/IDs/units/placements, hierarchy, host void relations and actual wall/opening geometry.",
+          "agent": "Independent reviewer checks source-to-element classification, host meaning and feature coverage using plan/elevation views.",
+          "user_decisions": "Resolve source-design conflict found by validation; accepting new classification remains an explicit decision.",
+          "dependencies": "Selected IfcOpenShell validator/geometry API and independent consumer where available; CAD-13 measurement pattern.",
+          "proposed_development": "Proposal: IFC source verifier emits separate schema, relationship, dimensional, projection and source-correspondence reports.",
+          "procedure": [
+            "Save and reopen exact IFC output.",
+            "Measure plan/vertical features and inspect relations/containment.",
+            "Independently review semantics and publish evidence with readiness."
+          ],
+          "validation": "Valid schema alone cannot pass wrong host/units/height; required void is checked in evaluated geometry and relation graph.",
+          "failure_resume": "Retain failed IFC/reports; return to context, element or source action and invalidate affected dependents only.",
+          "resources": "Local parse/relationship checks precede geometry evaluation; resource evidence names element/face counts; remote reviewer/manual work separate."
+        }
+      ],
+      "execution_modes": {
+        "agent_led": "Agent interprets source building semantics and directs explicit IFC creation/checks.",
+        "hybrid": "Software authors explicit geometry/relations; agent resolves classifications, hosts and source ambiguity.",
+        "software_first": "Demonstrated plan/element classes use checked adapters; unsupported walls, terms, hierarchy or openings enter review.",
+        "deterministic": "All five inputs, element classes/parameters/placements and supported APIs are explicit; geometry and relation checks are fixed."
+      },
+      "alternatives": [
+        "Manual source-linked IFC authoring in Bonsai/IfcOpenShell.",
+        "Reviewed CAD-05 graph directly drives supported IFC wall/opening families.",
+        "CAD-17 geometry reuse with an evidenced adapter and separately authored IFC identity/relations.",
+        "Plan layout and dimensioned semantic building deliverables retain distinct coverage, vertical parameters and validation requirements."
+      ],
+      "merge": {
+        "branches": "Geometry/semantic candidates share five-input revisions, frames and source element IDs; record use/coverage/criteria/resources.",
+        "evaluation": "VLM compares source roles/host meaning; software checks dimensions, placement and relationship graphs.",
+        "combination": "Merge compatible element/metadata contributions with explicit identity remap and asset terms; preserve conflicting classifications.",
+        "post_merge": "New IFC revision repeats schema/identity, placement, host void, dimensional, projection and independent semantic checks."
+      },
+      "software_migration": "Automate checked building element classes after wrong host, units, reversed local axes, missing elevations, duplicate IDs, curved-wall exception and save/reopen fixtures.",
+      "future_tests": [
+        "Each of five mandatory input records is absent in turn; related authoring remains blocked with named prerequisite.",
+        "Opening is created/represented/placed before add_feature links it to host; returned relation and evaluated void are checked separately.",
+        "IFC schema valid but wrong host or storey placement fails source/relationship checks.",
+        "Wall local axes reversed move thickness to wrong side and fail plan evidence.",
+        "Imported geometry has correct appearance but lost source identity/asset terms; semantic handoff fails.",
+        "Reopened IFC preserves IDs but changed units/elevation fail geometry checks."
+      ]
+    }
+  ],
+  "common_protocol": {
+    "references": [
+      "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+      "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md"
+    ],
+    "scope": "Point03 common_protocol supplies revision/request identity, separate producer/reviewer, native and remote uncertain-completion reconciliation, changed-source invalidation, per-feature criteria and migration gates. All detailed raster procedures and helpers remain proposals.",
+    "image_coordinates": "Preserve original bytes and image/page hash. Each crop/rotation/deskew/resize/projective warp/lens remap has explicit source and target frames, order/direction, pixel-center/grid convention, valid domain/mask, sampling/interpolation and version. Store forward/inverse coordinate mappings where defined; mappings locate source coordinates and cannot reconstruct discarded/resampled pixels. Transform OCR box corners as polygons; curved lens mappings retain adequate boundary sampling and actual remap representation.",
+    "metric_evidence": "Separate physical page rectification from drawing-to-object scale. Explicit source dimensions, independent measurements and image-derived estimates keep distinct status. At each measured feature record nominal/unit/source, engineering allowance, measurement uncertainty and computation/fit threshold; kernel/solver and export thresholds have their own scope. Transform localization/control uncertainty with a documented method into feature coordinates; no fixed pixel threshold silently becomes a global engineering tolerance.",
+    "branches": "Every candidate branch binds source/view/brief revisions, intended use, source subset, feature coverage/detail, units/frame, per-feature criteria and local/remote/manual observations. Keep branches isolated until evidence-based selection. A VLM means vision-language model: it receives full views plus located crops, endpoint/line evidence and actual numerical reports. It selects supported interpretations within current intent; source conflicts/new design choices go to the specific user decision.",
+    "validation": "Separate semantic reviewer execution from producing/merging interpretation; record actual/requested identities and shared models, pixels, OCR, source and kernel dependencies. Numerical results identify actual artifact and query/reader. Calibration checks use held-out controls where available and record independent evidence limits; model agreement or fit residual is not a substitute for a required check.",
+    "resources": "Use metadata, source controls, bounded crops and required-feature checks before full-image or learned processing. CPU/RAM estimates name pixels, labels, curves, candidates or model faces; local GPU use belongs to the actual selected backend. Remote inference calls/tokens/latency/cost and manual tracing/interpretation are separate. Qualitative estimates are proposals; measured cost requires run, hardware, settings and input-size evidence.",
+    "failure_resume": "Apply point03 native and remote protocols. Retain source/working hashes, mappings, raw OCR, candidate IDs, last valid artifact and call/request/partial response identities. Reconcile uncertain completion before replay. Malformed model selection cannot change merged records. Recheck source digests; changed control invalidates coordinate-derived outputs, changed annotation invalidates its feature claims, and unrelated checked regions persist."
+  },
+  "common_future_tests": [
+    "Crop, rotation, perspective warp and nonlinear lens-remap chain: locate original glyph/endpoint evidence with valid-domain metadata; retain original pixels; cropped/outside regions fail mapping rather than invent pixels.",
+    "Physical page dimensions and freehand depicted object dimensions disagree: page rectification passes its own controls while object values remain sourced annotations/image estimates.",
+    "Lost VLM response plus malformed feature rows and source change on resume: retain raw/request evidence, reconcile/retry lineage, keep merged artifact unchanged until valid selections, and invalidate only dependent features.",
+    "Two branches share OCR/pixels and agree on wrong glyph: record shared dependence and detect the error with independent source review or explicit source evidence.",
+    "Low-detail arrangement passes required envelope checks while a precision interface remains blocked by missing source dimension; no status promotion across uses."
+  ]
+}

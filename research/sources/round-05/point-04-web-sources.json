@@ -1,0 +1,145 @@
+[
+  {
+    "url": "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
+    "title": "Geometric Image Transformations — OpenCV 4.13.0",
+    "summary": "OpenCV 4.13.0 documents getPerspectiveTransform from four corresponding source/destination quadrangle points and warpPerspective using a 3×3 transform, output size, interpolation and border modes. The page states that geometric image transforms sample in reverse from destination pixels to source pixels; warpPerspective can take an inverse-map flag. These APIs transform pixel grids and do not establish metric calibration or independent validation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-02 / DOM-02: getPerspectiveTransform requires four corresponding point pairs",
+      "CAD-02 / DOM-02: warpPerspective maps destination pixels back to source coordinates and exposes interpolation, border and inverse-map controls"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html",
+    "title": "Camera Calibration and 3D Reconstruction — OpenCV 4.13.0",
+    "summary": "OpenCV 4.13.0 documents findHomography as a perspective transform between two planes from paired source/target points, with least-squares and robust methods (RANSAC, LMeDS, RHO), a reprojection threshold and inlier mask. The robust algorithms use four-pair subsets and discard collinear subsets; an unestimable homography returns an empty matrix. The same calib3d reference documents undistort(src, cameraMatrix, distCoeffs, ...) as compensation for radial and tangential lens distortion, implemented through a remap. These are geometric API claims, not measured calibration or accuracy results.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-02 / DOM-02: findHomography requires source/target plane correspondences; robust methods use four-pair subsets, reject collinear subsets and can report inliers",
+      "CAD-02 / DOM-02: undistort requires cameraMatrix and distCoeffs and compensates radial/tangential lens distortion"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  },
+  {
+    "url": "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
+    "title": "Command Line Usage — Tesseract documentation",
+    "summary": "The official command page shows `tsv` output with page/block/paragraph/line/word identifiers, pixel left/top/width/height, confidence and recognized text. Its hOCR example uses word boxes and `x_wconf`; the page describes available engines in Tesseract 5 and one sample output identifies an example build `5.0.1-64-g3c22`. The page does not identify a local binary or traineddata version; OCR values and confidence remain candidates for source review.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-03 / DOM-02: Tesseract TSV documents hierarchy identifiers, pixel bounding boxes, confidence and text",
+      "CAD-03 / DOM-02: Tesseract hOCR example documents word bounding boxes and x_wconf confidence values"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  },
+  {
+    "url": "https://potrace.sourceforge.net/potrace.pdf",
+    "title": "Potrace: a polygon-based tracing algorithm",
+    "summary": "Peter Selinger’s 2003 paper describes Potrace tracing black/white bitmaps into smooth Bezier contours, using polygons internally. It explicitly notes that several outlines can generate the same bitmap and that tracing cannot generate information absent from the input. This supports a vectorization capability and its information limit; it does not identify a locally selected executable, version or license.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-04: Potrace converts bitmap boundaries to Bezier-curve outline candidates using an internal polygon representation",
+      "CAD-04: raster tracing cannot recover information absent from the bitmap or uniquely choose among outlines consistent with it"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "application/pdf",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  },
+  {
+    "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
+    "title": "Part scripting — FreeCAD documentation",
+    "summary": "The FreeCAD Part scripting page describes Part as an Open CASCADE B-rep module with Python-accessible geometric primitives and TopoShapes including vertices, edges, wires, faces, solids and compounds. It shows creating a primitive, converting it to a shape, assigning the shape to a Part::Feature and recomputing. The inspected rendered GitHub page was paired with its raw view at https://raw.githubusercontent.com/FreeCAD/FreeCAD-documentation/main/wiki/Part_scripting.md to read the content. This documents native B-rep construction, not image interpretation or a validity check.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-17: FreeCAD Part scripting constructs native TopoShapes/B-reps and assigns shapes to document Part::Feature objects"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
+    "title": "Geometry creation — IfcOpenShell 0.9.0post1 documentation",
+    "summary": "IfcOpenShell 0.9.0post1 documents wall-like representations and `geometry.create_2pt_wall` with endpoints p1/p2, elevation, height and thickness. The representation follows the object placement along local +X, with thickness along local +Y; placement and rotation set plan endpoints. Examples use metre dimensions; `geometry.edit_object_placement(..., is_si=True)` selects SI translation units instead of project units. The guide also documents profile representations extruded along +Z. These are API examples, not executed geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-17 / DOM-18: create_2pt_wall accepts endpoints and explicit elevation, height and thickness; local axes and placement govern wall orientation",
+      "DOM-18: IfcOpenShell distinguishes SI object-placement translations from project units with is_si=True"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
+    "title": "ifcopenshell.api.feature.add_feature — IfcOpenShell 0.9.0post1 documentation",
+    "summary": "IfcOpenShell 0.9.0post1 documents `feature.add_feature(file, feature, element)` for projecting, voiding or surface features. Its example first creates a wall and its geometry, then separately creates an IfcOpeningElement, assigns opening geometry and placement, and finally calls add_feature with the existing opening and wall. For the voiding opening shown, the call returns an IfcRelVoidsElement; the documentation describes voiding features as cutting host geometry but does not specify when the Boolean geometry is evaluated. The function does not create the opening element or assign its geometry/placement; the result depends on the selected feature type. The page says semantic openings should be represented distinctly when they have their own meaning.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "DOM-18: example setup creates, represents and places IfcOpeningElement before calling feature.add_feature",
+      "DOM-18: feature.add_feature attaches the existing feature to the existing element and returns IfcRelVoidsElement for the voiding example; the docs describe voiding host geometry without specifying Boolean evaluation timing",
+      "DOM-18: opening semantic identity is a modeling decision; geometry Boolean alone is not equivalent to the relationship"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  },
+  {
+    "url": "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
+    "title": "Structural Analysis and Shape Descriptors — OpenCV 4.13.0",
+    "summary": "OpenCV 4.13.0 documents `findContours` on an 8-bit single-channel binary image; nonzero pixels are foreground and the API returns contour coordinates and hierarchy. Contours support shape analysis but are pixel-derived boundaries, not engineering feature classes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "web_inspected",
+    "supporting_claims": [
+      "CAD-04: findContours consumes a binary 8-bit single-channel image and returns contour coordinates plus hierarchy"
+    ],
+    "local_original": null,
+    "sha256": null,
+    "content_type": "text/html",
+    "referring_documents": [
+      "research/action-audit/reviews/point-04-sources.md",
+      "research/action-audit/reviews/point-04-software.md"
+    ]
+  }
+]

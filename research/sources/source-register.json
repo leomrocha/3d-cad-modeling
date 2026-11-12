@@ -110,8 +110,8 @@
       "id": "SRC-011e8da740e4",
       "url": "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
       "local_source_path": null,
-      "title": "IfcOpenShell feature.add_feature API",
-      "summary": "Official example creates IfcOpeningElement geometry and relates it as a void feature of a wall.",
+      "title": "ifcopenshell.api.feature.add_feature — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 documents `feature.add_feature(file, feature, element)` for projecting, voiding or surface features. Its example first creates a wall and its geometry, then separately creates an IfcOpeningElement, assigns opening geometry and placement, and finally calls add_feature with the existing opening and wall. For the voiding opening shown, the call returns an IfcRelVoidsElement; the documentation describes voiding features as cutting host geometry but does not specify when the Boolean geometry is evaluated. The function does not create the opening element or assign its geometry/placement; the result depends on the selected feature type. The page says semantic openings should be represented distinctly when they have their own meaning.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -127,13 +127,61 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "DOM-18: example setup creates, represents and places IfcOpeningElement before calling feature.add_feature",
+            "DOM-18: feature.add_feature attaches the existing feature to the existing element and returns IfcRelVoidsElement for the voiding example; the docs describe voiding host geometry without specifying Boolean evaluation timing",
+            "DOM-18: opening semantic identity is a modeling decision; geometry Boolean alone is not equivalent to the relationship"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-sources.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-04-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/mix-r01.md",
         "research/workflows/details/mix-r10.md"
+      ]
+    },
+    {
+      "id": "SRC-023374825488",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
+      "title": "dom-r01.md",
+      "summary": "Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
+          "access_date": "2026-11-12",
+          "sha256": "19d591fc7c1e88f96122080986338afec5c94177b04abf954674094d40681450",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -309,6 +357,16 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -321,7 +379,8 @@
         "research/sources/round-03/reconstruction-detail-sources.json",
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -400,6 +459,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-04-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/reconstruction-detail-sources.json",
@@ -517,11 +577,22 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "673cdef816a240ad04ce9421113a1a6fa2f78c808c96c39cbe74d47127f8991d",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -1006,6 +1077,32 @@
       ]
     },
     {
+      "id": "SRC-144b4a816641",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md",
+      "title": "cad-r09.md",
+      "summary": "Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md",
+          "access_date": "2026-11-12",
+          "sha256": "d003eb5dd901cca4510cc23983a6aa8dfa3df8cede1bb2b94f24a64cfc3206d0",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-158c2c4848c2",
       "url": null,
       "local_source_path": "/home/leo/projects/energy/AGENTS.md",
@@ -1164,6 +1261,32 @@
       ]
     },
     {
+      "id": "SRC-1a10c8033611",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+      "title": "reconstruction-sources.json",
+      "summary": "Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "2f3a21ddaed88b873d1d5522253617233f7ba7336b463a1d957288a9a2acdf95",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-1b2c3957498a",
       "url": "https://github.com/Open-Cascade-SAS/OCCT",
       "local_source_path": null,
@@ -1217,6 +1340,32 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1f314fe4accc",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs",
+      "title": "raster_image.rs",
+      "summary": "Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs",
+          "access_date": "2026-11-12",
+          "sha256": "6bf4fc4b10c26fa7b60b90cf3f331422c6d0cd0b3f3c844807256ea83289eff3",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -1469,13 +1618,24 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+          "access_date": "2026-11-12",
+          "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -1617,7 +1777,8 @@
       "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -1630,10 +1791,21 @@
             "research/action-audit/point-03-vector-and-solid.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "37b0d41ee65e7bcd60880920848e8a11a109e7483f55f3b679b5951fcceb0a2e",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -1787,6 +1959,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r05.md",
         "research/workflows/details/cad-r09.md",
@@ -1797,8 +1972,8 @@
       "id": "SRC-2bcc72542265",
       "url": "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
       "local_source_path": null,
-      "title": "IfcOpenShell geometry creation",
-      "summary": "Official API guidance for wall, profile and mesh representations, placements and SI-unit transforms.",
+      "title": "Geometry creation — IfcOpenShell 0.9.0post1 documentation",
+      "summary": "IfcOpenShell 0.9.0post1 documents wall-like representations and `geometry.create_2pt_wall` with endpoints p1/p2, elevation, height and thickness. The representation follows the object placement along local +X, with thickness along local +Y; placement and rotation set plan endpoints. Examples use metre dimensions; `geometry.edit_object_placement(..., is_si=True)` selects SI translation units instead of project units. The guide also documents profile representations extruded along +Z. These are API examples, not executed geometry.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -1828,13 +2003,33 @@
           ],
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-17 / DOM-18: create_2pt_wall accepts endpoints and explicit elevation, height and thickness; local axes and placement govern wall orientation",
+            "DOM-18: IfcOpenShell distinguishes SI object-placement translations from project units with is_si=True"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
+        "research/sources/round-05/point-04-web-sources.json",
         "research/workflows/details/dom-r01.md",
         "research/workflows/details/dom-r07.md",
         "research/workflows/details/mix-r01.md",
@@ -1884,12 +2079,23 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "66b709fbadd17e154dfdfaedf2ebac3ffe6f9a20b4d07a07cb8fe838cc957e0b",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -1925,6 +2131,32 @@
         "research/action-audit/reviews/software-review.md",
         "research/action-audit/reviews/source-check.md",
         "research/sources/round-04/intake-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2d95a53e76b4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
+      "title": "cad-r02.md",
+      "summary": "Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
+          "access_date": "2026-11-12",
+          "sha256": "d8f712a9bdf92769675868c2d93e01db2b826d5d56e3ba62db922628a84f16e3",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -1992,8 +2224,8 @@
       "id": "SRC-2e92a48ed867",
       "url": "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
       "local_source_path": null,
-      "title": "OpenCV structural analysis and shape descriptors",
-      "summary": "Official API documents contours, curve lengths, bounding boxes and approxPolyDP; polygon simplification is bounded by a pixel-coordinate precision setting.",
+      "title": "Structural Analysis and Shape Descriptors — OpenCV 4.13.0",
+      "summary": "OpenCV 4.13.0 documents `findContours` on an 8-bit single-channel binary image; nonzero pixels are foreground and the API returns contour coordinates and hierarchy. Contours support shape analysis but are pixel-derived boundaries, not engineering feature classes.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -2019,11 +2251,31 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-04: findContours consumes a binary 8-bit single-channel image and returns contour coordinates plus hierarchy"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-sources.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-04-web-sources.json",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r03.md",
         "research/workflows/details/mix-r01.md",
@@ -2071,12 +2323,23 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -2551,6 +2814,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r03.md",
@@ -2785,8 +3050,8 @@
       "id": "SRC-3cb645d27838",
       "url": "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
       "local_source_path": null,
-      "title": "FreeCAD Part scripting",
-      "summary": "Official documentation source for Part workbench scripting and shape operations.",
+      "title": "Part scripting — FreeCAD documentation",
+      "summary": "The FreeCAD Part scripting page describes Part as an Open CASCADE B-rep module with Python-accessible geometric primitives and TopoShapes including vertices, edges, wires, faces, solids and compounds. It shows creating a primitive, converting it to a shape, assigning the shape to a Part::Feature and recomputing. The inspected rendered GitHub page was paired with its raw view at https://raw.githubusercontent.com/FreeCAD/FreeCAD-documentation/main/wiki/Part_scripting.md to read the content. This documents native B-rep construction, not image interpretation or a validity check.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -2815,14 +3080,33 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-17: FreeCAD Part scripting constructs native TopoShapes/B-reps and assigns shapes to document Part::Feature objects"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
         "research/action-audit/reviews/point-03-software.md",
         "research/action-audit/reviews/point-03-visual.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-sources.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-04-web-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r03.md",
@@ -2850,10 +3134,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+          "access_date": "2026-11-12",
+          "sha256": "cd7642e848bdd6b6b71d72443bb1d1df25ab188f581ecd52e5bcc81db117f24b",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -3118,11 +3413,12 @@
       "id": "SRC-43a296901978",
       "url": "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
       "local_source_path": null,
-      "title": "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
-      "summary": "1. Name: OpenCV; Role: Planar image rectification and raster line candidates.; License: Apache-2.0 upstream.; Apis: cv2.getPerspectiveTransform(4 point pairs); cv2.warpPerspective; cv2.HoughLinesP; cv2.findContours/cv2.approxPolyDP; Dependencies: Python 3, OpenCV Python bindings (opencv-python or system package), NumPy; image file raster source.; Source urls: https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html; https://github.com/opencv/opencv/blob/4.x/LICENSE",
+      "title": "Geometric Image Transformations — OpenCV 4.13.0",
+      "summary": "OpenCV 4.13.0 documents getPerspectiveTransform from four corresponding source/destination quadrangle points and warpPerspective using a 3×3 transform, output size, interpolation and border modes. The page states that geometric image transforms sample in reverse from destination pixels to source pixels; warpPerspective can take an inverse-map flag. These APIs transform pixel grids and do not establish metric calibration or independent validation.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "web_inspected"
       ],
       "observations": [
         {
@@ -3134,11 +3430,32 @@
           "local_original": null,
           "sha256": null,
           "content_type": "text/html"
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-02 / DOM-02: getPerspectiveTransform requires four corresponding point pairs",
+            "CAD-02 / DOM-02: warpPerspective maps destination pixels back to source coordinates and exposes interpolation, border and inverse-map controls"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-sources.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-03/cad-detail-sources.json",
+        "research/sources/round-05/point-04-web-sources.json",
         "research/workflows/details/cad-r02.md"
       ]
     },
@@ -3621,6 +3938,41 @@
       ]
     },
     {
+      "id": "SRC-50e5314209fb",
+      "url": "https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html",
+      "local_source_path": null,
+      "title": "Camera Calibration and 3D Reconstruction — OpenCV 4.13.0",
+      "summary": "OpenCV 4.13.0 documents findHomography as a perspective transform between two planes from paired source/target points, with least-squares and robust methods (RANSAC, LMeDS, RHO), a reprojection threshold and inlier mask. The robust algorithms use four-pair subsets and discard collinear subsets; an unestimable homography returns an empty matrix. The same calib3d reference documents undistort(src, cameraMatrix, distCoeffs, ...) as compensation for radial and tangential lens distortion, implemented through a remap. These are geometric API claims, not measured calibration or accuracy results.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-02 / DOM-02: findHomography requires source/target plane correspondences; robust methods use four-pair subsets, reject collinear subsets and can report inliers",
+            "CAD-02 / DOM-02: undistort requires cameraMatrix and distCoeffs and compensates radial/tangential lens distortion"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-sources.md",
+        "research/sources/round-05/point-04-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-522e8d24462e",
       "url": "https://raw.githubusercontent.com/glotoff/freecad-skills/main/README.md",
       "local_source_path": null,
@@ -3745,6 +4097,8 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md"
       ]
@@ -3871,6 +4225,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r05.md",
@@ -3913,10 +4270,21 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
+          "access_date": "2026-11-12",
+          "sha256": "08be3ff11690a00128e3a252a24da421068db26c7ba7ea86ce86965b41bfbbc7",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -3997,6 +4365,33 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-56b9d47414e7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "title": "Point 04 — Raster drawings and interpreted dimensions",
+      "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+          "access_date": "2026-11-12",
+          "sha256": "362fb74ce43df38bd64ef2d1a2be9dfc477f3030e3d1900f648ab100de4eab98",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -4272,6 +4667,7 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/reviews/point-04-visual.md",
         "research/action-audit/reviews/visual-review.md",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r02.md"
@@ -4652,6 +5048,32 @@
       ]
     },
     {
+      "id": "SRC-61c6ad4341d0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
+      "title": "cad-r03.md",
+      "summary": "Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
+          "access_date": "2026-11-12",
+          "sha256": "c8946c1bda6607e6ba61e682bcea6451d2850631156b8c5eedfb23a88453be09",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-61f08f559e99",
       "url": "https://raw.githubusercontent.com/glotoff/freecad-skills/main/skills/freecad-developer/SKILL.md",
       "local_source_path": null,
@@ -4827,13 +5249,24 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+          "access_date": "2026-11-12",
+          "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -5513,10 +5946,21 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
+          "access_date": "2026-11-12",
+          "sha256": "4e321891af4b04a4afa57c634c2aac8e042c8e88d74a1c68b986b56bbb0eb05f",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -5551,11 +5995,22 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+          "access_date": "2026-11-12",
+          "sha256": "28f95615402d203fd686e7bca21218a083261e42ea6d5713e2d94e06f3d9f3de",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -5962,11 +6417,22 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "964063a30ad6777f74e0e6a8ce1851ae22d1b4a004c602a07ca20c1fd75219cb",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -6068,6 +6534,41 @@
       ]
     },
     {
+      "id": "SRC-7f7508ffab83",
+      "url": "https://potrace.sourceforge.net/potrace.pdf",
+      "local_source_path": null,
+      "title": "Potrace: a polygon-based tracing algorithm",
+      "summary": "Peter Selinger’s 2003 paper describes Potrace tracing black/white bitmaps into smooth Bezier contours, using polygons internally. It explicitly notes that several outlines can generate the same bitmap and that tracing cannot generate information absent from the input. This supports a vectorization capability and its information limit; it does not identify a locally selected executable, version or license.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "existing_report_registered",
+        "web_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-04: Potrace converts bitmap boundaries to Bezier-curve outline candidates using an internal polygon representation",
+            "CAD-04: raster tracing cannot recover information absent from the bitmap or uniquely choose among outlines consistent with it"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "application/pdf",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-sources.md",
+        "research/sources/round-05/point-04-web-sources.json"
+      ]
+    },
+    {
       "id": "SRC-8089d1901b4f",
       "url": "https://polyhaven.com/",
       "local_source_path": null,
@@ -6080,6 +6581,33 @@
       "observations": [],
       "referring_documents": [
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-80962f129a41",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-software.md",
+      "title": "Software review: raster drawings and interpreted dimensions",
+      "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-software.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-software.md",
+          "access_date": "2026-11-12",
+          "sha256": "49d5a88c935859deb93783ee5cdaaf5875d6a13d2633aa6230b5f49ed57bb98f",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -6181,6 +6709,33 @@
       ]
     },
     {
+      "id": "SRC-816d7accc0c5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+      "title": "Point 04 visual and evidence review — raster drawings and orthographic views",
+      "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "1296b41c61f425db0665ef9aa5b8479e5bf2a06173ec9d43a9f11f19738fd8c1",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-819035442c74",
       "url": "https://mcpmarket.com/tools/skills/generate-3d-model",
       "local_source_path": null,
@@ -6216,10 +6771,21 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "26e3eca43c57087beb6bec8eca55fce6a20f9c3c7cd31ee0b7b5eec8c97e9467",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -6635,12 +7201,23 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+          "access_date": "2026-11-12",
+          "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -6743,13 +7320,24 @@
           "referring_documents": [
             "research/action-audit/point-02-component-reuse.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+          "access_date": "2026-11-12",
+          "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
-        "research/sources/round-05/point-02-local-sources.json"
+        "research/sources/round-05/point-02-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -6782,11 +7370,22 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+          "access_date": "2026-11-12",
+          "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -7154,6 +7753,8 @@
       ],
       "referring_documents": [
         "research/action-audit/reviews/point-02-visual.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r01.md"
       ]
@@ -7361,6 +7962,33 @@
       ]
     },
     {
+      "id": "SRC-9969afca68d8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md",
+      "title": "Point 04 designer notes — raster drawings and interpreted dimensions",
+      "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md",
+          "access_date": "2026-11-12",
+          "sha256": "12edd0ea1ab11956a90ddb3f538502e306932ab1dd77209630ae038afd5c6912",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-99954d282c44",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md",
@@ -7464,7 +8092,7 @@
       "url": "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
       "local_source_path": null,
       "title": "Command Line Usage — Tesseract documentation",
-      "summary": "Official Tesseract command-line documentation shows TSV output selected by adding the tsv config and includes hierarchy identifiers, left/top/width/height pixel boxes, confidence values and recognized text in its example output. This supports recording OCR text candidates and image regions for later source review. Confidence and recognized text remain OCR output and do not establish engineering glyph, unit or feature meaning. The same URL is already present in the project source register; this observation records the fresh bounded inspection.",
+      "summary": "The official command page shows `tsv` output with page/block/paragraph/line/word identifiers, pixel left/top/width/height, confidence and recognized text. Its hOCR example uses word boxes and `x_wconf`; the page describes available engines in Tesseract 5 and one sample output identifies an example build `5.0.1-64-g3c22`. The page does not identify a local binary or traineddata version; OCR values and confidence remain candidates for source review.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "existing_report_registered",
@@ -7497,14 +8125,35 @@
             "research/action-audit/reviews/source-check.md",
             "research/action-audit/reviews/software-review.md"
           ]
+        },
+        {
+          "evidence_status": "web_inspected",
+          "access_date": "2026-11-12",
+          "supporting_claims": [
+            "CAD-03 / DOM-02: Tesseract TSV documents hierarchy identifiers, pixel bounding boxes, confidence and text",
+            "CAD-03 / DOM-02: Tesseract hOCR example documents word bounding boxes and x_wconf confidence values"
+          ],
+          "local_original": null,
+          "sha256": null,
+          "content_type": "text/html",
+          "referring_documents": [
+            "research/action-audit/reviews/point-04-sources.md",
+            "research/action-audit/reviews/point-04-software.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/action-audit/point-01-model-brief.md",
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-sources.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/action-audit/reviews/software-review.md",
         "research/action-audit/reviews/source-check.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-04/intake-sources.json",
+        "research/sources/round-05/point-04-web-sources.json",
         "research/workflows/details/cad-r02.md",
         "research/workflows/details/cad-r03.md",
         "research/workflows/details/mix-r01.md"
@@ -7783,6 +8432,16 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -7791,7 +8450,8 @@
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-02/domain-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -7832,6 +8492,10 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r05.md",
@@ -8075,6 +8739,10 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r03.md",
@@ -8649,11 +9317,22 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+          "access_date": "2026-11-12",
+          "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -8940,6 +9619,16 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+          "access_date": "2026-11-12",
+          "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
@@ -8948,7 +9637,8 @@
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -8985,7 +9675,8 @@
       "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -8998,10 +9689,21 @@
             "research/action-audit/point-03-vector-and-solid.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md",
+          "access_date": "2026-11-12",
+          "sha256": "bd0f768310f27533e0604b2922cf870b2eed66187157b282cbcacd56e73cfaa3",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -9303,7 +10005,8 @@
       "summary": "Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -9316,10 +10019,21 @@
             "research/action-audit/point-03-vector-and-solid.md",
             "research/action-audit/sequence.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+          "access_date": "2026-11-12",
+          "sha256": "86e7d8bca9f7bed88cb5356a46b1e2375dcf816970bf8ea428ba4ce2ec77ff09",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -9448,6 +10162,9 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/workflows/details/cad-r03.md",
         "research/workflows/details/mix-r01.md"
@@ -9821,11 +10538,22 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "53545e2c11a111e99430b5c9f1e5dc13cf0e06394a19c55d0095420c396501f4",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -10412,6 +11140,33 @@
       ]
     },
     {
+      "id": "SRC-c9c4bd1b2994",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+      "title": "point-04-operations",
+      "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+          "access_date": "2026-11-12",
+          "sha256": "af73a1a2db04c8be42893f5b56df2292b64ad057b473a3d784dbc482e0e82245",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c9c50a504fb8",
       "url": "https://docs.python.org/3/library/json.html",
       "local_source_path": null,
@@ -10692,6 +11447,33 @@
       ]
     },
     {
+      "id": "SRC-cfeb029989f0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-sources.md",
+      "title": "Point 04 source check: raster interpretation, orthographic views and IFC",
+      "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-sources.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-sources.md",
+          "access_date": "2026-11-12",
+          "sha256": "657900a26c71761285296d1b7dfca62e751f8451e0575f31cf900e0d7bd4a9dc",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-d130021486e1",
       "url": "https://raw.githubusercontent.com/leap71/PicoGK/main/LICENSE",
       "local_source_path": null,
@@ -10897,7 +11679,8 @@
       "summary": "Authored audit document recording Source check: intake operations. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "authored_document_inspected"
+        "authored_document_inspected",
+        "local_reference_registered"
       ],
       "observations": [
         {
@@ -10910,10 +11693,21 @@
             "research/action-audit/README.md",
             "research/action-audit/execution-record.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md",
+          "access_date": "2026-11-12",
+          "sha256": "8f861fd9fec733748e728273f8a8ef71c8ff15a19b11b6b744d88ce0e455114b",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-04/audit-local-sources.json"
+        "research/sources/round-04/audit-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -10975,6 +11769,33 @@
       "observations": [],
       "referring_documents": [
         "research/domains-and-components.md"
+      ]
+    },
+    {
+      "id": "SRC-d7af850e4bd9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-independent.md",
+      "title": "Independent review — Point 04 raster drawings and interpreted dimensions",
+      "summary": "Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "authored_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "authored_document_inspected",
+          "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-independent.md",
+          "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-independent.md",
+          "access_date": "2026-11-12",
+          "sha256": "3fbf072baa648964742beb156002264bd628bdfda1c9d91f56a4d4a75c2816db",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md",
+            "research/action-audit/sequence.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -11331,6 +12152,32 @@
       ]
     },
     {
+      "id": "SRC-dfbf09c1f151",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json",
+      "title": "point-04-web-sources.json",
+      "summary": "Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_reference_registered"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json",
+          "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json",
+          "access_date": "2026-11-12",
+          "sha256": "7cf2d63a6ae5e5f1e16cb4ac2a822ca07596bb3266b9bc4ac0575b9d2ec61a2b",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
       "id": "SRC-dfe7c160f462",
       "url": null,
       "local_source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
@@ -11374,12 +12221,23 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+          "access_date": "2026-11-12",
+          "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -11944,13 +12802,24 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+          "access_date": "2026-11-12",
+          "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-03/cad-detail-sources.json",
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -12002,6 +12871,10 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r02.md",
@@ -12495,11 +13368,22 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+          "access_date": "2026-11-12",
+          "sha256": "045cdfca4dc54247411c17576d0c2abc2ce5babc8bcc4d3d59bef22029ec008b",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -12540,6 +13424,10 @@
         }
       ],
       "referring_documents": [
+        "research/action-audit/point-04-raster-drawings.md",
+        "research/action-audit/reviews/point-04-designer.md",
+        "research/action-audit/reviews/point-04-software.md",
+        "research/action-audit/reviews/point-04-visual.md",
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r02.md",
@@ -12714,12 +13602,23 @@
           "referring_documents": [
             "research/action-audit/point-03-vector-and-solid.md"
           ]
+        },
+        {
+          "evidence_status": "local_reference_registered",
+          "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
+          "referring_documents": [
+            "research/action-audit/point-04-raster-drawings.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-02/cad-sources.json",
         "research/sources/round-05/point-02-local-sources.json",
-        "research/sources/round-05/point-03-local-sources.json"
+        "research/sources/round-05/point-03-local-sources.json",
+        "research/sources/round-05/point-04-local-sources.json"
       ]
     },
     {
@@ -12901,6 +13800,7 @@
         "research/action-audit/reviews/point-03-software.md",
         "research/action-audit/reviews/point-03-sources.md",
         "research/action-audit/reviews/point-03-visual.md",
+        "research/action-audit/reviews/point-04-software.md",
         "research/action-audit/reviews/visual-review.md",
         "research/cad-and-skills.md",
         "research/sources/round-02/cad-sources.json",

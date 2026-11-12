@@ -794,6 +794,132 @@ Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/le
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
+## AUDIT-CAD-02 — Rectify a raster drawing plane from known dimensions — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Rectify a raster drawing plane from known dimensions. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-03 — Recognize dimension text with OCR — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Recognize dimension text with OCR. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-04 — Extract raster edges, lines and contours — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract raster edges, lines and contours. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-05 — Convert raster floor-plan candidates into a wall and opening graph — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Convert raster floor-plan candidates into a wall and opening graph. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-06 — Register orthographic drawing views in a shared coordinate frame — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register orthographic drawing views in a shared coordinate frame. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconstruct a candidate 3D wireframe and surface from orthographic views. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-CAD-17 — Build wall and opening solids from a confirmed floor-plan graph — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build wall and opening solids from a confirmed floor-plan graph. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-02 — Raster sketch to constrained sketch — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Raster sketch to constrained sketch. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
+## AUDIT-DOM-18 — Raster floor plan to IFC building — detailed execution options
+
+Status: proposal.
+
+Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Raster floor plan to IFC building. Detailed contracts and conditions are retained in the linked operation record.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+
+Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+
+Next check: Exercise the specified implementation cases under the corresponding implementation scope.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.
