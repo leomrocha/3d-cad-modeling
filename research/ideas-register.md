@@ -1946,6 +1946,18 @@ Original proposal: [execution/p02-crossmember.md](/home/leo/projects/3dmodeling/
 
 Next check: Reuse the check only for the documented parallel-rail/local-frame conditions and keep assembly transforms separate.
 
+## COMP-I17 — Check reused detailed components against actual native geometry and source dimensions
+
+Status: proposal.
+
+Applied a source-bound bearing checker to an existingSKFmodel, detected32mmvs21mmcrown and corrected only its housing in a separate derivative. Native reader now handles explicit rigid transforms, spheres,cones and mounting-slot boundaries split by coplanarBooleanfragments;62savedchecks and40testsPASS.
+
+Original source: [/home/leo/projects/3dmodeling/execution/c009-bearing.md](/home/leo/projects/3dmodeling/execution/c009-bearing.md)
+
+Original proposal: [execution/c009-bearing.md](/home/leo/projects/3dmodeling/execution/c009-bearing.md), line 1.
+
+Next check: Use the documented component-label and source-bound dimension conditions for each other component before reusing this reader.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

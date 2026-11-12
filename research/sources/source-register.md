@@ -292,6 +292,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-081496ab4ae6"></a>
+
+## SRC-081496ab4ae6 — SKF iteration — capture-top.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json)
+
+Summary: Completed native top capture response binds derivative document75 to the inspected two-slot/bearing projection.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-0868c7d42c7e"></a>
 
 ## SRC-0868c7d42c7e — Point 02 visual, semantic and evidence-merge review
@@ -748,6 +760,18 @@ Evidence: authored_code_or_procedure_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-18305cb33c69"></a>
+
+## SRC-18305cb33c69 — Source-bound pillow-block checker
+
+Original source: [/home/leo/projects/3dmodeling/scripts/pillow_block.py](/home/leo/projects/3dmodeling/scripts/pillow_block.py)
+
+Summary: Reads ten exact metadata-labelled native parts and compares housing, slots, shaft, ring, screw, seals and fitting against externally pinned source features; original crown fails and corrected reopened derivative passes62checks.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-19255db776eb"></a>
 
 ## SRC-19255db776eb — MCP Market 3D Modeling Specialist
@@ -768,9 +792,9 @@ Original source: [/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py](/tmp/3dmodeli
 
 Summary: MIT library source implements typed binary token decoding, versioned record construction and pointer resolution through parse_sab. Its existing parser reads the saved P01 binary record without changing CAD geometry.
 
-Evidence: local_execution_evidence_inspected.
+Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-19a03b5f035d"></a>
 
@@ -928,6 +952,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
+<a id="src-1c1ff9274d77"></a>
+
+## SRC-1c1ff9274d77 — SKF iteration — audit.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json)
+
+Summary: Original ten-solid native audit has zeroerrors/warnings; geometric source comparison subsequently finds crown dimension failure.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-1c30dee16aac"></a>
 
 ## SRC-1c30dee16aac — Shared parts catalogue discussion
@@ -939,6 +975,18 @@ Summary: Authored proposal: requested identity/standards/location/search fields,
 Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
+
+<a id="src-1d9ccefff7d7"></a>
+
+## SRC-1d9ccefff7d7 — SKF iteration — ocs-journal.jsonl
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl)
+
+Summary: Append-only guarded requests retain original-open/reopen polling-bound outcomes and same-ID recovery, two housingSLICE commands, verifiedsave and actual captures.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-1eac959ecbf4"></a>
 
@@ -963,6 +1011,18 @@ Summary: Existing local source cited by point 04 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-04-local-sources.json.
+
+<a id="src-1f361eaafa20"></a>
+
+## SRC-1f361eaafa20 — Earlier SKF part record
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md](/home/leo/projects/ferme/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md)
+
+Summary: Supplies component identity and source relationships; its0.588kg figure differs from the retained technical sheet0.56kg, registered as a source finding without changing the record.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-1f4431787dd4"></a>
 
@@ -999,6 +1059,30 @@ Summary: - OpenMVG repository and license: https://github.com/openMVG/openMVG
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
+
+<a id="src-20296fc40b95"></a>
+
+## SRC-20296fc40b95 — SKF iteration — original-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json)
+
+Summary: Actual original native geometry produces61PASS and crownFAIL32mmversus21mm; preserves measured defect before revision.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
+<a id="src-20676393d92d"></a>
+
+## SRC-20676393d92d — SKF iteration — presave-correction-check.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json)
+
+Summary: Post-cut crown21mmPASS and byteidentical nine other solid geometry records recorded before derivative save.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-20a206cdbbd8"></a>
 
@@ -1096,6 +1180,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
 
+<a id="src-23588c0d99a2"></a>
+
+## SRC-23588c0d99a2 — SKF iteration — native-query.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json)
+
+Summary: Original document74 query identifies ten actual solid handles before feature checks and selective revision.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-240fe89d1198"></a>
 
 ## SRC-240fe89d1198 — EN 10210-2:2019 (E), SIST sample — Hot finished structural hollow sections, Part 2
@@ -1152,9 +1248,9 @@ Original source: [/home/leo/projects/3dmodeling/scripts/native_acis.py](/home/le
 
 Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.
 
-Evidence: local_execution_evidence_inspected.
+Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-26397bd1f7c2"></a>
 
@@ -1227,6 +1323,18 @@ Summary: Official repository page accessed 2026-11-12; mutable main branch, no c
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-03/domain-detail-sources.json, research/sources/round-05/point-06-web-sources.json, research/workflows/details/dom-r02.md, research/workflows/details/dom-r08.md.
+
+<a id="src-280cbbe6b531"></a>
+
+## SRC-280cbbe6b531 — SKF page4 fitting and slot image
+
+Original source: [/tmp/opencode/skf-sy20tf-technical-page4.png](/tmp/opencode/skf-sy20tf-technical-page4.png)
+
+Summary: Actual inspected primary page image confirms slotlength20.5mm,locking-sidefaceoffset18.3mm and45degree,2mmoffset greasefitting with7mmhex and6.5mmhead.
+
+Evidence: retained_source_render_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-28c1ea6ca46e"></a>
 
@@ -2248,6 +2356,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r10.md.
 
+<a id="src-409fb1abfc4f"></a>
+
+## SRC-409fb1abfc4f — SKF page3 dimensions image
+
+Original source: [/tmp/opencode/skf-sy20tf-technical-page3.png](/tmp/opencode/skf-sy20tf-technical-page3.png)
+
+Summary: Actual inspected primary page image confirms A1=21mm crown and A=32mm base with housing/mounting/shaft dimensions; supplies visual attribution for original model failure.
+
+Evidence: retained_source_render_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-40beea4e687b"></a>
 
 ## SRC-40beea4e687b — Victron Orion24-12 converter (C045) — CAD input sheet
@@ -2475,6 +2595,18 @@ Summary: p01-build-01 rail-record-schema-1.json: Retained native response with f
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-469662006b7c"></a>
+
+## SRC-469662006b7c — SKF iteration — reopened-checks.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json)
+
+Summary: All62 source-bound native checksPASS in derivative document75 after save/reopen, including corrected21mm crown.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-46a693242819"></a>
 
@@ -2784,9 +2916,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-4f49d9c8767a"></a>
 
@@ -3015,6 +3147,18 @@ Summary: Nerfstudio includes NeRF/Gaussian methods, Apache-2.0 code, and its rep
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-visual.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/details/rec-r02.md.
+
+<a id="src-53baa792380a"></a>
+
+## SRC-53baa792380a — SKF iteration — corrected-presave-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json)
+
+Summary: Actual post-cut native SAT housing and preserved nineSABsolid records support21mm crown measurement and bytecomparison.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-53f84ab8112a"></a>
 
@@ -3280,6 +3424,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-5c0d49b55a8f"></a>
+
+## SRC-5c0d49b55a8f — Source-checked SKF bearing derivative
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg)
+
+Summary: Native DWG2018 preserves ten solids with housing crown21mm. Original other nine solids remain unchanged before save; reopened dimension checks and persistence pass.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-5c5742981c2f"></a>
 
 ## SRC-5c5742981c2f — ShapeKernel upstream LICENSE file
@@ -3532,6 +3688,18 @@ Evidence: existing_report_registered, access_failed.
 
 Documents: research/action-audit/reviews/point-06-sources.md, research/sources/round-05/point-06-web-sources.json.
 
+<a id="src-63530860ce5d"></a>
+
+## SRC-63530860ce5d — SKF iteration — reopened-audit.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json)
+
+Summary: Reopened derivative has same ten-solid manifest as verified save, zeroerrors/warnings and retained source/file identity.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-6372bc22f3fc"></a>
 
 ## SRC-6372bc22f3fc — P01 p01-build-03 — pre-save-records.json
@@ -3603,6 +3771,18 @@ Summary: Component-led execution source: actual reusable implementation, source-
 Evidence: authored_document_or_code_inspected.
 
 Documents: research/sources/round-09/component-execution-sources.json.
+
+<a id="src-64aded16baff"></a>
+
+## SRC-64aded16baff — SKF iteration — source-findings.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json)
+
+Summary: Records actual32mm original crown versus SKF21mm and source mass0.56kg versus older0.588kg record.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-6507a5c7f8da"></a>
 
@@ -3792,9 +3972,9 @@ Original source: [/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md](/
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: authored_document_or_code_inspected, authored_code_or_procedure_inspected.
+Evidence: authored_document_or_code_inspected, authored_code_or_procedure_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-6b30ccb4447f"></a>
 
@@ -3904,6 +4084,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
 
+<a id="src-6d5424825e51"></a>
+
+## SRC-6d5424825e51 — SKF source inspection and completed derivative report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c009-bearing.md](/home/leo/projects/3dmodeling/execution/c009-bearing.md)
+
+Summary: Documents the original32-versus21mm crown defect, native housing-only revision,62saved checks,40tests, preserved original, actual view inspection and applied script/skill improvement.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-6d6dde7514cd"></a>
 
 ## SRC-6d6dde7514cd — Drive support gusset (P03G) — CAD input sheet
@@ -3915,6 +4107,18 @@ Summary: Input sheet registered from the inspected ferme manifest: frame; Applic
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-6d7e6a84d972"></a>
+
+## SRC-6d7e6a84d972 — Original SKF construction program
+
+Original source: [/tmp/opencode/build_skf_geometry.py](/tmp/opencode/build_skf_geometry.py)
+
+Summary: Existing local builder defines outline, mounting slots, seal/ring components and two linear32-to21mm draft wedges. Saved model retained32mm crown; new iteration restores its documented intended draft using nativeSLICE.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-6df970fcb6f8"></a>
 
@@ -4144,6 +4348,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-740290c1bc47"></a>
+
+## SRC-740290c1bc47 — SKF iteration — source-job.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json)
+
+Summary: Pins required SKF and reconstruction feature values, evidence status, source pages and hashes; names ten components and the existing local coordinate frame.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-74d5d4738857"></a>
 
 ## SRC-74d5d4738857 — Source contract findings and implementation conditions
@@ -4227,6 +4443,18 @@ Summary: Authored audit document recording Existing operation inventory and deta
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/audit-index-sources.json.
+
+<a id="src-777fed96f232"></a>
+
+## SRC-777fed96f232 — Local OCS plane-slice command implementation
+
+Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/modules/model/slice_cmd.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/modules/model/slice_cmd.rs)
+
+Summary: Inspected constructor and point-state handling establish preselected target, three plane points and retained-side point; live installedSLICE subsequently completed both intended housing cuts.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-785d8cbc2541"></a>
 
@@ -4623,6 +4851,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; B
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-82f59b1215c1"></a>
+
+## SRC-82f59b1215c1 — SKF iteration — persistence.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json)
+
+Summary: Recovered verifiedsave/reopen receipt proves fileSHA,zero droppedentities,ten-solid manifest and reopened zeroerror/warning audit.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-832bc3ab6751"></a>
 
@@ -5076,9 +5316,9 @@ Original source: [/home/leo/projects/3dmodeling/tests/test_native_acis.py](/home
 
 Summary: Four integration tests use FERME saved rail evidence: source dimensions pass, pre-save/reopened vertex and radius sets agree, wrong260mm expectation fails for600mm rail, and truncated binary is rejected.
 
-Evidence: local_execution_evidence_inspected, local_execution_source_inspected.
+Evidence: local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -5512,6 +5752,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-01-model-brief.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-sources.md, research/action-audit/reviews/point-04-visual.md, research/action-audit/reviews/software-review.md, research/action-audit/reviews/source-check.md, research/sources/round-02/cad-sources.json, research/sources/round-04/intake-sources.json, research/sources/round-05/point-04-web-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r03.md, research/workflows/details/mix-r01.md.
 
+<a id="src-9adef416e57c"></a>
+
+## SRC-9adef416e57c — Retained SKF insert catalogue page image
+
+Original source: [/tmp/opencode/skf-yar204-catalogue-page92.png](/tmp/opencode/skf-yar204-catalogue-page92.png)
+
+Summary: Actual inspected catalogue page image shows YAR204-2F20mmbore,47mmouterdiameter,31mminnerringwidth and18.3mmfaceoffset supporting the existing insert record.
+
+Evidence: retained_source_render_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-9bffb9dff56b"></a>
 
 ## SRC-9bffb9dff56b — OCS repository
@@ -5628,9 +5880,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-a00bd3c7c755"></a>
 
@@ -5679,6 +5931,18 @@ Summary: ICCV 2023 paper proposes a transformer/shape-program mapping from three
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-04-raster-drawings.md, research/action-audit/reviews/point-04-designer.md, research/action-audit/reviews/point-04-software.md, research/action-audit/reviews/point-04-visual.md, research/sources/round-02/cad-sources.json, research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r05.md, research/workflows/details/cad-r09.md, research/workflows/details/mix-r08.md.
+
+<a id="src-a0f13205bc91"></a>
+
+## SRC-a0f13205bc91 — SKF iteration — first-slice-response.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json)
+
+Summary: Completed nativeSLICE positive draft modifies only owned housingD7 with actual revision/state readback.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-a189f01c9855"></a>
 
@@ -5751,6 +6015,18 @@ Summary: p01-build-01 rail-first-query.json: Retained native response with field
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-a28ae7692d9d"></a>
+
+## SRC-a28ae7692d9d — SKF iteration — second-slice-response.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json)
+
+Summary: Completed mirrored nativeSLICE negative draft modifies only owned housingD7 and retains inside bearing side.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-a2e021f0ada1"></a>
 
@@ -5872,6 +6148,30 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
 
+<a id="src-a60085185158"></a>
+
+## SRC-a60085185158 — Original SKF bearing drawing preserved
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg)
+
+Summary: Existing ten-solid native reconstruction; measured crown32mm fails SKF A1=21mm. Original bytes match checkpointb36c147; corrected derivative uses a distinct path.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
+<a id="src-a62b176d4381"></a>
+
+## SRC-a62b176d4381 — SKF iteration — reopened-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json)
+
+Summary: Actual recovered reopen state identifies derivative document75 and preserved unrelated open drawing identities.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-a635c02f99cb"></a>
 
 ## SRC-a635c02f99cb — OCS numerical contract checker source
@@ -5919,6 +6219,18 @@ Summary: Project license information; primary FreeCAD project page.
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/cad-r02.md.
+
+<a id="src-a79889909bbf"></a>
+
+## SRC-a79889909bbf — SKF iteration — capture-front.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json)
+
+Summary: Completed native front capture response binds derivative document75,camera and image to actual request.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-a83674c889fd"></a>
 
@@ -6052,6 +6364,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-02/domain-sources.json, research/workflows/details/dom-r07.md, research/workflows/domain-paths.md.
 
+<a id="src-ad0cb8976c1e"></a>
+
+## SRC-ad0cb8976c1e — Earlier SKF reconstruction and dimension record
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md)
+
+Summary: Retains original housing and insert reconstruction dimensions, drawing-derived seal/flinger dimensions, screw spacing and source references. The source-bound iteration preserves it as historical input and detects actual saved crown mismatch.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-ad1f82234be8"></a>
 
 ## SRC-ad1f82234be8 — Geometry Validation Rules
@@ -6135,6 +6459,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-aea29b81cf2e"></a>
+
+## SRC-aea29b81cf2e — SKF iteration — result.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json)
+
+Summary: CompletedSKFiteration records derivative SHA,62nativePASS,persistence,inspectedviews and appliedPython/skill improvement with40tests.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-aec737b38b33"></a>
 
@@ -6348,9 +6684,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad-in
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 supported-shaft candidate; original kind manufacturer dimensions in existing record. Detailed geometry review belongs to its component iteration.
 
-Evidence: existing_report_registered.
+Evidence: existing_report_registered, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-b56bc21f14db"></a>
 
@@ -6496,6 +6832,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-09/component-execution-sources.json.
 
+<a id="src-b7e8e5d17d10"></a>
+
+## SRC-b7e8e5d17d10 — SKF iteration — capture-isometric.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json)
+
+Summary: Completed native isometric capture response identifies document75 and camera for inspected bearing component image.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-b81d432f6f0a"></a>
 
 ## SRC-b81d432f6f0a — KiCad library repositories
@@ -6543,6 +6891,18 @@ Summary: Skill catalogue sources inspected 2026-11-12: skills.sh leaderboard, gl
 Evidence: existing_report_registered, archived_original_referenced.
 
 Documents: research/cad-and-skills.md, research/sources/round-02/archive-sources.json.
+
+<a id="src-b9c03a1f1d09"></a>
+
+## SRC-b9c03a1f1d09 — SKF iteration — reopened-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json)
+
+Summary: Actual derivative ten-solid SAB records from document75 support independent savedfeature checks and regression inputs.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-b9f01467bce4"></a>
 
@@ -6627,6 +6987,18 @@ Summary: The supplied dev.opencascade.org URL redirects to https://occt3d.com/de
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-03-independent.md, research/action-audit/reviews/point-03-sources.md, research/sources/round-05/point-03-web-sources.json.
+
+<a id="src-bbe2770322c8"></a>
+
+## SRC-bbe2770322c8 — SKF iteration — native-records.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json)
+
+Summary: Raw original ten-solid SAB observations from document74 retain actual faulty housing and complete other part geometry for independent comparisons.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-bc2defd7afa9"></a>
 
@@ -6964,6 +7336,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-c35c5442f991"></a>
+
+## SRC-c35c5442f991 — SKF iteration — readiness.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json)
+
+Summary: All required bound SKF source features and pinned source hashes returnSOURCE_READY before dependent revision.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-c49f0a4410c4"></a>
 
 ## SRC-c49f0a4410c4 — Installed CAD and computational engineering command availability inventory
@@ -7044,9 +7428,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/RE
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json.
+Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-c70fd33bd9df"></a>
 
@@ -7468,6 +7852,18 @@ Evidence: local_source_inspected.
 
 Documents: research/sources/round-03/project-detail-sources.json.
 
+<a id="src-d1cfd29ff4b9"></a>
+
+## SRC-d1cfd29ff4b9 — Retained SKF technical data sheet
+
+Original source: [https://docs.rs-online.com/9fa3/A700000007995170.pdf](https://docs.rs-online.com/9fa3/A700000007995170.pdf)
+
+Summary: Primary6pagePDF inspected with text and actual page3/4images. A=32,A1=21,L=127,H2=64.5,H=33.3,d=20,J=97,N=11.5,N1=20.5,B=31,s1=18.3,B4=4.5; fitting and M6 screw details pin sourcejob expectations. Mass0.56kg registered separately.
+
+Evidence: retained_primary_document_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-d25b3e6e0e1d"></a>
 
 ## SRC-d25b3e6e0e1d — workflow-to-actions
@@ -7503,6 +7899,18 @@ Summary: contours samples retained text curves and normalizes the section; build
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
+
+<a id="src-d340255b4d7f"></a>
+
+## SRC-d340255b4d7f — SKF iteration — reopened-isometric.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png)
+
+Summary: Actual inspected isometric image shows tapered housing,bore,two mounting feet/slots and fitting/screw details.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-d36213956fa8"></a>
 
@@ -7984,6 +8392,18 @@ Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
 
+<a id="src-e4113edcaa23"></a>
+
+## SRC-e4113edcaa23 — Existing bearing inspection and selective revision procedure
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/existing-bearing.md](/home/leo/projects/3dmodeling/skills/component-cad/references/existing-bearing.md)
+
+Summary: Defines source binding, transformed native checks, coplanar fragment cancellation, exact source-defined plane cuts, preserved nine-solid geometry, same-ID recovery and save/view completion.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-e556fe740218"></a>
 
 ## SRC-e556fe740218 — Anderson3-6054P2 boot (C060) — CAD input sheet
@@ -8296,6 +8716,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-ed02d8942690"></a>
+
+## SRC-ed02d8942690 — SKF iteration — initial-open-state.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json)
+
+Summary: Native original-open state identifies document74, original SKF source path and unrelated open work, including preserved dirty wheel document52.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-ed09b653131a"></a>
 
 ## SRC-ed09b653131a — openscad — mitsuhiko/agent-stuff
@@ -8476,6 +8908,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-f279f6325539"></a>
+
+## SRC-f279f6325539 — SKF iteration — reopened-top.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png)
+
+Summary: Actual inspected top image shows two closed mounting slots, axial housing draft and bearing/fitting projection.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
+
 <a id="src-f2c662a213ab"></a>
 
 ## SRC-f2c662a213ab — GitHub Copilot FreeCAD scripting skill
@@ -8595,6 +9039,18 @@ Summary: Authoritative existing action/route record or authored implementation-q
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
+
+<a id="src-f5ab2b9f1eb3"></a>
+
+## SRC-f5ab2b9f1eb3 — SKF iteration — reopened-front.png
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png)
+
+Summary: Actual inspected front image shows shaft bore, housing outer silhouette, fitting and locking components of the saved derivative.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-f5b26686d5af"></a>
 
@@ -8748,9 +9204,9 @@ Original source: [/home/leo/projects/ferme/engineering/module-development/cad/wo
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected.
+Evidence: local_source_inspected, local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-11/rail-execution-sources.json, research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json.
 
 <a id="src-f954ab80c148"></a>
 
@@ -8763,6 +9219,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-f9d2b64c1fb2"></a>
+
+## SRC-f9d2b64c1fb2 — SKF iteration — header.json
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json)
+
+Summary: Actual original OCS document header identifies millimetre units for source-linked geometric coordinate checks.
+
+Evidence: local_source_or_execution_record_inspected.
+
+Documents: research/sources/round-14/bearing-sources.json.
 
 <a id="src-f9d4243f4cec"></a>
 

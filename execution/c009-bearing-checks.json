@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "component": "SKF SY20TF bearing unit (C009)",
+  "state": "DONE",
+  "native_checks": "62 PASS",
+  "original_failure": "crown32mm versus source21mm",
+  "saved_file_hash": "PASS",
+  "source_records": 48,
+  "previous_models_preserved": 19,
+  "append_only_occurrence_prefix": "PASS",
+  "graph_plan_preserved": "PASS",
+  "mermaid_blocks_found_and_preserved": 2,
+  "tests": "40 PASS",
+  "skill_validation": "PASS",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 13,
+    "receipt_included": true
+  },
+  "documentation_check_attempts": [
+    {
+      "result": "FAIL",
+      "finding": "Local-link check ran before the verification receipt existed; the pending link was the receipt itself."
+    },
+    {
+      "result": "PASS",
+      "finding": "Full checks rerun, final receipt written and reparsed; target exists and deterministic rebuild preserved outputs."
+    }
+  ]
+}

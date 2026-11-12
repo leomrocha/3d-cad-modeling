@@ -1000,6 +1000,32 @@
       ]
     },
     {
+      "id": "SRC-081496ab4ae6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json",
+      "title": "SKF iteration — capture-top.json",
+      "summary": "Completed native top capture response binds derivative document75 to the inspected two-slot/bearing projection.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json",
+          "access_date": "2026-11-12",
+          "sha256": "71fbc6af7486690767c6cb0fcc40ee6d00fed8f3a8592a124394a1203e4febea",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-0868c7d42c7e",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
@@ -2208,6 +2234,32 @@
       ]
     },
     {
+      "id": "SRC-18305cb33c69",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/scripts/pillow_block.py",
+      "title": "Source-bound pillow-block checker",
+      "summary": "Reads ten exact metadata-labelled native parts and compares housing, slots, shaft, ring, screw, seals and fitting against externally pinned source features; original crown fails and corrected reopened derivative passes62checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/pillow_block.py",
+          "access_date": "2026-11-12",
+          "sha256": "9a965cb69fdf1cbf4dc6b6895a42964242ed3e3f25efbd8b22c591cad65050fe",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-19255db776eb",
       "url": "https://mcpmarket.com/tools/skills/3d-modeling-specialist",
       "local_source_path": null,
@@ -2231,7 +2283,8 @@
       "summary": "MIT library source implements typed binary token decoding, versioned record construction and pointer resolution through parse_sab. Its existing parser reads the saved P01 binary record without changing CAD geometry.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_execution_evidence_inspected"
+        "local_execution_evidence_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -2242,10 +2295,21 @@
           "referring_documents": [
             "execution/p01-saved-verification.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py",
+          "access_date": "2026-11-12",
+          "sha256": "5ad571d3a72b94110087c09bfdc69cf9b04de207af009293f4b325670ac8981a",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-12/saved-rail-reader-sources.json"
+        "research/sources/round-12/saved-rail-reader-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -2684,6 +2748,32 @@
       ]
     },
     {
+      "id": "SRC-1c1ff9274d77",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json",
+      "title": "SKF iteration — audit.json",
+      "summary": "Original ten-solid native audit has zeroerrors/warnings; geometric source comparison subsequently finds crown dimension failure.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json",
+          "access_date": "2026-11-12",
+          "sha256": "3b7fa173c296c9c5adde533dde0bcfdcf3058286e1df18e0f8da39ac8fce3545",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-1c30dee16aac",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
@@ -2721,6 +2811,32 @@
       "referring_documents": [
         "research/sources/round-07/parts-catalogue-sources.json",
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1d9ccefff7d7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl",
+      "title": "SKF iteration — ocs-journal.jsonl",
+      "summary": "Append-only guarded requests retain original-open/reopen polling-bound outcomes and same-ID recovery, two housingSLICE commands, verifiedsave and actual captures.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl",
+          "access_date": "2026-11-12",
+          "sha256": "5893c7af06e614aedd66dc84884705cd9cc59e8ad626c018a6dfefed64cc5fca",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -2773,6 +2889,32 @@
       ],
       "referring_documents": [
         "research/sources/round-05/point-04-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1f361eaafa20",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md",
+      "title": "Earlier SKF part record",
+      "summary": "Supplies component identity and source relationships; its0.588kg figure differs from the retained technical sheet0.56kg, registered as a source finding without changing the record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md",
+          "access_date": "2026-11-12",
+          "sha256": "3354f474ba65c97574e8a0c2bf62008670e167d6d45dc94e0f6481f42bebef2e",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -2916,6 +3058,58 @@
         "research/workflows/details/rec-r05.md",
         "research/workflows/details/rec-r06.md",
         "research/workflows/details/rec-r08.md"
+      ]
+    },
+    {
+      "id": "SRC-20296fc40b95",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json",
+      "title": "SKF iteration — original-checks.json",
+      "summary": "Actual original native geometry produces61PASS and crownFAIL32mmversus21mm; preserves measured defect before revision.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "192a093293b609f99f34f4181a4aff187603b698956330518bec953ba56ce2bf",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-20676393d92d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json",
+      "title": "SKF iteration — presave-correction-check.json",
+      "summary": "Post-cut crown21mmPASS and byteidentical nine other solid geometry records recorded before derivative save.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json",
+          "access_date": "2026-11-12",
+          "sha256": "11c914835678e7576832a619bb0b3372a87b426c989870a4ea02f4f5579e6dcd",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -3167,6 +3361,32 @@
       ]
     },
     {
+      "id": "SRC-23588c0d99a2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json",
+      "title": "SKF iteration — native-query.json",
+      "summary": "Original document74 query identifies ten actual solid handles before feature checks and selective revision.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json",
+          "access_date": "2026-11-12",
+          "sha256": "6d3e127caa5d12f447fd1939a360fdac5a3ca4a15888f33cb31a75025ca0cc24",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-240fe89d1198",
       "url": "https://cdn.standards.iteh.ai/samples/38061/b2cb736a37f94d2f8a72c739a042aa44/SIST-EN-10210-2-2019.pdf",
       "local_source_path": null,
@@ -3377,7 +3597,8 @@
       "summary": "Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "local_execution_evidence_inspected"
+        "local_execution_evidence_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -3388,10 +3609,21 @@
           "referring_documents": [
             "execution/p01-saved-verification.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+          "access_date": "2026-11-12",
+          "sha256": "c4cd1fc6b0d76345740e5cfc295de5cd1512900c3ff6230126b961b021681def",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-12/saved-rail-reader-sources.json"
+        "research/sources/round-12/saved-rail-reader-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -3671,6 +3903,32 @@
         "research/sources/round-05/point-06-web-sources.json",
         "research/workflows/details/dom-r02.md",
         "research/workflows/details/dom-r08.md"
+      ]
+    },
+    {
+      "id": "SRC-280cbbe6b531",
+      "url": null,
+      "local_source_path": "/tmp/opencode/skf-sy20tf-technical-page4.png",
+      "title": "SKF page4 fitting and slot image",
+      "summary": "Actual inspected primary page image confirms slotlength20.5mm,locking-sidefaceoffset18.3mm and45degree,2mmoffset greasefitting with7mmhex and6.5mmhead.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "retained_source_render_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "retained_source_render_inspected",
+          "local_original": "/tmp/opencode/skf-sy20tf-technical-page4.png",
+          "access_date": "2026-11-12",
+          "sha256": "8c84aa75035e1c3db64eb1db9078a16b303f4945fd96389f41ed1d5dcdeac13a",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -6687,6 +6945,32 @@
       ]
     },
     {
+      "id": "SRC-409fb1abfc4f",
+      "url": null,
+      "local_source_path": "/tmp/opencode/skf-sy20tf-technical-page3.png",
+      "title": "SKF page3 dimensions image",
+      "summary": "Actual inspected primary page image confirms A1=21mm crown and A=32mm base with housing/mounting/shaft dimensions; supplies visual attribution for original model failure.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "retained_source_render_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "retained_source_render_inspected",
+          "local_original": "/tmp/opencode/skf-sy20tf-technical-page3.png",
+          "access_date": "2026-11-12",
+          "sha256": "7bf8eebd0cd1d248e06f0df05966d65d2d0f7cc8b719af421480f6351e979cd3",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-40beea4e687b",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md",
@@ -7351,6 +7635,32 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-469662006b7c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json",
+      "title": "SKF iteration — reopened-checks.json",
+      "summary": "All62 source-bound native checksPASS in derivative document75 after save/reopen, including corrected21mm crown.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "b31da4d1d44d82e8a6deec5f55b82c0770960e5217e42aa02789e820c5f8481b",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -8094,7 +8404,8 @@
       "evidence_statuses": [
         "local_source_inspected",
         "local_execution_evidence_inspected",
-        "local_execution_source_inspected"
+        "local_execution_source_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -8135,13 +8446,24 @@
           "referring_documents": [
             "execution/p02-crossmember.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+          "access_date": "2026-11-12",
+          "sha256": "03607c928366fdab6e661e5d52dd435980a0fb9ef35e9c81568db7418758ac80",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
         "research/sources/round-11/rail-execution-sources.json",
         "research/sources/round-12/saved-rail-reader-sources.json",
-        "research/sources/round-13/crossmember-sources.json"
+        "research/sources/round-13/crossmember-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -8736,6 +9058,32 @@
         "research/sources/round-02/reconstruction-sources.json",
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/rec-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-53baa792380a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json",
+      "title": "SKF iteration — corrected-presave-records.json",
+      "summary": "Actual post-cut native SAT housing and preserved nineSABsolid records support21mm crown measurement and bytecomparison.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json",
+          "access_date": "2026-11-12",
+          "sha256": "8b43a394f1a3a7ecdc9d5ecddbc49e87f9b76ba5dc36b719072be3b1fbb950ab",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -9538,6 +9886,32 @@
       ]
     },
     {
+      "id": "SRC-5c0d49b55a8f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg",
+      "title": "Source-checked SKF bearing derivative",
+      "summary": "Native DWG2018 preserves ten solids with housing crown21mm. Original other nine solids remain unchanged before save; reopened dimension checks and persistence pass.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg",
+          "access_date": "2026-11-12",
+          "sha256": "94dd235468e260ba90537fd4dffc664e20f9c64460a25ad7786170c8d991d91c",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-5c5742981c2f",
       "url": "https://raw.githubusercontent.com/leap71/LEAP71_ShapeKernel/main/LICENSE",
       "local_source_path": null,
@@ -10193,6 +10567,32 @@
       ]
     },
     {
+      "id": "SRC-63530860ce5d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json",
+      "title": "SKF iteration — reopened-audit.json",
+      "summary": "Reopened derivative has same ten-solid manifest as verified save, zeroerrors/warnings and retained source/file identity.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json",
+          "access_date": "2026-11-12",
+          "sha256": "d46e45da64dabdb1de7b49eb072bc6d79c2761feed57d4b25ce0a8cf8e2c8704",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6372bc22f3fc",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json",
@@ -10457,6 +10857,32 @@
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-64aded16baff",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json",
+      "title": "SKF iteration — source-findings.json",
+      "summary": "Records actual32mm original crown versus SKF21mm and source mass0.56kg versus older0.588kg record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json",
+          "access_date": "2026-11-12",
+          "sha256": "d74da044456356a4bdcab02a00f67cbab8fce0621c1954b5a10b1a73371990c7",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -10945,7 +11371,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "authored_document_or_code_inspected",
-        "authored_code_or_procedure_inspected"
+        "authored_code_or_procedure_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -10968,11 +11395,22 @@
             "execution/p01-rail-build.md",
             "skills/component-cad/references/source-first-and-tube.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+          "access_date": "2026-11-12",
+          "sha256": "03ae74ea1360888420a6edcaf69d11f98a5d2a59f372d546b2ae6ccfd82816ec",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
-        "research/sources/round-11/rail-execution-sources.json"
+        "research/sources/round-11/rail-execution-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -11272,6 +11710,32 @@
       ]
     },
     {
+      "id": "SRC-6d5424825e51",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c009-bearing.md",
+      "title": "SKF source inspection and completed derivative report",
+      "summary": "Documents the original32-versus21mm crown defect, native housing-only revision,62saved checks,40tests, preserved original, actual view inspection and applied script/skill improvement.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c009-bearing.md",
+          "access_date": "2026-11-12",
+          "sha256": "a3076d393e5b6be8ce74e8740cd864609846fba7e5f7fdc322ec59bbed0860e2",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-6d6dde7514cd",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md",
@@ -11296,6 +11760,32 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6d7e6a84d972",
+      "url": null,
+      "local_source_path": "/tmp/opencode/build_skf_geometry.py",
+      "title": "Original SKF construction program",
+      "summary": "Existing local builder defines outline, mounting slots, seal/ring components and two linear32-to21mm draft wedges. Saved model retained32mm crown; new iteration restores its documented intended draft using nativeSLICE.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/tmp/opencode/build_skf_geometry.py",
+          "access_date": "2026-11-12",
+          "sha256": "6cc691552271bf4c03d2c8cb4d0539e719b33f7d273956f68c12bb5e347e421a",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -11950,6 +12440,32 @@
       ]
     },
     {
+      "id": "SRC-740290c1bc47",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json",
+      "title": "SKF iteration — source-job.json",
+      "summary": "Pins required SKF and reconstruction feature values, evidence status, source pages and hashes; names ten components and the existing local coordinate frame.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "ae34a9035929a6053aa846ddf95cd3e6faddfab425646a3333a8dbf6760ce7d7",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-74d5d4738857",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/findings.md",
@@ -12232,6 +12748,32 @@
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/audit-index-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-777fed96f232",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/modules/model/slice_cmd.rs",
+      "title": "Local OCS plane-slice command implementation",
+      "summary": "Inspected constructor and point-state handling establish preselected target, three plane points and retained-side point; live installedSLICE subsequently completed both intended housing cuts.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/modules/model/slice_cmd.rs",
+          "access_date": "2026-11-12",
+          "sha256": "e36b31ded45160d7ba162d82c346d3a96f1e44f1616f1fd294b5a677ab26357d",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -13404,6 +13946,32 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-82f59b1215c1",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json",
+      "title": "SKF iteration — persistence.json",
+      "summary": "Recovered verifiedsave/reopen receipt proves fileSHA,zero droppedentities,ten-solid manifest and reopened zeroerror/warning audit.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json",
+          "access_date": "2026-11-12",
+          "sha256": "4de111e819742c7f5b267e392b16d40325ae11b5c19773f0fd2f4de9977b7a33",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -14840,7 +15408,8 @@
       "registered_at": "2026-11-12",
       "evidence_statuses": [
         "local_execution_evidence_inspected",
-        "local_execution_source_inspected"
+        "local_execution_source_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -14860,11 +15429,22 @@
           "referring_documents": [
             "execution/p02-crossmember.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+          "access_date": "2026-11-12",
+          "sha256": "5dfd02cb8f60e69b4e3d197e21886ca45d7ab3141ebfaa3fb19fd283d4b7e415",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-12/saved-rail-reader-sources.json",
-        "research/sources/round-13/crossmember-sources.json"
+        "research/sources/round-13/crossmember-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -16182,6 +16762,32 @@
       ]
     },
     {
+      "id": "SRC-9adef416e57c",
+      "url": null,
+      "local_source_path": "/tmp/opencode/skf-yar204-catalogue-page92.png",
+      "title": "Retained SKF insert catalogue page image",
+      "summary": "Actual inspected catalogue page image shows YAR204-2F20mmbore,47mmouterdiameter,31mminnerringwidth and18.3mmfaceoffset supporting the existing insert record.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "retained_source_render_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "retained_source_render_inspected",
+          "local_original": "/tmp/opencode/skf-yar204-catalogue-page92.png",
+          "access_date": "2026-11-12",
+          "sha256": "aa9c900fd33a9672092a4f9413c36eb4a1802197718320ff49c168057ff3d40f",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-9bffb9dff56b",
       "url": "https://github.com/HakanSeven12/OpenCADStudio",
       "local_source_path": null,
@@ -16481,7 +17087,8 @@
       "evidence_statuses": [
         "local_source_inspected",
         "local_execution_evidence_inspected",
-        "local_execution_source_inspected"
+        "local_execution_source_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -16522,13 +17129,24 @@
           "referring_documents": [
             "execution/p02-crossmember.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "b10e676b9dd39eb85148ae348a3ddb501aef35da4198b61c67ae7defb1a9ef51",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
         "research/sources/round-11/rail-execution-sources.json",
         "research/sources/round-12/saved-rail-reader-sources.json",
-        "research/sources/round-13/crossmember-sources.json"
+        "research/sources/round-13/crossmember-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -16721,6 +17339,32 @@
       ]
     },
     {
+      "id": "SRC-a0f13205bc91",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json",
+      "title": "SKF iteration — first-slice-response.json",
+      "summary": "Completed nativeSLICE positive draft modifies only owned housingD7 with actual revision/state readback.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json",
+          "access_date": "2026-11-12",
+          "sha256": "2d99a22526ec1077844b841da48e0ef6f92189419dc006e098e6fdd79cac9347",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-a189f01c9855",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md",
@@ -16889,6 +17533,32 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a28ae7692d9d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json",
+      "title": "SKF iteration — second-slice-response.json",
+      "summary": "Completed mirrored nativeSLICE negative draft modifies only owned housingD7 and retains inside bearing side.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json",
+          "access_date": "2026-11-12",
+          "sha256": "00e8f0e866395763b7ee7e7a7eec59bdefa2d3578493457132388b9ec2e04450",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -17216,6 +17886,58 @@
       ]
     },
     {
+      "id": "SRC-a60085185158",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg",
+      "title": "Original SKF bearing drawing preserved",
+      "summary": "Existing ten-solid native reconstruction; measured crown32mm fails SKF A1=21mm. Original bytes match checkpointb36c147; corrected derivative uses a distinct path.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg",
+          "access_date": "2026-11-12",
+          "sha256": "6ce365c13110d33a9267a35b7f383e6111c8b7edec86fcda4710548b48c21719",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a62b176d4381",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json",
+      "title": "SKF iteration — reopened-state.json",
+      "summary": "Actual recovered reopen state identifies derivative document75 and preserved unrelated open drawing identities.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json",
+          "access_date": "2026-11-12",
+          "sha256": "2c7f0ac2f1d1ffffc1aa3bd301a10f4c75531fe9489cbc1239d7b7e79f608ed2",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-a635c02f99cb",
       "url": null,
       "local_source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
@@ -17358,6 +18080,32 @@
         "research/sources/round-03/cad-detail-sources.json",
         "research/workflows/details/cad-r01.md",
         "research/workflows/details/cad-r02.md"
+      ]
+    },
+    {
+      "id": "SRC-a79889909bbf",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json",
+      "title": "SKF iteration — capture-front.json",
+      "summary": "Completed native front capture response binds derivative document75,camera and image to actual request.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json",
+          "access_date": "2026-11-12",
+          "sha256": "0c6d03e57137c922e883c3fddc1921abc779767a10235cd29ca26ccd3c556ab0",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -17687,6 +18435,32 @@
       ]
     },
     {
+      "id": "SRC-ad0cb8976c1e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md",
+      "title": "Earlier SKF reconstruction and dimension record",
+      "summary": "Retains original housing and insert reconstruction dimensions, drawing-derived seal/flinger dimensions, screw spacing and source references. The source-bound iteration preserves it as historical input and detects actual saved crown mismatch.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md",
+          "access_date": "2026-11-12",
+          "sha256": "2bb58692b75586060d522499cb21e140a5332f7b03e910cb2d51bce681d7f9c4",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-ad1f82234be8",
       "url": "https://raw.githubusercontent.com/Foster1202/cad-modeling-fusion-skill/main/references/geometry_validation_rules.md",
       "local_source_path": null,
@@ -17911,6 +18685,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-aea29b81cf2e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json",
+      "title": "SKF iteration — result.json",
+      "summary": "CompletedSKFiteration records derivative SHA,62nativePASS,persistence,inspectedviews and appliedPython/skill improvement with40tests.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "0e1c25505a1f1a7f8ec599e577be7345611c5176c737040d80d32b565590a4bf",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -18669,7 +19469,8 @@
       "summary": "Input sheet registered from the inspected ferme manifest: drive; ME0907 supported-shaft candidate; original kind manufacturer dimensions in existing record. Detailed geometry review belongs to its component iteration.",
       "registered_at": "2026-11-12",
       "evidence_statuses": [
-        "existing_report_registered"
+        "existing_report_registered",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -18682,10 +19483,21 @@
             "COMPONENT_DEVELOPMENT_PLAN.md",
             "research/component-development-coverage.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md",
+          "access_date": "2026-11-12",
+          "sha256": "c1ed3b75123fe208da1b9bd1e4c28b8fc74b170774048b4d5bcb71f8a682cea6",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
-        "research/sources/round-08/component-plan-sources.json"
+        "research/sources/round-08/component-plan-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -19071,6 +19883,32 @@
       ]
     },
     {
+      "id": "SRC-b7e8e5d17d10",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json",
+      "title": "SKF iteration — capture-isometric.json",
+      "summary": "Completed native isometric capture response identifies document75 and camera for inspected bearing component image.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json",
+          "access_date": "2026-11-12",
+          "sha256": "98bc9cae5299b7b9aedff8ecbc83d2c633a2fc9351bfbe14315ed923cd28d921",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-b81d432f6f0a",
       "url": "https://github.com/KiCad/kicad-packages3D",
       "local_source_path": null,
@@ -19226,6 +20064,32 @@
       "referring_documents": [
         "research/cad-and-skills.md",
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b9c03a1f1d09",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json",
+      "title": "SKF iteration — reopened-records.json",
+      "summary": "Actual derivative ten-solid SAB records from document75 support independent savedfeature checks and regression inputs.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json",
+          "access_date": "2026-11-12",
+          "sha256": "a0d2fe4311621d88f8b0e1490cab11ed95cfd9e16a7a19944df536a34ce7227e",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -19456,6 +20320,32 @@
         "research/action-audit/reviews/point-03-independent.md",
         "research/action-audit/reviews/point-03-sources.md",
         "research/sources/round-05/point-03-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-bbe2770322c8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json",
+      "title": "SKF iteration — native-records.json",
+      "summary": "Raw original ten-solid SAB observations from document74 retain actual faulty housing and complete other part geometry for independent comparisons.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json",
+          "access_date": "2026-11-12",
+          "sha256": "deeda7289743ed5e0ec09b83abccf20c80e8f21e76e4828706a2798775c3e002",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -20469,6 +21359,32 @@
       ]
     },
     {
+      "id": "SRC-c35c5442f991",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json",
+      "title": "SKF iteration — readiness.json",
+      "summary": "All required bound SKF source features and pinned source hashes returnSOURCE_READY before dependent revision.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json",
+          "access_date": "2026-11-12",
+          "sha256": "1c8ae77e717523487bfb2b86d2603c76f6bb6a7fe4bde4423ce7005b94821376",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c49f0a4410c4",
       "url": null,
       "local_source_path": "/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/harness/installed-tools-path-inventory.json",
@@ -20723,7 +21639,8 @@
       "evidence_statuses": [
         "local_source_inspected",
         "local_execution_evidence_inspected",
-        "local_execution_source_inspected"
+        "local_execution_source_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -20755,12 +21672,23 @@
           "referring_documents": [
             "execution/p02-crossmember.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+          "access_date": "2026-11-12",
+          "sha256": "40dbd80cda18037b5e19a6dd1780748ed9bb2e22d80009286852ab2521ffad1f",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json",
         "research/sources/round-11/rail-execution-sources.json",
-        "research/sources/round-13/crossmember-sources.json"
+        "research/sources/round-13/crossmember-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -21964,6 +22892,32 @@
       ]
     },
     {
+      "id": "SRC-d1cfd29ff4b9",
+      "url": "https://docs.rs-online.com/9fa3/A700000007995170.pdf",
+      "local_source_path": null,
+      "title": "Retained SKF technical data sheet",
+      "summary": "Primary6pagePDF inspected with text and actual page3/4images. A=32,A1=21,L=127,H2=64.5,H=33.3,d=20,J=97,N=11.5,N1=20.5,B=31,s1=18.3,B4=4.5; fitting and M6 screw details pin sourcejob expectations. Mass0.56kg registered separately.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "retained_primary_document_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "retained_primary_document_inspected",
+          "local_original": "/tmp/opencode/out_technical-data-sheet-skf-sy-20-tf-sy-20-",
+          "access_date": "2026-11-12",
+          "sha256": "535dc804124556ae856efda3be2e606e5660c06b995d32738bc3401f367e0530",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-d25b3e6e0e1d",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
@@ -22090,6 +23044,32 @@
       ],
       "referring_documents": [
         "research/sources/round-06/implementation-queue-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d340255b4d7f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png",
+      "title": "SKF iteration — reopened-isometric.png",
+      "summary": "Actual inspected isometric image shows tapered housing,bore,two mounting feet/slots and fitting/screw details.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png",
+          "access_date": "2026-11-12",
+          "sha256": "71191fda7ac620ddf978d50fbf4480e9ca07029aaa522a38ae280d2a8ac90b07",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -23408,6 +24388,32 @@
       ]
     },
     {
+      "id": "SRC-e4113edcaa23",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/existing-bearing.md",
+      "title": "Existing bearing inspection and selective revision procedure",
+      "summary": "Defines source binding, transformed native checks, coplanar fragment cancellation, exact source-defined plane cuts, preserved nine-solid geometry, same-ID recovery and save/view completion.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/existing-bearing.md",
+          "access_date": "2026-11-12",
+          "sha256": "f2a7dc4584237eed07e569b1fe6526b653ca01224d9f3aaf80ec51ba15c4405b",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-e556fe740218",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md",
@@ -24287,6 +25293,32 @@
       ]
     },
     {
+      "id": "SRC-ed02d8942690",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json",
+      "title": "SKF iteration — initial-open-state.json",
+      "summary": "Native original-open state identifies document74, original SKF source path and unrelated open work, including preserved dirty wheel document52.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json",
+          "access_date": "2026-11-12",
+          "sha256": "1a61806ec6f801c396f056f1b5b36db7f0d91d366c20bb827c2325bc20f9a3ed",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-ed09b653131a",
       "url": "https://www.skills.sh/mitsuhiko/agent-stuff/openscad",
       "local_source_path": null,
@@ -24827,6 +25859,32 @@
       ]
     },
     {
+      "id": "SRC-f279f6325539",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png",
+      "title": "SKF iteration — reopened-top.png",
+      "summary": "Actual inspected top image shows two closed mounting slots, axial housing draft and bearing/fitting projection.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png",
+          "access_date": "2026-11-12",
+          "sha256": "ae8e6a033a2a034a4df91c3b1cbbfa4e89e0332778ffff93bac1903129a2c319",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
+      ]
+    },
+    {
       "id": "SRC-f2c662a213ab",
       "url": "https://github.com/github/awesome-copilot",
       "local_source_path": null,
@@ -25213,6 +26271,32 @@
       ],
       "referring_documents": [
         "research/sources/round-06/implementation-queue-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f5ab2b9f1eb3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png",
+      "title": "SKF iteration — reopened-front.png",
+      "summary": "Actual inspected front image shows shaft bore, housing outer silhouette, fitting and locking components of the saved derivative.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png",
+          "access_date": "2026-11-12",
+          "sha256": "0fab86de92ea4b653d1d90241ab39a5e0ae6d5b8bce72afad40624ecb3bb4c9d",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -25697,7 +26781,8 @@
       "evidence_statuses": [
         "local_source_inspected",
         "local_execution_evidence_inspected",
-        "local_execution_source_inspected"
+        "local_execution_source_inspected",
+        "local_source_or_execution_record_inspected"
       ],
       "observations": [
         {
@@ -25738,13 +26823,24 @@
           "referring_documents": [
             "execution/p02-crossmember.md"
           ]
+        },
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+          "access_date": "2026-11-12",
+          "sha256": "de90bab5683f1a138a164f9ca8e30c7bc926a96c4ad1cc68b350f02aff65c379",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
         }
       ],
       "referring_documents": [
         "research/sources/round-09/component-execution-sources.json",
         "research/sources/round-11/rail-execution-sources.json",
         "research/sources/round-12/saved-rail-reader-sources.json",
-        "research/sources/round-13/crossmember-sources.json"
+        "research/sources/round-13/crossmember-sources.json",
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {
@@ -25794,6 +26890,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f9d2b64c1fb2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json",
+      "title": "SKF iteration — header.json",
+      "summary": "Actual original OCS document header identifies millimetre units for source-linked geometric coordinate checks.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "local_source_or_execution_record_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "local_source_or_execution_record_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json",
+          "access_date": "2026-11-12",
+          "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
+          "referring_documents": [
+            "execution/c009-bearing.md",
+            "skills/component-cad/references/existing-bearing.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-14/bearing-sources.json"
       ]
     },
     {

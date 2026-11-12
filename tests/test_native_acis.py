@@ -56,4 +56,37 @@ class CrossmemberNativeTests(unittest.TestCase):
         checks=crossmember_checks(self.rail,cross,340,260)
         self.assertEqual(checks['checks'][1]['result'],'FAIL')
 
+@unittest.skipUnless(ezdxf is not None and (W/'c009-reuse-01/reopened-records.json').is_file(),'Requires retained SKF native records')
+class PillowBlockNativeTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.job=json.loads((W/'c009-reuse-01/source-job.json').read_text())
+        cls.before=json.loads((W/'c009-reuse-01/native-records.json').read_text())
+        cls.after=json.loads((W/'c009-reuse-01/reopened-records.json').read_text())
+    def test_original_housing_crown_failure_is_detected(self):
+        from pillow_block import check
+        result=check(self.before,self.job)
+        self.assertEqual([c['check'] for c in result['checks'] if c['result']=='FAIL'],['housing top width'])
+    def test_saved_derivative_matches_bound_source_features(self):
+        from pillow_block import check
+        self.assertEqual(check(self.after,self.job)['result'],'PASS')
+    def test_transformed_screw_requires_explicit_reader_option(self):
+        row=next(r for r in self.before['records'] if r['handle']=='90')
+        with self.assertRaisesRegex(ValueError,'rigid-frame'):
+            sab_features(bytes(row['properties']['acis_data']['sab_data']))
+    def test_fragmented_mount_plane_recovers_two_closed_slots(self):
+        from pillow_block import read_parts
+        housing=read_parts(self.before,self.job)['housing']
+        plane=next(g for g in housing['planar_boundary_components'] if g['plane_normal']==[0,0,1] and abs(g['plane_offset'])<1e-7)
+        slots=[c for c in plane['components'] if abs(c['bounds']['max'][1]-c['bounds']['min'][1]-11.5)<1e-7]
+        self.assertEqual(len(slots),2)
+        self.assertTrue(all(c['closed_degree_two'] for c in slots))
+        self.assertTrue(all(abs(c['bounds']['max'][0]-c['bounds']['min'][0]-20.5)<1e-7 for c in slots))
+    def test_wrong_bore_expectation_fails(self):
+        import copy
+        from pillow_block import check
+        job=copy.deepcopy(self.job)
+        next(f for f in job['features'] if f['name']=='shaft bore diameter')['value']=22
+        self.assertEqual(check(self.after,job)['result'],'FAIL')
+
 if __name__=='__main__':unittest.main()
