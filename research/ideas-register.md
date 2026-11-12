@@ -1648,6 +1648,42 @@ Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
+## IMPL-I01 — Evidence-linked implementation queue
+
+Status: proposal.
+
+Link each existing action to inspected code/skill subsets, original result records and required integration changes; preserve the original graph and full operation contracts.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json)
+
+Original proposal: [research/action-audit/implementation-queue/queue.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json), line 1.
+
+Next check: Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch.
+
+## IMPL-I02 — Dependency-respecting implementation order
+
+Status: proposal.
+
+Use proposed action resource/effort classes and exact original-route reuse after preceding action dependencies. Preserve original route classifications and conditional upstream prerequisites separately.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md)
+
+Original proposal: [research/action-audit/implementation-queue/queue.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md), line 1.
+
+Next check: Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch.
+
+## IMPL-I03 — Per-job source revision and scope record
+
+Status: proposal.
+
+Implement the existing first shared intake action as a per-job source index plus agent-authored scope statement with revision/correction links, streaming hashes and action-specific tests.
+
+Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md)
+
+Original proposal: [research/action-audit/implementation-queue/first-action-plan.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md), line 1.
+
+Next check: Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch.
+
 ## PLAN-4689b53189 — Native editable source
 
 Status: proposal.

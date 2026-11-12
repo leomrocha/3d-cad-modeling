@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-12",
+  "status": "passed",
+  "coordinator_model": "gpt-6.1-sol",
+  "scope": "Implementation queue/document/source checks; proposed modeling/helper interfaces and test plans retain proposal status.",
+  "baseline_head": "c6eeb94ab344fe0f5104e69dfd4fe0c8dc3bb3c7",
+  "action_definitions": 245,
+  "structured_action_definitions_preserved": 235,
+  "shared_intake_actions": 10,
+  "original_operations": 77,
+  "original_routes": 38,
+  "assets_inspected": 22,
+  "asset_symbols_and_imports": "AST inspected; local programs were not imported/executed",
+  "retained_case_check_observations": 73,
+  "current_source_snapshots": 44,
+  "original_files_preserved": 177,
+  "original_mermaid_blocks_preserved": 2,
+  "raw_mermaid_pattern_matches_compared": 3,
+  "local_and_registered_link_occurrences": 1251,
+  "dependency_and_queue_order": "passed by independent eligible-set recomputation",
+  "original_route_scores_and_input_contracts": "exact comparison passed",
+  "evidence_categories": {
+    "existing_code_subset": 7,
+    "source_supported_action_specification": 202,
+    "documented_procedure_or_case": 24,
+    "existing_component_code_subset": 12
+  },
+  "first_proposed_action": {
+    "name": "Preserve the input revision and state the job boundary",
+    "reference": "INTAKE-A01",
+    "plan": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md"
+  },
+  "source_register": {
+    "date": "2026-11-12",
+    "sources": 507,
+    "operations": 77,
+    "recipes": 38,
+    "ideas": 191,
+    "candidate_handoffs": 879,
+    "errors": [],
+    "check_meaning": "Registration and declared type consistency, not tool execution or geometric validation"
+  },
+  "documentation_rebuild": "passed after actual file hash comparison",
+  "commands": [
+    [
+      "python3",
+      "research/tools/build_workflow_register.py",
+      "--date",
+      "2026-11-12"
+    ],
+    [
+      "python3",
+      "research/tools/build_workflow_details.py",
+      "--date",
+      "2026-11-12"
+    ]
+  ],
+  "execution_history": [
+    {
+      "check": "required action field coverage",
+      "result": "failed",
+      "finding": "INTAKE-A10 output field was empty because the temporary adapter assumed a uniform Markdown label.",
+      "correction": "Preserve Action 10 Output and resume condition plus Handoff checks; bound its extraction at the next section heading. Original action document unchanged."
+    },
+    {
+      "check": "Mermaid block count review",
+      "result": "corrected counting scope",
+      "finding": "Unanchored word-boundary pattern matched two fenced diagrams plus a quoted regex example in verification-method.md.",
+      "correction": "Retain the raw-pattern positive comparison and separately require exact equality of actual line-anchored Mermaid fences; expected actual diagrams: two."
+    }
+  ]
+}

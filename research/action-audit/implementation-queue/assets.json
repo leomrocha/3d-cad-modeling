@@ -1,0 +1,711 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "evidence_scope": "Read-only local source/AST inspection and retained results; no CAD/control/script execution",
+  "assets": [
+    {
+      "id": "ferme-findings",
+      "name": "cad-workflow-findings.md",
+      "path": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+      "kind": "recorded_execution_summary",
+      "inspection": "local_source_read",
+      "sha256": "fbd89002aa02beb1ead8d537dcb650047c357b90eea40d2281350ff28212811e",
+      "summary": "OCS 2026.42 component constructions, import/save results, failed requests and component-specific recoveries.",
+      "applicability_conditions": "Claims are attributed to the retained reports/session identifiers; raw session replay is a separate result.",
+      "symbols": []
+    },
+    {
+      "id": "ferme-skill",
+      "name": "SKILL.md",
+      "path": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+      "kind": "documented_skill",
+      "inspection": "local_source_read",
+      "sha256": "bc45db50ee1ee9ddbc1a39e10cc9de3dedd372698d5309f9f5bacfacb76bf3db",
+      "summary": "Reusable source, component/frame, construction, feature-check and saved-file procedure.",
+      "applicability_conditions": "Repository skill instructions and reproduction-package specification.",
+      "symbols": []
+    },
+    {
+      "id": "ferme-ocs",
+      "name": "ocs-skill-improvements.md",
+      "path": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+      "kind": "proposed_skill_extension",
+      "inspection": "local_source_read",
+      "sha256": "cf8ded1155c0984063a2c634eb4b741e9d22b2baadd4c218ba15814e5f4c5e10",
+      "summary": "Proposed OCS additions derived from recorded commands, topology recovery and representation/display observations.",
+      "applicability_conditions": "Held in ferme; installation is a separate action.",
+      "symbols": []
+    },
+    {
+      "id": "ferme-readme",
+      "name": "README.md",
+      "path": "/home/leo/projects/ferme/skills/README.md",
+      "kind": "evidence_index",
+      "inspection": "local_source_read",
+      "sha256": "852b9f2ee0efe7689d85d8e182693aa9e895c33202c3907f991c4b80d4da857e",
+      "summary": "Scope, source session/review boundary, OCS build and document use order.",
+      "applicability_conditions": "",
+      "symbols": []
+    },
+    {
+      "id": "ocs-skill",
+      "name": "SKILL.md",
+      "path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+      "kind": "installed_skill_source",
+      "inspection": "local_source_read",
+      "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+      "summary": "Existing OCS contract, guarded control, revision-bound readback, preservation and handoff instructions.",
+      "applicability_conditions": "",
+      "symbols": []
+    },
+    {
+      "id": "ocs-control",
+      "name": "ocs_control.py",
+      "path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+      "kind": "existing_code",
+      "inspection": "local_source_read",
+      "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+      "summary": "request, execute_checked and redact implement authenticated transport, preflight revision checks, one-send writes and uncertain-result identity.",
+      "applicability_conditions": "Inspected source only this batch; session descriptors are excluded from inspection/output. READ_OPS includes guide although the recorded OCS build rejects it.",
+      "symbols": [
+        {
+          "name": "ControlError",
+          "line": 19,
+          "end_line": 20
+        },
+        {
+          "name": "WriteUncertain",
+          "line": 23,
+          "end_line": 26
+        },
+        {
+          "name": "redact",
+          "line": 29,
+          "end_line": 35
+        },
+        {
+          "name": "load_descriptor",
+          "line": 38,
+          "end_line": 46
+        },
+        {
+          "name": "candidate_paths",
+          "line": 49,
+          "end_line": 57
+        },
+        {
+          "name": "request",
+          "line": 60,
+          "end_line": 78
+        },
+        {
+          "name": "descriptors",
+          "line": 81,
+          "end_line": 92
+        },
+        {
+          "name": "execute_checked",
+          "line": 95,
+          "end_line": 124
+        },
+        {
+          "name": "main",
+          "line": 127,
+          "end_line": 185
+        }
+      ],
+      "imports": [
+        "import argparse",
+        "import json",
+        "import os",
+        "import socket",
+        "import sys",
+        "from pathlib import Path"
+      ]
+    },
+    {
+      "id": "measurement-checker",
+      "name": "check_contract.py",
+      "path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+      "kind": "existing_code",
+      "inspection": "local_source_read",
+      "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+      "summary": "run checks supplied point/axis/plane observations, finite numbers, units, evidence identities and numerical criteria.",
+      "applicability_conditions": "Consumes supplied observations; acquisition and solid/topology verification belong to other code.",
+      "symbols": [
+        {
+          "name": "number",
+          "line": 9,
+          "end_line": 14
+        },
+        {
+          "name": "vector",
+          "line": 17,
+          "end_line": 20
+        },
+        {
+          "name": "dot",
+          "line": 23,
+          "end_line": 24
+        },
+        {
+          "name": "sub",
+          "line": 27,
+          "end_line": 28
+        },
+        {
+          "name": "cross",
+          "line": 31,
+          "end_line": 32
+        },
+        {
+          "name": "norm",
+          "line": 35,
+          "end_line": 36
+        },
+        {
+          "name": "normalized",
+          "line": 39,
+          "end_line": 43
+        },
+        {
+          "name": "run",
+          "line": 46,
+          "end_line": 137
+        },
+        {
+          "name": "main",
+          "line": 140,
+          "end_line": 151
+        }
+      ],
+      "imports": [
+        "import argparse",
+        "import json",
+        "import math",
+        "import sys"
+      ]
+    },
+    {
+      "id": "native-wrapper",
+      "name": "ngv064_ocs.py",
+      "path": "/tmp/opencode/ngv064_ocs.py",
+      "kind": "existing_component_code",
+      "inspection": "local_source_read",
+      "sha256": "68a0204cc78b8d46210fbf1498e015a0666f94cb5287427219c0188a23f53b71",
+      "summary": "read/write/step, checkpoint, revolve_z, cylinder and subtract wrap native requests and stepped command state.",
+      "applicability_conditions": "Fixed session, temporary paths/prefix allowlist; module import selects a descriptor; accepted/running polling is unbounded; write treats waiting_input as failure, while step permits it.",
+      "symbols": [
+        {
+          "name": "configure",
+          "line": 22,
+          "end_line": 30
+        },
+        {
+          "name": "read",
+          "line": 32,
+          "end_line": 35
+        },
+        {
+          "name": "write",
+          "line": 37,
+          "end_line": 49
+        },
+        {
+          "name": "checkpoint",
+          "line": 51,
+          "end_line": 52
+        },
+        {
+          "name": "added",
+          "line": 54,
+          "end_line": 55
+        },
+        {
+          "name": "run",
+          "line": 57,
+          "end_line": 57
+        },
+        {
+          "name": "select",
+          "line": 59,
+          "end_line": 59
+        },
+        {
+          "name": "new",
+          "line": 61,
+          "end_line": 70
+        },
+        {
+          "name": "revolve_z",
+          "line": 72,
+          "end_line": 83
+        },
+        {
+          "name": "cylinder",
+          "line": 85,
+          "end_line": 86
+        },
+        {
+          "name": "subtract",
+          "line": 88,
+          "end_line": 103
+        },
+        {
+          "name": "step",
+          "line": 105,
+          "end_line": 114
+        },
+        {
+          "name": "tag",
+          "line": 116,
+          "end_line": 124
+        }
+      ],
+      "imports": [
+        "import importlib.util",
+        "import json",
+        "from pathlib import Path"
+      ]
+    },
+    {
+      "id": "item-geometry",
+      "name": "item_ocs_parts.py",
+      "path": "/tmp/opencode/item_ocs_parts.py",
+      "kind": "existing_component_code",
+      "inspection": "local_source_read",
+      "sha256": "500d72af1767b433d521737a7aa2db2c268db9caa34aad357d5bc84fcd774bd4",
+      "summary": "extrude, rotate, move, combine and tag provide explicit source-labelled native constructions.",
+      "applicability_conditions": "Imports native-wrapper; dimensions and several recipes are ITEM-specific.",
+      "symbols": [
+        {
+          "name": "tag",
+          "line": 5,
+          "end_line": 11
+        },
+        {
+          "name": "move",
+          "line": 13,
+          "end_line": 13
+        },
+        {
+          "name": "rotate",
+          "line": 15,
+          "end_line": 17
+        },
+        {
+          "name": "extrude",
+          "line": 19,
+          "end_line": 23
+        },
+        {
+          "name": "combine",
+          "line": 25,
+          "end_line": 30
+        },
+        {
+          "name": "nut",
+          "line": 32,
+          "end_line": 45
+        },
+        {
+          "name": "washer",
+          "line": 47,
+          "end_line": 51
+        },
+        {
+          "name": "screw",
+          "line": 53,
+          "end_line": 65
+        }
+      ],
+      "imports": [
+        "import math",
+        "import ngv064_ocs as n"
+      ]
+    },
+    {
+      "id": "sat-reader",
+      "name": "check_ngv064_wheel.py",
+      "path": "/tmp/opencode/check_ngv064_wheel.py",
+      "kind": "existing_component_code",
+      "inspection": "local_source_read",
+      "sha256": "1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4",
+      "summary": "sat_features extracts selected SAT cylinders, planes, tori and points; verify checks the wheel.",
+      "applicability_conditions": "Top-level import loads native-wrapper. Restricted SAT fields; one body transform, unit scale; SAB requires a separate supported reader.",
+      "symbols": [
+        {
+          "name": "sat_features",
+          "line": 9,
+          "end_line": 35
+        },
+        {
+          "name": "verify",
+          "line": 37,
+          "end_line": 74
+        }
+      ],
+      "imports": [
+        "import json",
+        "import math",
+        "from pathlib import Path",
+        "import ngv064_ocs as n"
+      ]
+    },
+    {
+      "id": "profile-build",
+      "name": "build_item_profile_segment.py",
+      "path": "/tmp/opencode/build_item_profile_segment.py",
+      "kind": "existing_component_code",
+      "inspection": "local_source_read",
+      "sha256": "80d3fe7fd2308a26dda4133748c54d478a085ca381a423a60362dbf966324521",
+      "summary": "contours samples retained text curves and normalizes the section; build/complete/verify construct and check the profile.",
+      "applicability_conditions": "Uses extracted contour text rather than a DXF parser; fixed 40 mm normalization, 100 mm length, output paths, session wrapper and component checks.",
+      "symbols": [
+        {
+          "name": "contours",
+          "line": 16,
+          "end_line": 44
+        },
+        {
+          "name": "area",
+          "line": 46,
+          "end_line": 46
+        },
+        {
+          "name": "build",
+          "line": 48,
+          "end_line": 56
+        },
+        {
+          "name": "complete",
+          "line": 58,
+          "end_line": 74
+        },
+        {
+          "name": "verify",
+          "line": 76,
+          "end_line": 95
+        }
+      ],
+      "imports": [
+        "import json",
+        "import math",
+        "import re",
+        "from pathlib import Path",
+        "import ngv064_ocs as n",
+        "from item_ocs_parts import extrude,tag",
+        "from check_ngv064_wheel import sat_features"
+      ]
+    },
+    {
+      "id": "battery-geometry",
+      "name": "battery_ocs_parts.py",
+      "path": "/tmp/opencode/battery_ocs_parts.py",
+      "kind": "existing_component_code",
+      "inspection": "local_source_read",
+      "sha256": "ccf4bccc801c1315c0289c509e7f91681754c72fd65b89b5827f18de7b7c5159",
+      "summary": "rr, axial_x, face_x and tag reuse rounded sections, transforms and metadata.",
+      "applicability_conditions": "Imports item and session wrappers; caller must supply source-backed geometry.",
+      "symbols": [
+        {
+          "name": "rr",
+          "line": 6,
+          "end_line": 17
+        },
+        {
+          "name": "tag",
+          "line": 19,
+          "end_line": 24
+        },
+        {
+          "name": "axial_x",
+          "line": 26,
+          "end_line": 27
+        },
+        {
+          "name": "face_x",
+          "line": 29,
+          "end_line": 33
+        }
+      ],
+      "imports": [
+        "import math",
+        "import ngv064_ocs as n",
+        "from item_ocs_parts import extrude,rotate,move,combine"
+      ]
+    },
+    {
+      "id": "leaf-build",
+      "name": "build_leaf_gen2.py",
+      "path": "/tmp/opencode/build_leaf_gen2.py",
+      "kind": "existing_component_code",
+      "inspection": "local_source_read",
+      "sha256": "4d6f8eb52addd7a4c5b3ee687cd3118364360a7a162713e6185101b369bb9ef7",
+      "summary": "top and staged recovery functions reconstruct shell/terminal features; finish checks and saves the component.",
+      "applicability_conditions": "Component-specific dimensions and staged resumption; imports shared battery/item/wrapper/SAT modules.",
+      "symbols": [
+        {
+          "name": "top",
+          "line": 17,
+          "end_line": 24
+        },
+        {
+          "name": "after_cavity",
+          "line": 26,
+          "end_line": 29
+        },
+        {
+          "name": "after_hollow",
+          "line": 31,
+          "end_line": 35
+        },
+        {
+          "name": "after_pan",
+          "line": 37,
+          "end_line": 50
+        },
+        {
+          "name": "rest",
+          "line": 52,
+          "end_line": 66
+        },
+        {
+          "name": "finish",
+          "line": 68,
+          "end_line": 96
+        }
+      ],
+      "imports": [
+        "import json",
+        "from pathlib import Path",
+        "import ngv064_ocs as n",
+        "from battery_ocs_parts import rr,tag,axial_x,face_x",
+        "from item_ocs_parts import rotate,move,combine",
+        "from check_ngv064_wheel import sat_features"
+      ]
+    },
+    {
+      "id": "bmw-build",
+      "name": "build_bmw_i3_94ah.py",
+      "path": "/tmp/opencode/build_bmw_i3_94ah.py",
+      "kind": "existing_component_code",
+      "inspection": "local_source_read",
+      "sha256": "4bacd498f12f1dab482e6cb5f050e8a7dc2c5efc61473ee2127d2e8be5fa5c16",
+      "summary": "build/accessories/cable_done/finish reconstruct exterior parts and swept cable with checks.",
+      "applicability_conditions": "Component-specific dimensions, paths and cable pose; imports shared battery/item/wrapper/SAT modules.",
+      "symbols": [
+        {
+          "name": "box",
+          "line": 18,
+          "end_line": 19
+        },
+        {
+          "name": "label",
+          "line": 21,
+          "end_line": 23
+        },
+        {
+          "name": "build",
+          "line": 25,
+          "end_line": 58
+        },
+        {
+          "name": "accessories",
+          "line": 60,
+          "end_line": 85
+        },
+        {
+          "name": "cable_done",
+          "line": 87,
+          "end_line": 96
+        },
+        {
+          "name": "finish",
+          "line": 98,
+          "end_line": 132
+        }
+      ],
+      "imports": [
+        "import json,math",
+        "from pathlib import Path",
+        "import ngv064_ocs as n",
+        "from battery_ocs_parts import rr,tag,face_x",
+        "from item_ocs_parts import extrude,move,rotate,combine",
+        "from check_ngv064_wheel import sat_features"
+      ]
+    },
+    {
+      "id": "register-builder",
+      "name": "build_workflow_register.py",
+      "path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+      "kind": "existing_documentation_code",
+      "inspection": "local_source_read",
+      "sha256": "e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e",
+      "summary": "Existing read_json, write_json and sid conventions plus local-evidence/register handling provide source-record precedents.",
+      "applicability_conditions": "Uses project-global paths and report scanning; a per-job source intake adapter needs its own interface and tests.",
+      "symbols": [
+        {
+          "name": "read_json",
+          "line": 17,
+          "end_line": 18
+        },
+        {
+          "name": "write_json",
+          "line": 21,
+          "end_line": 22
+        },
+        {
+          "name": "sid",
+          "line": 25,
+          "end_line": 26
+        },
+        {
+          "name": "clean",
+          "line": 29,
+          "end_line": 32
+        },
+        {
+          "name": "urls",
+          "line": 35,
+          "end_line": 44
+        },
+        {
+          "name": "main",
+          "line": 47,
+          "end_line": 283
+        }
+      ],
+      "imports": [
+        "from __future__ import annotations",
+        "import argparse",
+        "import hashlib",
+        "import json",
+        "import re",
+        "from pathlib import Path"
+      ]
+    },
+    {
+      "id": "wheel-report",
+      "name": "neugart-ngv064-wheel-160.md",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
+      "kind": "recorded_execution_report",
+      "inspection": "local_source_read",
+      "sha256": "9ef13208ea35beabc65104ee0e807ee65915446f3a449b6bf8419525eca7bef2",
+      "summary": "Component-specific native checks, save/reopen observations and source paths for OCS 2026.42.",
+      "applicability_conditions": "",
+      "symbols": []
+    },
+    {
+      "id": "profile-report",
+      "name": "item-profile-02633-segment-100mm.md",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
+      "kind": "recorded_execution_report",
+      "inspection": "local_source_read",
+      "sha256": "d9f68c3ed038b1e39649437594fade9db78f1412ace69a832436fa3f4aca8f8d",
+      "summary": "Component-specific native checks, save/reopen observations and source paths for OCS 2026.42.",
+      "applicability_conditions": "",
+      "symbols": []
+    },
+    {
+      "id": "wheel-checks",
+      "name": "neugart-ngv064-wheel-160-native.json",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
+      "kind": "recorded_check_results",
+      "inspection": "local_source_read",
+      "sha256": "ba3fd46f29645a8434aed14f217ab5320836c5f13404885287c8359133964b98",
+      "summary": "Retained feature/audit observations for the named component.",
+      "applicability_conditions": "Pre-save stage; transfer conditions are retained in the matching report.",
+      "symbols": [],
+      "recorded_checks": {
+        "count": 14,
+        "statuses": {
+          "PASS": 14
+        },
+        "document_id": 51,
+        "revision": 137,
+        "geometry_revision": 5508
+      }
+    },
+    {
+      "id": "bracket-checks",
+      "name": "item-angle-bracket-set-41115-native.json",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
+      "kind": "recorded_check_results",
+      "inspection": "local_source_read",
+      "sha256": "df42709bbd7bc2a10102c5e7c7559667baa1aa0bba44eab57dce407ba5b7318f",
+      "summary": "Retained feature/audit observations for the named component.",
+      "applicability_conditions": "Pre-save stage; transfer conditions are retained in the matching report.",
+      "symbols": [],
+      "recorded_checks": {
+        "count": 21,
+        "statuses": {
+          "PASS": 21
+        },
+        "document_id": 59,
+        "revision": 186,
+        "geometry_revision": 7634
+      }
+    },
+    {
+      "id": "profile-checks",
+      "name": "item-profile-02633-segment-100mm-native.json",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
+      "kind": "recorded_check_results",
+      "inspection": "local_source_read",
+      "sha256": "7bae7ea075ac2a41d001518863889e6a593f24d25cbaa0c5a3556cadf3cdab58",
+      "summary": "Retained feature/audit observations for the named component.",
+      "applicability_conditions": "Pre-save stage; transfer conditions are retained in the matching report.",
+      "symbols": [],
+      "recorded_checks": {
+        "count": 11,
+        "statuses": {
+          "PASS": 11
+        },
+        "document_id": 61,
+        "revision": 22,
+        "geometry_revision": 7756
+      }
+    },
+    {
+      "id": "leaf-checks",
+      "name": "nissan-leaf-gen2-native.json",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
+      "kind": "recorded_check_results",
+      "inspection": "local_source_read",
+      "sha256": "d91733280a6fc484e9f769e3af1746145401331d8148a5ef0bbbd4ae827cafc8",
+      "summary": "Retained feature/audit observations for the named component.",
+      "applicability_conditions": "Pre-save stage; transfer conditions are retained in the matching report.",
+      "symbols": [],
+      "recorded_checks": {
+        "count": 14,
+        "statuses": {
+          "PASS": 14
+        },
+        "document_id": 63,
+        "revision": 192,
+        "geometry_revision": 8590
+      }
+    },
+    {
+      "id": "bmw-checks",
+      "name": "bmw-i3-94ah-native-checks.json",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
+      "kind": "recorded_check_results",
+      "inspection": "local_source_read",
+      "sha256": "18c6149a67d9397172579eab59855e397d035866225bef1fae7b79e22682d619",
+      "summary": "Retained feature/audit observations for the named component.",
+      "applicability_conditions": "Pre-save stage; transfer conditions are retained in the matching report.",
+      "symbols": [],
+      "recorded_checks": {
+        "count": 13,
+        "statuses": {
+          "PASS": 13
+        },
+        "document_id": 65,
+        "revision": 287,
+        "geometry_revision": 9882
+      }
+    }
+  ]
+}

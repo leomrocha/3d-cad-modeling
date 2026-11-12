@@ -1571,6 +1571,60 @@
         }
       ],
       "next_check": "Exercise the specified implementation cases under the corresponding implementation scope."
+    },
+    {
+      "id": "IMPL-I01",
+      "name": "Evidence-linked implementation queue",
+      "summary": "Link each existing action to inspected code/skill subsets, original result records and required integration changes; preserve the original graph and full operation contracts.",
+      "status": "proposal",
+      "origin": "authorized_implementation_queue",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/implementation-queue/queue.json",
+          "line": 1,
+          "section": "Evidence-linked implementation queue"
+        }
+      ],
+      "next_check": "Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch."
+    },
+    {
+      "id": "IMPL-I02",
+      "name": "Dependency-respecting implementation order",
+      "summary": "Use proposed action resource/effort classes and exact original-route reuse after preceding action dependencies. Preserve original route classifications and conditional upstream prerequisites separately.",
+      "status": "proposal",
+      "origin": "authorized_implementation_queue",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/implementation-queue/queue.md",
+          "line": 1,
+          "section": "Dependency-respecting implementation order"
+        }
+      ],
+      "next_check": "Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch."
+    },
+    {
+      "id": "IMPL-I03",
+      "name": "Per-job source revision and scope record",
+      "summary": "Implement the existing first shared intake action as a per-job source index plus agent-authored scope statement with revision/correction links, streaming hashes and action-specific tests.",
+      "status": "proposal",
+      "origin": "authorized_implementation_queue",
+      "source_urls": [
+        "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md"
+      ],
+      "source_documents": [
+        {
+          "path": "research/action-audit/implementation-queue/first-action-plan.md",
+          "line": 1,
+          "section": "Per-job source revision and scope record"
+        }
+      ],
+      "next_check": "Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch."
     }
   ]
 }

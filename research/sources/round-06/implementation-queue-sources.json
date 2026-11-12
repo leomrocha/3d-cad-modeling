@@ -1,0 +1,596 @@
+[
+  {
+    "local_original": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+    "source_path": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+    "title": "cad-workflow-findings.md — recorded_execution_summary",
+    "summary": "OCS 2026.42 component constructions, import/save results, failed requests and component-specific recoveries. Applicability: Claims are attributed to the retained reports/session identifiers; raw session replay is a separate result.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "fbd89002aa02beb1ead8d537dcb650047c357b90eea40d2281350ff28212811e",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+    "source_path": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+    "title": "SKILL.md — documented_skill",
+    "summary": "Reusable source, component/frame, construction, feature-check and saved-file procedure. Applicability: Repository skill instructions and reproduction-package specification.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "bc45db50ee1ee9ddbc1a39e10cc9de3dedd372698d5309f9f5bacfacb76bf3db",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+    "source_path": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+    "title": "ocs-skill-improvements.md — proposed_skill_extension",
+    "summary": "Proposed OCS additions derived from recorded commands, topology recovery and representation/display observations. Applicability: Held in ferme; installation is a separate action.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "cf8ded1155c0984063a2c634eb4b741e9d22b2baadd4c218ba15814e5f4c5e10",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/skills/README.md",
+    "source_path": "/home/leo/projects/ferme/skills/README.md",
+    "title": "README.md — evidence_index",
+    "summary": "Scope, source session/review boundary, OCS build and document use order. Applicability: ",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "852b9f2ee0efe7689d85d8e182693aa9e895c33202c3907f991c4b80d4da857e",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "title": "SKILL.md — installed_skill_source",
+    "summary": "Existing OCS contract, guarded control, revision-bound readback, preservation and handoff instructions. Applicability: ",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+    "title": "ocs_control.py — existing_code",
+    "summary": "request, execute_checked and redact implement authenticated transport, preflight revision checks, one-send writes and uncertain-result identity. Applicability: Inspected source only this batch; session descriptors are excluded from inspection/output. READ_OPS includes guide although the recorded OCS build rejects it.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+    "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+    "title": "check_contract.py — existing_code",
+    "summary": "run checks supplied point/axis/plane observations, finite numbers, units, evidence identities and numerical criteria. Applicability: Consumes supplied observations; acquisition and solid/topology verification belong to other code.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/ngv064_ocs.py",
+    "source_path": "/tmp/opencode/ngv064_ocs.py",
+    "title": "ngv064_ocs.py — existing_component_code",
+    "summary": "read/write/step, checkpoint, revolve_z, cylinder and subtract wrap native requests and stepped command state. Applicability: Fixed session, temporary paths/prefix allowlist; module import selects a descriptor; accepted/running polling is unbounded; write treats waiting_input as failure, while step permits it.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "68a0204cc78b8d46210fbf1498e015a0666f94cb5287427219c0188a23f53b71",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/item_ocs_parts.py",
+    "source_path": "/tmp/opencode/item_ocs_parts.py",
+    "title": "item_ocs_parts.py — existing_component_code",
+    "summary": "extrude, rotate, move, combine and tag provide explicit source-labelled native constructions. Applicability: Imports native-wrapper; dimensions and several recipes are ITEM-specific.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "500d72af1767b433d521737a7aa2db2c268db9caa34aad357d5bc84fcd774bd4",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/check_ngv064_wheel.py",
+    "source_path": "/tmp/opencode/check_ngv064_wheel.py",
+    "title": "check_ngv064_wheel.py — existing_component_code",
+    "summary": "sat_features extracts selected SAT cylinders, planes, tori and points; verify checks the wheel. Applicability: Top-level import loads native-wrapper. Restricted SAT fields; one body transform, unit scale; SAB requires a separate supported reader.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/build_item_profile_segment.py",
+    "source_path": "/tmp/opencode/build_item_profile_segment.py",
+    "title": "build_item_profile_segment.py — existing_component_code",
+    "summary": "contours samples retained text curves and normalizes the section; build/complete/verify construct and check the profile. Applicability: Uses extracted contour text rather than a DXF parser; fixed 40 mm normalization, 100 mm length, output paths, session wrapper and component checks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "80d3fe7fd2308a26dda4133748c54d478a085ca381a423a60362dbf966324521",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/battery_ocs_parts.py",
+    "source_path": "/tmp/opencode/battery_ocs_parts.py",
+    "title": "battery_ocs_parts.py — existing_component_code",
+    "summary": "rr, axial_x, face_x and tag reuse rounded sections, transforms and metadata. Applicability: Imports item and session wrappers; caller must supply source-backed geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "ccf4bccc801c1315c0289c509e7f91681754c72fd65b89b5827f18de7b7c5159",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/build_leaf_gen2.py",
+    "source_path": "/tmp/opencode/build_leaf_gen2.py",
+    "title": "build_leaf_gen2.py — existing_component_code",
+    "summary": "top and staged recovery functions reconstruct shell/terminal features; finish checks and saves the component. Applicability: Component-specific dimensions and staged resumption; imports shared battery/item/wrapper/SAT modules.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "4d6f8eb52addd7a4c5b3ee687cd3118364360a7a162713e6185101b369bb9ef7",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/tmp/opencode/build_bmw_i3_94ah.py",
+    "source_path": "/tmp/opencode/build_bmw_i3_94ah.py",
+    "title": "build_bmw_i3_94ah.py — existing_component_code",
+    "summary": "build/accessories/cable_done/finish reconstruct exterior parts and swept cable with checks. Applicability: Component-specific dimensions, paths and cable pose; imports shared battery/item/wrapper/SAT modules.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "4bacd498f12f1dab482e6cb5f050e8a7dc2c5efc61473ee2127d2e8be5fa5c16",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "source_path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "title": "build_workflow_register.py — existing_documentation_code",
+    "summary": "Existing read_json, write_json and sid conventions plus local-evidence/register handling provide source-record precedents. Applicability: Uses project-global paths and report scanning; a per-job source intake adapter needs its own interface and tests.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
+    "title": "neugart-ngv064-wheel-160.md — recorded_execution_report",
+    "summary": "Component-specific native checks, save/reopen observations and source paths for OCS 2026.42. Applicability: ",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "9ef13208ea35beabc65104ee0e807ee65915446f3a449b6bf8419525eca7bef2",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
+    "title": "item-profile-02633-segment-100mm.md — recorded_execution_report",
+    "summary": "Component-specific native checks, save/reopen observations and source paths for OCS 2026.42. Applicability: ",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "d9f68c3ed038b1e39649437594fade9db78f1412ace69a832436fa3f4aca8f8d",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
+    "title": "neugart-ngv064-wheel-160-native.json — recorded_check_results",
+    "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "ba3fd46f29645a8434aed14f217ab5320836c5f13404885287c8359133964b98",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
+    "title": "item-angle-bracket-set-41115-native.json — recorded_check_results",
+    "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "df42709bbd7bc2a10102c5e7c7559667baa1aa0bba44eab57dce407ba5b7318f",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
+    "title": "item-profile-02633-segment-100mm-native.json — recorded_check_results",
+    "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "7bae7ea075ac2a41d001518863889e6a593f24d25cbaa0c5a3556cadf3cdab58",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
+    "title": "nissan-leaf-gen2-native.json — recorded_check_results",
+    "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "d91733280a6fc484e9f769e3af1746145401331d8148a5ef0bbbd4ae827cafc8",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
+    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
+    "title": "bmw-i3-94ah-native-checks.json — recorded_check_results",
+    "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "18c6149a67d9397172579eab59855e397d035866225bef1fae7b79e22682d619",
+    "inspection_scope": "local_source_read",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/assets.md",
+      "research/action-audit/implementation-queue/queue.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
+    "title": "README",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "8c8ecc9231663aeac5a2a6c7147df65d81cef0b998c87fbe345ad073a17d8b34",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+    "title": "first action plan",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "e452fcb1441b0a2abfd88dfbf477b31fb6b7ef14cbde41be294113108eeb19b2",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+    "title": "queue",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "a32c803b5dabb0762423de33cc276078acf6f7e544fc45e1a7f69e583a945e46",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.json",
+    "title": "assets",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "84ff37ffad2480f6515c44b0755d894e5345be2f5c2ab5c06e64b1ec491f38c0",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/execution-record.md",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/execution-record.md",
+    "title": "execution record",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "ef14fd39746191309d9093fc773a191f7af551cac8b9d0a2420b3ec2bfb7c6ce",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md",
+    "title": "assets",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "d82ab3b9f00516efd574fc83902a0d942bc1c6820f7342439a59eccc56bd1f7f",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md",
+    "title": "queue",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "authored_document_inspected",
+    "sha256": "f28ebe5dc0615ad202a062b4c261a18f9d2802a5714639e56824852f046370f8",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "title": "AGENTS",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+    "title": "point 01 model brief",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "67ce7477f22d31661ba8933b2cb6464782262af9c94c91b00726981f34b5ebae",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
+    "title": "workflow to actions",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "0ed1c804ae7057eb9aadb234e0b5516b0a4fe730e97503cd37b7af210d704246",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json",
+    "title": "workflow details",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "80d12a8ff5174109156eef03075a928db4959ac71dfae752361bc9b00b9fbdbb",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "title": "ideas",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "7ecb51a3e68c99949244044cdacc70fe76fc27c05ecbc103520598e11c7f4c2f",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+    "title": "point 02 operations",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "ddfbcade5ba55cf336eb6452330672dfb2da69322ed17ad4d3157ce7db74ca1b",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+    "title": "point 03 operations",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "37b0d41ee65e7bcd60880920848e8a11a109e7483f55f3b679b5951fcceb0a2e",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+    "title": "point 04 operations",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "af73a1a2db04c8be42893f5b56df2292b64ad057b473a3d784dbc482e0e82245",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+    "title": "point 05 operations",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "6b5628396a5937608780b8dcf5a5df5fa035332b4cd5da07039b2a8ae35e22b1",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json",
+    "title": "point 06 operations",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "661707f4a64fc4dacfc5734cdb4200b5dceda04b587608356e88359223c66e8f",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json",
+    "title": "point 07 operations",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "2ee624b4776e4e7e7e09b1c46adfd8af0e04dcb17b701e8088e42f65ae18aac0",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "title": "cad paths",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "title": "domain paths",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "ad5350800c618f85a0add4a8a1e82aad8ce0a1b8816d729486d03a8836719aa4",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+    "title": "reconstruction paths",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "d89b7977ab3fa8013aaa1ffcfe097960f7ef6e4d3eb0db39331781a403190d2a",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+    "source_path": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+    "title": "combined paths",
+    "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
+    "access_date": "2026-11-12",
+    "evidence_status": "local_source_inspected",
+    "sha256": "0521f8e103c4a9fef0ae2222f9071d0775c2f7ef12d17335ba1f40a1b6185ec6",
+    "referring_documents": [
+      "research/action-audit/implementation-queue/README.md",
+      "research/action-audit/implementation-queue/execution-record.md"
+    ]
+  }
+]
