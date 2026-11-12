@@ -1,0 +1,797 @@
+[
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-product-page.html",
+    "title": "ARCA 203015T, 8121020 | 200 x 300 x 150 | ARCA 203015",
+    "summary": "Exact manufacturer product identity and page-listed dimensions, cover/locking/hinge description, package content, material, colour and ratings.",
+    "access_date": "2026-11-12",
+    "evidence_status": "downloaded_original",
+    "sha256": "3b06c64080b68a68f8715f5193976e676c74451deea36199467befb86bc72d5c",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ],
+    "url": "https://www.fibox.com/products/arca-iec/arca-203015/8121020"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-dimension-drawing.pdf",
+    "title": "FIBOX ARCA IEC 203015T",
+    "summary": "Metric rear and side-section views dimension the body, external mounting features, internal mounting-plate features, wall and cover. Dimension leaders and view associations are transcribed in source-notes.md.",
+    "access_date": "2026-11-12",
+    "evidence_status": "downloaded_original",
+    "sha256": "4aea55c55b1a3f040fb8ac7ef5d2dcdf0457959369fc1a6b5754856b42b89273",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ],
+    "url": "https://www.fibox.com/hubfs/assets/8121020_FIBOX%20ARCA%20IEC%20203015T.pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020.step",
+    "title": "8121020_FIBOX ARCA IEC 203015T",
+    "summary": "ExactmanufacturerSTEP8121020 with12soliddefinitions;retainsbase,cover,hinges,lock,plate,feet andsourceconfiguration.",
+    "access_date": "2026-11-12",
+    "evidence_status": "downloaded_original",
+    "sha256": "04c8dc5a8b91604a8ec549987d0b59c6b6d54befcf561e80ad4b2e064d37cecd",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ],
+    "url": "https://9349002.fs1.hubspotusercontent-na1.net/hubfs/9349002/assets/8121020_FIBOX%20ARCA%20IEC%20203015T.step"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/acquisition.json",
+    "title": "Fibox source acquisition metadata",
+    "summary": "Records3exactmanufacturer-linkedGETresults,timestamps,MIME,sizes,hashes andderivedpreviews.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_acquisition_record",
+    "sha256": "aef00ff8e94b50a7e31fcbec7277c8a829d5af8c047dfcbd6f4fe68b7911edf3",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes-initial.md",
+    "title": "Initial Fibox drawing transcription",
+    "summary": "Initialdelegatedtableincludesrearfootdepthdatumandmountingplateopeningmisassociations,preservedbeforecoordinatorcorrection.",
+    "access_date": "2026-11-12",
+    "evidence_status": "delegated_initial_source_review",
+    "sha256": "5201166c8c205d48bdda27b63fc2ea8f7f44d3d2f94b1203e9edf684d455c3bf",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md",
+    "title": "Integrated Fibox drawing andvariant review",
+    "summary": "Identifies203015Texactvariant,correctedrearbodydepthdatum,inneropeningassociation andsourcevsproductpageconditions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "reviewed_source_interpretation",
+    "sha256": "552036058443434998e2b1738b313be72a3b1f5d5751bb8db603bd53150b33aa",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md",
+    "title": "Fibox dimension-leader corrections",
+    "summary": "Recordsactualimageassociationreview:152.5fromrearbodyplane;261.5\u00d7161innerbodyopening;keepsinitialnotes andsavedMPSplate observationsseparate.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_coordinator_review",
+    "sha256": "8f63d8fbf524303501ec911e74a5e44f67b61f161c7502f49a69c34015ba5705",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png",
+    "title": "Full Fibox dimension drawing render",
+    "summary": "Actualrear/sectiondrawingviewwith300\u00d7200body,152.5depth,10footprojection andwall/covercallouts.",
+    "access_date": "2026-11-12",
+    "evidence_status": "derived_pdf_render",
+    "sha256": "91b8dceef1ba61299465c6e66c4c1fbb4b93ed4b4033e8840575a04990b443bb",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-front-detail.png",
+    "title": "Fibox rear-view detail",
+    "summary": "Derivedrear-viewcropretainsmounting/openingleadersforfeatureassociation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "derived_pdf_render",
+    "sha256": "86bac54205f10461bfaae61bbf566e72477c93c8d90b43fc42da1bbe845b606f",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-side-detail.png",
+    "title": "Fibox side-section detail",
+    "summary": "Derivedsectioncropretains152.5bodydepth,10footprojection,wall3.8 andcover3.5leaders.",
+    "access_date": "2026-11-12",
+    "evidence_status": "derived_pdf_render",
+    "sha256": "9966c20cf3c3fb9ca96a5253fccfe2b2574ef749a167627b16fb1af83fd53471",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/initial-state.json",
+    "title": "initial-state.json",
+    "summary": "NativeOCSbaselineactivedocument83 and6existingopendocumentsbeforecreating84.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "20122c6fae3dcc640acc9dc7e7dee38e750682778e8300c31ac0b3192e9fde5a",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/prior-model-hashes.json",
+    "title": "prior-model-hashes.json",
+    "summary": "Pre-buildhashesof23existingsavedDWGsforbytepreservationcomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "a127f6ff65e1aec24bfaa3a84928ddaba71c7549d48c812b6617732795e63666",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/document-checkpoint.json",
+    "title": "document-checkpoint.json",
+    "summary": "Newisolateddocument84binding,revisionandrequestnamespacebeforeenclosureimport.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "c7546f187c8050001f1a304477fb12e4f23315f621a859015cde1265baa3020a",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-format.json",
+    "title": "step-format.json",
+    "summary": "ActualImportFileactionselectingSTEPformat;waiting_inputdialogresult.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "b365ad14727b4b95a3bcdb05f42f865ae612135699fb16bde0465f823a0e7748",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-source.json",
+    "title": "step-source.json",
+    "summary": "ActualImportFileactionbindingtheexacthashedFiboxSTEPpath.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "23525161e158681cf11dd39d000d0619c3132743571946e68b2a4e4e51bb9c03",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-confirm.json",
+    "title": "step-confirm.json",
+    "summary": "CompletedoriginalSTEPimportconfirmationresultforthenewdocument.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "aff41c8ac64a24ecc8d4a7f9370630263ce460609e774c3821551d1fa2398e3c",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json",
+    "title": "imported-audit.json",
+    "summary": "Initial12solid/18blockreferenceauditwithzeroerrorsorwarningsbeforeplacementcorrection.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "50a4db8962781b5a86d80a02e1c3f8c388c3387529222f3c7ea3ea5bae8456d3",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-query.json",
+    "title": "imported-query.json",
+    "summary": "Importedentityhandle/typeinventoryusedforboundedrecordreads.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "fa359792f30ab234c8e376845fc2bbf5aa3ea77b0e52a73648ad0bfaf323dd3c",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-blocks.json",
+    "title": "imported-blocks.json",
+    "summary": "Initialblockdefinitionsandmembershipincludingroot,base,cover,lock,feetandplate.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "addebb30862a38676a161d504f15f5ccf3f0df4dc73b0e058eb257a7f9ea34ad",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-blocks.json",
+    "title": "corrected-blocks.json",
+    "summary": "Blockmembershipreadbackafter16sourceframecorrections.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "679909683e088593b49c9a52469130da910d527c5fe46073a6d4049c52afbdd0",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-blocks.json",
+    "title": "reopened-blocks.json",
+    "summary": "Persistedblockmembershipreadbackfromsaved/reopeneddocument85.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "fc742c1f3c186bd843ea58090bb189c64e7f099e23bbfe082f881482f70546e1",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-placement-plan.json",
+    "title": "source-placement-plan.json",
+    "summary": "17sourceframesand16uniqueinverse-matchednativeplacementswithreviewedtargetfields.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "97ddd185d8031cda46c7b1ba8b3835dac1339c317aa09a6bb0f90e1468913e6e",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/placement-corrections.json",
+    "title": "placement-corrections.json",
+    "summary": "Actualhelperrunreadbacksfor16nativeCAScorrectionsand12unchangedACISdefinitions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "ae2b1299570656a7f63416a37cb354815e949111bdcb281b1a8e22bd463ca259",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/pre-save-assembly-measurements.json",
+    "title": "pre-save-assembly-measurements.json",
+    "summary": "Source-corrected16instancepathsandpointspansbeforepersistence;accessoriesincluded.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "3830cf4741379201e7393c56a8a3583bae919be0a6cfc24aa0873fdd78c31cdc",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/persistence.json",
+    "title": "persistence.json",
+    "summary": "Recoveredoriginalreopenrequest,matchingDWGhash/manifestandzero-errorzero-warningaudit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "5bb0d0a71ffb11e3474481d1da73051ef5ee28c716cab1e77c607006ad7ffa61",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json",
+    "title": "reopened-checkpoint.json",
+    "summary": "Reopeneddocument85bindingandcurrentgeometryrevisionafterverifiedpersistence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "791dfd1d9355042044027a074efb5828af90b05b36566a6d8162399840eb6516",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/saved-assembly-checks.json",
+    "title": "saved-assembly-checks.json",
+    "summary": "29passingchecks:16sourceplacements,12definitionpointsetsandnestedinstancepreservation.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "ec842f4c7f2273a0c5c6c4438c794f00af2447031b480af590dc73c711d211a2",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json",
+    "title": "feature-checks.json",
+    "summary": "15passingchecks:300\u00d7200\u00d7152.5body/coververtexspansand12closededgepartnergraphs;sourcecounts/frameobservations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "bb881b060f393e7c4f8cf9a56ce07f7f6cf7a3ce45045b8fb4c11d2694135818",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reusable-repair-regression.json",
+    "title": "reusable-repair-regression.json",
+    "summary": "Twoofflinerecordedcomponenthelperchecks:13battery/16enclosureplacementsand21/12unchangeddefinitions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "af6f15cc42ed033931f02f023b489a9d346167f0c9b0edd225094db029c11352",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-job.json",
+    "title": "source-job.json",
+    "summary": "PinnedSTEP/drawinggeometrycontractforexact203015Tvariantandretainedsourceframe.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implementation_input_artifact",
+    "sha256": "59932d36b561e6e1dfc1300ada85d151c5af1b24586b2a5b770767c13febf7de",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/readiness.json",
+    "title": "readiness.json",
+    "summary": "SOURCE_READYresultfromexistingrequiredfeature/sourcehashgate.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "05c0c34535e43c4eb36150d7f5d70e297285311445b105c86d4f1be9eb9e15f7",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/result.json",
+    "title": "result.json",
+    "summary": "Completedmanufacturerassemblyiterationlinks44nativechecks,persistence,views,sourceconfigurationandappliedhelper.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "376a55de0b385372264fd26ecbd408e935f03ea1af404c5ab2213cfbd7f8f65b",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/ocs-journal.jsonl",
+    "title": "ocs-journal.jsonl",
+    "summary": "Write-aheadactualnativeimport,placement,CAS,save,reopen,captureandrecoveryrequests/results.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "4ec3242ed4daa062a46408adcdd6a799b859589312e7a1ab250783328f0d6900",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-isometric.png",
+    "title": "imported-isometric.png",
+    "summary": "Actualprecorrectionimportviewshowsdisplacedassemblycomponents.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "5e9845ebba154f1b46a89fc630618e34e4f4d94e1e373c2444effe8cf261a9aa",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png",
+    "title": "corrected-isometric.png",
+    "summary": "Actualpostpropertycorrectioncapturestillshowsdisplacedviewportgeometry;retainedwithactualmatrixreadbacks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "33656dd896474c05364f5b7a83b84ccedcb420715b60816970d3503453fec3c7",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-isometric.png",
+    "title": "reopened-isometric.png",
+    "summary": "Actualpersistedisometricviewshowsassembledenclosureandfourfeet.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "c0465f9e259a3fefe4be0524b1b12f792b3a5c715ac6dd26b34914ad0e9e3aaa",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-top.png",
+    "title": "reopened-top.png",
+    "summary": "Actualsavedtopviewshowscover,lockandexternalkeyholefeet.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "f153716483eac4658659b7536c1667f6b1e4446525a00c22381bb69710fbfc94",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-front.png",
+    "title": "reopened-front.png",
+    "summary": "Actualsavedfrontviewshowsbody/coverseam,lockprojectionandfeet.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_observation",
+    "sha256": "352399f7297404d5ded1bc3d001dcaf87fe347d5c8ce824c79baa836f9c01a4e",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-0.json",
+    "title": "corrected-records-0.json",
+    "summary": "correctednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "f05206fdaf55d684e6bee581e760ec4e266a1fcb75e6a0928d5c6b5bb4ccf9a5",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json",
+    "title": "corrected-records-12.json",
+    "summary": "correctednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "c9eeb6adf3f4603f1c0697768b5b07a51e828044ae34d6f74308617a34742881",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-18.json",
+    "title": "corrected-records-18.json",
+    "summary": "correctednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "87998f9f3888a379e2fa554f29bb61f758d567b54ea1ce3260acdfea46c1a77b",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-24.json",
+    "title": "corrected-records-24.json",
+    "summary": "correctednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "7ca2120a6c5062738bd28c368725d14648c4f4ec902ee4a652a9dd22040f1cf7",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-6.json",
+    "title": "corrected-records-6.json",
+    "summary": "correctednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "c39fa3cfcf6b5a9aec01d978f74ec563996efcb353036f993895d98d17739790",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-0.json",
+    "title": "imported-records-0.json",
+    "summary": "importednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "51ffeb31db85b0a984705c4958f05cdf136d175aa2d7912636ef98cf7da4469f",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-12.json",
+    "title": "imported-records-12.json",
+    "summary": "importednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "e58f16d2d9e200c00a324714f863e38f7229076c2c92a682be8f7996b32cd2a3",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json",
+    "title": "imported-records-18.json",
+    "summary": "importednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "e23082e291eb812b7366ea5e458fc448437e229f3fd27797a143a8b1d20d3797",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json",
+    "title": "imported-records-24.json",
+    "summary": "importednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "b8da578ab294bf35b66c6c0ace14974cb6f27797f5f985ffaa1284dafb020ee8",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-6.json",
+    "title": "imported-records-6.json",
+    "summary": "importednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "df35cffd85f6e5b5d06d998b8ee0cc88470dbe8d1134657d9f38bd31cc419752",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-0.json",
+    "title": "reopened-records-0.json",
+    "summary": "reopenednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "a034ed42d62b297b161a4f8af436f090654746b2dcccb1a61aef1fe5792f983d",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-12.json",
+    "title": "reopened-records-12.json",
+    "summary": "reopenednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "e9b2e7a994c71177dcefd071c583b0250930e3640568a531c44611d121f26552",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-18.json",
+    "title": "reopened-records-18.json",
+    "summary": "reopenednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "dd8a94e21be9ddcdb1c799fce73c40062e23a0ba1cdcbd3370c03936303ab529",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-24.json",
+    "title": "reopened-records-24.json",
+    "summary": "reopenednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "c03f0ab29af61d95e9522813cb723dd91088537fbd0f8e767866afb444a5b635",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-6.json",
+    "title": "reopened-records-6.json",
+    "summary": "reopenednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_record_read",
+    "sha256": "b3787cacf395424a06f1ab4e30d06976f52a5f32093faa944a0dbd6ca046dfed",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/start_c029.py",
+    "title": "start_c029.py",
+    "summary": "Createdisolateddocument84andimportedhash-pinnedmanufacturerSTEPwithsuccessfulnativeImportFilefields.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "b0fc2b7cc26546bc76f5b8b53a782290d37a04a2109ad70382c91053788e5839",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/read_c029.py",
+    "title": "read_c029.py",
+    "summary": "Retainedimportedaudit,blocks,entitiesandactualprecorrectionview;capturepollboundlaterrecovered.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "1f081afc60605d3457e1ee57280e29b8d9b47a6c98a0d8651def3959e4e6544d",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/plan_c029.py",
+    "title": "plan_c029.py",
+    "summary": "Read17STEPframesandgenerated16uniqueinverse-placementchangesagainstactualnativeinserts.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "cd96499f25bcc2f86ec0c4296f50726ac6cc5cb6534769fba7bea36dee1a5873",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/repair_c029.py",
+    "title": "repair_c029.py",
+    "summary": "Executedtheextractedhelperagainst16nativeplacements,preserved12ACISdefinitionsandcapturedpostwriteview.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "df27634fe49973a93398abbaf8ad5895a4afb8f6e1fc4129e5568b3313e7b7a3",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_presave_measurements.py",
+    "title": "c029_presave_measurements.py",
+    "summary": "Traversedsource-correctednativeinstancesandretainedpresavepointgeometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "2910cf746d010be9489f9132f9fd366a701d869c3e66dac43e26448e0c7f4263",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/reopen_c029.py",
+    "title": "reopen_c029.py",
+    "summary": "Recoveredoriginalopenrequest,verifiedsavehash/manifestandcapturedpersistedrecords/isometric.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "7168ff1ca4f162c5b34fe10e1100282c8adcfbc702237df5ad63869139a5991e",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_c029_saved.py",
+    "title": "check_c029_saved.py",
+    "summary": "Adaptedretainedsaved-checktemplateforFiboxandwrote29actualpersistedchecks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "66edf012ef774bc679bb5a2961e12822a4c434b1fe31bcb9bde6986e6070957a",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/views_c029.py",
+    "title": "views_c029.py",
+    "summary": "CapturedreopenedTOP/FRONTviewswithfitandmargincommands.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "5ce5663e465105a52d3ea69a00a93cdd957ec600c923387d33d0017874c5e800",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_feature_checks.py",
+    "title": "c029_feature_checks.py",
+    "summary": "Measuredsourcebody/covermembersagainst3drawingdimensionsandchecked12closedshellgraphs.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "b5bbca0047df63301fb79dd2fbaef485a1c2ff7957a1f89cb2690cb0b4ff908c",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_repair_cases.py",
+    "title": "check_repair_cases.py",
+    "summary": "RannewhelperofflineonretainedbatteryandenclosurenativerecordswithoutchangingoldCAD.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "7fdd3a31d1508d769825d63779af2ae6f0d538662a7d8fee034ec982e33641e6",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/control-bootstrap-prefix.py",
+    "title": "control-bootstrap-prefix.py",
+    "summary": "Exactexecutedcontrolprefixloadingexistingguardedclient/helperandexplicitOCSsession;descriptorcontentsomitted.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "4124942161c5b83359fd4dfd403e9af9e0ff7a87c5d5b6bf6402164e8e8c2fac",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/template-check_c023_saved.py",
+    "title": "template-check_c023_saved.py",
+    "summary": "Preservedexisting29/35checkalgorithmtemplateusedbytheactualFiboxsaved-checkdriver.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_driver_source",
+    "sha256": "9641deb91a7a28973d426d5809c411f1cc61f7b309e22507fb387abe88cc01fd",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/provenance.json",
+    "title": "provenance.json",
+    "summary": "Exactoriginaltemporarydriverpaths,retainedhashesandcontrolprefixextraction;recordsoriginaldependencyconditions.",
+    "access_date": "2026-11-12",
+    "evidence_status": "execution_provenance_record",
+    "sha256": "b20ccf8ae144fa5bcdb7e963bed482f4d76fdfed9d0b7f771f8cbdf148419981",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg",
+    "title": "SavedFiboxenclosure",
+    "summary": "NewnativeDWG2018manufacturerassembly;12soliddefinitions,16placedsolids,sourcecorrectedframes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_cad_artifact",
+    "sha256": "2938b38109e7481e9e73fa2c56924b5371e30ec7f7aeb9ab27ba93d8b10e6d82",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/assembly_repair.py",
+    "title": "Checkedplacementwritehelper",
+    "summary": "Extractedrepeatedreviewedsource-planwriteactionwithfullinsertpreflight,CAS,matrixreadbackandunchangedACISchecks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implemented_and_exercised_software",
+    "sha256": "abb7e5e98bab566051f8d101cb827471b9831d868f373a6ce5e61285b0a704b8",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_assembly_repair.py",
+    "title": "Placementhelpertests",
+    "summary": "Sixexecutedcasescoverrepeatedsuccess,staleinputs,tamperedfields,duplicatehandles,readbackfailureandchangedsoliddefinition.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_software_tests",
+    "sha256": "bf64974255ebb586c559e2d4adb94e150bdd625f9ff52486b4c4db154c99a0f7",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md",
+    "title": "Manufacturerassemblyprocedure",
+    "summary": "ExtendsbatteryprocedurewithactualFiboxcase,extractedwritehelper,recoveryandmember-specificsavedchecks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_case_procedure",
+    "sha256": "35333560a4ae65aca07ca638e78ad9dc9b55514016030430588c1dead7fdbb9d",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "title": "ComponentCADskillrouter",
+    "summary": "Routesmanufacturerassemblyworktoextractedhelperwithsourceplanreviewandreadbackpreservationchecks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implemented_skill_guidance",
+    "sha256": "86ab7071c8c425d907792643c7161e919112f87402d52d4f77ec325d41cb0913",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c029-fibox-enclosure.md",
+    "title": "Enclosureiterationreport",
+    "summary": "Documentsexactvariant,newCAD,44checks,sourcecorrections,sourceframe,appliedhelperandactualmodels.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_work_report",
+    "sha256": "1be2f92ae8b21765242a4a653c7e09b543b0887d85ccf55173eafb6c67c09ea3",
+    "referring_documents": [
+      "execution/c029-fibox-enclosure.md"
+    ]
+  }
+]

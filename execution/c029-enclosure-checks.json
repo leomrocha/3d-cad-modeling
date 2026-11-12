@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "component": "FiboxARCA203015T8121020",
+  "state": "DONE",
+  "scope": "ExactmanufacturerassemblyCADandappliedreusableimprovement",
+  "native_checks": 44,
+  "native_results": "PASS",
+  "software_unit_cases": 6,
+  "recorded_component_regressions": 2,
+  "source_records": 72,
+  "original_models_preserved": 23,
+  "action_prefix_preserved": true,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "source_hashes": "PASS",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 4,
+    "receipt_included": true
+  }
+}
