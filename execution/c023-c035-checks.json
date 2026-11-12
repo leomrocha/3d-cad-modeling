@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-12",
+  "model": "gpt-6.1-sol",
+  "battery_component": "C023 \u2014 Victron BAT524110620 manufacturer exterior",
+  "battery_state": "DONE for manufacturer exterior CAD and placement/persistence iteration",
+  "native_preservation_checks": "35 PASS",
+  "solid_definitions": 21,
+  "solid_instances": 39,
+  "source_placement_corrections": 13,
+  "unchanged_solid_definitions_during_correction": 21,
+  "tests": {
+    "placement_and_traversal": "10 PASS",
+    "affected_native_reader": "22 PASS",
+    "new_structure_rigid": "2 PASS",
+    "history": "Initial refactor run19cases/16NameErrors from removed metadata locals; corrected before22-case passing run"
+  },
+  "resistor_component": "C035 \u2014 Ohmite TA310PA1K00JE",
+  "resistor_state": "NEEDS_INPUT: ceramic substrate thickness",
+  "prior_tracked_models_preserved": 22,
+  "append_only_occurrence_prefix": "PASS",
+  "original_plan_and_queue": "PRESERVED",
+  "mermaid_blocks_found_and_preserved": 2,
+  "source_records": 30,
+  "source_hashes": "PASS",
+  "saved_hash_manifest": "PASS",
+  "skill_validation": "PASS",
+  "source_observations": {
+    "PDF_dimensions_mm": {
+      "width": 341.2,
+      "depth": 160.3,
+      "height_side_view": 234.7,
+      "height_front_view": 234.3,
+      "terminal_pitch": 220
+    },
+    "STEP_terminal_placement_pitch_mm": 220.2,
+    "interpretation": "Manufacturer STEP geometry and drawing dimensions retained as distinct source observations; vertex ranges are not analytic curved-surface bounds"
+  },
+  "open_partner_records": [
+    "B0",
+    "B1",
+    "B2",
+    "B3"
+  ],
+  "git_whitespace_scope": "Authored files checked separately from unchanged original PDF bytes; earlier staged check flags original archive PDF CRLF whitespace; original preserved",
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 4,
+    "receipt_included": true
+  }
+}

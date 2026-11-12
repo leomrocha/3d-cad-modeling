@@ -1,0 +1,335 @@
+[
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp",
+    "title": "Victron BAT524110620 shared exterior STEP",
+    "summary": "Frozen byte-identical copy of already acquired manufacturer AP214 model shared with BAT512120620. Source length units are mm; retained shape definitions and19 placement frames support the new native assembly.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_downloaded_original_reused",
+    "sha256": "ae0fc44a4acdb6d0369787c3aca0436ff68e880ba4e80f2d8b531a6ca3da7f35",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ],
+    "original_url": "https://www.victronenergy.com/upload/documents/LiFePO4-Battery-25.6V100Ah-NG-(stp-).STEP"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf",
+    "title": "Victron battery dimension drawing revision02",
+    "summary": "Original companion drawing identifies both battery SKUs,341.2mm width,160.3mm depth,234.7/234.3mm height callouts and220mm terminal pitch; source values remain distinct from STEP vertex/placement observations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_downloaded_original_reused",
+    "sha256": "40242b5c34597b55921ab2328c45ad028c1a3ec53ebbf28b164532bdff9bab78",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ],
+    "original_url": "https://www.victronenergy.com/upload/documents/LiFePO4-Battery-25.6V100Ah-NG.pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv",
+    "title": "Existing Victron acquisition provenance",
+    "summary": "Retains the earlier source URLs,byte counts,digests and reported retrieval timestamps for exact STEP,PDF,manual and product page. Copied unchanged from the concurrent FERME provenance file.",
+    "access_date": "2026-11-12",
+    "evidence_status": "existing_acquisition_record_reused",
+    "sha256": "52cf7ca1cfa723bbbb94d62a553c5e9192d0bf3dc6e864c1691ccbdced8266f9",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png",
+    "title": "Existing Victron dimension drawing render",
+    "summary": "Retained render inspected for exact shared variant,top/front/side arrangement,terminal and casing dimensional labels.",
+    "access_date": "2026-11-12",
+    "evidence_status": "derived_source_render_inspected",
+    "sha256": "401eb91fd188737a960e1336c700312ac94482358aad0f3a63a60e05af249e9a",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json",
+    "title": "Battery inverse-placement diagnosis and plan",
+    "summary": "All13 nonidentity native inserts uniquely match inverse source STEP frames. Plan records original and expected matrices,source entity IDs and proposed object-coordinate native fields.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_source_placement_inspection",
+    "sha256": "07004852dac4626f311947b2ede12b712aeb6d0567605cb5dc33795259736f06",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json",
+    "title": "Actual native insertion corrections",
+    "summary": "Readback records show each of13 native insert matrices matching the reviewed source frame after compare-and-set normal,rotation and position updates.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_correction_result",
+    "sha256": "a8b1fc48e4e5df8ee374acdf0d13e9109f050fa5202d62b8718e7d5914cd0cc7",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json",
+    "title": "Battery solid-definition preservation",
+    "summary": "Exact ACIS record comparison confirms all21 solid definitions remain unchanged during placement-only correction.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_verification_result",
+    "sha256": "0fec284083dc9b813b35aab3c730fd139478233bdce6a9140e6e110daac707bc",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json",
+    "title": "Saved battery placement and geometry checks",
+    "summary": "35 passing preservation checks cover13 source matrices,21 reachable vertex sets and39 instance paths/transforms. Reports17 closed-partner definitions,four open-partner records and source drawing/STEP dimensional observations separately.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_verification_result",
+    "sha256": "767527a32e49b7c82537f6a3a45cfa8cd9f6abf16bdddee3a5759ac93a71c60d",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json",
+    "title": "Battery native save and same-ID reopen recovery",
+    "summary": "Saved file hash and audit manifest match the reopened document83; native audit reports zero errors/warnings. Original reopen was recovered after repeated bounded pending checks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_persistence_result",
+    "sha256": "cd8af8e2e403b0049ae602f9372c40a927dc762069da6ff0eaa82646ad10df88",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json",
+    "title": "Battery exterior iteration result",
+    "summary": "New native battery file,source frame,21 definitions/39 instances,actual checks,source dimensional observations,inspected views and applied reusable improvement linked by path/hash.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_component_result",
+    "sha256": "5da8d66e1afd8bcfab53c37ab99b05817f19f65006dd103c762f4436fd0f2fbd",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl",
+    "title": "Battery guarded native journal",
+    "summary": "Records isolated document82,successful STEP format/path dialog fields,original import/capture/open identities,13 compare-and-set placement edits,verified save and model views.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_native_operation_record",
+    "sha256": "352c9c93f4b7cf0f49482f663c8021d2a2469cb21b5765e759c8e274dd7fa54e",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png",
+    "title": "Saved battery isometric view",
+    "summary": "Actual reopened exterior capture shows seated terminals,lid,casing ribs,side handle recess and mounting tabs; source geometry and insertion values retain independent checks.",
+    "access_date": "2026-11-12",
+    "evidence_status": "model_capture_inspected",
+    "sha256": "f27ad1930080245891a4888ae0472c75280e3e4cbf03b908ff2ae563a3aecbed",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png",
+    "title": "Saved battery terminal-face view",
+    "summary": "Actual reopened orthographic view inspected against the source top drawing; two terminals,polarity marks,centre fitting,logo and mounting tabs are visible.",
+    "access_date": "2026-11-12",
+    "evidence_status": "model_capture_inspected",
+    "sha256": "b535018e1f7ea17d077cf981207d2dfd14e4aa7f00d48c33d180beafe2720deb",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png",
+    "title": "Saved battery front view",
+    "summary": "Actual reopened orthographic view inspected for case,lid,terminal heights,edge ribs and bottom restraint geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "model_capture_inspected",
+    "sha256": "9f4ac8b303a53ccc8dfbfaca96350bfb5addd8b2d71a37d6287ce53bef3eb0a6",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf",
+    "title": "Ohmite TA-series package datasheet copy",
+    "summary": "Manufacturer-authored PDF retained from DigiKey. Page50 TA310PA row gives25.4mm length/height and7.62mm pitch; PA diagram identifies pin section and terminal/clip callouts.",
+    "access_date": "2026-11-12",
+    "evidence_status": "downloaded_original",
+    "sha256": "e606137040fe00e4137f9ad12b7bc8ac96c66bf63b507ede6a9437b1f969539e",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ],
+    "original_url": "https://media.digikey.com/pdf/Data%20Sheets/Ohmite%20PDFs/TA%20Series.pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md",
+    "title": "Initial delegated resistor transcription",
+    "summary": "Preserved original research notes include general-dimensional-tolerance and no-scale statements excluded by coordinator review of the retained PDF. Package-table dimensions remain attributed to TA310PA. Actual researcher runtime identity unavailable.",
+    "access_date": "2026-11-12",
+    "evidence_status": "initial_transcription_with_reviewed_corrections",
+    "sha256": "4f332796e0af29ca909ac43a9b2c51841a5981ce25969eabdda37c717ed47545",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md",
+    "title": "Integrated resistor package source notes",
+    "summary": "Retains applicable TA310PA dimensions and terminal/body association distinctions,with absolute original/render links. Coordinator removed unsupported PDF tolerance/no-scale attributions while preserving initial notes.",
+    "access_date": "2026-11-12",
+    "evidence_status": "reviewed_source_notes",
+    "sha256": "65c40435781fbfed6a619fffb3589066af4baf4bd3ba60fe8bde481a3ca9227c",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md",
+    "title": "Resistor dimension association and timestamp review",
+    "summary": "Confirms package-table/pin values,keeps2.54mm terminal span separate from substrate thickness,excludes initial unsupported general-tolerance/no-scale claims,and identifies CET versus reported CEST label.",
+    "access_date": "2026-11-12",
+    "evidence_status": "manufacturer_dimension_review",
+    "sha256": "fd4bc5e105152cb658a52a8a5ce3a0a8950cc9939331d6ec664d23904698bba0",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json",
+    "title": "Resistor PDF acquisition metadata",
+    "summary": "Retains exact URL,HTTP content type/status,174915bytes,digest and reported file timestamp. Server HTTP Date is separate; coordinator timezone correction is explicit.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_acquisition_record",
+    "sha256": "e9fd025fcb585d7bf66752b14e726d22a0913d5e81f46ae45f530e6abf464e17",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png",
+    "title": "Retained resistor package drawing render",
+    "summary": "Full manufacturer-authored page inspected for TA310PA table,row applicability and PA low-wattage package callouts.",
+    "access_date": "2026-11-12",
+    "evidence_status": "derived_source_render_inspected",
+    "sha256": "d39749611f9ad546805e67ee916267a049d1bc1244972aac2e3e6532c9af2167",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json",
+    "title": "Resistor pinned source inputs",
+    "summary": "Pins body length,height and lead pitch to the original PDF hash and names ceramic thickness as the required geometry input.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implementation_input_artifact",
+    "sha256": "341cc43b9e82b0eef46bb5f607a036e1d164c9e90a6ca7276e600641682624a1",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json",
+    "title": "Resistor source gate result",
+    "summary": "Existing source-readiness code reports NEEDS_INPUT for ceramic substrate thickness; source-backed dimensions are retained for later dependent geometry.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_readiness_result",
+    "sha256": "7176b56fce55ee9430b67153bde836ce11134681e71cf5512b5e5cb6f16f200d",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json",
+    "title": "Resistor current component state",
+    "summary": "Records exact input requirement and source review; CAD construction is dependent on the named substrate/terminal geometry evidence.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_component_stage_record",
+    "sha256": "bb205b9ed579e1c76aa56df8adf883585f56f5b3764715bcf96e4f4717d337e0",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/step_placements.py",
+    "title": "Read-only source/native placement and assembly helpers",
+    "summary": "Exercised AP214 frame reader detects unique inverse matches,round-trips proposed native fields and traverses bounded single-insert unit-scale zero-base block trees. Includes identity-SAT point reader used for pre-save comparison.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implementation_artifact",
+    "sha256": "c21c35f4420c6c7ff8ac57b993b18cb2d0b97e08900af06095012b066db5b75a",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "title": "Shared strict rigid-transform body reader",
+    "summary": "Existing rigid transform validation is shared by analytic and structure-only SAB readers; structure-only checks can explicitly enable rigid frames while retaining torus/spline type observations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implementation_artifact",
+    "sha256": "84d9df7572868cfeefbc8d68c10613cc3c26431dbd3912754931856533f11937",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_step_placements.py",
+    "title": "Placement and instance traversal regression cases",
+    "summary": "Ten passing software cases cover direct source axes,observed inverse mapping,already-correct/ambiguous/unsupported inputs,nested repeated paths,cycles and instance bounds.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implementation_test_artifact",
+    "sha256": "cf4abb6551fc37a3395fae73f198b604bf401274472ba2ff3155aa586c088b79",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "title": "Affected native checks and new structure-transform cases",
+    "summary": "Existing retained-model regressions exercise shared reader behavior;two added cases require explicit rigid option and compare analytic/structure world vertices and topology.22 affected cases andtwo additional cases pass after the recorded refactor correction.",
+    "access_date": "2026-11-12",
+    "evidence_status": "implementation_test_artifact",
+    "sha256": "2a6d90bee66a8763fa3268d4240d99206bba2002c4f34c80f016921738ea1b5e",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md",
+    "title": "Executed manufacturer assembly import procedure",
+    "summary": "Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_procedure_documentation",
+    "sha256": "956084a4d2f2da5616c4dbd7917229b0e0f59c8b17b53c1ce20e6b61d3a3c262",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c023-victron-battery.md",
+    "title": "Battery exterior execution report",
+    "summary": "Records newly saved native model,actual source reuse,13 placement corrections,21 unchanged definitions,39 instances,35 saved checks and per-source geometry observations.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_work_report",
+    "sha256": "dcec8a8cbf19c70ea9ccc5562e07535db8f615219303243d34a2272dab058ae7",
+    "referring_documents": [
+      "execution/c023-victron-battery.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c035-resistor-source.md",
+    "title": "Resistor source-readiness execution report",
+    "summary": "Records retained exact package datasheet,source-backed length/height/pitch and the named substrate-thickness input requirement from the actual review.",
+    "access_date": "2026-11-12",
+    "evidence_status": "executed_work_report",
+    "sha256": "6e24f8bee020ab655f422d00015499b18262dc01f98b5f85cfbfb34b6bbf1337",
+    "referring_documents": [
+      "execution/c035-resistor-source.md"
+    ]
+  }
+]

@@ -568,6 +568,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
 
+<a id="src-0b5ad789671d"></a>
+
+## SRC-0b5ad789671d — Ohmite TA-series package datasheet copy
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf)
+
+Summary: Manufacturer-authored PDF retained from DigiKey. Page50 TA310PA row gives25.4mm length/height and7.62mm pitch; PA diagram identifies pin section and terminal/clip callouts.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-0bc5d8f02292"></a>
 
 ## SRC-0bc5d8f02292 — Trelleborg T539 tyre (C001) — CAD input sheet
@@ -663,6 +675,18 @@ Summary: Twelve passing cases cover sources, corrections, changed revisions, zer
 Evidence: local_implementation_or_execution_record_inspected.
 
 Documents: research/sources/round-17/source-intake-sources.json.
+
+<a id="src-0de1ce69cd32"></a>
+
+## SRC-0de1ce69cd32 — Initial delegated resistor transcription
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md)
+
+Summary: Preserved original research notes include general-dimensional-tolerance and no-scale statements excluded by coordinator review of the retained PDF. Package-table dimensions remain attributed to TA310PA. Actual researcher runtime identity unavailable.
+
+Evidence: initial_transcription_with_reviewed_corrections.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-0df55f79b2d5"></a>
 
@@ -1192,6 +1216,18 @@ Evidence: authored_document_inspected, local_source_inspected.
 
 Documents: research/sources/round-07/parts-catalogue-sources.json, research/sources/round-08/component-plan-sources.json.
 
+<a id="src-1d0764f851b0"></a>
+
+## SRC-1d0764f851b0 — Battery exterior iteration result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json)
+
+Summary: New native battery file,source frame,21 definitions/39 instances,actual checks,source dimensional observations,inspected views and applied reusable improvement linked by path/hash.
+
+Evidence: executed_component_result.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-1d9ccefff7d7"></a>
 
 ## SRC-1d9ccefff7d7 — SKF iteration — ocs-journal.jsonl
@@ -1384,6 +1420,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-03-software.md, research/action-audit/reviews/point-03-visual.md, research/cad-and-skills.md, research/sources/round-02/cad-sources.json, research/workflows/details/cad-r02.md, research/workflows/details/cad-r04.md, research/workflows/details/mix-r02.md.
 
+<a id="src-228e61d4e7a6"></a>
+
+## SRC-228e61d4e7a6 — Resistor source gate result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json)
+
+Summary: Existing source-readiness code reports NEEDS_INPUT for ceramic substrate thickness; source-backed dimensions are retained for later dependent geometry.
+
+Evidence: executed_readiness_result.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-22b94e3ef160"></a>
 
 ## SRC-22b94e3ef160 — Caster angle-setting pin (C019) — CAD input sheet
@@ -1500,9 +1548,9 @@ Original source: [/home/leo/projects/3dmodeling/scripts/native_acis.py](/home/le
 
 Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.
 
-Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected.
+Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected, implementation_artifact.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-20/component-sources.json.
 
 <a id="src-26397bd1f7c2"></a>
 
@@ -2320,6 +2368,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-390f5c71910b"></a>
+
+## SRC-390f5c71910b — Existing Victron acquisition provenance
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv)
+
+Summary: Retains the earlier source URLs,byte counts,digests and reported retrieval timestamps for exact STEP,PDF,manual and product page. Copied unchanged from the concurrent FERME provenance file.
+
+Evidence: existing_acquisition_record_reused.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-39a648fd2c2a"></a>
 
 ## SRC-39a648fd2c2a — rec-r03.md
@@ -2704,6 +2764,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-3f924501d4f4"></a>
+
+## SRC-3f924501d4f4 — Saved battery isometric view
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png)
+
+Summary: Actual reopened exterior capture shows seated terminals,lid,casing ribs,side handle recess and mounting tabs; source geometry and insertion values retain independent checks.
+
+Evidence: model_capture_inspected.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-3fe2f4ec6c23"></a>
 
 ## SRC-3fe2f4ec6c23 — Blender MCP license
@@ -2739,6 +2811,18 @@ Summary: Named TRELLIS.2-4B model card inspected 2026-11-12. Card labels this ch
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/rec-r10.md.
+
+<a id="src-407da05c0cd4"></a>
+
+## SRC-407da05c0cd4 — Resistor pinned source inputs
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json)
+
+Summary: Pins body length,height and lead pitch to the original PDF hash and names ceramic thickness as the required geometry input.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-409fb1abfc4f"></a>
 
@@ -2848,6 +2932,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/action-audit/reviews/point-06-visual.md, research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r02.md.
 
+<a id="src-4285b32bca80"></a>
+
+## SRC-4285b32bca80 — Executed manufacturer assembly import procedure
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md](/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md)
+
+Summary: Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.
+
+Evidence: executed_procedure_documentation.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-42c5c688de76"></a>
 
 ## SRC-42c5c688de76 — NEN — NEN-EN 10210-1:2026 Ontw. en (draft) catalogue entry
@@ -2871,6 +2967,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-43041e997990"></a>
+
+## SRC-43041e997990 — Existing Victron dimension drawing render
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png)
+
+Summary: Retained render inspected for exact shared variant,top/front/side arrangement,terminal and casing dimensional labels.
+
+Evidence: derived_source_render_inspected.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-43744e9db2f6"></a>
 
@@ -3123,6 +3231,18 @@ Summary: Official ROS URDFDOM header on mutable rolling branch, accessed 2026-11
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
+
+<a id="src-49518696c006"></a>
+
+## SRC-49518696c006 — Battery native save and same-ID reopen recovery
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json)
+
+Summary: Saved file hash and audit manifest match the reopened document83; native audit reports zero errors/warnings. Original reopen was recovered after repeated bounded pending checks.
+
+Evidence: executed_persistence_result.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-4956c1c938ca"></a>
 
@@ -3411,6 +3531,18 @@ Summary: Primary sources: FreeCAD source/licence, Sketcher Python scripting, Par
 Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md.
+
+<a id="src-4ff31c35be7c"></a>
+
+## SRC-4ff31c35be7c — Battery guarded native journal
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl)
+
+Summary: Records isolated document82,successful STEP format/path dialog fields,original import/capture/open identities,13 compare-and-set placement edits,verified save and model views.
+
+Evidence: executed_native_operation_record.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-500be17749c8"></a>
 
@@ -3891,6 +4023,18 @@ Summary: The separate community project ahujasid/mcp-for-blender is explicitly n
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/reviews/point-06-visual.md, research/domains-and-components.md, research/sources/round-02/domain-sources.json, research/sources/round-03/domain-detail-sources.json, research/workflows/domain-paths.md.
+
+<a id="src-59097305d36e"></a>
+
+## SRC-59097305d36e — Battery exterior execution report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c023-victron-battery.md](/home/leo/projects/3dmodeling/execution/c023-victron-battery.md)
+
+Summary: Records newly saved native model,actual source reuse,13 placement corrections,21 unchanged definitions,39 instances,35 saved checks and per-source geometry observations.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-599641f63e9d"></a>
 
@@ -4444,6 +4588,18 @@ Evidence: authored_document_or_code_inspected.
 
 Documents: research/sources/round-09/component-execution-sources.json.
 
+<a id="src-6712dfc9aea8"></a>
+
+## SRC-6712dfc9aea8 — Retained resistor package drawing render
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png)
+
+Summary: Full manufacturer-authored page inspected for TA310PA table,row applicability and PA low-wattage package callouts.
+
+Evidence: derived_source_render_inspected.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-672023a44bcd"></a>
 
 ## SRC-672023a44bcd — Local OCS bounded-area construction implementation
@@ -4815,6 +4971,18 @@ Summary: - AliceVision official project (MPL-2.0; workflows): https://alicevisio
 Evidence: existing_report_registered.
 
 Documents: research/action-audit/implementation-queue/queue.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/workflows/details/mix-r01.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r09.md, research/workflows/details/rec-r01.md, research/workflows/details/rec-r02.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md.
+
+<a id="src-6e8a1b7fa38b"></a>
+
+## SRC-6e8a1b7fa38b — Resistor PDF acquisition metadata
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json)
+
+Summary: Retains exact URL,HTTP content type/status,174915bytes,digest and reported file timestamp. Server HTTP Date is separate; coordinator timezone correction is explicit.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-6e951925cbb7"></a>
 
@@ -5188,6 +5356,18 @@ Evidence: authored_document_inspected.
 
 Documents: research/sources/round-05/point-06-local-sources.json.
 
+<a id="src-79edac842934"></a>
+
+## SRC-79edac842934 — Actual native insertion corrections
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json)
+
+Summary: Readback records show each of13 native insert matrices matching the reviewed source frame after compare-and-set normal,rotation and position updates.
+
+Evidence: executed_native_correction_result.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-79f9dd42f446"></a>
 
 ## SRC-79f9dd42f446 — step.rs
@@ -5308,6 +5488,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-7d74315cc8c4"></a>
+
+## SRC-7d74315cc8c4 — Placement and instance traversal regression cases
+
+Original source: [/home/leo/projects/3dmodeling/tests/test_step_placements.py](/home/leo/projects/3dmodeling/tests/test_step_placements.py)
+
+Summary: Ten passing software cases cover direct source axes,observed inverse mapping,already-correct/ambiguous/unsupported inputs,nested repeated paths,cycles and instance bounds.
+
+Evidence: implementation_test_artifact.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-7db7da4f6264"></a>
 
 ## SRC-7db7da4f6264 — Tube-corner source observations
@@ -5403,6 +5595,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; N
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-7fc6417a02f1"></a>
+
+## SRC-7fc6417a02f1 — Victron BAT524110620 shared exterior STEP
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp)
+
+Summary: Frozen byte-identical copy of already acquired manufacturer AP214 model shared with BAT512120620. Source length units are mm; retained shape definitions and19 placement frames support the new native assembly.
+
+Evidence: existing_downloaded_original_reused.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-7fe70bbaa630"></a>
 
@@ -5764,6 +5968,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/findings.md, research/action-audit/implementation-queue/queue.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/mix-r09.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md, research/workflows/reconstruction-paths.md.
 
+<a id="src-878a429a2c73"></a>
+
+## SRC-878a429a2c73 — Saved battery front view
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png)
+
+Summary: Actual reopened orthographic view inspected for case,lid,terminal heights,edge ribs and bottom restraint geometry.
+
+Evidence: model_capture_inspected.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-87d4523a6fea"></a>
 
 ## SRC-87d4523a6fea — BMW i3 94Ah battery module (C022) — CAD input sheet
@@ -6040,6 +6256,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-15/leaf-sources.json.
 
+<a id="src-8f19f4f777d2"></a>
+
+## SRC-8f19f4f777d2 — Resistor dimension association and timestamp review
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md)
+
+Summary: Confirms package-table/pin values,keeps2.54mm terminal span separate from substrate thickness,excludes initial unsupported general-tolerance/no-scale claims,and identifies CET versus reported CEST label.
+
+Evidence: manufacturer_dimension_review.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-8f369f8f1381"></a>
 
 ## SRC-8f369f8f1381 — Python — MuJoCo Documentation
@@ -6096,9 +6324,9 @@ Original source: [/home/leo/projects/3dmodeling/tests/test_native_acis.py](/home
 
 Summary: Four integration tests use FERME saved rail evidence: source dimensions pass, pre-save/reopened vertex and radius sets agree, wrong260mm expectation fails for600mm rail, and truncated binary is rejected.
 
-Evidence: local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected.
+Evidence: local_execution_evidence_inspected, local_execution_source_inspected, local_source_or_execution_record_inspected, implementation_test_artifact.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-13/crossmember-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-20/component-sources.json.
 
 <a id="src-90428f0f4c05"></a>
 
@@ -6411,6 +6639,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; L
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-96c77b310d08"></a>
+
+## SRC-96c77b310d08 — Battery solid-definition preservation
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json)
+
+Summary: Exact ACIS record comparison confirms all21 solid definitions remain unchanged during placement-only correction.
+
+Evidence: executed_verification_result.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-96e5bd9ad8ba"></a>
 
@@ -7708,6 +7948,18 @@ Evidence: existing_report_registered, local_source_or_execution_record_inspected
 
 Documents: research/sources/round-08/component-plan-sources.json, research/sources/round-14/bearing-sources.json.
 
+<a id="src-b51ee490a99b"></a>
+
+## SRC-b51ee490a99b — Resistor source-readiness execution report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c035-resistor-source.md](/home/leo/projects/3dmodeling/execution/c035-resistor-source.md)
+
+Summary: Records retained exact package datasheet,source-backed length/height/pitch and the named substrate-thickness input requirement from the actual review.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-b56bc21f14db"></a>
 
 ## SRC-b56bc21f14db — rec-r06.md
@@ -8164,6 +8416,18 @@ Evidence: existing_report_registered.
 
 Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
+<a id="src-bedb22ee447a"></a>
+
+## SRC-bedb22ee447a — Saved battery placement and geometry checks
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json)
+
+Summary: 35 passing preservation checks cover13 source matrices,21 reachable vertex sets and39 instance paths/transforms. Reports17 closed-partner definitions,four open-partner records and source drawing/STEP dimensional observations separately.
+
+Evidence: executed_verification_result.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-bee391035496"></a>
 
 ## SRC-bee391035496 — Precharge resistor Ohmite TA310PA1K00JE (C035) — CAD input sheet
@@ -8283,6 +8547,18 @@ Summary: Existing local source cited by point 02 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json.
+
+<a id="src-c0bd9d377ee7"></a>
+
+## SRC-c0bd9d377ee7 — Saved battery terminal-face view
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png)
+
+Summary: Actual reopened orthographic view inspected against the source top drawing; two terminals,polarity marks,centre fitting,logo and mounting tabs are visible.
+
+Evidence: model_capture_inspected.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-c0ffb325c952"></a>
 
@@ -9664,6 +9940,18 @@ Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
 
+<a id="src-e5ab2b710c51"></a>
+
+## SRC-e5ab2b710c51 — Integrated resistor package source notes
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md)
+
+Summary: Retains applicable TA310PA dimensions and terminal/body association distinctions,with absolute original/render links. Coordinator removed unsupported PDF tolerance/no-scale attributions while preserving initial notes.
+
+Evidence: reviewed_source_notes.
+
+Documents: research/sources/round-20/component-sources.json.
+
 <a id="src-e5af12a0873d"></a>
 
 ## SRC-e5af12a0873d — Research and proposed implementation
@@ -9771,6 +10059,18 @@ Summary: Input sheet registered from the inspected ferme manifest: electrical; B
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-e86237284595"></a>
+
+## SRC-e86237284595 — Victron battery dimension drawing revision02
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf)
+
+Summary: Original companion drawing identifies both battery SKUs,341.2mm width,160.3mm depth,234.7/234.3mm height callouts and220mm terminal pitch; source values remain distinct from STEP vertex/placement observations.
+
+Evidence: existing_downloaded_original_reused.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-e8734095736c"></a>
 
@@ -10095,6 +10395,30 @@ Summary: Component-specific native checks, save/reopen observations and source p
 Evidence: local_source_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
+
+<a id="src-ef86743da4af"></a>
+
+## SRC-ef86743da4af — Read-only source/native placement and assembly helpers
+
+Original source: [/home/leo/projects/3dmodeling/scripts/step_placements.py](/home/leo/projects/3dmodeling/scripts/step_placements.py)
+
+Summary: Exercised AP214 frame reader detects unique inverse matches,round-trips proposed native fields and traverses bounded single-insert unit-scale zero-base block trees. Includes identity-SAT point reader used for pre-save comparison.
+
+Evidence: implementation_artifact.
+
+Documents: research/sources/round-20/component-sources.json.
+
+<a id="src-f052fe7cc9cb"></a>
+
+## SRC-f052fe7cc9cb — Resistor current component state
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json)
+
+Summary: Records exact input requirement and source review; CAD construction is dependent on the named substrate/terminal geometry evidence.
+
+Evidence: executed_component_stage_record.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-f06d3b316cfc"></a>
 
@@ -10587,6 +10911,18 @@ Summary: Input sheet registered from the inspected ferme manifest: attachments; 
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-fb567caa0d5c"></a>
+
+## SRC-fb567caa0d5c — Battery inverse-placement diagnosis and plan
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json)
+
+Summary: All13 nonidentity native inserts uniquely match inverse source STEP frames. Plan records original and expected matrices,source entity IDs and proposed object-coordinate native fields.
+
+Evidence: executed_source_placement_inspection.
+
+Documents: research/sources/round-20/component-sources.json.
 
 <a id="src-fbf7ed489d76"></a>
 
