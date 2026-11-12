@@ -268,6 +268,18 @@ Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-05-local-sources.json.
 
+<a id="src-04583314396e"></a>
+
+## SRC-04583314396e — ME0907 save and reopen receipt
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json)
+
+Summary: Records matching saved DWG hash and audit manifest, zero audit errors/warnings and recovery of the original reopen operation after its polling bound.
+
+Evidence: executed_persistence_result.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-045e4e413150"></a>
 
 ## SRC-045e4e413150 — P02 crossmember — interface-checks.json
@@ -400,6 +412,18 @@ Evidence: authored_document_inspected, local_reference_registered.
 
 Documents: research/sources/round-05/point-02-local-sources.json, research/sources/round-05/point-03-local-sources.json, research/sources/round-05/point-04-local-sources.json, research/sources/round-05/point-05-local-sources.json, research/sources/round-05/point-06-local-sources.json, research/sources/round-05/point-07-local-sources.json.
 
+<a id="src-0895e33945c4"></a>
+
+## SRC-0895e33945c4 — Executed axial motor procedure
+
+Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/axial-motor.md](/home/leo/projects/3dmodeling/skills/component-cad/references/axial-motor.md)
+
+Summary: Documents source-leader review, explicit keyway reconstruction, bounded native construction, surface-based dimensions, save/reopen recovery and per-feature downstream handoffs established by this actual motor.
+
+Evidence: executed_procedure_documentation.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-08989edb31e4"></a>
 
 ## SRC-08989edb31e4 — first action plan
@@ -411,6 +435,18 @@ Summary: Authoritative existing action/route record or authored implementation-q
 Evidence: authored_document_inspected, local_source_inspected, local_implementation_or_execution_record_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json, research/sources/round-07/parts-catalogue-sources.json, research/sources/round-17/source-intake-sources.json.
+
+<a id="src-08a4605c6182"></a>
+
+## SRC-08a4605c6182 — ME0907 component feature-stage state
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json)
+
+Summary: Mechanical interfaces are saved with18 passing checks. Exterior source lookup is complete; cooling-slot, terminal and connector geometry have a named required input, with manufacturer and supplier evidence linked.
+
+Evidence: executed_component_stage_record.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-0910720e555c"></a>
 
@@ -735,6 +771,18 @@ Summary: Documented byte hashing and SHA-256 constructors used as source evidenc
 Evidence: local_source_inspected, local_reference_registered.
 
 Documents: research/sources/round-04/audit-local-sources.json, research/sources/round-05/point-02-local-sources.json.
+
+<a id="src-11c693014725"></a>
+
+## SRC-11c693014725 — Source-bound axial motor construction and checker
+
+Original source: [/home/leo/projects/3dmodeling/scripts/axial_motor.py](/home/leo/projects/3dmodeling/scripts/axial_motor.py)
+
+Summary: New Python recipe calls existing guarded native geometry for housing/pilot, blind patterns, keyed shaft and rear region. Checks analytic cylinders and individual blind-bottom planes instead of estimating circle diameter from seam vertices.
+
+Evidence: implementation_artifact.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-11f42e602b33"></a>
 
@@ -1156,6 +1204,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-1e8dca4fc3d4"></a>
+
+## SRC-1e8dca4fc3d4 — Axial motor failure regression cases
+
+Original source: [/home/leo/projects/3dmodeling/tests/test_axial_motor.py](/home/leo/projects/3dmodeling/tests/test_axial_motor.py)
+
+Summary: Eight focused software tests exercise seam-only vertices, missing hole, swapped depths, wrong blind depth, wrong keyway floor, wrong diameter, invalid extents and unit/overrun rejection.
+
+Evidence: implementation_test_artifact.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-1eac959ecbf4"></a>
 
 ## SRC-1eac959ecbf4 — P01 p01-build-03 — persistence.json
@@ -1420,6 +1480,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/cad-detail-sources.json, research/workflows/details/cad-r01.md, research/workflows/details/mix-r02.md, research/workflows/details/mix-r03.md, research/workflows/details/mix-r04.md, research/workflows/details/mix-r07.md, research/workflows/details/mix-r09.md.
 
+<a id="src-25f843f2d67d"></a>
+
+## SRC-25f843f2d67d — Kelly archive member 48VCCW.pdf
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf)
+
+Summary: Retained original48V counterclockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.
+
+Evidence: extracted_original_archive_member.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-261ec2be4f36"></a>
 
 ## SRC-261ec2be4f36 — Body-linked native SAB feature adapter
@@ -1648,6 +1720,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-16/driver-sources.json.
 
+<a id="src-2c5893d8360b"></a>
+
+## SRC-2c5893d8360b — ME0907 additional exterior-source findings
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md)
+
+Summary: Bounded delegated review identifies the direct manufacturer drawing, Kelly archive variant, EVEA CAD-on-request page and cover150-011 with three Phillips screws. Exact URLs and download outcomes are retained. Actual agent identity unavailable.
+
+Evidence: delegated_web_review_record.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-2cea52720940"></a>
 
 ## SRC-2cea52720940 — P01 p01-build-03 — reopened-checks.json
@@ -1671,6 +1755,18 @@ Summary: Official raw source on tag v0.20.0 inspected 2026-11-12. `CreateFromCol
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/sources/round-05/point-07-web-sources.json.
+
+<a id="src-2d09726ce736"></a>
+
+## SRC-2d09726ce736 — Reviewed motor dimensions and feature associations
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md)
+
+Summary: Source-image review corrects the two mounting group associations, identifies 30 mm shaft-thread depth and 19.58 mm keyway section distance, and retains source tolerances and server-date attribution.
+
+Evidence: manufacturer_dimension_review.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-2d331dacc4f0"></a>
 
@@ -1863,6 +1959,18 @@ Summary: p01-build-03 reopened-records.json: 1 native entity records in document
 Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-11/rail-execution-sources.json.
+
+<a id="src-30ccd7c0d9d0"></a>
+
+## SRC-30ccd7c0d9d0 — ME0907 source drawing render
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png)
+
+Summary: Rendered original sheet inspected for front/side/section associations, exterior slots, terminals, connectors and source notes.
+
+Evidence: derived_source_render_inspected.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-3126762ba53b"></a>
 
@@ -2163,6 +2271,18 @@ Summary: - OpenMVS repository: https://github.com/cdcseacave/openMVS
 Evidence: existing_report_registered.
 
 Documents: research/reconstruction.md.
+
+<a id="src-37228572b45c"></a>
+
+## SRC-37228572b45c — Saved ME0907 analytic geometry observations
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json)
+
+Summary: 18 passing checks read actual saved surfaces and topology: cylinder axes/radii, individual hole-bottom centres, end stations, keyway planes/rounded end and three closed connected bodies.
+
+Evidence: executed_verification_result.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-379d3077df35"></a>
 
@@ -3004,6 +3124,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/point-06-building-and-robot.md, research/action-audit/reviews/point-06-designer.md, research/action-audit/reviews/point-06-software.md, research/sources/round-05/point-06-web-sources.json.
 
+<a id="src-4956c1c938ca"></a>
+
+## SRC-4956c1c938ca — ME0907 pinned feature inputs
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json)
+
+Summary: Binds 19 dimensions to original PDF/hash/locators, mm frame and mechanical-interface representation. Separately labels cutting overrun and reconstructed R2.39 mm keyway end.
+
+Evidence: implementation_input_artifact.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-49d1aa4fd35a"></a>
 
 ## SRC-49d1aa4fd35a — GitHub repository metadata or tree response
@@ -3424,6 +3556,18 @@ Evidence: local_execution_evidence_inspected.
 
 Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
+<a id="src-528c832b5179"></a>
+
+## SRC-528c832b5179 — ME0907 acquisition response and hash
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json)
+
+Summary: Records retained PDF path, HTTP status/content type and digest. The coordinator review classifies the retrieved_at field as copied server HTTP Date metadata.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-529bea09ca56"></a>
 
 ## SRC-529bea09ca56 — Existing IFC-to-GLB provenance record
@@ -3651,6 +3795,18 @@ Summary: Input sheet registered from the inspected ferme manifest: drive; BT; or
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-56813006b275"></a>
+
+## SRC-56813006b275 — EVEA ME0907 fan cover listing
+
+Original source: [https://www.evea-solutions.com/en/engine-accessories/1372-fan-cover-for-me0907-pmsm-brushless-motor.html](https://www.evea-solutions.com/en/engine-accessories/1372-fan-cover-for-me0907-pmsm-brushless-motor.html)
+
+Summary: Cover reference 150-011; black openwork plastic; three Phillips-head screws. No dimensions published.
+
+Evidence: delegated_web_inspection.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-56b9d47414e7"></a>
 
@@ -4107,6 +4263,18 @@ Summary: Authoritative existing action/route record or authored implementation-q
 Evidence: authored_document_inspected.
 
 Documents: research/sources/round-06/implementation-queue-sources.json.
+
+<a id="src-63185270fad3"></a>
+
+## SRC-63185270fad3 — Additional motor source acquisition manifest
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json)
+
+Summary: Records URLs, downloaded originals, archive members, byte counts, MIME types and hashes; page-only Autodesk viewer/cache-miss and EVEA CAD-on-request observations remain distinct. Date fields match the recorded HTTP Date and are preserved as reported acquisition metadata.
+
+Evidence: executed_acquisition_record.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-6350270f836a"></a>
 
@@ -4707,6 +4875,18 @@ Summary: Input sheet registered from the inspected ferme manifest: frame; Common
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-703184413ae8"></a>
+
+## SRC-703184413ae8 — Delegated initial motor drawing transcription
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md)
+
+Summary: Initial Luna-assigned transcription of the retained drawing. Its mounting group, thread-depth and tolerance associations are preserved with separate coordinator corrections; actual delegated runtime identity unavailable.
+
+Evidence: initial_transcription_with_reviewed_corrections.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-704288e14b9b"></a>
 
@@ -5787,6 +5967,18 @@ Summary: Actual example robot model source file for the Menagerie Panda; use onl
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/sources/round-03/domain-detail-sources.json, research/workflows/details/dom-r04.md.
+
+<a id="src-8ce066c08d57"></a>
+
+## SRC-8ce066c08d57 — Kelly ME0907 drawing/test-data archive
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip)
+
+Summary: Original ZIP linked by Kelly ME0907 page, acquired with three PDF members. The outline member is titled Mars Electric ME0201013001; it retains its own variant identity.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-8d633a1cae00"></a>
 
@@ -6964,6 +7156,18 @@ Evidence: retained_manufacturer_outline_inspected.
 
 Documents: research/sources/round-16/driver-sources.json.
 
+<a id="src-a7c2279a0c45"></a>
+
+## SRC-a7c2279a0c45 — Motenergy ME0907 outline 0JWT.301.073
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf)
+
+Summary: Original dimensioned motor drawing retained from EV Europe. Supplies mounting groups, shaft/keyway section, locating pilot, main/rear axial stations, nominal thread designations and exterior outlines. DO NOT SCALE accompanies the drawing.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-a807c8e08b82"></a>
 
 ## SRC-a807c8e08b82 — Existing OCS metric page-setup DXF fixture
@@ -7996,6 +8200,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-bfb6141184a2"></a>
+
+## SRC-bfb6141184a2 — Direct Motenergy ME0907 outline copy
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf)
+
+Summary: Original PDF acquired from the drawing link on Motenergy ME0907 page. Drawing title0JWT.301.073 and existing interfaces are identified in the delegated review; this retains the manufacturer-linked source separately from the EV Europe copy.
+
+Evidence: downloaded_original.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-bfd136961cc3"></a>
 
 ## SRC-bfd136961cc3 — Nerfstudio installation and CLI examples
@@ -8188,6 +8404,18 @@ Evidence: local_source_or_execution_record_inspected.
 
 Documents: research/sources/round-14/bearing-sources.json.
 
+<a id="src-c3c48b5318f8"></a>
+
+## SRC-c3c48b5318f8 — Kelly archive member 48VCW.pdf
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf)
+
+Summary: Retained original48V clockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.
+
+Evidence: extracted_original_archive_member.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-c49f0a4410c4"></a>
 
 ## SRC-c49f0a4410c4 — Installed CAD and computational engineering command availability inventory
@@ -8211,6 +8439,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-c52a21c8147a"></a>
+
+## SRC-c52a21c8147a — New motor implementation report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c005-me0907.md](/home/leo/projects/3dmodeling/execution/c005-me0907.md)
+
+Summary: Records new FERME model dimensions/detail, 18 saved checks, eight focused tests, source corrections, inspected views and the reusable axial construction/check improvement.
+
+Evidence: executed_work_report.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-c5c9233bf7a9"></a>
 
@@ -8535,6 +8775,18 @@ Summary: Input sheet registered from the inspected ferme manifest: caster; Remov
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-cc58c415a1bb"></a>
+
+## SRC-cc58c415a1bb — EVEA ME0907 product page / Autodesk Gallery viewer
+
+Original source: [https://www.evea-solutions.com/fr/moteurs-synchrones/668-moteur-synchrone-me0907-pmsm-brushless.html](https://www.evea-solutions.com/fr/moteurs-synchrones/668-moteur-synchrone-me0907-pmsm-brushless.html)
+
+Summary: Page states 3D model available on request and links a public Autodesk Gallery viewer. No request was sent.
+
+Evidence: delegated_web_inspection.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-cc688c1df94b"></a>
 
@@ -9184,6 +9436,18 @@ Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
 
+<a id="src-de3fef8057a3"></a>
+
+## SRC-de3fef8057a3 — ME0907 actual native operation journal
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl)
+
+Summary: Records isolated document creation, cylinders, pilot union, two blind-hole groups, end-thread/keyway cuts, save, same-identity reopen recovery and model captures.
+
+Evidence: executed_native_operation_record.
+
+Documents: research/sources/round-19/me0907-sources.json.
+
 <a id="src-de7c1927c29d"></a>
 
 ## SRC-de7c1927c29d — Saved rail hash and native API bounds observation
@@ -9651,6 +9915,18 @@ Summary: Actual source implements preprocessing, single-image inference, mesh ex
 Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/reviews/point-07-visual.md, research/sources/round-03/domain-detail-sources.json.
+
+<a id="src-eb5bcb4295ce"></a>
+
+## SRC-eb5bcb4295ce — Kelly archive predecessor motor outline
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf)
+
+Summary: Original archive member for ME0201013001, drawing0JWT.300.117. Delegated review identifies it as related visual evidence under Motenergy direct-replacement claim; it supplies its own title and is kept separate from exact ME0907 dimensions.
+
+Evidence: extracted_original_archive_member.
+
+Documents: research/sources/round-19/me0907-sources.json.
 
 <a id="src-eb880f7efbac"></a>
 

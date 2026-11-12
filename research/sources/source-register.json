@@ -910,6 +910,32 @@
       ]
     },
     {
+      "id": "SRC-04583314396e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json",
+      "title": "ME0907 save and reopen receipt",
+      "summary": "Records matching saved DWG hash and audit manifest, zero audit errors/warnings and recovery of the original reopen operation after its polling bound.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_persistence_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_persistence_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json",
+          "access_date": "2026-11-12",
+          "sha256": "04c8c157a870f9034970f846af1f05571be1446098462d1508b3dfaffa7d05ab",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-045e4e413150",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json",
@@ -1314,6 +1340,32 @@
       ]
     },
     {
+      "id": "SRC-0895e33945c4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/axial-motor.md",
+      "title": "Executed axial motor procedure",
+      "summary": "Documents source-leader review, explicit keyway reconstruction, bounded native construction, surface-based dimensions, save/reopen recovery and per-feature downstream handoffs established by this actual motor.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_procedure_documentation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_procedure_documentation",
+          "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/axial-motor.md",
+          "access_date": "2026-11-12",
+          "sha256": "5ca6a06dc546a6075ae590d5513cd52d92df2c787d9bbf432c2cb13aaeb51750",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-08989edb31e4",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
@@ -1362,6 +1414,32 @@
         "research/sources/round-06/implementation-queue-sources.json",
         "research/sources/round-07/parts-catalogue-sources.json",
         "research/sources/round-17/source-intake-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-08a4605c6182",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json",
+      "title": "ME0907 component feature-stage state",
+      "summary": "Mechanical interfaces are saved with18 passing checks. Exterior source lookup is complete; cooling-slot, terminal and connector geometry have a named required input, with manufacturer and supplier evidence linked.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_component_stage_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_stage_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json",
+          "access_date": "2026-11-12",
+          "sha256": "5a2af068ad96188255c1c58bc852acfd714ab987db07fead8c01e4af95ad8ae1",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -2160,6 +2238,32 @@
       "referring_documents": [
         "research/sources/round-04/audit-local-sources.json",
         "research/sources/round-05/point-02-local-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-11c693014725",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/scripts/axial_motor.py",
+      "title": "Source-bound axial motor construction and checker",
+      "summary": "New Python recipe calls existing guarded native geometry for housing/pilot, blind patterns, keyed shaft and rear region. Checks analytic cylinders and individual blind-bottom planes instead of estimating circle diameter from seam vertices.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_artifact",
+          "local_original": "/home/leo/projects/3dmodeling/scripts/axial_motor.py",
+          "access_date": "2026-11-12",
+          "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -3283,6 +3387,32 @@
       ]
     },
     {
+      "id": "SRC-1e8dca4fc3d4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/tests/test_axial_motor.py",
+      "title": "Axial motor failure regression cases",
+      "summary": "Eight focused software tests exercise seam-only vertices, missing hole, swapped depths, wrong blind depth, wrong keyway floor, wrong diameter, invalid extents and unit/overrun rejection.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_test_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_test_artifact",
+          "local_original": "/home/leo/projects/3dmodeling/tests/test_axial_motor.py",
+          "access_date": "2026-11-12",
+          "sha256": "b5d1942b18fe67181b156f3667ff91a405720452e57b3d98a1508de2e07bcd99",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-1eac959ecbf4",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json",
@@ -4059,6 +4189,31 @@
       ]
     },
     {
+      "id": "SRC-25f843f2d67d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf",
+      "title": "Kelly archive member 48VCCW.pdf",
+      "summary": "Retained original48V counterclockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "extracted_original_archive_member"
+      ],
+      "observations": [
+        {
+          "evidence_status": "extracted_original_archive_member",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "14e45d737dae52f663b4db5f805e567a87175ab998605c8f6a951edaf9dcde3f",
+          "referring_documents": [
+            "execution/c005-me0907.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-261ec2be4f36",
       "url": null,
       "local_source_path": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
@@ -4829,6 +4984,32 @@
       ]
     },
     {
+      "id": "SRC-2c5893d8360b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md",
+      "title": "ME0907 additional exterior-source findings",
+      "summary": "Bounded delegated review identifies the direct manufacturer drawing, Kelly archive variant, EVEA CAD-on-request page and cover150-011 with three Phillips screws. Exact URLs and download outcomes are retained. Actual agent identity unavailable.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_web_review_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_web_review_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md",
+          "access_date": "2026-11-12",
+          "sha256": "c85a65afaa33e27182e9a2eb236da04892d08f7490e1faff993262d2f87c2ec9",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-2cea52720940",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json",
@@ -4889,6 +5070,32 @@
         "research/action-audit/reviews/point-07-software.md",
         "research/action-audit/reviews/point-07-sources.md",
         "research/sources/round-05/point-07-web-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2d09726ce736",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md",
+      "title": "Reviewed motor dimensions and feature associations",
+      "summary": "Source-image review corrects the two mounting group associations, identifies 30 mm shaft-thread depth and 19.58 mm keyway section distance, and retains source tolerances and server-date attribution.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "manufacturer_dimension_review"
+      ],
+      "observations": [
+        {
+          "evidence_status": "manufacturer_dimension_review",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md",
+          "access_date": "2026-11-12",
+          "sha256": "2cad2e9626e585e7271debdeb015703dc76d2f38e60f919de14df4a05d17ed81",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -5575,6 +5782,32 @@
       ],
       "referring_documents": [
         "research/sources/round-11/rail-execution-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-30ccd7c0d9d0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png",
+      "title": "ME0907 source drawing render",
+      "summary": "Rendered original sheet inspected for front/side/section associations, exterior slots, terminals, connectors and source notes.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "derived_source_render_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "derived_source_render_inspected",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png",
+          "access_date": "2026-11-12",
+          "sha256": "97749b64c796622db2a27700461d13b98593802f915350469de363533feffc0c",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -6370,6 +6603,32 @@
       "observations": [],
       "referring_documents": [
         "research/reconstruction.md"
+      ]
+    },
+    {
+      "id": "SRC-37228572b45c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json",
+      "title": "Saved ME0907 analytic geometry observations",
+      "summary": "18 passing checks read actual saved surfaces and topology: cylinder axes/radii, individual hole-bottom centres, end stations, keyway planes/rounded end and three closed connected bodies.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_verification_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_verification_result",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json",
+          "access_date": "2026-11-12",
+          "sha256": "86cb0dd9935098af2c0875aa246e10bc91e7c8d2260e0f9689ff49a5aea7efb5",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -8662,6 +8921,32 @@
       ]
     },
     {
+      "id": "SRC-4956c1c938ca",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json",
+      "title": "ME0907 pinned feature inputs",
+      "summary": "Binds 19 dimensions to original PDF/hash/locators, mm frame and mechanical-interface representation. Separately labels cutting overrun and reconstructed R2.39 mm keyway end.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "implementation_input_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_input_artifact",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json",
+          "access_date": "2026-11-12",
+          "sha256": "3fc0912ad322723f27951ebc0126cef33e7fbbd961d2cb4c7881bb52ca03c9ed",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-49d1aa4fd35a",
       "url": "https://api.github.com/repos/reyk/freecad-ai-skill/git/trees/HEAD?recursive=1",
       "local_source_path": null,
@@ -9743,6 +10028,32 @@
       ]
     },
     {
+      "id": "SRC-528c832b5179",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json",
+      "title": "ME0907 acquisition response and hash",
+      "summary": "Records retained PDF path, HTTP status/content type and digest. The coordinator review classifies the retrieved_at field as copied server HTTP Date metadata.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "c8f0d421a40e38c75e03a6cf005321cebc596dc5e308c330b1717392ab6302a8",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-529bea09ca56",
       "url": null,
       "local_source_path": "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
@@ -10367,6 +10678,30 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-56813006b275",
+      "url": "https://www.evea-solutions.com/en/engine-accessories/1372-fan-cover-for-me0907-pmsm-brushless-motor.html",
+      "local_source_path": null,
+      "title": "EVEA ME0907 fan cover listing",
+      "summary": "Cover reference 150-011; black openwork plastic; three Phillips-head screws. No dimensions published.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_web_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_web_inspection",
+          "access_date": "2026-11-12",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -11639,6 +11974,32 @@
       ],
       "referring_documents": [
         "research/sources/round-06/implementation-queue-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-63185270fad3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json",
+      "title": "Additional motor source acquisition manifest",
+      "summary": "Records URLs, downloaded originals, archive members, byte counts, MIME types and hashes; page-only Autodesk viewer/cache-miss and EVEA CAD-on-request observations remain distinct. Date fields match the recorded HTTP Date and are preserved as reported acquisition metadata.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_acquisition_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_acquisition_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json",
+          "access_date": "2026-11-12",
+          "sha256": "821896120daafddfee106d28d098cfd9300982dca8131a3626ceaa8ce8ad7949",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -13304,6 +13665,32 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-703184413ae8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md",
+      "title": "Delegated initial motor drawing transcription",
+      "summary": "Initial Luna-assigned transcription of the retained drawing. Its mounting group, thread-depth and tolerance associations are preserved with separate coordinator corrections; actual delegated runtime identity unavailable.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "initial_transcription_with_reviewed_corrections"
+      ],
+      "observations": [
+        {
+          "evidence_status": "initial_transcription_with_reviewed_corrections",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md",
+          "access_date": "2026-11-12",
+          "sha256": "2a8c6933fc2873d9b478ee54f7b936ea3cb8fd8dd64dc21e75004ab2a60a3293",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -16443,6 +16830,33 @@
       "referring_documents": [
         "research/sources/round-03/domain-detail-sources.json",
         "research/workflows/details/dom-r04.md"
+      ]
+    },
+    {
+      "id": "SRC-8ce066c08d57",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip",
+      "title": "Kelly ME0907 drawing/test-data archive",
+      "summary": "Original ZIP linked by Kelly ME0907 page, acquired with three PDF members. The outline member is titled Mars Electric ME0201013001; it retains its own variant identity.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip",
+          "access_date": "2026-11-12",
+          "sha256": "1ce9294773164fd97f66bc740b4f1a1d98344f33d50dd07387f93c062af8ca86",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ],
+          "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -19983,6 +20397,33 @@
       ]
     },
     {
+      "id": "SRC-a7c2279a0c45",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf",
+      "title": "Motenergy ME0907 outline 0JWT.301.073",
+      "summary": "Original dimensioned motor drawing retained from EV Europe. Supplies mounting groups, shaft/keyway section, locating pilot, main/rear axial stations, nominal thread designations and exterior outlines. DO NOT SCALE accompanies the drawing.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "7c2fa6fefe5dabfd06143dd568ea90355622c6d6c0e1d3e22c518fa572e98c04",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ],
+          "original_url": "https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-a807c8e08b82",
       "url": null,
       "local_source_path": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf",
@@ -22860,6 +23301,33 @@
       ]
     },
     {
+      "id": "SRC-bfb6141184a2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf",
+      "title": "Direct Motenergy ME0907 outline copy",
+      "summary": "Original PDF acquired from the drawing link on Motenergy ME0907 page. Drawing title0JWT.301.073 and existing interfaces are identified in the delegated review; this retains the manufacturer-linked source separately from the EV Europe copy.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "downloaded_original"
+      ],
+      "observations": [
+        {
+          "evidence_status": "downloaded_original",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "0f24b6623bef575afa1371969a7acd201d20f2191814ebce3d1f19fe119c3304",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ],
+          "original_url": "https://sep.turbifycdn.com/ty/cdn/yhst-129399866319704/ME0907.pdf?t=1783724599"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-bfd136961cc3",
       "url": "https://docs.nerf.studio/quickstart/installation.html",
       "local_source_path": null,
@@ -23493,6 +23961,31 @@
       ]
     },
     {
+      "id": "SRC-c3c48b5318f8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf",
+      "title": "Kelly archive member 48VCW.pdf",
+      "summary": "Retained original48V clockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "extracted_original_archive_member"
+      ],
+      "observations": [
+        {
+          "evidence_status": "extracted_original_archive_member",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "a09fb35f822b6630dc90dcf59100d70eb763187927a6751f5de392641be5b46a",
+          "referring_documents": [
+            "execution/c005-me0907.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-c49f0a4410c4",
       "url": null,
       "local_source_path": "/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/harness/installed-tools-path-inventory.json",
@@ -23587,6 +24080,32 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c52a21c8147a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c005-me0907.md",
+      "title": "New motor implementation report",
+      "summary": "Records new FERME model dimensions/detail, 18 saved checks, eight focused tests, source corrections, inspected views and the reusable axial construction/check improvement.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_work_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_work_report",
+          "local_original": "/home/leo/projects/3dmodeling/execution/c005-me0907.md",
+          "access_date": "2026-11-12",
+          "sha256": "e99e3aceee040a7c0ef42c6392aa3a6c63ba02bffce27d67caf03db593b2e3aa",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -24619,6 +25138,30 @@
       ],
       "referring_documents": [
         "research/sources/round-08/component-plan-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-cc58c415a1bb",
+      "url": "https://www.evea-solutions.com/fr/moteurs-synchrones/668-moteur-synchrone-me0907-pmsm-brushless.html",
+      "local_source_path": null,
+      "title": "EVEA ME0907 product page / Autodesk Gallery viewer",
+      "summary": "Page states 3D model available on request and links a public Autodesk Gallery viewer. No request was sent.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "delegated_web_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "delegated_web_inspection",
+          "access_date": "2026-11-12",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
@@ -26286,6 +26829,32 @@
       ]
     },
     {
+      "id": "SRC-de3fef8057a3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl",
+      "title": "ME0907 actual native operation journal",
+      "summary": "Records isolated document creation, cylinders, pilot union, two blind-hole groups, end-thread/keyway cuts, save, same-identity reopen recovery and model captures.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "executed_native_operation_record"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_operation_record",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl",
+          "access_date": "2026-11-12",
+          "sha256": "af76044665112b253e66be247d707190552a5e513410d1331e6fe5369ad2096a",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ]
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
+      ]
+    },
+    {
       "id": "SRC-de7c1927c29d",
       "url": null,
       "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json",
@@ -27537,6 +28106,33 @@
       "referring_documents": [
         "research/action-audit/reviews/point-07-visual.md",
         "research/sources/round-03/domain-detail-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-eb5bcb4295ce",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf",
+      "title": "Kelly archive predecessor motor outline",
+      "summary": "Original archive member for ME0201013001, drawing0JWT.300.117. Delegated review identifies it as related visual evidence under Motenergy direct-replacement claim; it supplies its own title and is kept separate from exact ME0907 dimensions.",
+      "registered_at": "2026-11-12",
+      "evidence_statuses": [
+        "extracted_original_archive_member"
+      ],
+      "observations": [
+        {
+          "evidence_status": "extracted_original_archive_member",
+          "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf",
+          "access_date": "2026-11-12",
+          "sha256": "23ab4fe38cb476b8b0895cda3335605f6dbf0ab0b09be755fc6fe881b3fe7c12",
+          "referring_documents": [
+            "execution/c005-me0907.md",
+            "skills/component-cad/references/axial-motor.md"
+          ],
+          "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-19/me0907-sources.json"
       ]
     },
     {
