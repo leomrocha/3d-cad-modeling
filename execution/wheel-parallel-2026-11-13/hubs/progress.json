@@ -1,0 +1,101 @@
+{
+  "date": "2026-11-13",
+  "actual_model": "gpt-6-luna",
+  "scope": [
+    "P12 ME0907 supported wheel shaft",
+    "P12B driven sprocket axle carrier",
+    "P14ME ME0907 wheel shaft to rim adapter",
+    "P14SM PRO-M ring to rim adapter",
+    "P14SL PRO-L ring to rim adapter",
+    "P14BT BT output to rim adapter"
+  ],
+  "acceptance_state": "All six remain discussion ideas; no item is accepted in this iteration. Do not mark any item ACCEPTED.",
+  "local_inspection": {
+    "component_skill": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md and references/existing-model-start-check.md",
+    "manifest": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+    "work_index": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "models_index": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "inventory_script": "/home/leo/projects/3dmodeling/scripts/model_inventory.py",
+    "inventory_run": "Each id was run individually against the 43-file inventory. The gate output is preserved in this report."
+  },
+  "components": [
+    {
+      "id": "P12",
+      "name": "ME0907 supported wheel shaft",
+      "work_index_state": "NOT_STARTED",
+      "start_gate": "REVIEW_EXISTING_CANDIDATES",
+      "result": "Candidate reviewed: the attributed file is the separate ME0907 motor model, not a P12 shaft model. P12 remains NEW_MODEL_REQUIRED.",
+      "actual_part_path": null,
+      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg",
+      "build_state": "NOT_BUILT",
+      "source_readiness": "PARTIAL; motor shaft drawing features are recorded in local source report, while wheel shaft bearing spacing, shaft-seat fits, bearing spacing, stack, keyways, retention and selected braking interface remain unsupported by a dimensioned P12 source."
+    },
+    {
+      "id": "P12B",
+      "name": "Driven sprocket axle carrier",
+      "work_index_state": "NOT_STARTED",
+      "start_gate": "NEW_MODEL_REQUIRED",
+      "result": "43 existing 3D model/reference files checked; no matching P12B model or unresolved filename candidate found.",
+      "actual_part_path": null,
+      "build_state": "NOT_BUILT",
+      "source_readiness": "PARTIAL; mating C008 sprocket exact pilot/hole pattern and P12 drive interface must be extracted from their own records before construction."
+    },
+    {
+      "id": "P14ME",
+      "name": "ME0907 wheel shaft to rim adapter",
+      "work_index_state": "NOT_STARTED",
+      "start_gate": "REVIEW_EXISTING_CANDIDATES",
+      "result": "Candidate reviewed: the attributed file is the separate ME0907 motor model, not a P14ME adapter. P14ME remains NEW_MODEL_REQUIRED.",
+      "actual_part_path": null,
+      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg",
+      "build_state": "NOT_BUILT",
+      "source_readiness": "PARTIAL; rim side is documented; P12 custom shaft-side shoulder/drive/retention must be explicitly dimensioned before a complete adapter job."
+    },
+    {
+      "id": "P14SM",
+      "name": "PRO-M ring to rim adapter",
+      "work_index_state": "NOT_STARTED",
+      "start_gate": "NEW_MODEL_REQUIRED",
+      "result": "43 existing 3D model/reference files checked; no matching P14SM model or unresolved filename candidate found.",
+      "actual_part_path": null,
+      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-m-ch54065.dwg",
+      "build_state": "NOT_BUILT",
+      "source_readiness": "PARTIAL; manufacturer page 3 supplies ring pilot Ø145 h7 and 12×M5 depth12 on Ø134 PCD and Ø123 central output face; separate stationary case pattern is 4×M10 through on 160 square. C003 side awaits exact rim seat evidence; source outline does not dimension G-140 mating groove."
+    },
+    {
+      "id": "P14SL",
+      "name": "PRO-L ring to rim adapter",
+      "work_index_state": "NOT_STARTED",
+      "start_gate": "NEW_MODEL_REQUIRED",
+      "result": "43 existing 3D model/reference files checked; no matching P14SL model or unresolved filename candidate found.",
+      "actual_part_path": null,
+      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-l-ch54527.dwg",
+      "build_state": "NOT_BUILT",
+      "source_readiness": "PARTIAL; manufacturer page 2 supplies ring pilot Ø182 h7 and 12×M6 depth12 on Ø170 PCD and Ø155 central output face; separate stationary case pattern is 4×M12 through on 142 square. C003 side awaits exact rim seat evidence; source outline does not dimension AS568-261 mating groove."
+    },
+    {
+      "id": "P14BT",
+      "name": "BT output to rim adapter",
+      "work_index_state": "NOT_STARTED",
+      "start_gate": "NEW_MODEL_REQUIRED",
+      "result": "43 existing 3D model/reference files checked; no matching P14BT model or unresolved filename candidate found.",
+      "actual_part_path": null,
+      "reusable_dependency": "Local BT service manual report / exploded illustration only; no matching dimensioned BT 3D model was found in the inventory.",
+      "build_state": "NOT_BUILT",
+      "source_readiness": "BLOCKED for dimensioned construction; bounded web/local review found only exact-revision service manual/exploded view with shaft, bolts, seals and bearings but no output profile/projection, retention dimensions, wheel-bolt coordinates, bearing spacing or dimensioned envelope. Torque entries conflict at 130 N·m vs 90 N·m for item 15; preserve both claims."
+    }
+  ],
+  "shared_geometry": {
+    "units": "mm",
+    "assembly_axes": "X forward, Y left, Z up",
+    "rim_interface": "C003 Keiyama source record: 4×100 PCD, Ø60 centre, ET0, Ø13.5 plain holes. The source summary reports 7×8 rim and 425 kg at 20 km/h.",
+    "alternate_rim_seat": "Knott D12 spherical-seat fastener geometry is a different interface. Do not combine it with Keiyama Ø13.5 plain holes in one unlabeled pattern.",
+    "bearings": "C009 SKF SY20TF pair interface: 20 mm bore; housing envelope 127×32×64.5 mm; shaft height 33.3 mm; nominal bolt spacing 97 mm and slots 88–106 mm. Existing checked model and recorded checks are reusable.",
+    "me0907_motor": "Separate motor interface: Ø22.225 mm shaft, length 44.4 mm, 3/16 in (4.7625 mm) key, per local motor research. This does not define P12 axle interfaces.",
+    "pro_m": "C010 output-ring attributes from sheet: Ø145 h7 pilot; 12×M5 class 10.9; G-140 O-ring 3.1×139.4. Source sheet records 4×M10 class 8.8 stationary housing mounts and torque 46 N·m (source claim).",
+    "pro_l": "C011 output-ring attributes from sheet: Ø182 h7 pilot; 12×M6 class 10.9; AS568-261 O-ring 3.53×171.04. Source sheet records 4×M12 class 8.8 stationary housing mounts and torque 79 N·m (source condition applies).",
+    "frames": "Preserve each part datum from its input sheet and record transform. The P14 ring adapters have separate gearmotor ring face and rim face datums. No joint stacks, part thicknesses, fits or load sizing were inferred here."
+  },
+  "source_evidence_status": "Existing report/sheet registration, retained Sumitomo manufacturer PDF inspection on pages 2–3, and bounded web inspection for exact C008 PBR 4384 50T fitment/drawing evidence and BT LPE240 723984 / OEM169536 output-interface drawings on 2026-11-13. No new source originals downloaded; no newly acquired original bytes. The retained Sumitomo manufacturer PDF original URL, retrieval date, content type, local path, and SHA-256 are documented in source-and-actions.md. C008/BT web findings and source limits are recorded below.",
+  "next_executable_documents": "Construction work orders require exact input dimensions, source-feature coordinates and explicit alternative labels; this task prepares those gates but performs no native CAD mutation."
+}

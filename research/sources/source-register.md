@@ -16005,3 +16005,141 @@ Source: [Existing wheel hub and shaft findings](/home/leo/projects/ferme/researc
 Summary: Named hub, shaft, bearing and brake component interfaces and route alternatives reused by the running hub/adapter assignment.
 
 Evidence: inspected_local_research.
+
+## Wheel interface source results — 13 November 2026
+
+### Tyre profile source review — SRC-5d76e97c65ab
+
+Source: [Tyre profile source review](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/README.md)
+
+Summary: Reuses exact T539 table; records mating rim references, section input gate, nominal envelope frame and source version discrepancy.
+
+Evidence: delegated_source_review.
+
+### Tyre source records — SRC-edf64ae7a4e8
+
+Source: [Tyre source records](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/source-records.json)
+
+Summary: Original Continental/Petlas URLs, observed claims, existing Trelleborg original hash and flange-width source discrepancy.
+
+Evidence: executed_source_registration.
+
+### Tyre source-stage progress — SRC-6c9455412f0c
+
+Source: [Tyre source-stage progress](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/progress.json)
+
+Summary: Actual C001 start-gate result, source-stage completion and separate component input-gate state; no CAD mutation.
+
+Evidence: executed_source_stage_result.
+
+### Exact rim source review — SRC-36b728154357
+
+Source: [Exact rim source review](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/report.md)
+
+Summary: Keiyama/Knott identities, separate fixing seats, standardized profile references and product-section input questions.
+
+Evidence: delegated_source_review.
+
+### Rim geometric handoff — SRC-bfe15fc3a1f9
+
+Source: [Rim geometric handoff](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/geometry-handoff.json)
+
+Summary: Named dimensions, units/frame, mounting pattern and per-product partial source coverage with construction handoff.
+
+Evidence: implementation_input_artifact.
+
+### Rim source observations — SRC-8e40f450fc7f
+
+Source: [Rim source observations](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/sources.csv)
+
+Summary: Exact supplied/canonical URLs, observed date and actual web-inspection evidence; originals not acquired in this stage.
+
+Evidence: executed_source_registration.
+
+### Rim source-stage progress — SRC-e996f690d362
+
+Source: [Rim source-stage progress](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/progress.json)
+
+Summary: Two component-specific new-model checks and partial-source construction state.
+
+Evidence: executed_source_stage_result.
+
+### Wheel hub and shaft source/action review — SRC-4e988ebfcaad
+
+Source: [Wheel hub and shaft source/action review](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/source-and-actions.md)
+
+Summary: Six distinct file gates, source-derived PRO ring/mount patterns, actual PBR50T/BT followup findings and feature-specific work orders.
+
+Evidence: delegated_source_review.
+
+### Hub and adapter source-stage progress — SRC-fab209186151
+
+Source: [Hub and adapter source-stage progress](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/progress.json)
+
+Summary: Per-component file identity/candidate decisions, supported interfaces and exact remaining source conditions.
+
+Evidence: executed_source_stage_result.
+
+### Coordinator wheel source integration — SRC-1a944a3da043
+
+Source: [Coordinator wheel source integration](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md)
+
+Summary: Summarizes the distinct source-ready wheel interfaces, input gates, source statuses, preserved completed models and subsequent active implementation assignments.
+
+Evidence: executed_integration_report.
+
+### Agricultural tyre/rim table, Continental Agricultural Databook — SRC-36eb88cc0cf7
+
+Source: [Agricultural tyre/rim table, Continental Agricultural Databook](https://www.continental-tyres.co.uk/content/dam/conti-tires-cms/continental/b2b/agriculture/Continental__AG__Databook__A4__EN__copy.pdf.coredownload.pdf)
+
+Summary: Observed source claims: {"rim_contour": "7.00I", "rim_type": "5° drop-center symmetric", "specified_width_A_mm": 178, "flange_height_G_mm": 16, "minimum_flange_width_Bmin_mm": 10, "minimum_bead_seat_width_Pmin_mm": 23}; locator: Printed page 87, section 5° Drop-Center Symmetric, 7.00I row and adjacent rim contour diagram
+
+Evidence: web_inspection.
+
+### Tire Guide, Industrial & OTR Tires, Petlas — SRC-a9a1c5e60bf3
+
+Source: [Tire Guide, Industrial & OTR Tires, Petlas](https://www.petlas.com/en/powerguid/)
+
+Summary: Observed source claims: {"rim_contour": "7.00I", "specified_width_A_mm": 178, "flange_height_G_mm": 16, "minimum_bead_seat_width_Pmin_mm": 23, "nominal_rim_code": 8, "rim_diameter_D_mm": 202.4}; locator: RIMS / 5° Drop-Centre Rim - DD(L) Rim Contour table; Semi-drop & divided rim table; Rim Diameters table
+
+Evidence: web_inspection.
+
+### Trelleborg Technical Manual — SRC-40bcecc74df2
+
+Source: [Trelleborg Technical Manual](https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/technical-manual/trelleborg-technical-manual-en.pdf?hash=AB0C897622FFD6443624A33BDFA5552E&rev=258948143820400e9a05c5a63b8c7ae0&sc_lang=en)
+
+Summary: Observed source claims: {"rim_contour": "7.00I", "permitted_rim": "6.50-8", "outside_diameter_mm": 466, "outside_diameter_tolerance_percent": 1.5, "section_width_mm": 222, "section_width_tolerance_percent": 2, "rolling_circumference_mm": 1384, "rolling_circumference_tolerance_percent": 2.5, "maximum_air_pressure_bar": 2.8, "maximum_load_kg": 475, "speed_km_h": 30}; locator: PDF page 111; printed page 221; 18x8.50-8, 6PR, T539, Farming row
+
+Evidence: existing_downloaded_original_and_source_review.
+
+### Continental Technical Data Book — Agriculture, printed p. 84 — SRC-f002508a1eb2
+
+Source: [Continental Technical Data Book — Agriculture, printed p. 84](https://prod.continental-tires.com/content/dam/conti-tires-cms/continental/b2b/agriculture/CO_TechnicalDataBook_PDF_EN_CS.pdf.coredownload.pdf)
+
+Summary: Manufacturer table for7.00I nominal rim contour dimensions; version-specific flange-width minimum retained.
+
+Evidence: web_inspected_source_claim.
+
+### Petlas Tire Guide — Industrial & OTR Tires — SRC-a9a1c5e60bf3
+
+Source: [Petlas Tire Guide — Industrial & OTR Tires](https://www.petlas.com/en/powerguid/)
+
+Summary: Manufacturer rim reference tables for7.00I width/flange/bead-seat values and nominal diameter code8.
+
+Evidence: web_inspected_source_claim.
+
+### Knott rim 7.00Ix8 item 402386.001 — SRC-26778a23c9b6
+
+Source: [Knott rim 7.00Ix8 item 402386.001](https://www.knott-trailer-shop.com/rim_7_00ix8.html)
+
+Summary: Exact Knott402386.001 product listing for7.00Ix8,4x100,Ø60,ET0 and D12 spherical-seat fasteners.
+
+Evidence: web_inspected_source_claim.
+
+### Keiyama JA08-700-4T100-02 steel rim — SRC-da99f2ecb321
+
+Source: [Keiyama JA08-700-4T100-02 steel rim](https://www.keiyama.eu/jante-nue-agraire-acier-grise-700x8-et0-4-trous-60x100.html)
+
+Summary: Exact KeiyamaJA08-700-4T100-02 listing for7x8,4x100,Ø60,ET0 andØ13.5 fixing/Ø11.3 valve holes.
+
+Evidence: web_inspected_source_claim.

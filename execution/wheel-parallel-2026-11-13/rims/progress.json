@@ -1,0 +1,24 @@
+{
+  "task": "C003 Keiyama JA08-700-4T100-02 and C004 Knott 402386.001 rim geometry source readiness",
+  "observed_at": "2026-11-13T08:26:42Z",
+  "status": "DONE",
+  "source_readiness": "PARTIAL_SOURCE_READY",
+  "runtime_model": "unavailable",
+  "requested_model": "gpt-6-luna",
+  "actions_completed": [
+    "Read live 3dmodeling and FERME AGENTS.md and the component-cad existing-model procedure.",
+    "Read both rim input sheets and checked local part index, work index, CAD tree, existing rim research, source records, and 2D rim interface references.",
+    "Ran scripts/model_inventory.py for C003 and C004. Both report NEW_MODEL_REQUIRED, with no attributed or filename candidate 3D rim model among 43 checked 3D model files.",
+    "Inspected both exact seller product pages and manufacturer contour references from Continental and Petlas.",
+    "Recorded common nominal 7.00I contour dimensions and separate C003 plain-hole / C004 spherical-seat interfaces.",
+    "Produced report, source manifest, and source-bound geometry handoff. No downloaded originals, CAD files, shared indexes, or commits were created."
+  ],
+  "remaining_component_inputs": [
+    "Product-specific rim barrel/center-disc section and dish profile for each rim",
+    "Steel thickness, weld geometry, and detailed bead-seat radii/tolerances",
+    "Exact Knott spherical-seat radius and depth",
+    "Keiyama product-page confirmation that the rim uses the published 7.00I contour"
+  ],
+  "output_files": ["report.md", "geometry-handoff.json", "sources.csv"],
+  "companion_FERME_output": "write attempt pending"
+}

@@ -1,0 +1,190 @@
+[
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/README.md",
+    "title": "Tyre profile source review",
+    "summary": "Reuses exact T539 table; records mating rim references, section input gate, nominal envelope frame and source version discrepancy.",
+    "evidence_status": "delegated_source_review",
+    "access_date": "2026-11-13",
+    "sha256": "aa4b9c1acae779b9d549daf9b66686cdd3dad842d7d09054c2b31aa74fbf05f5",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/source-records.json",
+    "title": "Tyre source records",
+    "summary": "Original Continental/Petlas URLs, observed claims, existing Trelleborg original hash and flange-width source discrepancy.",
+    "evidence_status": "executed_source_registration",
+    "access_date": "2026-11-13",
+    "sha256": "9ffc22b82ebe4bcbbdf49e43a3213a3cd32395b64d6eff2211ed8c6970d8180e",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/progress.json",
+    "title": "Tyre source-stage progress",
+    "summary": "Actual C001 start-gate result, source-stage completion and separate component input-gate state; no CAD mutation.",
+    "evidence_status": "executed_source_stage_result",
+    "access_date": "2026-11-13",
+    "sha256": "3c7e44e38fcf04eb59245a86e74e42ecfda76efd1995841a33826ce580c21ce6",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/report.md",
+    "title": "Exact rim source review",
+    "summary": "Keiyama/Knott identities, separate fixing seats, standardized profile references and product-section input questions.",
+    "evidence_status": "delegated_source_review",
+    "access_date": "2026-11-13",
+    "sha256": "b7a733633720188b97063184cec5f59f9d212bee3f20f36bcec6d4544e24a013",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/geometry-handoff.json",
+    "title": "Rim geometric handoff",
+    "summary": "Named dimensions, units/frame, mounting pattern and per-product partial source coverage with construction handoff.",
+    "evidence_status": "implementation_input_artifact",
+    "access_date": "2026-11-13",
+    "sha256": "b58759c9c43e5830c3e76d4c081a7574e22286e6b14f01471078eec50864fcff",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/sources.csv",
+    "title": "Rim source observations",
+    "summary": "Exact supplied/canonical URLs, observed date and actual web-inspection evidence; originals not acquired in this stage.",
+    "evidence_status": "executed_source_registration",
+    "access_date": "2026-11-13",
+    "sha256": "97829a5e3551533b1446f6f475c03666b836ea2a8f864c129ef042050b87914e",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/progress.json",
+    "title": "Rim source-stage progress",
+    "summary": "Two component-specific new-model checks and partial-source construction state.",
+    "evidence_status": "executed_source_stage_result",
+    "access_date": "2026-11-13",
+    "sha256": "92a71d6c0f4b2ea3ed8739f9443824df800cbe3fd7e1a212ad7b36950e2258b0",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/source-and-actions.md",
+    "title": "Wheel hub and shaft source/action review",
+    "summary": "Six distinct file gates, source-derived PRO ring/mount patterns, actual PBR50T/BT followup findings and feature-specific work orders.",
+    "evidence_status": "delegated_source_review",
+    "access_date": "2026-11-13",
+    "sha256": "ab162a6fc6fdd1d31075cbdaee47e44def9072925b42f02bfec83d4974aff385",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/progress.json",
+    "title": "Hub and adapter source-stage progress",
+    "summary": "Per-component file identity/candidate decisions, supported interfaces and exact remaining source conditions.",
+    "evidence_status": "executed_source_stage_result",
+    "access_date": "2026-11-13",
+    "sha256": "1fdc2bee473fdbe79550c98a301c6e4c30daae3f012eba304f5701af90e949c6",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md",
+    "title": "Coordinator wheel source integration",
+    "summary": "Summarizes the distinct source-ready wheel interfaces, input gates, source statuses, preserved completed models and subsequent active implementation assignments.",
+    "evidence_status": "executed_integration_report",
+    "access_date": "2026-11-13",
+    "sha256": "677c498d39479da21d8d8aadfc6819c79c5a89be8818ce50f4150af50d714f54",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "url": "https://www.continental-tyres.co.uk/content/dam/conti-tires-cms/continental/b2b/agriculture/Continental__AG__Databook__A4__EN__copy.pdf.coredownload.pdf",
+    "title": "Agricultural tyre/rim table, Continental Agricultural Databook",
+    "summary": "Observed source claims: {\"rim_contour\": \"7.00I\", \"rim_type\": \"5° drop-center symmetric\", \"specified_width_A_mm\": 178, \"flange_height_G_mm\": 16, \"minimum_flange_width_Bmin_mm\": 10, \"minimum_bead_seat_width_Pmin_mm\": 23}; locator: Printed page 87, section 5° Drop-Center Symmetric, 7.00I row and adjacent rim contour diagram",
+    "evidence_status": "web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "url": "https://www.petlas.com/en/powerguid/",
+    "title": "Tire Guide, Industrial & OTR Tires, Petlas",
+    "summary": "Observed source claims: {\"rim_contour\": \"7.00I\", \"specified_width_A_mm\": 178, \"flange_height_G_mm\": 16, \"minimum_bead_seat_width_Pmin_mm\": 23, \"nominal_rim_code\": 8, \"rim_diameter_D_mm\": 202.4}; locator: RIMS / 5° Drop-Centre Rim - DD(L) Rim Contour table; Semi-drop & divided rim table; Rim Diameters table",
+    "evidence_status": "web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "url": "https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/technical-manual/trelleborg-technical-manual-en.pdf?hash=AB0C897622FFD6443624A33BDFA5552E&rev=258948143820400e9a05c5a63b8c7ae0&sc_lang=en",
+    "title": "Trelleborg Technical Manual",
+    "summary": "Observed source claims: {\"rim_contour\": \"7.00I\", \"permitted_rim\": \"6.50-8\", \"outside_diameter_mm\": 466, \"outside_diameter_tolerance_percent\": 1.5, \"section_width_mm\": 222, \"section_width_tolerance_percent\": 2, \"rolling_circumference_mm\": 1384, \"rolling_circumference_tolerance_percent\": 2.5, \"maximum_air_pressure_bar\": 2.8, \"maximum_load_kg\": 475, \"speed_km_h\": 30}; locator: PDF page 111; printed page 221; 18x8.50-8, 6PR, T539, Farming row",
+    "evidence_status": "existing_downloaded_original_and_source_review",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ],
+    "local_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
+    "content_type": "application/pdf",
+    "retrieved_at": "2026-11-13T08:54:26+01:00",
+    "sha256": "f9b0296a673b0fe14ca3649953a0feaa57963af88b23a58aa59350dfacf39cec"
+  },
+  {
+    "url": "https://prod.continental-tires.com/content/dam/conti-tires-cms/continental/b2b/agriculture/CO_TechnicalDataBook_PDF_EN_CS.pdf.coredownload.pdf",
+    "canonical_source_url": "https://prod.continental-tires.com/content/dam/conti-tires-cms/continental/b2b/agriculture/CO_TechnicalDataBook_PDF_EN_CS.pdf.coredownload.pdf",
+    "title": "Continental Technical Data Book — Agriculture, printed p. 84",
+    "summary": "Manufacturer table for7.00I nominal rim contour dimensions; version-specific flange-width minimum retained.",
+    "evidence_status": "web_inspected_source_claim",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "url": "https://www.petlas.com/en/powerguid/",
+    "canonical_source_url": "https://www.petlas.com/en/powerguid/",
+    "title": "Petlas Tire Guide — Industrial & OTR Tires",
+    "summary": "Manufacturer rim reference tables for7.00I width/flange/bead-seat values and nominal diameter code8.",
+    "evidence_status": "web_inspected_source_claim",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "url": "https://www.knott-trailer-shop.com/rim_7_00ix8.html",
+    "canonical_source_url": "https://www.knott-trailer-shop.com/rim_7_00ix8.html",
+    "title": "Knott rim 7.00Ix8 item 402386.001",
+    "summary": "Exact Knott402386.001 product listing for7.00Ix8,4x100,Ø60,ET0 and D12 spherical-seat fasteners.",
+    "evidence_status": "web_inspected_source_claim",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  },
+  {
+    "url": "https://www.keiyama.eu/jante-nue-agraire-acier-grise-700x8-et0-4-trous-60x100.html",
+    "canonical_source_url": "https://www.keiyama.eu/jante-nue-agraire-grise-700x8-et0-4-trous-60x100.html",
+    "title": "Keiyama JA08-700-4T100-02 steel rim",
+    "summary": "Exact KeiyamaJA08-700-4T100-02 listing for7x8,4x100,Ø60,ET0 andØ13.5 fixing/Ø11.3 valve holes.",
+    "evidence_status": "web_inspected_source_claim",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+    ]
+  }
+]

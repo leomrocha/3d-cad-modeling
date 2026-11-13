@@ -1,0 +1,85 @@
+{
+  "observation_date": "2026-11-13",
+  "timezone": "Europe/Paris",
+  "component_id": "C001",
+  "component_name": "Trelleborg T539 18x8.50-8 6PR tube-type tyre",
+  "sources": [
+    {
+      "title": "Agricultural tyre/rim table, Continental Agricultural Databook",
+      "url": "https://www.continental-tyres.co.uk/content/dam/conti-tires-cms/continental/b2b/agriculture/Continental__AG__Databook__A4__EN__copy.pdf.coredownload.pdf",
+      "status": "web_inspection",
+      "locator": "Printed page 87, section 5° Drop-Center Symmetric, 7.00I row and adjacent rim contour diagram",
+      "claims_observed": {
+        "rim_contour": "7.00I",
+        "rim_type": "5° drop-center symmetric",
+        "specified_width_A_mm": 178,
+        "flange_height_G_mm": 16,
+        "minimum_flange_width_Bmin_mm": 10,
+        "minimum_bead_seat_width_Pmin_mm": 23
+      },
+      "acquisition": "No original bytes downloaded; web-extracted PDF table and diagram inspected.",
+      "local_path": null,
+      "content_type": null,
+      "retrieved_at": null,
+      "sha256": null
+    },
+    {
+      "title": "Tire Guide, Industrial & OTR Tires, Petlas",
+      "url": "https://www.petlas.com/en/powerguid/",
+      "status": "web_inspection",
+      "locator": "RIMS / 5° Drop-Centre Rim - DD(L) Rim Contour table; Semi-drop & divided rim table; Rim Diameters table",
+      "claims_observed": {
+        "rim_contour": "7.00I",
+        "specified_width_A_mm": 178,
+        "flange_height_G_mm": 16,
+        "minimum_bead_seat_width_Pmin_mm": 23,
+        "nominal_rim_code": 8,
+        "rim_diameter_D_mm": 202.4
+      },
+      "acquisition": "No original bytes downloaded; web page tables inspected.",
+      "local_path": null,
+      "content_type": null,
+      "retrieved_at": null,
+      "sha256": null
+    },
+    {
+      "title": "Trelleborg Technical Manual",
+      "url": "https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/technical-manual/trelleborg-technical-manual-en.pdf?hash=AB0C897622FFD6443624A33BDFA5552E&rev=258948143820400e9a05c5a63b8c7ae0&sc_lang=en",
+      "status": "existing_downloaded_original_and_source_review",
+      "locator": "PDF page 111; printed page 221; 18x8.50-8, 6PR, T539, Farming row",
+      "claims_observed": {
+        "rim_contour": "7.00I",
+        "permitted_rim": "6.50-8",
+        "outside_diameter_mm": 466,
+        "outside_diameter_tolerance_percent": 1.5,
+        "section_width_mm": 222,
+        "section_width_tolerance_percent": 2,
+        "rolling_circumference_mm": 1384,
+        "rolling_circumference_tolerance_percent": 2.5,
+        "maximum_air_pressure_bar": 2.8,
+        "maximum_load_kg": 475,
+        "speed_km_h": 30
+      },
+      "acquisition": "Already acquired and retained by c001-build-01 source review on 2026-11-13.",
+      "local_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
+      "content_type": "application/pdf",
+      "retrieved_at": "2026-11-13T08:54:26+01:00",
+      "sha256": "f9b0296a673b0fe14ca3649953a0feaa57963af88b23a58aa59350dfacf39cec"
+    }
+  ],
+  "source_conflict": {
+    "claim": "7.00I minimum flange width Bmin",
+    "observations": [
+      {
+        "value_mm": 10,
+        "source": "Continental Agricultural Databook PDF linked above, printed page 87"
+      },
+      {
+        "value_mm": 8.5,
+        "source": "A second Continental-hosted databook rendering found in web search; URL https://www.continental-tires.com/content/dam/conti-tires-cms/continental/b2b/agriculture/Continental__AG__Databook__A4__EN.pdf.coredownload.pdf"
+      }
+    ],
+    "handoff_rule": "Use 10 mm only when the CAD input explicitly identifies the directly inspected Continental PDF version; preserve the second rendering as an attributed discrepancy. Verify the actual C003/C004 rim source against its own drawing."
+  },
+  "retrieval_limit": "Shell network request to https://www.petlas.com/en/powerguid/ failed with DNS resolution error. No new source original bytes were acquired in this stage."
+}

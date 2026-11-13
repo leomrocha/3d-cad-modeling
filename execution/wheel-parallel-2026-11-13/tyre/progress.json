@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-13",
+  "component_id": "C001",
+  "component_name": "Trelleborg T539 18x8.50-8 6PR tube-type tyre",
+  "task_status": "DONE",
+  "component_status": "NEEDS_INPUT",
+  "actual_model_identity": "unavailable",
+  "requested_external_research_model": "gpt-6-luna",
+  "actual_external_research_model_identity": "unavailable",
+  "model_start_gate": {
+    "command": "python3 /home/leo/projects/3dmodeling/scripts/model_inventory.py --index /home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json --work-index /home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root /home/leo/projects/ferme/engineering/module-development/cad --project-root /home/leo/projects/ferme --id C001",
+    "result": "NEW_MODEL_REQUIRED",
+    "attributed_models": 0,
+    "unlinked_candidates": 0,
+    "two_dimensional_references": 0,
+    "filesystem_model_files_checked": 43
+  },
+  "existing_readiness": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json",
+  "source_stage": "NEEDS_INPUT: exact tyre section/bead geometry is not specified by the exact T539 row; standardized 7.00I rim contour dimensions are now recorded for mating geometry.",
+  "cad_mutations": 0,
+  "files_written_outside_authorized_execution_directory": 0,
+  "source_originals_downloaded_during_this_stage": 0,
+  "external_sources_web_inspected": [
+    "https://www.petlas.com/en/powerguid/",
+    "https://www.continental-tyres.co.uk/content/dam/conti-tires-cms/continental/b2b/agriculture/Continental__AG__Databook__A4__EN__copy.pdf.coredownload.pdf"
+  ],
+  "source_bytes_note": "External browsing exposed source page/PDF content, but shell network retrieval failed because DNS/network access is restricted. No new original bytes are claimed or registered as downloaded."
+}

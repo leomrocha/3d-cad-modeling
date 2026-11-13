@@ -1,0 +1,53 @@
+{
+  "task": "wheel-parallel-2026-11-13-rims",
+  "observed_at_utc": "2026-11-13T08:26:42Z",
+  "runtime_model": "unavailable",
+  "requested_model": "gpt-6-luna",
+  "status": "PARTIAL_SOURCE_READY",
+  "geometry_common": {
+    "units": "mm",
+    "local_frame": "Origin at mounting-face centre; local Z along wheel axis; X/Y in mounting plane.",
+    "assembly_frame": "X forward, Y left, Z up; record placement transform.",
+    "published_contour": "7.00I symmetric 5-degree drop-center profile (Continental source); Keiyama product-specific contour identification needs confirmation.",
+    "nominal_rim_code_8_diameter_mm": 202.4,
+    "specified_width_A_mm": 178,
+    "flange_height_G_mm": 16,
+    "minimum_flange_width_Bmin_mm": 10,
+    "minimum_bead_seat_width_Pmin_mm": 23,
+    "evidence_status": "Manufacturer-source claims. These contour dimensions are not component measurements."
+  },
+  "pattern": {
+    "hole_count": 4,
+    "pcd_mm": 100,
+    "calculated_hole_axis_radius_mm": 50,
+    "calculation": "100 mm PCD / 2",
+    "nominal_angle_spacing_deg": 90,
+    "center_bore_diameter_mm": 60,
+    "offset": "ET0; seller says Keiyama disc centered and Knott offset 0 mm"
+  },
+  "components": [
+    {
+      "id": "C003",
+      "name": "Keiyama JA08-700-4T100-02 steel rim",
+      "inventory_action": "NEW_MODEL_REQUIRED",
+      "fixing_hole_diameter_mm": 13.5,
+      "fastener_seat": "Plain Ø13.5 mm holes per seller page",
+      "valve_hole_diameter_mm": 11.3,
+      "rating_claim": "425 kg at 20 km/h",
+      "needs_input_features": ["product-specific confirmation of 7.00I section contour", "mounting-disc thickness and pressed dish profile", "disc-to-barrel weld geometry", "bead-seat/curvature detail and tolerances", "valve angular and axial location"]
+    },
+    {
+      "id": "C004",
+      "name": "Knott 402386.001 steel rim",
+      "inventory_action": "NEW_MODEL_REQUIRED",
+      "fixing_hole_diameter_mm": 12,
+      "fastener_seat": "Spherical bolt type / D12 per seller page; exact sphere radius and section absent",
+      "mass_kg": 3.6,
+      "rating_claim": "425 kg at 130 km/h",
+      "needs_input_features": ["spherical-seat radius/profile and depth", "mounting-disc thickness and pressed dish profile", "disc-to-barrel weld geometry", "bead-seat/curvature detail and tolerances", "valve hole location and diameter"]
+    }
+  ],
+  "build_gate": "Construct the sourced standard contour envelope and interface pattern only after source revision binding. Full product rim solid needs a product drawing/CAD source or physical measurement for the listed NEEDS_INPUT features.",
+  "downloaded_originals": [],
+  "sources_file": "sources.csv"
+}
