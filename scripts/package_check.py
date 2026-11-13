@@ -39,7 +39,7 @@ def check(package, session=None, descriptor=None):
         if actual != version:
             raise ValueError('Dependency version mismatch: ' + name + ' requires ' + version + ', found ' + actual)
         dependencies[name] = actual
-    if manifest['skill'] == 'component-cad':
+    if manifest['skill'] == 'cad-ocs-engineering':
         for name in ['cadtools.runtime', 'cadtools.geometry', 'cadtools.verification']:
             module = importlib.import_module(name)
             if not Path(module.__file__).resolve().is_relative_to(scripts):
@@ -50,8 +50,8 @@ def check(package, session=None, descriptor=None):
     result = {'result': 'PASS', 'skill': manifest['skill'], 'hashed_files': checked,
               'imported_modules': imported, 'dependencies': dependencies}
     if session or descriptor:
-        if manifest['skill'] != 'component-cad':
-            raise ValueError('OCS connection belongs to component-cad')
+        if manifest['skill'] != 'cad-ocs-engineering':
+            raise ValueError('OCS connection belongs to cad-ocs-engineering')
         import ocs_control
         descriptors = ocs_control.descriptors(explicit=descriptor, session=session)
         if len(descriptors) != 1:
