@@ -8,7 +8,7 @@ from unittest.mock import Mock, patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 
-from envelope_reference import build_envelope, verify
+from envelope_reference import build_envelope, inspect, verify
 
 
 class EnvelopeReferenceTests(unittest.TestCase):
@@ -78,6 +78,57 @@ class EnvelopeReferenceTests(unittest.TestCase):
         self.assertEqual('PASS', verify({'points': points}, self.job)['result'])
         altered = [[x, y, z] for x in (1, 10.99) for y in (2, 7) for z in (3, 6)]
         self.assertEqual('FAIL', verify({'points': altered}, self.job)['result'])
+
+    def _sat_record(self, handle='A1', entity_type='Solid3D'):
+        points = [[x, y, z] for x in (1, 11) for y in (2, 7) for z in (3, 6)]
+        sat = '\n'.join('point -1 -1 -1 ' + ' '.join(map(str, point))
+                         for point in points)
+        return {'handle': handle, 'type': entity_type,
+                'properties': {'acis_data': {'sat_data': sat, 'sab_data': []}}}
+
+    class InspectClient:
+        document_id = 71
+
+        def __init__(self, states, record):
+            self.states = list(states)
+            self.record = record
+
+        def read(self, operation, **kwargs):
+            if operation == 'state':
+                return self.states.pop(0)
+            if operation == 'records':
+                return {'records': [self.record]}
+            raise AssertionError('unexpected read operation: ' + operation)
+
+    def _state(self, geometry_revision=17, revision=4):
+        return {'document_id': 71, 'geometry_revision': geometry_revision,
+                'revision': revision}
+
+    def test_inspect_records_actual_document_and_stable_revisions(self):
+        client = self.InspectClient([self._state(), self._state()],
+                                    self._sat_record())
+        response, result = inspect(client, {'envelope': 'A1'}, self.job)
+        self.assertEqual('PASS', result['result'])
+        self.assertEqual(71, result['document_id'])
+        self.assertEqual(4, result['document_revision'])
+        self.assertEqual(17, result['geometry_revision'])
+        self.assertEqual('A1', result['handle'])
+
+    def test_inspect_rejects_wrong_returned_handle(self):
+        client = self.InspectClient([self._state()], self._sat_record(handle='B2'))
+        with self.assertRaisesRegex(ValueError, 'handle differs'):
+            inspect(client, {'envelope': 'A1'}, self.job)
+
+    def test_inspect_rejects_geometry_revision_change(self):
+        client = self.InspectClient([self._state(17), self._state(18)],
+                                    self._sat_record())
+        with self.assertRaisesRegex(ValueError, 'Geometry revision changed'):
+            inspect(client, {'envelope': 'A1'}, self.job)
+
+    def test_inspect_rejects_non_solid_record(self):
+        client = self.InspectClient([self._state()], self._sat_record(entity_type='Polyline'))
+        with self.assertRaisesRegex(ValueError, 'type Solid3D'):
+            inspect(client, {'envelope': 'A1'}, self.job)
 
 
 if __name__ == '__main__':
