@@ -1,6 +1,16 @@
-# FERME: selected component examples
+# Mechanical component examples
 
 [Examples](README.md) · [Workflow](../workflow.md) · [Tools](../tools.md)
+
+## Introduction
+
+One of the reasons for the current project is thigns I've been using this project
+
+## Examples
+
+The following examples are fully automated reconstructions from specs, the general pipeline for these component reconstructions is:
+
+TODO HERE SHOW THE STEPS THAT WERE DONE FOR RECONSTRUCTING THESE
 
 These existing OpenCADStudio captures show component geometry used to develop reusable construction and inspection procedures.
 

@@ -16,13 +16,3 @@
 1. **OpenCADStudio:** native component and assembly construction, measurements and DWG saves in the wind-generator and FERME records.
 2. **Code_Aster 17.4.0:** existing mast equilibrium calculations and saved-field extraction. The example identifies the actual structural representation and load cases.
 3. **ParaView:** existing side-by-side displacement and yield-comparison captures from the retained mast results.
-
-## Researched integrations
-
-1. **FreeCAD, CadQuery and build123d:** parametric and solid-modeling routes.
-2. **Blender:** mesh, scene and rendering workflows.
-3. **IfcOpenShell and Bonsai:** proposed building-element and IFC authoring.
-4. **OpenCV, COLMAP, OpenMVS and Open3D:** proposed camera calibration, reconstruction and surface processing.
-5. **MuJoCo and URDF:** proposed articulated simulation handoffs.
-
-[Operation contracts](reference/operations.md) give the supported sources and interfaces. [Source register](reference/sources.md) distinguishes existing execution records from researched capabilities.
