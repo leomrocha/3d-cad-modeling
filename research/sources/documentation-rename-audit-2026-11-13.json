@@ -1,0 +1,132 @@
+{
+  "title": "Documentation rename and GitHub Pages audit",
+  "date": "2026-11-13",
+  "evidence_status": "local file inspection and executed local checks",
+  "referring_documents": [
+    "research/documentation-rename-audit/README.md",
+    "research/documentation-rename-audit/checks.json"
+  ],
+  "sources": [
+    {
+      "local_original": "skills/README.md",
+      "title": "Skill catalogue",
+      "summary": "Current package index and dated external OCS reuse entries.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "01c542e34595a96a34bb37ac2bcd04de93437bf3c06b12d5e6ba5815b5b14edd",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "research/tools/build_workflow_register.py",
+      "title": "Workflow and source-register builder",
+      "summary": "Direct summary insertion reproduces source-relative Markdown links in the register directory.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "e8257c766df57386908116909ff22f6db66e32e45df79e260875fe9a163d23b6",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "research/sources/tooling-registration-2026-11-13.json",
+      "title": "Tooling source observations",
+      "summary": "Attributed summaries containing the eight relative links reported by the audit.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "d836ac17d38d7986794b152b3d1840b2486109c5a71453875b3452610c03fd5e",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "docs/index.md",
+      "title": "GitHub Pages homepage",
+      "summary": "Public installation commands, skill references, examples and repository links.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "3360d47062b578a28b5920d195f2dad162f27a13b5065bfa9ff124b59136c6a7",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "docs/_config.yml",
+      "title": "Native GitHub Pages configuration",
+      "summary": "Jekyll /docs source configuration, project baseurl, navigation and exclusions.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "01f23b7d7fc5638b86fc7829babc76bb5f3ca086cfb862b10eded7af6bb52649",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "docs/_layouts/default.html",
+      "title": "Pages layout",
+      "summary": "Rendered navigation, project link, stylesheet and footer.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "ba4e483bb48750d921ee1a01480e34719ba8c2ca4d373d6f326bdbe398ad04fa",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "AGENTS.md",
+      "title": "Project instructions",
+      "summary": "Documentation registration, current path pointer and native source/ownership constraints.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "553ece91118b152a89b5cd86ab1cf6e0209c63eed833cc0cb86a380b9d9c1e6b",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "research/action-audit/skill-to-actions.md",
+      "title": "Workflow skill map",
+      "summary": "Dated OCS workflow naming and operation relationships.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "c68c27314ced0fc24dff6c2674367b82f43df3af26d589d12f778e09a7711bb3",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "research/action-audit/implementation-queue/first-action-plan.md",
+      "title": "Source-intake proposal",
+      "summary": "Shell placeholder syntax flagged by local bash syntax check.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "28858237b0c054643e8c9b054ef2fb95b9b2d17ce9f10be8131c1d324654a79d",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "research/workflows/reconstruction-paths.md",
+      "title": "Reconstruction workflows",
+      "summary": "Two shell blocks with unquoted angle-bracket placeholders.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "b5fe1d2ab068f7cf4ae988542fe4947ff0e0ab6b51ec377a94561f7c0de3d271",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    },
+    {
+      "local_original": "research/sources/source-register.md",
+      "title": "Combined source register",
+      "summary": "Eight unresolved relative Markdown targets in copied summaries.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "sha256": "6f77c7c9e00f28223df6ed6b34d57d3d2737945624d6bfe560d851fdfeedf40c",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md"
+      ]
+    }
+  ]
+}

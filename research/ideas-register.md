@@ -2677,3 +2677,9 @@ Status: proposal. Execution explicitly authorized.
 Merge both complete workflows directly into `cad-ocs-engineering/SKILL.md`, preserving all original OCS material and repository additions inside the skill folder. [Plan](cad-ocs-engineering-merge-plan.md). [Source inventory](sources/cad-ocs-engineering-merge-2026-11-13.json).
 
 Execution of CAD-OCS-MERGE-2026-11-13: DONE. [Complete merge report](../execution/cad-ocs-engineering-merge-2026-11-13.md).
+
+## CAD-DOCUMENTATION-RENAME-AUDIT-2026-11-13 — Documentation and GitHub Pages rename repair
+
+Status: proposal. Audit: DONE.
+
+Repair current skill instructions, register summary links and report navigation; validate native Jekyll output while preserving historical provenance. [Repair plan](documentation-rename-audit/README.md). [Audit sources](sources/documentation-rename-audit-2026-11-13.json).

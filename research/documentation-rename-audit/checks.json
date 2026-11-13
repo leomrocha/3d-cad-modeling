@@ -1,0 +1,5833 @@
+{
+  "tracked_markdown_pages": 286,
+  "checked_local_or_own_repository_links": 4080,
+  "link_issues": [
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16465,
+      "target": "../scripts/step_placements.py",
+      "kind": "markdown",
+      "error": "missing target"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16465,
+      "target": "../scripts/native_acis.py",
+      "kind": "markdown",
+      "error": "missing target"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16489,
+      "target": "../scripts/feature_checks.py",
+      "kind": "markdown",
+      "error": "missing target"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16513,
+      "target": "../requirements.txt",
+      "kind": "markdown",
+      "error": "missing target"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16777,
+      "target": "../scripts/annular_reference.py",
+      "kind": "markdown",
+      "error": "missing target"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16825,
+      "target": "../scripts/toroidal_reference.py",
+      "kind": "markdown",
+      "error": "missing target"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16885,
+      "target": "../scripts/source_metadata.py",
+      "kind": "markdown",
+      "error": "missing target"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 16933,
+      "target": "../scripts/axial_motor.py",
+      "kind": "markdown",
+      "error": "missing target"
+    }
+  ],
+  "shell_blocks": [
+    {
+      "file": "README.md",
+      "line": 124,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "README.md",
+      "line": 135,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "README.md",
+      "line": 148,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "README.md",
+      "line": 159,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "README.md",
+      "line": 170,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "README.md",
+      "line": 183,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "README.md",
+      "line": 200,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "README.md",
+      "line": 206,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/PAGES.md",
+      "line": 10,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 128,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 139,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 152,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 163,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 174,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 187,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 204,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "docs/index.md",
+      "line": 210,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "execution/source-intake.md",
+      "line": 15,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "research/action-audit/implementation-queue/first-action-plan.md",
+      "line": 50,
+      "result": 2,
+      "stderr": "bash: line 1: syntax error near unexpected token `newline'\nbash: line 1: `python3 scripts/source_intake.py --input <job-input.json> --output <new-intake-directory>'\n"
+    },
+    {
+      "file": "research/workflows/README.md",
+      "line": 67,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "research/workflows/details/README.md",
+      "line": 34,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "research/workflows/reconstruction-paths.md",
+      "line": 242,
+      "result": 2,
+      "stderr": "bash: line 4: syntax error near unexpected token `newline'\nbash: line 4: `colmap exhaustive_matcher --database_path <database.db>'\n"
+    },
+    {
+      "file": "research/workflows/reconstruction-paths.md",
+      "line": 259,
+      "result": 2,
+      "stderr": "bash: line 2: syntax error near unexpected token `newline'\nbash: line 2: `meshroom_batch --input <images-folder> --output <output-folder>'\n"
+    },
+    {
+      "file": "skills/cad-drawing-inspection/SKILL.md",
+      "line": 14,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-drawing-inspection/SKILL.md",
+      "line": 26,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-ocs-engineering/SKILL.md",
+      "line": 16,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-ocs-engineering/references/axial-motor.md",
+      "line": 17,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
+      "line": 5,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-ocs-engineering/references/ocs-control.md",
+      "line": 7,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-ocs-engineering/references/ocs-control.md",
+      "line": 17,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-ocs-engineering/references/source-first-and-tube.md",
+      "line": 31,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-source-intake/SKILL.md",
+      "line": 14,
+      "result": 0,
+      "stderr": ""
+    },
+    {
+      "file": "skills/cad-source-intake/SKILL.md",
+      "line": 28,
+      "result": 0,
+      "stderr": ""
+    }
+  ],
+  "rendered_html_pages": 1,
+  "rendered_local_links": 17,
+  "rendered_issues": [],
+  "skill_identities": [
+    {
+      "folder": "cad-drawing-inspection",
+      "frontmatter": "cad-drawing-inspection",
+      "manifest": "cad-drawing-inspection"
+    },
+    {
+      "folder": "cad-ocs-engineering",
+      "frontmatter": "cad-ocs-engineering",
+      "manifest": "cad-ocs-engineering"
+    },
+    {
+      "folder": "cad-source-intake",
+      "frontmatter": "cad-source-intake",
+      "manifest": "cad-source-intake"
+    }
+  ],
+  "date": "2026-11-13",
+  "evidence_status": "local working-tree inspection and local safe Jekyll build",
+  "audit_revision": "e0512e7a9db3c085b1de2f749c21b7fe71c65196",
+  "actual_execution_model": "unavailable",
+  "legacy_identifier_occurrences": 1108,
+  "legacy_path_candidates": [
+    {
+      "file": "execution/c014-dimension-limits-2026-11-13.md",
+      "line": 15,
+      "locator": "skills/component-cad/references/dimension-limits-and-datums.md"
+    },
+    {
+      "file": "execution/c015-source-view-evidence-2026-11-13.md",
+      "line": 9,
+      "locator": "skills/component-cad/references/source-view-evidence.md"
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/c028/progress.md",
+      "line": 11,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md"
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/c052/README.md",
+      "line": 38,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/pixhawk.md](../../../skills/cad-ocs-engineering/references/pixhawk.md"
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/coordinator.md",
+      "line": 5,
+      "locator": "skills/component-cad/references/pixhawk.md"
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/coordinator.md",
+      "line": 6,
+      "locator": "skills/component-cad/references/small-bms.md"
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/coordinator.md",
+      "line": 7,
+      "locator": "skills/component-cad/references/power-module.md"
+    },
+    {
+      "file": "execution/component-iteration-results-2026-11-13.md",
+      "line": 5,
+      "locator": "skills/component-cad/references/dimension-limits-and-datums.md"
+    },
+    {
+      "file": "execution/component-iteration-results-2026-11-13.md",
+      "line": 6,
+      "locator": "skills/component-cad/references/source-view-evidence.md"
+    },
+    {
+      "file": "execution/component-iteration-results-2026-11-13.md",
+      "line": 7,
+      "locator": "skills/component-cad/references/source-perimeter-chains.md"
+    },
+    {
+      "file": "execution/concurrent-staging-finding-2026-11-13.md",
+      "line": 3,
+      "locator": "skills/component-cad/references/envelope-job-runner.md"
+    },
+    {
+      "file": "execution/drawing-scale-and-dual-unit-review-2026-11-13.md",
+      "line": 6,
+      "locator": "skills/component-cad/references/dimension-limits-and-datums.md"
+    },
+    {
+      "file": "execution/exact-drawing-retrieval-2026-11-13.md",
+      "line": 8,
+      "locator": "skills/component-cad/references/source-view-evidence.md"
+    },
+    {
+      "file": "execution/fuse-source-retrieval-application-2026-11-13.md",
+      "line": 5,
+      "locator": "skills/component-cad/references/source-view-evidence.md"
+    },
+    {
+      "file": "execution/profile-postsave-validation-2026-11-13.md",
+      "line": 4,
+      "locator": "skills/component-cad/references/profile-reference.md"
+    },
+    {
+      "file": "execution/source-cell-transcription-2026-11-13.md",
+      "line": 4,
+      "locator": "skills/component-cad/references/source-variant-tables.md"
+    },
+    {
+      "file": "execution/variant-binding-and-request-id-preflight-2026-11-13.md",
+      "line": 5,
+      "locator": "skills/component-cad/references/source-variant-tables.md"
+    },
+    {
+      "file": "execution/wheel-parallel-2026-11-13/hubs/progress.json",
+      "line": 14,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "execution/wheel-parallel-2026-11-13/tyre/README.md",
+      "line": 52,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7495,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7496,
+      "locator": "skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7512,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7513,
+      "locator": "skills/component-cad/references/axial-motor.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7519,
+      "locator": "skills/component-cad/references/axial-motor.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7534,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7535,
+      "locator": "skills/component-cad/references/component-procedure.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7541,
+      "locator": "skills/component-cad/references/component-procedure.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7554,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7555,
+      "locator": "skills/component-cad/references/existing-battery.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7561,
+      "locator": "skills/component-cad/references/existing-battery.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7572,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7573,
+      "locator": "skills/component-cad/references/existing-bearing.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7579,
+      "locator": "skills/component-cad/references/existing-bearing.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7590,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7591,
+      "locator": "skills/component-cad/references/existing-model-start-check.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7597,
+      "locator": "skills/component-cad/references/existing-model-start-check.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7613,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7614,
+      "locator": "skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7620,
+      "locator": "skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7638,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/pixhawk.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7639,
+      "locator": "skills/component-cad/references/pixhawk.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7659,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/scaled-assemblies.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7660,
+      "locator": "skills/component-cad/references/scaled-assemblies.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7666,
+      "locator": "skills/component-cad/references/scaled-assemblies.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7680,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7681,
+      "locator": "skills/component-cad/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7687,
+      "locator": "skills/component-cad/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7698,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/small-bms.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7699,
+      "locator": "skills/component-cad/references/small-bms.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7705,
+      "locator": "skills/component-cad/references/small-bms.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7716,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7717,
+      "locator": "skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7723,
+      "locator": "skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7736,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/tabbed-battery.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7737,
+      "locator": "skills/component-cad/references/tabbed-battery.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7743,
+      "locator": "skills/component-cad/references/tabbed-battery.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7756,
+      "locator": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7757,
+      "locator": "skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7771,
+      "locator": "${MODELING_ROOT}/skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7772,
+      "locator": "skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/skill-renaming-plan.md",
+      "line": 12,
+      "locator": "skills/drawing-inspection/"
+    },
+    {
+      "file": "research/skill-renaming-plan.md",
+      "line": 12,
+      "locator": "skills/source-intake/"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 20,
+      "locator": "skills/component-cad/"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 123,
+      "locator": "skills/component-cad/LICENSE"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 134,
+      "locator": "skills/component-cad/NOTICE.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 145,
+      "locator": "skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 156,
+      "locator": "skills/component-cad/package-manifest.json"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 167,
+      "locator": "skills/component-cad/references/annular-reference.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 178,
+      "locator": "skills/component-cad/references/assembly-units.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 189,
+      "locator": "skills/component-cad/references/axial-motor.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 200,
+      "locator": "skills/component-cad/references/calibrated-trace.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 211,
+      "locator": "skills/component-cad/references/component-procedure.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 222,
+      "locator": "skills/component-cad/references/dimension-limits-and-datums.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 233,
+      "locator": "skills/component-cad/references/document-cleanup.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 244,
+      "locator": "skills/component-cad/references/drawing-feature-checks.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 255,
+      "locator": "skills/component-cad/references/envelope-job-runner.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 266,
+      "locator": "skills/component-cad/references/envelope-reference.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 277,
+      "locator": "skills/component-cad/references/existing-battery.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 288,
+      "locator": "skills/component-cad/references/existing-bearing.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 299,
+      "locator": "skills/component-cad/references/existing-model-start-check.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 310,
+      "locator": "skills/component-cad/references/hexagonal-reference.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 321,
+      "locator": "skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 332,
+      "locator": "skills/component-cad/references/model-contract.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 343,
+      "locator": "skills/component-cad/references/non-geometric-requirements.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 354,
+      "locator": "skills/component-cad/references/ocs-runtime.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 365,
+      "locator": "skills/component-cad/references/paths.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 376,
+      "locator": "skills/component-cad/references/pixhawk.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 387,
+      "locator": "skills/component-cad/references/profile-reference.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 398,
+      "locator": "skills/component-cad/references/retained-artifact-checks.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 409,
+      "locator": "skills/component-cad/references/scaled-assemblies.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 420,
+      "locator": "skills/component-cad/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 431,
+      "locator": "skills/component-cad/references/small-bms.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 442,
+      "locator": "skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 453,
+      "locator": "skills/component-cad/references/source-metadata.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 464,
+      "locator": "skills/component-cad/references/source-perimeter-chains.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 475,
+      "locator": "skills/component-cad/references/source-variant-tables.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 486,
+      "locator": "skills/component-cad/references/source-view-evidence.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 497,
+      "locator": "skills/component-cad/references/spherical-seat-profile.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 508,
+      "locator": "skills/component-cad/references/step-solid-inventory.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 519,
+      "locator": "skills/component-cad/references/tabbed-battery.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 530,
+      "locator": "skills/component-cad/references/toroidal-reference.md"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 541,
+      "locator": "skills/component-cad/requirements.txt"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 552,
+      "locator": "skills/component-cad/scripts/annular_reference.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 563,
+      "locator": "skills/component-cad/scripts/assembly_repair.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 574,
+      "locator": "skills/component-cad/scripts/assembly_units.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 585,
+      "locator": "skills/component-cad/scripts/axial_motor.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 596,
+      "locator": "skills/component-cad/scripts/battery_module.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 607,
+      "locator": "skills/component-cad/scripts/cadtools/__init__.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 618,
+      "locator": "skills/component-cad/scripts/cadtools/geometry.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 629,
+      "locator": "skills/component-cad/scripts/cadtools/runtime.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 640,
+      "locator": "skills/component-cad/scripts/cadtools/verification.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 651,
+      "locator": "skills/component-cad/scripts/calibrated_trace.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 662,
+      "locator": "skills/component-cad/scripts/check_contract.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 673,
+      "locator": "skills/component-cad/scripts/component_records.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 684,
+      "locator": "skills/component-cad/scripts/driver_checks.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 695,
+      "locator": "skills/component-cad/scripts/dxf_inspect.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 706,
+      "locator": "skills/component-cad/scripts/envelope_job_runner.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 717,
+      "locator": "skills/component-cad/scripts/envelope_reference.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 728,
+      "locator": "skills/component-cad/scripts/feature_checks.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 739,
+      "locator": "skills/component-cad/scripts/hexagonal_reference.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 750,
+      "locator": "skills/component-cad/scripts/model_inventory.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 761,
+      "locator": "skills/component-cad/scripts/native_acis.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 772,
+      "locator": "skills/component-cad/scripts/ocs_control.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 783,
+      "locator": "skills/component-cad/scripts/ocs_document_cleanup.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 794,
+      "locator": "skills/component-cad/scripts/package_check.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 805,
+      "locator": "skills/component-cad/scripts/part_index.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 816,
+      "locator": "skills/component-cad/scripts/pillow_block.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 827,
+      "locator": "skills/component-cad/scripts/pixhawk.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 838,
+      "locator": "skills/component-cad/scripts/profile_reference.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 849,
+      "locator": "skills/component-cad/scripts/retained_artifacts.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 860,
+      "locator": "skills/component-cad/scripts/rounded_tube.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 871,
+      "locator": "skills/component-cad/scripts/small_bms.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 882,
+      "locator": "skills/component-cad/scripts/source_intake.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 893,
+      "locator": "skills/component-cad/scripts/source_metadata.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 904,
+      "locator": "skills/component-cad/scripts/source_variant_table.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 915,
+      "locator": "skills/component-cad/scripts/step_placements.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 926,
+      "locator": "skills/component-cad/scripts/step_solid_inventory.py"
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 937,
+      "locator": "skills/component-cad/scripts/toroidal_reference.py"
+    },
+    {
+      "file": "research/sources/documentation-maintenance-2026-11-13.json",
+      "line": 81,
+      "locator": "skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/documentation-maintenance-2026-11-13.json",
+      "line": 95,
+      "locator": "skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/sources/documentation-maintenance-2026-11-13.json",
+      "line": 109,
+      "locator": "skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/generic-tooling-iterations-2026-11-13.json",
+      "line": 25,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md"
+    },
+    {
+      "file": "research/sources/generic-tooling-iterations-2026-11-13.json",
+      "line": 59,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/calibrated-trace.md"
+    },
+    {
+      "file": "research/sources/generic-tooling-iterations-2026-11-13.json",
+      "line": 93,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/assembly-units.md"
+    },
+    {
+      "file": "research/sources/round-09/component-execution-sources.json",
+      "line": 43,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-09/component-execution-sources.json",
+      "line": 57,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md"
+    },
+    {
+      "file": "research/sources/round-11/rail-execution-sources.json",
+      "line": 27,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-11/rail-execution-sources.json",
+      "line": 40,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/round-12/saved-rail-reader-sources.json",
+      "line": 58,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/round-13/crossmember-sources.json",
+      "line": 25,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/round-14/bearing-sources.json",
+      "line": 39,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-14/bearing-sources.json",
+      "line": 52,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md"
+    },
+    {
+      "file": "research/sources/round-15/leaf-sources.json",
+      "line": 51,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-15/leaf-sources.json",
+      "line": 64,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md"
+    },
+    {
+      "file": "research/sources/round-16/driver-sources.json",
+      "line": 63,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-16/driver-sources.json",
+      "line": 76,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 25,
+      "locator": "${MODELING_ROOT}/skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-18/dxf-inspection-sources.json",
+      "line": 27,
+      "locator": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-19/me0907-sources.json",
+      "line": 148,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md"
+    },
+    {
+      "file": "research/sources/round-20/component-sources.json",
+      "line": 303,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/round-23/enclosure-sources.json",
+      "line": 765,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/round-23/enclosure-sources.json",
+      "line": 777,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-24/converter-sources.json",
+      "line": 875,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/round-24/converter-sources.json",
+      "line": 887,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-29/resumed-component-sources.json",
+      "line": 1551,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/scaled-assemblies.md"
+    },
+    {
+      "file": "research/sources/round-30/bmw-iteration-sources.json",
+      "line": 322,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-30/bmw-iteration-sources.json",
+      "line": 334,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/tabbed-battery.md"
+    },
+    {
+      "file": "research/sources/round-31/model-inventory-sources.json",
+      "line": 25,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/round-31/model-inventory-sources.json",
+      "line": 37,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md"
+    },
+    {
+      "file": "research/sources/skill-installation-2026-11-13.json",
+      "line": 19,
+      "locator": "skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/skill-packaging-2026-11-13.json",
+      "line": 118,
+      "locator": "skills/component-cad/references/model-contract.md"
+    },
+    {
+      "file": "research/sources/skill-renaming-2026-11-13.json",
+      "line": 52,
+      "locator": "skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/sources/skill-renaming-2026-11-13.json",
+      "line": 60,
+      "locator": "skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 280,
+      "locator": "skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 287,
+      "locator": "skills/drawing-inspection/package-manifest.json"
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 294,
+      "locator": "skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 301,
+      "locator": "skills/source-intake/package-manifest.json"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 1487,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 1498,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 4495,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 4506,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9818,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9831,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9841,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9851,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 12660,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 12671,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15575,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15591,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15602,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15613,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15624,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15635,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15646,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15656,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 17343,
+      "locator": "${MODELING_ROOT}/skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 17354,
+      "locator": "${MODELING_ROOT}/skills/source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32500,
+      "locator": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32511,
+      "locator": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33094,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33105,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33716,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33728,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35043,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35056,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35067,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35077,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 39918,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/scaled-assemblies.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 40639,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/tabbed-battery.md"
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 40877,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 479,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md](../../skills/cad-ocs-engineering/references/axial-motor.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 1691,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md](../../skills/cad-ocs-engineering/references/existing-battery.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 3587,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md](../../skills/cad-ocs-engineering/references/manufacturer-assembly.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 4703,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md](../../skills/cad-ocs-engineering/references/shared-feature-checks.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 5795,
+      "locator": "${MODELING_ROOT}/skills/component-cad/SKILL.md](../../skills/cad-ocs-engineering/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 6455,
+      "locator": "${MODELING_ROOT}/skills/source-intake/SKILL.md](../../skills/cad-source-intake/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12011,
+      "locator": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md](../../skills/cad-drawing-inspection/SKILL.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12227,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md](../../skills/cad-ocs-engineering/references/existing-bearing.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12491,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md](../../skills/cad-ocs-engineering/references/component-procedure.md"
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12959,
+      "locator": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md](../../skills/cad-ocs-engineering/references/source-first-and-tube.md"
+    }
+  ],
+  "legacy_identifier_locations": [
+    {
+      "file": "COMPONENT_DEVELOPMENT_PLAN.md",
+      "line": 9
+    },
+    {
+      "file": "docs/skill-packaging.md",
+      "line": 16
+    },
+    {
+      "file": "docs/skill-packaging.md",
+      "line": 33
+    },
+    {
+      "file": "docs/skill-packaging.md",
+      "line": 41
+    },
+    {
+      "file": "execution/2026-11-12-component-led.md",
+      "line": 25
+    },
+    {
+      "file": "execution/README.md",
+      "line": 4
+    },
+    {
+      "file": "execution/c014-dimension-limits-2026-11-13.md",
+      "line": 15
+    },
+    {
+      "file": "execution/c015-source-view-evidence-2026-11-13.md",
+      "line": 9
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/c028/progress.md",
+      "line": 11
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/c052/README.md",
+      "line": 38
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/coordinator.md",
+      "line": 5
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/coordinator.md",
+      "line": 6
+    },
+    {
+      "file": "execution/component-followups-2026-11-13/coordinator.md",
+      "line": 7
+    },
+    {
+      "file": "execution/component-iteration-results-2026-11-13.md",
+      "line": 5
+    },
+    {
+      "file": "execution/component-iteration-results-2026-11-13.md",
+      "line": 6
+    },
+    {
+      "file": "execution/component-iteration-results-2026-11-13.md",
+      "line": 7
+    },
+    {
+      "file": "execution/concurrent-skill-publication-package-checks-2026-11-13.json",
+      "line": 7
+    },
+    {
+      "file": "execution/concurrent-skill-publication-package-checks-2026-11-13.json",
+      "line": 20
+    },
+    {
+      "file": "execution/concurrent-staging-finding-2026-11-13.md",
+      "line": 3
+    },
+    {
+      "file": "execution/drawing-scale-and-dual-unit-review-2026-11-13.md",
+      "line": 6
+    },
+    {
+      "file": "execution/dxf-inspection.md",
+      "line": 5
+    },
+    {
+      "file": "execution/exact-drawing-retrieval-2026-11-13.md",
+      "line": 8
+    },
+    {
+      "file": "execution/fuse-source-retrieval-application-2026-11-13.md",
+      "line": 5
+    },
+    {
+      "file": "execution/ocs-document-cleanup-2026-11-13.md",
+      "line": 8
+    },
+    {
+      "file": "execution/p01-rail-checks.json",
+      "line": 183
+    },
+    {
+      "file": "execution/profile-postsave-validation-2026-11-13.md",
+      "line": 4
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 11
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 24
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 86
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 98
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 119
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 125
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 181
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 186
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.json",
+      "line": 191
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.md",
+      "line": 5
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.md",
+      "line": 7
+    },
+    {
+      "file": "execution/skill-packaging-2026-11-13.md",
+      "line": 9
+    },
+    {
+      "file": "execution/skill-renaming-2026-11-13.json",
+      "line": 11
+    },
+    {
+      "file": "execution/skill-renaming-2026-11-13.json",
+      "line": 24
+    },
+    {
+      "file": "execution/skill-renaming-2026-11-13.json",
+      "line": 161
+    },
+    {
+      "file": "execution/skill-renaming-2026-11-13.md",
+      "line": 5
+    },
+    {
+      "file": "execution/source-cell-transcription-2026-11-13.md",
+      "line": 4
+    },
+    {
+      "file": "execution/source-intake.md",
+      "line": 5
+    },
+    {
+      "file": "execution/source-intake.md",
+      "line": 8
+    },
+    {
+      "file": "execution/source-intake.md",
+      "line": 9
+    },
+    {
+      "file": "execution/source-intake/job-input.json",
+      "line": 2
+    },
+    {
+      "file": "execution/source-intake/job-input.json",
+      "line": 10
+    },
+    {
+      "file": "execution/source-intake/job-input.json",
+      "line": 45
+    },
+    {
+      "file": "execution/source-intake/job-input.json",
+      "line": 46
+    },
+    {
+      "file": "execution/source-intake/live-01/revision/receipt.json",
+      "line": 6
+    },
+    {
+      "file": "execution/source-intake/live-01/revision/scope.md",
+      "line": 1
+    },
+    {
+      "file": "execution/source-intake/live-01/revision/scope.md",
+      "line": 16
+    },
+    {
+      "file": "execution/source-intake/live-01/revision/source-index.json",
+      "line": 3
+    },
+    {
+      "file": "execution/source-intake/live-01/revision/source-index.json",
+      "line": 11
+    },
+    {
+      "file": "execution/source-intake/live-01/revision/source-index.json",
+      "line": 62
+    },
+    {
+      "file": "execution/source-intake/live-01/revision/source-index.json",
+      "line": 63
+    },
+    {
+      "file": "execution/spherical-seat-profile-package-checks-2026-11-13.json",
+      "line": 7
+    },
+    {
+      "file": "execution/spherical-seat-profile-package-checks-2026-11-13.json",
+      "line": 20
+    },
+    {
+      "file": "execution/variant-binding-and-request-id-preflight-2026-11-13.md",
+      "line": 5
+    },
+    {
+      "file": "execution/wheel-parallel-2026-11-13/hubs/progress.json",
+      "line": 14
+    },
+    {
+      "file": "execution/wheel-parallel-2026-11-13/rims/progress.json",
+      "line": 9
+    },
+    {
+      "file": "execution/wheel-parallel-2026-11-13/tyre/README.md",
+      "line": 52
+    },
+    {
+      "file": "research/action-audit/checks.json",
+      "line": 67
+    },
+    {
+      "file": "research/action-audit/checks.json",
+      "line": 68
+    },
+    {
+      "file": "research/action-audit/checks.json",
+      "line": 69
+    },
+    {
+      "file": "research/action-audit/checks.json",
+      "line": 70
+    },
+    {
+      "file": "research/action-audit/checks.json",
+      "line": 71
+    },
+    {
+      "file": "research/action-audit/implementation-queue/assets.json",
+      "line": 53
+    },
+    {
+      "file": "research/action-audit/implementation-queue/assets.json",
+      "line": 64
+    },
+    {
+      "file": "research/action-audit/implementation-queue/assets.json",
+      "line": 129
+    },
+    {
+      "file": "research/action-audit/implementation-queue/assets.md",
+      "line": 39
+    },
+    {
+      "file": "research/action-audit/implementation-queue/assets.md",
+      "line": 47
+    },
+    {
+      "file": "research/action-audit/implementation-queue/assets.md",
+      "line": 59
+    },
+    {
+      "file": "research/action-audit/implementation-queue/execution-record.md",
+      "line": 14
+    },
+    {
+      "file": "research/action-audit/implementation-queue/execution-record.md",
+      "line": 17
+    },
+    {
+      "file": "research/action-audit/implementation-queue/first-action-plan.md",
+      "line": 16
+    },
+    {
+      "file": "research/action-audit/implementation-queue/implementation-status.json",
+      "line": 12
+    },
+    {
+      "file": "research/action-audit/implementation-queue/implementation-status.json",
+      "line": 14
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 40
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 43
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 249
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 260
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 671
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 1757
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 1768
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 1800
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 1803
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2005
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2016
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2049
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2052
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2254
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2265
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2298
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2301
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2503
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2514
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2547
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2550
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2752
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2763
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2796
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 2799
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3001
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3012
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3250
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3261
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3294
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3297
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3499
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3510
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3748
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 3759
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 7209
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 11954
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 13028
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 13991
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 14419
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 17306
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 17469
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 19874
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 19981
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 34533
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.json",
+      "line": 34649
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 283
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 291
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 293
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 313
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 315
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 397
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 399
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 415
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 421
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 423
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 439
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 445
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 447
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 463
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 469
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 471
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 487
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 493
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 495
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 511
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 517
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 519
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 541
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 543
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 559
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 565
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 567
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 589
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 591
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 977
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 1701
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 1903
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 1905
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2047
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2049
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2071
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2155
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2285
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2373
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2393
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2413
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2455
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2623
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2729
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2835
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 2857
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 4737
+    },
+    {
+      "file": "research/action-audit/implementation-queue/queue.md",
+      "line": 4757
+    },
+    {
+      "file": "research/action-audit/operation-inventory.json",
+      "line": 21
+    },
+    {
+      "file": "research/action-audit/operation-inventory.json",
+      "line": 129
+    },
+    {
+      "file": "research/action-audit/operation-inventory.json",
+      "line": 186
+    },
+    {
+      "file": "research/action-audit/operation-inventory.json",
+      "line": 199
+    },
+    {
+      "file": "research/action-audit/operation-inventory.json",
+      "line": 528
+    },
+    {
+      "file": "research/action-audit/operation-inventory.json",
+      "line": 827
+    },
+    {
+      "file": "research/action-audit/plan.md",
+      "line": 102
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 28
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 29
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 30
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 57
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 65
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 67
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 88
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 109
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 119
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 129
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 138
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 140
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 151
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 172
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 199
+    },
+    {
+      "file": "research/action-audit/point-01-model-brief.md",
+      "line": 227
+    },
+    {
+      "file": "research/action-audit/point-02-checks.json",
+      "line": 50
+    },
+    {
+      "file": "research/action-audit/point-02-checks.json",
+      "line": 51
+    },
+    {
+      "file": "research/action-audit/point-02-checks.json",
+      "line": 52
+    },
+    {
+      "file": "research/action-audit/point-02-checks.json",
+      "line": 53
+    },
+    {
+      "file": "research/action-audit/point-02-checks.json",
+      "line": 54
+    },
+    {
+      "file": "research/action-audit/point-02-component-reuse.md",
+      "line": 16
+    },
+    {
+      "file": "research/action-audit/point-02-component-reuse.md",
+      "line": 35
+    },
+    {
+      "file": "research/action-audit/point-02-component-reuse.md",
+      "line": 141
+    },
+    {
+      "file": "research/action-audit/point-02-component-reuse.md",
+      "line": 314
+    },
+    {
+      "file": "research/action-audit/point-02-operations.json",
+      "line": 18
+    },
+    {
+      "file": "research/action-audit/point-02-operations.json",
+      "line": 286
+    },
+    {
+      "file": "research/action-audit/point-02-operations.json",
+      "line": 287
+    },
+    {
+      "file": "research/action-audit/point-03-checks.json",
+      "line": 54
+    },
+    {
+      "file": "research/action-audit/point-03-checks.json",
+      "line": 55
+    },
+    {
+      "file": "research/action-audit/point-03-checks.json",
+      "line": 56
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 129
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 130
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 240
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 350
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 351
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 457
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 458
+    },
+    {
+      "file": "research/action-audit/point-03-operations.json",
+      "line": 896
+    },
+    {
+      "file": "research/action-audit/point-03-vector-and-solid.md",
+      "line": 5
+    },
+    {
+      "file": "research/action-audit/point-03-vector-and-solid.md",
+      "line": 56
+    },
+    {
+      "file": "research/action-audit/point-03-vector-and-solid.md",
+      "line": 106
+    },
+    {
+      "file": "research/action-audit/point-04-checks.json",
+      "line": 53
+    },
+    {
+      "file": "research/action-audit/point-04-checks.json",
+      "line": 54
+    },
+    {
+      "file": "research/action-audit/point-04-checks.json",
+      "line": 55
+    },
+    {
+      "file": "research/action-audit/point-04-raster-drawings.md",
+      "line": 5
+    },
+    {
+      "file": "research/action-audit/point-05-alignment-and-remodeling.md",
+      "line": 5
+    },
+    {
+      "file": "research/action-audit/point-05-alignment-and-remodeling.md",
+      "line": 347
+    },
+    {
+      "file": "research/action-audit/point-05-checks.json",
+      "line": 58
+    },
+    {
+      "file": "research/action-audit/point-05-checks.json",
+      "line": 59
+    },
+    {
+      "file": "research/action-audit/point-05-checks.json",
+      "line": 60
+    },
+    {
+      "file": "research/action-audit/point-05-operations.json",
+      "line": 979
+    },
+    {
+      "file": "research/action-audit/point-05-operations.json",
+      "line": 1407
+    },
+    {
+      "file": "research/action-audit/point-05-operations.json",
+      "line": 1515
+    },
+    {
+      "file": "research/action-audit/point-06-building-and-robot.md",
+      "line": 5
+    },
+    {
+      "file": "research/action-audit/point-06-checks.json",
+      "line": 63
+    },
+    {
+      "file": "research/action-audit/point-06-checks.json",
+      "line": 64
+    },
+    {
+      "file": "research/action-audit/point-06-checks.json",
+      "line": 65
+    },
+    {
+      "file": "research/action-audit/point-06-operations.json",
+      "line": 2040
+    },
+    {
+      "file": "research/action-audit/point-07-checks.json",
+      "line": 61
+    },
+    {
+      "file": "research/action-audit/point-07-checks.json",
+      "line": 62
+    },
+    {
+      "file": "research/action-audit/point-07-reconstruction.md",
+      "line": 59
+    },
+    {
+      "file": "research/action-audit/reviews/designer-notes.md",
+      "line": 22
+    },
+    {
+      "file": "research/action-audit/reviews/designer-notes.md",
+      "line": 23
+    },
+    {
+      "file": "research/action-audit/reviews/designer-notes.md",
+      "line": 24
+    },
+    {
+      "file": "research/action-audit/reviews/designer-notes.md",
+      "line": 30
+    },
+    {
+      "file": "research/action-audit/reviews/designer-notes.md",
+      "line": 42
+    },
+    {
+      "file": "research/action-audit/reviews/independent-review.md",
+      "line": 13
+    },
+    {
+      "file": "research/action-audit/reviews/independent-review.md",
+      "line": 27
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-designer.md",
+      "line": 27
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-designer.md",
+      "line": 28
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-independent.md",
+      "line": 11
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-software.md",
+      "line": 9
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-software.md",
+      "line": 14
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-software.md",
+      "line": 15
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-software.md",
+      "line": 53
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-visual.md",
+      "line": 10
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-visual.md",
+      "line": 120
+    },
+    {
+      "file": "research/action-audit/reviews/point-02-visual.md",
+      "line": 290
+    },
+    {
+      "file": "research/action-audit/reviews/point-03-designer.md",
+      "line": 12
+    },
+    {
+      "file": "research/action-audit/reviews/point-03-software.md",
+      "line": 8
+    },
+    {
+      "file": "research/action-audit/reviews/point-03-software.md",
+      "line": 20
+    },
+    {
+      "file": "research/action-audit/reviews/point-03-visual.md",
+      "line": 77
+    },
+    {
+      "file": "research/action-audit/reviews/point-03-visual.md",
+      "line": 139
+    },
+    {
+      "file": "research/action-audit/reviews/point-04-designer.md",
+      "line": 17
+    },
+    {
+      "file": "research/action-audit/reviews/point-04-software.md",
+      "line": 18
+    },
+    {
+      "file": "research/action-audit/reviews/point-05-designer.md",
+      "line": 19
+    },
+    {
+      "file": "research/action-audit/reviews/point-05-independent.md",
+      "line": 13
+    },
+    {
+      "file": "research/action-audit/reviews/point-05-software.md",
+      "line": 12
+    },
+    {
+      "file": "research/action-audit/reviews/point-05-software.md",
+      "line": 19
+    },
+    {
+      "file": "research/action-audit/reviews/point-05-software.md",
+      "line": 64
+    },
+    {
+      "file": "research/action-audit/reviews/point-05-visual.md",
+      "line": 145
+    },
+    {
+      "file": "research/action-audit/reviews/point-06-designer.md",
+      "line": 11
+    },
+    {
+      "file": "research/action-audit/reviews/point-06-software.md",
+      "line": 32
+    },
+    {
+      "file": "research/action-audit/reviews/point-06-visual.md",
+      "line": 116
+    },
+    {
+      "file": "research/action-audit/reviews/point-06-visual.md",
+      "line": 189
+    },
+    {
+      "file": "research/action-audit/reviews/point-07-designer.md",
+      "line": 20
+    },
+    {
+      "file": "research/action-audit/reviews/point-07-software.md",
+      "line": 29
+    },
+    {
+      "file": "research/action-audit/reviews/point-07-visual.md",
+      "line": 201
+    },
+    {
+      "file": "research/action-audit/reviews/software-review.md",
+      "line": 8
+    },
+    {
+      "file": "research/action-audit/reviews/software-review.md",
+      "line": 15
+    },
+    {
+      "file": "research/action-audit/reviews/software-review.md",
+      "line": 16
+    },
+    {
+      "file": "research/action-audit/reviews/software-review.md",
+      "line": 55
+    },
+    {
+      "file": "research/action-audit/reviews/visual-review.md",
+      "line": 85
+    },
+    {
+      "file": "research/action-audit/reviews/visual-review.md",
+      "line": 96
+    },
+    {
+      "file": "research/action-audit/reviews/visual-review.md",
+      "line": 161
+    },
+    {
+      "file": "research/action-audit/reviews/visual-review.md",
+      "line": 162
+    },
+    {
+      "file": "research/action-audit/reviews/visual-review.md",
+      "line": 180
+    },
+    {
+      "file": "research/action-audit/skill-to-actions.json",
+      "line": 28
+    },
+    {
+      "file": "research/action-audit/skill-to-actions.md",
+      "line": 17
+    },
+    {
+      "file": "research/cad-and-skills.md",
+      "line": 7
+    },
+    {
+      "file": "research/cad-and-skills.md",
+      "line": 30
+    },
+    {
+      "file": "research/cad-and-skills.md",
+      "line": 116
+    },
+    {
+      "file": "research/cad-and-skills.md",
+      "line": 124
+    },
+    {
+      "file": "research/cad-and-skills.md",
+      "line": 130
+    },
+    {
+      "file": "research/cad-and-skills.md",
+      "line": 147
+    },
+    {
+      "file": "research/cad-ocs-engineering-merge-plan.md",
+      "line": 3
+    },
+    {
+      "file": "research/domains-and-components.md",
+      "line": 127
+    },
+    {
+      "file": "research/ideas-register.json",
+      "line": 10
+    },
+    {
+      "file": "research/ideas-register.json",
+      "line": 319
+    },
+    {
+      "file": "research/ideas-register.json",
+      "line": 411
+    },
+    {
+      "file": "research/ideas-register.json",
+      "line": 4368
+    },
+    {
+      "file": "research/ideas-register.md",
+      "line": 13
+    },
+    {
+      "file": "research/ideas-register.md",
+      "line": 263
+    },
+    {
+      "file": "research/ideas-register.md",
+      "line": 337
+    },
+    {
+      "file": "research/implementation-plan.md",
+      "line": 63
+    },
+    {
+      "file": "research/local-baseline.md",
+      "line": 7
+    },
+    {
+      "file": "research/local-baseline.md",
+      "line": 30
+    },
+    {
+      "file": "research/next-step-proposal.md",
+      "line": 33
+    },
+    {
+      "file": "research/reconstruction.md",
+      "line": 142
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1512
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1513
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1524
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1525
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1536
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1537
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1548
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1549
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1572
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 1573
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7495
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7496
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7512
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7513
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7519
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7534
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7535
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7541
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7554
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7555
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7561
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7572
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7573
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7579
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7590
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7591
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7597
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7613
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7614
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7620
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7638
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7639
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7659
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7660
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7666
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7680
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7681
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7687
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7698
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7699
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7705
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7716
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7717
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7723
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7736
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7737
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7743
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7756
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7757
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7771
+    },
+    {
+      "file": "research/repository-split-preparation/manifest.json",
+      "line": 7772
+    },
+    {
+      "file": "research/repository-split-preparation/plan.md",
+      "line": 7
+    },
+    {
+      "file": "research/repository-split-preparation/script-changes.md",
+      "line": 5
+    },
+    {
+      "file": "research/skill-renaming-plan.md",
+      "line": 5
+    },
+    {
+      "file": "research/skill-renaming-plan.md",
+      "line": 12
+    },
+    {
+      "file": "research/skill-renaming-plan.md",
+      "line": 15
+    },
+    {
+      "file": "research/skill-renaming-plan.md",
+      "line": 21
+    },
+    {
+      "file": "research/skill-renaming-plan.md",
+      "line": 25
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 9
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 20
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 35
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 46
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 57
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 68
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 79
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 90
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 101
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 112
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 123
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 134
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 145
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 156
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 167
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 178
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 189
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 200
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 211
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 222
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 233
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 244
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 255
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 266
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 277
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 288
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 299
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 310
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 321
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 332
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 343
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 354
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 365
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 376
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 387
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 398
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 409
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 420
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 431
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 442
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 453
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 464
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 475
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 486
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 497
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 508
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 519
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 530
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 541
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 552
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 563
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 574
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 585
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 596
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 607
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 618
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 629
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 640
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 651
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 662
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 673
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 684
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 695
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 706
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 717
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 728
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 739
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 750
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 761
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 772
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 783
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 794
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 805
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 816
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 827
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 838
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 849
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 860
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 871
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 882
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 893
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 904
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 915
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 926
+    },
+    {
+      "file": "research/sources/cad-ocs-engineering-merge-2026-11-13.json",
+      "line": 937
+    },
+    {
+      "file": "research/sources/documentation-maintenance-2026-11-13.json",
+      "line": 81
+    },
+    {
+      "file": "research/sources/documentation-maintenance-2026-11-13.json",
+      "line": 95
+    },
+    {
+      "file": "research/sources/documentation-maintenance-2026-11-13.json",
+      "line": 109
+    },
+    {
+      "file": "research/sources/generic-tooling-iterations-2026-11-13.json",
+      "line": 25
+    },
+    {
+      "file": "research/sources/generic-tooling-iterations-2026-11-13.json",
+      "line": 59
+    },
+    {
+      "file": "research/sources/generic-tooling-iterations-2026-11-13.json",
+      "line": 93
+    },
+    {
+      "file": "research/sources/local-evidence.json",
+      "line": 14
+    },
+    {
+      "file": "research/sources/ocs-document-cleanup-2026-11-13.json",
+      "line": 112
+    },
+    {
+      "file": "research/sources/round-02/cad-sources.json",
+      "line": 3
+    },
+    {
+      "file": "research/sources/round-02/cad-sources.json",
+      "line": 18
+    },
+    {
+      "file": "research/sources/round-02/domain-sources.json",
+      "line": 31
+    },
+    {
+      "file": "research/sources/round-03/cad-detail-sources.json",
+      "line": 3
+    },
+    {
+      "file": "research/sources/round-03/cad-detail-sources.json",
+      "line": 4
+    },
+    {
+      "file": "research/sources/round-03/cad-detail-sources.json",
+      "line": 12
+    },
+    {
+      "file": "research/sources/round-03/cad-detail-sources.json",
+      "line": 17
+    },
+    {
+      "file": "research/sources/round-03/cad-detail-sources.json",
+      "line": 18
+    },
+    {
+      "file": "research/sources/round-03/cad-detail-sources.json",
+      "line": 25
+    },
+    {
+      "file": "research/sources/round-03/domain-detail-sources.json",
+      "line": 709
+    },
+    {
+      "file": "research/sources/round-03/reconstruction-detail-sources.json",
+      "line": 290
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 159
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 164
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 174
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 179
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 189
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 194
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 204
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 209
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 219
+    },
+    {
+      "file": "research/sources/round-04/audit-local-sources.json",
+      "line": 224
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 94
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 95
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 106
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 107
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 118
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 119
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 130
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 131
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 142
+    },
+    {
+      "file": "research/sources/round-05/point-02-local-sources.json",
+      "line": 143
+    },
+    {
+      "file": "research/sources/round-05/point-03-local-sources.json",
+      "line": 94
+    },
+    {
+      "file": "research/sources/round-05/point-03-local-sources.json",
+      "line": 95
+    },
+    {
+      "file": "research/sources/round-05/point-03-local-sources.json",
+      "line": 106
+    },
+    {
+      "file": "research/sources/round-05/point-03-local-sources.json",
+      "line": 107
+    },
+    {
+      "file": "research/sources/round-05/point-03-local-sources.json",
+      "line": 118
+    },
+    {
+      "file": "research/sources/round-05/point-03-local-sources.json",
+      "line": 119
+    },
+    {
+      "file": "research/sources/round-05/point-04-local-sources.json",
+      "line": 94
+    },
+    {
+      "file": "research/sources/round-05/point-04-local-sources.json",
+      "line": 95
+    },
+    {
+      "file": "research/sources/round-05/point-04-local-sources.json",
+      "line": 106
+    },
+    {
+      "file": "research/sources/round-05/point-04-local-sources.json",
+      "line": 107
+    },
+    {
+      "file": "research/sources/round-05/point-04-local-sources.json",
+      "line": 118
+    },
+    {
+      "file": "research/sources/round-05/point-04-local-sources.json",
+      "line": 119
+    },
+    {
+      "file": "research/sources/round-05/point-05-local-sources.json",
+      "line": 94
+    },
+    {
+      "file": "research/sources/round-05/point-05-local-sources.json",
+      "line": 95
+    },
+    {
+      "file": "research/sources/round-05/point-05-local-sources.json",
+      "line": 106
+    },
+    {
+      "file": "research/sources/round-05/point-05-local-sources.json",
+      "line": 107
+    },
+    {
+      "file": "research/sources/round-05/point-05-local-sources.json",
+      "line": 118
+    },
+    {
+      "file": "research/sources/round-05/point-05-local-sources.json",
+      "line": 119
+    },
+    {
+      "file": "research/sources/round-05/point-06-local-sources.json",
+      "line": 94
+    },
+    {
+      "file": "research/sources/round-05/point-06-local-sources.json",
+      "line": 95
+    },
+    {
+      "file": "research/sources/round-05/point-06-local-sources.json",
+      "line": 106
+    },
+    {
+      "file": "research/sources/round-05/point-06-local-sources.json",
+      "line": 107
+    },
+    {
+      "file": "research/sources/round-05/point-06-local-sources.json",
+      "line": 118
+    },
+    {
+      "file": "research/sources/round-05/point-06-local-sources.json",
+      "line": 119
+    },
+    {
+      "file": "research/sources/round-05/point-07-local-sources.json",
+      "line": 94
+    },
+    {
+      "file": "research/sources/round-05/point-07-local-sources.json",
+      "line": 95
+    },
+    {
+      "file": "research/sources/round-05/point-07-local-sources.json",
+      "line": 106
+    },
+    {
+      "file": "research/sources/round-05/point-07-local-sources.json",
+      "line": 107
+    },
+    {
+      "file": "research/sources/round-06/implementation-queue-sources.json",
+      "line": 59
+    },
+    {
+      "file": "research/sources/round-06/implementation-queue-sources.json",
+      "line": 60
+    },
+    {
+      "file": "research/sources/round-06/implementation-queue-sources.json",
+      "line": 73
+    },
+    {
+      "file": "research/sources/round-06/implementation-queue-sources.json",
+      "line": 74
+    },
+    {
+      "file": "research/sources/round-06/implementation-queue-sources.json",
+      "line": 87
+    },
+    {
+      "file": "research/sources/round-06/implementation-queue-sources.json",
+      "line": 88
+    },
+    {
+      "file": "research/sources/round-08/component-plan-sources.json",
+      "line": 1407
+    },
+    {
+      "file": "research/sources/round-08/component-plan-sources.json",
+      "line": 1408
+    },
+    {
+      "file": "research/sources/round-09/component-execution-sources.json",
+      "line": 43
+    },
+    {
+      "file": "research/sources/round-09/component-execution-sources.json",
+      "line": 57
+    },
+    {
+      "file": "research/sources/round-11/rail-execution-sources.json",
+      "line": 27
+    },
+    {
+      "file": "research/sources/round-11/rail-execution-sources.json",
+      "line": 40
+    },
+    {
+      "file": "research/sources/round-11/rail-execution-sources.json",
+      "line": 149
+    },
+    {
+      "file": "research/sources/round-12/saved-rail-reader-sources.json",
+      "line": 58
+    },
+    {
+      "file": "research/sources/round-13/crossmember-sources.json",
+      "line": 25
+    },
+    {
+      "file": "research/sources/round-14/bearing-sources.json",
+      "line": 39
+    },
+    {
+      "file": "research/sources/round-14/bearing-sources.json",
+      "line": 52
+    },
+    {
+      "file": "research/sources/round-15/leaf-sources.json",
+      "line": 51
+    },
+    {
+      "file": "research/sources/round-15/leaf-sources.json",
+      "line": 64
+    },
+    {
+      "file": "research/sources/round-16/driver-sources.json",
+      "line": 63
+    },
+    {
+      "file": "research/sources/round-16/driver-sources.json",
+      "line": 76
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 10
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 21
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 25
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 27
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 33
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 39
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 44
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 55
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 66
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 77
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 88
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 92
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 99
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 103
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 110
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 114
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 121
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 125
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 132
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 136
+    },
+    {
+      "file": "research/sources/round-17/source-intake-sources.json",
+      "line": 143
+    },
+    {
+      "file": "research/sources/round-18/dxf-inspection-sources.json",
+      "line": 27
+    },
+    {
+      "file": "research/sources/round-18/dxf-inspection-sources.json",
+      "line": 29
+    },
+    {
+      "file": "research/sources/round-18/dxf-inspection-sources.json",
+      "line": 42
+    },
+    {
+      "file": "research/sources/round-18/dxf-inspection-sources.json",
+      "line": 90
+    },
+    {
+      "file": "research/sources/round-19/me0907-sources.json",
+      "line": 148
+    },
+    {
+      "file": "research/sources/round-20/component-sources.json",
+      "line": 303
+    },
+    {
+      "file": "research/sources/round-23/enclosure-sources.json",
+      "line": 765
+    },
+    {
+      "file": "research/sources/round-23/enclosure-sources.json",
+      "line": 777
+    },
+    {
+      "file": "research/sources/round-24/converter-sources.json",
+      "line": 875
+    },
+    {
+      "file": "research/sources/round-24/converter-sources.json",
+      "line": 887
+    },
+    {
+      "file": "research/sources/round-29/resumed-component-sources.json",
+      "line": 1551
+    },
+    {
+      "file": "research/sources/round-30/bmw-iteration-sources.json",
+      "line": 322
+    },
+    {
+      "file": "research/sources/round-30/bmw-iteration-sources.json",
+      "line": 334
+    },
+    {
+      "file": "research/sources/round-31/model-inventory-sources.json",
+      "line": 25
+    },
+    {
+      "file": "research/sources/round-31/model-inventory-sources.json",
+      "line": 37
+    },
+    {
+      "file": "research/sources/skill-installation-2026-11-13.json",
+      "line": 19
+    },
+    {
+      "file": "research/sources/skill-packaging-2026-11-13.json",
+      "line": 49
+    },
+    {
+      "file": "research/sources/skill-packaging-2026-11-13.json",
+      "line": 63
+    },
+    {
+      "file": "research/sources/skill-packaging-2026-11-13.json",
+      "line": 114
+    },
+    {
+      "file": "research/sources/skill-packaging-2026-11-13.json",
+      "line": 118
+    },
+    {
+      "file": "research/sources/skill-renaming-2026-11-13.json",
+      "line": 50
+    },
+    {
+      "file": "research/sources/skill-renaming-2026-11-13.json",
+      "line": 52
+    },
+    {
+      "file": "research/sources/skill-renaming-2026-11-13.json",
+      "line": 58
+    },
+    {
+      "file": "research/sources/skill-renaming-2026-11-13.json",
+      "line": 60
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 6
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 7
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 126
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 133
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 140
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 147
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 154
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 280
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 287
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 294
+    },
+    {
+      "file": "research/sources/skill-renaming-plan-2026-11-13.json",
+      "line": 301
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 553
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 566
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 585
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 591
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 607
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 613
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 638
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 640
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 651
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 652
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 661
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 662
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 671
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 672
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 681
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 682
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 691
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 692
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 701
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 702
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 711
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 712
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 723
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 724
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 1174
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 1487
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 1498
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 1553
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 2245
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 3191
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 4495
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 4506
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9818
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9831
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9841
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 9851
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 11909
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 11919
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 11923
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 12660
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 12671
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13417
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13429
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13431
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13442
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13443
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13452
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13453
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 13464
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 14133
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 14849
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15575
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15591
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15602
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15613
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15624
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15635
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15646
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 15656
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 16143
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 16153
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 16157
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 17343
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 17345
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 17354
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 17359
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 21730
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 21740
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 21744
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 23399
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 23409
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 23413
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 23465
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 23475
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 23479
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 24456
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 24466
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 24468
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 24479
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 24480
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32500
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32502
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32511
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32554
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32564
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32565
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32680
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32691
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32693
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32704
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32705
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32714
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32715
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32724
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32725
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32734
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32735
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32744
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32745
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32754
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 32755
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33094
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33105
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33164
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33716
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 33728
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34071
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34072
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34087
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34093
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34095
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34106
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34107
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34116
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34117
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34126
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34127
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34136
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34137
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34146
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 34147
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35043
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35056
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35067
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 35077
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 39918
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 40639
+    },
+    {
+      "file": "research/sources/source-register.json",
+      "line": 40877
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 215
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 479
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 1691
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 3587
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 4403
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 4703
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 4979
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 5795
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 5987
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 6453
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 6455
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 8039
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 8615
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 8651
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 8999
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12009
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12011
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12035
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12083
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12227
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12491
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12621
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12623
+    },
+    {
+      "file": "research/sources/source-register.md",
+      "line": 12959
+    },
+    {
+      "file": "research/sources/spherical-seat-profile-2026-11-13.json",
+      "line": 43
+    },
+    {
+      "file": "research/user-supplied-links.md",
+      "line": 17
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 18
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 406
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 642
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 717
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 950
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 1133
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 1157
+    },
+    {
+      "file": "research/workflows/cad-paths.json",
+      "line": 1215
+    },
+    {
+      "file": "research/workflows/cad-paths.md",
+      "line": 3
+    },
+    {
+      "file": "research/workflows/combined-paths.json",
+      "line": 45
+    },
+    {
+      "file": "research/workflows/combined-paths.json",
+      "line": 114
+    },
+    {
+      "file": "research/workflows/combined-paths.json",
+      "line": 191
+    },
+    {
+      "file": "research/workflows/combined-paths.json",
+      "line": 261
+    },
+    {
+      "file": "research/workflows/combined-paths.json",
+      "line": 412
+    },
+    {
+      "file": "research/workflows/combined-paths.json",
+      "line": 460
+    },
+    {
+      "file": "research/workflows/combined-paths.json",
+      "line": 513
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 96
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 143
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 187
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 190
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 194
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 291
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 292
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 410
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 605
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 1229
+    },
+    {
+      "file": "research/workflows/details/cad-details.json",
+      "line": 1415
+    },
+    {
+      "file": "research/workflows/details/cad-r01.md",
+      "line": 33
+    },
+    {
+      "file": "research/workflows/details/cad-r01.md",
+      "line": 39
+    },
+    {
+      "file": "research/workflows/details/cad-r01.md",
+      "line": 47
+    },
+    {
+      "file": "research/workflows/details/cad-r01.md",
+      "line": 49
+    },
+    {
+      "file": "research/workflows/details/cad-r01.md",
+      "line": 54
+    },
+    {
+      "file": "research/workflows/details/cad-r01.md",
+      "line": 99
+    },
+    {
+      "file": "research/workflows/details/cad-r01.md",
+      "line": 100
+    },
+    {
+      "file": "research/workflows/details/cad-r02.md",
+      "line": 36
+    },
+    {
+      "file": "research/workflows/details/cad-r02.md",
+      "line": 53
+    },
+    {
+      "file": "research/workflows/details/cad-r02.md",
+      "line": 55
+    },
+    {
+      "file": "research/workflows/details/cad-r02.md",
+      "line": 57
+    },
+    {
+      "file": "research/workflows/details/cad-r02.md",
+      "line": 115
+    },
+    {
+      "file": "research/workflows/details/cad-r03.md",
+      "line": 48
+    },
+    {
+      "file": "research/workflows/details/cad-r03.md",
+      "line": 51
+    },
+    {
+      "file": "research/workflows/details/cad-r04.md",
+      "line": 47
+    },
+    {
+      "file": "research/workflows/details/cad-r04.md",
+      "line": 49
+    },
+    {
+      "file": "research/workflows/details/cad-r05.md",
+      "line": 47
+    },
+    {
+      "file": "research/workflows/details/cad-r06.md",
+      "line": 35
+    },
+    {
+      "file": "research/workflows/details/cad-r06.md",
+      "line": 50
+    },
+    {
+      "file": "research/workflows/details/cad-r07.md",
+      "line": 34
+    },
+    {
+      "file": "research/workflows/details/cad-r07.md",
+      "line": 48
+    },
+    {
+      "file": "research/workflows/details/cad-r08.md",
+      "line": 44
+    },
+    {
+      "file": "research/workflows/details/cad-r09.md",
+      "line": 47
+    },
+    {
+      "file": "research/workflows/details/cad-r10.md",
+      "line": 43
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 133
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 142
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 151
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 464
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 787
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 857
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 939
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 948
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 957
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1015
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1025
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1035
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1232
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1326
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1794
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1871
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1960
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1969
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 1978
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2167
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2178
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2189
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2200
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2211
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2321
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2680
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 2951
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3027
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3291
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3302
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3313
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3324
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3335
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3726
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3818
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 3883
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4755
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4764
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4773
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4873
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4884
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4895
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4906
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4917
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 4977
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5194
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5253
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5310
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5494
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5505
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5516
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5527
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5538
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5799
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5875
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 5939
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6141
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6152
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6163
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6174
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6185
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6512
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6593
+    },
+    {
+      "file": "research/workflows/details/combined-details.json",
+      "line": 6656
+    },
+    {
+      "file": "research/workflows/details/dom-r01.md",
+      "line": 62
+    },
+    {
+      "file": "research/workflows/details/dom-r05.md",
+      "line": 35
+    },
+    {
+      "file": "research/workflows/details/dom-r05.md",
+      "line": 55
+    },
+    {
+      "file": "research/workflows/details/dom-r05.md",
+      "line": 102
+    },
+    {
+      "file": "research/workflows/details/dom-r06.md",
+      "line": 50
+    },
+    {
+      "file": "research/workflows/details/domain-details.json",
+      "line": 1354
+    },
+    {
+      "file": "research/workflows/details/domain-details.json",
+      "line": 1416
+    },
+    {
+      "file": "research/workflows/details/domain-details.json",
+      "line": 1475
+    },
+    {
+      "file": "research/workflows/details/mix-r01.md",
+      "line": 49
+    },
+    {
+      "file": "research/workflows/details/mix-r01.md",
+      "line": 50
+    },
+    {
+      "file": "research/workflows/details/mix-r01.md",
+      "line": 51
+    },
+    {
+      "file": "research/workflows/details/mix-r01.md",
+      "line": 72
+    },
+    {
+      "file": "research/workflows/details/mix-r01.md",
+      "line": 87
+    },
+    {
+      "file": "research/workflows/details/mix-r01.md",
+      "line": 102
+    },
+    {
+      "file": "research/workflows/details/mix-r01.md",
+      "line": 152
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 40
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 41
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 42
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 47
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 48
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 49
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 67
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 69
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 84
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 86
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 104
+    },
+    {
+      "file": "research/workflows/details/mix-r02.md",
+      "line": 154
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 40
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 41
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 42
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 62
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 63
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 64
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 65
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 66
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 76
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 84
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 94
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 102
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 116
+    },
+    {
+      "file": "research/workflows/details/mix-r03.md",
+      "line": 166
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 59
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 60
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 61
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 62
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 63
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 75
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 87
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 95
+    },
+    {
+      "file": "research/workflows/details/mix-r04.md",
+      "line": 143
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 42
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 43
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 44
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 55
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 56
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 57
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 58
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 59
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 64
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 68
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 73
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 77
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 83
+    },
+    {
+      "file": "research/workflows/details/mix-r07.md",
+      "line": 132
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 51
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 52
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 53
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 54
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 55
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 65
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 75
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 81
+    },
+    {
+      "file": "research/workflows/details/mix-r08.md",
+      "line": 129
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 48
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 49
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 50
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 51
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 52
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 63
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 74
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 82
+    },
+    {
+      "file": "research/workflows/details/mix-r09.md",
+      "line": 130
+    },
+    {
+      "file": "research/workflows/details/rec-r01.md",
+      "line": 92
+    },
+    {
+      "file": "research/workflows/details/rec-r04.md",
+      "line": 89
+    },
+    {
+      "file": "research/workflows/details/rec-r06.md",
+      "line": 90
+    },
+    {
+      "file": "research/workflows/details/rec-r07.md",
+      "line": 52
+    },
+    {
+      "file": "research/workflows/details/rec-r07.md",
+      "line": 87
+    },
+    {
+      "file": "research/workflows/details/rec-r09.md",
+      "line": 90
+    },
+    {
+      "file": "research/workflows/details/rec-r10.md",
+      "line": 90
+    },
+    {
+      "file": "research/workflows/details/reconstruction-details.json",
+      "line": 124
+    },
+    {
+      "file": "research/workflows/details/reconstruction-details.json",
+      "line": 470
+    },
+    {
+      "file": "research/workflows/details/reconstruction-details.json",
+      "line": 698
+    },
+    {
+      "file": "research/workflows/details/reconstruction-details.json",
+      "line": 777
+    },
+    {
+      "file": "research/workflows/details/reconstruction-details.json",
+      "line": 815
+    },
+    {
+      "file": "research/workflows/details/reconstruction-details.json",
+      "line": 1041
+    },
+    {
+      "file": "research/workflows/details/reconstruction-details.json",
+      "line": 1163
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 56
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 103
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 147
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 150
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 154
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 251
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 252
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 297
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 416
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 582
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 777
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 956
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 1061
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 1181
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 1591
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 1742
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 2066
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 2186
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 2531
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 2678
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 2989
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 3117
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 3372
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 3660
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 4005
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 4286
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 4799
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 7164
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 7226
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 7285
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 7951
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 9220
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 9229
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 9238
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 9551
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 9874
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 9944
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10172
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10614
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10623
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10632
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10690
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10700
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10710
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 10907
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 11001
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 11469
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 11546
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 11647
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 11752
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12377
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12386
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12395
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12584
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12595
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12606
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12617
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12628
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 12738
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 13097
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 13368
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 13444
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 13542
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 13937
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 14506
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 14517
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 14528
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 14539
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 14550
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 14941
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 15033
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 15098
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 15512
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17037
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17046
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17055
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17155
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17166
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17177
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17188
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17199
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17259
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17476
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17535
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17592
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17650
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 17878
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18151
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18162
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18173
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18184
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18195
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18456
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18532
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18596
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 18856
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19177
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19188
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19199
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19210
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19221
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19548
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19629
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 19692
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 20037
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 21036
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 22085
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 22768
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 23111
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 23149
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 23663
+    },
+    {
+      "file": "research/workflows/details/workflow-details.json",
+      "line": 24023
+    },
+    {
+      "file": "research/workflows/domain-paths.json",
+      "line": 59
+    },
+    {
+      "file": "research/workflows/domain-paths.json",
+      "line": 1044
+    },
+    {
+      "file": "research/workflows/domain-paths.json",
+      "line": 2102
+    },
+    {
+      "file": "research/workflows/domain-paths.json",
+      "line": 2194
+    },
+    {
+      "file": "research/workflows/domain-paths.md",
+      "line": 137
+    },
+    {
+      "file": "research/workflows/operation-catalogue.md",
+      "line": 9
+    },
+    {
+      "file": "research/workflows/operation-catalogue.md",
+      "line": 17
+    },
+    {
+      "file": "research/workflows/operation-catalogue.md",
+      "line": 21
+    },
+    {
+      "file": "research/workflows/operation-catalogue.md",
+      "line": 22
+    },
+    {
+      "file": "research/workflows/operation-catalogue.md",
+      "line": 47
+    },
+    {
+      "file": "research/workflows/operation-catalogue.md",
+      "line": 69
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 69
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 492
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 749
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 830
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 2156
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 3141
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 3861
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 4136
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 4172
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 5081
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 5193
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 5325
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 5451
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 5689
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 5765
+    },
+    {
+      "file": "research/workflows/workflow-map.json",
+      "line": 5850
+    },
+    {
+      "file": "skills/README.md",
+      "line": 44
+    },
+    {
+      "file": "skills/README.md",
+      "line": 58
+    },
+    {
+      "file": "skills/README.md",
+      "line": 86
+    },
+    {
+      "file": "skills/cad-ocs-engineering/references/package-completion.md",
+      "line": 5
+    },
+    {
+      "file": "skills/cad-source-intake/SKILL.md",
+      "line": 45
+    },
+    {
+      "file": "skills/cad-source-intake/SKILL.md",
+      "line": 49
+    },
+    {
+      "file": "tests/test_ocs_skill_merge.py",
+      "line": 49
+    }
+  ],
+  "scope": "Plan only; current documents, code and website sources were inspected. Repairs are proposed.",
+  "coverage": [
+    "Tracked Markdown: inline links/images, explicit reference-style links, HTML a/img references, local anchors and own-repository blob/tree URLs mapped to local paths.",
+    "Tracked text: exact old skill identifiers and old repository skill path candidates. Historical occurrences require classification.",
+    "All tracked JSON parsed successfully during the audit.",
+    "All documented sh/bash fenced blocks checked with bash -n; commands were not executed.",
+    "Native Jekyll --safe build of docs into a temporary directory; rendered HTML href/src targets, IDs and project baseurl checked locally.",
+    "External URLs were classified by syntax; HTTP availability was not tested.",
+    "Code-formatted locators are inventoried separately; only navigational targets are counted as link failures."
+  ]
+}

@@ -4389,6 +4389,18 @@
       "next_check": "Delivery checks recorded in the execution report.",
       "execution_status": "DONE",
       "execution_report": "execution/cad-ocs-engineering-merge-2026-11-13.md"
+    },
+    {
+      "id": "CAD-DOCUMENTATION-RENAME-AUDIT-2026-11-13",
+      "name": "Documentation and GitHub Pages rename repair",
+      "summary": "Repair current skill instructions and generated summary links; preserve historical source identities and validate native Jekyll output.",
+      "status": "proposal",
+      "audit_status": "DONE",
+      "source_urls": [
+        "${MODELING_ROOT}/research/documentation-rename-audit/README.md",
+        "${MODELING_ROOT}/research/sources/documentation-rename-audit-2026-11-13.json"
+      ],
+      "next_check": "Execute the ordered repair batches after plan review, refreshing concurrent changes."
     }
   ]
 }
