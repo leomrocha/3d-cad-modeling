@@ -1,0 +1,9 @@
+# Spherical seat and shaft transition profile
+
+1. **Inputs:** caller-owned sphere radius and axial centre, collar radius and start station, shaft radius and tip station, and blend radius. Use one unit for all inputs. Bind printed dimensions, source approximations and calculated reconstruction points separately in the component job.
+2. **Source review:** identify the actual spherical segment, cylindrical collar, shaft root and head datum in the retained drawing. A sphere primitive represents the entire ball; this profile describes the bounded seat and its transition. Keep nominal reconstruction scope in the model metadata.
+3. **Calculation:** [spherical_seat_profile.py](../scripts/spherical_seat_profile.py) calculates the upper sphere/collar intersection and externally tangent sphere/blend circles, then emits a closed radius/axial profile with signed circular-arc bulges. The caller supplies every dimension.
+4. **Supported geometry:** positive shaft radius below collar radius below sphere radius; strictly increasing outer axial stations; one circular concave blend tangent to the shaft cylinder. Input overflow, coordinate collapse and invalid ordering raise errors before construction.
+5. **Construction:** use the existing `Geometry.revolve_z` with returned points and bulges. Compose separately sourced head geometry using existing operations. Keep a thread designation and pitch in metadata when the represented shaft is its nominal cylinder.
+6. **Checks:** independently verify arc centres and tangent contact equations before writes. After save/reopen, inspect analytic sphere/cylinder/torus records, axial/radial transition vertices, any separate head planes, closed-body topology and source metadata. Compare pre-save and reopened native geometry, then close the completed owned documents.
+7. **Evidence:** the synthetic tests exercise arithmetic and input guards. Actual component checks and source inputs remain in the caller-owned component record.
