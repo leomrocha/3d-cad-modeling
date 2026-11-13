@@ -32,14 +32,20 @@
       "title": "Toroidal reference skill procedure",
       "summary": "Describes source-bound inside and section dimensions, derived radii, exact circular revolve construction and the native torus observation contract.",
       "local_path": "skills/component-cad/references/toroidal-reference.md",
-      "sha256": "bdf06f04c5b37b2575c58c023e66edb73f9842bc6ffefcc225153b564afcaaed",
+      "sha256": "56271a93b495ab4d19b1bd15246148b64ffffefaab039f51d314d422926fb1f2",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "referring_documents": [
         "execution/toroidal-reference-helper-2026-11-13.md"
       ],
       "previous_sha256": "4da64ca86880e384e1a04461fc415a867ba51518513530ee6cc1a197f4454314",
-      "updated_at": "2026-11-13"
+      "updated_at": "2026-11-13",
+      "revision_history": [
+        {
+          "sha256": "bdf06f04c5b37b2575c58c023e66edb73f9842bc6ffefcc225153b564afcaaed",
+          "recorded_before_update": "2026-11-13"
+        }
+      ]
     },
     {
       "title": "Executed G-140 torus application",
@@ -52,6 +58,19 @@
       "coordinator_model": "gpt-6.1-sol",
       "helper_revision": "a359449",
       "decoder_revision": "61f3dc4",
+      "referring_documents": [
+        "execution/toroidal-reference-helper-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Executed AS568-261 nominal O-ring application",
+      "summary": "Saved native torus surfaces match source-derived radii and frame; connected topology, source metadata, recovered persistence and owned-document closure passed.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c074-build-01/result.json",
+      "sha256": "5147f51dec0d548c377524d86a31250ac85074bd371a20b9456857cc849ca67a",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "execution_model": "gpt-6-luna",
+      "coordinator_model": "gpt-6.1-sol",
       "referring_documents": [
         "execution/toroidal-reference-helper-2026-11-13.md"
       ]

@@ -20,12 +20,19 @@
       "title": "Envelope runner datum propagation",
       "summary": "Passes validated axis bindings into the final replacement metadata record and read-only preflight alongside existing source, replay, persistence and cleanup guards.",
       "local_path": "scripts/envelope_job_runner.py",
-      "sha256": "d8635c7f91b441daa6d84b24d5af9087af3edddbb11fe51f4a735a5650b193a7",
+      "sha256": "0d880d70597fa26f3514cb2f8649ae74f45ba002510acd3b3fe1cdde6bc4353a",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "referring_documents": [
         "execution/envelope-axis-datums-2026-11-13.md"
-      ]
+      ],
+      "revision_history": [
+        {
+          "sha256": "d8635c7f91b441daa6d84b24d5af9087af3edddbb11fe51f4a735a5650b193a7",
+          "recorded_before_update": "2026-11-13"
+        }
+      ],
+      "updated_at": "2026-11-13"
     },
     {
       "title": "Envelope helper regression tests",
@@ -53,9 +60,29 @@
       "title": "Envelope source-axis procedure",
       "summary": "Documents optional source-feature/datum mapping, separate construction origin and persisted native metadata comparison.",
       "local_path": "skills/component-cad/references/envelope-reference.md",
-      "sha256": "3043305a38ae8adc8fc3c3cd29c0b3b260d653a12696da601c3022298b4178d8",
+      "sha256": "543197d968706d4f28575cc062fb181620a0c782156f54c05fb4212e8f7e27b7",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/envelope-axis-datums-2026-11-13.md"
+      ],
+      "revision_history": [
+        {
+          "sha256": "3043305a38ae8adc8fc3c3cd29c0b3b260d653a12696da601c3022298b4178d8",
+          "recorded_before_update": "2026-11-13"
+        }
+      ],
+      "updated_at": "2026-11-13"
+    },
+    {
+      "title": "Executed TDK package-body clearance application",
+      "summary": "Saved body-clearance reference has source-axis datum lines in actual native metadata; geometry extrema, topology, saved persistence and owned-document cleanup passed.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/body-envelope-r01/result.json",
+      "sha256": "bfc5d8754b0835f971b120f44684d6db4847e72de12bee226f9ec34b2cd5c8f2",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "execution_model": "gpt-6-luna",
+      "coordinator_model": "gpt-6.1-sol",
       "referring_documents": [
         "execution/envelope-axis-datums-2026-11-13.md"
       ]
