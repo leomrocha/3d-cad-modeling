@@ -16,7 +16,7 @@
     },
     "scripts/component_records.py": {
       "source": "scripts/component_records.py",
-      "sha256": "e9a6f2ef7e14ba9ca0de4f201d55a27e0d4c58f09df15f0601d919333de573e0"
+      "sha256": "7a7a4685b51e2dcce8b6b5a51193916ec5912eabee2205bd6f3b7db63d2462b9"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",

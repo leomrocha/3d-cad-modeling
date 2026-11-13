@@ -39,6 +39,17 @@
       "referring_documents": [
         "execution/concurrent-skill-publication-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Current-name package refresh and isolated execution",
+      "summary": "Regenerated bundled component_records and model_inventory from committed canonical revision 08dcff0 using the publishing agent's renamed packages. Four isolated installation tests passed; the optional live OCS test was skipped. The generated files match canonical source.",
+      "local_path": "execution/concurrent-skill-publication-package-checks-2026-11-13.json",
+      "sha256": "8ea9f44d13839f399bc7371d4c5c76169f367d81e80c5a14d2326f6ec0519497",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "referring_documents": [
+        "execution/concurrent-skill-publication-2026-11-13.md"
+      ]
     }
   ]
 }
