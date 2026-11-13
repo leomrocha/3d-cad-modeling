@@ -8,10 +8,63 @@ import os
 from pathlib import Path
 import subprocess
 import sys
+import re
+import importlib.util
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake')
 HOST_ONLY = {'scripts/build_skill_packages.py'}
+
+
+def local_links(document):
+    targets = set()
+    for target in re.findall(r'\]\(([^)]+)\)', document.read_text()):
+        parsed = urlsplit(target)
+        if not parsed.scheme and parsed.path:
+            targets.add((document.parent / unquote(parsed.path)).resolve())
+    return targets
+
+
+def check_registrations():
+    """Require human-readable helper/procedure indexes and combined source coverage."""
+    tool_index = ROOT / 'docs/tools.md'
+    skill_index = ROOT / 'skills/README.md'
+    tools, procedures = local_links(tool_index), local_links(skill_index)
+    register = json.loads((ROOT / 'research/sources/source-register.json').read_text())
+    registered = {item.get('local_source_path') for item in register['sources']}
+    markdown = (ROOT / 'research/sources/source-register.md').read_text()
+    failures = []
+    required = {ROOT / relative for relative in source_paths() if Path(relative).name != '__init__.py'}
+    for path in required:
+        if path.resolve() not in tools:
+            failures.append('Tool catalogue entry missing: ' + str(path.relative_to(ROOT)))
+    main = ROOT / 'skills/cad-ocs-engineering/SKILL.md'
+    references = {path for path in local_links(main)
+                  if path.is_relative_to(main.parent / 'references')}
+    for path in references:
+        if path not in procedures:
+            failures.append('Skill procedure index entry missing: ' + str(path.relative_to(ROOT)))
+    # Source coverage includes reusable scripts and procedures invoked by the skill.
+    for path in required | references:
+        relative = str(path.relative_to(ROOT))
+        candidates = {relative, '${MODELING_ROOT}/' + relative}
+        matches = [item for item in register['sources'] if item.get('local_source_path') in candidates]
+        if not candidates & registered:
+            failures.append('Combined source registration missing: ' + relative)
+        elif any(not re.search(r'^#{2,3} .*' + re.escape(item['id']) + r'\b', markdown, re.M)
+                 for item in matches):
+            failures.append('Source Markdown index entry missing: ' + relative)
+    if failures:
+        raise ValueError('\n'.join(sorted(failures)))
+    documents = register.get('source_record_documents', [])
+    if documents:
+        spec = importlib.util.spec_from_file_location(
+            'tooling_source_registry', ROOT / 'research/tools/build_workflow_register.py')
+        registry = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(registry)
+        registry.merge_source_records(ROOT, documents, register['registered_at'], check=True)
+    return {'result': 'PASS', 'tool_entries': len(required), 'procedure_entries': len(references)}
 
 
 def source_paths(committed=False):
@@ -162,9 +215,10 @@ def complete(regenerate=False, cli_root=None, reader_root=None):
     if regenerate:
         build()
     build(check=True)
+    check_registrations()
     env = dict(os.environ, SKILLS_CLI_ROOT=str(cli_root), NATIVE_READER_ROOT=str(reader_root),
                PYTHONDONTWRITEBYTECODE='1', DISABLE_TELEMETRY='1', DO_NOT_TRACK='1')
-    for pattern in ('test_skill_package_build.py', 'test_skill_packages.py'):
+    for pattern in ('test_skill_package_build.py', 'test_source_registration.py', 'test_skill_packages.py'):
         process = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover',
                                   '-s', 'tests', '-p', pattern, '-v'], cwd=ROOT, env=env,
                                  text=True, capture_output=True)
@@ -173,8 +227,10 @@ def complete(regenerate=False, cli_root=None, reader_root=None):
         print(process.stdout + process.stderr, file=sys.stderr, end='')
     # Catch helpers changed or created during validation.
     build(check=True)
+    check_registrations()
     return {'result': 'PASS', 'mode': 'finalize' if regenerate else 'verify',
-            'skills': list(SKILLS), 'synchronisation': 'PASS', 'isolated_installation_checks': 'PASS',
+            'skills': list(SKILLS), 'synchronisation': 'PASS', 'registrations': 'PASS',
+            'isolated_installation_checks': 'PASS',
             'telemetry': 'disabled', 'live_ocs': 'caller-selected descriptor required; optional state check'}
 
 

@@ -4,6 +4,7 @@ This development operation runs from the 3D CAD Modeling source repository root 
 
 1. Keep component recipes, dimensions and model artifacts in the component project. Put generic Python helpers under the source repository's `scripts/` directory. New helpers there are automatically assigned to the full CAD package; source-intake and drawing-inspection also receive the transitive local imports of their entry points. Package manifests record source paths and hashes. Build-only code is explicitly excluded by the builder's `HOST_ONLY` declaration.
 2. Supply `SKILLS_CLI_ROOT` for an existing skills CLI package and `NATIVE_READER_ROOT` for the existing pinned Python dependency directory. These runtime paths are caller inputs. Use the repository's Python test environment.
+   Register each reusable helper in `docs/tools.md` and each procedure referenced by the main skill in `skills/README.md`. Add attributed source observations under `research/sources/` and merge them into the combined source indexes with `python3 research/tools/build_workflow_register.py --date YYYY-MM-DD --source-record research/sources/RECORD.json` from the source repository root. Supply the actual client date. The merge retains source IDs and original observations. Completion checks fail when catalogue entries or source observations are missing.
 3. After creating, modifying or deleting helpers or changing package dependencies/instructions, run:
 
    ```sh

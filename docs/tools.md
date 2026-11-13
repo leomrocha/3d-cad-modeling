@@ -42,6 +42,8 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 
 11. [spherical_seat_profile.py](../scripts/spherical_seat_profile.py) — calculates a closed spherical-seat, collar, shaft and tangent-blend profile from caller-supplied dimensions. [Profile procedure](../skills/cad-ocs-engineering/references/spherical-seat-profile.md).
 
+12. [conical_washer_profile.py](../scripts/conical_washer_profile.py) — constructs and checks a free conical washer from source-bound normal material thickness and radial/axial dimensions. [Conical-washer procedure](../skills/cad-ocs-engineering/references/conical-washer-profile.md).
+
 ## Circular-section ring geometry
 
 1. [toroidal_reference.py](../scripts/toroidal_reference.py) — constructs and checks a nominal circular-section ring from source-bound inside and section diameters. [Toroidal-reference procedure](../skills/cad-ocs-engineering/references/toroidal-reference.md).
@@ -67,7 +69,7 @@ Some of these are specialized tools for particular geometries. I still have work
 
 ## Installed packages and maintenance
 
-1. [build_skill_packages.py](../scripts/build_skill_packages.py) — generates per-skill copies from canonical reusable code and checks them with `--check`.
+1. [build_skill_packages.py](../scripts/build_skill_packages.py) — generates per-skill copies and source/hash manifests; `--finalize` regenerates and requires registration and isolated-installation checks, `--verify` performs final validation, and `--check` checks package synchronisation. [Completion procedure](../skills/cad-ocs-engineering/references/package-completion.md).
 2. [package_check.py](../scripts/package_check.py) — verifies installed package hashes, imports and pinned dependency versions; component CAD also accepts a selected OCS session for a read-only state check.
 3. [ocs_control.py](../scripts/ocs_control.py) — reads an existing authenticated native session and guards explicitly authorized mutation requests.
 4. [check_contract.py](../scripts/check_contract.py) — checks caller-supplied point, axis and plane measurements against an explicit coordinate contract.

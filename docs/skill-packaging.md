@@ -16,6 +16,12 @@ Set `SKILL_ROOT` to the installed directory. Resolve bundled helpers from `SKILL
 4. The [isolated package checks](../tests/test_skill_packages.py) copy dependencies into a temporary Python environment, install skills individually into temporary projects, check local references/imports/commands and exercise source-intake and DXF fixtures. Telemetry is disabled. Set a caller-selected `OCS_DESCRIPTOR` for the additional read-only OCS state check. Completion always requires the isolated package checks; live state access is conditional on that descriptor.
 5. Commit canonical changes and generated copies/manifests in the same authorized batch, preserving unrelated work. `--check` remains a lightweight synchronisation check. For a historical comparison, `--committed --check` reads both the script inventory and bytes from local Git HEAD. Completion modes validate current sources and reject `--committed`.
 
+### Required catalogue and source registration
+
+1. Add a readable helper entry to [docs/tools.md](tools.md), and index each procedure referenced by the CAD skill in [skills/README.md](../skills/README.md).
+2. Record original source locators, titles, summaries, dates, evidence status, hashes and referring documents in an attributed JSON file under `research/sources/`. Merge that file into both combined source indexes using `python3 research/tools/build_workflow_register.py --date YYYY-MM-DD --source-record research/sources/RECORD.json`. The merge preserves existing source IDs and observations; repeated merges are idempotent. Pass the actual client date explicitly.
+3. The combined register retains the input-document list. Future full register builds replay those documents. `--finalize` and `--verify` check helper catalogue coverage, procedure-index coverage, source coverage and whether both combined source indexes include the latest observations from those documents. Register omissions fail completion.
+
 ## Runtime ownership
 
 Generic `cadtools` runtime, geometry and persistence functions are maintained here. The existing component-project copies remain intact for current callers. Component recipes, dimensions, model files, source originals and job results retain their owning project. [Runtime provenance](../scripts/cadtools/NOTICE.md). [Migration update](../research/repository-split-preparation/script-changes.md#independent-skill-packaging).
