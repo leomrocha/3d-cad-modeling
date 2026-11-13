@@ -11,6 +11,7 @@ import hashlib
 import json
 import re
 import sys
+import time
 from pathlib import Path
 
 
@@ -337,8 +338,18 @@ class RecoveringClient:
         try:
             return self._client.mutate(label, operation, allow_wait=allow_wait, **fields)
         except Uncertain:
-            return self._client.recover(self._client.namespace + ':' + label,
-                                        allow_wait=allow_wait)
+            # Native operation queries may all return immediately while the
+            # asynchronous document open is still progressing. Poll the same
+            # journalled identity after bounded delays; never resend mutation.
+            for delay in (0, 0.25, 0.5, 1.0):
+                if delay:
+                    time.sleep(delay)
+                try:
+                    return self._client.recover(self._client.namespace + ':' + label,
+                                                allow_wait=allow_wait)
+                except Uncertain:
+                    if delay == 1.0:
+                        raise
 
 
 def cleanup_completed_envelope(*, helper, descriptor, client, namespace, output,

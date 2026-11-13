@@ -52,3 +52,12 @@ python -m unittest tests.test_envelope_job_runner -v
 ```
 
 The test suite checks named-root resolution, portable metadata with source hashes and scope, namespace/output validation, replay blocking, reader-import failure before OCS discovery, read-only default behavior and fake guarded orchestration. It does not connect to OCS or verify an installed CAD runtime.
+
+## Asynchronous operation recovery
+
+The shared `RecoveringClient` recovers the original journalled request after an
+uncertain response. If immediate recovery also exhausts while the operation is
+running, it makes three further recovery calls after 0.25, 0.5 and 1 second.
+The mutation is sent once. Definite rejection or error propagates immediately;
+persistent uncertainty propagates at the fixed bound. Preserve that request and
+its journal for read-only follow-up. See the [executed recovery record](../../../execution/bounded-request-recovery-2026-11-13.md).

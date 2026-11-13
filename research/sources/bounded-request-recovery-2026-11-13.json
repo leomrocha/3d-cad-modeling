@@ -1,0 +1,43 @@
+{
+  "implementation_model": "gpt-6.1-sol",
+  "component_execution_model": "gpt-6-luna",
+  "tests": {
+    "new_passed": 3,
+    "runner_regressions_passed": 12
+  },
+  "records": [
+    {
+      "title": "Bounded recovery proxy",
+      "summary": "Adds fixed delayed recovery calls for an uncertain existing request, preserving its identity and single mutation send.",
+      "local_path": "scripts/envelope_job_runner.py",
+      "sha256": "e13ba309c077b9c8a5198a4bf3addc95bf9f88579c5967cd4dd40ad58e6e788e",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/bounded-request-recovery-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Bounded recovery tests",
+      "summary": "Three executed tests verify eventual same-request completion, fixed-bound uncertainty and immediate definite-error propagation with exactly one mutation send.",
+      "local_path": "tests/test_request_recovery.py",
+      "sha256": "5cd3f54f9a93eced816a2e01720053a1f8dcd6139c8fa8b9f8b0b5f00561194e",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/bounded-request-recovery-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Installed CADTOOLS operation query loop",
+      "summary": "Inspected Client._finish and recover show immediate bounded status queries and journal-context checks behind the shared proxy.",
+      "local_path": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/runtime.py",
+      "sha256": "42b90c0839d5bc12b292fccf771ee08f92f5c2c2fb542aca694c2d8ae5755d49",
+      "registered_at": "2026-11-13",
+      "evidence_status": "inspected_local_source",
+      "referring_documents": [
+        "execution/bounded-request-recovery-2026-11-13.md"
+      ]
+    }
+  ]
+}
