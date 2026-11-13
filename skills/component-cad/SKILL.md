@@ -57,3 +57,5 @@ Use this skill when a real component job develops the reusable tools in this rep
 25. For SAT-to-SAB geometry persistence, use the [smallBMS comparison procedure](references/small-bms.md) within its supported frame and body conditions.
 26. For the source-dimensioned Pixhawk 6C clearance envelope and mounting references, use the [Pixhawk procedure](references/pixhawk.md).
 27. After final provenance and path edits, use the [retained-artifact manifest check](references/retained-artifact-checks.md). Keep the emitted receipt with the component records in the owning project.
+
+28. For a circular-section ring defined by inside diameter and section diameter, use the [toroidal-reference procedure](references/toroidal-reference.md). Supply source-bound dimensions and an explicit centre and axis. Preserve saved native surface records before extending their decoder; verify analytic radii and body closure before completing the component.

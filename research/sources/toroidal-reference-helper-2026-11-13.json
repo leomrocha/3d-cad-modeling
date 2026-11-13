@@ -1,0 +1,43 @@
+{
+  "implementation_model": "gpt-6-luna",
+  "coordinator_and_test_model": "gpt-6.1-sol",
+  "synthetic_tests": {
+    "result": "PASS",
+    "count": 9
+  },
+  "records": [
+    {
+      "title": "Toroidal reference helper",
+      "summary": "Constructs an external-source circular-section ring and compares analytic torus radii, centre, axis, connected topology and source metadata.",
+      "local_path": "scripts/toroidal_reference.py",
+      "sha256": "f6f0cb56e797731c76f4f11d293487d84215446bf74f384dfb5c8c3504c989ff",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/toroidal-reference-helper-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Toroidal reference synthetic tests",
+      "summary": "Nine executed tests cover source binding, exact arc profile planning, numerical guards, analytic surface comparisons, the installed metadata adapter and document revision checks.",
+      "local_path": "tests/test_toroidal_reference.py",
+      "sha256": "bc866c5f25126c6a4113ad0f86d730a14d4f971c969d165b5f6dd3b356b725b5",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/toroidal-reference-helper-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Toroidal reference skill procedure",
+      "summary": "Describes source-bound inside and section dimensions, derived radii, exact circular revolve construction and the native torus observation contract.",
+      "local_path": "skills/component-cad/references/toroidal-reference.md",
+      "sha256": "4da64ca86880e384e1a04461fc415a867ba51518513530ee6cc1a197f4454314",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/toroidal-reference-helper-2026-11-13.md"
+      ]
+    }
+  ]
+}
