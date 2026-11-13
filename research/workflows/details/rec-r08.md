@@ -84,4 +84,4 @@ If camera solve fragments, capture more overlap or resolve moving objects/lens m
 5. [https://docs.nerf.studio/quickstart/custom_dataset.html](https://docs.nerf.studio/quickstart/custom_dataset.html)
 6. [https://docs.nerf.studio/quickstart/installation.html](https://docs.nerf.studio/quickstart/installation.html)
 
-Full source summaries: [source register](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+Full source summaries: [source register](../../sources/source-register.md).

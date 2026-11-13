@@ -1,223 +1,235 @@
 [
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/mast-assembly-comparison.png",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/mast-assembly-comparison.png",
     "title": "Mast displacement, incoming wind 0 and 45 degrees, scale one",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_local_capture_copied_unchanged",
     "sha256": "b6c166859bcee7d88d5e1d4b1d3bf41e74b030b83fa98758dc57c8ad0789b519",
     "content_type": "image/png",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/images/wind-generator/mast-displacement.png",
+    "local_copy": "${MODELING_ROOT}/docs/images/wind-generator/mast-displacement.png",
     "referring_documents": [
       "README.md",
       "docs/examples/wind-generator.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/mast-assembly-comparison-yield.png",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/mast-assembly-comparison-yield.png",
     "title": "Mast assigned yield divided by calculated stress",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_local_capture_copied_unchanged",
     "sha256": "eda39754895f39117ce10a46892fc889ef705da3fec05f088088f2e5cde19362",
     "content_type": "image/png",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/images/wind-generator/mast-yield.png",
+    "local_copy": "${MODELING_ROOT}/docs/images/wind-generator/mast-yield.png",
     "referring_documents": [
       "README.md",
       "docs/examples/wind-generator.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png",
     "title": "FERME longitudinal rail native model",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_local_cad_capture_copied_unchanged",
     "sha256": "979206d7bb9f12abd10de2e0d76240860854365480c3f76390483ea5637485b9",
     "content_type": "image/png",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/images/ferme/frame.png",
+    "local_copy": "${MODELING_ROOT}/docs/images/ferme/frame.png",
     "referring_documents": [
       "docs/examples/ferme.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/isometric.png",
     "title": "FERME Motenergy ME0907 modeled interfaces",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_local_cad_capture_copied_unchanged",
     "sha256": "7af4364ab874f8ad6f2a8d9b70c95e1d69ced16b16bbc17cae84fe7e278e5fdf",
     "content_type": "image/png",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/images/ferme/motor.png",
+    "local_copy": "${MODELING_ROOT}/docs/images/ferme/motor.png",
     "referring_documents": [
       "docs/examples/ferme.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png",
     "title": "FERME SKF SY20TF bearing unit",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_local_cad_capture_copied_unchanged",
     "sha256": "71191fda7ac620ddf978d50fbf4480e9ca07029aaa522a38ae280d2a8ac90b07",
     "content_type": "image/png",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/images/ferme/bearing.png",
+    "local_copy": "${MODELING_ROOT}/docs/images/ferme/bearing.png",
     "referring_documents": [
       "docs/examples/ferme.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png",
     "title": "FERME Nissan Leaf Gen2 module",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_local_cad_capture_copied_unchanged",
     "sha256": "4c8c12631464a7fe7e7ee90b34e5146837972323adcf139bb7756b21a0dadb11",
     "content_type": "image/png",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/images/ferme/battery.png",
+    "local_copy": "${MODELING_ROOT}/docs/images/ferme/battery.png",
     "referring_documents": [
       "docs/examples/ferme.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/models/mast-assembly-variants/square-reach400-steel-structure.dwg",
+    "local_original": "${EOLIENNES_ROOT}/models/mast-assembly-variants/square-reach400-steel-structure.dwg",
     "title": "Square mast with 400 mm reinforcement arms",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_native_model_example_copy",
     "sha256": "db6d67c37347b3418dac645efd348eb226b58afce3cce170e45cd6383b3227c5",
     "content_type": "image/vnd.dwg",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/square-mast.dwg",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/square-mast.dwg",
     "referring_documents": [
       "docs/examples/wind-generator.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/metrics.json",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/metrics.json",
     "title": "0deg mast metrics.json",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "182b7edd88fe966fd541cd7e543d0e1faf58c31d2f218209201abe21284a76fe",
     "content_type": "application/json",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/0deg-metrics.json",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/0deg-metrics.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
-    ]
+    ],
+    "local_copy_sha256": "eba8f07e14eb0832017e10c16ce62d79e5fbead3f613b09a791b689e82b09987",
+    "copy_transformation": "Portable path normalization; original source hash retained."
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/job.json",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/job.json",
     "title": "0deg mast job.json",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "350a5152f1c99b6e924cef64944aa3e3a310ebd53467915185d1823ed88f3c3e",
     "content_type": "application/json",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/0deg-job.json",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/0deg-job.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
-    ]
+    ],
+    "local_copy_sha256": "8b15bd2915243da9676432673986e74bb5244bbdf231d95cf133e44fd25facab",
+    "copy_transformation": "Portable path normalization; original source hash retained."
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/metrics.json",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/metrics.json",
     "title": "45deg mast metrics.json",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "7fb221356f561783babe1959fcf94b69e24305cc8ae1048c8eedeeaee9e76ed0",
     "content_type": "application/json",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/45deg-metrics.json",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/45deg-metrics.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
-    ]
+    ],
+    "local_copy_sha256": "537d9ebb3a98d8a6521b712e9b318ea4de5150f98f9a739b129f80fd4342f774",
+    "copy_transformation": "Portable path normalization; original source hash retained."
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/job.json",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/job.json",
     "title": "45deg mast job.json",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "3b9909229f662b88adce14e1804f05b9037750d2f6c91d0a8c61d903ca9e02d4",
     "content_type": "application/json",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/45deg-job.json",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/45deg-job.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
-    ]
+    ],
+    "local_copy_sha256": "b846aedbdb6553b28f40864bea262e8800bd8e1027bbc55e239d506b7827d33a",
+    "copy_transformation": "Portable path normalization; original source hash retained."
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/input-register.json",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/input-register.json",
     "title": "Mast simulation input provenance",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_report_or_input_copied_unchanged",
     "sha256": "41516296753962a96dcf9657ee6a4f7b56029fa55162fc3a2e38dff435f76d8c",
     "content_type": "application/json",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/input-register.json",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/input-register.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/models/mast-assembly-variants/SIMULATION-HANDOFF.md",
+    "local_original": "${EOLIENNES_ROOT}/models/mast-assembly-variants/SIMULATION-HANDOFF.md",
     "title": "Mast CAD-to-simulation connection requirements",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_report_or_input_copied_unchanged",
     "sha256": "16d9ade6ad41cc9a227054c05392b384f34601b9147c07cad912b34871688cd8",
     "content_type": "text/markdown",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/simulation-handoff.md",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/simulation-handoff.md",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/IDEAL-BASE-SCREENING.md",
+    "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/IDEAL-BASE-SCREENING.md",
     "title": "Executed ideal-base mast simulation record",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_report_or_input_copied_unchanged",
     "sha256": "ed6b525cb193f353750abe3cc196a926fd5290fcfdc343b9a5dd5625f5ad3035",
     "content_type": "text/markdown",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/wind-generator/ideal-base-screening.md",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/ideal-base-screening.md",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json",
     "title": "bearing-result.json",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_component_result_copied_unchanged",
     "sha256": "0e1c25505a1f1a7f8ec599e577be7345611c5176c737040d80d32b565590a4bf",
     "content_type": "application/json",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/ferme/bearing-result.json",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/ferme/bearing-result.json",
     "referring_documents": [
       "docs/examples/ferme.md"
-    ]
+    ],
+    "local_copy_sha256": "d8a0a287ef90e8765d98bdabfe496c7bba213f9da21a3ada8004bb9390264020",
+    "copy_transformation": "Portable path normalization; original source hash retained."
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json",
     "title": "battery-result.json",
     "summary": "Selected unchanged example copy; usage and component/case scope are recorded in the referring page.",
     "observation_date": "2026-11-13",
     "evidence_status": "existing_component_result_copied_unchanged",
     "sha256": "7f89e3ac39db08427d78be0b43ac16e9d5e98a86cd01e63ab74cc130e7ce1dd3",
     "content_type": "application/json",
-    "local_copy": "/home/leo/projects/3dmodeling/docs/examples/files/ferme/battery-result.json",
+    "local_copy": "${MODELING_ROOT}/docs/examples/files/ferme/battery-result.json",
     "referring_documents": [
       "docs/examples/ferme.md"
-    ]
+    ],
+    "local_copy_sha256": "a309fea2af195dc0d7818a59e07aa1ba8b3c6612f62dc83e4f4be9b10f55c6fb",
+    "copy_transformation": "Portable path normalization; original source hash retained."
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/cad-paths.json",
     "title": "cad-paths.json",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -230,7 +242,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
     "title": "reconstruction-paths.json",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -243,7 +255,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/domain-paths.json",
     "title": "domain-paths.json",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -256,7 +268,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json",
     "title": "result.json",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -269,7 +281,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json",
     "title": "result.json",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -282,7 +294,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/skf-sy20tf.md",
     "title": "skf-sy20tf.md",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -295,7 +307,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/calibrated_trace.py",
+    "local_original": "${MODELING_ROOT}/scripts/calibrated_trace.py",
     "title": "calibrated_trace.py",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -308,7 +320,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/source_intake.py",
+    "local_original": "${MODELING_ROOT}/scripts/source_intake.py",
     "title": "source_intake.py",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",
@@ -321,7 +333,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/model_inventory.py",
+    "local_original": "${MODELING_ROOT}/scripts/model_inventory.py",
     "title": "model_inventory.py",
     "summary": "Existing local operation, component or simulation evidence inspected to attribute documentation claims and handoffs.",
     "observation_date": "2026-11-13",

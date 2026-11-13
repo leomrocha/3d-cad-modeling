@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "local_original": "${MODELING_ROOT}/research/domains-and-components.md",
     "title": "domains-and-components.md",
     "summary": "Existing building semantics, IFC, display and simulation representation research.",
     "observation_date": "2026-11-13",
@@ -13,7 +13,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "local_original": "${MODELING_ROOT}/research/reconstruction.md",
     "title": "reconstruction.md",
     "summary": "Existing reconstruction and calibrated-input workflow research.",
     "observation_date": "2026-11-13",
@@ -26,7 +26,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "local_original": "${MODELING_ROOT}/research/cad-and-skills.md",
     "title": "cad-and-skills.md",
     "summary": "Existing CAD software and automation assessment.",
     "observation_date": "2026-11-13",
@@ -39,7 +39,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/calibrated_trace.py",
+    "local_original": "${MODELING_ROOT}/scripts/calibrated_trace.py",
     "title": "calibrated_trace.py",
     "summary": "Inspected implementation of signed-scale image point mapping and worst-case uncertainty bounds.",
     "observation_date": "2026-11-13",

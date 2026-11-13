@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/rounded_tube.py",
+    "local_original": "${MODELING_ROOT}/scripts/rounded_tube.py",
     "title": "Shared tube helper with crossmember interface checks",
     "summary": "Adds actual native rail-width/crossmember-span comparison against sourced outside frame width, plus midpoint-plane comparison against cut length/2. Existing construction completed the260mm P02 body and saved/reopened native checks pass.",
     "access_date": "2026-11-12",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "local_original": "${MODELING_ROOT}/tests/test_native_acis.py",
     "title": "Recorded-native regression for rail and crossmember",
     "summary": "Retains four saved-rail cases and adds three actual P02 cases: correct frame gap/midpoint pass, wrong350mm frame width fails, and shifted crossmember local origin fails midpoint. Combined helper suite passes35 tests.",
     "access_date": "2026-11-12",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
     "title": "Repeated-section and interface-check procedure",
     "summary": "Documents reuse of the same nominal section at600mm and260mm cut lengths, preserving separate datums and adding the nominal frame-gap/local-midpoint check with supported conditions.",
     "access_date": "2026-11-12",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/p02-crossmember.md",
+    "local_original": "${MODELING_ROOT}/execution/p02-crossmember.md",
     "title": "Completed crossmember iteration report",
     "summary": "Records source-ready260mm crossmember, isolated document72/reopened73, five pre-save and six reopened groups, two nominal interface/datum checks, inspected views and the applied shared-helper improvement.",
     "access_date": "2026-11-12",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
     "title": "Crossmember source sheet",
     "summary": "Source proposal gives40x40x3mm square tube,260mm cut length, quantity3, frame reference face and centre-plane datums and dependency on main-frame rail.",
     "access_date": "2026-11-12",
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
+    "local_original": "${FERME_ROOT}/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
     "title": "Parallel-rail layout source for nominal gap check",
     "summary": "Existing frame proposal gives600mm length and340mm outside width with40mm rails and260mm crossmembers. Its outside width supplies the independent nominal gap comparison for actual saved P01/P02 features.",
     "access_date": "2026-11-12",
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg",
     "title": "Main frame crossmember nominal native model",
     "summary": "New DWG2018 contains one hollow260mm crossmember with proposed40x40x3mm section and standard-calculation outer6mm/inner3mm corner radii. Native pre-save/reopened dimensions, persistence and inspected views pass.",
     "access_date": "2026-11-12",
@@ -77,7 +77,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json",
     "title": "P02 crossmember — body-checkpoint.json",
     "summary": "Checkpoint identifies the P02 native hollow body before dimension inspection and saving.",
     "access_date": "2026-11-12",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json",
     "title": "P02 crossmember — document-checkpoint.json",
     "summary": "Initial isolated P02 document identity/revision checkpoint supports inspected stage recovery without touching prior models.",
     "access_date": "2026-11-12",
@@ -99,7 +99,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json",
     "title": "P02 crossmember — end-capture.json",
     "summary": "Completed end-view capture response identifies the reopened component camera/document context.",
     "access_date": "2026-11-12",
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json",
     "title": "P02 crossmember — initial-state.json",
     "summary": "Pre-build OCS state identifies the active rail document and all open work; later new-document construction preserves unrelated documents.",
     "access_date": "2026-11-12",
@@ -121,7 +121,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json",
     "title": "P02 crossmember — interface-checks.json",
     "summary": "Actual saved crossmember span260mm equals340mm sourced outside frame width minus twice actual rail width40mm; local midpoint Z130mm also passes.",
     "access_date": "2026-11-12",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json",
     "title": "P02 crossmember — iso-capture.json",
     "summary": "Completed isometric capture response binds the actual crossmember image to its native document and camera.",
     "access_date": "2026-11-12",
@@ -143,7 +143,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl",
     "title": "P02 crossmember — ocs-journal.jsonl",
     "summary": "Append-only native request journal records isolated document creation, exact rounded profiles, bounded-area extrusion, temporary-profile cleanup, metadata, save and reopen with stable identities.",
     "access_date": "2026-11-12",
@@ -154,7 +154,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json",
     "title": "P02 crossmember — persistence.json",
     "summary": "DWG2018 save/hash/audit-manifest and reopened identity checks PASS with one solid and zero dropped entities.",
     "access_date": "2026-11-12",
@@ -165,7 +165,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json",
     "title": "P02 crossmember — pre-save-checks.json",
     "summary": "Five source-linked native dimension check groups PASS for the260mm crossmember before saving.",
     "access_date": "2026-11-12",
@@ -176,7 +176,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json",
     "title": "P02 crossmember — pre-save-records.json",
     "summary": "Raw native SAT record of the actual P02 solid in document72 supplies the original surface/vertex observations.",
     "access_date": "2026-11-12",
@@ -187,7 +187,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json",
     "title": "P02 crossmember — readiness.json",
     "summary": "Required P02 feature coverage and all pinned source observations return SOURCE_READY before native construction.",
     "access_date": "2026-11-12",
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json",
     "title": "P02 crossmember — reopened-checkpoint.json",
     "summary": "Reopened checkpoint binds the saved P02 component handle and document/revision to its completed body.",
     "access_date": "2026-11-12",
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json",
     "title": "P02 crossmember — reopened-checks.json",
     "summary": "Six native SAB groups PASS: section/length, X/Y walls, ends, eight corner surfaces and a connected closed body.",
     "access_date": "2026-11-12",
@@ -220,7 +220,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png",
     "title": "P02 crossmember — reopened-end.png",
     "summary": "Inspected reopened end view shows the outer and inner rounded-square section of the P02 hollow crossmember.",
     "access_date": "2026-11-12",
@@ -231,7 +231,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png",
     "title": "P02 crossmember — reopened-isometric.png",
     "summary": "Inspected reopened isometric view shows the260mm crossmember longitudinal edges and hollow end section.",
     "access_date": "2026-11-12",
@@ -242,7 +242,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json",
     "title": "P02 crossmember — reopened-records.json",
     "summary": "Raw native SAB body in reopened document73 supplies independent persisted-geometry observations.",
     "access_date": "2026-11-12",
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json",
     "title": "P02 crossmember — result.json",
     "summary": "Current P02 iteration result is DONE with saved DWG hash, native/persistence/view passes, midpoint130mm, nominal gap260mm and applied helper SHA.",
     "access_date": "2026-11-12",
@@ -264,7 +264,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json",
     "title": "P02 crossmember — source-job-r02.json",
     "summary": "Immutable P02 source revision2 pins proposed section/length, standard calculation radii,340mm outside frame width, source hashes and explicit local midpoint datum mapping.",
     "access_date": "2026-11-12",
@@ -275,7 +275,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl",
     "title": "P02 crossmember — view-journal.jsonl",
     "summary": "Retains guarded end/isometric camera commands and actual capture requests for the reopened crossmember.",
     "access_date": "2026-11-12",
@@ -286,7 +286,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json",
     "title": "P02 crossmember — view-state.json",
     "summary": "Actual OCS view state identifies reopened document73 and preserves unrelated original wheel document52 revision2.",
     "access_date": "2026-11-12",
@@ -297,7 +297,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
     "title": "Component index after two completed iterations",
     "summary": "Main rail and crossmember are DONE. SKF SY20TF is next eligible existing-model inspection because its source sheet links a detailed native component and complete source/check records; all original job identities remain.",
     "access_date": "2026-11-12",
@@ -308,7 +308,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
     "title": "Component history after crossmember iteration",
     "summary": "Original action history remains an unchanged prefix; source preparation, construction, saved native checks, nominal interface/datum checking and inspected views are appended for P02.",
     "access_date": "2026-11-12",
@@ -319,7 +319,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
     "title": "FERME crossmember completion index",
     "summary": "Adds the P02 saved component/result links, native and interface check outcomes and the selected next existing-model reuse job.",
     "access_date": "2026-11-12",
@@ -330,7 +330,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/README.md",
     "title": "FERME model index with crossmember",
     "summary": "Adds the distinct P02 nominal reference model alongside P01 and all original component CAD references, linked to its exact execution/check result.",
     "access_date": "2026-11-12",

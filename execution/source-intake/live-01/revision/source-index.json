@@ -11,7 +11,7 @@
     "statement": "Implement the existing source-intake task using the existing JSON and file-observation helpers. Add its skill, meaningful tests, executed local source capture and documentation. Preserve completed CAD models and earlier implementations.",
     "requested_output": "Source-intake Python script, skill, tests, protected source revision and execution records",
     "authorized_paths": [
-      "/home/leo/projects/3dmodeling"
+      "${MODELING_ROOT}"
     ]
   },
   "sources": [
@@ -48,11 +48,11 @@
       "title": "Current project rules",
       "summary": "Defines task scope, source registration, before/after commits and communication rules.",
       "kind": "file",
-      "locator": "/home/leo/projects/3dmodeling/AGENTS.md",
+      "locator": "${MODELING_ROOT}/AGENTS.md",
       "observed_at": "2026-11-12",
       "observation": {
         "state": "local_file_observed",
-        "path": "/home/leo/projects/3dmodeling/AGENTS.md",
+        "path": "${MODELING_ROOT}/AGENTS.md",
         "sha256": "4102e7edc906a542e566d590e6d2970266df52a846a361cd654ef1ac7ac39232",
         "bytes": 19232
       }
@@ -62,11 +62,11 @@
       "title": "Existing source-intake implementation plan",
       "summary": "Defines the unfinished source-intake adapter, protected revisions, correction links and required checks.",
       "kind": "file",
-      "locator": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+      "locator": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md",
       "observed_at": "2026-11-12",
       "observation": {
         "state": "local_file_observed",
-        "path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+        "path": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md",
         "sha256": "e452fcb1441b0a2abfd88dfbf477b31fb6b7ef14cbde41be294113108eeb19b2",
         "bytes": 10303
       }

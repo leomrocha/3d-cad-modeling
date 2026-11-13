@@ -49,7 +49,7 @@ Pixels map to normalized camera rays with K/distortion inverse, transformed into
 
 ## Documented third-party tool and API entry points
 
-1. Path: Blender Python Console (native bpy API; no project script); Status: existing_tool_entrypoint; Entrypoint: `depsgraph = bpy.context.evaluated_depsgraph_get(); hit, location, normal, face_index, obj, matrix = bpy.context.scene.ray_cast(depsgraph, origin, direction); origin/direction are world-space rays computed from the calibrated camera and stroke pixel.`; Source urls: https://docs.blender.org/api/current/bpy.types.Scene.html; [SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+1. Path: Blender Python Console (native bpy API; no project script); Status: existing_tool_entrypoint; Entrypoint: `depsgraph = bpy.context.evaluated_depsgraph_get(); hit, location, normal, face_index, obj, matrix = bpy.context.scene.ray_cast(depsgraph, origin, direction); origin/direction are world-space rays computed from the calibrated camera and stroke pixel.`; Source urls: https://docs.blender.org/api/current/bpy.types.Scene.html; SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 
 ## Output artifacts
 
@@ -84,6 +84,6 @@ For ambiguous rays, require selected target surface or user selection; preserve 
 ## Original sources
 
 1. [https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html](https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html)
-2. [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+2. ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 
-Full source summaries: [source register](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+Full source summaries: [source register](../../sources/source-register.md).

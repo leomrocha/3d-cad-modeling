@@ -56,9 +56,9 @@ These routes provide a source-backed way to define a nominal CAD shape without t
 
 ## Existing project records consulted
 
-- [Main frame longitudinal rail input sheet (P01)](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md) — P01 proposed 40 × 40 × 3 mm tube, 600 mm cut length; grade follows actual stock record.
-- [Main frame crossmember input sheet (P02)](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md) — P02 proposed 40 × 40 × 3 mm tube, 260 mm cut length between rails.
-- [Frame, hitch and supports research](/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md) and [frame source manifest](/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv) — identify the supplier page/item 040819 as prior seller-page observation and list the original URL; do not contain process or standard evidence for the tube.
+- Main frame longitudinal rail input sheet (P01) (`${FERME_ROOT}/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md`) — P01 proposed 40 × 40 × 3 mm tube, 600 mm cut length; grade follows actual stock record.
+- Main frame crossmember input sheet (P02) (`${FERME_ROOT}/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md`) — P02 proposed 40 × 40 × 3 mm tube, 260 mm cut length between rails.
+- Frame, hitch and supports research (`${FERME_ROOT}/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md`) and frame source manifest (`${FERME_ROOT}/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv`) — identify the supplier page/item 040819 as prior seller-page observation and list the original URL; do not contain process or standard evidence for the tube.
 - The frame source manifest records the seller page's 19.8 kg listing for a 6 m bar. This mass listing is not used to identify a standard or process.
 
 ## Source/claim status
@@ -69,5 +69,5 @@ Direct observations from the supplier and AFNOR/NEN catalogue pages are source c
 
 1. **Research agent:** requested model `gpt-6-luna`; actual runtime identity unavailable to the agent.
 2. **Coordinator:** `gpt-6.1-sol`; reviewed returned source observations, source locations, arithmetic and supplier applicability.
-3. **Related action:** [Select a supported solid feature route (CAD-10-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). The section evidence applies to the proposed main frame longitudinal rail and crossmember.
-4. **Registered alternatives:** [Cold-formed, hot-finished and measured-stock geometry proposals](/home/leo/projects/3dmodeling/research/action-audit/ideas.json), COMP-I08–COMP-I10.
+3. **Related action:** [Select a supported solid feature route (CAD-10-A01)](action-audit/point-03-operations.json). The section evidence applies to the proposed main frame longitudinal rail and crossmember.
+4. **Registered alternatives:** [Cold-formed, hot-finished and measured-stock geometry proposals](action-audit/ideas.json), COMP-I08–COMP-I10.

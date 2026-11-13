@@ -1,6 +1,6 @@
 [
   {
-    "url": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "url": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "title": "OCS Engineering skill",
     "summary": "Installed OCS skill defines units, axes, frames, datums, part boundaries, revision-bound mutations, readback geometry checks, verified save and computational handoff. Existing local source; user reported prior partial runtime success in earlier conversation.",
     "access_date": "2026-11-12",
@@ -15,12 +15,12 @@
       "CAD-R07",
       "CAD-R08"
     ],
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "url": "${MODELING_ROOT}/research/implementation-plan.md",
     "title": "3D modeling implementation plan",
     "summary": "Prior project proposal identifies OCS as the interactive baseline, FreeCAD for constrained feature trees, code-CAD for scripted solids, raster plans, drawing conversion and verification routes. Used as existing project context, not as runtime evidence.",
     "access_date": "2026-11-12",
@@ -30,12 +30,12 @@
       "CAD-I04",
       "CAD-R01"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "local_original": "${MODELING_ROOT}/research/implementation-plan.md",
     "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "url": "${MODELING_ROOT}/research/reconstruction.md",
     "title": "3D reconstruction research report",
     "summary": "Prior repository report assesses image/depth reconstruction methods, source terms and prerequisites. This batch references it for scan-to-CAD transition context and does not repeat that research.",
     "access_date": "2026-11-12",
@@ -45,12 +45,12 @@
       "CAD-R06",
       "CAD-R07"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "local_original": "${MODELING_ROOT}/research/reconstruction.md",
     "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "url": "${MODELING_ROOT}/research/domains-and-components.md",
     "title": "Domain and component research report",
     "summary": "Prior project report compares reusable component sources and downstream architecture/robotics domains. This batch uses it for source-library and assembly handoffs.",
     "access_date": "2026-11-12",
@@ -61,12 +61,12 @@
       "CAD-R07",
       "CAD-R08"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "local_original": "${MODELING_ROOT}/research/domains-and-components.md",
     "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/architecture/research/README.md",
+    "url": "${ARCHITECTURE_ROOT}/research/README.md",
     "title": "Architecture research index",
     "summary": "Existing architecture project source index and prior route context for building design. It is referenced as prior work, not newly web researched.",
     "access_date": "2026-11-12",
@@ -74,12 +74,12 @@
     "supporting_claims": [
       "CAD-11"
     ],
-    "local_original": "/home/leo/projects/architecture/research/README.md",
+    "local_original": "${ARCHITECTURE_ROOT}/research/README.md",
     "sha256": "f4040982c5baf0845c2be900e6892434dcb154cec111ef034e9a7d420f54dc41",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+    "url": "${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md",
     "title": "OpenCADStudio CAD harness findings",
     "summary": "Prior read-only OCS inspection documents API capabilities and evidence limits, with source receipts. This workflow map reuses the findings and does not claim new runtime execution.",
     "access_date": "2026-11-12",
@@ -87,12 +87,12 @@
     "supporting_claims": [
       "CAD-14"
     ],
-    "local_original": "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+    "local_original": "${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md",
     "sha256": "e2118a37d040ead069f9f464d0683c5e987db677a386ec2393d8de90f3ae18f2",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "url": "${OCS_ROOT}/README.md",
     "title": "OpenCADStudio README",
     "summary": "Local OCS source README lists supported drawing formats, MCP/automation entry point, solid commands and STEP AP203 export of mesh data. Local source was inspected in prior CAD research; this report registers that evidence.",
     "access_date": "2026-11-12",
@@ -100,12 +100,12 @@
     "supporting_claims": [
       "CAD-08"
     ],
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "local_original": "${OCS_ROOT}/README.md",
     "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+    "url": "${OCS_ROOT}/docs/automation/README.md",
     "title": "OpenCADStudio MCP automation guide",
     "summary": "Local OCS guide describes stdio MCP and drawing inspection, mutation, measurements, audits and verified save. It supports application-level drawing workflow claims.",
     "access_date": "2026-11-12",
@@ -117,12 +117,12 @@
       "CAD-17",
       "CAD-R03"
     ],
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+    "local_original": "${OCS_ROOT}/docs/automation/README.md",
     "sha256": "582af3c68bf1756658b5fe89d8a56094992b884d4e9a85daa3f584f8e8ec93e3",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+    "url": "${OCS_ROOT}/docs/cadkernel-body-path.md",
     "title": "OpenCADStudio kernel body path note",
     "summary": "Local OCS design/implementation note describes supported kernel-body paths and history limitations; it does not establish STEP analytic-surface export.",
     "access_date": "2026-11-12",
@@ -130,12 +130,12 @@
     "supporting_claims": [
       "CAD-10"
     ],
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+    "local_original": "${OCS_ROOT}/docs/cadkernel-body-path.md",
     "sha256": "64d940087bda6af3457406b07ed1595ddd974bd97256873a26ffaad6b40d48e4",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "url": "${OCS_ROOT}/src/io/step.rs",
     "title": "OpenCADStudio STEP writer source",
     "summary": "Local Rust writer consumes mesh models and emits triangular planar faces in STEP closed-shell/manifold-solid structures. It supports the claim that this exporter produces faceted mesh-derived STEP geometry.",
     "access_date": "2026-11-12",
@@ -145,7 +145,7 @@
       "CAD-I04",
       "CAD-R04"
     ],
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "local_original": "${OCS_ROOT}/src/io/step.rs",
     "sha256": "2269911945e747b5ef30bbaaa8b656a0f6e4e348ed911af256034a612f3cd899",
     "content_type": "text/plain"
   },
@@ -445,7 +445,7 @@
     "content_type": "text/html"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "url": "${MODELING_ROOT}/research/reconstruction.md",
     "title": "3D reconstruction workflow findings",
     "summary": "Existing project report records COLMAP/AliceVision/Meshroom photo-to-sparse/dense cloud and mesh routes, metric scaling from controls, and checks for camera coverage, reprojection, point clouds, mesh defects and withheld dimensions. Registered from the existing report; no current external page was reopened for this batch.",
     "access_date": "2026-11-12",
@@ -455,7 +455,7 @@
       "CAD-16",
       "CAD-R06"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "local_original": "${MODELING_ROOT}/research/reconstruction.md",
     "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
     "content_type": "text/markdown"
   },

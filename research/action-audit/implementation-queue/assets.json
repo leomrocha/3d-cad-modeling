@@ -6,7 +6,7 @@
     {
       "id": "ferme-findings",
       "name": "cad-workflow-findings.md",
-      "path": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+      "path": "${FERME_ROOT}/skills/cad-workflow-findings.md",
       "kind": "recorded_execution_summary",
       "inspection": "local_source_read",
       "sha256": "fbd89002aa02beb1ead8d537dcb650047c357b90eea40d2281350ff28212811e",
@@ -17,7 +17,7 @@
     {
       "id": "ferme-skill",
       "name": "SKILL.md",
-      "path": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+      "path": "${FERME_ROOT}/skills/cad-construction/SKILL.md",
       "kind": "documented_skill",
       "inspection": "local_source_read",
       "sha256": "bc45db50ee1ee9ddbc1a39e10cc9de3dedd372698d5309f9f5bacfacb76bf3db",
@@ -28,7 +28,7 @@
     {
       "id": "ferme-ocs",
       "name": "ocs-skill-improvements.md",
-      "path": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+      "path": "${FERME_ROOT}/skills/ocs-skill-improvements.md",
       "kind": "proposed_skill_extension",
       "inspection": "local_source_read",
       "sha256": "cf8ded1155c0984063a2c634eb4b741e9d22b2baadd4c218ba15814e5f4c5e10",
@@ -39,7 +39,7 @@
     {
       "id": "ferme-readme",
       "name": "README.md",
-      "path": "/home/leo/projects/ferme/skills/README.md",
+      "path": "${FERME_ROOT}/skills/README.md",
       "kind": "evidence_index",
       "inspection": "local_source_read",
       "sha256": "852b9f2ee0efe7689d85d8e182693aa9e895c33202c3907f991c4b80d4da857e",
@@ -50,7 +50,7 @@
     {
       "id": "ocs-skill",
       "name": "SKILL.md",
-      "path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+      "path": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
       "kind": "installed_skill_source",
       "inspection": "local_source_read",
       "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
@@ -61,7 +61,7 @@
     {
       "id": "ocs-control",
       "name": "ocs_control.py",
-      "path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+      "path": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py",
       "kind": "existing_code",
       "inspection": "local_source_read",
       "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
@@ -126,7 +126,7 @@
     {
       "id": "measurement-checker",
       "name": "check_contract.py",
-      "path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+      "path": "${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py",
       "kind": "existing_code",
       "inspection": "local_source_read",
       "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
@@ -189,7 +189,7 @@
     {
       "id": "native-wrapper",
       "name": "ngv064_ocs.py",
-      "path": "/tmp/opencode/ngv064_ocs.py",
+      "path": "${TEMP_ROOT}/opencode/ngv064_ocs.py",
       "kind": "existing_component_code",
       "inspection": "local_source_read",
       "sha256": "68a0204cc78b8d46210fbf1498e015a0666f94cb5287427219c0188a23f53b71",
@@ -271,7 +271,7 @@
     {
       "id": "item-geometry",
       "name": "item_ocs_parts.py",
-      "path": "/tmp/opencode/item_ocs_parts.py",
+      "path": "${TEMP_ROOT}/opencode/item_ocs_parts.py",
       "kind": "existing_component_code",
       "inspection": "local_source_read",
       "sha256": "500d72af1767b433d521737a7aa2db2c268db9caa34aad357d5bc84fcd774bd4",
@@ -327,7 +327,7 @@
     {
       "id": "sat-reader",
       "name": "check_ngv064_wheel.py",
-      "path": "/tmp/opencode/check_ngv064_wheel.py",
+      "path": "${TEMP_ROOT}/opencode/check_ngv064_wheel.py",
       "kind": "existing_component_code",
       "inspection": "local_source_read",
       "sha256": "1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4",
@@ -355,7 +355,7 @@
     {
       "id": "profile-build",
       "name": "build_item_profile_segment.py",
-      "path": "/tmp/opencode/build_item_profile_segment.py",
+      "path": "${TEMP_ROOT}/opencode/build_item_profile_segment.py",
       "kind": "existing_component_code",
       "inspection": "local_source_read",
       "sha256": "80d3fe7fd2308a26dda4133748c54d478a085ca381a423a60362dbf966324521",
@@ -401,7 +401,7 @@
     {
       "id": "battery-geometry",
       "name": "battery_ocs_parts.py",
-      "path": "/tmp/opencode/battery_ocs_parts.py",
+      "path": "${TEMP_ROOT}/opencode/battery_ocs_parts.py",
       "kind": "existing_component_code",
       "inspection": "local_source_read",
       "sha256": "ccf4bccc801c1315c0289c509e7f91681754c72fd65b89b5827f18de7b7c5159",
@@ -438,7 +438,7 @@
     {
       "id": "leaf-build",
       "name": "build_leaf_gen2.py",
-      "path": "/tmp/opencode/build_leaf_gen2.py",
+      "path": "${TEMP_ROOT}/opencode/build_leaf_gen2.py",
       "kind": "existing_component_code",
       "inspection": "local_source_read",
       "sha256": "4d6f8eb52addd7a4c5b3ee687cd3118364360a7a162713e6185101b369bb9ef7",
@@ -488,7 +488,7 @@
     {
       "id": "bmw-build",
       "name": "build_bmw_i3_94ah.py",
-      "path": "/tmp/opencode/build_bmw_i3_94ah.py",
+      "path": "${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py",
       "kind": "existing_component_code",
       "inspection": "local_source_read",
       "sha256": "4bacd498f12f1dab482e6cb5f050e8a7dc2c5efc61473ee2127d2e8be5fa5c16",
@@ -538,7 +538,7 @@
     {
       "id": "register-builder",
       "name": "build_workflow_register.py",
-      "path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+      "path": "${MODELING_ROOT}/research/tools/build_workflow_register.py",
       "kind": "existing_documentation_code",
       "inspection": "local_source_read",
       "sha256": "e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e",
@@ -588,7 +588,7 @@
     {
       "id": "wheel-report",
       "name": "neugart-ngv064-wheel-160.md",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
       "kind": "recorded_execution_report",
       "inspection": "local_source_read",
       "sha256": "9ef13208ea35beabc65104ee0e807ee65915446f3a449b6bf8419525eca7bef2",
@@ -599,7 +599,7 @@
     {
       "id": "profile-report",
       "name": "item-profile-02633-segment-100mm.md",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
       "kind": "recorded_execution_report",
       "inspection": "local_source_read",
       "sha256": "d9f68c3ed038b1e39649437594fade9db78f1412ace69a832436fa3f4aca8f8d",
@@ -610,7 +610,7 @@
     {
       "id": "wheel-checks",
       "name": "neugart-ngv064-wheel-160-native.json",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
       "kind": "recorded_check_results",
       "inspection": "local_source_read",
       "sha256": "ba3fd46f29645a8434aed14f217ab5320836c5f13404885287c8359133964b98",
@@ -630,7 +630,7 @@
     {
       "id": "bracket-checks",
       "name": "item-angle-bracket-set-41115-native.json",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
       "kind": "recorded_check_results",
       "inspection": "local_source_read",
       "sha256": "df42709bbd7bc2a10102c5e7c7559667baa1aa0bba44eab57dce407ba5b7318f",
@@ -650,7 +650,7 @@
     {
       "id": "profile-checks",
       "name": "item-profile-02633-segment-100mm-native.json",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
       "kind": "recorded_check_results",
       "inspection": "local_source_read",
       "sha256": "7bae7ea075ac2a41d001518863889e6a593f24d25cbaa0c5a3556cadf3cdab58",
@@ -670,7 +670,7 @@
     {
       "id": "leaf-checks",
       "name": "nissan-leaf-gen2-native.json",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
       "kind": "recorded_check_results",
       "inspection": "local_source_read",
       "sha256": "d91733280a6fc484e9f769e3af1746145401331d8148a5ef0bbbd4ae827cafc8",
@@ -690,7 +690,7 @@
     {
       "id": "bmw-checks",
       "name": "bmw-i3-94ah-native-checks.json",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
       "kind": "recorded_check_results",
       "inspection": "local_source_read",
       "sha256": "18c6149a67d9397172579eab59855e397d035866225bef1fae7b79e22682d619",

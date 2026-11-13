@@ -23,9 +23,9 @@
         "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
       },
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+        "${MODELING_ROOT}/research/tube-corner-research.md"
       ],
-      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "occurrence_registry": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
       "date": "2026-11-12"
     },
     {
@@ -50,9 +50,9 @@
         "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
       },
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+        "${MODELING_ROOT}/research/tube-corner-research.md"
       ],
-      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "occurrence_registry": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
       "date": "2026-11-12"
     },
     {
@@ -77,9 +77,9 @@
         "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
       },
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+        "${MODELING_ROOT}/research/tube-corner-research.md"
       ],
-      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "occurrence_registry": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
       "date": "2026-11-12"
     },
     {
@@ -104,9 +104,9 @@
         "condition": "Output evidence identifies the exact feature and retains the representation basis; source readiness checks pass before construction."
       },
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+        "${MODELING_ROOT}/research/tube-corner-research.md"
       ],
-      "occurrence_registry": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+      "occurrence_registry": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
       "date": "2026-11-12"
     }
   ]

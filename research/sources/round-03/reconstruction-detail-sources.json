@@ -287,7 +287,7 @@
     "content_type": "text/html"
   },
   {
-    "url": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "url": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "title": "OCS Engineering skill instructions",
     "summary": "Local skill defines explicit units, origins, axes, datums, part boundaries, constrained model edits, readback and measured checks; retain it for remodeling handoff.",
     "access_date": "2026-11-12",

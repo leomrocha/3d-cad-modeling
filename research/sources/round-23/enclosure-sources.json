@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-product-page.html",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-product-page.html",
     "title": "ARCA 203015T, 8121020 | 200 x 300 x 150 | ARCA 203015",
     "summary": "Exact manufacturer product identity and page-listed dimensions, cover/locking/hinge description, package content, material, colour and ratings.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     "url": "https://www.fibox.com/products/arca-iec/arca-203015/8121020"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-dimension-drawing.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-dimension-drawing.pdf",
     "title": "FIBOX ARCA IEC 203015T",
     "summary": "Metric rear and side-section views dimension the body, external mounting features, internal mounting-plate features, wall and cover. Dimension leaders and view associations are transcribed in source-notes.md.",
     "access_date": "2026-11-12",
@@ -24,7 +24,7 @@
     "url": "https://www.fibox.com/hubfs/assets/8121020_FIBOX%20ARCA%20IEC%20203015T.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020.step",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020.step",
     "title": "8121020_FIBOX ARCA IEC 203015T",
     "summary": "ExactmanufacturerSTEP8121020 with12soliddefinitions;retainsbase,cover,hinges,lock,plate,feet andsourceconfiguration.",
     "access_date": "2026-11-12",
@@ -36,7 +36,7 @@
     "url": "https://9349002.fs1.hubspotusercontent-na1.net/hubfs/9349002/assets/8121020_FIBOX%20ARCA%20IEC%20203015T.step"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/acquisition.json",
     "title": "Fibox source acquisition metadata",
     "summary": "Records3exactmanufacturer-linkedGETresults,timestamps,MIME,sizes,hashes andderivedpreviews.",
     "access_date": "2026-11-12",
@@ -47,7 +47,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes-initial.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes-initial.md",
     "title": "Initial Fibox drawing transcription",
     "summary": "Initialdelegatedtableincludesrearfootdepthdatumandmountingplateopeningmisassociations,preservedbeforecoordinatorcorrection.",
     "access_date": "2026-11-12",
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md",
     "title": "Integrated Fibox drawing andvariant review",
     "summary": "Identifies203015Texactvariant,correctedrearbodydepthdatum,inneropeningassociation andsourcevsproductpageconditions.",
     "access_date": "2026-11-12",
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md",
     "title": "Fibox dimension-leader corrections",
     "summary": "Recordsactualimageassociationreview:152.5fromrearbodyplane;261.5\u00d7161innerbodyopening;keepsinitialnotes andsavedMPSplate observationsseparate.",
     "access_date": "2026-11-12",
@@ -80,7 +80,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png",
     "title": "Full Fibox dimension drawing render",
     "summary": "Actualrear/sectiondrawingviewwith300\u00d7200body,152.5depth,10footprojection andwall/covercallouts.",
     "access_date": "2026-11-12",
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-front-detail.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-front-detail.png",
     "title": "Fibox rear-view detail",
     "summary": "Derivedrear-viewcropretainsmounting/openingleadersforfeatureassociation.",
     "access_date": "2026-11-12",
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-side-detail.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-side-detail.png",
     "title": "Fibox side-section detail",
     "summary": "Derivedsectioncropretains152.5bodydepth,10footprojection,wall3.8 andcover3.5leaders.",
     "access_date": "2026-11-12",
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/initial-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/initial-state.json",
     "title": "initial-state.json",
     "summary": "NativeOCSbaselineactivedocument83 and6existingopendocumentsbeforecreating84.",
     "access_date": "2026-11-12",
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/prior-model-hashes.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/prior-model-hashes.json",
     "title": "prior-model-hashes.json",
     "summary": "Pre-buildhashesof23existingsavedDWGsforbytepreservationcomparison.",
     "access_date": "2026-11-12",
@@ -135,7 +135,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/document-checkpoint.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/document-checkpoint.json",
     "title": "document-checkpoint.json",
     "summary": "Newisolateddocument84binding,revisionandrequestnamespacebeforeenclosureimport.",
     "access_date": "2026-11-12",
@@ -146,7 +146,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-format.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-format.json",
     "title": "step-format.json",
     "summary": "ActualImportFileactionselectingSTEPformat;waiting_inputdialogresult.",
     "access_date": "2026-11-12",
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-source.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-source.json",
     "title": "step-source.json",
     "summary": "ActualImportFileactionbindingtheexacthashedFiboxSTEPpath.",
     "access_date": "2026-11-12",
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-confirm.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-confirm.json",
     "title": "step-confirm.json",
     "summary": "CompletedoriginalSTEPimportconfirmationresultforthenewdocument.",
     "access_date": "2026-11-12",
@@ -179,7 +179,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json",
     "title": "imported-audit.json",
     "summary": "Initial12solid/18blockreferenceauditwithzeroerrorsorwarningsbeforeplacementcorrection.",
     "access_date": "2026-11-12",
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-query.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-query.json",
     "title": "imported-query.json",
     "summary": "Importedentityhandle/typeinventoryusedforboundedrecordreads.",
     "access_date": "2026-11-12",
@@ -201,7 +201,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-blocks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-blocks.json",
     "title": "imported-blocks.json",
     "summary": "Initialblockdefinitionsandmembershipincludingroot,base,cover,lock,feetandplate.",
     "access_date": "2026-11-12",
@@ -212,7 +212,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-blocks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-blocks.json",
     "title": "corrected-blocks.json",
     "summary": "Blockmembershipreadbackafter16sourceframecorrections.",
     "access_date": "2026-11-12",
@@ -223,7 +223,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-blocks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-blocks.json",
     "title": "reopened-blocks.json",
     "summary": "Persistedblockmembershipreadbackfromsaved/reopeneddocument85.",
     "access_date": "2026-11-12",
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-placement-plan.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-placement-plan.json",
     "title": "source-placement-plan.json",
     "summary": "17sourceframesand16uniqueinverse-matchednativeplacementswithreviewedtargetfields.",
     "access_date": "2026-11-12",
@@ -245,7 +245,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/placement-corrections.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/placement-corrections.json",
     "title": "placement-corrections.json",
     "summary": "Actualhelperrunreadbacksfor16nativeCAScorrectionsand12unchangedACISdefinitions.",
     "access_date": "2026-11-12",
@@ -256,7 +256,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/pre-save-assembly-measurements.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/pre-save-assembly-measurements.json",
     "title": "pre-save-assembly-measurements.json",
     "summary": "Source-corrected16instancepathsandpointspansbeforepersistence;accessoriesincluded.",
     "access_date": "2026-11-12",
@@ -267,7 +267,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/persistence.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/persistence.json",
     "title": "persistence.json",
     "summary": "Recoveredoriginalreopenrequest,matchingDWGhash/manifestandzero-errorzero-warningaudit.",
     "access_date": "2026-11-12",
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json",
     "title": "reopened-checkpoint.json",
     "summary": "Reopeneddocument85bindingandcurrentgeometryrevisionafterverifiedpersistence.",
     "access_date": "2026-11-12",
@@ -289,7 +289,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/saved-assembly-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/saved-assembly-checks.json",
     "title": "saved-assembly-checks.json",
     "summary": "29passingchecks:16sourceplacements,12definitionpointsetsandnestedinstancepreservation.",
     "access_date": "2026-11-12",
@@ -300,7 +300,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json",
     "title": "feature-checks.json",
     "summary": "15passingchecks:300\u00d7200\u00d7152.5body/coververtexspansand12closededgepartnergraphs;sourcecounts/frameobservations.",
     "access_date": "2026-11-12",
@@ -311,7 +311,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reusable-repair-regression.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reusable-repair-regression.json",
     "title": "reusable-repair-regression.json",
     "summary": "Twoofflinerecordedcomponenthelperchecks:13battery/16enclosureplacementsand21/12unchangeddefinitions.",
     "access_date": "2026-11-12",
@@ -322,7 +322,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-job.json",
     "title": "source-job.json",
     "summary": "PinnedSTEP/drawinggeometrycontractforexact203015Tvariantandretainedsourceframe.",
     "access_date": "2026-11-12",
@@ -333,7 +333,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/readiness.json",
     "title": "readiness.json",
     "summary": "SOURCE_READYresultfromexistingrequiredfeature/sourcehashgate.",
     "access_date": "2026-11-12",
@@ -344,7 +344,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/result.json",
     "title": "result.json",
     "summary": "Completedmanufacturerassemblyiterationlinks44nativechecks,persistence,views,sourceconfigurationandappliedhelper.",
     "access_date": "2026-11-12",
@@ -355,7 +355,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/ocs-journal.jsonl",
     "title": "ocs-journal.jsonl",
     "summary": "Write-aheadactualnativeimport,placement,CAS,save,reopen,captureandrecoveryrequests/results.",
     "access_date": "2026-11-12",
@@ -366,7 +366,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-isometric.png",
     "title": "imported-isometric.png",
     "summary": "Actualprecorrectionimportviewshowsdisplacedassemblycomponents.",
     "access_date": "2026-11-12",
@@ -377,7 +377,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png",
     "title": "corrected-isometric.png",
     "summary": "Actualpostpropertycorrectioncapturestillshowsdisplacedviewportgeometry;retainedwithactualmatrixreadbacks.",
     "access_date": "2026-11-12",
@@ -388,7 +388,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-isometric.png",
     "title": "reopened-isometric.png",
     "summary": "Actualpersistedisometricviewshowsassembledenclosureandfourfeet.",
     "access_date": "2026-11-12",
@@ -399,7 +399,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-top.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-top.png",
     "title": "reopened-top.png",
     "summary": "Actualsavedtopviewshowscover,lockandexternalkeyholefeet.",
     "access_date": "2026-11-12",
@@ -410,7 +410,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-front.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-front.png",
     "title": "reopened-front.png",
     "summary": "Actualsavedfrontviewshowsbody/coverseam,lockprojectionandfeet.",
     "access_date": "2026-11-12",
@@ -421,7 +421,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-0.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-0.json",
     "title": "corrected-records-0.json",
     "summary": "correctednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -432,7 +432,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json",
     "title": "corrected-records-12.json",
     "summary": "correctednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -443,7 +443,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-18.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-18.json",
     "title": "corrected-records-18.json",
     "summary": "correctednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -454,7 +454,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-24.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-24.json",
     "title": "corrected-records-24.json",
     "summary": "correctednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -465,7 +465,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-6.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-6.json",
     "title": "corrected-records-6.json",
     "summary": "correctednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -476,7 +476,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-0.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-0.json",
     "title": "imported-records-0.json",
     "summary": "importednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -487,7 +487,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-12.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-12.json",
     "title": "imported-records-12.json",
     "summary": "importednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -498,7 +498,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json",
     "title": "imported-records-18.json",
     "summary": "importednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -509,7 +509,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json",
     "title": "imported-records-24.json",
     "summary": "importednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -520,7 +520,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-6.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-6.json",
     "title": "imported-records-6.json",
     "summary": "importednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -531,7 +531,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-0.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-0.json",
     "title": "reopened-records-0.json",
     "summary": "reopenednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -542,7 +542,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-12.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-12.json",
     "title": "reopened-records-12.json",
     "summary": "reopenednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -553,7 +553,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-18.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-18.json",
     "title": "reopened-records-18.json",
     "summary": "reopenednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -564,7 +564,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-24.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-24.json",
     "title": "reopened-records-24.json",
     "summary": "reopenednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -575,7 +575,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-6.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-6.json",
     "title": "reopened-records-6.json",
     "summary": "reopenednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.",
     "access_date": "2026-11-12",
@@ -586,7 +586,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/start_c029.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/start_c029.py",
     "title": "start_c029.py",
     "summary": "Createdisolateddocument84andimportedhash-pinnedmanufacturerSTEPwithsuccessfulnativeImportFilefields.",
     "access_date": "2026-11-12",
@@ -597,7 +597,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/read_c029.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/read_c029.py",
     "title": "read_c029.py",
     "summary": "Retainedimportedaudit,blocks,entitiesandactualprecorrectionview;capturepollboundlaterrecovered.",
     "access_date": "2026-11-12",
@@ -608,7 +608,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/plan_c029.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/plan_c029.py",
     "title": "plan_c029.py",
     "summary": "Read17STEPframesandgenerated16uniqueinverse-placementchangesagainstactualnativeinserts.",
     "access_date": "2026-11-12",
@@ -619,7 +619,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/repair_c029.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/repair_c029.py",
     "title": "repair_c029.py",
     "summary": "Executedtheextractedhelperagainst16nativeplacements,preserved12ACISdefinitionsandcapturedpostwriteview.",
     "access_date": "2026-11-12",
@@ -630,7 +630,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_presave_measurements.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_presave_measurements.py",
     "title": "c029_presave_measurements.py",
     "summary": "Traversedsource-correctednativeinstancesandretainedpresavepointgeometry.",
     "access_date": "2026-11-12",
@@ -641,7 +641,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/reopen_c029.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/reopen_c029.py",
     "title": "reopen_c029.py",
     "summary": "Recoveredoriginalopenrequest,verifiedsavehash/manifestandcapturedpersistedrecords/isometric.",
     "access_date": "2026-11-12",
@@ -652,7 +652,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_c029_saved.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_c029_saved.py",
     "title": "check_c029_saved.py",
     "summary": "Adaptedretainedsaved-checktemplateforFiboxandwrote29actualpersistedchecks.",
     "access_date": "2026-11-12",
@@ -663,7 +663,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/views_c029.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/views_c029.py",
     "title": "views_c029.py",
     "summary": "CapturedreopenedTOP/FRONTviewswithfitandmargincommands.",
     "access_date": "2026-11-12",
@@ -674,7 +674,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_feature_checks.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_feature_checks.py",
     "title": "c029_feature_checks.py",
     "summary": "Measuredsourcebody/covermembersagainst3drawingdimensionsandchecked12closedshellgraphs.",
     "access_date": "2026-11-12",
@@ -685,7 +685,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_repair_cases.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_repair_cases.py",
     "title": "check_repair_cases.py",
     "summary": "RannewhelperofflineonretainedbatteryandenclosurenativerecordswithoutchangingoldCAD.",
     "access_date": "2026-11-12",
@@ -696,7 +696,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/control-bootstrap-prefix.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/control-bootstrap-prefix.py",
     "title": "control-bootstrap-prefix.py",
     "summary": "Exactexecutedcontrolprefixloadingexistingguardedclient/helperandexplicitOCSsession;descriptorcontentsomitted.",
     "access_date": "2026-11-12",
@@ -707,7 +707,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/template-check_c023_saved.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/template-check_c023_saved.py",
     "title": "template-check_c023_saved.py",
     "summary": "Preservedexisting29/35checkalgorithmtemplateusedbytheactualFiboxsaved-checkdriver.",
     "access_date": "2026-11-12",
@@ -718,7 +718,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/provenance.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/provenance.json",
     "title": "provenance.json",
     "summary": "Exactoriginaltemporarydriverpaths,retainedhashesandcontrolprefixextraction;recordsoriginaldependencyconditions.",
     "access_date": "2026-11-12",
@@ -729,7 +729,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg",
     "title": "SavedFiboxenclosure",
     "summary": "NewnativeDWG2018manufacturerassembly;12soliddefinitions,16placedsolids,sourcecorrectedframes.",
     "access_date": "2026-11-12",
@@ -740,7 +740,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/assembly_repair.py",
+    "local_original": "${MODELING_ROOT}/scripts/assembly_repair.py",
     "title": "Checkedplacementwritehelper",
     "summary": "Extractedrepeatedreviewedsource-planwriteactionwithfullinsertpreflight,CAS,matrixreadbackandunchangedACISchecks.",
     "access_date": "2026-11-12",
@@ -751,7 +751,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_assembly_repair.py",
+    "local_original": "${MODELING_ROOT}/tests/test_assembly_repair.py",
     "title": "Placementhelpertests",
     "summary": "Sixexecutedcasescoverrepeatedsuccess,staleinputs,tamperedfields,duplicatehandles,readbackfailureandchangedsoliddefinition.",
     "access_date": "2026-11-12",
@@ -762,7 +762,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
     "title": "Manufacturerassemblyprocedure",
     "summary": "ExtendsbatteryprocedurewithactualFiboxcase,extractedwritehelper,recoveryandmember-specificsavedchecks.",
     "access_date": "2026-11-12",
@@ -773,7 +773,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
     "title": "ComponentCADskillrouter",
     "summary": "Routesmanufacturerassemblyworktoextractedhelperwithsourceplanreviewandreadbackpreservationchecks.",
     "access_date": "2026-11-12",
@@ -784,7 +784,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c029-fibox-enclosure.md",
+    "local_original": "${MODELING_ROOT}/execution/c029-fibox-enclosure.md",
     "title": "Enclosureiterationreport",
     "summary": "Documentsexactvariant,newCAD,44checks,sourcecorrections,sourceframe,appliedhelperandactualmodels.",
     "access_date": "2026-11-12",

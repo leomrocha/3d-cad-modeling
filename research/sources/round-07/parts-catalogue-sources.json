@@ -1,7 +1,7 @@
 [
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md",
     "title": "Shared parts catalogue discussion",
     "summary": "Authored proposal: requested identity/standards/location/search fields, storage alternatives and explicit future material/resistance/work-domain extensions.",
     "access_date": "2026-11-12",
@@ -13,8 +13,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad-inputs/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/README.md",
     "title": "Ferme component input index",
     "summary": "Existing component sheet and source/model dependency index; relationship to proposed catalogue.",
     "access_date": "2026-11-12",
@@ -26,8 +26,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
     "title": "Ferme part manifest",
     "summary": "Existing 103 part records and their identity, route, dependency, source and model-reference fields; proposed catalogue seed.",
     "access_date": "2026-11-12",
@@ -39,8 +39,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+    "source_path": "${FERME_ROOT}/skills/cad-construction/SKILL.md",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/SKILL.md",
     "title": "Evidence-based CAD construction",
     "summary": "Existing component/source/revision and model/check provenance procedure supporting catalogue relationships.",
     "access_date": "2026-11-12",
@@ -52,8 +52,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/README.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/README.md",
     "title": "Existing action or implementation record",
     "summary": "Existing action records and source/identity implementation proposal linked by the parts-catalogue discussion.",
     "access_date": "2026-11-12",
@@ -65,8 +65,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
     "title": "Existing action or implementation record",
     "summary": "Existing action records and source/identity implementation proposal linked by the parts-catalogue discussion.",
     "access_date": "2026-11-12",
@@ -78,8 +78,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md",
     "title": "Existing action or implementation record",
     "summary": "Existing action records and source/identity implementation proposal linked by the parts-catalogue discussion.",
     "access_date": "2026-11-12",

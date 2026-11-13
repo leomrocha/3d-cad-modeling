@@ -42,11 +42,11 @@
       "status": "proposed_composition",
       "summary": "Combine plan interpretation with measured site surfaces and identified library components; preserve the IFC model, photo solution and conversion map.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
         "https://alicevision.org/",
         "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
@@ -111,12 +111,12 @@
       "status": "proposed_composition",
       "summary": "Use a dimensioned part as one assembly component, place identified library parts, author explicit joints and physical data, and derive robot packages.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/README.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/docs/cadkernel-body-path.md",
         "https://build123d.readthedocs.io/en/latest/operations.html",
         "https://cadquery.readthedocs.io/en/stable/",
         "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
@@ -188,11 +188,11 @@
       "status": "proposed_composition",
       "summary": "Reconstruct visible surfaces, fit candidate features, remodel selected parts, combine them with identified hardware and author the robot model.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://alicevision.org/",
         "https://build123d.readthedocs.io/en/stable/",
         "https://cadquery.readthedocs.io/en/stable/",
@@ -258,11 +258,11 @@
       "status": "proposed_composition",
       "summary": "Use the housing as a stable reference, drawing dimensions as constraints and scan surfaces as local evidence for the scoped replacement.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://build123d.readthedocs.io/en/stable/",
         "https://cadquery.readthedocs.io/en/stable/",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
@@ -362,7 +362,7 @@
       "status": "proposed_composition",
       "summary": "Derive colliders from selected building elements while preserving semantic IFC as the building source.",
       "source_urls": [
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/introduction.html",
@@ -409,11 +409,11 @@
       "status": "proposed_composition",
       "summary": "Anchor screen annotations to the selected surface, interpret feature intent and construct a dimensioned CAD revision.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://build123d.readthedocs.io/en/stable/",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
         "https://docs.blender.org/api/current/bpy.types.Scene.html",
@@ -457,11 +457,11 @@
       "status": "proposed_composition",
       "summary": "Use multiple orthographic views and dimension evidence to propose a consistent 3D model and record the result as a source-linked candidate component.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://build123d.readthedocs.io/en/stable/",
         "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
         "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
@@ -510,9 +510,9 @@
       "status": "proposed_composition",
       "summary": "Fork the capture into a view-synthesis branch and dense geometry branch, then retain their alignment with the CAD interpretation.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://alicevision.org/",
         "https://build123d.readthedocs.io/en/stable/",
         "https://docs.nerf.studio/nerfology/methods/splat.html",
@@ -562,8 +562,8 @@
       "status": "proposed_composition",
       "summary": "Place identified library elements into IFC, retain an explicit B-rep extraction branch and derive a static simulation environment.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
@@ -586,7 +586,7 @@
       "name": "Shared frame and anchor record",
       "summary": "Use one versioned record to relate pixels, camera rays, scan coordinates, CAD datums and component IDs.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md"
+        "${MODELING_ROOT}/research/workflows/composition-rules.md"
       ],
       "status": "research_question",
       "next_check": "Compare transform direction, units and anchor round trips in the selected tools."
@@ -596,7 +596,7 @@
       "name": "Source-to-feature association",
       "summary": "Retain each fitted or interpreted surface region and the exact CAD feature it supports.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md"
+        "${MODELING_ROOT}/research/workflows/composition-rules.md"
       ],
       "status": "research_question",
       "next_check": "Compare fitted-plane/cylinder evidence with saved feature and dimension readback."
@@ -606,7 +606,7 @@
       "name": "Importer/exporter field mapping",
       "summary": "Maintain actual preserved/transformed/discarded field mappings per tool/version.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md"
+        "${MODELING_ROOT}/research/workflows/composition-rules.md"
       ],
       "status": "research_question",
       "next_check": "Run the same component and assembly fixtures through the intended consumers."
@@ -616,7 +616,7 @@
       "name": "Ambiguous-view comparison",
       "summary": "Retain several geometrically consistent interpretations until source evidence distinguishes them.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md"
+        "${MODELING_ROOT}/research/workflows/composition-rules.md"
       ],
       "status": "research_question",
       "next_check": "Compare projected views and independent dimensions, with inference labels by feature."
@@ -626,7 +626,7 @@
       "name": "Dependency-driven revision updates",
       "summary": "Record which branch depends on each measurement, component revision and interpretation.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md"
+        "${MODELING_ROOT}/research/workflows/composition-rules.md"
       ],
       "status": "research_question",
       "next_check": "Trace a single input change through affected recipes and derivative revisions."
@@ -636,7 +636,7 @@
       "name": "Text-to-concept-image-to-mesh route",
       "summary": "Register a possible branch from text or sketch through a concept image to an image-conditioned mesh, then measured CAD remodeling.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json"
+        "${MODELING_ROOT}/research/workflows/combined-paths.json"
       ],
       "status": "research_question",
       "next_check": "Research an open image-generation backend and its exact weight/output terms before defining the first transition."
@@ -646,7 +646,7 @@
       "name": "Procedural field geometry supplement",
       "summary": "Evaluate PicoGK/ShapeKernel as a separate source-driven geometry branch with explicit field/mesh resolution and OCS interchange checks.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+        "${MODELING_ROOT}/research/workflows/combined-paths.json",
         "https://github.com/leap71/PicoGK",
         "https://github.com/leap71/LEAP71_ShapeKernel",
         "https://picogk.org/doc/"
@@ -659,7 +659,7 @@
       "name": "Targeted first-pilot handoff review",
       "summary": "Resolve exact tools, representations, editable sources, unit/frame mappings and prerequisites for four route cards before the pilot experiments.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+        "${MODELING_ROOT}/research/next-step-proposal.md"
       ],
       "status": "proposal",
       "next_check": "Produce four route cards and a bounded source-linked experiment list."
@@ -669,7 +669,7 @@
       "name": "Shared records and fixture briefs",
       "summary": "Define model/evidence/artifact/component/check records and three dimensioned fixture briefs.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+        "${MODELING_ROOT}/research/next-step-proposal.md"
       ],
       "status": "proposal",
       "next_check": "Check representation, identity and evidence fields against the selected routes."
@@ -679,7 +679,7 @@
       "name": "OCS baseline pilot",
       "summary": "Exercise the existing OCS skill on a bracket and mating plate, including a revision, native save/reopen and measured derivative checks.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+        "${MODELING_ROOT}/research/next-step-proposal.md"
       ],
       "status": "proposal",
       "next_check": "Record the actual installed capabilities and saved geometry for that fixture."
@@ -689,7 +689,7 @@
       "name": "Text and drawing CAD pilot",
       "summary": "Compare text, raster sketch and DXF/SVG routes using the same dimensioned fixture and a complementary procedural-solid backend.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+        "${MODELING_ROOT}/research/next-step-proposal.md"
       ],
       "status": "proposal",
       "next_check": "Compare dimensions, topology, editable source and importer readback."
@@ -699,7 +699,7 @@
       "name": "Reconstruction and mixed-input pilot",
       "summary": "Combine photographs, controls, drawings or identified components into registered references and source-linked CAD remodeling, including anchored annotations.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+        "${MODELING_ROOT}/research/next-step-proposal.md"
       ],
       "status": "proposal",
       "next_check": "Compare held-out measurements and regional scan-to-CAD deviations."
@@ -709,7 +709,7 @@
       "name": "Architecture robotics and component pilot",
       "summary": "Exercise IFC building semantics, robot joint/physical-property handoffs and a pilot reusable component library.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+        "${MODELING_ROOT}/research/next-step-proposal.md"
       ],
       "status": "proposal",
       "next_check": "Check loaded domain models, frames, geometry roles and source identities."
@@ -719,7 +719,7 @@
       "name": "Package exercised skills and helpers",
       "summary": "Package exercised workflows with skills, scripts, examples, dependency records and shared CLI operations.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/next-step-proposal.md"
+        "${MODELING_ROOT}/research/next-step-proposal.md"
       ],
       "status": "proposal",
       "next_check": "Run the relevant fixture and preserve actual execution evidence for each supported route."

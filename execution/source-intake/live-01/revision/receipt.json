@@ -3,7 +3,7 @@
   "revision_id": "source-intake-r1",
   "model": "gpt-6.1-sol",
   "input": {
-    "path": "/home/leo/projects/3dmodeling/execution/source-intake/job-input.json",
+    "path": "${MODELING_ROOT}/execution/source-intake/job-input.json",
     "sha256": "107202a53045e3e15bdb18c2de57c39a0b7b560b11d8b6d423a80beb2132609d",
     "bytes": 2424
   },

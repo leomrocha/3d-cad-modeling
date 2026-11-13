@@ -1,112 +1,112 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/README.md",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/tyre/README.md",
     "title": "Tyre profile source review",
     "summary": "Reuses exact T539 table; records mating rim references, section input gate, nominal envelope frame and source version discrepancy.",
     "evidence_status": "delegated_source_review",
     "access_date": "2026-11-13",
     "sha256": "aa4b9c1acae779b9d549daf9b66686cdd3dad842d7d09054c2b31aa74fbf05f5",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/source-records.json",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/tyre/source-records.json",
     "title": "Tyre source records",
     "summary": "Original Continental/Petlas URLs, observed claims, existing Trelleborg original hash and flange-width source discrepancy.",
     "evidence_status": "executed_source_registration",
     "access_date": "2026-11-13",
     "sha256": "9ffc22b82ebe4bcbbdf49e43a3213a3cd32395b64d6eff2211ed8c6970d8180e",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/progress.json",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/tyre/progress.json",
     "title": "Tyre source-stage progress",
     "summary": "Actual C001 start-gate result, source-stage completion and separate component input-gate state; no CAD mutation.",
     "evidence_status": "executed_source_stage_result",
     "access_date": "2026-11-13",
     "sha256": "3c7e44e38fcf04eb59245a86e74e42ecfda76efd1995841a33826ce580c21ce6",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/report.md",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/rims/report.md",
     "title": "Exact rim source review",
     "summary": "Keiyama/Knott identities, separate fixing seats, standardized profile references and product-section input questions.",
     "evidence_status": "delegated_source_review",
     "access_date": "2026-11-13",
     "sha256": "b7a733633720188b97063184cec5f59f9d212bee3f20f36bcec6d4544e24a013",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/geometry-handoff.json",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/rims/geometry-handoff.json",
     "title": "Rim geometric handoff",
     "summary": "Named dimensions, units/frame, mounting pattern and per-product partial source coverage with construction handoff.",
     "evidence_status": "implementation_input_artifact",
     "access_date": "2026-11-13",
     "sha256": "b58759c9c43e5830c3e76d4c081a7574e22286e6b14f01471078eec50864fcff",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/sources.csv",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/rims/sources.csv",
     "title": "Rim source observations",
     "summary": "Exact supplied/canonical URLs, observed date and actual web-inspection evidence; originals not acquired in this stage.",
     "evidence_status": "executed_source_registration",
     "access_date": "2026-11-13",
     "sha256": "97829a5e3551533b1446f6f475c03666b836ea2a8f864c129ef042050b87914e",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/progress.json",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/rims/progress.json",
     "title": "Rim source-stage progress",
     "summary": "Two component-specific new-model checks and partial-source construction state.",
     "evidence_status": "executed_source_stage_result",
     "access_date": "2026-11-13",
     "sha256": "92a71d6c0f4b2ea3ed8739f9443824df800cbe3fd7e1a212ad7b36950e2258b0",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/source-and-actions.md",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/hubs/source-and-actions.md",
     "title": "Wheel hub and shaft source/action review",
     "summary": "Six distinct file gates, source-derived PRO ring/mount patterns, actual PBR50T/BT followup findings and feature-specific work orders.",
     "evidence_status": "delegated_source_review",
     "access_date": "2026-11-13",
     "sha256": "ab162a6fc6fdd1d31075cbdaee47e44def9072925b42f02bfec83d4974aff385",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/progress.json",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/hubs/progress.json",
     "title": "Hub and adapter source-stage progress",
     "summary": "Per-component file identity/candidate decisions, supported interfaces and exact remaining source conditions.",
     "evidence_status": "executed_source_stage_result",
     "access_date": "2026-11-13",
     "sha256": "1fdc2bee473fdbe79550c98a301c6e4c30daae3f012eba304f5701af90e949c6",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md",
     "title": "Coordinator wheel source integration",
     "summary": "Summarizes the distinct source-ready wheel interfaces, input gates, source statuses, preserved completed models and subsequent active implementation assignments.",
     "evidence_status": "executed_integration_report",
     "access_date": "2026-11-13",
     "sha256": "677c498d39479da21d8d8aadfc6819c79c5a89be8818ce50f4150af50d714f54",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
@@ -116,7 +116,7 @@
     "evidence_status": "web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
@@ -126,7 +126,7 @@
     "evidence_status": "web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
@@ -136,9 +136,9 @@
     "evidence_status": "existing_downloaded_original_and_source_review",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ],
-    "local_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
+    "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
     "content_type": "application/pdf",
     "retrieved_at": "2026-11-13T08:54:26+01:00",
     "sha256": "f9b0296a673b0fe14ca3649953a0feaa57963af88b23a58aa59350dfacf39cec"
@@ -151,7 +151,7 @@
     "evidence_status": "web_inspected_source_claim",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
@@ -162,7 +162,7 @@
     "evidence_status": "web_inspected_source_claim",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
@@ -173,7 +173,7 @@
     "evidence_status": "web_inspected_source_claim",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   },
   {
@@ -184,7 +184,7 @@
     "evidence_status": "web_inspected_source_claim",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
     ]
   }
 ]

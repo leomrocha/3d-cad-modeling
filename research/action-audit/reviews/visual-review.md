@@ -9,9 +9,9 @@ Dispatcher identifier: `gpt-6.1-sol`; requested reasoning setting: `xhigh`. Actu
 1. Preserve the supplied description, dimension records and optional source views as the input revision. Extract component names, dimensions, relations, required outputs and intended use into a source-linked model brief.
 2. Use a reasoning language model for text interpretation. Use a **VLM — vision-language model**, a model that accepts images and text, when the task includes image content. Record each proposed interpretation beside the source passage or image region that supports it.
 3. Produce a brief, a feature evidence matrix, conflicts, dependent questions and per-feature readiness. Geometry construction consumes that brief through an explicitly scoped later operation.
-4. Preserve the current [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md), including its stages. These proposals expand its intake and verification detail. They use the branch, evidence-merge and version handoffs in [workflow composition rules](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md).
+4. Preserve the current [implementation plan](../../implementation-plan.md), including its stages. These proposals expand its intake and verification detail. They use the branch, evidence-merge and version handoffs in [workflow composition rules](../../workflows/composition-rules.md).
 
-The [CAD-R01 text/dimensions recipe](/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md) describes a simple plate fixture with a centre datum and millimetres. A generic brief records the source job's unit, datum and axes. The fixture convention applies when that fixture is the task. The [DOM-R01 building recipe](/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md) expands DOM-01 into IFC, survey and reconstruction operations; the present point ends at brief intake.
+The [CAD-R01 text/dimensions recipe](../../workflows/details/cad-r01.md) describes a simple plate fixture with a centre datum and millimetres. A generic brief records the source job's unit, datum and axes. The fixture convention applies when that fixture is the task. The [DOM-R01 building recipe](../../workflows/details/dom-r01.md) expands DOM-01 into IFC, survey and reconstruction operations; the present point ends at brief intake.
 
 ## 2. Proposed reasoning tasks and retained outputs
 
@@ -69,7 +69,7 @@ Proposed coordinate procedure:
 4. Cite the dimension label region and the endpoints/features to which the label applies. A text box around the digits supplies a transcription location; the feature association also needs the leader, extension lines or explicit text relation.
 5. Retain a full view beside the crop during review. The crop supplies glyph detail; the full view supplies component and projection context. A proposed crop records intended coordinates; an executed crop additionally records the produced file and transform.
 
-This extends the existing [CAD-R02 raster interpretation procedure](/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md), which retains original pixels, OCR boxes, control points, transformations and feature associations.
+This extends the existing [CAD-R02 raster interpretation procedure](../../workflows/details/cad-r02.md), which retains original pixels, OCR boxes, control points, transformations and feature associations.
 
 ## 5. Proposed VLM comparison and merge actions
 
@@ -82,7 +82,7 @@ This extends the existing [CAD-R02 raster interpretation procedure](/home/leo/pr
 7. **Select by goal:** compare the retained supported features against the requested deliverable. A display layout, an interface model, a robot joint and a house analysis can require different fields and checks. Record the selected branch contents as a proposal unless the supplied task already defines that content.
 8. **Publish the merged brief revision:** retain its input source revision, selected rows, excluded candidate rows with reasons, feature states and downstream dependencies. Rerun checks on the merged values and relations.
 
-Common handoff rules come from [composition rules](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md) and the [OCS model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md): explicit units, right-handed frame, named datum, axis meanings, separate parts, interfaces and motion. Preserve a component's definition separately from an occurrence placement. Store source-to-target transform direction and numerical unit factor. Keep image pixel, drawing plane, local component, assembly and map frames individually identified when present.
+Common handoff rules come from [composition rules](../../workflows/composition-rules.md) and the OCS model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`): explicit units, right-handed frame, named datum, axis meanings, separate parts, interfaces and motion. Preserve a component's definition separately from an occurrence placement. Store source-to-target transform direction and numerical unit factor. Keep image pixel, drawing plane, local component, assembly and map frames individually identified when present.
 
 ## 6. Proposed numerical and semantic checks after merge
 
@@ -93,7 +93,7 @@ Common handoff rules come from [composition rules](/home/leo/projects/3dmodeling
 5. **Future geometry checks:** when a later authorized modeling operation produces geometry, measure the saved model revision, part IDs/handles, bounds, relevant features and exported artifact hash with the owning application or independent importer. Inspect corresponding orthographic views of that same geometry revision.
 6. **Future downstream semantic checks:** compare IFC element identity/containment or robot link/joint records with the brief when those consumers are in scope. Preserve the mapping through any visual derivative.
 
-The [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md) prescribes readback tied to the actual document revision and corresponding orthographic views. Its [model-contract checker](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md) checks supplied point/axis/plane numbers and caller-supplied provenance. A report must name whether its numbers came from an actual CAD query, a declared design input or a synthetic fixture.
+The OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) prescribes readback tied to the actual document revision and corresponding orthographic views. Its model-contract checker (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) checks supplied point/axis/plane numbers and caller-supplied provenance. A report must name whether its numbers came from an actual CAD query, a declared design input or a synthetic fixture.
 
 ## 7. Proposed per-feature tolerance and readiness
 
@@ -116,7 +116,7 @@ The [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md) prescribes rea
 | CAD application and importer | Construct authorized geometry later; read back actual dimensions, topology and revision | Native source, measured result and checked derivative |
 | User | Supply the intended goal and required decisions; resolve interpretations requiring new intent, scope or acceptance | Exact response/correction and its affected features |
 
-The software entry points are documented in [CAD-R02](/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md) and the [CAD source records](/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json). A reusable brief checker and its adapter remain implementation proposals in the [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+The software entry points are documented in [CAD-R02](../../workflows/details/cad-r02.md) and the [CAD source records](../../sources/round-02/cad-sources.json). A reusable brief checker and its adapter remain implementation proposals in the [implementation plan](../../implementation-plan.md).
 
 | Resource axis | Local run record | Remote run record |
 | --- | --- | --- |
@@ -145,7 +145,7 @@ These are case definitions for a future authorized validation batch. Each case n
 10. **Branch merge regression:** an expanded branch adds supported details; verify controlling values and identities against the same baseline and preserve each added feature's evidence.
 11. **Visualization and metric evidence:** an appearance view suggests a feature while a dimensioned source defines its value; verify the retained evidence class and source association for each claim.
 
-Visualization supplies context, visible correspondence and review findings. Metric claims carry a named measured quantity, units, source controls or supplied dimensions, tolerance/criterion and the checked artifact revision. The [reconstruction assessment](/home/leo/projects/3dmodeling/research/reconstruction.md) already separates appearance, scale controls, independent measurements and inferred geometry.
+Visualization supplies context, visible correspondence and review findings. Metric claims carry a named measured quantity, units, source controls or supplied dimensions, tolerance/criterion and the checked artifact revision. The [reconstruction assessment](../../reconstruction.md) already separates appearance, scale controls, independent measurements and inferred geometry.
 
 ## 10. Local evidence and original-source relationships
 
@@ -153,16 +153,16 @@ All records below were read or registered from local files on 2026-11-12. Extern
 
 | Read local evidence | Concrete summary and use in this review | Evidence status |
 | --- | --- | --- |
-| [Implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md) | Defines source-linked intake, geometry adapters, representation ownership, staged work and saved-artifact verification | Local proposal inspected |
-| [Workflow composition rules](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md) | Defines branch, evidence merge, identity, units/frames, dimensional evidence and version/check handoffs | Local proposal inspected |
-| [CAD-R01 text/dimensions recipe](/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md) | Connects CAD-01 to source-preserving intake and identifies the plate fixture's example datum convention | Existing local assessment inspected |
-| [DOM-R01 building recipe](/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md) | Records DOM-01 and its larger building/IFC route; establishes the separation between generic intake and building operations | Existing local assessment inspected |
-| [CAD-R02 raster recipe](/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md) | Records OCR candidates, boxes, original pixels, transforms, view/feature association and review | Existing local assessment inspected |
-| [OCS Engineering skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md) | Defines explicit modeling contract, source-view review, revision-bound measurements and same-model orthographic review | Local skill inspected |
-| [OCS model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md) | Defines units, right-handed frames, separate components, source tolerances and point/axis/plane check limits | Local skill reference inspected |
-| [CAD source register, round 2](/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json) and [round 3](/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json) | Preserve original sources for Tesseract OCR, OpenCV transforms/calibration, FreeCAD constraints and CAD readback methods | Existing source records inspected; original external pages retained at their recorded status |
-| [Domain source register, round 2](/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json) and [round 3](/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json) | Preserve IFC and robot identity, unit, placement and semantic source relationships used in the proposed goal examples | Existing source records inspected; original external pages retained at their recorded status |
-| [Reconstruction assessment](/home/leo/projects/3dmodeling/research/reconstruction.md) and [round-2 source records](/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json) | Separate visual appearance, image geometry, calibrated controls, scale, independent checks and inferred surfaces | Existing local assessment and source records inspected |
+| [Implementation plan](../../implementation-plan.md) | Defines source-linked intake, geometry adapters, representation ownership, staged work and saved-artifact verification | Local proposal inspected |
+| [Workflow composition rules](../../workflows/composition-rules.md) | Defines branch, evidence merge, identity, units/frames, dimensional evidence and version/check handoffs | Local proposal inspected |
+| [CAD-R01 text/dimensions recipe](../../workflows/details/cad-r01.md) | Connects CAD-01 to source-preserving intake and identifies the plate fixture's example datum convention | Existing local assessment inspected |
+| [DOM-R01 building recipe](../../workflows/details/dom-r01.md) | Records DOM-01 and its larger building/IFC route; establishes the separation between generic intake and building operations | Existing local assessment inspected |
+| [CAD-R02 raster recipe](../../workflows/details/cad-r02.md) | Records OCR candidates, boxes, original pixels, transforms, view/feature association and review | Existing local assessment inspected |
+| OCS Engineering skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) | Defines explicit modeling contract, source-view review, revision-bound measurements and same-model orthographic review | Local skill inspected |
+| OCS model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) | Defines units, right-handed frames, separate components, source tolerances and point/axis/plane check limits | Local skill reference inspected |
+| [CAD source register, round 2](../../sources/round-02/cad-sources.json) and [round 3](../../sources/round-03/cad-detail-sources.json) | Preserve original sources for Tesseract OCR, OpenCV transforms/calibration, FreeCAD constraints and CAD readback methods | Existing source records inspected; original external pages retained at their recorded status |
+| [Domain source register, round 2](../../sources/round-02/domain-sources.json) and [round 3](../../sources/round-03/domain-detail-sources.json) | Preserve IFC and robot identity, unit, placement and semantic source relationships used in the proposed goal examples | Existing source records inspected; original external pages retained at their recorded status |
+| [Reconstruction assessment](../../reconstruction.md) and [round-2 source records](../../sources/round-02/reconstruction-sources.json) | Separate visual appearance, image geometry, calibrated controls, scale, independent checks and inferred surfaces | Existing local assessment and source records inspected |
 
 Original links retained through the existing source records:
 
@@ -177,4 +177,4 @@ Original links retained through the existing source records:
 
 1. **DONE — local visual/procedure review.** The written procedure proposals cover text-only reasoning, optional image reasoning, first-iteration effort, feature evidence, branch comparison, merge decisions, source coordinates, numerical/semantic checks, per-feature criteria and resource recording.
 2. Add those operations to the point-01 audit as proposals. Keep the merged brief as the point's output and retain geometry construction as its downstream operation.
-3. Register this review and the [OCS model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md) in the coordinating source-documentation batch, with their referring audit documents. The coordinator owns that source-register change and the batch commits.
+3. Register this review and the OCS model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) in the coordinating source-documentation batch, with their referring audit documents. The coordinator owns that source-register change and the batch commits.

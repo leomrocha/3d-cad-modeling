@@ -11,9 +11,9 @@ Date: 12 November 2026. Status: proposed procedures and development specificatio
 5. **DOM-38 — Import STEP solid into CAD representation:** inspect and import a supplied STEP file with actual unit, shape and product-structure checks.
 6. **DOM-39 — Export STEP assembly:** derive a new STEP artifact from a frozen native assembly and check it in the receiving consumer.
 
-The [structured action specification](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) contains all fifteen required fields for each of the 24 actions: purpose, intended use, inputs, outputs, accuracy, evidence, software, agent, user decisions, dependencies, proposed development, procedure, validation, failure/resume and resources. The numbered actions below expose the concrete sequence, outputs and checks. Original records remain in [CAD operations](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json) and [domain operations](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json); the [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md) retains its existing content.
+The [structured action specification](point-02-operations.json) contains all fifteen required fields for each of the 24 actions: purpose, intended use, inputs, outputs, accuracy, evidence, software, agent, user decisions, dependencies, proposed development, procedure, validation, failure/resume and resources. The numbered actions below expose the concrete sequence, outputs and checks. Original records remain in [CAD operations](../workflows/cad-paths.json) and [domain operations](../workflows/domain-paths.json); the [implementation plan](../implementation-plan.md) retains its existing content.
 
-The [component assessment](/home/leo/projects/3dmodeling/research/domains-and-components.md), [composition rules](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md), [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md) and [OCS model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md) supply identity, frame, source, representation and check requirements. [Software review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md), [visual review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md) and [Luna source inspection](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md) supply the supporting interface and source findings.
+The [component assessment](../domains-and-components.md), [composition rules](../workflows/composition-rules.md), OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) and OCS model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) supply identity, frame, source, representation and check requirements. [Software review](reviews/point-02-software.md), [visual review](reviews/point-02-visual.md) and [Luna source inspection](reviews/point-02-sources.md) supply the supporting interface and source findings.
 
 ## 2. Representation and execution conventions
 
@@ -32,10 +32,10 @@ A dependency-led execution begins with the DOM-06-A01/A02 identity/rights receip
 
 ## 3. Source-supported tool choices
 
-1. [OCS API-SPEC](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md) describes `block_define`, which moves source entities into a block definition and creates an Insert, and `group_create`, which groups existing handles. Use those operations for their stated drawing representations. The [OCS control reference](/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md) establishes the state/revision/request protocol and records the limits of observed assembly and clearance support.
+1. OCS API-SPEC (`${OCS_ROOT}/docs/automation/API-SPEC.md`) describes `block_define`, which moves source entities into a block definition and creates an Insert, and `group_create`, which groups existing handles. Use those operations for their stated drawing representations. The OCS control reference (`${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md`) establishes the state/revision/request protocol and records the limits of observed assembly and clearance support.
 2. [FreeCAD Assembly documentation](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md) describes assemblies, source links and joints. [Import/export preferences](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md) describe STEP structure/instance-name settings, export units and AP203/AP214 choices. Luna inspected these pages in the archived FreeCAD documentation repository; actual installed support is a future run finding.
 3. [OCCT STEPCAFControl_Reader](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html) documents assembly-shape, name/color and root transfer into a DECAF document. [STEPCAFControl_Writer](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html) documents document/label/root-assembly transfer, names/colors and root-label length-unit or Cascade fallback. Luna's source inspection followed these original URLs to the OCCT 8.0.1 manual. The proposed adapter must establish its actual version and exercised preservation.
-4. The inspected [OCS STEP writer body](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs) collects triangles across meshes and emits one shell, solid and representation with planar faces. It formats coordinates to six decimals, skips invalid triangle indices and emits an SI millimetre entity without attaching it to the geometric representation context. Its body and opening comments describe different organization. A future consumer fixture must establish units, topology and usable output. Assembly hierarchy and curved-surface preservation require the selected assembly-aware route and actual readback.
+4. The inspected OCS STEP writer body (`${OCS_ROOT}/src/io/step.rs`) collects triangles across meshes and emits one shell, solid and representation with planar faces. It formats coordinates to six decimals, skips invalid triangle indices and emits an SI millimetre entity without attaching it to the geometric representation context. Its body and opening comments describe different organization. A future consumer fixture must establish units, topology and usable output. Assembly hierarchy and curved-surface preservation require the selected assembly-aware route and actual readback.
 5. [KiCad library terms](https://www.kicad.org/libraries/license/) state the collection licence and design-use exception. [Menagerie](https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md) directs users to each model directory's LICENSE for XML/assets. Attach actual item/model terms, attribution and revisions separately from application-software terms.
 
 ## 4. Resources and goal-specific detail
@@ -138,7 +138,7 @@ Failure/resume: Preserve failed output and logs; return to the owning placement/
 4. A failed sequential create resumes from recorded committed steps and preserves existing user work.
 5. Native reopen retains occurrence count and interfaces; a visual overlap is checked using the supported geometry query.
 
-**Sources:** [1](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), [2](/home/leo/projects/3dmodeling/research/domains-and-components.md), [3](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md), [4](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [5](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md), [6](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [7](https://cadquery.readthedocs.io/en/stable/importexport.html).
+**Sources:** [1](../workflows/cad-paths.json), [2](../domains-and-components.md), [3](../workflows/composition-rules.md), 4 (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), 5 (`${OCS_ROOT}/docs/automation/API-SPEC.md`), [6](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [7](https://cadquery.readthedocs.io/en/stable/importexport.html).
 
 ### DOM-06 — Library asset intake and rights record
 
@@ -224,7 +224,7 @@ Failure/resume: Preserve failed record as a draft; fix the owning source/terms/r
 4. A visual mesh and analytic CAD representation receive distinct roles and feature evidence.
 5. A configured item whose preview resembles another model remains associated with its actual part/configuration ID.
 
-**Sources:** [1](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [2](/home/leo/projects/3dmodeling/research/domains-and-components.md), [3](/home/leo/projects/3dmodeling/research/implementation-plan.md), [4](https://www.kicad.org/libraries/license/), [5](https://github.com/google-deepmind/mujoco_menagerie), [6](https://polyhaven.com/license), [7](https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280).
+**Sources:** [1](../workflows/domain-paths.json), [2](../domains-and-components.md), [3](../implementation-plan.md), [4](https://www.kicad.org/libraries/license/), [5](https://github.com/google-deepmind/mujoco_menagerie), [6](https://polyhaven.com/license), [7](https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280).
 
 ### DOM-07 — Place reusable component in assembly
 
@@ -311,7 +311,7 @@ Failure/resume: Retain the failed placement; return to correspondence, calculati
 5. Native insertion succeeds but graph update fails; resume reconciles the existing occurrence instead of duplicating it.
 6. Component plus measurements with an absent, stale or wrong target assembly revision/graph blocks placement before any mutation; source and target identities must match the declared graph prerequisites.
 
-**Sources:** [1](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [2](/home/leo/projects/3dmodeling/research/domains-and-components.md), [3](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md), [4](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [5](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md), [6](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [7](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md).
+**Sources:** [1](../workflows/domain-paths.json), [2](../domains-and-components.md), [3](../workflows/composition-rules.md), [4](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), 5 (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`), 6 (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), 7 (`${OCS_ROOT}/docs/automation/API-SPEC.md`).
 
 ### DOM-26 — Version and reuse component revision
 
@@ -398,7 +398,7 @@ Failure/resume: Preserve unresolved/corrupt artifact evidence; restore exact byt
 4. Interrupted metadata publication leaves the previous revision readable and resumes without overwriting it.
 5. A changed interface invalidates its placement/export checks while unrelated feature evidence stays linked to its original revision.
 
-**Sources:** [1](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [2](/home/leo/projects/3dmodeling/research/domains-and-components.md), [3](/home/leo/projects/3dmodeling/research/implementation-plan.md), [4](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md).
+**Sources:** [1](../workflows/domain-paths.json), [2](../domains-and-components.md), [3](../implementation-plan.md), [4](../workflows/composition-rules.md).
 
 ### DOM-38 — Import STEP solid into CAD representation
 
@@ -485,7 +485,7 @@ Failure/resume: Preserve both reader results and artifacts; classify importer, u
 5. Invalid/open shell input yields an explicit result and preserved source; healing is a new derivative.
 6. Two readers with a shared kernel record that dependency beside matching results.
 
-**Sources:** [1](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [2](/home/leo/projects/3dmodeling/research/local-baseline.md), [3](/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md), [4](/home/leo/projects/3dmodeling/research/domains-and-components.md), [5](https://cadquery.readthedocs.io/en/stable/importexport.html), [6](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs), [7](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md), [8](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html).
+**Sources:** [1](../workflows/domain-paths.json), [2](../local-baseline.md), [3](../workflows/details/dom-r02.md), [4](../domains-and-components.md), [5](https://cadquery.readthedocs.io/en/stable/importexport.html), 6 (`${OCS_ROOT}/src/io/step.rs`), [7](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md), [8](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html).
 
 ### DOM-39 — Export STEP assembly
 
@@ -572,7 +572,7 @@ Failure/resume: Preserve both native and imported results; locate exporter/impor
 5. A changing source during export invalidates the frozen revision and yields a distinct retry artifact.
 6. Semantically equal exports with different timestamp bytes retain separate hashes while passing declared invariants.
 
-**Sources:** [1](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [2](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [3](https://cadquery.readthedocs.io/en/stable/importexport.html), [4](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [5](/home/leo/projects/3dmodeling/research/domains-and-components.md), [6](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs), [7](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md), [8](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md), [9](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html).
+**Sources:** [1](../workflows/domain-paths.json), [2](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [3](https://cadquery.readthedocs.io/en/stable/importexport.html), [4](../cad-and-skills.md), [5](../domains-and-components.md), 6 (`${OCS_ROOT}/src/io/step.rs`), [7](../workflows/composition-rules.md), [8](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md), [9](https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html).
 
 ## 6. Shared interruption and revision protocol
 
@@ -593,7 +593,7 @@ At every resume, compare source and target revision/hash records with the saved 
 | DOM-38 STEP import | STEP preflight → actual schema/unit/product evidence; importer adapter → isolated configured transfer; transfer recorder → shapes/entity mappings; invariant report → per-feature and semantic readback findings |
 | DOM-39 STEP export | Export contract builder → frozen tree/feature requirements; capability adapter → tested route/settings; export wrapper → derivative and preservation mapping; exchange comparator → actual consumer tree/transform/interface findings |
 
-1. Each action's proposed helper specifies its input/output role in the [structured action specification](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). They are development proposals; the existing tool sources establish only their documented or inspected behavior.
+1. Each action's proposed helper specifies its input/output role in the [structured action specification](point-02-operations.json). They are development proposals; the existing tool sources establish only their documented or inspected behavior.
 2. Future tests require retained input sources, checked expected identities/measurements, per-feature criteria and actual tool/model versions. Compare deterministic measurements and independent semantic findings separately.
 3. Migration is per operation and input family: record agent actions; define stable rules; retain successful, ambiguous, failed and interrupted checked cases; implement the scoped helper; test on held-out cases; promote only the demonstrated family and route exceptions to source review.
-4. [Designer notes](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md) record local sources, review integration and document checks. The coordinator owns source/idea registers and batch commits.
+4. [Designer notes](reviews/point-02-designer.md) record local sources, review integration and document checks. The coordinator owns source/idea registers and batch commits.

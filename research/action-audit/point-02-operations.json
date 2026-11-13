@@ -12,11 +12,11 @@
       "operation_id": "CAD-12",
       "name": "Assemble existing CAD or source-library components",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/workflows/composition-rules.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/docs/automation/API-SPEC.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://cadquery.readthedocs.io/en/stable/importexport.html"
       ],
@@ -146,9 +146,9 @@
       "operation_id": "DOM-06",
       "name": "Library asset intake and rights record",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://www.kicad.org/libraries/license/",
         "https://github.com/google-deepmind/mujoco_menagerie",
         "https://polyhaven.com/license",
@@ -279,13 +279,13 @@
       "operation_id": "DOM-07",
       "name": "Place reusable component in assembly",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/workflows/composition-rules.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-        "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+        "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/docs/automation/API-SPEC.md"
       ],
       "actions": [
         {
@@ -413,10 +413,10 @@
       "operation_id": "DOM-26",
       "name": "Version and reuse component revision",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md"
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/workflows/composition-rules.md"
       ],
       "actions": [
         {
@@ -544,12 +544,12 @@
       "operation_id": "DOM-38",
       "name": "Import STEP solid into CAD representation",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/local-baseline.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/local-baseline.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r02.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
         "https://cadquery.readthedocs.io/en/stable/importexport.html",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
         "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___reader.html"
       ],
@@ -679,13 +679,13 @@
       "operation_id": "DOM-39",
       "name": "Export STEP assembly",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://cadquery.readthedocs.io/en/stable/importexport.html",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-        "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${OCS_ROOT}/src/io/step.rs",
+        "${MODELING_ROOT}/research/workflows/composition-rules.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Import_Export_Preferences.md",
         "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_c_a_f_control___writer.html"
       ],

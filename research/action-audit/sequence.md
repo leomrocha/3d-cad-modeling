@@ -1,9 +1,9 @@
 # Sequential audit of every recorded operation
 
-Date: 12 November 2026. Scope: detailed procedure and implementation-design documentation. The existing [audit plan](/home/leo/projects/3dmodeling/research/action-audit/plan.md) supplies the fifteen action fields, four execution options and five model roles.
+Date: 12 November 2026. Scope: detailed procedure and implementation-design documentation. The existing [audit plan](plan.md) supplies the fifteen action fields, four execution options and five model roles.
 
 1. **Authorization:** “THEN EXECUTE ALL FUCKGIN POINTS THAT WAS THE FUCKIGN ORDER ONE BY ONE IN THE DEFINED MODEL apply now,”.
-2. **Execution order:** complete the current point's design, software/visual/source reviews, independent review, registration, checks and result commit; then begin the next point. The [execution state](/home/leo/projects/3dmodeling/research/action-audit/sequence.json) maps all 77 operations to exactly one point.
+2. **Execution order:** complete the current point's design, software/visual/source reviews, independent review, registration, checks and result commit; then begin the next point. The [execution state](sequence.json) maps all 77 operations to exactly one point.
 3. **Point 01 — Descriptions and dimensions to a model brief:** two operations; completed document review, commit `eb1cfa4`.
 4. **Point 02 — Existing components and CAD reuse:** six operations, including library rights/revision intake, STEP import, assembly placement and export.
 5. **Point 03 — Confirmed dimensions and vector drawings to CAD:** ten operations, including profile cleanup/constraints, solid construction, export, checks and recovery.

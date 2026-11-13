@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/feature_checks.py",
+    "local_original": "${MODELING_ROOT}/scripts/feature_checks.py",
     "title": "Shared measured-feature comparisons",
     "summary": "Adds source-independent numeric comparison, closed-body connectivity, vertex-range and Cartesian cylindrical-pattern functions. Driver and Leaf checks use the same functions with their own source values; invalid expectations are rejected.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "local_original": "${MODELING_ROOT}/scripts/native_acis.py",
     "title": "Native structure reader alongside strict analytic reader",
     "summary": "Adds an explicit untransformed ACIS700 body-graph and vertex reader for the driver loft. Surface types are reported; the analytic reader continues to reject spline equations.",
     "access_date": "2026-11-12",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/driver_checks.py",
+    "local_original": "${MODELING_ROOT}/scripts/driver_checks.py",
     "title": "Source-bound driver exterior checks",
     "summary": "Uses the shared functions and pinned component expectations to check 116 separate solids, mounting features, terminal geometry and connector span. Original span fails; corrected saved derivative passes all141 checks.",
     "access_date": "2026-11-12",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/battery_module.py",
+    "local_original": "${MODELING_ROOT}/scripts/battery_module.py",
     "title": "Leaf checker adopting shared functions",
     "summary": "Replaces repeated numerical, connectivity, vertex-range and mounting-pattern rules with shared functions while retaining the original Leaf source expectations and component procedure. Prior recorded-native cases pass.",
     "access_date": "2026-11-12",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "local_original": "${MODELING_ROOT}/tests/test_native_acis.py",
     "title": "Recorded-native driver and shared-check regressions",
     "summary": "Adds six driver cases for source failure, corrected derivative, explicit spline scope, wrong mounting pitch, actual cross-family reuse and invalid expectations. Entire helper suite passes50 tests.",
     "access_date": "2026-11-12",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
     "title": "Component skill routing to exercised shared checks",
     "summary": "Adds the cross-component procedure with required source expectations, measurement methods, agent/software roles, failure cases and supported reuse conditions.",
     "access_date": "2026-11-12",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/shared-feature-checks.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md",
     "title": "Cross-component feature-check procedure",
     "summary": "Explains how an action becomes shared software using independent expectations and actual native measurements. Driver and Leaf mounting-hole patterns exercise one function with different dimensions.",
     "access_date": "2026-11-12",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/shared-check-actions.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/shared-check-actions.json",
     "title": "Four observed shared comparison action details",
     "summary": "Registers functions, inputs, outputs, prerequisites, measurement limits, agent/software ownership and actual driver/Leaf evidence as implementation details of native verification; original graph boundaries remain.",
     "access_date": "2026-11-12",
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c012-driver.md",
+    "local_original": "${MODELING_ROOT}/execution/c012-driver.md",
     "title": "Driver correction and generic-check iteration report",
     "summary": "Records manufacturer dimensions, original116.85mm versus116.7mm span failure, intact31-solid X2 translation,141 saved checks, actual views and shared-function adoption with50 tests.",
     "access_date": "2026-11-12",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md",
     "title": "Sumitomo driver component input sheet",
     "summary": "Links the existing driver and retained outline; requires mounting pattern, outline, terminal positions and cable interfaces. The iteration attributes exact CH52308G10 identity to the inspected drawing title.",
     "access_date": "2026-11-12",
@@ -120,7 +120,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg",
     "title": "Original Sumitomo driver drawing",
     "summary": "Preserved original contains116 solids and eight text labels. Its connector shells span116.85mm; the retained manufacturer drawing gives116.7mm.",
     "access_date": "2026-11-12",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg",
     "title": "Checked Sumitomo driver derivative",
     "summary": "Separate native derivative retains116 solids/eight text labels and corrects connector-shell span to116.7mm by moving the complete X2 group -0.15mm in X; saved141 checks pass.",
     "access_date": "2026-11-12",
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/README.md",
     "title": "Existing manufacturer-source provenance index",
     "summary": "Inspected Sumitomo entries identify original ECO/PRO drawing URLs, source descriptions and retained paths; these locate the exact local drawing reused by the iteration.",
     "access_date": "2026-11-12",
@@ -156,7 +156,7 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/build_remaining_sumitomo.py",
+    "local_original": "${TEMP_ROOT}/opencode/build_remaining_sumitomo.py",
     "title": "Original Sumitomo reconstruction source",
     "summary": "Read existing driver construction and source attribution:186x116 base,168x98 mounting pattern, nominal terminals, loft and reconstructed connector positions. An unchanged copy is retained with the job.",
     "access_date": "2026-11-12",
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/sumitomo-smartris-driver-ch52308-state.json",
+    "local_original": "${TEMP_ROOT}/opencode/sumitomo-smartris-driver-ch52308-state.json",
     "title": "Original driver component mapping",
     "summary": "Existing mapping identifies116 component handles and their construction names, used to bind actual native records and select the complete31-solid X2 group. An unchanged copy is retained in FERME.",
     "access_date": "2026-11-12",
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
     "title": "Component iteration register after driver checks",
     "summary": "All103 identities remain. Rail, crossmember, SKF bearing, Leaf module and Sumitomo driver have DONE results and applied improvements; other98 jobs keep their existing states.",
     "access_date": "2026-11-12",
@@ -192,7 +192,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
     "title": "Component history including driver source failure and correction",
     "summary": "Appends driver source attribution, initial span failure, whole-group revision, persistence/recovery, saved checks, views and shared-improvement regression observations; earlier bytes remain an unchanged prefix.",
     "access_date": "2026-11-12",
@@ -204,7 +204,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
     "title": "Component iteration index with driver result",
     "summary": "Adds source correction, checked driver artifact, shared functions adopted by two families and final50-test result.",
     "access_date": "2026-11-12",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/README.md",
     "title": "CAD index with checked driver derivative",
     "summary": "Adds distinct driver derivative and exact current iteration result while preserving existing original model links and historical entries.",
     "access_date": "2026-11-12",
@@ -228,7 +228,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Sumitomo-smartris-ECO-CAD.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/Sumitomo-smartris-ECO-CAD.pdf",
     "title": "Retained Sumitomo ECO outline page1, CH52308G10",
     "summary": "Actual page1 inspected visually:186x116 base,168x98 mounting centres, four13mm holes,84.25/69/72mm heights, nominalM6,19.2mm divider clear space and116.7mm connector span. Pins the independent driver expectations.",
     "access_date": "2026-11-12",
@@ -241,7 +241,7 @@
     "url": "https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-eco.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Sumitomo-smartris-PRO-CAD.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/Sumitomo-smartris-PRO-CAD.pdf",
     "title": "Retained Sumitomo PRO outline page1 cross-check",
     "summary": "Actual page1 rendered and inspected; shows the same CH52308G10 driver outline and dimensions as the ECO drawing. The bound job uses the ECO original to preserve existing construction attribution.",
     "access_date": "2026-11-12",
@@ -254,7 +254,7 @@
     "url": "https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-pro.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json",
     "title": "Driver iteration — audit.json",
     "summary": "Original native audit reports116 solids/eight text labels, zero errors/warnings and original file SHA.",
     "access_date": "2026-11-12",
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json",
     "title": "Driver iteration — capture-front.json",
     "summary": "Completed front capture response binds actual driver document78 and its inspected front projection.",
     "access_date": "2026-11-12",
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json",
     "title": "Driver iteration — capture-isometric.json",
     "summary": "Completed isometric capture response identifies document78 and actual component image.",
     "access_date": "2026-11-12",
@@ -290,7 +290,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json",
     "title": "Driver iteration — capture-side.json",
     "summary": "Completed side capture response binds document78 and inspected housing/connector height view.",
     "access_date": "2026-11-12",
@@ -302,7 +302,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json",
     "title": "Driver iteration — corrected-presave-records.json",
     "summary": "Actual post-translation records preserve the complete moved X2 group and all93 unaffected entity properties before save.",
     "access_date": "2026-11-12",
@@ -314,7 +314,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json",
     "title": "Driver iteration — correction.json",
     "summary": "Records source-derived -0.15mm X translation,31 owned X2 solids, original116.85mm span and target116.7mm; unaffected entities preserved.",
     "access_date": "2026-11-12",
@@ -326,7 +326,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json",
     "title": "Driver iteration — header.json",
     "summary": "Actual driver document header records its millimetre units.",
     "access_date": "2026-11-12",
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json",
     "title": "Driver iteration — initial-state.json",
     "summary": "Actual pre-open OCS state identifies prior Leaf document76 and other open work before driver inspection.",
     "access_date": "2026-11-12",
@@ -350,7 +350,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json",
     "title": "Driver iteration — native-query.json",
     "summary": "Actual original query identifies116 solid entities and eight text labels, preserving all native handles.",
     "access_date": "2026-11-12",
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json",
     "title": "Driver iteration — native-records.json",
     "summary": "Raw original SAB solids and text records supply independent geometry observations and preserved baseline properties.",
     "access_date": "2026-11-12",
@@ -374,7 +374,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl",
     "title": "Driver iteration — ocs-journal.jsonl",
     "summary": "Guarded request history preserves original open/reopen polling-bound results, same-ID recovery, whole-X2 translation, verified save and actual captures.",
     "access_date": "2026-11-12",
@@ -386,7 +386,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json",
     "title": "Driver iteration — opened-state.json",
     "summary": "Recovered original open state identifies driver document77 and original saved path.",
     "access_date": "2026-11-12",
@@ -398,7 +398,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json",
     "title": "Driver iteration — original-checks.json",
     "summary": "Original native model passes140 checks and fails connector-shell span116.85mm versus manufacturer116.7mm.",
     "access_date": "2026-11-12",
@@ -410,7 +410,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json",
     "title": "Driver iteration — persistence.json",
     "summary": "Verified-save SHA, zero dropped entities, preserved manifest and recovered reopened audit all pass for the checked derivative.",
     "access_date": "2026-11-12",
@@ -422,7 +422,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json",
     "title": "Driver iteration — readiness.json",
     "summary": "All15 required source expectations and pinned hashes pass SOURCE_READY with durable retained reconstruction evidence.",
     "access_date": "2026-11-12",
@@ -434,7 +434,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json",
     "title": "Driver iteration — reopened-audit.json",
     "summary": "Saved derivative audit preserves116 solids/eight text labels and zero errors/warnings.",
     "access_date": "2026-11-12",
@@ -446,7 +446,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json",
     "title": "Driver iteration — reopened-checks.json",
     "summary": "All141 saved native checks pass, with housing graph/vertex method separated from analytic measurement methods.",
     "access_date": "2026-11-12",
@@ -458,7 +458,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png",
     "title": "Driver iteration — reopened-front.png",
     "summary": "Inspected front image shows four mounting bores, six terminal assemblies, X1/X2 connectors and indicator details; X1/X2/W/B markings render visibly.",
     "access_date": "2026-11-12",
@@ -470,7 +470,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png",
     "title": "Driver iteration — reopened-isometric.png",
     "summary": "Inspected isometric image shows tapered housing, separate studs/washers/dividers, recessed signal connectors and contacts.",
     "access_date": "2026-11-12",
@@ -482,7 +482,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json",
     "title": "Driver iteration — reopened-records.json",
     "summary": "Actual saved derivative SAB records supply all141 passing feature checks and regression inputs.",
     "access_date": "2026-11-12",
@@ -494,7 +494,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png",
     "title": "Driver iteration — reopened-side.png",
     "summary": "Inspected side image shows housing taper, mounting base and separate projecting connector/terminal geometry against source side outline.",
     "access_date": "2026-11-12",
@@ -506,7 +506,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json",
     "title": "Driver iteration — reopened-state.json",
     "summary": "Recovered derivative-open state identifies document78 and the separate checked driver path.",
     "access_date": "2026-11-12",
@@ -518,7 +518,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json",
     "title": "Driver iteration — result.json",
     "summary": "DONE driver iteration records derivative SHA,141 saved checks, actual views, preserved original and shared-function improvement with50 tests.",
     "access_date": "2026-11-12",
@@ -530,7 +530,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py",
     "title": "Driver iteration — retained-source/original-construction-source.py",
     "summary": "Unchanged retained copy of the inspected original Sumitomo builder; used as reconstruction source evidence, with its original code and attribution preserved.",
     "access_date": "2026-11-12",
@@ -542,7 +542,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json",
     "title": "Driver iteration — retained-source/original-part-map.json",
     "summary": "Unchanged retained copy of the original116-part handle map, enabling source-to-native identity review and bounded X2 group selection.",
     "access_date": "2026-11-12",
@@ -554,7 +554,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json",
     "title": "Driver iteration — source-job-r01.json",
     "summary": "Original pinned source-job revision retains temporary original-builder source paths used for the first check.",
     "access_date": "2026-11-12",
@@ -566,7 +566,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json",
     "title": "Driver iteration — source-job.json",
     "summary": "Current source job pins15 manufacturer/reconstruction expectations, exact116-part handle mapping and explicit housing structure-only method; builder evidence uses durable retained copy.",
     "access_date": "2026-11-12",
@@ -578,7 +578,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png",
     "title": "Driver iteration — source-outline-page1.png",
     "summary": "Inspected rendering of retained ECO page1 identifies exact CH52308G10 drawing dimensions and physical features.",
     "access_date": "2026-11-12",

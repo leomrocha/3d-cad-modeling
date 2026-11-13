@@ -3,18 +3,18 @@
   "part_id": "C021",
   "part_name": "Nissan Leaf Gen2 battery module",
   "model_identity": "gpt-6.1-sol",
-  "output": "/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg",
+  "output": "${FERME_ROOT}/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg",
   "sha256": "4eabb05101f181a9ab8fbf29bd0e6f8f45b823c273eecd2e684e3e870053b13c",
   "native_checks": "29 PASS",
   "persistence": "PASS",
   "visual_checks": "top/terminal-end/isometric contents inspected against retained source illustration",
   "applied_improvement": {
-    "checker": "/home/leo/projects/3dmodeling/scripts/battery_module.py",
+    "checker": "${MODELING_ROOT}/scripts/battery_module.py",
     "checker_sha256": "6b40bc5b2c48ec3b9e6515f014747ee8270dd29419614c026e37f87e40e2e1c3",
-    "shared_reader": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "shared_reader": "${MODELING_ROOT}/scripts/native_acis.py",
     "shared_reader_sha256": "7206669f1275dc8a68c6dcdd372f83de184dc0e442f446e09468ace94213472a",
-    "procedure": "/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md"
+    "procedure": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md"
   },
   "tests": "44 PASS",
-  "source_job": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json"
+  "source_job": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json"
 }

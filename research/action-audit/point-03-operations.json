@@ -12,12 +12,12 @@
       "operation_id": "CAD-08",
       "name": "Read and clean vector drawing geometry",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
         "https://ezdxf.readthedocs.io/en/stable/",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
+        "${OCS_ROOT}/docs/automation/API-SPEC.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r04.md",
         "https://ezdxf.readthedocs.io/en/stable/tasks/query.html",
         "https://ezdxf.readthedocs.io/en/stable/concepts/units.html",
         "https://www.w3.org/TR/SVG2/coords.html"
@@ -123,11 +123,11 @@
       "operation_id": "CAD-09",
       "name": "Build and constrain an editable planar sketch",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md"
       ],
       "actions": [
         {
@@ -230,16 +230,16 @@
       "operation_id": "CAD-10",
       "name": "Create a kernel solid and native model document from confirmed parameters",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
-        "/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${OCS_ROOT}/docs/cadkernel-body-path.md",
+        "${OCS_ROOT}/src/app/plugin_host.rs",
+        "${OCS_ROOT}/crates/ocs_plugin_api/src/host.rs",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
         "https://cadquery.readthedocs.io/en/stable/classreference.html",
         "https://build123d.readthedocs.io/en/latest/operations.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/plugins/opencad-python/src/document_model.py",
+        "${OCS_ROOT}/src/app/command_driver/solid3d.rs"
       ],
       "actions": [
         {
@@ -345,12 +345,12 @@
       "operation_id": "CAD-13",
       "name": "Verify model geometry and saved output",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${OCS_ROOT}/docs/automation/API-SPEC.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md",
         "https://cadquery.readthedocs.io/en/stable/classreference.html",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+        "${OCS_ROOT}/src/io/step.rs"
       ],
       "actions": [
         {
@@ -453,12 +453,12 @@
       "operation_id": "CAD-14",
       "name": "Recover from failed interpretation or geometry construction",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+        "${OCS_ROOT}/src/app/plugin_host.rs",
+        "${OCS_ROOT}/docs/cadkernel-body-path.md"
       ],
       "actions": [
         {
@@ -561,10 +561,10 @@
       "operation_id": "CAD-15",
       "name": "Render source-defined CSG as a mesh",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://openscad.org/documentation",
         "https://files.openscad.org/documentation/manual/The_OpenSCAD_Language.html",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md"
       ],
       "actions": [
         {
@@ -667,9 +667,9 @@
       "operation_id": "DOM-03",
       "name": "DXF/SVG drawing to constrained profile",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
@@ -779,12 +779,12 @@
       "operation_id": "DOM-04",
       "name": "Brief/profile to native CAD solid",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${OCS_ROOT}/src/app/plugin_host.rs",
+        "${OCS_ROOT}/docs/cadkernel-body-path.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md"
       ],
       "actions": [
@@ -888,12 +888,12 @@
       "operation_id": "DOM-05",
       "name": "Export STEP solid",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://cadquery.readthedocs.io/en/stable/importexport.html",
         "https://dev.opencascade.org/doc/refman/html/class_s_t_e_p_control___writer.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "actions": [
         {
@@ -996,9 +996,9 @@
       "operation_id": "DOM-40",
       "name": "Script-parametric CAD authoring",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://cadquery.readthedocs.io/en/stable/classreference.html",
         "https://build123d.readthedocs.io/en/latest/operations.html",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",

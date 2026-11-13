@@ -13,12 +13,12 @@
       "name": "Extract a model brief from text and dimensions",
       "family": "cad",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-01-model-brief.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ]
     },
     {
@@ -26,9 +26,9 @@
       "name": "Rectify a raster drawing plane from known dimensions",
       "family": "cad",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://docs.opencv.org/5.0/main_modules/calib.html"
       ]
@@ -38,9 +38,9 @@
       "name": "Recognize dimension text with OCR",
       "family": "cad",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html"
       ]
@@ -50,9 +50,9 @@
       "name": "Extract raster edges, lines and contours",
       "family": "cad",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
         "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
@@ -64,9 +64,9 @@
       "name": "Convert raster floor-plan candidates into a wall and opening graph",
       "family": "cad",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
@@ -78,9 +78,9 @@
       "name": "Register orthographic drawing views in a shared coordinate frame",
       "family": "cad",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
         "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
@@ -91,9 +91,9 @@
       "name": "Reconstruct a candidate 3D wireframe and surface from orthographic views",
       "family": "cad",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
         "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html"
@@ -104,15 +104,15 @@
       "name": "Read and clean vector drawing geometry",
       "family": "cad",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
         "https://ezdxf.readthedocs.io/en/stable/",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/README.md"
       ]
     },
     {
@@ -120,13 +120,13 @@
       "name": "Build and constrain an editable planar sketch",
       "family": "cad",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ]
     },
     {
@@ -134,15 +134,15 @@
       "name": "Create a kernel solid and native model document from confirmed parameters",
       "family": "cad",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://build123d.readthedocs.io/en/latest/operations.html",
         "https://cadquery.readthedocs.io/en/stable/",
         "https://openscad.org/documentation",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+        "${OCS_ROOT}/docs/cadkernel-body-path.md"
       ]
     },
     {
@@ -150,12 +150,12 @@
       "name": "Fit analytic features to scans or image-derived point clouds",
       "family": "cad",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/architecture/research/README.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${ARCHITECTURE_ROOT}/research/README.md"
       ]
     },
     {
@@ -163,12 +163,12 @@
       "name": "Assemble existing CAD or source-library components",
       "family": "cad",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${OCS_ROOT}/docs/automation/README.md",
         "https://cadquery.readthedocs.io/en/stable/"
       ]
     },
@@ -177,13 +177,13 @@
       "name": "Verify model geometry and saved output",
       "family": "cad",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://build123d.readthedocs.io/en/stable/"
       ]
     },
@@ -192,12 +192,12 @@
       "name": "Recover from failed interpretation or geometry construction",
       "family": "cad",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md"
       ]
     },
@@ -206,9 +206,9 @@
       "name": "Calibrate camera poses from photographs and known controls",
       "family": "cad",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html",
         "https://docs.opencv.org/5.0/main_modules/calib.html"
@@ -219,9 +219,9 @@
       "name": "Render source-defined CSG as a mesh",
       "family": "cad",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
         "https://openscad.org/documentation"
       ]
@@ -231,11 +231,11 @@
       "name": "Reconstruct camera poses and dense visible geometry from overlapping photos",
       "family": "cad",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://github.com/colmap/colmap",
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
       ]
@@ -245,14 +245,14 @@
       "name": "Build wall and opening solids from a confirmed floor-plan graph",
       "family": "cad",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/cad-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
         "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md"
+        "${OCS_ROOT}/docs/automation/README.md"
       ]
     },
     {
@@ -260,9 +260,9 @@
       "name": "Calibrate camera intrinsics and distortion",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
       ]
@@ -272,9 +272,9 @@
       "name": "Solve camera pose from known 3D-to-2D correspondences",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
       ]
@@ -284,9 +284,9 @@
       "name": "Estimate camera poses and sparse structure from overlapping photos",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://alicevision.org/",
@@ -298,9 +298,9 @@
       "name": "Convert video into an image reconstruction dataset",
       "family": "reconstruction",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
         "https://github.com/nerfstudio-project/nerfstudio"
@@ -311,9 +311,9 @@
       "name": "Register RGB and depth frames and estimate sequence poses",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
@@ -324,9 +324,9 @@
       "name": "Integrate calibrated RGB-D frames into point cloud or TSDF mesh",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
       ]
@@ -336,9 +336,9 @@
       "name": "Estimate coarse transform between point clouds",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html"
       ]
@@ -348,9 +348,9 @@
       "name": "Refine registration and compare point-cloud surfaces",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
@@ -361,9 +361,9 @@
       "name": "Segment point clouds and fit candidate primitive evidence",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://github.com/CloudCompare/CloudCompare"
@@ -374,9 +374,9 @@
       "name": "Estimate multi-view depth, camera poses and Gaussian outputs",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/ByteDance-Seed/Depth-Anything-3",
         "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
@@ -388,9 +388,9 @@
       "name": "Train NeRF or Gaussian scene for view synthesis",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
@@ -402,9 +402,9 @@
       "name": "Register existing CAD to calibrated photographs or scan points",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
@@ -416,9 +416,9 @@
       "name": "Anchor a screen sketch to a 3D surface",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://docs.blender.org/api/current/bpy.types.Scene.html",
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html"
@@ -429,9 +429,9 @@
       "name": "Remodel segmented scan evidence as parametric CAD",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
@@ -442,9 +442,9 @@
       "name": "Reconcile scan surfaces with dimensioned drawings",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
@@ -455,9 +455,9 @@
       "name": "Iterate CAD edits against registered evidence",
       "family": "reconstruction",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
@@ -468,9 +468,9 @@
       "name": "Build dense point cloud and mesh from SfM camera solution",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
@@ -481,9 +481,9 @@
       "name": "Generate a single-image mesh proxy",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/VAST-AI-Research/TripoSR",
         "https://github.com/microsoft/TRELLIS.2",
@@ -495,9 +495,9 @@
       "name": "Train and export a Gaussian splat scene",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://docs.nerf.studio/nerfology/methods/splat.html"
       ]
@@ -507,9 +507,9 @@
       "name": "Train and export a NeRF scene",
       "family": "reconstruction",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md"
@@ -520,12 +520,12 @@
       "name": "Normalize model brief",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-01-model-brief.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ]
     },
     {
@@ -533,12 +533,12 @@
       "name": "Raster sketch to constrained sketch",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md"
       ]
     },
     {
@@ -546,12 +546,12 @@
       "name": "DXF/SVG drawing to constrained profile",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ]
     },
     {
@@ -559,14 +559,14 @@
       "name": "Brief/profile to native CAD solid",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${OCS_ROOT}/README.md",
+        "${OCS_ROOT}/src/io/step.rs"
       ]
     },
     {
@@ -574,14 +574,14 @@
       "name": "Export STEP solid",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/local-baseline.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+        "${MODELING_ROOT}/research/local-baseline.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${OCS_ROOT}/README.md",
+        "${OCS_ROOT}/src/io/step.rs"
       ]
     },
     {
@@ -589,9 +589,9 @@
       "name": "Library asset intake and rights record",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "https://www.freecad.org/addons.php?lang=eng_EN",
         "https://www.kicad.org/libraries/license/",
@@ -605,12 +605,12 @@
       "name": "Place reusable component in assembly",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ]
     },
     {
@@ -618,9 +618,9 @@
       "name": "CAD assembly to articulated robot structure",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
@@ -632,9 +632,9 @@
       "name": "Robot assembly to URDF package",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/ros/urdf_tutorial",
         "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
@@ -646,9 +646,9 @@
       "name": "URDF import and MJCF conversion",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
@@ -660,9 +660,9 @@
       "name": "Author native MJCF simulation model",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
@@ -674,13 +674,13 @@
       "name": "Export mesh assets for MuJoCo",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ]
     },
     {
@@ -688,9 +688,9 @@
       "name": "Generate convex collision set",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
         "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
@@ -702,13 +702,13 @@
       "name": "Calculate or import physical mass properties",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ]
     },
     {
@@ -716,9 +716,9 @@
       "name": "Author semantic IFC building",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_profile_representation/index.html",
@@ -730,9 +730,9 @@
       "name": "Extract IFC geometry as triangles",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
@@ -743,13 +743,13 @@
       "name": "IFC to GLB display scene",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/introduction.html",
         "https://www.blender.org/features/pipeline/",
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
       ]
     },
     {
@@ -757,11 +757,11 @@
       "name": "Raster floor plan to IFC building",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
       ]
     },
@@ -770,12 +770,12 @@
       "name": "Register scan to building frame",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ]
     },
     {
@@ -783,11 +783,11 @@
       "name": "Photos/video to camera solution, point cloud and mesh",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ]
     },
     {
@@ -795,11 +795,11 @@
       "name": "Depth frames to registered point cloud or mesh",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ]
     },
     {
@@ -807,11 +807,11 @@
       "name": "Photographs to Gaussian/NeRF visual scene",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ]
     },
     {
@@ -819,12 +819,12 @@
       "name": "Scan or mesh to parametric CAD remodeling",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ]
     },
     {
@@ -832,9 +832,9 @@
       "name": "Assemble and inspect Blender scene",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://www.blender.org/features/pipeline/",
         "https://projects.blender.org/lab/blender_mcp/src/branch/main",
@@ -847,12 +847,12 @@
       "name": "Create fabrication package",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md"
       ]
     },
     {
@@ -860,12 +860,12 @@
       "name": "Version and reuse component revision",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ]
     },
     {
@@ -873,9 +873,9 @@
       "name": "Extract IFC geometry as OpenCASCADE B-rep",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
@@ -886,11 +886,11 @@
       "name": "Dense multi-view stereo to point cloud and mesh",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ]
     },
     {
@@ -898,11 +898,11 @@
       "name": "Point cloud to surface mesh",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ]
     },
     {
@@ -910,11 +910,11 @@
       "name": "Photos to NeRF visual scene",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ]
     },
     {
@@ -922,9 +922,9 @@
       "name": "Author assembly graph and joint set",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/ros/urdf_tutorial"
@@ -935,9 +935,9 @@
       "name": "Map CAD link geometry to MJCF body tree",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
@@ -948,9 +948,9 @@
       "name": "Add environment collision geometry to MJCF",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst"
@@ -961,9 +961,9 @@
       "name": "Author static MuJoCo environment from BIM mesh",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst"
@@ -974,9 +974,9 @@
       "name": "Place library component in semantic IFC",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://www.freecad.org/addons.php?lang=eng_EN"
@@ -987,9 +987,9 @@
       "name": "Author robot assembly from CAD component",
       "family": "domain",
       "original_automation_label": "assisted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/ros/urdf_tutorial"
@@ -1000,12 +1000,12 @@
       "name": "Import STEP solid into CAD representation",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/local-baseline.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+        "${MODELING_ROOT}/research/local-baseline.md",
+        "${OCS_ROOT}/README.md"
       ]
     },
     {
@@ -1013,12 +1013,12 @@
       "name": "Export STEP assembly",
       "family": "domain",
       "original_automation_label": "mixed",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md"
       ]
     },
     {
@@ -1026,12 +1026,12 @@
       "name": "Script-parametric CAD authoring",
       "family": "domain",
       "original_automation_label": "scripted",
-      "source_record": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+      "source_record": "${MODELING_ROOT}/research/workflows/domain-paths.json",
       "definition_state": "proposed_action_definition_reviewed",
-      "point_document": "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
+      "point_document": "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ]
     }
   ]

@@ -2,7 +2,7 @@
 
 Date: 12 November 2026. Status: **DONE — documentation and independent review**. The 17 operation definitions, 51 actions, helper specifications and future cases are proposals. Requested designer dispatch: `gpt-6-astra`, effort `xhigh`. Actual runtime model identity: **unavailable**.
 
-The [structured action records](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) contain all fifteen required fields per action. This document gives the ordered actions, actual tool boundaries, helper contracts, execution choices and validation. The [audit plan](/home/leo/projects/3dmodeling/research/action-audit/plan.md), [sequence](/home/leo/projects/3dmodeling/research/action-audit/sequence.json) and [original implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md) retain their existing scope. Source evidence is recorded in the [primary-source review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md) and [26 successful inspections plus four failed attempts](/home/leo/projects/3dmodeling/research/sources/round-05/point-07-web-sources.json). The designer read these local records; Luna performed the external inspection.
+The [structured action records](point-07-operations.json) contain all fifteen required fields per action. This document gives the ordered actions, actual tool boundaries, helper contracts, execution choices and validation. The [audit plan](plan.md), [sequence](sequence.json) and [original implementation plan](../implementation-plan.md) retain their existing scope. Source evidence is recorded in the [primary-source review](reviews/point-07-sources.md) and [26 successful inspections plus four failed attempts](../sources/round-05/point-07-web-sources.json). The designer read these local records; Luna performed the external inspection.
 
 ## 1. Terms and preserved contracts
 
@@ -11,8 +11,8 @@ The [structured action records](/home/leo/projects/3dmodeling/research/action-au
 3. **Intrinsics** describe camera imaging geometry, including focal and principal-point parameters. **Extrinsics** describe the camera position and orientation relative to another frame. A **quaternion** is a four-component rotation representation whose component order/convention must be recorded. **Normalization** here means a documented coordinate reorientation, translation or scaling. A **mask** identifies image regions used or excluded by an operation.
 4. A **Gaussian scene** contains learned spatial Gaussian rendering primitives, including position, extent/orientation, opacity and appearance parameters. A **neural radiance field (NeRF)** is a trained representation queried to render views. A **renderer** produces an image from a representation and camera. A training **checkpoint** stores model state for loading or resumption. **PLY** can carry point attributes or triangle faces; **GLB** is a binary glTF scene container. The actual fields and consumer determine the representation.
 5. A **vision-language model (VLM)** reasons over image and text evidence. A **sidecar** is a separate metadata file associated with an artifact. **VRAM** is graphics-processor memory. A **pinned revision** is an explicitly fixed revision or content hash. A **branch** is an isolated candidate procedure with its own inputs, settings and result.
-6. **CAD-16 — photo-derived geometry** requires `photo-set` AND `measurement-set` and all three outputs: cameras, cloud and mesh. **REC-03 — sparse reconstruction** supplies cameras and sparse cloud; **REC-17/DOM-28 — dense reconstruction** supplies cloud and mesh. Fusion and meshing are separate stages. Source: [original CAD contracts](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json) and [original reconstruction contracts](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json).
-7. **DOM-20 — photo reconstruction** declares photos → cameras and cloud, while its title also mentions video/mesh. REC-04 supplies the video-to-photo stage; REC-17/DOM-28 supplies mesh. **DOM-21 — depth reconstruction** declares depth plus measurements → cloud; REC-06 supplies a separate cloud-and-mesh fusion branch. **DOM-22 — Gaussian appearance** declares `gaussian-scene`; DOM-30 declares `nerf-scene`. These source-contract findings preserve the [original domain records](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json).
+6. **CAD-16 — photo-derived geometry** requires `photo-set` AND `measurement-set` and all three outputs: cameras, cloud and mesh. **REC-03 — sparse reconstruction** supplies cameras and sparse cloud; **REC-17/DOM-28 — dense reconstruction** supplies cloud and mesh. Fusion and meshing are separate stages. Source: [original CAD contracts](../workflows/cad-paths.json) and [original reconstruction contracts](../workflows/reconstruction-paths.json).
+7. **DOM-20 — photo reconstruction** declares photos → cameras and cloud, while its title also mentions video/mesh. REC-04 supplies the video-to-photo stage; REC-17/DOM-28 supplies mesh. **DOM-21 — depth reconstruction** declares depth plus measurements → cloud; REC-06 supplies a separate cloud-and-mesh fusion branch. **DOM-22 — Gaussian appearance** declares `gaussian-scene`; DOM-30 declares `nerf-scene`. These source-contract findings preserve the [original domain records](../workflows/domain-paths.json).
 8. **REC-10 — learned cameras/cloud** accepts photos OR video and requires cameras plus cloud; optional Gaussian products retain their own type. **REC-11 — visual scene** packages a named Gaussian/NeRF subtype with its renderer assets. **REC-18 — single-image mesh** selects one source image and a mesh-capable backend. The inspected SAM 3D Objects example produces Gaussian PLY; TripoSR and TRELLIS.2 document mesh routes. Generic Nerfstudio TSDF documentation and Splatfacto-specific unsupported mesh/cloud export wording form a recorded source conflict; the selected model/version requires an actual capability check.
 
 ## 2. Common source and execution protocol
@@ -56,11 +56,11 @@ Source entrypoints for these common clauses:
 | [DA3](https://github.com/ByteDance-Seed/Depth-Anything-3), [Streaming](https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md), [DA3Metric-Large card](https://huggingface.co/depth-anything/DA3Metric-Large) | Exact variant outputs, chunk/resource conditions, camera arrays and bounded metric/focal claim. |
 | [TripoSR](https://github.com/VAST-AI-Research/TripoSR), [TRELLIS.2](https://github.com/microsoft/TRELLIS.2), [SAM Objects](https://github.com/facebookresearch/sam-3d-objects), [SAM setup](https://github.com/facebookresearch/sam-3d-objects/blob/main/doc/setup.md) | Model-specific mesh versus Gaussian output and stated hardware conditions. |
 
-The [point-05 alignment procedure](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md) supplies camera/control and CAD remodeling handoffs. The [point-02 reuse procedure](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md) supplies revision and compatible-component checks. The [OCS engineering skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md) and [model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md) govern a separately scoped CAD handoff; reconstruction does not itself create parametric CAD history. OCS remains the project's native CAD route, and another CAD adapter requires its documented capability and scoped proposal.
+The [point-05 alignment procedure](point-05-alignment-and-remodeling.md) supplies camera/control and CAD remodeling handoffs. The [point-02 reuse procedure](point-02-component-reuse.md) supplies revision and compatible-component checks. The OCS engineering skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) and model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) govern a separately scoped CAD handoff; reconstruction does not itself create parametric CAD history. OCS remains the project's native CAD route, and another CAD adapter requires its documented capability and scoped proposal.
 
 ## 3. REC-04 — Convert video into an image reconstruction dataset
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **video → photo-set**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **video → photo-set**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-04-A01 — Inventory video timing camera state and coverage.** (1) Pin original stream bytes and metadata. (2) Identify camera-state/scene intervals. (3) Define sharpness, redundancy and viewpoint coverage criteria. Output: Source hash/stream manifest, scene intervals and frame-selection criteria. Check: Frame rate alone cannot reconstruct variable presentation timestamps; physical capture and synthetic frames remain labelled.
 
@@ -96,7 +96,7 @@ Future cases: Variable-rate clip preserves original presentation timestamps rath
 
 ## 4. REC-03 — Estimate camera poses and sparse structure from overlapping photos
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **photo-set → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **photo-set → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-03-A01 — Bind image identities calibration groups and sparse-solve settings.** (1) Pin dataset and camera groups. (2) Bind image transforms to intrinsic/distortion convention. (3) Reserve independent views/controls and choose sparse settings. Output: Dataset/camera-group manifest, fit/check split and sparse configuration. Check: Photo-only input permits arbitrary-scale reconstruction; original scale-control checks apply only when linked metric evidence exists.
 
@@ -132,7 +132,7 @@ Future cases: Unrelated calibration board size cannot silently set scene scale. 
 
 ## 5. CAD-16 — Reconstruct camera poses and dense visible geometry from overlapping photos
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json): **photo-set AND measurement-set → camera-solution AND point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/cad-paths.json): **photo-set AND measurement-set → camera-solution AND point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **CAD-16-A01 — Bind complete photo and metric-control contract.** (1) Pin photos and measurement-set. (2) Map fit controls versus independent checks. (3) Set frame, feature coverage and camera/cloud/mesh output requirements. Output: Dataset/control/frame plan selecting sparse and dense stages. Check: Original contract requires all three outputs; inferred hidden geometry retains its evidence label.
 
@@ -168,7 +168,7 @@ Future cases: Camera/cloud produced but mesh stage fails: complete CAD-16 handof
 
 ## 6. REC-05 — Register RGB and depth frames and estimate sequence poses
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **depth-frames → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **depth-frames → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-05-A01 — Bind sensor calibration timing and depth encoding.** (1) Pin raw frames/calibration and timing. (2) Decode depth scale/range/invalid conventions. (3) Check RGB-depth registration and pose-source prerequisites. Output: Per-frame sensor/calibration/time manifest and alignment/validity plan. Check: Depth numeric values require declared divisor/units; different clocks/extrinsics cannot be treated as aligned frames.
 
@@ -204,7 +204,7 @@ Future cases: Depth divisor error creates coherent but wrong scale; known-range 
 
 ## 7. REC-06 — Integrate calibrated RGB-D frames into point cloud or TSDF mesh
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **depth-frames AND camera-solution → point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **depth-frames AND camera-solution → point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-06-A01 — Resolve fusion grid and pose convention.** (1) Match each frame to calibration/pose revision. (2) Convert poses to exact integration convention. (3) Set source-backed voxel/truncation/range criteria and protected features. Output: Integration manifest with frame order, world frame, validity masks and grid settings. Check: Depth truncation and signed-distance truncation are separate quantities; no implicit unit/default conversion.
 
@@ -240,7 +240,7 @@ Future cases: Wrong pose inverse creates double surface and fails raw-frame/cont
 
 ## 8. DOM-21 — Depth frames to registered point cloud or mesh
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json): **depth-frames AND measurement-set → point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/domain-paths.json): **depth-frames AND measurement-set → point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **DOM-21-A01 — Bind mandatory depth and measurement evidence.** (1) Pin frames and measurement-set. (2) Map physical controls and pose source. (3) Define registered-cloud frame and target features. Output: Control/calibration/frame plan for registered point-cloud. Check: Original output is point-cloud; mesh title wording is recorded as a separate downstream branch.
 
@@ -276,7 +276,7 @@ Future cases: Missing measurement-set cannot be silently bypassed by sensor metr
 
 ## 9. REC-17 — Build dense point cloud and mesh from SfM camera solution
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **photo-set AND camera-solution → point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **photo-set AND camera-solution → point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-17-A01 — Validate sparse-to-dense image and camera handoff.** (1) Verify supplied image/camera revisions. (2) Create documented undistorted workspace without losing source mappings. (3) Select bounded dense settings and supported backend. Output: Undistorted image/camera workspace and dense-backend/settings plan. Check: Undistorted intrinsics and pixels must agree; a sparse camera model carries its own arbitrary/metric scale status.
 
@@ -312,7 +312,7 @@ Future cases: Cloud fusion succeeds but mesher fails: cloud retained, combined o
 
 ## 10. DOM-28 — Dense multi-view stereo to point cloud and mesh
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json): **photo-set AND camera-solution → point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/domain-paths.json): **photo-set AND camera-solution → point-cloud AND mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **DOM-28-A01 — Bind supplied cameras and required surface outputs.** (1) Bind exact photo/camera pair. (2) Record scale/frame and required features. (3) Select compatible dense and mesh stages. Output: Camera/image/frame validation receipt and both-output requirements. Check: Calibrated intrinsics alone do not establish unrelated scene scale.
 
@@ -348,7 +348,7 @@ Future cases: Sparse cloud mislabeled dense fails required coverage. Mesh output
 
 ## 11. DOM-29 — Point cloud to surface mesh
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json): **point-cloud → mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/domain-paths.json): **point-cloud → mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **DOM-29-A01 — Inspect point evidence normals and meshing assumptions.** (1) Inspect actual point representation and source evidence. (2) Select/filter regions with original IDs. (3) Prepare method-specific normals and closure assumptions. Output: Method/normal/filter plan and source-point membership map. Check: Gaussian PLY centers/covariances/opacity require separately defined surface extraction before this geometry route.
 
@@ -384,7 +384,7 @@ Future cases: Gaussian PLY shares extension with point cloud but fails geometric
 
 ## 12. DOM-20 — Photos/video to camera solution, point cloud and mesh
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json): **photo-set → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/domain-paths.json): **photo-set → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **DOM-20-A01 — Resolve literal photo input and cloud detail target.** (1) Verify actual photo-set input. (2) Declare sparse or dense cloud target. (3) Bind camera/scale evidence and output coverage criteria. Output: Input/quality/frame plan and camera/cloud output specification. Check: Title's video/mesh wording does not alter photo-set→camera-solution+point-cloud contract.
 
@@ -420,7 +420,7 @@ Future cases: Video file alone cannot satisfy photo-set without explicit extract
 
 ## 13. REC-10 — Estimate multi-view depth, camera poses and Gaussian outputs
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **one alternative: photo-set OR video → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **one alternative: photo-set OR video → camera-solution AND point-cloud**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-10-A01 — Bind learned reconstruction variant, images and camera roles.** (1) Identify the actual checkpoint and source input class. (2) Bind image transforms, masks, camera roles and control partitions. (3) Record the required camera/cloud exports and feature criteria. Output: Inference manifest with source/generated origin, variant/checkpoint hash, processed image mapping, supplied-versus-estimated camera policy, output names and scale status. Check: Check literal one-of input, all files/revisions, rights references and actual model export contract; a GLB-only example cannot complete camera-solution plus point-cloud.
 
@@ -456,7 +456,7 @@ Future cases: Metric versus relative checkpoint on same data preserves separate 
 
 ## 14. REC-18 — Generate a single-image mesh proxy
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **photo-set → mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **photo-set → mesh**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-18-A01 — Select one source image and a mesh-producing model contract.** (1) Select and hash the one source image and mask. (2) Match the chosen model to a triangle-mesh output contract. (3) Record visible evidence, hidden-region interpretation and scope criteria. Output: Single-image generation manifest with mask/preprocessing, generated-region policy, model/output contract and resource conditions. Check: Input selection remains explicit; actual source image rather than a rendered substitute is identified; unsupported Gaussian-only output cannot satisfy mesh.
 
@@ -492,7 +492,7 @@ Future cases: SAM Objects Gaussian PLY cannot fulfill direct mesh; a generated b
 
 ## 15. REC-19 — Train and export a Gaussian splat scene
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **photo-set AND camera-solution → gaussian-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **photo-set AND camera-solution → gaussian-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-19-A01 — Prepare a Gaussian training dataset with verified camera mapping.** (1) Pair every image with its source camera and pixel convention. (2) Apply only the required camera-basis and world transforms, then read parsed values. (3) Freeze training, camera-refinement, tuning and evaluation participation. Output: Dataset/parser receipt with original-to-training camera/world transforms, scale, image assignments, camera-optimization policy and feature evaluation plan. Check: Check camera projection against source before training; reject duplicate axis flip/scale normalization; evaluation images used in SfM retain their shared pose dependence.
 
@@ -528,7 +528,7 @@ Future cases: Already converted camera receives no second axis flip; hidden pars
 
 ## 16. REC-20 — Train and export a NeRF scene
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **photo-set AND camera-solution → nerf-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **photo-set AND camera-solution → nerf-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-20-A01 — Bind NeRF method, supplied cameras and training-space transforms.** (1) Bind source images to exact camera records and calibration. (2) Build the selected parser input and read its actual camera/world transforms. (3) Freeze appearance training, camera optimization, tuning and evaluation roles. Output: NeRF dataset receipt with camera basis/world orientation/centering/scale transforms, parser readback and source participation table. Check: Projection agreement is checked before training; a generic processing route that re-estimates supplied poses must be explicitly requested and produce a new camera revision.
 
@@ -564,7 +564,7 @@ Future cases: Missing predicted normals blocks Poisson exporter while scene stay
 
 ## 17. REC-11 — Train NeRF or Gaussian scene for view synthesis
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json): **photo-set AND camera-solution → visual-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/reconstruction-paths.json): **photo-set AND camera-solution → visual-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **REC-11-A01 — Choose the actual renderable scene subtype and consumer.** (1) Identify the required visual consumer and source regions. (2) Select the evidenced Gaussian/NeRF subtype and payload. (3) Bind camera parsing and representation-specific output/validation actions. Output: Scene dispatch record naming Gaussian or NeRF subtype, renderer, config/checkpoint/assets, camera route and optional separate geometry branch. Check: Consumer supports the actual subtype and required assets; a generic visual-scene type cannot conceal missing renderer/checkpoint dependencies.
 
@@ -600,7 +600,7 @@ Future cases: Gaussian scene declared GLB without supported export fails consume
 
 ## 18. DOM-22 — Photographs to Gaussian/NeRF visual scene
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json): **photo-set AND camera-solution → gaussian-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/domain-paths.json): **photo-set AND camera-solution → gaussian-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **DOM-22-A01 — Bind the domain Gaussian scene contract.** (1) Read the literal photo/camera inputs and Gaussian output. (2) Map domain regions to source pixels and intended views. (3) Select the supported Gaussian route and recorded frame handoff. Output: Gaussian domain route receipt with feature-to-source mapping, camera policy and explicit link to REC-19; NeRF requests route separately to DOM-30. Check: NeRF or mesh request is explicitly dispatched to its own operation; every required region has source/evaluation roles and consumer support.
 
@@ -636,7 +636,7 @@ Future cases: Broad title cannot return NeRF as Gaussian output; learned primiti
 
 ## 19. DOM-30 — Photos to NeRF visual scene
 
-[Original contract](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json): **photo-set AND camera-solution → nerf-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
+[Original contract](../workflows/domain-paths.json): **photo-set AND camera-solution → nerf-scene**. The corresponding JSON record supplies each action's exact inputs, evidence, role assignments, criteria and resource conditions.
 
 1. **DOM-30-A01 — Bind domain features and cameras to the NeRF route.** (1) Pair domain features with source images and cameras. (2) Select the NeRF method/consumer and explicit parser route. (3) Freeze source/evaluation roles and required region criteria. Output: Domain NeRF request referencing REC-20, input camera/parser mapping and required source/view coverage. Check: Both inputs and camera coverage are present; actual renderer supports NeRF payload; parser coordinate/scale discovery is assigned before training.
 
@@ -696,4 +696,4 @@ Future cases: NeRF checkpoint without renderer/config stays partial; parser worl
 
 12. Compatible appearance+mesh+CAD composition and contradictory regional geometry: expected typed layers/common transforms, source-supported selection without averaging, new revision and separate numerical/semantic post-merge checks.
 
-The tests above specify future fixture inputs and expected outcomes. Documentation checks cover exact operation/action coverage, fifteen-field completeness, four execution modes, matching Markdown action IDs, local links and file formatting. Review evidence is in the [software review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-software.md), [visual/evidence review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-visual.md), [source review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md) and [designer notes](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md). The [independent review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md) is DONE; both recorded findings are resolved after reread.
+The tests above specify future fixture inputs and expected outcomes. Documentation checks cover exact operation/action coverage, fifteen-field completeness, four execution modes, matching Markdown action IDs, local links and file formatting. Review evidence is in the [software review](reviews/point-07-software.md), [visual/evidence review](reviews/point-07-visual.md), [source review](reviews/point-07-sources.md) and [designer notes](reviews/point-07-designer.md). The [independent review](reviews/point-07-independent.md) is DONE; both recorded findings are resolved after reread.

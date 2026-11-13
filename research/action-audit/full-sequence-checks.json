@@ -144,7 +144,7 @@
     ]
   ],
   "runtime_modeling_cases": "Proposed future tests; point receipts record static document/source checks.",
-  "document_reviewer": "/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md",
+  "document_reviewer": "${MODELING_ROOT}/research/action-audit/reviews/full-sequence-independent.md",
   "execution_history": [
     {
       "check": "workflow/action index generation",

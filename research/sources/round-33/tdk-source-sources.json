@@ -6,7 +6,7 @@
     "evidence_status": "manufacturer_product_page_web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "inspected by requested Luna research model; original HTML not downloaded"
   },
@@ -17,7 +17,7 @@
     "evidence_status": "manufacturer_technical_data_web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "inspected by requested Luna research model; original HTML not downloaded"
   },
@@ -28,7 +28,7 @@
     "evidence_status": "manufacturer_step_listed_but_not_downloaded",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "listed on exact manufacturer page; direct fetch returned HTTP 403 from AkamaiGHost (text/html, 528 bytes); browser-profile retry also returned HTTP 403"
   },
@@ -39,7 +39,7 @@
     "evidence_status": "manufacturer_specification_web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "PDF inspected and text extracted by requested Luna research model; direct local retrieval failed"
   },
@@ -50,7 +50,7 @@
     "evidence_status": "manufacturer_regional_catalog_route_web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "inspected by requested Luna research model; no alternate STEP host found"
   },
@@ -61,7 +61,7 @@
     "evidence_status": "manufacturer_catalog_route_web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "inspected by requested Luna research model"
   },
@@ -72,7 +72,7 @@
     "evidence_status": "distributor_exact_part_web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "exact-part page and model listing inspected by requested Luna research model; DigiKey model page reports Model download failed and exposes no direct file URL or downloadable bytes"
   },
@@ -83,118 +83,118 @@
     "evidence_status": "manufacturer_series_brochure_web_inspection",
     "access_date": "2026-11-13",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ],
     "retrieval_status": "manufacturer link inspected by requested Luna research model; direct retrieval returned HTTP 403"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/existing-model-start.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/existing-model-start.json",
     "title": "existing model start",
     "summary": "Fresh actual-file lookup identifies C046 as requiring a new model; existing completed components retain their models.",
     "evidence_status": "executed_filesystem_start_check",
     "access_date": "2026-11-13",
     "sha256": "92538c2a64ab1892b4db2a5e16c57919f4a2839c929ef0ee3af13c9748833ab7",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/result.json",
     "title": "result",
     "summary": "Names the six-pin geometry input and exact failed acquisition routes; component NEEDS_INPUT, native CAD mutations zero.",
     "evidence_status": "executed_source_stage_result",
     "access_date": "2026-11-13",
     "sha256": "0f3772f25ed5e6a323a2a2a2cdb7fb83397feed9ffb4c0284e11fac2f064eba6",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/acquisition.json",
     "title": "acquisition",
     "summary": "Individual manufacturer and distributor URLs, exact variant dimensions, source locators and actual HTTP/TLS/model-download outcomes.",
     "evidence_status": "executed_acquisition_record",
     "access_date": "2026-11-13",
     "sha256": "379715aa736fd58adda7aa7483e3b0c5f63564fc9cbe03fcfa18156105cde8e6",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/source-review.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/source-review.md",
     "title": "source review",
     "summary": "Separates exact -000 pin length, top-view pattern callouts and acquisition failures; no pin centers inferred from extracted text.",
     "evidence_status": "delegated_source_review_record",
     "access_date": "2026-11-13",
     "sha256": "4c0ca83d7f1e0ef002df6c6dff6b4ce9a6d63329da88d65568894f1cba099dd1",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-series-datasheet-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-series-datasheet-response-headers.txt",
     "title": "tdk i1c series datasheet response headers",
     "summary": "Actual acquisition response headers for tdk i1c series datasheet response headers, retained to identify HTTP status and returned content type.",
     "evidence_status": "executed_retrieval_metadata",
     "access_date": "2026-11-13",
     "sha256": "0380bc7ed2cd9385bbe6953bebbf0d0ba9c47b7701f0158f4b0d82fdbbba9af8",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers-retry.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers-retry.txt",
     "title": "tdk i1c spec response headers retry",
     "summary": "Actual acquisition response headers for tdk i1c spec response headers retry, retained to identify HTTP status and returned content type.",
     "evidence_status": "executed_retrieval_metadata",
     "access_date": "2026-11-13",
     "sha256": "76ff5644436dc6691c4b76119d3d1af733a2e162da2ee95ebfe5ec03db202a81",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers.txt",
     "title": "tdk i1c spec response headers",
     "summary": "Actual acquisition response headers for tdk i1c spec response headers, retained to identify HTTP status and returned content type.",
     "evidence_status": "executed_retrieval_metadata",
     "access_date": "2026-11-13",
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers-retry.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers-retry.txt",
     "title": "tdk i1c step response headers retry",
     "summary": "Actual acquisition response headers for tdk i1c step response headers retry, retained to identify HTTP status and returned content type.",
     "evidence_status": "executed_retrieval_metadata",
     "access_date": "2026-11-13",
     "sha256": "3b90958bf0fecb77a0065e97ea104fa515a0bb99c3ac9479e0e3d5bab48ce528",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers.txt",
     "title": "tdk i1c step response headers",
     "summary": "Actual acquisition response headers for tdk i1c step response headers, retained to identify HTTP status and returned content type.",
     "evidence_status": "executed_retrieval_metadata",
     "access_date": "2026-11-13",
     "sha256": "63a6a431ef6b5e8d5e2f81c80c0b0fe68733d1a6ddaa0e98b4cd50003e89d7dc",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md",
+    "local_original": "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md",
     "title": "TDK converter source-stage execution report",
     "summary": "Exact variant evidence, acquisition errors, construction input gate and next eligible component selection; coordinator and researcher identities attributed separately.",
     "evidence_status": "executed_work_report",
     "access_date": "2026-11-13",
     "sha256": "0c27c4b21ca1c0032066c581153ee6bd43693a55bfeac726fe78f171e611752e",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+      "${MODELING_ROOT}/execution/c046-tdk-source-2026-11-13.md"
     ]
   }
 ]

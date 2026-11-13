@@ -6,13 +6,13 @@
   "actual_model": "gpt-6-luna",
   "scope": {
     "component": "PM02V3 power module only; separate from Pixhawk 6C",
-    "ferme_job_directory": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c055-build-01/",
-    "report_directory": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/",
+    "ferme_job_directory": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c055-build-01/",
+    "report_directory": "${MODELING_ROOT}/execution/component-followups-2026-11-13/c055/",
     "native_ocs_mutation": "WAITING_FOR_ROOT_WRITER_SLOT"
   },
   "local_sources_reviewed": [
     {
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md",
+      "path": "${FERME_ROOT}/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md",
       "status": "existing source sheet inspected",
       "facts": [
         "mm units",
@@ -25,7 +25,7 @@
       ]
     },
     {
-      "path": "/home/leo/projects/ferme/engineering/module-development/parts/control-power/holybro-pixhawk-6c-pm02.md",
+      "path": "${FERME_ROOT}/engineering/module-development/parts/control-power/holybro-pixhawk-6c-pm02.md",
       "status": "existing related research inspected",
       "facts": [
         "records set-level statement PM02V3 input 2S-12S",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+      "path": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
       "status": "C055 manifest record inspected",
       "facts": [
         "electrical",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
       "status": "C055 work entry inspected",
       "facts": [
         "NOT_STARTED",
@@ -56,7 +56,7 @@
     }
   ],
   "model_gate": {
-    "command": "python scripts/model_inventory.py --index /home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json --work-index /home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root /home/leo/projects/ferme/engineering/module-development/cad --project-root /home/leo/projects/ferme --id C055",
+    "command": "python scripts/model_inventory.py --index ${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json --work-index ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root ${FERME_ROOT}/engineering/module-development/cad --project-root ${FERME_ROOT} --id C055",
     "result": "NEW_MODEL_REQUIRED",
     "filesystem_model_files_checked": 44,
     "attributed_models": [],

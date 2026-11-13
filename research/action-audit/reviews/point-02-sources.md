@@ -1,6 +1,6 @@
 # Point 02 source check: existing components and CAD files
 
-Date: 2026-11-12. Status: six original documentation pages inspected. Requested dispatch: gpt-6-luna, high. Actual runtime model identity: unavailable. Scope: CAD-12, DOM-06, DOM-07, DOM-26, DOM-38 and DOM-39. No CAD runtime, import/export, model conversion, installation or test was performed. Source observations are registered in [point-02-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json).
+Date: 2026-11-12. Status: six original documentation pages inspected. Requested dispatch: gpt-6-luna, high. Actual runtime model identity: unavailable. Scope: CAD-12, DOM-06, DOM-07, DOM-26, DOM-38 and DOM-39. No CAD runtime, import/export, model conversion, installation or test was performed. Source observations are registered in [point-02-web-sources.json](../../sources/round-05/point-02-web-sources.json).
 
 ## Findings for the procedure designer
 
@@ -11,7 +11,7 @@ Date: 2026-11-12. Status: six original documentation pages inspected. Requested 
 
 ## OCS source boundary
 
-The existing [point-02 software review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md) describes the locally inspected OCS STEP writer: it collects triangles from input meshes into one faceted shell/solid/representation, emits an SI millimetre unit entity without attaching it to the geometric representation context, rounds coordinates to six decimal places and skips triangles with invalid indices. This is source-code inspection, not an executed export. The OCCT references describe richer document and assembly operations; they do not change the OCS writer's source-level behavior. Keep the proposed FreeCAD/OCCT adapter separate from the OCS mesh-to-STEP writer until a versioned import/export fixture establishes its inputs, geometry representation, unit interpretation, occurrence structure and checks.
+The existing [point-02 software review](point-02-software.md) describes the locally inspected OCS STEP writer: it collects triangles from input meshes into one faceted shell/solid/representation, emits an SI millimetre unit entity without attaching it to the geometric representation context, rounds coordinates to six decimal places and skips triangles with invalid indices. This is source-code inspection, not an executed export. The OCCT references describe richer document and assembly operations; they do not change the OCS writer's source-level behavior. Keep the proposed FreeCAD/OCCT adapter separate from the OCS mesh-to-STEP writer until a versioned import/export fixture establishes its inputs, geometry representation, unit interpretation, occurrence structure and checks.
 
 ## Proposed software-review edits (message only)
 

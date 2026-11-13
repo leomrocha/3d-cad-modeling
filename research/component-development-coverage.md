@@ -2,8 +2,8 @@
 
 Date: 12 November 2026. Status: **planning reference**. Model: gpt-6.1-sol.
 
-1. The authoritative [part index](/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md), [103-part manifest](/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json) and [geometric dependency order](/home/leo/projects/ferme/engineering/module-development/cad-inputs/dependency-order.tsv) remain in FERME.
-2. The [component-led development plan](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md) references those existing records. Parts catalogue data, future databases, component CAD and build evidence belong to FERME.
+1. The authoritative part index (`${FERME_ROOT}/engineering/module-development/cad-inputs/README.md`), 103-part manifest (`${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json`) and geometric dependency order (`${FERME_ROOT}/engineering/module-development/cad-inputs/dependency-order.tsv`) remain in FERME.
+2. The [component-led development plan](../COMPONENT_DEVELOPMENT_PLAN.md) references those existing records. Parts catalogue data, future databases, component CAD and build evidence belong to FERME.
 3. This project owns reusable skills, Python helpers/tests, action definitions and instructions/interfaces for accessing FERME data when it exists. It records tooling improvements linked to the actual FERME component cases.
 4. Proposed first jobs: Main frame longitudinal rail (P01), then dependent Main frame crossmember (P02). Each iteration produces the checked CAD artifact and an applied verified improvement here.
 

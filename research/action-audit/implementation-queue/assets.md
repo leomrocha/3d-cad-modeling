@@ -4,7 +4,7 @@ Date: 12 November 2026. Inspection model: gpt-6.1-sol. Local source reading and 
 
 ## cad-workflow-findings.md — ferme-findings
 
-Original: [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md). Evidence: `recorded_execution_summary`. SHA-256: `fbd89002aa02beb1ead8d537dcb650047c357b90eea40d2281350ff28212811e`.
+Original: cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`). Evidence: `recorded_execution_summary`. SHA-256: `fbd89002aa02beb1ead8d537dcb650047c357b90eea40d2281350ff28212811e`.
 
 OCS 2026.42 component constructions, import/save results, failed requests and component-specific recoveries.
 
@@ -12,7 +12,7 @@ Claims are attributed to the retained reports/session identifiers; raw session r
 
 ## SKILL.md — ferme-skill
 
-Original: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Evidence: `documented_skill`. SHA-256: `bc45db50ee1ee9ddbc1a39e10cc9de3dedd372698d5309f9f5bacfacb76bf3db`.
+Original: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Evidence: `documented_skill`. SHA-256: `bc45db50ee1ee9ddbc1a39e10cc9de3dedd372698d5309f9f5bacfacb76bf3db`.
 
 Reusable source, component/frame, construction, feature-check and saved-file procedure.
 
@@ -20,7 +20,7 @@ Repository skill instructions and reproduction-package specification.
 
 ## ocs-skill-improvements.md — ferme-ocs
 
-Original: [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Evidence: `proposed_skill_extension`. SHA-256: `cf8ded1155c0984063a2c634eb4b741e9d22b2baadd4c218ba15814e5f4c5e10`.
+Original: ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Evidence: `proposed_skill_extension`. SHA-256: `cf8ded1155c0984063a2c634eb4b741e9d22b2baadd4c218ba15814e5f4c5e10`.
 
 Proposed OCS additions derived from recorded commands, topology recovery and representation/display observations.
 
@@ -28,7 +28,7 @@ Held in ferme; installation is a separate action.
 
 ## README.md — ferme-readme
 
-Original: [README.md](/home/leo/projects/ferme/skills/README.md). Evidence: `evidence_index`. SHA-256: `852b9f2ee0efe7689d85d8e182693aa9e895c33202c3907f991c4b80d4da857e`.
+Original: README.md (`${FERME_ROOT}/skills/README.md`). Evidence: `evidence_index`. SHA-256: `852b9f2ee0efe7689d85d8e182693aa9e895c33202c3907f991c4b80d4da857e`.
 
 Scope, source session/review boundary, OCS build and document use order.
 
@@ -36,7 +36,7 @@ Scope, source session/review boundary, OCS build and document use order.
 
 ## SKILL.md — ocs-skill
 
-Original: [SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md). Evidence: `installed_skill_source`. SHA-256: `d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058`.
+Original: SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`). Evidence: `installed_skill_source`. SHA-256: `d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058`.
 
 Existing OCS contract, guarded control, revision-bound readback, preservation and handoff instructions.
 
@@ -44,7 +44,7 @@ Existing OCS contract, guarded control, revision-bound readback, preservation an
 
 ## ocs_control.py — ocs-control
 
-Original: [ocs_control.py](/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py). Evidence: `existing_code`. SHA-256: `ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e`.
+Original: ocs_control.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py`). Evidence: `existing_code`. SHA-256: `ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e`.
 
 request, execute_checked and redact implement authenticated transport, preflight revision checks, one-send writes and uncertain-result identity.
 
@@ -56,7 +56,7 @@ Dependencies: `import argparse`; `import json`; `import os`; `import socket`; `i
 
 ## check_contract.py — measurement-checker
 
-Original: [check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py). Evidence: `existing_code`. SHA-256: `e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8`.
+Original: check_contract.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py`). Evidence: `existing_code`. SHA-256: `e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8`.
 
 run checks supplied point/axis/plane observations, finite numbers, units, evidence identities and numerical criteria.
 
@@ -68,7 +68,7 @@ Dependencies: `import argparse`; `import json`; `import math`; `import sys`.
 
 ## ngv064_ocs.py — native-wrapper
 
-Original: [ngv064_ocs.py](/tmp/opencode/ngv064_ocs.py). Evidence: `existing_component_code`. SHA-256: `68a0204cc78b8d46210fbf1498e015a0666f94cb5287427219c0188a23f53b71`.
+Original: ngv064_ocs.py (`${TEMP_ROOT}/opencode/ngv064_ocs.py`). Evidence: `existing_component_code`. SHA-256: `68a0204cc78b8d46210fbf1498e015a0666f94cb5287427219c0188a23f53b71`.
 
 read/write/step, checkpoint, revolve_z, cylinder and subtract wrap native requests and stepped command state.
 
@@ -80,7 +80,7 @@ Dependencies: `import importlib.util`; `import json`; `from pathlib import Path`
 
 ## item_ocs_parts.py — item-geometry
 
-Original: [item_ocs_parts.py](/tmp/opencode/item_ocs_parts.py). Evidence: `existing_component_code`. SHA-256: `500d72af1767b433d521737a7aa2db2c268db9caa34aad357d5bc84fcd774bd4`.
+Original: item_ocs_parts.py (`${TEMP_ROOT}/opencode/item_ocs_parts.py`). Evidence: `existing_component_code`. SHA-256: `500d72af1767b433d521737a7aa2db2c268db9caa34aad357d5bc84fcd774bd4`.
 
 extrude, rotate, move, combine and tag provide explicit source-labelled native constructions.
 
@@ -92,7 +92,7 @@ Dependencies: `import math`; `import ngv064_ocs as n`.
 
 ## check_ngv064_wheel.py — sat-reader
 
-Original: [check_ngv064_wheel.py](/tmp/opencode/check_ngv064_wheel.py). Evidence: `existing_component_code`. SHA-256: `1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4`.
+Original: check_ngv064_wheel.py (`${TEMP_ROOT}/opencode/check_ngv064_wheel.py`). Evidence: `existing_component_code`. SHA-256: `1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4`.
 
 sat_features extracts selected SAT cylinders, planes, tori and points; verify checks the wheel.
 
@@ -104,7 +104,7 @@ Dependencies: `import json`; `import math`; `from pathlib import Path`; `import 
 
 ## build_item_profile_segment.py — profile-build
 
-Original: [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py). Evidence: `existing_component_code`. SHA-256: `80d3fe7fd2308a26dda4133748c54d478a085ca381a423a60362dbf966324521`.
+Original: build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`). Evidence: `existing_component_code`. SHA-256: `80d3fe7fd2308a26dda4133748c54d478a085ca381a423a60362dbf966324521`.
 
 contours samples retained text curves and normalizes the section; build/complete/verify construct and check the profile.
 
@@ -116,7 +116,7 @@ Dependencies: `import json`; `import math`; `import re`; `from pathlib import Pa
 
 ## battery_ocs_parts.py — battery-geometry
 
-Original: [battery_ocs_parts.py](/tmp/opencode/battery_ocs_parts.py). Evidence: `existing_component_code`. SHA-256: `ccf4bccc801c1315c0289c509e7f91681754c72fd65b89b5827f18de7b7c5159`.
+Original: battery_ocs_parts.py (`${TEMP_ROOT}/opencode/battery_ocs_parts.py`). Evidence: `existing_component_code`. SHA-256: `ccf4bccc801c1315c0289c509e7f91681754c72fd65b89b5827f18de7b7c5159`.
 
 rr, axial_x, face_x and tag reuse rounded sections, transforms and metadata.
 
@@ -128,7 +128,7 @@ Dependencies: `import math`; `import ngv064_ocs as n`; `from item_ocs_parts impo
 
 ## build_leaf_gen2.py — leaf-build
 
-Original: [build_leaf_gen2.py](/tmp/opencode/build_leaf_gen2.py). Evidence: `existing_component_code`. SHA-256: `4d6f8eb52addd7a4c5b3ee687cd3118364360a7a162713e6185101b369bb9ef7`.
+Original: build_leaf_gen2.py (`${TEMP_ROOT}/opencode/build_leaf_gen2.py`). Evidence: `existing_component_code`. SHA-256: `4d6f8eb52addd7a4c5b3ee687cd3118364360a7a162713e6185101b369bb9ef7`.
 
 top and staged recovery functions reconstruct shell/terminal features; finish checks and saves the component.
 
@@ -140,7 +140,7 @@ Dependencies: `import json`; `from pathlib import Path`; `import ngv064_ocs as n
 
 ## build_bmw_i3_94ah.py — bmw-build
 
-Original: [build_bmw_i3_94ah.py](/tmp/opencode/build_bmw_i3_94ah.py). Evidence: `existing_component_code`. SHA-256: `4bacd498f12f1dab482e6cb5f050e8a7dc2c5efc61473ee2127d2e8be5fa5c16`.
+Original: build_bmw_i3_94ah.py (`${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py`). Evidence: `existing_component_code`. SHA-256: `4bacd498f12f1dab482e6cb5f050e8a7dc2c5efc61473ee2127d2e8be5fa5c16`.
 
 build/accessories/cable_done/finish reconstruct exterior parts and swept cable with checks.
 
@@ -152,7 +152,7 @@ Dependencies: `import json,math`; `from pathlib import Path`; `import ngv064_ocs
 
 ## build_workflow_register.py — register-builder
 
-Original: [build_workflow_register.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py). Evidence: `existing_documentation_code`. SHA-256: `e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e`.
+Original: [build_workflow_register.py](../../tools/build_workflow_register.py). Evidence: `existing_documentation_code`. SHA-256: `e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e`.
 
 Existing read_json, write_json and sid conventions plus local-evidence/register handling provide source-record precedents.
 
@@ -164,7 +164,7 @@ Dependencies: `from __future__ import annotations`; `import argparse`; `import h
 
 ## neugart-ngv064-wheel-160.md — wheel-report
 
-Original: [neugart-ngv064-wheel-160.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md). Evidence: `recorded_execution_report`. SHA-256: `9ef13208ea35beabc65104ee0e807ee65915446f3a449b6bf8419525eca7bef2`.
+Original: neugart-ngv064-wheel-160.md (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md`). Evidence: `recorded_execution_report`. SHA-256: `9ef13208ea35beabc65104ee0e807ee65915446f3a449b6bf8419525eca7bef2`.
 
 Component-specific native checks, save/reopen observations and source paths for OCS 2026.42.
 
@@ -172,7 +172,7 @@ Component-specific native checks, save/reopen observations and source paths for 
 
 ## item-profile-02633-segment-100mm.md — profile-report
 
-Original: [item-profile-02633-segment-100mm.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md). Evidence: `recorded_execution_report`. SHA-256: `d9f68c3ed038b1e39649437594fade9db78f1412ace69a832436fa3f4aca8f8d`.
+Original: item-profile-02633-segment-100mm.md (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md`). Evidence: `recorded_execution_report`. SHA-256: `d9f68c3ed038b1e39649437594fade9db78f1412ace69a832436fa3f4aca8f8d`.
 
 Component-specific native checks, save/reopen observations and source paths for OCS 2026.42.
 
@@ -180,7 +180,7 @@ Component-specific native checks, save/reopen observations and source paths for 
 
 ## neugart-ngv064-wheel-160-native.json — wheel-checks
 
-Original: [neugart-ngv064-wheel-160-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json). Evidence: `recorded_check_results`. SHA-256: `ba3fd46f29645a8434aed14f217ab5320836c5f13404885287c8359133964b98`.
+Original: neugart-ngv064-wheel-160-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json`). Evidence: `recorded_check_results`. SHA-256: `ba3fd46f29645a8434aed14f217ab5320836c5f13404885287c8359133964b98`.
 
 Retained feature/audit observations for the named component.
 
@@ -190,7 +190,7 @@ Retained check observations: {"count": 14, "statuses": {"PASS": 14}, "document_i
 
 ## item-angle-bracket-set-41115-native.json — bracket-checks
 
-Original: [item-angle-bracket-set-41115-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json). Evidence: `recorded_check_results`. SHA-256: `df42709bbd7bc2a10102c5e7c7559667baa1aa0bba44eab57dce407ba5b7318f`.
+Original: item-angle-bracket-set-41115-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json`). Evidence: `recorded_check_results`. SHA-256: `df42709bbd7bc2a10102c5e7c7559667baa1aa0bba44eab57dce407ba5b7318f`.
 
 Retained feature/audit observations for the named component.
 
@@ -200,7 +200,7 @@ Retained check observations: {"count": 21, "statuses": {"PASS": 21}, "document_i
 
 ## item-profile-02633-segment-100mm-native.json — profile-checks
 
-Original: [item-profile-02633-segment-100mm-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json). Evidence: `recorded_check_results`. SHA-256: `7bae7ea075ac2a41d001518863889e6a593f24d25cbaa0c5a3556cadf3cdab58`.
+Original: item-profile-02633-segment-100mm-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json`). Evidence: `recorded_check_results`. SHA-256: `7bae7ea075ac2a41d001518863889e6a593f24d25cbaa0c5a3556cadf3cdab58`.
 
 Retained feature/audit observations for the named component.
 
@@ -210,7 +210,7 @@ Retained check observations: {"count": 11, "statuses": {"PASS": 11}, "document_i
 
 ## nissan-leaf-gen2-native.json — leaf-checks
 
-Original: [nissan-leaf-gen2-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json). Evidence: `recorded_check_results`. SHA-256: `d91733280a6fc484e9f769e3af1746145401331d8148a5ef0bbbd4ae827cafc8`.
+Original: nissan-leaf-gen2-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json`). Evidence: `recorded_check_results`. SHA-256: `d91733280a6fc484e9f769e3af1746145401331d8148a5ef0bbbd4ae827cafc8`.
 
 Retained feature/audit observations for the named component.
 
@@ -220,7 +220,7 @@ Retained check observations: {"count": 14, "statuses": {"PASS": 14}, "document_i
 
 ## bmw-i3-94ah-native-checks.json — bmw-checks
 
-Original: [bmw-i3-94ah-native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json). Evidence: `recorded_check_results`. SHA-256: `18c6149a67d9397172579eab59855e397d035866225bef1fae7b79e22682d619`.
+Original: bmw-i3-94ah-native-checks.json (`${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json`). Evidence: `recorded_check_results`. SHA-256: `18c6149a67d9397172579eab59855e397d035866225bef1fae7b79e22682d619`.
 
 Retained feature/audit observations for the named component.
 

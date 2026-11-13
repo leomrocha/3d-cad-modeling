@@ -103,4 +103,4 @@ test_source_screw_axes_and_position (test_step_placements.PlacementTests.test_so
 Ran 100 tests in 15.323s
 
 OK
-{"state": "FAILED", "error": "Existing output preserved: /tmp/tmpv8k0sxc3/protected.json"}
+{"state": "FAILED", "error": "Existing output preserved: ${TEMP_ROOT}/tmpv8k0sxc3/protected.json"}

@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/anderson-ds-sb50.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/anderson-ds-sb50.pdf",
     "title": "Anderson SB50 manufacturer datasheet",
     "summary": "Original DS-SB50 revision9 maps blue992G4 andsilver high-force5900;dimensioned housing,mated pair andwire contacts.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     "url": "https://p1.aprimocdn.net/idealindustries/d7c0a682-e691-4b60-8e76-b3f000737d74/ap-web_product-assets_default_data-sheets_ds-sb50_Original%20file.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png",
     "title": "SB50 housing source image",
     "summary": "Actual manufacturer page1 shows housing bottom view and35.1 width/22.5+19.1+6.4 axial chain,\u00d83.7 holes andmated81.3\u00d715.9 view.",
     "access_date": "2026-11-12",
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png",
     "title": "SB50 contact source image",
     "summary": "Actual page2 shows30mm contact overall,11.1 axial segment,7.2 barrel profile and5900 A5.59 table row.",
     "access_date": "2026-11-12",
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md",
     "title": "Initial SB50 delegated notes",
     "summary": "Preserves original kit mapping/source outcomes andinitial mistaken11.1 barrel-diameter interpretation.",
     "access_date": "2026-11-12",
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json",
     "title": "Initial SB50 source metadata",
     "summary": "Preserves original download metadata andsource classifications before drawingleader correction.",
     "access_date": "2026-11-12",
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md",
     "title": "Reviewed SB50 source findings",
     "summary": "Links exact blue kit mapping andactual dimension directions;separates mated view,wire contacts,yellow key family andPowerclaw alternative.",
     "access_date": "2026-11-12",
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json",
     "title": "Reviewed SB50 acquisition metadata",
     "summary": "Records original PDF URL/time/MIME/hash,distributor mapping,login-gated manufacturer CAD route andcorrected axial11.1 dimension association.",
     "access_date": "2026-11-12",
@@ -78,7 +78,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md",
     "title": "SB50 leader andchain review",
     "summary": "Actual source-image review corrects11.1 axial segment andcalculates48mm housing length fromdimension chain.",
     "access_date": "2026-11-12",
@@ -89,7 +89,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json",
     "title": "SB50 source feature contract",
     "summary": "Pins manufacturer dimensions/hash andtwo named required housing/contact geometry inputs.",
     "access_date": "2026-11-12",
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json",
     "title": "SB50 source-readiness result",
     "summary": "Existing required-feature/hash gate returns NEEDS_INPUT forblue housing seating/key geometry andcontact transition/blade.",
     "access_date": "2026-11-12",
@@ -111,7 +111,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json",
     "title": "SB50 source-stage result",
     "summary": "Retains exact6331G5 kit identity,source model roles anddependent geometry questions.",
     "access_date": "2026-11-12",
@@ -122,7 +122,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c038-sb50-source.md",
+    "local_original": "${MODELING_ROOT}/execution/c038-sb50-source.md",
     "title": "SB50 source-stage report",
     "summary": "Documents exactkit,reviewed dimensions,current sourcegate,actual source actions andmodel identities.",
     "access_date": "2026-11-12",

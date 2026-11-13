@@ -20,6 +20,6 @@ Requested output: Source-intake Python script, skill, tests, protected source re
 
 Authorized paths:
 
-1. /home/leo/projects/3dmodeling
+1. ${MODELING_ROOT}
 
 Source observations, corrections and conflicts: source-index.json

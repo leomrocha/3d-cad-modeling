@@ -121,7 +121,7 @@
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md",
         "https://colmap.github.io/faq.html",
         "https://colmap.github.io/cameras.html",
@@ -467,7 +467,7 @@
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-09",
@@ -695,7 +695,7 @@
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-03",
@@ -774,7 +774,7 @@
           "entrypoint": "depsgraph = bpy.context.evaluated_depsgraph_get(); hit, location, normal, face_index, obj, matrix = bpy.context.scene.ray_cast(depsgraph, origin, direction); origin/direction are world-space rays computed from the calibrated camera and stroke pixel.",
           "source_urls": [
             "https://docs.blender.org/api/current/bpy.types.Scene.html",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -812,7 +812,7 @@
       },
       "source_urls": [
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-13",
@@ -1038,7 +1038,7 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-05",
@@ -1160,7 +1160,7 @@
         "https://github.com/microsoft/TRELLIS.2",
         "https://huggingface.co/microsoft/TRELLIS.2-4B",
         "https://github.com/facebookresearch/sam-3d-objects",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md"
       ],
       "operation_ids": [

@@ -406,9 +406,9 @@
         "https://www.blender.org/features/pipeline/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r03.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r09.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -571,7 +571,7 @@
           "limitations_and_asset_terms": "Registry is proposed project data, not a supplied runtime tool.",
           "source_urls": [
             "https://github.com/IfcOpenShell/IfcOpenShell",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ]
         },
         {
@@ -757,10 +757,10 @@
         "https://github.com/boelnasr/CAD_TO_URDF",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1011,7 +1011,7 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r02.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1267,9 +1267,9 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r09.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r08.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1351,8 +1351,8 @@
           "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
           "limitations_and_asset_terms": "Native editor/runtime remains required; helper code does not issue application commands.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md"
           ]
         },
         {
@@ -1413,8 +1413,8 @@
           "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
           "related_entrypoints": [],
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md",
             "https://docs.blender.org/manual/en/latest/advanced/command_line/"
           ],
           "entrypoints": [
@@ -1472,13 +1472,13 @@
         ]
       },
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
         "https://docs.blender.org/manual/en/latest/advanced/command_line/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r02.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r04.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1719,8 +1719,8 @@
         "https://huggingface.co/stabilityai/TripoSR"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1974,7 +1974,7 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -2216,7 +2216,7 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r04.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     }

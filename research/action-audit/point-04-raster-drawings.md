@@ -2,7 +2,7 @@
 
 Date: 2026-11-12. Status: **procedure proposal**. Scope: nine operations and 30 actions. Requested procedure-design dispatch: `gpt-6-astra`, `xhigh`; actual executing model identity: **unavailable**.
 
-[Structured operation records](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) contain all 15 fields per action, operation-specific alternatives, four execution modes, merging, migration and future cases. This readable procedure retains the same stable action IDs. The [audit plan](/home/leo/projects/3dmodeling/research/action-audit/plan.md), [original CAD records](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), [domain records](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md) and [retained implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md) govern source identity, units, frames and evidence. All helper interfaces and execution procedures are proposals; acceptance labels require `MARK AS ACCEPTED`.
+[Structured operation records](point-04-operations.json) contain all 15 fields per action, operation-specific alternatives, four execution modes, merging, migration and future cases. This readable procedure retains the same stable action IDs. The [audit plan](plan.md), [original CAD records](../workflows/cad-paths.json), [domain records](../workflows/domain-paths.json), OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) and [retained implementation plan](../implementation-plan.md) govern source identity, units, frames and evidence. All helper interfaces and execution procedures are proposals; acceptance labels require `MARK AS ACCEPTED`.
 
 ## 1. Terms and evidence chain
 
@@ -30,7 +30,7 @@ The source chain is original image → mapped reading/tracing coordinates → li
 5. Each feature has separate engineering allowance, measurement uncertainty and computational/fit threshold with sources. Solver/kernel criteria and saved/export comparison thresholds also retain their scopes. A pixel displacement is converted through the actual local mapping; it supplies no universal dimensional tolerance.
 6. Every branch records source subset/revisions, intended use, feature coverage/detail, units/frame, individual criteria and local/remote/manual resources. A lower-detail arrangement branch can satisfy its envelope/datum requirements while a working-part interface or building opening needs further source evidence.
 7. The VLM receives full source views, located crops, original glyphs, candidate overlays and actual numerical reports. It can select supported associations or compatible contributions within the stated task. Conflicting controlling sources or new design intent require the precise user decision. Dimensions are preserved as alternatives rather than averaged.
-8. Use the [point03 shared protocol](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) for source/request identity, isolated candidates, producer/reviewer separation, uncertain native/remote completion and affected-only invalidation. Raster-specific additions and future recovery cases are in this point's `common_protocol` and `common_future_tests`.
+8. Use the [point03 shared protocol](point-03-operations.json) for source/request identity, isolated candidates, producer/reviewer separation, uncertain native/remote completion and affected-only invalidation. Raster-specific additions and future recovery cases are in this point's `common_protocol` and `common_future_tests`.
 
 ## 3. CAD-02 — Rectify a raster drawing plane from known dimensions
 
@@ -127,7 +127,7 @@ The source chain is original image → mapped reading/tracing coordinates → li
 
 ## 7. CAD-06 — Register orthographic drawing views in a shared coordinate frame
 
-**Entry points and evidence.** [Orthographic matching research](https://xnjdxb.swjtu.edu.cn/en/article/id/9616) and [PlankAssembly](https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html) supply method evidence with their input conditions. [CAD-R05](/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md) records the manual CAD route.
+**Entry points and evidence.** [Orthographic matching research](https://xnjdxb.swjtu.edu.cn/en/article/id/9616) and [PlankAssembly](https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html) supply method evidence with their input conditions. [CAD-R05](../workflows/details/cad-r05.md) records the manual CAD route.
 
 1. **CAD-06-A01 — Identify views and declare their projection frames.** Identify view regions and labels. Declare each view axes/direction/scale. Attach control and convention evidence. Output: View inventory with plane axes, viewing direction, scale, datum and convention evidence. Check: At least two identified views are available; auxiliary/section views have their own projection definition.
 2. **CAD-06-A02 — Match source features and solve registration candidates.** Identify shared axes and candidate feature pairs. Estimate permitted view transforms. Compare dimensions and preserve alternate correspondences. Output: Per-view transforms and feature-correspondence alternatives with residuals. Check: Independent controls and shared-axis residuals check registration; equal projections can retain several 3D interpretations.
@@ -150,7 +150,7 @@ The source chain is original image → mapped reading/tracing coordinates → li
 
 ## 8. CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views
 
-**Entry points and evidence.** [Wireframe reconstruction research](https://www.sciencedirect.com/science/article/pii/S0097849323000766) and [PlankAssembly](https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html) support candidate methods. [Point03 native construction](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md) defines actual supported kernel interfaces and output checks.
+**Entry points and evidence.** [Wireframe reconstruction research](https://www.sciencedirect.com/science/article/pii/S0097849323000766) and [PlankAssembly](https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html) support candidate methods. [Point03 native construction](point-03-vector-and-solid.md) defines actual supported kernel interfaces and output checks.
 
 1. **CAD-07-A01 — Enumerate source-constrained 3D feature candidates.** Collect constraints from all views. Construct compatible 3D hypotheses. Retain dimension/hidden-feature alternatives and readiness. Output: Candidate vertex/edge/feature hypotheses with source-view links and unresolved degrees of freedom. Check: Every required coordinate/feature has source or explicit inference status; equal projections preserve alternatives.
 2. **CAD-07-A02 — Construct candidate edges and bounded surfaces.** Create mapped edges/curves. Construct supported faces or explicit features. Query actual intermediate representation and failed boundaries. Output: Candidate wireframe/faces with feature IDs, source links and construction receipt. Check: Check projected edges and dimensions before sealing; open surface remains an intermediate artifact.
@@ -174,7 +174,7 @@ The source chain is original image → mapped reading/tracing coordinates → li
 
 ## 9. CAD-17 — Build wall and opening solids from a confirmed floor-plan graph
 
-**Entry points and evidence.** [Point03 CAD-10](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md) defines native operations and explicit preservation flags. [FreeCAD Part scripting](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md) documents native shape construction.
+**Entry points and evidence.** [Point03 CAD-10](point-03-vector-and-solid.md) defines native operations and explicit preservation flags. [FreeCAD Part scripting](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md) documents native shape construction.
 
 1. **CAD-17-A01 — Bind graph elements to sourced vertical parameters.** Read graph/source parameter revisions. Bind wall/opening local frames and vertical values. Check route support and named prerequisites. Output: Per-wall/opening feature plan with units/frame, host IDs and complete or blocked parameter states. Check: Required heights/thicknesses/opening parameters come from sources or explicit decisions; no values are filled from plan appearance.
 2. **CAD-17-A02 — Construct walls and opening voids with retained identities.** Construct supported wall body in its declared frame. Create/place identified opening cutter and apply supported void operation. Read back actual wall/void geometry and group separate elements. Output: Wall solids, retained opening cutter/void records and assembly mapping with operation receipts. Check: Each opening affects only intended host geometry; assembly/group representation records actual available identity semantics.
@@ -197,7 +197,7 @@ The source chain is original image → mapped reading/tracing coordinates → li
 
 ## 10. DOM-02 — Raster sketch to constrained sketch
 
-**Entry points and evidence.** [Original domain record](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json) and [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md) define the composition. [Point03 CAD-09](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md) supplies actual native constraint and diagnostic requirements.
+**Entry points and evidence.** [Original domain record](../workflows/domain-paths.json) and [implementation plan](../implementation-plan.md) define the composition. [Point03 CAD-09](point-03-vector-and-solid.md) supplies actual native constraint and diagnostic requirements.
 
 1. **DOM-02-A01 — Specify raster-backed sketch requirements.** Preserve raster and locate intended profile. Record controls and constraint sources. Select actual native constraint route. Output: Sketch intake record with source hash, controls, required constraints and route selection. Check: Dimension-only material routes to point01/point03; this raster procedure retains actual raster evidence.
 2. **DOM-02-A02 — Compose calibrated vectors and source-linked constraints.** Reuse matching source-processing receipts. Map curves/dimensions to native IDs. Apply explicit constraints and query supported solver diagnostics. Output: Native sketch revision with pixel-to-curve-to-constraint map and reused action receipts. Check: Actual constraint data and source map are present; unavailable required diagnostics remain unresolved.
@@ -220,7 +220,7 @@ The source chain is original image → mapped reading/tracing coordinates → li
 
 ## 11. DOM-18 — Raster floor plan to IFC building
 
-**Entry points and evidence.** [IfcOpenShell geometry](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html) and [feature.add_feature](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html) document element geometry and host relationships. [DOM-R01](/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md) records context, units, placement and hierarchy entrypoints.
+**Entry points and evidence.** [IfcOpenShell geometry](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html) and [feature.add_feature](https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html) document element geometry and host relationships. [DOM-R01](../workflows/details/dom-r01.md) records context, units, placement and hierarchy entrypoints.
 
 1. **DOM-18-A01 — Bind all five inputs and element-level building requirements.** Register all five input records. Bind plan/vertical dimensions and reused asset terms. Select compatible graph/geometry receipts or named construction route. Output: Building intake manifest with all five input revisions, element requirements and source-asset terms. Check: Each required element has source-backed geometry/semantic prerequisites; library terms attach to actual reused items.
 2. **DOM-18-A02 — Create explicit IFC identity, units and spatial structure.** Create named schema document, units and contexts. Create source-linked spatial elements. Assign declared hierarchy/placements and inspect relationships. Output: IFC document with unique identities, units, representation contexts and spatial hierarchy. Check: Schema/unit and unique-ID checks pass; source storey elevations and local/world transforms match declared frames.
@@ -244,7 +244,7 @@ The source chain is original image → mapped reading/tracing coordinates → li
 
 ## 12. Representation and failure boundaries
 
-1. **Image placement:** OCS [embed_image](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md) supplies position/width and linked/embedded underlay modes. The [image command](/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs) has a pixel-derived display-width fallback. Metric calibration requires the explicit control/mapping receipt.
+1. **Image placement:** OCS embed_image (`${OCS_ROOT}/docs/automation/API-SPEC.md`) supplies position/width and linked/embedded underlay modes. The image command (`${OCS_ROOT}/src/modules/draw/draw/raster_image.rs`) has a pixel-derived display-width fallback. Metric calibration requires the explicit control/mapping receipt.
 2. **Curve candidates:** OpenCV contours and polygon simplification retain their actual curve class and residual. A fitted arc needs its own support pixels, estimator and uncertainty. Research floor-plan methods and Potrace's algorithm paper provide method evidence; runtime, model weights, executable version and terms belong to the selected future execution.
 3. **Multiview geometry:** repeated features, hidden edges and equal projections can leave several candidates. CAD-07 publishes cad-solid readiness only for an actual closed valid supported shape. Its intermediate edges/faces and unresolved hidden-feature alternatives remain identified.
 4. **Wall geometry:** curved/nonorthogonal walls retain their source geometry or a specific backend-support exception. Wall thickness convention, floor datum and vertical/opening dimensions are sourced prerequisites. Native wall/cutter operations use point03's explicit preservation flags. Opening cutters/void records retain their meaning separately from physical wall components.
@@ -273,7 +273,7 @@ Initial ambiguous sources can use higher reasoning effort for feature interpreta
 
 ## 14. Future checked cases
 
-The [structured records](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) specify expected outcomes per operation. Future fixtures supply actual source values and criteria before execution.
+The [structured records](point-04-operations.json) specify expected outcomes per operation. Future fixtures supply actual source values and criteria before execution.
 
 1. **Plane and mapping:** degenerate/reordered controls, single-length perspective ambiguity, withheld-control failure, regional page deformation, crop/resize/warp/lens-map composition and outside-domain coordinates. Preserve original pixels and distinguish page rectification from freehand object proportions.
 2. **Text and curves:** plausible high-confidence wrong glyph, decimal/radius/diameter/tolerance/count confusion, correct text attached to the wrong feature, crossed annotation strokes, double strokes, lost narrow slot, short-arc ambiguity and excessive gap repair.
@@ -281,4 +281,4 @@ The [structured records](/home/leo/projects/3dmodeling/research/action-audit/poi
 4. **Geometry and IFC:** open surface failing cad-solid, wrong hidden hole, missing vertical dimensions, reversed sill/axis, unintended adjacent-wall cut, lost native constraints, each missing DOM-18 input, wrong host/storey/units and separately evaluated void geometry.
 5. **Branches and resumption:** lost VLM response, malformed selection rows, changed source, shared OCR error and different arrangement/precision readiness. Retain raw/request evidence and retry lineage; publish merged changes only after valid source-linked selections and repeat required checks on the new revision.
 
-[Designer notes](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md) record source summaries, original-contract findings, review changes and static documentary checks.
+[Designer notes](reviews/point-04-designer.md) record source summaries, original-contract findings, review changes and static documentary checks.

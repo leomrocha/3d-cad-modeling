@@ -118,13 +118,13 @@ Each format adapter needs a fixture suite based on small, versioned source files
 6. **Collision assets**: ensure each collider has finite bounds and intended scale, cover source contact envelope within tolerance, inspect convex decomposition for lost passages/holes, test collision pairs with known outcomes, and compare simulation stability across representative contact scenes.
 7. **Export mappings**: test known losses and round-trip semantics. URDF-to-MJCF should produce a declared mapping; compare against MuJoCo's documented URDF limitations/extensions. BIM-to-glTF validates display only and cannot stand in for IFC semantics.
 
-The neighboring `/home/leo/projects/energy-sim-3d/data/real-house-ifc/` provides a useful local pattern: immutable IFC and derived GLB are accompanied by provenance and display-map/validation JSON with source hashes, declared millimetre-to-metre conversion, stable converted part identities and geometry comparisons. The artifact records meaningful limitations such as absent IfcSpace/thermal-zone assignments and embedded opening geometry. Reuse the provenance structure and the practice of labeling identity derivation; do not treat its CASA-specific IFC content as a generic component library.
+The neighboring `${ENERGY_SIM_ROOT}/data/real-house-ifc/` provides a useful local pattern: immutable IFC and derived GLB are accompanied by provenance and display-map/validation JSON with source hashes, declared millimetre-to-metre conversion, stable converted part identities and geometry comparisons. The artifact records meaningful limitations such as absent IfcSpace/thermal-zone assignments and embedded opening geometry. Reuse the provenance structure and the practice of labeling identity derivation; do not treat its CASA-specific IFC content as a generic component library.
 
-The neighboring `/home/leo/projects/architecture/` repository is an earlier architecture-oriented workflow exploration with ingestion/orchestration/frontend subsystems and planning/research notes. This review only established its on-disk presence and broad structure; it did not assess implementation capability or test status.
+The neighboring `${ARCHITECTURE_ROOT}/` repository is an earlier architecture-oriented workflow exploration with ingestion/orchestration/frontend subsystems and planning/research notes. This review only established its on-disk presence and broad structure; it did not assess implementation capability or test status.
 
 ## Skills and integration interfaces
 
-The local available `/home/leo/.codex/skills/ocs-engineering/SKILL.md` describes an OpenCADStudio engineering workflow with explicit parts, units, frames, measured checks and simulation handoffs. OpenCADStudio remains the project's CAD baseline; Blender is a complementary scene/mesh and automation tool. No OCS MCP integration was found among the tools available to this research agent. Local installed skill inventory includes C4 architecture, OpenSpec, document, PDF, presentation, spreadsheet and image-generation skills; these do not provide CAD authoring or geometry validation. The project `skills/README.md` correctly describes software installation and CAD execution as later implementation actions.
+The local available `${CODEX_HOME}/skills/ocs-engineering/SKILL.md` describes an OpenCADStudio engineering workflow with explicit parts, units, frames, measured checks and simulation handoffs. OpenCADStudio remains the project's CAD baseline; Blender is a complementary scene/mesh and automation tool. No OCS MCP integration was found among the tools available to this research agent. Local installed skill inventory includes C4 architecture, OpenSpec, document, PDF, presentation, spreadsheet and image-generation skills; these do not provide CAD authoring or geometry validation. The project `skills/README.md` correctly describes software installation and CAD execution as later implementation actions.
 
 ### Blender MCP workflow source assigned for review
 
@@ -187,7 +187,7 @@ The first implementation milestone should deliver a schema plus import-report pr
 - [Blender Python background scripting guidance](https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst)
 - [Blender upstream COPYING](https://github.com/blender/blender/blob/main/COPYING)
 - [Blender upstream GPL text](https://github.com/blender/blender/blob/main/doc/license/GPL-license.txt)
-- Local Blender version and Debian copyright record: `/bin/blender` reports 5.0.1; `/usr/share/doc/blender/copyright` labels the main Blender files GPL-2+.
+- Local Blender version and Debian copyright record: `/bin/blender` reports 5.0.1; `${SYSTEM_ROOT}/usr/share/doc/blender/copyright` labels the main Blender files GPL-2+.
 - [Community MCP for Blender repository](https://github.com/ahujasid/mcp-for-blender)
 - [Community MCP package metadata: MIT license](https://github.com/ahujasid/mcp-for-blender/blob/main/pyproject.toml)
 - [Community MCP setup, capabilities and security documentation](https://github.com/ahujasid/mcp-for-blender#limitations--security-considerations)

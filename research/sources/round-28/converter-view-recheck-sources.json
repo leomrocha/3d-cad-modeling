@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json",
     "title": "OCS state before the requested view recheck",
     "summary": "Active document 87 is the saved Victron 24/12 converter. The camera records the current user-rotated view before capture.",
     "access_date": "2026-11-13",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json",
     "title": "OCS state after the current-view capture",
     "summary": "Native state retained after recovering and inspecting the captured converter view. Document and camera observations remain explicit.",
     "access_date": "2026-11-13",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json",
     "title": "Saved converter hash before recheck",
     "summary": "Pins the existing native DWG path and hash before current-view capture, for preservation comparison.",
     "access_date": "2026-11-13",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl",
     "title": "Current converter capture request and recovery",
     "summary": "Write-ahead capture intent, initial polling-bound responses and original-request recovery for the current user view.",
     "access_date": "2026-11-13",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json",
     "title": "Completed current-view capture response",
     "summary": "Actual completed response for the original capture request c045-view-recheck-20261113:current-user-view.",
     "access_date": "2026-11-13",
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png",
     "title": "Current rotated Victron 24/12 converter view",
     "summary": "Actual inspected image shows cover, heatsink fins, mounting slots, terminal housing and hardware. Its hash differs from the earlier repeated enclosure image.",
     "access_date": "2026-11-13",
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json",
     "title": "Converter current-view recheck result",
     "summary": "One current-view identity check passes. Saved DWG bytes match the earlier component record; prior failed captures remain preserved.",
     "access_date": "2026-11-13",
@@ -77,7 +77,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c045-view-recheck-2026-11-13.md",
+    "local_original": "${MODELING_ROOT}/execution/c045-view-recheck-2026-11-13.md",
     "title": "Victron converter current-view recheck report",
     "summary": "Documents the newly successful current-view identity check, user rotation report, actual capture recovery and unchanged saved native CAD hash.",
     "access_date": "2026-11-13",

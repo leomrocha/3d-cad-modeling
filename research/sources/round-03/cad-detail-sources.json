@@ -1,7 +1,7 @@
 [
   {
-    "url": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-    "title": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "url": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+    "title": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
     "access_date": "2026-11-12",
     "evidence_status": "existing_report_registered",
@@ -9,64 +9,64 @@
       "Text and explicit dimensions to an editable engineering part",
       "Raster sketch and measured scale to constrained profile and solid"
     ],
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
-    "title": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "url": "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
+    "title": "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
     "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
     "access_date": "2026-11-12",
     "evidence_status": "existing_report_registered",
     "supporting_claims": [
       "Text and explicit dimensions to an editable engineering part"
     ],
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
     "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-    "title": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "url": "${MODELING_ROOT}/research/implementation-plan.md",
+    "title": "${MODELING_ROOT}/research/implementation-plan.md",
     "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
     "access_date": "2026-11-12",
     "evidence_status": "existing_report_registered",
     "supporting_claims": [
       "Text and explicit dimensions to an editable engineering part"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "local_original": "${MODELING_ROOT}/research/implementation-plan.md",
     "sha256": "798a9bd999a5998b6b35abea78b176eed5babcdcc4b790c5081d7475a1282cc6",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-    "title": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "url": "${MODELING_ROOT}/research/workflows/cad-paths.json",
+    "title": "${MODELING_ROOT}/research/workflows/cad-paths.json",
     "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
     "access_date": "2026-11-12",
     "evidence_status": "existing_report_registered",
     "supporting_claims": [
       "Text and explicit dimensions to an editable engineering part"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/cad-paths.json",
     "sha256": "2e3407168e73a763adc235481c516105f0a47de762561e5a6248da35fc19d49c",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
-    "title": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "url": "${OCS_ROOT}/LICENSE",
+    "title": "${OCS_ROOT}/LICENSE",
     "summary": "Source referenced for the stated workflow; see the owning documentation or research item.",
     "access_date": "2026-11-12",
     "evidence_status": "existing_report_registered",
     "supporting_claims": [
       "Text and explicit dimensions to an editable engineering part"
     ],
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "local_original": "${OCS_ROOT}/LICENSE",
     "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "url": "${OCS_ROOT}/docs/automation/API-SPEC.md",
     "title": "OpenCADStudio automation API specification",
     "summary": "Local source documents MCP commands and entity/record schemas; inspected from local checkout.",
     "access_date": "2026-11-12",
@@ -76,7 +76,7 @@
       "Known library parts to placed assembly",
       "OpenSCAD source to mesh and checked CAD handoff"
     ],
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "local_original": "${OCS_ROOT}/docs/automation/API-SPEC.md",
     "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
     "content_type": "text/markdown"
   },

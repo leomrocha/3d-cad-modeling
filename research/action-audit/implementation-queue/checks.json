@@ -28,7 +28,7 @@
   "first_proposed_action": {
     "name": "Preserve the input revision and state the job boundary",
     "reference": "INTAKE-A01",
-    "plan": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md"
+    "plan": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md"
   },
   "source_register": {
     "date": "2026-11-12",

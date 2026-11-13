@@ -41,13 +41,13 @@ Date: 12 November 2026. Evidence: **user proposal and proposed design alternativ
 
 ## 6. Existing local sources and relationships
 
-1. [Ferme CAD input index](/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md): source-based component/custom-part sheets, model references and geometric dependency rules.
-2. [Ferme part manifest](/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json): 103 records with ID, readable name, group, route, quantity, kind, input sheet, dependencies, sources and existing CAD path. Existing project catalogue seed material.
-3. [Evidence-based CAD construction skill](/home/leo/projects/ferme/skills/cad-construction/SKILL.md): component/source identity, variants, revisions, representation, provenance and reproduction records.
-4. [Implementation queue and existing-code map](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md): existing action-level implementation records and evidence categories.
-5. [Structured implementation queue](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json): individual action references and operation contracts. The proposed catalogue links to action occurrences while retaining those definitions.
-6. [First source-record implementation proposal](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md): source locators, revision identities, hashes and correction relationships that can support catalogue evidence.
-7. [Project idea register](/home/leo/projects/3dmodeling/research/ideas-register.md): catalogue/storage/search and future materials/work-domain ideas, each with proposal status and links to this discussion record.
+1. Ferme CAD input index (`${FERME_ROOT}/engineering/module-development/cad-inputs/README.md`): source-based component/custom-part sheets, model references and geometric dependency rules.
+2. Ferme part manifest (`${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json`): 103 records with ID, readable name, group, route, quantity, kind, input sheet, dependencies, sources and existing CAD path. Existing project catalogue seed material.
+3. Evidence-based CAD construction skill (`${FERME_ROOT}/skills/cad-construction/SKILL.md`): component/source identity, variants, revisions, representation, provenance and reproduction records.
+4. [Implementation queue and existing-code map](implementation-queue/README.md): existing action-level implementation records and evidence categories.
+5. [Structured implementation queue](implementation-queue/queue.json): individual action references and operation contracts. The proposed catalogue links to action occurrences while retaining those definitions.
+6. [First source-record implementation proposal](implementation-queue/first-action-plan.md): source locators, revision identities, hashes and correction relationships that can support catalogue evidence.
+7. [Project idea register](../ideas-register.md): catalogue/storage/search and future materials/work-domain ideas, each with proposal status and links to this discussion record.
 
 ## 7. Batch execution record
 

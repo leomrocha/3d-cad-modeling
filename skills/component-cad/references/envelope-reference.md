@@ -1,6 +1,6 @@
 # Source-defined envelope reference
 
-Use `/home/leo/projects/3dmodeling/scripts/envelope_reference.py` when the source supports an overall product or clearance envelope and a detailed component body is not available. The output is one axis-aligned reference volume. It carries no implied PCB outline, mounting surface, connector locations or physical construction.
+Use `${MODELING_ROOT}/scripts/envelope_reference.py` when the source supports an overall product or clearance envelope and a detailed component body is not available. The output is one axis-aligned reference volume. It carries no implied PCB outline, mounting surface, connector locations or physical construction.
 
 ## Input and preflight
 
@@ -17,7 +17,7 @@ Use `/home/leo/projects/3dmodeling/scripts/envelope_reference.py` when the sourc
 2. The representation must remain a reference envelope. Do not add undimensioned details or label the output as detailed component geometry.
 3. `inspect(client, {"envelope": handle}, job)` reads the actual OCS solid. It binds the check to `client.document_id`, requires the returned entity handle and `Solid3D` type to match, and confirms active document, document revision and geometry revision remain stable around the record read. SAT inspection uses the existing identity-transform point reader; SAB inspection uses the native ACIS body reader. `verify(features, job)` compares native vertex extrema to the three source-bound extents and checks the closed body when topology is available. The numerical tolerance is a software comparison threshold, separate from source/manufacturing tolerance. Its result carries the optional `envelope_scope` for evidence review.
 4. Save to a new authorized native document path, reopen the saved file, then repeat the readback checks against the reopened document. Compare pre-save SAT points with reopened SAB through the existing `small_bms.compare_sat_sab` helper where supported. Record output hash and exact native document identity separately from component identity.
-5. The scope text returned by `verify()` comes from the job. Use the [native source-metadata comparison](/home/leo/projects/3dmodeling/skills/component-cad/references/source-metadata.md) on actual `CADTOOLS_SOURCE` xdata when checking metadata persistence. `Geometry.metadata` uses `xdata_set`; write identity, units, frame, job and optional scope together because another call for that application replaces the previous values.
+5. The scope text returned by `verify()` comes from the job. Use the [native source-metadata comparison](source-metadata.md) on actual `CADTOOLS_SOURCE` xdata when checking metadata persistence. `Geometry.metadata` uses `xdata_set`; write identity, units, frame, job and optional scope together because another call for that application replaces the previous values.
 6. Keep the source-defined detail gate separate. A reference-envelope pass establishes only the checked dimensions and persistence of the represented reference volume.
 
 ## Verification scope

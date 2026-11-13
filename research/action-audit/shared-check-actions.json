@@ -9,7 +9,7 @@
       "inputs": "Finite measured numbers or lists; independently sourced expected values; unit and positive numerical threshold",
       "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
       "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
-      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::comparison",
+      "software": "${MODELING_ROOT}/scripts/feature_checks.py::comparison",
       "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
       "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
       "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
@@ -23,8 +23,8 @@
         "condition": "Use individual passed checks within their declared measurement scope and source revision"
       },
       "evidence": [
-        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
-        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+        "${MODELING_ROOT}/execution/c012-driver.md",
+        "${MODELING_ROOT}/tests/test_native_acis.py"
       ],
       "date": "2026-11-12",
       "executing_model": "gpt-6.1-sol"
@@ -37,7 +37,7 @@
       "inputs": "Native body/lump/shell counts and reciprocal coedge connectivity",
       "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
       "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
-      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::closed_body",
+      "software": "${MODELING_ROOT}/scripts/feature_checks.py::closed_body",
       "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
       "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
       "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
@@ -51,8 +51,8 @@
         "condition": "Use individual passed checks within their declared measurement scope and source revision"
       },
       "evidence": [
-        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
-        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+        "${MODELING_ROOT}/execution/c012-driver.md",
+        "${MODELING_ROOT}/tests/test_native_acis.py"
       ],
       "date": "2026-11-12",
       "executing_model": "gpt-6.1-sol"
@@ -65,7 +65,7 @@
       "inputs": "Actual native vertices; expected XYZ coordinate ranges; numerical threshold",
       "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
       "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
-      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::vertex_extrema",
+      "software": "${MODELING_ROOT}/scripts/feature_checks.py::vertex_extrema",
       "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
       "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
       "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
@@ -79,8 +79,8 @@
         "condition": "Use individual passed checks within their declared measurement scope and source revision"
       },
       "evidence": [
-        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
-        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+        "${MODELING_ROOT}/execution/c012-driver.md",
+        "${MODELING_ROOT}/tests/test_native_acis.py"
       ],
       "date": "2026-11-12",
       "executing_model": "gpt-6.1-sol"
@@ -93,7 +93,7 @@
       "inputs": "Native circular cylinder surfaces; diameter; Cartesian axis; expected projected centres; numerical threshold",
       "outputs": "Per-check expected/observed values, units, method, numerical threshold and PASS/FAIL; invalid expectations raise ValueError",
       "prerequisites": "Actual source-pinned component expectations and measured native geometry; source and geometry identities retained by caller",
-      "software": "/home/leo/projects/3dmodeling/scripts/feature_checks.py::cylinder_pattern",
+      "software": "${MODELING_ROOT}/scripts/feature_checks.py::cylinder_pattern",
       "agent": "Interpret source feature and frame; select supported measurement; inspect exceptions and actual views",
       "representation": "Native source-labelled analytic features, vertex observations or connectivity graph",
       "units_frames": "Caller supplies source unit and actual component frame; millimetres in both exercised component jobs",
@@ -107,8 +107,8 @@
         "condition": "Use individual passed checks within their declared measurement scope and source revision"
       },
       "evidence": [
-        "/home/leo/projects/3dmodeling/execution/c012-driver.md",
-        "/home/leo/projects/3dmodeling/tests/test_native_acis.py"
+        "${MODELING_ROOT}/execution/c012-driver.md",
+        "${MODELING_ROOT}/tests/test_native_acis.py"
       ],
       "date": "2026-11-12",
       "executing_model": "gpt-6.1-sol"

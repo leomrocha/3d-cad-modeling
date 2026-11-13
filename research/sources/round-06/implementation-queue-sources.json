@@ -1,7 +1,7 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
-    "source_path": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+    "local_original": "${FERME_ROOT}/skills/cad-workflow-findings.md",
+    "source_path": "${FERME_ROOT}/skills/cad-workflow-findings.md",
     "title": "cad-workflow-findings.md — recorded_execution_summary",
     "summary": "OCS 2026.42 component constructions, import/save results, failed requests and component-specific recoveries. Applicability: Claims are attributed to the retained reports/session identifiers; raw session replay is a separate result.",
     "access_date": "2026-11-12",
@@ -14,8 +14,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
-    "source_path": "/home/leo/projects/ferme/skills/cad-construction/SKILL.md",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/SKILL.md",
+    "source_path": "${FERME_ROOT}/skills/cad-construction/SKILL.md",
     "title": "SKILL.md — documented_skill",
     "summary": "Reusable source, component/frame, construction, feature-check and saved-file procedure. Applicability: Repository skill instructions and reproduction-package specification.",
     "access_date": "2026-11-12",
@@ -28,8 +28,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
-    "source_path": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+    "local_original": "${FERME_ROOT}/skills/ocs-skill-improvements.md",
+    "source_path": "${FERME_ROOT}/skills/ocs-skill-improvements.md",
     "title": "ocs-skill-improvements.md — proposed_skill_extension",
     "summary": "Proposed OCS additions derived from recorded commands, topology recovery and representation/display observations. Applicability: Held in ferme; installation is a separate action.",
     "access_date": "2026-11-12",
@@ -42,8 +42,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/skills/README.md",
-    "source_path": "/home/leo/projects/ferme/skills/README.md",
+    "local_original": "${FERME_ROOT}/skills/README.md",
+    "source_path": "${FERME_ROOT}/skills/README.md",
     "title": "README.md — evidence_index",
     "summary": "Scope, source session/review boundary, OCS build and document use order. Applicability: ",
     "access_date": "2026-11-12",
@@ -56,8 +56,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "title": "SKILL.md — installed_skill_source",
     "summary": "Existing OCS contract, guarded control, revision-bound readback, preservation and handoff instructions. Applicability: ",
     "access_date": "2026-11-12",
@@ -70,8 +70,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py",
     "title": "ocs_control.py — existing_code",
     "summary": "request, execute_checked and redact implement authenticated transport, preflight revision checks, one-send writes and uncertain-result identity. Applicability: Inspected source only this batch; session descriptors are excluded from inspection/output. READ_OPS includes guide although the recorded OCS build rejects it.",
     "access_date": "2026-11-12",
@@ -84,8 +84,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py",
     "title": "check_contract.py — existing_code",
     "summary": "run checks supplied point/axis/plane observations, finite numbers, units, evidence identities and numerical criteria. Applicability: Consumes supplied observations; acquisition and solid/topology verification belong to other code.",
     "access_date": "2026-11-12",
@@ -98,8 +98,8 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/ngv064_ocs.py",
-    "source_path": "/tmp/opencode/ngv064_ocs.py",
+    "local_original": "${TEMP_ROOT}/opencode/ngv064_ocs.py",
+    "source_path": "${TEMP_ROOT}/opencode/ngv064_ocs.py",
     "title": "ngv064_ocs.py — existing_component_code",
     "summary": "read/write/step, checkpoint, revolve_z, cylinder and subtract wrap native requests and stepped command state. Applicability: Fixed session, temporary paths/prefix allowlist; module import selects a descriptor; accepted/running polling is unbounded; write treats waiting_input as failure, while step permits it.",
     "access_date": "2026-11-12",
@@ -112,8 +112,8 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/item_ocs_parts.py",
-    "source_path": "/tmp/opencode/item_ocs_parts.py",
+    "local_original": "${TEMP_ROOT}/opencode/item_ocs_parts.py",
+    "source_path": "${TEMP_ROOT}/opencode/item_ocs_parts.py",
     "title": "item_ocs_parts.py — existing_component_code",
     "summary": "extrude, rotate, move, combine and tag provide explicit source-labelled native constructions. Applicability: Imports native-wrapper; dimensions and several recipes are ITEM-specific.",
     "access_date": "2026-11-12",
@@ -126,8 +126,8 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/check_ngv064_wheel.py",
-    "source_path": "/tmp/opencode/check_ngv064_wheel.py",
+    "local_original": "${TEMP_ROOT}/opencode/check_ngv064_wheel.py",
+    "source_path": "${TEMP_ROOT}/opencode/check_ngv064_wheel.py",
     "title": "check_ngv064_wheel.py — existing_component_code",
     "summary": "sat_features extracts selected SAT cylinders, planes, tori and points; verify checks the wheel. Applicability: Top-level import loads native-wrapper. Restricted SAT fields; one body transform, unit scale; SAB requires a separate supported reader.",
     "access_date": "2026-11-12",
@@ -140,8 +140,8 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/build_item_profile_segment.py",
-    "source_path": "/tmp/opencode/build_item_profile_segment.py",
+    "local_original": "${TEMP_ROOT}/opencode/build_item_profile_segment.py",
+    "source_path": "${TEMP_ROOT}/opencode/build_item_profile_segment.py",
     "title": "build_item_profile_segment.py — existing_component_code",
     "summary": "contours samples retained text curves and normalizes the section; build/complete/verify construct and check the profile. Applicability: Uses extracted contour text rather than a DXF parser; fixed 40 mm normalization, 100 mm length, output paths, session wrapper and component checks.",
     "access_date": "2026-11-12",
@@ -154,8 +154,8 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/battery_ocs_parts.py",
-    "source_path": "/tmp/opencode/battery_ocs_parts.py",
+    "local_original": "${TEMP_ROOT}/opencode/battery_ocs_parts.py",
+    "source_path": "${TEMP_ROOT}/opencode/battery_ocs_parts.py",
     "title": "battery_ocs_parts.py — existing_component_code",
     "summary": "rr, axial_x, face_x and tag reuse rounded sections, transforms and metadata. Applicability: Imports item and session wrappers; caller must supply source-backed geometry.",
     "access_date": "2026-11-12",
@@ -168,8 +168,8 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/build_leaf_gen2.py",
-    "source_path": "/tmp/opencode/build_leaf_gen2.py",
+    "local_original": "${TEMP_ROOT}/opencode/build_leaf_gen2.py",
+    "source_path": "${TEMP_ROOT}/opencode/build_leaf_gen2.py",
     "title": "build_leaf_gen2.py — existing_component_code",
     "summary": "top and staged recovery functions reconstruct shell/terminal features; finish checks and saves the component. Applicability: Component-specific dimensions and staged resumption; imports shared battery/item/wrapper/SAT modules.",
     "access_date": "2026-11-12",
@@ -182,8 +182,8 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/build_bmw_i3_94ah.py",
-    "source_path": "/tmp/opencode/build_bmw_i3_94ah.py",
+    "local_original": "${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py",
+    "source_path": "${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py",
     "title": "build_bmw_i3_94ah.py — existing_component_code",
     "summary": "build/accessories/cable_done/finish reconstruct exterior parts and swept cable with checks. Applicability: Component-specific dimensions, paths and cable pose; imports shared battery/item/wrapper/SAT modules.",
     "access_date": "2026-11-12",
@@ -196,8 +196,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
-    "source_path": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "local_original": "${MODELING_ROOT}/research/tools/build_workflow_register.py",
+    "source_path": "${MODELING_ROOT}/research/tools/build_workflow_register.py",
     "title": "build_workflow_register.py — existing_documentation_code",
     "summary": "Existing read_json, write_json and sid conventions plus local-evidence/register handling provide source-record precedents. Applicability: Uses project-global paths and report scanning; a per-job source intake adapter needs its own interface and tests.",
     "access_date": "2026-11-12",
@@ -210,8 +210,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md",
     "title": "neugart-ngv064-wheel-160.md — recorded_execution_report",
     "summary": "Component-specific native checks, save/reopen observations and source paths for OCS 2026.42. Applicability: ",
     "access_date": "2026-11-12",
@@ -224,8 +224,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md",
     "title": "item-profile-02633-segment-100mm.md — recorded_execution_report",
     "summary": "Component-specific native checks, save/reopen observations and source paths for OCS 2026.42. Applicability: ",
     "access_date": "2026-11-12",
@@ -238,8 +238,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json",
     "title": "neugart-ngv064-wheel-160-native.json — recorded_check_results",
     "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
     "access_date": "2026-11-12",
@@ -252,8 +252,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json",
     "title": "item-angle-bracket-set-41115-native.json — recorded_check_results",
     "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
     "access_date": "2026-11-12",
@@ -266,8 +266,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json",
     "title": "item-profile-02633-segment-100mm-native.json — recorded_check_results",
     "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
     "access_date": "2026-11-12",
@@ -280,8 +280,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json",
     "title": "nissan-leaf-gen2-native.json — recorded_check_results",
     "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
     "access_date": "2026-11-12",
@@ -294,8 +294,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json",
     "title": "bmw-i3-94ah-native-checks.json — recorded_check_results",
     "summary": "Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.",
     "access_date": "2026-11-12",
@@ -308,8 +308,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/README.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/README.md",
     "title": "README",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -321,8 +321,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md",
     "title": "first action plan",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -334,8 +334,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
     "title": "queue",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -347,8 +347,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/assets.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/assets.json",
     "title": "assets",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -360,8 +360,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/execution-record.md",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/execution-record.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/execution-record.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/execution-record.md",
     "title": "execution record",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -373,8 +373,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/assets.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/assets.md",
     "title": "assets",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -386,8 +386,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.md",
     "title": "queue",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -399,8 +399,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
-    "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "local_original": "${MODELING_ROOT}/AGENTS.md",
+    "source_path": "${MODELING_ROOT}/AGENTS.md",
     "title": "AGENTS",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -412,8 +412,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-01-model-brief.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-01-model-brief.md",
     "title": "point 01 model brief",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -425,8 +425,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/workflow-to-actions.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/workflow-to-actions.json",
     "title": "workflow to actions",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -438,8 +438,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/details/workflow-details.json",
+    "source_path": "${MODELING_ROOT}/research/workflows/details/workflow-details.json",
     "title": "workflow details",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -451,8 +451,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/ideas.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/ideas.json",
     "title": "ideas",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -464,8 +464,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-02-operations.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-02-operations.json",
     "title": "point 02 operations",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -477,8 +477,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-03-operations.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-03-operations.json",
     "title": "point 03 operations",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -490,8 +490,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-04-operations.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-04-operations.json",
     "title": "point 04 operations",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -503,8 +503,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-05-operations.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-05-operations.json",
     "title": "point 05 operations",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -516,8 +516,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-06-operations.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-06-operations.json",
     "title": "point 06 operations",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -529,8 +529,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-07-operations.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-07-operations.json",
     "title": "point 07 operations",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -542,8 +542,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/cad-paths.json",
+    "source_path": "${MODELING_ROOT}/research/workflows/cad-paths.json",
     "title": "cad paths",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -555,8 +555,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/domain-paths.json",
+    "source_path": "${MODELING_ROOT}/research/workflows/domain-paths.json",
     "title": "domain paths",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -568,8 +568,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
+    "source_path": "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
     "title": "reconstruction paths",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",
@@ -581,8 +581,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/combined-paths.json",
+    "source_path": "${MODELING_ROOT}/research/workflows/combined-paths.json",
     "title": "combined paths",
     "summary": "Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.",
     "access_date": "2026-11-12",

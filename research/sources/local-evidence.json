@@ -2,7 +2,7 @@
   {
     "title": "AGENTS.md",
     "url": null,
-    "local_path": "/home/leo/projects/ferme/AGENTS.md",
+    "local_path": "${FERME_ROOT}/AGENTS.md",
     "access_date": "2026-11-12",
     "retrieval_status": "existing local file inspected in place",
     "sha256": "48a48d1d178fc06df8c49635ba88ac26812206e117ffd778d7900ff7cf248276",
@@ -11,7 +11,7 @@
   {
     "title": "SKILL.md",
     "url": null,
-    "local_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_path": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "access_date": "2026-11-12",
     "retrieval_status": "existing local file inspected in place",
     "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
@@ -20,7 +20,7 @@
   {
     "title": "README.md",
     "url": null,
-    "local_path": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "local_path": "${OCS_ROOT}/README.md",
     "access_date": "2026-11-12",
     "retrieval_status": "existing local file inspected in place",
     "sha256": "847b5594234974565667ab7e8d229679e59816966176ea6330582fccd2453fbf",
@@ -29,7 +29,7 @@
   {
     "title": "step.rs",
     "url": null,
-    "local_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "local_path": "${OCS_ROOT}/src/io/step.rs",
     "access_date": "2026-11-12",
     "retrieval_status": "existing local file inspected in place",
     "sha256": "2269911945e747b5ef30bbaaa8b656a0f6e4e348ed911af256034a612f3cd899",
@@ -38,7 +38,7 @@
   {
     "title": "skills-findings.md",
     "url": null,
-    "local_path": "/home/leo/projects/energy/eoliennes/research/cad-workflow/skills-findings.md",
+    "local_path": "${EOLIENNES_ROOT}/research/cad-workflow/skills-findings.md",
     "access_date": "2026-11-12",
     "retrieval_status": "existing local file inspected in place",
     "sha256": "f579f37a61269e431e2041630fe14bdd230b7ff80195abb4c71a913ba4c49f01",
@@ -47,7 +47,7 @@
   {
     "title": "harness-findings.md",
     "url": null,
-    "local_path": "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+    "local_path": "${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md",
     "access_date": "2026-11-12",
     "retrieval_status": "existing local file inspected in place",
     "sha256": "e2118a37d040ead069f9f464d0683c5e987db677a386ec2393d8de90f3ae18f2",
@@ -56,7 +56,7 @@
   {
     "title": "README.md",
     "url": null,
-    "local_path": "/home/leo/projects/architecture/research/README.md",
+    "local_path": "${ARCHITECTURE_ROOT}/research/README.md",
     "access_date": "2026-11-12",
     "retrieval_status": "existing local file inspected in place",
     "sha256": "f4040982c5baf0845c2be900e6892434dcb154cec111ef034e9a7d420f54dc41",

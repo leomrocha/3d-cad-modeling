@@ -93,4 +93,4 @@ If visual odometry drifts, add loop closure/targets or use sensor SLAM; if ICP f
 6. [https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md](https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md)
 7. [https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode](https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode)
 
-Full source summaries: [source register](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+Full source summaries: [source register](../../sources/source-register.md).

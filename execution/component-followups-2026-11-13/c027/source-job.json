@@ -12,7 +12,7 @@
       "unit": "source association",
       "required": true,
       "evidence_status": "official_manufacturer_page_and_linked_originals_inspected",
-      "source": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
+      "source": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
       "source_sha256": "80f88a81abee073536f00d28020fd773a552f88810bfd698192e44e9e405fabc",
       "source_location": "Mechanical Drawing (PDF) and Mechanical Model (3D STEP) links on product page"
     },
@@ -22,7 +22,7 @@
       "unit": "STEP product names",
       "required": true,
       "evidence_status": "downloaded_original_inspected",
-      "source": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
+      "source": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
       "source_sha256": "80f88a81abee073536f00d28020fd773a552f88810bfd698192e44e9e405fabc",
       "source_location": "FILE_NAME, PRODUCT, SHAPE_REPRESENTATION, and MANIFOLD_SOLID_BREP records"
     },
@@ -32,7 +32,7 @@
       "unit": "length unit",
       "required": true,
       "evidence_status": "downloaded_original_inspected",
-      "source": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
+      "source": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
       "source_sha256": "80f88a81abee073536f00d28020fd773a552f88810bfd698192e44e9e405fabc",
       "source_location": "CONVERSION_BASED_UNIT ('INCH'); LENGTH_UNIT records"
     },
@@ -42,7 +42,7 @@
       "unit": "STEP AP214 placements",
       "required": true,
       "evidence_status": "downloaded_original_inspected",
-      "source": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
+      "source": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
       "source_sha256": "80f88a81abee073536f00d28020fd773a552f88810bfd698192e44e9e405fabc",
       "source_location": "ITEM_DEFINED_TRANSFORMATION and AXIS2_PLACEMENT_3D entities; parsed with scripts/step_placements.py identity_target_placements"
     },
@@ -52,7 +52,7 @@
       "unit": "manufacturer variant labels",
       "required": true,
       "evidence_status": "downloaded_original_inspected",
-      "source": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/orionbms_jr_mechanical.pdf",
+      "source": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/orionbms_jr_mechanical.pdf",
       "source_sha256": "584390f934247dd836c753cd70f224f0c7ad0a05a57a480f1025d038b4a7d0b8",
       "source_location": "PDF pages 1\u20133 title blocks and product labels; associated STEP solid labels"
     },
@@ -62,13 +62,13 @@
       "unit": "inch",
       "required": true,
       "evidence_status": "downloaded_original_inspected",
-      "source": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/orionbms_jr_mechanical.pdf",
+      "source": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/orionbms_jr_mechanical.pdf",
       "source_sha256": "584390f934247dd836c753cd70f224f0c7ad0a05a57a480f1025d038b4a7d0b8",
       "source_location": "Pages 1\u20133: Polycase SL-64 / SL-64B / SL-64C product detail drawings"
     }
   ],
   "geometry_source": {
-    "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
+    "path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/11930A.STEP",
     "sha256": "80f88a81abee073536f00d28020fd773a552f88810bfd698192e44e9e405fabc",
     "original_url": "https://www.orionbms.com/downloads/drawings/orionbms_jr_mechanical.zip",
     "evidence_status": "downloaded_original_archive_member_extracted_unchanged",
@@ -77,7 +77,7 @@
   "source_comparison": {
     "official_product_page": "https://www.orionbms.com/products/orion-jr-2-bms/",
     "drawing_original_url": "https://www.orionbms.com/downloads/drawings/orionbms_jr_mechanical.pdf",
-    "drawing_local_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/orionbms_jr_mechanical.pdf",
+    "drawing_local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/source/orionbms_jr_mechanical.pdf",
     "drawing_sha256": "584390f934247dd836c753cd70f224f0c7ad0a05a57a480f1025d038b4a7d0b8",
     "step_archive_sha256": "0f033e8b79162b6a7dac12e7238bdb07ee0de31fae05ae987506dc94a421a052",
     "step_member": "orionjr2_mechanical.step",

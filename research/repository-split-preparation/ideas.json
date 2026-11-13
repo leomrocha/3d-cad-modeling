@@ -7,8 +7,8 @@
       "status": "proposal",
       "summary": "Classify existing files by content, migrate component artifacts with provenance and maintain per-iteration output ownership. Preparation is executed; migration remains proposed.",
       "source_paths": [
-        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
-        "/home/leo/projects/3dmodeling/research/repository-split-preparation/plan.md"
+        "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md",
+        "${MODELING_ROOT}/research/repository-split-preparation/plan.md"
       ],
       "alternatives": [
         "Reuse an identical attributed FERME record after hash comparison.",

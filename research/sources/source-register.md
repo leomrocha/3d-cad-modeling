@@ -2,13 +2,13 @@
 
 Registered: 2026-11-13.
 
-Each entry preserves the original URL or local source path and records its summary, evidence status and referring documents. Detailed observations are retained in [source-register.json](/home/leo/projects/3dmodeling/research/sources/source-register.json).
+Each entry preserves the original URL or local source path and records its summary, evidence status and referring documents. Detailed observations are retained in [source-register.json](source-register.json).
 
 <a id="src-001b3a40cfd7"></a>
 
 ## SRC-001b3a40cfd7 — Source-bound driver exterior checks
 
-Original source: [/home/leo/projects/3dmodeling/scripts/driver_checks.py](/home/leo/projects/3dmodeling/scripts/driver_checks.py)
+Original source: [${MODELING_ROOT}/scripts/driver_checks.py](../../scripts/driver_checks.py)
 
 Summary: Uses the shared functions and pinned component expectations to check 116 separate solids, mounting features, terminal geometry and connector span. Original span fails; corrected saved derivative passes all141 checks.
 
@@ -44,7 +44,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/workflows
 
 ## SRC-00b33c4777ca — Driver iteration — opened-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/opened-state.json`)
 
 Summary: Recovered original open state identifies driver document77 and original saved path.
 
@@ -68,7 +68,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-00ef88b61c5d — Independent procedure review — Point 01 model brief
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/independent-review.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/independent-review.md](../action-audit/reviews/independent-review.md)
 
 Summary: Authored audit document recording Independent procedure review — Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -80,7 +80,7 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 ## SRC-00fe5418f4eb — ocs-skill-improvements.md — proposed_skill_extension
 
-Original source: [/home/leo/projects/ferme/skills/ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md)
+Original source: ${FERME_ROOT}/skills/ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`)
 
 Summary: Proposed OCS additions derived from recorded commands, topology recovery and representation/display observations. Applicability: Held in ferme; installation is a separate action.
 
@@ -92,7 +92,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json, research
 
 ## SRC-011a79e3f993 — Driver iteration — reopened-side.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-side.png`)
 
 Summary: Inspected side image shows housing taper, mounting base and separate projecting connector/terminal geometry against source side outline.
 
@@ -116,7 +116,7 @@ Documents: research/action-audit/point-04-raster-drawings.md, research/action-au
 
 ## SRC-017b462fd1bf — Stop-button source-readiness result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json`)
 
 Summary: Existing source/hash gate returns NEEDS_INPUT foroperator/mounting body andcontact/terminal geometry.
 
@@ -128,7 +128,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-01a105b9ee75 — imported-records-24.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-24.json`)
 
 Summary: imported native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -140,7 +140,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-021178edf288 — Driver iteration — header.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/header.json`)
 
 Summary: Actual driver document header records its millimetre units.
 
@@ -152,7 +152,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-023374825488 — dom-r01.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r01.md](../workflows/details/dom-r01.md)
 
 Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -188,7 +188,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-0308beb80af5 — P01 p01-build-01 — rail-doc-schema-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-0.json`)
 
 Summary: p01-build-01 rail-doc-schema-0.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.
 
@@ -200,7 +200,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-031b438ece44 — Leaf iteration — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json`)
 
 Summary: Completed Leaf iteration records 29 native checks, unchanged model hash, audit/persistence, inspected source/model views and applied checker/shared reader with 44 tests.
 
@@ -212,7 +212,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-03256efc5e07 — SKILL.md
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
@@ -236,7 +236,7 @@ Documents: research/action-audit/reviews/point-02-visual.md, research/action-aud
 
 ## SRC-035204d4e7eb — Driver iteration — reopened-audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-audit.json`)
 
 Summary: Saved derivative audit preserves116 solids/eight text labels and zero errors/warnings.
 
@@ -260,7 +260,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-038ae5e03363 — source-placement-plan.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-placement-plan.json`)
 
 Summary: 28 STEP source frames and27 unique inverse-matched native insert corrections.
 
@@ -272,7 +272,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-03adf43b9941 — Kelly KLS7240N controller (C015) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c015-kelly-kls7240n-controller.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind exact controller candidate record. Detailed geometry review belongs to its component iteration.
 
@@ -296,7 +296,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-04350e8a74da — local-inventory.json
 
-Original source: [/home/leo/projects/3dmodeling/research/local-inventory.json](/home/leo/projects/3dmodeling/research/local-inventory.json)
+Original source: [${MODELING_ROOT}/research/local-inventory.json](../local-inventory.json)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -308,7 +308,7 @@ Documents: research/sources/round-05/point-05-local-sources.json.
 
 ## SRC-04583314396e — ME0907 save and reopen receipt
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json`)
 
 Summary: Records matching saved DWG hash and audit manifest, zero audit errors/warnings and recovery of the original reopen operation after its polling bound.
 
@@ -320,7 +320,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-045e4e413150 — P02 crossmember — interface-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/interface-checks.json`)
 
 Summary: Actual saved crossmember span260mm equals340mm sourced outside frame width minus twice actual rail width40mm; local midpoint Z130mm also passes.
 
@@ -332,7 +332,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-047ea9576020 — dom-r03.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r03.md](../workflows/details/dom-r03.md)
 
 Summary: Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -368,7 +368,7 @@ Documents: research/cad-and-skills.md, skills/README.md.
 
 ## SRC-05baf05685b3 — component_records.py
 
-Original source: [/home/leo/projects/3dmodeling/scripts/component_records.py](/home/leo/projects/3dmodeling/scripts/component_records.py)
+Original source: [${MODELING_ROOT}/scripts/component_records.py](../../scripts/component_records.py)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -380,7 +380,7 @@ Documents: research/sources/round-09/component-execution-sources.json, research/
 
 ## SRC-0697ecbb0ad0 — document-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/document-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/document-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/document-checkpoint.json`)
 
 Summary: Newisolateddocument84binding,revisionandrequestnamespacebeforeenclosureimport.
 
@@ -392,7 +392,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-06c5ba590bdd — Completed crossmember iteration report
 
-Original source: [/home/leo/projects/3dmodeling/execution/p02-crossmember.md](/home/leo/projects/3dmodeling/execution/p02-crossmember.md)
+Original source: [${MODELING_ROOT}/execution/p02-crossmember.md](../../execution/p02-crossmember.md)
 
 Summary: Records source-ready260mm crossmember, isolated document72/reopened73, five pre-save and six reopened groups, two nominal interface/datum checks, inspected views and the applied shared-helper improvement.
 
@@ -404,7 +404,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-071deb628e4d — Caster support arm (P06) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06-caster-support-arm.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06-caster-support-arm.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p06-caster-support-arm.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p06-caster-support-arm.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Removable support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -416,7 +416,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-0724f34c3f7f — reconstruction-detail-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json](/home/leo/projects/3dmodeling/research/sources/round-03/reconstruction-detail-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-03/reconstruction-detail-sources.json](round-03/reconstruction-detail-sources.json)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -428,7 +428,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 ## SRC-075213db418c — step-format.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-format.json`)
 
 Summary: Actual import dialog STEP-format selection result.
 
@@ -440,7 +440,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-081496ab4ae6 — SKF iteration — capture-top.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json`)
 
 Summary: Completed native top capture response binds derivative document75 to the inspected two-slot/bearing projection.
 
@@ -452,7 +452,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-082d081b5a44 — Driver iteration — capture-front.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-front.json`)
 
 Summary: Completed front capture response binds actual driver document78 and its inspected front projection.
 
@@ -464,7 +464,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-0868c7d42c7e — Point 02 visual, semantic and evidence-merge review
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-02-visual.md](../action-audit/reviews/point-02-visual.md)
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -476,7 +476,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-0895e33945c4 — Executed axial motor procedure
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/axial-motor.md](/home/leo/projects/3dmodeling/skills/component-cad/references/axial-motor.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/axial-motor.md](../../skills/component-cad/references/axial-motor.md)
 
 Summary: Documents source-leader review, explicit keyway reconstruction, bounded native construction, surface-based dimensions, save/reopen recovery and per-feature downstream handoffs established by this actual motor.
 
@@ -488,7 +488,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-08989edb31e4 — first action plan
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md](../action-audit/implementation-queue/first-action-plan.md)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -500,7 +500,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json, research
 
 ## SRC-08a4605c6182 — ME0907 component feature-stage state
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json`)
 
 Summary: Mechanical interfaces are saved with18 passing checks. Exterior source lookup is complete; cooling-slot, terminal and connector geometry have a named required input, with manufacturer and supplier evidence linked.
 
@@ -512,7 +512,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-0910720e555c — Point 05 independent procedure review — CAD, photographs and scans alignment
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-independent.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-05-independent.md](../action-audit/reviews/point-05-independent.md)
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -524,7 +524,7 @@ Documents: research/sources/round-05/point-05-local-sources.json.
 
 ## SRC-09342e239988 — Tyro Gemini1S remote-stop receiver (C047) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c047-tyro-gemini1s-remote-stop-receiver.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Separate stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -536,7 +536,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-096e1d7af9e5 — dom-r07.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r07.md](../workflows/details/dom-r07.md)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -548,7 +548,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-09acefc0b51b — Extracted Pilz SVG linework
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg`)
 
 Summary: Actual Poppler derivative retains47 paths,including side-profile linework andcase/cover endpoint offsets.
 
@@ -560,7 +560,7 @@ Documents: research/sources/round-26/relay-sources.json.
 
 ## SRC-09f3c0537603 — P01 p01-build-01 — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/initial-state.json`)
 
 Summary: p01-build-01 initial-state.json: Observed document 52 revision 2 with open-document identities and camera/command state; used for write isolation or capture provenance.
 
@@ -608,7 +608,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-0a87ef91b4b8 — Stop-button source findings
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md`)
 
 Summary: Exact manufacturer variant,dimension leaders,panel mounting conditions andactual gated CAD routes.
 
@@ -620,7 +620,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-0aace313f4cb — Curtis 1243-4303 controller (C014) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c014-curtis-1243-4303-controller.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; BT; original kind donor controller reference. Detailed geometry review belongs to its component iteration.
 
@@ -632,7 +632,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-0acbe2450bde — SB50 source feature contract
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source-job.json`)
 
 Summary: Pins manufacturer dimensions/hash andtwo named required housing/contact geometry inputs.
 
@@ -644,7 +644,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-0ad259094c61 — Driver iteration — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/initial-state.json`)
 
 Summary: Actual pre-open OCS state identifies prior Leaf document76 and other open work before driver inspection.
 
@@ -668,7 +668,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-0b06ee1720d4 — reopened-top.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-top.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-top.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-top.png`)
 
 Summary: Actualsavedtopviewshowscover,lockandexternalkeyholefeet.
 
@@ -680,7 +680,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-0b5ad789671d — Ohmite TA-series package datasheet copy
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf`)
 
 Summary: Manufacturer-authored PDF retained from DigiKey. Page50 TA310PA row gives25.4mm length/height and7.62mm pitch; PA diagram identifies pin section and terminal/clip callouts.
 
@@ -692,7 +692,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-0bc5d8f02292 — Trelleborg T539 tyre (C001) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Common wheel reference; original kind manufacturer specification recorded locally. Detailed geometry review belongs to its component iteration.
 
@@ -704,7 +704,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-0c098ecd90ed — Local tool and source baseline
 
-Original source: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md)
+Original source: [${MODELING_ROOT}/research/local-baseline.md](../local-baseline.md)
 
 Summary: Inspected in this research turn; records OCS STEP representation finding and environment/source inspection.
 
@@ -728,7 +728,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-0cb70285e323 — Leaf iteration — capture-top.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json`)
 
 Summary: Completed top capture response binds document 76, camera and module image for actual visual inspection.
 
@@ -740,7 +740,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-0d1de3da8732 — OCS capture/control source
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs)
+Original source: ${OCS_ROOT}/src/app/control/mod.rs (`${OCS_ROOT}/src/app/control/mod.rs`)
 
 Summary: Local source describes deferred frame capture andnativeactivate routing;source inspection is separate from installed runtime evidence.
 
@@ -776,7 +776,7 @@ Documents: research/action-audit/reviews/point-06-sources.md, research/sources/r
 
 ## SRC-0da51768e908 — Leaf iteration — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json`)
 
 Summary: Native pre-open state identifies SKF document 75 and unrelated open work before opening the Leaf drawing.
 
@@ -788,7 +788,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-0db17291beb9 — Source-intake fidelity and failure tests
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_source_intake.py](/home/leo/projects/3dmodeling/tests/test_source_intake.py)
+Original source: [${MODELING_ROOT}/tests/test_source_intake.py](../../tests/test_source_intake.py)
 
 Summary: Twelve passing cases cover sources, corrections, changed revisions, zero-network URL registration, invalid records, interrupted publication and protected earlier artifacts. Final reference checks reject repeated conflict identities.
 
@@ -800,7 +800,7 @@ Documents: research/sources/round-17/source-intake-sources.json.
 
 ## SRC-0de1ce69cd32 — Initial delegated resistor transcription
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md`)
 
 Summary: Preserved original research notes include general-dimensional-tolerance and no-scale statements excluded by coordinator review of the retained PDF. Package-table dimensions remain attributed to TA310PA. Actual researcher runtime identity unavailable.
 
@@ -836,7 +836,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-0ecb978bb734 — Driver iteration — capture-side.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-side.json`)
 
 Summary: Completed side capture response binds document78 and inspected housing/connector height view.
 
@@ -848,7 +848,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-0f1f289478e2 — Wheel splash panel (P24) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p24-wheel-splash-panel.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: guards; Common withroute-specificshape; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -872,7 +872,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-106d47161026 — Gland source feature contract
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json`)
 
 Summary: Pins exactmanufacturer page findings through acquisition hash andnames three required geometry inputs.
 
@@ -896,7 +896,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-115e3fe90a0c — c029_feature_checks.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_feature_checks.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_feature_checks.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_feature_checks.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_feature_checks.py`)
 
 Summary: Measuredsourcebody/covermembersagainst3drawingdimensionsandchecked12closedshellgraphs.
 
@@ -908,7 +908,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-1179a9bfdd5a — Victron supported shelf (P19) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p19-victron-supported-shelf.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Victron or BT-V; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -920,7 +920,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-1195ea9b1b28 — Wheel shaft bearing support plate (P13) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p13-wheel-shaft-bearing-support-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -932,7 +932,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-11a3ab01c356 — Project workflow composition rules
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/composition-rules.md](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md)
+Original source: [${MODELING_ROOT}/research/workflows/composition-rules.md](../workflows/composition-rules.md)
 
 Summary: Project proposal defining sequences, branches, evidence merges, component substitution, representation forks and revisioned edit/compare loops, with explicit handoff conditions and research questions.
 
@@ -944,7 +944,7 @@ Documents: research/sources/round-02/project-sources.json, research/sources/roun
 
 ## SRC-11b52766dd34 — Local Python 3.14 hashlib source
 
-Original source: [/usr/lib/python3.14/hashlib.py](/usr/lib/python3.14/hashlib.py)
+Original source: ${SYSTEM_ROOT}/usr/lib/python3.14/hashlib.py (`${SYSTEM_ROOT}/usr/lib/python3.14/hashlib.py`)
 
 Summary: Documented byte hashing and SHA-256 constructors used as source evidence for input revision identity.
 
@@ -956,7 +956,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-11c693014725 — Source-bound axial motor construction and checker
 
-Original source: [/home/leo/projects/3dmodeling/scripts/axial_motor.py](/home/leo/projects/3dmodeling/scripts/axial_motor.py)
+Original source: [${MODELING_ROOT}/scripts/axial_motor.py](../../scripts/axial_motor.py)
 
 Summary: New Python recipe calls existing guarded native geometry for housing/pilot, blind patterns, keyed shaft and rear region. Checks analytic cylinders and individual blind-bottom planes instead of estimating circle diameter from seam vertices.
 
@@ -992,7 +992,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-12a05a05db24 — SB50 contact source image
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-2.png`)
 
 Summary: Actual page2 shows30mm contact overall,11.1 axial segment,7.2 barrel profile and5900 A5.59 table row.
 
@@ -1004,7 +1004,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-1341a6b69ecb — AGENTS.md
 
-Original source: [/home/leo/projects/ferme/AGENTS.md](/home/leo/projects/ferme/AGENTS.md)
+Original source: ${FERME_ROOT}/AGENTS.md (`${FERME_ROOT}/AGENTS.md`)
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
@@ -1028,7 +1028,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-1361cced4e93 — 520 roller chain (C007) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c007-520-roller-chain.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c007-520-roller-chain.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c007-520-roller-chain.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c007-520-roller-chain.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source size family. Detailed geometry review belongs to its component iteration.
 
@@ -1040,7 +1040,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-13e9587720a2 — Fuse source-readiness gate
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json`)
 
 Summary: Existing source/hash validation returns NEEDS_INPUT with thethree required geometry questions and actual retained-source observations.
 
@@ -1064,7 +1064,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-144b4a816641 — cad-r09.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r09.md](../workflows/details/cad-r09.md)
 
 Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -1076,7 +1076,7 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 ## SRC-14d64147c232 — XB5AS8445 mounting render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png`)
 
 Summary: Actual panel-cutout image givesØ22.3+0.4/0 recommended22.5,lug3.2+0.2/0,24.1+0.4/0 height,r≤0.8 andscrew-clamp40/30 spacing.
 
@@ -1088,7 +1088,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-15006ce1a525 — Stop-button source-stage report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c049-stop-button-source.md](/home/leo/projects/3dmodeling/execution/c049-stop-button-source.md)
+Original source: [${MODELING_ROOT}/execution/c049-stop-button-source.md](../../execution/c049-stop-button-source.md)
 
 Summary: Documents exact assembly mapping,finished panel tolerances,source access outcomes andseparate panel/full-body actions.
 
@@ -1100,7 +1100,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-158c2c4848c2 — AGENTS.md — energy project instructions
 
-Original source: [/home/leo/projects/energy/AGENTS.md](/home/leo/projects/energy/AGENTS.md)
+Original source: ${ENERGY_ROOT}/AGENTS.md (`${ENERGY_ROOT}/AGENTS.md`)
 
 Summary: Existing archived source for CAD skill source instructions, references, marketplace discovery and repository metadata: AGENTS.md — energy project instructions. Source class: project research and communication instructions. Original reuse terms: Local instructions; referenced in place without duplication.
 
@@ -1112,7 +1112,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-15f1b4d0281d — Leaf iteration — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl`)
 
 Summary: Guarded requests retain the original Leaf open polling-bound result and same-ID recovery, followed by actual top, terminal-end and isometric view/capture operations.
 
@@ -1124,7 +1124,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-16d2d9b6a0cb — P01 p01-build-01 — rail-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-state.json`)
 
 Summary: p01-build-01 rail-state.json: Observed document 52 revision 2 with open-document identities and camera/command state; used for write isolation or capture provenance.
 
@@ -1136,7 +1136,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-170cae45c8e7 — Leaf cassette support rail (P17R) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p17r-leaf-cassette-support-rail.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Leaf; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -1148,7 +1148,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-172ac1af7b52 — Pilz PNOZX3 774310 relay (C048) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c048-pilz-pnozx3-774310-relay.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -1172,7 +1172,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-17542ff2880d — Project skill catalogue
 
-Original source: [/home/leo/projects/3dmodeling/skills/README.md](/home/leo/projects/3dmodeling/skills/README.md)
+Original source: [${MODELING_ROOT}/skills/README.md](../../skills/README.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -1184,7 +1184,7 @@ Documents: research/sources/round-05/audit-index-sources.json, research/sources/
 
 ## SRC-17a777175a39 — Four observed component-source action definitions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/component-source-actions.json](/home/leo/projects/3dmodeling/research/action-audit/component-source-actions.json)
+Original source: [${MODELING_ROOT}/research/action-audit/component-source-actions.json](../action-audit/component-source-actions.json)
 
 Summary: Defines stock/supplier lookup, feature-standard search, per-claim access review and nominal feature calculation, including software/agent roles, units, preserved information, alternatives and downstream conditions. Links original intake/solid-route actions and the FERME occurrence registry.
 
@@ -1196,7 +1196,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-17d541c31dfa — Source-vector reconstruction proposal
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md`)
 
 Summary: Separates actual PDF-to-SVG extraction fromproposed source-view selection,unit checks,joining/part-boundary rules andnative extrusion.
 
@@ -1208,7 +1208,7 @@ Documents: research/sources/round-26/relay-sources.json.
 
 ## SRC-18305cb33c69 — Source-bound pillow-block checker
 
-Original source: [/home/leo/projects/3dmodeling/scripts/pillow_block.py](/home/leo/projects/3dmodeling/scripts/pillow_block.py)
+Original source: [${MODELING_ROOT}/scripts/pillow_block.py](../../scripts/pillow_block.py)
 
 Summary: Reads ten exact metadata-labelled native parts and compares housing, slots, shaft, ring, screw, seals and fitting against externally pinned source features; original crown fails and corrected reopened derivative passes62checks.
 
@@ -1220,7 +1220,7 @@ Documents: research/sources/round-14/bearing-sources.json, research/sources/roun
 
 ## SRC-184a5ba4315f — imported-records-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-0.json`)
 
 Summary: importednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -1244,7 +1244,7 @@ Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
 ## SRC-194cc6d76652 — ezdxf1.4.5 native SAB decoder source
 
-Original source: [/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py](/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py)
+Original source: ${NATIVE_READER_ROOT}/ezdxf/acis/sab.py (`${NATIVE_READER_ROOT}/ezdxf/acis/sab.py`)
 
 Summary: MIT library source implements typed binary token decoding, versioned record construction and pointer resolution through parse_sab. Its existing parser reads the saved P01 binary record without changing CAD geometry.
 
@@ -1256,7 +1256,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json, research/so
 
 ## SRC-196d24be8370 — Installed MIT-licensed DXF units mapping
 
-Original source: [/tmp/3dmodeling-native-reader/ezdxf/units.py](/tmp/3dmodeling-native-reader/ezdxf/units.py)
+Original source: ${NATIVE_READER_ROOT}/ezdxf/units.py (`${NATIVE_READER_ROOT}/ezdxf/units.py`)
 
 Summary: Inspected decode maps actual INSUNITS enum codes to unit labels. The inspector preserves code0 as unresolved unit evidence and actual code6 as metres.
 
@@ -1268,7 +1268,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-199449a3713f — Fibox source acquisition metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/acquisition.json`)
 
 Summary: Records3exactmanufacturer-linkedGETresults,timestamps,MIME,sizes,hashes andderivedpreviews.
 
@@ -1292,7 +1292,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-19e1d74855d9 — ME0907 supported wheel shaft (P12) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p12-me0907-supported-wheel-shaft.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -1316,7 +1316,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-1a10c8033611 — reconstruction-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json](/home/leo/projects/3dmodeling/research/sources/round-02/reconstruction-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-02/reconstruction-sources.json](round-02/reconstruction-sources.json)
 
 Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -1328,7 +1328,7 @@ Documents: research/sources/round-05/point-04-local-sources.json, research/sourc
 
 ## SRC-1a2bd5aac217 — execution record
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/execution-record.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/execution-record.md)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/execution-record.md](../action-audit/implementation-queue/execution-record.md)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -1340,7 +1340,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-1a9d2f4c6a7a — assets
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/assets.md](../action-audit/implementation-queue/assets.md)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -1352,7 +1352,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json, research
 
 ## SRC-1ae836243bfc — P01 p01-build-01 — rail-after-cut-measure.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-measure.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-measure.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-measure.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-measure.json`)
 
 Summary: p01-build-01 rail-after-cut-measure.json: Retained native response with fields document_id, geometry_revision, measurements, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -1364,7 +1364,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-1b0d9fc7bcf8 — manifest.tsv
 
-Original source: [/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv](/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv)
+Original source: ${FERME_ROOT}/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv (`${FERME_ROOT}/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -1376,7 +1376,7 @@ Documents: research/sources/round-09/component-execution-sources.json, research/
 
 ## SRC-1b1ca9a7f6a5 — start_c029.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/start_c029.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/start_c029.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/start_c029.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/start_c029.py`)
 
 Summary: Createdisolateddocument84andimportedhash-pinnedmanufacturerSTEPwithsuccessfulnativeImportFilefields.
 
@@ -1400,7 +1400,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-1b3804492890 — P01 p01-build-02 — document-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/document-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/document-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/document-checkpoint.json`)
 
 Summary: p01-build-02 document-checkpoint.json: Binds partial/native stage to document 69, revision 0 and named part handles {}; supports inspected recovery.
 
@@ -1424,7 +1424,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-1bf6e9a12d73 — dom-r06.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r06.md](../workflows/details/dom-r06.md)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -1436,7 +1436,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-1c03ba612505 — Pinned native-reader dependency environment
 
-Original source: [/home/leo/projects/3dmodeling/requirements-native.txt](/home/leo/projects/3dmodeling/requirements-native.txt)
+Original source: [${MODELING_ROOT}/requirements-native.txt](../../requirements-native.txt)
 
 Summary: Pins ezdxf1.4.5 and the observed fonttools4.68.0/numpy2.5.4/pyparsing3.3.3/typing_extensions4.16.0 dependencies installed in isolated temporary target. This pin set was exercised with Python3.12.9.
 
@@ -1448,7 +1448,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json, research/so
 
 ## SRC-1c1ff9274d77 — SKF iteration — audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json`)
 
 Summary: Original ten-solid native audit has zeroerrors/warnings; geometric source comparison subsequently finds crown dimension failure.
 
@@ -1460,7 +1460,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-1c30dee16aac — Shared parts catalogue discussion
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+Original source: [${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md](../action-audit/parts-catalogue-proposal.md)
 
 Summary: Authored proposal: requested identity/standards/location/search fields, storage alternatives and explicit future material/resistance/work-domain extensions.
 
@@ -1472,7 +1472,7 @@ Documents: research/sources/round-07/parts-catalogue-sources.json, research/sour
 
 ## SRC-1d0764f851b0 — Battery exterior iteration result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json`)
 
 Summary: New native battery file,source frame,21 definitions/39 instances,actual checks,source dimensional observations,inspected views and applied reusable improvement linked by path/hash.
 
@@ -1496,7 +1496,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-1d9ccefff7d7 — SKF iteration — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl`)
 
 Summary: Append-only guarded requests retain original-open/reopen polling-bound outcomes and same-ID recovery, two housingSLICE commands, verifiedsave and actual captures.
 
@@ -1508,7 +1508,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-1dbeea3c6e30 — Full Fibox dimension drawing render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png`)
 
 Summary: Actualrear/sectiondrawingviewwith300×200body,152.5depth,10footprojection andwall/covercallouts.
 
@@ -1520,7 +1520,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-1df8ac8c2937 — imported-records-6.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-6.json`)
 
 Summary: imported native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -1532,7 +1532,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-1e8dca4fc3d4 — Axial motor failure regression cases
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_axial_motor.py](/home/leo/projects/3dmodeling/tests/test_axial_motor.py)
+Original source: [${MODELING_ROOT}/tests/test_axial_motor.py](../../tests/test_axial_motor.py)
 
 Summary: Eight focused software tests exercise seam-only vertices, missing hole, swapped depths, wrong blind depth, wrong keyway floor, wrong diameter, invalid extents and unit/overrun rejection.
 
@@ -1544,7 +1544,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-1eac959ecbf4 — P01 p01-build-03 — persistence.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/persistence.json`)
 
 Summary: p01-build-03 persistence.json: DWG2018 save/reopen audit/hash/manifest result PASS, one native solid, zero dropped entities. Detailed reopened geometry has its own separate receipt.
 
@@ -1556,7 +1556,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-1eb8186891cc — reopened-records-6.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-6.json`)
 
 Summary: reopened native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -1568,7 +1568,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-1f314fe4accc — raster_image.rs
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/modules/draw/draw/raster_image.rs)
+Original source: ${OCS_ROOT}/src/modules/draw/draw/raster_image.rs (`${OCS_ROOT}/src/modules/draw/draw/raster_image.rs`)
 
 Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -1580,7 +1580,7 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 ## SRC-1f361eaafa20 — Earlier SKF part record
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md](/home/leo/projects/ferme/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md)
+Original source: ${FERME_ROOT}/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md (`${FERME_ROOT}/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md`)
 
 Summary: Supplies component identity and source relationships; its0.588kg figure differs from the retained technical sheet0.56kg, registered as a source finding without changing the record.
 
@@ -1616,7 +1616,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-1f8a84e3e367 — Fuse exact-part outline lookup
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md`)
 
 Summary: Retains manufacturer datasheet URL/revision,shared M6 suffix applicability,reported dimension labels and exact acquisition outcomes.60/42 leader associations remain named geometry inputs.
 
@@ -1628,7 +1628,7 @@ Documents: research/sources/round-21/fuse-sources.json.
 
 ## SRC-1f99e1c91c5c — imported-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-isometric.png`)
 
 Summary: Actual converter capture attempt imported-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
 
@@ -1652,7 +1652,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-1fe7a6d498a1 — imported-records-18.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-18.json`)
 
 Summary: imported native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -1664,7 +1664,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-20296fc40b95 — SKF iteration — original-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json`)
 
 Summary: Actual original native geometry produces61PASS and crownFAIL32mmversus21mm; preserves measured defect before revision.
 
@@ -1676,7 +1676,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-20676393d92d — SKF iteration — presave-correction-check.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json`)
 
 Summary: Post-cut crown21mmPASS and byteidentical nine other solid geometry records recorded before derivative save.
 
@@ -1688,7 +1688,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-208dce2b3f17 — Saved battery inspection and source-bound check procedure
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md](/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/existing-battery.md](../../skills/component-cad/references/existing-battery.md)
 
 Summary: Details exact source variant, metadata identity, unchanged-file persistence, transformed shell and terminal checks, source/model views and verified shared-reader extraction.
 
@@ -1700,7 +1700,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-20a206cdbbd8 — README.md — evidence_index
 
-Original source: [/home/leo/projects/ferme/skills/README.md](/home/leo/projects/ferme/skills/README.md)
+Original source: ${FERME_ROOT}/skills/README.md (`${FERME_ROOT}/skills/README.md`)
 
 Summary: Scope, source session/review boundary, OCS build and document use order. Applicability:
 
@@ -1760,7 +1760,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-221c17026037 — imported-records-6.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-6.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-6.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-6.json`)
 
 Summary: importednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -1772,7 +1772,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-2277b3d17f5b — Pilz source-stage result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json`)
 
 Summary: Connects source gate andexecuted PDF-vector extraction alternative.
 
@@ -1784,7 +1784,7 @@ Documents: research/sources/round-26/relay-sources.json.
 
 ## SRC-228e61d4e7a6 — Resistor source gate result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json`)
 
 Summary: Existing source-readiness code reports NEEDS_INPUT for ceramic substrate thickness; source-backed dimensions are retained for later dependent geometry.
 
@@ -1796,7 +1796,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-22b94e3ef160 — Caster angle-setting pin (C019) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c019-caster-angle-setting-pin.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Retained fixed-setting arm proposal; original kind pin component geometry input. Detailed geometry review belongs to its component iteration.
 
@@ -1808,7 +1808,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-22d386b03b6c — Front attachment support plate (P08) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p08-front-attachment-support-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: attachments; Front mount proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -1832,7 +1832,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-234298cb79b4 — P01 p01-build-03 — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/result.json`)
 
 Summary: p01-build-03 result.json: Observed attempt state BUILT_REOPENED_FEATURE_CHECK_REQUIRED; Read/query reopened SAB feature geometry and repeat the source-linked dimension checks; investigate zero native bounds alongside nonzero mesh and visible geometry.
 
@@ -1844,7 +1844,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-23588c0d99a2 — SKF iteration — native-query.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json`)
 
 Summary: Original document74 query identifies ten actual solid handles before feature checks and selective revision.
 
@@ -1868,7 +1868,7 @@ Documents: research/sources/round-10/tube-corner-sources.json, research/tube-cor
 
 ## SRC-243b037b93ab — CAD and skills assessment
 
-Original source: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md)
+Original source: [${MODELING_ROOT}/research/cad-and-skills.md](../cad-and-skills.md)
 
 Summary: Inspected in this research turn; records OCS baseline, CAD representation tradeoffs and alternate authoring backends.
 
@@ -1880,7 +1880,7 @@ Documents: research/sources/round-02/domain-sources.json, research/sources/round
 
 ## SRC-24ffaaff970e — BMW cell supervision circuit (C053) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c053-bmw-cell-supervision-circuit.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; BMW; original kind OEM component reference. Detailed geometry review belongs to its component iteration.
 
@@ -1904,7 +1904,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/workflows
 
 ## SRC-25413f03b05d — source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source-job.json`)
 
 Summary: Pins C043 target identity to reviewed source metadata andnames required exact geometry/depth revision inputs.
 
@@ -1916,7 +1916,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-257da81e1cf3 — repair_c045.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/repair_c045.py`)
 
 Summary: Applied existing tested placement helper to27 native inserts andchecked nine unchanged solid definitions.
 
@@ -1928,7 +1928,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-25f843f2d67d — Kelly archive member 48VCCW.pdf
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf`)
 
 Summary: Retained original48V counterclockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.
 
@@ -1940,7 +1940,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-261ec2be4f36 — Body-linked native SAB feature adapter
 
-Original source: [/home/leo/projects/3dmodeling/scripts/native_acis.py](/home/leo/projects/3dmodeling/scripts/native_acis.py)
+Original source: [${MODELING_ROOT}/scripts/native_acis.py](../../scripts/native_acis.py)
 
 Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.
 
@@ -1952,7 +1952,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json, research/so
 
 ## SRC-2626ebf073f7 — Pilz source-readiness result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json`)
 
 Summary: Existing gate returns NEEDS_INPUT forterminal bank andrail-clip interface geometry.
 
@@ -1964,7 +1964,7 @@ Documents: research/sources/round-26/relay-sources.json.
 
 ## SRC-26397bd1f7c2 — P01 p01-build-01 — rail-schema-3.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-3.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-3.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-3.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-3.json`)
 
 Summary: p01-build-01 rail-schema-3.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -1976,7 +1976,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-26613ca599a7 — Main frame crossmember nominal native model
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg`)
 
 Summary: New DWG2018 contains one hollow260mm crossmember with proposed40x40x3mm section and standard-calculation outer6mm/inner3mm corner radii. Native pre-save/reopened dimensions, persistence and inspected views pass.
 
@@ -2012,7 +2012,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-27385cb38c95 — Initial delegated Orion metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition-initial.json`)
 
 Summary: Preserves initial assertion that retained manual includes48/12-30,subsequently contradicted by coordinator extraction;original download hashes retained.
 
@@ -2024,7 +2024,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-2752296f9685 — point-03-operations
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](../action-audit/point-03-operations.json)
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -2048,7 +2048,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-27d968161e9f — OCS window-restore source
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/sys.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/sys.rs)
+Original source: ${OCS_ROOT}/src/sys.rs (`${OCS_ROOT}/src/sys.rs`)
 
 Summary: Local source inspected for capture window-restore behavior;no application source edits made.
 
@@ -2060,7 +2060,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-280cbbe6b531 — SKF page4 fitting and slot image
 
-Original source: [/tmp/opencode/skf-sy20tf-technical-page4.png](/tmp/opencode/skf-sy20tf-technical-page4.png)
+Original source: ${TEMP_ROOT}/opencode/skf-sy20tf-technical-page4.png (`${TEMP_ROOT}/opencode/skf-sy20tf-technical-page4.png`)
 
 Summary: Actual inspected primary page image confirms slotlength20.5mm,locking-sidefaceoffset18.3mm and45degree,2mmoffset greasefitting with7mmhex and6.5mmhead.
 
@@ -2096,7 +2096,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-2945aa520dc5 — Authorized action-audit execution record
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/execution-record.md](/home/leo/projects/3dmodeling/research/action-audit/execution-record.md)
+Original source: [${MODELING_ROOT}/research/action-audit/execution-record.md](../action-audit/execution-record.md)
 
 Summary: Observed dispatch, actual identity reports, review dispositions, scope finding and source-registration integration for this authorized documentation batch.
 
@@ -2108,7 +2108,7 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 ## SRC-296ae586672b — persistence.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/persistence.json`)
 
 Summary: Recovered original reopen request withmatching savehash,manifest andzero-error audit.
 
@@ -2120,7 +2120,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-29c790174a58 — Robot tow-ball support plate (P07) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p07-robot-tow-ball-support-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -2132,7 +2132,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-29e05b3b3047 — OpenCADStudio kernel body path note
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md)
+Original source: ${OCS_ROOT}/docs/cadkernel-body-path.md (`${OCS_ROOT}/docs/cadkernel-body-path.md`)
 
 Summary: Local OCS design/implementation note describes supported kernel-body paths and history limitations; it does not establish STEP analytic-surface export.
 
@@ -2144,7 +2144,7 @@ Documents: research/sources/round-02/cad-sources.json, research/sources/round-05
 
 ## SRC-2a3f02ebc764 — reopened-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-checkpoint.json`)
 
 Summary: Saved/reopened document87 identity andgeometry revision.
 
@@ -2168,7 +2168,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-2aa9c1b61444 — start_c045.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/start_c045.py`)
 
 Summary: Validated source-covered C045 feature contract,created isolated native document86 andimported pinned STEP.
 
@@ -2180,7 +2180,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-2ad28cfa19ba — Point 06 — software and API review
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-software.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-06-software.md](../action-audit/reviews/point-06-software.md)
 
 Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -2204,7 +2204,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-2b834d92a1e6 — Point 06 — Building and robot structure and properties
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](../action-audit/point-06-building-and-robot.md)
 
 Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -2228,7 +2228,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-2bdc86cc68a8 — Checked Sumitomo driver derivative
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg`)
 
 Summary: Separate native derivative retains116 solids/eight text labels and corrects connector-shell span to116.7mm by moving the complete X2 group -0.15mm in X; saved141 checks pass.
 
@@ -2240,7 +2240,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-2c5893d8360b — ME0907 additional exterior-source findings
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md`)
 
 Summary: Bounded delegated review identifies the direct manufacturer drawing, Kelly archive variant, EVEA CAD-on-request page and cover150-011 with three Phillips screws. Exact URLs and download outcomes are retained. Actual agent identity unavailable.
 
@@ -2252,7 +2252,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-2cea52720940 — P01 p01-build-03 — reopened-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checks.json`)
 
 Summary: p01-build-03 reopened-checks.json: Feature/source check result UNKNOWN; Reopened record stores SAB binary; this feature reader supports SAT text
 
@@ -2276,7 +2276,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-2d09726ce736 — Reviewed motor dimensions and feature associations
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md`)
 
 Summary: Source-image review corrects the two mounting group associations, identifies 30 mm shaft-thread depth and 19.58 mm keyway section distance, and retains source tolerances and server-date attribution.
 
@@ -2288,7 +2288,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-2d331dacc4f0 — Execution plan: define one workflow point at a time
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/plan.md](../action-audit/plan.md)
 
 Summary: Authorized documentation method: fifteen fields per action, alternative software/agent modes, evidence-based merges, feature-specific accuracy and local-compute-first definition order.
 
@@ -2300,7 +2300,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-2d407c9d997c — point-06-operations
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](../action-audit/point-06-operations.json)
 
 Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -2324,7 +2324,7 @@ Documents: research/action-audit/point-01-model-brief.md, research/action-audit/
 
 ## SRC-2d95a53e76b4 — cad-r02.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r02.md](../workflows/details/cad-r02.md)
 
 Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -2360,7 +2360,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-2e1174c2d05e — activated-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/activated-isometric.png`)
 
 Summary: Actual converter capture attempt activated-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
 
@@ -2372,7 +2372,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-2e711cc8d780 — P01 p01-build-01 — rail-capabilities.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-capabilities.json`)
 
 Summary: p01-build-01 rail-capabilities.json: Retained native response with fields api, concurrency, editor, geometry, ok, operations, records; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -2384,7 +2384,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-2e8d8f25e086 — p02-source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -2408,7 +2408,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-2f10709cdd89 — Schneider XB5AS8445 emergency button (C049) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c049-schneider-xb5as8445-emergency-button.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Local stop equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -2420,7 +2420,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-2f413e970d01 — P01 p01-build-02 — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/result.json`)
 
 Summary: p01-build-02 result.json: Observed attempt state FAIL; Retains the definitive native subtraction error and the preserved recovery context.
 
@@ -2430,9 +2430,9 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 <a id="src-2fad977d4fe9"></a>
 
-## SRC-2fad977d4fe9 — /home/leo/projects/3dmodeling/research/workflows/cad-paths.json
+## SRC-2fad977d4fe9 — ${MODELING_ROOT}/research/workflows/cad-paths.json
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/cad-paths.json](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json)
+Original source: [${MODELING_ROOT}/research/workflows/cad-paths.json](../workflows/cad-paths.json)
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
@@ -2444,7 +2444,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/sources/r
 
 ## SRC-2fe2fa4714a1 — Local Python 3.14 decimal interface source
 
-Original source: [/usr/lib/python3.14/decimal.py](/usr/lib/python3.14/decimal.py)
+Original source: ${SYSTEM_ROOT}/usr/lib/python3.14/decimal.py (`${SYSTEM_ROOT}/usr/lib/python3.14/decimal.py`)
 
 Summary: Decimal interface source inspected by software reviewer; official decimal documentation separately supports exact string construction.
 
@@ -2468,7 +2468,7 @@ Documents: research/action-audit/reviews/point-06-designer.md, research/sources/
 
 ## SRC-3083e6298cf7 — Driver iteration — source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job.json`)
 
 Summary: Current source job pins15 manufacturer/reconstruction expectations, exact116-part handle mapping and explicit housing structure-only method; builder evidence uses durable retained copy.
 
@@ -2480,7 +2480,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-30936b6bad80 — P01 p01-build-03 — reopened-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-records.json`)
 
 Summary: p01-build-03 reopened-records.json: 1 native entity records in document 71, revision 0; stores exact geometry encoding and properties for interpretation independently of PASS labels.
 
@@ -2492,7 +2492,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-30ccd7c0d9d0 — ME0907 source drawing render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png`)
 
 Summary: Rendered original sheet inspected for front/side/section associations, exterior slots, terminals, connectors and source notes.
 
@@ -2504,7 +2504,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-3126762ba53b — cad-workflow-findings.md — recorded_execution_summary
 
-Original source: [/home/leo/projects/ferme/skills/cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md)
+Original source: ${FERME_ROOT}/skills/cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`)
 
 Summary: OCS 2026.42 component constructions, import/save results, failed requests and component-specific recoveries. Applicability: Claims are attributed to the retained reports/session identifiers; raw session replay is a separate result.
 
@@ -2516,7 +2516,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json, research
 
 ## SRC-3161922d5c21 — P01 p01-build-01 — readiness-r02.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/readiness-r02.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/readiness-r02.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/readiness-r02.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/readiness-r02.json`)
 
 Summary: p01-build-01 readiness-r02.json: Retained native response with fields job_id, part_id, part_name, state, questions, source_observations, meaning; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -2528,7 +2528,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-31664957c5f6 — imported-blocks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-blocks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-blocks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-blocks.json`)
 
 Summary: Initialblockdefinitionsandmembershipincludingroot,base,cover,lock,feetandplate.
 
@@ -2540,7 +2540,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-319fc05dec23 — corrected-records-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-0.json`)
 
 Summary: corrected native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -2552,7 +2552,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-31a38faa2037 — Point 07 designer notes — reconstruction procedures
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-designer.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-07-designer.md](../action-audit/reviews/point-07-designer.md)
 
 Summary: Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -2576,7 +2576,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-31ce89d89be0 — build_leaf_gen2.py — existing_component_code
 
-Original source: [/tmp/opencode/build_leaf_gen2.py](/tmp/opencode/build_leaf_gen2.py)
+Original source: ${TEMP_ROOT}/opencode/build_leaf_gen2.py (`${TEMP_ROOT}/opencode/build_leaf_gen2.py`)
 
 Summary: top and staged recovery functions reconstruct shell/terminal features; finish checks and saves the component. Applicability: Component-specific dimensions and staged resumption; imports shared battery/item/wrapper/SAT modules.
 
@@ -2588,7 +2588,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json, research
 
 ## SRC-31e3c7199ce2 — Anderson SB50 6331G5 connector assembly (C038) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c038-anderson-sb50-6331g5-connector-assembly.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge port proposal; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -2600,7 +2600,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-31f850cbf25b — step-source.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-source.json`)
 
 Summary: Actual import dialog exact family-STEP path binding.
 
@@ -2624,7 +2624,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-32250745fda8 — saved-assembly-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/saved-assembly-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/saved-assembly-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/saved-assembly-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/saved-assembly-checks.json`)
 
 Summary: 29passingchecks:16sourceplacements,12definitionpointsetsandnestedinstancepreservation.
 
@@ -2636,7 +2636,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-32a6140acc3a — reopened-records-18.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-18.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-18.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-18.json`)
 
 Summary: reopenednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -2660,7 +2660,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-334ea37bde4d — build_bmw_i3_94ah.py — existing_component_code
 
-Original source: [/tmp/opencode/build_bmw_i3_94ah.py](/tmp/opencode/build_bmw_i3_94ah.py)
+Original source: ${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py (`${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py`)
 
 Summary: build/accessories/cable_done/finish reconstruct exterior parts and swept cable with checks. Applicability: Component-specific dimensions, paths and cable pose; imports shared battery/item/wrapper/SAT modules.
 
@@ -2708,7 +2708,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-33c6833035f2 — P01 p01-build-03 — pre-save-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-checks.json`)
 
 Summary: p01-build-03 pre-save-checks.json: Feature/source check result PASS; 5 retained check groups with document/revision evidence.
 
@@ -2732,7 +2732,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-34471858a5cb — 50mm2 main cable geometry (C059) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c059-50mm2-main-cable-geometry.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Existing main cable example; original kind source cable reference. Detailed geometry review belongs to its component iteration.
 
@@ -2756,7 +2756,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-348e931a03fa — P01 p01-build-01 — schema-discovery-findings.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/schema-discovery-findings.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/schema-discovery-findings.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/schema-discovery-findings.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/schema-discovery-findings.json`)
 
 Summary: p01-build-01 schema-discovery-findings.json: Retained native response with fields evidence, document_context, observations; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -2768,7 +2768,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-34adb5d3d452 — reopened-records-12.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-12.json`)
 
 Summary: reopened native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -2780,7 +2780,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-34ed7ccfd827 — Point 02 — Existing components and CAD files to inspected reusable inputs
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md](../action-audit/point-02-component-reuse.md)
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -2816,7 +2816,7 @@ Documents: research/sources/round-10/tube-corner-sources.json.
 
 ## SRC-35a34c26c8e5 — P02 crossmember — reopened-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-records.json`)
 
 Summary: Raw native SAB body in reopened document73 supplies independent persisted-geometry observations.
 
@@ -2840,7 +2840,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-360ae57eba52 — Driver iteration — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/ocs-journal.jsonl`)
 
 Summary: Guarded request history preserves original open/reopen polling-bound results, same-ID recovery, whole-X2 translation, verified save and actual captures.
 
@@ -2864,7 +2864,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-36ec74f82716 — readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/readiness.json`)
 
 Summary: Existing gate returns NEEDS_INPUT for exact48/12 mounting/terminal geometry andhousing depth revision.
 
@@ -2888,7 +2888,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-37228572b45c — Saved ME0907 analytic geometry observations
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json`)
 
 Summary: 18 passing checks read actual saved surfaces and topology: cylinder axes/radii, individual hole-bottom centres, end stations, keyway planes/rounded end and three closed connected bodies.
 
@@ -2912,7 +2912,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-3832553f9cb5 — 02-fabrication-requirements.md
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/physical-build/02-fabrication-requirements.md](/home/leo/projects/ferme/engineering/module-development/physical-build/02-fabrication-requirements.md)
+Original source: ${FERME_ROOT}/engineering/module-development/physical-build/02-fabrication-requirements.md (`${FERME_ROOT}/engineering/module-development/physical-build/02-fabrication-requirements.md`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -2924,7 +2924,7 @@ Documents: research/sources/round-09/component-execution-sources.json.
 
 ## SRC-3844fad0d2f9 — Orion Jr2 16cell BMS (C027) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c027-orion-jr2-16cell-bms.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Leaf main bank; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -2936,7 +2936,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-390f5c71910b — Existing Victron acquisition provenance
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv`)
 
 Summary: Retains the earlier source URLs,byte counts,digests and reported retrieval timestamps for exact STEP,PDF,manual and product page. Copied unchanged from the concurrent FERME provenance file.
 
@@ -2948,7 +2948,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-393afe62bdcb — capture-identity-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/capture-identity-checks.json`)
 
 Summary: Failed visual identity:previous enclosure remains visible andall new ISO/TOP/activate/REGEN image hashes are identical.
 
@@ -2960,7 +2960,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-39a648fd2c2a — rec-r03.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r03.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r03.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r03.md](../workflows/details/rec-r03.md)
 
 Summary: Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -2972,7 +2972,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-39a675ae7e31 — P01 p01-build-01 — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/ocs-journal.jsonl`)
 
 Summary: p01-build-01 append-only request journal retains 52 events across 22 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
 
@@ -2996,7 +2996,7 @@ Documents: research/sources/round-10/tube-corner-sources.json, research/tube-cor
 
 ## SRC-39d84cf3ce70 — Driver iteration — corrected-presave-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/corrected-presave-records.json`)
 
 Summary: Actual post-translation records preserve the complete moved X2 group and all93 unaffected entity properties before save.
 
@@ -3044,7 +3044,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-3a1449ac8a6c — Converter execution report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c043-c045-converters.md](/home/leo/projects/3dmodeling/execution/c043-c045-converters.md)
+Original source: [${MODELING_ROOT}/execution/c043-c045-converters.md](../../execution/c043-c045-converters.md)
 
 Summary: Explains exact C045 CAD,39 checks,failed views,applied procedure,C043 source gate andretained manual correction.
 
@@ -3068,7 +3068,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-3a866415e567 — P01 p01-build-03 — view-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/view-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/view-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/view-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/view-journal.jsonl`)
 
 Summary: p01-build-03 append-only request journal retains 28 events across 5 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
 
@@ -3128,7 +3128,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-3b89f4bc986b — Leaf iteration — native-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json`)
 
 Summary: Actual eight-solid saved SAB records provide transformed shell vertices, analytic surfaces and terminal geometry for 29 source-bound checks.
 
@@ -3152,7 +3152,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-3bc1484f7601 — P02 crossmember — source-job-r02.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/source-job-r02.json`)
 
 Summary: Immutable P02 source revision2 pins proposed section/length, standard calculation radii,340mm outside frame width, source hashes and explicit local midpoint datum mapping.
 
@@ -3188,7 +3188,7 @@ Documents: research/action-audit/findings.md, research/action-audit/point-07-rec
 
 ## SRC-3c5050fd6ac5 — Driver iteration — reopened-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-checks.json`)
 
 Summary: All141 saved native checks pass, with housing graph/vertex method separated from analytic measurement methods.
 
@@ -3212,7 +3212,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-3d1d4ee7af09 — P01 p01-build-01 — document-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/document-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/document-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/document-checkpoint.json`)
 
 Summary: p01-build-01 document-checkpoint.json: Binds partial/native stage to document 68, revision 0 and named part handles {}; supports inspected recovery.
 
@@ -3236,7 +3236,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-3d2c6bb76580 — Main-frame rail native execution report
 
-Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+Original source: [${MODELING_ROOT}/execution/p01-rail-build.md](../../execution/p01-rail-build.md)
 
 Summary: Records the source-first action registration, three native attempts, successful hollow-section dimensions and save/reopen identity, captured views, applied selection/script/skill improvements,28 passing helper tests and the next binary-feature readback issue.
 
@@ -3248,7 +3248,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-3d593dd6ed4a — README
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/README.md)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/README.md](../action-audit/implementation-queue/README.md)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -3260,7 +3260,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json, research
 
 ## SRC-3d8897df5de5 — Leaf iteration — reopened-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png`)
 
 Summary: Inspected current isometric image shows both shell outlines, pressed features, corner mounts and three contacts corresponding to the retained source illustration.
 
@@ -3272,7 +3272,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-3d8ba9ae669c — sequence.md
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/sequence.md](/home/leo/projects/3dmodeling/research/action-audit/sequence.md)
+Original source: [${MODELING_ROOT}/research/action-audit/sequence.md](../action-audit/sequence.md)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -3284,7 +3284,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-3d8e9cd2ace9 — ngv064_ocs.py — existing_component_code
 
-Original source: [/tmp/opencode/ngv064_ocs.py](/tmp/opencode/ngv064_ocs.py)
+Original source: ${TEMP_ROOT}/opencode/ngv064_ocs.py (`${TEMP_ROOT}/opencode/ngv064_ocs.py`)
 
 Summary: read/write/step, checkpoint, revolve_z, cylinder and subtract wrap native requests and stepped command state. Applicability: Fixed session, temporary paths/prefix allowlist; module import selects a descriptor; accepted/running polling is unbounded; write treats waiting_input as failure, while step permits it.
 
@@ -3308,7 +3308,7 @@ Documents: research/reconstruction.md, research/user-supplied-links.md.
 
 ## SRC-3e48dbdca207 — bmw-i3-94ah-native-checks.json — recorded_check_results
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json (`${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json`)
 
 Summary: Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.
 
@@ -3332,7 +3332,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-3e6c1657a06b — rec-r02.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r02.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r02.md](../workflows/details/rec-r02.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -3344,7 +3344,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 ## SRC-3ea30e7b5209 — Documentary verification method
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/verification-method.md](/home/leo/projects/3dmodeling/research/action-audit/verification-method.md)
+Original source: [${MODELING_ROOT}/research/action-audit/verification-method.md](../action-audit/verification-method.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -3356,7 +3356,7 @@ Documents: research/sources/round-05/audit-index-sources.json.
 
 ## SRC-3eaf1eca263a — Main frame longitudinal rail proposal
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md`)
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
@@ -3380,7 +3380,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-3f924501d4f4 — Saved battery isometric view
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png`)
 
 Summary: Actual reopened exterior capture shows seated terminals,lid,casing ribs,side handle recess and mounting tabs; source geometry and insertion values retain independent checks.
 
@@ -3392,7 +3392,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-3fc1850b2202 — Saved converter hash before recheck
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json`)
 
 Summary: Pins the existing native DWG path and hash before current-view capture, for preservation comparison.
 
@@ -3416,7 +3416,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-402780a7bc37 — Point 07 primary-source check: photographs, depth and learned reconstruction
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-sources.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-07-sources.md](../action-audit/reviews/point-07-sources.md)
 
 Summary: Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -3440,7 +3440,7 @@ Documents: research/action-audit/reviews/point-07-designer.md, research/action-a
 
 ## SRC-407da05c0cd4 — Resistor pinned source inputs
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json`)
 
 Summary: Pins body length,height and lead pitch to the original PDF hash and names ceramic thickness as the required geometry input.
 
@@ -3452,7 +3452,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-409fb1abfc4f — SKF page3 dimensions image
 
-Original source: [/tmp/opencode/skf-sy20tf-technical-page3.png](/tmp/opencode/skf-sy20tf-technical-page3.png)
+Original source: ${TEMP_ROOT}/opencode/skf-sy20tf-technical-page3.png (`${TEMP_ROOT}/opencode/skf-sy20tf-technical-page3.png`)
 
 Summary: Actual inspected primary page image confirms A1=21mm crown and A=32mm base with housing/mounting/shaft dimensions; supplies visual attribution for original model failure.
 
@@ -3464,7 +3464,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-40beea4e687b — Victron Orion24-12 converter (C045) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c045-victron-orion24-12-converter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; BT; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -3476,7 +3476,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-40fd07a56db7 — Retained EVShop bare-terminal module illustration
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg`)
 
 Summary: Actual source image inspected against current top, terminal-end and isometric views. Pressed pan/ribs, four corner mounts and three bare terminal pedestals identify the exercised external reconstruction.
 
@@ -3488,7 +3488,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-410617a348da — Fibox side-section detail
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-side-detail.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-side-detail.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-side-detail.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-side-detail.png`)
 
 Summary: Derivedsectioncropretains152.5bodydepth,10footprojection,wall3.8 andcover3.5leaders.
 
@@ -3500,7 +3500,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-41482c223014 — Ferme part manifest
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json](/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json (`${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json`)
 
 Summary: Existing 103 part records and their identity, route, dependency, source and model-reference fields; proposed catalogue seed.
 
@@ -3524,7 +3524,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/sources/r
 
 ## SRC-41a47f716081 — prior-model-hashes.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/prior-model-hashes.json`)
 
 Summary: Pre-build hashes of24 saved DWGs used to confirm existing CAD preservation.
 
@@ -3560,7 +3560,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-427835ebb48d — Proposed skills linked to reviewed action procedures
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md)
+Original source: [${MODELING_ROOT}/research/action-audit/skill-to-actions.md](../action-audit/skill-to-actions.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -3584,7 +3584,7 @@ Documents: research/action-audit/reviews/point-06-designer.md, research/action-a
 
 ## SRC-4285b32bca80 — Executed manufacturer assembly import procedure
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md](/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md](../../skills/component-cad/references/manufacturer-assembly.md)
 
 Summary: Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.
 
@@ -3620,7 +3620,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-43041e997990 — Existing Victron dimension drawing render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png`)
 
 Summary: Retained render inspected for exact shared variant,top/front/side arrangement,terminal and casing dimensional labels.
 
@@ -3632,7 +3632,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-43744e9db2f6 — Front attachment crossmember doubler (P08D) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p08d-front-attachment-crossmember-doubler.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: attachments; Front interface support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -3656,7 +3656,7 @@ Documents: research/action-audit/point-04-raster-drawings.md, research/action-au
 
 ## SRC-43abef0cc8e8 — reopened-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-isometric.png`)
 
 Summary: Actualpersistedisometricviewshowsassembledenclosureandfourfeet.
 
@@ -3668,7 +3668,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-441a0f0e29e3 — Blickle LS-VLE250K caster reference (C017) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c017-blickle-ls-vle250k-caster-reference.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Caster reference alternative; original kind project reference envelope. Detailed geometry review belongs to its component iteration.
 
@@ -3692,7 +3692,7 @@ Documents: research/domains-and-components.md, research/sources/round-03/domain-
 
 ## SRC-4489f34f70ef — Driver iteration — audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/audit.json`)
 
 Summary: Original native audit reports116 solids/eight text labels, zero errors/warnings and original file SHA.
 
@@ -3704,7 +3704,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-44cb08ec63a1 — FERME save/reopen implementation reused by rail
 
-Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/verification.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/verification.py)
+Original source: ${FERME_ROOT}/skills/cad-construction/scripts/cadtools/verification.py (`${FERME_ROOT}/skills/cad-construction/scripts/cadtools/verification.py`)
 
 Summary: Existing save_reopen checks audit manifests, dropped entities, output hash and reopened file identity. P01 passed those checks; its detailed reopened feature check separately reports SAB encoding and zero bounds beside a visible nonzero-volume mesh.
 
@@ -3716,7 +3716,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-4576a97efe3e — Battery removable hold-down (P20H) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p20h-battery-removable-hold-down.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Separate geometry per battery route; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -3728,7 +3728,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-45aee6e7fdff — Leaf iteration — readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json`)
 
 Summary: All 14 required feature values and observed source hashes pass SOURCE_READY before geometry checks.
 
@@ -3740,7 +3740,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-46011fa591f5 — cad-r07.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r07.md](../workflows/details/cad-r07.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -3764,7 +3764,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-4658b352c90f — point-03-web-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-03-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-03-web-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-05/point-03-web-sources.json](round-05/point-03-web-sources.json)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -3776,7 +3776,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-465ffa6730dd — P01 p01-build-01 — rail-record-schema-1.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-1.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-1.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-1.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-1.json`)
 
 Summary: p01-build-01 rail-record-schema-1.json: Retained native response with fields annotation_scale_value, current_layer, current_text_style, insertion_units, ltscale, ok, pdmode; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -3788,7 +3788,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-469662006b7c — SKF iteration — reopened-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json`)
 
 Summary: All62 source-bound native checksPASS in derivative document75 after save/reopen, including corrected21mm crown.
 
@@ -3800,7 +3800,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-469daa8796cd — DXF implementation execution report
 
-Original source: [/home/leo/projects/3dmodeling/execution/dxf-inspection.md](/home/leo/projects/3dmodeling/execution/dxf-inspection.md)
+Original source: [${MODELING_ROOT}/execution/dxf-inspection.md](../../execution/dxf-inspection.md)
 
 Summary: Records two actual OCS fixture inspections, eight software tests, reused library/source hashing, exact action scope and agent/software responsibility boundaries.
 
@@ -3812,7 +3812,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-46a693242819 — Rounded hollow-section OCS helper
 
-Original source: [/home/leo/projects/3dmodeling/scripts/rounded_tube.py](/home/leo/projects/3dmodeling/scripts/rounded_tube.py)
+Original source: [${MODELING_ROOT}/scripts/rounded_tube.py](../../scripts/rounded_tube.py)
 
 Summary: Source-bound nominal tube builder reuses FERME guarded runtime and geometry modules. The live P01 run established explicit selection readback and bounded-area extrusion; native pre-save checks pass. The reader returns UNKNOWN for reopened SAB records and preserves their raw bytes. Solid and planar subtraction attempts retain their failed routes.
 
@@ -3824,7 +3824,7 @@ Documents: research/sources/round-11/rail-execution-sources.json, research/sourc
 
 ## SRC-46f27524d072 — Driver iteration — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/result.json`)
 
 Summary: DONE driver iteration records derivative SHA,141 saved checks, actual views, preserved original and shared-function improvement with50 tests.
 
@@ -3836,7 +3836,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-47301af50b05 — corrected-records-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-0.json`)
 
 Summary: correctednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -3848,7 +3848,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-47401a0e9609 — Controller thermal mounting plate (P21) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p21-controller-thermal-mounting-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; One variant per controller; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -3860,7 +3860,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-4740401a7d90 — Initial Orion source transcription
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes-initial.md`)
 
 Summary: Records delegated product mapping,reported price-list row,source ranges andfamily applicability before coordinator manual review.
 
@@ -3872,7 +3872,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-474e58a9c0ea — plan_c045.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/plan_c045.py`)
 
 Summary: Compared28 source frames withnative inserts andgenerated27 unique reversed-placement corrections.
 
@@ -3896,7 +3896,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-484ebea9c7f7 — P02 crossmember — pre-save-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-checks.json`)
 
 Summary: Five source-linked native dimension check groups PASS for the260mm crossmember before saving.
 
@@ -3932,7 +3932,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-49518696c006 — Battery native save and same-ID reopen recovery
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json`)
 
 Summary: Saved file hash and audit manifest match the reopened document83; native audit reports zero errors/warnings. Original reopen was recovered after repeated bounded pending checks.
 
@@ -3944,7 +3944,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-4956c1c938ca — ME0907 pinned feature inputs
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`)
 
 Summary: Binds 19 dimensions to original PDF/hash/locators, mm frame and mechanical-interface representation. Separately labels cutting overrun and reconstructed R2.39 mm keyway end.
 
@@ -3968,7 +3968,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-49f830258969 — Gland variant and drawn-feature review
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md`)
 
 Summary: Separates exactLG page fromWH datasheet, assigns explicit dimension labels,retains variable length/clamp range meanings and actual CAD acquisition outcomes.
 
@@ -3992,7 +3992,7 @@ Documents: research/action-audit/reviews/point-06-software.md, research/action-a
 
 ## SRC-4a3c376f9a29 — P01 p01-build-01 — rail-schema-1.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-1.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-1.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-1.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-1.json`)
 
 Summary: p01-build-01 rail-schema-1.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.
 
@@ -4028,7 +4028,7 @@ Documents: research/action-audit/reviews/point-06-software.md, research/action-a
 
 ## SRC-4afcbdb352d9 — skills-findings.md
 
-Original source: [/home/leo/projects/energy/eoliennes/research/cad-workflow/skills-findings.md](/home/leo/projects/energy/eoliennes/research/cad-workflow/skills-findings.md)
+Original source: ${EOLIENNES_ROOT}/research/cad-workflow/skills-findings.md (`${EOLIENNES_ROOT}/research/cad-workflow/skills-findings.md`)
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
@@ -4040,7 +4040,7 @@ Documents: research/local-baseline.md, research/sources/local-evidence.json.
 
 ## SRC-4b50dfc03e47 — imported-blocks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-blocks.json`)
 
 Summary: Initial source-covered converter block hierarchy,including heatsink,terminals,cover andhardware.
 
@@ -4052,7 +4052,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-4ba8cc4436be — imported-records-18.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-18.json`)
 
 Summary: importednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -4064,7 +4064,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-4bd0fe0b900a — Local OCS automation selection implementation
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/app/automation.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/automation.rs)
+Original source: ${OCS_ROOT}/src/app/automation.rs (`${OCS_ROOT}/src/app/automation.rs`)
 
 Summary: The local select implementation deselects all and selects supplied handles only when clear is not true. This source explains the rail’s observed empty selection; live readback confirms the adapter’s corrected nonempty pick.
 
@@ -4088,7 +4088,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-4cb8874a1a39 — pre-save-assembly-measurements.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/pre-save-assembly-measurements.json`)
 
 Summary: 27 source-corrected instance paths andactual pre-save point geometry.
 
@@ -4100,7 +4100,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-4cbe441f37a2 — cad-r04.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r04.md](../workflows/details/cad-r04.md)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -4112,7 +4112,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-4cc49dfadc47 — Upper deck panel (P04) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p04-upper-deck-panel.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p04-upper-deck-panel.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -4136,7 +4136,7 @@ Documents: research/action-audit/reviews/point-07-sources.md, research/sources/r
 
 ## SRC-4d2254355a66 — P01 p01-build-01 — rail-first-measure.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-measure.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-measure.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-measure.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-measure.json`)
 
 Summary: p01-build-01 rail-first-measure.json: Retained native response with fields document_id, geometry_revision, measurements, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -4148,7 +4148,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-4d342aad4f2b — imported-records-12.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-12.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-12.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-12.json`)
 
 Summary: importednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -4160,7 +4160,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-4d3746ad7211 — ezdxf ACIS body/entity reference definitions
 
-Original source: [/tmp/3dmodeling-native-reader/ezdxf/acis/entities.py](/tmp/3dmodeling-native-reader/ezdxf/acis/entities.py)
+Original source: ${NATIVE_READER_ROOT}/ezdxf/acis/entities.py (`${NATIVE_READER_ROOT}/ezdxf/acis/entities.py`)
 
 Summary: Body/lump/shell/face/coedge definitions describe parent and partner relationships. These existing definitions and the observed record layout guide the adapter’s body traversal and reciprocal partner checks.
 
@@ -4172,7 +4172,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-4d871dcad456 — P01 p01-build-01 — rail-schema-2.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-2.json`)
 
 Summary: p01-build-01 rail-schema-2.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.
 
@@ -4184,7 +4184,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-4d88a7d32b7f — Detailed point procedures and reviews
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-index.md](/home/leo/projects/3dmodeling/research/action-audit/point-index.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-index.md](../action-audit/point-index.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -4196,7 +4196,7 @@ Documents: research/sources/round-05/audit-index-sources.json.
 
 ## SRC-4dbc6baf3db1 — Point 07 visual and evidence review — photographs, depth and learned reconstruction
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-visual.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-07-visual.md](../action-audit/reviews/point-07-visual.md)
 
 Summary: Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -4208,7 +4208,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-4de79e2f8bfe — Caster joint spacer or bush (P05S) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p05s-caster-joint-spacer-or-bush.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -4220,7 +4220,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-4e6ff41dcd81 — P02 crossmember — view-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-journal.jsonl`)
 
 Summary: Retains guarded end/isometric camera commands and actual capture requests for the reopened crossmember.
 
@@ -4244,7 +4244,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-4eb42ece1132 — imported-records-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-0.json`)
 
 Summary: imported native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -4256,7 +4256,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-4f0c8d392a38 — component-work.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -4268,7 +4268,7 @@ Documents: research/sources/round-09/component-execution-sources.json, research/
 
 ## SRC-4f49d9c8767a — PRO-M ring to rim adapter (P14SM) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p14sm-pro-m-ring-to-rim-adapter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-M; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -4304,7 +4304,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-4fe9c9192b9b — SB50 source-stage report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c038-sb50-source.md](/home/leo/projects/3dmodeling/execution/c038-sb50-source.md)
+Original source: [${MODELING_ROOT}/execution/c038-sb50-source.md](../../execution/c038-sb50-source.md)
 
 Summary: Documents exactkit,reviewed dimensions,current sourcegate,actual source actions andmodel identities.
 
@@ -4316,7 +4316,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-4ff31c35be7c — Battery guarded native journal
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl`)
 
 Summary: Records isolated document82,successful STEP format/path dialog fields,original import/capture/open identities,13 compare-and-set placement edits,verified save and model views.
 
@@ -4340,7 +4340,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-502c2eec4519 — source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/source-job.json`)
 
 Summary: Pre-import SOURCE_READY contract pins exact C045 drawing row andfamilySTEP hashes,mount labels andsource frame.
 
@@ -4352,7 +4352,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-5042379f8832 — harness-findings.md
 
-Original source: [/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md](/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md)
+Original source: ${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md (`${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md`)
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
@@ -4364,7 +4364,7 @@ Documents: research/local-baseline.md, research/sources/local-evidence.json, res
 
 ## SRC-50b834655ede — item_ocs_parts.py — existing_component_code
 
-Original source: [/tmp/opencode/item_ocs_parts.py](/tmp/opencode/item_ocs_parts.py)
+Original source: ${TEMP_ROOT}/opencode/item_ocs_parts.py (`${TEMP_ROOT}/opencode/item_ocs_parts.py`)
 
 Summary: extrude, rotate, move, combine and tag provide explicit source-labelled native constructions. Applicability: Imports native-wrapper; dimensions and several recipes are ITEM-specific.
 
@@ -4388,7 +4388,7 @@ Documents: research/action-audit/point-04-raster-drawings.md, research/action-au
 
 ## SRC-5149721d596f — SPP ZSK0750 trailer coupling (C024) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c024-spp-zsk0750-trailer-coupling.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind source coupling reference. Detailed geometry review belongs to its component iteration.
 
@@ -4400,7 +4400,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-518a5353a3f2 — Source-intake execution and scope report
 
-Original source: [/home/leo/projects/3dmodeling/execution/source-intake.md](/home/leo/projects/3dmodeling/execution/source-intake.md)
+Original source: [${MODELING_ROOT}/execution/source-intake.md](../../execution/source-intake.md)
 
 Summary: Records the new implementation, reused helpers, actual four-source capture, twelve tests, agent scope review and staged-publication design.
 
@@ -4412,7 +4412,7 @@ Documents: research/sources/round-17/source-intake-sources.json.
 
 ## SRC-51bc1eab5201 — Leaf iteration — header.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json`)
 
 Summary: Current OCS document header identifies millimetres for source-bound native-coordinate checks.
 
@@ -4424,7 +4424,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-51e2013a5b3c — neugart-ngv064-wheel-160-native.json — recorded_check_results
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json`)
 
 Summary: Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.
 
@@ -4436,7 +4436,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-5211764e8dfb — P02 crossmember — readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/readiness.json`)
 
 Summary: Required P02 feature coverage and all pinned source observations return SOURCE_READY before native construction.
 
@@ -4448,7 +4448,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-5219c6a1df9e — step-confirm.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/step-confirm.json`)
 
 Summary: Actual completed STEP import confirmation in the isolated converter document.
 
@@ -4484,7 +4484,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-5270d066fe0f — Reopened rail document-unit observation
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/document-header.json`)
 
 Summary: OCS header reports insertion_units4, millimetres, for the actual reopened rail document. This records the document coordinate unit independently from the ACIS header metadata.
 
@@ -4496,7 +4496,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-528c832b5179 — ME0907 acquisition response and hash
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json`)
 
 Summary: Records retained PDF path, HTTP status/content type and digest. The coordinator review classifies the retrieved_at field as copied server HTTP Date metadata.
 
@@ -4508,7 +4508,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-529bea09ca56 — Existing IFC-to-GLB provenance record
 
-Original source: [/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json](/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json)
+Original source: ${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json (`${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json`)
 
 Summary: Existing artifact pattern: source hashes, declared mm-to-m conversion, identity status, runtime and geometry mapping.
 
@@ -4520,7 +4520,7 @@ Documents: research/sources/round-02/domain-sources.json, research/sources/round
 
 ## SRC-52d0800bbbcf — Victron Orion48-24 converter (C044) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c044-victron-orion48-24-converter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; 44–51.2 V battery routes; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -4532,7 +4532,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-5336889bffab — Shared M6 mechanical-family source and model terms
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md`)
 
 Summary: Manufacturer family table and common M6 drawing support proposed shared exterior reuse. Records DigiKey60A STEP listing and concrete internal-use/employer-binding terms; no download control accepted.
 
@@ -4556,7 +4556,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-53588e078081 — Pilz vector-source observations
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json`)
 
 Summary: Records exact conversion command,source/output hashes,47 paths andunit/join interpretations requiring verification before3D.
 
@@ -4616,7 +4616,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-53b138cae8c2 — reopened-records-24.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-24.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-24.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-24.json`)
 
 Summary: reopenednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -4628,7 +4628,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-53baa792380a — SKF iteration — corrected-presave-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json`)
 
 Summary: Actual post-cut native SAT housing and preserved nineSABsolid records support21mm crown measurement and bytecomparison.
 
@@ -4664,7 +4664,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-5502cfd4bd53 — cad-r05.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r05.md](../workflows/details/cad-r05.md)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -4688,7 +4688,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-5537b62dfae7 — Sumitomo standard driver CH52308G10G10 (C012) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c012-sumitomo-standard-driver-ch52308g10g10.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo; original kind manufacturer outline reference. Detailed geometry review belongs to its component iteration.
 
@@ -4700,7 +4700,7 @@ Documents: research/sources/round-08/component-plan-sources.json, research/sourc
 
 ## SRC-5545b27ec2a0 — Cross-component feature-check procedure
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/shared-feature-checks.md](/home/leo/projects/3dmodeling/skills/component-cad/references/shared-feature-checks.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md](../../skills/component-cad/references/shared-feature-checks.md)
 
 Summary: Explains how an action becomes shared software using independent expectations and actual native measurements. Driver and Leaf mounting-hole patterns exercise one function with different dimensions.
 
@@ -4724,7 +4724,7 @@ Documents: research/action-audit/reviews/point-06-visual.md, research/sources/ro
 
 ## SRC-5561868d066a — Live reopened rail dimension and topology checks
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-checks.json`)
 
 Summary: Six native check groups PASS: source-defined section/length, X/Y walls, end planes, eight corner surfaces and one connected closed body with18 faces and reciprocal closed partners.
 
@@ -4736,7 +4736,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-556d712120d7 — P01 p01-build-03 — isometric-capture.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-capture.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-capture.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-capture.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-capture.json`)
 
 Summary: p01-build-03 isometric-capture.json: Completed original isometric capture response, recovered under the same request identity; ties the actual image to reopened document71 and camera state.
 
@@ -4772,7 +4772,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-56687776c458 — BT OEM169536 geared drive assembly (C013) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c013-bt-oem169536-geared-drive-assembly.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; BT; original kind donor assembly reference. Detailed geometry review belongs to its component iteration.
 
@@ -4784,7 +4784,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-566a523ea815 — OCS operation declaration source
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/mcp_ops.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/mcp_ops.rs)
+Original source: ${OCS_ROOT}/src/mcp_ops.rs (`${OCS_ROOT}/src/mcp_ops.rs`)
 
 Summary: Local source describes activate as switching an open drawing tab;current native activate executed andcompleted in this case.
 
@@ -4808,7 +4808,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-56b9d47414e7 — Point 04 — Raster drawings and interpreted dimensions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](../action-audit/point-04-raster-drawings.md)
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -4856,7 +4856,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-580683a4cc41 — Pilz dimension drawing render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png`)
 
 Summary: Actual six-view drawing shows terminal banks andrail-clip profile;coordinator inspected dimension leaders.
 
@@ -4904,7 +4904,7 @@ Documents: research/action-audit/reviews/point-06-visual.md, research/domains-an
 
 ## SRC-58e9ce4c7811 — Checkedplacementwritehelper
 
-Original source: [/home/leo/projects/3dmodeling/scripts/assembly_repair.py](/home/leo/projects/3dmodeling/scripts/assembly_repair.py)
+Original source: [${MODELING_ROOT}/scripts/assembly_repair.py](../../scripts/assembly_repair.py)
 
 Summary: Extractedrepeatedreviewedsource-planwriteactionwithfullinsertpreflight,CAS,matrixreadbackandunchangedACISchecks.
 
@@ -4916,7 +4916,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-58eb12a69f1a — Current rotated Victron 24/12 converter view
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png`)
 
 Summary: Actual inspected image shows cover, heatsink fins, mounting slots, terminal housing and hardware. Its hash differs from the earlier repeated enclosure image.
 
@@ -4928,7 +4928,7 @@ Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 ## SRC-59097305d36e — Battery exterior execution report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c023-victron-battery.md](/home/leo/projects/3dmodeling/execution/c023-victron-battery.md)
+Original source: [${MODELING_ROOT}/execution/c023-victron-battery.md](../../execution/c023-victron-battery.md)
 
 Summary: Records newly saved native model,actual source reuse,13 placement corrections,21 unchanged definitions,39 instances,35 saved checks and per-source geometry observations.
 
@@ -4940,7 +4940,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-599641f63e9d — P01 p01-build-03 — reopened-measure.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-measure.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-measure.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-measure.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-measure.json`)
 
 Summary: p01-build-03 reopened-measure.json: Reopened native API returns zero bounds alongside nonzero mesh volume252167.41146658108mm³; this records the bounds/mesh discrepancy.
 
@@ -4964,7 +4964,7 @@ Documents: research/action-audit/reviews/point-04-visual.md, research/action-aud
 
 ## SRC-5a8b5891ac1d — ocs_module.rs
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/ocs_module.rs](/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/ocs_module.rs)
+Original source: ${OCS_ROOT}/plugins/opencad-python/src/ocs_module.rs (`${OCS_ROOT}/plugins/opencad-python/src/ocs_module.rs`)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -4976,7 +4976,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-5afc1d03b483 — OCS session control helper source
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py](/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py`)
 
 Summary: Session preflight and mutation transport helper for a later authorized live CAD operation.
 
@@ -4988,7 +4988,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-5b7a1024db32 — Leaf stack end restraint plate (P17E) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p17e-leaf-stack-end-restraint-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Leaf; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -5000,7 +5000,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-5b8ba14d70b1 — Altec ALT-SB50RAMBKT bracket (C039) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c039-altec-alt-sb50rambkt-bracket.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge port proposal; original kind seller component reference. Detailed geometry review belongs to its component iteration.
 
@@ -5012,7 +5012,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-5b8f29b55228 — Shared measured-feature comparisons
 
-Original source: [/home/leo/projects/3dmodeling/scripts/feature_checks.py](/home/leo/projects/3dmodeling/scripts/feature_checks.py)
+Original source: [${MODELING_ROOT}/scripts/feature_checks.py](../../scripts/feature_checks.py)
 
 Summary: Adds source-independent numeric comparison, closed-body connectivity, vertex-range and Cartesian cylindrical-pattern functions. Driver and Leaf checks use the same functions with their own source values; invalid expectations are rejected.
 
@@ -5024,7 +5024,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-5c0d49b55a8f — Source-checked SKF bearing derivative
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg`)
 
 Summary: Native DWG2018 preserves ten solids with housing crown21mm. Original other nine solids remain unchanged before save; reopened dimension checks and persistence pass.
 
@@ -5048,7 +5048,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-5c74a56ff439 — Source-bound saved battery geometry checker
 
-Original source: [/home/leo/projects/3dmodeling/scripts/battery_module.py](/home/leo/projects/3dmodeling/scripts/battery_module.py)
+Original source: [${MODELING_ROOT}/scripts/battery_module.py](../../scripts/battery_module.py)
 
 Summary: Adds 29 checks for actual saved Leaf shells, case envelope, mounting bore centres and axes, inner walls, nominal terminal bores, contact faces and pedestal sections. Expected values come from the external source job.
 
@@ -5060,7 +5060,7 @@ Documents: research/sources/round-15/leaf-sources.json, research/sources/round-1
 
 ## SRC-5d152842ea12 — solid3d.rs
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs)
+Original source: ${OCS_ROOT}/src/app/command_driver/solid3d.rs (`${OCS_ROOT}/src/app/command_driver/solid3d.rs`)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -5072,7 +5072,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-5d313d6528a8 — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/ocs-journal.jsonl`)
 
 Summary: Write-aheadactualnativeimport,placement,CAS,save,reopen,captureandrecoveryrequests/results.
 
@@ -5084,7 +5084,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-5d32161e7c40 — Holybro PM02V3 module (C055) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Auxiliary controller supply proposal; original kind manufacturer hardware reference. Detailed geometry review belongs to its component iteration.
 
@@ -5120,7 +5120,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-5dd5375bc1d0 — step-source.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-source.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-source.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-source.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-source.json`)
 
 Summary: ActualImportFileactionbindingtheexacthashedFiboxSTEPpath.
 
@@ -5132,7 +5132,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-5e0d7de82f1b — Research record
 
-Original source: [/home/leo/projects/3dmodeling/research/research-log.md](/home/leo/projects/3dmodeling/research/research-log.md)
+Original source: [${MODELING_ROOT}/research/research-log.md](../research-log.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -5156,7 +5156,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-5e7bb9363c2a — reopened-front.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-front.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-front.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-front.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-front.png`)
 
 Summary: Actualsavedfrontviewshowsbody/coverseam,lockprojectionandfeet.
 
@@ -5216,7 +5216,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-5f744c173454 — heatsink-analytic-features.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json`)
 
 Summary: Existing SAB reader observes heatsink planes,cylinders,cones andloops;R4 slot centres identify174.3×71mm pattern.
 
@@ -5228,7 +5228,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-5f9c829cdfd0 — Existing manufacturer-source provenance index
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/README.md](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/README.md)
+Original source: ${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/README.md (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/README.md`)
 
 Summary: Inspected Sumitomo entries identify original ECO/PRO drawing URLs, source descriptions and retained paths; these locate the exact local drawing reused by the iteration.
 
@@ -5240,7 +5240,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-6002c90d8336 — Implemented immutable source intake
 
-Original source: [/home/leo/projects/3dmodeling/scripts/source_intake.py](/home/leo/projects/3dmodeling/scripts/source_intake.py)
+Original source: [${MODELING_ROOT}/scripts/source_intake.py](../../scripts/source_intake.py)
 
 Summary: New script validates source/scope records, preserves exact text and corrections, reuses existing JSON/hash helpers, checks prior revisions and protects completed outputs through staged publication and failure records.
 
@@ -5252,7 +5252,7 @@ Documents: research/sources/round-17/source-intake-sources.json.
 
 ## SRC-6038042a0445 — point-02-web-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-05/point-02-web-sources.json](round-05/point-02-web-sources.json)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -5264,7 +5264,7 @@ Documents: research/sources/round-05/point-02-local-sources.json.
 
 ## SRC-608f9d6fff1b — dom-r04.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r04.md](../workflows/details/dom-r04.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -5276,7 +5276,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 ## SRC-60e0a613e21d — Point 07 — reconstruction software and API review
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-software.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-07-software.md](../action-audit/reviews/point-07-software.md)
 
 Summary: Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -5288,7 +5288,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-611132c2602f — Native converter plot attempt
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.pdf`)
 
 Summary: Actual OCS one-page plot output;subsequent Poppler inspection shows an entirelywhite page. Export completion andfailed visualcontent retained separately.
 
@@ -5300,7 +5300,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-618fca25dd4d — corrected-records-30.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-30.json`)
 
 Summary: corrected native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -5312,7 +5312,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-61c6ad4341d0 — cad-r03.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r03.md](../workflows/details/cad-r03.md)
 
 Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -5336,7 +5336,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-620ff17ef7cd — point-07-operations
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](../action-audit/point-07-operations.json)
 
 Summary: Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -5372,7 +5372,7 @@ Documents: research/cad-and-skills.md, skills/README.md.
 
 ## SRC-63043c7b233e — queue
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/queue.md](../action-audit/implementation-queue/queue.md)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -5384,7 +5384,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-63185270fad3 — Additional motor source acquisition manifest
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json`)
 
 Summary: Records URLs, downloaded originals, archive members, byte counts, MIME types and hashes; page-only Autodesk viewer/cache-miss and EVEA CAD-on-request observations remain distinct. Date fields match the recorded HTTP Date and are preserved as reported acquisition metadata.
 
@@ -5408,7 +5408,7 @@ Documents: research/action-audit/reviews/point-06-sources.md, research/sources/r
 
 ## SRC-63530860ce5d — SKF iteration — reopened-audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json`)
 
 Summary: Reopened derivative has same ten-solid manifest as verified save, zeroerrors/warnings and retained source/file identity.
 
@@ -5420,7 +5420,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-6372bc22f3fc — P01 p01-build-03 — pre-save-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/pre-save-records.json`)
 
 Summary: p01-build-03 pre-save-records.json: 1 native entity records in document 70, revision 8; stores exact geometry encoding and properties for interpretation independently of PASS labels.
 
@@ -5432,9 +5432,9 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-6398638998c9 — OpenCADStudio Automation API — Specification 1.1
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md)
+Original source: ${OCS_ROOT}/docs/automation/API-SPEC.md (`${OCS_ROOT}/docs/automation/API-SPEC.md`)
 
-Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: OpenCADStudio Automation API — Specification 1.1. Source class: local primary product documentation; exact byte copy from local source repository. Original reuse terms: GPL-3.0-or-later repository license; see /home/leo/projects/3rdparty/OpenCADStudio/LICENSE
+Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: OpenCADStudio Automation API — Specification 1.1. Source class: local primary product documentation; exact byte copy from local source repository. Original reuse terms: GPL-3.0-or-later repository license; see ${OCS_ROOT}/LICENSE
 
 Evidence: archived_original_referenced, local_source_inspected, local_reference_registered.
 
@@ -5444,7 +5444,7 @@ Documents: research/sources/round-02/archive-sources.json, research/sources/roun
 
 ## SRC-64196dacabad — Independent review — Point 02 component and CAD reuse
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-02-independent.md](../action-audit/reviews/point-02-independent.md)
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -5456,7 +5456,7 @@ Documents: research/sources/round-05/point-02-local-sources.json.
 
 ## SRC-64327fe17901 — Point 02 source check: existing components and CAD files
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-02-sources.md](../action-audit/reviews/point-02-sources.md)
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -5468,7 +5468,7 @@ Documents: research/sources/round-05/point-02-local-sources.json.
 
 ## SRC-6435b92f204d — corrected-records-24.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-24.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-24.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-24.json`)
 
 Summary: correctednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -5492,7 +5492,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-647254850698 — part_index.py
 
-Original source: [/home/leo/projects/3dmodeling/scripts/part_index.py](/home/leo/projects/3dmodeling/scripts/part_index.py)
+Original source: [${MODELING_ROOT}/scripts/part_index.py](../../scripts/part_index.py)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -5504,7 +5504,7 @@ Documents: research/sources/round-09/component-execution-sources.json, research/
 
 ## SRC-64aded16baff — SKF iteration — source-findings.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json`)
 
 Summary: Records actual32mm original crown versus SKF21mm and source mass0.56kg versus older0.588kg record.
 
@@ -5516,7 +5516,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-6507a5c7f8da — contract.json
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/contract.json](/home/leo/projects/3dmodeling/research/workflows/details/contract.json)
+Original source: [${MODELING_ROOT}/research/workflows/details/contract.json](../workflows/details/contract.json)
 
 Summary: Analyst classification contract: independent manual effort, software setup and computing classes; required evidence, input and output fields.
 
@@ -5528,7 +5528,7 @@ Documents: research/sources/round-03/project-detail-sources.json.
 
 ## SRC-6523f7bc1fa7 — Reviewed SB50 source findings
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes.md`)
 
 Summary: Links exact blue kit mapping andactual dimension directions;separates mated view,wire contacts,yellow key family andPowerclaw alternative.
 
@@ -5540,7 +5540,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-65f2ca319152 — OCS state before the requested view recheck
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json`)
 
 Summary: Active document 87 is the saved Victron 24/12 converter. The camera records the current user-rotated view before capture.
 
@@ -5552,7 +5552,7 @@ Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 ## SRC-66546119d7fd — Driver iteration — persistence.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/persistence.json`)
 
 Summary: Verified-save SHA, zero dropped entities, preserved manifest and recovered reopened audit all pass for the checked derivative.
 
@@ -5564,7 +5564,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-665cfb1ddd3b — Original Sumitomo driver drawing
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg`)
 
 Summary: Preserved original contains116 solids and eight text labels. Its connector shells span116.85mm; the retained manufacturer drawing gives116.7mm.
 
@@ -5576,7 +5576,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-667b0ab089a4 — Side connector mounting panel (P23) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p23-side-connector-mounting-panel.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Route-specific panel proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -5588,7 +5588,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-668386d68294 — 2026-11-12-component-led.md
 
-Original source: [/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md)
+Original source: [${MODELING_ROOT}/execution/2026-11-12-component-led.md](../../execution/2026-11-12-component-led.md)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -5600,7 +5600,7 @@ Documents: research/sources/round-09/component-execution-sources.json.
 
 ## SRC-6712dfc9aea8 — Retained resistor package drawing render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png`)
 
 Summary: Full manufacturer-authored page inspected for TA310PA table,row applicability and PA low-wattage package callouts.
 
@@ -5612,7 +5612,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-672023a44bcd — Local OCS bounded-area construction implementation
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/scene/model/presspull_model.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/scene/model/presspull_model.rs)
+Original source: ${OCS_ROOT}/src/scene/model/presspull_model.rs (`${OCS_ROOT}/src/scene/model/presspull_model.rs`)
 
 Summary: Local source describes nested planar boundary loops and direct region extrusion. It supported testing PRESSPULL at the wall-interior pick after solid and planar-region Boolean subtraction were refused. The P01 native checks established the actual result.
 
@@ -5624,7 +5624,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-6767227cb6dc — CPC-T5008 cable lug (C058) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c058-cpc-t5008-cable-lug.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; M8 terminal example; original kind source terminal reference. Detailed geometry review belongs to its component iteration.
 
@@ -5660,7 +5660,7 @@ Documents: research/action-audit/point-03-vector-and-solid.md, research/action-a
 
 ## SRC-6835419dcf57 — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/initial-state.json`)
 
 Summary: NativeOCSbaselineactivedocument83 and6existingopendocumentsbeforecreating84.
 
@@ -5672,7 +5672,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-688d8e475957 — p01-readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -5708,7 +5708,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-69c044526e3f — Point 01 — Descriptions and explicit dimensions to a model brief
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-01-model-brief.md](../action-audit/point-01-model-brief.md)
 
 Summary: Proposed ten-action source-to-model-brief procedure with software, AI and user assignments, four execution modes, per-feature requirements, candidate comparison/merge, eight development components and thirteen future validation cases.
 
@@ -5720,7 +5720,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-6a20dc32784d — reopened-blocks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-blocks.json`)
 
 Summary: Persisted converter block hierarchy fromsaved document87.
 
@@ -5744,7 +5744,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-6a6e188c27d3 — skill-to-actions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.json](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.json)
+Original source: [${MODELING_ROOT}/research/action-audit/skill-to-actions.json](../action-audit/skill-to-actions.json)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -5756,7 +5756,7 @@ Documents: research/sources/round-05/audit-index-sources.json.
 
 ## SRC-6a8670ea9c90 — Independent review — Point 03 vectors, sketches and solids
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-independent.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-03-independent.md](../action-audit/reviews/point-03-independent.md)
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -5768,7 +5768,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-6aa38cb021a0 — Four observed shared comparison action details
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/shared-check-actions.json](/home/leo/projects/3dmodeling/research/action-audit/shared-check-actions.json)
+Original source: [${MODELING_ROOT}/research/action-audit/shared-check-actions.json](../action-audit/shared-check-actions.json)
 
 Summary: Registers functions, inputs, outputs, prerequisites, measurement limits, agent/software ownership and actual driver/Leaf evidence as implementation details of native verification; original graph boundaries remain.
 
@@ -5792,7 +5792,7 @@ Documents: research/action-audit/reviews/point-03-independent.md, research/actio
 
 ## SRC-6b239a9bfdd1 — SKILL.md
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/SKILL.md](../../skills/component-cad/SKILL.md)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -5816,7 +5816,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-6b70d88d2033 — Driver correction and generic-check iteration report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c012-driver.md](/home/leo/projects/3dmodeling/execution/c012-driver.md)
+Original source: [${MODELING_ROOT}/execution/c012-driver.md](../../execution/c012-driver.md)
 
 Summary: Records manufacturer dimensions, original116.85mm versus116.7mm span failure, intact31-solid X2 translation,141 saved checks, actual views and shared-function adoption with50 tests.
 
@@ -5828,7 +5828,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-6b9134b4349d — repair_c029.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/repair_c029.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/repair_c029.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/repair_c029.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/repair_c029.py`)
 
 Summary: Executedtheextractedhelperagainst16nativeplacements,preserved12ACISdefinitionsandcapturedpostwriteview.
 
@@ -5852,7 +5852,7 @@ Documents: research/action-audit/reviews/point-07-software.md, research/action-a
 
 ## SRC-6c1f23fbb942 — P02 crossmember — reopened-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-isometric.png`)
 
 Summary: Inspected reopened isometric view shows the260mm crossmember longitudinal edges and hollow end section.
 
@@ -5876,7 +5876,7 @@ Documents: research/action-audit/findings.md, research/action-audit/point-07-rec
 
 ## SRC-6c38f0dfe089 — saved-assembly-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/saved-assembly-checks.json`)
 
 Summary: 37 passing saved source-placement,definition point-set andnested-instance checks;source revision values remain separately attributed.
 
@@ -5900,7 +5900,7 @@ Documents: research/cad-and-skills.md, research/next-step-proposal.md.
 
 ## SRC-6ca63dd2611f — check_ngv064_wheel.py — existing_component_code
 
-Original source: [/tmp/opencode/check_ngv064_wheel.py](/tmp/opencode/check_ngv064_wheel.py)
+Original source: ${TEMP_ROOT}/opencode/check_ngv064_wheel.py (`${TEMP_ROOT}/opencode/check_ngv064_wheel.py`)
 
 Summary: sat_features extracts selected SAT cylinders, planes, tori and points; verify checks the wheel. Applicability: Top-level import loads native-wrapper. Restricted SAT fields; one body transform, unit scale; SAB requires a separate supported reader.
 
@@ -5948,7 +5948,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-6d5424825e51 — SKF source inspection and completed derivative report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c009-bearing.md](/home/leo/projects/3dmodeling/execution/c009-bearing.md)
+Original source: [${MODELING_ROOT}/execution/c009-bearing.md](../../execution/c009-bearing.md)
 
 Summary: Documents the original32-versus21mm crown defect, native housing-only revision,62saved checks,40tests, preserved original, actual view inspection and applied script/skill improvement.
 
@@ -5960,7 +5960,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-6d6dde7514cd — Drive support gusset (P03G) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p03g-drive-support-gusset.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: frame; Applicable support variant; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -5972,7 +5972,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-6d7e6a84d972 — Original SKF construction program
 
-Original source: [/tmp/opencode/build_skf_geometry.py](/tmp/opencode/build_skf_geometry.py)
+Original source: ${TEMP_ROOT}/opencode/build_skf_geometry.py (`${TEMP_ROOT}/opencode/build_skf_geometry.py`)
 
 Summary: Existing local builder defines outline, mounting slots, seal/ring components and two linear32-to21mm draft wedges. Saved model retained32mm crown; new iteration restores its documented intended draft using nativeSLICE.
 
@@ -5984,7 +5984,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-6d89ac359e55 — Published exact request and scope
 
-Original source: [/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/scope.md](/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/scope.md)
+Original source: [${MODELING_ROOT}/execution/source-intake/live-01/revision/scope.md](../../execution/source-intake/live-01/revision/scope.md)
 
 Summary: Actual Markdown output preserves the supplied request and explicitly limits implementation to the unfinished intake action and its deliverables.
 
@@ -5996,7 +5996,7 @@ Documents: research/sources/round-17/source-intake-sources.json.
 
 ## SRC-6df970fcb6f8 — parts-and-standards.json
 
-Original source: [/home/leo/projects/ferme/skills/dictionaries/parts-and-standards.json](/home/leo/projects/ferme/skills/dictionaries/parts-and-standards.json)
+Original source: ${FERME_ROOT}/skills/dictionaries/parts-and-standards.json (`${FERME_ROOT}/skills/dictionaries/parts-and-standards.json`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -6020,7 +6020,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/workflows
 
 ## SRC-6e4167b03b67 — Stop-button acquisition metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json`)
 
 Summary: Retains original source URLs,redirect URL,time/MIME/hash,render metadata andactual verification/login/403 route outcomes.
 
@@ -6044,7 +6044,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-6e7a85a22dae — WISKA-ESKV-25-page-3.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png`)
 
 Summary: RenderedWH datasheet page3:axialschematic withTL,L,D,SW/E leaders.
 
@@ -6056,7 +6056,7 @@ Documents: research/sources/round-22/gland-sources.json.
 
 ## SRC-6e8a1b7fa38b — Resistor PDF acquisition metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json`)
 
 Summary: Retains exact URL,HTTP content type/status,174915bytes,digest and reported file timestamp. Server HTTP Date is separate; coordinator timezone correction is explicit.
 
@@ -6080,7 +6080,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-6f5062ead541 — Project cross-domain workflow recipes and additional ideas
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/combined-paths.json](/home/leo/projects/3dmodeling/research/workflows/combined-paths.json)
+Original source: [${MODELING_ROOT}/research/workflows/combined-paths.json](../workflows/combined-paths.json)
 
 Summary: Original project proposals combining CAD, photogrammetry, controls, component libraries, IFC and robot models, with named artifact roles and explicit handoff conditions. Also records concept-image and procedural-field research questions.
 
@@ -6092,7 +6092,7 @@ Documents: research/sources/round-02/project-sources.json, research/sources/roun
 
 ## SRC-6f5dbc4f4bd8 — reopened-records-30.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-30.json`)
 
 Summary: reopened native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -6104,7 +6104,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-6f832566dcde — corrected-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png`)
 
 Summary: Actualpostpropertycorrectioncapturestillshowsdisplacedviewportgeometry;retainedwithactualmatrixreadbacks.
 
@@ -6116,7 +6116,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-6fdd6f04d055 — cad-r08.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r08.md](../workflows/details/cad-r08.md)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -6140,7 +6140,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-70208d220176 — Deck support ledge (P04L) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p04l-deck-support-ledge.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: frame; Common deck proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -6152,7 +6152,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-702aefd0f6c1 — imported-query.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-query.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-query.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-query.json`)
 
 Summary: Importedentityhandle/typeinventoryusedforboundedrecordreads.
 
@@ -6164,7 +6164,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-703184413ae8 — Delegated initial motor drawing transcription
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md`)
 
 Summary: Initial Luna-assigned transcription of the retained drawing. Its mounting group, thread-depth and tolerance associations are preserved with separate coordinator corrections; actual delegated runtime identity unavailable.
 
@@ -6176,7 +6176,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-704288e14b9b — Caster clevis cheek (P05A) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p05a-caster-clevis-cheek.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -6188,7 +6188,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-707585d22a36 — Tyro Indus1S handheld stop remote (C056) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c056-tyro-indus1s-handheld-stop-remote.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Handheld operator equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -6212,7 +6212,7 @@ Documents: research/action-audit/findings.md, research/action-audit/point-06-bui
 
 ## SRC-708aa14d658e — Gland source acquisition metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json`)
 
 Summary: Records original PDF and HTML hashes,URLs,retrieval outcomes,rendered images and exact-order CAD selector availability.
 
@@ -6224,7 +6224,7 @@ Documents: research/sources/round-22/gland-sources.json.
 
 ## SRC-70f3c3558125 — native-plot-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-isometric.png`)
 
 Summary: ActualnativeplotPDF render is entirelywhite;pixel extrema andvisualcheck recorded.
 
@@ -6236,7 +6236,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-717a1bbd2f70 — dom-r05.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r05.md](../workflows/details/dom-r05.md)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -6248,7 +6248,7 @@ Documents: research/sources/round-05/point-03-local-sources.json, research/sourc
 
 ## SRC-71c2ebea0058 — Ferme component input index
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/README.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/README.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/README.md`)
 
 Summary: Existing component sheet and source/model dependency index; relationship to proposed catalogue.
 
@@ -6260,7 +6260,7 @@ Documents: research/sources/round-07/parts-catalogue-sources.json, research/sour
 
 ## SRC-71dee9d2e674 — Visual interpretation review — descriptions and explicit dimensions to a model brief
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/visual-review.md](../action-audit/reviews/visual-review.md)
 
 Summary: Authored audit document recording Visual interpretation review — descriptions and explicit dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -6272,7 +6272,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-71df4a24323d — Point 06 primary-source check: building and robot structure and properties
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-sources.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-06-sources.md](../action-audit/reviews/point-06-sources.md)
 
 Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -6296,7 +6296,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-72fd254a4766 — P01 p01-build-01 — source-job-r02.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/source-job-r02.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/source-job-r02.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/source-job-r02.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/source-job-r02.json`)
 
 Summary: p01-build-01 source-job-r02.json: Immutable source revision2 binds P01 proposed dimensions to the researched6/3mm nominal corner convention, pinned source hashes and local XY/+Z frame. It supersedes revision1 for this build.
 
@@ -6308,7 +6308,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-7300061feed8 — Amphenol AHDBM04-24-91PN receptacle (C040) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c040-amphenol-ahdbm04-24-91pn-receptacle.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Agricultural interface provision; original kind manufacturer source reference. Detailed geometry review belongs to its component iteration.
 
@@ -6320,7 +6320,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-735d336832fb — Schneider XB5AA31 reset button (C050) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c050-schneider-xb5aa31-reset-button.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Local reset equipment; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -6332,7 +6332,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-73c5c15a332f — Driver iteration — source-job-r01.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-job-r01.json`)
 
 Summary: Original pinned source-job revision retains temporary original-builder source paths used for the first check.
 
@@ -6344,7 +6344,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-740290c1bc47 — SKF iteration — source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json`)
 
 Summary: Pins required SKF and reconstruction feature values, evidence status, source pages and hashes; names ten components and the existing local coordinate frame.
 
@@ -6356,7 +6356,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-744990fc5c15 — Fibox dimension-leader corrections
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md`)
 
 Summary: Recordsactualimageassociationreview:152.5fromrearbodyplane;261.5×161innerbodyopening;keepsinitialnotes andsavedMPSplate observationsseparate.
 
@@ -6368,7 +6368,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-74d5d4738857 — Source contract findings and implementation conditions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/findings.md](/home/leo/projects/3dmodeling/research/action-audit/findings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/findings.md](../action-audit/findings.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -6380,7 +6380,7 @@ Documents: research/sources/round-05/audit-index-sources.json.
 
 ## SRC-74d8fd75f81f — reopened-blocks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-blocks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-blocks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-blocks.json`)
 
 Summary: Persistedblockmembershipreadbackfromsaved/reopeneddocument85.
 
@@ -6392,7 +6392,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-7508372349a9 — Pilz source/vector-stage report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c048-pilz-source.md](/home/leo/projects/3dmodeling/execution/c048-pilz-source.md)
+Original source: [${MODELING_ROOT}/execution/c048-pilz-source.md](../../execution/c048-pilz-source.md)
 
 Summary: Documents exact relay sources,dimensions,blocked STEP route andactual2D vector extraction withseparate reconstruction proposal.
 
@@ -6404,7 +6404,7 @@ Documents: research/sources/round-26/relay-sources.json.
 
 ## SRC-750882b224a7 — battery_ocs_parts.py — existing_component_code
 
-Original source: [/tmp/opencode/battery_ocs_parts.py](/tmp/opencode/battery_ocs_parts.py)
+Original source: ${TEMP_ROOT}/opencode/battery_ocs_parts.py (`${TEMP_ROOT}/opencode/battery_ocs_parts.py`)
 
 Summary: rr, axial_x, face_x and tag reuse rounded sections, transforms and metadata. Applicability: Imports item and session wrappers; caller must supply source-backed geometry.
 
@@ -6440,7 +6440,7 @@ Documents: research/action-audit/findings.md, research/action-audit/implementati
 
 ## SRC-75ebd4f71d22 — source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-job.json`)
 
 Summary: PinnedSTEP/drawinggeometrycontractforexact203015Tvariantandretainedsourceframe.
 
@@ -6452,7 +6452,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-7606cf6527a4 — Implemented source-intake skill
 
-Original source: [/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md](/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md)
+Original source: [${MODELING_ROOT}/skills/source-intake/SKILL.md](../../skills/source-intake/SKILL.md)
 
 Summary: Documents the actual input schema, command, output layout, failure exit codes, recovery, reusable completed revisions and agent/software responsibility boundary.
 
@@ -6476,7 +6476,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-76f855deeb5a — XB5AS8445 dimension render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png`)
 
 Summary: Actual exactpart image givesØ40 operator,43 overall height,39.5 front and43 rear projections,1–6mm panel range.
 
@@ -6500,7 +6500,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-77594e51ac89 — Existing operation inventory and detailed-review state
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md](/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md)
+Original source: [${MODELING_ROOT}/research/action-audit/operation-inventory.md](../action-audit/operation-inventory.md)
 
 Summary: Authored audit document recording Existing operation inventory and detailed-review state. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -6512,7 +6512,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-777fed96f232 — Local OCS plane-slice command implementation
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/modules/model/slice_cmd.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/modules/model/slice_cmd.rs)
+Original source: ${OCS_ROOT}/src/modules/model/slice_cmd.rs (`${OCS_ROOT}/src/modules/model/slice_cmd.rs`)
 
 Summary: Inspected constructor and point-state handling establish preselected target, three plane points and retained-side point; live installedSLICE subsequently completed both intended housing cuts.
 
@@ -6524,7 +6524,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-785d8cbc2541 — rec-r07.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r07.md](../workflows/details/rec-r07.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -6536,7 +6536,7 @@ Documents: research/sources/round-05/point-05-local-sources.json.
 
 ## SRC-789932d05ce2 — 3D reconstruction research report
 
-Original source: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md)
+Original source: [${MODELING_ROOT}/research/reconstruction.md](../reconstruction.md)
 
 Summary: Prior repository report assesses image/depth reconstruction methods, source terms and prerequisites. This batch references it for scan-to-CAD transition context and does not repeat that research.
 
@@ -6548,7 +6548,7 @@ Documents: research/sources/round-02/cad-sources.json, research/sources/round-02
 
 ## SRC-792e6e233cf9 — reopened-records-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-0.json`)
 
 Summary: reopenednativeentitysnapshot: 81:Solid3D, 85:Solid3D, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -6560,7 +6560,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-7986969c7a59 — Point 06 designer notes — building and robot structure and properties
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-designer.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-06-designer.md](../action-audit/reviews/point-06-designer.md)
 
 Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -6572,7 +6572,7 @@ Documents: research/sources/round-05/point-06-local-sources.json.
 
 ## SRC-79edac842934 — Actual native insertion corrections
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json`)
 
 Summary: Readback records show each of13 native insert matrices matching the reviewed source frame after compare-and-set normal,rotation and position updates.
 
@@ -6584,7 +6584,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-79f9dd42f446 — step.rs
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs)
+Original source: ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`)
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
@@ -6596,7 +6596,7 @@ Documents: research/local-baseline.md, research/sources/local-evidence.json, res
 
 ## SRC-7a5a898279b3 — Pilz source acquisition findings
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md`)
 
 Summary: Records exact774310 mapping,manufacturer source dimensions,STEP403 andbacked mirror route.
 
@@ -6608,7 +6608,7 @@ Documents: research/sources/round-26/relay-sources.json.
 
 ## SRC-7a9b6fde0c01 — reconstruction-paths.json
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json)
+Original source: [${MODELING_ROOT}/research/workflows/reconstruction-paths.json](../workflows/reconstruction-paths.json)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -6632,7 +6632,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-7b3f397d3342 — P02 crossmember — iso-capture.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/iso-capture.json`)
 
 Summary: Completed isometric capture response binds the actual crossmember image to its native document and camera.
 
@@ -6656,7 +6656,7 @@ Documents: research/action-audit/reviews/point-07-sources.md, research/sources/r
 
 ## SRC-7bc0b8d43055 — SB50 source-readiness result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/readiness.json`)
 
 Summary: Existing required-feature/hash gate returns NEEDS_INPUT forblue housing seating/key geometry andcontact transition/blade.
 
@@ -6668,7 +6668,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-7bd91f2e39d7 — Completed current-view capture response
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json`)
 
 Summary: Actual completed response for the original capture request c045-view-recheck-20261113:current-user-view.
 
@@ -6680,7 +6680,7 @@ Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 ## SRC-7be225e2793e — cad-detail-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json](/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-03/cad-detail-sources.json](round-03/cad-detail-sources.json)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -6692,7 +6692,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-7c108255a4eb — provenance.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/provenance.json`)
 
 Summary: Actual temporary driver paths,retained hashes andoriginal bootstrap dependency conditions.
 
@@ -6728,7 +6728,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-7c8a5bf54e7c — Electrical equipment bracket (P22) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p22-electrical-equipment-bracket.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Route-specific equipment support; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -6740,7 +6740,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-7c8bdf666637 — mount-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/mount-checks.json`)
 
 Summary: Two passing R4-slot/count andvertical-pitch checks;records STEP174.3 vsdrawing174 pitch and186.6 vs187 flange observation.
 
@@ -6752,7 +6752,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-7cd4f7a294b2 — imported-records-24.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-records-24.json`)
 
 Summary: importednativeentitysnapshot: C0:Insert, C1:Insert, C2:Insert, C3:Insert, C4:Insert, C5:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -6764,7 +6764,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-7d065c90de76 — Saved Victron24/12 native assembly
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg`)
 
 Summary: New DWG2018 has9 solid definitions and27 source-corrected instances;39 numeric checks pass andvisual identity check remainsFAIL.
 
@@ -6788,7 +6788,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-7d74315cc8c4 — Placement and instance traversal regression cases
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_step_placements.py](/home/leo/projects/3dmodeling/tests/test_step_placements.py)
+Original source: [${MODELING_ROOT}/tests/test_step_placements.py](../../tests/test_step_placements.py)
 
 Summary: Ten passing software cases cover direct source axes,observed inverse mapping,already-correct/ambiguous/unsupported inputs,nested repeated paths,cycles and instance bounds.
 
@@ -6800,7 +6800,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-7db7da4f6264 — Tube-corner source observations
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json](/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-10/tube-corner-sources.json](round-10/tube-corner-sources.json)
 
 Summary: Individual delegated web observations, exact standard clauses, supplier listing details, catalogue edition evidence, access failures and existing FERME sheet relationships underpin the tube-corner report. Each source retains its own concrete summary and evidence status.
 
@@ -6812,7 +6812,7 @@ Documents: research/sources/round-10/tube-corner-local-sources.json.
 
 ## SRC-7dbfb81bf992 — P01 p01-build-01 — rail-type-Solid3D.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-Solid3D.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-Solid3D.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-Solid3D.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-Solid3D.json`)
 
 Summary: p01-build-01 rail-type-Solid3D.json: Retained native response with fields collection, definitions, editing, fields, notes, ok, record_type; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -6824,7 +6824,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-7e07ebce5d02 — check_c045_mounts.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_mounts.py`)
 
 Summary: Read fourR4 mount-slot ends,computed71/174.3mm pitches anddetected byte-identical captures.
 
@@ -6836,7 +6836,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-7e97117530b1 — P02 crossmember — reopened-end.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-end.png`)
 
 Summary: Inspected reopened end view shows the outer and inner rounded-square section of the P02 hollow crossmember.
 
@@ -6848,7 +6848,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-7ec6b1588bb0 — P01 p01-build-03 — reopened-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-isometric.png`)
 
 Summary: Reopened isometric capture shows the P01 rail longitudinal edges and hollow section. The original asynchronous capture request completed through same-ID recovery.
 
@@ -6860,7 +6860,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-7f544def9af7 — Robot tow ball (C025) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c025-robot-tow-ball.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c025-robot-tow-ball.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c025-robot-tow-ball.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c025-robot-tow-ball.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind mating component input. Detailed geometry review belongs to its component iteration.
 
@@ -6872,7 +6872,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-7f6eca002620 — AMP 520BS10HT-7-8 motor sprocket (C006) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c006-amp-520bs10ht-7-8-motor-sprocket.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source component interface example. Detailed geometry review belongs to its component iteration.
 
@@ -6896,7 +6896,7 @@ Documents: research/action-audit/point-04-raster-drawings.md, research/action-au
 
 ## SRC-7f797955889e — Initial SB50 source metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition-initial.json`)
 
 Summary: Preserves original download metadata andsource classifications before drawingleader correction.
 
@@ -6908,7 +6908,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-7fb788503589 — Happymodel EP1 receiver (C051) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c051-happymodel-ep1-receiver.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Normal radio equipment; original kind existing component record. Detailed geometry review belongs to its component iteration.
 
@@ -6920,7 +6920,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-7fc6417a02f1 — Victron BAT524110620 shared exterior STEP
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp`)
 
 Summary: Frozen byte-identical copy of already acquired manufacturer AP214 model shared with BAT512120620. Source length units are mm; retained shape definitions and19 placement frames support the new native assembly.
 
@@ -6932,7 +6932,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-7fe70bbaa630 — Driver iteration — original-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/original-checks.json`)
 
 Summary: Original native model passes140 checks and fails connector-shell span116.85mm versus manufacturer116.7mm.
 
@@ -6956,7 +6956,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-80962f129a41 — Software review: raster drawings and interpreted dimensions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-software.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-04-software.md](../action-audit/reviews/point-04-software.md)
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -6968,7 +6968,7 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 ## SRC-80af5eb42a78 — P02 crossmember — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/result.json`)
 
 Summary: Current P02 iteration result is DONE with saved DWG hash, native/persistence/view passes, midpoint130mm, nominal gap260mm and applied helper SHA.
 
@@ -7004,7 +7004,7 @@ Documents: research/sources/round-22/gland-sources.json.
 
 ## SRC-80f9c2092927 — ME0907 motor adjustment plate (P11) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p11-me0907-motor-adjustment-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -7028,7 +7028,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-816d7accc0c5 — Point 04 visual and evidence review — raster drawings and orthographic views
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-visual.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-04-visual.md](../action-audit/reviews/point-04-visual.md)
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -7040,7 +7040,7 @@ Documents: research/sources/round-05/point-04-local-sources.json, research/sourc
 
 ## SRC-8173158dcbfb — cad-automation-and-reuse.md
 
-Original source: [/home/leo/projects/ferme/skills/cad-automation-and-reuse.md](/home/leo/projects/ferme/skills/cad-automation-and-reuse.md)
+Original source: ${FERME_ROOT}/skills/cad-automation-and-reuse.md (`${FERME_ROOT}/skills/cad-automation-and-reuse.md`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -7064,7 +7064,7 @@ Documents: research/reconstruction.md, research/user-supplied-links.md.
 
 ## SRC-82658321d621 — neugart-ngv064-wheel-160.md — recorded_execution_report
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md`)
 
 Summary: Component-specific native checks, save/reopen observations and source paths for OCS 2026.42. Applicability:
 
@@ -7076,7 +7076,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-82875df94520 — Sumitomo PRO-L CH54527G10 gearmotor (C011) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c011-sumitomo-pro-l-ch54527g10-gearmotor.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-L; original kind manufacturer geometry in retained drawing. Detailed geometry review belongs to its component iteration.
 
@@ -7088,7 +7088,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-82d9fa8ce417 — domain-detail-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json](/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-03/domain-detail-sources.json](round-03/domain-detail-sources.json)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -7100,7 +7100,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-82e88e67d3cf — Littelfuse75921-10 service disconnect (C032) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c032-littelfuse75921-10-service-disconnect.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Battery isolation proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -7112,7 +7112,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-82f59b1215c1 — SKF iteration — persistence.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json`)
 
 Summary: Recovered verifiedsave/reopen receipt proves fileSHA,zero droppedentities,ten-solid manifest and reopened zeroerror/warning audit.
 
@@ -7124,7 +7124,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-832bc3ab6751 — ME0907 transmission guard (P16) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p16-me0907-transmission-guard.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -7136,7 +7136,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-83551fe43914 — Leaf iteration — audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json`)
 
 Summary: Current opened Leaf audit contains eight solids, zero errors/warnings and the original saved-file identity.
 
@@ -7160,9 +7160,9 @@ Documents: research/domains-and-components.md.
 
 ## SRC-83daf3ad8d92 — Driving the OpenCADStudio native builds
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/native.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/native.md)
+Original source: ${OCS_ROOT}/docs/automation/native.md (`${OCS_ROOT}/docs/automation/native.md`)
 
-Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: Driving the OpenCADStudio native builds. Source class: local primary product documentation; exact byte copy from local source repository. Original reuse terms: GPL-3.0-or-later repository license; see /home/leo/projects/3rdparty/OpenCADStudio/LICENSE
+Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: Driving the OpenCADStudio native builds. Source class: local primary product documentation; exact byte copy from local source repository. Original reuse terms: GPL-3.0-or-later repository license; see ${OCS_ROOT}/LICENSE
 
 Evidence: archived_original_referenced.
 
@@ -7184,7 +7184,7 @@ Documents: research/sources/round-10/tube-corner-sources.json.
 
 ## SRC-840d8b69fd8f — Software review: CAD, photographs and scans alignment
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-software.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-05-software.md](../action-audit/reviews/point-05-software.md)
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -7196,7 +7196,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 ## SRC-84b231f10122 — Nissan Leaf Gen2 battery module (C021) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Leaf bank or BT-L alternative; original kind source component/model reference. Detailed geometry review belongs to its component iteration.
 
@@ -7208,7 +7208,7 @@ Documents: research/sources/round-08/component-plan-sources.json, research/sourc
 
 ## SRC-84c081bf3776 — P01 p01-build-03 — document-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/document-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/document-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/document-checkpoint.json`)
 
 Summary: p01-build-03 document-checkpoint.json: Binds partial/native stage to document 70, revision 0 and named part handles {}; supports inspected recovery.
 
@@ -7220,7 +7220,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-8505da5fe91f — read_c045.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/read_c045.py`)
 
 Summary: Read imported manifest/records andrequested initial ISO capture,whose contents laterfailed identity review.
 
@@ -7232,7 +7232,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-856db78a1b1e — Drive support plate (P03) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p03-drive-support-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p03-drive-support-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: frame; One variant per drive route; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -7256,7 +7256,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-85767f154783 — P01 p01-build-03 — isometric-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/isometric-state.json`)
 
 Summary: p01-build-03 isometric-state.json: Observed document 71 revision 0 with open-document identities and camera/command state; used for write isolation or capture provenance.
 
@@ -7268,7 +7268,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-85b949b4c1e5 — Point 06 independent review — building and robot structure and properties
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-independent.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-06-independent.md](../action-audit/reviews/point-06-independent.md)
 
 Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -7292,7 +7292,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-868fbd6b345d — Knott 402386.001 steel rim (C004) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c004-knott-402386-001-steel-rim.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Knott wheel alternative; original kind seller/manufacturer dimensions recorded locally. Detailed geometry review belongs to its component iteration.
 
@@ -7316,7 +7316,7 @@ Documents: research/action-audit/findings.md, research/action-audit/implementati
 
 ## SRC-8700820313fd — Victron converter current-view recheck report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c045-view-recheck-2026-11-13.md](/home/leo/projects/3dmodeling/execution/c045-view-recheck-2026-11-13.md)
+Original source: [${MODELING_ROOT}/execution/c045-view-recheck-2026-11-13.md](../../execution/c045-view-recheck-2026-11-13.md)
 
 Summary: Documents the newly successful current-view identity check, user rotation report, actual capture recovery and unchanged saved native CAD hash.
 
@@ -7328,7 +7328,7 @@ Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 ## SRC-878a429a2c73 — Saved battery front view
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png`)
 
 Summary: Actual reopened orthographic view inspected for case,lid,terminal heights,edge ribs and bottom restraint geometry.
 
@@ -7340,7 +7340,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-87d4523a6fea — BMW i3 94Ah battery module (C022) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c022-bmw-i3-94ah-battery-module.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; BMW; original kind source component/model reference. Detailed geometry review belongs to its component iteration.
 
@@ -7352,7 +7352,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-882c011aea56 — OCS state after the current-view capture
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json`)
 
 Summary: Native state retained after recovering and inspecting the captured converter view. Document and camera observations remain explicit.
 
@@ -7388,7 +7388,7 @@ Documents: research/cad-and-skills.md, skills/README.md.
 
 ## SRC-887713f8625d — item-profile-02633-segment-100mm-native.json — recorded_check_results
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json`)
 
 Summary: Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.
 
@@ -7400,7 +7400,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-891a60e9bc7b — Main frame crossmember proposal
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md`)
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
@@ -7412,7 +7412,7 @@ Documents: research/sources/round-08/component-plan-sources.json, research/sourc
 
 ## SRC-8926d9c1e68c — Driver iteration — reopened-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png`)
 
 Summary: Inspected isometric image shows tapered housing, separate studs/washers/dividers, recessed signal connectors and contacts.
 
@@ -7436,7 +7436,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-89c0679bdda3 — Proposed next stages from the workflow research
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](../next-step-proposal.md)
 
 Summary: Seven proposed work packages: targeted route review, shared records, existing OCS pilot, text/drawing routes, measured reconstruction, architecture/robotics/component reuse, and packaging exercised workflows. Preserves the existing implementation plan.
 
@@ -7448,7 +7448,7 @@ Documents: research/sources/round-02/project-sources.json.
 
 ## SRC-8a3139cd3bdf — P01 p01-build-03 — reopened-view-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-view-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-view-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-view-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-view-state.json`)
 
 Summary: p01-build-03 reopened-view-state.json: Observed document 71 revision 0 with open-document identities and camera/command state; used for write isolation or capture provenance.
 
@@ -7460,7 +7460,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-8a5ee96b7077 — SurLok SLPIPB50BSO0 cable plug (C036) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c036-surlok-slpipb50bso0-cable-plug.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Battery service pole candidate; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -7484,7 +7484,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-8a94739a62eb — native-plot-visual-check.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-visual-check.json`)
 
 Summary: Actual Poppler rendering andpixel extrema show anentirelywhite page;visualcheck FAIL whileexport operationcompleted.
 
@@ -7496,7 +7496,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-8a9e1c41280d — Brake caliper reaction bracket (P15) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p15-brake-caliper-reaction-bracket.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 or separate service-brake proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -7508,7 +7508,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-8a9f0d7330ec — SB50 source-stage result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/result.json`)
 
 Summary: Retains exact6331G5 kit identity,source model roles anddependent geometry questions.
 
@@ -7520,7 +7520,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-8ab7d0d86617 — 02-frame-hitch-supports.md
 
-Original source: [/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md](/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md)
+Original source: ${FERME_ROOT}/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md (`${FERME_ROOT}/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -7532,7 +7532,7 @@ Documents: research/sources/round-09/component-execution-sources.json, research/
 
 ## SRC-8ae740d518bb — test_component_tools.py
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_component_tools.py](/home/leo/projects/3dmodeling/tests/test_component_tools.py)
+Original source: [${MODELING_ROOT}/tests/test_component_tools.py](../../tests/test_component_tools.py)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -7544,7 +7544,7 @@ Documents: research/sources/round-09/component-execution-sources.json.
 
 ## SRC-8b8ba89972cd — Blickle LS-PS310K caster reference (C016) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c016-blickle-ls-ps310k-caster-reference.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Caster reference alternative; original kind project reference envelope. Detailed geometry review belongs to its component iteration.
 
@@ -7556,7 +7556,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-8ba644c474b4 — Driver iteration — native-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-records.json`)
 
 Summary: Raw original SAB solids and text records supply independent geometry observations and preserved baseline properties.
 
@@ -7592,7 +7592,7 @@ Documents: research/sources/round-03/domain-detail-sources.json, research/workfl
 
 ## SRC-8c3e1acbd99d — check_c045_saved.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/check_c045_saved.py`)
 
 Summary: Computed37 actual persisted placement/point/instance checks andseparate source-dimension observations.
 
@@ -7604,7 +7604,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-8ce066c08d57 — Kelly ME0907 drawing/test-data archive
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip`)
 
 Summary: Original ZIP linked by Kelly ME0907 page, acquired with three PDF members. The outline member is titled Mars Electric ME0201013001; it retains its own variant identity.
 
@@ -7616,7 +7616,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-8d633a1cae00 — P01 p01-build-03 — reopened-viewport.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-viewport.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-viewport.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-viewport.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-viewport.png`)
 
 Summary: Reopened end-view capture shows the outer and inner rounded-square outlines of the P01 rail.
 
@@ -7628,7 +7628,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-8da82a2f23b9 — reopened-records-36.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-36.json`)
 
 Summary: reopened native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -7650,9 +7650,9 @@ Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
 <a id="src-8de314785eed"></a>
 
-## SRC-8de314785eed — /home/leo/projects/3rdparty/OpenCADStudio/LICENSE
+## SRC-8de314785eed — ${OCS_ROOT}/LICENSE
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/LICENSE](/home/leo/projects/3rdparty/OpenCADStudio/LICENSE)
+Original source: ${OCS_ROOT}/LICENSE (`${OCS_ROOT}/LICENSE`)
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
@@ -7676,7 +7676,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-8f09660dbc00 — Earlier Leaf native construction and verification report
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2.md (`${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2.md`)
 
 Summary: Identifies the eight-solid drawing, earlier 14 pre-save checks, verified-save SHA and historical viewport failure. The current iteration reads saved SAB and inspects successful current captures.
 
@@ -7688,7 +7688,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-8f19f4f777d2 — Resistor dimension association and timestamp review
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md`)
 
 Summary: Confirms package-table/pin values,keeps2.54mm terminal span separate from substrate thickness,excludes initial unsupported general-tolerance/no-scale claims,and identifies CET versus reported CEST label.
 
@@ -7712,7 +7712,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-8f7945ad1ed7 — P01 p01-build-03 — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/ocs-journal.jsonl`)
 
 Summary: p01-build-03 append-only request journal retains 35 events across 13 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
 
@@ -7724,7 +7724,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-8f8532cac48e — Domain and component research report
 
-Original source: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md)
+Original source: [${MODELING_ROOT}/research/domains-and-components.md](../domains-and-components.md)
 
 Summary: Prior project report compares reusable component sources and downstream architecture/robotics domains. This batch uses it for source-library and assembly handoffs.
 
@@ -7736,7 +7736,7 @@ Documents: research/sources/round-02/cad-sources.json, research/sources/round-02
 
 ## SRC-8f9b6f25cd0d — AGENTS.md
 
-Original source: [/home/leo/projects/3dmodeling/AGENTS.md](/home/leo/projects/3dmodeling/AGENTS.md)
+Original source: [${MODELING_ROOT}/AGENTS.md](../../AGENTS.md)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -7748,7 +7748,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-8fd31c82a6fe — Recorded native binary regression tests
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_native_acis.py](/home/leo/projects/3dmodeling/tests/test_native_acis.py)
+Original source: [${MODELING_ROOT}/tests/test_native_acis.py](../../tests/test_native_acis.py)
 
 Summary: Four integration tests use FERME saved rail evidence: source dimensions pass, pre-save/reopened vertex and radius sets agree, wrong260mm expectation fails for600mm rail, and truncated binary is rejected.
 
@@ -7772,7 +7772,7 @@ Documents: research/action-audit/reviews/point-07-software.md, research/action-a
 
 ## SRC-90d5093f2a51 — P01 p01-build-01 — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/result.json`)
 
 Summary: p01-build-01 result.json: Observed attempt state FAIL; Retains the definitive native subtraction error and the preserved recovery context.
 
@@ -7784,7 +7784,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-90f352cc1a15 — reopened-records-24.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-24.json`)
 
 Summary: reopened native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -7796,7 +7796,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-9133612f3fad — reopened-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-checkpoint.json`)
 
 Summary: Reopeneddocument85bindingandcurrentgeometryrevisionafterverifiedpersistence.
 
@@ -7820,7 +7820,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-91d52ea5a02e — Ferme geometric dependency order
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/dependency-order.tsv](/home/leo/projects/ferme/engineering/module-development/cad-inputs/dependency-order.tsv)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/dependency-order.tsv (`${FERME_ROOT}/engineering/module-development/cad-inputs/dependency-order.tsv`)
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
@@ -7844,7 +7844,7 @@ Documents: research/cad-and-skills.md, skills/README.md.
 
 ## SRC-92ae5f12a6ef — imported-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-isometric.png`)
 
 Summary: Actualprecorrectionimportviewshowsdisplacedassemblycomponents.
 
@@ -7856,7 +7856,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-92b7a09b7e3a — Local Python 3.14 CSV source
 
-Original source: [/usr/lib/python3.14/csv.py](/usr/lib/python3.14/csv.py)
+Original source: ${SYSTEM_ROOT}/usr/lib/python3.14/csv.py (`${SYSTEM_ROOT}/usr/lib/python3.14/csv.py`)
 
 Summary: CSV dialect/field parsing source inspected by the software reviewer; retain source strings and explicit dialect.
 
@@ -7868,7 +7868,7 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 ## SRC-92f126438f43 — reopened-records-18.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-18.json`)
 
 Summary: reopened native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -7880,7 +7880,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-93087004fdb3 — imported-audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/imported-audit.json`)
 
 Summary: Initial12solid/18blockreferenceauditwithzeroerrorsorwarningsbeforeplacementcorrection.
 
@@ -7904,7 +7904,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-9332105dc85a — nissan-leaf-gen2-native.json — recorded_check_results
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json`)
 
 Summary: Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.
 
@@ -7928,7 +7928,7 @@ Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
 ## SRC-9345ab05320c — corrected-records-36.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-36.json`)
 
 Summary: corrected native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -7940,7 +7940,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-937929a512bd — Point 05 designer notes — alignment and parametric remodeling
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-designer.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-05-designer.md](../action-audit/reviews/point-05-designer.md)
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -7964,7 +7964,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-93aef666d1eb — rec-r10.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r10.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r10.md](../workflows/details/rec-r10.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -7976,7 +7976,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 ## SRC-93b47d856776 — Local Python 3.14 JSON interface source
 
-Original source: [/usr/lib/python3.14/json/__init__.py](/usr/lib/python3.14/json/__init__.py)
+Original source: ${SYSTEM_ROOT}/usr/lib/python3.14/json/__init__.py (`${SYSTEM_ROOT}/usr/lib/python3.14/json/__init__.py`)
 
 Summary: Decoder callbacks, numeric token handling and nonfinite/default behavior inspected as intake design evidence.
 
@@ -7988,7 +7988,7 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 ## SRC-93cc6c46876e — imported-records-12.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-12.json`)
 
 Summary: imported native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -8000,7 +8000,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-9409ef71b08a — P01 p01-build-01 — rail-schema-4.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-4.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-4.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-4.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-4.json`)
 
 Summary: p01-build-01 rail-schema-4.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -8012,7 +8012,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-940fb4ea2921 — Point 06 visual and evidence review — building and robot structure and properties
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-06-visual.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-06-visual.md](../action-audit/reviews/point-06-visual.md)
 
 Summary: Point 06 Building and robot structure and properties: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -8024,7 +8024,7 @@ Documents: research/sources/round-05/point-06-local-sources.json, research/sourc
 
 ## SRC-94415df8565c — Point 07 — Capture, reconstruction and appearance scenes
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](../action-audit/point-07-reconstruction.md)
 
 Summary: Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -8036,7 +8036,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-944a92cb8bdf — Published four-source intake index
 
-Original source: [/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/source-index.json](/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/source-index.json)
+Original source: [${MODELING_ROOT}/execution/source-intake/live-01/revision/source-index.json](../../execution/source-intake/live-01/revision/source-index.json)
 
 Summary: Actual execution retains two exact user messages, two file observations, byte hashes, scope and request identity with no network acquisition.
 
@@ -8060,7 +8060,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-9498bff46463 — SurLok SLPIRBBPSO0 receptacle (C037) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c037-surlok-slpirbbpso0-receptacle.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Battery service pole candidate; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -8084,7 +8084,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-95551de04df8 — Sumitomo PRO-M CH54065G10 gearmotor (C010) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c010-sumitomo-pro-m-ch54065g10-gearmotor.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-M; original kind manufacturer geometry in retained drawing. Detailed geometry review belongs to its component iteration.
 
@@ -8096,7 +8096,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-9557e8c0e378 — point-02-operations
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-operations.json](../action-audit/point-02-operations.json)
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -8120,7 +8120,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-95f6c0cb869a — Pinned fuse source labels and unresolved geometry inputs
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json`)
 
 Summary: Pins reader-reported overall length,hole diameter,strip thickness andend-circle label to the acquisition record/hash. Body length,hole pitch andcontact-plane association are explicit required inputs.
 
@@ -8156,7 +8156,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-96b0604f6e83 — Albright SW80B-40 contactor (C033) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c033-albright-sw80b-40-contactor.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Leaf or BMW candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -8168,7 +8168,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-96c77b310d08 — Battery solid-definition preservation
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json`)
 
 Summary: Exact ACIS record comparison confirms all21 solid definitions remain unchanged during placement-only correction.
 
@@ -8180,7 +8180,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-96e5bd9ad8ba — Full-sequence independent integration review
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/full-sequence-independent.md](../action-audit/reviews/full-sequence-independent.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -8204,7 +8204,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-97cf3ff5244d — reopened-records-12.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-12.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-12.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-12.json`)
 
 Summary: reopenednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -8216,7 +8216,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-97ed6b862899 — P01 p01-build-01 — rail-schema-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-schema-0.json`)
 
 Summary: p01-build-01 rail-schema-0.json: Installed API response document_required: Read state and supply document_id; retained as a protocol/schema discovery failure for this rail build.
 
@@ -8228,7 +8228,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-989f5c3e411a — template-check_c023_saved.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/template-check_c023_saved.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/template-check_c023_saved.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/template-check_c023_saved.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/template-check_c023_saved.py`)
 
 Summary: Preservedexisting29/35checkalgorithmtemplateusedbytheactualFiboxsaved-checkdriver.
 
@@ -8252,7 +8252,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-98af64fdd846 — Converter current-view recheck result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json`)
 
 Summary: One current-view identity check passes. Saved DWG bytes match the earlier component record; prior failed captures remain preserved.
 
@@ -8264,7 +8264,7 @@ Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 ## SRC-98e17e4710fb — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/result.json`)
 
 Summary: C043 source-stage result retains target identity andlinks C045 reuse of acquired originals.
 
@@ -8276,7 +8276,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-993c97d817f0 — P01 p01-build-01 — rail-record-schema-2.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-2.json`)
 
 Summary: p01-build-01 rail-record-schema-2.json: Retained native response with fields command, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -8300,7 +8300,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-9968cbf922d2 — Leaf iteration — reopened-terminal.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png`)
 
 Summary: Inspected current end image shows separate power/tap/power terminal assemblies aligned along the reconstructed row.
 
@@ -8312,7 +8312,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-9969afca68d8 — Point 04 designer notes — raster drawings and interpreted dimensions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-designer.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-04-designer.md](../action-audit/reviews/point-04-designer.md)
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -8324,7 +8324,7 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 ## SRC-998613bbc692 — Implemented DXF entity/context inspector
 
-Original source: [/home/leo/projects/3dmodeling/scripts/dxf_inspect.py](/home/leo/projects/3dmodeling/scripts/dxf_inspect.py)
+Original source: [${MODELING_ROOT}/scripts/dxf_inspect.py](../../scripts/dxf_inspect.py)
 
 Summary: New read-only adapter inventories original source handles, curve types, attributes, spaces/layers, units, source coordinate systems and nested INSERT transforms. Preserves hashes and guards explicit resource/output limits.
 
@@ -8336,7 +8336,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-99954d282c44 — Point 03 designer notes — vector profiles and small solids
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-03-designer.md](../action-audit/reviews/point-03-designer.md)
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -8360,7 +8360,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-99fd15613b4b — P01 p01-build-03 — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/initial-state.json`)
 
 Summary: p01-build-03 initial-state.json: Observed document 69 revision 7 with open-document identities and camera/command state; used for write isolation or capture provenance.
 
@@ -8396,7 +8396,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-9a847c6724b8 — reopened-top.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-top.png`)
 
 Summary: Actual converter capture attempt reopened-top;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
 
@@ -8408,7 +8408,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-9adef416e57c — Retained SKF insert catalogue page image
 
-Original source: [/tmp/opencode/skf-yar204-catalogue-page92.png](/tmp/opencode/skf-yar204-catalogue-page92.png)
+Original source: ${TEMP_ROOT}/opencode/skf-yar204-catalogue-page92.png (`${TEMP_ROOT}/opencode/skf-yar204-catalogue-page92.png`)
 
 Summary: Actual inspected catalogue page image shows YAR204-2F20mmbore,47mmouterdiameter,31mminnerringwidth and18.3mmfaceoffset supporting the existing insert record.
 
@@ -8420,7 +8420,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-9b8eb3a2b709 — corrected-records-24.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-24.json`)
 
 Summary: corrected native record snapshot: B7:Insert, B8:Insert, B9:Insert, BA:Insert, BB:Insert, BC:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -8432,7 +8432,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-9b9b3c47b23f — Completed saved Leaf module iteration report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c021-leaf-module.md](/home/leo/projects/3dmodeling/execution/c021-leaf-module.md)
+Original source: [${MODELING_ROOT}/execution/c021-leaf-module.md](../../execution/c021-leaf-module.md)
 
 Summary: Records reuse of the eight-solid model, the retained 300 x 222 x 34 mm case convention, 29 native checks, persistence, actual source/view inspection and the applied checker with 44 tests.
 
@@ -8456,7 +8456,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-9c0fbe89719d — Driver iteration — correction.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/correction.json`)
 
 Summary: Records source-derived -0.15mm X translation,31 owned X2 solids, original116.85mm span and target116.7mm; unaffected entities preserved.
 
@@ -8468,7 +8468,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-9ce53648c6f9 — WISKA-ESKV-25-page3-detail.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png`)
 
 Summary: Detailed page3 rasterused for actual drawnfeatureassociation;no additional numerical segmentheights.
 
@@ -8480,7 +8480,7 @@ Documents: research/sources/round-22/gland-sources.json.
 
 ## SRC-9cfb720a2d78 — reopen_c029.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/reopen_c029.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/reopen_c029.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/reopen_c029.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/reopen_c029.py`)
 
 Summary: Recoveredoriginalopenrequest,verifiedsavehash/manifestandcapturedpersistedrecords/isometric.
 
@@ -8504,7 +8504,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-9d121e4915e5 — Leaf iteration — capture-isometric.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json`)
 
 Summary: Completed isometric capture response binds document 76 and the model image compared with the source.
 
@@ -8528,7 +8528,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-9e3aa6c6cce6 — P02 crossmember — body-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/body-checkpoint.json`)
 
 Summary: Checkpoint identifies the P02 native hollow body before dimension inspection and saving.
 
@@ -8540,7 +8540,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-9e57d453372b — queue
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json](../action-audit/implementation-queue/queue.json)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -8552,7 +8552,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json, research
 
 ## SRC-9e5cbb874a32 — P01 p01-build-01 — rail-doc-schema-1.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-1.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-1.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-1.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-1.json`)
 
 Summary: p01-build-01 rail-doc-schema-1.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.
 
@@ -8564,7 +8564,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-9e97a14e9164 — pre-save-assembly-measurements.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/pre-save-assembly-measurements.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/pre-save-assembly-measurements.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/pre-save-assembly-measurements.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/pre-save-assembly-measurements.json`)
 
 Summary: Source-corrected16instancepathsandpointspansbeforepersistence;accessoriesincluded.
 
@@ -8576,7 +8576,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-9e9899193ac9 — Software review: confirmed dimensions and vector drawings to CAD
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-03-software.md](../action-audit/reviews/point-03-software.md)
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -8600,7 +8600,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-9ec25a7b74a7 — corrected-records-12.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-12.json`)
 
 Summary: corrected native record snapshot: AB:Insert, AC:Insert, AD:Insert, AE:Insert, AF:Insert, B0:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -8612,7 +8612,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-9f577a14e903 — Actual intake completion receipt
 
-Original source: [/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json](/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json)
+Original source: [${MODELING_ROOT}/execution/source-intake/live-01/revision/receipt.json](../../execution/source-intake/live-01/revision/receipt.json)
 
 Summary: Records COMPLETE publication, tool/input/artifact hashes, Python runtime, elapsed time and zero network requests for the executed capture.
 
@@ -8624,7 +8624,7 @@ Documents: research/sources/round-17/source-intake-sources.json.
 
 ## SRC-9f71130cf873 — Leaf iteration — native-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json`)
 
 Summary: All 29 current saved-geometry comparisons pass for eight closed solids, case dimensions, mounting bores, inner walls and three nominal terminal assemblies.
 
@@ -8648,7 +8648,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-9fdfe0a67f6a — Actual implementation job input
 
-Original source: [/home/leo/projects/3dmodeling/execution/source-intake/job-input.json](/home/leo/projects/3dmodeling/execution/source-intake/job-input.json)
+Original source: [${MODELING_ROOT}/execution/source-intake/job-input.json](../../execution/source-intake/job-input.json)
 
 Summary: Preserves exact current execution/no-redo instructions and identifies project rules plus the existing first-action plan as local source inputs.
 
@@ -8660,7 +8660,7 @@ Documents: research/sources/round-17/source-intake-sources.json.
 
 ## SRC-9ff47adead00 — README.md
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -8672,7 +8672,7 @@ Documents: research/sources/round-09/component-execution-sources.json, research/
 
 ## SRC-a00bd3c7c755 — Caster primary removable pin (C018) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c018-caster-primary-removable-pin.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Retained fixed-setting arm proposal; original kind pin component geometry input. Detailed geometry review belongs to its component iteration.
 
@@ -8684,7 +8684,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-a07601074c08 — Point 03 source check: confirmed dimensions and vector drawings
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-03-sources.md](../action-audit/reviews/point-03-sources.md)
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -8696,7 +8696,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-a086c5a04ee4 — README.md
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md)
+Original source: ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`)
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
@@ -8720,7 +8720,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-a0f13205bc91 — SKF iteration — first-slice-response.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json`)
 
 Summary: Completed nativeSLICE positive draft modifies only owned housingD7 with actual revision/state readback.
 
@@ -8732,7 +8732,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-a189f01c9855 — Holybro Pixhawk6C hardware (C052) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c052-holybro-pixhawk6c-hardware.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Controller hardware proposal; original kind existing component reference. Detailed geometry review belongs to its component iteration.
 
@@ -8756,7 +8756,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-a1e82dcf8fcb — document_model.py
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py](/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py)
+Original source: ${OCS_ROOT}/plugins/opencad-python/src/document_model.py (`${OCS_ROOT}/plugins/opencad-python/src/document_model.py`)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -8768,7 +8768,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-a1fc353f03bd — Victron Lynx Smart BMS NG500 M10 (C026) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c026-victron-lynx-smart-bms-ng500-m10.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Victron NG; original kind manufacturer assembly reference. Detailed geometry review belongs to its component iteration.
 
@@ -8780,7 +8780,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-a22f0b43932b — Workflow and source register builder
 
-Original source: [/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py)
+Original source: [${MODELING_ROOT}/research/tools/build_workflow_register.py](../tools/build_workflow_register.py)
 
 Summary: Combines retained sources and round-specific evidence; checks operation inputs and recipe types; parses Markdown-link destinations separately from bare URLs to preserve original source addresses.
 
@@ -8792,7 +8792,7 @@ Documents: research/sources/round-03/project-detail-sources.json, research/sourc
 
 ## SRC-a234ddd91071 — P01 p01-build-01 — rail-first-query.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-query.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-query.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-first-query.json`)
 
 Summary: p01-build-01 rail-first-query.json: Retained native response with fields count, document_id, entities, geometry_revision, next_offset, ok, returned; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -8804,7 +8804,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-a28ae7692d9d — SKF iteration — second-slice-response.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json`)
 
 Summary: Completed mirrored nativeSLICE negative draft modifies only owned housingD7 and retains inside bearing side.
 
@@ -8816,7 +8816,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-a2ddc249d60b — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/initial-state.json`)
 
 Summary: Native document85 andexisting open-document state before creating converter document86.
 
@@ -8852,7 +8852,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-a36a990b86b7 — step-format.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-format.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-format.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-format.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-format.json`)
 
 Summary: ActualImportFileactionselectingSTEPformat;waiting_inputdialogresult.
 
@@ -8876,7 +8876,7 @@ Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
 ## SRC-a3a2d5382a80 — Battery terminal cover (P20C) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p20c-battery-terminal-cover.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Separate geometry per battery route; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -8900,7 +8900,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-a426faf2681b — Anderson3-6055P2 boot (C061) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c061-anderson3-6055p2-boot.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge-port accessory; original kind source accessory reference. Detailed geometry review belongs to its component iteration.
 
@@ -8960,7 +8960,7 @@ Documents: research/action-audit/reviews/point-06-visual.md, research/sources/ro
 
 ## SRC-a60085185158 — Original SKF bearing drawing preserved
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf.dwg`)
 
 Summary: Existing ten-solid native reconstruction; measured crown32mm fails SKF A1=21mm. Original bytes match checkpointb36c147; corrected derivative uses a distinct path.
 
@@ -8972,7 +8972,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-a62979656e4c — Leaf iteration — reopened-top.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png`)
 
 Summary: Inspected current top image shows case outline, pressed pan/ribs, four corner mounting bores and terminal projection.
 
@@ -8984,7 +8984,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-a62b176d4381 — SKF iteration — reopened-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json`)
 
 Summary: Actual recovered reopen state identifies derivative document75 and preserved unrelated open drawing identities.
 
@@ -8996,7 +8996,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-a635c02f99cb — OCS numerical contract checker source
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py`)
 
 Summary: Reads supplied point/axis/plane observations with one length/angular threshold pair per invocation; later adapter must preserve feature-specific applicability.
 
@@ -9008,7 +9008,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-a66a9495624e — Driver iteration — reopened-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-state.json`)
 
 Summary: Recovered derivative-open state identifies document78 and the separate checked driver path.
 
@@ -9032,7 +9032,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-a6ae4a99861b — imported-records-30.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-30.json`)
 
 Summary: imported native record snapshot: BD:Insert, BE:Insert, BF:Insert, C0:Insert, C1:Insert, C2:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -9044,7 +9044,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-a6e8373ba9d0 — Side lifting tab (P10) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p10-side-lifting-tab.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p10-side-lifting-tab.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p10-side-lifting-tab.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p10-side-lifting-tab.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: frame; Side support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -9068,7 +9068,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/workflows
 
 ## SRC-a79889909bbf — SKF iteration — capture-front.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json`)
 
 Summary: Completed native front capture response binds derivative document75,camera and image to actual request.
 
@@ -9092,7 +9092,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-a7c2279a0c45 — Motenergy ME0907 outline 0JWT.301.073
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf`)
 
 Summary: Original dimensioned motor drawing retained from EV Europe. Supplies mounting groups, shaft/keyway section, locating pilot, main/rear axial stations, nominal thread designations and exterior outlines. DO NOT SCALE accompanies the drawing.
 
@@ -9104,7 +9104,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-a807c8e08b82 — Existing OCS metric page-setup DXF fixture
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf](/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf)
+Original source: ${OCS_ROOT}/tests/fixtures/plot/page-setups-metric.dxf (`${OCS_ROOT}/tests/fixtures/plot/page-setups-metric.dxf`)
 
 Summary: Original existing fixture used read-only for the second inspection; actual INSUNITS code6 identifies metres. Original bytes remain unchanged.
 
@@ -9116,7 +9116,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-a83674c889fd — point-05-web-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-05/point-05-web-sources.json](round-05/point-05-web-sources.json)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -9128,7 +9128,7 @@ Documents: research/sources/round-05/point-05-local-sources.json.
 
 ## SRC-a8b84ecb56bc — P01 p01-build-02 — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/ocs-journal.jsonl`)
 
 Summary: p01-build-02 append-only request journal retains 43 events across 19 request identities, with original intents and responses. It supplies the native command/recovery history for this named attempt; request tokens are excluded.
 
@@ -9140,7 +9140,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-a8d7ba68a870 — Enclosureiterationreport
 
-Original source: [/home/leo/projects/3dmodeling/execution/c029-fibox-enclosure.md](/home/leo/projects/3dmodeling/execution/c029-fibox-enclosure.md)
+Original source: [${MODELING_ROOT}/execution/c029-fibox-enclosure.md](../../execution/c029-fibox-enclosure.md)
 
 Summary: Documentsexactvariant,newCAD,44checks,sourcecorrections,sourceframe,appliedhelperandactualmodels.
 
@@ -9152,7 +9152,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-a8e753f7f1eb — Actual metric page-setup DXF inventory
 
-Original source: [/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json](/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json)
+Original source: [${MODELING_ROOT}/execution/dxf-inspection/page-setup-inventory.json](../../execution/dxf-inspection/page-setup-inventory.json)
 
 Summary: Actual read-only run records one LINE and one DIMENSION; source header code6 declares metres, preserving actual units rather than inferring them from a filename.
 
@@ -9164,7 +9164,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-a9d0f0d71c99 — Installed DXF file-reading API source
 
-Original source: [/tmp/3dmodeling-native-reader/ezdxf/filemanagement.py](/tmp/3dmodeling-native-reader/ezdxf/filemanagement.py)
+Original source: ${NATIVE_READER_ROOT}/ezdxf/filemanagement.py (`${NATIVE_READER_ROOT}/ezdxf/filemanagement.py`)
 
 Summary: Inspected readfile/read API supports strict decoding and original file parsing. The implementation chooses readfile with strict errors and performs no recovery rewrite.
 
@@ -9176,7 +9176,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-aa5f4c33e807 — P02 crossmember — persistence.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/persistence.json`)
 
 Summary: DWG2018 save/hash/audit-manifest and reopened identity checks PASS with one solid and zero dropped entities.
 
@@ -9188,7 +9188,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-aadc9e21c0ad — check_repair_cases.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_repair_cases.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_repair_cases.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_repair_cases.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_repair_cases.py`)
 
 Summary: RannewhelperofflineonretainedbatteryandenclosurenativerecordswithoutchangingoldCAD.
 
@@ -9200,7 +9200,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-abde4c7c95ff — Actual viewport-fixture DXF inventory
 
-Original source: [/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json](/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json)
+Original source: [${MODELING_ROOT}/execution/dxf-inspection/viewport-model-inventory.json](../../execution/dxf-inspection/viewport-model-inventory.json)
 
 Summary: Actual read-only run records eight entity occurrences and preserved handles/context. Source header code0 produces NEEDS_UNIT_EVIDENCE rather than an assumed physical scale.
 
@@ -9212,7 +9212,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-ac0ff15cdc81 — check_c029_saved.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_c029_saved.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_c029_saved.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_c029_saved.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/check_c029_saved.py`)
 
 Summary: Adaptedretainedsaved-checktemplateforFiboxandwrote29actualpersistedchecks.
 
@@ -9224,7 +9224,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-ac15e16a45ad — Pilz source feature contract
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json`)
 
 Summary: Pins45/87/120.6 dimensions andnames terminal/rail-clip geometry inputs.
 
@@ -9284,7 +9284,7 @@ Documents: research/action-audit/reviews/point-02-visual.md, research/action-aud
 
 ## SRC-acbface446ee — Keiyama JA08-700-4T100-02 steel rim (C003) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c003-keiyama-ja08-700-4t100-02-steel-rim.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Keiyama wheel alternative; original kind seller/manufacturer dimensions recorded locally. Detailed geometry review belongs to its component iteration.
 
@@ -9332,7 +9332,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-ad0cb8976c1e — Earlier SKF reconstruction and dimension record
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/skf-sy20tf.md (`${FERME_ROOT}/engineering/module-development/cad/checks/skf-sy20tf.md`)
 
 Summary: Retains original housing and insert reconstruction dimensions, drawing-derived seal/flinger dimensions, screw spacing and source references. The source-bound iteration preserves it as historical input and detects actual saved crown mismatch.
 
@@ -9356,7 +9356,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-ad3c319de0b3 — plugin_host.rs
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs)
+Original source: ${OCS_ROOT}/src/app/plugin_host.rs (`${OCS_ROOT}/src/app/plugin_host.rs`)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -9368,7 +9368,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-ad47e1f99cf8 — Littelfuse20EV100 bolt-down fuse (C030) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c030-littelfuse20ev100-bolt-down-fuse.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Traction fuse candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -9380,7 +9380,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-ad9e8b3c3670 — Shared-family CAD follow-up metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json`)
 
 Summary: Retains exact source pages,family inference and actual non-download status with license/access observations.
 
@@ -9404,7 +9404,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-adc1b41ef30c — P01 p01-build-01 — rail-entity_schema.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-entity_schema.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-entity_schema.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-entity_schema.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-entity_schema.json`)
 
 Summary: p01-build-01 rail-entity_schema.json: Installed API response request_id_required: Supply a unique request_id (maximum 128 bytes); retained as a protocol/schema discovery failure for this rail build.
 
@@ -9428,7 +9428,7 @@ Documents: research/action-audit/point-03-vector-and-solid.md, research/action-a
 
 ## SRC-ae42dbaf6d16 — Installed MIT-licensed INSERT API source
 
-Original source: [/tmp/3dmodeling-native-reader/ezdxf/entities/insert.py](/tmp/3dmodeling-native-reader/ezdxf/entities/insert.py)
+Original source: ${NATIVE_READER_ROOT}/ezdxf/entities/insert.py (`${NATIVE_READER_ROOT}/ezdxf/entities/insert.py`)
 
 Summary: Inspected matrix44 handles block base point, OCS, scale and rotation. multi_insert supplies rotated array-cell positions without scaling grid spacing; these existing APIs are used directly.
 
@@ -9440,7 +9440,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-ae801910597e — Original Sumitomo reconstruction source
 
-Original source: [/tmp/opencode/build_remaining_sumitomo.py](/tmp/opencode/build_remaining_sumitomo.py)
+Original source: ${TEMP_ROOT}/opencode/build_remaining_sumitomo.py (`${TEMP_ROOT}/opencode/build_remaining_sumitomo.py`)
 
 Summary: Read existing driver construction and source attribution:186x116 base,168x98 mounting pattern, nominal terminals, loft and reconstructed connector positions. An unchanged copy is retained with the job.
 
@@ -9464,7 +9464,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-aea29b81cf2e — SKF iteration — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json`)
 
 Summary: CompletedSKFiteration records derivative SHA,62nativePASS,persistence,inspectedviews and appliedPython/skill improvement with40tests.
 
@@ -9476,7 +9476,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-aec737b38b33 — SimpBMS board (C028) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c028-simpbms-board.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c028-simpbms-board.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c028-simpbms-board.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c028-simpbms-board.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; BMW; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -9488,7 +9488,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-af8c2d79e989 — cad-r06.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r06.md](../workflows/details/cad-r06.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -9500,7 +9500,7 @@ Documents: research/sources/round-05/point-05-local-sources.json.
 
 ## SRC-afa0b4d5a10b — domain-paths.json
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/domain-paths.json](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json)
+Original source: [${MODELING_ROOT}/research/workflows/domain-paths.json](../workflows/domain-paths.json)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -9512,7 +9512,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-afba409b6281 — Gland source-readiness result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json`)
 
 Summary: Existing gate returns NEEDS_INPUT forcap/bodysegmentheights,assembledposition andpassagegeometry.
 
@@ -9536,7 +9536,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-b079e75fd12d — P02 crossmember — end-capture.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/end-capture.json`)
 
 Summary: Completed end-view capture response identifies the reopened component camera/document context.
 
@@ -9548,7 +9548,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-b08d4de19a31 — Fuse source-stage execution report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c030-fuse-source.md](/home/leo/projects/3dmodeling/execution/c030-fuse-source.md)
+Original source: [${MODELING_ROOT}/execution/c030-fuse-source.md](../../execution/c030-fuse-source.md)
 
 Summary: Explains exactpart source findings,shared M6 alternative,actual acquisition results and the named construction inputs.
 
@@ -9560,7 +9560,7 @@ Documents: research/sources/round-21/fuse-sources.json.
 
 ## SRC-b123fa7af4ef — Orion Rev01 drawing render
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-dimension-drawing-preview.png`)
 
 Summary: Actual dimensioned front/side/detail views explicitly listORI241236120 andits mounting-slot reference labels.
 
@@ -9596,7 +9596,7 @@ Documents: research/action-audit/findings.md, research/action-audit/point-06-bui
 
 ## SRC-b18991f27bde — dom-r08.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r08.md](../workflows/details/dom-r08.md)
 
 Summary: Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -9620,7 +9620,7 @@ Documents: research/action-audit/point-03-vector-and-solid.md, research/action-a
 
 ## SRC-b238ff5da9a9 — point-05-operations
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](../action-audit/point-05-operations.json)
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -9644,7 +9644,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-b264855e91e7 — corrected-records-18.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-18.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-18.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-18.json`)
 
 Summary: correctednativeentitysnapshot: BA:Insert, BB:Insert, BC:Insert, BD:Insert, BE:Insert, BF:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -9656,7 +9656,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-b2d596e125f6 — SavedFiboxenclosure
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg`)
 
 Summary: NewnativeDWG2018manufacturerassembly;12soliddefinitions,16placedsolids,sourcecorrectedframes.
 
@@ -9668,7 +9668,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-b2e6a72711e2 — Driver iteration — source-outline-page1.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/source-outline-page1.png`)
 
 Summary: Inspected rendering of retained ECO page1 identifies exact CH52308G10 drawing dimensions and physical features.
 
@@ -9704,7 +9704,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/workflows
 
 ## SRC-b33d12d0b924 — P01 p01-build-03 — body-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/body-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/body-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/body-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/body-checkpoint.json`)
 
 Summary: p01-build-03 body-checkpoint.json: Binds partial/native stage to document 70, revision 8 and named part handles {'tube': '80'}; supports inspected recovery.
 
@@ -9728,7 +9728,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-b3eaf3b1142c — ME0907 wheel shaft to rim adapter (P14ME) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p14me-me0907-wheel-shaft-to-rim-adapter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -9740,7 +9740,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-b423063cc3e8 — placement-corrections.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/placement-corrections.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/placement-corrections.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/placement-corrections.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/placement-corrections.json`)
 
 Summary: Actualhelperrunreadbacksfor16nativeCAScorrectionsand12unchangedACISdefinitions.
 
@@ -9752,7 +9752,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-b47fffcd39a7 — 3D modeling implementation plan
 
-Original source: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md)
+Original source: [${MODELING_ROOT}/research/implementation-plan.md](../implementation-plan.md)
 
 Summary: Prior project proposal identifies OCS as the interactive baseline, FreeCAD for constrained feature trees, code-CAD for scripted solids, raster plans, drawing conversion and verification routes. Used as existing project context, not as runtime evidence.
 
@@ -9764,7 +9764,7 @@ Documents: research/sources/round-02/cad-sources.json, research/sources/round-02
 
 ## SRC-b4cef6ac5426 — SKF SY20TF bearing unit (C009) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 supported-shaft candidate; original kind manufacturer dimensions in existing record. Detailed geometry review belongs to its component iteration.
 
@@ -9776,7 +9776,7 @@ Documents: research/sources/round-08/component-plan-sources.json, research/sourc
 
 ## SRC-b51ee490a99b — Resistor source-readiness execution report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c035-resistor-source.md](/home/leo/projects/3dmodeling/execution/c035-resistor-source.md)
+Original source: [${MODELING_ROOT}/execution/c035-resistor-source.md](../../execution/c035-resistor-source.md)
 
 Summary: Records retained exact package datasheet,source-backed length/height/pitch and the named substrate-thickness input requirement from the actual review.
 
@@ -9788,7 +9788,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-b56bc21f14db — rec-r06.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r06.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r06.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r06.md](../workflows/details/rec-r06.md)
 
 Summary: Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -9800,7 +9800,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-b5b5f2bbfc67 — host.rs
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs](/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs)
+Original source: ${OCS_ROOT}/crates/ocs_plugin_api/src/host.rs (`${OCS_ROOT}/crates/ocs_plugin_api/src/host.rs`)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -9812,7 +9812,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-b600ecb1a3e1 — BMW module tray (P18) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p18-bmw-module-tray.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p18-bmw-module-tray.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p18-bmw-module-tray.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p18-bmw-module-tray.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; BMW; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -9824,7 +9824,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-b64f05c5a931 — Fuse component source-stage result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json`)
 
 Summary: Connects shared-family exterior proposal,target100A identity,actual acquisition/access routes and dependent geometry evidence.
 
@@ -9836,7 +9836,7 @@ Documents: research/sources/round-21/fuse-sources.json.
 
 ## SRC-b6504258277a — Point 03 visual and evidence review — vectors, sketches and small solids
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-03-visual.md](../action-audit/reviews/point-03-visual.md)
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -9872,7 +9872,7 @@ Documents: research/domains-and-components.md.
 
 ## SRC-b70a1a95f34d — reopened-records-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-records-0.json`)
 
 Summary: reopened native record snapshot: 81:Solid3D, 85:Insert, 89:Solid3D, 8D:Solid3D, 91:Solid3D, 95:Solid3D. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -9896,7 +9896,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-b74bd207d260 — P01 p01-build-03 — reopened-audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-audit.json`)
 
 Summary: p01-build-03 reopened-audit.json: Retained native response with fields bounds, document_id, issues, manifest, ok, source, status; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -9908,7 +9908,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-b77d14bbded9 — TDK I1C2W010A120V converter board (C046) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c046-tdk-i1c2w010a120v-converter-board.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; BT24 V regulation proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -9920,7 +9920,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-b794725381cf — Rounded-tube helper regression tests
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_rounded_tube.py](/home/leo/projects/3dmodeling/tests/test_rounded_tube.py)
+Original source: [${MODELING_ROOT}/tests/test_rounded_tube.py](../../tests/test_rounded_tube.py)
 
 Summary: Ten regression tests cover native clear-only selection semantics and mismatched picks, exact quarter-circle profile encoding, incorrect wall/radius/length observations, unsupported transformed/incomplete SAT and explicit UNKNOWN classification for reopened SAB data. Together with the existing18 tests the suite passed28 cases.
 
@@ -9932,7 +9932,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-b7aa02d92193 — Local Python 3.14 JSON decoder source
 
-Original source: [/usr/lib/python3.14/json/decoder.py](/usr/lib/python3.14/json/decoder.py)
+Original source: ${SYSTEM_ROOT}/usr/lib/python3.14/json/decoder.py (`${SYSTEM_ROOT}/usr/lib/python3.14/json/decoder.py`)
 
 Summary: Independent review inspected ordered pairs, dictionary conversion and nonfinite constants, supporting duplicate/nonfinite guards.
 
@@ -9944,7 +9944,7 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 ## SRC-b7d893687f49 — p02-readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -9956,7 +9956,7 @@ Documents: research/sources/round-09/component-execution-sources.json.
 
 ## SRC-b7e8e5d17d10 — SKF iteration — capture-isometric.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json`)
 
 Summary: Completed native isometric capture response identifies document75 and camera for inspected bearing component image.
 
@@ -9992,7 +9992,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-b83d2a638faa — step-confirm.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-confirm.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-confirm.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-confirm.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/step-confirm.json`)
 
 Summary: CompletedoriginalSTEPimportconfirmationresultforthenewdocument.
 
@@ -10004,7 +10004,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-b884395f7485 — c045_presave_measurements.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/c045_presave_measurements.py`)
 
 Summary: Traversed source-corrected instance paths andrecorded point-set geometry before saving.
 
@@ -10016,7 +10016,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-b914a224eaf5 — rec-r01.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r01.md](../workflows/details/rec-r01.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -10030,7 +10030,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 Original source: [https://www.skills.sh/](https://www.skills.sh/)
 
-Summary: Skill catalogue sources inspected 2026-11-12: skills.sh leaderboard, glotoff/freecad-skills, reyk/freecad-ai-skill, mitsuhiko/agent-stuff, earthtojake/text-to-cad, Foster1202/cad-modeling-fusion-skill, and the installed OCS engineering skill. Existing findings are at `/home/leo/projects/energy/eoliennes/research/cad-workflow/`; source candidates are also archived under `/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/skills/`. The detailed OCS harness findings describe an installed-build read-only inspection and existing API receipts; the skill research contains captured source files and hashes. These findings were reused, not reacquired or changed.
+Summary: Skill catalogue sources inspected 2026-11-12: skills.sh leaderboard, glotoff/freecad-skills, reyk/freecad-ai-skill, mitsuhiko/agent-stuff, earthtojake/text-to-cad, Foster1202/cad-modeling-fusion-skill, and the installed OCS engineering skill. Existing findings are at `${EOLIENNES_ROOT}/research/cad-workflow/`; source candidates are also archived under `${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/skills/`. The detailed OCS harness findings describe an installed-build read-only inspection and existing API receipts; the skill research contains captured source files and hashes. These findings were reused, not reacquired or changed.
 
 Evidence: existing_report_registered, archived_original_referenced.
 
@@ -10040,7 +10040,7 @@ Documents: research/cad-and-skills.md, research/sources/round-02/archive-sources
 
 ## SRC-b9c03a1f1d09 — SKF iteration — reopened-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json`)
 
 Summary: Actual derivative ten-solid SAB records from document75 support independent savedfeature checks and regression inputs.
 
@@ -10052,7 +10052,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-b9f01467bce4 — P02 crossmember — document-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/document-checkpoint.json`)
 
 Summary: Initial isolated P02 document identity/revision checkpoint supports inspected stage recovery without touching prior models.
 
@@ -10076,7 +10076,7 @@ Documents: research/sources/round-03/cad-detail-sources.json, research/workflows
 
 ## SRC-ba79f85a852f — Action-by-action workflow audit
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/README.md](/home/leo/projects/3dmodeling/research/action-audit/README.md)
+Original source: [${MODELING_ROOT}/research/action-audit/README.md](../action-audit/README.md)
 
 Summary: Authored audit document recording Action-by-action workflow audit. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -10088,7 +10088,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-bad31f6c036a — Point 03 — Confirmed dimensions and vector drawings to small CAD models
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](../action-audit/point-03-vector-and-solid.md)
 
 Summary: Point 03 Confirmed dimensions and vector drawings to CAD: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -10136,7 +10136,7 @@ Documents: research/action-audit/reviews/point-03-independent.md, research/actio
 
 ## SRC-bb6e841ed0bc — Gland source-stage result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json`)
 
 Summary: Connects exactLGidentity,familyWHdrawing,locatedCADselector andsourcegate.
 
@@ -10148,7 +10148,7 @@ Documents: research/sources/round-22/gland-sources.json.
 
 ## SRC-bbe2770322c8 — SKF iteration — native-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json`)
 
 Summary: Raw original ten-solid SAB observations from document74 retain actual faulty housing and complete other part geometry for independent comparisons.
 
@@ -10160,7 +10160,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-bbfca0dda33f — corrected-blocks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-blocks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-blocks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-blocks.json`)
 
 Summary: Blockmembershipreadbackafter16sourceframecorrections.
 
@@ -10184,7 +10184,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-bc59d9c5c5c8 — Point 05 visual and evidence review — existing CAD with photographs and scans
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-visual.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-05-visual.md](../action-audit/reviews/point-05-visual.md)
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -10196,7 +10196,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 ## SRC-bc5f6a777dc4 — Leaf iteration — reopened-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json`)
 
 Summary: Recovered open state binds document 76 to the exact existing Leaf DWG and preserves other open drawing identities.
 
@@ -10208,7 +10208,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-bc6235b9e567 — corrected-blocks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-blocks.json`)
 
 Summary: Block membership readback after27 source placement corrections.
 
@@ -10220,7 +10220,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-bcae1b9fb83c — P02 crossmember — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/initial-state.json`)
 
 Summary: Pre-build OCS state identifies the active rail document and all open work; later new-document construction preserves unrelated documents.
 
@@ -10232,7 +10232,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-bce7d3359ed2 — Motenergy ME0907 motor (C005) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c005-motenergy-me0907-motor.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind component geometry reference. Detailed geometry review belongs to its component iteration.
 
@@ -10256,7 +10256,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-bd0f14e5688e — README.md
 
-Original source: [/home/leo/projects/architecture/research/README.md](/home/leo/projects/architecture/research/README.md)
+Original source: ${ARCHITECTURE_ROOT}/research/README.md (`${ARCHITECTURE_ROOT}/research/README.md`)
 
 Summary: Existing local source inspected in the initial research; its use is described in research/local-baseline.md.
 
@@ -10268,7 +10268,7 @@ Documents: research/local-baseline.md, research/sources/local-evidence.json, res
 
 ## SRC-bd5ead990898 — Initial Fibox drawing transcription
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes-initial.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes-initial.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes-initial.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes-initial.md`)
 
 Summary: Initialdelegatedtableincludesrearfootdepthdatumandmountingplateopeningmisassociations,preservedbeforecoordinatorcorrection.
 
@@ -10292,7 +10292,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-bddb6be8c5b8 — persistence.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/persistence.json`)
 
 Summary: Recoveredoriginalreopenrequest,matchingDWGhash/manifestandzero-errorzero-warningaudit.
 
@@ -10304,7 +10304,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-be135dffe792 — Point 02 — Procedure designer notes
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-02-designer.md](../action-audit/reviews/point-02-designer.md)
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -10316,7 +10316,7 @@ Documents: research/sources/round-05/point-02-local-sources.json.
 
 ## SRC-be85a93a4c48 — Fuse PDF and exact-model acquisition record
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json`)
 
 Summary: Records manufacturer403,Mouser transfer failure,reader-only dimensions and screenshot placeholder. Distinguishes PDF-reader observations from retained originals and exact target identity from adjacent60A CAD.
 
@@ -10328,7 +10328,7 @@ Documents: research/sources/round-21/fuse-sources.json.
 
 ## SRC-bea676f3a5b9 — Caster frame doubler (P05D) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p05d-caster-frame-doubler.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Removable caster support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -10340,7 +10340,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-bec11051e812 — SKILL.md — documented_skill
 
-Original source: [/home/leo/projects/ferme/skills/cad-construction/SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md)
+Original source: ${FERME_ROOT}/skills/cad-construction/SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`)
 
 Summary: Reusable source, component/frame, construction, feature-check and saved-file procedure. Applicability: Repository skill instructions and reproduction-package specification.
 
@@ -10364,7 +10364,7 @@ Documents: research/cad-and-skills.md, research/user-supplied-links.md.
 
 ## SRC-bedb22ee447a — Saved battery placement and geometry checks
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json`)
 
 Summary: 35 passing preservation checks cover13 source matrices,21 reachable vertex sets and39 instance paths/transforms. Reports17 closed-partner definitions,four open-partner records and source drawing/STEP dimensional observations separately.
 
@@ -10376,7 +10376,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-bee391035496 — Precharge resistor Ohmite TA310PA1K00JE (C035) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c035-precharge-resistor-ohmite-ta310pa1k00je.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Kelly wiring candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -10412,7 +10412,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-bf7c144ea436 — reopen_c045.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/reopen_c045.py`)
 
 Summary: Recovered original reopen,verified hash/manifest/audit andretained saved records;capture laterfailed image identity.
 
@@ -10424,7 +10424,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-bfb6141184a2 — Direct Motenergy ME0907 outline copy
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf`)
 
 Summary: Original PDF acquired from the drawing link on Motenergy ME0907 page. Drawing title0JWT.301.073 and existing interfaces are identified in the delegated review; this retains the manufacturer-linked source separately from the EV Europe copy.
 
@@ -10448,7 +10448,7 @@ Documents: research/action-audit/reviews/point-07-visual.md, research/sources/ro
 
 ## SRC-bfdf4432e2de — reopened-records-6.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-6.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-6.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reopened-records-6.json`)
 
 Summary: reopenednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -10484,7 +10484,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-c01e327d09e4 — P01 p01-build-01 — rail-profile-readback.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-profile-readback.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-profile-readback.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-profile-readback.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-profile-readback.json`)
 
 Summary: p01-build-01 rail-profile-readback.json: Retained native response with fields collection, count, document_id, geometry_revision, next_offset, ok, records; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -10508,7 +10508,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-c057807eb5f6 — cad-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json](/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-02/cad-sources.json](round-02/cad-sources.json)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -10520,7 +10520,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-c0bd9d377ee7 — Saved battery terminal-face view
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png`)
 
 Summary: Actual reopened orthographic view inspected against the source top drawing; two terminals,polarity marks,centre fitting,logo and mounting tabs are visible.
 
@@ -10544,7 +10544,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-c14ca78d0641 — Software review: existing components and CAD files to inspected reusable inputs
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-02-software.md](../action-audit/reviews/point-02-software.md)
 
 Summary: Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -10556,7 +10556,7 @@ Documents: research/sources/round-05/point-02-local-sources.json.
 
 ## SRC-c19fa9da345e — Driver iteration — readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/readiness.json`)
 
 Summary: All15 required source expectations and pinned hashes pass SOURCE_READY with durable retained reconstruction evidence.
 
@@ -10592,7 +10592,7 @@ Documents: research/sources/round-02/archive-sources.json, research/sources/roun
 
 ## SRC-c2bf631e3721 — Square-tube corner research for main-frame rails and crossmembers
 
-Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+Original source: [${MODELING_ROOT}/research/tube-corner-research.md](../tube-corner-research.md)
 
 Summary: Luna report compares EN 10219-2:2019 cold-formed and EN 10210-2:2019 hot-finished nominal section-property corner radii, external manufacturing profile limits and seller evidence for item040819. It links these findings to P01/P02 and records reference-model and measured-stock alternatives as proposals.
 
@@ -10604,7 +10604,7 @@ Documents: research/sources/round-10/tube-corner-local-sources.json.
 
 ## SRC-c2f8f1ee81fd — acis_export.rs
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/scene/convert/acis_export.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/scene/convert/acis_export.rs)
+Original source: ${OCS_ROOT}/src/scene/convert/acis_export.rs (`${OCS_ROOT}/src/scene/convert/acis_export.rs`)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -10628,7 +10628,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-c30253c39c7d — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/result.json`)
 
 Summary: C045 IN_PROGRESS result:39 native checks andpersistence pass,visual check fails;applied capture-identity procedure linked.
 
@@ -10652,7 +10652,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-c35c5442f991 — SKF iteration — readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json`)
 
 Summary: All required bound SKF source features and pinned source hashes returnSOURCE_READY before dependent revision.
 
@@ -10664,7 +10664,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-c3a52bea4793 — SB50 housing source image
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/sb50-datasheet-page-1.png`)
 
 Summary: Actual manufacturer page1 shows housing bottom view and35.1 width/22.5+19.1+6.4 axial chain,Ø3.7 holes andmated81.3×15.9 view.
 
@@ -10676,7 +10676,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-c3c48b5318f8 — Kelly archive member 48VCW.pdf
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf`)
 
 Summary: Retained original48V clockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.
 
@@ -10688,7 +10688,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-c4427df066e7 — corrected-records-18.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-18.json`)
 
 Summary: corrected native record snapshot: B1:Insert, B2:Insert, B3:Insert, B4:Insert, B5:Insert, B6:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -10700,7 +10700,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-c49f0a4410c4 — Installed CAD and computational engineering command availability inventory
 
-Original source: [/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/harness/installed-tools-path-inventory.json](/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/harness/installed-tools-path-inventory.json)
+Original source: ${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/harness/installed-tools-path-inventory.json (`${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/harness/installed-tools-path-inventory.json`)
 
 Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: Installed CAD and computational engineering command availability inventory. Source class: read-only local PATH lookup and version probes. Original reuse terms: not applicable; locally generated environment observation
 
@@ -10724,7 +10724,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-c52a21c8147a — New motor implementation report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c005-me0907.md](/home/leo/projects/3dmodeling/execution/c005-me0907.md)
+Original source: [${MODELING_ROOT}/execution/c005-me0907.md](../../execution/c005-me0907.md)
 
 Summary: Records new FERME model dimensions/detail, 18 saved checks, eight focused tests, source corrections, inspected views and the reusable axial construction/check improvement.
 
@@ -10736,7 +10736,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-c5c9233bf7a9 — Rear attachment crossmember doubler (P09D) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p09d-rear-attachment-crossmember-doubler.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: attachments; Rear interface support proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -10748,7 +10748,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-c5c9d3ec5705 — OpenCADStudio 2026.42 generated capability, command, and record-schema responses
 
-Original source: [/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/harness/installed-2026.42-readonly-api-receipts.json](/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/harness/installed-2026.42-readonly-api-receipts.json)
+Original source: ${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/harness/installed-2026.42-readonly-api-receipts.json (`${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/harness/installed-2026.42-readonly-api-receipts.json`)
 
 Summary: Existing archived source for OCS automation documentation and historical installed-capability receipts: OpenCADStudio 2026.42 generated capability, command, and record-schema responses. Source class: read-only live runtime API observation; not product documentation. Original reuse terms: not applicable; locally generated observation of installed application output
 
@@ -10760,7 +10760,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-c5e854fd419c — cad.py
 
-Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cad.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cad.py)
+Original source: ${FERME_ROOT}/skills/cad-construction/scripts/cad.py (`${FERME_ROOT}/skills/cad-construction/scripts/cad.py`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -10784,7 +10784,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-c66fe74bfd16 — Existing CAD and checks index
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/README.md](/home/leo/projects/ferme/engineering/module-development/cad/README.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/README.md (`${FERME_ROOT}/engineering/module-development/cad/README.md`)
 
 Summary: Existing local component/action/skill/catalogue source reused by the consolidated plan. Evidence and proposal boundaries remain in the original record.
 
@@ -10796,7 +10796,7 @@ Documents: research/sources/round-08/component-plan-sources.json, research/sourc
 
 ## SRC-c69eb556dd4e — control-bootstrap-prefix.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/control-bootstrap-prefix.py`)
 
 Summary: Exact actual control bootstrap prefix loads existing guarded client/helper andexplicit session;private descriptor content omitted.
 
@@ -10820,7 +10820,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-c748eeb196bb — rec-r05.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r05.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r05.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r05.md](../workflows/details/rec-r05.md)
 
 Summary: Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -10844,7 +10844,7 @@ Documents: research/reconstruction.md, research/sources/round-03/cad-detail-sour
 
 ## SRC-c777cf43a2bb — Trelleborg tube 6.00-9TR15 (C002) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c002-trelleborg-tube-6-00-9tr15.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Common wheel reference; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -10856,7 +10856,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-c7a5d7a2632d — rec-r08.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r08.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r08.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r08.md](../workflows/details/rec-r08.md)
 
 Summary: Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -10868,7 +10868,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-c838814ff6f2 — Current converter capture request and recovery
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl`)
 
 Summary: Write-ahead capture intent, initial polling-bound responses and original-request recovery for the current user view.
 
@@ -10904,7 +10904,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-c9c4bd1b2994 — point-04-operations
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](../action-audit/point-04-operations.json)
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -10928,7 +10928,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-c9cb9090afed — Driver iteration — capture-isometric.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/capture-isometric.json`)
 
 Summary: Completed isometric capture response identifies document78 and actual component image.
 
@@ -10940,7 +10940,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-ca19e3275b4b — native-plot-result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json`)
 
 Summary: Completed native PDF plot response fordocument87,one297×210mm page;visual content checked separately.
 
@@ -10964,7 +10964,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-caa0e7dcf088 — Battery fuse CNL150 (C065) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c065-battery-fuse-cnl150.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Mersen fuse alternative; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -10976,7 +10976,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-cab5e73f144b — Existing OCS viewport-association DXF fixture
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf](/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf)
+Original source: ${OCS_ROOT}/tests/fixtures/dim_assoc/viewport_associations.dxf (`${OCS_ROOT}/tests/fixtures/dim_assoc/viewport_associations.dxf`)
 
 Summary: Original existing fixture used read-only for the first actual DXF inspection; contains model/paper contexts and diverse entity types. Original bytes remain unchanged.
 
@@ -10988,7 +10988,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-cabea6f9d38d — Category1 lower linkage pin (C063) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c063-category1-lower-linkage-pin.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: attachments; Reference attachment interface; original kind source component reference. Detailed geometry review belongs to its component iteration.
 
@@ -11024,7 +11024,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-cb4319e9559f — Initial SB50 delegated notes
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/source-notes-initial.md`)
 
 Summary: Preserves original kit mapping/source outcomes andinitial mistaken11.1 barrel-diameter interpretation.
 
@@ -11036,7 +11036,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-cb44d69bba55 — AHDBM06 mating plug geometry (C062) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c062-ahdbm06-mating-plug-geometry.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Agricultural interface provision; original kind manufacturer mate-family reference. Detailed geometry review belongs to its component iteration.
 
@@ -11048,7 +11048,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-cb56cc1e6215 — corrected-records-6.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-6.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-6.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-6.json`)
 
 Summary: correctednativeentitysnapshot: 96:Insert, 9A:Solid3D, 9E:Solid3D, 9F:Solid3D, A3:Solid3D, A7:Insert. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -11060,7 +11060,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-cb5cec23d032 — Workflow routes linked to detailed actions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md)
+Original source: [${MODELING_ROOT}/research/action-audit/workflow-to-actions.md](../action-audit/workflow-to-actions.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -11072,7 +11072,7 @@ Documents: research/sources/round-05/audit-index-sources.json, research/sources/
 
 ## SRC-cb92cde3eea0 — P02 crossmember — reopened-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checkpoint.json`)
 
 Summary: Reopened checkpoint binds the saved P02 component handle and document/revision to its completed body.
 
@@ -11084,7 +11084,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-cb939ff4c2d6 — Completed saved rail verification report
 
-Original source: [/home/leo/projects/3dmodeling/execution/p01-saved-verification.md](/home/leo/projects/3dmodeling/execution/p01-saved-verification.md)
+Original source: [${MODELING_ROOT}/execution/p01-saved-verification.md](../../execution/p01-saved-verification.md)
 
 Summary: Reports live saved-body checks, unchanged DWG hash, body-derived versus zero API bounds, documented OCS/ACIS unit metadata, dependency installation results,32 passing tests and the eligible crossmember.
 
@@ -11096,7 +11096,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-cbdfa4a88a6b — Leaf iteration — capture-terminal.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json`)
 
 Summary: Completed terminal-end capture response identifies document 76 and its three distinct terminal assemblies.
 
@@ -11108,7 +11108,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-cc34a83be8f3 — Caster pin positive keeper (C020) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c020-caster-pin-positive-keeper.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Removable support proposal; original kind retention component geometry input. Detailed geometry review belongs to its component iteration.
 
@@ -11132,7 +11132,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-cc688c1df94b — RadioMaster Pocket ELRS transmitter (C057) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c057-radiomaster-pocket-elrs-transmitter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Handheld operator equipment; original kind existing component reference. Detailed geometry review belongs to its component iteration.
 
@@ -11144,7 +11144,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-ccbf0b22fcf6 — cad-r10.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md](/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/cad-r10.md](../workflows/details/cad-r10.md)
 
 Summary: Existing local source cited by point 03 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -11156,7 +11156,7 @@ Documents: research/sources/round-05/point-03-local-sources.json.
 
 ## SRC-ccd90649a995 — source-placement-plan.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-placement-plan.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-placement-plan.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-placement-plan.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source-placement-plan.json`)
 
 Summary: 17sourceframesand16uniqueinverse-matchednativeplacementswithreviewedtargetfields.
 
@@ -11168,7 +11168,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-cce96de57cbe — Ideas
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/ideas.json](/home/leo/projects/3dmodeling/research/action-audit/ideas.json)
+Original source: [${MODELING_ROOT}/research/action-audit/ideas.json](../action-audit/ideas.json)
 
 Summary: Authored audit document recording Ideas. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -11192,7 +11192,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-cd8d24d026d3 — Point 05 — Alignment and parametric remodeling
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](../action-audit/point-05-alignment-and-remodeling.md)
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -11204,7 +11204,7 @@ Documents: research/sources/round-05/point-05-local-sources.json, research/sourc
 
 ## SRC-ce0594707cbb — item-angle-bracket-set-41115-native.json — recorded_check_results
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json`)
 
 Summary: Retained feature/audit observations for the named component. Applicability: Pre-save stage; transfer conditions are retained in the matching report.
 
@@ -11216,7 +11216,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-ce70036fb35b — 3D modeling
 
-Original source: [/home/leo/projects/3dmodeling/README.md](/home/leo/projects/3dmodeling/README.md)
+Original source: [${MODELING_ROOT}/README.md](../../README.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -11240,7 +11240,7 @@ Documents: research/action-audit/reviews/point-03-visual.md, research/sources/ro
 
 ## SRC-cea6a9237427 — Integrated Orion source review
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/source-notes.md`)
 
 Summary: Links coordinator correction to preserved initial interpretation andretains original links,dimension labels andC045 family applicability.
 
@@ -11252,7 +11252,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-cf13f71acbca — corrected-records-12.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-records-12.json`)
 
 Summary: correctednativeentitysnapshot: A8:Insert, A9:Insert, AA:Insert, AE:Solid3D, B2:Solid3D, B6:Solid3D. ExactpropertiesandACISbytesusedforplacement/geometrycomparison.
 
@@ -11264,7 +11264,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-cf30fb2ca81a — Driver iteration — reopened-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-records.json`)
 
 Summary: Actual saved derivative SAB records supply all141 passing feature checks and regression inputs.
 
@@ -11276,7 +11276,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-cf410cec238a — Actual retained-manual model-table review
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/coordinator-review.md`)
 
 Summary: PDF text extraction finds48/12-20 andno48/12-30;separates retained PDF,delegated price-list claim,project input andexact C045 drawing coverage.
 
@@ -11288,7 +11288,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-cf6156d88759 — P01 p01-build-02 — initial-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/initial-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/initial-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/initial-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-02/initial-state.json`)
 
 Summary: p01-build-02 initial-state.json: Observed document 68 revision 8 with open-document identities and camera/command state; used for write isolation or capture provenance.
 
@@ -11300,7 +11300,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-cf83883aed8c — Victron smallBMS NG (C054) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c054-victron-smallbms-ng.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Victron alternative BMS arrangement; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -11312,7 +11312,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-cfdbfbbc0d31 — imported-audit.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-audit.json`)
 
 Summary: Initial nine-solid/29-block-reference manifest withzeroerrors/warnings.
 
@@ -11324,7 +11324,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-cfeb029989f0 — Point 04 source check: raster interpretation, orthographic views and IFC
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-sources.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-04-sources.md](../action-audit/reviews/point-04-sources.md)
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -11336,7 +11336,7 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 ## SRC-d0312b87a2c9 — P02 crossmember — pre-save-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/pre-save-records.json`)
 
 Summary: Raw native SAT record of the actual P02 solid in document72 supplies the original surface/vertex observations.
 
@@ -11348,7 +11348,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-d08c92fa1104 — P01 p01-build-01 — rail-after-cut-records.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-after-cut-records.json`)
 
 Summary: p01-build-01 rail-after-cut-records.json: 2 native entity records in document 68, revision 8; stores exact geometry encoding and properties for interpretation independently of PASS labels.
 
@@ -11360,7 +11360,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-d0936a70fd33 — reusable-repair-regression.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reusable-repair-regression.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reusable-repair-regression.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reusable-repair-regression.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/reusable-repair-regression.json`)
 
 Summary: Twoofflinerecordedcomponenthelperchecks:13battery/16enclosureplacementsand21/12unchangeddefinitions.
 
@@ -11384,7 +11384,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-d1328d9f4a93 — readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/readiness.json`)
 
 Summary: SOURCE_READYresultfromexistingrequiredfeature/sourcehashgate.
 
@@ -11396,7 +11396,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-d17309e8596a — Fibox rear-view detail
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-front-detail.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-front-detail.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-front-detail.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-front-detail.png`)
 
 Summary: Derivedrear-viewcropretainsmounting/openingleadersforfeatureassociation.
 
@@ -11408,7 +11408,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-d191df74c19e — control-bootstrap-prefix.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/control-bootstrap-prefix.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/control-bootstrap-prefix.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/control-bootstrap-prefix.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/control-bootstrap-prefix.py`)
 
 Summary: Exactexecutedcontrolprefixloadingexistingguardedclient/helperandexplicitOCSsession;descriptorcontentsomitted.
 
@@ -11432,7 +11432,7 @@ Documents: research/sources/round-10/tube-corner-sources.json, research/tube-cor
 
 ## SRC-d1c0e9f5deef — Authorized cleanup of newly authored examples
 
-Original source: [/home/leo/projects/3dmodeling/research/cleanup-record.md](/home/leo/projects/3dmodeling/research/cleanup-record.md)
+Original source: [${MODELING_ROOT}/research/cleanup-record.md](../cleanup-record.md)
 
 Summary: Records the removal of 13 example files, verified original Git revision and SHA-256 values, prior scope finding and replacement of active example references with documented third-party APIs.
 
@@ -11456,7 +11456,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-d25b3e6e0e1d — workflow-to-actions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json)
+Original source: [${MODELING_ROOT}/research/action-audit/workflow-to-actions.json](../action-audit/workflow-to-actions.json)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -11480,7 +11480,7 @@ Documents: research/sources/round-02/archive-sources.json, research/sources/roun
 
 ## SRC-d3096ede4e6f — Driver iteration — retained-source/original-construction-source.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-construction-source.py`)
 
 Summary: Unchanged retained copy of the inspected original Sumitomo builder; used as reconstruction source evidence, with its original code and attribution preserved.
 
@@ -11492,7 +11492,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-d32e74eebf36 — build_item_profile_segment.py — existing_component_code
 
-Original source: [/tmp/opencode/build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py)
+Original source: ${TEMP_ROOT}/opencode/build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`)
 
 Summary: contours samples retained text curves and normalizes the section; build/complete/verify construct and check the profile. Applicability: Uses extracted contour text rather than a DXF parser; fixed 40 mm normalization, 100 mm length, output paths, session wrapper and component checks.
 
@@ -11504,7 +11504,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-d340255b4d7f — SKF iteration — reopened-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png`)
 
 Summary: Actual inspected isometric image shows tapered housing,bore,two mounting feet/slots and fitting/screw details.
 
@@ -11540,7 +11540,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-d4dbbb69bd1c — P01 p01-build-01 — rail-record-schema-0.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-0.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-0.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-0.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-record-schema-0.json`)
 
 Summary: p01-build-01 rail-record-schema-0.json: Retained native response with fields collection, collections, count, editing, next, next_offset, ok; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -11552,7 +11552,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-d52309ad63a6 — combined-details.json
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json](/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json)
+Original source: [${MODELING_ROOT}/research/workflows/details/combined-details.json](../workflows/details/combined-details.json)
 
 Summary: Ten proposed combined workflow dossiers with source-backed operations, frame controls, tool/API entry points, resource conditions and relative classifications.
 
@@ -11564,7 +11564,7 @@ Documents: research/sources/round-03/project-detail-sources.json.
 
 ## SRC-d526125ac341 — Source check: intake operations
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/source-check.md](../action-audit/reviews/source-check.md)
 
 Summary: Authored audit document recording Source check: intake operations. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -11576,7 +11576,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-d5265b630533 — find-skills — skill discovery workflow
 
-Original source: [/home/leo/.agents/skills/find-skills/SKILL.md](/home/leo/.agents/skills/find-skills/SKILL.md)
+Original source: ${AGENT_SKILLS_ROOT}/find-skills/SKILL.md (`${AGENT_SKILLS_ROOT}/find-skills/SKILL.md`)
 
 Summary: Existing archived source for CAD skill source instructions, references, marketplace discovery and repository metadata: find-skills — skill discovery workflow. Source class: local discovery skill instructions. Original reuse terms: Local instructions; referenced in place without duplication.
 
@@ -11588,7 +11588,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-d58501ecc5d1 — feature-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json`)
 
 Summary: 15passingchecks:300×200×152.5body/coververtexspansand12closededgepartnergraphs;sourcecounts/frameobservations.
 
@@ -11600,7 +11600,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-d5c6dba4409f — document-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/document-checkpoint.json`)
 
 Summary: New isolated document86 binding,revision andrequest namespace before import.
 
@@ -11612,7 +11612,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-d5f6d3131aaa — Integrated Fibox drawing andvariant review
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/source-notes.md`)
 
 Summary: Identifies203015Texactvariant,correctedrearbodydepthdatum,inneropeningassociation andsourcevsproductpageconditions.
 
@@ -11624,7 +11624,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-d64a3133bef1 — provenance.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/provenance.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/provenance.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/provenance.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/provenance.json`)
 
 Summary: Exactoriginaltemporarydriverpaths,retainedhashesandcontrolprefixextraction;recordsoriginaldependencyconditions.
 
@@ -11648,7 +11648,7 @@ Documents: research/action-audit/reviews/point-06-visual.md, research/domains-an
 
 ## SRC-d6f3a12f4f78 — PRO-L ring to rim adapter (P14SL) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p14sl-pro-l-ring-to-rim-adapter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; Sumitomo PRO-L; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -11660,7 +11660,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-d74883941311 — p01-source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -11672,7 +11672,7 @@ Documents: research/sources/round-09/component-execution-sources.json.
 
 ## SRC-d7af850e4bd9 — Independent review — Point 04 raster drawings and interpreted dimensions
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-04-independent.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-04-independent.md](../action-audit/reviews/point-04-independent.md)
 
 Summary: Point 04 Raster drawings and interpreted dimensions: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -11684,7 +11684,7 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 ## SRC-d84e68b6a0ca — P01 p01-build-03 — reopened-checkpoint.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checkpoint.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checkpoint.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checkpoint.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-03/reopened-checkpoint.json`)
 
 Summary: p01-build-03 reopened-checkpoint.json: Binds partial/native stage to document 71, revision 0 and named part handles {'tube': '80'}; supports inspected recovery.
 
@@ -11696,7 +11696,7 @@ Documents: research/sources/round-11/rail-execution-sources.json.
 
 ## SRC-d87cb7ce3b84 — views_c029.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/views_c029.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/views_c029.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/views_c029.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/views_c029.py`)
 
 Summary: CapturedreopenedTOP/FRONTviewswithfitandmargincommands.
 
@@ -11720,7 +11720,7 @@ Documents: research/action-audit/point-06-building-and-robot.md, research/action
 
 ## SRC-d928392d886f — build_workflow_details.py
 
-Original source: [/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py)
+Original source: [${MODELING_ROOT}/research/tools/build_workflow_details.py](../tools/build_workflow_details.py)
 
 Summary: Documentation renderer validating recipe coverage, classification values and source references; builds workflow pages and independent sorted tables.
 
@@ -11732,7 +11732,7 @@ Documents: research/sources/round-03/project-detail-sources.json.
 
 ## SRC-d946b31f68ec — WISKA ESKV25 gland10066413 (C041) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c041-wiska-eskv25-gland10066413.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Main cable entry candidate; original kind manufacturer source reference. Detailed geometry review belongs to its component iteration.
 
@@ -11756,7 +11756,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-d9b54d7ca1b6 — Leaf iteration — persistence.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json`)
 
 Summary: Current file SHA matches the earlier verified-save SHA. Opened native audit has eight solids and zero errors/warnings; original file bytes remain preserved.
 
@@ -11768,7 +11768,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-da01bd7cde5d — imported-query.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-query.json`)
 
 Summary: Actual native imported entity handle/type inventory.
 
@@ -11780,7 +11780,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-da6cb18472ad — P01 p01-build-01 — rail-doc-schema-2.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-doc-schema-2.json`)
 
 Summary: p01-build-01 rail-doc-schema-2.json: Installed API response unknown_operation: Unknown operation; retained as a protocol/schema discovery failure for this rail build.
 
@@ -11828,7 +11828,7 @@ Documents: research/sources/round-22/gland-sources.json.
 
 ## SRC-db98256a44dd — Point 07 independent review — photographs, depth and learned reconstruction
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-07-independent.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-07-independent.md](../action-audit/reviews/point-07-independent.md)
 
 Summary: Point 07 Photographs, depth and learned reconstruction: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -11840,7 +11840,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-dba1e4dff6ac — Original driver component mapping
 
-Original source: [/tmp/opencode/sumitomo-smartris-driver-ch52308-state.json](/tmp/opencode/sumitomo-smartris-driver-ch52308-state.json)
+Original source: ${TEMP_ROOT}/opencode/sumitomo-smartris-driver-ch52308-state.json (`${TEMP_ROOT}/opencode/sumitomo-smartris-driver-ch52308-state.json`)
 
 Summary: Existing mapping identifies116 component handles and their construction names, used to bind actual native records and select the complete31-solid X2 group. An unchanged copy is retained in FERME.
 
@@ -11852,7 +11852,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-dbc7c88be85f — test_cadtools.py
 
-Original source: [/home/leo/projects/ferme/skills/cad-construction/tests/test_cadtools.py](/home/leo/projects/ferme/skills/cad-construction/tests/test_cadtools.py)
+Original source: ${FERME_ROOT}/skills/cad-construction/tests/test_cadtools.py (`${FERME_ROOT}/skills/cad-construction/tests/test_cadtools.py`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -11888,7 +11888,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-dcb41c3ce9ea — Fibox ARCA203015 enclosure (C029) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c029-fibox-arca203015-enclosure.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; Control enclosure proposal; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -11912,7 +11912,7 @@ Documents: research/action-audit/reviews/point-02-visual.md, research/domains-an
 
 ## SRC-dcd239b413da — Pilz source provenance
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json`)
 
 Summary: Original PDF retrieval time,MIME/hash,derived render metadata andactual blocked STEP access outcome.
 
@@ -11936,7 +11936,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-dd1fcc78e97c — Independent DXF transform and context tests
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_dxf_inspect.py](/home/leo/projects/3dmodeling/tests/test_dxf_inspect.py)
+Original source: [${MODELING_ROOT}/tests/test_dxf_inspect.py](../../tests/test_dxf_inspect.py)
 
 Summary: Eight passing cases verify nested world-coordinate control, layer inheritance, model/paper contexts, preserved bulges and bytes, unitless records, cycles, array identities and bounded expansion.
 
@@ -11948,7 +11948,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-dd4c729f9ace — Victron Orion48-12 converter (C043) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c043-victron-orion48-12-converter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; 44–51.2 V battery routes; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -11960,7 +11960,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-ddbe71fda666 — workflow details
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json](/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json)
+Original source: [${MODELING_ROOT}/research/workflows/details/workflow-details.json](../workflows/details/workflow-details.json)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -11984,7 +11984,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-de3fef8057a3 — ME0907 actual native operation journal
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl`)
 
 Summary: Records isolated document creation, cylinders, pilot union, two blind-hole groups, end-thread/keyway cuts, save, same-identity reopen recovery and model captures.
 
@@ -11996,7 +11996,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-de7c1927c29d — Saved rail hash and native API bounds observation
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-audit.json`)
 
 Summary: Actual reopened document audit identifies the saved DWG and its SHA256, one-solid manifest and zero-error audit; reported bounds are zero. Native decoded features provide the independent nonzero bounds.
 
@@ -12008,7 +12008,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-dec8ef1082c6 — Implemented drawing-inspection skill
 
-Original source: [/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md](/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md)
+Original source: [${MODELING_ROOT}/skills/drawing-inspection/SKILL.md](../../skills/drawing-inspection/SKILL.md)
 
 Summary: Documents the tested DXF command, dependency setup, coordinate matrix semantics, source-unit evidence, resource limits and agent handoff to mapped derivative selection.
 
@@ -12020,7 +12020,7 @@ Documents: research/sources/round-18/dxf-inspection-sources.json.
 
 ## SRC-df08a712232a — Driver iteration — native-query.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/native-query.json`)
 
 Summary: Actual original query identifies116 solid entities and eight text labels, preserving all native handles.
 
@@ -12032,7 +12032,7 @@ Documents: research/sources/round-16/driver-sources.json.
 
 ## SRC-df6405fd9570 — computational-engineering.md
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md](/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/references/computational-engineering.md (`${CODEX_HOME}/skills/ocs-engineering/references/computational-engineering.md`)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -12056,7 +12056,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-dfbf09c1f151 — point-04-web-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-05/point-04-web-sources.json](round-05/point-04-web-sources.json)
 
 Summary: Existing local source cited by point 04 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -12068,7 +12068,7 @@ Documents: research/sources/round-05/point-04-local-sources.json.
 
 ## SRC-dfe4eca1f71a — imported-records-36.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/imported-records-36.json`)
 
 Summary: imported native record snapshot: C3:Insert, C4:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -12080,7 +12080,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-dfe7c160f462 — OCS model contract
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/references/model-contract.md](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`)
 
 Summary: Requirements for units, frames, source corrections, parts, tolerances and supplied numerical check observations.
 
@@ -12092,7 +12092,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-dfeba86ef6d2 — point-07-web-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-07-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-07-web-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-05/point-07-web-sources.json](round-05/point-07-web-sources.json)
 
 Summary: Existing local source cited by point 07 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -12104,7 +12104,7 @@ Documents: research/sources/round-05/point-07-local-sources.json.
 
 ## SRC-e0ea93a3ecb8 — result.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/result.json`)
 
 Summary: Completedmanufacturerassemblyiterationlinks44nativechecks,persistence,views,sourceconfigurationandappliedhelper.
 
@@ -12116,7 +12116,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-e11abaaead0b — Gland source-stage execution report
 
-Original source: [/home/leo/projects/3dmodeling/execution/c041-cable-gland-source.md](/home/leo/projects/3dmodeling/execution/c041-cable-gland-source.md)
+Original source: [${MODELING_ROOT}/execution/c041-cable-gland-source.md](../../execution/c041-cable-gland-source.md)
 
 Summary: Documents exactvariant,dimensionedsourcefields,actualsourceinspection andnextdependentgeometryinputs.
 
@@ -12140,7 +12140,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-e24faff4c00b — Point 05 source check: calibration, scan alignment and coordinate frames
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-05-sources.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/point-05-sources.md](../action-audit/reviews/point-05-sources.md)
 
 Summary: Point 05 CAD, photographs and scans alignment: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.
 
@@ -12176,7 +12176,7 @@ Documents: research/reconstruction.md, research/sources/round-03/cad-detail-sour
 
 ## SRC-e3ba6f17358b — Operation Inventory
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json](/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json)
+Original source: [${MODELING_ROOT}/research/action-audit/operation-inventory.json](../action-audit/operation-inventory.json)
 
 Summary: Authored audit document recording Operation Inventory. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -12188,7 +12188,7 @@ Documents: research/sources/round-04/audit-local-sources.json, research/sources/
 
 ## SRC-e3d853f6ef1d — views_c045.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/executed-drivers/views_c045.py`)
 
 Summary: Requested saved TOP/FRONT views;first TOP request hit polling bound andits repeated image wasretained.
 
@@ -12212,7 +12212,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-e4073c405422 — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/ocs-journal.jsonl`)
 
 Summary: Actual guarded import,CAS corrections,save/reopen,view/capture,recovery,activate andREGEN write/readback history.
 
@@ -12224,7 +12224,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-e4113edcaa23 — Existing bearing inspection and selective revision procedure
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/existing-bearing.md](/home/leo/projects/3dmodeling/skills/component-cad/references/existing-bearing.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md](../../skills/component-cad/references/existing-bearing.md)
 
 Summary: Defines source binding, transformed native checks, coplanar fragment cancellation, exact source-defined plane cuts, preserved nine-solid geometry, same-ID recovery and save/view completion.
 
@@ -12236,7 +12236,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-e556fe740218 — Anderson3-6054P2 boot (C060) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c060-anderson3-6054p2-boot.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: connectors; Charge-port accessory; original kind source accessory reference. Detailed geometry review belongs to its component iteration.
 
@@ -12248,7 +12248,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-e55c2ad4734f — Observed implementation status overlay
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/implementation-status.json](../action-audit/implementation-queue/implementation-status.json)
 
 Summary: Marks source intake as implemented with actual code, skill, test and execution paths while preserving the original planning queue.
 
@@ -12260,7 +12260,7 @@ Documents: research/sources/round-17/source-intake-sources.json, research/source
 
 ## SRC-e5981cd49734 — PBR 4384 520 50T driven sprocket (C008) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c008-pbr-4384-520-50t-driven-sprocket.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907 chain example; original kind source component reference. Detailed geometry review belongs to its component iteration.
 
@@ -12272,7 +12272,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-e5ab2b710c51 — Integrated resistor package source notes
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md`)
 
 Summary: Retains applicable TA310PA dimensions and terminal/body association distinctions,with absolute original/render links. Coordinator removed unsupported PDF tolerance/no-scale attributions while preserving initial notes.
 
@@ -12284,7 +12284,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-e5af12a0873d — Research and proposed implementation
 
-Original source: [/home/leo/projects/3dmodeling/research/README.md](/home/leo/projects/3dmodeling/research/README.md)
+Original source: [${MODELING_ROOT}/research/README.md](../README.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -12296,7 +12296,7 @@ Documents: research/sources/round-05/audit-index-sources.json.
 
 ## SRC-e601a94ea182 — Reviewed SB50 acquisition metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/acquisition.json`)
 
 Summary: Records original PDF URL/time/MIME/hash,distributor mapping,login-gated manufacturer CAD route andcorrected axial11.1 dimension association.
 
@@ -12320,7 +12320,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-e632f00983a2 — reopened-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/reopened-isometric.png`)
 
 Summary: Actual converter capture attempt reopened-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
 
@@ -12332,7 +12332,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-e635bf5bcf73 — Live reopened rail native entity record
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/native-records.json`)
 
 Summary: Current OCS document71 native record contains the unchanged saved SAB body; its bytes match the earlier saved record. This record supplies the actual feature observations for the successful repeat check.
 
@@ -12344,7 +12344,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-e6c61c3caf92 — P02 crossmember — view-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/view-state.json`)
 
 Summary: Actual OCS view state identifies reopened document73 and preserves unrelated original wheel document52 revision2.
 
@@ -12356,7 +12356,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-e70585fd1821 — Leaf iteration — source-job.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json`)
 
 Summary: Pins 14 feature values with specific source sections, hashes, units, evidence labels and eight exact component names.
 
@@ -12368,7 +12368,7 @@ Documents: research/sources/round-15/leaf-sources.json.
 
 ## SRC-e7211c15cdf1 — P02 crossmember — reopened-checks.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/reopened-checks.json`)
 
 Summary: Six native SAB groups PASS: section/length, X/Y walls, ends, eight corner surfaces and a connected closed body.
 
@@ -12380,7 +12380,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-e74aa94bbb50 — Procedure-design review notes — Point 01 model brief
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/designer-notes.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/designer-notes.md](../action-audit/reviews/designer-notes.md)
 
 Summary: Authored audit document recording Procedure-design review notes — Point 01 model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -12392,7 +12392,7 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 ## SRC-e796d575e829 — Software review: descriptions and dimensions to a model brief
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md](/home/leo/projects/3dmodeling/research/action-audit/reviews/software-review.md)
+Original source: [${MODELING_ROOT}/research/action-audit/reviews/software-review.md](../action-audit/reviews/software-review.md)
 
 Summary: Authored audit document recording Software review: descriptions and dimensions to a model brief. Includes source links, evidence status and its relationship to the first-point procedure and operation inventory.
 
@@ -12404,7 +12404,7 @@ Documents: research/sources/round-04/audit-local-sources.json.
 
 ## SRC-e7c712c212f9 — WISKA-ESKV-25-page-1.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png`)
 
 Summary: RenderedWH datasheet page1:material,thread,length,flats,collar,TLrange andpartidentity.
 
@@ -12416,7 +12416,7 @@ Documents: research/sources/round-22/gland-sources.json.
 
 ## SRC-e7f1135e0337 — Albright SW200-281 contactor (C034) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c034-albright-sw200-281-contactor.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; BT candidate; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -12428,7 +12428,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-e86237284595 — Victron battery dimension drawing revision02
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf`)
 
 Summary: Original companion drawing identifies both battery SKUs,341.2mm width,160.3mm depth,234.7/234.3mm height callouts and220mm terminal pitch; source values remain distinct from STEP vertex/placement observations.
 
@@ -12440,7 +12440,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-e8734095736c — parts-and-standards-dictionary.md
 
-Original source: [/home/leo/projects/ferme/skills/parts-and-standards-dictionary.md](/home/leo/projects/ferme/skills/parts-and-standards-dictionary.md)
+Original source: ${FERME_ROOT}/skills/parts-and-standards-dictionary.md (`${FERME_ROOT}/skills/parts-and-standards-dictionary.md`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -12476,7 +12476,7 @@ Documents: research/cad-and-skills.md, research/next-step-proposal.md.
 
 ## SRC-e8fb488a4b54 — BT output to rim adapter (P14BT) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p14bt-bt-output-to-rim-adapter.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; BT; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -12488,7 +12488,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-e9161d79c2fb — component-procedure.md
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/component-procedure.md](/home/leo/projects/3dmodeling/skills/component-cad/references/component-procedure.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/component-procedure.md](../../skills/component-cad/references/component-procedure.md)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -12500,7 +12500,7 @@ Documents: research/sources/round-09/component-execution-sources.json.
 
 ## SRC-e91ac441ccab — c029_presave_measurements.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_presave_measurements.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_presave_measurements.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_presave_measurements.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/c029_presave_measurements.py`)
 
 Summary: Traversedsource-correctednativeinstancesandretainedpresavepointgeometry.
 
@@ -12524,7 +12524,7 @@ Documents: research/action-audit/point-02-component-reuse.md, research/action-au
 
 ## SRC-e941de7f22bc — Existing Leaf module saved native model
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg`)
 
 Summary: Original eight-solid reconstruction reused without changing its bytes. Current 29 source-bound native checks, file hash/audit and actual view inspection pass.
 
@@ -12596,7 +12596,7 @@ Documents: research/action-audit/reviews/point-07-visual.md, research/sources/ro
 
 ## SRC-eb5bcb4295ce — Kelly archive predecessor motor outline
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf`)
 
 Summary: Original archive member for ME0201013001, drawing0JWT.300.117. Delegated review identifies it as related visual evidence under Motenergy direct-replacement claim; it supplies its own title and is kept separate from exact ME0907 dimensions.
 
@@ -12608,7 +12608,7 @@ Documents: research/sources/round-19/me0907-sources.json.
 
 ## SRC-eb82077bb446 — Reviewed Orion acquisition metadata
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/acquisition.json`)
 
 Summary: Original PDF/STEP/manual URLs,times,MIME,hashes andactual price-list access outcomes;retained-manual attribution corrected with initial copy preserved.
 
@@ -12618,9 +12618,9 @@ Documents: research/sources/round-24/converter-sources.json.
 
 <a id="src-eb880f7efbac"></a>
 
-## SRC-eb880f7efbac — /home/leo/.codex/skills/ocs-engineering/references/ocs-control.md
+## SRC-eb880f7efbac — ${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md](/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md (`${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md`)
 
 Summary: Source referenced for the stated workflow; see the owning documentation or research item.
 
@@ -12644,7 +12644,7 @@ Documents: research/cad-and-skills.md.
 
 ## SRC-ebe044688086 — Driver iteration — retained-source/original-part-map.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/retained-source/original-part-map.json`)
 
 Summary: Unchanged retained copy of the original116-part handle map, enabling source-to-native identity review and bounded X2 group selection.
 
@@ -12668,7 +12668,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-ecc97be7318c — point-06-web-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-05/point-06-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-06-web-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-05/point-06-web-sources.json](round-05/point-06-web-sources.json)
 
 Summary: Existing local source cited by point 06 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -12680,7 +12680,7 @@ Documents: research/sources/round-05/point-06-local-sources.json.
 
 ## SRC-ecdea17f6078 — WISKA-ESKV-25-page-2.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png`)
 
 Summary: RenderedWH datasheet page2:accessoryordercodes andprinteddate.
 
@@ -12704,7 +12704,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-ed02d8942690 — SKF iteration — initial-open-state.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json`)
 
 Summary: Native original-open state identifies document74, original SKF source path and unrelated open work, including preserved dirty wheel document52.
 
@@ -12728,7 +12728,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-ed1c06986d4c — Stop-button feature contract
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json`)
 
 Summary: Pins finished panel-interface bounds andindividual required operator/contact body geometry questions.
 
@@ -12740,7 +12740,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-ede1a41b29c4 — Caster head mounting plate (P06B) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p06b-caster-head-mounting-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: caster; Chosen caster reference; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -12752,7 +12752,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-ede9c64cd596 — rec-r09.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r09.md](../workflows/details/rec-r09.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -12764,7 +12764,7 @@ Documents: research/sources/round-05/point-05-local-sources.json.
 
 ## SRC-edf75a7ba1f0 — placement-corrections.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/placement-corrections.json`)
 
 Summary: Actual checked helper application:27 matrices corrected,nine ACIS definitions unchanged.
 
@@ -12788,7 +12788,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-eeafae2a7d94 — Mersen FTFH fuse holder (C031) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c031-mersen-ftfh-fuse-holder.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; CNL fuse alternative; original kind component reference. Detailed geometry review belongs to its component iteration.
 
@@ -12800,7 +12800,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-eedbcb57b436 — Complete component input coverage
 
-Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+Original source: [${MODELING_ROOT}/research/component-development-coverage.md](../component-development-coverage.md)
 
 Summary: Plan-side source coverage and ownership reference linking to the authoritative FERME 103-part data; group counts and proposed first two jobs are explicit.
 
@@ -12812,7 +12812,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-ef7f25d50b37 — item-profile-02633-segment-100mm.md — recorded_execution_report
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md`)
 
 Summary: Component-specific native checks, save/reopen observations and source paths for OCS 2026.42. Applicability:
 
@@ -12824,7 +12824,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-ef86743da4af — Read-only source/native placement and assembly helpers
 
-Original source: [/home/leo/projects/3dmodeling/scripts/step_placements.py](/home/leo/projects/3dmodeling/scripts/step_placements.py)
+Original source: [${MODELING_ROOT}/scripts/step_placements.py](../../scripts/step_placements.py)
 
 Summary: Exercised AP214 frame reader detects unique inverse matches,round-trips proposed native fields and traverses bounded single-insert unit-scale zero-base block trees. Includes identity-SAT point reader used for pre-save comparison.
 
@@ -12836,7 +12836,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-f052fe7cc9cb — Resistor current component state
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json`)
 
 Summary: Records exact input requirement and source review; CAD construction is dependent on the named substrate/terminal geometry evidence.
 
@@ -12860,7 +12860,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-f06d3b316cfc — rec-r04.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/rec-r04.md](../workflows/details/rec-r04.md)
 
 Summary: Existing local source cited by point 05 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -12896,7 +12896,7 @@ Documents: research/action-audit/point-07-reconstruction.md, research/action-aud
 
 ## SRC-f0d4b933a88b — Leaf source attribution and reconstruction geometry record
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md)
+Original source: ${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md`)
 
 Summary: Separates EVShop case dimensions, VT-Tech mounting holes and nominal terminal sizes, Jay Summet reuse pitch, and reconstructed shell/pan/terminal features. Supplies pinned feature expectations.
 
@@ -12932,7 +12932,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-f1ece207e03f — Completed P01 component iteration result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-verify-04/result.json`)
 
 Summary: P01 state DONE links saved native geometry, passed binary feature checks, original views, applied reader improvement and32 passing tests; records decoded bounds and contradictory API bounds.
 
@@ -12944,7 +12944,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-f21f3a511691 — prior-model-hashes.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/prior-model-hashes.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/prior-model-hashes.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/prior-model-hashes.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/prior-model-hashes.json`)
 
 Summary: Pre-buildhashesof23existingsavedDWGsforbytepreservationcomparison.
 
@@ -12956,7 +12956,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-f22443c65bee — Source-first tube construction and recovery procedure
 
-Original source: [/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md](/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md](../../skills/component-cad/references/source-first-and-tube.md)
 
 Summary: Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.
 
@@ -12968,7 +12968,7 @@ Documents: research/sources/round-11/rail-execution-sources.json, research/sourc
 
 ## SRC-f278cbf89b6d — Victron NG25.6V100Ah battery (C023) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c023-victron-ng25-6v100ah-battery.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: battery; Victron pair or single BT-V; original kind manufacturer case reference. Detailed geometry review belongs to its component iteration.
 
@@ -12980,7 +12980,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-f279f6325539 — SKF iteration — reopened-top.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png`)
 
 Summary: Actual inspected top image shows two closed mounting slots, axial housing draft and bearing/fitting projection.
 
@@ -13016,7 +13016,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-f2cbfd7c15e2 — Hitch support gusset (P07G) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p07g-hitch-support-gusset.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: hitch; Trailer ball-coupling proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -13028,7 +13028,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-f31b446de956 — Blue Sea5026 auxiliary fuse block (C042) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c042-blue-sea5026-auxiliary-fuse-block.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: electrical; 12 or24 V branch distribution; original kind manufacturer component reference. Detailed geometry review belongs to its component iteration.
 
@@ -13040,7 +13040,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-f343e0d088b6 — corrected-records-6.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-records-6.json`)
 
 Summary: corrected native record snapshot: 99:Solid3D, 9D:Solid3D, A1:Solid3D, A5:Solid3D, A9:Insert, AA:Insert. Preserves exact fields/ACIS for source-frame andsaved geometry comparisons.
 
@@ -13052,7 +13052,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-f3798f920e4f — Driven sprocket axle carrier (P12B) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p12b-driven-sprocket-axle-carrier.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: drive; ME0907; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -13076,7 +13076,7 @@ Documents: research/sources/round-10/tube-corner-sources.json, research/tube-cor
 
 ## SRC-f428be8d9008 — readiness.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/readiness.json`)
 
 Summary: Existing source/hash gate SOURCE_READY result before native construction.
 
@@ -13088,7 +13088,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-f47d7610aaad — Placementhelpertests
 
-Original source: [/home/leo/projects/3dmodeling/tests/test_assembly_repair.py](/home/leo/projects/3dmodeling/tests/test_assembly_repair.py)
+Original source: [${MODELING_ROOT}/tests/test_assembly_repair.py](../../tests/test_assembly_repair.py)
 
 Summary: Sixexecutedcasescoverrepeatedsuccess,staleinputs,tamperedfields,duplicatehandles,readbackfailureandchangedsoliddefinition.
 
@@ -13100,7 +13100,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-f4b8da3b384e — runtime.py
 
-Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/runtime.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/runtime.py)
+Original source: ${FERME_ROOT}/skills/cad-construction/scripts/cadtools/runtime.py (`${FERME_ROOT}/skills/cad-construction/scripts/cadtools/runtime.py`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -13148,7 +13148,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-f5689f245f38 — assets
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.json)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/assets.json](../action-audit/implementation-queue/assets.json)
 
 Summary: Authoritative existing action/route record or authored implementation-queue record: individual action boundaries, original input contracts, source/code evidence, qualitative order or first-task implementation proposal. Revision scope is this batch.
 
@@ -13160,7 +13160,7 @@ Documents: research/sources/round-06/implementation-queue-sources.json.
 
 ## SRC-f5ab2b9f1eb3 — SKF iteration — reopened-front.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png`)
 
 Summary: Actual inspected front image shows shaft bore, housing outer silhouette, fitting and locking components of the saved derivative.
 
@@ -13172,7 +13172,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-f5b26686d5af — Cargo.toml
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml](/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml)
+Original source: ${OCS_ROOT}/Cargo.toml (`${OCS_ROOT}/Cargo.toml`)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -13184,7 +13184,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-f5d6cbd7ce2c — P01 p01-build-01 — rail-type-LwPolyline.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-LwPolyline.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-LwPolyline.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-LwPolyline.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-build-01/rail-type-LwPolyline.json`)
 
 Summary: p01-build-01 rail-type-LwPolyline.json: Retained native response with fields collection, definitions, editing, fields, notes, ok, record_type; links this installed API/schema or geometry observation to the corresponding P01 attempt.
 
@@ -13244,7 +13244,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-f77e765324d1 — geometry.py
 
-Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py)
+Original source: ${FERME_ROOT}/skills/cad-construction/scripts/cadtools/geometry.py (`${FERME_ROOT}/skills/cad-construction/scripts/cadtools/geometry.py`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -13256,7 +13256,7 @@ Documents: research/sources/round-09/component-execution-sources.json, research/
 
 ## SRC-f77f55667d7d — domain-sources.json
 
-Original source: [/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json](/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json)
+Original source: [${MODELING_ROOT}/research/sources/round-02/domain-sources.json](round-02/domain-sources.json)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -13280,7 +13280,7 @@ Documents: research/action-audit/point-05-alignment-and-remodeling.md, research/
 
 ## SRC-f80023f6c2fa — corrected-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/corrected-isometric.png`)
 
 Summary: Actual converter capture attempt corrected-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
 
@@ -13292,7 +13292,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-f828b291cc6f — OpenCADStudio MCP automation guide
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md)
+Original source: ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`)
 
 Summary: Local OCS guide describes stdio MCP and drawing inspection, mutation, measurements, audits and verified save. It supports application-level drawing workflow claims.
 
@@ -13316,7 +13316,7 @@ Documents: research/sources/round-10/tube-corner-sources.json, research/tube-cor
 
 ## SRC-f85e4e244a2b — Browser source-image route outcome
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md`)
 
 Summary: CUA inventory had no browser/app surface,so this exact-PDF route produced no raster or source bytes. Earlier source evidence remains preserved.
 
@@ -13328,7 +13328,7 @@ Documents: research/sources/round-21/fuse-sources.json.
 
 ## SRC-f87051bef24f — catalogue.py
 
-Original source: [/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/catalogue.py](/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/catalogue.py)
+Original source: ${FERME_ROOT}/skills/cad-construction/scripts/cadtools/catalogue.py (`${FERME_ROOT}/skills/cad-construction/scripts/cadtools/catalogue.py`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -13340,7 +13340,7 @@ Documents: research/sources/round-09/component-execution-sources.json.
 
 ## SRC-f945f7d18313 — action-occurrences.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl`)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -13364,7 +13364,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-f9d2b64c1fb2 — SKF iteration — header.json
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json`)
 
 Summary: Actual original OCS document header identifies millimetre units for source-linked geometric coordinate checks.
 
@@ -13376,7 +13376,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-f9d4243f4cec — Category1 upper linkage pin (C064) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/c064-category1-upper-linkage-pin.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: attachments; Reference attachment interface; original kind source component reference. Detailed geometry review belongs to its component iteration.
 
@@ -13388,7 +13388,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-f9e1dbc024e2 — dom-r02.md
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md)
+Original source: [${MODELING_ROOT}/research/workflows/details/dom-r02.md](../workflows/details/dom-r02.md)
 
 Summary: Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.
 
@@ -13412,7 +13412,7 @@ Documents: research/sources/round-03/domain-detail-sources.json, research/workfl
 
 ## SRC-fabfe00e465d — ezdxf ACIS header interpretation
 
-Original source: [/tmp/3dmodeling-native-reader/ezdxf/acis/hdr.py](/tmp/3dmodeling-native-reader/ezdxf/acis/hdr.py)
+Original source: ${NATIVE_READER_ROOT}/ezdxf/acis/hdr.py (`${NATIVE_READER_ROOT}/ezdxf/acis/hdr.py`)
 
 Summary: Existing AcisHeader exposes units_in_mm and version fields. The P01 reader reports decoded metadata10.0 beside OCS document millimetres and preserves native coordinates; the same value occurs before saving.
 
@@ -13424,7 +13424,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-fae815d28e80 — Rear attachment support plate (P09) — CAD input sheet
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md](/home/leo/projects/ferme/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md (`${FERME_ROOT}/engineering/module-development/cad-inputs/p09-rear-attachment-support-plate.md`)
 
 Summary: Input sheet registered from the inspected ferme manifest: attachments; Rear ISO730 reference proposal; original kind custom proposal. Detailed geometry review belongs to its component iteration.
 
@@ -13436,7 +13436,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-fb567caa0d5c — Battery inverse-placement diagnosis and plan
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json`)
 
 Summary: All13 nonidentity native inserts uniquely match inverse source STEP frames. Plan records original and expected matrices,source entity IDs and proposed object-coordinate native fields.
 
@@ -13448,7 +13448,7 @@ Documents: research/sources/round-20/component-sources.json.
 
 ## SRC-fb5d6f6a65cc — read_c029.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/read_c029.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/read_c029.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/read_c029.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/read_c029.py`)
 
 Summary: Retainedimportedaudit,blocks,entitiesandactualprecorrectionview;capturepollboundlaterrecovered.
 
@@ -13472,7 +13472,7 @@ Documents: research/reconstruction.md.
 
 ## SRC-fc97ce67556a — P02 crossmember — ocs-journal.jsonl
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-build-01/ocs-journal.jsonl`)
 
 Summary: Append-only native request journal records isolated document creation, exact rounded profiles, bounded-area extrusion, temporary-profile cleanup, metadata, save and reopen with stable identities.
 
@@ -13484,7 +13484,7 @@ Documents: research/sources/round-13/crossmember-sources.json.
 
 ## SRC-fcb5653f90bc — regen-isometric.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/regen-isometric.png`)
 
 Summary: Actual converter capture attempt regen-isometric;image repeats the previous Fibox enclosure. Included as failed visual evidence,withhash comparison in capture-identity-checks.
 
@@ -13508,7 +13508,7 @@ Documents: research/action-audit/implementation-queue/queue.md, research/action-
 
 ## SRC-fcf66e735eb6 — plan_c029.py
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/plan_c029.py](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/plan_c029.py)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/plan_c029.py (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/executed-drivers/plan_c029.py`)
 
 Summary: Read17STEPframesandgenerated16uniqueinverse-placementchangesagainstactualnativeinserts.
 
@@ -13520,7 +13520,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-fcfc3aa6479a — SB50 leader andchain review
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c038-build-01/source/coordinator-review.md`)
 
 Summary: Actual source-image review corrects11.1 axial segment andcalculates48mm housing length fromdimension chain.
 
@@ -13532,7 +13532,7 @@ Documents: research/sources/round-25/connector-sources.json.
 
 ## SRC-fe0ed186d8d8 — Main frame longitudinal rail nominal reference DWG
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg](/home/leo/projects/ferme/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg (`${FERME_ROOT}/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg`)
 
 Summary: Saved native DWG2018 contains one source-labelled P01 hollow rail with proposed40x40x3mm section,600mm length and EN10219 nominal6/3mm corner radii. Pre-save feature checks pass; save/hash/manifest and reopened views pass; detailed reopened SAB feature checks have UNKNOWN status.
 
@@ -13568,7 +13568,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ## SRC-fe7b635af96d — Stop-button source-stage result
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json`)
 
 Summary: Connects exactvariant,source-defined panel interface,unresolved full body features andseparate nominal/projection labels.
 
@@ -13580,7 +13580,7 @@ Documents: research/sources/round-27/stop-button-sources.json.
 
 ## SRC-fe876787e9e0 — Component-led CAD and tooling development plan
 
-Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+Original source: [${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md](../../COMPONENT_DEVELOPMENT_PLAN.md)
 
 Summary: Consolidated proposal: minimum records, first rail/crossmember builds, per-component execution/check/improvement cycle, Python extraction, catalogue/search, priority rules and future extensions.
 
@@ -13592,7 +13592,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-fe980d416f56 — sequence
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/sequence.json](/home/leo/projects/3dmodeling/research/action-audit/sequence.json)
+Original source: [${MODELING_ROOT}/research/action-audit/sequence.json](../action-audit/sequence.json)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
@@ -13604,7 +13604,7 @@ Documents: research/sources/round-05/audit-index-sources.json.
 
 ## SRC-fea7e6f61e34 — Driver iteration — reopened-front.png
 
-Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png)
+Original source: ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-front.png`)
 
 Summary: Inspected front image shows four mounting bores, six terminal assemblies, X1/X2 connectors and indicator details; X1/X2/W/B markings render visibly.
 
@@ -13652,7 +13652,7 @@ Documents: research/sources/round-02/archive-sources.json.
 
 ### Lynx audit evidence — SRC-a4a7445ec595
 
-Original source: [Lynx audit evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/audit.json)
+Original source: Lynx audit evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/audit.json`)
 
 Summary: Existing Lynx audit reports 95 solids and 128 block references; compared with the saved derivative audit.
 
@@ -13660,7 +13660,7 @@ Evidence: executed_native_state_read.
 
 ### Original Lynx CAD and source hashes — SRC-9f96098ee90a
 
-Original source: [Original Lynx CAD and source hashes](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/baseline.json)
+Original source: Original Lynx CAD and source hashes (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/baseline.json`)
 
 Summary: Pins the original DWG and manufacturer STEP bytes before correction; source hash matches the retained acquisition record.
 
@@ -13668,7 +13668,7 @@ Evidence: executed_file_inspection.
 
 ### Lynx blocks evidence — SRC-2fb804239b51
 
-Original source: [Lynx blocks evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/blocks.json)
+Original source: Lynx blocks evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/blocks.json`)
 
 Summary: Native block membership at blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.
 
@@ -13676,7 +13676,7 @@ Evidence: executed_native_state_read.
 
 ### Lynx corrected blocks evidence — SRC-8383735f7fe8
 
-Original source: [Lynx corrected blocks evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-blocks.json)
+Original source: Lynx corrected blocks evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-blocks.json`)
 
 Summary: Native block membership at corrected blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.
 
@@ -13684,7 +13684,7 @@ Evidence: executed_native_state_read.
 
 ### Corrected Lynx placed solid hierarchy — SRC-5c766056233f
 
-Original source: [Corrected Lynx placed solid hierarchy](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-instances.json)
+Original source: Corrected Lynx placed solid hierarchy (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-instances.json`)
 
 Summary: 130 complete native solid instance paths and matrices after reviewed correction; outer millimetre-to-metre scale retained.
 
@@ -13692,7 +13692,7 @@ Evidence: executed_assembly_inspection.
 
 ### Lynx corrected records 0 native records — SRC-be2093995f07
 
-Original source: [Lynx corrected records 0 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-0.json)
+Original source: Lynx corrected records 0 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-0.json`)
 
 Summary: Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13700,7 +13700,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 104 native records — SRC-9781d66101ed
 
-Original source: [Lynx corrected records 104 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-104.json)
+Original source: Lynx corrected records 104 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-104.json`)
 
 Summary: Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13708,7 +13708,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 112 native records — SRC-c8dfce5c7575
 
-Original source: [Lynx corrected records 112 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-112.json)
+Original source: Lynx corrected records 112 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-112.json`)
 
 Summary: Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13716,7 +13716,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 120 native records — SRC-1a99c0bf98d7
 
-Original source: [Lynx corrected records 120 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-120.json)
+Original source: Lynx corrected records 120 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-120.json`)
 
 Summary: Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage corrected working model.
 
@@ -13724,7 +13724,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 128 native records — SRC-fcb3e15bb17b
 
-Original source: [Lynx corrected records 128 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-128.json)
+Original source: Lynx corrected records 128 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-128.json`)
 
 Summary: Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13732,7 +13732,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 136 native records — SRC-b3bfb5570f38
 
-Original source: [Lynx corrected records 136 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-136.json)
+Original source: Lynx corrected records 136 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-136.json`)
 
 Summary: Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13740,7 +13740,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 144 native records — SRC-71bf5f751f30
 
-Original source: [Lynx corrected records 144 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-144.json)
+Original source: Lynx corrected records 144 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-144.json`)
 
 Summary: Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13748,7 +13748,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 152 native records — SRC-8ed937c0b7b8
 
-Original source: [Lynx corrected records 152 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-152.json)
+Original source: Lynx corrected records 152 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-152.json`)
 
 Summary: Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13756,7 +13756,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 16 native records — SRC-836615063de7
 
-Original source: [Lynx corrected records 16 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-16.json)
+Original source: Lynx corrected records 16 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-16.json`)
 
 Summary: Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage corrected working model.
 
@@ -13764,7 +13764,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 160 native records — SRC-0d314595fa4a
 
-Original source: [Lynx corrected records 160 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-160.json)
+Original source: Lynx corrected records 160 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-160.json`)
 
 Summary: Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13772,7 +13772,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 168 native records — SRC-fd8367c1e3f3
 
-Original source: [Lynx corrected records 168 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-168.json)
+Original source: Lynx corrected records 168 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-168.json`)
 
 Summary: Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13780,7 +13780,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 176 native records — SRC-6a7e1cdf3015
 
-Original source: [Lynx corrected records 176 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-176.json)
+Original source: Lynx corrected records 176 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-176.json`)
 
 Summary: Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13788,7 +13788,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 184 native records — SRC-5eac9403ed9d
 
-Original source: [Lynx corrected records 184 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-184.json)
+Original source: Lynx corrected records 184 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-184.json`)
 
 Summary: Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13796,7 +13796,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 192 native records — SRC-ccdbf25e82c6
 
-Original source: [Lynx corrected records 192 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-192.json)
+Original source: Lynx corrected records 192 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-192.json`)
 
 Summary: Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13804,7 +13804,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 200 native records — SRC-97954e9ed7ce
 
-Original source: [Lynx corrected records 200 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-200.json)
+Original source: Lynx corrected records 200 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-200.json`)
 
 Summary: Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13812,7 +13812,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 208 native records — SRC-c65cf5c41654
 
-Original source: [Lynx corrected records 208 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-208.json)
+Original source: Lynx corrected records 208 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-208.json`)
 
 Summary: Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13820,7 +13820,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 216 native records — SRC-f0e03c5ef882
 
-Original source: [Lynx corrected records 216 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-216.json)
+Original source: Lynx corrected records 216 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-216.json`)
 
 Summary: Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage corrected working model.
 
@@ -13828,7 +13828,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 24 native records — SRC-45e10de48de3
 
-Original source: [Lynx corrected records 24 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-24.json)
+Original source: Lynx corrected records 24 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-24.json`)
 
 Summary: Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage corrected working model.
 
@@ -13836,7 +13836,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 32 native records — SRC-07381c175a35
 
-Original source: [Lynx corrected records 32 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-32.json)
+Original source: Lynx corrected records 32 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-32.json`)
 
 Summary: Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage corrected working model.
 
@@ -13844,7 +13844,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 40 native records — SRC-f60856cbdfb4
 
-Original source: [Lynx corrected records 40 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-40.json)
+Original source: Lynx corrected records 40 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-40.json`)
 
 Summary: Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage corrected working model.
 
@@ -13852,7 +13852,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 48 native records — SRC-d31478416fae
 
-Original source: [Lynx corrected records 48 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-48.json)
+Original source: Lynx corrected records 48 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-48.json`)
 
 Summary: Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage corrected working model.
 
@@ -13860,7 +13860,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 56 native records — SRC-f272cb0c9c5c
 
-Original source: [Lynx corrected records 56 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-56.json)
+Original source: Lynx corrected records 56 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-56.json`)
 
 Summary: Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13868,7 +13868,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 64 native records — SRC-74ea95f4c61a
 
-Original source: [Lynx corrected records 64 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-64.json)
+Original source: Lynx corrected records 64 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-64.json`)
 
 Summary: Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13876,7 +13876,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 72 native records — SRC-550c25dedf92
 
-Original source: [Lynx corrected records 72 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-72.json)
+Original source: Lynx corrected records 72 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-72.json`)
 
 Summary: Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage corrected working model.
 
@@ -13884,7 +13884,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 8 native records — SRC-f64b6c2462f9
 
-Original source: [Lynx corrected records 8 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-8.json)
+Original source: Lynx corrected records 8 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-8.json`)
 
 Summary: Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13892,7 +13892,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 80 native records — SRC-fce472423429
 
-Original source: [Lynx corrected records 80 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-80.json)
+Original source: Lynx corrected records 80 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-80.json`)
 
 Summary: Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage corrected working model.
 
@@ -13900,7 +13900,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 88 native records — SRC-b2615d68e946
 
-Original source: [Lynx corrected records 88 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-88.json)
+Original source: Lynx corrected records 88 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-88.json`)
 
 Summary: Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13908,7 +13908,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx corrected records 96 native records — SRC-e7b396f933b9
 
-Original source: [Lynx corrected records 96 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-96.json)
+Original source: Lynx corrected records 96 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-96.json`)
 
 Summary: Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
 
@@ -13916,7 +13916,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx document checkpoint evidence — SRC-256d9dcd0f49
 
-Original source: [Lynx document checkpoint evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/document-checkpoint.json)
+Original source: Lynx document checkpoint evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/document-checkpoint.json`)
 
 Summary: Native state and document identity at the document checkpoint boundary; preserves the operation revision used for subsequent checks.
 
@@ -13924,7 +13924,7 @@ Evidence: executed_native_state_read.
 
 ### Executed Lynx driver check_lynx — SRC-eeed397bd2e6
 
-Original source: [Executed Lynx driver check_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/check_lynx.py)
+Original source: Executed Lynx driver check_lynx (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/check_lynx.py`)
 
 Summary: Compares 95 saved solid definitions, 60 source placements, 130 instance paths, metre units, outer scale and original-file hash; calculates explicit metre and millimetre vertex ranges.
 
@@ -13932,7 +13932,7 @@ Evidence: executed_implementation_artifact.
 
 ### Executed Lynx driver lynx_views — SRC-a2a785715504
 
-Original source: [Executed Lynx driver lynx_views](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/lynx_views.py)
+Original source: Executed Lynx driver lynx_views (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/lynx_views.py`)
 
 Summary: Sets native top and front views of saved document 89, captures both and recovers bounded capture requests under their original identities.
 
@@ -13940,7 +13940,7 @@ Evidence: executed_implementation_artifact.
 
 ### Lynx provenance evidence — SRC-75d0575521ec
 
-Original source: [Lynx provenance evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/provenance.json)
+Original source: Lynx provenance evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/provenance.json`)
 
 Summary: Hashes the exact executed Lynx driver files and identifies their local helper bootstrap without recording authentication tokens.
 
@@ -13948,7 +13948,7 @@ Evidence: executed_artifact_provenance.
 
 ### Executed Lynx driver read_lynx — SRC-ca32afe0f973
 
-Original source: [Executed Lynx driver read_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/read_lynx.py)
+Original source: Executed Lynx driver read_lynx (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/read_lynx.py`)
 
 Summary: Recovers the original open, reads document 88 audit, 223 entity records and block membership, then captures the displaced initial assembly.
 
@@ -13956,7 +13956,7 @@ Evidence: executed_implementation_artifact.
 
 ### Executed Lynx driver record_lynx_source — SRC-6188c6fbaa58
 
-Original source: [Executed Lynx driver record_lynx_source](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/record_lynx_source.py)
+Original source: Executed Lynx driver record_lynx_source (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/record_lynx_source.py`)
 
 Summary: Writes the source-linked Lynx job and runs its source-readiness validation using retained STEP identity, units and placement frames.
 
@@ -13964,7 +13964,7 @@ Evidence: executed_implementation_artifact.
 
 ### Executed Lynx driver reopen_lynx — SRC-fe62091d82e4
 
-Original source: [Executed Lynx driver reopen_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/reopen_lynx.py)
+Original source: Executed Lynx driver reopen_lynx (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/reopen_lynx.py`)
 
 Summary: Recovers the pending derivative reopen, verifies saved hash and manifest, reads document 89 geometry and header and requests its isometric view.
 
@@ -13972,7 +13972,7 @@ Evidence: executed_implementation_artifact.
 
 ### Executed Lynx driver repair_lynx — SRC-7ec44d4b4885
 
-Original source: [Executed Lynx driver repair_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/repair_lynx.py)
+Original source: Executed Lynx driver repair_lynx (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/repair_lynx.py`)
 
 Summary: Builds the reviewed 60-placement source plan, retains the outer 0.001 scale, applies guarded corrections, reads corrected records and saves a separate checked derivative.
 
@@ -13980,7 +13980,7 @@ Evidence: executed_implementation_artifact.
 
 ### Executed Lynx driver resume_lynx — SRC-082426c6d5f2
 
-Original source: [Executed Lynx driver resume_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/resume_lynx.py)
+Original source: Executed Lynx driver resume_lynx (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/resume_lynx.py`)
 
 Summary: Pins the original Lynx DWG and manufacturer STEP hashes and starts opening the existing saved assembly under a journaled request.
 
@@ -13988,7 +13988,7 @@ Evidence: executed_implementation_artifact.
 
 ### Lynx existing isometric view — SRC-9377f9a6519a
 
-Original source: [Lynx existing isometric view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/existing-isometric.png)
+Original source: Lynx existing isometric view (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/existing-isometric.png`)
 
 Summary: Actual initial image shows hardware displaced from the enclosure.
 
@@ -13996,7 +13996,7 @@ Evidence: executed_native_capture.
 
 ### Lynx front capture evidence — SRC-6bf28649add0
 
-Original source: [Lynx front capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/front-capture.json)
+Original source: Lynx front capture evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/front-capture.json`)
 
 Summary: Completed original capture request response for the front capture image, retained beside the inspected native image.
 
@@ -14004,7 +14004,7 @@ Evidence: executed_native_capture_result.
 
 ### Original Lynx drawing units — SRC-5cd1611c89a0
 
-Original source: [Original Lynx drawing units](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/header.json)
+Original source: Original Lynx drawing units (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/header.json`)
 
 Summary: Native header declares insertion unit code 6, metres, providing the interpretation of the retained 0.001 outer insertion scale.
 
@@ -14012,7 +14012,7 @@ Evidence: executed_native_state_read.
 
 ### Lynx isometric capture evidence — SRC-6ce289f7395b
 
-Original source: [Lynx isometric capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/isometric-capture.json)
+Original source: Lynx isometric capture evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/isometric-capture.json`)
 
 Summary: Completed original capture request response for the isometric capture image, retained beside the inspected native image.
 
@@ -14020,7 +14020,7 @@ Evidence: executed_native_capture_result.
 
 ### Lynx native operation journal — SRC-36ecfc230ce2
 
-Original source: [Lynx native operation journal](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/ocs-journal.jsonl)
+Original source: Lynx native operation journal (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/ocs-journal.jsonl`)
 
 Summary: Append-only intent and response history for existing-model inspection, 60 guarded placement writes, verified save, reopen and view captures.
 
@@ -14028,7 +14028,7 @@ Evidence: executed_native_operation_journal.
 
 ### Lynx verified save and reopen — SRC-019bb82ec263
 
-Original source: [Lynx verified save and reopen](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/persistence.json)
+Original source: Lynx verified save and reopen (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/persistence.json`)
 
 Summary: Separate checked derivative passes file hash, manifest and zero-error audit comparisons; original pending reopen request was recovered.
 
@@ -14036,7 +14036,7 @@ Evidence: executed_persistence_check.
 
 ### Lynx guarded correction readback — SRC-45f98d367645
 
-Original source: [Lynx guarded correction readback](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/placement-corrections.json)
+Original source: Lynx guarded correction readback (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/placement-corrections.json`)
 
 Summary: Sixty source placement writes pass readback; all 95 solid definitions remain unchanged.
 
@@ -14044,7 +14044,7 @@ Evidence: executed_native_correction.
 
 ### Lynx query evidence — SRC-727ae37a310c
 
-Original source: [Lynx query evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/query.json)
+Original source: Lynx query evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/query.json`)
 
 Summary: Existing Lynx entity inventory identifies 223 native entities for bounded record inspection.
 
@@ -14052,7 +14052,7 @@ Evidence: executed_native_state_read.
 
 ### Lynx source readiness — SRC-d88062a24ef8
 
-Original source: [Lynx source readiness](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/readiness.json)
+Original source: Lynx source readiness (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/readiness.json`)
 
 Summary: Executed requirement validation for the exact manufacturer assembly and source-backed frame inputs.
 
@@ -14060,7 +14060,7 @@ Evidence: executed_input_validation.
 
 ### Lynx records 0 native records — SRC-ab9d1cc0b15b
 
-Original source: [Lynx records 0 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-0.json)
+Original source: Lynx records 0 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-0.json`)
 
 Summary: Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14068,7 +14068,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 104 native records — SRC-23b2720611ee
 
-Original source: [Lynx records 104 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-104.json)
+Original source: Lynx records 104 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-104.json`)
 
 Summary: Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14076,7 +14076,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 112 native records — SRC-b8a5068c8697
 
-Original source: [Lynx records 112 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-112.json)
+Original source: Lynx records 112 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-112.json`)
 
 Summary: Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14084,7 +14084,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 120 native records — SRC-058be1c6022d
 
-Original source: [Lynx records 120 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-120.json)
+Original source: Lynx records 120 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-120.json`)
 
 Summary: Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage existing original import.
 
@@ -14092,7 +14092,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 128 native records — SRC-510fdce758c7
 
-Original source: [Lynx records 128 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-128.json)
+Original source: Lynx records 128 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-128.json`)
 
 Summary: Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14100,7 +14100,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 136 native records — SRC-e9bbfc1a980e
 
-Original source: [Lynx records 136 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-136.json)
+Original source: Lynx records 136 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-136.json`)
 
 Summary: Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14108,7 +14108,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 144 native records — SRC-2751b2ee10da
 
-Original source: [Lynx records 144 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-144.json)
+Original source: Lynx records 144 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-144.json`)
 
 Summary: Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14116,7 +14116,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 152 native records — SRC-33a0a0ddc238
 
-Original source: [Lynx records 152 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-152.json)
+Original source: Lynx records 152 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-152.json`)
 
 Summary: Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14124,7 +14124,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 16 native records — SRC-567fe01db45e
 
-Original source: [Lynx records 16 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-16.json)
+Original source: Lynx records 16 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-16.json`)
 
 Summary: Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage existing original import.
 
@@ -14132,7 +14132,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 160 native records — SRC-da6832088dfd
 
-Original source: [Lynx records 160 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-160.json)
+Original source: Lynx records 160 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-160.json`)
 
 Summary: Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14140,7 +14140,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 168 native records — SRC-b02199f3c627
 
-Original source: [Lynx records 168 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-168.json)
+Original source: Lynx records 168 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-168.json`)
 
 Summary: Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14148,7 +14148,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 176 native records — SRC-26c2d547c0a8
 
-Original source: [Lynx records 176 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-176.json)
+Original source: Lynx records 176 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-176.json`)
 
 Summary: Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14156,7 +14156,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 184 native records — SRC-89ab56f3445e
 
-Original source: [Lynx records 184 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-184.json)
+Original source: Lynx records 184 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-184.json`)
 
 Summary: Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14164,7 +14164,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 192 native records — SRC-9005f607e412
 
-Original source: [Lynx records 192 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-192.json)
+Original source: Lynx records 192 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-192.json`)
 
 Summary: Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14172,7 +14172,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 200 native records — SRC-9f0bd1cc0d2c
 
-Original source: [Lynx records 200 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-200.json)
+Original source: Lynx records 200 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-200.json`)
 
 Summary: Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14180,7 +14180,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 208 native records — SRC-9f0195c3ab12
 
-Original source: [Lynx records 208 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-208.json)
+Original source: Lynx records 208 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-208.json`)
 
 Summary: Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14188,7 +14188,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 216 native records — SRC-37a036bdf257
 
-Original source: [Lynx records 216 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-216.json)
+Original source: Lynx records 216 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-216.json`)
 
 Summary: Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage existing original import.
 
@@ -14196,7 +14196,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 24 native records — SRC-500cc7b95998
 
-Original source: [Lynx records 24 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-24.json)
+Original source: Lynx records 24 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-24.json`)
 
 Summary: Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage existing original import.
 
@@ -14204,7 +14204,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 32 native records — SRC-169e80504fc9
 
-Original source: [Lynx records 32 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-32.json)
+Original source: Lynx records 32 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-32.json`)
 
 Summary: Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage existing original import.
 
@@ -14212,7 +14212,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 40 native records — SRC-b9c57ffb89e0
 
-Original source: [Lynx records 40 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-40.json)
+Original source: Lynx records 40 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-40.json`)
 
 Summary: Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage existing original import.
 
@@ -14220,7 +14220,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 48 native records — SRC-a7eb4b31ed51
 
-Original source: [Lynx records 48 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-48.json)
+Original source: Lynx records 48 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-48.json`)
 
 Summary: Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage existing original import.
 
@@ -14228,7 +14228,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 56 native records — SRC-a258fd85727d
 
-Original source: [Lynx records 56 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-56.json)
+Original source: Lynx records 56 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-56.json`)
 
 Summary: Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14236,7 +14236,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 64 native records — SRC-09b214595569
 
-Original source: [Lynx records 64 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-64.json)
+Original source: Lynx records 64 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-64.json`)
 
 Summary: Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14244,7 +14244,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 72 native records — SRC-8ff54e1de411
 
-Original source: [Lynx records 72 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-72.json)
+Original source: Lynx records 72 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-72.json`)
 
 Summary: Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage existing original import.
 
@@ -14252,7 +14252,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 8 native records — SRC-080bd6b4503a
 
-Original source: [Lynx records 8 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-8.json)
+Original source: Lynx records 8 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-8.json`)
 
 Summary: Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14260,7 +14260,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 80 native records — SRC-d5211fa06d19
 
-Original source: [Lynx records 80 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-80.json)
+Original source: Lynx records 80 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-80.json`)
 
 Summary: Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage existing original import.
 
@@ -14268,7 +14268,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 88 native records — SRC-42ef68c0a219
 
-Original source: [Lynx records 88 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-88.json)
+Original source: Lynx records 88 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-88.json`)
 
 Summary: Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14276,7 +14276,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx records 96 native records — SRC-7087a96dadb8
 
-Original source: [Lynx records 96 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-96.json)
+Original source: Lynx records 96 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-96.json`)
 
 Summary: Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage existing original import.
 
@@ -14284,7 +14284,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened blocks evidence — SRC-467e7131ee59
 
-Original source: [Lynx reopened blocks evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-blocks.json)
+Original source: Lynx reopened blocks evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-blocks.json`)
 
 Summary: Native block membership at reopened blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.
 
@@ -14292,7 +14292,7 @@ Evidence: executed_native_state_read.
 
 ### Lynx reopened checkpoint evidence — SRC-0a751f4d81c2
 
-Original source: [Lynx reopened checkpoint evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-checkpoint.json)
+Original source: Lynx reopened checkpoint evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-checkpoint.json`)
 
 Summary: Native state and document identity at the reopened checkpoint boundary; preserves the operation revision used for subsequent checks.
 
@@ -14300,7 +14300,7 @@ Evidence: executed_native_state_read.
 
 ### Lynx reopened front view — SRC-d11186282897
 
-Original source: [Lynx reopened front view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-front.png)
+Original source: Lynx reopened front view (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-front.png`)
 
 Summary: Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is front.
 
@@ -14308,7 +14308,7 @@ Evidence: executed_native_capture.
 
 ### Saved Lynx drawing units — SRC-bdfdc162dfc5
 
-Original source: [Saved Lynx drawing units](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-header.json)
+Original source: Saved Lynx drawing units (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-header.json`)
 
 Summary: Reopened checked derivative retains insertion unit code 6, metres.
 
@@ -14316,7 +14316,7 @@ Evidence: executed_native_state_read.
 
 ### Lynx reopened isometric view — SRC-aaaf6c5dd563
 
-Original source: [Lynx reopened isometric view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-isometric.png)
+Original source: Lynx reopened isometric view (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-isometric.png`)
 
 Summary: Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is isometric.
 
@@ -14324,7 +14324,7 @@ Evidence: executed_native_capture.
 
 ### Lynx reopened records 0 native records — SRC-c43671ae8097
 
-Original source: [Lynx reopened records 0 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-0.json)
+Original source: Lynx reopened records 0 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-0.json`)
 
 Summary: Native document 89 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14332,7 +14332,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 104 native records — SRC-9ca25aacaf1c
 
-Original source: [Lynx reopened records 104 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-104.json)
+Original source: Lynx reopened records 104 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-104.json`)
 
 Summary: Native document 89 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14340,7 +14340,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 112 native records — SRC-ff6e7f977ca2
 
-Original source: [Lynx reopened records 112 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-112.json)
+Original source: Lynx reopened records 112 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-112.json`)
 
 Summary: Native document 89 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14348,7 +14348,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 120 native records — SRC-148f28990b68
 
-Original source: [Lynx reopened records 120 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-120.json)
+Original source: Lynx reopened records 120 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-120.json`)
 
 Summary: Native document 89 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage saved derivative.
 
@@ -14356,7 +14356,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 128 native records — SRC-b14a6a2b185d
 
-Original source: [Lynx reopened records 128 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-128.json)
+Original source: Lynx reopened records 128 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-128.json`)
 
 Summary: Native document 89 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14364,7 +14364,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 136 native records — SRC-c7081b3be440
 
-Original source: [Lynx reopened records 136 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-136.json)
+Original source: Lynx reopened records 136 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-136.json`)
 
 Summary: Native document 89 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14372,7 +14372,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 144 native records — SRC-49c894b64172
 
-Original source: [Lynx reopened records 144 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-144.json)
+Original source: Lynx reopened records 144 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-144.json`)
 
 Summary: Native document 89 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14380,7 +14380,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 152 native records — SRC-f0168c67c897
 
-Original source: [Lynx reopened records 152 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-152.json)
+Original source: Lynx reopened records 152 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-152.json`)
 
 Summary: Native document 89 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14388,7 +14388,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 16 native records — SRC-38cef6ed62af
 
-Original source: [Lynx reopened records 16 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-16.json)
+Original source: Lynx reopened records 16 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-16.json`)
 
 Summary: Native document 89 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage saved derivative.
 
@@ -14396,7 +14396,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 160 native records — SRC-03d1a09f78f8
 
-Original source: [Lynx reopened records 160 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-160.json)
+Original source: Lynx reopened records 160 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-160.json`)
 
 Summary: Native document 89 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14404,7 +14404,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 168 native records — SRC-56a0f5891cd3
 
-Original source: [Lynx reopened records 168 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-168.json)
+Original source: Lynx reopened records 168 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-168.json`)
 
 Summary: Native document 89 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14412,7 +14412,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 176 native records — SRC-9919cced30fa
 
-Original source: [Lynx reopened records 176 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-176.json)
+Original source: Lynx reopened records 176 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-176.json`)
 
 Summary: Native document 89 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14420,7 +14420,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 184 native records — SRC-1a7c8d68bce8
 
-Original source: [Lynx reopened records 184 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-184.json)
+Original source: Lynx reopened records 184 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-184.json`)
 
 Summary: Native document 89 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14428,7 +14428,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 192 native records — SRC-01f96907504c
 
-Original source: [Lynx reopened records 192 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-192.json)
+Original source: Lynx reopened records 192 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-192.json`)
 
 Summary: Native document 89 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14436,7 +14436,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 200 native records — SRC-91332cccbebc
 
-Original source: [Lynx reopened records 200 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-200.json)
+Original source: Lynx reopened records 200 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-200.json`)
 
 Summary: Native document 89 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14444,7 +14444,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 208 native records — SRC-064e69f97070
 
-Original source: [Lynx reopened records 208 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-208.json)
+Original source: Lynx reopened records 208 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-208.json`)
 
 Summary: Native document 89 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14452,7 +14452,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 216 native records — SRC-c5392ad41c00
 
-Original source: [Lynx reopened records 216 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-216.json)
+Original source: Lynx reopened records 216 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-216.json`)
 
 Summary: Native document 89 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage saved derivative.
 
@@ -14460,7 +14460,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 24 native records — SRC-daa51fe3fdd2
 
-Original source: [Lynx reopened records 24 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-24.json)
+Original source: Lynx reopened records 24 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-24.json`)
 
 Summary: Native document 89 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage saved derivative.
 
@@ -14468,7 +14468,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 32 native records — SRC-9e08629c78a3
 
-Original source: [Lynx reopened records 32 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-32.json)
+Original source: Lynx reopened records 32 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-32.json`)
 
 Summary: Native document 89 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage saved derivative.
 
@@ -14476,7 +14476,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 40 native records — SRC-f09ccd9cf02a
 
-Original source: [Lynx reopened records 40 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-40.json)
+Original source: Lynx reopened records 40 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-40.json`)
 
 Summary: Native document 89 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage saved derivative.
 
@@ -14484,7 +14484,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 48 native records — SRC-70229263a540
 
-Original source: [Lynx reopened records 48 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-48.json)
+Original source: Lynx reopened records 48 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-48.json`)
 
 Summary: Native document 89 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage saved derivative.
 
@@ -14492,7 +14492,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 56 native records — SRC-c2acb8079d68
 
-Original source: [Lynx reopened records 56 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-56.json)
+Original source: Lynx reopened records 56 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-56.json`)
 
 Summary: Native document 89 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14500,7 +14500,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 64 native records — SRC-dbebc08b0ba9
 
-Original source: [Lynx reopened records 64 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-64.json)
+Original source: Lynx reopened records 64 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-64.json`)
 
 Summary: Native document 89 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14508,7 +14508,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 72 native records — SRC-d4820d22dee4
 
-Original source: [Lynx reopened records 72 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-72.json)
+Original source: Lynx reopened records 72 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-72.json`)
 
 Summary: Native document 89 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage saved derivative.
 
@@ -14516,7 +14516,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 8 native records — SRC-71ccf5670468
 
-Original source: [Lynx reopened records 8 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-8.json)
+Original source: Lynx reopened records 8 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-8.json`)
 
 Summary: Native document 89 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14524,7 +14524,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 80 native records — SRC-3311aa5fea40
 
-Original source: [Lynx reopened records 80 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-80.json)
+Original source: Lynx reopened records 80 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-80.json`)
 
 Summary: Native document 89 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage saved derivative.
 
@@ -14532,7 +14532,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 88 native records — SRC-3569e6d94947
 
-Original source: [Lynx reopened records 88 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-88.json)
+Original source: Lynx reopened records 88 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-88.json`)
 
 Summary: Native document 89 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14540,7 +14540,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened records 96 native records — SRC-816e64244f99
 
-Original source: [Lynx reopened records 96 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-96.json)
+Original source: Lynx reopened records 96 native records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-96.json`)
 
 Summary: Native document 89 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
 
@@ -14548,7 +14548,7 @@ Evidence: executed_native_record_read.
 
 ### Lynx reopened top view — SRC-7f94a2475be7
 
-Original source: [Lynx reopened top view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-top.png)
+Original source: Lynx reopened top view (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-top.png`)
 
 Summary: Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is top.
 
@@ -14556,7 +14556,7 @@ Evidence: executed_native_capture.
 
 ### Completed Lynx component iteration — SRC-7798e76e43a5
 
-Original source: [Completed Lynx component iteration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/result.json)
+Original source: Completed Lynx component iteration (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/result.json`)
 
 Summary: Records the checked DWG, source correction, scale-aware Python improvement, three inspected views and actual test/recovery history.
 
@@ -14564,7 +14564,7 @@ Evidence: executed_component_result.
 
 ### Lynx saved geometry checks — SRC-6c9c15d8564c
 
-Original source: [Lynx saved geometry checks](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/saved-assembly-checks.json)
+Original source: Lynx saved geometry checks (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/saved-assembly-checks.json`)
 
 Summary: 159 comparisons pass for solid equality, 60 source placements, 130 instance paths/matrices, metre units, preserved 0.001 scale and original DWG bytes. Point ranges are explicitly converted into millimetres.
 
@@ -14572,7 +14572,7 @@ Evidence: executed_saved_geometry_check.
 
 ### Lynx source-linked feature requirements — SRC-426f459cb6f3
 
-Original source: [Lynx source-linked feature requirements](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-job.json)
+Original source: Lynx source-linked feature requirements (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-job.json`)
 
 Summary: Binds exact rev04 M10 assembly, STEP length units and source placement frames to the retained manufacturer original.
 
@@ -14580,7 +14580,7 @@ Evidence: implementation_artifact.
 
 ### Reviewed Lynx placement corrections — SRC-e1fe7974d0c3
 
-Original source: [Reviewed Lynx placement corrections](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-placement-plan.json)
+Original source: Reviewed Lynx placement corrections (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-placement-plan.json`)
 
 Summary: Sixty internal insertions uniquely match inverted source frames. Outer 0.001 scaling is preserved because source millimetres convert into native drawing metres.
 
@@ -14588,7 +14588,7 @@ Evidence: executed_source_comparison.
 
 ### Lynx state evidence — SRC-9c538ca9300c
 
-Original source: [Lynx state evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/state.json)
+Original source: Lynx state evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/state.json`)
 
 Summary: Existing Lynx opened in document 88 with current camera and document identities recorded.
 
@@ -14596,7 +14596,7 @@ Evidence: executed_native_state_read.
 
 ### Lynx top capture evidence — SRC-2b1e0de0467b
 
-Original source: [Lynx top capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/top-capture.json)
+Original source: Lynx top capture evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/top-capture.json`)
 
 Summary: Completed original capture request response for the top capture image, retained beside the inspected native image.
 
@@ -14604,7 +14604,7 @@ Evidence: executed_native_capture_result.
 
 ### Converter front capture evidence — SRC-e9e70b8fbc2d
 
-Original source: [Converter front capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front-capture.json)
+Original source: Converter front capture evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front-capture.json`)
 
 Summary: Native front capture observation from document 87 during completion of the converter orthographic view checks.
 
@@ -14612,7 +14612,7 @@ Evidence: executed_native_capture_result.
 
 ### Converter front view — SRC-d03faba9877b
 
-Original source: [Converter front view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front.png)
+Original source: Converter front view (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front.png`)
 
 Summary: Actual native front image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view.
 
@@ -14620,7 +14620,7 @@ Evidence: executed_native_capture.
 
 ### Converter orthographic capture journal — SRC-f98bb31e988b
 
-Original source: [Converter orthographic capture journal](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/ocs-journal.jsonl)
+Original source: Converter orthographic capture journal (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/ocs-journal.jsonl`)
 
 Summary: Native top/front commands, capture intents and same-request recovery responses used to finish visual verification.
 
@@ -14628,7 +14628,7 @@ Evidence: executed_native_operation_journal.
 
 ### Completed converter iteration — SRC-fb7487babc95
 
-Original source: [Completed converter iteration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/result.json)
+Original source: Completed converter iteration (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/result.json`)
 
 Summary: Combines the existing 39 passing saved geometry checks with three successful component views, preserving earlier failed result records.
 
@@ -14636,7 +14636,7 @@ Evidence: executed_component_result.
 
 ### Converter state after evidence — SRC-9303bc078b8c
 
-Original source: [Converter state after evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-after.json)
+Original source: Converter state after evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-after.json`)
 
 Summary: Native state after observation from document 87 during completion of the converter orthographic view checks.
 
@@ -14644,7 +14644,7 @@ Evidence: executed_native_state_read.
 
 ### Converter state before evidence — SRC-77a21a6666d5
 
-Original source: [Converter state before evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-before.json)
+Original source: Converter state before evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-before.json`)
 
 Summary: Native state before observation from document 87 during completion of the converter orthographic view checks.
 
@@ -14652,7 +14652,7 @@ Evidence: executed_native_state_read.
 
 ### Converter top capture evidence — SRC-b682e9c40220
 
-Original source: [Converter top capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top-capture.json)
+Original source: Converter top capture evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top-capture.json`)
 
 Summary: Native top capture observation from document 87 during completion of the converter orthographic view checks.
 
@@ -14660,7 +14660,7 @@ Evidence: executed_native_capture_result.
 
 ### Converter top view — SRC-2d34ea14c9fd
 
-Original source: [Converter top view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top.png)
+Original source: Converter top view (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top.png`)
 
 Summary: Actual native top image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view.
 
@@ -14668,7 +14668,7 @@ Evidence: executed_native_capture.
 
 ### Scale-aware native assembly traversal — SRC-ef86743da4af
 
-Original source: [Scale-aware native assembly traversal](/home/leo/projects/3dmodeling/scripts/step_placements.py)
+Original source: [Scale-aware native assembly traversal](../../scripts/step_placements.py)
 
 Summary: Adds explicit positive uniform-scale support to native matrices and nested instance traversal, preserving default unit-scale guards. Exercised on the Lynx metre drawing and 130 placed solids.
 
@@ -14676,7 +14676,7 @@ Evidence: implementation_artifact.
 
 ### Uniform-scale assembly regression tests — SRC-1365d8cb5b94
 
-Original source: [Uniform-scale assembly regression tests](/home/leo/projects/3dmodeling/tests/test_scaled_assembly.py)
+Original source: [Uniform-scale assembly regression tests](../../tests/test_scaled_assembly.py)
 
 Summary: Four cases verify rotation/translation with scale, invalid scales, unequal scales and all 130 recorded Lynx instance paths.
 
@@ -14684,7 +14684,7 @@ Evidence: implementation_artifact.
 
 ### Procedure for source-to-drawing unit conversion — SRC-e24ea3f3e131
 
-Original source: [Procedure for source-to-drawing unit conversion](/home/leo/projects/3dmodeling/skills/component-cad/references/scaled-assemblies.md)
+Original source: [Procedure for source-to-drawing unit conversion](../../skills/component-cad/references/scaled-assemblies.md)
 
 Summary: Documents the actual Lynx millimetre-source/metre-drawing conversion, separate internal correction and saved geometry handoffs.
 
@@ -14692,7 +14692,7 @@ Evidence: implementation_artifact.
 
 ### Resumed CAD helper regression execution — SRC-8bab030cd5d3
 
-Original source: [Resumed CAD helper regression execution](/home/leo/projects/3dmodeling/execution/resumed-cad-tests-2026-11-13.txt)
+Original source: [Resumed CAD helper regression execution](../../execution/resumed-cad-tests-2026-11-13.txt)
 
 Summary: Full recorded unittest execution: 100 tests pass in 15.323 seconds. The protected-output test intentionally emits its rejected-write result.
 
@@ -14700,7 +14700,7 @@ Evidence: executed_software_test_result.
 
 ### Lynx completed iteration report — SRC-6b5bcf790212
 
-Original source: [Lynx completed iteration report](/home/leo/projects/3dmodeling/execution/c026-lynx-2026-11-13.md)
+Original source: [Lynx completed iteration report](../../execution/c026-lynx-2026-11-13.md)
 
 Summary: Reports corrected manufacturer assembly, 159 saved checks, explicit units, applied scale reader improvement and actual source and recovery evidence.
 
@@ -14708,7 +14708,7 @@ Evidence: executed_verification_report.
 
 ### Converter completed iteration report — SRC-36b3ef66e551
 
-Original source: [Converter completed iteration report](/home/leo/projects/3dmodeling/execution/c045-completion-2026-11-13.md)
+Original source: [Converter completed iteration report](../../execution/c045-completion-2026-11-13.md)
 
 Summary: Reports reuse of saved converter geometry, newly successful orthographic views and the applied capture verification procedure.
 
@@ -14716,7 +14716,7 @@ Evidence: executed_verification_report.
 
 ### Lynx Smart BMS 500 NG M10 rev04 STEP original — SRC-a6c30a318e46
 
-Original source: [Lynx Smart BMS 500 NG M10 rev04 STEP original](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp)
+Original source: Lynx Smart BMS 500 NG M10 rev04 STEP original (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp`)
 
 Summary: Existing retained manufacturer AP214 assembly declares millimetres and explicit source placement frames. Reused unchanged for the 60 internal correction comparisons.
 
@@ -14726,7 +14726,7 @@ Evidence: existing_local_manufacturer_original_inspected.
 
 ### BMW activated isometric capture — SRC-c1cd17605690
 
-Original source: [BMW activated isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/activated-isometric.png)
+Original source: BMW activated isometric capture (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/activated-isometric.png`)
 
 Summary: Actual inspected activated isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
 
@@ -14734,7 +14734,7 @@ Evidence: executed_native_capture_failed_identity.
 
 ### BMW current native audit — SRC-7c43c07f98cd
 
-Original source: [BMW current native audit](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/audit.json)
+Original source: BMW current native audit (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/audit.json`)
 
 Summary: Saved document reports 13 solids and zero audit errors/warnings.
 
@@ -14742,7 +14742,7 @@ Evidence: executed_native_audit.
 
 ### BMW document native capabilities — SRC-8c2f0d50aa2d
 
-Original source: [BMW document native capabilities](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/capabilities.json)
+Original source: BMW document native capabilities (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/capabilities.json`)
 
 Summary: Installed native automation capabilities and document record collections were read before additional viewport inspection.
 
@@ -14750,7 +14750,7 @@ Evidence: executed_native_capability_read.
 
 ### BMW copy isometric capture — SRC-8a2300ee7ccd
 
-Original source: [BMW copy isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-isometric.png)
+Original source: BMW copy isometric capture (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-isometric.png`)
 
 Summary: Actual inspected copy isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
 
@@ -14758,7 +14758,7 @@ Evidence: executed_native_capture_failed_identity.
 
 ### BMW isolated inspection document state — SRC-100b4715becf
 
-Original source: [BMW isolated inspection document state](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-state.json)
+Original source: BMW isolated inspection document state (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-state.json`)
 
 Summary: Fresh document 90 addresses an exact-byte BMW inspection copy; captured image retains the earlier Lynx view.
 
@@ -14766,7 +14766,7 @@ Evidence: executed_native_state_read.
 
 ### Executed BMW isolated-view driver — SRC-f35676bd27f5
 
-Original source: [Executed BMW isolated-view driver](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/bmw_isolated_view.py)
+Original source: Executed BMW isolated-view driver (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/bmw_isolated_view.py`)
 
 Summary: Copies exact original DWG bytes into a diagnostic path and opens a fresh document for a component-identity capture.
 
@@ -14774,7 +14774,7 @@ Evidence: executed_implementation_artifact.
 
 ### Executed BMW source and geometry driver — SRC-5cc1a26a5c2b
 
-Original source: [Executed BMW source and geometry driver](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/check_bmw_iteration.py)
+Original source: Executed BMW source and geometry driver (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/check_bmw_iteration.py`)
 
 Summary: Writes the initial source job and compares native case, mounting and cover features; later source revision 2 retains corrected report attribution separately.
 
@@ -14782,7 +14782,7 @@ Evidence: executed_implementation_artifact.
 
 ### BMW executed driver provenance — SRC-202743c156fc
 
-Original source: [BMW executed driver provenance](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/provenance.json)
+Original source: BMW executed driver provenance (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/provenance.json`)
 
 Summary: Hashes retained inspection drivers and source reconstruction program; identifies the restricted helper bootstrap and preserves the original construction program as source.
 
@@ -14790,7 +14790,7 @@ Evidence: executed_artifact_provenance.
 
 ### Executed BMW inspection driver — SRC-e433169a1ce6
 
-Original source: [Executed BMW inspection driver](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/start_bmw_iteration.py)
+Original source: Executed BMW inspection driver (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/start_bmw_iteration.py`)
 
 Summary: Opens the existing module, checks original hash, reads header/audit and 13 saved native solids, then requests the first isometric capture.
 
@@ -14798,7 +14798,7 @@ Evidence: executed_implementation_artifact.
 
 ### BMW drawing units — SRC-ed75a17d7f36
 
-Original source: [BMW drawing units](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/header.json)
+Original source: BMW drawing units (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/header.json`)
 
 Summary: Saved drawing insertion units code 4 identifies millimetres for source-bound geometry checks.
 
@@ -14806,7 +14806,7 @@ Evidence: executed_native_state_read.
 
 ### BMW isometric capture — SRC-b33b1135609a
 
-Original source: [BMW isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/isometric.png)
+Original source: BMW isometric capture (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/isometric.png`)
 
 Summary: Actual inspected isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
 
@@ -14814,7 +14814,7 @@ Evidence: executed_native_capture_failed_identity.
 
 ### BMW saved native geometry records — SRC-12777a7a34c9
 
-Original source: [BMW saved native geometry records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/native-records.json)
+Original source: BMW saved native geometry records (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/native-records.json`)
 
 Summary: Document 79 readback contains all 13 exterior solids with component metadata and native SAB geometry used by the new checker.
 
@@ -14822,7 +14822,7 @@ Evidence: executed_native_record_read.
 
 ### BMW current native request journal — SRC-13f3a3686de7
 
-Original source: [BMW current native request journal](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/ocs-journal.jsonl)
+Original source: BMW current native request journal (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/ocs-journal.jsonl`)
 
 Summary: Stable request intents and responses preserve existing open, view setup, explicit activation, pointer event, exact-byte-copy open and captures.
 
@@ -14830,7 +14830,7 @@ Evidence: executed_native_operation_journal.
 
 ### BMW pointer isometric capture — SRC-b0614d34bbd7
 
-Original source: [BMW pointer isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-isometric.png)
+Original source: BMW pointer isometric capture (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-isometric.png`)
 
 Summary: Actual inspected pointer isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
 
@@ -14838,7 +14838,7 @@ Evidence: executed_native_capture_failed_identity.
 
 ### BMW native pointer response — SRC-b02693d9042f
 
-Original source: [BMW native pointer response](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-result.json)
+Original source: BMW native pointer response (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-result.json`)
 
 Summary: Supported native pointer move and wheel action completed; subsequent capture still shows the Lynx BMS.
 
@@ -14846,7 +14846,7 @@ Evidence: executed_native_view_action.
 
 ### BMW input coverage check — SRC-5ae53054d5c4
 
-Original source: [BMW input coverage check](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/readiness.json)
+Original source: BMW input coverage check (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/readiness.json`)
 
 Summary: Current source revision passes required feature/hash coverage before the 19 saved-geometry comparisons.
 
@@ -14854,7 +14854,7 @@ Evidence: executed_input_validation.
 
 ### BMW iteration stage result — SRC-da0f92d3a5e0
 
-Original source: [BMW iteration stage result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/result.json)
+Original source: BMW iteration stage result (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/result.json`)
 
 Summary: Saved geometry and the applied planar-pattern helper pass; component remains IN_PROGRESS with a blocked visual identity stage. Original BMW file hash stays unchanged.
 
@@ -14862,7 +14862,7 @@ Evidence: executed_component_result.
 
 ### BMW saved geometry comparisons — SRC-f5b9e2c34e6f
 
-Original source: [BMW saved geometry comparisons](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/saved-checks.json)
+Original source: BMW saved geometry comparisons (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/saved-checks.json`)
 
 Summary: 19 passing comparisons cover 13 closed solids, case dimensions, four mounting bores and all 24 closed cover recesses.
 
@@ -14870,7 +14870,7 @@ Evidence: executed_saved_geometry_check.
 
 ### Existing BMW reconstruction source program — SRC-94d4b9997579
 
-Original source: [Existing BMW reconstruction source program](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source/build_bmw_i3_94ah.py)
+Original source: Existing BMW reconstruction source program (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source/build_bmw_i3_94ah.py`)
 
 Summary: Preserved original construction parameters supply the six-by-four pressing grid and existing exterior interpretation. Its construction function was not rerun.
 
@@ -14878,7 +14878,7 @@ Evidence: existing_local_implementation_source_inspected.
 
 ### BMW initial source requirements — SRC-4bf57d873df3
 
-Original source: [BMW initial source requirements](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job-r01.json)
+Original source: BMW initial source requirements (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job-r01.json`)
 
 Summary: Preserves the initial direct-HTML dimension binding before source review identified the report as the actual retained dimensional evidence.
 
@@ -14886,7 +14886,7 @@ Evidence: historical_implementation_artifact.
 
 ### BMW source requirements revision 2 — SRC-6bfdf70ce9d1
 
-Original source: [BMW source requirements revision 2](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json)
+Original source: BMW source requirements revision 2 (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json`)
 
 Summary: Binds reported case dimensions to the existing geometry report and reconstruction features to their retained records; includes exact expected 24 recess centres.
 
@@ -14894,7 +14894,7 @@ Evidence: implementation_artifact.
 
 ### BMW source evidence review — SRC-e8db5a8bec64
 
-Original source: [BMW source evidence review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-review.json)
+Original source: BMW source evidence review (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-review.json`)
 
 Summary: Three retained EVShop HTML copies lack the recorded dimension text; current source revision attributes dimensions through the existing geometry report. Numeric expectations stay unchanged.
 
@@ -14902,7 +14902,7 @@ Evidence: executed_local_source_review.
 
 ### BMW existing document state — SRC-79b348f11de4
 
-Original source: [BMW existing document state](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/state.json)
+Original source: BMW existing document state (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/state.json`)
 
 Summary: Records existing saved BMW document 79, its camera and document identity before current inspection.
 
@@ -14910,7 +14910,7 @@ Evidence: executed_native_state_read.
 
 ### BMW failed capture identity checks — SRC-cc7a5085d90e
 
-Original source: [BMW failed capture identity checks](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-checks.json)
+Original source: BMW failed capture identity checks (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-checks.json`)
 
 Summary: Four native images have the same SHA-256 and show the previous Lynx BMS while native BMW documents are 79 and 90.
 
@@ -14918,7 +14918,7 @@ Evidence: executed_visual_verification.
 
 ### BMW diagnostic copy provenance — SRC-9a7e251c187a
 
-Original source: [BMW diagnostic copy provenance](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-copy.json)
+Original source: BMW diagnostic copy provenance (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-copy.json`)
 
 Summary: Pins original and inspection-copy paths and their identical DWG SHA-256; purpose is viewport diagnosis with zero geometry or format changes.
 
@@ -14926,7 +14926,7 @@ Evidence: executed_file_copy_provenance.
 
 ### BMW byte-identical inspection copy — SRC-35c99d126bf6
 
-Original source: [BMW byte-identical inspection copy](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg)
+Original source: BMW byte-identical inspection copy (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg`)
 
 Summary: Exact original saved geometry opened in isolated document 90 to test stale existing-tab rendering; this is a diagnostic work artifact.
 
@@ -14934,7 +14934,7 @@ Evidence: executed_byte_identical_copy.
 
 ### Shared repeated planar-boundary checker — SRC-5b8f29b55228
 
-Original source: [Shared repeated planar-boundary checker](/home/leo/projects/3dmodeling/scripts/feature_checks.py)
+Original source: [Shared repeated planar-boundary checker](../../scripts/feature_checks.py)
 
 Summary: Adds a source-bound plane level, complete closed-boundary count, centres and span comparison for repeated recesses.
 
@@ -14942,7 +14942,7 @@ Evidence: implementation_artifact.
 
 ### Named battery case measurement groups — SRC-5c74a56ff439
 
-Original source: [Named battery case measurement groups](/home/leo/projects/3dmodeling/scripts/battery_module.py)
+Original source: [Named battery case measurement groups](../../scripts/battery_module.py)
 
 Summary: Adds check_tabbed_case, reusing source readiness, named native parts, closed-body and mounting-pattern checks with explicit component measurement groups.
 
@@ -14950,7 +14950,7 @@ Evidence: implementation_artifact.
 
 ### BMW saved-case and recess regression tests — SRC-c4061056ed3f
 
-Original source: [BMW saved-case and recess regression tests](/home/leo/projects/3dmodeling/tests/test_tabbed_battery.py)
+Original source: [BMW saved-case and recess regression tests](../../tests/test_tabbed_battery.py)
 
 Summary: Six actual-record cases pass; they exercise correct geometry and detection of incorrect length, shifted/missing recesses, incorrect floor and open boundary.
 
@@ -14958,7 +14958,7 @@ Evidence: implementation_artifact.
 
 ### Current component iteration skill — SRC-6b239a9bfdd1
 
-Original source: [Current component iteration skill](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md)
+Original source: [Current component iteration skill](../../skills/component-cad/SKILL.md)
 
 Summary: Routes component work through existing source, native geometry, persistence, visual identity and checked improvement procedures, including scaled assemblies and multi-solid battery cases.
 
@@ -14966,7 +14966,7 @@ Evidence: implementation_artifact.
 
 ### Tabbed battery and cover-pattern procedure — SRC-240f5a0db534
 
-Original source: [Tabbed battery and cover-pattern procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/tabbed-battery.md)
+Original source: [Tabbed battery and cover-pattern procedure](../../skills/component-cad/references/tabbed-battery.md)
 
 Summary: Records the saved BMW case measurement groups, source/reconstruction attribution, repeated-boundary checker and concrete stale-capture failure.
 
@@ -14974,7 +14974,7 @@ Evidence: implementation_artifact.
 
 ### BMW saved-check iteration report — SRC-de515b0eea67
 
-Original source: [BMW saved-check iteration report](/home/leo/projects/3dmodeling/execution/c022-bmw-2026-11-13.md)
+Original source: [BMW saved-check iteration report](../../execution/c022-bmw-2026-11-13.md)
 
 Summary: Reports 19 passing saved comparisons, the applied six-test improvement, report-bound dimensional evidence and blocked visual identity stage.
 
@@ -14982,7 +14982,7 @@ Evidence: executed_verification_report.
 
 ### BMW iteration full regression result — SRC-2cf3d0d9c4d9
 
-Original source: [BMW iteration full regression result](/home/leo/projects/3dmodeling/execution/bmw-iteration-tests-2026-11-13.txt)
+Original source: [BMW iteration full regression result](../../execution/bmw-iteration-tests-2026-11-13.txt)
 
 Summary: Records the final full helper test run after source revision 2. All 106 tests pass; protected-output rejection is an intentional test case.
 
@@ -14990,7 +14990,7 @@ Evidence: executed_software_test_result.
 
 ### Retained BMW seller HTML evshop_page_fr.html — SRC-d8586951cbe6
 
-Original source: [Retained BMW seller HTML evshop_page_fr.html](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_fr.html)
+Original source: Retained BMW seller HTML evshop_page_fr.html (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_fr.html`)
 
 Summary: Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.
 
@@ -14998,7 +14998,7 @@ Evidence: existing_local_original_inspected.
 
 ### Retained BMW seller HTML evshop_page_de.html — SRC-149df552e1f9
 
-Original source: [Retained BMW seller HTML evshop_page_de.html](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_de.html)
+Original source: Retained BMW seller HTML evshop_page_de.html (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_de.html`)
 
 Summary: Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.
 
@@ -15006,7 +15006,7 @@ Evidence: existing_local_original_inspected.
 
 ### Retained BMW seller HTML evshop_page_en.html — SRC-a351e9134375
 
-Original source: [Retained BMW seller HTML evshop_page_en.html](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_en.html)
+Original source: Retained BMW seller HTML evshop_page_en.html (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_en.html`)
 
 Summary: Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.
 
@@ -15014,7 +15014,7 @@ Evidence: existing_local_original_inspected.
 
 ### Existing BMW geometry and attribution record — SRC-c170afb93281
 
-Original source: [Existing BMW geometry and attribution record](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/bmw-i3-94ah-geometry.md)
+Original source: Existing BMW geometry and attribution record (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/bmw-i3-94ah-geometry.md`)
 
 Summary: Records EVShop-attributed 410/385/310/150 mm case dimensions and separately labelled reconstructed mounting centres, cover pattern and loose cable pose. Supplies current component-check inputs.
 
@@ -15022,7 +15022,7 @@ Evidence: existing_local_report_inspected.
 
 ### Local OCS control source actions.rs — SRC-c8f3cb9eeded
 
-Original source: [Local OCS control source actions.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/actions.rs)
+Original source: Local OCS control source actions.rs (`${OCS_ROOT}/src/app/control/actions.rs`)
 
 Summary: Local source read to identify native pointer, document activation and capture actions. The current pointer call completed and its observed capture result is retained separately.
 
@@ -15030,7 +15030,7 @@ Evidence: local_implementation_source_inspected.
 
 ### Local OCS control source mod.rs — SRC-0d1de3da8732
 
-Original source: [Local OCS control source mod.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs)
+Original source: Local OCS control source mod.rs (`${OCS_ROOT}/src/app/control/mod.rs`)
 
 Summary: Local source read to identify native pointer, document activation and capture actions. The current pointer call completed and its observed capture result is retained separately.
 
@@ -15040,7 +15040,7 @@ Evidence: local_implementation_source_inspected.
 
 ### Actual-file component start check — SRC-33d3e8961151
 
-Original source: [Actual-file component start check](/home/leo/projects/3dmodeling/scripts/model_inventory.py)
+Original source: [Actual-file component start check](../../scripts/model_inventory.py)
 
 Summary: Reads manifest and work-record model/output/native_model paths, sheet links and filesystem files. Returns skip, locate, review or new-model action without opening CAD.
 
@@ -15048,7 +15048,7 @@ Evidence: implementation_artifact.
 
 ### Existing-model start regression tests — SRC-cb2e35b829eb
 
-Original source: [Existing-model start regression tests](/home/leo/projects/3dmodeling/tests/test_model_inventory.py)
+Original source: [Existing-model start regression tests](../../tests/test_model_inventory.py)
 
 Summary: Ten tests cover stale status, recorded path fields, sheet discovery, unlinked files, dependency models, 2D references and completed-state preservation.
 
@@ -15056,7 +15056,7 @@ Evidence: implementation_artifact.
 
 ### Component iteration skill with mandatory file lookup — SRC-6b239a9bfdd1
 
-Original source: [Component iteration skill with mandatory file lookup](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md)
+Original source: [Component iteration skill with mandatory file lookup](../../skills/component-cad/SKILL.md)
 
 Summary: Requires actual 3D file and prior-record inspection before every component start and reuse of existing completed models.
 
@@ -15064,7 +15064,7 @@ Evidence: implementation_artifact.
 
 ### Existing-model start procedure — SRC-758d94d927aa
 
-Original source: [Existing-model start procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/existing-model-start-check.md)
+Original source: [Existing-model start procedure](../../skills/component-cad/references/existing-model-start-check.md)
 
 Summary: Documents each lookup result, exact FERME command, identity review, reuse of existing checks and separation of 2D references.
 
@@ -15072,7 +15072,7 @@ Evidence: implementation_artifact.
 
 ### Standing existing-model reuse instruction — SRC-8f9b6f25cd0d
 
-Original source: [Standing existing-model reuse instruction](/home/leo/projects/3dmodeling/AGENTS.md)
+Original source: [Standing existing-model reuse instruction](../../AGENTS.md)
 
 Summary: Records the 13 November instruction to check actual files before every start and mark matching existing models DONE in the current list.
 
@@ -15080,7 +15080,7 @@ Evidence: registered_user_instruction.
 
 ### Existing-model reconciliation report — SRC-2adf14e1a45e
 
-Original source: [Existing-model reconciliation report](/home/leo/projects/3dmodeling/execution/existing-model-audit-2026-11-13.md)
+Original source: [Existing-model reconciliation report](../../execution/existing-model-audit-2026-11-13.md)
 
 Summary: Reports 103 checked rows, 43 files, 13 existing matching models and four stale status corrections, with the next tyre file lookup.
 
@@ -15088,7 +15088,7 @@ Evidence: executed_reconciliation_report.
 
 ### Existing-model guard test result — SRC-f6862578e31e
 
-Original source: [Existing-model guard test result](/home/leo/projects/3dmodeling/execution/existing-model-start-tests-2026-11-13.txt)
+Original source: [Existing-model guard test result](../../execution/existing-model-start-tests-2026-11-13.txt)
 
 Summary: Recorded execution of ten focused start-check tests; all pass.
 
@@ -15096,7 +15096,7 @@ Evidence: executed_software_test_result.
 
 ### Full before-and-after component file audit — SRC-67b43e6b7da4
 
-Original source: [Full before-and-after component file audit](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/audit.json)
+Original source: Full before-and-after component file audit (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/audit.json`)
 
 Summary: Contains all 103 before/after entries and 43 file hashes; identifies 13 matching existing 3D components and four status corrections.
 
@@ -15104,7 +15104,7 @@ Evidence: executed_filesystem_reconciliation.
 
 ### Human-readable completed component file list — SRC-d32e5f329b48
 
-Original source: [Human-readable completed component file list](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/README.md)
+Original source: Human-readable completed component file list (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/README.md`)
 
 Summary: Lists 13 DONE components with actual file paths, the four status corrections and next-component file check.
 
@@ -15112,7 +15112,7 @@ Evidence: executed_reconciliation_report.
 
 ### Trelleborg T539 actual-file start check — SRC-cd1b7c790611
 
-Original source: [Trelleborg T539 actual-file start check](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/next-component-check.json)
+Original source: Trelleborg T539 actual-file start check (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/next-component-check.json`)
 
 Summary: C001 tyre lookup scans all 43 available model/reference files and returns NEW_MODEL_REQUIRED. Existing completed components stay outside this construction candidate.
 
@@ -15120,7 +15120,7 @@ Evidence: executed_filesystem_start_check.
 
 ### Current component manifest with CAD completion states — SRC-41482c223014
 
-Original source: [Current component manifest with CAD completion states](/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json)
+Original source: Current component manifest with CAD completion states (`${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json`)
 
 Summary: Preserves all 103 component identities and source/dependency fields; adds current CAD states and preferred existing paths for 13 modeled components.
 
@@ -15128,7 +15128,7 @@ Evidence: implementation_data_artifact.
 
 ### Reconciled component work states — SRC-4f0c8d392a38
 
-Original source: [Reconciled component work states](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json)
+Original source: Reconciled component work states (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json`)
 
 Summary: Four stale statuses become DONE with linked existing geometry, preserved prior records and current filesystem-check evidence. All existing CAD is reused.
 
@@ -15136,7 +15136,7 @@ Evidence: implementation_data_artifact.
 
 ### CAD model index with current completion list — SRC-c66fe74bfd16
 
-Original source: [CAD model index with current completion list](/home/leo/projects/ferme/engineering/module-development/cad/README.md)
+Original source: CAD model index with current completion list (`${FERME_ROOT}/engineering/module-development/cad/README.md`)
 
 Summary: Adds the current 13-component completion list and mandatory actual-file lookup above the preserved component table and dated iteration records.
 
@@ -15144,7 +15144,7 @@ Evidence: implementation_documentation.
 
 ### Motenergy ME0907 motor completion reconciliation — SRC-30a98a34cb6d
 
-Original source: [Motenergy ME0907 motor completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C005.json)
+Original source: Motenergy ME0907 motor completion reconciliation (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C005.json`)
 
 Summary: Marks C005 DONE from its existing matching 3D file and retained checks. Previous state IN_PROGRESS and historical result reference are preserved.
 
@@ -15152,7 +15152,7 @@ Evidence: executed_status_reconciliation.
 
 ### Sumitomo PRO-M CH54065G10 gearmotor completion reconciliation — SRC-78e4e9208e59
 
-Original source: [Sumitomo PRO-M CH54065G10 gearmotor completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C010.json)
+Original source: Sumitomo PRO-M CH54065G10 gearmotor completion reconciliation (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C010.json`)
 
 Summary: Marks C010 DONE from its existing matching 3D file and retained checks. Previous state NOT_STARTED and historical result reference are preserved.
 
@@ -15160,7 +15160,7 @@ Evidence: executed_status_reconciliation.
 
 ### Sumitomo PRO-L CH54527G10 gearmotor completion reconciliation — SRC-1e186a487fe5
 
-Original source: [Sumitomo PRO-L CH54527G10 gearmotor completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C011.json)
+Original source: Sumitomo PRO-L CH54527G10 gearmotor completion reconciliation (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C011.json`)
 
 Summary: Marks C011 DONE from its existing matching 3D file and retained checks. Previous state NOT_STARTED and historical result reference are preserved.
 
@@ -15168,7 +15168,7 @@ Evidence: executed_status_reconciliation.
 
 ### BMW i3 94Ah battery module completion reconciliation — SRC-afdbd5edcfcc
 
-Original source: [BMW i3 94Ah battery module completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C022.json)
+Original source: BMW i3 94Ah battery module completion reconciliation (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C022.json`)
 
 Summary: Marks C022 DONE from its existing matching 3D file and retained checks. Previous state IN_PROGRESS and historical result reference are preserved.
 
@@ -15176,7 +15176,7 @@ Evidence: executed_status_reconciliation.
 
 ### blickle-ls-ps310k-support-wheel-reference.dwg — existing file inventory — SRC-e4d0aa2ce4b4
 
-Original source: [blickle-ls-ps310k-support-wheel-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-ps310k-support-wheel-reference.dwg)
+Original source: blickle-ls-ps310k-support-wheel-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-ps310k-support-wheel-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15184,7 +15184,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### blickle-ls-vle250k-support-wheel-reference.dwg — existing file inventory — SRC-f4e146422d3e
 
-Original source: [blickle-ls-vle250k-support-wheel-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-vle250k-support-wheel-reference.dwg)
+Original source: blickle-ls-vle250k-support-wheel-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-vle250k-support-wheel-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15192,7 +15192,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### hy400-hy70716a-rim-interface-reference.dwg — existing file inventory — SRC-622a7b1a5254
 
-Original source: [hy400-hy70716a-rim-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/hy400-hy70716a-rim-interface-reference.dwg)
+Original source: hy400-hy70716a-rim-interface-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/hy400-hy70716a-rim-interface-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15200,7 +15200,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### iso730-category-1-interface-reference.dwg — existing file inventory — SRC-76dc483c3633
 
-Original source: [iso730-category-1-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1-interface-reference.dwg)
+Original source: iso730-category-1-interface-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1-interface-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15208,7 +15208,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### iso730-category-1n-interface-reference.dwg — existing file inventory — SRC-9806f18177c5
 
-Original source: [iso730-category-1n-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1n-interface-reference.dwg)
+Original source: iso730-category-1n-interface-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1n-interface-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15216,7 +15216,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### item-line8-m8-connection-interface-reference.dwg — existing file inventory — SRC-aa161a4cd4c0
 
-Original source: [item-line8-m8-connection-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/item-line8-m8-connection-interface-reference.dwg)
+Original source: item-line8-m8-connection-interface-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/item-line8-m8-connection-interface-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15224,7 +15224,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### kc14940-square-tube-connection-reference.dwg — existing file inventory — SRC-e4b4947b4986
 
-Original source: [kc14940-square-tube-connection-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/kc14940-square-tube-connection-reference.dwg)
+Original source: kc14940-square-tube-connection-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/kc14940-square-tube-connection-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15232,7 +15232,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### quadboss-steely-608489-rim-interface-reference.dwg — existing file inventory — SRC-419bd0e5cdaf
 
-Original source: [quadboss-steely-608489-rim-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/quadboss-steely-608489-rim-interface-reference.dwg)
+Original source: quadboss-steely-608489-rim-interface-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/quadboss-steely-608489-rim-interface-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15240,7 +15240,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### skf-sy20tf-mounting-reference.dwg — existing file inventory — SRC-487528ab019b
 
-Original source: [skf-sy20tf-mounting-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/skf-sy20tf-mounting-reference.dwg)
+Original source: skf-sy20tf-mounting-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/skf-sy20tf-mounting-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15248,7 +15248,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### spp-zsk0750-trailer-interface-reference.dwg — existing file inventory — SRC-133be125123c
 
-Original source: [spp-zsk0750-trailer-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/spp-zsk0750-trailer-interface-reference.dwg)
+Original source: spp-zsk0750-trailer-interface-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/spp-zsk0750-trailer-interface-reference.dwg`)
 
 Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
 
@@ -15256,7 +15256,7 @@ Evidence: existing_local_2d_file_inventory.
 
 ### bmw-i3-94ah-module.dwg — existing file inventory — SRC-f66bd429303e
 
-Original source: [bmw-i3-94ah-module.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/bmw-i3-94ah-module.dwg)
+Original source: bmw-i3-94ah-module.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/bmw-i3-94ah-module.dwg`)
 
 Summary: Existing 3D file associated with C022 — BMW i3 94Ah battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15264,7 +15264,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### fibox-arca-203015t-8121020.dwg — existing file inventory — SRC-b2d596e125f6
 
-Original source: [fibox-arca-203015t-8121020.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg)
+Original source: fibox-arca-203015t-8121020.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg`)
 
 Summary: Existing 3D file associated with C029 — Fibox ARCA203015 enclosure. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15272,7 +15272,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### item-angle-bracket-set-8-40x40-41115.dwg — existing file inventory — SRC-32ccc223976e
 
-Original source: [item-angle-bracket-set-8-40x40-41115.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/item-angle-bracket-set-8-40x40-41115.dwg)
+Original source: item-angle-bracket-set-8-40x40-41115.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/item-angle-bracket-set-8-40x40-41115.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15280,7 +15280,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### item-profile-8-40x40-light-02633-segment-100mm.dwg — existing file inventory — SRC-cbf5e1960412
 
-Original source: [item-profile-8-40x40-light-02633-segment-100mm.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/item-profile-8-40x40-light-02633-segment-100mm.dwg)
+Original source: item-profile-8-40x40-light-02633-segment-100mm.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/item-profile-8-40x40-light-02633-segment-100mm.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15288,7 +15288,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### item-t-slot-nut-8-st-m8-02618.dwg — existing file inventory — SRC-cf54653f6b35
 
-Original source: [item-t-slot-nut-8-st-m8-02618.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/item-t-slot-nut-8-st-m8-02618.dwg)
+Original source: item-t-slot-nut-8-st-m8-02618.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/item-t-slot-nut-8-st-m8-02618.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15296,7 +15296,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### motenergy-me0907-mechanical-reference.dwg — existing file inventory — SRC-bac57ae3a67d
 
-Original source: [motenergy-me0907-mechanical-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg)
+Original source: motenergy-me0907-mechanical-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg`)
 
 Summary: Existing 3D file associated with C005 — Motenergy ME0907 motor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15304,7 +15304,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### neugart-ngv064-wheel-160.dwg — existing file inventory — SRC-b0ae08bfa359
 
-Original source: [neugart-ngv064-wheel-160.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/neugart-ngv064-wheel-160.dwg)
+Original source: neugart-ngv064-wheel-160.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/neugart-ngv064-wheel-160.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15312,7 +15312,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### neugart-ngv090-wheel-200.dwg — existing file inventory — SRC-d9bf927f1b4a
 
-Original source: [neugart-ngv090-wheel-200.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/neugart-ngv090-wheel-200.dwg)
+Original source: neugart-ngv090-wheel-200.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/neugart-ngv090-wheel-200.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15320,7 +15320,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### neugart-ngv110-wheel-250.dwg — existing file inventory — SRC-98e16cfbc51e
 
-Original source: [neugart-ngv110-wheel-250.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/neugart-ngv110-wheel-250.dwg)
+Original source: neugart-ngv110-wheel-250.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/neugart-ngv110-wheel-250.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15328,7 +15328,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### nissan-leaf-gen2-module-300x222x34.dwg — existing file inventory — SRC-e941de7f22bc
 
-Original source: [nissan-leaf-gen2-module-300x222x34.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg)
+Original source: nissan-leaf-gen2-module-300x222x34.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg`)
 
 Summary: Existing 3D file associated with C021 — Nissan Leaf Gen2 battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15336,7 +15336,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### p01-main-frame-longitudinal-rail-reference.dwg — existing file inventory — SRC-fe0ed186d8d8
 
-Original source: [p01-main-frame-longitudinal-rail-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg)
+Original source: p01-main-frame-longitudinal-rail-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg`)
 
 Summary: Existing 3D file associated with P01 — Main frame longitudinal rail. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15344,7 +15344,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### p02-main-frame-crossmember-reference.dwg — existing file inventory — SRC-26613ca599a7
 
-Original source: [p02-main-frame-crossmember-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg)
+Original source: p02-main-frame-crossmember-reference.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg`)
 
 Summary: Existing 3D file associated with P02 — Main frame crossmember. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15352,7 +15352,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### roboteq-mdc2x-manufacturer-assembly.dwg — existing file inventory — SRC-e3336ac55611
 
-Original source: [roboteq-mdc2x-manufacturer-assembly.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/roboteq-mdc2x-manufacturer-assembly.dwg)
+Original source: roboteq-mdc2x-manufacturer-assembly.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/roboteq-mdc2x-manufacturer-assembly.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15360,7 +15360,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### skf-sy20tf-checked.dwg — existing file inventory — SRC-5c0d49b55a8f
 
-Original source: [skf-sy20tf-checked.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg)
+Original source: skf-sy20tf-checked.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg`)
 
 Summary: Existing 3D file associated with C009 — SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15368,7 +15368,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### skf-sy20tf.dwg — existing file inventory — SRC-a60085185158
 
-Original source: [skf-sy20tf.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg)
+Original source: skf-sy20tf.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf.dwg`)
 
 Summary: Existing 3D file associated with C009 — SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15376,7 +15376,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### sumitomo-eco-m-ch52578.dwg — existing file inventory — SRC-2d9d30506fd3
 
-Original source: [sumitomo-eco-m-ch52578.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-eco-m-ch52578.dwg)
+Original source: sumitomo-eco-m-ch52578.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-eco-m-ch52578.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15384,7 +15384,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### sumitomo-eco-s-absolute-ch54149.dwg — existing file inventory — SRC-179ceac88c1a
 
-Original source: [sumitomo-eco-s-absolute-ch54149.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-eco-s-absolute-ch54149.dwg)
+Original source: sumitomo-eco-s-absolute-ch54149.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-eco-s-absolute-ch54149.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15392,7 +15392,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### sumitomo-eco-s-resolver-ch51944.dwg — existing file inventory — SRC-79411293ac82
 
-Original source: [sumitomo-eco-s-resolver-ch51944.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-eco-s-resolver-ch51944.dwg)
+Original source: sumitomo-eco-s-resolver-ch51944.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-eco-s-resolver-ch51944.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15400,7 +15400,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### sumitomo-pro-l-ch54527.dwg — existing file inventory — SRC-0dd3c026cbac
 
-Original source: [sumitomo-pro-l-ch54527.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-l-ch54527.dwg)
+Original source: sumitomo-pro-l-ch54527.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-pro-l-ch54527.dwg`)
 
 Summary: Existing 3D file associated with C011 — Sumitomo PRO-L CH54527G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15408,7 +15408,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### sumitomo-pro-m-ch54065.dwg — existing file inventory — SRC-8746a0585203
 
-Original source: [sumitomo-pro-m-ch54065.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-m-ch54065.dwg)
+Original source: sumitomo-pro-m-ch54065.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-pro-m-ch54065.dwg`)
 
 Summary: Existing 3D file associated with C010 — Sumitomo PRO-M CH54065G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15416,7 +15416,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### sumitomo-smartris-driver-ch52308-checked.dwg — existing file inventory — SRC-2bdc86cc68a8
 
-Original source: [sumitomo-smartris-driver-ch52308-checked.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg)
+Original source: sumitomo-smartris-driver-ch52308-checked.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg`)
 
 Summary: Existing 3D file associated with C012 — Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15424,7 +15424,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### sumitomo-smartris-driver-ch52308.dwg — existing file inventory — SRC-665cfb1ddd3b
 
-Original source: [sumitomo-smartris-driver-ch52308.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg)
+Original source: sumitomo-smartris-driver-ch52308.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg`)
 
 Summary: Existing 3D file associated with C012 — Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15432,7 +15432,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### victron-lithium-ng-25.6v-100ah.dwg — existing file inventory — SRC-e8bdba090964
 
-Original source: [victron-lithium-ng-25.6v-100ah.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-lithium-ng-25.6v-100ah.dwg)
+Original source: victron-lithium-ng-25.6v-100ah.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/victron-lithium-ng-25.6v-100ah.dwg`)
 
 Summary: Existing 3D file associated with C023 — Victron NG25.6V100Ah battery. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15440,7 +15440,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### victron-lynx-smart-bms-500-ng-m10-checked.dwg — existing file inventory — SRC-4b603333faf9
 
-Original source: [victron-lynx-smart-bms-500-ng-m10-checked.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10-checked.dwg)
+Original source: victron-lynx-smart-bms-500-ng-m10-checked.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10-checked.dwg`)
 
 Summary: Existing 3D file associated with C026 — Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15448,7 +15448,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### victron-lynx-smart-bms-500-ng-m10.dwg — existing file inventory — SRC-3e0b8d150d0e
 
-Original source: [victron-lynx-smart-bms-500-ng-m10.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10.dwg)
+Original source: victron-lynx-smart-bms-500-ng-m10.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10.dwg`)
 
 Summary: Existing 3D file associated with C026 — Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15456,7 +15456,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### victron-orion-tr-smart-24-12-30a.dwg — existing file inventory — SRC-7d065c90de76
 
-Original source: [victron-orion-tr-smart-24-12-30a.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg)
+Original source: victron-orion-tr-smart-24-12-30a.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg`)
 
 Summary: Existing 3D file associated with C045 — Victron Orion24-12 converter. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
 
@@ -15464,7 +15464,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### visual-inspection-copy.dwg — existing file inventory — SRC-35c99d126bf6
 
-Original source: [visual-inspection-copy.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg)
+Original source: visual-inspection-copy.dwg — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15472,7 +15472,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory — SRC-7fc6417a02f1
 
-Original source: [LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp)
+Original source: LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15480,7 +15480,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### Fibox-ARCA-203015T-8121020.step — existing file inventory — SRC-ec27d08dafa1
 
-Original source: [Fibox-ARCA-203015T-8121020.step — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020.step)
+Original source: Fibox-ARCA-203015T-8121020.step — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020.step`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15488,7 +15488,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP — existing file inventory — SRC-3814905f350e
 
-Original source: [Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP)
+Original source: Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP — existing file inventory (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15496,7 +15496,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### Lynx-Smart-BMS-500-NG-M10-3D.stp — existing file inventory — SRC-a6c30a318e46
 
-Original source: [Lynx-Smart-BMS-500-NG-M10-3D.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp)
+Original source: Lynx-Smart-BMS-500-NG-M10-3D.stp — existing file inventory (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15504,7 +15504,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### Roboteq-MDC2x-step3d.stp — existing file inventory — SRC-8207668e8d28
 
-Original source: [Roboteq-MDC2x-step3d.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Roboteq-MDC2x-step3d.stp)
+Original source: Roboteq-MDC2x-step3d.stp — existing file inventory (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/Roboteq-MDC2x-step3d.stp`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15512,7 +15512,7 @@ Evidence: existing_local_3d_file_inventory.
 
 ### LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory — SRC-d628632cecd6
 
-Original source: [LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/victron-ng/LiFePO4-Battery-25.6V100Ah-NG.stp)
+Original source: LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory (`${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/victron-ng/LiFePO4-Battery-25.6V100Ah-NG.stp`)
 
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
@@ -15562,7 +15562,7 @@ Evidence: downloaded_web_page_snapshot.
 
 ### trelleborg light service brochure response headers — SRC-bc2905798e67
 
-Original source: [trelleborg light service brochure response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure-response-headers.txt)
+Original source: trelleborg light service brochure response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure-response-headers.txt`)
 
 Summary: Retained HTTP response headers for trelleborg-light-service-brochure acquisition, including actual response status/content type when provided.
 
@@ -15570,7 +15570,7 @@ Evidence: executed_retrieval_metadata.
 
 ### trelleborg manual response headers — SRC-c3e6932e4972
 
-Original source: [trelleborg manual response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-manual-response-headers.txt)
+Original source: trelleborg manual response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-manual-response-headers.txt`)
 
 Summary: Retained HTTP response headers for trelleborg-manual acquisition, including actual response status/content type when provided.
 
@@ -15578,7 +15578,7 @@ Evidence: executed_retrieval_metadata.
 
 ### trelleborg t539 page response headers — SRC-2126824b9855
 
-Original source: [trelleborg t539 page response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-page-response-headers.txt)
+Original source: trelleborg t539 page response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-page-response-headers.txt`)
 
 Summary: Retained HTTP response headers for trelleborg-t539-page acquisition, including actual response status/content type when provided.
 
@@ -15586,7 +15586,7 @@ Evidence: executed_retrieval_metadata.
 
 ### trelleborg t539 photo response headers — SRC-f1f846f920ea
 
-Original source: [trelleborg t539 photo response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-photo-response-headers.txt)
+Original source: trelleborg t539 photo response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-photo-response-headers.txt`)
 
 Summary: Retained HTTP response headers for trelleborg-t539-photo acquisition, including actual response status/content type when provided.
 
@@ -15594,7 +15594,7 @@ Evidence: executed_retrieval_metadata.
 
 ### trelleborg visual folder response headers — SRC-6e85c2c8ade7
 
-Original source: [trelleborg visual folder response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder-response-headers.txt)
+Original source: trelleborg visual folder response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder-response-headers.txt`)
 
 Summary: Retained HTTP response headers for trelleborg-visual-folder acquisition, including actual response status/content type when provided.
 
@@ -15602,7 +15602,7 @@ Evidence: executed_retrieval_metadata.
 
 ### Tyre original acquisition manifest — SRC-d09376951e70
 
-Original source: [Tyre original acquisition manifest](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json)
+Original source: Tyre original acquisition manifest (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json`)
 
 Summary: Individual original URLs, actual retrieval outcomes, content types, times, local paths, hashes and source summaries; requested and actual model identities kept distinct.
 
@@ -15610,7 +15610,7 @@ Evidence: executed_source_acquisition.
 
 ### Tyre manufacturer geometry review — SRC-da905bba09d5
 
-Original source: [Tyre manufacturer geometry review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md)
+Original source: Tyre manufacturer geometry review (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md`)
 
 Summary: Separates the exact 6PR manual row, different 4PR brochure row and undimensioned family photo; identifies the bead/section input required for construction.
 
@@ -15618,7 +15618,7 @@ Evidence: executed_source_review.
 
 ### Exact tyre manual page rendering — SRC-847a7f8f1a9a
 
-Original source: [Exact tyre manual page rendering](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-pdf-page-111.png)
+Original source: Exact tyre manual page rendering (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-pdf-page-111.png`)
 
 Summary: Full PDF page 111, printed 220–221 spread, visually inspected for the 18x8.50-8 6PR T539 row and tolerance headings.
 
@@ -15626,7 +15626,7 @@ Evidence: executed_pdf_render_and_inspection.
 
 ### Tyre pre-start actual-file lookup — SRC-e055d2981083
 
-Original source: [Tyre pre-start actual-file lookup](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/existing-model-start.json)
+Original source: Tyre pre-start actual-file lookup (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/existing-model-start.json`)
 
 Summary: Fresh lookup finds no matching tyre 3D file among the project model/reference inventory; completed models remain reuse inputs.
 
@@ -15634,7 +15634,7 @@ Evidence: executed_filesystem_start_check.
 
 ### Initial tyre source job — SRC-8a8c1be024b8
 
-Original source: [Initial tyre source job](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r01.json)
+Original source: Initial tyre source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r01.json`)
 
 Summary: Existing recorded envelope dimensions and rim designation with a named required section-profile input.
 
@@ -15642,7 +15642,7 @@ Evidence: implementation_data_artifact.
 
 ### Tyre source job bound to original manual — SRC-d5b677175f7e
 
-Original source: [Tyre source job bound to original manual](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r02.json)
+Original source: Tyre source job bound to original manual (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r02.json`)
 
 Summary: Rebinds OD, width and rim designation to the exact downloaded manufacturer row; preserves source tolerances and the initial revision.
 
@@ -15650,7 +15650,7 @@ Evidence: implementation_data_artifact.
 
 ### Initial tyre input gate — SRC-3824e4bbeff1
 
-Original source: [Initial tyre input gate](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r01.json)
+Original source: Initial tyre input gate (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r01.json`)
 
 Summary: Existing requirement checker reports the named bead/section requirement before original-manual source review.
 
@@ -15658,7 +15658,7 @@ Evidence: executed_input_validation.
 
 ### Reviewed tyre input gate — SRC-68e0a74a126a
 
-Original source: [Reviewed tyre input gate](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json)
+Original source: Reviewed tyre input gate (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json`)
 
 Summary: Reviewed dimensional sources pass their hash bindings; the bead/section requirement remains the construction input question.
 
@@ -15666,7 +15666,7 @@ Evidence: executed_input_validation.
 
 ### OCS state before tyre work — SRC-275835f08b76
 
-Original source: [OCS state before tyre work](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/initial-state.json)
+Original source: OCS state before tyre work (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/initial-state.json`)
 
 Summary: Read-only state inspection preserves existing open drawings and establishes the native session for a later source-ready build.
 
@@ -15674,7 +15674,7 @@ Evidence: executed_native_state_read.
 
 ### Tyre source-stage result — SRC-281cdf03a461
 
-Original source: [Tyre source-stage result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json)
+Original source: Tyre source-stage result (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json`)
 
 Summary: Source review completed; component state NEEDS_INPUT for its bead/section geometry. No native geometry operation was performed.
 
@@ -15682,7 +15682,7 @@ Evidence: executed_source_stage_result.
 
 ### Tyre source-stage execution report — SRC-c1d36f59f5e8
 
-Original source: [Tyre source-stage execution report](/home/leo/projects/3dmodeling/execution/c001-tyre-source-2026-11-13.md)
+Original source: [Tyre source-stage execution report](../../execution/c001-tyre-source-2026-11-13.md)
 
 Summary: Documents actual exact-variant evidence, source gate, completed lookup and coordinator/research identities.
 
@@ -15690,7 +15690,7 @@ Evidence: executed_verification_report.
 
 ### Installed OCS CIRCLE command declaration — SRC-38d1476f2f41
 
-Original source: [Installed OCS CIRCLE command declaration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-circle.json)
+Original source: Installed OCS CIRCLE command declaration (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-circle.json`)
 
 Summary: Read installed CIRCLE command schema during source-stage preflight; declaration retained separately from construction execution.
 
@@ -15698,7 +15698,7 @@ Evidence: executed_native_capability_read.
 
 ### Installed OCS TORUS command declaration — SRC-c54dec652b41
 
-Original source: [Installed OCS TORUS command declaration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-torus.json)
+Original source: Installed OCS TORUS command declaration (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-torus.json`)
 
 Summary: Read installed TORUS command schema during source-stage preflight; declaration retained separately from construction execution.
 
@@ -15706,7 +15706,7 @@ Evidence: executed_native_capability_read.
 
 ### Installed OCS REVOLVE command declaration — SRC-d199c522d4c1
 
-Original source: [Installed OCS REVOLVE command declaration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-revolve.json)
+Original source: Installed OCS REVOLVE command declaration (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-revolve.json`)
 
 Summary: Read installed REVOLVE command schema during source-stage preflight; declaration retained separately from construction execution.
 
@@ -15780,7 +15780,7 @@ Evidence: manufacturer_series_brochure_web_inspection.
 
 ### existing model start — SRC-9cdf6153dc98
 
-Source: [existing model start](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/existing-model-start.json)
+Source: existing model start (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/existing-model-start.json`)
 
 Summary: Fresh actual-file lookup identifies C046 as requiring a new model; existing completed components retain their models.
 
@@ -15788,7 +15788,7 @@ Evidence: executed_filesystem_start_check.
 
 ### result — SRC-758fb57013c6
 
-Source: [result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/result.json)
+Source: result (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/result.json`)
 
 Summary: Names the six-pin geometry input and exact failed acquisition routes; component NEEDS_INPUT, native CAD mutations zero.
 
@@ -15796,7 +15796,7 @@ Evidence: executed_source_stage_result.
 
 ### acquisition — SRC-f4fa3d9206c2
 
-Source: [acquisition](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/acquisition.json)
+Source: acquisition (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/acquisition.json`)
 
 Summary: Individual manufacturer and distributor URLs, exact variant dimensions, source locators and actual HTTP/TLS/model-download outcomes.
 
@@ -15804,7 +15804,7 @@ Evidence: executed_acquisition_record.
 
 ### source review — SRC-243a0dcd9117
 
-Source: [source review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/source-review.md)
+Source: source review (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/source-review.md`)
 
 Summary: Separates exact -000 pin length, top-view pattern callouts and acquisition failures; no pin centers inferred from extracted text.
 
@@ -15812,7 +15812,7 @@ Evidence: delegated_source_review_record.
 
 ### tdk i1c series datasheet response headers — SRC-c04f80f53d85
 
-Source: [tdk i1c series datasheet response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-series-datasheet-response-headers.txt)
+Source: tdk i1c series datasheet response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-series-datasheet-response-headers.txt`)
 
 Summary: Actual acquisition response headers for tdk i1c series datasheet response headers, retained to identify HTTP status and returned content type.
 
@@ -15820,7 +15820,7 @@ Evidence: executed_retrieval_metadata.
 
 ### tdk i1c spec response headers retry — SRC-9379662c6e30
 
-Source: [tdk i1c spec response headers retry](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers-retry.txt)
+Source: tdk i1c spec response headers retry (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers-retry.txt`)
 
 Summary: Actual acquisition response headers for tdk i1c spec response headers retry, retained to identify HTTP status and returned content type.
 
@@ -15828,7 +15828,7 @@ Evidence: executed_retrieval_metadata.
 
 ### tdk i1c spec response headers — SRC-4dd718bf4ffe
 
-Source: [tdk i1c spec response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers.txt)
+Source: tdk i1c spec response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers.txt`)
 
 Summary: Actual acquisition response headers for tdk i1c spec response headers, retained to identify HTTP status and returned content type.
 
@@ -15836,7 +15836,7 @@ Evidence: executed_retrieval_metadata.
 
 ### tdk i1c step response headers retry — SRC-9c06519d3e5d
 
-Source: [tdk i1c step response headers retry](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers-retry.txt)
+Source: tdk i1c step response headers retry (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers-retry.txt`)
 
 Summary: Actual acquisition response headers for tdk i1c step response headers retry, retained to identify HTTP status and returned content type.
 
@@ -15844,7 +15844,7 @@ Evidence: executed_retrieval_metadata.
 
 ### tdk i1c step response headers — SRC-4ead276ff16f
 
-Source: [tdk i1c step response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers.txt)
+Source: tdk i1c step response headers (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers.txt`)
 
 Summary: Actual acquisition response headers for tdk i1c step response headers, retained to identify HTTP status and returned content type.
 
@@ -15852,7 +15852,7 @@ Evidence: executed_retrieval_metadata.
 
 ### TDK converter source-stage execution report — SRC-5159849b1129
 
-Source: [TDK converter source-stage execution report](/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md)
+Source: [TDK converter source-stage execution report](../../execution/c046-tdk-source-2026-11-13.md)
 
 Summary: Exact variant evidence, acquisition errors, construction input gate and next eligible component selection; coordinator and researcher identities attributed separately.
 
@@ -15918,7 +15918,7 @@ Evidence: manufacturer_non_smart_drawing_excluded.
 
 ### existing model start — SRC-e35b2a1b7a0c
 
-Source: [existing model start](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/existing-model-start.json)
+Source: existing model start (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/existing-model-start.json`)
 
 Summary: Fresh inventory identifies C044 as NEW_MODEL_REQUIRED; 43 model/reference files checked.
 
@@ -15926,7 +15926,7 @@ Evidence: executed_filesystem_start_check.
 
 ### initial state — SRC-9f8bf013cc70
 
-Source: [initial state](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/initial-state.json)
+Source: initial state (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/initial-state.json`)
 
 Summary: Read-only OCS session and document state before source-qualified converter work.
 
@@ -15934,7 +15934,7 @@ Evidence: executed_native_state_read.
 
 ### prior model hashes — SRC-bbc7e71e7aa0
 
-Source: [prior model hashes](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/prior-model-hashes.json)
+Source: prior model hashes (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/prior-model-hashes.json`)
 
 Summary: Hashes of all 26 prior final DWGs retained before the new component source stage.
 
@@ -15942,7 +15942,7 @@ Evidence: executed_existing_model_hashes.
 
 ### result — SRC-921d733e06a7
 
-Source: [result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/result.json)
+Source: result (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/result.json`)
 
 Summary: Names the exact-model mounting/terminal input gate and source-family mismatch; CAD mutations zero.
 
@@ -15950,7 +15950,7 @@ Evidence: executed_source_stage_result.
 
 ### acquisition — SRC-bc97944dd4fa
 
-Source: [acquisition](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/acquisition.json)
+Source: acquisition (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/acquisition.json`)
 
 Summary: Original URLs, reused source bytes and hashes, exact model associations, manual envelope and actual web-inspection attribution.
 
@@ -15958,7 +15958,7 @@ Evidence: executed_source_review_record.
 
 ### source review — SRC-a2878ff6a7f7
 
-Source: [source review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/source-review.md)
+Source: source review (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/source-review.md`)
 
 Summary: Manufacturer source findings separate the exact Smart target from listed 12/24 V variants and the non-Smart drawing.
 
@@ -15966,7 +15966,7 @@ Evidence: delegated_source_review_record.
 
 ### c044 orion source 2026 11 13 — SRC-3cbd18cb5a50
 
-Source: [c044 orion source 2026 11 13](/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md)
+Source: [c044 orion source 2026 11 13](../../execution/c044-orion-source-2026-11-13.md)
 
 Summary: Execution report identifies source reuse, target attribution, component state and next sequential selection.
 
@@ -15976,7 +15976,7 @@ Evidence: executed_work_report.
 
 ### Parallel wheel work dispatch — SRC-471f14ab2093
 
-Source: [Parallel wheel work dispatch](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/launch.md)
+Source: [Parallel wheel work dispatch](../../execution/wheel-parallel-2026-11-13/launch.md)
 
 Summary: Records three explicitly authorized concurrent tyre/rim/hub source and construction-readiness assignments, their disjoint paths, local-first checks and single native writer.
 
@@ -15984,7 +15984,7 @@ Evidence: executed_agent_dispatch.
 
 ### Existing exact tyre source-stage result — SRC-281cdf03a461
 
-Source: [Existing exact tyre source-stage result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json)
+Source: Existing exact tyre source-stage result (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json`)
 
 Summary: Prior manufacturer source review and bead/section input gate reused by the running tyre assignment.
 
@@ -15992,7 +15992,7 @@ Evidence: inspected_local_executed_result.
 
 ### Existing steel rim findings — SRC-b817b2002bf4
 
-Source: [Existing steel rim findings](/home/leo/projects/ferme/research/wheel-mount-battery-details-2026-11-12/01-steel-rims.md)
+Source: Existing steel rim findings (`${FERME_ROOT}/research/wheel-mount-battery-details-2026-11-12/01-steel-rims.md`)
 
 Summary: Exact Keiyama and Knott rim identities, wheel-mount interface and separate hole/seat variants reused for the running rim assignment.
 
@@ -16000,7 +16000,7 @@ Evidence: inspected_local_research.
 
 ### Existing wheel hub and shaft findings — SRC-a84a21f49930
 
-Source: [Existing wheel hub and shaft findings](/home/leo/projects/ferme/research/wheel-mount-battery-details-2026-11-12/02-hubs-shafts-bearings-brakes.md)
+Source: Existing wheel hub and shaft findings (`${FERME_ROOT}/research/wheel-mount-battery-details-2026-11-12/02-hubs-shafts-bearings-brakes.md`)
 
 Summary: Named hub, shaft, bearing and brake component interfaces and route alternatives reused by the running hub/adapter assignment.
 
@@ -16010,7 +16010,7 @@ Evidence: inspected_local_research.
 
 ### Tyre profile source review — SRC-5d76e97c65ab
 
-Source: [Tyre profile source review](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/README.md)
+Source: [Tyre profile source review](../../execution/wheel-parallel-2026-11-13/tyre/README.md)
 
 Summary: Reuses exact T539 table; records mating rim references, section input gate, nominal envelope frame and source version discrepancy.
 
@@ -16018,7 +16018,7 @@ Evidence: delegated_source_review.
 
 ### Tyre source records — SRC-edf64ae7a4e8
 
-Source: [Tyre source records](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/source-records.json)
+Source: [Tyre source records](../../execution/wheel-parallel-2026-11-13/tyre/source-records.json)
 
 Summary: Original Continental/Petlas URLs, observed claims, existing Trelleborg original hash and flange-width source discrepancy.
 
@@ -16026,7 +16026,7 @@ Evidence: executed_source_registration.
 
 ### Tyre source-stage progress — SRC-6c9455412f0c
 
-Source: [Tyre source-stage progress](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/tyre/progress.json)
+Source: [Tyre source-stage progress](../../execution/wheel-parallel-2026-11-13/tyre/progress.json)
 
 Summary: Actual C001 start-gate result, source-stage completion and separate component input-gate state; no CAD mutation.
 
@@ -16034,7 +16034,7 @@ Evidence: executed_source_stage_result.
 
 ### Exact rim source review — SRC-36b728154357
 
-Source: [Exact rim source review](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/report.md)
+Source: [Exact rim source review](../../execution/wheel-parallel-2026-11-13/rims/report.md)
 
 Summary: Keiyama/Knott identities, separate fixing seats, standardized profile references and product-section input questions.
 
@@ -16042,7 +16042,7 @@ Evidence: delegated_source_review.
 
 ### Rim geometric handoff — SRC-bfe15fc3a1f9
 
-Source: [Rim geometric handoff](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/geometry-handoff.json)
+Source: [Rim geometric handoff](../../execution/wheel-parallel-2026-11-13/rims/geometry-handoff.json)
 
 Summary: Named dimensions, units/frame, mounting pattern and per-product partial source coverage with construction handoff.
 
@@ -16050,7 +16050,7 @@ Evidence: implementation_input_artifact.
 
 ### Rim source observations — SRC-8e40f450fc7f
 
-Source: [Rim source observations](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/sources.csv)
+Source: [Rim source observations](../../execution/wheel-parallel-2026-11-13/rims/sources.csv)
 
 Summary: Exact supplied/canonical URLs, observed date and actual web-inspection evidence; originals not acquired in this stage.
 
@@ -16058,7 +16058,7 @@ Evidence: executed_source_registration.
 
 ### Rim source-stage progress — SRC-e996f690d362
 
-Source: [Rim source-stage progress](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/rims/progress.json)
+Source: [Rim source-stage progress](../../execution/wheel-parallel-2026-11-13/rims/progress.json)
 
 Summary: Two component-specific new-model checks and partial-source construction state.
 
@@ -16066,7 +16066,7 @@ Evidence: executed_source_stage_result.
 
 ### Wheel hub and shaft source/action review — SRC-4e988ebfcaad
 
-Source: [Wheel hub and shaft source/action review](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/source-and-actions.md)
+Source: [Wheel hub and shaft source/action review](../../execution/wheel-parallel-2026-11-13/hubs/source-and-actions.md)
 
 Summary: Six distinct file gates, source-derived PRO ring/mount patterns, actual PBR50T/BT followup findings and feature-specific work orders.
 
@@ -16074,7 +16074,7 @@ Evidence: delegated_source_review.
 
 ### Hub and adapter source-stage progress — SRC-fab209186151
 
-Source: [Hub and adapter source-stage progress](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/hubs/progress.json)
+Source: [Hub and adapter source-stage progress](../../execution/wheel-parallel-2026-11-13/hubs/progress.json)
 
 Summary: Per-component file identity/candidate decisions, supported interfaces and exact remaining source conditions.
 
@@ -16082,7 +16082,7 @@ Evidence: executed_source_stage_result.
 
 ### Coordinator wheel source integration — SRC-1a944a3da043
 
-Source: [Coordinator wheel source integration](/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/integration.md)
+Source: [Coordinator wheel source integration](../../execution/wheel-parallel-2026-11-13/integration.md)
 
 Summary: Summarizes the distinct source-ready wheel interfaces, input gates, source statuses, preserved completed models and subsequent active implementation assignments.
 

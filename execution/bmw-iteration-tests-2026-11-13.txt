@@ -109,4 +109,4 @@ test_wrong_source_body_length_is_detected (test_tabbed_battery.TabbedBatteryTest
 Ran 106 tests in 18.425s
 
 OK
-{"state": "FAILED", "error": "Existing output preserved: /tmp/tmppltliy3e/protected.json"}
+{"state": "FAILED", "error": "Existing output preserved: ${TEMP_ROOT}/tmppltliy3e/protected.json"}

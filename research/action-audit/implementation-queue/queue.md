@@ -2,9 +2,9 @@
 
 Date: 12 November 2026. Status: proposed implementation order. Coordinator: gpt-6.1-sol.
 
-Coverage: 245 distinct action definitions, all 77 operations and 38 original routes. Each entry retains the original action and operation input contracts in [structured queue](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json).
+Coverage: 245 distinct action definitions, all 77 operations and 38 original routes. Each entry retains the original action and operation input contracts in [structured queue](queue.json).
 
-Reuse evidence and code entry points: [inspected assets](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/assets.md). First task: [Record source files, revisions and job scope](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md).
+Reuse evidence and code entry points: [inspected assets](assets.md). First task: [Record source files, revisions and job scope](first-action-plan.md).
 
 ## Ordering and boundaries
 
@@ -18,257 +18,257 @@ Reuse evidence and code entry points: [inspected assets](/home/leo/projects/3dmo
 
 | Order | Human-readable action and reference | Resource / effort band | Previous action | Original routes | Reuse evidence |
 | ---: | --- | --- | --- | ---: | --- |
-| 1 | [Preserve the input revision and state the job boundary (INTAKE-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 0 / 1 | operation inputs | 8 | existing_code_subset |
-| 2 | [Bind checks to actual artifacts and source criteria (CAD-13-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 15 | existing_code_subset |
-| 3 | [Identify the exact library item and retained files (DOM-06-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 1 / 2 | operation inputs | 11 | existing_code_subset |
-| 4 | [Define collision scope and contact features (DOM-13-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 11 | source_supported_action_specification |
-| 5 | [Define feature evidence and all required editable outputs (REC-14-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 9 | source_supported_action_specification |
-| 6 | [Select the execution mode and define candidate branches (INTAKE-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Preserve the input revision and state the job boundary (INTAKE-A01) | 8 | source_supported_action_specification |
-| 7 | [Extract source claims and associate each value with its subject (INTAKE-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Select the execution mode and define candidate branches (INTAKE-A02) | 8 | documented_procedure_or_case |
-| 8 | [Identify components, features and geometric relationships (INTAKE-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Extract source claims and associate each value with its subject (INTAKE-A03) | 8 | documented_procedure_or_case |
-| 9 | [Normalize explicit quantities, units, datums and frames (INTAKE-A05)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Identify components, features and geometric relationships (INTAKE-A04) | 8 | documented_procedure_or_case |
-| 10 | [Record per-feature tolerance and evidence requirements (INTAKE-A06)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Normalize explicit quantities, units, datums and frames (INTAKE-A05) | 8 | documented_procedure_or_case |
-| 11 | [Evaluate candidate briefs against their source evidence (INTAKE-A07)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Record per-feature tolerance and evidence requirements (INTAKE-A06) | 8 | documented_procedure_or_case |
-| 12 | [Select supported records and merge compatible contributions (INTAKE-A08)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Evaluate candidate briefs against their source evidence (INTAKE-A07) | 8 | documented_procedure_or_case |
-| 13 | [Validate the merged brief independently (INTAKE-A09)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Select supported records and merge compatible contributions (INTAKE-A08) | 8 | documented_procedure_or_case |
-| 14 | [Deliver the brief and specify the downstream handoff (INTAKE-A10)](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md) | 1 / 2 | Validate the merged brief independently (INTAKE-A09) | 8 | documented_procedure_or_case |
-| 15 | [Bind image identities calibration groups and sparse-solve settings (REC-03-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 8 | source_supported_action_specification |
-| 16 | [Freeze comparison baseline and bounded edit scope (REC-16-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 7 | source_supported_action_specification |
-| 17 | [Select geometry occurrence and mesh role (DOM-12-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 7 | source_supported_action_specification |
-| 18 | [Pin source definitions and assembly roles (CAD-12-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 1 / 2 | operation inputs | 5 | documented_procedure_or_case |
-| 19 | [Resolve rigid links from authored assembly relations (DOM-08-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 5 | source_supported_action_specification |
-| 20 | [Validate sparse-to-dense image and camera handoff (REC-17-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 5 | source_supported_action_specification |
-| 21 | [Classify the component change and identify new bytes (DOM-26-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 1 / 2 | operation inputs | 4 | existing_code_subset |
-| 22 | [Select a supported solid feature route (CAD-10-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 4 | documented_procedure_or_case |
-| 23 | [Identify plane evidence and independent metric controls (CAD-02-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 24 | [Separate stroke classes and inspect source regions (CAD-04-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 25 | [Select calibrated target observations and hold-out views (REC-01-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 26 | [Select physical-property evidence per rigid body (DOM-14-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 27 | [Define IFC-to-display identity and unit policy (DOM-17-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 28 | [Bind environment to existing robot world frame (DOM-33-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 29 | [Bind sensor calibration timing and depth encoding (REC-05-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 30 | [Resolve fusion grid and pose convention (REC-06-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 31 | [Prepare a Gaussian training dataset with verified camera mapping (REC-19-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
-| 32 | [Inspect source entities, units and drawing contexts (CAD-08-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 33 | [Map curves and sourced constraints to a sketch plan (CAD-09-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 34 | [Locate annotations and retain crop mappings (CAD-03-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 35 | [Identify views and declare their projection frames (CAD-06-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 36 | [Enumerate source-constrained 3D feature candidates (CAD-07-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 37 | [Select observed regions and preserve point membership (REC-09-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 38 | [Bind exact CAD and observation-route evidence (REC-12-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 39 | [Check literal package inputs and supported URDF tree (DOM-09-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 40 | [Select IFC elements and triangle extraction policy (DOM-16-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 41 | [Resolve scene input branch and actual adapter (DOM-24-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 42 | [Bind library asset and target IFC placement meaning (DOM-35-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 43 | [Resolve literal photo input and cloud detail target (DOM-20-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
-| 44 | [Declare plan conventions and wall/opening candidates (CAD-05-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 45 | [Bind all five inputs and element-level building requirements (DOM-18-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 46 | [Freeze initialization and comparison objective (REC-08-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 47 | [Verify metric evidence and select functional features (CAD-11-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 48 | [Bind sketch view, camera and hit surface (REC-13-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 49 | [Bind source revisions, datums and discrepancy purpose (REC-15-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 50 | [Resolve scan, building and survey frame definitions (DOM-19-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 51 | [Bind assembly occurrences and motion evidence (DOM-31-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 52 | [Bind sourced component to target robot role (DOM-37-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 53 | [Bind native model roles and compiler policy (DOM-11-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 54 | [Pin seed model and map CAD occurrences to bodies (DOM-32-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 55 | [Bind BIM-derived mesh and collider identities (DOM-34-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 56 | [Bind mandatory depth and measurement evidence (DOM-21-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 57 | [Bind supplied cameras and required surface outputs (DOM-28-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 58 | [Inspect point evidence normals and meshing assumptions (DOM-29-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
-| 59 | [Resolve source and target interface identities (DOM-07-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 60 | [Inspect STEP identity, structure and unit evidence (DOM-38-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 61 | [Inspect CSG source, parameters and mesh criteria (CAD-15-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 62 | [Choose the profile target and source entity mapping (DOM-03-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 63 | [Define native artifact and solid prerequisites (DOM-04-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 1 | documented_procedure_or_case |
-| 64 | [Bind the solid export to representation and consumer criteria (DOM-05-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 65 | [Define sourced parameters and the executable model contract (DOM-40-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 1 | documented_procedure_or_case |
-| 66 | [Bind graph elements to sourced vertical parameters (CAD-17-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 67 | [Specify raster-backed sketch requirements (DOM-02-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 68 | [Bind both clouds and declare transform freedoms (REC-07-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 69 | [Audit literal input contract and target remodeling meaning (DOM-23-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 70 | [Inventory URDF import policy and expected losses (DOM-10-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 71 | [Resolve building schema units hierarchy and element evidence (DOM-15-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 72 | [Resolve IFC kernel shape extraction requirements (DOM-27-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 73 | [Bind model revision to fabrication requirements (DOM-25-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 74 | [Inventory video timing camera state and coverage (REC-04-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 75 | [Bind complete photo and metric-control contract (CAD-16-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 76 | [Bind learned reconstruction variant, images and camera roles (REC-10-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 77 | [Select one source image and a mesh-producing model contract (REC-18-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
-| 78 | [Freeze the native assembly and export contract (DOM-39-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 1 / 2 | operation inputs | 0 | documented_procedure_or_case |
-| 79 | [Reconcile the failed operation and preserve its evidence (CAD-14-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 1 / 2 | operation inputs | 0 | existing_component_code_subset |
-| 80 | [Bind photographs, target evidence and camera state (CAD-02B-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
-| 81 | [Bind 3D landmarks to calibrated image coordinates (REC-02-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
-| 82 | [Bind NeRF method, supplied cameras and training-space transforms (REC-20-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
-| 83 | [Choose the actual renderable scene subtype and consumer (REC-11-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
-| 84 | [Bind the domain Gaussian scene contract (DOM-22-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
-| 85 | [Bind domain features and cameras to the NeRF route (DOM-30-A01)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
-| 86 | [Read actual geometry and compare required features (CAD-13-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Bind checks to actual artifacts and source criteria (CAD-13-A01) | 15 | existing_component_code_subset |
-| 87 | [Reopen saved artifacts and issue the verification report (CAD-13-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Read actual geometry and compare required features (CAD-13-A02) | 15 | existing_component_code_subset |
-| 88 | [Attach item-level terms and permitted operations (DOM-06-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Identify the exact library item and retained files (DOM-06-A01) | 11 | source_supported_action_specification |
-| 89 | [Classify component representations and interface evidence (DOM-06-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Attach item-level terms and permitted operations (DOM-06-A02) | 11 | documented_procedure_or_case |
-| 90 | [Register the component record and handoff conditions (DOM-06-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Classify component representations and interface evidence (DOM-06-A03) | 11 | documented_procedure_or_case |
-| 91 | [Define interface frames and placement relations (CAD-12-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Pin source definitions and assembly roles (CAD-12-A01) | 5 | existing_code_subset |
-| 92 | [Create bounded native occurrences (CAD-12-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Define interface frames and placement relations (CAD-12-A02) | 5 | source_supported_action_specification |
-| 93 | [Validate and preserve assembly structure (CAD-12-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Create bounded native occurrences (CAD-12-A03) | 5 | documented_procedure_or_case |
-| 94 | [Resolve the complete dependency and rights set (DOM-26-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Classify the component change and identify new bytes (DOM-26-A01) | 4 | documented_procedure_or_case |
-| 95 | [Publish a new immutable revision and explicit reuse pins (DOM-26-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Resolve the complete dependency and rights set (DOM-26-A02) | 4 | documented_procedure_or_case |
-| 96 | [Reopen pinned artifacts and check reuse reproducibility (DOM-26-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Publish a new immutable revision and explicit reuse pins (DOM-26-A03) | 4 | documented_procedure_or_case |
-| 97 | [Construct features with revision-bound readback (CAD-10-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Select a supported solid feature route (CAD-10-A01) | 4 | existing_component_code_subset |
-| 98 | [Verify native solid and saved construction record (CAD-10-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Construct features with revision-bound readback (CAD-10-A02) | 4 | existing_component_code_subset |
-| 99 | [Create a mapped and explicitly cleaned derivative (CAD-08-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Inspect source entities, units and drawing contexts (CAD-08-A01) | 3 | existing_component_code_subset |
-| 100 | [Validate curve fidelity and publish the vector handoff (CAD-08-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Create a mapped and explicitly cleaned derivative (CAD-08-A02) | 3 | existing_component_code_subset |
-| 101 | [Create the sketch and solve bounded constraint groups (CAD-09-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Map curves and sourced constraints to a sketch plan (CAD-09-A01) | 3 | source_supported_action_specification |
-| 102 | [Measure and reopen the constrained sketch (CAD-09-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Create the sketch and solve bounded constraint groups (CAD-09-A02) | 3 | source_supported_action_specification |
-| 103 | [Compute the occurrence transform (DOM-07-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Resolve source and target interface identities (DOM-07-A01) | 1 | existing_code_subset |
-| 104 | [Insert the component occurrence and connection edge (DOM-07-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Compute the occurrence transform (DOM-07-A02) | 1 | source_supported_action_specification |
-| 105 | [Measure placed interfaces and preserve the result (DOM-07-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Insert the component occurrence and connection edge (DOM-07-A03) | 1 | existing_code_subset |
-| 106 | [Choose and configure an isolated importer (DOM-38-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Inspect STEP identity, structure and unit evidence (DOM-38-A01) | 1 | documented_procedure_or_case |
-| 107 | [Transfer geometry and classify actual output (DOM-38-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Choose and configure an isolated importer (DOM-38-A02) | 1 | documented_procedure_or_case |
-| 108 | [Measure and independently reopen imported geometry (DOM-38-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Transfer geometry and classify actual output (DOM-38-A03) | 1 | documented_procedure_or_case |
-| 109 | [Evaluate final CSG and export the mesh derivative (CAD-15-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Inspect CSG source, parameters and mesh criteria (CAD-15-A01) | 1 | source_supported_action_specification |
-| 110 | [Measure the mesh and check declared parametric behavior (CAD-15-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Evaluate final CSG and export the mesh derivative (CAD-15-A02) | 1 | source_supported_action_specification |
-| 111 | [Normalize curves and construct the constrained profile (DOM-03-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Choose the profile target and source entity mapping (DOM-03-A01) | 1 | source_supported_action_specification |
-| 112 | [Verify profile semantics and constrained editability (DOM-03-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Normalize curves and construct the constrained profile (DOM-03-A02) | 1 | source_supported_action_specification |
-| 113 | [Construct or reuse the checked native body (DOM-04-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Define native artifact and solid prerequisites (DOM-04-A01) | 1 | existing_component_code_subset |
-| 114 | [Save and validate the native model contract (DOM-04-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Construct or reuse the checked native body (DOM-04-A02) | 1 | existing_component_code_subset |
-| 115 | [Write a separate STEP derivative with actual settings (DOM-05-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Bind the solid export to representation and consumer criteria (DOM-05-A01) | 1 | source_supported_action_specification |
-| 116 | [Reopen STEP and compare critical geometry (DOM-05-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Write a separate STEP derivative with actual settings (DOM-05-A02) | 1 | source_supported_action_specification |
-| 117 | [Author readable parametric source with stable feature references (DOM-40-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Define sourced parameters and the executable model contract (DOM-40-A01) | 1 | existing_component_code_subset |
-| 118 | [Generate geometry in the declared environment (DOM-40-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Author readable parametric source with stable feature references (DOM-40-A02) | 1 | existing_component_code_subset |
-| 119 | [Validate generated geometry and a supplied parameter variant (DOM-40-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Generate geometry in the declared environment (DOM-40-A03) | 1 | existing_component_code_subset |
-| 120 | [Select the assembly-aware exporter and settings (DOM-39-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Freeze the native assembly and export contract (DOM-39-A01) | 0 | source_supported_action_specification |
-| 121 | [Write the STEP derivative and preservation mapping (DOM-39-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Select the assembly-aware exporter and settings (DOM-39-A02) | 0 | source_supported_action_specification |
-| 122 | [Reopen and compare the exported assembly (DOM-39-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json) | 2 / 3 | Write the STEP derivative and preservation mapping (DOM-39-A03) | 0 | source_supported_action_specification |
-| 123 | [Diagnose the earliest invalid source-to-geometry transition (CAD-14-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Reconcile the failed operation and preserve its evidence (CAD-14-A01) | 0 | documented_procedure_or_case |
-| 124 | [Revise the brief and issue a bounded retry plan (CAD-14-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) | 2 / 3 | Diagnose the earliest invalid source-to-geometry transition (CAD-14-A02) | 0 | documented_procedure_or_case |
-| 125 | [Estimate plane mapping and rectified derivative (CAD-02-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Identify plane evidence and independent metric controls (CAD-02-A01) | 4 | source_supported_action_specification |
-| 126 | [Check independent controls and publish measurements (CAD-02-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Estimate plane mapping and rectified derivative (CAD-02-A02) | 4 | source_supported_action_specification |
-| 127 | [Fit source-supported vector candidates (CAD-04-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Separate stroke classes and inspect source regions (CAD-04-A01) | 4 | source_supported_action_specification |
-| 128 | [Check geometry and publish vector evidence (CAD-04-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Fit source-supported vector candidates (CAD-04-A02) | 4 | source_supported_action_specification |
-| 129 | [Recognize glyphs and parse engineering notation (CAD-03-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Locate annotations and retain crop mappings (CAD-03-A01) | 3 | source_supported_action_specification |
-| 130 | [Associate text with geometric features (CAD-03-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Recognize glyphs and parse engineering notation (CAD-03-A02) | 3 | source_supported_action_specification |
-| 131 | [Publish reviewed text and association evidence (CAD-03-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Associate text with geometric features (CAD-03-A03) | 3 | source_supported_action_specification |
-| 132 | [Match source features and solve registration candidates (CAD-06-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Identify views and declare their projection frames (CAD-06-A01) | 3 | source_supported_action_specification |
-| 133 | [Verify registration and publish reconstruction brief (CAD-06-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Match source features and solve registration candidates (CAD-06-A02) | 3 | source_supported_action_specification |
-| 134 | [Construct candidate edges and bounded surfaces (CAD-07-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Enumerate source-constrained 3D feature candidates (CAD-07-A01) | 3 | source_supported_action_specification |
-| 135 | [Form and inspect the required solid (CAD-07-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Construct candidate edges and bounded surfaces (CAD-07-A02) | 3 | source_supported_action_specification |
-| 136 | [Project back to every view and publish checked geometry (CAD-07-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Form and inspect the required solid (CAD-07-A03) | 3 | source_supported_action_specification |
-| 137 | [Construct dimensioned wall and opening relationships (CAD-05-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Declare plan conventions and wall/opening candidates (CAD-05-A01) | 2 | source_supported_action_specification |
-| 138 | [Verify plan graph and publish vector handoff (CAD-05-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Construct dimensioned wall and opening relationships (CAD-05-A02) | 2 | source_supported_action_specification |
-| 139 | [Create explicit IFC identity, units and spatial structure (DOM-18-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Bind all five inputs and element-level building requirements (DOM-18-A01) | 2 | source_supported_action_specification |
-| 140 | [Author placed wall/opening geometry and host relations (DOM-18-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Create explicit IFC identity, units and spatial structure (DOM-18-A02) | 2 | source_supported_action_specification |
-| 141 | [Validate saved IFC geometry and semantics (DOM-18-A04)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Author placed wall/opening geometry and host relations (DOM-18-A03) | 2 | source_supported_action_specification |
-| 142 | [Construct walls and opening voids with retained identities (CAD-17-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Bind graph elements to sourced vertical parameters (CAD-17-A01) | 1 | source_supported_action_specification |
-| 143 | [Validate plan, elevation and saved assembly (CAD-17-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Construct walls and opening voids with retained identities (CAD-17-A02) | 1 | source_supported_action_specification |
-| 144 | [Compose calibrated vectors and source-linked constraints (DOM-02-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Specify raster-backed sketch requirements (DOM-02-A01) | 1 | source_supported_action_specification |
-| 145 | [Verify solved geometry and saved editability (DOM-02-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json) | 3 / 3 | Compose calibrated vectors and source-linked constraints (DOM-02-A02) | 1 | source_supported_action_specification |
-| 146 | [Extract selected frames with reversible timeline mapping (REC-04-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 3 / 4 | Inventory video timing camera state and coverage (REC-04-A01) | 1 | source_supported_action_specification |
-| 147 | [Check dataset quality and camera compatibility (REC-04-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 3 / 4 | Extract selected frames with reversible timeline mapping (REC-04-A02) | 1 | source_supported_action_specification |
-| 148 | [Generate independently framed convex pieces (DOM-13-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Define collision scope and contact features (DOM-13-A01) | 11 | source_supported_action_specification |
-| 149 | [Validate passages and intended contact behavior (DOM-13-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Generate independently framed convex pieces (DOM-13-A02) | 11 | source_supported_action_specification |
-| 150 | [Export source-linked mesh assets (DOM-12-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Select geometry occurrence and mesh role (DOM-12-A01) | 7 | source_supported_action_specification |
-| 151 | [Compare meshes to source and reopen (DOM-12-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Export source-linked mesh assets (DOM-12-A02) | 7 | source_supported_action_specification |
-| 152 | [Build articulated link and joint representation (DOM-08-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Resolve rigid links from authored assembly relations (DOM-08-A01) | 5 | source_supported_action_specification |
-| 153 | [Validate robot assembly against measured configurations (DOM-08-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Build articulated link and joint representation (DOM-08-A02) | 5 | source_supported_action_specification |
-| 154 | [Calculate and transform sourced mass properties (DOM-14-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Select physical-property evidence per rigid body (DOM-14-A01) | 4 | source_supported_action_specification |
-| 155 | [Check admissibility and consumer-specific completeness (DOM-14-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Calculate and transform sourced mass properties (DOM-14-A02) | 4 | source_supported_action_specification |
-| 156 | [Write GLB and semantic sidecar (DOM-17-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Define IFC-to-display identity and unit policy (DOM-17-A01) | 4 | source_supported_action_specification |
-| 157 | [Reopen scene and compare identity coverage (DOM-17-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Write GLB and semantic sidecar (DOM-17-A02) | 4 | source_supported_action_specification |
-| 158 | [Add static geoms with separate visual and collision roles (DOM-33-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Bind environment to existing robot world frame (DOM-33-A01) | 4 | source_supported_action_specification |
-| 159 | [Check robot preservation and obstacle contacts (DOM-33-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Add static geoms with separate visual and collision roles (DOM-33-A02) | 4 | source_supported_action_specification |
-| 160 | [Serialize links joints and distinct asset origins (DOM-09-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Check literal package inputs and supported URDF tree (DOM-09-A01) | 3 | source_supported_action_specification |
-| 161 | [Parse reopen and compare robot poses and physics (DOM-09-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Serialize links joints and distinct asset origins (DOM-09-A02) | 3 | source_supported_action_specification |
-| 162 | [Extract triangles with source and transform mapping (DOM-16-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Select IFC elements and triangle extraction policy (DOM-16-A01) | 3 | source_supported_action_specification |
-| 163 | [Check element coverage placements and openings (DOM-16-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Extract triangles with source and transform mapping (DOM-16-A02) | 3 | source_supported_action_specification |
-| 164 | [Compose source-linked scene objects and cameras (DOM-24-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Resolve scene input branch and actual adapter (DOM-24-A01) | 3 | source_supported_action_specification |
-| 165 | [Reopen and inspect scene content numerically and visually (DOM-24-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Compose source-linked scene objects and cameras (DOM-24-A02) | 3 | source_supported_action_specification |
-| 166 | [Create placed semantic occurrence with source mapping (DOM-35-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Bind library asset and target IFC placement meaning (DOM-35-A01) | 3 | source_supported_action_specification |
-| 167 | [Check new occurrence and preserved IFC relationships (DOM-35-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Create placed semantic occurrence with source mapping (DOM-35-A02) | 3 | source_supported_action_specification |
-| 168 | [Author named joint records and graph topology (DOM-31-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Bind assembly occurrences and motion evidence (DOM-31-A01) | 2 | source_supported_action_specification |
-| 169 | [Check reference and moved configurations (DOM-31-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Author named joint records and graph topology (DOM-31-A02) | 2 | source_supported_action_specification |
-| 170 | [Create separate occurrence and authored joint relation (DOM-37-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Bind sourced component to target robot role (DOM-37-A01) | 2 | source_supported_action_specification |
-| 171 | [Validate attachment and publish three outputs (DOM-37-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Create separate occurrence and authored joint relation (DOM-37-A02) | 2 | source_supported_action_specification |
-| 172 | [Author body tree geoms and explicit closure constraints (DOM-11-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Bind native model roles and compiler policy (DOM-11-A01) | 2 | source_supported_action_specification |
-| 173 | [Compile read back and check model meaning (DOM-11-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Author body tree geoms and explicit closure constraints (DOM-11-A02) | 2 | source_supported_action_specification |
-| 174 | [Replace mapped role-specific geometry (DOM-32-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Pin seed model and map CAD occurrences to bodies (DOM-32-A01) | 2 | source_supported_action_specification |
-| 175 | [Compare preserved semantics and effective geometry (DOM-32-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Replace mapped role-specific geometry (DOM-32-A02) | 2 | source_supported_action_specification |
-| 176 | [Author static world geoms and source sidecar (DOM-34-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Bind BIM-derived mesh and collider identities (DOM-34-A01) | 2 | source_supported_action_specification |
-| 177 | [Validate static coverage and working passages (DOM-34-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Author static world geoms and source sidecar (DOM-34-A02) | 2 | source_supported_action_specification |
-| 178 | [Parse compile and serialize editable MJCF (DOM-10-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Inventory URDF import policy and expected losses (DOM-10-A01) | 1 | source_supported_action_specification |
-| 179 | [Reopen MJCF and compare supported semantics (DOM-10-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Parse compile and serialize editable MJCF (DOM-10-A02) | 1 | source_supported_action_specification |
-| 180 | [Author IFC elements placements and relationships (DOM-15-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Resolve building schema units hierarchy and element evidence (DOM-15-A01) | 1 | source_supported_action_specification |
-| 181 | [Validate semantic graph and evaluated geometry (DOM-15-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Author IFC elements placements and relationships (DOM-15-A02) | 1 | source_supported_action_specification |
-| 182 | [Extract and retain native kernel shapes (DOM-27-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Resolve IFC kernel shape extraction requirements (DOM-27-A01) | 1 | source_supported_action_specification |
-| 183 | [Validate shape class and source feature agreement (DOM-27-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Extract and retain native kernel shapes (DOM-27-A02) | 1 | source_supported_action_specification |
-| 184 | [Produce linked drawings and exchange geometry (DOM-25-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Bind model revision to fabrication requirements (DOM-25-A01) | 1 | source_supported_action_specification |
-| 185 | [Reopen recipient artifacts and audit feature coverage (DOM-25-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json) | 4 / 4 | Produce linked drawings and exchange geometry (DOM-25-A02) | 1 | source_supported_action_specification |
-| 186 | [Author constrained source and materialize geometry (REC-14-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Define feature evidence and all required editable outputs (REC-14-A01) | 9 | source_supported_action_specification |
-| 187 | [Verify editability, interfaces and fixed scan comparisons (REC-14-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Author constrained source and materialize geometry (REC-14-A02) | 9 | source_supported_action_specification |
-| 188 | [Estimate sparse cameras and points with retained hypotheses (REC-03-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Bind image identities calibration groups and sparse-solve settings (REC-03-A01) | 8 | source_supported_action_specification |
-| 189 | [Validate camera coverage and scale evidence (REC-03-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Estimate sparse cameras and points with retained hypotheses (REC-03-A02) | 8 | source_supported_action_specification |
-| 190 | [Apply scoped edit and read actual resulting geometry (REC-16-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Freeze comparison baseline and bounded edit scope (REC-16-A01) | 7 | source_supported_action_specification |
-| 191 | [Compare fixed evidence and publish revision deltas (REC-16-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Apply scoped edit and read actual resulting geometry (REC-16-A02) | 7 | source_supported_action_specification |
-| 192 | [Estimate intrinsic and distortion parameters (REC-01-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Select calibrated target observations and hold-out views (REC-01-A01) | 4 | source_supported_action_specification |
-| 193 | [Check held-out distortion behavior and publish intrinsics (REC-01-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Estimate intrinsic and distortion parameters (REC-01-A02) | 4 | source_supported_action_specification |
-| 194 | [Estimate or import sequence poses and projected samples (REC-05-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Bind sensor calibration timing and depth encoding (REC-05-A01) | 4 | source_supported_action_specification |
-| 195 | [Validate trajectory and metric depth independently (REC-05-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Estimate or import sequence poses and projected samples (REC-05-A02) | 4 | source_supported_action_specification |
-| 196 | [Integrate observations and extract explicit geometry (REC-06-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Resolve fusion grid and pose convention (REC-06-A01) | 4 | source_supported_action_specification |
-| 197 | [Compare fusion candidates and independent controls (REC-06-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Integrate observations and extract explicit geometry (REC-06-A02) | 4 | source_supported_action_specification |
-| 198 | [Generate plane, cluster and cylinder candidates (REC-09-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Select observed regions and preserve point membership (REC-09-A01) | 3 | source_supported_action_specification |
-| 199 | [Check sampling bias and publish primitive evidence (REC-09-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Generate plane, cluster and cylinder candidates (REC-09-A02) | 3 | source_supported_action_specification |
-| 200 | [Estimate route-specific CAD alignment candidates (REC-12-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Bind exact CAD and observation-route evidence (REC-12-A01) | 3 | source_supported_action_specification |
-| 201 | [Validate alignment and publish conditional outputs (REC-12-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Estimate route-specific CAD alignment candidates (REC-12-A02) | 3 | source_supported_action_specification |
-| 202 | [Refine transform and retain correspondence evidence (REC-08-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Freeze initialization and comparison objective (REC-08-A01) | 2 | source_supported_action_specification |
-| 203 | [Measure independent and directional surface differences (REC-08-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Refine transform and retain correspondence evidence (REC-08-A02) | 2 | source_supported_action_specification |
-| 204 | [Estimate analytic parameters and uncertainty (CAD-11-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Verify metric evidence and select functional features (CAD-11-A01) | 2 | source_supported_action_specification |
-| 205 | [Construct and validate supported CAD feature geometry (CAD-11-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Estimate analytic parameters and uncertainty (CAD-11-A02) | 2 | source_supported_action_specification |
-| 206 | [Cast rays and record hit alternatives (REC-13-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Bind sketch view, camera and hit surface (REC-13-A01) | 2 | source_supported_action_specification |
-| 207 | [Reproject anchors and publish measurement evidence (REC-13-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Cast rays and record hit alternatives (REC-13-A02) | 2 | source_supported_action_specification |
-| 208 | [Align evidence under fixed datum choices and measure differences (REC-15-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Bind source revisions, datums and discrepancy purpose (REC-15-A01) | 2 | source_supported_action_specification |
-| 209 | [Publish reconciliation choices and preserved conflicts (REC-15-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Align evidence under fixed datum choices and measure differences (REC-15-A02) | 2 | source_supported_action_specification |
-| 210 | [Estimate supported scan-to-building transform (DOM-19-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Resolve scan, building and survey frame definitions (DOM-19-A01) | 2 | source_supported_action_specification |
-| 211 | [Validate controls and publish aligned derivative (DOM-19-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Estimate supported scan-to-building transform (DOM-19-A02) | 2 | source_supported_action_specification |
-| 212 | [Project register and publish source-linked cloud candidate (DOM-21-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Bind mandatory depth and measurement evidence (DOM-21-A01) | 2 | source_supported_action_specification |
-| 213 | [Check registered cloud controls and source coverage (DOM-21-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Project register and publish source-linked cloud candidate (DOM-21-A02) | 2 | source_supported_action_specification |
-| 214 | [Reconstruct surface and retain every cleanup derivative (DOM-29-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Inspect point evidence normals and meshing assumptions (DOM-29-A01) | 2 | source_supported_action_specification |
-| 215 | [Compare surface and protected features to source (DOM-29-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 5 / 4 | Reconstruct surface and retain every cleanup derivative (DOM-29-A02) | 2 | source_supported_action_specification |
-| 216 | [Generate coarse alignment hypotheses (REC-07-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Bind both clouds and declare transform freedoms (REC-07-A01) | 1 | source_supported_action_specification |
-| 217 | [Test withheld controls and publish initialization (REC-07-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Generate coarse alignment hypotheses (REC-07-A02) | 1 | source_supported_action_specification |
-| 218 | [Author parametric source and actual feature geometry (DOM-23-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Audit literal input contract and target remodeling meaning (DOM-23-A01) | 1 | source_supported_action_specification |
-| 219 | [Validate functional interfaces and saved parametric output (DOM-23-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Author parametric source and actual feature geometry (DOM-23-A02) | 1 | source_supported_action_specification |
-| 220 | [Compose intrinsic calibration and per-image pose solutions (CAD-02B-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Bind photographs, target evidence and camera state (CAD-02B-A01) | 0 | source_supported_action_specification |
-| 221 | [Validate and publish camera solution (CAD-02B-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Compose intrinsic calibration and per-image pose solutions (CAD-02B-A02) | 0 | source_supported_action_specification |
-| 222 | [Estimate object-to-camera pose candidates (REC-02-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Bind 3D landmarks to calibrated image coordinates (REC-02-A01) | 0 | source_supported_action_specification |
-| 223 | [Validate independent reprojection and publish pose (REC-02-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json) | 5 / 4 | Estimate object-to-camera pose candidates (REC-02-A02) | 0 | source_supported_action_specification |
-| 224 | [Estimate dense depth and fuse visible samples (REC-17-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Validate sparse-to-dense image and camera handoff (REC-17-A01) | 5 | source_supported_action_specification |
-| 225 | [Mesh dense cloud and validate both outputs (REC-17-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Estimate dense depth and fuse visible samples (REC-17-A02) | 5 | source_supported_action_specification |
-| 226 | [Recover cameras and the declared cloud representation (DOM-20-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Resolve literal photo input and cloud detail target (DOM-20-A01) | 3 | source_supported_action_specification |
-| 227 | [Validate saved domain outputs and downstream conditions (DOM-20-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Recover cameras and the declared cloud representation (DOM-20-A02) | 3 | source_supported_action_specification |
-| 228 | [Compose dense estimation fusion and meshing (DOM-28-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Bind supplied cameras and required surface outputs (DOM-28-A01) | 2 | source_supported_action_specification |
-| 229 | [Check source geometry and independent controls (DOM-28-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Compose dense estimation fusion and meshing (DOM-28-A02) | 2 | source_supported_action_specification |
-| 230 | [Compose sparse and dense visible-surface reconstruction (CAD-16-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Bind complete photo and metric-control contract (CAD-16-A01) | 1 | source_supported_action_specification |
-| 231 | [Validate metric reference and saved three-output package (CAD-16-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 6 / 4 | Compose sparse and dense visible-surface reconstruction (CAD-16-A02) | 1 | source_supported_action_specification |
-| 232 | [Train and export the actual Gaussian scene representation (REC-19-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Prepare a Gaussian training dataset with verified camera mapping (REC-19-A01) | 4 | source_supported_action_specification |
-| 233 | [Evaluate captured-view appearance and geometry handoff boundaries (REC-19-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Train and export the actual Gaussian scene representation (REC-19-A02) | 4 | source_supported_action_specification |
-| 234 | [Estimate depth and cameras and materialize the declared cloud (REC-10-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Bind learned reconstruction variant, images and camera roles (REC-10-A01) | 1 | source_supported_action_specification |
-| 235 | [Compare predictions with independent controls and conventional candidates (REC-10-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Estimate depth and cameras and materialize the declared cloud (REC-10-A02) | 1 | source_supported_action_specification |
-| 236 | [Generate and preserve the proxy mesh and its coordinate frame (REC-18-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Select one source image and a mesh-producing model contract (REC-18-A01) | 1 | source_supported_action_specification |
-| 237 | [Evaluate visible fit and gate geometric reuse by independent evidence (REC-18-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Generate and preserve the proxy mesh and its coordinate frame (REC-18-A02) | 1 | source_supported_action_specification |
-| 238 | [Train and save a renderable NeRF state (REC-20-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Bind NeRF method, supplied cameras and training-space transforms (REC-20-A01) | 0 | source_supported_action_specification |
-| 239 | [Validate scene appearance and any separately extracted geometry (REC-20-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Train and save a renderable NeRF state (REC-20-A02) | 0 | source_supported_action_specification |
-| 240 | [Execute the selected typed training route and package its scene (REC-11-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Choose the actual renderable scene subtype and consumer (REC-11-A01) | 0 | source_supported_action_specification |
-| 241 | [Validate scene use and proposed appearance/mesh/CAD composition (REC-11-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Execute the selected typed training route and package its scene (REC-11-A02) | 0 | source_supported_action_specification |
-| 242 | [Build the Gaussian scene and preserve domain mappings (DOM-22-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Bind the domain Gaussian scene contract (DOM-22-A01) | 0 | source_supported_action_specification |
-| 243 | [Check domain appearance and explicit geometric overlays (DOM-22-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Build the Gaussian scene and preserve domain mappings (DOM-22-A02) | 0 | source_supported_action_specification |
-| 244 | [Train and package the domain NeRF state (DOM-30-A02)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Bind domain features and cameras to the NeRF route (DOM-30-A01) | 0 | source_supported_action_specification |
-| 245 | [Evaluate domain viewing results and optional surface reuse (DOM-30-A03)](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json) | 7 / 4 | Train and package the domain NeRF state (DOM-30-A02) | 0 | source_supported_action_specification |
+| 1 | [Preserve the input revision and state the job boundary (INTAKE-A01)](../point-01-model-brief.md) | 0 / 1 | operation inputs | 8 | existing_code_subset |
+| 2 | [Bind checks to actual artifacts and source criteria (CAD-13-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 15 | existing_code_subset |
+| 3 | [Identify the exact library item and retained files (DOM-06-A01)](../point-02-operations.json) | 1 / 2 | operation inputs | 11 | existing_code_subset |
+| 4 | [Define collision scope and contact features (DOM-13-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 11 | source_supported_action_specification |
+| 5 | [Define feature evidence and all required editable outputs (REC-14-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 9 | source_supported_action_specification |
+| 6 | [Select the execution mode and define candidate branches (INTAKE-A02)](../point-01-model-brief.md) | 1 / 2 | Preserve the input revision and state the job boundary (INTAKE-A01) | 8 | source_supported_action_specification |
+| 7 | [Extract source claims and associate each value with its subject (INTAKE-A03)](../point-01-model-brief.md) | 1 / 2 | Select the execution mode and define candidate branches (INTAKE-A02) | 8 | documented_procedure_or_case |
+| 8 | [Identify components, features and geometric relationships (INTAKE-A04)](../point-01-model-brief.md) | 1 / 2 | Extract source claims and associate each value with its subject (INTAKE-A03) | 8 | documented_procedure_or_case |
+| 9 | [Normalize explicit quantities, units, datums and frames (INTAKE-A05)](../point-01-model-brief.md) | 1 / 2 | Identify components, features and geometric relationships (INTAKE-A04) | 8 | documented_procedure_or_case |
+| 10 | [Record per-feature tolerance and evidence requirements (INTAKE-A06)](../point-01-model-brief.md) | 1 / 2 | Normalize explicit quantities, units, datums and frames (INTAKE-A05) | 8 | documented_procedure_or_case |
+| 11 | [Evaluate candidate briefs against their source evidence (INTAKE-A07)](../point-01-model-brief.md) | 1 / 2 | Record per-feature tolerance and evidence requirements (INTAKE-A06) | 8 | documented_procedure_or_case |
+| 12 | [Select supported records and merge compatible contributions (INTAKE-A08)](../point-01-model-brief.md) | 1 / 2 | Evaluate candidate briefs against their source evidence (INTAKE-A07) | 8 | documented_procedure_or_case |
+| 13 | [Validate the merged brief independently (INTAKE-A09)](../point-01-model-brief.md) | 1 / 2 | Select supported records and merge compatible contributions (INTAKE-A08) | 8 | documented_procedure_or_case |
+| 14 | [Deliver the brief and specify the downstream handoff (INTAKE-A10)](../point-01-model-brief.md) | 1 / 2 | Validate the merged brief independently (INTAKE-A09) | 8 | documented_procedure_or_case |
+| 15 | [Bind image identities calibration groups and sparse-solve settings (REC-03-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 8 | source_supported_action_specification |
+| 16 | [Freeze comparison baseline and bounded edit scope (REC-16-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 7 | source_supported_action_specification |
+| 17 | [Select geometry occurrence and mesh role (DOM-12-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 7 | source_supported_action_specification |
+| 18 | [Pin source definitions and assembly roles (CAD-12-A01)](../point-02-operations.json) | 1 / 2 | operation inputs | 5 | documented_procedure_or_case |
+| 19 | [Resolve rigid links from authored assembly relations (DOM-08-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 5 | source_supported_action_specification |
+| 20 | [Validate sparse-to-dense image and camera handoff (REC-17-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 5 | source_supported_action_specification |
+| 21 | [Classify the component change and identify new bytes (DOM-26-A01)](../point-02-operations.json) | 1 / 2 | operation inputs | 4 | existing_code_subset |
+| 22 | [Select a supported solid feature route (CAD-10-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 4 | documented_procedure_or_case |
+| 23 | [Identify plane evidence and independent metric controls (CAD-02-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 24 | [Separate stroke classes and inspect source regions (CAD-04-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 25 | [Select calibrated target observations and hold-out views (REC-01-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 26 | [Select physical-property evidence per rigid body (DOM-14-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 27 | [Define IFC-to-display identity and unit policy (DOM-17-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 28 | [Bind environment to existing robot world frame (DOM-33-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 29 | [Bind sensor calibration timing and depth encoding (REC-05-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 30 | [Resolve fusion grid and pose convention (REC-06-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 31 | [Prepare a Gaussian training dataset with verified camera mapping (REC-19-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 4 | source_supported_action_specification |
+| 32 | [Inspect source entities, units and drawing contexts (CAD-08-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 33 | [Map curves and sourced constraints to a sketch plan (CAD-09-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 34 | [Locate annotations and retain crop mappings (CAD-03-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 35 | [Identify views and declare their projection frames (CAD-06-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 36 | [Enumerate source-constrained 3D feature candidates (CAD-07-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 37 | [Select observed regions and preserve point membership (REC-09-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 38 | [Bind exact CAD and observation-route evidence (REC-12-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 39 | [Check literal package inputs and supported URDF tree (DOM-09-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 40 | [Select IFC elements and triangle extraction policy (DOM-16-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 41 | [Resolve scene input branch and actual adapter (DOM-24-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 42 | [Bind library asset and target IFC placement meaning (DOM-35-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 43 | [Resolve literal photo input and cloud detail target (DOM-20-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 3 | source_supported_action_specification |
+| 44 | [Declare plan conventions and wall/opening candidates (CAD-05-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 45 | [Bind all five inputs and element-level building requirements (DOM-18-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 46 | [Freeze initialization and comparison objective (REC-08-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 47 | [Verify metric evidence and select functional features (CAD-11-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 48 | [Bind sketch view, camera and hit surface (REC-13-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 49 | [Bind source revisions, datums and discrepancy purpose (REC-15-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 50 | [Resolve scan, building and survey frame definitions (DOM-19-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 51 | [Bind assembly occurrences and motion evidence (DOM-31-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 52 | [Bind sourced component to target robot role (DOM-37-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 53 | [Bind native model roles and compiler policy (DOM-11-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 54 | [Pin seed model and map CAD occurrences to bodies (DOM-32-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 55 | [Bind BIM-derived mesh and collider identities (DOM-34-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 56 | [Bind mandatory depth and measurement evidence (DOM-21-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 57 | [Bind supplied cameras and required surface outputs (DOM-28-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 58 | [Inspect point evidence normals and meshing assumptions (DOM-29-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 2 | source_supported_action_specification |
+| 59 | [Resolve source and target interface identities (DOM-07-A01)](../point-02-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 60 | [Inspect STEP identity, structure and unit evidence (DOM-38-A01)](../point-02-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 61 | [Inspect CSG source, parameters and mesh criteria (CAD-15-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 62 | [Choose the profile target and source entity mapping (DOM-03-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 63 | [Define native artifact and solid prerequisites (DOM-04-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 1 | documented_procedure_or_case |
+| 64 | [Bind the solid export to representation and consumer criteria (DOM-05-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 65 | [Define sourced parameters and the executable model contract (DOM-40-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 1 | documented_procedure_or_case |
+| 66 | [Bind graph elements to sourced vertical parameters (CAD-17-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 67 | [Specify raster-backed sketch requirements (DOM-02-A01)](../point-04-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 68 | [Bind both clouds and declare transform freedoms (REC-07-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 69 | [Audit literal input contract and target remodeling meaning (DOM-23-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 70 | [Inventory URDF import policy and expected losses (DOM-10-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 71 | [Resolve building schema units hierarchy and element evidence (DOM-15-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 72 | [Resolve IFC kernel shape extraction requirements (DOM-27-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 73 | [Bind model revision to fabrication requirements (DOM-25-A01)](../point-06-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 74 | [Inventory video timing camera state and coverage (REC-04-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 75 | [Bind complete photo and metric-control contract (CAD-16-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 76 | [Bind learned reconstruction variant, images and camera roles (REC-10-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 77 | [Select one source image and a mesh-producing model contract (REC-18-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 1 | source_supported_action_specification |
+| 78 | [Freeze the native assembly and export contract (DOM-39-A01)](../point-02-operations.json) | 1 / 2 | operation inputs | 0 | documented_procedure_or_case |
+| 79 | [Reconcile the failed operation and preserve its evidence (CAD-14-A01)](../point-03-operations.json) | 1 / 2 | operation inputs | 0 | existing_component_code_subset |
+| 80 | [Bind photographs, target evidence and camera state (CAD-02B-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
+| 81 | [Bind 3D landmarks to calibrated image coordinates (REC-02-A01)](../point-05-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
+| 82 | [Bind NeRF method, supplied cameras and training-space transforms (REC-20-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
+| 83 | [Choose the actual renderable scene subtype and consumer (REC-11-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
+| 84 | [Bind the domain Gaussian scene contract (DOM-22-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
+| 85 | [Bind domain features and cameras to the NeRF route (DOM-30-A01)](../point-07-operations.json) | 1 / 2 | operation inputs | 0 | source_supported_action_specification |
+| 86 | [Read actual geometry and compare required features (CAD-13-A02)](../point-03-operations.json) | 2 / 3 | Bind checks to actual artifacts and source criteria (CAD-13-A01) | 15 | existing_component_code_subset |
+| 87 | [Reopen saved artifacts and issue the verification report (CAD-13-A03)](../point-03-operations.json) | 2 / 3 | Read actual geometry and compare required features (CAD-13-A02) | 15 | existing_component_code_subset |
+| 88 | [Attach item-level terms and permitted operations (DOM-06-A02)](../point-02-operations.json) | 2 / 3 | Identify the exact library item and retained files (DOM-06-A01) | 11 | source_supported_action_specification |
+| 89 | [Classify component representations and interface evidence (DOM-06-A03)](../point-02-operations.json) | 2 / 3 | Attach item-level terms and permitted operations (DOM-06-A02) | 11 | documented_procedure_or_case |
+| 90 | [Register the component record and handoff conditions (DOM-06-A04)](../point-02-operations.json) | 2 / 3 | Classify component representations and interface evidence (DOM-06-A03) | 11 | documented_procedure_or_case |
+| 91 | [Define interface frames and placement relations (CAD-12-A02)](../point-02-operations.json) | 2 / 3 | Pin source definitions and assembly roles (CAD-12-A01) | 5 | existing_code_subset |
+| 92 | [Create bounded native occurrences (CAD-12-A03)](../point-02-operations.json) | 2 / 3 | Define interface frames and placement relations (CAD-12-A02) | 5 | source_supported_action_specification |
+| 93 | [Validate and preserve assembly structure (CAD-12-A04)](../point-02-operations.json) | 2 / 3 | Create bounded native occurrences (CAD-12-A03) | 5 | documented_procedure_or_case |
+| 94 | [Resolve the complete dependency and rights set (DOM-26-A02)](../point-02-operations.json) | 2 / 3 | Classify the component change and identify new bytes (DOM-26-A01) | 4 | documented_procedure_or_case |
+| 95 | [Publish a new immutable revision and explicit reuse pins (DOM-26-A03)](../point-02-operations.json) | 2 / 3 | Resolve the complete dependency and rights set (DOM-26-A02) | 4 | documented_procedure_or_case |
+| 96 | [Reopen pinned artifacts and check reuse reproducibility (DOM-26-A04)](../point-02-operations.json) | 2 / 3 | Publish a new immutable revision and explicit reuse pins (DOM-26-A03) | 4 | documented_procedure_or_case |
+| 97 | [Construct features with revision-bound readback (CAD-10-A02)](../point-03-operations.json) | 2 / 3 | Select a supported solid feature route (CAD-10-A01) | 4 | existing_component_code_subset |
+| 98 | [Verify native solid and saved construction record (CAD-10-A03)](../point-03-operations.json) | 2 / 3 | Construct features with revision-bound readback (CAD-10-A02) | 4 | existing_component_code_subset |
+| 99 | [Create a mapped and explicitly cleaned derivative (CAD-08-A02)](../point-03-operations.json) | 2 / 3 | Inspect source entities, units and drawing contexts (CAD-08-A01) | 3 | existing_component_code_subset |
+| 100 | [Validate curve fidelity and publish the vector handoff (CAD-08-A03)](../point-03-operations.json) | 2 / 3 | Create a mapped and explicitly cleaned derivative (CAD-08-A02) | 3 | existing_component_code_subset |
+| 101 | [Create the sketch and solve bounded constraint groups (CAD-09-A02)](../point-03-operations.json) | 2 / 3 | Map curves and sourced constraints to a sketch plan (CAD-09-A01) | 3 | source_supported_action_specification |
+| 102 | [Measure and reopen the constrained sketch (CAD-09-A03)](../point-03-operations.json) | 2 / 3 | Create the sketch and solve bounded constraint groups (CAD-09-A02) | 3 | source_supported_action_specification |
+| 103 | [Compute the occurrence transform (DOM-07-A02)](../point-02-operations.json) | 2 / 3 | Resolve source and target interface identities (DOM-07-A01) | 1 | existing_code_subset |
+| 104 | [Insert the component occurrence and connection edge (DOM-07-A03)](../point-02-operations.json) | 2 / 3 | Compute the occurrence transform (DOM-07-A02) | 1 | source_supported_action_specification |
+| 105 | [Measure placed interfaces and preserve the result (DOM-07-A04)](../point-02-operations.json) | 2 / 3 | Insert the component occurrence and connection edge (DOM-07-A03) | 1 | existing_code_subset |
+| 106 | [Choose and configure an isolated importer (DOM-38-A02)](../point-02-operations.json) | 2 / 3 | Inspect STEP identity, structure and unit evidence (DOM-38-A01) | 1 | documented_procedure_or_case |
+| 107 | [Transfer geometry and classify actual output (DOM-38-A03)](../point-02-operations.json) | 2 / 3 | Choose and configure an isolated importer (DOM-38-A02) | 1 | documented_procedure_or_case |
+| 108 | [Measure and independently reopen imported geometry (DOM-38-A04)](../point-02-operations.json) | 2 / 3 | Transfer geometry and classify actual output (DOM-38-A03) | 1 | documented_procedure_or_case |
+| 109 | [Evaluate final CSG and export the mesh derivative (CAD-15-A02)](../point-03-operations.json) | 2 / 3 | Inspect CSG source, parameters and mesh criteria (CAD-15-A01) | 1 | source_supported_action_specification |
+| 110 | [Measure the mesh and check declared parametric behavior (CAD-15-A03)](../point-03-operations.json) | 2 / 3 | Evaluate final CSG and export the mesh derivative (CAD-15-A02) | 1 | source_supported_action_specification |
+| 111 | [Normalize curves and construct the constrained profile (DOM-03-A02)](../point-03-operations.json) | 2 / 3 | Choose the profile target and source entity mapping (DOM-03-A01) | 1 | source_supported_action_specification |
+| 112 | [Verify profile semantics and constrained editability (DOM-03-A03)](../point-03-operations.json) | 2 / 3 | Normalize curves and construct the constrained profile (DOM-03-A02) | 1 | source_supported_action_specification |
+| 113 | [Construct or reuse the checked native body (DOM-04-A02)](../point-03-operations.json) | 2 / 3 | Define native artifact and solid prerequisites (DOM-04-A01) | 1 | existing_component_code_subset |
+| 114 | [Save and validate the native model contract (DOM-04-A03)](../point-03-operations.json) | 2 / 3 | Construct or reuse the checked native body (DOM-04-A02) | 1 | existing_component_code_subset |
+| 115 | [Write a separate STEP derivative with actual settings (DOM-05-A02)](../point-03-operations.json) | 2 / 3 | Bind the solid export to representation and consumer criteria (DOM-05-A01) | 1 | source_supported_action_specification |
+| 116 | [Reopen STEP and compare critical geometry (DOM-05-A03)](../point-03-operations.json) | 2 / 3 | Write a separate STEP derivative with actual settings (DOM-05-A02) | 1 | source_supported_action_specification |
+| 117 | [Author readable parametric source with stable feature references (DOM-40-A02)](../point-03-operations.json) | 2 / 3 | Define sourced parameters and the executable model contract (DOM-40-A01) | 1 | existing_component_code_subset |
+| 118 | [Generate geometry in the declared environment (DOM-40-A03)](../point-03-operations.json) | 2 / 3 | Author readable parametric source with stable feature references (DOM-40-A02) | 1 | existing_component_code_subset |
+| 119 | [Validate generated geometry and a supplied parameter variant (DOM-40-A04)](../point-03-operations.json) | 2 / 3 | Generate geometry in the declared environment (DOM-40-A03) | 1 | existing_component_code_subset |
+| 120 | [Select the assembly-aware exporter and settings (DOM-39-A02)](../point-02-operations.json) | 2 / 3 | Freeze the native assembly and export contract (DOM-39-A01) | 0 | source_supported_action_specification |
+| 121 | [Write the STEP derivative and preservation mapping (DOM-39-A03)](../point-02-operations.json) | 2 / 3 | Select the assembly-aware exporter and settings (DOM-39-A02) | 0 | source_supported_action_specification |
+| 122 | [Reopen and compare the exported assembly (DOM-39-A04)](../point-02-operations.json) | 2 / 3 | Write the STEP derivative and preservation mapping (DOM-39-A03) | 0 | source_supported_action_specification |
+| 123 | [Diagnose the earliest invalid source-to-geometry transition (CAD-14-A02)](../point-03-operations.json) | 2 / 3 | Reconcile the failed operation and preserve its evidence (CAD-14-A01) | 0 | documented_procedure_or_case |
+| 124 | [Revise the brief and issue a bounded retry plan (CAD-14-A03)](../point-03-operations.json) | 2 / 3 | Diagnose the earliest invalid source-to-geometry transition (CAD-14-A02) | 0 | documented_procedure_or_case |
+| 125 | [Estimate plane mapping and rectified derivative (CAD-02-A02)](../point-04-operations.json) | 3 / 3 | Identify plane evidence and independent metric controls (CAD-02-A01) | 4 | source_supported_action_specification |
+| 126 | [Check independent controls and publish measurements (CAD-02-A03)](../point-04-operations.json) | 3 / 3 | Estimate plane mapping and rectified derivative (CAD-02-A02) | 4 | source_supported_action_specification |
+| 127 | [Fit source-supported vector candidates (CAD-04-A02)](../point-04-operations.json) | 3 / 3 | Separate stroke classes and inspect source regions (CAD-04-A01) | 4 | source_supported_action_specification |
+| 128 | [Check geometry and publish vector evidence (CAD-04-A03)](../point-04-operations.json) | 3 / 3 | Fit source-supported vector candidates (CAD-04-A02) | 4 | source_supported_action_specification |
+| 129 | [Recognize glyphs and parse engineering notation (CAD-03-A02)](../point-04-operations.json) | 3 / 3 | Locate annotations and retain crop mappings (CAD-03-A01) | 3 | source_supported_action_specification |
+| 130 | [Associate text with geometric features (CAD-03-A03)](../point-04-operations.json) | 3 / 3 | Recognize glyphs and parse engineering notation (CAD-03-A02) | 3 | source_supported_action_specification |
+| 131 | [Publish reviewed text and association evidence (CAD-03-A04)](../point-04-operations.json) | 3 / 3 | Associate text with geometric features (CAD-03-A03) | 3 | source_supported_action_specification |
+| 132 | [Match source features and solve registration candidates (CAD-06-A02)](../point-04-operations.json) | 3 / 3 | Identify views and declare their projection frames (CAD-06-A01) | 3 | source_supported_action_specification |
+| 133 | [Verify registration and publish reconstruction brief (CAD-06-A03)](../point-04-operations.json) | 3 / 3 | Match source features and solve registration candidates (CAD-06-A02) | 3 | source_supported_action_specification |
+| 134 | [Construct candidate edges and bounded surfaces (CAD-07-A02)](../point-04-operations.json) | 3 / 3 | Enumerate source-constrained 3D feature candidates (CAD-07-A01) | 3 | source_supported_action_specification |
+| 135 | [Form and inspect the required solid (CAD-07-A03)](../point-04-operations.json) | 3 / 3 | Construct candidate edges and bounded surfaces (CAD-07-A02) | 3 | source_supported_action_specification |
+| 136 | [Project back to every view and publish checked geometry (CAD-07-A04)](../point-04-operations.json) | 3 / 3 | Form and inspect the required solid (CAD-07-A03) | 3 | source_supported_action_specification |
+| 137 | [Construct dimensioned wall and opening relationships (CAD-05-A02)](../point-04-operations.json) | 3 / 3 | Declare plan conventions and wall/opening candidates (CAD-05-A01) | 2 | source_supported_action_specification |
+| 138 | [Verify plan graph and publish vector handoff (CAD-05-A03)](../point-04-operations.json) | 3 / 3 | Construct dimensioned wall and opening relationships (CAD-05-A02) | 2 | source_supported_action_specification |
+| 139 | [Create explicit IFC identity, units and spatial structure (DOM-18-A02)](../point-04-operations.json) | 3 / 3 | Bind all five inputs and element-level building requirements (DOM-18-A01) | 2 | source_supported_action_specification |
+| 140 | [Author placed wall/opening geometry and host relations (DOM-18-A03)](../point-04-operations.json) | 3 / 3 | Create explicit IFC identity, units and spatial structure (DOM-18-A02) | 2 | source_supported_action_specification |
+| 141 | [Validate saved IFC geometry and semantics (DOM-18-A04)](../point-04-operations.json) | 3 / 3 | Author placed wall/opening geometry and host relations (DOM-18-A03) | 2 | source_supported_action_specification |
+| 142 | [Construct walls and opening voids with retained identities (CAD-17-A02)](../point-04-operations.json) | 3 / 3 | Bind graph elements to sourced vertical parameters (CAD-17-A01) | 1 | source_supported_action_specification |
+| 143 | [Validate plan, elevation and saved assembly (CAD-17-A03)](../point-04-operations.json) | 3 / 3 | Construct walls and opening voids with retained identities (CAD-17-A02) | 1 | source_supported_action_specification |
+| 144 | [Compose calibrated vectors and source-linked constraints (DOM-02-A02)](../point-04-operations.json) | 3 / 3 | Specify raster-backed sketch requirements (DOM-02-A01) | 1 | source_supported_action_specification |
+| 145 | [Verify solved geometry and saved editability (DOM-02-A03)](../point-04-operations.json) | 3 / 3 | Compose calibrated vectors and source-linked constraints (DOM-02-A02) | 1 | source_supported_action_specification |
+| 146 | [Extract selected frames with reversible timeline mapping (REC-04-A02)](../point-07-operations.json) | 3 / 4 | Inventory video timing camera state and coverage (REC-04-A01) | 1 | source_supported_action_specification |
+| 147 | [Check dataset quality and camera compatibility (REC-04-A03)](../point-07-operations.json) | 3 / 4 | Extract selected frames with reversible timeline mapping (REC-04-A02) | 1 | source_supported_action_specification |
+| 148 | [Generate independently framed convex pieces (DOM-13-A02)](../point-06-operations.json) | 4 / 4 | Define collision scope and contact features (DOM-13-A01) | 11 | source_supported_action_specification |
+| 149 | [Validate passages and intended contact behavior (DOM-13-A03)](../point-06-operations.json) | 4 / 4 | Generate independently framed convex pieces (DOM-13-A02) | 11 | source_supported_action_specification |
+| 150 | [Export source-linked mesh assets (DOM-12-A02)](../point-06-operations.json) | 4 / 4 | Select geometry occurrence and mesh role (DOM-12-A01) | 7 | source_supported_action_specification |
+| 151 | [Compare meshes to source and reopen (DOM-12-A03)](../point-06-operations.json) | 4 / 4 | Export source-linked mesh assets (DOM-12-A02) | 7 | source_supported_action_specification |
+| 152 | [Build articulated link and joint representation (DOM-08-A02)](../point-06-operations.json) | 4 / 4 | Resolve rigid links from authored assembly relations (DOM-08-A01) | 5 | source_supported_action_specification |
+| 153 | [Validate robot assembly against measured configurations (DOM-08-A03)](../point-06-operations.json) | 4 / 4 | Build articulated link and joint representation (DOM-08-A02) | 5 | source_supported_action_specification |
+| 154 | [Calculate and transform sourced mass properties (DOM-14-A02)](../point-06-operations.json) | 4 / 4 | Select physical-property evidence per rigid body (DOM-14-A01) | 4 | source_supported_action_specification |
+| 155 | [Check admissibility and consumer-specific completeness (DOM-14-A03)](../point-06-operations.json) | 4 / 4 | Calculate and transform sourced mass properties (DOM-14-A02) | 4 | source_supported_action_specification |
+| 156 | [Write GLB and semantic sidecar (DOM-17-A02)](../point-06-operations.json) | 4 / 4 | Define IFC-to-display identity and unit policy (DOM-17-A01) | 4 | source_supported_action_specification |
+| 157 | [Reopen scene and compare identity coverage (DOM-17-A03)](../point-06-operations.json) | 4 / 4 | Write GLB and semantic sidecar (DOM-17-A02) | 4 | source_supported_action_specification |
+| 158 | [Add static geoms with separate visual and collision roles (DOM-33-A02)](../point-06-operations.json) | 4 / 4 | Bind environment to existing robot world frame (DOM-33-A01) | 4 | source_supported_action_specification |
+| 159 | [Check robot preservation and obstacle contacts (DOM-33-A03)](../point-06-operations.json) | 4 / 4 | Add static geoms with separate visual and collision roles (DOM-33-A02) | 4 | source_supported_action_specification |
+| 160 | [Serialize links joints and distinct asset origins (DOM-09-A02)](../point-06-operations.json) | 4 / 4 | Check literal package inputs and supported URDF tree (DOM-09-A01) | 3 | source_supported_action_specification |
+| 161 | [Parse reopen and compare robot poses and physics (DOM-09-A03)](../point-06-operations.json) | 4 / 4 | Serialize links joints and distinct asset origins (DOM-09-A02) | 3 | source_supported_action_specification |
+| 162 | [Extract triangles with source and transform mapping (DOM-16-A02)](../point-06-operations.json) | 4 / 4 | Select IFC elements and triangle extraction policy (DOM-16-A01) | 3 | source_supported_action_specification |
+| 163 | [Check element coverage placements and openings (DOM-16-A03)](../point-06-operations.json) | 4 / 4 | Extract triangles with source and transform mapping (DOM-16-A02) | 3 | source_supported_action_specification |
+| 164 | [Compose source-linked scene objects and cameras (DOM-24-A02)](../point-06-operations.json) | 4 / 4 | Resolve scene input branch and actual adapter (DOM-24-A01) | 3 | source_supported_action_specification |
+| 165 | [Reopen and inspect scene content numerically and visually (DOM-24-A03)](../point-06-operations.json) | 4 / 4 | Compose source-linked scene objects and cameras (DOM-24-A02) | 3 | source_supported_action_specification |
+| 166 | [Create placed semantic occurrence with source mapping (DOM-35-A02)](../point-06-operations.json) | 4 / 4 | Bind library asset and target IFC placement meaning (DOM-35-A01) | 3 | source_supported_action_specification |
+| 167 | [Check new occurrence and preserved IFC relationships (DOM-35-A03)](../point-06-operations.json) | 4 / 4 | Create placed semantic occurrence with source mapping (DOM-35-A02) | 3 | source_supported_action_specification |
+| 168 | [Author named joint records and graph topology (DOM-31-A02)](../point-06-operations.json) | 4 / 4 | Bind assembly occurrences and motion evidence (DOM-31-A01) | 2 | source_supported_action_specification |
+| 169 | [Check reference and moved configurations (DOM-31-A03)](../point-06-operations.json) | 4 / 4 | Author named joint records and graph topology (DOM-31-A02) | 2 | source_supported_action_specification |
+| 170 | [Create separate occurrence and authored joint relation (DOM-37-A02)](../point-06-operations.json) | 4 / 4 | Bind sourced component to target robot role (DOM-37-A01) | 2 | source_supported_action_specification |
+| 171 | [Validate attachment and publish three outputs (DOM-37-A03)](../point-06-operations.json) | 4 / 4 | Create separate occurrence and authored joint relation (DOM-37-A02) | 2 | source_supported_action_specification |
+| 172 | [Author body tree geoms and explicit closure constraints (DOM-11-A02)](../point-06-operations.json) | 4 / 4 | Bind native model roles and compiler policy (DOM-11-A01) | 2 | source_supported_action_specification |
+| 173 | [Compile read back and check model meaning (DOM-11-A03)](../point-06-operations.json) | 4 / 4 | Author body tree geoms and explicit closure constraints (DOM-11-A02) | 2 | source_supported_action_specification |
+| 174 | [Replace mapped role-specific geometry (DOM-32-A02)](../point-06-operations.json) | 4 / 4 | Pin seed model and map CAD occurrences to bodies (DOM-32-A01) | 2 | source_supported_action_specification |
+| 175 | [Compare preserved semantics and effective geometry (DOM-32-A03)](../point-06-operations.json) | 4 / 4 | Replace mapped role-specific geometry (DOM-32-A02) | 2 | source_supported_action_specification |
+| 176 | [Author static world geoms and source sidecar (DOM-34-A02)](../point-06-operations.json) | 4 / 4 | Bind BIM-derived mesh and collider identities (DOM-34-A01) | 2 | source_supported_action_specification |
+| 177 | [Validate static coverage and working passages (DOM-34-A03)](../point-06-operations.json) | 4 / 4 | Author static world geoms and source sidecar (DOM-34-A02) | 2 | source_supported_action_specification |
+| 178 | [Parse compile and serialize editable MJCF (DOM-10-A02)](../point-06-operations.json) | 4 / 4 | Inventory URDF import policy and expected losses (DOM-10-A01) | 1 | source_supported_action_specification |
+| 179 | [Reopen MJCF and compare supported semantics (DOM-10-A03)](../point-06-operations.json) | 4 / 4 | Parse compile and serialize editable MJCF (DOM-10-A02) | 1 | source_supported_action_specification |
+| 180 | [Author IFC elements placements and relationships (DOM-15-A02)](../point-06-operations.json) | 4 / 4 | Resolve building schema units hierarchy and element evidence (DOM-15-A01) | 1 | source_supported_action_specification |
+| 181 | [Validate semantic graph and evaluated geometry (DOM-15-A03)](../point-06-operations.json) | 4 / 4 | Author IFC elements placements and relationships (DOM-15-A02) | 1 | source_supported_action_specification |
+| 182 | [Extract and retain native kernel shapes (DOM-27-A02)](../point-06-operations.json) | 4 / 4 | Resolve IFC kernel shape extraction requirements (DOM-27-A01) | 1 | source_supported_action_specification |
+| 183 | [Validate shape class and source feature agreement (DOM-27-A03)](../point-06-operations.json) | 4 / 4 | Extract and retain native kernel shapes (DOM-27-A02) | 1 | source_supported_action_specification |
+| 184 | [Produce linked drawings and exchange geometry (DOM-25-A02)](../point-06-operations.json) | 4 / 4 | Bind model revision to fabrication requirements (DOM-25-A01) | 1 | source_supported_action_specification |
+| 185 | [Reopen recipient artifacts and audit feature coverage (DOM-25-A03)](../point-06-operations.json) | 4 / 4 | Produce linked drawings and exchange geometry (DOM-25-A02) | 1 | source_supported_action_specification |
+| 186 | [Author constrained source and materialize geometry (REC-14-A02)](../point-05-operations.json) | 5 / 4 | Define feature evidence and all required editable outputs (REC-14-A01) | 9 | source_supported_action_specification |
+| 187 | [Verify editability, interfaces and fixed scan comparisons (REC-14-A03)](../point-05-operations.json) | 5 / 4 | Author constrained source and materialize geometry (REC-14-A02) | 9 | source_supported_action_specification |
+| 188 | [Estimate sparse cameras and points with retained hypotheses (REC-03-A02)](../point-07-operations.json) | 5 / 4 | Bind image identities calibration groups and sparse-solve settings (REC-03-A01) | 8 | source_supported_action_specification |
+| 189 | [Validate camera coverage and scale evidence (REC-03-A03)](../point-07-operations.json) | 5 / 4 | Estimate sparse cameras and points with retained hypotheses (REC-03-A02) | 8 | source_supported_action_specification |
+| 190 | [Apply scoped edit and read actual resulting geometry (REC-16-A02)](../point-05-operations.json) | 5 / 4 | Freeze comparison baseline and bounded edit scope (REC-16-A01) | 7 | source_supported_action_specification |
+| 191 | [Compare fixed evidence and publish revision deltas (REC-16-A03)](../point-05-operations.json) | 5 / 4 | Apply scoped edit and read actual resulting geometry (REC-16-A02) | 7 | source_supported_action_specification |
+| 192 | [Estimate intrinsic and distortion parameters (REC-01-A02)](../point-05-operations.json) | 5 / 4 | Select calibrated target observations and hold-out views (REC-01-A01) | 4 | source_supported_action_specification |
+| 193 | [Check held-out distortion behavior and publish intrinsics (REC-01-A03)](../point-05-operations.json) | 5 / 4 | Estimate intrinsic and distortion parameters (REC-01-A02) | 4 | source_supported_action_specification |
+| 194 | [Estimate or import sequence poses and projected samples (REC-05-A02)](../point-07-operations.json) | 5 / 4 | Bind sensor calibration timing and depth encoding (REC-05-A01) | 4 | source_supported_action_specification |
+| 195 | [Validate trajectory and metric depth independently (REC-05-A03)](../point-07-operations.json) | 5 / 4 | Estimate or import sequence poses and projected samples (REC-05-A02) | 4 | source_supported_action_specification |
+| 196 | [Integrate observations and extract explicit geometry (REC-06-A02)](../point-07-operations.json) | 5 / 4 | Resolve fusion grid and pose convention (REC-06-A01) | 4 | source_supported_action_specification |
+| 197 | [Compare fusion candidates and independent controls (REC-06-A03)](../point-07-operations.json) | 5 / 4 | Integrate observations and extract explicit geometry (REC-06-A02) | 4 | source_supported_action_specification |
+| 198 | [Generate plane, cluster and cylinder candidates (REC-09-A02)](../point-05-operations.json) | 5 / 4 | Select observed regions and preserve point membership (REC-09-A01) | 3 | source_supported_action_specification |
+| 199 | [Check sampling bias and publish primitive evidence (REC-09-A03)](../point-05-operations.json) | 5 / 4 | Generate plane, cluster and cylinder candidates (REC-09-A02) | 3 | source_supported_action_specification |
+| 200 | [Estimate route-specific CAD alignment candidates (REC-12-A02)](../point-05-operations.json) | 5 / 4 | Bind exact CAD and observation-route evidence (REC-12-A01) | 3 | source_supported_action_specification |
+| 201 | [Validate alignment and publish conditional outputs (REC-12-A03)](../point-05-operations.json) | 5 / 4 | Estimate route-specific CAD alignment candidates (REC-12-A02) | 3 | source_supported_action_specification |
+| 202 | [Refine transform and retain correspondence evidence (REC-08-A02)](../point-05-operations.json) | 5 / 4 | Freeze initialization and comparison objective (REC-08-A01) | 2 | source_supported_action_specification |
+| 203 | [Measure independent and directional surface differences (REC-08-A03)](../point-05-operations.json) | 5 / 4 | Refine transform and retain correspondence evidence (REC-08-A02) | 2 | source_supported_action_specification |
+| 204 | [Estimate analytic parameters and uncertainty (CAD-11-A02)](../point-05-operations.json) | 5 / 4 | Verify metric evidence and select functional features (CAD-11-A01) | 2 | source_supported_action_specification |
+| 205 | [Construct and validate supported CAD feature geometry (CAD-11-A03)](../point-05-operations.json) | 5 / 4 | Estimate analytic parameters and uncertainty (CAD-11-A02) | 2 | source_supported_action_specification |
+| 206 | [Cast rays and record hit alternatives (REC-13-A02)](../point-05-operations.json) | 5 / 4 | Bind sketch view, camera and hit surface (REC-13-A01) | 2 | source_supported_action_specification |
+| 207 | [Reproject anchors and publish measurement evidence (REC-13-A03)](../point-05-operations.json) | 5 / 4 | Cast rays and record hit alternatives (REC-13-A02) | 2 | source_supported_action_specification |
+| 208 | [Align evidence under fixed datum choices and measure differences (REC-15-A02)](../point-05-operations.json) | 5 / 4 | Bind source revisions, datums and discrepancy purpose (REC-15-A01) | 2 | source_supported_action_specification |
+| 209 | [Publish reconciliation choices and preserved conflicts (REC-15-A03)](../point-05-operations.json) | 5 / 4 | Align evidence under fixed datum choices and measure differences (REC-15-A02) | 2 | source_supported_action_specification |
+| 210 | [Estimate supported scan-to-building transform (DOM-19-A02)](../point-05-operations.json) | 5 / 4 | Resolve scan, building and survey frame definitions (DOM-19-A01) | 2 | source_supported_action_specification |
+| 211 | [Validate controls and publish aligned derivative (DOM-19-A03)](../point-05-operations.json) | 5 / 4 | Estimate supported scan-to-building transform (DOM-19-A02) | 2 | source_supported_action_specification |
+| 212 | [Project register and publish source-linked cloud candidate (DOM-21-A02)](../point-07-operations.json) | 5 / 4 | Bind mandatory depth and measurement evidence (DOM-21-A01) | 2 | source_supported_action_specification |
+| 213 | [Check registered cloud controls and source coverage (DOM-21-A03)](../point-07-operations.json) | 5 / 4 | Project register and publish source-linked cloud candidate (DOM-21-A02) | 2 | source_supported_action_specification |
+| 214 | [Reconstruct surface and retain every cleanup derivative (DOM-29-A02)](../point-07-operations.json) | 5 / 4 | Inspect point evidence normals and meshing assumptions (DOM-29-A01) | 2 | source_supported_action_specification |
+| 215 | [Compare surface and protected features to source (DOM-29-A03)](../point-07-operations.json) | 5 / 4 | Reconstruct surface and retain every cleanup derivative (DOM-29-A02) | 2 | source_supported_action_specification |
+| 216 | [Generate coarse alignment hypotheses (REC-07-A02)](../point-05-operations.json) | 5 / 4 | Bind both clouds and declare transform freedoms (REC-07-A01) | 1 | source_supported_action_specification |
+| 217 | [Test withheld controls and publish initialization (REC-07-A03)](../point-05-operations.json) | 5 / 4 | Generate coarse alignment hypotheses (REC-07-A02) | 1 | source_supported_action_specification |
+| 218 | [Author parametric source and actual feature geometry (DOM-23-A02)](../point-05-operations.json) | 5 / 4 | Audit literal input contract and target remodeling meaning (DOM-23-A01) | 1 | source_supported_action_specification |
+| 219 | [Validate functional interfaces and saved parametric output (DOM-23-A03)](../point-05-operations.json) | 5 / 4 | Author parametric source and actual feature geometry (DOM-23-A02) | 1 | source_supported_action_specification |
+| 220 | [Compose intrinsic calibration and per-image pose solutions (CAD-02B-A02)](../point-05-operations.json) | 5 / 4 | Bind photographs, target evidence and camera state (CAD-02B-A01) | 0 | source_supported_action_specification |
+| 221 | [Validate and publish camera solution (CAD-02B-A03)](../point-05-operations.json) | 5 / 4 | Compose intrinsic calibration and per-image pose solutions (CAD-02B-A02) | 0 | source_supported_action_specification |
+| 222 | [Estimate object-to-camera pose candidates (REC-02-A02)](../point-05-operations.json) | 5 / 4 | Bind 3D landmarks to calibrated image coordinates (REC-02-A01) | 0 | source_supported_action_specification |
+| 223 | [Validate independent reprojection and publish pose (REC-02-A03)](../point-05-operations.json) | 5 / 4 | Estimate object-to-camera pose candidates (REC-02-A02) | 0 | source_supported_action_specification |
+| 224 | [Estimate dense depth and fuse visible samples (REC-17-A02)](../point-07-operations.json) | 6 / 4 | Validate sparse-to-dense image and camera handoff (REC-17-A01) | 5 | source_supported_action_specification |
+| 225 | [Mesh dense cloud and validate both outputs (REC-17-A03)](../point-07-operations.json) | 6 / 4 | Estimate dense depth and fuse visible samples (REC-17-A02) | 5 | source_supported_action_specification |
+| 226 | [Recover cameras and the declared cloud representation (DOM-20-A02)](../point-07-operations.json) | 6 / 4 | Resolve literal photo input and cloud detail target (DOM-20-A01) | 3 | source_supported_action_specification |
+| 227 | [Validate saved domain outputs and downstream conditions (DOM-20-A03)](../point-07-operations.json) | 6 / 4 | Recover cameras and the declared cloud representation (DOM-20-A02) | 3 | source_supported_action_specification |
+| 228 | [Compose dense estimation fusion and meshing (DOM-28-A02)](../point-07-operations.json) | 6 / 4 | Bind supplied cameras and required surface outputs (DOM-28-A01) | 2 | source_supported_action_specification |
+| 229 | [Check source geometry and independent controls (DOM-28-A03)](../point-07-operations.json) | 6 / 4 | Compose dense estimation fusion and meshing (DOM-28-A02) | 2 | source_supported_action_specification |
+| 230 | [Compose sparse and dense visible-surface reconstruction (CAD-16-A02)](../point-07-operations.json) | 6 / 4 | Bind complete photo and metric-control contract (CAD-16-A01) | 1 | source_supported_action_specification |
+| 231 | [Validate metric reference and saved three-output package (CAD-16-A03)](../point-07-operations.json) | 6 / 4 | Compose sparse and dense visible-surface reconstruction (CAD-16-A02) | 1 | source_supported_action_specification |
+| 232 | [Train and export the actual Gaussian scene representation (REC-19-A02)](../point-07-operations.json) | 7 / 4 | Prepare a Gaussian training dataset with verified camera mapping (REC-19-A01) | 4 | source_supported_action_specification |
+| 233 | [Evaluate captured-view appearance and geometry handoff boundaries (REC-19-A03)](../point-07-operations.json) | 7 / 4 | Train and export the actual Gaussian scene representation (REC-19-A02) | 4 | source_supported_action_specification |
+| 234 | [Estimate depth and cameras and materialize the declared cloud (REC-10-A02)](../point-07-operations.json) | 7 / 4 | Bind learned reconstruction variant, images and camera roles (REC-10-A01) | 1 | source_supported_action_specification |
+| 235 | [Compare predictions with independent controls and conventional candidates (REC-10-A03)](../point-07-operations.json) | 7 / 4 | Estimate depth and cameras and materialize the declared cloud (REC-10-A02) | 1 | source_supported_action_specification |
+| 236 | [Generate and preserve the proxy mesh and its coordinate frame (REC-18-A02)](../point-07-operations.json) | 7 / 4 | Select one source image and a mesh-producing model contract (REC-18-A01) | 1 | source_supported_action_specification |
+| 237 | [Evaluate visible fit and gate geometric reuse by independent evidence (REC-18-A03)](../point-07-operations.json) | 7 / 4 | Generate and preserve the proxy mesh and its coordinate frame (REC-18-A02) | 1 | source_supported_action_specification |
+| 238 | [Train and save a renderable NeRF state (REC-20-A02)](../point-07-operations.json) | 7 / 4 | Bind NeRF method, supplied cameras and training-space transforms (REC-20-A01) | 0 | source_supported_action_specification |
+| 239 | [Validate scene appearance and any separately extracted geometry (REC-20-A03)](../point-07-operations.json) | 7 / 4 | Train and save a renderable NeRF state (REC-20-A02) | 0 | source_supported_action_specification |
+| 240 | [Execute the selected typed training route and package its scene (REC-11-A02)](../point-07-operations.json) | 7 / 4 | Choose the actual renderable scene subtype and consumer (REC-11-A01) | 0 | source_supported_action_specification |
+| 241 | [Validate scene use and proposed appearance/mesh/CAD composition (REC-11-A03)](../point-07-operations.json) | 7 / 4 | Execute the selected typed training route and package its scene (REC-11-A02) | 0 | source_supported_action_specification |
+| 242 | [Build the Gaussian scene and preserve domain mappings (DOM-22-A02)](../point-07-operations.json) | 7 / 4 | Bind the domain Gaussian scene contract (DOM-22-A01) | 0 | source_supported_action_specification |
+| 243 | [Check domain appearance and explicit geometric overlays (DOM-22-A03)](../point-07-operations.json) | 7 / 4 | Build the Gaussian scene and preserve domain mappings (DOM-22-A02) | 0 | source_supported_action_specification |
+| 244 | [Train and package the domain NeRF state (DOM-30-A02)](../point-07-operations.json) | 7 / 4 | Bind domain features and cameras to the NeRF route (DOM-30-A01) | 0 | source_supported_action_specification |
+| 245 | [Evaluate domain viewing results and optional surface reuse (DOM-30-A03)](../point-07-operations.json) | 7 / 4 | Train and package the domain NeRF state (DOM-30-A02) | 0 | source_supported_action_specification |
 
 ## Action-specific implementation work
 
 ### 1. Preserve the input revision and state the job boundary (INTAKE-A01)
 
-Original action: [Preserve the input revision and state the job boundary](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Preserve the input revision and state the job boundary](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Add a per-job source-index and scope-record adapter using standard-library hashing and the existing provenance fields; retain original bytes and correction references.
 
@@ -280,21 +280,21 @@ Inputs: read the current request, supplied descriptions and explicit values; ide
 
 Output/check: source index plus a scope statement; every retained source has an identity and every explicit correction points to the statement it changes. The original can be reopened from its recorded location.
 
-Dependencies: [project instructions](/home/leo/projects/3dmodeling/AGENTS.md), research registration rules 1–7; [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md), modeling contract steps 1–2.
+Dependencies: [project instructions](../../../AGENTS.md), research registration rules 1–7; OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), modeling contract steps 1–2.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [build_workflow_register.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py). Source identity/hash and report registration conventions; per-job interface is proposed.
+Reuse: [build_workflow_register.py](../../tools/build_workflow_register.py). Source identity/hash and report registration conventions; per-job interface is proposed.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 2. Bind checks to actual artifacts and source criteria (CAD-13-A01)
 
-Original action: [Bind checks to actual artifacts and source criteria](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-13 — Verify model geometry and saved output.
+Original action: [Bind checks to actual artifacts and source criteria](../point-03-operations.json). Operations: CAD-13 — Verify model geometry and saved output.
 
 Implementation proposal: Add feature/source criteria binding around the existing supplied-measurement checker; group only compatible numerical criteria and retain each feature identity.
 
@@ -310,13 +310,13 @@ Dependencies: Native measurement APIs and actual independent consumer; OCS numer
 
 Resources: Metadata planning first; local CPU small relative to geometry queries for the same artifact. Remote/manual review concerns source associations and criteria.
 
-Reuse: [check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
+Reuse: check_contract.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py`). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
 
-Source-supported tools: OCS read/measure/audit/save_verified, FreeCAD B-rep readback, build123d/CadQuery shape checks, independent importer, mesh validation. Original evidence: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [https://build123d.readthedocs.io/en/stable/](https://build123d.readthedocs.io/en/stable/).
+Source-supported tools: OCS read/measure/audit/save_verified, FreeCAD B-rep readback, build123d/CadQuery shape checks, independent importer, mesh validation. Original evidence: ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), [https://build123d.readthedocs.io/en/stable/](https://build123d.readthedocs.io/en/stable/).
 
 ### 3. Identify the exact library item and retained files (DOM-06-A01)
 
-Original action: [Identify the exact library item and retained files](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
+Original action: [Identify the exact library item and retained files](../point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
 
 Implementation proposal: Proposal: item intake helper with separate item, file, source and occurrence identities.
 
@@ -332,13 +332,13 @@ Dependencies: Existing library/source records and standard file/hash tools; cata
 
 Resources: Local metadata/hash work first; source inspection/manual identity effort recorded separately. Remote model work uses item labels/views; external retrieval remains its authorized research action.
 
-Reuse: [build_workflow_register.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py). Source identity/hash and report registration conventions; per-job interface is proposed.
+Reuse: [build_workflow_register.py](../../tools/build_workflow_register.py). Source identity/hash and report registration conventions; per-job interface is proposed.
 
 Source-supported tools: component registry/schema proposal; source license review. Original evidence: [https://www.freecad.org/addons.php?lang=eng_EN](https://www.freecad.org/addons.php?lang=eng_EN), [https://www.kicad.org/libraries/license/](https://www.kicad.org/libraries/license/), [https://github.com/google-deepmind/mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie), [https://polyhaven.com/license](https://polyhaven.com/license), [https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280](https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280).
 
 ### 4. Define collision scope and contact features (DOM-13-A01)
 
-Original action: [Define collision scope and contact features](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-13 — Generate convex collision set.
+Original action: [Define collision scope and contact features](../point-06-operations.json). Operations: DOM-13 — Generate convex collision set.
 
 Implementation proposal: Proposal: collision intake partitions by rigid body and emits protected-feature/criteria records.
 
@@ -358,7 +358,7 @@ Source-supported tools: CoACD; V-HACD; primitive fitting. Original evidence: [ht
 
 ### 5. Define feature evidence and all required editable outputs (REC-14-A01)
 
-Original action: [Define feature evidence and all required editable outputs](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-14 — Remodel segmented scan evidence as parametric CAD.
+Original action: [Define feature evidence and all required editable outputs](../point-05-operations.json). Operations: REC-14 — Remodel segmented scan evidence as parametric CAD.
 
 Implementation proposal: Proposal: remodeling planner emits feature dependencies and required artifact/output capability matrix.
 
@@ -378,7 +378,7 @@ Source-supported tools: Open3D feature fits, OpenCADStudio OCS skill, parametric
 
 ### 6. Select the execution mode and define candidate branches (INTAKE-A02)
 
-Original action: [Select the execution mode and define candidate branches](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Select the execution mode and define candidate branches](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Encode the existing execution-mode/branch instructions as a reusable agent task with branch input/output ownership and recorded reasons.
 
@@ -390,21 +390,21 @@ Inputs: use the preserved source set to identify which records are explicit and 
 
 Output/check: a branch plan naming the source corpus revision, branch source subset, assigned actions, intended use, required coverage/detail, feature accuracy criteria, component rationale, output ownership, resource-record requirements and evaluation conditions. Verify that every branch receives the same controlling source revisions and that its proposed detail/accuracy target follows the requested use.
 
-Dependencies: [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md), source intake and proposed skills; [project instructions](/home/leo/projects/3dmodeling/AGENTS.md), bounded parallel contribution and evidence separation. Branch composition is a proposal.
+Dependencies: [implementation plan](../../implementation-plan.md), source intake and proposed skills; [project instructions](../../../AGENTS.md), bounded parallel contribution and evidence separation. Branch composition is a proposal.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 7. Extract source claims and associate each value with its subject (INTAKE-A03)
 
-Original action: [Extract source claims and associate each value with its subject](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Extract source claims and associate each value with its subject](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Add extraction adapters retaining original tokens and locations; validate JSON duplicate keys/nonfinite values and CSV dialect; keep semantic association in the agent step.
 
-Software: copy machine-readable text and tabular cells with their locations and original formatting. Preserve the original numeric token, signs, decimal separator, unit label, inequality and tolerance notation. For JSON, detect duplicate object names through `object_pairs_hook` before creating a dictionary; reject `NaN`, `Infinity` and `-Infinity` through `parse_constant` and check parsed numerical finiteness. Preserve numeric token strings using the appropriate parsing callbacks. For CSV, record encoding/dialect and retain field strings through extraction. A parser reports rejected or ambiguous tokens as exceptions. These behaviors follow the official-library findings in the [source lookup](/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md).
+Software: copy machine-readable text and tabular cells with their locations and original formatting. Preserve the original numeric token, signs, decimal separator, unit label, inequality and tolerance notation. For JSON, detect duplicate object names through `object_pairs_hook` before creating a dictionary; reject `NaN`, `Infinity` and `-Infinity` through `parse_constant` and check parsed numerical finiteness. Preserve numeric token strings using the appropriate parsing callbacks. For CSV, record encoding/dialect and retain field strings through extraction. A parser reports rejected or ambiguous tokens as exceptions. These behaviors follow the official-library findings in the [source lookup](../reviews/source-check.md).
 
 Agent: name the component, feature and property to which each claim refers. Link a pronoun, repeated name or shorthand only when the cited context supports that association. For visual annotations, a VLM cites the source image/page and relevant region and distinguishes the label from the feature it labels.
 
@@ -412,19 +412,19 @@ Inputs: read each supplied statement and value in the preserved sources.
 
 Output/check: a claim record for every relevant statement or value: source location, original text, subject, proposed meaning, evidence status and branch identity. Compare the extracted claims against the original source; count and name omitted or duplicated source items.
 
-Dependencies: [CAD-01](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), preservation/check requirements; [DOM-01](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), original wording and evidence status; [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md), source-view inspection; original [JSON](https://docs.python.org/3/library/json.html) and [CSV](https://docs.python.org/3/library/csv.html) documentation inspected by the source-lookup role.
+Dependencies: [CAD-01](../../workflows/cad-paths.json), preservation/check requirements; [DOM-01](../../workflows/domain-paths.json), original wording and evidence status; OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), source-view inspection; original [JSON](https://docs.python.org/3/library/json.html) and [CSV](https://docs.python.org/3/library/csv.html) documentation inspected by the source-lookup role.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 8. Identify components, features and geometric relationships (INTAKE-A04)
 
-Original action: [Identify components, features and geometric relationships](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Identify components, features and geometric relationships](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Add reference/name consistency checks around the existing component/feature association procedure.
 
@@ -436,19 +436,19 @@ Inputs: organize the source claims into the component and feature structure need
 
 Output/check: a component/feature list and a relationship list, each with source pointers and dependencies. Check that a component named in a dimension exists and that a relation points to the intended features on both sides.
 
-Dependencies: [OCS model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md), named separate parts, connections/motion and measurable invariants; [CAD-01](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), component boundaries and geometry intent.
+Dependencies: OCS model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`), named separate parts, connections/motion and measurable invariants; [CAD-01](../../workflows/cad-paths.json), component boundaries and geometry intent.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 9. Normalize explicit quantities, units, datums and frames (INTAKE-A05)
 
-Original action: [Normalize explicit quantities, units, datums and frames](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Normalize explicit quantities, units, datums and frames](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Add explicit quantity/unit conversion and frame records around the existing normalization procedure; keep semantic datum selection with the agent.
 
@@ -460,19 +460,19 @@ Inputs: convert source-linked claims into quantities a later model can consume w
 
 Output/check: per-feature quantity records with original/normalized values, units, source location, datum, frame and value status. Recompute each permitted unit conversion; verify that source/target quantity types match and that each positional value names its reference.
 
-Dependencies: [DOM-01](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), unit normalization and preserved source frames; [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md), units/origin/axes/datums; [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md), interchange and reproducibility checks.
+Dependencies: [DOM-01](../../workflows/domain-paths.json), unit normalization and preserved source frames; OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), units/origin/axes/datums; [implementation plan](../../implementation-plan.md), interchange and reproducibility checks.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 10. Record per-feature tolerance and evidence requirements (INTAKE-A06)
 
-Original action: [Record per-feature tolerance and evidence requirements](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Record per-feature tolerance and evidence requirements](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Add per-feature criteria records distinguishing engineering allowance, source uncertainty and numerical checks.
 
@@ -484,19 +484,19 @@ Inputs: connect each geometry check to the acceptance rule and evidence that app
 
 Output/check: for every controlling feature, record component/feature name, quantity or relation, nominal value if applicable, units/frame, tolerance form/value, tolerance source and scope, evidence uncertainty, intended check and responsible decision record. Verify each tolerance against the cited requirement. Preserve features whose pending question blocks a particular numerical check, with the exact question and affected downstream action.
 
-Dependencies: [OCS model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md), selected dimensions/tolerances and check interface; [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md), component geometry and verification specification; [project instructions](/home/leo/projects/3dmodeling/AGENTS.md), sourced engineering values.
+Dependencies: OCS model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`), selected dimensions/tolerances and check interface; [implementation plan](../../implementation-plan.md), component geometry and verification specification; [project instructions](../../../AGENTS.md), sourced engineering values.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 11. Evaluate candidate briefs against their source evidence (INTAKE-A07)
 
-Original action: [Evaluate candidate briefs against their source evidence](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Evaluate candidate briefs against their source evidence](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Package candidate-to-source review as an action-specific agent instruction with software coverage comparisons.
 
@@ -508,19 +508,19 @@ Inputs: compare the isolated candidate records against the frozen source revisio
 
 Output/check: an evidence assessment for each differing record, the source region/passage, numerical checks, branch identity, evaluator identity and proposed selection. Verify that every selected claim points to an input source or a separately recorded user decision.
 
-Dependencies: [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md), source inspection and distinction between visual inspection and measured checks; [CAD-01](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), source/value preservation. Candidate evaluation by a VLM is a proposed composition of these requirements.
+Dependencies: OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), source inspection and distinction between visual inspection and measured checks; [CAD-01](../../workflows/cad-paths.json), source/value preservation. Candidate evaluation by a VLM is a proposed composition of these requirements.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 12. Select supported records and merge compatible contributions (INTAKE-A08)
 
-Original action: [Select supported records and merge compatible contributions](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Select supported records and merge compatible contributions](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Add a contribution merge adapter preserving compatible records and conflicting alternatives with their sources.
 
@@ -532,19 +532,19 @@ Inputs: produce one coherent brief from evaluated candidates and recorded user d
 
 Output/check: merged brief plus a selection record containing retained candidate contributions, discarded candidate interpretations with reasons, preserved conflicts and sources. Recheck every cross-feature relationship affected by the merge.
 
-Dependencies: [CAD-01](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), source associations and unresolved choices; [DOM-01](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), preserved units/frames/status; [project instructions](/home/leo/projects/3dmodeling/AGENTS.md), proposal and decision separation. Record selection/merge is a proposal.
+Dependencies: [CAD-01](../../workflows/cad-paths.json), source associations and unresolved choices; [DOM-01](../../workflows/domain-paths.json), preserved units/frames/status; [project instructions](../../../AGENTS.md), proposal and decision separation. Record selection/merge is a proposal.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 13. Validate the merged brief independently (INTAKE-A09)
 
-Original action: [Validate the merged brief independently](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Validate the merged brief independently](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Package independent merged-brief reread plus structural/reference checks; retain reviewer identity and observations.
 
@@ -556,19 +556,19 @@ Inputs: inspect the exact merged revision for numerical, referential and semanti
 
 Output/check: per-feature/action status with the exact test, source and result. Use `READY — source extraction` for recorded literal value/source correspondence and `READY — named geometry operation` when the feature supplies that operation's required evidence and decisions. Use `BLOCKED — named prerequisite` with the source conflict/question and exact dependent operation. Carry a controlling feature's blocked prerequisite to the placements/relations that depend on it. The brief also records the current artifact revision and source revisions.
 
-Dependencies: [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md), verification/reproducibility requirements; [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md), measured checks and corresponding visual inspection; [CAD-01](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), provenance and ambiguity checks.
+Dependencies: [implementation plan](../../implementation-plan.md), verification/reproducibility requirements; OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), measured checks and corresponding visual inspection; [CAD-01](../../workflows/cad-paths.json), provenance and ambiguity checks.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 14. Deliver the brief and specify the downstream handoff (INTAKE-A10)
 
-Original action: [Deliver the brief and specify the downstream handoff](/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
+Original action: [Deliver the brief and specify the downstream handoff](../point-01-model-brief.md). Operations: CAD-01 — Extract a model brief from text and dimensions, DOM-01 — Normalize model brief.
 
 Implementation proposal: Add consumer-input and artifact-revision checks for the existing brief handoff procedure.
 
@@ -580,19 +580,19 @@ Inputs: save the checked brief revision and state which subsequent actions can c
 
 Output/check: one documented brief revision and a named next action or exact input request for each feature branch. A subsequent source change starts from Action 01's revision step and invalidates only the affected downstream records. Handoff checks: link each next action to the feature records it needs, its applicable tolerances and its later geometry measurement plan. Retain original source wording and proposal/decision statuses. Check that the consumer receives a single identified brief revision.
 
-Dependencies: [CAD-09/CAD-10 — Constrained sketch/kernel solid operations](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json); [DOM-04/DOM-40 — Native CAD/script-parametric authoring](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json); [implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md), source ownership and verification.
+Dependencies: [CAD-09/CAD-10 — Constrained sketch/kernel solid operations](../../workflows/cad-paths.json); [DOM-04/DOM-40 — Native CAD/script-parametric authoring](../../workflows/domain-paths.json); [implementation plan](../../implementation-plan.md), source ownership and verification.
 
 Resources: Local file I/O, hashing/text records and optional remote reasoning; per-action requirements remain in the first-point table.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Source/feature association, unit/frame, checking and provenance instructions for the corresponding action; retain the original action-specific procedure.
 
-Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: model brief schema, human review, OCS engineering skill. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
-Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: existing OCS engineering skill; structured project schema proposal. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 15. Bind image identities calibration groups and sparse-solve settings (REC-03-A01)
 
-Original action: [Bind image identities calibration groups and sparse-solve settings](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-03 — Estimate camera poses and sparse structure from overlapping photos.
+Original action: [Bind image identities calibration groups and sparse-solve settings](../point-07-operations.json). Operations: REC-03 — Estimate camera poses and sparse structure from overlapping photos.
 
 Implementation proposal: Proposal: SfM intake emits per-image camera/model/mask records and explicit scale status.
 
@@ -612,7 +612,7 @@ Source-supported tools: COLMAP/pycolmap, AliceVision/Meshroom, OpenMVG. Original
 
 ### 16. Freeze comparison baseline and bounded edit scope (REC-16-A01)
 
-Original action: [Freeze comparison baseline and bounded edit scope](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-16 — Iterate CAD edits against registered evidence.
+Original action: [Freeze comparison baseline and bounded edit scope](../point-05-operations.json). Operations: REC-16 — Iterate CAD edits against registered evidence.
 
 Implementation proposal: Proposal: edit-baseline binder emits immutable comparison inputs and bounded feature plan.
 
@@ -632,7 +632,7 @@ Source-supported tools: OCS revision-bound edit/readback, Open3D distance querie
 
 ### 17. Select geometry occurrence and mesh role (DOM-12-A01)
 
-Original action: [Select geometry occurrence and mesh role](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-12 — Export mesh assets for MuJoCo.
+Original action: [Select geometry occurrence and mesh role](../point-06-operations.json). Operations: DOM-12 — Export mesh assets for MuJoCo.
 
 Implementation proposal: Proposal: mesh planner emits source occurrences, target body frames and role-specific export settings.
 
@@ -648,11 +648,11 @@ Dependencies: Point03 native geometry; supported exporter and selected MuJoCo fo
 
 Resources: Metadata/selected regions precede full tessellation; remote/manual role review separate.
 
-Source-supported tools: CAD mesh exporter; Blender; Open CASCADE tessellation. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: CAD mesh exporter; Blender; Open CASCADE tessellation. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 18. Pin source definitions and assembly roles (CAD-12-A01)
 
-Original action: [Pin source definitions and assembly roles](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
+Original action: [Pin source definitions and assembly roles](../point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
 
 Implementation proposal: Proposal: definition intake helper preserving identity, unit/frame and representation with a source/occurrence distinction.
 
@@ -668,13 +668,13 @@ Dependencies: Existing source records, native CAD reader and OCS skill; operatio
 
 Resources: Local metadata/hash CPU and file I/O first; geometry inspection scales with file size. Remote reasoning only for ambiguous identity; log model calls and active source review.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
 
-Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
+Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
 
 ### 19. Resolve rigid links from authored assembly relations (DOM-08-A01)
 
-Original action: [Resolve rigid links from authored assembly relations](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-08 — CAD assembly to articulated robot structure.
+Original action: [Resolve rigid links from authored assembly relations](../point-06-operations.json). Operations: DOM-08 — CAD assembly to articulated robot structure.
 
 Implementation proposal: Proposal: link mapper accepts occurrences/joints/measurements and emits link memberships plus unmapped references.
 
@@ -694,7 +694,7 @@ Source-supported tools: FreeCAD Assembly Workbench; explicit robot-description a
 
 ### 20. Validate sparse-to-dense image and camera handoff (REC-17-A01)
 
-Original action: [Validate sparse-to-dense image and camera handoff](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-17 — Build dense point cloud and mesh from SfM camera solution.
+Original action: [Validate sparse-to-dense image and camera handoff](../point-07-operations.json). Operations: REC-17 — Build dense point cloud and mesh from SfM camera solution.
 
 Implementation proposal: Proposal: dense intake emits source-to-undistorted image/camera map and compatible workspace receipt.
 
@@ -714,7 +714,7 @@ Source-supported tools: OpenMVS DensifyPointCloud, OpenMVS ReconstructMesh, COLM
 
 ### 21. Classify the component change and identify new bytes (DOM-26-A01)
 
-Original action: [Classify the component change and identify new bytes](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
+Original action: [Classify the component change and identify new bytes](../point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
 
 Implementation proposal: Proposal: revision-diff helper separating source bytes, rights evidence, metadata and geometry derivatives.
 
@@ -730,13 +730,13 @@ Dependencies: Existing content hashes and completed required intake references; 
 
 Resources: Local hashing/I/O first; cost scales with asset bytes. Remote/manual work is limited to identity and semantic change classification.
 
-Reuse: [build_workflow_register.py](/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py). Source identity/hash and report registration conventions; per-job interface is proposed.
+Reuse: [build_workflow_register.py](../../tools/build_workflow_register.py). Source identity/hash and report registration conventions; per-job interface is proposed.
 
-Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 22. Select a supported solid feature route (CAD-10-A01)
 
-Original action: [Select a supported solid feature route](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-10 — Create a kernel solid and native model document from confirmed parameters.
+Original action: [Select a supported solid feature route](../point-03-operations.json). Operations: CAD-10 — Create a kernel solid and native model document from confirmed parameters.
 
 Implementation proposal: Proposal: feature capability planner with explicit profile, operand and representation prerequisites.
 
@@ -752,13 +752,13 @@ Dependencies: OCS SolidOperation enum/source implements create, rigid transform,
 
 Resources: Metadata/profile checks first; local CPU/RAM scales with feature/operand complexity. High-reasoning agent handles ambiguous topology/sequence; record manual decisions.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md), [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Source-defined feature route and component representation decisions.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`), ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Source-defined feature route and component representation decisions.
 
-Source-supported tools: OpenCADStudio kernel tools, FreeCAD PartDesign/Part, build123d, CadQuery. Original evidence: [https://build123d.readthedocs.io/en/latest/operations.html](https://build123d.readthedocs.io/en/latest/operations.html), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/), [https://openscad.org/documentation](https://openscad.org/documentation), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md), [/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md).
+Source-supported tools: OpenCADStudio kernel tools, FreeCAD PartDesign/Part, build123d, CadQuery. Original evidence: [https://build123d.readthedocs.io/en/latest/operations.html](https://build123d.readthedocs.io/en/latest/operations.html), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/), [https://openscad.org/documentation](https://openscad.org/documentation), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md), ${OCS_ROOT}/docs/cadkernel-body-path.md (`${OCS_ROOT}/docs/cadkernel-body-path.md`).
 
 ### 23. Identify plane evidence and independent metric controls (CAD-02-A01)
 
-Original action: [Identify plane evidence and independent metric controls](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-02 — Rectify a raster drawing plane from known dimensions.
+Original action: [Identify plane evidence and independent metric controls](../point-04-operations.json). Operations: CAD-02 — Rectify a raster drawing plane from known dimensions.
 
 Implementation proposal: Proposal: plane preflight consumes image/control evidence and emits model sufficiency, control roles and check IDs.
 
@@ -778,7 +778,7 @@ Source-supported tools: OpenCV point correspondences, planar homography. Origina
 
 ### 24. Separate stroke classes and inspect source regions (CAD-04-A01)
 
-Original action: [Separate stroke classes and inspect source regions](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-04 — Extract raster edges, lines and contours.
+Original action: [Separate stroke classes and inspect source regions](../point-04-operations.json). Operations: CAD-04 — Extract raster edges, lines and contours.
 
 Implementation proposal: Proposal: stroke preflight emits source-mapped class masks and ambiguous regions.
 
@@ -798,7 +798,7 @@ Source-supported tools: OpenCV thresholding, HoughLinesP, findContours, approxPo
 
 ### 25. Select calibrated target observations and hold-out views (REC-01-A01)
 
-Original action: [Select calibrated target observations and hold-out views](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-01 — Calibrate camera intrinsics and distortion.
+Original action: [Select calibrated target observations and hold-out views](../point-05-operations.json). Operations: REC-01 — Calibrate camera intrinsics and distortion.
 
 Implementation proposal: Proposal: target-observation collector returns point identities, coverage and exclusions.
 
@@ -818,7 +818,7 @@ Source-supported tools: OpenCV calibrateCamera, checkerboard or Charuco target. 
 
 ### 26. Select physical-property evidence per rigid body (DOM-14-A01)
 
-Original action: [Select physical-property evidence per rigid body](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-14 — Calculate or import physical mass properties.
+Original action: [Select physical-property evidence per rigid body](../point-06-operations.json). Operations: DOM-14 — Calculate or import physical mass properties.
 
 Implementation proposal: Proposal: property intake emits per-field provenance, reference point/axes and required calculation inputs.
 
@@ -834,11 +834,11 @@ Dependencies: DOM-08 rigid grouping; actual geometry integration capability.
 
 Resources: Metadata checks first; mesh validity cost follows triangles; manual metrology separate.
 
-Source-supported tools: CAD kernel mass properties; MuJoCo compiler geom inference; measured scale. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: CAD kernel mass properties; MuJoCo compiler geom inference; measured scale. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 27. Define IFC-to-display identity and unit policy (DOM-17-A01)
 
-Original action: [Define IFC-to-display identity and unit policy](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-17 — IFC to GLB display scene.
+Original action: [Define IFC-to-display identity and unit policy](../point-06-operations.json). Operations: DOM-17 — IFC to GLB display scene.
 
 Implementation proposal: Proposal: scene planner emits element selection, node identity policy and preserved/lost field map.
 
@@ -854,11 +854,11 @@ Dependencies: IfcOpenShell/IfcConvert GLB source capability; optional Blender ch
 
 Resources: Local mapping preflight first; remote/manual display semantics separate.
 
-Source-supported tools: IfcOpenShell IfcConvert; Blender; GLB export. Original evidence: [https://docs.ifcopenshell.org/introduction.html](https://docs.ifcopenshell.org/introduction.html), [https://www.blender.org/features/pipeline/](https://www.blender.org/features/pipeline/), [/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json](/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json).
+Source-supported tools: IfcOpenShell IfcConvert; Blender; GLB export. Original evidence: [https://docs.ifcopenshell.org/introduction.html](https://docs.ifcopenshell.org/introduction.html), [https://www.blender.org/features/pipeline/](https://www.blender.org/features/pipeline/), ${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json (`${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json`).
 
 ### 28. Bind environment to existing robot world frame (DOM-33-A01)
 
-Original action: [Bind environment to existing robot world frame](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-33 — Add environment collision geometry to MJCF.
+Original action: [Bind environment to existing robot world frame](../point-06-operations.json). Operations: DOM-33 — Add environment collision geometry to MJCF.
 
 Implementation proposal: Proposal: environment intake emits frame/contact dependencies and seed preservation snapshot.
 
@@ -878,7 +878,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 29. Bind sensor calibration timing and depth encoding (REC-05-A01)
 
-Original action: [Bind sensor calibration timing and depth encoding](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-05 — Register RGB and depth frames and estimate sequence poses.
+Original action: [Bind sensor calibration timing and depth encoding](../point-07-operations.json). Operations: REC-05 — Register RGB and depth frames and estimate sequence poses.
 
 Implementation proposal: Proposal: RGB-D intake emits calibrated frame pairs, depth units/validity and source-to-target camera mapping.
 
@@ -898,7 +898,7 @@ Source-supported tools: Open3D RGB-D odometry, sensor SDK calibration, Open3D ca
 
 ### 30. Resolve fusion grid and pose convention (REC-06-A01)
 
-Original action: [Resolve fusion grid and pose convention](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-06 — Integrate calibrated RGB-D frames into point cloud or TSDF mesh.
+Original action: [Resolve fusion grid and pose convention](../point-07-operations.json). Operations: REC-06 — Integrate calibrated RGB-D frames into point cloud or TSDF mesh.
 
 Implementation proposal: Proposal: fusion preflight emits per-frame integration transform and units/settings receipt.
 
@@ -918,7 +918,7 @@ Source-supported tools: Open3D ScalableTSDFVolume, Open3D RGBDImage, Open3D marc
 
 ### 31. Prepare a Gaussian training dataset with verified camera mapping (REC-19-A01)
 
-Original action: [Prepare a Gaussian training dataset with verified camera mapping](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-19 — Train and export a Gaussian splat scene.
+Original action: [Prepare a Gaussian training dataset with verified camera mapping](../point-07-operations.json). Operations: REC-19 — Train and export a Gaussian splat scene.
 
 Implementation proposal: PROPOSAL Gaussian dataset adapter: photos + supplied cameras + selected parser/config → training dataset, camera/world normalization receipt, readback differences and participation table.
 
@@ -938,7 +938,7 @@ Source-supported tools: Nerfstudio Splatfacto / gsplat, Gaussian PLY export. Ori
 
 ### 32. Inspect source entities, units and drawing contexts (CAD-08-A01)
 
-Original action: [Inspect source entities, units and drawing contexts](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-08 — Read and clean vector drawing geometry.
+Original action: [Inspect source entities, units and drawing contexts](../point-03-operations.json). Operations: CAD-08 — Read and clean vector drawing geometry.
 
 Implementation proposal: Proposal: drawing preflight retaining entity IDs, nested transforms, unit evidence and importer option receipt.
 
@@ -954,11 +954,11 @@ Dependencies: Documented FreeCAD DXF/SVG import and ezdxf APIs; OCS read/schema 
 
 Resources: Metadata/stream reading first; local CPU/RAM grows with entities/nesting. Remote VLM uses original views for selection; record manual source-review effort.
 
-Source-supported tools: OpenCADStudio DWG/DXF/MCP, FreeCAD Draft DXF/SVG import, ezdxf, geometry audit. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md), [https://ezdxf.readthedocs.io/en/stable/](https://ezdxf.readthedocs.io/en/stable/), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md).
+Source-supported tools: OpenCADStudio DWG/DXF/MCP, FreeCAD Draft DXF/SVG import, ezdxf, geometry audit. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md), [https://ezdxf.readthedocs.io/en/stable/](https://ezdxf.readthedocs.io/en/stable/), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`).
 
 ### 33. Map curves and sourced constraints to a sketch plan (CAD-09-A01)
 
-Original action: [Map curves and sourced constraints to a sketch plan](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-09 — Build and constrain an editable planar sketch.
+Original action: [Map curves and sourced constraints to a sketch plan](../point-03-operations.json). Operations: CAD-09 — Build and constrain an editable planar sketch.
 
 Implementation proposal: Proposal: source-to-sketch constraint mapper with stable geometry IDs and intended freedom records.
 
@@ -974,11 +974,11 @@ Dependencies: FreeCAD Sketcher addGeometry/addConstraint documentation; OCS sket
 
 Resources: Local mapping checks depend on entity/constraint count. High-reasoning/VLM review addresses ambiguous relation meaning; record manual decisions.
 
-Source-supported tools: FreeCAD Sketcher scripting, FreeCAD Draft-to-Sketch, OpenCADStudio sketch/constraint capability as discovered in session. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: FreeCAD Sketcher scripting, FreeCAD Draft-to-Sketch, OpenCADStudio sketch/constraint capability as discovered in session. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 34. Locate annotations and retain crop mappings (CAD-03-A01)
 
-Original action: [Locate annotations and retain crop mappings](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
+Original action: [Locate annotations and retain crop mappings](../point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
 
 Implementation proposal: Proposal: annotation-region helper emits mapped crops and contextual source locations.
 
@@ -998,7 +998,7 @@ Source-supported tools: Tesseract OCR TSV output, image crop/deskew, human trans
 
 ### 35. Identify views and declare their projection frames (CAD-06-A01)
 
-Original action: [Identify views and declare their projection frames](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-06 — Register orthographic drawing views in a shared coordinate frame.
+Original action: [Identify views and declare their projection frames](../point-04-operations.json). Operations: CAD-06 — Register orthographic drawing views in a shared coordinate frame.
 
 Implementation proposal: Proposal: view manifest accepts vector bundle/metadata and outputs explicit view-to-model projection definitions.
 
@@ -1018,7 +1018,7 @@ Source-supported tools: view segmentation, projection-axis declaration, line/ver
 
 ### 36. Enumerate source-constrained 3D feature candidates (CAD-07-A01)
 
-Original action: [Enumerate source-constrained 3D feature candidates](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
+Original action: [Enumerate source-constrained 3D feature candidates](../point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
 
 Implementation proposal: Proposal: reconstruction hypothesis builder emits source-linked candidate edges/features and unresolved dependencies.
 
@@ -1038,7 +1038,7 @@ Source-supported tools: multi-view edge correspondence, wireframe/face reconstru
 
 ### 37. Select observed regions and preserve point membership (REC-09-A01)
 
-Original action: [Select observed regions and preserve point membership](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-09 — Segment point clouds and fit candidate primitive evidence.
+Original action: [Select observed regions and preserve point membership](../point-05-operations.json). Operations: REC-09 — Segment point clouds and fit candidate primitive evidence.
 
 Implementation proposal: Proposal: region selector emits immutable point-membership and coverage manifests.
 
@@ -1058,7 +1058,7 @@ Source-supported tools: Open3D segment_plane, Open3D DBSCAN, CloudCompare scalar
 
 ### 38. Bind exact CAD and observation-route evidence (REC-12-A01)
 
-Original action: [Bind exact CAD and observation-route evidence](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-12 — Register existing CAD to calibrated photographs or scan points.
+Original action: [Bind exact CAD and observation-route evidence](../point-05-operations.json). Operations: REC-12 — Register existing CAD to calibrated photographs or scan points.
 
 Implementation proposal: Proposal: CAD observation binder emits route-specific geometry/control manifests.
 
@@ -1078,7 +1078,7 @@ Source-supported tools: CAD tessellation with named 3D landmarks, OpenCV solvePn
 
 ### 39. Check literal package inputs and supported URDF tree (DOM-09-A01)
 
-Original action: [Check literal package inputs and supported URDF tree](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-09 — Robot assembly to URDF package.
+Original action: [Check literal package inputs and supported URDF tree](../point-06-operations.json). Operations: DOM-09 — Robot assembly to URDF package.
 
 Implementation proposal: Proposal: URDF preflight emits literal-input receipt, supported tree and per-role readiness.
 
@@ -1098,7 +1098,7 @@ Source-supported tools: URDF XML/Xacro authoring; ROS urdf_tutorial; CAD-to-URDF
 
 ### 40. Select IFC elements and triangle extraction policy (DOM-16-A01)
 
-Original action: [Select IFC elements and triangle extraction policy](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-16 — Extract IFC geometry as triangles.
+Original action: [Select IFC elements and triangle extraction policy](../point-06-operations.json). Operations: DOM-16 — Extract IFC geometry as triangles.
 
 Implementation proposal: Proposal: extraction planner emits element IDs, settings and expected output frame/unit contract.
 
@@ -1118,7 +1118,7 @@ Source-supported tools: IfcOpenShell geom.create_shape/iterator; IfcConvert. Ori
 
 ### 41. Resolve scene input branch and actual adapter (DOM-24-A01)
 
-Original action: [Resolve scene input branch and actual adapter](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-24 — Assemble and inspect Blender scene.
+Original action: [Resolve scene input branch and actual adapter](../point-06-operations.json). Operations: DOM-24 — Assemble and inspect Blender scene.
 
 Implementation proposal: Proposal: scene intake emits selected variant, object/camera map and importer prerequisites.
 
@@ -1138,7 +1138,7 @@ Source-supported tools: Blender Python API; Blender MCP; background Blender scri
 
 ### 42. Bind library asset and target IFC placement meaning (DOM-35-A01)
 
-Original action: [Bind library asset and target IFC placement meaning](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-35 — Place library component in semantic IFC.
+Original action: [Bind library asset and target IFC placement meaning](../point-06-operations.json). Operations: DOM-35 — Place library component in semantic IFC.
 
 Implementation proposal: Proposal: component-to-IFC planner emits source/target identities, required semantics and representation capability.
 
@@ -1158,7 +1158,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 43. Resolve literal photo input and cloud detail target (DOM-20-A01)
 
-Original action: [Resolve literal photo input and cloud detail target](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-20 — Photos/video to camera solution, point cloud and mesh.
+Original action: [Resolve literal photo input and cloud detail target](../point-07-operations.json). Operations: DOM-20 — Photos/video to camera solution, point cloud and mesh.
 
 Implementation proposal: Proposal: domain photo intake distinguishes typed photo input from video upstream and mesh downstream dependencies.
 
@@ -1174,11 +1174,11 @@ Dependencies: REC-03 and optional REC-17 dense stages.
 
 Resources: Local metadata/source review first; remote/manual coverage choices separate.
 
-Source-supported tools: COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 44. Declare plan conventions and wall/opening candidates (CAD-05-A01)
 
-Original action: [Declare plan conventions and wall/opening candidates](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-05 — Convert raster floor-plan candidates into a wall and opening graph.
+Original action: [Declare plan conventions and wall/opening candidates](../point-04-operations.json). Operations: CAD-05 — Convert raster floor-plan candidates into a wall and opening graph.
 
 Implementation proposal: Proposal: plan candidate ledger accepts traced vectors/measurements and returns wall/opening roles and convention alternatives.
 
@@ -1198,7 +1198,7 @@ Source-supported tools: floor-plan segmentation/vectorization model or manual tr
 
 ### 45. Bind all five inputs and element-level building requirements (DOM-18-A01)
 
-Original action: [Bind all five inputs and element-level building requirements](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
+Original action: [Bind all five inputs and element-level building requirements](../point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
 
 Implementation proposal: Proposal: building intake binder emits linked source/control/asset/element manifest and feature prerequisites.
 
@@ -1214,11 +1214,11 @@ Dependencies: Point01 brief, point02 source-library checks, CAD-02/05 evidence; 
 
 Resources: Local manifests first; remote semantic interpretation and manual evidence acquisition recorded separately.
 
-Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
+Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
 
 ### 46. Freeze initialization and comparison objective (REC-08-A01)
 
-Original action: [Freeze initialization and comparison objective](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-08 — Refine registration and compare point-cloud surfaces.
+Original action: [Freeze initialization and comparison objective](../point-05-operations.json). Operations: REC-08 — Refine registration and compare point-cloud surfaces.
 
 Implementation proposal: Proposal: refinement preflight emits supported objective, overlap and observability diagnostics.
 
@@ -1238,7 +1238,7 @@ Source-supported tools: Open3D point-to-plane ICP, Open3D evaluate_registration,
 
 ### 47. Verify metric evidence and select functional features (CAD-11-A01)
 
-Original action: [Verify metric evidence and select functional features](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: CAD-11 — Fit analytic features to scans or image-derived point clouds.
+Original action: [Verify metric evidence and select functional features](../point-05-operations.json). Operations: CAD-11 — Fit analytic features to scans or image-derived point clouds.
 
 Implementation proposal: Proposal: analytic-fit intake emits feature/support/criteria manifest and unresolved prerequisites.
 
@@ -1254,11 +1254,11 @@ Dependencies: REC-09 evidence; supported calibrated-depth/mesh sampling adapter;
 
 Resources: Local source/control preflight precedes fitting; remote/manual feature identification recorded.
 
-Source-supported tools: point-cloud registration and segmentation, least-squares plane/cylinder/axis fits, FreeCAD/build123d. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/projects/architecture/research/README.md](/home/leo/projects/architecture/research/README.md).
+Source-supported tools: point-cloud registration and segmentation, least-squares plane/cylinder/axis fits, FreeCAD/build123d. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), ${ARCHITECTURE_ROOT}/research/README.md (`${ARCHITECTURE_ROOT}/research/README.md`).
 
 ### 48. Bind sketch view, camera and hit surface (REC-13-A01)
 
-Original action: [Bind sketch view, camera and hit surface](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-13 — Anchor a screen sketch to a 3D surface.
+Original action: [Bind sketch view, camera and hit surface](../point-05-operations.json). Operations: REC-13 — Anchor a screen sketch to a 3D surface.
 
 Implementation proposal: Proposal: anchor intake emits camera/ray conventions, surface selection and feature prerequisites.
 
@@ -1278,7 +1278,7 @@ Source-supported tools: Blender Scene.ray_cast, screen-to-camera ray projection,
 
 ### 49. Bind source revisions, datums and discrepancy purpose (REC-15-A01)
 
-Original action: [Bind source revisions, datums and discrepancy purpose](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-15 — Reconcile scan surfaces with dimensioned drawings.
+Original action: [Bind source revisions, datums and discrepancy purpose](../point-05-operations.json). Operations: REC-15 — Reconcile scan surfaces with dimensioned drawings.
 
 Implementation proposal: Proposal: reconciliation intake emits paired feature sources, datum choices and separate fit/check roles.
 
@@ -1298,7 +1298,7 @@ Source-supported tools: CAD drawing datums, Open3D/CloudCompare registration and
 
 ### 50. Resolve scan, building and survey frame definitions (DOM-19-A01)
 
-Original action: [Resolve scan, building and survey frame definitions](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: DOM-19 — Register scan to building frame.
+Original action: [Resolve scan, building and survey frame definitions](../point-05-operations.json). Operations: DOM-19 — Register scan to building frame.
 
 Implementation proposal: Proposal: building-frame resolver emits explicit unit/placement/map chains and control sufficiency.
 
@@ -1314,11 +1314,11 @@ Dependencies: IfcOpenShell read/placement/georeference APIs; actual sensor calib
 
 Resources: Local IFC/control parsing first; remote/manual datum/source review separate.
 
-Source-supported tools: COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 51. Bind assembly occurrences and motion evidence (DOM-31-A01)
 
-Original action: [Bind assembly occurrences and motion evidence](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-31 — Author assembly graph and joint set.
+Original action: [Bind assembly occurrences and motion evidence](../point-06-operations.json). Operations: DOM-31 — Author assembly graph and joint set.
 
 Implementation proposal: Proposal: graph intake maps occurrence IDs, source evidence and candidate rigid groups without editing source geometry.
 
@@ -1338,7 +1338,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 52. Bind sourced component to target robot role (DOM-37-A01)
 
-Original action: [Bind sourced component to target robot role](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-37 — Author robot assembly from CAD component.
+Original action: [Bind sourced component to target robot role](../point-06-operations.json). Operations: DOM-37 — Author robot assembly from CAD component.
 
 Implementation proposal: Proposal: attachment intake emits source component, parent context and unresolved interface dependencies.
 
@@ -1358,7 +1358,7 @@ Source-supported tools: FreeCAD Assembly Workbench or explicit CAD assembly auth
 
 ### 53. Bind native model roles and compiler policy (DOM-11-A01)
 
-Original action: [Bind native model roles and compiler policy](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-11 — Author native MJCF simulation model.
+Original action: [Bind native model roles and compiler policy](../point-06-operations.json). Operations: DOM-11 — Author native MJCF simulation model.
 
 Implementation proposal: Proposal: MJCF intake emits complete role/physical/source map and required model decisions.
 
@@ -1378,7 +1378,7 @@ Source-supported tools: MuJoCo MJCF XML and mjSpec API. Original evidence: [http
 
 ### 54. Pin seed model and map CAD occurrences to bodies (DOM-32-A01)
 
-Original action: [Pin seed model and map CAD occurrences to bodies](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-32 — Map CAD link geometry to MJCF body tree.
+Original action: [Pin seed model and map CAD occurrences to bodies](../point-06-operations.json). Operations: DOM-32 — Map CAD link geometry to MJCF body tree.
 
 Implementation proposal: Proposal: seed mapper emits body/occurrence correspondence, invariants and affected physics dependencies.
 
@@ -1398,7 +1398,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 55. Bind BIM-derived mesh and collider identities (DOM-34-A01)
 
-Original action: [Bind BIM-derived mesh and collider identities](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-34 — Author static MuJoCo environment from BIM mesh.
+Original action: [Bind BIM-derived mesh and collider identities](../point-06-operations.json). Operations: DOM-34 — Author static MuJoCo environment from BIM mesh.
 
 Implementation proposal: Proposal: BIM-environment intake emits static role/coverage and source-frame contract.
 
@@ -1418,7 +1418,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 56. Bind mandatory depth and measurement evidence (DOM-21-A01)
 
-Original action: [Bind mandatory depth and measurement evidence](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-21 — Depth frames to registered point cloud or mesh.
+Original action: [Bind mandatory depth and measurement evidence](../point-07-operations.json). Operations: DOM-21 — Depth frames to registered point cloud or mesh.
 
 Implementation proposal: Proposal: depth-domain intake emits mandatory-input receipt and point-cloud prerequisites.
 
@@ -1434,11 +1434,11 @@ Dependencies: REC-05 and point05 control/frame procedures.
 
 Resources: Local metadata/control checks first; manual sensor/target acquisition separate.
 
-Source-supported tools: Open3D; CloudCompare. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Open3D; CloudCompare. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 57. Bind supplied cameras and required surface outputs (DOM-28-A01)
 
-Original action: [Bind supplied cameras and required surface outputs](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-28 — Dense multi-view stereo to point cloud and mesh.
+Original action: [Bind supplied cameras and required surface outputs](../point-07-operations.json). Operations: DOM-28 — Dense multi-view stereo to point cloud and mesh.
 
 Implementation proposal: Proposal: domain dense planner emits image/camera/settings and cloud/mesh dependency graph.
 
@@ -1454,11 +1454,11 @@ Dependencies: REC-17 documented dense/meshing routes.
 
 Resources: Local manifest/control review before dense processing; remote/manual capture decisions separate.
 
-Source-supported tools: COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 58. Inspect point evidence normals and meshing assumptions (DOM-29-A01)
 
-Original action: [Inspect point evidence normals and meshing assumptions](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-29 — Point cloud to surface mesh.
+Original action: [Inspect point evidence normals and meshing assumptions](../point-07-operations.json). Operations: DOM-29 — Point cloud to surface mesh.
 
 Implementation proposal: Proposal: meshing intake emits validated geometric point set, normal lineage and method prerequisites.
 
@@ -1474,11 +1474,11 @@ Dependencies: Pinned Open3D surface/normal APIs; source-typed geometry adapter.
 
 Resources: Local schema/density checks and bounded regions before full meshing; normal search scales with samples/neighborhood.
 
-Source-supported tools: Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 59. Resolve source and target interface identities (DOM-07-A01)
 
-Original action: [Resolve source and target interface identities](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
+Original action: [Resolve source and target interface identities](../point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
 
 Implementation proposal: Proposal: datum resolver requiring explicit source/target frame direction and occurrence identity.
 
@@ -1494,11 +1494,11 @@ Dependencies: Native measurement/frame APIs; OCS contract; existing assembly-gra
 
 Resources: Local identity/measurement queries first; CPU/RAM depends on queried geometry. Remote VLM uses bounded cited views; record manual datum decisions.
 
-Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 60. Inspect STEP identity, structure and unit evidence (DOM-38-A01)
 
-Original action: [Inspect STEP identity, structure and unit evidence](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
+Original action: [Inspect STEP identity, structure and unit evidence](../point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
 
 Implementation proposal: Proposal: STEP preflight inspector reporting referenced unit contexts, topology/entity families and product structure.
 
@@ -1514,11 +1514,11 @@ Dependencies: Existing original STEP and partial identity/rights receipt; select
 
 Resources: Local file/header inspection first; full entity parsing scales with file size. Remote review handles schema/use or source ambiguity; record manual interpretation.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [${MODELING_ROOT}/research/local-baseline.md](../../local-baseline.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`).
 
 ### 61. Inspect CSG source, parameters and mesh criteria (CAD-15-A01)
 
-Original action: [Inspect CSG source, parameters and mesh criteria](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-15 — Render source-defined CSG as a mesh.
+Original action: [Inspect CSG source, parameters and mesh criteria](../point-03-operations.json). Operations: CAD-15 — Render source-defined CSG as a mesh.
 
 Implementation proposal: Proposal: source/render manifest and parameter/dependency validator.
 
@@ -1538,7 +1538,7 @@ Source-supported tools: OpenSCAD, STL/3MF mesh export. Original evidence: [https
 
 ### 62. Choose the profile target and source entity mapping (DOM-03-A01)
 
-Original action: [Choose the profile target and source entity mapping](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-03 — DXF/SVG drawing to constrained profile.
+Original action: [Choose the profile target and source entity mapping](../point-03-operations.json). Operations: DOM-03 — DXF/SVG drawing to constrained profile.
 
 Implementation proposal: Proposal: profile route selector exposing actual output type and required source/constraint inputs.
 
@@ -1554,11 +1554,11 @@ Dependencies: CAD-08 vector preparation and CAD-09 constrained sketch; FreeCAD S
 
 Resources: Local entity/metadata checks first; remote VLM handles loop/label meaning and manual output choices.
 
-Source-supported tools: OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude. Original evidence: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude. Original evidence: [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 63. Define native artifact and solid prerequisites (DOM-04-A01)
 
-Original action: [Define native artifact and solid prerequisites](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-04 — Brief/profile to native CAD solid.
+Original action: [Define native artifact and solid prerequisites](../point-03-operations.json). Operations: DOM-04 — Brief/profile to native CAD solid.
 
 Implementation proposal: Proposal: native-artifact contract mapper separating native document, parametric source, B-rep and mesh.
 
@@ -1574,13 +1574,13 @@ Dependencies: OCS native body/document; FreeCAD feature document; CAD-10 and DOM
 
 Resources: Local contract/capability reading precedes modeling. Remote agent/manual effort resolves intent and representation choices.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md), [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Source-defined feature route and component representation decisions.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`), ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Source-defined feature route and component representation decisions.
 
-Source-supported tools: OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs).
+Source-supported tools: OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`).
 
 ### 64. Bind the solid export to representation and consumer criteria (DOM-05-A01)
 
-Original action: [Bind the solid export to representation and consumer criteria](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-05 — Export STEP solid.
+Original action: [Bind the solid export to representation and consumer criteria](../point-03-operations.json). Operations: DOM-05 — Export STEP solid.
 
 Implementation proposal: Proposal: solid-export capability/criteria planner with source-to-output field mapping.
 
@@ -1596,11 +1596,11 @@ Dependencies: Selected FreeCAD/OCCT/CadQuery export capability; OCS mesh writer 
 
 Resources: Local metadata/shape inspection first; export cost follows surfaces/triangles. Remote/manual review addresses consumer and representation requirements.
 
-Source-supported tools: OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export. Original evidence: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs).
+Source-supported tools: OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export. Original evidence: [${MODELING_ROOT}/research/local-baseline.md](../../local-baseline.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`).
 
 ### 65. Define sourced parameters and the executable model contract (DOM-40-A01)
 
-Original action: [Define sourced parameters and the executable model contract](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
+Original action: [Define sourced parameters and the executable model contract](../point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
 
 Implementation proposal: Proposal: parametric model-brief skill and contract validator with actual output-type gate.
 
@@ -1616,13 +1616,13 @@ Dependencies: CadQuery/build123d/FreeCAD documented APIs; OpenSCAD source route 
 
 Resources: Local metadata/API inspection first; high-reasoning model can interpret complex intent. Record remote calls and manual parameter decisions separately.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md), [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Source-defined feature route and component representation decisions.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`), ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Source-defined feature route and component representation decisions.
 
-Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 66. Bind graph elements to sourced vertical parameters (CAD-17-A01)
 
-Original action: [Bind graph elements to sourced vertical parameters](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-17 — Build wall and opening solids from a confirmed floor-plan graph.
+Original action: [Bind graph elements to sourced vertical parameters](../point-04-operations.json). Operations: CAD-17 — Build wall and opening solids from a confirmed floor-plan graph.
 
 Implementation proposal: Proposal: wall feature planner emits explicit wall/cutter construction records and feature-level blocking dependencies.
 
@@ -1638,11 +1638,11 @@ Dependencies: CAD-05 graph and point01 brief; CAD-10 supported native features a
 
 Resources: Local graph/parameter checks first; remote interpretation for junctions/offsets; manual missing-parameter acquisition separate.
 
-Source-supported tools: FreeCAD Part/Sketcher or OCS native geometry, wall/opening graph interpretation, human confirmation. Original evidence: [https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html), [https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf](https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf), [https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf](https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md).
+Source-supported tools: FreeCAD Part/Sketcher or OCS native geometry, wall/opening graph interpretation, human confirmation. Original evidence: [https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html), [https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf](https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf), [https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf](https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`).
 
 ### 67. Specify raster-backed sketch requirements (DOM-02-A01)
 
-Original action: [Specify raster-backed sketch requirements](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: DOM-02 — Raster sketch to constrained sketch.
+Original action: [Specify raster-backed sketch requirements](../point-04-operations.json). Operations: DOM-02 — Raster sketch to constrained sketch.
 
 Implementation proposal: Proposal: raster-sketch intake emits feature/constraint requirements and source-evidence prerequisites.
 
@@ -1658,11 +1658,11 @@ Dependencies: CAD-02/03/04 and CAD-09 contracts; original DOM-02 raster input pl
 
 Resources: Local metadata first; higher reasoning for freehand intent; manual controls and remote effort recorded.
 
-Source-supported tools: OpenCADStudio; FreeCAD Sketcher; manual image tracing. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: OpenCADStudio; FreeCAD Sketcher; manual image tracing. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 68. Bind both clouds and declare transform freedoms (REC-07-A01)
 
-Original action: [Bind both clouds and declare transform freedoms](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-07 — Estimate coarse transform between point clouds.
+Original action: [Bind both clouds and declare transform freedoms](../point-05-operations.json). Operations: REC-07 — Estimate coarse transform between point clouds.
 
 Implementation proposal: Proposal: cloud preflight emits role/frame/model manifest, masks and observability prerequisites.
 
@@ -1682,7 +1682,7 @@ Source-supported tools: Open3D FPFH, Open3D RANSAC global registration, CloudCom
 
 ### 69. Audit literal input contract and target remodeling meaning (DOM-23-A01)
 
-Original action: [Audit literal input contract and target remodeling meaning](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: DOM-23 — Scan or mesh to parametric CAD remodeling.
+Original action: [Audit literal input contract and target remodeling meaning](../point-05-operations.json). Operations: DOM-23 — Scan or mesh to parametric CAD remodeling.
 
 Implementation proposal: Proposal: remodeling intake distinguishes literal four-input route from separately proposed true alternative or explicit sampled-cloud route.
 
@@ -1698,11 +1698,11 @@ Dependencies: Original DOM23 record, point02 identity, CAD11/REC14 evidence and 
 
 Resources: Local manifests first; sampling if later authorized has explicit size/compute; remote/manual intent review separate.
 
-Source-supported tools: Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 70. Inventory URDF import policy and expected losses (DOM-10-A01)
 
-Original action: [Inventory URDF import policy and expected losses](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-10 — URDF import and MJCF conversion.
+Original action: [Inventory URDF import policy and expected losses](../point-06-operations.json). Operations: DOM-10 — URDF import and MJCF conversion.
 
 Implementation proposal: Proposal: conversion preflight emits effective compiler options and field/default/loss expectations.
 
@@ -1722,7 +1722,7 @@ Source-supported tools: MuJoCo URDF parser/compiler; mjSpec API. Original eviden
 
 ### 71. Resolve building schema units hierarchy and element evidence (DOM-15-A01)
 
-Original action: [Resolve building schema units hierarchy and element evidence](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-15 — Author semantic IFC building.
+Original action: [Resolve building schema units hierarchy and element evidence](../point-06-operations.json). Operations: DOM-15 — Author semantic IFC building.
 
 Implementation proposal: Proposal: semantic intake emits required element/property/relationship records and per-element readiness.
 
@@ -1742,7 +1742,7 @@ Source-supported tools: Bonsai; IfcOpenShell API. Original evidence: [https://do
 
 ### 72. Resolve IFC kernel shape extraction requirements (DOM-27-A01)
 
-Original action: [Resolve IFC kernel shape extraction requirements](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-27 — Extract IFC geometry as OpenCASCADE B-rep.
+Original action: [Resolve IFC kernel shape extraction requirements](../point-06-operations.json). Operations: DOM-27 — Extract IFC geometry as OpenCASCADE B-rep.
 
 Implementation proposal: Proposal: B-rep preflight emits supported shape classes and explicit backend/import dependencies.
 
@@ -1762,7 +1762,7 @@ Source-supported tools: IfcOpenShell geom.create_shape/iterator using OpenCASCAD
 
 ### 73. Bind model revision to fabrication requirements (DOM-25-A01)
 
-Original action: [Bind model revision to fabrication requirements](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-25 — Create fabrication package.
+Original action: [Bind model revision to fabrication requirements](../point-06-operations.json). Operations: DOM-25 — Create fabrication package.
 
 Implementation proposal: Proposal: fabrication planner emits part/feature/datum/requirement coverage and supported output matrix.
 
@@ -1778,11 +1778,11 @@ Dependencies: Point03 native/readback; actual OCS exporter capability; optional 
 
 Resources: Local feature/requirement inventory first; manual engineering decisions separate.
 
-Source-supported tools: Native CAD drawing/workbench; STEP/DXF/PDF exporters. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: Native CAD drawing/workbench; STEP/DXF/PDF exporters. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 74. Inventory video timing camera state and coverage (REC-04-A01)
 
-Original action: [Inventory video timing camera state and coverage](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-04 — Convert video into an image reconstruction dataset.
+Original action: [Inventory video timing camera state and coverage](../point-07-operations.json). Operations: REC-04 — Convert video into an image reconstruction dataset.
 
 Implementation proposal: Proposal: video intake emits stream/timebase/camera/rights records and selection plan.
 
@@ -1802,7 +1802,7 @@ Source-supported tools: ffmpeg frame extraction, blur/duplicate-frame filtering,
 
 ### 75. Bind complete photo and metric-control contract (CAD-16-A01)
 
-Original action: [Bind complete photo and metric-control contract](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: CAD-16 — Reconstruct camera poses and dense visible geometry from overlapping photos.
+Original action: [Bind complete photo and metric-control contract](../point-07-operations.json). Operations: CAD-16 — Reconstruct camera poses and dense visible geometry from overlapping photos.
 
 Implementation proposal: Proposal: reconstruction planner emits source/control plan and prerequisites for all three outputs.
 
@@ -1818,11 +1818,11 @@ Dependencies: REC-03, REC-17/DOM-28 and source-backed backend capabilities.
 
 Resources: Local input/control review first; expensive dense work waits for sparse/control checks.
 
-Source-supported tools: COLMAP or AliceVision/Meshroom, scale/control-point alignment. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [https://github.com/colmap/colmap](https://github.com/colmap/colmap), [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst).
+Source-supported tools: COLMAP or AliceVision/Meshroom, scale/control-point alignment. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), [https://github.com/colmap/colmap](https://github.com/colmap/colmap), [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst).
 
 ### 76. Bind learned reconstruction variant, images and camera roles (REC-10-A01)
 
-Original action: [Bind learned reconstruction variant, images and camera roles](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-10 — Estimate multi-view depth, camera poses and Gaussian outputs.
+Original action: [Bind learned reconstruction variant, images and camera roles](../point-07-operations.json). Operations: REC-10 — Estimate multi-view depth, camera poses and Gaussian outputs.
 
 Implementation proposal: PROPOSAL learned-input planner: image/video manifest + selected model card/config → exact input/output manifest, camera policy, expected coordinate/scale record and blocked conditions.
 
@@ -1842,7 +1842,7 @@ Source-supported tools: Depth Anything 3, DA3-Streaming, DA3 Blender add-on. Ori
 
 ### 77. Select one source image and a mesh-producing model contract (REC-18-A01)
 
-Original action: [Select one source image and a mesh-producing model contract](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-18 — Generate a single-image mesh proxy.
+Original action: [Select one source image and a mesh-producing model contract](../point-07-operations.json). Operations: REC-18 — Generate a single-image mesh proxy.
 
 Implementation proposal: PROPOSAL proxy-input planner: chosen image/mask + model specification + intended use → generation request, output type and visible/inferred region map.
 
@@ -1862,7 +1862,7 @@ Source-supported tools: TripoSR, TRELLIS.2, SAM 3D Objects. Original evidence: [
 
 ### 78. Freeze the native assembly and export contract (DOM-39-A01)
 
-Original action: [Freeze the native assembly and export contract](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
+Original action: [Freeze the native assembly and export contract](../point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
 
 Implementation proposal: Proposal: export contract builder with exact definition/occurrence and per-feature invariant sets.
 
@@ -1878,13 +1878,13 @@ Dependencies: Native assembly reader; component/version records; selected consum
 
 Resources: Local tree/hash inspection first; no geometry conversion. Remote/manual review addresses consumer meaning and export scope.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 79. Reconcile the failed operation and preserve its evidence (CAD-14-A01)
 
-Original action: [Reconcile the failed operation and preserve its evidence](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-14 — Recover from failed interpretation or geometry construction.
+Original action: [Reconcile the failed operation and preserve its evidence](../point-03-operations.json). Operations: CAD-14 — Recover from failed interpretation or geometry construction.
 
 Implementation proposal: Reuse execute_checked and same-request-ID operation lookup; add a durable per-operation reconciliation record, bounded polling and partial-effect/command-state tests.
 
@@ -1900,13 +1900,13 @@ Dependencies: OCS operation-status and revision protocol; backend logs; saved ar
 
 Resources: Local logs/state/hash work precedes new geometry. Remote reasoning examines evidence; manual effort resolves only source/scope ambiguity.
 
-Reuse: [ocs_control.py](/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py), [ngv064_ocs.py](/tmp/opencode/ngv064_ocs.py), [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md). One-send transport/WriteUncertain and request-ID lookup; reconcile entity effects separately from command state.
+Reuse: ocs_control.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py`), ngv064_ocs.py (`${TEMP_ROOT}/opencode/ngv064_ocs.py`), cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`). One-send transport/WriteUncertain and request-ID lookup; reconcile entity effects separately from command state.
 
-Source-supported tools: source overlay, operation logs, constraint residuals, OCS operation status/revision readback, CAD kernel validity reports. Original evidence: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md](/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
+Source-supported tools: source overlay, operation logs, constraint residuals, OCS operation status/revision readback, CAD kernel validity reports. Original evidence: ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), ${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md (`${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md`), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
 
 ### 80. Bind photographs, target evidence and camera state (CAD-02B-A01)
 
-Original action: [Bind photographs, target evidence and camera state](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: CAD-02B — Calibrate camera poses from photographs and known controls.
+Original action: [Bind photographs, target evidence and camera state](../point-05-operations.json). Operations: CAD-02B — Calibrate camera poses from photographs and known controls.
 
 Implementation proposal: Proposal: calibration intake emits camera groups, target roles and per-image prerequisites.
 
@@ -1926,7 +1926,7 @@ Source-supported tools: OpenCV findChessboardCorners, OpenCV calibrateCamera, Op
 
 ### 81. Bind 3D landmarks to calibrated image coordinates (REC-02-A01)
 
-Original action: [Bind 3D landmarks to calibrated image coordinates](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-02 — Solve camera pose from known 3D-to-2D correspondences.
+Original action: [Bind 3D landmarks to calibrated image coordinates](../point-05-operations.json). Operations: REC-02 — Solve camera pose from known 3D-to-2D correspondences.
 
 Implementation proposal: Proposal: PnP preflight returns compatible correspondences and ambiguous/unobservable components.
 
@@ -1946,7 +1946,7 @@ Source-supported tools: OpenCV solvePnP / solvePnPRansac, projectPoints. Origina
 
 ### 82. Bind NeRF method, supplied cameras and training-space transforms (REC-20-A01)
 
-Original action: [Bind NeRF method, supplied cameras and training-space transforms](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-20 — Train and export a NeRF scene.
+Original action: [Bind NeRF method, supplied cameras and training-space transforms](../point-07-operations.json). Operations: REC-20 — Train and export a NeRF scene.
 
 Implementation proposal: PROPOSAL NeRF input adapter: photos/cameras/config → parsed dataset, reversible world transform, camera comparison and partition manifest.
 
@@ -1966,7 +1966,7 @@ Source-supported tools: Nerfstudio nerfacto, Nerfstudio checkpoint and viewer ex
 
 ### 83. Choose the actual renderable scene subtype and consumer (REC-11-A01)
 
-Original action: [Choose the actual renderable scene subtype and consumer](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-11 — Train NeRF or Gaussian scene for view synthesis.
+Original action: [Choose the actual renderable scene subtype and consumer](../point-07-operations.json). Operations: REC-11 — Train NeRF or Gaussian scene for view synthesis.
 
 Implementation proposal: PROPOSAL scene dispatcher: photos/cameras + consumer requirements + capability evidence → typed method route and explicit visual-scene payload manifest.
 
@@ -1986,7 +1986,7 @@ Source-supported tools: Nerfstudio ns-process-data, ns-train nerfacto/splatfacto
 
 ### 84. Bind the domain Gaussian scene contract (DOM-22-A01)
 
-Original action: [Bind the domain Gaussian scene contract](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-22 — Photographs to Gaussian/NeRF visual scene.
+Original action: [Bind the domain Gaussian scene contract](../point-07-operations.json). Operations: DOM-22 — Photographs to Gaussian/NeRF visual scene.
 
 Implementation proposal: PROPOSAL domain Gaussian planner: photos/cameras + domain feature/use map → REC-19 request, typed gaussian-scene consumer and coverage criteria.
 
@@ -2002,11 +2002,11 @@ Dependencies: REC-19 input conditions; domain source identity and optional regis
 
 Resources: Local manifest/projection checks first; record image count/resolution and required viewing extent before training; manual identity and remote VLM costs separate.
 
-Source-supported tools: Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 85. Bind domain features and cameras to the NeRF route (DOM-30-A01)
 
-Original action: [Bind domain features and cameras to the NeRF route](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-30 — Photos to NeRF visual scene.
+Original action: [Bind domain features and cameras to the NeRF route](../point-07-operations.json). Operations: DOM-30 — Photos to NeRF visual scene.
 
 Implementation proposal: PROPOSAL domain NeRF planner: source photos/cameras + domain/view goals → REC-20 request, parser/renderer contract and required region checks.
 
@@ -2022,11 +2022,11 @@ Dependencies: REC-20 input contract; source camera/calibration and domain featur
 
 Resources: Metadata/camera preview first; training demand based on exact image count/resolution/method rather than a universal GPU score; remote inference/manual separate.
 
-Source-supported tools: Nerfstudio; COLMAP camera input. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Nerfstudio; COLMAP camera input. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 86. Read actual geometry and compare required features (CAD-13-A02)
 
-Original action: [Read actual geometry and compare required features](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-13 — Verify model geometry and saved output.
+Original action: [Read actual geometry and compare required features](../point-03-operations.json). Operations: CAD-13 — Verify model geometry and saved output.
 
 Implementation proposal: Reuse sat_features and check_contract.run for their supported observations; detach pure readers from session-binding imports and dispatch by actual SAT/SAB representation with per-feature supported-check results.
 
@@ -2042,15 +2042,15 @@ Dependencies: Native kernel/mesh query APIs; point/axis/plane helper only after 
 
 Resources: Required-feature queries precede broad topology/mesh scans; local CPU/RAM scales with geometry size. Remote VLM and manual measurement review tracked separately.
 
-Reuse: [check_ngv064_wheel.py](/tmp/opencode/check_ngv064_wheel.py), [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [neugart-ngv064-wheel-160-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json), [item-angle-bracket-set-41115-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json), [item-profile-02633-segment-100mm-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json), [nissan-leaf-gen2-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json), [bmw-i3-94ah-native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json). Restricted native surface checks and retained pre-save component results; choose reader for actual representation.
+Reuse: check_ngv064_wheel.py (`${TEMP_ROOT}/opencode/check_ngv064_wheel.py`), build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), neugart-ngv064-wheel-160-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json`), item-angle-bracket-set-41115-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json`), item-profile-02633-segment-100mm-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json`), nissan-leaf-gen2-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json`), bmw-i3-94ah-native-checks.json (`${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json`). Restricted native surface checks and retained pre-save component results; choose reader for actual representation.
 
-Reuse: [check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
+Reuse: check_contract.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py`). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
 
-Source-supported tools: OCS read/measure/audit/save_verified, FreeCAD B-rep readback, build123d/CadQuery shape checks, independent importer, mesh validation. Original evidence: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [https://build123d.readthedocs.io/en/stable/](https://build123d.readthedocs.io/en/stable/).
+Source-supported tools: OCS read/measure/audit/save_verified, FreeCAD B-rep readback, build123d/CadQuery shape checks, independent importer, mesh validation. Original evidence: ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), [https://build123d.readthedocs.io/en/stable/](https://build123d.readthedocs.io/en/stable/).
 
 ### 87. Reopen saved artifacts and issue the verification report (CAD-13-A03)
 
-Original action: [Reopen saved artifacts and issue the verification report](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-13 — Verify model geometry and saved output.
+Original action: [Reopen saved artifacts and issue the verification report](../point-03-operations.json). Operations: CAD-13 — Verify model geometry and saved output.
 
 Implementation proposal: Reuse existing save_verified/open/audit sequences; add separately recorded reopened feature checks and verified document/view identity.
 
@@ -2066,13 +2066,13 @@ Dependencies: Native reader and supported independent consumer; OCS verified DWG
 
 Resources: Local reopen/query costs follow file/geometry size; record reader CPU/RAM and I/O. Remote/manual review checks mappings, failures and intended use.
 
-Reuse: [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [item-profile-02633-segment-100mm.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md), [neugart-ngv064-wheel-160.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md). save_verified/open and reopened audits in existing component procedures; detailed surface and visual checks retain stage-specific evidence.
+Reuse: build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), item-profile-02633-segment-100mm.md (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md`), neugart-ngv064-wheel-160.md (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md`). save_verified/open and reopened audits in existing component procedures; detailed surface and visual checks retain stage-specific evidence.
 
-Source-supported tools: OCS read/measure/audit/save_verified, FreeCAD B-rep readback, build123d/CadQuery shape checks, independent importer, mesh validation. Original evidence: [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [https://build123d.readthedocs.io/en/stable/](https://build123d.readthedocs.io/en/stable/).
+Source-supported tools: OCS read/measure/audit/save_verified, FreeCAD B-rep readback, build123d/CadQuery shape checks, independent importer, mesh validation. Original evidence: ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), [https://build123d.readthedocs.io/en/stable/](https://build123d.readthedocs.io/en/stable/).
 
 ### 88. Attach item-level terms and permitted operations (DOM-06-A02)
 
-Original action: [Attach item-level terms and permitted operations](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
+Original action: [Attach item-level terms and permitted operations](../point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
 
 Implementation proposal: Proposal: rights evidence attachment and operation-permission checklist driven by actual terms, with manual ambiguity review.
 
@@ -2092,7 +2092,7 @@ Source-supported tools: component registry/schema proposal; source license revie
 
 ### 89. Classify component representations and interface evidence (DOM-06-A03)
 
-Original action: [Classify component representations and interface evidence](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
+Original action: [Classify component representations and interface evidence](../point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
 
 Implementation proposal: Proposal: representation inspector linking source claims and measured feature records without promoting visual proxies to dimensional evidence.
 
@@ -2108,13 +2108,13 @@ Dependencies: Native CAD/mesh readers; DOM-38 accepts the partial identity/right
 
 Resources: Start with file metadata; load geometry only for required features. CPU/RAM scales with entities/triangles; GPU only for view inspection. Record VLM inputs and manual associations.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
 
 Source-supported tools: component registry/schema proposal; source license review. Original evidence: [https://www.freecad.org/addons.php?lang=eng_EN](https://www.freecad.org/addons.php?lang=eng_EN), [https://www.kicad.org/libraries/license/](https://www.kicad.org/libraries/license/), [https://github.com/google-deepmind/mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie), [https://polyhaven.com/license](https://polyhaven.com/license), [https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280](https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280).
 
 ### 90. Register the component record and handoff conditions (DOM-06-A04)
 
-Original action: [Register the component record and handoff conditions](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
+Original action: [Register the component record and handoff conditions](../point-02-operations.json). Operations: DOM-06 — Library asset intake and rights record.
 
 Implementation proposal: Proposal: component registration validator with per-operation prerequisite status and immutable original references.
 
@@ -2130,13 +2130,13 @@ Dependencies: Existing source registry and proposed component-record organizatio
 
 Resources: Local metadata/reference checks first; storage scales with retained originals. Remote/manual review addresses source meaning and decisions, with actual effort recorded.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
 
 Source-supported tools: component registry/schema proposal; source license review. Original evidence: [https://www.freecad.org/addons.php?lang=eng_EN](https://www.freecad.org/addons.php?lang=eng_EN), [https://www.kicad.org/libraries/license/](https://www.kicad.org/libraries/license/), [https://github.com/google-deepmind/mujoco_menagerie](https://github.com/google-deepmind/mujoco_menagerie), [https://polyhaven.com/license](https://polyhaven.com/license), [https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280](https://www.contec.com/en/download/contract/contract3/?downloaditemid=b1063f2d-146f-4ca4-b8d2-b54c4388c265&itemid=f9a4d3e0-9ca3-4466-9b3d-cffac9355280).
 
 ### 91. Define interface frames and placement relations (CAD-12-A02)
 
-Original action: [Define interface frames and placement relations](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
+Original action: [Define interface frames and placement relations](../point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
 
 Implementation proposal: Reuse check_contract.run for supported axis/plane predicates; add interface identity, frame composition and per-feature criteria mapping.
 
@@ -2152,13 +2152,13 @@ Dependencies: OCS model contract; FreeCAD Assembly documented joints; existing m
 
 Resources: Small matrix/graph checks use local CPU/RAM. CAD measurements depend on shape size. VLM calls use cited views; record manual relation decisions and latency.
 
-Reuse: [check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
+Reuse: check_contract.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py`). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
 
-Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
+Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
 
 ### 92. Create bounded native occurrences (CAD-12-A03)
 
-Original action: [Create bounded native occurrences](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
+Original action: [Create bounded native occurrences](../point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
 
 Implementation proposal: Proposal: occurrence adapter with immutable definition references, explicit IDs and revision-aware restart.
 
@@ -2174,11 +2174,11 @@ Dependencies: OCS API-SPEC revision/request protocol; FreeCAD Assembly or CadQue
 
 Resources: Local CPU/RAM scales with occurrence count and geometry; graphics only for native display. Remote agent directs exceptions; record manual constraint edits.
 
-Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
+Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
 
 ### 93. Validate and preserve assembly structure (CAD-12-A04)
 
-Original action: [Validate and preserve assembly structure](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
+Original action: [Validate and preserve assembly structure](../point-02-operations.json). Operations: CAD-12 — Assemble existing CAD or source-library components.
 
 Implementation proposal: Reuse the recorded assembly count/save checks; add explicit definition/occurrence/transform and interface preservation comparisons.
 
@@ -2194,13 +2194,13 @@ Dependencies: Native CAD measurement/save facilities; OCS save audit applies onl
 
 Resources: Local shape checks may dominate CPU/RAM for large assemblies; begin with hashes/counts/transforms. Remote review uses bounded views; record review time and corrections.
 
-Reuse: [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md), [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
+Reuse: cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`), ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
 
-Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
+Source-supported tools: OCS blocks/groups, FreeCAD App::Link/Assembly, build123d/CadQuery Assembly, unit and frame mapping. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/).
 
 ### 94. Resolve the complete dependency and rights set (DOM-26-A02)
 
-Original action: [Resolve the complete dependency and rights set](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
+Original action: [Resolve the complete dependency and rights set](../point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
 
 Implementation proposal: Proposal: dependency-closure and invalidation helper with explicit asset/tool/configuration edges.
 
@@ -2216,13 +2216,13 @@ Dependencies: Existing source/terms registry, file hashing and reference graph; 
 
 Resources: Local graph/hash work scales with dependency count/bytes; no geometry regeneration. Remote review handles lineage/terms ambiguities; record manual effort.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
 
-Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 95. Publish a new immutable revision and explicit reuse pins (DOM-26-A03)
 
-Original action: [Publish a new immutable revision and explicit reuse pins](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
+Original action: [Publish a new immutable revision and explicit reuse pins](../point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
 
 Implementation proposal: Proposal: revision publisher with collision detection, atomic metadata replacement and recoverable consumer pin updates.
 
@@ -2238,13 +2238,13 @@ Dependencies: Existing repository/content-addressed storage policy; Git/LFS are 
 
 Resources: Local storage and hash I/O dominate; record bytes written and checks. Remote/manual work reviews consumer selection and exceptions.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
 
-Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 96. Reopen pinned artifacts and check reuse reproducibility (DOM-26-A04)
 
-Original action: [Reopen pinned artifacts and check reuse reproducibility](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
+Original action: [Reopen pinned artifacts and check reuse reproducibility](../point-02-operations.json). Operations: DOM-26 — Version and reuse component revision.
 
 Implementation proposal: Proposal: revision-resolution report and affected-check scheduler scoped to changed dependencies.
 
@@ -2260,13 +2260,13 @@ Dependencies: Existing readers and manifest records; supported exporter/adapter 
 
 Resources: Local hash/read cost scales with selected dependency closure. Remote/manual review examines semantic invalidation and migration scope.
 
-Reuse: [SKILL.md](/home/leo/projects/ferme/skills/cad-construction/SKILL.md). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
+Reuse: SKILL.md (`${FERME_ROOT}/skills/cad-construction/SKILL.md`). Documented exact part/revision, representation, source dependency and reproduction-package records; serialization/automation follows each action.
 
-Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: content-addressed files; Git metadata; source/license registry. Original evidence: [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 97. Construct features with revision-bound readback (CAD-10-A02)
 
-Original action: [Construct features with revision-bound readback](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-10 — Create a kernel solid and native model document from confirmed parameters.
+Original action: [Construct features with revision-bound readback](../point-03-operations.json). Operations: CAD-10 — Create a kernel solid and native model document from confirmed parameters.
 
 Implementation proposal: Adapt execute_checked and the existing write/step geometry wrappers to explicit session/document configuration and bounded completion polling; preserve the existing one-send guard and separate entity effects from interactive command state.
 
@@ -2282,13 +2282,13 @@ Dependencies: Installed OCS command/plugin path; FreeCAD Part/PartDesign or CadQ
 
 Resources: Local Boolean/kernel work can dominate simple profile checks; record actual face/feature counts and build mode. Remote agent diagnoses exceptions; GPU is display-only unless actual backend uses it.
 
-Reuse: [ocs_control.py](/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py), [ngv064_ocs.py](/tmp/opencode/ngv064_ocs.py), [item_ocs_parts.py](/tmp/opencode/item_ocs_parts.py), [battery_ocs_parts.py](/tmp/opencode/battery_ocs_parts.py), [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [build_leaf_gen2.py](/tmp/opencode/build_leaf_gen2.py), [build_bmw_i3_94ah.py](/tmp/opencode/build_bmw_i3_94ah.py). Guarded writes and native geometry creation; component recipes require explicit input/session adapters.
+Reuse: ocs_control.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py`), ngv064_ocs.py (`${TEMP_ROOT}/opencode/ngv064_ocs.py`), item_ocs_parts.py (`${TEMP_ROOT}/opencode/item_ocs_parts.py`), battery_ocs_parts.py (`${TEMP_ROOT}/opencode/battery_ocs_parts.py`), build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), build_leaf_gen2.py (`${TEMP_ROOT}/opencode/build_leaf_gen2.py`), build_bmw_i3_94ah.py (`${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py`). Guarded writes and native geometry creation; component recipes require explicit input/session adapters.
 
-Source-supported tools: OpenCADStudio kernel tools, FreeCAD PartDesign/Part, build123d, CadQuery. Original evidence: [https://build123d.readthedocs.io/en/latest/operations.html](https://build123d.readthedocs.io/en/latest/operations.html), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/), [https://openscad.org/documentation](https://openscad.org/documentation), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md), [/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md).
+Source-supported tools: OpenCADStudio kernel tools, FreeCAD PartDesign/Part, build123d, CadQuery. Original evidence: [https://build123d.readthedocs.io/en/latest/operations.html](https://build123d.readthedocs.io/en/latest/operations.html), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/), [https://openscad.org/documentation](https://openscad.org/documentation), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md), ${OCS_ROOT}/docs/cadkernel-body-path.md (`${OCS_ROOT}/docs/cadkernel-body-path.md`).
 
 ### 98. Verify native solid and saved construction record (CAD-10-A03)
 
-Original action: [Verify native solid and saved construction record](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-10 — Create a kernel solid and native model document from confirmed parameters.
+Original action: [Verify native solid and saved construction record](../point-03-operations.json). Operations: CAD-10 — Create a kernel solid and native model document from confirmed parameters.
 
 Implementation proposal: Reuse recorded feature checks; add explicit native representation selection and stage-bound saved-artifact evidence to their result adapter.
 
@@ -2304,13 +2304,13 @@ Dependencies: Native CAD readback/save; CAD-13 validation contract; exact source
 
 Resources: Local shape/reopen costs depend on faces and feature history; start with counts and required features. Remote/VLM semantic review uses bounded views; manual corrections logged.
 
-Reuse: [check_ngv064_wheel.py](/tmp/opencode/check_ngv064_wheel.py), [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [neugart-ngv064-wheel-160-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json), [item-angle-bracket-set-41115-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json), [item-profile-02633-segment-100mm-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json), [nissan-leaf-gen2-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json), [bmw-i3-94ah-native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json). Restricted native surface checks and retained pre-save component results; choose reader for actual representation.
+Reuse: check_ngv064_wheel.py (`${TEMP_ROOT}/opencode/check_ngv064_wheel.py`), build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), neugart-ngv064-wheel-160-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json`), item-angle-bracket-set-41115-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json`), item-profile-02633-segment-100mm-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json`), nissan-leaf-gen2-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json`), bmw-i3-94ah-native-checks.json (`${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json`). Restricted native surface checks and retained pre-save component results; choose reader for actual representation.
 
-Source-supported tools: OpenCADStudio kernel tools, FreeCAD PartDesign/Part, build123d, CadQuery. Original evidence: [https://build123d.readthedocs.io/en/latest/operations.html](https://build123d.readthedocs.io/en/latest/operations.html), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/), [https://openscad.org/documentation](https://openscad.org/documentation), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md), [/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md).
+Source-supported tools: OpenCADStudio kernel tools, FreeCAD PartDesign/Part, build123d, CadQuery. Original evidence: [https://build123d.readthedocs.io/en/latest/operations.html](https://build123d.readthedocs.io/en/latest/operations.html), [https://cadquery.readthedocs.io/en/stable/](https://cadquery.readthedocs.io/en/stable/), [https://openscad.org/documentation](https://openscad.org/documentation), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md), ${OCS_ROOT}/docs/cadkernel-body-path.md (`${OCS_ROOT}/docs/cadkernel-body-path.md`).
 
 ### 99. Create a mapped and explicitly cleaned derivative (CAD-08-A02)
 
-Original action: [Create a mapped and explicitly cleaned derivative](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-08 — Read and clean vector drawing geometry.
+Original action: [Create a mapped and explicitly cleaned derivative](../point-03-operations.json). Operations: CAD-08 — Read and clean vector drawing geometry.
 
 Implementation proposal: Reuse contours sampling/normalization only for the retained text-contour branch; parameterize its source transform and approximation criteria. Implement DXF/SVG adapters as their separately identified format branches.
 
@@ -2326,13 +2326,13 @@ Dependencies: Native OCS/Draft edits or ezdxf derivative writer; actual supporte
 
 Resources: Local transform/detection work scales with curve count and intersection candidates; expensive comparisons follow bounding filters. Remote review/manual edits address only ambiguous repairs.
 
-Reuse: [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [item-profile-02633-segment-100mm.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md). Existing extracted-contour sampling, duplicate removal and XY normalization branch; DXF/SVG generic parsing remains a separate adapter.
+Reuse: build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), item-profile-02633-segment-100mm.md (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md`). Existing extracted-contour sampling, duplicate removal and XY normalization branch; DXF/SVG generic parsing remains a separate adapter.
 
-Source-supported tools: OpenCADStudio DWG/DXF/MCP, FreeCAD Draft DXF/SVG import, ezdxf, geometry audit. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md), [https://ezdxf.readthedocs.io/en/stable/](https://ezdxf.readthedocs.io/en/stable/), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md).
+Source-supported tools: OpenCADStudio DWG/DXF/MCP, FreeCAD Draft DXF/SVG import, ezdxf, geometry audit. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md), [https://ezdxf.readthedocs.io/en/stable/](https://ezdxf.readthedocs.io/en/stable/), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`).
 
 ### 100. Validate curve fidelity and publish the vector handoff (CAD-08-A03)
 
-Original action: [Validate curve fidelity and publish the vector handoff](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-08 — Read and clean vector drawing geometry.
+Original action: [Validate curve fidelity and publish the vector handoff](../point-03-operations.json). Operations: CAD-08 — Read and clean vector drawing geometry.
 
 Implementation proposal: Reuse the profile contour-count/area and dimension checks as a case fixture; add source-to-curve maps and actual curve-fidelity/closure checks for the chosen vector format.
 
@@ -2348,13 +2348,13 @@ Dependencies: Selected geometry reader/curve checker; independent reader when it
 
 Resources: Local topology checks scale with curves/intersections; views add display cost. Record remote review calls, source image size and manual correspondence corrections.
 
-Reuse: [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [item-profile-02633-segment-100mm-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json). Source contour counts/area and checked dimensions on the profile example; per-curve fidelity check still follows the audited action.
+Reuse: build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), item-profile-02633-segment-100mm-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json`). Source contour counts/area and checked dimensions on the profile example; per-curve fidelity check still follows the audited action.
 
-Source-supported tools: OpenCADStudio DWG/DXF/MCP, FreeCAD Draft DXF/SVG import, ezdxf, geometry audit. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md), [https://ezdxf.readthedocs.io/en/stable/](https://ezdxf.readthedocs.io/en/stable/), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md).
+Source-supported tools: OpenCADStudio DWG/DXF/MCP, FreeCAD Draft DXF/SVG import, ezdxf, geometry audit. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md), [https://ezdxf.readthedocs.io/en/stable/](https://ezdxf.readthedocs.io/en/stable/), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`).
 
 ### 101. Create the sketch and solve bounded constraint groups (CAD-09-A02)
 
-Original action: [Create the sketch and solve bounded constraint groups](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-09 — Build and constrain an editable planar sketch.
+Original action: [Create the sketch and solve bounded constraint groups](../point-03-operations.json). Operations: CAD-09 — Build and constrain an editable planar sketch.
 
 Implementation proposal: Proposal: incremental constraint adapter and conflict reporter preserving source-to-constraint relationships.
 
@@ -2370,11 +2370,11 @@ Dependencies: FreeCAD Sketcher APIs/version; OCS equivalent only after installed
 
 Resources: Local solver CPU/RAM scales with constraints and connectivity. Remote reasoning diagnoses semantics; manual work concerns exact conflict decisions.
 
-Source-supported tools: FreeCAD Sketcher scripting, FreeCAD Draft-to-Sketch, OpenCADStudio sketch/constraint capability as discovered in session. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: FreeCAD Sketcher scripting, FreeCAD Draft-to-Sketch, OpenCADStudio sketch/constraint capability as discovered in session. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 102. Measure and reopen the constrained sketch (CAD-09-A03)
 
-Original action: [Measure and reopen the constrained sketch](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-09 — Build and constrain an editable planar sketch.
+Original action: [Measure and reopen the constrained sketch](../point-03-operations.json). Operations: CAD-09 — Build and constrain an editable planar sketch.
 
 Implementation proposal: Proposal: sketch evidence validator linking solver, geometry and native parameter behavior.
 
@@ -2390,11 +2390,11 @@ Dependencies: Native Sketcher measurements/recompute and save/reopen; separate r
 
 Resources: Local readback precedes variant recompute; effort scales with sketch dependencies. Remote/manual source review and local graphics are recorded separately.
 
-Source-supported tools: FreeCAD Sketcher scripting, FreeCAD Draft-to-Sketch, OpenCADStudio sketch/constraint capability as discovered in session. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: FreeCAD Sketcher scripting, FreeCAD Draft-to-Sketch, OpenCADStudio sketch/constraint capability as discovered in session. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 103. Compute the occurrence transform (DOM-07-A02)
 
-Original action: [Compute the occurrence transform](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
+Original action: [Compute the occurrence transform](../point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
 
 Implementation proposal: Reuse the existing numerical observation checker; add explicit source-to-target frame composition and instance transform output.
 
@@ -2410,13 +2410,13 @@ Dependencies: Checked matrix arithmetic and native placement API; representation
 
 Resources: Small local matrix computations need CPU/RAM; no GPU requirement. Remote reasoning only for semantic exceptions; record human frame corrections.
 
-Reuse: [check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
+Reuse: check_contract.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py`). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
 
-Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 104. Insert the component occurrence and connection edge (DOM-07-A03)
 
-Original action: [Insert the component occurrence and connection edge](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
+Original action: [Insert the component occurrence and connection edge](../point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
 
 Implementation proposal: Proposal: placement adapter with stable occurrence IDs and recoverable native-document/graph update ordering. Preserve target assembly revision, required graph and graph revision explicitly.
 
@@ -2432,11 +2432,11 @@ Dependencies: OCS block/group semantics only where appropriate; FreeCAD Assembly
 
 Resources: Local insertion cost scales with source shape/display complexity; rendering GPU use recorded if observed. Agent/manual work diagnoses interface or state exceptions.
 
-Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 105. Measure placed interfaces and preserve the result (DOM-07-A04)
 
-Original action: [Measure placed interfaces and preserve the result](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
+Original action: [Measure placed interfaces and preserve the result](../point-02-operations.json). Operations: DOM-07 — Place reusable component in assembly.
 
 Implementation proposal: Reuse supported supplied-measurement predicates; add placed-interface observation acquisition and saved occurrence/revision binding.
 
@@ -2452,13 +2452,13 @@ Dependencies: Native measurement and save/reopen interface; OCS contract checker
 
 Resources: Local bounded measurements precede expensive pair checks; record CPU/RAM and candidate-pair count. Remote review and manual corrections receive separate effort records.
 
-Reuse: [check_contract.py](/home/leo/.codex/skills/ocs-engineering/scripts/check_contract.py). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
+Reuse: check_contract.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py`). Supplied point/axis/plane numerical checks only; caller supplies independently sourced observations and criteria.
 
-Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: OCS; FreeCAD Assembly Workbench; native CAD assembly API. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 106. Choose and configure an isolated importer (DOM-38-A02)
 
-Original action: [Choose and configure an isolated importer](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
+Original action: [Choose and configure an isolated importer](../point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
 
 Implementation proposal: Reuse the recorded native IMPORT workflow; add installed-schema and exact target/session/import-setting configuration around that route.
 
@@ -2474,13 +2474,13 @@ Dependencies: OCCT 8.0.1 STEPCAFControl_Reader documentation inspected by Luna; 
 
 Resources: Local capability/settings inspection precedes full import. Import CPU/RAM estimates follow file/entity size; remote/manual effort concerns route choice.
 
-Reuse: [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md), [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
+Reuse: cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`), ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [${MODELING_ROOT}/research/local-baseline.md](../../local-baseline.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`).
 
 ### 107. Transfer geometry and classify actual output (DOM-38-A03)
 
-Original action: [Transfer geometry and classify actual output](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
+Original action: [Transfer geometry and classify actual output](../point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
 
 Implementation proposal: Reuse the evidenced IMPORT route; record actual imported geometry classes, nested instances and source-to-result mapping.
 
@@ -2496,13 +2496,13 @@ Dependencies: Selected native/OCCT STEP reader; shape inspection APIs; source-fa
 
 Resources: Local import/healing CPU and RAM scale with entity/face count; begin without optional costly healing. Display GPU only if used. Agent reviews transfer exceptions.
 
-Reuse: [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md), [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
+Reuse: cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`), ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [${MODELING_ROOT}/research/local-baseline.md](../../local-baseline.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`).
 
 ### 108. Measure and independently reopen imported geometry (DOM-38-A04)
 
-Original action: [Measure and independently reopen imported geometry](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
+Original action: [Measure and independently reopen imported geometry](../point-02-operations.json). Operations: DOM-38 — Import STEP solid into CAD representation.
 
 Implementation proposal: Reuse recorded imported-assembly audit/save checks; add required interface measurements and stage-specific reopen comparisons.
 
@@ -2518,13 +2518,13 @@ Dependencies: Native shape validity/measurement APIs and second reader; OCS chec
 
 Resources: Metadata/count checks precede detailed face/feature measurements; CPU/RAM scales with shape complexity. Remote VLM views support identity review; manual discrepancy work is logged.
 
-Reuse: [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md), [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
+Reuse: cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`), ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`). Reported native IMPORT and assembly/save preservation for Victron and RoboteQ; retained counts apply to those examples.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [${MODELING_ROOT}/research/local-baseline.md](../../local-baseline.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`).
 
 ### 109. Evaluate final CSG and export the mesh derivative (CAD-15-A02)
 
-Original action: [Evaluate final CSG and export the mesh derivative](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-15 — Render source-defined CSG as a mesh.
+Original action: [Evaluate final CSG and export the mesh derivative](../point-03-operations.json). Operations: CAD-15 — Render source-defined CSG as a mesh.
 
 Implementation proposal: Proposal: resumable render wrapper with source/settings digest and explicit mesh result type.
 
@@ -2544,7 +2544,7 @@ Source-supported tools: OpenSCAD, STL/3MF mesh export. Original evidence: [https
 
 ### 110. Measure the mesh and check declared parametric behavior (CAD-15-A03)
 
-Original action: [Measure the mesh and check declared parametric behavior](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-15 — Render source-defined CSG as a mesh.
+Original action: [Measure the mesh and check declared parametric behavior](../point-03-operations.json). Operations: CAD-15 — Render source-defined CSG as a mesh.
 
 Implementation proposal: Proposal: source-to-mesh feature validator and variant comparison report.
 
@@ -2564,7 +2564,7 @@ Source-supported tools: OpenSCAD, STL/3MF mesh export. Original evidence: [https
 
 ### 111. Normalize curves and construct the constrained profile (DOM-03-A02)
 
-Original action: [Normalize curves and construct the constrained profile](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-03 — DXF/SVG drawing to constrained profile.
+Original action: [Normalize curves and construct the constrained profile](../point-03-operations.json). Operations: DOM-03 — DXF/SVG drawing to constrained profile.
 
 Implementation proposal: Proposal: composed profile adapter joining existing curve and sketch receipts by stable feature IDs.
 
@@ -2580,11 +2580,11 @@ Dependencies: Selected DXF/SVG reader plus actual constraint-bearing backend; di
 
 Resources: Local parsing/curve/solver workload depends on entities/constraints; remote/manual review concentrates on exceptions.
 
-Source-supported tools: OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude. Original evidence: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude. Original evidence: [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 112. Verify profile semantics and constrained editability (DOM-03-A03)
 
-Original action: [Verify profile semantics and constrained editability](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-03 — DXF/SVG drawing to constrained profile.
+Original action: [Verify profile semantics and constrained editability](../point-03-operations.json). Operations: DOM-03 — DXF/SVG drawing to constrained profile.
 
 Implementation proposal: Proposal: profile handoff validator that distinguishes constrained-sketch from clean-wire or mesh outputs.
 
@@ -2600,11 +2600,11 @@ Dependencies: Native sketch reader and geometric validators; CAD-09 check receip
 
 Resources: Local sketch/readback work precedes solid construction; remote VLM review and manual corrections are separate records.
 
-Source-supported tools: OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude. Original evidence: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude. Original evidence: [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 113. Construct or reuse the checked native body (DOM-04-A02)
 
-Original action: [Construct or reuse the checked native body](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-04 — Brief/profile to native CAD solid.
+Original action: [Construct or reuse the checked native body](../point-03-operations.json). Operations: DOM-04 — Brief/profile to native CAD solid.
 
 Implementation proposal: Reuse the checked native body or existing component construction functions; add an explicit brief-to-existing-function parameter map and exact artifact/revision handoff.
 
@@ -2620,13 +2620,13 @@ Dependencies: Chosen native CAD API and CAD-10/DOM-40 contracts; no duplicate cr
 
 Resources: Local kernel/attachment work scales with features and shape size. Remote/manual effort examines editing/history exceptions.
 
-Reuse: [ocs_control.py](/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py), [ngv064_ocs.py](/tmp/opencode/ngv064_ocs.py), [item_ocs_parts.py](/tmp/opencode/item_ocs_parts.py), [battery_ocs_parts.py](/tmp/opencode/battery_ocs_parts.py), [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [build_leaf_gen2.py](/tmp/opencode/build_leaf_gen2.py), [build_bmw_i3_94ah.py](/tmp/opencode/build_bmw_i3_94ah.py). Guarded writes and native geometry creation; component recipes require explicit input/session adapters.
+Reuse: ocs_control.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py`), ngv064_ocs.py (`${TEMP_ROOT}/opencode/ngv064_ocs.py`), item_ocs_parts.py (`${TEMP_ROOT}/opencode/item_ocs_parts.py`), battery_ocs_parts.py (`${TEMP_ROOT}/opencode/battery_ocs_parts.py`), build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), build_leaf_gen2.py (`${TEMP_ROOT}/opencode/build_leaf_gen2.py`), build_bmw_i3_94ah.py (`${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py`). Guarded writes and native geometry creation; component recipes require explicit input/session adapters.
 
-Source-supported tools: OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs).
+Source-supported tools: OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`).
 
 ### 114. Save and validate the native model contract (DOM-04-A03)
 
-Original action: [Save and validate the native model contract](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-04 — Brief/profile to native CAD solid.
+Original action: [Save and validate the native model contract](../point-03-operations.json). Operations: DOM-04 — Brief/profile to native CAD solid.
 
 Implementation proposal: Reuse component save/open code; add a manifest linking the saved revision, representation and actual per-stage checks to the native model contract.
 
@@ -2642,13 +2642,13 @@ Dependencies: Supported native save/readback and CAD-13; OCS save audit limited 
 
 Resources: Local save/reopen and required-feature queries first; record CPU/RAM/I/O. Remote review and manual editing decisions separately.
 
-Reuse: [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [item-profile-02633-segment-100mm.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md), [neugart-ngv064-wheel-160.md](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md). save_verified/open and reopened audits in existing component procedures; detailed surface and visual checks retain stage-specific evidence.
+Reuse: build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), item-profile-02633-segment-100mm.md (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm.md`), neugart-ngv064-wheel-160.md (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160.md`). save_verified/open and reopened audits in existing component procedures; detailed surface and visual checks retain stage-specific evidence.
 
-Source-supported tools: OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs).
+Source-supported tools: OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`).
 
 ### 115. Write a separate STEP derivative with actual settings (DOM-05-A02)
 
-Original action: [Write a separate STEP derivative with actual settings](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-05 — Export STEP solid.
+Original action: [Write a separate STEP derivative with actual settings](../point-03-operations.json). Operations: DOM-05 — Export STEP solid.
 
 Implementation proposal: Proposal: solid export wrapper retaining actual representation and source/output lineage.
 
@@ -2664,11 +2664,11 @@ Dependencies: Selected STEP writer; OCS source body collects triangles into one 
 
 Resources: Local export CPU/RAM/I/O scales with faces/triangles; remote reasoning only examines warnings or loss decisions.
 
-Source-supported tools: OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export. Original evidence: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs).
+Source-supported tools: OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export. Original evidence: [${MODELING_ROOT}/research/local-baseline.md](../../local-baseline.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`).
 
 ### 116. Reopen STEP and compare critical geometry (DOM-05-A03)
 
-Original action: [Reopen STEP and compare critical geometry](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-05 — Export STEP solid.
+Original action: [Reopen STEP and compare critical geometry](../point-03-operations.json). Operations: DOM-05 — Export STEP solid.
 
 Implementation proposal: Proposal: solid exchange comparator with named-feature, unit and representation checks.
 
@@ -2684,11 +2684,11 @@ Dependencies: Actual consumer STEP reader; native shape/feature queries; CAD-13 
 
 Resources: Local reader/shape work scales with topology; required features precede broad checks. Remote/manual semantic review remains separate.
 
-Source-supported tools: OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export. Original evidence: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3rdparty/OpenCADStudio/README.md](/home/leo/projects/3rdparty/OpenCADStudio/README.md), [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs).
+Source-supported tools: OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export. Original evidence: [${MODELING_ROOT}/research/local-baseline.md](../../local-baseline.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), ${OCS_ROOT}/README.md (`${OCS_ROOT}/README.md`), ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`).
 
 ### 117. Author readable parametric source with stable feature references (DOM-40-A02)
 
-Original action: [Author readable parametric source with stable feature references](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
+Original action: [Author readable parametric source with stable feature references](../point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
 
 Implementation proposal: Extract explicit source-backed parameters and feature references from the existing component programs while retaining their working geometry functions and provenance metadata.
 
@@ -2704,13 +2704,13 @@ Dependencies: Actual supported CadQuery/build123d/FreeCAD/OpenSCAD APIs; existin
 
 Resources: Local syntax/static analysis scales with source/dependencies; remote reasoning authors/reviews semantic construction; manual choices remain recorded.
 
-Reuse: [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [item_ocs_parts.py](/tmp/opencode/item_ocs_parts.py), [build_leaf_gen2.py](/tmp/opencode/build_leaf_gen2.py), [build_bmw_i3_94ah.py](/tmp/opencode/build_bmw_i3_94ah.py). Existing readable component parameter/construction code; constants, import side effects and file locations require scoped extraction.
+Reuse: build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), item_ocs_parts.py (`${TEMP_ROOT}/opencode/item_ocs_parts.py`), build_leaf_gen2.py (`${TEMP_ROOT}/opencode/build_leaf_gen2.py`), build_bmw_i3_94ah.py (`${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py`). Existing readable component parameter/construction code; constants, import side effects and file locations require scoped extraction.
 
-Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 118. Generate geometry in the declared environment (DOM-40-A03)
 
-Original action: [Generate geometry in the declared environment](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
+Original action: [Generate geometry in the declared environment](../point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
 
 Implementation proposal: Add configured source/parameter/output paths and complete helper dependency resolution around the existing component build entry point.
 
@@ -2726,13 +2726,13 @@ Dependencies: Pinned library/runtime/kernel; CAD-10 supported construction or CA
 
 Resources: Local kernel/render CPU/RAM scales with feature/Boolean/mesh complexity; remote model time is separate. Record manual exception handling and actual build mode.
 
-Reuse: [ocs_control.py](/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py), [ngv064_ocs.py](/tmp/opencode/ngv064_ocs.py), [item_ocs_parts.py](/tmp/opencode/item_ocs_parts.py), [battery_ocs_parts.py](/tmp/opencode/battery_ocs_parts.py), [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [build_leaf_gen2.py](/tmp/opencode/build_leaf_gen2.py), [build_bmw_i3_94ah.py](/tmp/opencode/build_bmw_i3_94ah.py). Guarded writes and native geometry creation; component recipes require explicit input/session adapters.
+Reuse: ocs_control.py (`${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py`), ngv064_ocs.py (`${TEMP_ROOT}/opencode/ngv064_ocs.py`), item_ocs_parts.py (`${TEMP_ROOT}/opencode/item_ocs_parts.py`), battery_ocs_parts.py (`${TEMP_ROOT}/opencode/battery_ocs_parts.py`), build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), build_leaf_gen2.py (`${TEMP_ROOT}/opencode/build_leaf_gen2.py`), build_bmw_i3_94ah.py (`${TEMP_ROOT}/opencode/build_bmw_i3_94ah.py`). Guarded writes and native geometry creation; component recipes require explicit input/session adapters.
 
-Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 119. Validate generated geometry and a supplied parameter variant (DOM-40-A04)
 
-Original action: [Validate generated geometry and a supplied parameter variant](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
+Original action: [Validate generated geometry and a supplied parameter variant](../point-03-operations.json). Operations: DOM-40 — Script-parametric CAD authoring.
 
 Implementation proposal: Reuse component verification functions and recorded fixtures; parameterize their expected values from independent inputs and test one explicit supported parameter change.
 
@@ -2748,13 +2748,13 @@ Dependencies: Native/independent shape queries, CAD-13 and selected backend rege
 
 Resources: Local regeneration may dominate readback; compare actual feature/face count and runtime. Remote/VLM review targets semantic variant changes; manual corrections recorded.
 
-Reuse: [check_ngv064_wheel.py](/tmp/opencode/check_ngv064_wheel.py), [build_item_profile_segment.py](/tmp/opencode/build_item_profile_segment.py), [neugart-ngv064-wheel-160-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json), [item-angle-bracket-set-41115-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json), [item-profile-02633-segment-100mm-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json), [nissan-leaf-gen2-native.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json), [bmw-i3-94ah-native-checks.json](/home/leo/projects/ferme/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json). Restricted native surface checks and retained pre-save component results; choose reader for actual representation.
+Reuse: check_ngv064_wheel.py (`${TEMP_ROOT}/opencode/check_ngv064_wheel.py`), build_item_profile_segment.py (`${TEMP_ROOT}/opencode/build_item_profile_segment.py`), neugart-ngv064-wheel-160-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/neugart-ngv064-wheel-160-native.json`), item-angle-bracket-set-41115-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-angle-bracket-set-41115-native.json`), item-profile-02633-segment-100mm-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/item-profile-02633-segment-100mm-native.json`), nissan-leaf-gen2-native.json (`${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2-native.json`), bmw-i3-94ah-native-checks.json (`${FERME_ROOT}/engineering/module-development/cad/checks/bmw-i3-94ah-native-checks.json`). Restricted native surface checks and retained pre-save component results; choose reader for actual representation.
 
-Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: CadQuery; build123d; OpenSCAD; FreeCAD Python. Original evidence: [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 120. Select the assembly-aware exporter and settings (DOM-39-A02)
 
-Original action: [Select the assembly-aware exporter and settings](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
+Original action: [Select the assembly-aware exporter and settings](../point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
 
 Implementation proposal: Proposal: exporter capability adapter that declares preserved product structure and blocks mismatched route selection.
 
@@ -2770,11 +2770,11 @@ Dependencies: OCCT 8.0.1 STEPCAFControl_Writer source documentation and archived
 
 Resources: Local capability inspection precedes export; CPU/RAM estimate follows component/face count. Remote/manual work compares consumer and representation constraints.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 121. Write the STEP derivative and preservation mapping (DOM-39-A03)
 
-Original action: [Write the STEP derivative and preservation mapping](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
+Original action: [Write the STEP derivative and preservation mapping](../point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
 
 Implementation proposal: Proposal: export transaction/report wrapper with stable operation identity and source/output lineage.
 
@@ -2790,11 +2790,11 @@ Dependencies: Selected STEP exporter and native assembly API; destination writin
 
 Resources: Local export CPU/RAM/storage depends on faces/products; no reconstruction inference. Agent reviews warnings; record manual intervention and any remote review.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 122. Reopen and compare the exported assembly (DOM-39-A04)
 
-Original action: [Reopen and compare the exported assembly](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
+Original action: [Reopen and compare the exported assembly](../point-02-operations.json). Operations: DOM-39 — Export STEP assembly.
 
 Implementation proposal: Proposal: assembly exchange comparator using stable source-object mappings plus explicit failure localization.
 
@@ -2810,11 +2810,11 @@ Dependencies: Actual receiving importer and shape/assembly inspection APIs; seco
 
 Resources: Begin with structure/units/transforms; detailed topology/features scale with entity count. Remote VLM review is supplementary evidence; log latency and manual mapping effort.
 
-Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: FreeCAD/Open CASCADE STEP adapter. Original evidence: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 123. Diagnose the earliest invalid source-to-geometry transition (CAD-14-A02)
 
-Original action: [Diagnose the earliest invalid source-to-geometry transition](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-14 — Recover from failed interpretation or geometry construction.
+Original action: [Diagnose the earliest invalid source-to-geometry transition](../point-03-operations.json). Operations: CAD-14 — Recover from failed interpretation or geometry construction.
 
 Implementation proposal: Proposal: causal transition map linking failed predicates to source/constraint/feature/export actions.
 
@@ -2830,13 +2830,13 @@ Dependencies: Native diagnostics, source overlays and kernel validity reports; a
 
 Resources: Local comparison uses retained records first; geometry isolation is a separate authorized computation. Remote/VLM calls and manual diagnosis are measured separately.
 
-Reuse: [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md), [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md). Recorded topology, command-state, bounds and capture failures; component-specific recovery decisions.
+Reuse: ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`), cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`). Recorded topology, command-state, bounds and capture failures; component-specific recovery decisions.
 
-Source-supported tools: source overlay, operation logs, constraint residuals, OCS operation status/revision readback, CAD kernel validity reports. Original evidence: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md](/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
+Source-supported tools: source overlay, operation logs, constraint residuals, OCS operation status/revision readback, CAD kernel validity reports. Original evidence: ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), ${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md (`${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md`), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
 
 ### 124. Revise the brief and issue a bounded retry plan (CAD-14-A03)
 
-Original action: [Revise the brief and issue a bounded retry plan](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json). Operations: CAD-14 — Recover from failed interpretation or geometry construction.
+Original action: [Revise the brief and issue a bounded retry plan](../point-03-operations.json). Operations: CAD-14 — Recover from failed interpretation or geometry construction.
 
 Implementation proposal: Proposal: recovery-plan emitter with per-action prerequisites, restart boundary and required rechecks.
 
@@ -2852,13 +2852,13 @@ Dependencies: Existing brief/version records and owning-operation contracts; geo
 
 Resources: Local metadata/dependency work is bounded by affected records. Remote/manual effort records correction choices; actual rerun cost belongs to the owning operation.
 
-Reuse: [ocs-skill-improvements.md](/home/leo/projects/ferme/skills/ocs-skill-improvements.md), [cad-workflow-findings.md](/home/leo/projects/ferme/skills/cad-workflow-findings.md). Recorded topology, command-state, bounds and capture failures; component-specific recovery decisions.
+Reuse: ocs-skill-improvements.md (`${FERME_ROOT}/skills/ocs-skill-improvements.md`), cad-workflow-findings.md (`${FERME_ROOT}/skills/cad-workflow-findings.md`). Recorded topology, command-state, bounds and capture failures; component-specific recovery decisions.
 
-Source-supported tools: source overlay, operation logs, constraint residuals, OCS operation status/revision readback, CAD kernel validity reports. Original evidence: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md](/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
+Source-supported tools: source overlay, operation logs, constraint residuals, OCS operation status/revision readback, CAD kernel validity reports. Original evidence: ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), ${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md (`${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md`), [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
 
 ### 125. Estimate plane mapping and rectified derivative (CAD-02-A02)
 
-Original action: [Estimate plane mapping and rectified derivative](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-02 — Rectify a raster drawing plane from known dimensions.
+Original action: [Estimate plane mapping and rectified derivative](../point-04-operations.json). Operations: CAD-02 — Rectify a raster drawing plane from known dimensions.
 
 Implementation proposal: Proposal: rectification adapter emits matrix/inverse, valid domain, fit diagnostics and sampling receipt.
 
@@ -2878,7 +2878,7 @@ Source-supported tools: OpenCV point correspondences, planar homography. Origina
 
 ### 126. Check independent controls and publish measurements (CAD-02-A03)
 
-Original action: [Check independent controls and publish measurements](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-02 — Rectify a raster drawing plane from known dimensions.
+Original action: [Check independent controls and publish measurements](../point-04-operations.json). Operations: CAD-02 — Rectify a raster drawing plane from known dimensions.
 
 Implementation proposal: Proposal: planar checker consumes mapping/checks/criteria and emits residual rows and named downstream readiness.
 
@@ -2898,7 +2898,7 @@ Source-supported tools: OpenCV point correspondences, planar homography. Origina
 
 ### 127. Fit source-supported vector candidates (CAD-04-A02)
 
-Original action: [Fit source-supported vector candidates](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-04 — Extract raster edges, lines and contours.
+Original action: [Fit source-supported vector candidates](../point-04-operations.json). Operations: CAD-04 — Extract raster edges, lines and contours.
 
 Implementation proposal: Proposal: curve fitter consumes support pixels/class/criteria and emits typed alternatives, support sets and residuals.
 
@@ -2918,7 +2918,7 @@ Source-supported tools: OpenCV thresholding, HoughLinesP, findContours, approxPo
 
 ### 128. Check geometry and publish vector evidence (CAD-04-A03)
 
-Original action: [Check geometry and publish vector evidence](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-04 — Extract raster edges, lines and contours.
+Original action: [Check geometry and publish vector evidence](../point-04-operations.json). Operations: CAD-04 — Extract raster edges, lines and contours.
 
 Implementation proposal: Proposal: raster-vector audit outputs typed geometry, source map, change ledger and named check results.
 
@@ -2938,7 +2938,7 @@ Source-supported tools: OpenCV thresholding, HoughLinesP, findContours, approxPo
 
 ### 129. Recognize glyphs and parse engineering notation (CAD-03-A02)
 
-Original action: [Recognize glyphs and parse engineering notation](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
+Original action: [Recognize glyphs and parse engineering notation](../point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
 
 Implementation proposal: Proposal: annotation parser consumes raw TSV/source context and emits typed candidates with unsupported/ambiguous flags.
 
@@ -2958,7 +2958,7 @@ Source-supported tools: Tesseract OCR TSV output, image crop/deskew, human trans
 
 ### 130. Associate text with geometric features (CAD-03-A03)
 
-Original action: [Associate text with geometric features](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
+Original action: [Associate text with geometric features](../point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
 
 Implementation proposal: Proposal: association helper returns candidate links, source locators and selected/ambiguous states.
 
@@ -2978,7 +2978,7 @@ Source-supported tools: Tesseract OCR TSV output, image crop/deskew, human trans
 
 ### 131. Publish reviewed text and association evidence (CAD-03-A04)
 
-Original action: [Publish reviewed text and association evidence](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
+Original action: [Publish reviewed text and association evidence](../point-04-operations.json). Operations: CAD-03 — Recognize dimension text with OCR.
 
 Implementation proposal: Proposal: evidence exporter emits reviewed text plus structured companion records.
 
@@ -2998,7 +2998,7 @@ Source-supported tools: Tesseract OCR TSV output, image crop/deskew, human trans
 
 ### 132. Match source features and solve registration candidates (CAD-06-A02)
 
-Original action: [Match source features and solve registration candidates](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-06 — Register orthographic drawing views in a shared coordinate frame.
+Original action: [Match source features and solve registration candidates](../point-04-operations.json). Operations: CAD-06 — Register orthographic drawing views in a shared coordinate frame.
 
 Implementation proposal: Proposal: correspondence solver emits candidate links, transform receipts and contradictions from view manifests/vectors.
 
@@ -3018,7 +3018,7 @@ Source-supported tools: view segmentation, projection-axis declaration, line/ver
 
 ### 133. Verify registration and publish reconstruction brief (CAD-06-A03)
 
-Original action: [Verify registration and publish reconstruction brief](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-06 — Register orthographic drawing views in a shared coordinate frame.
+Original action: [Verify registration and publish reconstruction brief](../point-04-operations.json). Operations: CAD-06 — Register orthographic drawing views in a shared coordinate frame.
 
 Implementation proposal: Proposal: registered-view brief exporter preserves frames, alternate matches and exact downstream prerequisites.
 
@@ -3038,7 +3038,7 @@ Source-supported tools: view segmentation, projection-axis declaration, line/ver
 
 ### 134. Construct candidate edges and bounded surfaces (CAD-07-A02)
 
-Original action: [Construct candidate edges and bounded surfaces](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
+Original action: [Construct candidate edges and bounded surfaces](../point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
 
 Implementation proposal: Proposal: reconstruction adapter consumes hypothesis/sequence and emits typed edges/faces plus lineage.
 
@@ -3058,7 +3058,7 @@ Source-supported tools: multi-view edge correspondence, wireframe/face reconstru
 
 ### 135. Form and inspect the required solid (CAD-07-A03)
 
-Original action: [Form and inspect the required solid](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
+Original action: [Form and inspect the required solid](../point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
 
 Implementation proposal: Proposal: solid readiness checker accepts candidate boundary/criteria and reports actual class and blocking boundaries.
 
@@ -3078,7 +3078,7 @@ Source-supported tools: multi-view edge correspondence, wireframe/face reconstru
 
 ### 136. Project back to every view and publish checked geometry (CAD-07-A04)
 
-Original action: [Project back to every view and publish checked geometry](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
+Original action: [Project back to every view and publish checked geometry](../point-04-operations.json). Operations: CAD-07 — Reconstruct a candidate 3D wireframe and surface from orthographic views.
 
 Implementation proposal: Proposal: multiview verifier emits located edge/dimension residuals, feature coverage and unresolved alternatives.
 
@@ -3098,7 +3098,7 @@ Source-supported tools: multi-view edge correspondence, wireframe/face reconstru
 
 ### 137. Construct dimensioned wall and opening relationships (CAD-05-A02)
 
-Original action: [Construct dimensioned wall and opening relationships](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-05 — Convert raster floor-plan candidates into a wall and opening graph.
+Original action: [Construct dimensioned wall and opening relationships](../point-04-operations.json). Operations: CAD-05 — Convert raster floor-plan candidates into a wall and opening graph.
 
 Implementation proposal: Proposal: graph builder consumes candidates/conventions/criteria and emits nodes, wall paths, opening host/intervals and residuals.
 
@@ -3118,7 +3118,7 @@ Source-supported tools: floor-plan segmentation/vectorization model or manual tr
 
 ### 138. Verify plan graph and publish vector handoff (CAD-05-A03)
 
-Original action: [Verify plan graph and publish vector handoff](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-05 — Convert raster floor-plan candidates into a wall and opening graph.
+Original action: [Verify plan graph and publish vector handoff](../point-04-operations.json). Operations: CAD-05 — Convert raster floor-plan candidates into a wall and opening graph.
 
 Implementation proposal: Proposal: plan-graph verifier emits geometric/semantic findings and downstream element readiness.
 
@@ -3138,7 +3138,7 @@ Source-supported tools: floor-plan segmentation/vectorization model or manual tr
 
 ### 139. Create explicit IFC identity, units and spatial structure (DOM-18-A02)
 
-Original action: [Create explicit IFC identity, units and spatial structure](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
+Original action: [Create explicit IFC identity, units and spatial structure](../point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
 
 Implementation proposal: Proposal: IFC context builder consumes semantic/placement records and emits identity/units/context hierarchy receipts.
 
@@ -3154,11 +3154,11 @@ Dependencies: Selected IfcOpenShell/Bonsai schema/API version; DOM-R01 documente
 
 Resources: Local metadata/relationship creation scales with elements; remote review covers semantic decisions; manual hierarchy corrections recorded.
 
-Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
+Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
 
 ### 140. Author placed wall/opening geometry and host relations (DOM-18-A03)
 
-Original action: [Author placed wall/opening geometry and host relations](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
+Original action: [Author placed wall/opening geometry and host relations](../point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
 
 Implementation proposal: Proposal: building element adapter accepts wall/opening/placement records and emits geometry, identity and host-relation receipts.
 
@@ -3174,11 +3174,11 @@ Dependencies: IfcOpenShell geometry/placement/feature APIs; existing CAD geometr
 
 Resources: Local geometry cost follows walls/openings and Boolean evaluation; semantic record work separate; remote/manual host review recorded.
 
-Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
+Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
 
 ### 141. Validate saved IFC geometry and semantics (DOM-18-A04)
 
-Original action: [Validate saved IFC geometry and semantics](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
+Original action: [Validate saved IFC geometry and semantics](../point-04-operations.json). Operations: DOM-18 — Raster floor plan to IFC building.
 
 Implementation proposal: Proposal: IFC source verifier emits separate schema, relationship, dimensional, projection and source-correspondence reports.
 
@@ -3194,11 +3194,11 @@ Dependencies: Selected IfcOpenShell validator/geometry API and independent consu
 
 Resources: Local parse/relationship checks precede geometry evaluation; resource evidence names element/face counts; remote reviewer/manual work separate.
 
-Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
+Source-supported tools: Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html).
 
 ### 142. Construct walls and opening voids with retained identities (CAD-17-A02)
 
-Original action: [Construct walls and opening voids with retained identities](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-17 — Build wall and opening solids from a confirmed floor-plan graph.
+Original action: [Construct walls and opening voids with retained identities](../point-04-operations.json). Operations: CAD-17 — Build wall and opening solids from a confirmed floor-plan graph.
 
 Implementation proposal: Proposal: wall assembly executor accepts feature records and emits wall/cutter handles, Boolean receipts and source mappings.
 
@@ -3214,11 +3214,11 @@ Dependencies: CAD-10 native capability gates; OCS explicit delete_source/keep_op
 
 Resources: Local cost follows walls/faces/cuts; curved Booleans may dominate; remote/manual diagnosis and display GPU role separate.
 
-Source-supported tools: FreeCAD Part/Sketcher or OCS native geometry, wall/opening graph interpretation, human confirmation. Original evidence: [https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html), [https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf](https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf), [https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf](https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md).
+Source-supported tools: FreeCAD Part/Sketcher or OCS native geometry, wall/opening graph interpretation, human confirmation. Original evidence: [https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html), [https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf](https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf), [https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf](https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`).
 
 ### 143. Validate plan, elevation and saved assembly (CAD-17-A03)
 
-Original action: [Validate plan, elevation and saved assembly](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: CAD-17 — Build wall and opening solids from a confirmed floor-plan graph.
+Original action: [Validate plan, elevation and saved assembly](../point-04-operations.json). Operations: CAD-17 — Build wall and opening solids from a confirmed floor-plan graph.
 
 Implementation proposal: Proposal: wall assembly verifier emits plan/elevation/host comparisons and saved-revision mapping.
 
@@ -3234,11 +3234,11 @@ Dependencies: CAD-13 dimensional/readback checks; CAD assembly representation su
 
 Resources: Local required-feature checks precede whole-model comparisons; remote full/section review and manual work tracked.
 
-Source-supported tools: FreeCAD Part/Sketcher or OCS native geometry, wall/opening graph interpretation, human confirmation. Original evidence: [https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html), [https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf](https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf), [https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf](https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf), [/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md).
+Source-supported tools: FreeCAD Part/Sketcher or OCS native geometry, wall/opening graph interpretation, human confirmation. Original evidence: [https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html](https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html), [https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf](https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf), [https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf](https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf), ${OCS_ROOT}/docs/automation/README.md (`${OCS_ROOT}/docs/automation/README.md`).
 
 ### 144. Compose calibrated vectors and source-linked constraints (DOM-02-A02)
 
-Original action: [Compose calibrated vectors and source-linked constraints](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: DOM-02 — Raster sketch to constrained sketch.
+Original action: [Compose calibrated vectors and source-linked constraints](../point-04-operations.json). Operations: DOM-02 — Raster sketch to constrained sketch.
 
 Implementation proposal: Proposal: raster-sketch composer maps source feature records into native geometry/constraints and retains all upstream receipts.
 
@@ -3254,11 +3254,11 @@ Dependencies: FreeCAD Sketcher documented construction and discovered diagnostic
 
 Resources: Local tracing/solver cost follows curves/relations; remote/manual work resolves semantic association.
 
-Source-supported tools: OpenCADStudio; FreeCAD Sketcher; manual image tracing. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: OpenCADStudio; FreeCAD Sketcher; manual image tracing. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 145. Verify solved geometry and saved editability (DOM-02-A03)
 
-Original action: [Verify solved geometry and saved editability](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json). Operations: DOM-02 — Raster sketch to constrained sketch.
+Original action: [Verify solved geometry and saved editability](../point-04-operations.json). Operations: DOM-02 — Raster sketch to constrained sketch.
 
 Implementation proposal: Proposal: raster-sketch verifier outputs source, solver and saved-editability results separately.
 
@@ -3274,11 +3274,11 @@ Dependencies: CAD-09/CAD-13; actual native save/readback interfaces.
 
 Resources: Local required-feature checks first; remote reviewer sees source/full sketch and located discrepancies; manual corrections recorded.
 
-Source-supported tools: OpenCADStudio; FreeCAD Sketcher; manual image tracing. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: OpenCADStudio; FreeCAD Sketcher; manual image tracing. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 146. Extract selected frames with reversible timeline mapping (REC-04-A02)
 
-Original action: [Extract selected frames with reversible timeline mapping](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-04 — Convert video into an image reconstruction dataset.
+Original action: [Extract selected frames with reversible timeline mapping](../point-07-operations.json). Operations: REC-04 — Convert video into an image reconstruction dataset.
 
 Implementation proposal: Proposal: frame extractor accepts timeline selections and outputs images plus frame/time/pixel manifest.
 
@@ -3298,7 +3298,7 @@ Source-supported tools: ffmpeg frame extraction, blur/duplicate-frame filtering,
 
 ### 147. Check dataset quality and camera compatibility (REC-04-A03)
 
-Original action: [Check dataset quality and camera compatibility](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-04 — Convert video into an image reconstruction dataset.
+Original action: [Check dataset quality and camera compatibility](../point-07-operations.json). Operations: REC-04 — Convert video into an image reconstruction dataset.
 
 Implementation proposal: Proposal: frame-set verifier emits per-image quality/camera/timeline readiness.
 
@@ -3318,7 +3318,7 @@ Source-supported tools: ffmpeg frame extraction, blur/duplicate-frame filtering,
 
 ### 148. Generate independently framed convex pieces (DOM-13-A02)
 
-Original action: [Generate independently framed convex pieces](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-13 — Generate convex collision set.
+Original action: [Generate independently framed convex pieces](../point-06-operations.json). Operations: DOM-13 — Generate convex collision set.
 
 Implementation proposal: Proposal: decomposition adapter accepts mesh/frame/settings and emits individually addressable pieces plus errors/loss map.
 
@@ -3338,7 +3338,7 @@ Source-supported tools: CoACD; V-HACD; primitive fitting. Original evidence: [ht
 
 ### 149. Validate passages and intended contact behavior (DOM-13-A03)
 
-Original action: [Validate passages and intended contact behavior](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-13 — Generate convex collision set.
+Original action: [Validate passages and intended contact behavior](../point-06-operations.json). Operations: DOM-13 — Generate convex collision set.
 
 Implementation proposal: Proposal: collision verifier reports per-feature envelope, penetration/clearance and contact outcomes.
 
@@ -3358,7 +3358,7 @@ Source-supported tools: CoACD; V-HACD; primitive fitting. Original evidence: [ht
 
 ### 150. Export source-linked mesh assets (DOM-12-A02)
 
-Original action: [Export source-linked mesh assets](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-12 — Export mesh assets for MuJoCo.
+Original action: [Export source-linked mesh assets](../point-06-operations.json). Operations: DOM-12 — Export mesh assets for MuJoCo.
 
 Implementation proposal: Proposal: mesh exporter accepts occurrence/frame/role settings and returns meshes plus approximation/loss ledger.
 
@@ -3374,11 +3374,11 @@ Dependencies: Selected actual exporter and target mesh loader; no unsupported AP
 
 Resources: Local cost follows faces, tessellation density and asset count; GPU only if actual exporter uses it.
 
-Source-supported tools: CAD mesh exporter; Blender; Open CASCADE tessellation. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: CAD mesh exporter; Blender; Open CASCADE tessellation. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 151. Compare meshes to source and reopen (DOM-12-A03)
 
-Original action: [Compare meshes to source and reopen](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-12 — Export mesh assets for MuJoCo.
+Original action: [Compare meshes to source and reopen](../point-06-operations.json). Operations: DOM-12 — Export mesh assets for MuJoCo.
 
 Implementation proposal: Proposal: asset checker emits source-to-mesh residuals, frame/unit checks and parser outcomes.
 
@@ -3394,11 +3394,11 @@ Dependencies: Proposed mesh comparator and target loader fixture.
 
 Resources: Local selected-feature checks before dense distances; remote view review/manual controls separate.
 
-Source-supported tools: CAD mesh exporter; Blender; Open CASCADE tessellation. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: CAD mesh exporter; Blender; Open CASCADE tessellation. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 152. Build articulated link and joint representation (DOM-08-A02)
 
-Original action: [Build articulated link and joint representation](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-08 — CAD assembly to articulated robot structure.
+Original action: [Build articulated link and joint representation](../point-06-operations.json). Operations: DOM-08 — CAD assembly to articulated robot structure.
 
 Implementation proposal: Proposal: articulation adapter emits joint/geometry frame maps and supported/unsupported relation ledger.
 
@@ -3418,7 +3418,7 @@ Source-supported tools: FreeCAD Assembly Workbench; explicit robot-description a
 
 ### 153. Validate robot assembly against measured configurations (DOM-08-A03)
 
-Original action: [Validate robot assembly against measured configurations](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-08 — CAD assembly to articulated robot structure.
+Original action: [Validate robot assembly against measured configurations](../point-06-operations.json). Operations: DOM-08 — CAD assembly to articulated robot structure.
 
 Implementation proposal: Proposal: robot-assembly checker reports per-link/joint residuals and format-specific prerequisites.
 
@@ -3438,7 +3438,7 @@ Source-supported tools: FreeCAD Assembly Workbench; explicit robot-description a
 
 ### 154. Calculate and transform sourced mass properties (DOM-14-A02)
 
-Original action: [Calculate and transform sourced mass properties](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-14 — Calculate or import physical mass properties.
+Original action: [Calculate and transform sourced mass properties](../point-06-operations.json). Operations: DOM-14 — Calculate or import physical mass properties.
 
 Implementation proposal: Proposal: physical-property adapter accepts measured fields or validated shapes/density plus raw component/sign/reference/unit metadata. It emits no-density geometric integrals, density application count, physical mass/COM/central tensor and frame/aggregation ledger. Length scaling uses volume L³, geometric inertia L⁵ and physical inertia mass×L²; mass/length/density units convert coherently. Reject an unknown source off-diagonal/product convention rather than copy field names.
 
@@ -3454,11 +3454,11 @@ Dependencies: Documented kernel mass-property API and selected format inertia co
 
 Resources: Local analytic/solid integration before dense mesh integration; cost follows bodies/faces; remote review/manual density data separate.
 
-Source-supported tools: CAD kernel mass properties; MuJoCo compiler geom inference; measured scale. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: CAD kernel mass properties; MuJoCo compiler geom inference; measured scale. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 155. Check admissibility and consumer-specific completeness (DOM-14-A03)
 
-Original action: [Check admissibility and consumer-specific completeness](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-14 — Calculate or import physical mass properties.
+Original action: [Check admissibility and consumer-specific completeness](../point-06-operations.json). Operations: DOM-14 — Calculate or import physical mass properties.
 
 Implementation proposal: Proposal: validator emits field-level admissibility, physical-evidence comparison and consumer readiness.
 
@@ -3474,11 +3474,11 @@ Dependencies: Proposed numerical property checker; downstream URDF/MJCF readback
 
 Resources: Small matrix checks low compute; independent physical measurement/manual review separately costed.
 
-Source-supported tools: CAD kernel mass properties; MuJoCo compiler geom inference; measured scale. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst), [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md).
+Source-supported tools: CAD kernel mass properties; MuJoCo compiler geom inference; measured scale. Original evidence: [https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst), [https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst](https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst), [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md).
 
 ### 156. Write GLB and semantic sidecar (DOM-17-A02)
 
-Original action: [Write GLB and semantic sidecar](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-17 — IFC to GLB display scene.
+Original action: [Write GLB and semantic sidecar](../point-06-operations.json). Operations: DOM-17 — IFC to GLB display scene.
 
 Implementation proposal: Proposal: GLB writer emits scene plus ID/property/loss map; preserves original IFC independently.
 
@@ -3494,11 +3494,11 @@ Dependencies: Pinned converter/serializer and DOM-16 geometry semantics.
 
 Resources: Local tessellation/serialization scales with triangles/materials; display GPU optional and recorded.
 
-Source-supported tools: IfcOpenShell IfcConvert; Blender; GLB export. Original evidence: [https://docs.ifcopenshell.org/introduction.html](https://docs.ifcopenshell.org/introduction.html), [https://www.blender.org/features/pipeline/](https://www.blender.org/features/pipeline/), [/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json](/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json).
+Source-supported tools: IfcOpenShell IfcConvert; Blender; GLB export. Original evidence: [https://docs.ifcopenshell.org/introduction.html](https://docs.ifcopenshell.org/introduction.html), [https://www.blender.org/features/pipeline/](https://www.blender.org/features/pipeline/), ${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json (`${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json`).
 
 ### 157. Reopen scene and compare identity coverage (DOM-17-A03)
 
-Original action: [Reopen scene and compare identity coverage](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-17 — IFC to GLB display scene.
+Original action: [Reopen scene and compare identity coverage](../point-06-operations.json). Operations: DOM-17 — IFC to GLB display scene.
 
 Implementation proposal: Proposal: scene verifier reports coverage, frame/units and visual/source correspondence.
 
@@ -3514,11 +3514,11 @@ Dependencies: Target GLB reader and proposed IFC-display comparator.
 
 Resources: Local coverage/transform checks before render review; remote/manual image review separate.
 
-Source-supported tools: IfcOpenShell IfcConvert; Blender; GLB export. Original evidence: [https://docs.ifcopenshell.org/introduction.html](https://docs.ifcopenshell.org/introduction.html), [https://www.blender.org/features/pipeline/](https://www.blender.org/features/pipeline/), [/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json](/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json).
+Source-supported tools: IfcOpenShell IfcConvert; Blender; GLB export. Original evidence: [https://docs.ifcopenshell.org/introduction.html](https://docs.ifcopenshell.org/introduction.html), [https://www.blender.org/features/pipeline/](https://www.blender.org/features/pipeline/), ${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json (`${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json`).
 
 ### 158. Add static geoms with separate visual and collision roles (DOM-33-A02)
 
-Original action: [Add static geoms with separate visual and collision roles](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-33 — Add environment collision geometry to MJCF.
+Original action: [Add static geoms with separate visual and collision roles](../point-06-operations.json). Operations: DOM-33 — Add environment collision geometry to MJCF.
 
 Implementation proposal: Proposal: static-geom composer emits new XML/assets and per-piece world placement/role ledger.
 
@@ -3538,7 +3538,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 159. Check robot preservation and obstacle contacts (DOM-33-A03)
 
-Original action: [Check robot preservation and obstacle contacts](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-33 — Add environment collision geometry to MJCF.
+Original action: [Check robot preservation and obstacle contacts](../point-06-operations.json). Operations: DOM-33 — Add environment collision geometry to MJCF.
 
 Implementation proposal: Proposal: environment verifier reports seed invariants, frame/coverage and per-fixture outcomes.
 
@@ -3558,7 +3558,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 160. Serialize links joints and distinct asset origins (DOM-09-A02)
 
-Original action: [Serialize links joints and distinct asset origins](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-09 — Robot assembly to URDF package.
+Original action: [Serialize links joints and distinct asset origins](../point-06-operations.json). Operations: DOM-09 — Robot assembly to URDF package.
 
 Implementation proposal: Proposal: package writer accepts checked graph/role/tensor records and emits URDF, meshes and mapped omission list.
 
@@ -3578,7 +3578,7 @@ Source-supported tools: URDF XML/Xacro authoring; ROS urdf_tutorial; CAD-to-URDF
 
 ### 161. Parse reopen and compare robot poses and physics (DOM-09-A03)
 
-Original action: [Parse reopen and compare robot poses and physics](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-09 — Robot assembly to URDF package.
+Original action: [Parse reopen and compare robot poses and physics](../point-06-operations.json). Operations: DOM-09 — Robot assembly to URDF package.
 
 Implementation proposal: Proposal: package verifier emits type/asset/tree, kinematic and property equivalence results.
 
@@ -3598,7 +3598,7 @@ Source-supported tools: URDF XML/Xacro authoring; ROS urdf_tutorial; CAD-to-URDF
 
 ### 162. Extract triangles with source and transform mapping (DOM-16-A02)
 
-Original action: [Extract triangles with source and transform mapping](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-16 — Extract IFC geometry as triangles.
+Original action: [Extract triangles with source and transform mapping](../point-06-operations.json). Operations: DOM-16 — Extract IFC geometry as triangles.
 
 Implementation proposal: Proposal: triangle adapter emits per-element meshes, identity/material map and baked-versus-external transform flag.
 
@@ -3618,7 +3618,7 @@ Source-supported tools: IfcOpenShell geom.create_shape/iterator; IfcConvert. Ori
 
 ### 163. Check element coverage placements and openings (DOM-16-A03)
 
-Original action: [Check element coverage placements and openings](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-16 — Extract IFC geometry as triangles.
+Original action: [Check element coverage placements and openings](../point-06-operations.json). Operations: DOM-16 — Extract IFC geometry as triangles.
 
 Implementation proposal: Proposal: extraction verifier reports element-level geometry/identity results and eligible downstream roles.
 
@@ -3638,7 +3638,7 @@ Source-supported tools: IfcOpenShell geom.create_shape/iterator; IfcConvert. Ori
 
 ### 164. Compose source-linked scene objects and cameras (DOM-24-A02)
 
-Original action: [Compose source-linked scene objects and cameras](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-24 — Assemble and inspect Blender scene.
+Original action: [Compose source-linked scene objects and cameras](../point-06-operations.json). Operations: DOM-24 — Assemble and inspect Blender scene.
 
 Implementation proposal: Proposal: scene composer accepts typed imports/transforms/cameras and emits scene plus source/loss manifest.
 
@@ -3658,7 +3658,7 @@ Source-supported tools: Blender Python API; Blender MCP; background Blender scri
 
 ### 165. Reopen and inspect scene content numerically and visually (DOM-24-A03)
 
-Original action: [Reopen and inspect scene content numerically and visually](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-24 — Assemble and inspect Blender scene.
+Original action: [Reopen and inspect scene content numerically and visually](../point-06-operations.json). Operations: DOM-24 — Assemble and inspect Blender scene.
 
 Implementation proposal: Proposal: scene verifier emits role-specific checks and source/derivative coverage.
 
@@ -3678,7 +3678,7 @@ Source-supported tools: Blender Python API; Blender MCP; background Blender scri
 
 ### 166. Create placed semantic occurrence with source mapping (DOM-35-A02)
 
-Original action: [Create placed semantic occurrence with source mapping](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-35 — Place library component in semantic IFC.
+Original action: [Create placed semantic occurrence with source mapping](../point-06-operations.json). Operations: DOM-35 — Place library component in semantic IFC.
 
 Implementation proposal: Proposal: library inserter emits new entity/representation/relation IDs and source/placement ledger.
 
@@ -3698,7 +3698,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 167. Check new occurrence and preserved IFC relationships (DOM-35-A03)
 
-Original action: [Check new occurrence and preserved IFC relationships](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-35 — Place library component in semantic IFC.
+Original action: [Check new occurrence and preserved IFC relationships](../point-06-operations.json). Operations: DOM-35 — Place library component in semantic IFC.
 
 Implementation proposal: Proposal: insertion verifier emits source identity, occurrence geometry and preserved-context checks.
 
@@ -3718,7 +3718,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 168. Author named joint records and graph topology (DOM-31-A02)
 
-Original action: [Author named joint records and graph topology](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-31 — Author assembly graph and joint set.
+Original action: [Author named joint records and graph topology](../point-06-operations.json). Operations: DOM-31 — Author assembly graph and joint set.
 
 Implementation proposal: Proposal: joint author emits typed records and cycle edges, validates unique names, type-applicable axes/normals and limit fields; preserves inapplicable fields explicitly and never invents placeholder axes.
 
@@ -3738,7 +3738,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 169. Check reference and moved configurations (DOM-31-A03)
 
-Original action: [Check reference and moved configurations](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-31 — Author assembly graph and joint set.
+Original action: [Check reference and moved configurations](../point-06-operations.json). Operations: DOM-31 — Author assembly graph and joint set.
 
 Implementation proposal: Proposal: graph verifier emits per-joint pose residuals, unresolved closure conditions and downstream readiness.
 
@@ -3758,7 +3758,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 170. Create separate occurrence and authored joint relation (DOM-37-A02)
 
-Original action: [Create separate occurrence and authored joint relation](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-37 — Author robot assembly from CAD component.
+Original action: [Create separate occurrence and authored joint relation](../point-06-operations.json). Operations: DOM-37 — Author robot assembly from CAD component.
 
 Implementation proposal: Proposal: component inserter takes source/target revision and explicit transform and returns native handles plus graph relations.
 
@@ -3778,7 +3778,7 @@ Source-supported tools: FreeCAD Assembly Workbench or explicit CAD assembly auth
 
 ### 171. Validate attachment and publish three outputs (DOM-37-A03)
 
-Original action: [Validate attachment and publish three outputs](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-37 — Author robot assembly from CAD component.
+Original action: [Validate attachment and publish three outputs](../point-06-operations.json). Operations: DOM-37 — Author robot assembly from CAD component.
 
 Implementation proposal: Proposal: attachment publisher checks cross-artifact IDs/transforms and emits per-output readiness.
 
@@ -3798,7 +3798,7 @@ Source-supported tools: FreeCAD Assembly Workbench or explicit CAD assembly auth
 
 ### 172. Author body tree geoms and explicit closure constraints (DOM-11-A02)
 
-Original action: [Author body tree geoms and explicit closure constraints](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-11 — Author native MJCF simulation model.
+Original action: [Author body tree geoms and explicit closure constraints](../point-06-operations.json). Operations: DOM-11 — Author native MJCF simulation model.
 
 Implementation proposal: Proposal: MJCF author maps graph/roles/properties into editable source with explicit inferred/declared field ledger.
 
@@ -3818,7 +3818,7 @@ Source-supported tools: MuJoCo MJCF XML and mjSpec API. Original evidence: [http
 
 ### 173. Compile read back and check model meaning (DOM-11-A03)
 
-Original action: [Compile read back and check model meaning](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-11 — Author native MJCF simulation model.
+Original action: [Compile read back and check model meaning](../point-06-operations.json). Operations: DOM-11 — Author native MJCF simulation model.
 
 Implementation proposal: Proposal: model verifier reports effective defaults, kinematics, inertials and named fixture outcomes.
 
@@ -3838,7 +3838,7 @@ Source-supported tools: MuJoCo MJCF XML and mjSpec API. Original evidence: [http
 
 ### 174. Replace mapped role-specific geometry (DOM-32-A02)
 
-Original action: [Replace mapped role-specific geometry](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-32 — Map CAD link geometry to MJCF body tree.
+Original action: [Replace mapped role-specific geometry](../point-06-operations.json). Operations: DOM-32 — Map CAD link geometry to MJCF body tree.
 
 Implementation proposal: Proposal: geometry patcher accepts body/role/asset transforms and emits changed fields plus preservation diff.
 
@@ -3858,7 +3858,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 175. Compare preserved semantics and effective geometry (DOM-32-A03)
 
-Original action: [Compare preserved semantics and effective geometry](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-32 — Map CAD link geometry to MJCF body tree.
+Original action: [Compare preserved semantics and effective geometry](../point-06-operations.json). Operations: DOM-32 — Map CAD link geometry to MJCF body tree.
 
 Implementation proposal: Proposal: replacement verifier emits preserved-field diff, world-geometry residuals and affected contact results.
 
@@ -3878,7 +3878,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 176. Author static world geoms and source sidecar (DOM-34-A02)
 
-Original action: [Author static world geoms and source sidecar](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-34 — Author static MuJoCo environment from BIM mesh.
+Original action: [Author static world geoms and source sidecar](../point-06-operations.json). Operations: DOM-34 — Author static MuJoCo environment from BIM mesh.
 
 Implementation proposal: Proposal: static-world writer emits XML/assets with source-element and approximation mapping.
 
@@ -3898,7 +3898,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 177. Validate static coverage and working passages (DOM-34-A03)
 
-Original action: [Validate static coverage and working passages](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-34 — Author static MuJoCo environment from BIM mesh.
+Original action: [Validate static coverage and working passages](../point-06-operations.json). Operations: DOM-34 — Author static MuJoCo environment from BIM mesh.
 
 Implementation proposal: Proposal: verifier emits per-element geometry/identity and per-contact readiness.
 
@@ -3918,7 +3918,7 @@ Source-supported tools: documented adapter or explicit authoring step. Original 
 
 ### 178. Parse compile and serialize editable MJCF (DOM-10-A02)
 
-Original action: [Parse compile and serialize editable MJCF](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-10 — URDF import and MJCF conversion.
+Original action: [Parse compile and serialize editable MJCF](../point-06-operations.json). Operations: DOM-10 — URDF import and MJCF conversion.
 
 Implementation proposal: Proposal: converter emits source/spec/compiled/saved stage receipts and generated flattened XML with mapping.
 
@@ -3938,7 +3938,7 @@ Source-supported tools: MuJoCo URDF parser/compiler; mjSpec API. Original eviden
 
 ### 179. Reopen MJCF and compare supported semantics (DOM-10-A03)
 
-Original action: [Reopen MJCF and compare supported semantics](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-10 — URDF import and MJCF conversion.
+Original action: [Reopen MJCF and compare supported semantics](../point-06-operations.json). Operations: DOM-10 — URDF import and MJCF conversion.
 
 Implementation proposal: Proposal: conversion verifier emits per-field equivalence, fusion mapping and consumer readiness.
 
@@ -3958,7 +3958,7 @@ Source-supported tools: MuJoCo URDF parser/compiler; mjSpec API. Original eviden
 
 ### 180. Author IFC elements placements and relationships (DOM-15-A02)
 
-Original action: [Author IFC elements placements and relationships](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-15 — Author semantic IFC building.
+Original action: [Author IFC elements placements and relationships](../point-06-operations.json). Operations: DOM-15 — Author semantic IFC building.
 
 Implementation proposal: Proposal: IFC author emits element/representation/relationship identities plus source/placement ledger.
 
@@ -3978,7 +3978,7 @@ Source-supported tools: Bonsai; IfcOpenShell API. Original evidence: [https://do
 
 ### 181. Validate semantic graph and evaluated geometry (DOM-15-A03)
 
-Original action: [Validate semantic graph and evaluated geometry](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-15 — Author semantic IFC building.
+Original action: [Validate semantic graph and evaluated geometry](../point-06-operations.json). Operations: DOM-15 — Author semantic IFC building.
 
 Implementation proposal: Proposal: IFC verifier emits per-element semantic, geometry and delivery-requirement results.
 
@@ -3998,7 +3998,7 @@ Source-supported tools: Bonsai; IfcOpenShell API. Original evidence: [https://do
 
 ### 182. Extract and retain native kernel shapes (DOM-27-A02)
 
-Original action: [Extract and retain native kernel shapes](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-27 — Extract IFC geometry as OpenCASCADE B-rep.
+Original action: [Extract and retain native kernel shapes](../point-06-operations.json). Operations: DOM-27 — Extract IFC geometry as OpenCASCADE B-rep.
 
 Implementation proposal: Proposal: B-rep adapter emits typed shapes, source maps and evaluation/healing settings.
 
@@ -4018,7 +4018,7 @@ Source-supported tools: IfcOpenShell geom.create_shape/iterator using OpenCASCAD
 
 ### 183. Validate shape class and source feature agreement (DOM-27-A03)
 
-Original action: [Validate shape class and source feature agreement](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-27 — Extract IFC geometry as OpenCASCADE B-rep.
+Original action: [Validate shape class and source feature agreement](../point-06-operations.json). Operations: DOM-27 — Extract IFC geometry as OpenCASCADE B-rep.
 
 Implementation proposal: Proposal: shape verifier emits per-element class, metric, source and downstream-readiness records.
 
@@ -4038,7 +4038,7 @@ Source-supported tools: IfcOpenShell geom.create_shape/iterator using OpenCASCAD
 
 ### 184. Produce linked drawings and exchange geometry (DOM-25-A02)
 
-Original action: [Produce linked drawings and exchange geometry](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-25 — Create fabrication package.
+Original action: [Produce linked drawings and exchange geometry](../point-06-operations.json). Operations: DOM-25 — Create fabrication package.
 
 Implementation proposal: Proposal: package producer maps native feature IDs to views/dimensions and emits files plus lost-annotation/representation ledger.
 
@@ -4054,11 +4054,11 @@ Dependencies: Actual OCS exporter evidence; optional inspected TechDraw SVG API 
 
 Resources: Local drawing/solid export cost follows parts/views/faces; PDF rendering and manual annotation review separately recorded.
 
-Source-supported tools: Native CAD drawing/workbench; STEP/DXF/PDF exporters. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: Native CAD drawing/workbench; STEP/DXF/PDF exporters. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 185. Reopen recipient artifacts and audit feature coverage (DOM-25-A03)
 
-Original action: [Reopen recipient artifacts and audit feature coverage](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json). Operations: DOM-25 — Create fabrication package.
+Original action: [Reopen recipient artifacts and audit feature coverage](../point-06-operations.json). Operations: DOM-25 — Create fabrication package.
 
 Implementation proposal: Proposal: fabrication verifier emits per-feature requirement coverage, format losses and readback results.
 
@@ -4074,11 +4074,11 @@ Dependencies: Selected recipient/reader and proposed coverage checker.
 
 Resources: Local file/feature checks first; graphics/document review and recipient manual effort separate.
 
-Source-supported tools: Native CAD drawing/workbench; STEP/DXF/PDF exporters. Original evidence: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), [/home/leo/projects/3dmodeling/research/cad-and-skills.md](/home/leo/projects/3dmodeling/research/cad-and-skills.md).
+Source-supported tools: Native CAD drawing/workbench; STEP/DXF/PDF exporters. Original evidence: [${MODELING_ROOT}/research/implementation-plan.md](../../implementation-plan.md), [${MODELING_ROOT}/research/cad-and-skills.md](../../cad-and-skills.md).
 
 ### 186. Author constrained source and materialize geometry (REC-14-A02)
 
-Original action: [Author constrained source and materialize geometry](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-14 — Remodel segmented scan evidence as parametric CAD.
+Original action: [Author constrained source and materialize geometry](../point-05-operations.json). Operations: REC-14 — Remodel segmented scan evidence as parametric CAD.
 
 Implementation proposal: Proposal: editable remodel composer emits three artifacts plus dependency and source mapping.
 
@@ -4098,7 +4098,7 @@ Source-supported tools: Open3D feature fits, OpenCADStudio OCS skill, parametric
 
 ### 187. Verify editability, interfaces and fixed scan comparisons (REC-14-A03)
 
-Original action: [Verify editability, interfaces and fixed scan comparisons](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-14 — Remodel segmented scan evidence as parametric CAD.
+Original action: [Verify editability, interfaces and fixed scan comparisons](../point-05-operations.json). Operations: REC-14 — Remodel segmented scan evidence as parametric CAD.
 
 Implementation proposal: Proposal: editable-output verifier emits each representation's checks and cross-artifact lineage.
 
@@ -4118,7 +4118,7 @@ Source-supported tools: Open3D feature fits, OpenCADStudio OCS skill, parametric
 
 ### 188. Estimate sparse cameras and points with retained hypotheses (REC-03-A02)
 
-Original action: [Estimate sparse cameras and points with retained hypotheses](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-03 — Estimate camera poses and sparse structure from overlapping photos.
+Original action: [Estimate sparse cameras and points with retained hypotheses](../point-07-operations.json). Operations: REC-03 — Estimate camera poses and sparse structure from overlapping photos.
 
 Implementation proposal: Proposal: sparse runner emits database/model/settings plus registered/unregistered-image and component reports.
 
@@ -4138,7 +4138,7 @@ Source-supported tools: COLMAP/pycolmap, AliceVision/Meshroom, OpenMVG. Original
 
 ### 189. Validate camera coverage and scale evidence (REC-03-A03)
 
-Original action: [Validate camera coverage and scale evidence](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-03 — Estimate camera poses and sparse structure from overlapping photos.
+Original action: [Validate camera coverage and scale evidence](../point-07-operations.json). Operations: REC-03 — Estimate camera poses and sparse structure from overlapping photos.
 
 Implementation proposal: Proposal: sparse verifier emits per-camera/component readiness, control residuals and explicit arbitrary/metric scale state.
 
@@ -4158,7 +4158,7 @@ Source-supported tools: COLMAP/pycolmap, AliceVision/Meshroom, OpenMVG. Original
 
 ### 190. Apply scoped edit and read actual resulting geometry (REC-16-A02)
 
-Original action: [Apply scoped edit and read actual resulting geometry](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-16 — Iterate CAD edits against registered evidence.
+Original action: [Apply scoped edit and read actual resulting geometry](../point-05-operations.json). Operations: REC-16 — Iterate CAD edits against registered evidence.
 
 Implementation proposal: Proposal: revision edit executor emits actual changed geometry and dependency receipt.
 
@@ -4178,7 +4178,7 @@ Source-supported tools: OCS revision-bound edit/readback, Open3D distance querie
 
 ### 191. Compare fixed evidence and publish revision deltas (REC-16-A03)
 
-Original action: [Compare fixed evidence and publish revision deltas](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-16 — Iterate CAD edits against registered evidence.
+Original action: [Compare fixed evidence and publish revision deltas](../point-05-operations.json). Operations: REC-16 — Iterate CAD edits against registered evidence.
 
 Implementation proposal: Proposal: revision comparator emits comparable deltas, invariants and failed dependencies.
 
@@ -4198,7 +4198,7 @@ Source-supported tools: OCS revision-bound edit/readback, Open3D distance querie
 
 ### 192. Estimate intrinsic and distortion parameters (REC-01-A02)
 
-Original action: [Estimate intrinsic and distortion parameters](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-01 — Calibrate camera intrinsics and distortion.
+Original action: [Estimate intrinsic and distortion parameters](../point-05-operations.json). Operations: REC-01 — Calibrate camera intrinsics and distortion.
 
 Implementation proposal: Proposal: intrinsic fitter emits candidates, residual distribution and declared observability findings.
 
@@ -4218,7 +4218,7 @@ Source-supported tools: OpenCV calibrateCamera, checkerboard or Charuco target. 
 
 ### 193. Check held-out distortion behavior and publish intrinsics (REC-01-A03)
 
-Original action: [Check held-out distortion behavior and publish intrinsics](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-01 — Calibrate camera intrinsics and distortion.
+Original action: [Check held-out distortion behavior and publish intrinsics](../point-05-operations.json). Operations: REC-01 — Calibrate camera intrinsics and distortion.
 
 Implementation proposal: Proposal: calibration validator emits region/state validity and derivative metadata.
 
@@ -4238,7 +4238,7 @@ Source-supported tools: OpenCV calibrateCamera, checkerboard or Charuco target. 
 
 ### 194. Estimate or import sequence poses and projected samples (REC-05-A02)
 
-Original action: [Estimate or import sequence poses and projected samples](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-05 — Register RGB and depth frames and estimate sequence poses.
+Original action: [Estimate or import sequence poses and projected samples](../point-07-operations.json). Operations: REC-05 — Register RGB and depth frames and estimate sequence poses.
 
 Implementation proposal: Proposal: pose adapter emits pairwise/source-to-world transforms, sample IDs and failed intervals.
 
@@ -4258,7 +4258,7 @@ Source-supported tools: Open3D RGB-D odometry, sensor SDK calibration, Open3D ca
 
 ### 195. Validate trajectory and metric depth independently (REC-05-A03)
 
-Original action: [Validate trajectory and metric depth independently](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-05 — Register RGB and depth frames and estimate sequence poses.
+Original action: [Validate trajectory and metric depth independently](../point-07-operations.json). Operations: REC-05 — Register RGB and depth frames and estimate sequence poses.
 
 Implementation proposal: Proposal: trajectory verifier emits per-segment control/drift and output-readiness records.
 
@@ -4278,7 +4278,7 @@ Source-supported tools: Open3D RGB-D odometry, sensor SDK calibration, Open3D ca
 
 ### 196. Integrate observations and extract explicit geometry (REC-06-A02)
 
-Original action: [Integrate observations and extract explicit geometry](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-06 — Integrate calibrated RGB-D frames into point cloud or TSDF mesh.
+Original action: [Integrate observations and extract explicit geometry](../point-07-operations.json). Operations: REC-06 — Integrate calibrated RGB-D frames into point cloud or TSDF mesh.
 
 Implementation proposal: Proposal: fusion runner emits both geometry types and frame-to-surface/support evidence or documented mapping limits.
 
@@ -4298,7 +4298,7 @@ Source-supported tools: Open3D ScalableTSDFVolume, Open3D RGBDImage, Open3D marc
 
 ### 197. Compare fusion candidates and independent controls (REC-06-A03)
 
-Original action: [Compare fusion candidates and independent controls](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-06 — Integrate calibrated RGB-D frames into point cloud or TSDF mesh.
+Original action: [Compare fusion candidates and independent controls](../point-07-operations.json). Operations: REC-06 — Integrate calibrated RGB-D frames into point cloud or TSDF mesh.
 
 Implementation proposal: Proposal: verifier reports per-feature/control error, coverage and approximation changes across settings.
 
@@ -4318,7 +4318,7 @@ Source-supported tools: Open3D ScalableTSDFVolume, Open3D RGBDImage, Open3D marc
 
 ### 198. Generate plane, cluster and cylinder candidates (REC-09-A02)
 
-Original action: [Generate plane, cluster and cylinder candidates](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-09 — Segment point clouds and fit candidate primitive evidence.
+Original action: [Generate plane, cluster and cylinder candidates](../point-05-operations.json). Operations: REC-09 — Segment point clouds and fit candidate primitive evidence.
 
 Implementation proposal: Proposal: primitive-candidate adapter accepts immutable cloud/normal IDs, original-index mapping, model and typed settings; emits inlier IDs, raw coefficient vector, named parameter fields, source unit/frame, setting receipt, coverage and geometric residuals. Reject length/index mismatches, nonfinite/zero normals, empty support, invalid coefficient vectors and nonpositive radius before downstream use.
 
@@ -4338,7 +4338,7 @@ Source-supported tools: Open3D segment_plane, Open3D DBSCAN, CloudCompare scalar
 
 ### 199. Check sampling bias and publish primitive evidence (REC-09-A03)
 
-Original action: [Check sampling bias and publish primitive evidence](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-09 — Segment point clouds and fit candidate primitive evidence.
+Original action: [Check sampling bias and publish primitive evidence](../point-05-operations.json). Operations: REC-09 — Segment point clouds and fit candidate primitive evidence.
 
 Implementation proposal: Proposal: fit evidence checker emits parameter confidence basis and source-dependent limitations.
 
@@ -4358,7 +4358,7 @@ Source-supported tools: Open3D segment_plane, Open3D DBSCAN, CloudCompare scalar
 
 ### 200. Estimate route-specific CAD alignment candidates (REC-12-A02)
 
-Original action: [Estimate route-specific CAD alignment candidates](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-12 — Register existing CAD to calibrated photographs or scan points.
+Original action: [Estimate route-specific CAD alignment candidates](../point-05-operations.json). Operations: REC-12 — Register existing CAD to calibrated photographs or scan points.
 
 Implementation proposal: Proposal: route registrar preserves native CAD and emits conditional pose/spatial records.
 
@@ -4378,7 +4378,7 @@ Source-supported tools: CAD tessellation with named 3D landmarks, OpenCV solvePn
 
 ### 201. Validate alignment and publish conditional outputs (REC-12-A03)
 
-Original action: [Validate alignment and publish conditional outputs](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-12 — Register existing CAD to calibrated photographs or scan points.
+Original action: [Validate alignment and publish conditional outputs](../point-05-operations.json). Operations: REC-12 — Register existing CAD to calibrated photographs or scan points.
 
 Implementation proposal: Proposal: conditional registration exporter emits supported branch artifacts and unmet original output labels.
 
@@ -4398,7 +4398,7 @@ Source-supported tools: CAD tessellation with named 3D landmarks, OpenCV solvePn
 
 ### 202. Refine transform and retain correspondence evidence (REC-08-A02)
 
-Original action: [Refine transform and retain correspondence evidence](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-08 — Refine registration and compare point-cloud surfaces.
+Original action: [Refine transform and retain correspondence evidence](../point-05-operations.json). Operations: REC-08 — Refine registration and compare point-cloud surfaces.
 
 Implementation proposal: Proposal: refinement adapter emits transform lineage, convergence and correspondence receipt.
 
@@ -4418,7 +4418,7 @@ Source-supported tools: Open3D point-to-plane ICP, Open3D evaluate_registration,
 
 ### 203. Measure independent and directional surface differences (REC-08-A03)
 
-Original action: [Measure independent and directional surface differences](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-08 — Refine registration and compare point-cloud surfaces.
+Original action: [Measure independent and directional surface differences](../point-05-operations.json). Operations: REC-08 — Refine registration and compare point-cloud surfaces.
 
 Implementation proposal: Proposal: comparison reporter emits direction-specific residual/coverage and control checks.
 
@@ -4438,7 +4438,7 @@ Source-supported tools: Open3D point-to-plane ICP, Open3D evaluate_registration,
 
 ### 204. Estimate analytic parameters and uncertainty (CAD-11-A02)
 
-Original action: [Estimate analytic parameters and uncertainty](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: CAD-11 — Fit analytic features to scans or image-derived point clouds.
+Original action: [Estimate analytic parameters and uncertainty](../point-05-operations.json). Operations: CAD-11 — Fit analytic features to scans or image-derived point clouds.
 
 Implementation proposal: Proposal: analytic estimator accepts feature/model/support/normal/settings/criteria records and emits named parameters plus raw coefficients, inlier IDs, coverage, diagnostics and observable components. Cylinder-axis comparison uses a common sourced datum and explicit direction convention; extent/closure comes from separate feature evidence. Validate settings and decoded output before CAD consumption.
 
@@ -4454,11 +4454,11 @@ Dependencies: REC-09 cylinder adapter contract; PCL 1.15.1-dev API and mutable m
 
 Resources: Local point/normal checks and source-linked region sampling precede bounded optimization/consensus and sensitivity studies; cost depends on samples, normal neighborhoods and hypothesis limits. Precision checks use required retained samples/controls. Record remote interpretation and manual metrology separately.
 
-Source-supported tools: point-cloud registration and segmentation, least-squares plane/cylinder/axis fits, FreeCAD/build123d. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/projects/architecture/research/README.md](/home/leo/projects/architecture/research/README.md).
+Source-supported tools: point-cloud registration and segmentation, least-squares plane/cylinder/axis fits, FreeCAD/build123d. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), ${ARCHITECTURE_ROOT}/research/README.md (`${ARCHITECTURE_ROOT}/research/README.md`).
 
 ### 205. Construct and validate supported CAD feature geometry (CAD-11-A03)
 
-Original action: [Construct and validate supported CAD feature geometry](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: CAD-11 — Fit analytic features to scans or image-derived point clouds.
+Original action: [Construct and validate supported CAD feature geometry](../point-05-operations.json). Operations: CAD-11 — Fit analytic features to scans or image-derived point clouds.
 
 Implementation proposal: Proposal: fitted-feature builder emits native solid and feature-measurement/uncertainty ledger.
 
@@ -4474,11 +4474,11 @@ Dependencies: Point03 native construction/readback; actual backend capability an
 
 Resources: Local CAD/kernel and regional distances follow surfaces/samples; remote semantics and manual missing data separate.
 
-Source-supported tools: point-cloud registration and segmentation, least-squares plane/cylinder/axis fits, FreeCAD/build123d. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/projects/architecture/research/README.md](/home/leo/projects/architecture/research/README.md).
+Source-supported tools: point-cloud registration and segmentation, least-squares plane/cylinder/axis fits, FreeCAD/build123d. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), ${ARCHITECTURE_ROOT}/research/README.md (`${ARCHITECTURE_ROOT}/research/README.md`).
 
 ### 206. Cast rays and record hit alternatives (REC-13-A02)
 
-Original action: [Cast rays and record hit alternatives](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-13 — Anchor a screen sketch to a 3D surface.
+Original action: [Cast rays and record hit alternatives](../point-05-operations.json). Operations: REC-13 — Anchor a screen sketch to a 3D surface.
 
 Implementation proposal: Proposal: ray-anchor adapter emits full ray/hit provenance, candidate ordering and validity states.
 
@@ -4498,7 +4498,7 @@ Source-supported tools: Blender Scene.ray_cast, screen-to-camera ray projection,
 
 ### 207. Reproject anchors and publish measurement evidence (REC-13-A03)
 
-Original action: [Reproject anchors and publish measurement evidence](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-13 — Anchor a screen sketch to a 3D surface.
+Original action: [Reproject anchors and publish measurement evidence](../point-05-operations.json). Operations: REC-13 — Anchor a screen sketch to a 3D surface.
 
 Implementation proposal: Proposal: anchor verifier emits view residuals and explicit planar/nonplanar feature states.
 
@@ -4518,7 +4518,7 @@ Source-supported tools: Blender Scene.ray_cast, screen-to-camera ray projection,
 
 ### 208. Align evidence under fixed datum choices and measure differences (REC-15-A02)
 
-Original action: [Align evidence under fixed datum choices and measure differences](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-15 — Reconcile scan surfaces with dimensioned drawings.
+Original action: [Align evidence under fixed datum choices and measure differences](../point-05-operations.json). Operations: REC-15 — Reconcile scan surfaces with dimensioned drawings.
 
 Implementation proposal: Proposal: paired-feature comparator emits direction/method/uncertainty-specific discrepancies.
 
@@ -4538,7 +4538,7 @@ Source-supported tools: CAD drawing datums, Open3D/CloudCompare registration and
 
 ### 209. Publish reconciliation choices and preserved conflicts (REC-15-A03)
 
-Original action: [Publish reconciliation choices and preserved conflicts](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-15 — Reconcile scan surfaces with dimensioned drawings.
+Original action: [Publish reconciliation choices and preserved conflicts](../point-05-operations.json). Operations: REC-15 — Reconcile scan surfaces with dimensioned drawings.
 
 Implementation proposal: Proposal: reconciliation exporter emits source-separated values, reasons and downstream readiness.
 
@@ -4558,7 +4558,7 @@ Source-supported tools: CAD drawing datums, Open3D/CloudCompare registration and
 
 ### 210. Estimate supported scan-to-building transform (DOM-19-A02)
 
-Original action: [Estimate supported scan-to-building transform](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: DOM-19 — Register scan to building frame.
+Original action: [Estimate supported scan-to-building transform](../point-05-operations.json). Operations: DOM-19 — Register scan to building frame.
 
 Implementation proposal: Proposal: building registrar returns transform candidates and source/target sampling/normalization receipts.
 
@@ -4574,11 +4574,11 @@ Dependencies: Open3D/CloudCompare supported registration; IFC geometry extractio
 
 Resources: Local coarse regions first; large-cloud memory/target tessellation explicit; remote/manual correspondence separate.
 
-Source-supported tools: COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 211. Validate controls and publish aligned derivative (DOM-19-A03)
 
-Original action: [Validate controls and publish aligned derivative](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: DOM-19 — Register scan to building frame.
+Original action: [Validate controls and publish aligned derivative](../point-05-operations.json). Operations: DOM-19 — Register scan to building frame.
 
 Implementation proposal: Proposal: building-registration publisher emits aligned cloud, transform chain and source/readback checks.
 
@@ -4594,11 +4594,11 @@ Dependencies: REC-08 metric protocol and actual cloud serializer; camera operati
 
 Resources: Local transformed cloud cost follows points; required regions first; remote semantic/manual checks separate.
 
-Source-supported tools: COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md).
+Source-supported tools: COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), [${MODELING_ROOT}/research/domains-and-components.md](../../domains-and-components.md).
 
 ### 212. Project register and publish source-linked cloud candidate (DOM-21-A02)
 
-Original action: [Project register and publish source-linked cloud candidate](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-21 — Depth frames to registered point cloud or mesh.
+Original action: [Project register and publish source-linked cloud candidate](../point-07-operations.json). Operations: DOM-21 — Depth frames to registered point cloud or mesh.
 
 Implementation proposal: Proposal: depth-cloud composer emits actual cloud, source membership and removed/inferred-region ledger.
 
@@ -4614,11 +4614,11 @@ Dependencies: Open3D or independently evidenced CloudCompare adapter; exact tran
 
 Resources: Local bounded cloud first; memory follows retained samples/frames; remote region review separate.
 
-Source-supported tools: Open3D; CloudCompare. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Open3D; CloudCompare. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 213. Check registered cloud controls and source coverage (DOM-21-A03)
 
-Original action: [Check registered cloud controls and source coverage](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-21 — Depth frames to registered point cloud or mesh.
+Original action: [Check registered cloud controls and source coverage](../point-07-operations.json). Operations: DOM-21 — Depth frames to registered point cloud or mesh.
 
 Implementation proposal: Proposal: registered-cloud checker emits per-feature metric/coverage and lineage results.
 
@@ -4634,11 +4634,11 @@ Dependencies: Point05 cloud comparator and proposed domain verifier.
 
 Resources: Local control queries before dense analysis; remote/manual evidence review separate.
 
-Source-supported tools: Open3D; CloudCompare. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Open3D; CloudCompare. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 214. Reconstruct surface and retain every cleanup derivative (DOM-29-A02)
 
-Original action: [Reconstruct surface and retain every cleanup derivative](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-29 — Point cloud to surface mesh.
+Original action: [Reconstruct surface and retain every cleanup derivative](../point-07-operations.json). Operations: DOM-29 — Point cloud to surface mesh.
 
 Implementation proposal: Proposal: surface adapter emits raw mesh plus independent cleanup derivatives and change/support ledger.
 
@@ -4654,11 +4654,11 @@ Dependencies: Actual Open3D method/version and prerequisites; decimation capabil
 
 Resources: Cost follows points, octree/grid/resolution or pivot neighborhoods and triangles; bounded detail first.
 
-Source-supported tools: Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 215. Compare surface and protected features to source (DOM-29-A03)
 
-Original action: [Compare surface and protected features to source](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-29 — Point cloud to surface mesh.
+Original action: [Compare surface and protected features to source](../point-07-operations.json). Operations: DOM-29 — Point cloud to surface mesh.
 
 Implementation proposal: Proposal: mesh checker emits per-feature before/after deviation, topology/coverage and downstream-readiness results.
 
@@ -4674,11 +4674,11 @@ Dependencies: Point05 geometry comparator and proposed mesh verifier.
 
 Resources: Local selected-feature checks precede whole-surface distances; remote image review and manual metrology separate.
 
-Source-supported tools: Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 216. Generate coarse alignment hypotheses (REC-07-A02)
 
-Original action: [Generate coarse alignment hypotheses](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-07 — Estimate coarse transform between point clouds.
+Original action: [Generate coarse alignment hypotheses](../point-05-operations.json). Operations: REC-07 — Estimate coarse transform between point clouds.
 
 Implementation proposal: Proposal: coarse registrar outputs hypotheses and exact source/target correspondences.
 
@@ -4698,7 +4698,7 @@ Source-supported tools: Open3D FPFH, Open3D RANSAC global registration, CloudCom
 
 ### 217. Test withheld controls and publish initialization (REC-07-A03)
 
-Original action: [Test withheld controls and publish initialization](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-07 — Estimate coarse transform between point clouds.
+Original action: [Test withheld controls and publish initialization](../point-05-operations.json). Operations: REC-07 — Estimate coarse transform between point clouds.
 
 Implementation proposal: Proposal: coarse-check report emits control residuals and permitted downstream refinement state.
 
@@ -4718,7 +4718,7 @@ Source-supported tools: Open3D FPFH, Open3D RANSAC global registration, CloudCom
 
 ### 218. Author parametric source and actual feature geometry (DOM-23-A02)
 
-Original action: [Author parametric source and actual feature geometry](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: DOM-23 — Scan or mesh to parametric CAD remodeling.
+Original action: [Author parametric source and actual feature geometry](../point-05-operations.json). Operations: DOM-23 — Scan or mesh to parametric CAD remodeling.
 
 Implementation proposal: Proposal: remodeling composer emits parameter/source dependency graph and actual CAD output.
 
@@ -4734,11 +4734,11 @@ Dependencies: Point03 DOM40/CAD10 supported source and geometry; OCS native body
 
 Resources: Local fitting/kernel work follows selected features; remote/manual feature interpretation separate.
 
-Source-supported tools: Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 219. Validate functional interfaces and saved parametric output (DOM-23-A03)
 
-Original action: [Validate functional interfaces and saved parametric output](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: DOM-23 — Scan or mesh to parametric CAD remodeling.
+Original action: [Validate functional interfaces and saved parametric output](../point-05-operations.json). Operations: DOM-23 — Scan or mesh to parametric CAD remodeling.
 
 Implementation proposal: Proposal: remodel verifier emits output-specific editability/geometry/source reports.
 
@@ -4754,11 +4754,11 @@ Dependencies: CAD13 and REC16 fixed-evidence checks; actual backend persistence 
 
 Resources: Local required-feature checks first; large distance comparisons bounded; remote semantic/manual metrology separate.
 
-Source-supported tools: Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md).
+Source-supported tools: Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`).
 
 ### 220. Compose intrinsic calibration and per-image pose solutions (CAD-02B-A02)
 
-Original action: [Compose intrinsic calibration and per-image pose solutions](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: CAD-02B — Calibrate camera poses from photographs and known controls.
+Original action: [Compose intrinsic calibration and per-image pose solutions](../point-05-operations.json). Operations: CAD-02B — Calibrate camera poses from photographs and known controls.
 
 Implementation proposal: Proposal: camera-solution composer links versioned calibration and pose receipts without rerunning valid stages.
 
@@ -4778,7 +4778,7 @@ Source-supported tools: OpenCV findChessboardCorners, OpenCV calibrateCamera, Op
 
 ### 221. Validate and publish camera solution (CAD-02B-A03)
 
-Original action: [Validate and publish camera solution](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: CAD-02B — Calibrate camera poses from photographs and known controls.
+Original action: [Validate and publish camera solution](../point-05-operations.json). Operations: CAD-02B — Calibrate camera poses from photographs and known controls.
 
 Implementation proposal: Proposal: camera package checker emits per-image/control readiness for named consumers.
 
@@ -4798,7 +4798,7 @@ Source-supported tools: OpenCV findChessboardCorners, OpenCV calibrateCamera, Op
 
 ### 222. Estimate object-to-camera pose candidates (REC-02-A02)
 
-Original action: [Estimate object-to-camera pose candidates](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-02 — Solve camera pose from known 3D-to-2D correspondences.
+Original action: [Estimate object-to-camera pose candidates](../point-05-operations.json). Operations: REC-02 — Solve camera pose from known 3D-to-2D correspondences.
 
 Implementation proposal: Proposal: pose solver emits transform candidates, objective diagnostics and source-to-camera convention receipt.
 
@@ -4818,7 +4818,7 @@ Source-supported tools: OpenCV solvePnP / solvePnPRansac, projectPoints. Origina
 
 ### 223. Validate independent reprojection and publish pose (REC-02-A03)
 
-Original action: [Validate independent reprojection and publish pose](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json). Operations: REC-02 — Solve camera pose from known 3D-to-2D correspondences.
+Original action: [Validate independent reprojection and publish pose](../point-05-operations.json). Operations: REC-02 — Solve camera pose from known 3D-to-2D correspondences.
 
 Implementation proposal: Proposal: pose verifier returns per-landmark residual and feature-level readiness.
 
@@ -4838,7 +4838,7 @@ Source-supported tools: OpenCV solvePnP / solvePnPRansac, projectPoints. Origina
 
 ### 224. Estimate dense depth and fuse visible samples (REC-17-A02)
 
-Original action: [Estimate dense depth and fuse visible samples](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-17 — Build dense point cloud and mesh from SfM camera solution.
+Original action: [Estimate dense depth and fuse visible samples](../point-07-operations.json). Operations: REC-17 — Build dense point cloud and mesh from SfM camera solution.
 
 Implementation proposal: Proposal: dense runner emits depth/fusion artifacts and source support/coverage manifest.
 
@@ -4858,7 +4858,7 @@ Source-supported tools: OpenMVS DensifyPointCloud, OpenMVS ReconstructMesh, COLM
 
 ### 225. Mesh dense cloud and validate both outputs (REC-17-A03)
 
-Original action: [Mesh dense cloud and validate both outputs](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-17 — Build dense point cloud and mesh from SfM camera solution.
+Original action: [Mesh dense cloud and validate both outputs](../point-07-operations.json). Operations: REC-17 — Build dense point cloud and mesh from SfM camera solution.
 
 Implementation proposal: Proposal: dense-output publisher emits both typed artifacts with per-feature observed/inferred status.
 
@@ -4878,7 +4878,7 @@ Source-supported tools: OpenMVS DensifyPointCloud, OpenMVS ReconstructMesh, COLM
 
 ### 226. Recover cameras and the declared cloud representation (DOM-20-A02)
 
-Original action: [Recover cameras and the declared cloud representation](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-20 — Photos/video to camera solution, point cloud and mesh.
+Original action: [Recover cameras and the declared cloud representation](../point-07-operations.json). Operations: DOM-20 — Photos/video to camera solution, point cloud and mesh.
 
 Implementation proposal: Proposal: photo-domain composer emits camera/cloud and typed optional-stage ledger.
 
@@ -4894,11 +4894,11 @@ Dependencies: Actual backend capability and point05 camera/frame checks.
 
 Resources: Sparse CPU-compatible work first; dense GPU/RAM requirements conditional on actual chosen branch.
 
-Source-supported tools: COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 227. Validate saved domain outputs and downstream conditions (DOM-20-A03)
 
-Original action: [Validate saved domain outputs and downstream conditions](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-20 — Photos/video to camera solution, point cloud and mesh.
+Original action: [Validate saved domain outputs and downstream conditions](../point-07-operations.json). Operations: DOM-20 — Photos/video to camera solution, point cloud and mesh.
 
 Implementation proposal: Proposal: photo-domain verifier emits exact-output and downstream mesh/metric prerequisites.
 
@@ -4914,11 +4914,11 @@ Dependencies: REC-03/17 validation and proposed domain output checker.
 
 Resources: Local output/control checks before display review; remote/manual assessment separate.
 
-Source-supported tools: COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 228. Compose dense estimation fusion and meshing (DOM-28-A02)
 
-Original action: [Compose dense estimation fusion and meshing](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-28 — Dense multi-view stereo to point cloud and mesh.
+Original action: [Compose dense estimation fusion and meshing](../point-07-operations.json). Operations: DOM-28 — Dense multi-view stereo to point cloud and mesh.
 
 Implementation proposal: Proposal: domain composer links dense/cloud/mesh stages without treating one output as another.
 
@@ -4934,11 +4934,11 @@ Dependencies: Pinned COLMAP/OpenMVS or separately evidenced Meshroom graph.
 
 Resources: Local CPU-compatible stage choices first; dense GPU/RAM conditions and storage recorded per backend.
 
-Source-supported tools: COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 229. Check source geometry and independent controls (DOM-28-A03)
 
-Original action: [Check source geometry and independent controls](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-28 — Dense multi-view stereo to point cloud and mesh.
+Original action: [Check source geometry and independent controls](../point-07-operations.json). Operations: DOM-28 — Dense multi-view stereo to point cloud and mesh.
 
 Implementation proposal: Proposal: dense-domain verifier emits output-completeness and source/metric findings.
 
@@ -4954,11 +4954,11 @@ Dependencies: REC-17/DOM-29 verifiers and point05 registration checks.
 
 Resources: Local selected controls before dense full-surface comparisons; remote review/manual metrology separate.
 
-Source-supported tools: COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 230. Compose sparse and dense visible-surface reconstruction (CAD-16-A02)
 
-Original action: [Compose sparse and dense visible-surface reconstruction](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: CAD-16 — Reconstruct camera poses and dense visible geometry from overlapping photos.
+Original action: [Compose sparse and dense visible-surface reconstruction](../point-07-operations.json). Operations: CAD-16 — Reconstruct camera poses and dense visible geometry from overlapping photos.
 
 Implementation proposal: Proposal: stage composer links immutable sparse/dense/mesh receipts and common metric transform.
 
@@ -4974,11 +4974,11 @@ Dependencies: Actual dense backend/import bridge; CPU/GPU configuration and outp
 
 Resources: Sparse CPU-compatible subset first; dense GPU/RAM cost follows images/resolution/depth range/neighbors; remote review separate.
 
-Source-supported tools: COLMAP or AliceVision/Meshroom, scale/control-point alignment. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [https://github.com/colmap/colmap](https://github.com/colmap/colmap), [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst).
+Source-supported tools: COLMAP or AliceVision/Meshroom, scale/control-point alignment. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), [https://github.com/colmap/colmap](https://github.com/colmap/colmap), [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst).
 
 ### 231. Validate metric reference and saved three-output package (CAD-16-A03)
 
-Original action: [Validate metric reference and saved three-output package](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: CAD-16 — Reconstruct camera poses and dense visible geometry from overlapping photos.
+Original action: [Validate metric reference and saved three-output package](../point-07-operations.json). Operations: CAD-16 — Reconstruct camera poses and dense visible geometry from overlapping photos.
 
 Implementation proposal: Proposal: package verifier emits each output's actual type/source/frame and feature-readiness report.
 
@@ -4994,11 +4994,11 @@ Dependencies: Point05 geometry comparison and proposed reconstruction-package ch
 
 Resources: Local targeted controls before dense comparison/render review; manual measurements and remote VLM separate.
 
-Source-supported tools: COLMAP or AliceVision/Meshroom, scale/control-point alignment. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md), [https://github.com/colmap/colmap](https://github.com/colmap/colmap), [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst).
+Source-supported tools: COLMAP or AliceVision/Meshroom, scale/control-point alignment. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md), [https://github.com/colmap/colmap](https://github.com/colmap/colmap), [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst).
 
 ### 232. Train and export the actual Gaussian scene representation (REC-19-A02)
 
-Original action: [Train and export the actual Gaussian scene representation](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-19 — Train and export a Gaussian splat scene.
+Original action: [Train and export the actual Gaussian scene representation](../point-07-operations.json). Operations: REC-19 — Train and export a Gaussian splat scene.
 
 Implementation proposal: PROPOSAL Gaussian package adapter: trained state + parser transform + supported Gaussian export → typed gaussian-scene with renderer assets, attribute manifest and resume receipt.
 
@@ -5018,7 +5018,7 @@ Source-supported tools: Nerfstudio Splatfacto / gsplat, Gaussian PLY export. Ori
 
 ### 233. Evaluate captured-view appearance and geometry handoff boundaries (REC-19-A03)
 
-Original action: [Evaluate captured-view appearance and geometry handoff boundaries](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-19 — Train and export a Gaussian splat scene.
+Original action: [Evaluate captured-view appearance and geometry handoff boundaries](../point-07-operations.json). Operations: REC-19 — Train and export a Gaussian splat scene.
 
 Implementation proposal: PROPOSAL Gaussian evaluation/composition ledger: scene + captured checks + optional geometry transforms → region results, compatible scene layers and fresh composite validation.
 
@@ -5038,7 +5038,7 @@ Source-supported tools: Nerfstudio Splatfacto / gsplat, Gaussian PLY export. Ori
 
 ### 234. Estimate depth and cameras and materialize the declared cloud (REC-10-A02)
 
-Original action: [Estimate depth and cameras and materialize the declared cloud](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-10 — Estimate multi-view depth, camera poses and Gaussian outputs.
+Original action: [Estimate depth and cameras and materialize the declared cloud](../point-07-operations.json). Operations: REC-10 — Estimate multi-view depth, camera poses and Gaussian outputs.
 
 Implementation proposal: PROPOSAL DA3 result adapter: raw depth/camera/confidence exports + image/config manifest → named camera records, typed geometric cloud, frame/scale receipt and partial-output status.
 
@@ -5058,7 +5058,7 @@ Source-supported tools: Depth Anything 3, DA3-Streaming, DA3 Blender add-on. Ori
 
 ### 235. Compare predictions with independent controls and conventional candidates (REC-10-A03)
 
-Original action: [Compare predictions with independent controls and conventional candidates](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-10 — Estimate multi-view depth, camera poses and Gaussian outputs.
+Original action: [Compare predictions with independent controls and conventional candidates](../point-07-operations.json). Operations: REC-10 — Estimate multi-view depth, camera poses and Gaussian outputs.
 
 Implementation proposal: PROPOSAL prediction comparison ledger: predicted and conventional candidates + fit/check partition → regional errors, selection reasons, common dependencies and per-feature readiness.
 
@@ -5078,7 +5078,7 @@ Source-supported tools: Depth Anything 3, DA3-Streaming, DA3 Blender add-on. Ori
 
 ### 236. Generate and preserve the proxy mesh and its coordinate frame (REC-18-A02)
 
-Original action: [Generate and preserve the proxy mesh and its coordinate frame](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-18 — Generate a single-image mesh proxy.
+Original action: [Generate and preserve the proxy mesh and its coordinate frame](../point-07-operations.json). Operations: REC-18 — Generate a single-image mesh proxy.
 
 Implementation proposal: PROPOSAL proxy exporter: raw model result + input/config receipt → mesh/material package, frame/normalization map and per-region generated lineage.
 
@@ -5098,7 +5098,7 @@ Source-supported tools: TripoSR, TRELLIS.2, SAM 3D Objects. Original evidence: [
 
 ### 237. Evaluate visible fit and gate geometric reuse by independent evidence (REC-18-A03)
 
-Original action: [Evaluate visible fit and gate geometric reuse by independent evidence](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-18 — Generate a single-image mesh proxy.
+Original action: [Evaluate visible fit and gate geometric reuse by independent evidence](../point-07-operations.json). Operations: REC-18 — Generate a single-image mesh proxy.
 
 Implementation proposal: PROPOSAL proxy qualification ledger: mesh + actual capture/control evidence → feature readiness by intended use, candidate selection and remodeling requirements.
 
@@ -5118,7 +5118,7 @@ Source-supported tools: TripoSR, TRELLIS.2, SAM 3D Objects. Original evidence: [
 
 ### 238. Train and save a renderable NeRF state (REC-20-A02)
 
-Original action: [Train and save a renderable NeRF state](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-20 — Train and export a NeRF scene.
+Original action: [Train and save a renderable NeRF state](../point-07-operations.json). Operations: REC-20 — Train and export a NeRF scene.
 
 Implementation proposal: PROPOSAL NeRF package adapter: training state/config + transform receipt → renderable nerf-scene and separately typed optional export with support/loss map.
 
@@ -5138,7 +5138,7 @@ Source-supported tools: Nerfstudio nerfacto, Nerfstudio checkpoint and viewer ex
 
 ### 239. Validate scene appearance and any separately extracted geometry (REC-20-A03)
 
-Original action: [Validate scene appearance and any separately extracted geometry](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-20 — Train and export a NeRF scene.
+Original action: [Validate scene appearance and any separately extracted geometry](../point-07-operations.json). Operations: REC-20 — Train and export a NeRF scene.
 
 Implementation proposal: PROPOSAL NeRF qualification adapter: trained scene + actual captures + optional extracted geometry/control evidence → appearance and geometry reports with independent readiness.
 
@@ -5158,7 +5158,7 @@ Source-supported tools: Nerfstudio nerfacto, Nerfstudio checkpoint and viewer ex
 
 ### 240. Execute the selected typed training route and package its scene (REC-11-A02)
 
-Original action: [Execute the selected typed training route and package its scene](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-11 — Train NeRF or Gaussian scene for view synthesis.
+Original action: [Execute the selected typed training route and package its scene](../point-07-operations.json). Operations: REC-11 — Train NeRF or Gaussian scene for view synthesis.
 
 Implementation proposal: PROPOSAL visual-scene manifest builder: checked Gaussian/NeRF package + consumer contract → generic visual-scene with exact subtype, dependency closure and load receipt.
 
@@ -5178,7 +5178,7 @@ Source-supported tools: Nerfstudio ns-process-data, ns-train nerfacto/splatfacto
 
 ### 241. Validate scene use and proposed appearance/mesh/CAD composition (REC-11-A03)
 
-Original action: [Validate scene use and proposed appearance/mesh/CAD composition](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: REC-11 — Train NeRF or Gaussian scene for view synthesis.
+Original action: [Validate scene use and proposed appearance/mesh/CAD composition](../point-07-operations.json). Operations: REC-11 — Train NeRF or Gaussian scene for view synthesis.
 
 Implementation proposal: PROPOSAL scene composition ledger: typed appearance package + optional mesh/CAD + measured transforms → layered scene manifest, affected checks and source-per-feature report.
 
@@ -5198,7 +5198,7 @@ Source-supported tools: Nerfstudio ns-process-data, ns-train nerfacto/splatfacto
 
 ### 242. Build the Gaussian scene and preserve domain mappings (DOM-22-A02)
 
-Original action: [Build the Gaussian scene and preserve domain mappings](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-22 — Photographs to Gaussian/NeRF visual scene.
+Original action: [Build the Gaussian scene and preserve domain mappings](../point-07-operations.json). Operations: DOM-22 — Photographs to Gaussian/NeRF visual scene.
 
 Implementation proposal: PROPOSAL domain scene packager: Gaussian state + source/domain map → gaussian-scene with stable source feature references and actual renderer receipt.
 
@@ -5214,11 +5214,11 @@ Dependencies: A01 mapping; REC-19 complete scene and renderer dependency manifes
 
 Resources: Reuse recorded training demand; sidecar checks are local metadata work; rendering cost follows scene size/viewpoints and remote reasoning separate.
 
-Source-supported tools: Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 243. Check domain appearance and explicit geometric overlays (DOM-22-A03)
 
-Original action: [Check domain appearance and explicit geometric overlays](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-22 — Photographs to Gaussian/NeRF visual scene.
+Original action: [Check domain appearance and explicit geometric overlays](../point-07-operations.json). Operations: DOM-22 — Photographs to Gaussian/NeRF visual scene.
 
 Implementation proposal: PROPOSAL domain appearance report: Gaussian scene + captured checks + optional measured geometry → region readiness and compatible overlay receipt.
 
@@ -5234,11 +5234,11 @@ Dependencies: A02 renderable output; independent source/control evidence; separa
 
 Resources: Use selected region views and control queries before full scene traversal; log local render/query costs and remote VLM/manual associations separately.
 
-Source-supported tools: Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 244. Train and package the domain NeRF state (DOM-30-A02)
 
-Original action: [Train and package the domain NeRF state](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-30 — Photos to NeRF visual scene.
+Original action: [Train and package the domain NeRF state](../point-07-operations.json). Operations: DOM-30 — Photos to NeRF visual scene.
 
 Implementation proposal: PROPOSAL domain NeRF packager: trained NeRF + domain/source map → loadable nerf-scene manifest with renderer, frame chain and artifact dependencies.
 
@@ -5254,11 +5254,11 @@ Dependencies: A01 request and REC-20 complete renderable-state requirements.
 
 Resources: Reuse actual NeRF training measurements when available; package hash/readback scales with checkpoint bytes; remote VLM/manual review is recorded separately.
 
-Source-supported tools: Nerfstudio; COLMAP camera input. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Nerfstudio; COLMAP camera input. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).
 
 ### 245. Evaluate domain viewing results and optional surface reuse (DOM-30-A03)
 
-Original action: [Evaluate domain viewing results and optional surface reuse](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json). Operations: DOM-30 — Photos to NeRF visual scene.
+Original action: [Evaluate domain viewing results and optional surface reuse](../point-07-operations.json). Operations: DOM-30 — Photos to NeRF visual scene.
 
 Implementation proposal: PROPOSAL domain NeRF qualification: scene + source/check roles + optional geometry → per-region appearance/geometry readiness and affected dependency checks.
 
@@ -5274,4 +5274,4 @@ Dependencies: A02 complete renderer state; exact optional exporter capability; d
 
 Resources: Fixed region/view sample first; extraction grid and mesh checks have separate local memory/compute costs; VLM evidence and manual correction effort separate.
 
-Source-supported tools: Nerfstudio; COLMAP camera input. Original evidence: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md).
+Source-supported tools: Nerfstudio; COLMAP camera input. Original evidence: [${MODELING_ROOT}/research/reconstruction.md](../../reconstruction.md).

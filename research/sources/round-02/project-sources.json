@@ -1,6 +1,6 @@
 [
   {
-    "url": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "url": "${MODELING_ROOT}/research/workflows/composition-rules.md",
     "title": "Project workflow composition rules",
     "summary": "Project proposal defining sequences, branches, evidence merges, component substitution, representation forks and revisioned edit/compare loops, with explicit handoff conditions and research questions.",
     "access_date": "2026-11-12",
@@ -8,12 +8,12 @@
     "supporting_claims": [
       "Original project proposal and composition-rule research questions"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "local_original": "${MODELING_ROOT}/research/workflows/composition-rules.md",
     "sha256": "5c87e8f36249d93315e57320d929170ee42bcc83873f13c6118d88c271c817c5",
     "content_type": "text/markdown"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+    "url": "${MODELING_ROOT}/research/workflows/combined-paths.json",
     "title": "Project cross-domain workflow recipes and additional ideas",
     "summary": "Original project proposals combining CAD, photogrammetry, controls, component libraries, IFC and robot models, with named artifact roles and explicit handoff conditions. Also records concept-image and procedural-field research questions.",
     "access_date": "2026-11-12",
@@ -21,7 +21,7 @@
     "supporting_claims": [
       "Cross-domain workflow proposals and original project research questions"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/combined-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/combined-paths.json",
     "sha256": "0521f8e103c4a9fef0ae2222f9071d0775c2f7ef12d17335ba1f40a1b6185ec6",
     "content_type": "application/json",
     "prior_revision_observation": {
@@ -41,7 +41,7 @@
     "local_original": null,
     "sha256": null,
     "content_type": null,
-    "source_report": "/home/leo/projects/energy/eoliennes/research/cad-workflow/computational-engineering-findings.md"
+    "source_report": "${EOLIENNES_ROOT}/research/cad-workflow/computational-engineering-findings.md"
   },
   {
     "url": "https://github.com/leap71/LEAP71_ShapeKernel",
@@ -55,7 +55,7 @@
     "local_original": null,
     "sha256": null,
     "content_type": null,
-    "source_report": "/home/leo/projects/energy/eoliennes/research/cad-workflow/computational-engineering-findings.md"
+    "source_report": "${EOLIENNES_ROOT}/research/cad-workflow/computational-engineering-findings.md"
   },
   {
     "url": "https://picogk.org/doc/",
@@ -69,10 +69,10 @@
     "local_original": null,
     "sha256": null,
     "content_type": null,
-    "source_report": "/home/leo/projects/energy/eoliennes/research/cad-workflow/computational-engineering-findings.md"
+    "source_report": "${EOLIENNES_ROOT}/research/cad-workflow/computational-engineering-findings.md"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/next-step-proposal.md",
+    "url": "${MODELING_ROOT}/research/next-step-proposal.md",
     "title": "Proposed next stages from the workflow research",
     "summary": "Seven proposed work packages: targeted route review, shared records, existing OCS pilot, text/drawing routes, measured reconstruction, architecture/robotics/component reuse, and packaging exercised workflows. Preserves the existing implementation plan.",
     "access_date": "2026-11-12",
@@ -80,7 +80,7 @@
     "supporting_claims": [
       "NEXT-I01 through NEXT-I07: original project proposals"
     ],
-    "local_original": "/home/leo/projects/3dmodeling/research/next-step-proposal.md",
+    "local_original": "${MODELING_ROOT}/research/next-step-proposal.md",
     "sha256": "5a1a9a4d97e0c2229f7fa94613eff978d16f082158698b9a9da1eeaeade3c573",
     "content_type": "text/markdown"
   }

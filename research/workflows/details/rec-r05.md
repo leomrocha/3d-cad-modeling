@@ -86,4 +86,4 @@ If DA3 and SfM disagree, check camera metadata, moving objects, lens distortion 
 4. [https://docs.nerf.studio/nerfology/methods/splat.html](https://docs.nerf.studio/nerfology/methods/splat.html)
 5. [https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html](https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html)
 
-Full source summaries: [source register](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+Full source summaries: [source register](../../sources/source-register.md).

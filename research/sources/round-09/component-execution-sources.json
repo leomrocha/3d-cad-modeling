@@ -1,7 +1,7 @@
 [
   {
-    "source_path": "/home/leo/projects/3dmodeling/scripts/part_index.py",
-    "local_original": "/home/leo/projects/3dmodeling/scripts/part_index.py",
+    "source_path": "${MODELING_ROOT}/scripts/part_index.py",
+    "local_original": "${MODELING_ROOT}/scripts/part_index.py",
     "title": "part_index.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -13,8 +13,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/scripts/component_records.py",
-    "local_original": "/home/leo/projects/3dmodeling/scripts/component_records.py",
+    "source_path": "${MODELING_ROOT}/scripts/component_records.py",
+    "local_original": "${MODELING_ROOT}/scripts/component_records.py",
     "title": "component_records.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -26,8 +26,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/tests/test_component_tools.py",
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_component_tools.py",
+    "source_path": "${MODELING_ROOT}/tests/test_component_tools.py",
+    "local_original": "${MODELING_ROOT}/tests/test_component_tools.py",
     "title": "test_component_tools.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -39,8 +39,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "source_path": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
     "title": "SKILL.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -52,8 +52,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/component-procedure.md",
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/component-procedure.md",
+    "source_path": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md",
     "title": "component-procedure.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -65,8 +65,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/skills/README.md",
-    "local_original": "/home/leo/projects/3dmodeling/skills/README.md",
+    "source_path": "${MODELING_ROOT}/skills/README.md",
+    "local_original": "${MODELING_ROOT}/skills/README.md",
     "title": "README.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -78,8 +78,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md",
-    "local_original": "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md",
+    "source_path": "${MODELING_ROOT}/execution/2026-11-12-component-led.md",
+    "local_original": "${MODELING_ROOT}/execution/2026-11-12-component-led.md",
     "title": "2026-11-12-component-led.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -91,8 +91,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
     "title": "README.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -104,8 +104,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
     "title": "component-work.json",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -117,8 +117,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-source-job.json",
     "title": "p01-source-job.json",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -130,8 +130,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-source-job.json",
     "title": "p02-source-job.json",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -143,8 +143,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p01-readiness.json",
     "title": "p01-readiness.json",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -156,8 +156,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/p02-readiness.json",
     "title": "p02-readiness.json",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -169,8 +169,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
     "title": "action-occurrences.jsonl",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -182,8 +182,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-automation-and-reuse.md",
-    "local_original": "/home/leo/projects/ferme/skills/cad-automation-and-reuse.md",
+    "source_path": "${FERME_ROOT}/skills/cad-automation-and-reuse.md",
+    "local_original": "${FERME_ROOT}/skills/cad-automation-and-reuse.md",
     "title": "cad-automation-and-reuse.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -195,8 +195,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/parts-and-standards-dictionary.md",
-    "local_original": "/home/leo/projects/ferme/skills/parts-and-standards-dictionary.md",
+    "source_path": "${FERME_ROOT}/skills/parts-and-standards-dictionary.md",
+    "local_original": "${FERME_ROOT}/skills/parts-and-standards-dictionary.md",
     "title": "parts-and-standards-dictionary.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -208,8 +208,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
-    "local_original": "/home/leo/projects/ferme/skills/ocs-skill-improvements.md",
+    "source_path": "${FERME_ROOT}/skills/ocs-skill-improvements.md",
+    "local_original": "${FERME_ROOT}/skills/ocs-skill-improvements.md",
     "title": "ocs-skill-improvements.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -221,8 +221,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
-    "local_original": "/home/leo/projects/ferme/skills/cad-workflow-findings.md",
+    "source_path": "${FERME_ROOT}/skills/cad-workflow-findings.md",
+    "local_original": "${FERME_ROOT}/skills/cad-workflow-findings.md",
     "title": "cad-workflow-findings.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -234,8 +234,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/dictionaries/parts-and-standards.json",
-    "local_original": "/home/leo/projects/ferme/skills/dictionaries/parts-and-standards.json",
+    "source_path": "${FERME_ROOT}/skills/dictionaries/parts-and-standards.json",
+    "local_original": "${FERME_ROOT}/skills/dictionaries/parts-and-standards.json",
     "title": "parts-and-standards.json",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -247,8 +247,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/runtime.py",
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/runtime.py",
+    "source_path": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/runtime.py",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/runtime.py",
     "title": "runtime.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -260,8 +260,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py",
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py",
+    "source_path": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/geometry.py",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/geometry.py",
     "title": "geometry.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -273,8 +273,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/catalogue.py",
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/catalogue.py",
+    "source_path": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/catalogue.py",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/catalogue.py",
     "title": "catalogue.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -286,8 +286,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-construction/scripts/cad.py",
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cad.py",
+    "source_path": "${FERME_ROOT}/skills/cad-construction/scripts/cad.py",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cad.py",
     "title": "cad.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -299,8 +299,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/skills/cad-construction/tests/test_cadtools.py",
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/tests/test_cadtools.py",
+    "source_path": "${FERME_ROOT}/skills/cad-construction/tests/test_cadtools.py",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/tests/test_cadtools.py",
     "title": "test_cadtools.py",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -312,8 +312,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
     "title": "p01-main-frame-longitudinal-rail.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -325,8 +325,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
+    "source_path": "${FERME_ROOT}/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
     "title": "p02-main-frame-crossmember.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -338,8 +338,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/engineering/module-development/physical-build/02-fabrication-requirements.md",
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/physical-build/02-fabrication-requirements.md",
+    "source_path": "${FERME_ROOT}/engineering/module-development/physical-build/02-fabrication-requirements.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/physical-build/02-fabrication-requirements.md",
     "title": "02-fabrication-requirements.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -351,8 +351,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
-    "local_original": "/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
+    "source_path": "${FERME_ROOT}/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
+    "local_original": "${FERME_ROOT}/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
     "title": "02-frame-hitch-supports.md",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",
@@ -364,8 +364,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv",
-    "local_original": "/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv",
+    "source_path": "${FERME_ROOT}/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv",
+    "local_original": "${FERME_ROOT}/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv",
     "title": "manifest.tsv",
     "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
     "access_date": "2026-11-12",

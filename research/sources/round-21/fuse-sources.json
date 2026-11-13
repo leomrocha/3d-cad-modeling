@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/source-notes.md",
     "title": "Fuse exact-part outline lookup",
     "summary": "Retains manufacturer datasheet URL/revision,shared M6 suffix applicability,reported dimension labels and exact acquisition outcomes.60/42 leader associations remain named geometry inputs.",
     "access_date": "2026-11-12",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/acquisition.json",
     "title": "Fuse PDF and exact-model acquisition record",
     "summary": "Records manufacturer403,Mouser transfer failure,reader-only dimensions and screenshot placeholder. Distinguishes PDF-reader observations from retained originals and exact target identity from adjacent60A CAD.",
     "access_date": "2026-11-12",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-shared-m6-outline.md",
     "title": "Shared M6 mechanical-family source and model terms",
     "summary": "Manufacturer family table and common M6 drawing support proposed shared exterior reuse. Records DigiKey60A STEP listing and concrete internal-use/employer-binding terms; no download control accepted.",
     "access_date": "2026-11-12",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-acquisition.json",
     "title": "Shared-family CAD follow-up metadata",
     "summary": "Retains exact source pages,family inference and actual non-download status with license/access observations.",
     "access_date": "2026-11-12",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/followup-browser-route.md",
     "title": "Browser source-image route outcome",
     "summary": "CUA inventory had no browser/app surface,so this exact-PDF route produced no raster or source bytes. Earlier source evidence remains preserved.",
     "access_date": "2026-11-12",
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source-job.json",
     "title": "Pinned fuse source labels and unresolved geometry inputs",
     "summary": "Pins reader-reported overall length,hole diameter,strip thickness andend-circle label to the acquisition record/hash. Body length,hole pitch andcontact-plane association are explicit required inputs.",
     "access_date": "2026-11-12",
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/readiness.json",
     "title": "Fuse source-readiness gate",
     "summary": "Existing source/hash validation returns NEEDS_INPUT with thethree required geometry questions and actual retained-source observations.",
     "access_date": "2026-11-12",
@@ -77,7 +77,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result.json",
     "title": "Fuse component source-stage result",
     "summary": "Connects shared-family exterior proposal,target100A identity,actual acquisition/access routes and dependent geometry evidence.",
     "access_date": "2026-11-12",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c030-fuse-source.md",
+    "local_original": "${MODELING_ROOT}/execution/c030-fuse-source.md",
     "title": "Fuse source-stage execution report",
     "summary": "Explains exactpart source findings,shared M6 alternative,actual acquisition results and the named construction inputs.",
     "access_date": "2026-11-12",
@@ -99,7 +99,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/ideas.json",
     "title": "Registered axial,assembly andshared-family reuse proposals",
     "summary": "Adds three sourced reuse records:analytic axial measurements,source-matrix assembly correction andshared-family exterior reuse. Executed evidence stays distinct from proposed wider reuse.",
     "access_date": "2026-11-12",

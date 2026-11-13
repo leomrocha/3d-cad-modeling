@@ -1,7 +1,7 @@
 {
   "state": "INVENTORIED",
   "source": {
-    "path": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf",
+    "path": "${OCS_ROOT}/tests/fixtures/plot/page-setups-metric.dxf",
     "sha256": "60372c545843be004c820a364f06d891845ccf15c319795a6b63c170ac17a21e",
     "bytes": 136437
   },

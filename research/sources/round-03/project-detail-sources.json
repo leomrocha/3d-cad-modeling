@@ -1,51 +1,51 @@
 [
   {
-    "url": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
+    "url": "${MODELING_ROOT}/research/workflows/details/contract.json",
     "title": "contract.json",
     "summary": "Analyst classification contract: independent manual effort, software setup and computing classes; required evidence, input and output fields.",
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/details/contract.json",
     "sha256": "1e1f7a994b53b8f438f5d0407ace8ebe9aee8c75ce502d5ebc953c763458c818",
     "content_type": "application/json"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
+    "url": "${MODELING_ROOT}/research/workflows/details/combined-details.json",
     "title": "combined-details.json",
     "summary": "Ten proposed combined workflow dossiers with source-backed operations, frame controls, tool/API entry points, resource conditions and relative classifications.",
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/combined-details.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/details/combined-details.json",
     "sha256": "c0e93e1631fa570ec4dd8eac46ce23258bfcc3382eb28d889c9e958ee83296e5",
     "content_type": "application/json"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
+    "url": "${MODELING_ROOT}/research/tools/build_workflow_details.py",
     "title": "build_workflow_details.py",
     "summary": "Documentation renderer validating recipe coverage, classification values and source references; builds workflow pages and independent sorted tables.",
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_details.py",
+    "local_original": "${MODELING_ROOT}/research/tools/build_workflow_details.py",
     "sha256": "bde729b3f2b3481f1d20704880ddbb446bef48857742c2ccc96d3aeff0d79e3a",
     "content_type": "text/x-python"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "url": "${MODELING_ROOT}/research/tools/build_workflow_register.py",
     "title": "Workflow and source register builder",
     "summary": "Combines retained sources and round-specific evidence; checks operation inputs and recipe types; parses Markdown-link destinations separately from bare URLs to preserve original source addresses.",
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "local_original": "${MODELING_ROOT}/research/tools/build_workflow_register.py",
     "sha256": "6548c1bac0a6162684045b47470fe4f8378cdad96dd18c1af7ad8a4d44077afd",
     "content_type": "text/x-python"
   },
   {
-    "url": "/home/leo/projects/3dmodeling/research/cleanup-record.md",
+    "url": "${MODELING_ROOT}/research/cleanup-record.md",
     "title": "Authorized cleanup of newly authored examples",
     "summary": "Records the removal of 13 example files, verified original Git revision and SHA-256 values, prior scope finding and replacement of active example references with documented third-party APIs.",
     "access_date": "2026-11-12",
     "evidence_status": "local_source_inspected",
-    "local_original": "/home/leo/projects/3dmodeling/research/cleanup-record.md",
+    "local_original": "${MODELING_ROOT}/research/cleanup-record.md",
     "sha256": "716710accf15a1509eaef904dd267df0301b65c7a1c87fd06550ebc8e6bbcbb2",
     "content_type": "text/markdown"
   }

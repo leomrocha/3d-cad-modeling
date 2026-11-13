@@ -1,6 +1,6 @@
 # Point 05 source check: calibration, scan alignment and coordinate frames
 
-Date: 2026-11-12. Initial pass: ten primary pages inspected. Follow-up: three additional official PCL pages inspected, bringing the total to thirteen. Requested dispatch: gpt-6-luna, high. Actual runtime model identity: unavailable. Scope: CAD-11, CAD-02B, REC-01, REC-02, REC-07, REC-08, REC-09, REC-12, REC-13, REC-14, REC-15, REC-16, DOM-19 and DOM-23. The source records are in [point-05-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-05-web-sources.json). Documentation claims are not local runtime results; no calibration, registration, ray casting, geometry, installation or program execution was performed.
+Date: 2026-11-12. Initial pass: ten primary pages inspected. Follow-up: three additional official PCL pages inspected, bringing the total to thirteen. Requested dispatch: gpt-6-luna, high. Actual runtime model identity: unavailable. Scope: CAD-11, CAD-02B, REC-01, REC-02, REC-07, REC-08, REC-09, REC-12, REC-13, REC-14, REC-15, REC-16, DOM-19 and DOM-23. The source records are in [point-05-web-sources.json](../../sources/round-05/point-05-web-sources.json). Documentation claims are not local runtime results; no calibration, registration, ray casting, geometry, installation or program execution was performed.
 
 ## Findings
 

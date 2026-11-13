@@ -654,7 +654,7 @@
   },
   {
     "url": null,
-    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "local_original": "${MODELING_ROOT}/research/domains-and-components.md",
     "title": "Existing domains/components research",
     "summary": "Existing project report compares OCS, IFC, robotics, physical properties, collision generation and component-library terms.",
     "access_date": "2026-11-12",
@@ -667,7 +667,7 @@
   },
   {
     "url": null,
-    "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "local_original": "${MODELING_ROOT}/research/cad-and-skills.md",
     "title": "Existing CAD and skills assessment",
     "summary": "Existing project report documents OCS baseline, CAD alternatives and representation fidelity.",
     "access_date": "2026-11-12",
@@ -680,7 +680,7 @@
   },
   {
     "url": null,
-    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "local_original": "${MODELING_ROOT}/research/reconstruction.md",
     "title": "Existing reconstruction research",
     "summary": "Existing project report documents COLMAP, Meshroom, Open3D, OpenMVS, Gaussian/NeRF and scan-to-CAD routes.",
     "access_date": "2026-11-12",
@@ -693,7 +693,7 @@
   },
   {
     "url": null,
-    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "local_original": "${MODELING_ROOT}/research/implementation-plan.md",
     "title": "Existing implementation plan",
     "summary": "Proposed project software architecture and stage plan; proposal rather than executed integrations.",
     "access_date": "2026-11-12",
@@ -706,7 +706,7 @@
   },
   {
     "url": null,
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "title": "Installed OpenCADStudio engineering skill",
     "summary": "Local skill supplies explicit units, frames, component boundaries, source evidence and geometry validation. User reports partial success.",
     "access_date": "2026-11-12",
@@ -719,7 +719,7 @@
   },
   {
     "url": null,
-    "local_original": "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+    "local_original": "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
     "title": "Existing IFC-to-GLB provenance example",
     "summary": "Local provenance manifest records source IFC and conversion details including unit transform; reuse as process pattern only.",
     "access_date": "2026-11-12",

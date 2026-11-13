@@ -55,8 +55,8 @@
         "existing OCS engineering skill; structured project schema proposal"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "prerequisites": [
         "Input sources retained with identity and access terms."
@@ -102,8 +102,8 @@
         "OpenCADStudio; FreeCAD Sketcher; manual image tracing"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md"
       ],
       "prerequisites": [
         "Known scale or one or more dimension controls; sketch plane/orientation identified."
@@ -149,8 +149,8 @@
         "OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "prerequisites": [
         "Source units, layers/blocks, target sketch plane and intended entities identified."
@@ -187,10 +187,10 @@
         "OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${OCS_ROOT}/README.md",
+        "${OCS_ROOT}/src/io/step.rs"
       ],
       "prerequisites": [
         "Dimensions, datums, units and component boundaries resolved; backend supports required solid features."
@@ -239,10 +239,10 @@
         "OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/local-baseline.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+        "${MODELING_ROOT}/research/local-baseline.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${OCS_ROOT}/README.md",
+        "${OCS_ROOT}/src/io/step.rs"
       ],
       "prerequisites": [
         "Source/target frame and units declared; recipient supports the chosen STEP schema."
@@ -338,7 +338,7 @@
       ],
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ],
       "prerequisites": [
         "Component has named interface frames or measured mounting datums; target assembly frame known."
@@ -563,7 +563,7 @@
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ],
       "prerequisites": [
         "Tessellation settings and mesh local frame/units chosen."
@@ -657,7 +657,7 @@
       "source_urls": [
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "prerequisites": [
         "Geometry scale/frame and density or measured mass stated; inertia reference frame defined."
@@ -799,7 +799,7 @@
       "source_urls": [
         "https://docs.ifcopenshell.org/introduction.html",
         "https://www.blender.org/features/pipeline/",
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
       ],
       "prerequisites": [
         "Element-to-display mapping and length/orientation conversion are declared."
@@ -842,7 +842,7 @@
         "Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
       ],
       "prerequisites": [
@@ -884,8 +884,8 @@
         "COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ],
       "prerequisites": [
         "At least one common frame datum and distributed control points/lengths; scan sensor calibration available."
@@ -924,7 +924,7 @@
         "COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "prerequisites": [
         "Overlapping sharp views, camera metadata/calibration where available, scene motion/lighting assessed and scale controls identified."
@@ -962,7 +962,7 @@
         "Open3D; CloudCompare"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "prerequisites": [
         "Sensor model, calibration, units, extrinsics and depth validity/range known."
@@ -1000,7 +1000,7 @@
         "Nerfstudio/gsplat; COLMAP camera input; Blender viewer/export"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "prerequisites": [
         "Camera poses and training configuration available; GPU/runtime/weight license assessed for selected implementation."
@@ -1040,8 +1040,8 @@
         "Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "prerequisites": [
         "Source scan frame/scale calibrated; independent interface dimensions and target function stated."
@@ -1143,8 +1143,8 @@
         "Native CAD drawing/workbench; STEP/DXF/PDF exporters"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md"
       ],
       "prerequisites": [
         "Design revision, manufacturing process, required dimensions/tolerances and materials sourced."
@@ -1190,8 +1190,8 @@
         "content-addressed files; Git metadata; source/license registry"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "prerequisites": [
         "Stable component ID, exact source bytes, item terms and conversion lineage recorded."
@@ -1270,7 +1270,7 @@
         "COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "prerequisites": [
         "Camera solution and image set correspond; scale/control transform is available for metric results."
@@ -1307,7 +1307,7 @@
         "Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "prerequisites": [
         "Point cloud has known frame, scale, normals if required, and density/noise characteristics."
@@ -1345,7 +1345,7 @@
         "Nerfstudio; COLMAP camera input"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "prerequisites": [
         "Camera poses, training parameters, model/checkpoint license and runtime requirements are recorded."
@@ -1630,8 +1630,8 @@
         "cad-solid"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/local-baseline.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+        "${MODELING_ROOT}/research/local-baseline.md",
+        "${OCS_ROOT}/README.md"
       ],
       "summary": "Import a supplied neutral STEP file to the project CAD representation; a faceted STEP source remains faceted after import. **Exact adapter fidelity depends on importer.**",
       "tools": [
@@ -1670,7 +1670,7 @@
       ],
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md"
       ],
       "summary": "Export named CAD assembly instances and placements to STEP exchange where the selected exporter preserves assembly structure; verify the exported part tree.",
       "tools": [
@@ -1712,8 +1712,8 @@
         "CadQuery; build123d; OpenSCAD; FreeCAD Python"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "prerequisites": [
         "Parameters, units, datum and solid design intent are explicit."
@@ -1893,8 +1893,8 @@
         "Existing CAD solid remains the starting model; do not overwrite. The resulting profile/solid is a proposed revision and STEP is an exchange derivative with recorded fidelity."
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "status": "proposed_composition",
       "summary": "Calibrate sketch and drawing evidence, author a revision from a brief/profile, inspect it against the prior model, and export a separate exchange file."
@@ -1923,8 +1923,8 @@
         "Photogrammetry mesh is reference evidence; measurements constrain CAD dimensions. Keep reconstructed mesh and parametric CAD as separate linked assets. Component licensing applies to source model/assets individually."
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "status": "proposed_composition",
       "summary": "Intake source rights, reconstruct a mesh reference, remodel measured geometry parametrically and create a versioned reusable component record."
@@ -1976,7 +1976,7 @@
         "The robot MJCF is an actual seed. Point-cloud triangulation and convex decomposition alter surface geometry; preserve originals, component frames and algorithm/version/settings."
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
         "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE"
@@ -1991,8 +1991,8 @@
       "name": "One canonical component schema with domain adapters",
       "summary": "Store identity, source/license, geometry representations, units/frames and physical values once; generate IFC, URDF, MJCF and visual exports through explicit adapters.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ],
       "status": "proposal",
       "next_check": "Prototype one mechanical component and one IFC product; document representation loss in each export.",
@@ -2053,7 +2053,7 @@
       "name": "Plan plus scan to IFC as-built model",
       "summary": "Use measured scan alignment as surface evidence, plan interpretation for semantic element boundaries and IFC relationships for the building model.",
       "source_urls": [
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html"
       ],
       "status": "proposal",
@@ -2068,7 +2068,7 @@
       "name": "CAD/STEP/B-rep fidelity gates",
       "summary": "Use STEP for geometry exchange while comparing the actual exporter/importer pair; source formats differ in whether they preserve analytic faces, assemblies and parametric history.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/local-baseline.md",
+        "${MODELING_ROOT}/research/local-baseline.md",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html"
       ],
       "status": "proposal",
@@ -2098,8 +2098,8 @@
       "name": "Scan to CAD with evidence labels",
       "summary": "Maintain scan, controls, fitted primitive/features, independent residuals and CAD source as separate linked representations.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "status": "proposal",
       "next_check": "Test one manufactured mechanical component with held-out interface dimensions.",
@@ -2159,7 +2159,7 @@
         "https://projects.blender.org/lab/blender_mcp/src/branch/main",
         "https://github.com/ahujasid/mcp-for-blender",
         "https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst",
-        "/home/leo/projects/3dmodeling/research/local-baseline.md"
+        "${MODELING_ROOT}/research/local-baseline.md"
       ],
       "status": "proposal",
       "next_check": "Compare scripted and MCP scene edits once the local Blender 5.0.1 compatibility constraint is resolved or a compatible integration chosen.",
@@ -2176,7 +2176,7 @@
       "summary": "Combine an articulated robot description with a registered room or terrain mesh, then derive a simplified collision scene while keeping source coordinates and body frames linked.",
       "source_urls": [
         "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "status": "proposal",
       "next_check": "Create a miniature scene with one articulated robot and one scanned obstacle; verify frame transforms and collision envelope.",
@@ -2190,8 +2190,8 @@
       "name": "Sketch-over-model revision workflow",
       "summary": "Align new sketch/image dimensions to an existing model datum, revise its native source, and regenerate geometry and visual exports without losing unrelated component identity.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "status": "proposal",
       "next_check": "Exercise a changed hole position against a pinned source model and compare a before/after measurement manifest.",
@@ -2207,7 +2207,7 @@
       "source_urls": [
         "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
         "https://polyhaven.com/license",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ],
       "status": "proposal",
       "next_check": "Define permitted downstream operations for each asset evidence class without presenting a license or visual source as engineering validation.",

@@ -8,7 +8,7 @@
       "status": "proposal",
       "origin": "authorized_action_audit_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+        "${MODELING_ROOT}/research/action-audit/plan.md"
       ],
       "source_documents": [
         {
@@ -26,7 +26,7 @@
       "status": "proposal",
       "origin": "authorized_action_audit_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+        "${MODELING_ROOT}/research/action-audit/plan.md"
       ],
       "source_documents": [
         {
@@ -44,7 +44,7 @@
       "status": "proposal",
       "origin": "authorized_action_audit_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+        "${MODELING_ROOT}/research/action-audit/plan.md"
       ],
       "source_documents": [
         {
@@ -62,7 +62,7 @@
       "status": "proposal",
       "origin": "authorized_action_audit_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+        "${MODELING_ROOT}/research/action-audit/plan.md"
       ],
       "source_documents": [
         {
@@ -80,7 +80,7 @@
       "status": "proposal",
       "origin": "authorized_action_audit_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+        "${MODELING_ROOT}/research/action-audit/plan.md"
       ],
       "source_documents": [
         {
@@ -98,7 +98,7 @@
       "status": "proposal",
       "origin": "authorized_action_audit_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/plan.md"
+        "${MODELING_ROOT}/research/action-audit/plan.md"
       ],
       "source_documents": [
         {
@@ -116,8 +116,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Assemble existing CAD or source-library components. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
+        "${MODELING_ROOT}/research/action-audit/point-02-operations.json"
       ],
       "source_documents": [
         {
@@ -135,8 +135,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Library asset intake and rights record. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
+        "${MODELING_ROOT}/research/action-audit/point-02-operations.json"
       ],
       "source_documents": [
         {
@@ -154,8 +154,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Place reusable component in assembly. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
+        "${MODELING_ROOT}/research/action-audit/point-02-operations.json"
       ],
       "source_documents": [
         {
@@ -173,8 +173,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Version and reuse component revision. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
+        "${MODELING_ROOT}/research/action-audit/point-02-operations.json"
       ],
       "source_documents": [
         {
@@ -192,8 +192,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Import STEP solid into CAD representation. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
+        "${MODELING_ROOT}/research/action-audit/point-02-operations.json"
       ],
       "source_documents": [
         {
@@ -211,8 +211,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP assembly. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
+        "${MODELING_ROOT}/research/action-audit/point-02-operations.json"
       ],
       "source_documents": [
         {
@@ -230,8 +230,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Read and clean vector drawing geometry. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -249,8 +249,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build and constrain an editable planar sketch. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -268,8 +268,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Create a kernel solid and native model document from confirmed parameters. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -287,8 +287,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Verify model geometry and saved output. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -306,8 +306,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Recover from failed interpretation or geometry construction. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -325,8 +325,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Render source-defined CSG as a mesh. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -344,8 +344,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for DXF/SVG drawing to constrained profile. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -363,8 +363,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Brief/profile to native CAD solid. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -382,8 +382,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP solid. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -401,8 +401,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 03 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Script-parametric CAD authoring. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "source_documents": [
         {
@@ -420,8 +420,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Rectify a raster drawing plane from known dimensions. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -439,8 +439,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Recognize dimension text with OCR. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -458,8 +458,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract raster edges, lines and contours. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -477,8 +477,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Convert raster floor-plan candidates into a wall and opening graph. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -496,8 +496,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register orthographic drawing views in a shared coordinate frame. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -515,8 +515,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconstruct a candidate 3D wireframe and surface from orthographic views. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -534,8 +534,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build wall and opening solids from a confirmed floor-plan graph. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -553,8 +553,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Raster sketch to constrained sketch. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -572,8 +572,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Raster floor plan to IFC building. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md",
+        "${MODELING_ROOT}/research/action-audit/point-04-operations.json"
       ],
       "source_documents": [
         {
@@ -591,8 +591,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calibrate camera poses from photographs and known controls. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -610,8 +610,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calibrate camera intrinsics and distortion. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -629,8 +629,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Solve camera pose from known 3D-to-2D correspondences. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -648,8 +648,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate coarse transform between point clouds. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -667,8 +667,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Refine registration and compare point-cloud surfaces. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -686,8 +686,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Segment point clouds and fit candidate primitive evidence. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -705,8 +705,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Fit analytic features to scans or image-derived point clouds. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -724,8 +724,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register existing CAD to calibrated photographs or scan points. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -743,8 +743,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Anchor a screen sketch to a 3D surface. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -762,8 +762,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Remodel segmented scan evidence as parametric CAD. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -781,8 +781,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconcile scan surfaces with dimensioned drawings. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -800,8 +800,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Iterate CAD edits against registered evidence. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -819,8 +819,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register scan to building frame. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -838,8 +838,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Scan or mesh to parametric CAD remodeling. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md",
+        "${MODELING_ROOT}/research/action-audit/point-05-operations.json"
       ],
       "source_documents": [
         {
@@ -857,8 +857,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author assembly graph and joint set. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -876,8 +876,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author robot assembly from CAD component. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -895,8 +895,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for CAD assembly to articulated robot structure. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -914,8 +914,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calculate or import physical mass properties. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -933,8 +933,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export mesh assets for MuJoCo. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -952,8 +952,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Generate convex collision set. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -971,8 +971,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Robot assembly to URDF package. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -990,8 +990,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for URDF import and MJCF conversion. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1009,8 +1009,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author native MJCF simulation model. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1028,8 +1028,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author semantic IFC building. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1047,8 +1047,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract IFC geometry as triangles. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1066,8 +1066,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract IFC geometry as OpenCASCADE B-rep. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1085,8 +1085,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for IFC to GLB display scene. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1104,8 +1104,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Map CAD link geometry to MJCF body tree. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1123,8 +1123,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Add environment collision geometry to MJCF. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1142,8 +1142,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author static MuJoCo environment from BIM mesh. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1161,8 +1161,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Assemble and inspect Blender scene. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1180,8 +1180,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Place library component in semantic IFC. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1199,8 +1199,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Create fabrication package. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md",
+        "${MODELING_ROOT}/research/action-audit/point-06-operations.json"
       ],
       "source_documents": [
         {
@@ -1218,8 +1218,8 @@
       "status": "proposal",
       "origin": "authorized_full_action_audit",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/action-audit/skill-to-actions.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "source_documents": [
         {
@@ -1237,8 +1237,8 @@
       "status": "proposal",
       "origin": "authorized_full_action_audit",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+        "${MODELING_ROOT}/research/action-audit/workflow-to-actions.md",
+        "${MODELING_ROOT}/research/implementation-plan.md"
       ],
       "source_documents": [
         {
@@ -1256,8 +1256,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Convert video into an image reconstruction dataset. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1275,8 +1275,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate camera poses and sparse structure from overlapping photos. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1294,8 +1294,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconstruct camera poses and dense visible geometry from overlapping photos. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1313,8 +1313,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register RGB and depth frames and estimate sequence poses. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1332,8 +1332,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Integrate calibrated RGB-D frames into point cloud or TSDF mesh. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1351,8 +1351,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Depth frames to registered point cloud or mesh. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1370,8 +1370,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build dense point cloud and mesh from SfM camera solution. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1389,8 +1389,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Dense multi-view stereo to point cloud and mesh. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1408,8 +1408,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Point cloud to surface mesh. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1427,8 +1427,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photos/video to camera solution, point cloud and mesh. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1446,8 +1446,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate multi-view depth, camera poses and Gaussian outputs. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1465,8 +1465,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Generate a single-image mesh proxy. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1484,8 +1484,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train and export a Gaussian splat scene. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1503,8 +1503,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train and export a NeRF scene. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1522,8 +1522,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train NeRF or Gaussian scene for view synthesis. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1541,8 +1541,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photographs to Gaussian/NeRF visual scene. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1560,8 +1560,8 @@
       "origin": "authorized_sequential_action_audit",
       "summary": "Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photos to NeRF visual scene. Detailed contracts and conditions are retained in the linked operation record.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md",
+        "${MODELING_ROOT}/research/action-audit/point-07-operations.json"
       ],
       "source_documents": [
         {
@@ -1579,7 +1579,7 @@
       "status": "proposal",
       "origin": "authorized_implementation_queue",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+        "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json"
       ],
       "source_documents": [
         {
@@ -1597,7 +1597,7 @@
       "status": "proposal",
       "origin": "authorized_implementation_queue",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md"
+        "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.md"
       ],
       "source_documents": [
         {
@@ -1615,7 +1615,7 @@
       "status": "proposal",
       "origin": "authorized_implementation_queue",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md"
+        "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md"
       ],
       "source_documents": [
         {
@@ -1635,7 +1635,7 @@
       "registered_at": "2026-11-12",
       "evidence_status": "user_proposal",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       ],
       "source_documents": [
         {
@@ -1645,8 +1645,8 @@
         }
       ],
       "relationships": {
-        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+        "component_records": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json"
       },
       "next_check": "Review the documented catalogue structure and relationships before catalogue implementation."
     },
@@ -1659,7 +1659,7 @@
       "registered_at": "2026-11-12",
       "evidence_status": "proposed_design_alternative",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       ],
       "source_documents": [
         {
@@ -1669,8 +1669,8 @@
         }
       ],
       "relationships": {
-        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+        "component_records": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json"
       },
       "next_check": "Review the documented catalogue structure and relationships before catalogue implementation."
     },
@@ -1683,7 +1683,7 @@
       "registered_at": "2026-11-12",
       "evidence_status": "proposed_design_alternative",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       ],
       "source_documents": [
         {
@@ -1693,8 +1693,8 @@
         }
       ],
       "relationships": {
-        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+        "component_records": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json"
       },
       "next_check": "Review the documented catalogue structure and relationships before catalogue implementation."
     },
@@ -1707,7 +1707,7 @@
       "registered_at": "2026-11-12",
       "evidence_status": "user_proposal",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       ],
       "source_documents": [
         {
@@ -1717,8 +1717,8 @@
         }
       ],
       "relationships": {
-        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+        "component_records": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json"
       },
       "next_check": "Define this extension when future work is taken up."
     },
@@ -1731,7 +1731,7 @@
       "registered_at": "2026-11-12",
       "evidence_status": "user_proposal",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       ],
       "source_documents": [
         {
@@ -1741,8 +1741,8 @@
         }
       ],
       "relationships": {
-        "component_records": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json"
+        "component_records": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json"
       },
       "next_check": "Define this extension when future work is taken up."
     },
@@ -1755,8 +1755,8 @@
       "registered_at": "2026-11-12",
       "evidence_status": "proposed_execution_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
-        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+        "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md",
+        "${MODELING_ROOT}/research/component-development-coverage.md"
       ],
       "source_documents": [
         {
@@ -1766,9 +1766,9 @@
         }
       ],
       "relationships": {
-        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
-        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "component_inputs": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       },
       "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records."
     },
@@ -1781,8 +1781,8 @@
       "registered_at": "2026-11-12",
       "evidence_status": "proposed_execution_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
-        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+        "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md",
+        "${MODELING_ROOT}/research/component-development-coverage.md"
       ],
       "source_documents": [
         {
@@ -1792,9 +1792,9 @@
         }
       ],
       "relationships": {
-        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
-        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "component_inputs": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       },
       "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records."
     },
@@ -1807,8 +1807,8 @@
       "registered_at": "2026-11-12",
       "evidence_status": "proposed_execution_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
-        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+        "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md",
+        "${MODELING_ROOT}/research/component-development-coverage.md"
       ],
       "source_documents": [
         {
@@ -1818,9 +1818,9 @@
         }
       ],
       "relationships": {
-        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
-        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "component_inputs": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       },
       "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records."
     },
@@ -1833,8 +1833,8 @@
       "registered_at": "2026-11-12",
       "evidence_status": "proposed_execution_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
-        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+        "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md",
+        "${MODELING_ROOT}/research/component-development-coverage.md"
       ],
       "source_documents": [
         {
@@ -1844,9 +1844,9 @@
         }
       ],
       "relationships": {
-        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
-        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "component_inputs": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       },
       "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records."
     },
@@ -1859,8 +1859,8 @@
       "registered_at": "2026-11-12",
       "evidence_status": "proposed_execution_plan",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
-        "/home/leo/projects/3dmodeling/research/component-development-coverage.md"
+        "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md",
+        "${MODELING_ROOT}/research/component-development-coverage.md"
       ],
       "source_documents": [
         {
@@ -1870,9 +1870,9 @@
         }
       ],
       "relationships": {
-        "component_inputs": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-        "action_records": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
-        "catalogue_proposal": "/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md"
+        "component_inputs": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+        "action_records": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
+        "catalogue_proposal": "${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md"
       },
       "next_check": "Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records."
     },
@@ -1884,7 +1884,7 @@
       "origin": "executed_component_source_preparation",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md"
+        "${MODELING_ROOT}/execution/2026-11-12-component-led.md"
       ],
       "source_documents": [
         {
@@ -1903,7 +1903,7 @@
       "origin": "executed_component_source_preparation",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md"
+        "${MODELING_ROOT}/execution/2026-11-12-component-led.md"
       ],
       "source_documents": [
         {
@@ -1922,7 +1922,7 @@
       "origin": "authorized_tube_corner_standards_research",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+        "${MODELING_ROOT}/research/tube-corner-research.md"
       ],
       "source_documents": [
         {
@@ -1949,7 +1949,7 @@
       "origin": "authorized_tube_corner_standards_research",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+        "${MODELING_ROOT}/research/tube-corner-research.md"
       ],
       "source_documents": [
         {
@@ -1976,7 +1976,7 @@
       "origin": "authorized_tube_corner_standards_research",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/tube-corner-research.md"
+        "${MODELING_ROOT}/research/tube-corner-research.md"
       ],
       "source_documents": [
         {
@@ -2003,7 +2003,7 @@
       "origin": "observed_rail_execution",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+        "${MODELING_ROOT}/execution/p01-rail-build.md"
       ],
       "source_documents": [
         {
@@ -2022,7 +2022,7 @@
       "origin": "observed_rail_execution",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+        "${MODELING_ROOT}/execution/p01-rail-build.md"
       ],
       "source_documents": [
         {
@@ -2041,7 +2041,7 @@
       "origin": "observed_rail_execution",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+        "${MODELING_ROOT}/execution/p01-rail-build.md"
       ],
       "source_documents": [
         {
@@ -2060,7 +2060,7 @@
       "origin": "observed_rail_execution",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/p01-rail-build.md"
+        "${MODELING_ROOT}/execution/p01-rail-build.md"
       ],
       "source_documents": [
         {
@@ -2079,7 +2079,7 @@
       "origin": "executed_saved_rail_verification",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/p01-saved-verification.md"
+        "${MODELING_ROOT}/execution/p01-saved-verification.md"
       ],
       "source_documents": [
         {
@@ -2098,7 +2098,7 @@
       "origin": "executed_crossmember_iteration",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/p02-crossmember.md"
+        "${MODELING_ROOT}/execution/p02-crossmember.md"
       ],
       "source_documents": [
         {
@@ -2117,7 +2117,7 @@
       "origin": "executed_bearing_iteration",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/c009-bearing.md"
+        "${MODELING_ROOT}/execution/c009-bearing.md"
       ],
       "source_documents": [
         {
@@ -2136,7 +2136,7 @@
       "origin": "executed_leaf_iteration",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/c021-leaf-module.md"
+        "${MODELING_ROOT}/execution/c021-leaf-module.md"
       ],
       "source_documents": [
         {
@@ -2155,7 +2155,7 @@
       "origin": "executed_driver_iteration",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/c012-driver.md"
+        "${MODELING_ROOT}/execution/c012-driver.md"
       ],
       "source_documents": [
         {
@@ -2174,7 +2174,7 @@
       "origin": "executed_motor_iteration",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/c005-me0907.md"
+        "${MODELING_ROOT}/execution/c005-me0907.md"
       ],
       "source_documents": [
         {
@@ -2193,7 +2193,7 @@
       "origin": "executed_manufacturer_assembly_iteration",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/c023-victron-battery.md"
+        "${MODELING_ROOT}/execution/c023-victron-battery.md"
       ],
       "source_documents": [
         {
@@ -2212,7 +2212,7 @@
       "origin": "fuse_source_readiness",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/c030-fuse-source.md"
+        "${MODELING_ROOT}/execution/c030-fuse-source.md"
       ],
       "source_documents": [
         {
@@ -2231,7 +2231,7 @@
       "origin": "executed_relay_pdf_vector_extraction",
       "registered_at": "2026-11-12",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/execution/c048-pilz-source.md",
+        "${MODELING_ROOT}/execution/c048-pilz-source.md",
         "https://www.pilz.com/download/open/P9745_2009094_-.pdf"
       ],
       "source_documents": [

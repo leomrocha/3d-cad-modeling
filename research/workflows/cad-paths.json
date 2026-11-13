@@ -14,8 +14,8 @@
         "OCS engineering skill"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "prerequisites": [
         "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -356,8 +356,8 @@
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
         "https://ezdxf.readthedocs.io/en/stable/",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/README.md"
       ],
       "prerequisites": [
         "Preserve source file and hash.",
@@ -403,7 +403,7 @@
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "prerequisites": [
         "Specify units, support plane and datum.",
@@ -462,7 +462,7 @@
         "https://cadquery.readthedocs.io/en/stable/",
         "https://openscad.org/documentation",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+        "${OCS_ROOT}/docs/cadkernel-body-path.md"
       ],
       "prerequisites": [
         "Declare units, feature parameters, direction/axis and part boundary.",
@@ -519,8 +519,8 @@
         "FreeCAD/build123d"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/architecture/research/README.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${ARCHITECTURE_ROOT}/research/README.md"
       ],
       "prerequisites": [
         "Input is already a metric, registered point cloud, depth sequence, or mesh with a declared coordinate frame.",
@@ -580,8 +580,8 @@
         "unit and frame mapping"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${OCS_ROOT}/docs/automation/README.md",
         "https://cadquery.readthedocs.io/en/stable/"
       ],
       "prerequisites": [
@@ -637,9 +637,9 @@
         "mesh validation"
       ],
       "source_urls": [
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://build123d.readthedocs.io/en/stable/"
       ],
       "prerequisites": [
@@ -714,8 +714,8 @@
         "CAD kernel validity reports"
       ],
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/energy/eoliennes/research/cad-workflow/harness-findings.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${EOLIENNES_ROOT}/research/cad-workflow/harness-findings.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md"
       ],
       "prerequisites": [
@@ -846,7 +846,7 @@
         "scale/control-point alignment"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://github.com/colmap/colmap",
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
       ],
@@ -896,7 +896,7 @@
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
         "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md"
+        "${OCS_ROOT}/docs/automation/README.md"
       ],
       "prerequisites": [
         "vector-drawing contains the reviewed plan wall/opening graph from CAD-05.",
@@ -946,8 +946,8 @@
         "The original brief remains linked to each controlling dimension."
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://build123d.readthedocs.io/en/latest/operations.html"
       ],
@@ -1044,7 +1044,7 @@
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
         "https://ezdxf.readthedocs.io/en/stable/",
         "https://build123d.readthedocs.io/en/latest/operations.html",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+        "${OCS_ROOT}/src/io/step.rs"
       ],
       "status": "proposed_composition",
       "summary": "Preserve source drawing → choose profiles → clean/constraint → feature generation → exact representation check."
@@ -1101,8 +1101,8 @@
         "Unsampled/occluded surfaces remain inferred; do not warp library geometry silently."
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md"
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/reconstruction.md"
       ],
       "status": "proposed_composition",
       "summary": "Reconstruct a scaled camera solution and visible point cloud/mesh from overlapping photos; fit analytic interface features; compare to a library component; assemble and verify. Photograph-derived hidden surfaces remain inferred."
@@ -1128,9 +1128,9 @@
         "Fit residuals and interface dimensions are checked independently."
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "status": "proposed_composition",
       "summary": "Align measured scan to retained CAD → fit interface primitives → remodel only the scoped component → check assembly interfaces. CAD-12 receives the retained housing and the distinct fitted component as separate cad-solid occurrences."
@@ -1153,8 +1153,8 @@
         "No unobserved interface or part number is invented."
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "status": "proposed_composition",
       "summary": "Assemble known components by interface frames and leave the unresolved envelope visibly attributable to its current evidence status. CAD-12 receives the CAD solid as base and the library component as a separate part."
@@ -1212,7 +1212,7 @@
       "name": "Feature-level evidence ledger",
       "summary": "Link every model parameter and geometric feature to a source document, coordinate range, evidence status, units, transformation and uncertainty; keep solver constraints separate from measured inputs.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md"
       ],
       "status": "proposal",
@@ -1245,8 +1245,8 @@
       "name": "Representation-aware backend selection",
       "summary": "Route each job using required outputs: OCS for the established session workflow, FreeCAD for constrained feature history, code-CAD for reproducible exact B-rep source, and Blender/OpenSCAD for mesh or scene routes; record when a format conversion changes representation.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
         "https://build123d.readthedocs.io/en/latest/operations.html"
       ],

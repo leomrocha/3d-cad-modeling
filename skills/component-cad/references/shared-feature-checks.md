@@ -1,6 +1,6 @@
 # Reuse a measured-feature check across components
 
-Executed evidence: [driver iteration](/home/leo/projects/3dmodeling/execution/c012-driver.md), [Leaf module iteration](/home/leo/projects/3dmodeling/execution/c021-leaf-module.md). Code: [feature_checks.py](/home/leo/projects/3dmodeling/scripts/feature_checks.py).
+Executed evidence: [driver iteration](../../../execution/c012-driver.md), [Leaf module iteration](../../../execution/c021-leaf-module.md). Code: [feature_checks.py](../../../scripts/feature_checks.py).
 
 1. **Choose the action:** identify what repeats, such as comparing mounting-hole centres. Keep the source interpretation, native measurement, numerical comparison and visual inspection as separate actions with their own evidence.
 2. **Bind independent expectations:** the component job supplies source-backed dimensions, expected axes/positions, units and a numerical comparison threshold. Record the source/hash/location beside every expectation before reading measured geometry. Project dimensions stay in FERME.

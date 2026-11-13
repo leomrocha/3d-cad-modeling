@@ -11,11 +11,11 @@
   ],
   "acceptance_state": "All six remain discussion ideas; no item is accepted in this iteration. Do not mark any item ACCEPTED.",
   "local_inspection": {
-    "component_skill": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md and references/existing-model-start-check.md",
-    "manifest": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
-    "work_index": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
-    "models_index": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
-    "inventory_script": "/home/leo/projects/3dmodeling/scripts/model_inventory.py",
+    "component_skill": "${MODELING_ROOT}/skills/component-cad/SKILL.md and references/existing-model-start-check.md",
+    "manifest": "${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json",
+    "work_index": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "models_index": "${FERME_ROOT}/engineering/module-development/cad/README.md",
+    "inventory_script": "${MODELING_ROOT}/scripts/model_inventory.py",
     "inventory_run": "Each id was run individually against the 43-file inventory. The gate output is preserved in this report."
   },
   "components": [
@@ -26,7 +26,7 @@
       "start_gate": "REVIEW_EXISTING_CANDIDATES",
       "result": "Candidate reviewed: the attributed file is the separate ME0907 motor model, not a P12 shaft model. P12 remains NEW_MODEL_REQUIRED.",
       "actual_part_path": null,
-      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg",
+      "reusable_dependency": "${FERME_ROOT}/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg",
       "build_state": "NOT_BUILT",
       "source_readiness": "PARTIAL; motor shaft drawing features are recorded in local source report, while wheel shaft bearing spacing, shaft-seat fits, bearing spacing, stack, keyways, retention and selected braking interface remain unsupported by a dimensioned P12 source."
     },
@@ -47,7 +47,7 @@
       "start_gate": "REVIEW_EXISTING_CANDIDATES",
       "result": "Candidate reviewed: the attributed file is the separate ME0907 motor model, not a P14ME adapter. P14ME remains NEW_MODEL_REQUIRED.",
       "actual_part_path": null,
-      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg",
+      "reusable_dependency": "${FERME_ROOT}/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg",
       "build_state": "NOT_BUILT",
       "source_readiness": "PARTIAL; rim side is documented; P12 custom shaft-side shoulder/drive/retention must be explicitly dimensioned before a complete adapter job."
     },
@@ -58,7 +58,7 @@
       "start_gate": "NEW_MODEL_REQUIRED",
       "result": "43 existing 3D model/reference files checked; no matching P14SM model or unresolved filename candidate found.",
       "actual_part_path": null,
-      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-m-ch54065.dwg",
+      "reusable_dependency": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-pro-m-ch54065.dwg",
       "build_state": "NOT_BUILT",
       "source_readiness": "PARTIAL; manufacturer page 3 supplies ring pilot Ø145 h7 and 12×M5 depth12 on Ø134 PCD and Ø123 central output face; separate stationary case pattern is 4×M10 through on 160 square. C003 side awaits exact rim seat evidence; source outline does not dimension G-140 mating groove."
     },
@@ -69,7 +69,7 @@
       "start_gate": "NEW_MODEL_REQUIRED",
       "result": "43 existing 3D model/reference files checked; no matching P14SL model or unresolved filename candidate found.",
       "actual_part_path": null,
-      "reusable_dependency": "/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-l-ch54527.dwg",
+      "reusable_dependency": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-pro-l-ch54527.dwg",
       "build_state": "NOT_BUILT",
       "source_readiness": "PARTIAL; manufacturer page 2 supplies ring pilot Ø182 h7 and 12×M6 depth12 on Ø170 PCD and Ø155 central output face; separate stationary case pattern is 4×M12 through on 142 square. C003 side awaits exact rim seat evidence; source outline does not dimension AS568-261 mating groove."
     },

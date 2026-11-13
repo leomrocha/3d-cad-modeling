@@ -5,7 +5,7 @@
   "records": [
     {
       "url": null,
-      "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+      "local_original": "${MODELING_ROOT}/research/implementation-plan.md",
       "title": "3D modeling implementation plan",
       "summary": "Inspected in this research turn; records proposed tool layers, routes, adapters, verification and staged experiments.",
       "access_date": "2026-11-12",
@@ -28,7 +28,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+      "local_original": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
       "title": "Installed OpenCADStudio engineering skill",
       "summary": "Existing local baseline report records unit/frame contracts, revision-aware operations, readback, geometry checks and save handling; user reports partial use success.",
       "access_date": "2026-11-12",
@@ -42,7 +42,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+      "local_original": "${MODELING_ROOT}/research/cad-and-skills.md",
       "title": "CAD and skills assessment",
       "summary": "Inspected in this research turn; records OCS baseline, CAD representation tradeoffs and alternate authoring backends.",
       "access_date": "2026-11-12",
@@ -62,7 +62,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+      "local_original": "${OCS_ROOT}/README.md",
       "title": "OpenCADStudio README",
       "summary": "Existing local baseline report records OCS native drawing/solid workflow, STEP export description and MCP/JSON automation.",
       "access_date": "2026-11-12",
@@ -77,7 +77,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+      "local_original": "${OCS_ROOT}/src/io/step.rs",
       "title": "OpenCADStudio STEP exporter source",
       "summary": "Existing local baseline report records a triangle-driven exporter that emits plane-based faces in a closed-shell/solid structure.",
       "access_date": "2026-11-12",
@@ -91,7 +91,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+      "local_original": "${MODELING_ROOT}/research/local-baseline.md",
       "title": "Local tool and source baseline",
       "summary": "Inspected in this research turn; records OCS STEP representation finding and environment/source inspection.",
       "access_date": "2026-11-12",
@@ -191,7 +191,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+      "local_original": "${MODELING_ROOT}/research/domains-and-components.md",
       "title": "Domain and component assessment",
       "summary": "Inspected in this research turn; records IFC, MuJoCo, URDF, asset library and per-asset license findings.",
       "access_date": "2026-11-12",
@@ -477,7 +477,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+      "local_original": "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
       "title": "Existing IFC-to-GLB provenance record",
       "summary": "Existing artifact pattern: source hashes, declared mm-to-m conversion, identity status, runtime and geometry mapping.",
       "access_date": "2026-11-12",
@@ -490,7 +490,7 @@
     },
     {
       "url": null,
-      "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+      "local_original": "${MODELING_ROOT}/research/reconstruction.md",
       "title": "Reconstruction workflow assessment",
       "summary": "Inspected in this research turn; records photogrammetry, depth scan, Gaussian/NeRF and scan-to-CAD evidence boundaries.",
       "access_date": "2026-11-12",

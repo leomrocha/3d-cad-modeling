@@ -1,6 +1,6 @@
 # Point 04 source check: raster interpretation, orthographic views and IFC
 
-Date: 2026-11-12. Status: eight primary documentation pages inspected. Requested dispatch: gpt-6-luna, high. Actual runtime model identity: unavailable. Scope: CAD-02, CAD-03, CAD-04, CAD-05, CAD-06, CAD-07, CAD-17, DOM-02 and DOM-18. The source records are in [point-04-web-sources.json](/home/leo/projects/3dmodeling/research/sources/round-05/point-04-web-sources.json). These are documented software capabilities; no image processing, OCR, CAD/IFC creation, installation or runtime test was performed.
+Date: 2026-11-12. Status: eight primary documentation pages inspected. Requested dispatch: gpt-6-luna, high. Actual runtime model identity: unavailable. Scope: CAD-02, CAD-03, CAD-04, CAD-05, CAD-06, CAD-07, CAD-17, DOM-02 and DOM-18. The source records are in [point-04-web-sources.json](../../sources/round-05/point-04-web-sources.json). These are documented software capabilities; no image processing, OCR, CAD/IFC creation, installation or runtime test was performed.
 
 ## Findings
 

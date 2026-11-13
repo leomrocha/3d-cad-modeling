@@ -12,7 +12,7 @@
       "operation_id": "DOM-31",
       "name": "Author assembly graph and joint set",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/ros/urdf_tutorial",
         "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
@@ -119,7 +119,7 @@
       "operation_id": "DOM-37",
       "name": "Author robot assembly from CAD component",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/ros/urdf_tutorial",
         "https://github.com/ros/urdfdom_headers/blob/rolling/include/urdf_model/joint.hpp",
@@ -224,7 +224,7 @@
       "operation_id": "DOM-08",
       "name": "CAD assembly to articulated robot structure",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
         "https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md",
         "https://github.com/boelnasr/CAD_TO_URDF",
@@ -330,10 +330,10 @@
       "operation_id": "DOM-14",
       "name": "Calculate or import physical mass properties",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://dev.opencascade.org/doc/refman/html/class_g_prop___g_props.html",
         "https://occt3d.com/dev/doc/refman/html/class_b_rep_g_prop.html",
         "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
@@ -442,10 +442,10 @@
       "operation_id": "DOM-12",
       "name": "Export mesh assets for MuJoCo",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
         "https://mujoco.readthedocs.io/en/stable/XMLreference.html"
       ],
       "actions": [
@@ -548,7 +548,7 @@
       "operation_id": "DOM-13",
       "name": "Generate convex collision set",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://raw.githubusercontent.com/SarahWeiii/CoACD/main/LICENSE",
         "https://github.com/kmammou/v-hacd/blob/master/LICENSE",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
@@ -656,7 +656,7 @@
       "operation_id": "DOM-09",
       "name": "Robot assembly to URDF package",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/ros/urdf_tutorial",
         "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
         "https://github.com/life-efficient/FreeCAD-Assembly4-to-URDF",
@@ -765,7 +765,7 @@
       "operation_id": "DOM-10",
       "name": "URDF import and MJCF conversion",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst",
@@ -874,7 +874,7 @@
       "operation_id": "DOM-11",
       "name": "Author native MJCF simulation model",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/modeledit.rst",
@@ -981,7 +981,7 @@
       "operation_id": "DOM-15",
       "name": "Author semantic IFC building",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_profile_representation/index.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/index.html",
@@ -1088,7 +1088,7 @@
       "operation_id": "DOM-16",
       "name": "Extract IFC geometry as triangles",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
         "https://docs.ifcopenshell.org/ifcconvert/usage.html"
@@ -1193,7 +1193,7 @@
       "operation_id": "DOM-27",
       "name": "Extract IFC geometry as OpenCASCADE B-rep",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html"
       ],
@@ -1296,10 +1296,10 @@
       "operation_id": "DOM-17",
       "name": "IFC to GLB display scene",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://docs.ifcopenshell.org/introduction.html",
         "https://www.blender.org/features/pipeline/",
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/ifcconvert/usage.html",
         "https://github.com/blender/blender/blob/main/scripts/addons_core/io_scene_gltf2/blender/imp/blender_gltf.py"
@@ -1404,7 +1404,7 @@
       "operation_id": "DOM-32",
       "name": "Map CAD link geometry to MJCF body tree",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
@@ -1509,7 +1509,7 @@
       "operation_id": "DOM-33",
       "name": "Add environment collision geometry to MJCF",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://mujoco.readthedocs.io/en/stable/XMLreference.html"
@@ -1613,7 +1613,7 @@
       "operation_id": "DOM-34",
       "name": "Author static MuJoCo environment from BIM mesh",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
         "https://mujoco.readthedocs.io/en/stable/XMLreference.html",
@@ -1718,7 +1718,7 @@
       "operation_id": "DOM-24",
       "name": "Assemble and inspect Blender scene",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://www.blender.org/features/pipeline/",
         "https://projects.blender.org/lab/blender_mcp/src/branch/main",
         "https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst",
@@ -1824,7 +1824,7 @@
       "operation_id": "DOM-35",
       "name": "Place library component in semantic IFC",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://www.freecad.org/addons.php?lang=eng_EN",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/add_representation/index.html",
@@ -1929,9 +1929,9 @@
       "operation_id": "DOM-25",
       "name": "Create fabrication package",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/TechDraw_ExportPageSVG.md"
       ],
       "actions": [
@@ -2034,10 +2034,10 @@
   ],
   "common_protocol": {
     "references": [
-      "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
-      "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
-      "/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json",
-      "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md"
+      "${MODELING_ROOT}/research/action-audit/point-02-operations.json",
+      "${MODELING_ROOT}/research/action-audit/point-03-operations.json",
+      "${MODELING_ROOT}/research/action-audit/point-05-operations.json",
+      "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md"
     ],
     "status": "All helper/interfaces/procedures/test cases are proposals. Current execution is document authoring/static review; original operation contracts and implementation plan remain unchanged. Acceptance labels require MARK AS ACCEPTED.",
     "frames": "Record source/target revisions, units, axes, handedness, matrix storage/application convention and direction p_target = T_target_source p_source. Separate unit scale, rigid placement, numerical-origin shift and CRS/map conversion. URDF uses ROS SI/right-handed conventions; MJCF units are selected consistently and compiler angle is explicit. Joint axis is expressed in the stated joint/body frame with type-specific meaning/limits. Compare named reference and moved states; a zero pose alone does not validate motion.",

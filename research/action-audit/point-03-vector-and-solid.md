@@ -2,7 +2,7 @@
 
 Date: 2026-11-12. Status: **procedure proposal**. Scope: ten operations and 31 actions. Requested procedure-design dispatch: `gpt-6-astra`, `xhigh`; actual executing model identity: **unavailable**.
 
-[Structured action records](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) contain all 15 required fields for every action: purpose, intended use, inputs, outputs, accuracy, evidence, software, agent, user decisions, dependencies, proposed development, procedure, validation, failure/resumption and resources. This document supplies the readable sequence and concrete representation boundaries. The [execution plan](/home/leo/projects/3dmodeling/research/action-audit/plan.md), [original CAD records](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), [original domain records](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [OCS skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md), [model contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md) and [retained implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md) supply the governing contracts. Procedures, proposed helpers and future cases describe work to execute under its own authorized task. Acceptance labels use the explicit `MARK AS ACCEPTED` instruction.
+[Structured action records](point-03-operations.json) contain all 15 required fields for every action: purpose, intended use, inputs, outputs, accuracy, evidence, software, agent, user decisions, dependencies, proposed development, procedure, validation, failure/resumption and resources. This document supplies the readable sequence and concrete representation boundaries. The [execution plan](plan.md), [original CAD records](../workflows/cad-paths.json), [original domain records](../workflows/domain-paths.json), OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) and [retained implementation plan](../implementation-plan.md) supply the governing contracts. Procedures, proposed helpers and future cases describe work to execute under its own authorized task. Acceptance labels use the explicit `MARK AS ACCEPTED` instruction.
 
 ## 1. Sequence, representations and feature criteria
 
@@ -21,14 +21,14 @@ A lower-detail arrangement branch can retain named envelopes, datums and interfa
 1. [ezdxf](https://ezdxf.readthedocs.io/en/stable/tasks/query.html) documents entity queries, while [unit documentation](https://ezdxf.readthedocs.io/en/stable/concepts/units.html) records unitless coordinates, declared document units and explicit block scaling. [SVG 2](https://www.w3.org/TR/SVG2/coords.html) defines viewport/viewBox and nested coordinate transforms.
 2. [FreeCAD Sketcher documentation](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md) demonstrates geometry/constraint construction and recompute. The archived example supplies API guidance; the selected build must expose the required diagnostics before a diagnostic check can pass.
 3. [build123d](https://build123d.readthedocs.io/en/latest/operations.html) documents Sketch/Face extrusion to Part. [CadQuery](https://cadquery.readthedocs.io/en/stable/importexport.html) documents DXF wires, downstream extrusion and STEP exchange. Its [Shape API](https://cadquery.readthedocs.io/en/stable/classreference.html) documents kernel shape validity.
-4. Local OCS [host enum](/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs), [implementation](/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs) and [Python binding](/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py) provide native create/transform/profile/extrude/Boolean evidence. The [kernel note](/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md) contains earlier proposals followed by implemented status and historical tests. Native operations and the [faceted STEP writer](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs) have separate capability records.
-5. [OpenSCAD documentation](https://openscad.org/documentation) and the [previous manual source record](/home/leo/projects/3dmodeling/research/sources/source-register.md#src-ce92c7f02e89) support source-defined CSG/mesh work. The fresh source role inspected the documentation index; its manual evidence comes from the prior record.
+4. Local OCS host enum (`${OCS_ROOT}/crates/ocs_plugin_api/src/host.rs`), implementation (`${OCS_ROOT}/src/app/plugin_host.rs`) and Python binding (`${OCS_ROOT}/plugins/opencad-python/src/document_model.py`) provide native create/transform/profile/extrude/Boolean evidence. The kernel note (`${OCS_ROOT}/docs/cadkernel-body-path.md`) contains earlier proposals followed by implemented status and historical tests. Native operations and the faceted STEP writer (`${OCS_ROOT}/src/io/step.rs`) have separate capability records.
+5. [OpenSCAD documentation](https://openscad.org/documentation) and the [previous manual source record](../sources/source-register.md#src-ce92c7f02e89) support source-defined CSG/mesh work. The fresh source role inspected the documentation index; its manual evidence comes from the prior record.
 
-The [software review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-software.md), [visual review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-visual.md) and [source review](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-sources.md) identify the inspected evidence and version conditions. The following procedures are proposed compositions of those capabilities.
+The [software review](reviews/point-03-software.md), [visual review](reviews/point-03-visual.md) and [source review](reviews/point-03-sources.md) identify the inspected evidence and version conditions. The following procedures are proposed compositions of those capabilities.
 
 ## 3. CAD-08 — Read and clean vector drawing geometry
 
-Entry points and evidence: [ezdxf queries](https://ezdxf.readthedocs.io/en/stable/tasks/query.html), [DXF units](https://ezdxf.readthedocs.io/en/stable/concepts/units.html), [SVG coordinates](https://www.w3.org/TR/SVG2/coords.html), [CAD-R04](/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md).
+Entry points and evidence: [ezdxf queries](https://ezdxf.readthedocs.io/en/stable/tasks/query.html), [DXF units](https://ezdxf.readthedocs.io/en/stable/concepts/units.html), [SVG coordinates](https://www.w3.org/TR/SVG2/coords.html), [CAD-R04](../workflows/details/cad-r04.md).
 
 1. **CAD-08-A01 — Inspect source entities, units and drawing contexts.** Read the original DXF/SVG and hash; inventory entities by type, layer, model/paper space and block occurrence. Record DXF declared units and nested transforms, or SVG viewport, physical dimensions, viewBox and transforms. Associate selected profile entities with their source component and plane.
 2. **CAD-08-A02 — Create a mapped and explicitly cleaned derivative.** Apply the recorded unit/frame transform to a derivative; classify open ends, duplicates, crossings and nonplanarity. Apply only source-supported repairs within individual feature criteria. Preserve source-to-result IDs and before/after geometry, including curve-type changes from nonuniform scale.
@@ -53,7 +53,7 @@ DXF coordinates have unit declarations and explicit block scale behavior. SVG di
 
 ## 4. CAD-09 — Build and constrain an editable planar sketch
 
-Entry points and evidence: [FreeCAD Sketcher scripting](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), [OCS contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md).
+Entry points and evidence: [FreeCAD Sketcher scripting](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md), OCS contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`).
 
 1. **CAD-09-A01 — Map curves and sourced constraints to a sketch plan.** Map each source curve to sketch geometry and each source dimension/relation to a named constraint. Record support plane, datum, units, nominal value, source status and intended remaining freedom. Resolve radius/diameter, edge/centre, hole and symmetry associations before applying constraints.
 2. **CAD-09-A02 — Create the sketch and solve bounded constraint groups.** Create geometry and add bounded constraint groups with the selected version's supported API; recompute and read actual solver diagnostics. Record remaining degrees of freedom, conflicts, residuals and geometry displacement where supported. An unavailable required diagnostic leaves its dependent check unresolved.
@@ -78,7 +78,7 @@ A degree of freedom is an independent movement remaining in the sketch. Intended
 
 ## 5. CAD-10 — Create a kernel solid and native model document from confirmed parameters
 
-Entry points and evidence: [OCS host operations](/home/leo/projects/3rdparty/OpenCADStudio/crates/ocs_plugin_api/src/host.rs), [host implementation](/home/leo/projects/3rdparty/OpenCADStudio/src/app/plugin_host.rs), [Python solids interface](/home/leo/projects/3rdparty/OpenCADStudio/plugins/opencad-python/src/document_model.py), [REVOLVE command](/home/leo/projects/3rdparty/OpenCADStudio/src/app/command_driver/solid3d.rs), [build123d extrusion](https://build123d.readthedocs.io/en/latest/operations.html).
+Entry points and evidence: OCS host operations (`${OCS_ROOT}/crates/ocs_plugin_api/src/host.rs`), host implementation (`${OCS_ROOT}/src/app/plugin_host.rs`), Python solids interface (`${OCS_ROOT}/plugins/opencad-python/src/document_model.py`), REVOLVE command (`${OCS_ROOT}/src/app/command_driver/solid3d.rs`), [build123d extrusion](https://build123d.readthedocs.io/en/latest/operations.html).
 
 1. **CAD-10-A01 — Select a supported solid feature route.** Choose a supported primitive, extrusion, revolution or Boolean sequence from the confirmed parameters/profile. Bind signed direction, axis, sweep and part boundary to sources. Check the actual backend input and result types before construction.
 2. **CAD-10-A02 — Construct features with revision-bound readback.** Execute one bounded feature against named operands and target revision, retaining request and readback evidence. For profile preservation explicitly pass delete_source=False; for OCS Boolean operand preservation explicitly pass keep_operands=True. Read resulting handles and representation before the next dependent feature.
@@ -103,7 +103,7 @@ OCS plugin Extrude accepts one curve-profile handle and rejects Region. Closed p
 
 ## 6. CAD-13 — Verify model geometry and saved output
 
-Entry points and evidence: [Original CAD verification operation](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), [CadQuery Shape API](https://cadquery.readthedocs.io/en/stable/classreference.html), [OCS measurement contract](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md).
+Entry points and evidence: [Original CAD verification operation](../workflows/cad-paths.json), [CadQuery Shape API](https://cadquery.readthedocs.io/en/stable/classreference.html), OCS measurement contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`).
 
 1. **CAD-13-A01 — Bind checks to actual artifacts and source criteria.** Bind every check to an exact artifact revision, required feature, source reference, unit/frame and individual criterion. Identify actual geometry available for measurement. A source-only script can receive source/provenance review; its geometry checks require a generated artifact or retained executed generation receipt.
 2. **CAD-13-A02 — Read actual geometry and compare required features.** Query actual geometry for controlling dimensions, axes, parts, holes and structural validity. Compare independent source controls and record measured differences with the query method. Report unsupported queries individually; broad bounds/volume checks accompany critical-feature checks.
@@ -128,7 +128,7 @@ CadQuery Shape.isValid() uses OCCT shape-defect checks. It supplies kernel-integ
 
 ## 7. CAD-14 — Recover from failed interpretation or geometry construction
 
-Entry points and evidence: [Original recovery operation](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json), [OCS automation API](/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md), [composition rules](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md).
+Entry points and evidence: [Original recovery operation](../workflows/cad-paths.json), OCS automation API (`${OCS_ROOT}/docs/automation/API-SPEC.md`), [composition rules](../workflows/composition-rules.md).
 
 1. **CAD-14-A01 — Reconcile the failed operation and preserve its evidence.** Reconcile the failed or uncertain action against request identity, document revision, actual state and partial outputs. Preserve the failure report and last checked revision; establish which mutation or export completed.
 2. **CAD-14-A02 — Diagnose the earliest invalid source-to-geometry transition.** Trace failed checks back through source interpretation, transforms, loop roles, constraints, feature operations and export. Identify the earliest invalid transition and affected descendants; retain independent valid branches.
@@ -153,7 +153,7 @@ CAD-14 outputs the recovery brief and retry plan. Kernel refusal, ambiguous evid
 
 ## 8. CAD-15 — Render source-defined CSG as a mesh
 
-Entry points and evidence: [OpenSCAD documentation](https://openscad.org/documentation), [registered manual evidence](/home/leo/projects/3dmodeling/research/sources/source-register.md#src-ce92c7f02e89), [CAD-R10](/home/leo/projects/3dmodeling/research/workflows/details/cad-r10.md).
+Entry points and evidence: [OpenSCAD documentation](https://openscad.org/documentation), [registered manual evidence](../sources/source-register.md#src-ce92c7f02e89), [CAD-R10](../workflows/details/cad-r10.md).
 
 1. **CAD-15-A01 — Inspect CSG source, parameters and mesh criteria.** Bind the CSG source, included assets, parameter values, units/frame and required features to a fixed source revision. Specify final render/export mode and feature-specific tessellation criteria. Record the chosen OpenSCAD version/backend and output mesh format.
 2. **CAD-15-A02 — Evaluate final CSG and export the mesh derivative.** Evaluate the final CSG and export a new mesh; retain process results, settings and input/output hashes. Distinguish any preview from the final evaluated artifact. Inspect actual output presence and representation before measurement.
@@ -178,7 +178,7 @@ CSG means constructive solid geometry: shape operations combine or subtract sour
 
 ## 9. DOM-03 — DXF/SVG drawing to constrained profile
 
-Entry points and evidence: [Original domain profile operation](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [DXF import](https://cadquery.readthedocs.io/en/stable/importexport.html), [Sketcher scripting](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
+Entry points and evidence: [Original domain profile operation](../workflows/domain-paths.json), [DXF import](https://cadquery.readthedocs.io/en/stable/importexport.html), [Sketcher scripting](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md).
 
 1. **DOM-03-A01 — Choose the profile target and source entity mapping.** Declare whether the requested profile needs editable native constraints, clean curves or a direct CSG profile. Select the required regions and map source entities, dimensions, plane and intended loop roles to that contract.
 2. **DOM-03-A02 — Normalize curves and construct the constrained profile.** Consume CAD-08's checked curve derivative. For a constrained-sketch target, apply CAD-09 with explicit source-linked constraints and retain both action receipts; reuse a valid existing receipt for the same revision.
@@ -203,7 +203,7 @@ CadQuery DXF import supplies wires and a downstream extrusion route; OpenSCAD su
 
 ## 10. DOM-04 — Brief/profile to native CAD solid
 
-Entry points and evidence: [Original native-solid operation](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [OCS kernel note](/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md), [build123d operations](https://build123d.readthedocs.io/en/latest/operations.html).
+Entry points and evidence: [Original native-solid operation](../workflows/domain-paths.json), OCS kernel note (`${OCS_ROOT}/docs/cadkernel-body-path.md`), [build123d operations](https://build123d.readthedocs.io/en/latest/operations.html).
 
 1. **DOM-04-A01 — Define native artifact and solid prerequisites.** Define native editability, required solid representation, selected application and source-linked feature inputs. Check actual backend capabilities and consuming operations; choose feature history, native body document or parametric source as the explicit retained record.
 2. **DOM-04-A02 — Construct or reuse the checked native body.** Construct through CAD-10 or consume a matching checked solid receipt; preserve source geometry and intended component boundaries. Record actual geometry type and native/source lineage, including any supported feature-history changes.
@@ -228,7 +228,7 @@ OCS native primitives/profile operations/Boolean operations are present in local
 
 ## 11. DOM-05 — Export STEP solid
 
-Entry points and evidence: [Original STEP export operation](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [CadQuery STEP exchange](https://cadquery.readthedocs.io/en/stable/importexport.html), [OCS STEP writer](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs).
+Entry points and evidence: [Original STEP export operation](../workflows/domain-paths.json), [CadQuery STEP exchange](https://cadquery.readthedocs.io/en/stable/importexport.html), OCS STEP writer (`${OCS_ROOT}/src/io/step.rs`).
 
 1. **DOM-05-A01 — Bind the solid export to representation and consumer criteria.** Freeze the source solid/native revision and required feature manifest; choose exporter, STEP representation/schema, units, frame and consumer. Specify retained geometry and metadata and identify expected information changes.
 2. **DOM-05-A02 — Write a separate STEP derivative with actual settings.** Export a separate STEP derivative and record actual output hash, source revision, adapter version/settings and representation/loss map. Preserve the native source. Inspect actual export types and unit declarations.
@@ -253,7 +253,7 @@ The inspected OCS writer converts triangle meshes into one planar-faced shell/so
 
 ## 12. DOM-40 — Script-parametric CAD authoring
 
-Entry points and evidence: [Original script authoring operation](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json), [CadQuery API](https://cadquery.readthedocs.io/en/stable/classreference.html), [build123d operations](https://build123d.readthedocs.io/en/latest/operations.html), [OpenSCAD](https://openscad.org/documentation).
+Entry points and evidence: [Original script authoring operation](../workflows/domain-paths.json), [CadQuery API](https://cadquery.readthedocs.io/en/stable/classreference.html), [build123d operations](https://build123d.readthedocs.io/en/latest/operations.html), [OpenSCAD](https://openscad.org/documentation).
 
 1. **DOM-40-A01 — Define sourced parameters and the executable model contract.** Map the brief to named parameters, source values, units/frame, required features and target representation. Select a supported backend/environment and explicit permitted parameter domain; preserve component boundaries and dependencies.
 2. **DOM-40-A02 — Author readable parametric source with stable feature references.** Author readable source with stable feature references and recorded parameter provenance. Inspect expression units, feature order and selectors against the brief; preserve libraries and asset attribution. Changes to the source receive their own revision.
@@ -298,7 +298,7 @@ CadQuery/build123d or FreeCAD source can produce the declared kernel geometry th
 
 ## 15. Future validation cases
 
-The [structured records](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json) contain operation-specific cases and expected outcomes. Fixture values, dimensions and criteria must be supplied with sources before execution.
+The [structured records](point-03-operations.json) contain operation-specific cases and expected outcomes. Fixture values, dimensions and criteria must be supplied with sources before execution.
 
 1. **Vector/constraint cases:** nested DXF blocks, model/paper-space selection, mixed entity coverage, SVG nested viewBox/transforms and explicit physical controls; expected source/entity maps survive. Open/self-crossing loops and ambiguous hole roles stop dependent construction. Contradictory/redundant constraints and intentional free movement have explicit expected solver outcomes. Wrong-but-consistent feature associations fail source comparison. A missing required diagnostic remains unresolved.
 2. **Kernel cases:** OCS Region input is rejected by plugin extrusion; open input produces a Surface and blocks a required-solid route; a supported closed/hole sequence preserves the required void. Explicit delete_source and keep_operands flags produce the recorded handle retention/deletion. Revolution axis/sign and Boolean refusals retain source operands and bounded recovery evidence.
@@ -306,4 +306,4 @@ The [structured records](/home/leo/projects/3dmodeling/research/action-audit/poi
 4. **Source/mesh cases:** final CSG output and preview retain separate identities; two supplied tessellation settings receive measured approximation and feature-preservation checks. A source edit or parameter variant invalidates and regenerates descendants. A valid solid with the wrong selected face fails source correspondence. Empty/surface-only output fails a solid requirement.
 5. **Interruption/merge cases:** lost remote response, malformed selection rows and changed source on resume preserve raw/request evidence and retry lineage. The last validated merged artifact remains unchanged until valid source-linked rows arrive; changed sources invalidate affected descendants. A lower-detail branch retains layout readiness while a precision-interface check remains blocked.
 
-The [designer evidence notes](/home/leo/projects/3dmodeling/research/action-audit/reviews/point-03-designer.md) record source summaries, retained original-record findings and documentary checks.
+The [designer evidence notes](reviews/point-03-designer.md) record source summaries, retained original-record findings and documentary checks.

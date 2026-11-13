@@ -36,7 +36,7 @@ Exact vocabulary, explicit context and unambiguous engineering communication are
 14. Think, examine evidence and consequences, and disagree with explicit reasons when warranted. Avoid flattery, automatic agreement, emotional imitation, sarcasm, metaphors and judgments about the author's intentions. Change a conclusion when the evidence changes.
 15. Use evaluative or comparative adjectives only with a cited source or an explicit comparison. Prefer the actual measurement, condition, price or result.
 16. Ask an open question when a required term, scope or decision is ambiguous. Name the exact ambiguity and wait before the dependent action. Do not prescribe the author's answer or restrict it to closed choices.
-17. Pair internal identifiers with readable component names. Use absolute paths for file links and direct URLs for source or seller links.
+17. Pair internal identifiers with readable component names. Use repository-relative paths for file links and named-root locators for external files; use direct URLs for source or seller links.
 18. In execution reports, identify the model that actually performed the work when that identity is available. Do not substitute the intended model, model family or an assumed equivalent. State that the actual model is unavailable when it is unavailable.
 19. Report status only for the requested work and the observed execution state. Use concrete states such as DONE, RUNNING, BLOCKED, FAILED or UNKNOWN. Separate an individual failed test from the state of the overall task. Do not invent totals, completion percentages or previous counts.
 20. Do not describe an output as “ready for your verification” or use an equivalent unsolicited formula. Report automated checks as technical results; record author acceptance separately.
@@ -115,11 +115,11 @@ Standing instruction from 13 November 2026:
 
 Read on 9 November 2026:
 
-1. `/home/leo/projects/casa/AGENTS.md`.
-2. `/home/leo/projects/energy/AGENTS.md`.
-3. `/home/leo/projects/energy/eoliennes/AGENTS.md`.
-4. `/home/leo/projects/CocoLeCoq/AGENTS.md`.
-5. `/home/leo/projects/CocoLeCoq/blog/AGENTS.md`.
+1. `${CASA_ROOT}/AGENTS.md`.
+2. `${ENERGY_ROOT}/AGENTS.md`.
+3. `${EOLIENNES_ROOT}/AGENTS.md`.
+4. `${COCOLECOQ_ROOT}/AGENTS.md`.
+5. `${COCOLECOQ_ROOT}/blog/AGENTS.md`.
 
 The communication, scope, evidence, preservation and reuse rules are adapted here together with the author's instructions in this project. Other projects' simulation architecture, territorial datasets, turbine solver settings, blog infrastructure, VPN workflow and project-specific commit authorizations remain scoped to those projects.
 
@@ -128,9 +128,9 @@ The communication, scope, evidence, preservation and reuse rules are adapted her
 Instruction date: 13 November 2026. Preparation and ongoing modeling have separate owners. Preserve ongoing iterations and fixes.
 
 1. For future outputs, place FERME component recipes, source originals, source reviews, measurements, model files, captures, job records, progress and action occurrences in FERME under its applicable instructions. Place reusable functions, generic tests, modeling methods, shared skills and tooling-improvement reports in 3dmodeling.
-2. Follow the [modeling-agent instructions](/home/leo/projects/3dmodeling/research/repository-split-preparation/modeling-agent-instructions.md). Keep project values and paths as inputs to shared tools; link each component result to the exact shared-tool revision.
+2. Follow the [modeling-agent instructions](research/repository-split-preparation/modeling-agent-instructions.md). Keep project values and paths as inputs to shared tools; link each component result to the exact shared-tool revision.
 3. The preparation agent owns separation documents. The modeling agent continues its authorized component/tool improvements and preserves the preparation files. Current active paths remain intact; the split coordinator migrates historical files in a separately scoped batch at affected component checkpoints.
-4. Read the [split preparation](/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md) before changing repository ownership, imports or fixture paths. The manifest is a dated proposal; refresh it against concurrent work before migration.
+4. Read the [split preparation](research/repository-split-preparation/README.md) before changing repository ownership, imports or fixture paths. The manifest is a dated proposal; refresh it against concurrent work before migration.
 
 ## Confidential wind-generator head assembly
 
@@ -139,3 +139,12 @@ Instruction date: 13 November 2026. The wind-generator head assembly is awaiting
 1. Keep its models, images, geometry descriptions, source copies and derived design records out of this repository, its documentation and Git history. Keep original material in its owning private project.
 2. Mast-only models and mast simulation examples retain their separate scope. Review actual example content before staging; a filename alone does not establish that an asset is safe to include.
 3. Apply this restriction to ongoing agents and future documentation/modeling iterations until the user explicitly releases the protected material.
+
+## Portable stored paths
+
+Instruction date: 13 November 2026.
+
+1. Store repository-relative paths and page-relative Markdown links for this checkout. Represent external project, tool, user and temporary locations through named root placeholders documented in docs/paths.md.
+2. Keep machine-specific workspace locations out of committed text and captured metadata. Normalize paths before registering new job records or examples.
+3. Preserve registered source IDs, original-source hashes and numerical results. Mark normalized copies as derivatives with their own hashes.
+4. Resolve stored root placeholders with an explicit caller-supplied root map before file access. Runtime-derived absolute paths may be used to open files; stored documentation and source locators use portable roots.

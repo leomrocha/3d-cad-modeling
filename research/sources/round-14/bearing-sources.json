@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "local_original": "${MODELING_ROOT}/scripts/native_acis.py",
     "title": "Native analytic geometry and boundary adapter",
     "summary": "Extends the saved-tube reader with explicit proper rigid transforms, spherical seats, circular cones and connected boundary reconstruction after cancelling internal coplanar edges. Actual SKF records expose the32mm original crown and corrected21mm derivative.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/pillow_block.py",
+    "local_original": "${MODELING_ROOT}/scripts/pillow_block.py",
     "title": "Source-bound pillow-block checker",
     "summary": "Reads ten exact metadata-labelled native parts and compares housing, slots, shaft, ring, screw, seals and fitting against externally pinned source features; original crown fails and corrected reopened derivative passes62checks.",
     "access_date": "2026-11-12",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "local_original": "${MODELING_ROOT}/tests/test_native_acis.py",
     "title": "Native rail, crossmember and bearing regression cases",
     "summary": "Adds five SKF recorded-native cases covering crown defect, corrected derivative, explicit rigid-frame opt-in, fragmented coplanar slot boundaries and wrong-bore rejection. Full helper suite40PASS.",
     "access_date": "2026-11-12",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
     "title": "Component iteration skill with bearing procedure",
     "summary": "Adds the exercised bearing inspection/derivative reference alongside the existing source-ready tube route; component-owned evidence and tool-owned code remain separate.",
     "access_date": "2026-11-12",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/existing-bearing.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md",
     "title": "Existing bearing inspection and selective revision procedure",
     "summary": "Defines source binding, transformed native checks, coplanar fragment cancellation, exact source-defined plane cuts, preserved nine-solid geometry, same-ID recovery and save/view completion.",
     "access_date": "2026-11-12",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c009-bearing.md",
+    "local_original": "${MODELING_ROOT}/execution/c009-bearing.md",
     "title": "SKF source inspection and completed derivative report",
     "summary": "Documents the original32-versus21mm crown defect, native housing-only revision,62saved checks,40tests, preserved original, actual view inspection and applied script/skill improvement.",
     "access_date": "2026-11-12",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/c009-skf-sy20tf-bearing-unit.md",
     "title": "SKF component input sheet",
     "summary": "Requires the20mm-bore bearing assembly with127x32x64.5mm housing,33.3mm shaft height, mounting slots, locks, seals and fitting; points to existing native geometry and part records.",
     "access_date": "2026-11-12",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/skf-sy20tf.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/skf-sy20tf.md",
     "title": "Earlier SKF reconstruction and dimension record",
     "summary": "Retains original housing and insert reconstruction dimensions, drawing-derived seal/flinger dimensions, screw spacing and source references. The source-bound iteration preserves it as historical input and detects actual saved crown mismatch.",
     "access_date": "2026-11-12",
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/parts/mechanical-connections/skf-sy-20-tf.md",
     "title": "Earlier SKF part record",
     "summary": "Supplies component identity and source relationships; its0.588kg figure differs from the retained technical sheet0.56kg, registered as a source finding without changing the record.",
     "access_date": "2026-11-12",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf.dwg",
     "title": "Original SKF bearing drawing preserved",
     "summary": "Existing ten-solid native reconstruction; measured crown32mm fails SKF A1=21mm. Original bytes match checkpointb36c147; corrected derivative uses a distinct path.",
     "access_date": "2026-11-12",
@@ -120,7 +120,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg",
     "title": "Source-checked SKF bearing derivative",
     "summary": "Native DWG2018 preserves ten solids with housing crown21mm. Original other nine solids remain unchanged before save; reopened dimension checks and persistence pass.",
     "access_date": "2026-11-12",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/build_skf_geometry.py",
+    "local_original": "${TEMP_ROOT}/opencode/build_skf_geometry.py",
     "title": "Original SKF construction program",
     "summary": "Existing local builder defines outline, mounting slots, seal/ring components and two linear32-to21mm draft wedges. Saved model retained32mm crown; new iteration restores its documented intended draft using nativeSLICE.",
     "access_date": "2026-11-12",
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/modules/model/slice_cmd.rs",
+    "local_original": "${OCS_ROOT}/src/modules/model/slice_cmd.rs",
     "title": "Local OCS plane-slice command implementation",
     "summary": "Inspected constructor and point-state handling establish preselected target, three plane points and retained-side point; live installedSLICE subsequently completed both intended housing cuts.",
     "access_date": "2026-11-12",
@@ -156,7 +156,7 @@
     ]
   },
   {
-    "local_original": "/tmp/3dmodeling-native-reader/ezdxf/acis/sab.py",
+    "local_original": "${NATIVE_READER_ROOT}/ezdxf/acis/sab.py",
     "title": "Installed ezdxf native binary parser and loader",
     "summary": "Inspected MIT-licensed parse_sab/SabDataLoader supplies native pointer/vector/interval/double access for source-bound transformed-cylinder/cone/sphere reading. Installed dependency1.4.5 remains in isolated target.",
     "access_date": "2026-11-12",
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
     "title": "Component execution register after SKF iteration",
     "summary": "Preserves all103job identities; rail,crossmember andSKFbearing areDONE with exact result/derivative references. Other jobs retain their individual execution states.",
     "access_date": "2026-11-12",
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
     "title": "Component action history including SKF failure and correction",
     "summary": "Appends source attribution, original crownFAIL, selective housingrevision, save recovery, reopened62checks, visual inspection and appliedhelper improvement; earlier occurrence bytes remain unchanged.",
     "access_date": "2026-11-12",
@@ -192,7 +192,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
     "title": "Component iteration index with SKF result",
     "summary": "Adds checked SKF derivative, actual crown finding/correction,62native checks,40regressions and reusable bearing procedure links; earlier historical iteration sections remain.",
     "access_date": "2026-11-12",
@@ -204,7 +204,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/README.md",
     "title": "FERME CAD index with distinct SKF derivative",
     "summary": "Adds source-checked SKF derivative and detailed execution evidence alongside the preserved original model and all previous CAD entries.",
     "access_date": "2026-11-12",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/out_technical-data-sheet-skf-sy-20-tf-sy-20-",
+    "local_original": "${TEMP_ROOT}/opencode/out_technical-data-sheet-skf-sy-20-tf-sy-20-",
     "title": "Retained SKF technical data sheet",
     "summary": "Primary6pagePDF inspected with text and actual page3/4images. A=32,A1=21,L=127,H2=64.5,H=33.3,d=20,J=97,N=11.5,N1=20.5,B=31,s1=18.3,B4=4.5; fitting and M6 screw details pin sourcejob expectations. Mass0.56kg registered separately.",
     "access_date": "2026-11-12",
@@ -229,7 +229,7 @@
     "url": "https://docs.rs-online.com/9fa3/A700000007995170.pdf"
   },
   {
-    "local_original": "/tmp/opencode/skf-sy20tf-technical-page3.png",
+    "local_original": "${TEMP_ROOT}/opencode/skf-sy20tf-technical-page3.png",
     "title": "SKF page3 dimensions image",
     "summary": "Actual inspected primary page image confirms A1=21mm crown and A=32mm base with housing/mounting/shaft dimensions; supplies visual attribution for original model failure.",
     "access_date": "2026-11-12",
@@ -241,7 +241,7 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/skf-sy20tf-technical-page4.png",
+    "local_original": "${TEMP_ROOT}/opencode/skf-sy20tf-technical-page4.png",
     "title": "SKF page4 fitting and slot image",
     "summary": "Actual inspected primary page image confirms slotlength20.5mm,locking-sidefaceoffset18.3mm and45degree,2mmoffset greasefitting with7mmhex and6.5mmhead.",
     "access_date": "2026-11-12",
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/skf-yar204-catalogue-page92.png",
+    "local_original": "${TEMP_ROOT}/opencode/skf-yar204-catalogue-page92.png",
     "title": "Retained SKF insert catalogue page image",
     "summary": "Actual inspected catalogue page image shows YAR204-2F20mmbore,47mmouterdiameter,31mminnerringwidth and18.3mmfaceoffset supporting the existing insert record.",
     "access_date": "2026-11-12",
@@ -265,7 +265,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/audit.json",
     "title": "SKF iteration — audit.json",
     "summary": "Original ten-solid native audit has zeroerrors/warnings; geometric source comparison subsequently finds crown dimension failure.",
     "access_date": "2026-11-12",
@@ -277,7 +277,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-front.json",
     "title": "SKF iteration — capture-front.json",
     "summary": "Completed native front capture response binds derivative document75,camera and image to actual request.",
     "access_date": "2026-11-12",
@@ -289,7 +289,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-isometric.json",
     "title": "SKF iteration — capture-isometric.json",
     "summary": "Completed native isometric capture response identifies document75 and camera for inspected bearing component image.",
     "access_date": "2026-11-12",
@@ -301,7 +301,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/capture-top.json",
     "title": "SKF iteration — capture-top.json",
     "summary": "Completed native top capture response binds derivative document75 to the inspected two-slot/bearing projection.",
     "access_date": "2026-11-12",
@@ -313,7 +313,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/corrected-presave-records.json",
     "title": "SKF iteration — corrected-presave-records.json",
     "summary": "Actual post-cut native SAT housing and preserved nineSABsolid records support21mm crown measurement and bytecomparison.",
     "access_date": "2026-11-12",
@@ -325,7 +325,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/first-slice-response.json",
     "title": "SKF iteration — first-slice-response.json",
     "summary": "Completed nativeSLICE positive draft modifies only owned housingD7 with actual revision/state readback.",
     "access_date": "2026-11-12",
@@ -337,7 +337,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/header.json",
     "title": "SKF iteration — header.json",
     "summary": "Actual original OCS document header identifies millimetre units for source-linked geometric coordinate checks.",
     "access_date": "2026-11-12",
@@ -349,7 +349,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/initial-open-state.json",
     "title": "SKF iteration — initial-open-state.json",
     "summary": "Native original-open state identifies document74, original SKF source path and unrelated open work, including preserved dirty wheel document52.",
     "access_date": "2026-11-12",
@@ -361,7 +361,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-query.json",
     "title": "SKF iteration — native-query.json",
     "summary": "Original document74 query identifies ten actual solid handles before feature checks and selective revision.",
     "access_date": "2026-11-12",
@@ -373,7 +373,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/native-records.json",
     "title": "SKF iteration — native-records.json",
     "summary": "Raw original ten-solid SAB observations from document74 retain actual faulty housing and complete other part geometry for independent comparisons.",
     "access_date": "2026-11-12",
@@ -385,7 +385,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/ocs-journal.jsonl",
     "title": "SKF iteration — ocs-journal.jsonl",
     "summary": "Append-only guarded requests retain original-open/reopen polling-bound outcomes and same-ID recovery, two housingSLICE commands, verifiedsave and actual captures.",
     "access_date": "2026-11-12",
@@ -397,7 +397,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/original-checks.json",
     "title": "SKF iteration — original-checks.json",
     "summary": "Actual original native geometry produces61PASS and crownFAIL32mmversus21mm; preserves measured defect before revision.",
     "access_date": "2026-11-12",
@@ -409,7 +409,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/persistence.json",
     "title": "SKF iteration — persistence.json",
     "summary": "Recovered verifiedsave/reopen receipt proves fileSHA,zero droppedentities,ten-solid manifest and reopened zeroerror/warning audit.",
     "access_date": "2026-11-12",
@@ -421,7 +421,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/presave-correction-check.json",
     "title": "SKF iteration — presave-correction-check.json",
     "summary": "Post-cut crown21mmPASS and byteidentical nine other solid geometry records recorded before derivative save.",
     "access_date": "2026-11-12",
@@ -433,7 +433,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/readiness.json",
     "title": "SKF iteration — readiness.json",
     "summary": "All required bound SKF source features and pinned source hashes returnSOURCE_READY before dependent revision.",
     "access_date": "2026-11-12",
@@ -445,7 +445,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-audit.json",
     "title": "SKF iteration — reopened-audit.json",
     "summary": "Reopened derivative has same ten-solid manifest as verified save, zeroerrors/warnings and retained source/file identity.",
     "access_date": "2026-11-12",
@@ -457,7 +457,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-checks.json",
     "title": "SKF iteration — reopened-checks.json",
     "summary": "All62 source-bound native checksPASS in derivative document75 after save/reopen, including corrected21mm crown.",
     "access_date": "2026-11-12",
@@ -469,7 +469,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-front.png",
     "title": "SKF iteration — reopened-front.png",
     "summary": "Actual inspected front image shows shaft bore, housing outer silhouette, fitting and locking components of the saved derivative.",
     "access_date": "2026-11-12",
@@ -481,7 +481,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-isometric.png",
     "title": "SKF iteration — reopened-isometric.png",
     "summary": "Actual inspected isometric image shows tapered housing,bore,two mounting feet/slots and fitting/screw details.",
     "access_date": "2026-11-12",
@@ -493,7 +493,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-records.json",
     "title": "SKF iteration — reopened-records.json",
     "summary": "Actual derivative ten-solid SAB records from document75 support independent savedfeature checks and regression inputs.",
     "access_date": "2026-11-12",
@@ -505,7 +505,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-state.json",
     "title": "SKF iteration — reopened-state.json",
     "summary": "Actual recovered reopen state identifies derivative document75 and preserved unrelated open drawing identities.",
     "access_date": "2026-11-12",
@@ -517,7 +517,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/reopened-top.png",
     "title": "SKF iteration — reopened-top.png",
     "summary": "Actual inspected top image shows two closed mounting slots, axial housing draft and bearing/fitting projection.",
     "access_date": "2026-11-12",
@@ -529,7 +529,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json",
     "title": "SKF iteration — result.json",
     "summary": "CompletedSKFiteration records derivative SHA,62nativePASS,persistence,inspectedviews and appliedPython/skill improvement with40tests.",
     "access_date": "2026-11-12",
@@ -541,7 +541,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/second-slice-response.json",
     "title": "SKF iteration — second-slice-response.json",
     "summary": "Completed mirrored nativeSLICE negative draft modifies only owned housingD7 and retains inside bearing side.",
     "access_date": "2026-11-12",
@@ -553,7 +553,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-findings.json",
     "title": "SKF iteration — source-findings.json",
     "summary": "Records actual32mm original crown versus SKF21mm and source mass0.56kg versus older0.588kg record.",
     "access_date": "2026-11-12",
@@ -565,7 +565,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/source-job.json",
     "title": "SKF iteration — source-job.json",
     "summary": "Pins required SKF and reconstruction feature values, evidence status, source pages and hashes; names ten components and the existing local coordinate frame.",
     "access_date": "2026-11-12",

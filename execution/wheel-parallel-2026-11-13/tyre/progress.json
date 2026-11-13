@@ -8,14 +8,14 @@
   "requested_external_research_model": "gpt-6-luna",
   "actual_external_research_model_identity": "unavailable",
   "model_start_gate": {
-    "command": "python3 /home/leo/projects/3dmodeling/scripts/model_inventory.py --index /home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json --work-index /home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root /home/leo/projects/ferme/engineering/module-development/cad --project-root /home/leo/projects/ferme --id C001",
+    "command": "python3 ${MODELING_ROOT}/scripts/model_inventory.py --index ${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json --work-index ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root ${FERME_ROOT}/engineering/module-development/cad --project-root ${FERME_ROOT} --id C001",
     "result": "NEW_MODEL_REQUIRED",
     "attributed_models": 0,
     "unlinked_candidates": 0,
     "two_dimensional_references": 0,
     "filesystem_model_files_checked": 43
   },
-  "existing_readiness": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json",
+  "existing_readiness": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json",
   "source_stage": "NEEDS_INPUT: exact tyre section/bead geometry is not specified by the exact T539 row; standardized 7.00I rim contour dimensions are now recorded for mating geometry.",
   "cad_mutations": 0,
   "files_written_outside_authorized_execution_directory": 0,

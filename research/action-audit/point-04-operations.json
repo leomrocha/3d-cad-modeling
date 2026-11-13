@@ -12,10 +12,10 @@
       "operation_id": "CAD-02",
       "name": "Rectify a raster drawing plane from known dimensions",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://docs.opencv.org/5.0/main_modules/calib.html",
         "https://docs.opencv.org/4.13.0/da/d54/group__imgproc__transform.html",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r02.md",
         "https://docs.opencv.org/4.13.0/d9/d0c/group__calib3d.html"
       ],
       "actions": [
@@ -119,9 +119,9 @@
       "operation_id": "CAD-03",
       "name": "Recognize dimension text with OCR",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html",
-        "/home/leo/projects/3dmodeling/research/action-audit/reviews/source-check.md"
+        "${MODELING_ROOT}/research/action-audit/reviews/source-check.md"
       ],
       "actions": [
         {
@@ -248,7 +248,7 @@
       "operation_id": "CAD-04",
       "name": "Extract raster edges, lines and contours",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
         "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
@@ -357,11 +357,11 @@
       "operation_id": "CAD-05",
       "name": "Convert raster floor-plan candidates into a wall and opening graph",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
         "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r03.md"
       ],
       "actions": [
         {
@@ -465,10 +465,10 @@
       "operation_id": "CAD-06",
       "name": "Register orthographic drawing views in a shared coordinate frame",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://xnjdxb.swjtu.edu.cn/en/article/id/9616",
         "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r05.md"
       ],
       "actions": [
         {
@@ -572,10 +572,10 @@
       "operation_id": "CAD-07",
       "name": "Reconstruct a candidate 3D wireframe and surface from orthographic views",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://www.sciencedirect.com/science/article/pii/S0097849323000766",
         "https://openaccess.thecvf.com/content/ICCV2023/html/Hu_PlankAssembly_Robust_3D_Reconstruction_from_Three_Orthographic_Views_with_Learnt_ICCV_2023_paper.html",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md"
       ],
       "actions": [
         {
@@ -702,12 +702,12 @@
       "operation_id": "CAD-17",
       "name": "Build wall and opening solids from a confirmed floor-plan graph",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
         "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
         "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md"
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+        "${OCS_ROOT}/docs/automation/README.md"
       ],
       "actions": [
         {
@@ -811,10 +811,10 @@
       "operation_id": "DOM-02",
       "name": "Raster sketch to constrained sketch",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md"
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md"
       ],
       "actions": [
         {
@@ -918,11 +918,11 @@
       "operation_id": "DOM-18",
       "name": "Raster floor plan to IFC building",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/feature/add_feature/index.html",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r01.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/geometry/edit_object_placement/index.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/unit/assign_unit/index.html"
       ],
@@ -1051,9 +1051,9 @@
   ],
   "common_protocol": {
     "references": [
-      "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
-      "/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md",
-      "/home/leo/projects/3dmodeling/research/action-audit/point-01-model-brief.md"
+      "${MODELING_ROOT}/research/action-audit/point-03-operations.json",
+      "${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md",
+      "${MODELING_ROOT}/research/action-audit/point-01-model-brief.md"
     ],
     "scope": "Point03 common_protocol supplies revision/request identity, separate producer/reviewer, native and remote uncertain-completion reconciliation, changed-source invalidation, per-feature criteria and migration gates. All detailed raster procedures and helpers remain proposals.",
     "image_coordinates": "Preserve original bytes and image/page hash. Each crop/rotation/deskew/resize/projective warp/lens remap has explicit source and target frames, order/direction, pixel-center/grid convention, valid domain/mask, sampling/interpolation and version. Store forward/inverse coordinate mappings where defined; mappings locate source coordinates and cannot reconstruct discarded/resampled pixels. Transform OCR box corners as polygons; curved lens mappings retain adequate boundary sampling and actual remap representation.",

@@ -30,7 +30,7 @@ Evidence: [component contract](implementation-plan.md#6-component-library-contra
 
 ## 3. Establish the OCS modeling baseline
 
-1. Reuse the installed [OCS engineering skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md) and record the actual session/build capabilities used by the fixture.
+1. Reuse the installed OCS engineering skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) and record the actual session/build capabilities used by the fixture.
 2. Model the bracket and mating plate with named parts, declared datums and dimensions; make one parameter or dimension revision through the supported native workflow.
 3. Read back dimensions, part identity and geometry; save and reopen the native document; inspect the requested derivative in its receiving application.
 4. Record the STEP export's actual surface representation alongside native-solid results. The inspected exporter consumes tessellated meshes.

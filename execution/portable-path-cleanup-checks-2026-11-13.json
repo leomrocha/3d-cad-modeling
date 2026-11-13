@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-13",
+  "status": "PASS",
+  "executing_model": "gpt-6.1-sol",
+  "text_files_scanned": 447,
+  "machine_specific_path_hits": 0,
+  "json_files_parsed": 181,
+  "markdown_files_checked": 214,
+  "relative_links_examined": 3799,
+  "public_document_broken_links": [],
+  "historical_document_link_findings": [],
+  "asset_copy_hashes": "PASS",
+  "path_normalized_example_copies": 6,
+  "native_reader_test": "3 tests PASS",
+  "python_syntax": "PASS",
+  "scope": "Working repository content; historical commits are outside this cleanup batch."
+}

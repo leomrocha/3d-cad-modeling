@@ -13,7 +13,7 @@
       "content_type": "application/octet-stream",
       "size_bytes": 7509127,
       "sha256": "9ffe0d59f07b2fa9d1a74cb609d2c18b99203a139de08bb8c73e6148261af51f",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c054-build-01/source/DimensionDrawing_SmallBMS-NG-3D.STEP",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c054-build-01/source/DimensionDrawing_SmallBMS-NG-3D.STEP",
       "original_preserved_unchanged": true,
       "binding_evidence": "manufacturer product page labels enclosure drawing STEP; STEP AP214 header calls file DimensionDrawing_SmallBMS NG-rev00x-3D.STEP; source explicitly includes BMS400100300 association through companion drawing"
     },
@@ -27,7 +27,7 @@
       "content_type": "application/pdf",
       "size_bytes": 650438,
       "sha256": "84a8aa25736a1893271ab9e1c13ad480f69fd91993ecc66d8b3dd9e0d02c12d4",
-      "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c054-build-01/source/DimensionDrawing_SmallBMS-NG.pdf",
+      "path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c054-build-01/source/DimensionDrawing_SmallBMS-NG.pdf",
       "original_preserved_unchanged": true,
       "binding_evidence": "Manufacturer Rev00 drawing; title block names BMS400100300 smallBMS NG; dimensions in mm"
     }

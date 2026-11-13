@@ -61,7 +61,7 @@
         "speed_km_h": 30
       },
       "acquisition": "Already acquired and retained by c001-build-01 source review on 2026-11-13.",
-      "local_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
       "content_type": "application/pdf",
       "retrieved_at": "2026-11-13T08:54:26+01:00",
       "sha256": "f9b0296a673b0fe14ca3649953a0feaa57963af88b23a58aa59350dfacf39cec"

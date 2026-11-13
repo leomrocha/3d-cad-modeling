@@ -36,31 +36,31 @@
   "source_observations": [
     {
       "feature": "Nominal manufacturer envelope",
-      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "path": "${MODELING_ROOT}/execution/component-followups-2026-11-13/c055/source-review.md",
       "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
       "bytes": 6444
     },
     {
       "feature": "Mounting-hole availability",
-      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "path": "${MODELING_ROOT}/execution/component-followups-2026-11-13/c055/source-review.md",
       "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
       "bytes": 6444
     },
     {
       "feature": "Power wiring and connectors",
-      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "path": "${MODELING_ROOT}/execution/component-followups-2026-11-13/c055/source-review.md",
       "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
       "bytes": 6444
     },
     {
       "feature": "Signal cables",
-      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "path": "${MODELING_ROOT}/execution/component-followups-2026-11-13/c055/source-review.md",
       "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
       "bytes": 6444
     },
     {
       "feature": "Installed capacitor",
-      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "path": "${MODELING_ROOT}/execution/component-followups-2026-11-13/c055/source-review.md",
       "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
       "bytes": 6444
     }

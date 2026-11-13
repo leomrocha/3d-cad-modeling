@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/dxf_inspect.py",
+    "local_original": "${MODELING_ROOT}/scripts/dxf_inspect.py",
     "title": "Implemented DXF entity/context inspector",
     "summary": "New read-only adapter inventories original source handles, curve types, attributes, spaces/layers, units, source coordinate systems and nested INSERT transforms. Preserves hashes and guards explicit resource/output limits.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_dxf_inspect.py",
+    "local_original": "${MODELING_ROOT}/tests/test_dxf_inspect.py",
     "title": "Independent DXF transform and context tests",
     "summary": "Eight passing cases verify nested world-coordinate control, layer inheritance, model/paper contexts, preserved bulges and bytes, unitless records, cycles, array identities and bounded expansion.",
     "access_date": "2026-11-12",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md",
+    "local_original": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md",
     "title": "Implemented drawing-inspection skill",
     "summary": "Documents the tested DXF command, dependency setup, coordinate matrix semantics, source-unit evidence, resource limits and agent handoff to mapped derivative selection.",
     "access_date": "2026-11-12",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/README.md",
+    "local_original": "${MODELING_ROOT}/skills/README.md",
     "title": "Skill catalogue with implemented DXF inspection",
     "summary": "Adds direct links to the new DXF skill and actual execution report beside the implemented source-intake action.",
     "access_date": "2026-11-12",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/dxf-inspection.md",
+    "local_original": "${MODELING_ROOT}/execution/dxf-inspection.md",
     "title": "DXF implementation execution report",
     "summary": "Records two actual OCS fixture inspections, eight software tests, reused library/source hashing, exact action scope and agent/software responsibility boundaries.",
     "access_date": "2026-11-12",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/dxf-inspection/viewport-model-inventory.json",
+    "local_original": "${MODELING_ROOT}/execution/dxf-inspection/viewport-model-inventory.json",
     "title": "Actual viewport-fixture DXF inventory",
     "summary": "Actual read-only run records eight entity occurrences and preserved handles/context. Source header code0 produces NEEDS_UNIT_EVIDENCE rather than an assumed physical scale.",
     "access_date": "2026-11-12",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/dxf-inspection/page-setup-inventory.json",
+    "local_original": "${MODELING_ROOT}/execution/dxf-inspection/page-setup-inventory.json",
     "title": "Actual metric page-setup DXF inventory",
     "summary": "Actual read-only run records one LINE and one DIMENSION; source header code6 declares metres, preserving actual units rather than inferring them from a filename.",
     "access_date": "2026-11-12",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/implementation-status.json",
     "title": "Observed implementation status for source intake and DXF branch",
     "summary": "Adds the implemented DXF entity/context branch with its script, skill, tests and actual output paths; preserves the source-intake result and original planning queue.",
     "access_date": "2026-11-12",
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json",
     "title": "Existing vector-inspection implementation contract",
     "summary": "DXF/SVG inspection action defines entity/context inventory, unit evidence, nested transforms, profile interpretation and separate mapped-derivative handoff. This batch implements its DXF branch.",
     "access_date": "2026-11-12",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/requirements-native.txt",
+    "local_original": "${MODELING_ROOT}/requirements-native.txt",
     "title": "Existing pinned ezdxf environment",
     "summary": "Existing dependency lock supplies ezdxf1.4.5 and its installed dependencies. The DXF inspector uses this environment without a new installation.",
     "access_date": "2026-11-12",
@@ -120,7 +120,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/component_records.py",
+    "local_original": "${MODELING_ROOT}/scripts/component_records.py",
     "title": "Existing stable source observer",
     "summary": "Streaming hash and before/after file-identity capture is reused unchanged for the new DXF inspector.",
     "access_date": "2026-11-12",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "local_original": "/tmp/3dmodeling-native-reader/ezdxf/entities/insert.py",
+    "local_original": "${NATIVE_READER_ROOT}/ezdxf/entities/insert.py",
     "title": "Installed MIT-licensed INSERT API source",
     "summary": "Inspected matrix44 handles block base point, OCS, scale and rotation. multi_insert supplies rotated array-cell positions without scaling grid spacing; these existing APIs are used directly.",
     "access_date": "2026-11-12",
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "local_original": "/tmp/3dmodeling-native-reader/ezdxf/filemanagement.py",
+    "local_original": "${NATIVE_READER_ROOT}/ezdxf/filemanagement.py",
     "title": "Installed DXF file-reading API source",
     "summary": "Inspected readfile/read API supports strict decoding and original file parsing. The implementation chooses readfile with strict errors and performs no recovery rewrite.",
     "access_date": "2026-11-12",
@@ -156,7 +156,7 @@
     ]
   },
   {
-    "local_original": "/tmp/3dmodeling-native-reader/ezdxf/units.py",
+    "local_original": "${NATIVE_READER_ROOT}/ezdxf/units.py",
     "title": "Installed MIT-licensed DXF units mapping",
     "summary": "Inspected decode maps actual INSUNITS enum codes to unit labels. The inspector preserves code0 as unresolved unit evidence and actual code6 as metres.",
     "access_date": "2026-11-12",
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf",
+    "local_original": "${OCS_ROOT}/tests/fixtures/dim_assoc/viewport_associations.dxf",
     "title": "Existing OCS viewport-association DXF fixture",
     "summary": "Original existing fixture used read-only for the first actual DXF inspection; contains model/paper contexts and diverse entity types. Original bytes remain unchanged.",
     "access_date": "2026-11-12",
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/plot/page-setups-metric.dxf",
+    "local_original": "${OCS_ROOT}/tests/fixtures/plot/page-setups-metric.dxf",
     "title": "Existing OCS metric page-setup DXF fixture",
     "summary": "Original existing fixture used read-only for the second inspection; actual INSUNITS code6 identifies metres. Original bytes remain unchanged.",
     "access_date": "2026-11-12",
@@ -192,7 +192,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "local_original": "${OCS_ROOT}/LICENSE",
     "title": "OCS repository licence file",
     "summary": "Inspected local repository licence states GNU GPL version3. Fixture originals remain at their existing repository paths; this implementation records observations and source references.",
     "access_date": "2026-11-12",

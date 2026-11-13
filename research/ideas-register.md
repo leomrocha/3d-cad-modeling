@@ -2,7 +2,7 @@
 
 Registered: 2026-11-13.
 
-The records retain project proposals, experiment questions and the earlier implementation-plan ideas. Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](/home/leo/projects/3dmodeling/research/ideas-register.json).
+The records retain project proposals, experiment questions and the earlier implementation-plan ideas. Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](ideas-register.json).
 
 ## CAD-I01 — Feature-level evidence ledger
 
@@ -10,7 +10,7 @@ Status: proposal.
 
 Link every model parameter and geometric feature to a source document, coordinate range, evidence status, units, transformation and uncertainty; keep solver constraints separate from measured inputs.
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 
 Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md)
 
@@ -46,9 +46,9 @@ Status: proposal.
 
 Route each job using required outputs: OCS for the established session workflow, FreeCAD for constrained feature history, code-CAD for reproducible exact B-rep source, and Blender/OpenSCAD for mesh or scene routes; record when a format conversion changes representation.
 
-Original source: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md)
+Original source: [${MODELING_ROOT}/research/implementation-plan.md](implementation-plan.md)
 
-Original source: [/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs)
+Original source: ${OCS_ROOT}/src/io/step.rs (`${OCS_ROOT}/src/io/step.rs`)
 
 Original source: [https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md)
 
@@ -172,9 +172,9 @@ Status: proposal.
 
 Store identity, source/license, geometry representations, units/frames and physical values once; generate IFC, URDF, MJCF and visual exports through explicit adapters.
 
-Original source: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md)
+Original source: [${MODELING_ROOT}/research/implementation-plan.md](implementation-plan.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md)
+Original source: [${MODELING_ROOT}/research/domains-and-components.md](domains-and-components.md)
 
 Next check: Prototype one mechanical component and one IFC product; document representation loss in each export.
 
@@ -222,7 +222,7 @@ Status: proposal.
 
 Use measured scan alignment as surface evidence, plan interpretation for semantic element boundaries and IFC relationships for the building model.
 
-Original source: [/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json](/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json)
+Original source: ${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json (`${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json`)
 
 Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html)
 
@@ -234,7 +234,7 @@ Status: proposal.
 
 Use STEP for geometry exchange while comparing the actual exporter/importer pair; source formats differ in whether they preserve analytic faces, assemblies and parametric history.
 
-Original source: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md)
+Original source: [${MODELING_ROOT}/research/local-baseline.md](local-baseline.md)
 
 Original source: [https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html](https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html)
 
@@ -258,9 +258,9 @@ Status: proposal.
 
 Maintain scan, controls, fitted primitive/features, independent residuals and CAD source as separate linked representations.
 
-Original source: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md)
+Original source: [${MODELING_ROOT}/research/reconstruction.md](reconstruction.md)
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 
 Next check: Test one manufactured mechanical component with held-out interface dimensions.
 
@@ -310,7 +310,7 @@ Original source: [https://github.com/ahujasid/mcp-for-blender](https://github.co
 
 Original source: [https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst](https://github.com/blender/blender/blob/main/doc/python_api/rst/info_tips_and_tricks.rst)
 
-Original source: [/home/leo/projects/3dmodeling/research/local-baseline.md](/home/leo/projects/3dmodeling/research/local-baseline.md)
+Original source: [${MODELING_ROOT}/research/local-baseline.md](local-baseline.md)
 
 Next check: Compare scripted and MCP scene edits once the local Blender 5.0.1 compatibility constraint is resolved or a compatible integration chosen.
 
@@ -322,7 +322,7 @@ Combine an articulated robot description with a registered room or terrain mesh,
 
 Original source: [https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md](https://github.com/google-deepmind/mujoco_menagerie/blob/main/README.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/reconstruction.md](/home/leo/projects/3dmodeling/research/reconstruction.md)
+Original source: [${MODELING_ROOT}/research/reconstruction.md](reconstruction.md)
 
 Next check: Create a miniature scene with one articulated robot and one scanned obstacle; verify frame transforms and collision envelope.
 
@@ -332,9 +332,9 @@ Status: proposal.
 
 Align new sketch/image dimensions to an existing model datum, revise its native source, and regenerate geometry and visual exports without losing unrelated component identity.
 
-Original source: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md)
+Original source: [${MODELING_ROOT}/research/implementation-plan.md](implementation-plan.md)
 
-Original source: [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+Original source: ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 
 Next check: Exercise a changed hole position against a pinned source model and compare a before/after measurement manifest.
 
@@ -348,7 +348,7 @@ Original source: [https://github.com/google-deepmind/mujoco_menagerie/blob/main/
 
 Original source: [https://polyhaven.com/license](https://polyhaven.com/license)
 
-Original source: [/home/leo/projects/3dmodeling/research/domains-and-components.md](/home/leo/projects/3dmodeling/research/domains-and-components.md)
+Original source: [${MODELING_ROOT}/research/domains-and-components.md](domains-and-components.md)
 
 Next check: Define permitted downstream operations for each asset evidence class without presenting a license or visual source as engineering validation.
 
@@ -358,7 +358,7 @@ Status: research_question.
 
 Use one versioned record to relate pixels, camera rays, scan coordinates, CAD datums and component IDs.
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/composition-rules.md](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md)
+Original source: [${MODELING_ROOT}/research/workflows/composition-rules.md](workflows/composition-rules.md)
 
 Next check: Compare transform direction, units and anchor round trips in the selected tools.
 
@@ -368,7 +368,7 @@ Status: research_question.
 
 Retain each fitted or interpreted surface region and the exact CAD feature it supports.
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/composition-rules.md](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md)
+Original source: [${MODELING_ROOT}/research/workflows/composition-rules.md](workflows/composition-rules.md)
 
 Next check: Compare fitted-plane/cylinder evidence with saved feature and dimension readback.
 
@@ -378,7 +378,7 @@ Status: research_question.
 
 Maintain actual preserved/transformed/discarded field mappings per tool/version.
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/composition-rules.md](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md)
+Original source: [${MODELING_ROOT}/research/workflows/composition-rules.md](workflows/composition-rules.md)
 
 Next check: Run the same component and assembly fixtures through the intended consumers.
 
@@ -388,7 +388,7 @@ Status: research_question.
 
 Retain several geometrically consistent interpretations until source evidence distinguishes them.
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/composition-rules.md](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md)
+Original source: [${MODELING_ROOT}/research/workflows/composition-rules.md](workflows/composition-rules.md)
 
 Next check: Compare projected views and independent dimensions, with inference labels by feature.
 
@@ -398,7 +398,7 @@ Status: research_question.
 
 Record which branch depends on each measurement, component revision and interpretation.
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/composition-rules.md](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md)
+Original source: [${MODELING_ROOT}/research/workflows/composition-rules.md](workflows/composition-rules.md)
 
 Next check: Trace a single input change through affected recipes and derivative revisions.
 
@@ -408,7 +408,7 @@ Status: research_question.
 
 Register a possible branch from text or sketch through a concept image to an image-conditioned mesh, then measured CAD remodeling.
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/combined-paths.json](/home/leo/projects/3dmodeling/research/workflows/combined-paths.json)
+Original source: [${MODELING_ROOT}/research/workflows/combined-paths.json](workflows/combined-paths.json)
 
 Next check: Research an open image-generation backend and its exact weight/output terms before defining the first transition.
 
@@ -418,7 +418,7 @@ Status: proposal.
 
 Evaluate PicoGK/ShapeKernel as a separate source-driven geometry branch with explicit field/mesh resolution and OCS interchange checks.
 
-Original source: [/home/leo/projects/3dmodeling/research/workflows/combined-paths.json](/home/leo/projects/3dmodeling/research/workflows/combined-paths.json)
+Original source: [${MODELING_ROOT}/research/workflows/combined-paths.json](workflows/combined-paths.json)
 
 Original source: [https://github.com/leap71/PicoGK](https://github.com/leap71/PicoGK)
 
@@ -434,7 +434,7 @@ Status: proposal.
 
 Resolve exact tools, representations, editable sources, unit/frame mappings and prerequisites for four route cards before the pilot experiments.
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](next-step-proposal.md)
 
 Next check: Produce four route cards and a bounded source-linked experiment list.
 
@@ -444,7 +444,7 @@ Status: proposal.
 
 Define model/evidence/artifact/component/check records and three dimensioned fixture briefs.
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](next-step-proposal.md)
 
 Next check: Check representation, identity and evidence fields against the selected routes.
 
@@ -454,7 +454,7 @@ Status: proposal.
 
 Exercise the existing OCS skill on a bracket and mating plate, including a revision, native save/reopen and measured derivative checks.
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](next-step-proposal.md)
 
 Next check: Record the actual installed capabilities and saved geometry for that fixture.
 
@@ -464,7 +464,7 @@ Status: proposal.
 
 Compare text, raster sketch and DXF/SVG routes using the same dimensioned fixture and a complementary procedural-solid backend.
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](next-step-proposal.md)
 
 Next check: Compare dimensions, topology, editable source and importer readback.
 
@@ -474,7 +474,7 @@ Status: proposal.
 
 Combine photographs, controls, drawings or identified components into registered references and source-linked CAD remodeling, including anchored annotations.
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](next-step-proposal.md)
 
 Next check: Compare held-out measurements and regional scan-to-CAD deviations.
 
@@ -484,7 +484,7 @@ Status: proposal.
 
 Exercise IFC building semantics, robot joint/physical-property handoffs and a pilot reusable component library.
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](next-step-proposal.md)
 
 Next check: Check loaded domain models, frames, geometry roles and source identities.
 
@@ -494,7 +494,7 @@ Status: proposal.
 
 Package exercised workflows with skills, scripts, examples, dependency records and shared CLI operations.
 
-Original source: [/home/leo/projects/3dmodeling/research/next-step-proposal.md](/home/leo/projects/3dmodeling/research/next-step-proposal.md)
+Original source: [${MODELING_ROOT}/research/next-step-proposal.md](next-step-proposal.md)
 
 Next check: Run the relevant fixture and preserve actual execution evidence for each supported route.
 
@@ -504,9 +504,9 @@ Status: proposal.
 
 Define agent-led, hybrid, software-first exception and deterministic alternatives per action and supported input class.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/plan.md](action-audit/plan.md)
 
-Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 5.
+Original proposal: [research/action-audit/plan.md](action-audit/plan.md), line 5.
 
 Next check: Review the point-01 assignment of software, model and user responsibilities.
 
@@ -516,9 +516,9 @@ Status: proposal.
 
 Run alternative interpretations or software routes where useful; align their records, compare evidence and preserve per-feature provenance when a reasoning VLM proposes selection or combination.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/plan.md](action-audit/plan.md)
 
-Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 40.
+Original proposal: [research/action-audit/plan.md](action-audit/plan.md), line 40.
 
 Next check: Review conflict, source-precedence and post-merge validation cases.
 
@@ -528,9 +528,9 @@ Status: proposal.
 
 Separate dimensional accuracy, geometry detail, appearance, function, simulation and manufacturing requirements; attach tolerances to individual features and relationships.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/plan.md](action-audit/plan.md)
 
-Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 50.
+Original proposal: [research/action-audit/plan.md](action-audit/plan.md), line 50.
 
 Next check: Review the first-point requirement and tolerance record without introducing a sample design.
 
@@ -540,9 +540,9 @@ Status: proposal.
 
 Specify and test repeatable software functions for particular input classes while preserving agent-assisted exception routes.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/plan.md](action-audit/plan.md)
 
-Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 58.
+Original proposal: [research/action-audit/plan.md](action-audit/plan.md), line 58.
 
 Next check: Review proposed representative and failure cases before any implementation.
 
@@ -552,9 +552,9 @@ Status: proposal.
 
 Define source briefs and existing geometry before processing-heavy reconstruction; record local and remote resources separately.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/plan.md](action-audit/plan.md)
 
-Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 83.
+Original proposal: [research/action-audit/plan.md](action-audit/plan.md), line 83.
 
 Next check: Review each point in the plan order with its stated data size and output purpose.
 
@@ -564,9 +564,9 @@ Status: proposal.
 
 Use the requested Astra, Sol, Terra and Luna assignments for design, visual reasoning, independent review, software assessment and primary-source lookup.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/plan.md](action-audit/plan.md)
 
-Original proposal: [research/action-audit/plan.md](/home/leo/projects/3dmodeling/research/action-audit/plan.md), line 68.
+Original proposal: [research/action-audit/plan.md](action-audit/plan.md), line 68.
 
 Next check: Record actual task execution, source findings and reviewer dispositions separately from dispatch settings.
 
@@ -576,11 +576,11 @@ Status: proposal.
 
 Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Assemble existing CAD or source-library components. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-operations.json](action-audit/point-02-operations.json)
 
-Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+Original proposal: [research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -590,11 +590,11 @@ Status: proposal.
 
 Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Library asset intake and rights record. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-operations.json](action-audit/point-02-operations.json)
 
-Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+Original proposal: [research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -604,11 +604,11 @@ Status: proposal.
 
 Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Place reusable component in assembly. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-operations.json](action-audit/point-02-operations.json)
 
-Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+Original proposal: [research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -618,11 +618,11 @@ Status: proposal.
 
 Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Version and reuse component revision. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-operations.json](action-audit/point-02-operations.json)
 
-Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+Original proposal: [research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -632,11 +632,11 @@ Status: proposal.
 
 Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Import STEP solid into CAD representation. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-operations.json](action-audit/point-02-operations.json)
 
-Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+Original proposal: [research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -646,11 +646,11 @@ Status: proposal.
 
 Point 02 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP assembly. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-02-operations.json](action-audit/point-02-operations.json)
 
-Original proposal: [research/action-audit/point-02-component-reuse.md](/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md), line 1.
+Original proposal: [research/action-audit/point-02-component-reuse.md](action-audit/point-02-component-reuse.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -660,11 +660,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Read and clean vector drawing geometry. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -674,11 +674,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build and constrain an editable planar sketch. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -688,11 +688,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Create a kernel solid and native model document from confirmed parameters. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -702,11 +702,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Verify model geometry and saved output. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -716,11 +716,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Recover from failed interpretation or geometry construction. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -730,11 +730,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Render source-defined CSG as a mesh. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -744,11 +744,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for DXF/SVG drawing to constrained profile. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -758,11 +758,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Brief/profile to native CAD solid. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -772,11 +772,11 @@ Status: proposal.
 
 Point 03 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export STEP solid. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -786,11 +786,11 @@ Status: proposal.
 
 Point 03 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Script-parametric CAD authoring. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-03-operations.json](action-audit/point-03-operations.json)
 
-Original proposal: [research/action-audit/point-03-vector-and-solid.md](/home/leo/projects/3dmodeling/research/action-audit/point-03-vector-and-solid.md), line 1.
+Original proposal: [research/action-audit/point-03-vector-and-solid.md](action-audit/point-03-vector-and-solid.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -800,11 +800,11 @@ Status: proposal.
 
 Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Rectify a raster drawing plane from known dimensions. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -814,11 +814,11 @@ Status: proposal.
 
 Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Recognize dimension text with OCR. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -828,11 +828,11 @@ Status: proposal.
 
 Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract raster edges, lines and contours. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -842,11 +842,11 @@ Status: proposal.
 
 Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Convert raster floor-plan candidates into a wall and opening graph. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -856,11 +856,11 @@ Status: proposal.
 
 Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register orthographic drawing views in a shared coordinate frame. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -870,11 +870,11 @@ Status: proposal.
 
 Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconstruct a candidate 3D wireframe and surface from orthographic views. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -884,11 +884,11 @@ Status: proposal.
 
 Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build wall and opening solids from a confirmed floor-plan graph. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -898,11 +898,11 @@ Status: proposal.
 
 Point 04 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Raster sketch to constrained sketch. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -912,11 +912,11 @@ Status: proposal.
 
 Point 04 defines 4 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Raster floor plan to IFC building. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-04-operations.json](action-audit/point-04-operations.json)
 
-Original proposal: [research/action-audit/point-04-raster-drawings.md](/home/leo/projects/3dmodeling/research/action-audit/point-04-raster-drawings.md), line 1.
+Original proposal: [research/action-audit/point-04-raster-drawings.md](action-audit/point-04-raster-drawings.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -926,11 +926,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calibrate camera poses from photographs and known controls. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -940,11 +940,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calibrate camera intrinsics and distortion. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -954,11 +954,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Solve camera pose from known 3D-to-2D correspondences. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -968,11 +968,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate coarse transform between point clouds. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -982,11 +982,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Refine registration and compare point-cloud surfaces. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -996,11 +996,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Segment point clouds and fit candidate primitive evidence. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1010,11 +1010,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Fit analytic features to scans or image-derived point clouds. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1024,11 +1024,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register existing CAD to calibrated photographs or scan points. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1038,11 +1038,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Anchor a screen sketch to a 3D surface. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1052,11 +1052,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Remodel segmented scan evidence as parametric CAD. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1066,11 +1066,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconcile scan surfaces with dimensioned drawings. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1080,11 +1080,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Iterate CAD edits against registered evidence. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1094,11 +1094,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register scan to building frame. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1108,11 +1108,11 @@ Status: proposal.
 
 Point 05 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Scan or mesh to parametric CAD remodeling. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-05-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-05-operations.json](action-audit/point-05-operations.json)
 
-Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](/home/leo/projects/3dmodeling/research/action-audit/point-05-alignment-and-remodeling.md), line 1.
+Original proposal: [research/action-audit/point-05-alignment-and-remodeling.md](action-audit/point-05-alignment-and-remodeling.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1122,11 +1122,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author assembly graph and joint set. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1136,11 +1136,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author robot assembly from CAD component. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1150,11 +1150,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for CAD assembly to articulated robot structure. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1164,11 +1164,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Calculate or import physical mass properties. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1178,11 +1178,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Export mesh assets for MuJoCo. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1192,11 +1192,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Generate convex collision set. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1206,11 +1206,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Robot assembly to URDF package. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1220,11 +1220,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for URDF import and MJCF conversion. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1234,11 +1234,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author native MJCF simulation model. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1248,11 +1248,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author semantic IFC building. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1262,11 +1262,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract IFC geometry as triangles. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1276,11 +1276,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Extract IFC geometry as OpenCASCADE B-rep. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1290,11 +1290,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for IFC to GLB display scene. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1304,11 +1304,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Map CAD link geometry to MJCF body tree. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1318,11 +1318,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Add environment collision geometry to MJCF. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1332,11 +1332,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Author static MuJoCo environment from BIM mesh. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1346,11 +1346,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Assemble and inspect Blender scene. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1360,11 +1360,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Place library component in semantic IFC. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1374,11 +1374,11 @@ Status: proposal.
 
 Point 06 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Create fabrication package. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-06-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-06-operations.json](action-audit/point-06-operations.json)
 
-Original proposal: [research/action-audit/point-06-building-and-robot.md](/home/leo/projects/3dmodeling/research/action-audit/point-06-building-and-robot.md), line 1.
+Original proposal: [research/action-audit/point-06-building-and-robot.md](action-audit/point-06-building-and-robot.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1388,11 +1388,11 @@ Status: proposal.
 
 Group existing operation/action/helper specifications under the fifteen catalogue skill names; preserve one operation definition where several skills reuse it. Include Gaussian and related NeRF view-synthesis branches with distinct payloads and backend conditions.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md)
+Original source: [${MODELING_ROOT}/research/action-audit/skill-to-actions.md](action-audit/skill-to-actions.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md)
+Original source: [${MODELING_ROOT}/research/implementation-plan.md](implementation-plan.md)
 
-Original proposal: [research/action-audit/skill-to-actions.md](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md), line 1.
+Original proposal: [research/action-audit/skill-to-actions.md](action-audit/skill-to-actions.md), line 1.
 
 Next check: Use the linked supported-input, backend and future-case contracts when implementing or composing that workflow.
 
@@ -1402,11 +1402,11 @@ Status: proposal.
 
 Connect the 38 retained route step lists to 220 detailed operation references, and explicitly expose the eight audited operations outside those lists for conditional future compositions.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md)
+Original source: [${MODELING_ROOT}/research/action-audit/workflow-to-actions.md](action-audit/workflow-to-actions.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md)
+Original source: [${MODELING_ROOT}/research/implementation-plan.md](implementation-plan.md)
 
-Original proposal: [research/action-audit/workflow-to-actions.md](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md), line 1.
+Original proposal: [research/action-audit/workflow-to-actions.md](action-audit/workflow-to-actions.md), line 1.
 
 Next check: Use the linked supported-input, backend and future-case contracts when implementing or composing that workflow.
 
@@ -1416,11 +1416,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Convert video into an image reconstruction dataset. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1430,11 +1430,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate camera poses and sparse structure from overlapping photos. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1444,11 +1444,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Reconstruct camera poses and dense visible geometry from overlapping photos. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1458,11 +1458,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Register RGB and depth frames and estimate sequence poses. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1472,11 +1472,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Integrate calibrated RGB-D frames into point cloud or TSDF mesh. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1486,11 +1486,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Depth frames to registered point cloud or mesh. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1500,11 +1500,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Build dense point cloud and mesh from SfM camera solution. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1514,11 +1514,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Dense multi-view stereo to point cloud and mesh. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1528,11 +1528,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Point cloud to surface mesh. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1542,11 +1542,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photos/video to camera solution, point cloud and mesh. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1556,11 +1556,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Estimate multi-view depth, camera poses and Gaussian outputs. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1570,11 +1570,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Generate a single-image mesh proxy. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1584,11 +1584,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train and export a Gaussian splat scene. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1598,11 +1598,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train and export a NeRF scene. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1612,11 +1612,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Train NeRF or Gaussian scene for view synthesis. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1626,11 +1626,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photographs to Gaussian/NeRF visual scene. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1640,11 +1640,11 @@ Status: proposal.
 
 Point 07 defines 3 actions, four software/AI modes, evidence-based alternative selection/merge, proposed helpers and future validation cases for Photos to NeRF visual scene. Detailed contracts and conditions are retained in the linked operation record.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json](/home/leo/projects/3dmodeling/research/action-audit/point-07-operations.json)
+Original source: [${MODELING_ROOT}/research/action-audit/point-07-operations.json](action-audit/point-07-operations.json)
 
-Original proposal: [research/action-audit/point-07-reconstruction.md](/home/leo/projects/3dmodeling/research/action-audit/point-07-reconstruction.md), line 1.
+Original proposal: [research/action-audit/point-07-reconstruction.md](action-audit/point-07-reconstruction.md), line 1.
 
 Next check: Exercise the specified implementation cases under the corresponding implementation scope.
 
@@ -1654,9 +1654,9 @@ Status: proposal.
 
 Link each existing action to inspected code/skill subsets, original result records and required integration changes; preserve the original graph and full operation contracts.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/queue.json](action-audit/implementation-queue/queue.json)
 
-Original proposal: [research/action-audit/implementation-queue/queue.json](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.json), line 1.
+Original proposal: [research/action-audit/implementation-queue/queue.json](action-audit/implementation-queue/queue.json), line 1.
 
 Next check: Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch.
 
@@ -1666,9 +1666,9 @@ Status: proposal.
 
 Use proposed action resource/effort classes and exact original-route reuse after preceding action dependencies. Preserve original route classifications and conditional upstream prerequisites separately.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/queue.md](action-audit/implementation-queue/queue.md)
 
-Original proposal: [research/action-audit/implementation-queue/queue.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/queue.md), line 1.
+Original proposal: [research/action-audit/implementation-queue/queue.md](action-audit/implementation-queue/queue.md), line 1.
 
 Next check: Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch.
 
@@ -1678,9 +1678,9 @@ Status: proposal.
 
 Implement the existing first shared intake action as a per-job source index plus agent-authored scope statement with revision/correction links, streaming hashes and action-specific tests.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md)
+Original source: [${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md](action-audit/implementation-queue/first-action-plan.md)
 
-Original proposal: [research/action-audit/implementation-queue/first-action-plan.md](/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md), line 1.
+Original proposal: [research/action-audit/implementation-queue/first-action-plan.md](action-audit/implementation-queue/first-action-plan.md), line 1.
 
 Next check: Execute the named action implementation plan and retain actual tests under its separately scoped implementation batch.
 
@@ -1690,9 +1690,9 @@ Status: proposal.
 
 Register stable item identity, readable/formal names, descriptions, manufacturer/supplier/project codes, attributed standards and source/CAD/physical locations; connect parts to component outputs and action/tool records.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+Original source: [${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md)
 
-Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md), line 1.
 
 Next check: Review the documented catalogue structure and relationships before catalogue implementation.
 
@@ -1702,9 +1702,9 @@ Status: proposal.
 
 Compare one CSV plus descriptions, linked CSV files plus generated Markdown, and Markdown-first pages; linked files preserve multiple standards, aliases and artifact revisions.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+Original source: [${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md)
 
-Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md), line 1.
 
 Next check: Review the documented catalogue structure and relationships before catalogue implementation.
 
@@ -1714,9 +1714,9 @@ Status: proposal.
 
 Propose initial name/code/standard/category search over text records; retain IDs/relationships for future SQLite/DuckDB import and separately specified vector similarity indexing.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+Original source: [${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md)
 
-Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md), line 1.
 
 Next check: Review the documented catalogue structure and relationships before catalogue implementation.
 
@@ -1726,9 +1726,9 @@ Status: future_work.
 
 Future work requested by the user: add material and resistance properties to each part with sourced values, units and applicability conditions.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+Original source: [${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md)
 
-Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md), line 1.
 
 Next check: Define this extension when future work is taken up.
 
@@ -1738,9 +1738,9 @@ Status: future_work.
 
 Future work requested by the user: classification including wood, metal, architecture, mechanical and industrial; define taxonomy and multi-domain relationships in that future extension.
 
-Original source: [/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md)
+Original source: [${MODELING_ROOT}/research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md)
 
-Original proposal: [research/action-audit/parts-catalogue-proposal.md](/home/leo/projects/3dmodeling/research/action-audit/parts-catalogue-proposal.md), line 1.
+Original proposal: [research/action-audit/parts-catalogue-proposal.md](action-audit/parts-catalogue-proposal.md), line 1.
 
 Next check: Define this extension when future work is taken up.
 
@@ -1750,11 +1750,11 @@ Status: proposal.
 
 Use the real ferme component jobs as the development sequence; each job produces geometry/checks and an applied verified improvement to current skills/procedures or Python helpers.
 
-Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+Original source: [${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+Original source: [${MODELING_ROOT}/research/component-development-coverage.md](component-development-coverage.md)
 
-Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md), line 1.
 
 Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
 
@@ -1764,11 +1764,11 @@ Status: proposal.
 
 FERME owns CAD, component/action occurrence evidence and parts catalogue/database data. This project owns reusable skills, Python helpers/tests, action definitions and instructions for consuming FERME data, linked by exact source/model/tool revisions.
 
-Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+Original source: [${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+Original source: [${MODELING_ROOT}/research/component-development-coverage.md](component-development-coverage.md)
 
-Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md), line 1.
 
 Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
 
@@ -1778,11 +1778,11 @@ Status: proposal.
 
 Record action inputs, outputs, representations, units/frames, changed information, alternatives, recovery and handoff conditions; document repeated successful procedures before extracting or extending tested Python functions.
 
-Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+Original source: [${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+Original source: [${MODELING_ROOT}/research/component-development-coverage.md](component-development-coverage.md)
 
-Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md), line 1.
 
 Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
 
@@ -1792,11 +1792,11 @@ Status: proposal.
 
 Propose the main frame longitudinal rail followed by the dependent crossmember as initial component jobs using their existing proposed 40x40x3 mm sections and separate sourced cut lengths.
 
-Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+Original source: [${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+Original source: [${MODELING_ROOT}/research/component-development-coverage.md](component-development-coverage.md)
 
-Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md), line 1.
 
 Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
 
@@ -1806,11 +1806,11 @@ Status: proposal.
 
 Preserve all 103 source inputs and route alternatives; select ready jobs by geometric inputs, source evidence, local computation and useful repeated actions; use the existing graph/queue as action definitions and integration references.
 
-Original source: [/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md)
+Original source: [${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md)
 
-Original source: [/home/leo/projects/3dmodeling/research/component-development-coverage.md](/home/leo/projects/3dmodeling/research/component-development-coverage.md)
+Original source: [${MODELING_ROOT}/research/component-development-coverage.md](component-development-coverage.md)
 
-Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md), line 1.
+Original proposal: [COMPONENT_DEVELOPMENT_PLAN.md](../COMPONENT_DEVELOPMENT_PLAN.md), line 1.
 
 Next check: Execute the selected component iteration, apply and verify its actual tooling improvement, and retain the three linked records.
 
@@ -1820,9 +1820,9 @@ Status: proposal.
 
 Observed rail preflight requires a sourced tube corner profile or explicit nominal representation decision before dependent native construction.
 
-Original source: [/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md)
+Original source: [${MODELING_ROOT}/execution/2026-11-12-component-led.md](../execution/2026-11-12-component-led.md)
 
-Original proposal: [execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md), line 1.
+Original proposal: [execution/2026-11-12-component-led.md](../execution/2026-11-12-component-led.md), line 1.
 
 Next check: Resolve the named feature input and exercise the matching native component actions with their own checks.
 
@@ -1832,9 +1832,9 @@ Status: proposal.
 
 Current FERME Client/Journal/Geometry/recipe and verification modules replace temporary-wrapper reuse assumptions for matching native operations; retain their existing tests and explicit data ownership.
 
-Original source: [/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md)
+Original source: [${MODELING_ROOT}/execution/2026-11-12-component-led.md](../execution/2026-11-12-component-led.md)
 
-Original proposal: [execution/2026-11-12-component-led.md](/home/leo/projects/3dmodeling/execution/2026-11-12-component-led.md), line 1.
+Original proposal: [execution/2026-11-12-component-led.md](../execution/2026-11-12-component-led.md), line 1.
 
 Next check: Resolve the named feature input and exercise the matching native component actions with their own checks.
 
@@ -1844,9 +1844,9 @@ Status: proposal.
 
 For the proposed 40×40×3 mm main-frame rail and crossmember, EN 10219-2:2019 Annex A.3 provides nominal section-property radii of 6 mm outside and 3 mm inside. Table 3 separately gives the 4.8–7.2 mm external manufacturing profile interval. A CAD reference representation can carry this named calculation basis; supplier conformity requires its own product evidence.
 
-Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+Original source: [${MODELING_ROOT}/research/tube-corner-research.md](tube-corner-research.md)
 
-Original proposal: [research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md), line 1.
+Original proposal: [research/tube-corner-research.md](tube-corner-research.md), line 1.
 
 Next check: Use the source-defined nominal model label when this calculation convention is the chosen representation; preserve supplier process evidence separately.
 
@@ -1856,9 +1856,9 @@ Status: proposal.
 
 EN 10210-2:2019 Annex A.3 supplies the alternative nominal section-property radii of 4.5 mm outside and 3 mm inside at 3 mm nominal wall thickness. Table 2 supplies a 9 mm default external maximum, with a 6 mm maximum under order option 2.2. Keep this process-specific branch linked to the same rail/crossmember source sheets.
 
-Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+Original source: [${MODELING_ROOT}/research/tube-corner-research.md](tube-corner-research.md)
 
-Original proposal: [research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md), line 1.
+Original proposal: [research/tube-corner-research.md](tube-corner-research.md), line 1.
 
 Next check: Match the hot-finished branch to product evidence before assigning it as actual supply geometry.
 
@@ -1868,9 +1868,9 @@ Status: proposal.
 
 For a model representing actual stock geometry, EN 10219-2:2019 clause 7.7 describes external profile measurement using a radius gauge or corner offsets. Record actual stock measurements as a separate input revision linked to the supplier item and the main-frame component records.
 
-Original source: [/home/leo/projects/3dmodeling/research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md)
+Original source: [${MODELING_ROOT}/research/tube-corner-research.md](tube-corner-research.md)
 
-Original proposal: [research/tube-corner-research.md](/home/leo/projects/3dmodeling/research/tube-corner-research.md), line 1.
+Original proposal: [research/tube-corner-research.md](tube-corner-research.md), line 1.
 
 Next check: Retain measurement locations, units, method and observed values when measurements are available.
 
@@ -1880,9 +1880,9 @@ Status: proposal.
 
 Four source-preparation definitions and their actual supplier/standard/access/calculation occurrences are implemented and linked to the original intake/solid-route actions. Each retains software/agent responsibilities and evidence.
 
-Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+Original source: [${MODELING_ROOT}/execution/p01-rail-build.md](../execution/p01-rail-build.md)
 
-Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+Original proposal: [execution/p01-rail-build.md](../execution/p01-rail-build.md), line 1.
 
 Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
 
@@ -1892,9 +1892,9 @@ Status: proposal.
 
 Live P01 execution exposed clear-only selection semantics. A reusable adapter corrects nonempty explicit selection and verifies actual handles; live resumed extrusion and regression tests exercise the fix.
 
-Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+Original source: [${MODELING_ROOT}/execution/p01-rail-build.md](../execution/p01-rail-build.md)
 
-Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+Original proposal: [execution/p01-rail-build.md](../execution/p01-rail-build.md), line 1.
 
 Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
 
@@ -1904,9 +1904,9 @@ Status: proposal.
 
 P01 solid subtraction and planar-region subtraction returned CutRefused. Direct bounded-area extrusion produced the source-defined hollow rail and passed five native feature check groups; preserve all three route outcomes.
 
-Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+Original source: [${MODELING_ROOT}/execution/p01-rail-build.md](../execution/p01-rail-build.md)
 
-Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+Original proposal: [execution/p01-rail-build.md](../execution/p01-rail-build.md), line 1.
 
 Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
 
@@ -1916,9 +1916,9 @@ Status: proposal.
 
 P01 saved/reopened DWG stores SAB binary while the current feature reader supports SAT text. Native API bounds are zero beside visible nonzero-volume mesh geometry. Next checker implementation should reuse a supported decoder/query route and repeat required saved-feature checks.
 
-Original source: [/home/leo/projects/3dmodeling/execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md)
+Original source: [${MODELING_ROOT}/execution/p01-rail-build.md](../execution/p01-rail-build.md)
 
-Original proposal: [execution/p01-rail-build.md](/home/leo/projects/3dmodeling/execution/p01-rail-build.md), line 1.
+Original proposal: [execution/p01-rail-build.md](../execution/p01-rail-build.md), line 1.
 
 Next check: Use the recorded P01 evidence and its next required reopened feature action; retain original graph and source revisions.
 
@@ -1928,9 +1928,9 @@ Status: proposal.
 
 Implemented ezdxf-backed reading of the source-linked saved P01 body graph. Native dimensions and closed topology pass; the prior binary-reader gap now has a successful occurrence while the OCS zero-bounds discrepancy remains attributed.
 
-Original source: [/home/leo/projects/3dmodeling/execution/p01-saved-verification.md](/home/leo/projects/3dmodeling/execution/p01-saved-verification.md)
+Original source: [${MODELING_ROOT}/execution/p01-saved-verification.md](../execution/p01-saved-verification.md)
 
-Original proposal: [execution/p01-saved-verification.md](/home/leo/projects/3dmodeling/execution/p01-saved-verification.md), line 1.
+Original proposal: [execution/p01-saved-verification.md](../execution/p01-saved-verification.md), line 1.
 
 Next check: Apply the supported reader to the next component’s saved geometry and preserve any new exceptions.
 
@@ -1940,9 +1940,9 @@ Status: proposal.
 
 Implemented a nominal rail-gap and crossmember-midpoint check using actual saved native P01/P02 features and the sourced340mm frame outside width. The260mm gap and Z130mm midpoint pass; wrong-width and shifted-origin regression cases fail.
 
-Original source: [/home/leo/projects/3dmodeling/execution/p02-crossmember.md](/home/leo/projects/3dmodeling/execution/p02-crossmember.md)
+Original source: [${MODELING_ROOT}/execution/p02-crossmember.md](../execution/p02-crossmember.md)
 
-Original proposal: [execution/p02-crossmember.md](/home/leo/projects/3dmodeling/execution/p02-crossmember.md), line 1.
+Original proposal: [execution/p02-crossmember.md](../execution/p02-crossmember.md), line 1.
 
 Next check: Reuse the check only for the documented parallel-rail/local-frame conditions and keep assembly transforms separate.
 
@@ -1952,9 +1952,9 @@ Status: proposal.
 
 Applied a source-bound bearing checker to an existingSKFmodel, detected32mmvs21mmcrown and corrected only its housing in a separate derivative. Native reader now handles explicit rigid transforms, spheres,cones and mounting-slot boundaries split by coplanarBooleanfragments;62savedchecks and40testsPASS.
 
-Original source: [/home/leo/projects/3dmodeling/execution/c009-bearing.md](/home/leo/projects/3dmodeling/execution/c009-bearing.md)
+Original source: [${MODELING_ROOT}/execution/c009-bearing.md](../execution/c009-bearing.md)
 
-Original proposal: [execution/c009-bearing.md](/home/leo/projects/3dmodeling/execution/c009-bearing.md), line 1.
+Original proposal: [execution/c009-bearing.md](../execution/c009-bearing.md), line 1.
 
 Next check: Use the documented component-label and source-bound dimension conditions for each other component before reusing this reader.
 
@@ -1964,9 +1964,9 @@ Status: proposal.
 
 Extracted a shared named-solid reader after SKF and Leaf models used Component: labels with different optional spacing. Added an external-job-bound saved Leaf shell, mounting-hole and terminal checker. All 29 saved-geometry checks and 44 helper tests pass; existing drawing bytes remain preserved.
 
-Original source: [/home/leo/projects/3dmodeling/execution/c021-leaf-module.md](/home/leo/projects/3dmodeling/execution/c021-leaf-module.md)
+Original source: [${MODELING_ROOT}/execution/c021-leaf-module.md](../execution/c021-leaf-module.md)
 
-Original proposal: [execution/c021-leaf-module.md](/home/leo/projects/3dmodeling/execution/c021-leaf-module.md), line 1.
+Original proposal: [execution/c021-leaf-module.md](../execution/c021-leaf-module.md), line 1.
 
 Next check: Keep exact required component sets and sourcebound features for each new assembly; reject unknown identities before reusing geometry checks.
 
@@ -1976,9 +1976,9 @@ Status: proposal.
 
 Shared finite comparison, connectivity, vertex-range and Cartesian-cylinder-pattern functions now serve actual Sumitomo driver and Leaf module checks using separate source dimensions. The driver iteration detects and corrects a connector span error; all50 helper tests pass. Spline graph/vertex reading retains its explicit measurement scope.
 
-Original source: [/home/leo/projects/3dmodeling/execution/c012-driver.md](/home/leo/projects/3dmodeling/execution/c012-driver.md)
+Original source: [${MODELING_ROOT}/execution/c012-driver.md](../execution/c012-driver.md)
 
-Original proposal: [execution/c012-driver.md](/home/leo/projects/3dmodeling/execution/c012-driver.md), line 1.
+Original proposal: [execution/c012-driver.md](../execution/c012-driver.md), line 1.
 
 Next check: Reuse only the documented measurement conditions; each next component supplies independent source expectations and native observations.
 
@@ -1988,9 +1988,9 @@ Status: proposal.
 
 Executed ME0907 recipe and18 saved checks use cylinder radii and planar stations. The observed rear cylinder has two seam vertices atX82mm; vertex transverse span alone cannot provide its164mm diameter. Eight focused cases verify success and wrong/missing features.
 
-Original source: [/home/leo/projects/3dmodeling/execution/c005-me0907.md](/home/leo/projects/3dmodeling/execution/c005-me0907.md)
+Original source: [${MODELING_ROOT}/execution/c005-me0907.md](../execution/c005-me0907.md)
 
-Original proposal: [execution/c005-me0907.md](/home/leo/projects/3dmodeling/execution/c005-me0907.md), line 1.
+Original proposal: [execution/c005-me0907.md](../execution/c005-me0907.md), line 1.
 
 Next check: Reuse for source-bound axial cylinder/plane jobs with explicit nominal-thread and keyway representation.
 
@@ -2000,9 +2000,9 @@ Status: proposal.
 
 Executed Victron battery import diagnosed13 reversed placements against original STEP frames,changed only native insertion fields and preserved21 solid definitions.35 saved checks preserve source placements,definition vertices and39 instance paths; current source limits and open-partner records remain explicit.
 
-Original source: [/home/leo/projects/3dmodeling/execution/c023-victron-battery.md](/home/leo/projects/3dmodeling/execution/c023-victron-battery.md)
+Original source: [${MODELING_ROOT}/execution/c023-victron-battery.md](../execution/c023-victron-battery.md)
 
-Original proposal: [execution/c023-victron-battery.md](/home/leo/projects/3dmodeling/execution/c023-victron-battery.md), line 1.
+Original proposal: [execution/c023-victron-battery.md](../execution/c023-victron-battery.md), line 1.
 
 Next check: Reuse only after exact source-frame/native-matrix comparison and supported unit-scale zero-base single-insert conditions.
 
@@ -2012,9 +2012,9 @@ Status: proposal.
 
 Littelfuse20EV manufacturer datasheet provides one M6 outline for20EVxxx.ZXBDMC60–150A. The available adjacent60A STEP is a proposed exterior reference for the100A target; source identity,electrical properties and download rights remain separate fields.
 
-Original source: [/home/leo/projects/3dmodeling/execution/c030-fuse-source.md](/home/leo/projects/3dmodeling/execution/c030-fuse-source.md)
+Original source: [${MODELING_ROOT}/execution/c030-fuse-source.md](../execution/c030-fuse-source.md)
 
-Original proposal: [execution/c030-fuse-source.md](/home/leo/projects/3dmodeling/execution/c030-fuse-source.md), line 1.
+Original proposal: [execution/c030-fuse-source.md](../execution/c030-fuse-source.md), line 1.
 
 Next check: Acquire readable family geometry with appropriate access rights;compare mechanical interfaces against the shared manufacturer outline before any variant-specific CAD handoff.
 
@@ -2024,11 +2024,11 @@ Status: proposal.
 
 Pilz774310 manufacturer STEP download returned403. Existing Poppler extraction produced47SVG paths fromthe retained dimension drawing. Proposed next interpretation separates case/cover segments,verifies units against dimension leaders anddefines explicit joining rules before native extrusion;terminal andrail-clip features keep separate actions.
 
-Original source: [/home/leo/projects/3dmodeling/execution/c048-pilz-source.md](/home/leo/projects/3dmodeling/execution/c048-pilz-source.md)
+Original source: [${MODELING_ROOT}/execution/c048-pilz-source.md](../execution/c048-pilz-source.md)
 
 Original source: [https://www.pilz.com/download/open/P9745_2009094_-.pdf](https://www.pilz.com/download/open/P9745_2009094_-.pdf)
 
-Original proposal: [execution/c048-pilz-source.md](/home/leo/projects/3dmodeling/execution/c048-pilz-source.md), line 1.
+Original proposal: [execution/c048-pilz-source.md](../execution/c048-pilz-source.md), line 1.
 
 Next check: Verify SVG units,part boundaries andendpoint treatment against the sourced dimensions before constructing any dependent native geometry.
 
@@ -2038,7 +2038,7 @@ Status: proposal.
 
 **Native editable source:** Preserve the OCS document, FreeCAD document, procedural Python/OpenSCAD source or IFC model used to create the geometry. Record backend and version.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 34.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 34.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2048,7 +2048,7 @@ Status: proposal.
 
 **Analytic solid:** Use a supported boundary-representation route for exact planes, cylinders and topology. Record export settings and reopen measurements. STEP exchange preserves the content its exporter writes; feature history remains in the native source or generator.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 35.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 35.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2058,7 +2058,7 @@ Status: proposal.
 
 **Polygon mesh:** Keep visual and collision meshes as separate derivatives. Record tessellation, simplification, normals, watertightness and unit conversion. Use GLB for packaged visual assets, with consumer-specific STL/OBJ/PLY where appropriate.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 36.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 36.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2068,7 +2068,7 @@ Status: proposal.
 
 **Point cloud:** Preserve sample positions, coordinate frame, colour, normals and measurement provenance when available. Store filtering and registration transforms.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 37.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 37.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2078,7 +2078,7 @@ Status: proposal.
 
 **Gaussian/NeRF scene:** Preserve cameras and reconstruction settings with the native representation. Extracted meshes become separately tracked derivatives with their own checks.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 38.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 38.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2088,7 +2088,7 @@ Status: proposal.
 
 **Building model:** Use IFC classes, placements, property sets, material assignments, spatial hierarchy and stable element IDs for architecture.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 39.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 39.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2098,7 +2098,7 @@ Status: proposal.
 
 **Robot model:** Preserve the kinematic tree, joint axes, limits, inertial properties, visual/collision mapping and source part IDs in MJCF/URDF packages.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 40.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 40.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2108,7 +2108,7 @@ Status: proposal.
 
 **Job brief and source intake.** A small Python CLI reads a structured model brief and reference files. It records units, frames, part IDs, required dimensions, intended use, input rights and output formats. Keep the original images, drawings and supplied measurements with hashes.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 46.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 46.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2118,7 +2118,7 @@ Status: proposal.
 
 **Geometry adapters.** Reuse the local OCS session-control skill and revision-aware operations. Evaluate build123d and CadQuery on the same solid fixtures, then retain the one whose API and saved results fit the jobs. Use FreeCAD where an interactive feature tree and constrained sketches are required. Use OpenSCAD for concise CSG and suitable library components.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 47.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 47.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2128,7 +2128,7 @@ Status: proposal.
 
 **Blender adapter.** Execute bounded Python scripts using Blender's native API for scene assembly, visual inspection, meshes, materials and rendering. Assess MCP bridges against direct scripts for session preservation and reproducibility.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 48.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 48.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2138,7 +2138,7 @@ Status: proposal.
 
 **Reconstruction adapters.** Begin with a calibrated photogrammetry route and Open3D/CloudCompare processing. Add a separate GPU experiment for Gaussian scenes and learned object reconstruction after licence and hardware assessment.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 49.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 49.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2148,7 +2148,7 @@ Status: proposal.
 
 **Domain exporters.** Use IfcOpenShell/Bonsai for building semantics and MuJoCo's native loader/compiler for simulation checks. Add URDF exchange when the robot consumer requires it.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 50.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 50.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2158,7 +2158,7 @@ Status: proposal.
 
 **Component registry.** Store small metadata and procedural sources in Git; select binary storage after measuring fixture sizes and update frequency. Resolve components by stable ID, revision and content hash. Keep supplier models and scanned/generative assets traceable to their respective sources.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 51.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 51.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2168,7 +2168,7 @@ Status: proposal.
 
 **Verification and reports.** Each adapter writes its actual execution state, logs, model revision, measured properties and output hashes. A readable report links dimensions and component names to the exact model being checked.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 52.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 52.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2178,7 +2178,7 @@ Status: proposal.
 
 **Identity:** `component_id`, readable name, family, revision, source revision, author/manufacturer and part number where applicable.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 84.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 84.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2188,7 +2188,7 @@ Status: proposal.
 
 **Evidence:** source URL or file, retrieval date, source hash, licence identifier, licence text path, attribution, redistribution terms and provenance status.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 85.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 85.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2198,7 +2198,7 @@ Status: proposal.
 
 **Representation:** native source, generator and parameters, analytic solid, visual mesh, collision mesh, point cloud and their hashes.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 86.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 86.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2208,7 +2208,7 @@ Status: proposal.
 
 **Geometry:** length unit, local frame, origin, axes, bounding dimensions, interface frames, mounting features and declared tolerances with their sources.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 87.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 87.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2218,7 +2218,7 @@ Status: proposal.
 
 **Assembly:** child component IDs, occurrence transforms, connection references and joint metadata where applicable.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 88.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 88.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2228,7 +2228,7 @@ Status: proposal.
 
 **Physical properties:** mass, centre of mass, inertia tensor, material and density, each with units, frame and measured/manufacturer/calculated/assumed status.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 89.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 89.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2238,7 +2238,7 @@ Status: proposal.
 
 **Verification:** backend/version, solid validity, mesh checks, dimensions, importer results and check date tied to the exact revision.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 90.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 90.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2248,7 +2248,7 @@ Status: proposal.
 
 **Use and discovery:** tags, preview paths, permitted uses and consumer formats.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 91.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 91.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2258,7 +2258,7 @@ Status: proposal.
 
 Record the installed OCS build/session capabilities and retain the current local skill behaviour that already works.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 117.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 117.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2268,7 +2268,7 @@ Status: proposal.
 
 Exercise one dimensioned bracket with a bore and multiple named parts using the authorized CAD route.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 118.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 118.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2278,7 +2278,7 @@ Status: proposal.
 
 Compare a curved solid from build123d and CadQuery using identical declared dimensions; assess edits, export, analytic surfaces and saved-file readback.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 119.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 119.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2288,7 +2288,7 @@ Status: proposal.
 
 Reopen derivatives in an independent supported importer and inspect part count, bounds, bore size and volume.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 120.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 120.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2298,7 +2298,7 @@ Status: proposal.
 
 Deliver the existing-skill capability receipt, one selected procedural-solid adapter, model brief schema and an example with measured checks.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 121.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 121.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2308,7 +2308,7 @@ Status: proposal.
 
 Run a dimensioned DXF profile with a hole, a dimensioned raster sketch and a text brief through the intake contract.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 127.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 127.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2318,7 +2318,7 @@ Status: proposal.
 
 Create a corresponding part and a simple room with a wall opening; validate the supplied dimensions and geometry features.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 128.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 128.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2328,7 +2328,7 @@ Status: proposal.
 
 Derive Blender visual assets from those same revisions and verify unit/axis mapping numerically.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 129.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 129.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2338,7 +2338,7 @@ Status: proposal.
 
 Add a small pilot catalogue spanning a mechanical part, an assembly, and an architectural element. Preserve licences, interfaces and source dimensions.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 130.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 130.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2348,7 +2348,7 @@ Status: proposal.
 
 Deliver `drawing-to-cad`, `blender-modeling` and `component-library` skills backed by exercised scripts.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 131.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 131.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2358,7 +2358,7 @@ Status: proposal.
 
 Capture or reuse an authorized photo set with calibration evidence and measured control distances.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 135.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 135.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2368,7 +2368,7 @@ Status: proposal.
 
 Reconstruct cameras and surfaces, then align scale/frame using a subset of controls.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 136.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 136.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2378,7 +2378,7 @@ Status: proposal.
 
 Reserve independent measurements for error evaluation. Report per-control residuals in millimetres and surface-fit residuals over defined regions.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 137.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 137.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2388,7 +2388,7 @@ Status: proposal.
 
 Fit relevant planes/cylinders and rebuild a selected part as CAD. Inspect functional dimensions and scan-to-CAD distances.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 138.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 138.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2398,7 +2398,7 @@ Status: proposal.
 
 Deliver the capture, photogrammetry, cloud/mesh and scan-to-CAD skills with original images, transformations and measurements.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 139.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 139.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2408,7 +2408,7 @@ Status: proposal.
 
 Create an IFC example with a wall, opening, door/window and storey placement. Check semantic classes, geometric dimensions and a consumer import.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 143.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 143.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2418,7 +2418,7 @@ Status: proposal.
 
 Create an articulated robot example with separate links, defined joints and known physical-property inputs.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 144.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 144.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2428,7 +2428,7 @@ Status: proposal.
 
 Export visual and collision geometry, compile the MJCF model and check frame transforms, joint ranges and intended contacts.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 145.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 145.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2438,7 +2438,7 @@ Status: proposal.
 
 Export URDF if the selected robot consumer uses it; compare the imported kinematics and inertial metadata against the source.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 146.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 146.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2448,7 +2448,7 @@ Status: proposal.
 
 Deliver `architecture-ifc` and `robot-model-handoff` skills with source-linked verification reports.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 147.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 147.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2458,7 +2458,7 @@ Status: proposal.
 
 Select a specific tool/model from the licence assessment and record compatible hardware, dependencies and weights.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 151.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 151.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2468,7 +2468,7 @@ Status: proposal.
 
 Benchmark Gaussian scene reconstruction on the metric photo fixture, retaining cameras and transforms.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 152.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 152.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2478,7 +2478,7 @@ Status: proposal.
 
 Benchmark learned image-to-3D on an object with known independent dimensions and multi-view references.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 153.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 153.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2488,7 +2488,7 @@ Status: proposal.
 
 Compare runtime, peak memory, output representation, appearance and measured geometry errors. Keep inferred surfaces tagged through remodeling.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 154.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 154.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2498,7 +2498,7 @@ Status: proposal.
 
 Deliver optional reference-generation skills whose outputs enter the same asset registry and verification process.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 155.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 155.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2508,7 +2508,7 @@ Status: proposal.
 
 Provide one CLI entrypoint for intake, adapter execution, inspection and export.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 159.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 159.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2518,7 +2518,7 @@ Status: proposal.
 
 Add capability discovery per installed tool and versioned adapter configuration.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 160.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 160.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2528,7 +2528,7 @@ Status: proposal.
 
 Record job state, partial outputs and restart points for long reconstruction operations.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 161.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 161.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2538,7 +2538,7 @@ Status: proposal.
 
 Package exercised skills and pinned environment definitions by workflow family.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 162.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 162.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2548,7 +2548,7 @@ Status: proposal.
 
 Document examples from each supported input type through its native source and downstream consumer.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 163.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 163.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2558,7 +2558,7 @@ Status: proposal.
 
 **Geometry:** Controlling dimensions and allowed errors come from the task brief and intended use. Measure the actual saved geometry. For solids, inspect validity, count, topology, volume, surface types and interfaces. For meshes, inspect scale, normals, disconnected components, degeneracy and watertightness where required.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 167.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 167.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2568,7 +2568,7 @@ Status: proposal.
 
 **Reconstruction:** Separate controls used to estimate the transformation from controls used to assess error. Record camera/image coverage, calibrated parameters, registration residuals, point/mesh coverage and local error distributions. Compare inferred and observed regions separately.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 168.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 168.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2578,7 +2578,7 @@ Status: proposal.
 
 **Interchange:** Reopen each supported output using its actual consumer and compare IDs/counts, placements, dimensions and available properties. Retain a numerical conversion factor and explicit source/target frames.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 169.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 169.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2588,7 +2588,7 @@ Status: proposal.
 
 **Robot dynamics:** Record the source of mass and inertia. Test loader compilation, joint-axis direction, limits and defined contact cases. A numerical simulation report describes that specified model and operating conditions.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 170.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 170.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2598,7 +2598,7 @@ Status: proposal.
 
 **Architecture:** Check IFC schema validity, class/property assignments, placements, openings and quantities against the example brief. Exercise the selected architecture consumer.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 171.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 171.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2608,7 +2608,7 @@ Status: proposal.
 
 **Reproducibility:** Record tool versions, dependency locks, model-weight revisions, parameters, seeds where relevant, original input hashes, execution logs and output hashes.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 172.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 172.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2618,7 +2618,7 @@ Status: proposal.
 
 Start with existing OCS use, dimensioned text/sketch modeling and Blender derivatives: these provide a direct route to CAD on the observed local setup.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 176.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 176.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2628,7 +2628,7 @@ Status: proposal.
 
 Add source-backed component reuse and drawing intake: these reduce repeated modeling and support architecture and robotics together.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 177.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 177.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2638,7 +2638,7 @@ Status: proposal.
 
 Establish metric reconstruction and scan-to-CAD with independent controls: this connects photographic evidence to dimensional geometry.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 178.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 178.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2648,7 +2648,7 @@ Status: proposal.
 
 Add IFC and MJCF consumers: these demonstrate the two named application domains.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 179.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 179.
 
 Next check: Use the associated workflow operation and stage checks.
 
@@ -2658,6 +2658,6 @@ Status: proposal.
 
 Add GPU reference-generation options against the same fixtures: this provides a measured comparison of appearance and geometry for the additional methods.
 
-Original proposal: [research/implementation-plan.md](/home/leo/projects/3dmodeling/research/implementation-plan.md), line 180.
+Original proposal: [research/implementation-plan.md](implementation-plan.md), line 180.
 
 Next check: Use the associated workflow operation and stage checks.

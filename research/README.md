@@ -17,10 +17,10 @@ Research date: 12 November 2026.
 13. [Skill catalogue](../skills/README.md) — reuse candidates and proposed project workflows.
 14. [Initial verification receipt](verification.json) — observations from the repository foundation.
 15. [Workflow registration checks](workflows/register-checks.json) and [document checks](workflows/document-checks.json) — current documentation consistency checks.
-16. [Square-tube corner standards for the main-frame rails and crossmembers](/home/leo/projects/3dmodeling/research/tube-corner-research.md) — EN 10219-2 and EN 10210-2 nominal calculation radii, external manufacturing limits, supplier evidence and proposed CAD representations; [individual source observations](/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json).
-17. [Main-frame rail execution and applied tooling improvements](/home/leo/projects/3dmodeling/execution/p01-rail-build.md) — source-first action records, actual OCS construction attempts, checked native rail geometry, saved model, reopened views and the SAB feature-reader issue; [four source-action definitions](/home/leo/projects/3dmodeling/research/action-audit/component-source-actions.json).
-18. [Saved rail verification completed](/home/leo/projects/3dmodeling/execution/p01-saved-verification.md) — existing binary parser reused, six native check groups passed, reader/skill improvement applied, 32 tests passed and crossmember dependency satisfied.
-19. [Main frame crossmember completed](/home/leo/projects/3dmodeling/execution/p02-crossmember.md) — native and saved geometry, nominal rail-gap and local midpoint checks, inspected model views and the shared interface-check improvement; 35 tests passed.
+16. [Square-tube corner standards for the main-frame rails and crossmembers](tube-corner-research.md) — EN 10219-2 and EN 10210-2 nominal calculation radii, external manufacturing limits, supplier evidence and proposed CAD representations; [individual source observations](sources/round-10/tube-corner-sources.json).
+17. [Main-frame rail execution and applied tooling improvements](../execution/p01-rail-build.md) — source-first action records, actual OCS construction attempts, checked native rail geometry, saved model, reopened views and the SAB feature-reader issue; [four source-action definitions](action-audit/component-source-actions.json).
+18. [Saved rail verification completed](../execution/p01-saved-verification.md) — existing binary parser reused, six native check groups passed, reader/skill improvement applied, 32 tests passed and crossmember dependency satisfied.
+19. [Main frame crossmember completed](../execution/p02-crossmember.md) — native and saved geometry, nominal rail-gap and local midpoint checks, inspected model views and the shared interface-check improvement; 35 tests passed.
 
 ## Evidence and execution
 
@@ -34,15 +34,15 @@ The workflow-research extension preserves the implementation plan and prior tool
 
 ## Detailed procedures and effort classification
 
-[Input requirements, documented software APIs and all 38 ranked workflows](/home/leo/projects/3dmodeling/research/workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.
+[Input requirements, documented software APIs and all 38 ranked workflows](workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.
 
 ## Action-by-action software and AI audit
 
-[Detailed procedures, operation inventory and reviews](/home/leo/projects/3dmodeling/research/action-audit/README.md) cover all 77 original operations through 245 action definitions. The [38-route index](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md) maps 220 original steps to their action contracts and explicitly lists eight additional audited operations. The [skill packaging map](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) groups all 77 operations under the existing fifteen proposed skill names. [Source contract findings](/home/leo/projects/3dmodeling/research/action-audit/findings.md) preserve original contradictions and the detailed procedures' conditional clarifications. Per-point review records and check receipts state the observed evidence.
+[Detailed procedures, operation inventory and reviews](action-audit/README.md) cover all 77 original operations through 245 action definitions. The [38-route index](action-audit/workflow-to-actions.md) maps 220 original steps to their action contracts and explicitly lists eight additional audited operations. The [skill packaging map](action-audit/skill-to-actions.md) groups all 77 operations under the existing fifteen proposed skill names. [Source contract findings](action-audit/findings.md) preserve original contradictions and the detailed procedures' conditional clarifications. Per-point review records and check receipts state the observed evidence.
 
 ## Generic research and component research
 
 1. This repository owns modeling methods, software/API findings, workflow contracts and generic tool evidence. FERME owns component specifications, originals, geometry inputs and component execution evidence.
 2. Preserve exact URLs, dates, source labels and hashes. Link a general finding here to its component evidence in FERME when both subjects occur in one investigation.
-3. [Separation preparation](/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md) contains the dated file manifest, proposed extraction/move operations and script changes. Current modeling continues with its existing active paths.
-4. [Preparation source register](/home/leo/projects/3dmodeling/research/sources/repository-separation-2026-11-13.json) and [proposal register](/home/leo/projects/3dmodeling/research/repository-split-preparation/ideas.json) record this batch independently of source-register generation used by ongoing work.
+3. [Separation preparation](repository-split-preparation/README.md) contains the dated file manifest, proposed extraction/move operations and script changes. Current modeling continues with its existing active paths.
+4. [Preparation source register](sources/repository-separation-2026-11-13.json) and [proposal register](repository-split-preparation/ideas.json) record this batch independently of source-register generation used by ongoing work.

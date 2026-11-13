@@ -72,4 +72,4 @@ This rebuilds source/idea registers and the combined operation map from the reta
 
 ## Detailed procedures and effort classification
 
-[Input requirements, documented software APIs and all 38 ranked workflows](/home/leo/projects/3dmodeling/research/workflows/details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.
+[Input requirements, documented software APIs and all 38 ranked workflows](details/README.md). The manual-effort and computing tables use independent ordinal scales and state each route’s comparison conditions.

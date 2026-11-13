@@ -1,7 +1,7 @@
 [
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-component-reuse.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-02-component-reuse.md",
     "title": "Point 02 — Existing components and CAD files to inspected reusable inputs",
     "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
     "access_date": "2026-11-12",
@@ -13,8 +13,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-02-operations.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-02-operations.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-02-operations.json",
     "title": "point-02-operations",
     "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
     "access_date": "2026-11-12",
@@ -26,8 +26,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-designer.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/reviews/point-02-designer.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/reviews/point-02-designer.md",
     "title": "Point 02 — Procedure designer notes",
     "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
     "access_date": "2026-11-12",
@@ -39,8 +39,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-independent.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/reviews/point-02-independent.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/reviews/point-02-independent.md",
     "title": "Independent review — Point 02 component and CAD reuse",
     "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
     "access_date": "2026-11-12",
@@ -52,8 +52,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-software.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/reviews/point-02-software.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/reviews/point-02-software.md",
     "title": "Software review: existing components and CAD files to inspected reusable inputs",
     "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
     "access_date": "2026-11-12",
@@ -65,8 +65,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-sources.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/reviews/point-02-sources.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/reviews/point-02-sources.md",
     "title": "Point 02 source check: existing components and CAD files",
     "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
     "access_date": "2026-11-12",
@@ -78,8 +78,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/point-02-visual.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/reviews/point-02-visual.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/reviews/point-02-visual.md",
     "title": "Point 02 visual, semantic and evidence-merge review",
     "summary": "Point 02 Existing components and CAD reuse: authored procedure/action contracts or source-linked review. Contains the exact proposed software/agent assignments, alternatives, checks and evidence status.",
     "access_date": "2026-11-12",
@@ -91,8 +91,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
     "title": "SKILL.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -103,8 +103,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md",
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/computational-engineering.md",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/references/computational-engineering.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/references/computational-engineering.md",
     "title": "computational-engineering.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -115,8 +115,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md",
     "title": "model-contract.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -127,8 +127,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
     "title": "ocs-control.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -139,8 +139,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
-    "local_original": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py",
+    "source_path": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py",
+    "local_original": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py",
     "title": "ocs_control.py",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -151,8 +151,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/AGENTS.md",
-    "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "source_path": "${MODELING_ROOT}/AGENTS.md",
+    "local_original": "${MODELING_ROOT}/AGENTS.md",
     "title": "AGENTS.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -163,8 +163,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/plan.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/plan.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/plan.md",
     "title": "plan.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -175,8 +175,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/visual-review.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/reviews/visual-review.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/reviews/visual-review.md",
     "title": "visual-review.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -187,8 +187,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/sequence.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/sequence.md",
     "title": "sequence.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -199,8 +199,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "source_path": "${MODELING_ROOT}/research/cad-and-skills.md",
+    "local_original": "${MODELING_ROOT}/research/cad-and-skills.md",
     "title": "cad-and-skills.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -211,8 +211,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "source_path": "${MODELING_ROOT}/research/domains-and-components.md",
+    "local_original": "${MODELING_ROOT}/research/domains-and-components.md",
     "title": "domains-and-components.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -223,8 +223,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+    "source_path": "${MODELING_ROOT}/research/implementation-plan.md",
+    "local_original": "${MODELING_ROOT}/research/implementation-plan.md",
     "title": "implementation-plan.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -235,8 +235,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+    "source_path": "${MODELING_ROOT}/research/local-baseline.md",
+    "local_original": "${MODELING_ROOT}/research/local-baseline.md",
     "title": "local-baseline.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -247,8 +247,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/cad-sources.json",
+    "source_path": "${MODELING_ROOT}/research/sources/round-02/cad-sources.json",
+    "local_original": "${MODELING_ROOT}/research/sources/round-02/cad-sources.json",
     "title": "cad-sources.json",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -259,8 +259,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
+    "source_path": "${MODELING_ROOT}/research/sources/round-02/domain-sources.json",
+    "local_original": "${MODELING_ROOT}/research/sources/round-02/domain-sources.json",
     "title": "domain-sources.json",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -271,8 +271,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/cad-detail-sources.json",
+    "source_path": "${MODELING_ROOT}/research/sources/round-03/cad-detail-sources.json",
+    "local_original": "${MODELING_ROOT}/research/sources/round-03/cad-detail-sources.json",
     "title": "cad-detail-sources.json",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -283,8 +283,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-03/domain-detail-sources.json",
+    "source_path": "${MODELING_ROOT}/research/sources/round-03/domain-detail-sources.json",
+    "local_original": "${MODELING_ROOT}/research/sources/round-03/domain-detail-sources.json",
     "title": "domain-detail-sources.json",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -295,8 +295,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-05/point-02-web-sources.json",
+    "source_path": "${MODELING_ROOT}/research/sources/round-05/point-02-web-sources.json",
+    "local_original": "${MODELING_ROOT}/research/sources/round-05/point-02-web-sources.json",
     "title": "point-02-web-sources.json",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -307,8 +307,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+    "source_path": "${MODELING_ROOT}/research/workflows/cad-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/cad-paths.json",
     "title": "cad-paths.json",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -319,8 +319,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/composition-rules.md",
+    "source_path": "${MODELING_ROOT}/research/workflows/composition-rules.md",
+    "local_original": "${MODELING_ROOT}/research/workflows/composition-rules.md",
     "title": "composition-rules.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -331,8 +331,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md",
+    "source_path": "${MODELING_ROOT}/research/workflows/details/cad-r08.md",
+    "local_original": "${MODELING_ROOT}/research/workflows/details/cad-r08.md",
     "title": "cad-r08.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -343,8 +343,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
+    "source_path": "${MODELING_ROOT}/research/workflows/details/dom-r02.md",
+    "local_original": "${MODELING_ROOT}/research/workflows/details/dom-r02.md",
     "title": "dom-r02.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -355,8 +355,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
+    "source_path": "${MODELING_ROOT}/research/workflows/details/dom-r06.md",
+    "local_original": "${MODELING_ROOT}/research/workflows/details/dom-r06.md",
     "title": "dom-r06.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -367,8 +367,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
+    "source_path": "${MODELING_ROOT}/research/workflows/details/dom-r07.md",
+    "local_original": "${MODELING_ROOT}/research/workflows/details/dom-r07.md",
     "title": "dom-r07.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -379,8 +379,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
+    "source_path": "${MODELING_ROOT}/research/workflows/domain-paths.json",
+    "local_original": "${MODELING_ROOT}/research/workflows/domain-paths.json",
     "title": "domain-paths.json",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -391,8 +391,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/Cargo.toml",
+    "source_path": "${OCS_ROOT}/Cargo.toml",
+    "local_original": "${OCS_ROOT}/Cargo.toml",
     "title": "Cargo.toml",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -403,8 +403,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+    "source_path": "${OCS_ROOT}/LICENSE",
+    "local_original": "${OCS_ROOT}/LICENSE",
     "title": "LICENSE",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -415,8 +415,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
+    "source_path": "${OCS_ROOT}/README.md",
+    "local_original": "${OCS_ROOT}/README.md",
     "title": "README.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -427,8 +427,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
+    "source_path": "${OCS_ROOT}/docs/automation/API-SPEC.md",
+    "local_original": "${OCS_ROOT}/docs/automation/API-SPEC.md",
     "title": "API-SPEC.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -439,8 +439,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+    "source_path": "${OCS_ROOT}/docs/automation/README.md",
+    "local_original": "${OCS_ROOT}/docs/automation/README.md",
     "title": "README.md",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -451,8 +451,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+    "source_path": "${OCS_ROOT}/src/io/step.rs",
+    "local_original": "${OCS_ROOT}/src/io/step.rs",
     "title": "step.rs",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",
@@ -463,8 +463,8 @@
     ]
   },
   {
-    "source_path": "/usr/lib/python3.14/hashlib.py",
-    "local_original": "/usr/lib/python3.14/hashlib.py",
+    "source_path": "${SYSTEM_ROOT}/usr/lib/python3.14/hashlib.py",
+    "local_original": "${SYSTEM_ROOT}/usr/lib/python3.14/hashlib.py",
     "title": "hashlib.py",
     "summary": "Existing local source cited by point 02 procedure/reviews; its concrete claim and operation relationship are preserved in those referring documents. This record captures source bytes at integration.",
     "access_date": "2026-11-12",

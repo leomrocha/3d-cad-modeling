@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094.pdf",
     "title": "Pilz manufacturer P97/45 drawing",
     "summary": "Original drawing2009094/model2006038 gives45\u00d787 front and120.6/115.4 side dimensions,dated30June2011.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     "url": "https://www.pilz.com/download/open/P9745_2009094_-.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/pilz-p9745-2009094-page-1.png",
     "title": "Pilz dimension drawing render",
     "summary": "Actual six-view drawing shows terminal banks andrail-clip profile;coordinator inspected dimension leaders.",
     "access_date": "2026-11-12",
@@ -23,7 +23,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/source-notes.md",
     "title": "Pilz source acquisition findings",
     "summary": "Records exact774310 mapping,manufacturer source dimensions,STEP403 andbacked mirror route.",
     "access_date": "2026-11-12",
@@ -34,7 +34,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source/acquisition.json",
     "title": "Pilz source provenance",
     "summary": "Original PDF retrieval time,MIME/hash,derived render metadata andactual blocked STEP access outcome.",
     "access_date": "2026-11-12",
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/source-job.json",
     "title": "Pilz source feature contract",
     "summary": "Pins45/87/120.6 dimensions andnames terminal/rail-clip geometry inputs.",
     "access_date": "2026-11-12",
@@ -56,7 +56,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/readiness.json",
     "title": "Pilz source-readiness result",
     "summary": "Existing gate returns NEEDS_INPUT forterminal bank andrail-clip interface geometry.",
     "access_date": "2026-11-12",
@@ -67,7 +67,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/result.json",
     "title": "Pilz source-stage result",
     "summary": "Connects source gate andexecuted PDF-vector extraction alternative.",
     "access_date": "2026-11-12",
@@ -78,7 +78,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/pilz-drawing.svg",
     "title": "Extracted Pilz SVG linework",
     "summary": "Actual Poppler derivative retains47 paths,including side-profile linework andcase/cover endpoint offsets.",
     "access_date": "2026-11-12",
@@ -89,7 +89,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/extraction.json",
     "title": "Pilz vector-source observations",
     "summary": "Records exact conversion command,source/output hashes,47 paths andunit/join interpretations requiring verification before3D.",
     "access_date": "2026-11-12",
@@ -100,7 +100,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c048-build-01/vector-extraction/procedure.md",
     "title": "Source-vector reconstruction proposal",
     "summary": "Separates actual PDF-to-SVG extraction fromproposed source-view selection,unit checks,joining/part-boundary rules andnative extrusion.",
     "access_date": "2026-11-12",
@@ -111,7 +111,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c048-pilz-source.md",
+    "local_original": "${MODELING_ROOT}/execution/c048-pilz-source.md",
     "title": "Pilz source/vector-stage report",
     "summary": "Documents exact relay sources,dimensions,blocked STEP route andactual2D vector extraction withseparate reconstruction proposal.",
     "access_date": "2026-11-12",
@@ -122,7 +122,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/ideas.json",
     "title": "Source-vector reconstruction proposal register",
     "summary": "Registers COMP-I23: source-view selection,unit verification andexplicit joining before native profile extrusion,linked toactual47-path Pilz extraction.",
     "access_date": "2026-11-12",

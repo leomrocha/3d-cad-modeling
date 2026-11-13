@@ -1,7 +1,7 @@
 {
   "domain": "cad",
   "date": "2026-11-12",
-  "contract": "/home/leo/projects/3dmodeling/research/workflows/details/contract.json",
+  "contract": "${MODELING_ROOT}/research/workflows/details/contract.json",
   "evidence_note": "Proposed qualitative classifications based on documented software capabilities and stated input/output conditions. Tool entry points refer to third-party software documentation.",
   "rankings": {
     "human_low_to_high": [
@@ -93,9 +93,9 @@
             "OpenCADStudio desktop build with MCP enabled; Python 3 helper plus local session credentials/config."
           ],
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/API-SPEC.md",
+            "${OCS_ROOT}/LICENSE"
           ]
         },
         {
@@ -184,14 +184,14 @@
           ]
         },
         {
-          "entrypoint": "python /home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py discover; read state/capabilities/commands using helper contract",
+          "entrypoint": "python ${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py discover; read state/capabilities/commands using helper contract",
           "status": "existing_tool_entrypoint",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ],
           "notes": "Read-only command entrypoint observed in local skill sources; no OCS command run.",
-          "path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py"
+          "path": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py"
         }
       ],
       "outputs": {
@@ -286,12 +286,12 @@
         ]
       },
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
+        "${OCS_ROOT}/docs/automation/API-SPEC.md",
+        "${OCS_ROOT}/LICENSE",
         "https://cadquery.readthedocs.io/en/stable/importexport.html",
         "https://cadquery.readthedocs.io/en/stable/classreference.html",
         "https://cadquery.readthedocs.io/en/stable/quickstart.html",
@@ -407,9 +407,9 @@
             "OpenCADStudio desktop build with MCP enabled; Python 3 helper plus local session credentials/config."
           ],
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/API-SPEC.md",
+            "${OCS_ROOT}/LICENSE"
           ]
         }
       ],
@@ -602,7 +602,7 @@
         "https://github.com/tesseract-ocr/tesseract",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ]
     },
     {
@@ -783,7 +783,7 @@
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1340,7 +1340,7 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1521,7 +1521,7 @@
         "https://github.com/CloudCompare/CloudCompare"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r09.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     },
@@ -1565,7 +1565,7 @@
             "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ]
         }
       ],
@@ -1611,7 +1611,7 @@
           "entrypoint": "FreeCAD import STEP; set Placement(Base=Vector(...),Rotation=Rotation(...)); apply selected assembly workbench constraints; run solve and interference review",
           "status": "existing_tool_entrypoint",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ],
           "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
@@ -1668,7 +1668,7 @@
         "variants": "Simplified envelopes reduce working memory; retain detailed originals."
       },
       "source_urls": [
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+        "${OCS_ROOT}/docs/automation/API-SPEC.md"
       ]
     },
     {
@@ -1875,7 +1875,7 @@
           ],
           "source_urls": [
             "https://openscad.org/documentation.html",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ]
         },
         {
@@ -1891,7 +1891,7 @@
           ],
           "source_urls": [
             "https://openscad.org/documentation.html",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ]
         }
       ],
@@ -1931,7 +1931,7 @@
           "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://openscad.org/documentation.html",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ],
           "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
@@ -1989,7 +1989,7 @@
       },
       "source_urls": [
         "https://openscad.org/documentation.html",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+        "${OCS_ROOT}/docs/automation/API-SPEC.md"
       ]
     }
   ]

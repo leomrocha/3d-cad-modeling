@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907.pdf",
     "title": "Motenergy ME0907 outline 0JWT.301.073",
     "summary": "Original dimensioned motor drawing retained from EV Europe. Supplies mounting groups, shaft/keyway section, locating pilot, main/rear axial stations, nominal thread designations and exterior outlines. DO NOT SCALE accompanies the drawing.",
     "access_date": "2026-11-12",
@@ -13,7 +13,7 @@
     "original_url": "https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/acquisition.json",
     "title": "ME0907 acquisition response and hash",
     "summary": "Records retained PDF path, HTTP status/content type and digest. The coordinator review classifies the retrieved_at field as copied server HTTP Date metadata.",
     "access_date": "2026-11-12",
@@ -25,7 +25,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/source-notes.md",
     "title": "Delegated initial motor drawing transcription",
     "summary": "Initial Luna-assigned transcription of the retained drawing. Its mounting group, thread-depth and tolerance associations are preserved with separate coordinator corrections; actual delegated runtime identity unavailable.",
     "access_date": "2026-11-12",
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md",
     "title": "Reviewed motor dimensions and feature associations",
     "summary": "Source-image review corrects the two mounting group associations, identifies 30 mm shaft-thread depth and 19.58 mm keyway section distance, and retains source tolerances and server-date attribution.",
     "access_date": "2026-11-12",
@@ -49,7 +49,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/ME0907-page1.png",
     "title": "ME0907 source drawing render",
     "summary": "Rendered original sheet inspected for front/side/section associations, exterior slots, terminals, connectors and source notes.",
     "access_date": "2026-11-12",
@@ -61,7 +61,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json",
     "title": "ME0907 pinned feature inputs",
     "summary": "Binds 19 dimensions to original PDF/hash/locators, mm frame and mechanical-interface representation. Separately labels cutting overrun and reconstructed R2.39 mm keyway end.",
     "access_date": "2026-11-12",
@@ -73,7 +73,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/ocs-journal.jsonl",
     "title": "ME0907 actual native operation journal",
     "summary": "Records isolated document creation, cylinders, pilot union, two blind-hole groups, end-thread/keyway cuts, save, same-identity reopen recovery and model captures.",
     "access_date": "2026-11-12",
@@ -85,7 +85,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/final-checks.json",
     "title": "Saved ME0907 analytic geometry observations",
     "summary": "18 passing checks read actual saved surfaces and topology: cylinder axes/radii, individual hole-bottom centres, end stations, keyway planes/rounded end and three closed connected bodies.",
     "access_date": "2026-11-12",
@@ -97,7 +97,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/persistence.json",
     "title": "ME0907 save and reopen receipt",
     "summary": "Records matching saved DWG hash and audit manifest, zero audit errors/warnings and recovery of the original reopen operation after its polling bound.",
     "access_date": "2026-11-12",
@@ -109,7 +109,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/result.json",
     "title": "ME0907 component feature-stage state",
     "summary": "Mechanical interfaces are saved with18 passing checks. Exterior source lookup is complete; cooling-slot, terminal and connector geometry have a named required input, with manufacturer and supplier evidence linked.",
     "access_date": "2026-11-12",
@@ -121,7 +121,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/axial_motor.py",
+    "local_original": "${MODELING_ROOT}/scripts/axial_motor.py",
     "title": "Source-bound axial motor construction and checker",
     "summary": "New Python recipe calls existing guarded native geometry for housing/pilot, blind patterns, keyed shaft and rear region. Checks analytic cylinders and individual blind-bottom planes instead of estimating circle diameter from seam vertices.",
     "access_date": "2026-11-12",
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_axial_motor.py",
+    "local_original": "${MODELING_ROOT}/tests/test_axial_motor.py",
     "title": "Axial motor failure regression cases",
     "summary": "Eight focused software tests exercise seam-only vertices, missing hole, swapped depths, wrong blind depth, wrong keyway floor, wrong diameter, invalid extents and unit/overrun rejection.",
     "access_date": "2026-11-12",
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/axial-motor.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md",
     "title": "Executed axial motor procedure",
     "summary": "Documents source-leader review, explicit keyway reconstruction, bounded native construction, surface-based dimensions, save/reopen recovery and per-feature downstream handoffs established by this actual motor.",
     "access_date": "2026-11-12",
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c005-me0907.md",
+    "local_original": "${MODELING_ROOT}/execution/c005-me0907.md",
     "title": "New motor implementation report",
     "summary": "Records new FERME model dimensions/detail, 18 saved checks, eight focused tests, source corrections, inspected views and the reusable axial construction/check improvement.",
     "access_date": "2026-11-12",
@@ -169,7 +169,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Motenergy-ME0907-outline.pdf",
     "title": "Direct Motenergy ME0907 outline copy",
     "summary": "Original PDF acquired from the drawing link on Motenergy ME0907 page. Drawing title0JWT.301.073 and existing interfaces are identified in the delegated review; this retains the manufacturer-linked source separately from the EV Europe copy.",
     "access_date": "2026-11-12",
@@ -182,7 +182,7 @@
     "original_url": "https://sep.turbifycdn.com/ty/cdn/yhst-129399866319704/ME0907.pdf?t=1783724599"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/Kelly-ME0907-dimensions-testdata.zip",
     "title": "Kelly ME0907 drawing/test-data archive",
     "summary": "Original ZIP linked by Kelly ME0907 page, acquired with three PDF members. The outline member is titled Mars Electric ME0201013001; it retains its own variant identity.",
     "access_date": "2026-11-12",
@@ -195,7 +195,7 @@
     "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/bldcmotor.pdf",
     "title": "Kelly archive predecessor motor outline",
     "summary": "Original archive member for ME0201013001, drawing0JWT.300.117. Delegated review identifies it as related visual evidence under Motenergy direct-replacement claim; it supplies its own title and is kept separate from exact ME0907 dimensions.",
     "access_date": "2026-11-12",
@@ -208,7 +208,7 @@
     "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md",
     "title": "ME0907 additional exterior-source findings",
     "summary": "Bounded delegated review identifies the direct manufacturer drawing, Kelly archive variant, EVEA CAD-on-request page and cover150-011 with three Phillips screws. Exact URLs and download outcomes are retained. Actual agent identity unavailable.",
     "access_date": "2026-11-12",
@@ -220,7 +220,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/acquisition.json",
     "title": "Additional motor source acquisition manifest",
     "summary": "Records URLs, downloaded originals, archive members, byte counts, MIME types and hashes; page-only Autodesk viewer/cache-miss and EVEA CAD-on-request observations remain distinct. Date fields match the recorded HTTP Date and are preserved as reported acquisition metadata.",
     "access_date": "2026-11-12",
@@ -239,7 +239,7 @@
     "evidence_status": "delegated_web_inspection",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md"
+      "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md"
     ]
   },
   {
@@ -250,11 +250,11 @@
     "evidence_status": "delegated_web_inspection",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md"
+      "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/source-review.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCCW.pdf",
     "title": "Kelly archive member 48VCCW.pdf",
     "summary": "Retained original48V counterclockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.",
     "access_date": "2026-11-12",
@@ -265,7 +265,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/exterior-source-review/kelly-archive/48VCW.pdf",
     "title": "Kelly archive member 48VCW.pdf",
     "summary": "Retained original48V clockwise performance-curve PDF extracted with the supplied motor archive. Acquired as original archive content; this geometry batch makes no curve-value interpretation.",
     "access_date": "2026-11-12",

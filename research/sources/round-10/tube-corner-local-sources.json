@@ -1,7 +1,7 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/tube-corner-research.md",
-    "source_path": "/home/leo/projects/3dmodeling/research/tube-corner-research.md",
+    "local_original": "${MODELING_ROOT}/research/tube-corner-research.md",
+    "source_path": "${MODELING_ROOT}/research/tube-corner-research.md",
     "title": "Square-tube corner research for main-frame rails and crossmembers",
     "summary": "Luna report compares EN 10219-2:2019 cold-formed and EN 10210-2:2019 hot-finished nominal section-property corner radii, external manufacturing profile limits and seller evidence for item040819. It links these findings to P01/P02 and records reference-model and measured-stock alternatives as proposals.",
     "access_date": "2026-11-12",
@@ -13,8 +13,8 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json",
-    "source_path": "/home/leo/projects/3dmodeling/research/sources/round-10/tube-corner-sources.json",
+    "local_original": "${MODELING_ROOT}/research/sources/round-10/tube-corner-sources.json",
+    "source_path": "${MODELING_ROOT}/research/sources/round-10/tube-corner-sources.json",
     "title": "Tube-corner source observations",
     "summary": "Individual delegated web observations, exact standard clauses, supplier listing details, catalogue edition evidence, access failures and existing FERME sheet relationships underpin the tube-corner report. Each source retains its own concrete summary and evidence status.",
     "access_date": "2026-11-12",

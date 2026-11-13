@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-product-datasheet.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-product-datasheet.pdf",
     "title": "Exact XB5AS8445 manufacturer datasheet",
     "summary": "Original exactpart data withpage3 operator/panel projections andpage4 finished cutout tolerances,screw-clamp spacing andclamping range.",
     "access_date": "2026-11-12",
@@ -13,7 +13,7 @@
     "supplied_url": "https://iportal2.schneider-electric.com/Contents/docs/SQD-XB5AS8445.PDF"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-harmony-xb5-catalog.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-harmony-xb5-catalog.pdf",
     "title": "Manufacturer Harmony XB5 catalogue",
     "summary": "Printed44/PDF45 explicitly mapsXB5AS8445 toZB5AZ105 contact body andZB5AS844 head,1NO+1NC andturn release.",
     "access_date": "2026-11-12",
@@ -26,7 +26,7 @@
     "supplied_url": "https://iportal.se.com/Contents/docs/HARMONY%20XB5_CATALOG.PDF"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-3.png",
     "title": "XB5AS8445 dimension render",
     "summary": "Actual exactpart image gives\u00d840 operator,43 overall height,39.5 front and43 rear projections,1\u20136mm panel range.",
     "access_date": "2026-11-12",
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/schneider-xb5as8445-page-4.png",
     "title": "XB5AS8445 mounting render",
     "summary": "Actual panel-cutout image gives\u00d822.3+0.4/0 recommended22.5,lug3.2+0.2/0,24.1+0.4/0 height,r\u22640.8 andscrew-clamp40/30 spacing.",
     "access_date": "2026-11-12",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/source-notes.md",
     "title": "Stop-button source findings",
     "summary": "Exact manufacturer variant,dimension leaders,panel mounting conditions andactual gated CAD routes.",
     "access_date": "2026-11-12",
@@ -59,7 +59,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source/acquisition.json",
     "title": "Stop-button acquisition metadata",
     "summary": "Retains original source URLs,redirect URL,time/MIME/hash,render metadata andactual verification/login/403 route outcomes.",
     "access_date": "2026-11-12",
@@ -70,7 +70,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/source-job.json",
     "title": "Stop-button feature contract",
     "summary": "Pins finished panel-interface bounds andindividual required operator/contact body geometry questions.",
     "access_date": "2026-11-12",
@@ -81,7 +81,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/readiness.json",
     "title": "Stop-button source-readiness result",
     "summary": "Existing source/hash gate returns NEEDS_INPUT foroperator/mounting body andcontact/terminal geometry.",
     "access_date": "2026-11-12",
@@ -92,7 +92,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c049-build-01/result.json",
     "title": "Stop-button source-stage result",
     "summary": "Connects exactvariant,source-defined panel interface,unresolved full body features andseparate nominal/projection labels.",
     "access_date": "2026-11-12",
@@ -103,7 +103,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c049-stop-button-source.md",
+    "local_original": "${MODELING_ROOT}/execution/c049-stop-button-source.md",
     "title": "Stop-button source-stage report",
     "summary": "Documents exact assembly mapping,finished panel tolerances,source access outcomes andseparate panel/full-body actions.",
     "access_date": "2026-11-12",

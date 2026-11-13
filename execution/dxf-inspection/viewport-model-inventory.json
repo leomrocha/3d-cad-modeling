@@ -1,7 +1,7 @@
 {
   "state": "INVENTORIED",
   "source": {
-    "path": "/home/leo/projects/3rdparty/OpenCADStudio/tests/fixtures/dim_assoc/viewport_associations.dxf",
+    "path": "${OCS_ROOT}/tests/fixtures/dim_assoc/viewport_associations.dxf",
     "sha256": "2e9752b049fbdf4d31fc0ef0d2e3aa20559412f28d9de5227d6c1fbb7d05511a",
     "bytes": 7790
   },

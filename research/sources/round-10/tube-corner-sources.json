@@ -160,7 +160,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/p01-main-frame-longitudinal-rail.md",
     "title": "P01 — Main frame longitudinal rail CAD input sheet",
     "summary": "Local sheet records proposed 40×40×3 mm square steel tube, 600 mm cut length and says material grade follows the actual stock record. Used to define applicability to the P01 cross-section and length.",
     "access_date": "2026-11-12",
@@ -178,7 +178,7 @@
     "bytes": 1624
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/p02-main-frame-crossmember.md",
     "title": "P02 — Main frame crossmember CAD input sheet",
     "summary": "Local sheet records proposed 40×40×3 mm tube, 260 mm cut length between rails. Used to apply the same section evidence to P02 while preserving its separate cut-length input.",
     "access_date": "2026-11-12",
@@ -196,7 +196,7 @@
     "bytes": 1729
   },
   {
-    "local_original": "/home/leo/projects/ferme/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
+    "local_original": "${FERME_ROOT}/research/base-component-completion-2026-11-12/02-frame-hitch-supports.md",
     "title": "Frame, hitch and supports component research",
     "summary": "Existing local research document includes the frame's common steel-frame proposal and identifies the 40×40×3 mm tube proposal; reviewed for project context and relationship to the P01/P02 sheets.",
     "access_date": "2026-11-12",
@@ -214,7 +214,7 @@
     "bytes": 24608
   },
   {
-    "local_original": "/home/leo/projects/ferme/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv",
+    "local_original": "${FERME_ROOT}/research/base-component-completion-2026-11-12/sources-frame/manifest.tsv",
     "title": "Frame source manifest",
     "summary": "Existing manifest records the exact Perrin/Fers & Métaux URL, item 040819, seller-page observation date and sales/stock statements. It classifies the evidence as web seller page and says no local original was saved.",
     "access_date": "2026-11-12",

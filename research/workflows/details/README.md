@@ -2,12 +2,12 @@
 
 Date: 12 November 2026. These are generic procedures for the 38 recorded routes. Each dossier states its input conditions and intended output.
 
-1. [All workflows ordered by manual effort](/home/leo/projects/3dmodeling/research/workflows/details/by-human.md).
-2. [All workflows ordered by computing demand](/home/leo/projects/3dmodeling/research/workflows/details/by-compute.md).
-3. [Structured dossiers](/home/leo/projects/3dmodeling/research/workflows/details/workflow-details.json) and [classification contract](/home/leo/projects/3dmodeling/research/workflows/details/contract.json).
-4. [Documented third-party operations and source links](/home/leo/projects/3dmodeling/research/workflows/operation-catalogue.md).
-5. [Reconstruction Mermaid graph](/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.md) and [operation catalogue with source links](/home/leo/projects/3dmodeling/research/workflows/operation-catalogue.md).
-6. [Original source register with summaries](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+1. [All workflows ordered by manual effort](by-human.md).
+2. [All workflows ordered by computing demand](by-compute.md).
+3. [Structured dossiers](workflow-details.json) and [classification contract](contract.json).
+4. [Documented third-party operations and source links](../operation-catalogue.md).
+5. [Reconstruction Mermaid graph](../reconstruction-paths.md) and [operation catalogue with source links](../operation-catalogue.md).
+6. [Original source register with summaries](../../sources/source-register.md).
 
 ## Reading the classifications
 

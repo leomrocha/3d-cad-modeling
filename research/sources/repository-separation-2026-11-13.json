@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/README.md",
+    "local_original": "${MODELING_ROOT}/README.md",
     "title": "Shared modeling project scope",
     "summary": "Defines generic geometry workflows and folder ownership.",
     "observation_date": "2026-11-13",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "local_original": "${MODELING_ROOT}/AGENTS.md",
     "title": "Working rules and continuing-output separation",
     "summary": "Requires source records, scoped commits, existing-model reuse and separation of ongoing component/tool outputs.",
     "observation_date": "2026-11-13",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+    "local_original": "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md",
     "title": "Component development ownership contract",
     "summary": "Section 2 assigns component models, data and execution to FERME and shared tooling here.",
     "observation_date": "2026-11-13",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/rounded_tube.py",
+    "local_original": "${MODELING_ROOT}/scripts/rounded_tube.py",
     "title": "External runtime integration",
     "summary": "Parameterized constructor accepts cad-modules and imports FERME cadtools.",
     "observation_date": "2026-11-13",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/pixhawk.py",
+    "local_original": "${MODELING_ROOT}/scripts/pixhawk.py",
     "title": "C052-specific construction recipe",
     "summary": "Requires Pixhawk 6C component identity and source-bound M2 reference features.",
     "observation_date": "2026-11-13",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/small_bms.py",
+    "local_original": "${MODELING_ROOT}/scripts/small_bms.py",
     "title": "Assembly persistence comparisons",
     "summary": "Compares SAT/SAB points and placed assembly instances with supplied records.",
     "observation_date": "2026-11-13",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_small_bms.py",
+    "local_original": "${MODELING_ROOT}/tests/test_small_bms.py",
     "title": "Current C054 integration data paths",
     "summary": "Reads execution component files and a temporary reader path.",
     "observation_date": "2026-11-13",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "local_original": "${MODELING_ROOT}/research/tools/build_workflow_register.py",
     "title": "Source-register generator",
     "summary": "Scans local round source files and generates source/idea/workflow outputs.",
     "observation_date": "2026-11-13",
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/README.md",
     "title": "Existing FERME model index",
     "summary": "Existing external project path inspected for reuse and proposed handoff; retained in place.",
     "observation_date": "2026-11-13",
@@ -107,7 +107,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py",
+    "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/geometry.py",
     "title": "Existing FERME geometry runtime",
     "summary": "Existing external project path inspected for reuse and proposed handoff; retained in place.",
     "observation_date": "2026-11-13",
@@ -118,7 +118,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md",
+    "local_original": "${MODELING_ROOT}/research/repository-split-preparation/README.md",
     "title": "Current split-preparation instructions",
     "summary": "Prepare documentation and plans up to before the split; preserve ongoing modeling and fixes; instruct the executing agent to separate generic and FERME work.",
     "observation_date": "2026-11-13",

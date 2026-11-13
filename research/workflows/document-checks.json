@@ -72,8 +72,8 @@
   "round_three_project_source_hashes": "passed",
   "historical_source_hash_mismatches": [
     {
-      "source_record": "/home/leo/projects/3dmodeling/research/sources/round-02/domain-sources.json",
-      "path": "/home/leo/projects/3dmodeling/research/local-baseline.md",
+      "source_record": "${MODELING_ROOT}/research/sources/round-02/domain-sources.json",
+      "path": "${MODELING_ROOT}/research/local-baseline.md",
       "recorded_sha256": "cefd57403dfa1a89b304ee8ec22ea56cc9d1d60ce4177745c2fbc0877ec3440c",
       "current_sha256": "8bfba18c642878f29577e7e1eaf625fdf68a58de9040b0db704c3f6d6cc3c068"
     }

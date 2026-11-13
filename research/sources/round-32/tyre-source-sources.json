@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
     "title": "Trelleborg Technical manual",
     "summary": "The exact 18x8.50-8, PR 6, T539 Farming row lists 7.00I rim, permitted 6.50-8, OD 466 mm ±1.5%, section width 222 mm ±2%, max air pressure 2.8 bar, max load 475 kg at 30 km/h, and rolling circumference 1384 mm ±2.5%. This is exterior envelope and nominal rim-contour evidence. The row gives no bead-seat, bead profile, wall, tread-depth or sectional profile dimensions. PDF metadata dates creation 2026-10-05 and modification 2026-10-06.",
     "evidence_status": "downloaded_original",
@@ -16,7 +16,7 @@
     "content_type": "application/pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure.pdf",
     "title": "Trelleborg Light service tires brochure",
     "summary": "Lists 18x8.50-8 T539 TL, 4 PR, with rim 7.00I, OD 472 mm, section 222 mm, 1.5 bar, 375 kg at 30 km/h, rolling circumference 1402 mm. This is a different 4PR tubeless row and does not supply dimensions for C001's 6PR tube-type variant. No profile or bead drawing found.",
     "evidence_status": "downloaded_original",
@@ -32,7 +32,7 @@
     "content_type": "application/pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder.pdf",
     "title": "Trelleborg Visual Folder",
     "summary": "Manufacturer visual folder contains a T539 family label. It provides no size-specific 18x8.50-8 drawing or dimensioned tyre profile.",
     "evidence_status": "downloaded_original",
@@ -48,7 +48,7 @@
     "content_type": "application/pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-product-photo-575x575.webp",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-product-photo-575x575.webp",
     "title": "Trelleborg T539 product image, 575x575",
     "summary": "Exact T539 manufacturer product image linked by the T539 product page. It shows a three-quarter tyre and mounted rim, with tread and sidewall visible. The page and image do not associate this image with the 18x8.50-8 size; use it as visual tread/sidewall reference only, not as a dimensioned interface source.",
     "evidence_status": "downloaded_manufacturer_product_image",
@@ -64,7 +64,7 @@
     "content_type": "image/webp"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-product-page.html",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-product-page.html",
     "title": "Trelleborg T539 product page (English)",
     "summary": "The official product page identifies T539, links the Light service tires brochure and Visual Folder, and embeds the retained T539 product image. Its page HTML does not contain a STEP/CAD file or a dimensioned section/bead drawing.",
     "evidence_status": "downloaded_web_page_snapshot",
@@ -80,7 +80,7 @@
     "content_type": "text/html; charset=utf-8"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure-response-headers.txt",
     "title": "trelleborg light service brochure response headers",
     "summary": "Retained HTTP response headers for trelleborg-light-service-brochure acquisition, including actual response status/content type when provided.",
     "evidence_status": "executed_retrieval_metadata",
@@ -91,7 +91,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-manual-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-manual-response-headers.txt",
     "title": "trelleborg manual response headers",
     "summary": "Retained HTTP response headers for trelleborg-manual acquisition, including actual response status/content type when provided.",
     "evidence_status": "executed_retrieval_metadata",
@@ -102,7 +102,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-page-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-page-response-headers.txt",
     "title": "trelleborg t539 page response headers",
     "summary": "Retained HTTP response headers for trelleborg-t539-page acquisition, including actual response status/content type when provided.",
     "evidence_status": "executed_retrieval_metadata",
@@ -113,7 +113,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-photo-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-photo-response-headers.txt",
     "title": "trelleborg t539 photo response headers",
     "summary": "Retained HTTP response headers for trelleborg-t539-photo acquisition, including actual response status/content type when provided.",
     "evidence_status": "executed_retrieval_metadata",
@@ -124,7 +124,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder-response-headers.txt",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder-response-headers.txt",
     "title": "trelleborg visual folder response headers",
     "summary": "Retained HTTP response headers for trelleborg-visual-folder acquisition, including actual response status/content type when provided.",
     "evidence_status": "executed_retrieval_metadata",
@@ -135,7 +135,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json",
     "title": "Tyre original acquisition manifest",
     "summary": "Individual original URLs, actual retrieval outcomes, content types, times, local paths, hashes and source summaries; requested and actual model identities kept distinct.",
     "evidence_status": "executed_source_acquisition",
@@ -146,7 +146,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md",
     "title": "Tyre manufacturer geometry review",
     "summary": "Separates the exact 6PR manual row, different 4PR brochure row and undimensioned family photo; identifies the bead/section input required for construction.",
     "evidence_status": "executed_source_review",
@@ -157,7 +157,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-pdf-page-111.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-pdf-page-111.png",
     "title": "Exact tyre manual page rendering",
     "summary": "Full PDF page 111, printed 220–221 spread, visually inspected for the 18x8.50-8 6PR T539 row and tolerance headings.",
     "evidence_status": "executed_pdf_render_and_inspection",
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/existing-model-start.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/existing-model-start.json",
     "title": "Tyre pre-start actual-file lookup",
     "summary": "Fresh lookup finds no matching tyre 3D file among the project model/reference inventory; completed models remain reuse inputs.",
     "evidence_status": "executed_filesystem_start_check",
@@ -179,7 +179,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r01.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r01.json",
     "title": "Initial tyre source job",
     "summary": "Existing recorded envelope dimensions and rim designation with a named required section-profile input.",
     "evidence_status": "implementation_data_artifact",
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r02.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r02.json",
     "title": "Tyre source job bound to original manual",
     "summary": "Rebinds OD, width and rim designation to the exact downloaded manufacturer row; preserves source tolerances and the initial revision.",
     "evidence_status": "implementation_data_artifact",
@@ -201,7 +201,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r01.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r01.json",
     "title": "Initial tyre input gate",
     "summary": "Existing requirement checker reports the named bead/section requirement before original-manual source review.",
     "evidence_status": "executed_input_validation",
@@ -212,7 +212,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json",
     "title": "Reviewed tyre input gate",
     "summary": "Reviewed dimensional sources pass their hash bindings; the bead/section requirement remains the construction input question.",
     "evidence_status": "executed_input_validation",
@@ -223,7 +223,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/initial-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/initial-state.json",
     "title": "OCS state before tyre work",
     "summary": "Read-only state inspection preserves existing open drawings and establishes the native session for a later source-ready build.",
     "evidence_status": "executed_native_state_read",
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json",
     "title": "Tyre source-stage result",
     "summary": "Source review completed; component state NEEDS_INPUT for its bead/section geometry. No native geometry operation was performed.",
     "evidence_status": "executed_source_stage_result",
@@ -245,7 +245,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c001-tyre-source-2026-11-13.md",
+    "local_original": "${MODELING_ROOT}/execution/c001-tyre-source-2026-11-13.md",
     "title": "Tyre source-stage execution report",
     "summary": "Documents actual exact-variant evidence, source gate, completed lookup and coordinator/research identities.",
     "evidence_status": "executed_verification_report",
@@ -256,7 +256,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-circle.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-circle.json",
     "title": "Installed OCS CIRCLE command declaration",
     "summary": "Read installed CIRCLE command schema during source-stage preflight; declaration retained separately from construction execution.",
     "evidence_status": "executed_native_capability_read",
@@ -267,7 +267,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-torus.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-torus.json",
     "title": "Installed OCS TORUS command declaration",
     "summary": "Read installed TORUS command schema during source-stage preflight; declaration retained separately from construction execution.",
     "evidence_status": "executed_native_capability_read",
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-revolve.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-revolve.json",
     "title": "Installed OCS REVOLVE command declaration",
     "summary": "Read installed REVOLVE command schema during source-stage preflight; declaration retained separately from construction execution.",
     "evidence_status": "executed_native_capability_read",

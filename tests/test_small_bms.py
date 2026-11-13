@@ -1,9 +1,11 @@
 import sys
+import os
+import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-sys.path[:0] = [str(ROOT / "scripts"), "/tmp/3dmodeling-native-reader"]
+sys.path[:0] = [str(ROOT / "scripts"), os.environ.get("NATIVE_READER_ROOT", str(Path(tempfile.gettempdir()) / "3dmodeling-native-reader"))]
 
 from small_bms import compare_sat_sab
 

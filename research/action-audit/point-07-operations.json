@@ -12,7 +12,7 @@
       "operation_id": "REC-04",
       "name": "Convert video into an image reconstruction dataset",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
         "https://github.com/nerfstudio-project/nerfstudio"
       ],
@@ -115,7 +115,7 @@
       "operation_id": "REC-03",
       "name": "Estimate camera poses and sparse structure from overlapping photos",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://alicevision.org/",
         "https://github.com/openMVG/openMVG",
@@ -225,8 +225,8 @@
       "operation_id": "CAD-16",
       "name": "Reconstruct camera poses and dense visible geometry from overlapping photos",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://github.com/colmap/colmap",
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://colmap.github.io/format.html",
@@ -334,7 +334,7 @@
       "operation_id": "REC-05",
       "name": "Register RGB and depth frames and estimate sequence poses",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
         "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
@@ -444,7 +444,7 @@
       "operation_id": "REC-06",
       "name": "Integrate calibrated RGB-D frames into point cloud or TSDF mesh",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
         "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
         "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
@@ -554,8 +554,8 @@
       "operation_id": "DOM-21",
       "name": "Depth frames to registered point cloud or mesh",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://www.open3d.org/docs/latest/python_api/open3d.pipelines.odometry.compute_rgbd_odometry.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
         "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
@@ -664,7 +664,7 @@
       "operation_id": "REC-17",
       "name": "Build dense point cloud and mesh from SfM camera solution",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://colmap.github.io/format.html",
@@ -772,8 +772,8 @@
       "operation_id": "DOM-28",
       "name": "Dense multi-view stereo to point cloud and mesh",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://colmap.github.io/format.html",
         "https://colmap.github.io/cameras.html",
         "https://colmap.github.io/faq.html",
@@ -879,8 +879,8 @@
       "operation_id": "DOM-29",
       "name": "Point cloud to surface mesh",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://www.open3d.org/docs/latest/python_api/open3d.geometry.PointCloud.html",
         "https://www.open3d.org/docs/latest/python_api/open3d.geometry.TriangleMesh.html"
       ],
@@ -984,8 +984,8 @@
       "operation_id": "DOM-20",
       "name": "Photos/video to camera solution, point cloud and mesh",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://colmap.github.io/format.html",
         "https://colmap.github.io/cameras.html",
         "https://colmap.github.io/faq.html",
@@ -1091,7 +1091,7 @@
       "operation_id": "REC-10",
       "name": "Estimate multi-view depth, camera poses and Gaussian outputs",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://github.com/ByteDance-Seed/Depth-Anything-3",
         "https://github.com/ByteDance-Seed/Depth-Anything-3/blob/main/da3_streaming/README.md",
         "https://github.com/xy-gao/DA3-blender",
@@ -1192,7 +1192,7 @@
       "operation_id": "REC-18",
       "name": "Generate a single-image mesh proxy",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://github.com/VAST-AI-Research/TripoSR",
         "https://github.com/microsoft/TRELLIS.2",
         "https://github.com/facebookresearch/sam-3d-objects",
@@ -1294,7 +1294,7 @@
       "operation_id": "REC-19",
       "name": "Train and export a Gaussian splat scene",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://docs.nerf.studio/quickstart/custom_dataset.html",
         "https://docs.nerf.studio/quickstart/export_geometry.html",
@@ -1396,7 +1396,7 @@
       "operation_id": "REC-20",
       "name": "Train and export a NeRF scene",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
         "https://docs.nerf.studio/quickstart/custom_dataset.html",
@@ -1500,7 +1500,7 @@
       "operation_id": "REC-11",
       "name": "Train NeRF or Gaussian scene for view synthesis",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/export_geometry.md",
         "https://github.com/nerfstudio-project/nerfstudio/blob/main/docs/quickstart/custom_dataset.md",
@@ -1604,8 +1604,8 @@
       "operation_id": "DOM-22",
       "name": "Photographs to Gaussian/NeRF visual scene",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://docs.nerf.studio/quickstart/custom_dataset.html",
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://docs.nerf.studio/quickstart/export_geometry.html",
@@ -1707,8 +1707,8 @@
       "operation_id": "DOM-30",
       "name": "Photos to NeRF visual scene",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
         "https://docs.nerf.studio/quickstart/custom_dataset.html",
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://docs.nerf.studio/quickstart/export_geometry.html",

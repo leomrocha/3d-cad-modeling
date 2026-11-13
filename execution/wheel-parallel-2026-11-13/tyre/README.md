@@ -33,7 +33,7 @@ The manufacturer data and standard identify no cross-section curve joining the 2
 
 ## Source records and acquisition status
 
-1. **Existing downloaded original:** Trelleborg Technical Manual; exact URL and supplied URL preserved in `/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json`; retrieved 13 November 2026, `application/pdf`, SHA-256 `f9b0296a673b0fe14ca3649953a0feaa57963af88b23a58aa59350dfacf39cec`.
+1. **Existing downloaded original:** Trelleborg Technical Manual; exact URL and supplied URL preserved in `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json`; retrieved 13 November 2026, `application/pdf`, SHA-256 `f9b0296a673b0fe14ca3649953a0feaa57963af88b23a58aa59350dfacf39cec`.
 2. **Web inspection:** Continental Agricultural Databook, exact PDF URL above; printed p.87 and web-extracted table/diagram inspected 13 November 2026. Original PDF bytes were not downloaded in this stage.
 3. **Web inspection:** Petlas Tire Guide, exact URL above; rim contour and nominal diameter tables inspected 13 November 2026. Original page bytes were not downloaded in this stage.
 4. Shell retrieval of the Petlas page failed at DNS resolution (`Could not resolve host`); this report labels the sources as web-inspected and does not claim local original files, content types, retrieval timestamps, or hashes for them.
@@ -45,9 +45,9 @@ The coordinator can now consume the source-backed **7.00I-8 rim contour** when t
 
 ## Local records consulted
 
-- `/home/leo/projects/ferme/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md`
-- `/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json`
-- `/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json`
-- `/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md`
-- `/home/leo/projects/3dmodeling/skills/component-cad/references/existing-model-start-check.md`
-- `/home/leo/projects/ferme/skills/cad-construction/SKILL.md`
+- `${FERME_ROOT}/engineering/module-development/cad-inputs/c001-trelleborg-t539-tyre.md`
+- `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json`
+- `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json`
+- `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md`
+- `${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md`
+- `${FERME_ROOT}/skills/cad-construction/SKILL.md`

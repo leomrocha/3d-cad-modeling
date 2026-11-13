@@ -89,10 +89,10 @@ If calibration residuals cluster by image edge, verify lens/focus and corner det
 2. [https://github.com/colmap/colmap/blob/main/doc/cli.rst](https://github.com/colmap/colmap/blob/main/doc/cli.rst)
 3. [https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/](https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/)
 4. [https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html](https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html)
-5. [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+5. ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 6. [https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md](https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md)
 7. [https://colmap.github.io/faq.html](https://colmap.github.io/faq.html)
 8. [https://colmap.github.io/cameras.html](https://colmap.github.io/cameras.html)
 9. [https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md](https://github.com/alicevision/Meshroom/blob/develop/INSTALL.md)
 
-Full source summaries: [source register](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+Full source summaries: [source register](../../sources/source-register.md).

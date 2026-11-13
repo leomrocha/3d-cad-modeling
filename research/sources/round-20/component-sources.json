@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp",
     "title": "Victron BAT524110620 shared exterior STEP",
     "summary": "Frozen byte-identical copy of already acquired manufacturer AP214 model shared with BAT512120620. Source length units are mm; retained shape definitions and19 placement frames support the new native assembly.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     "original_url": "https://www.victronenergy.com/upload/documents/LiFePO4-Battery-25.6V100Ah-NG-(stp-).STEP"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.pdf",
     "title": "Victron battery dimension drawing revision02",
     "summary": "Original companion drawing identifies both battery SKUs,341.2mm width,160.3mm depth,234.7/234.3mm height callouts and220mm terminal pitch; source values remain distinct from STEP vertex/placement observations.",
     "access_date": "2026-11-12",
@@ -24,7 +24,7 @@
     "original_url": "https://www.victronenergy.com/upload/documents/LiFePO4-Battery-25.6V100Ah-NG.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/existing-source-provenance.tsv",
     "title": "Existing Victron acquisition provenance",
     "summary": "Retains the earlier source URLs,byte counts,digests and reported retrieval timestamps for exact STEP,PDF,manual and product page. Copied unchanged from the concurrent FERME provenance file.",
     "access_date": "2026-11-12",
@@ -35,7 +35,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/dimension-drawing.png",
     "title": "Existing Victron dimension drawing render",
     "summary": "Retained render inspected for exact shared variant,top/front/side arrangement,terminal and casing dimensional labels.",
     "access_date": "2026-11-12",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source-placement-plan.json",
     "title": "Battery inverse-placement diagnosis and plan",
     "summary": "All13 nonidentity native inserts uniquely match inverse source STEP frames. Plan records original and expected matrices,source entity IDs and proposed object-coordinate native fields.",
     "access_date": "2026-11-12",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/placement-corrections.json",
     "title": "Actual native insertion corrections",
     "summary": "Readback records show each of13 native insert matrices matching the reviewed source frame after compare-and-set normal,rotation and position updates.",
     "access_date": "2026-11-12",
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/geometry-preservation.json",
     "title": "Battery solid-definition preservation",
     "summary": "Exact ACIS record comparison confirms all21 solid definitions remain unchanged during placement-only correction.",
     "access_date": "2026-11-12",
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/saved-assembly-checks.json",
     "title": "Saved battery placement and geometry checks",
     "summary": "35 passing preservation checks cover13 source matrices,21 reachable vertex sets and39 instance paths/transforms. Reports17 closed-partner definitions,four open-partner records and source drawing/STEP dimensional observations separately.",
     "access_date": "2026-11-12",
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/persistence.json",
     "title": "Battery native save and same-ID reopen recovery",
     "summary": "Saved file hash and audit manifest match the reopened document83; native audit reports zero errors/warnings. Original reopen was recovered after repeated bounded pending checks.",
     "access_date": "2026-11-12",
@@ -101,7 +101,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json",
     "title": "Battery exterior iteration result",
     "summary": "New native battery file,source frame,21 definitions/39 instances,actual checks,source dimensional observations,inspected views and applied reusable improvement linked by path/hash.",
     "access_date": "2026-11-12",
@@ -112,7 +112,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/ocs-journal.jsonl",
     "title": "Battery guarded native journal",
     "summary": "Records isolated document82,successful STEP format/path dialog fields,original import/capture/open identities,13 compare-and-set placement edits,verified save and model views.",
     "access_date": "2026-11-12",
@@ -123,7 +123,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-isometric.png",
     "title": "Saved battery isometric view",
     "summary": "Actual reopened exterior capture shows seated terminals,lid,casing ribs,side handle recess and mounting tabs; source geometry and insertion values retain independent checks.",
     "access_date": "2026-11-12",
@@ -134,7 +134,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-top.png",
     "title": "Saved battery terminal-face view",
     "summary": "Actual reopened orthographic view inspected against the source top drawing; two terminals,polarity marks,centre fitting,logo and mounting tabs are visible.",
     "access_date": "2026-11-12",
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/reopened-front.png",
     "title": "Saved battery front view",
     "summary": "Actual reopened orthographic view inspected for case,lid,terminal heights,edge ribs and bottom restraint geometry.",
     "access_date": "2026-11-12",
@@ -156,7 +156,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-DigiKey-copy.pdf",
     "title": "Ohmite TA-series package datasheet copy",
     "summary": "Manufacturer-authored PDF retained from DigiKey. Page50 TA310PA row gives25.4mm length/height and7.62mm pitch; PA diagram identifies pin section and terminal/clip callouts.",
     "access_date": "2026-11-12",
@@ -168,7 +168,7 @@
     "original_url": "https://media.digikey.com/pdf/Data%20Sheets/Ohmite%20PDFs/TA%20Series.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes-initial.md",
     "title": "Initial delegated resistor transcription",
     "summary": "Preserved original research notes include general-dimensional-tolerance and no-scale statements excluded by coordinator review of the retained PDF. Package-table dimensions remain attributed to TA310PA. Actual researcher runtime identity unavailable.",
     "access_date": "2026-11-12",
@@ -179,7 +179,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/source-notes.md",
     "title": "Integrated resistor package source notes",
     "summary": "Retains applicable TA310PA dimensions and terminal/body association distinctions,with absolute original/render links. Coordinator removed unsupported PDF tolerance/no-scale attributions while preserving initial notes.",
     "access_date": "2026-11-12",
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/coordinator-review.md",
     "title": "Resistor dimension association and timestamp review",
     "summary": "Confirms package-table/pin values,keeps2.54mm terminal span separate from substrate thickness,excludes initial unsupported general-tolerance/no-scale claims,and identifies CET versus reported CEST label.",
     "access_date": "2026-11-12",
@@ -201,7 +201,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/acquisition.json",
     "title": "Resistor PDF acquisition metadata",
     "summary": "Retains exact URL,HTTP content type/status,174915bytes,digest and reported file timestamp. Server HTTP Date is separate; coordinator timezone correction is explicit.",
     "access_date": "2026-11-12",
@@ -212,7 +212,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source/Ohmite-TA-Series-page1.png",
     "title": "Retained resistor package drawing render",
     "summary": "Full manufacturer-authored page inspected for TA310PA table,row applicability and PA low-wattage package callouts.",
     "access_date": "2026-11-12",
@@ -223,7 +223,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/source-job.json",
     "title": "Resistor pinned source inputs",
     "summary": "Pins body length,height and lead pitch to the original PDF hash and names ceramic thickness as the required geometry input.",
     "access_date": "2026-11-12",
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/readiness.json",
     "title": "Resistor source gate result",
     "summary": "Existing source-readiness code reports NEEDS_INPUT for ceramic substrate thickness; source-backed dimensions are retained for later dependent geometry.",
     "access_date": "2026-11-12",
@@ -245,7 +245,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c035-build-01/result.json",
     "title": "Resistor current component state",
     "summary": "Records exact input requirement and source review; CAD construction is dependent on the named substrate/terminal geometry evidence.",
     "access_date": "2026-11-12",
@@ -256,7 +256,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/step_placements.py",
+    "local_original": "${MODELING_ROOT}/scripts/step_placements.py",
     "title": "Read-only source/native placement and assembly helpers",
     "summary": "Exercised AP214 frame reader detects unique inverse matches,round-trips proposed native fields and traverses bounded single-insert unit-scale zero-base block trees. Includes identity-SAT point reader used for pre-save comparison.",
     "access_date": "2026-11-12",
@@ -267,7 +267,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "local_original": "${MODELING_ROOT}/scripts/native_acis.py",
     "title": "Shared strict rigid-transform body reader",
     "summary": "Existing rigid transform validation is shared by analytic and structure-only SAB readers; structure-only checks can explicitly enable rigid frames while retaining torus/spline type observations.",
     "access_date": "2026-11-12",
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_step_placements.py",
+    "local_original": "${MODELING_ROOT}/tests/test_step_placements.py",
     "title": "Placement and instance traversal regression cases",
     "summary": "Ten passing software cases cover direct source axes,observed inverse mapping,already-correct/ambiguous/unsupported inputs,nested repeated paths,cycles and instance bounds.",
     "access_date": "2026-11-12",
@@ -289,7 +289,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "local_original": "${MODELING_ROOT}/tests/test_native_acis.py",
     "title": "Affected native checks and new structure-transform cases",
     "summary": "Existing retained-model regressions exercise shared reader behavior;two added cases require explicit rigid option and compare analytic/structure world vertices and topology.22 affected cases andtwo additional cases pass after the recorded refactor correction.",
     "access_date": "2026-11-12",
@@ -300,7 +300,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/manufacturer-assembly.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
     "title": "Executed manufacturer assembly import procedure",
     "summary": "Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.",
     "access_date": "2026-11-12",
@@ -311,7 +311,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c023-victron-battery.md",
+    "local_original": "${MODELING_ROOT}/execution/c023-victron-battery.md",
     "title": "Battery exterior execution report",
     "summary": "Records newly saved native model,actual source reuse,13 placement corrections,21 unchanged definitions,39 instances,35 saved checks and per-source geometry observations.",
     "access_date": "2026-11-12",
@@ -322,7 +322,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c035-resistor-source.md",
+    "local_original": "${MODELING_ROOT}/execution/c035-resistor-source.md",
     "title": "Resistor source-readiness execution report",
     "summary": "Records retained exact package datasheet,source-backed length/height/pitch and the named substrate-thickness input requirement from the actual review.",
     "access_date": "2026-11-12",

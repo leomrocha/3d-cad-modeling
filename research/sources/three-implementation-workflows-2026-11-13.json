@@ -1,12 +1,12 @@
 [
   {
-    "local_source_path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/coordinator.md",
+    "local_source_path": "${MODELING_ROOT}/execution/component-followups-2026-11-13/coordinator.md",
     "title": "Three parallel implementation workflow assignments",
     "summary": "Records end-to-end ownership for Pixhawk6C, Victron smallBMS NG and PM02V3; one native writer, disjoint code/job paths, coordinator verification and full component-plan relationship.",
     "observation_date": "2026-11-13",
     "evidence_status": "executed_agent_assignment",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md"
+      "${MODELING_ROOT}/COMPONENT_DEVELOPMENT_PLAN.md"
     ]
   }
 ]

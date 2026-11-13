@@ -96,8 +96,8 @@ For every option, compare local processing/memory/graphics requirements, remote 
 
 ## Original project sources
 
-1. [Existing CAD operations](/home/leo/projects/3dmodeling/research/workflows/cad-paths.json): CAD-01 defines the source-linked brief and its evidence categories.
-2. [Existing domain operations](/home/leo/projects/3dmodeling/research/workflows/domain-paths.json): DOM-01 defines brief normalization.
-3. [Composition rules](/home/leo/projects/3dmodeling/research/workflows/composition-rules.md): branches, evidence merges and revision loops.
-4. [Existing OCS engineering contract](/home/leo/.codex/skills/ocs-engineering/SKILL.md) and [model-contract reference](/home/leo/.codex/skills/ocs-engineering/references/model-contract.md): source identity, units, frames, part boundaries and supplied-measurement checks.
-5. [Retained implementation plan](/home/leo/projects/3dmodeling/research/implementation-plan.md): original proposed skills, software layers and verification requirements.
+1. [Existing CAD operations](../workflows/cad-paths.json): CAD-01 defines the source-linked brief and its evidence categories.
+2. [Existing domain operations](../workflows/domain-paths.json): DOM-01 defines brief normalization.
+3. [Composition rules](../workflows/composition-rules.md): branches, evidence merges and revision loops.
+4. Existing OCS engineering contract (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) and model-contract reference (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`): source identity, units, frames, part boundaries and supplied-measurement checks.
+5. [Retained implementation plan](../implementation-plan.md): original proposed skills, software layers and verification requirements.

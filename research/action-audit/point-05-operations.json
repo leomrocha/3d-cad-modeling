@@ -12,7 +12,7 @@
       "operation_id": "CAD-02B",
       "name": "Calibrate camera poses from photographs and known controls",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
         "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html",
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
         "https://docs.opencv.org/4.12.0/dc/dbb/tutorial_py_calibration.html",
@@ -118,7 +118,7 @@
       "operation_id": "REC-01",
       "name": "Calibrate camera intrinsics and distortion",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html"
       ],
       "actions": [
@@ -222,7 +222,7 @@
       "operation_id": "REC-02",
       "name": "Solve camera pose from known 3D-to-2D correspondences",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
         "https://docs.opencv.org/4.13.0/d5/d1f/calib3d_solvePnP.html"
       ],
@@ -326,7 +326,7 @@
       "operation_id": "REC-07",
       "name": "Estimate coarse transform between point clouds",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html"
       ],
       "actions": [
@@ -430,7 +430,7 @@
       "operation_id": "REC-08",
       "name": "Refine registration and compare point-cloud surfaces",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
       ],
@@ -536,7 +536,7 @@
       "operation_id": "REC-09",
       "name": "Segment point clouds and fit candidate primitive evidence",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://github.com/CloudCompare/CloudCompare",
         "https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html",
@@ -647,9 +647,9 @@
       "operation_id": "CAD-11",
       "name": "Fit analytic features to scans or image-derived point clouds",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/architecture/research/README.md",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${ARCHITECTURE_ROOT}/research/README.md",
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://pointclouds.org/documentation/tutorials/cylinder_segmentation.html",
         "https://pointclouds.org/documentation/classpcl_1_1_s_a_c_segmentation_from_normals.html",
@@ -759,7 +759,7 @@
       "operation_id": "REC-12",
       "name": "Register existing CAD to calibrated photographs or scan points",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
@@ -865,7 +865,7 @@
       "operation_id": "REC-13",
       "name": "Anchor a screen sketch to a 3D surface",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://docs.blender.org/api/current/bpy.types.Scene.html",
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
         "https://raw.githubusercontent.com/blender/blender/main/source/blender/makesrna/intern/rna_scene_api.cc",
@@ -973,11 +973,11 @@
       "operation_id": "REC-14",
       "name": "Remodel segmented scan evidence as parametric CAD",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "actions": [
         {
@@ -1080,7 +1080,7 @@
       "operation_id": "REC-15",
       "name": "Reconcile scan surfaces with dimensioned drawings",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode"
       ],
@@ -1185,10 +1185,10 @@
       "operation_id": "REC-16",
       "name": "Iterate CAD edits against registered evidence",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/reconstruction-paths.json",
+        "${MODELING_ROOT}/research/workflows/reconstruction-paths.json",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+        "${OCS_ROOT}/docs/automation/API-SPEC.md"
       ],
       "actions": [
         {
@@ -1291,9 +1291,9 @@
       "operation_id": "DOM-19",
       "name": "Register scan to building frame",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/api/georeference/index.html",
@@ -1402,12 +1402,12 @@
       "operation_id": "DOM-23",
       "name": "Scan or mesh to parametric CAD remodeling",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/domain-paths.json",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/workflows/domain-paths.json",
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
-        "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json"
+        "${MODELING_ROOT}/research/action-audit/point-03-operations.json"
       ],
       "actions": [
         {
@@ -1510,9 +1510,9 @@
   ],
   "common_protocol": {
     "references": [
-      "/home/leo/projects/3dmodeling/research/action-audit/point-03-operations.json",
-      "/home/leo/projects/3dmodeling/research/action-audit/point-04-operations.json",
-      "/home/leo/.codex/skills/ocs-engineering/references/model-contract.md"
+      "${MODELING_ROOT}/research/action-audit/point-03-operations.json",
+      "${MODELING_ROOT}/research/action-audit/point-04-operations.json",
+      "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md"
     ],
     "scope": "Prior common protocols govern evidence/revision/request identity, per-feature criteria, independent semantic review, native/remote uncertain completion, malformed outputs and affected-only invalidation. All action procedures/helpers and future tests remain proposals.",
     "frames": "Every transform records source and destination frame IDs/revisions, coordinate units, handedness/axis order, matrix storage/application convention, direction, inverse and composition order. Rigid transform permits rotation/translation; similarity adds explicitly justified positive uniform scale. Unit conversion, origin shift and survey/map conversion retain separate records. Reflections and nonuniform deformation require their own explicit model rather than entering rigid/similarity fitting.",

@@ -15,8 +15,8 @@
         "OCS engineering skill"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "prerequisites": [
         "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -101,8 +101,8 @@
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
         "https://ezdxf.readthedocs.io/en/stable/",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/README.md"
       ],
       "prerequisites": [
         "Preserve source file and hash.",
@@ -165,7 +165,7 @@
       "source_urls": [
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "prerequisites": [
         "Specify units, support plane and datum.",
@@ -251,7 +251,7 @@
         "https://cadquery.readthedocs.io/en/stable/",
         "https://openscad.org/documentation",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+        "${OCS_ROOT}/docs/cadkernel-body-path.md"
       ],
       "prerequisites": [
         "Declare units, feature parameters, direction/axis and part boundary.",
@@ -338,8 +338,8 @@
         "unit and frame mapping"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${OCS_ROOT}/docs/automation/README.md",
         "https://cadquery.readthedocs.io/en/stable/"
       ],
       "prerequisites": [
@@ -420,9 +420,9 @@
         "mesh validation"
       ],
       "source_urls": [
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://build123d.readthedocs.io/en/stable/",
         "../examples/files/ferme/bearing-result.json",
         "../examples/files/ferme/battery-result.json"
@@ -1034,7 +1034,7 @@
       "source_urls": [
         "https://docs.ifcopenshell.org/introduction.html",
         "https://www.blender.org/features/pipeline/",
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
       ],
       "prerequisites": [
         "Element-to-display mapping and length/orientation conversion are declared."
@@ -1094,7 +1094,7 @@
         "Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell"
       ],
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
       ],
       "prerequisites": [

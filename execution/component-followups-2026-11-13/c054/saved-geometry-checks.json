@@ -2,7 +2,7 @@
   "status": "PASS",
   "pre_save_document_id": 91,
   "reopened_document_id": 92,
-  "saved_native_path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-smallbms-ng-bms400100300.dwg",
+  "saved_native_path": "${FERME_ROOT}/engineering/module-development/cad/parts/victron-smallbms-ng-bms400100300.dwg",
   "saved_native_sha256": "4c784fbf6a14346179404d55dff7ad1cff0b4984f8726a8676702abd26cf9f3a",
   "solid_geometry_checks": [
     {

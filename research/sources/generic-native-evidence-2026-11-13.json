@@ -5,79 +5,79 @@
   "records": [
     {
       "title": "source metadata",
-      "local_path": "/home/leo/projects/3dmodeling/scripts/source_metadata.py",
+      "local_path": "${MODELING_ROOT}/scripts/source_metadata.py",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "summary": "Read-only comparison binds the entity handle and metadata application, splits expected lines into the writer chunk format, and compares actual native String values in order; missing or changed values fail.",
       "sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-native-evidence-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-native-evidence-2026-11-13.md"
       ]
     },
     {
       "title": "test source metadata",
-      "local_path": "/home/leo/projects/3dmodeling/tests/test_source_metadata.py",
+      "local_path": "${MODELING_ROOT}/tests/test_source_metadata.py",
       "registered_at": "2026-11-13",
       "evidence_status": "executed_synthetic_test_source",
       "summary": "Nine synthetic tests cover complete metadata, scope-only replacement losing identity, altered text/order, missing application, wrong handle, duplicate application and malformed native payload.",
       "sha256": "5e96b16ffa5a4d4de4b08bf4e46b2ad3948bce9e0ac2498c616524e4866fa795",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-native-evidence-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-native-evidence-2026-11-13.md"
       ]
     },
     {
       "title": "source metadata",
-      "local_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/source-metadata.md",
+      "local_path": "${MODELING_ROOT}/skills/component-cad/references/source-metadata.md",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "summary": "Describes actual extended-data inspection, caller-owned document/revision binding, exact chunk comparison and replacement semantics for the existing metadata writer.",
       "sha256": "24f6388c599c65840a713acd6a1b5d6bcddaf48f82246876dce7f99cf510cc21",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-native-evidence-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-native-evidence-2026-11-13.md"
       ]
     },
     {
       "title": "calibrated trace",
-      "local_path": "/home/leo/projects/3dmodeling/scripts/calibrated_trace.py",
+      "local_path": "${MODELING_ROOT}/scripts/calibrated_trace.py",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "summary": "Adds scale calibration from a dimension and pixel span with asymmetric endpoint ratio bounds, explicit uncertainty and predivision overflow/zero checks; existing point mapping is preserved.",
       "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-native-evidence-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-native-evidence-2026-11-13.md"
       ]
     },
     {
       "title": "test calibrated trace",
-      "local_path": "/home/leo/projects/3dmodeling/tests/test_calibrated_trace.py",
+      "local_path": "${MODELING_ROOT}/tests/test_calibrated_trace.py",
       "registered_at": "2026-11-13",
       "evidence_status": "executed_synthetic_test_source",
       "summary": "Nine synthetic tests cover reference-scale endpoint intervals, zero uncertainty, invalid and overflowing denominator intervals, underflow-to-zero rejection and existing signed point-coordinate uncertainty.",
       "sha256": "352286903888a80aa23a7004656b230d6cff2e178fa047bfb8db0a7f259dd035",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-native-evidence-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-native-evidence-2026-11-13.md"
       ]
     },
     {
       "title": "calibrated trace",
-      "local_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/calibrated-trace.md",
+      "local_path": "${MODELING_ROOT}/skills/component-cad/references/calibrated-trace.md",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "summary": "Defines the external dimension/pixel-span calibration contract, endpoint evidence, scale uncertainty and its propagation through the existing trace helper.",
       "sha256": "0da3e123a7185e4de1915c4372a79f3286b34262bdaf36a69e68f04f680a64f6",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-native-evidence-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-native-evidence-2026-11-13.md"
       ]
     },
     {
       "title": "envelope reference",
-      "local_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/envelope-reference.md",
+      "local_path": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "summary": "Routes native metadata persistence checks to the new read-only comparator while preserving external source-pinned envelope construction and geometry verification.",
       "sha256": "e34924a51747c0cfd837690e453ed406408a654976568f40831ae993118fcfe4",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-native-evidence-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-native-evidence-2026-11-13.md"
       ]
     }
   ],

@@ -113,9 +113,9 @@ A selected Menagerie model and corresponding robot CAD, explicit joint mapping a
 
 ## Detailed branch procedures
 
-1. [dom-r04.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md)
-2. [dom-r08.md](/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md)
-3. [rec-r09.md](/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md)
+1. [dom-r04.md](dom-r04.md)
+2. [dom-r08.md](dom-r08.md)
+3. [rec-r09.md](rec-r09.md)
 
 The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.
 
@@ -137,4 +137,4 @@ The software lists include alternatives per operation. Select one compatible bac
 14. [https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html](https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html)
 15. [https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html](https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html)
 
-Full source summaries: [source register](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+Full source summaries: [source register](../../sources/source-register.md).

@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+    "local_original": "${MODELING_ROOT}/scripts/native_acis.py",
     "title": "Shared native component identity reader",
     "summary": "Extracts strict component metadata matching for the bearing and Leaf module. Accepts the observed optional space after Component: and rejects duplicate or missing parts, while preserving explicit surface and transform options.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/pillow_block.py",
+    "local_original": "${MODELING_ROOT}/scripts/pillow_block.py",
     "title": "Bearing checker using extracted shared identity reader",
     "summary": "Reuses native_acis.named_parts in place of its earlier private SKF label loop. The existing source-bound bearing checks pass after extraction.",
     "access_date": "2026-11-12",
@@ -24,7 +24,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/battery_module.py",
+    "local_original": "${MODELING_ROOT}/scripts/battery_module.py",
     "title": "Source-bound saved battery geometry checker",
     "summary": "Adds 29 checks for actual saved Leaf shells, case envelope, mounting bore centres and axes, inner walls, nominal terminal bores, contact faces and pedestal sections. Expected values come from the external source job.",
     "access_date": "2026-11-12",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_native_acis.py",
+    "local_original": "${MODELING_ROOT}/tests/test_native_acis.py",
     "title": "Recorded native component tests including Leaf module",
     "summary": "Adds saved Leaf success, wrong terminal pitch failure, missing component rejection and colon-spacing compatibility. All 44 helper tests pass, including the SKF crown defect and corrected derivative.",
     "access_date": "2026-11-12",
@@ -48,7 +48,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
     "title": "Component iteration skill with saved-battery procedure",
     "summary": "Links the exercised battery inspection and saved-geometry procedure alongside existing bearing and tube guidance.",
     "access_date": "2026-11-12",
@@ -60,7 +60,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/existing-battery.md",
+    "local_original": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md",
     "title": "Saved battery inspection and source-bound check procedure",
     "summary": "Details exact source variant, metadata identity, unchanged-file persistence, transformed shell and terminal checks, source/model views and verified shared-reader extraction.",
     "access_date": "2026-11-12",
@@ -72,7 +72,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c021-leaf-module.md",
+    "local_original": "${MODELING_ROOT}/execution/c021-leaf-module.md",
     "title": "Completed saved Leaf module iteration report",
     "summary": "Records reuse of the eight-solid model, the retained 300 x 222 x 34 mm case convention, 29 native checks, persistence, actual source/view inspection and the applied checker with 44 tests.",
     "access_date": "2026-11-12",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/c021-nissan-leaf-gen2-battery-module.md",
     "title": "Leaf module component input sheet",
     "summary": "Specifies the 300 x 222 x 34 mm case, existing shells, mounting bores, three terminal assemblies, local datum and relationships to battery supports.",
     "access_date": "2026-11-12",
@@ -96,7 +96,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/leaf-gen2-geometry.md",
     "title": "Leaf source attribution and reconstruction geometry record",
     "summary": "Separates EVShop case dimensions, VT-Tech mounting holes and nominal terminal sizes, Jay Summet reuse pitch, and reconstructed shell/pan/terminal features. Supplies pinned feature expectations.",
     "access_date": "2026-11-12",
@@ -108,7 +108,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/checks/nissan-leaf-gen2.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/checks/nissan-leaf-gen2.md",
     "title": "Earlier Leaf native construction and verification report",
     "summary": "Identifies the eight-solid drawing, earlier 14 pre-save checks, verified-save SHA and historical viewport failure. The current iteration reads saved SAB and inspects successful current captures.",
     "access_date": "2026-11-12",
@@ -120,7 +120,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg",
     "title": "Existing Leaf module saved native model",
     "summary": "Original eight-solid reconstruction reused without changing its bytes. Current 29 source-bound native checks, file hash/audit and actual view inspection pass.",
     "access_date": "2026-11-12",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "local_original": "/tmp/opencode/build_leaf_gen2.py",
+    "local_original": "${TEMP_ROOT}/opencode/build_leaf_gen2.py",
     "title": "Existing Leaf reconstruction program",
     "summary": "Inspected original builder defines two hollow pressed shells, feature provenance labels, terminal assemblies and 14 SAT pre-save checks. The current helper adds source-bound saved SAB checks.",
     "access_date": "2026-11-12",
@@ -144,7 +144,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p03-drive-support-plate.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/p03-drive-support-plate.md",
     "title": "Drive support plate source for job selection",
     "summary": "Existing 10 mm plate-stock proposal requires a drive-specific outline and mounting pattern and mates the rails/crossmembers. Purchased interface inspection precedes its separate plate geometry task.",
     "access_date": "2026-11-12",
@@ -156,7 +156,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/p04-upper-deck-panel.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad-inputs/p04-upper-deck-panel.md",
     "title": "Upper deck source for job selection",
     "summary": "Existing 600 x 400 x 3 mm usable deck proposal splits panel shapes according to battery and service access. Battery interface inspection contributes to later panel outlines.",
     "access_date": "2026-11-12",
@@ -168,7 +168,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
     "title": "Component register after four completed iterations",
     "summary": "Retains all 103 job identities. Rail, crossmember, SKF bearing and Leaf module have DONE results. The other 99 jobs retain their individual execution states.",
     "access_date": "2026-11-12",
@@ -180,7 +180,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/action-occurrences.jsonl",
     "title": "Component history with Leaf inspection iteration",
     "summary": "Appends five Leaf source, geometry, persistence, view and improvement occurrences. All earlier rail, crossmember and SKF occurrence bytes remain preserved.",
     "access_date": "2026-11-12",
@@ -192,7 +192,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md",
     "title": "Component iteration index with Leaf module result",
     "summary": "Adds the Leaf module result: 29 saved-geometry checks, unchanged model hash, inspected views and applied shared reader/checker with 44 tests.",
     "access_date": "2026-11-12",
@@ -204,7 +204,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/README.md",
     "title": "CAD index with Leaf saved-geometry result",
     "summary": "Adds current Leaf saved-geometry results and battery procedure links, preserving original CAD entries and historical checks.",
     "access_date": "2026-11-12",
@@ -216,7 +216,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/leaf-gen2/evshop-en-321.html",
+    "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/leaf-gen2/evshop-en-321.html",
     "title": "Retained EVShop Leaf Gen2 module listing",
     "summary": "Actual retained page text inspected: 300 x 222 x 34 mm supplies this reconstruction case convention. Original retrieval metadata remains in the existing provenance register.",
     "access_date": "2026-11-12",
@@ -229,7 +229,7 @@
     "url": "https://evshop.eu/en/batteries/321-module-from-nissan-leaf-gen-2-24kwh.html"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/leaf-gen2/vtteh-leaf-modules.html",
+    "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/leaf-gen2/vtteh-leaf-modules.html",
     "title": "Retained VT-Tech Leaf reuse article",
     "summary": "Actual retained article inspected: 9.1 mm mounting holes and M6 power/M4 tap terminals support nominal bore geometry. Its combined Gen1/Gen2 case dimensions 303 x 223 x 35 mm retain their separate attribution.",
     "access_date": "2026-11-12",
@@ -242,7 +242,7 @@
     "url": "https://vt-tech.eu/en/articles/ev-transport/7-nissan-leaf-salvaged-battery-modules"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/images/source-pages/leaf-gen2/evshop-photo-original-4566.jpg",
     "title": "Retained EVShop bare-terminal module illustration",
     "summary": "Actual source image inspected against current top, terminal-end and isometric views. Pressed pan/ribs, four corner mounts and three bare terminal pedestals identify the exercised external reconstruction.",
     "access_date": "2026-11-12",
@@ -254,7 +254,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/audit.json",
     "title": "Leaf iteration — audit.json",
     "summary": "Current opened Leaf audit contains eight solids, zero errors/warnings and the original saved-file identity.",
     "access_date": "2026-11-12",
@@ -266,7 +266,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-isometric.json",
     "title": "Leaf iteration — capture-isometric.json",
     "summary": "Completed isometric capture response binds document 76 and the model image compared with the source.",
     "access_date": "2026-11-12",
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-terminal.json",
     "title": "Leaf iteration — capture-terminal.json",
     "summary": "Completed terminal-end capture response identifies document 76 and its three distinct terminal assemblies.",
     "access_date": "2026-11-12",
@@ -290,7 +290,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/capture-top.json",
     "title": "Leaf iteration — capture-top.json",
     "summary": "Completed top capture response binds document 76, camera and module image for actual visual inspection.",
     "access_date": "2026-11-12",
@@ -302,7 +302,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/header.json",
     "title": "Leaf iteration — header.json",
     "summary": "Current OCS document header identifies millimetres for source-bound native-coordinate checks.",
     "access_date": "2026-11-12",
@@ -314,7 +314,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/initial-state.json",
     "title": "Leaf iteration — initial-state.json",
     "summary": "Native pre-open state identifies SKF document 75 and unrelated open work before opening the Leaf drawing.",
     "access_date": "2026-11-12",
@@ -326,7 +326,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-checks.json",
     "title": "Leaf iteration — native-checks.json",
     "summary": "All 29 current saved-geometry comparisons pass for eight closed solids, case dimensions, mounting bores, inner walls and three nominal terminal assemblies.",
     "access_date": "2026-11-12",
@@ -338,7 +338,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/native-records.json",
     "title": "Leaf iteration — native-records.json",
     "summary": "Actual eight-solid saved SAB records provide transformed shell vertices, analytic surfaces and terminal geometry for 29 source-bound checks.",
     "access_date": "2026-11-12",
@@ -350,7 +350,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/ocs-journal.jsonl",
     "title": "Leaf iteration — ocs-journal.jsonl",
     "summary": "Guarded requests retain the original Leaf open polling-bound result and same-ID recovery, followed by actual top, terminal-end and isometric view/capture operations.",
     "access_date": "2026-11-12",
@@ -362,7 +362,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/persistence.json",
     "title": "Leaf iteration — persistence.json",
     "summary": "Current file SHA matches the earlier verified-save SHA. Opened native audit has eight solids and zero errors/warnings; original file bytes remain preserved.",
     "access_date": "2026-11-12",
@@ -374,7 +374,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/readiness.json",
     "title": "Leaf iteration — readiness.json",
     "summary": "All 14 required feature values and observed source hashes pass SOURCE_READY before geometry checks.",
     "access_date": "2026-11-12",
@@ -386,7 +386,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-isometric.png",
     "title": "Leaf iteration — reopened-isometric.png",
     "summary": "Inspected current isometric image shows both shell outlines, pressed features, corner mounts and three contacts corresponding to the retained source illustration.",
     "access_date": "2026-11-12",
@@ -398,7 +398,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-state.json",
     "title": "Leaf iteration — reopened-state.json",
     "summary": "Recovered open state binds document 76 to the exact existing Leaf DWG and preserves other open drawing identities.",
     "access_date": "2026-11-12",
@@ -410,7 +410,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-terminal.png",
     "title": "Leaf iteration — reopened-terminal.png",
     "summary": "Inspected current end image shows separate power/tap/power terminal assemblies aligned along the reconstructed row.",
     "access_date": "2026-11-12",
@@ -422,7 +422,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/reopened-top.png",
     "title": "Leaf iteration — reopened-top.png",
     "summary": "Inspected current top image shows case outline, pressed pan/ribs, four corner mounting bores and terminal projection.",
     "access_date": "2026-11-12",
@@ -434,7 +434,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json",
     "title": "Leaf iteration — result.json",
     "summary": "Completed Leaf iteration records 29 native checks, unchanged model hash, audit/persistence, inspected source/model views and applied checker/shared reader with 44 tests.",
     "access_date": "2026-11-12",
@@ -446,7 +446,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/source-job.json",
     "title": "Leaf iteration — source-job.json",
     "summary": "Pins 14 feature values with specific source sections, hashes, units, evidence labels and eight exact component names.",
     "access_date": "2026-11-12",

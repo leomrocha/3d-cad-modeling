@@ -10,13 +10,13 @@ Implements the DXF branch of **Inspect source entities, units and drawing contex
 ## Inputs and command
 
 1. Preserve the exact original DXF path and source identity. Select the required layout explicitly; `Model` is the default. Select layers when the job identifies them. The inspection returns all encountered occurrence IDs with an explicit selection flag.
-2. Use the pinned [native-reader dependencies](/home/leo/projects/3dmodeling/requirements-native.txt), including ezdxf1.4.5. Supply the installation directory through the Python environment. The tool uses ezdxf directly and the existing `component_records.observe_file` helper.
+2. Use the pinned [native-reader dependencies](../../requirements-native.txt), including ezdxf1.4.5. Supply the installation directory through the Python environment. The tool uses ezdxf directly and the existing `component_records.observe_file` helper.
 
 ```sh
-PYTHONPATH=/absolute/path/native-reader python3 \
-  /home/leo/projects/3dmodeling/scripts/dxf_inspect.py \
-  /absolute/path/source.dxf --space Model \
-  --output /absolute/path/new-inventory.json
+PYTHONPATH=${SOURCE_ROOT}/native-reader python3 \
+  ${MODELING_ROOT}/scripts/dxf_inspect.py \
+  ${SOURCE_ROOT}/source.dxf --space Model \
+  --output ${SOURCE_ROOT}/new-inventory.json
 ```
 
 3. Add repeated `--layer NAME` arguments for explicit layer selection. Optional bounds: `--max-entities`, `--max-depth`, `--max-bytes`. Defaults are10000 occurrences,32 nested block levels and64 MiB of source bytes. A source over a bound fails with the affected limit.
@@ -35,4 +35,4 @@ PYTHONPATH=/absolute/path/native-reader python3 \
 
 1. Identify source profile, annotations and construction geometry using the actual source/context. Review units, source dimensions, selected occurrence IDs, plane and any cyclic/missing-block issues.
 2. Pass the original source hash, chosen occurrence paths, units and target-plane decision to **Create a mapped and explicitly cleaned derivative (CAD-08-A02)**. The source-to-profile transformation belongs to that action.
-3. [Execution report](/home/leo/projects/3dmodeling/execution/dxf-inspection.md) links two actual retained DXF runs and eight tests, including independent nested-transform controls.
+3. [Execution report](../../execution/dxf-inspection.md) links two actual retained DXF runs and eight tests, including independent nested-transform controls.

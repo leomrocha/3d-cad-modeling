@@ -53,9 +53,9 @@
             "OpenCADStudio desktop build with MCP enabled; Python 3 helper plus local session credentials/config."
           ],
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/API-SPEC.md",
+            "${OCS_ROOT}/LICENSE"
           ]
         },
         {
@@ -144,14 +144,14 @@
           ]
         },
         {
-          "entrypoint": "python /home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py discover; read state/capabilities/commands using helper contract",
+          "entrypoint": "python ${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py discover; read state/capabilities/commands using helper contract",
           "status": "existing_tool_entrypoint",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ],
           "notes": "Read-only command entrypoint observed in local skill sources; no OCS command run.",
-          "path": "/home/leo/.codex/skills/ocs-engineering/scripts/ocs_control.py"
+          "path": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py"
         }
       ],
       "outputs": {
@@ -246,12 +246,12 @@
         ]
       },
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/workflows/cad-paths.json",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/.codex/skills/ocs-engineering/references/ocs-control.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE",
+        "${MODELING_ROOT}/research/workflows/cad-paths.json",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
+        "${OCS_ROOT}/docs/automation/API-SPEC.md",
+        "${OCS_ROOT}/LICENSE",
         "https://cadquery.readthedocs.io/en/stable/importexport.html",
         "https://cadquery.readthedocs.io/en/stable/classreference.html",
         "https://cadquery.readthedocs.io/en/stable/quickstart.html",
@@ -293,8 +293,8 @@
             "OCS engineering skill"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -352,7 +352,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "prerequisites": [
             "Declare units, feature parameters, direction/axis and part boundary.",
@@ -411,9 +411,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -579,9 +579,9 @@
             "OpenCADStudio desktop build with MCP enabled; Python 3 helper plus local session credentials/config."
           ],
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/LICENSE"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/API-SPEC.md",
+            "${OCS_ROOT}/LICENSE"
           ]
         }
       ],
@@ -774,7 +774,7 @@
         "https://github.com/tesseract-ocr/tesseract",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "source_ids": [
         "SRC-03256efc5e07",
@@ -952,8 +952,8 @@
             "OCS engineering skill"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -1011,8 +1011,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ],
           "prerequisites": [
             "Preserve source file and hash.",
@@ -1058,7 +1058,7 @@
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Specify units, support plane and datum.",
@@ -1117,7 +1117,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "prerequisites": [
             "Declare units, feature parameters, direction/axis and part boundary.",
@@ -1176,9 +1176,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -1416,7 +1416,7 @@
         "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -1587,8 +1587,8 @@
             "OCS engineering skill"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -1693,7 +1693,7 @@
             "https://openaccess.thecvf.com/content/CVPR2021/html/Lv_Residential_Floor_Plan_Recognition_and_Reconstruction_CVPR_2021_paper.html",
             "https://openaccess.thecvf.com/content/ACCV2022/papers/Song_Vectorizing_Building_Blueprints_ACCV_2022_paper.pdf",
             "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md"
+            "${OCS_ROOT}/docs/automation/README.md"
           ],
           "prerequisites": [
             "vector-drawing contains the reviewed plan wall/opening graph from CAD-05.",
@@ -1737,9 +1737,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -2016,8 +2016,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ],
           "prerequisites": [
             "Preserve source file and hash.",
@@ -2063,7 +2063,7 @@
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Specify units, support plane and datum.",
@@ -2122,7 +2122,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "prerequisites": [
             "Declare units, feature parameters, direction/axis and part boundary.",
@@ -2181,9 +2181,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -2526,9 +2526,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -2789,7 +2789,7 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -2822,7 +2822,7 @@
             "scale/control-point alignment"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
+            "${MODELING_ROOT}/research/reconstruction.md",
             "https://github.com/colmap/colmap",
             "https://github.com/colmap/colmap/blob/main/doc/cli.rst"
           ],
@@ -2866,8 +2866,8 @@
             "FreeCAD/build123d"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/projects/architecture/research/README.md"
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${ARCHITECTURE_ROOT}/research/README.md"
           ],
           "prerequisites": [
             "Input is already a metric, registered point cloud, depth sequence, or mesh with a declared coordinate frame.",
@@ -2927,8 +2927,8 @@
             "unit and frame mapping"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -2984,9 +2984,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -3223,7 +3223,7 @@
         "https://github.com/CloudCompare/CloudCompare"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r09.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -3249,8 +3249,8 @@
             "FreeCAD/build123d"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/projects/architecture/research/README.md"
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${ARCHITECTURE_ROOT}/research/README.md"
           ],
           "prerequisites": [
             "Input is already a metric, registered point cloud, depth sequence, or mesh with a declared coordinate frame.",
@@ -3310,8 +3310,8 @@
             "unit and frame mapping"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -3367,9 +3367,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -3469,7 +3469,7 @@
             "FreeCAD application with bundled Python, Sketcher, Part and (for assemblies) chosen Assembly workbench; system Python generally cannot import FreeCAD modules."
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ]
         }
       ],
@@ -3515,7 +3515,7 @@
           "entrypoint": "FreeCAD import STEP; set Placement(Base=Vector(...),Rotation=Rotation(...)); apply selected assembly workbench constraints; run solve and interference review",
           "status": "existing_tool_entrypoint",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ],
           "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
@@ -3572,7 +3572,7 @@
         "variants": "Simplified envelopes reduce working memory; retain detailed originals."
       },
       "source_urls": [
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+        "${OCS_ROOT}/docs/automation/API-SPEC.md"
       ],
       "source_ids": [
         "SRC-6398638998c9"
@@ -3598,8 +3598,8 @@
             "unit and frame mapping"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -3655,9 +3655,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -4000,9 +4000,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -4101,7 +4101,7 @@
           ],
           "source_urls": [
             "https://openscad.org/documentation.html",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ]
         },
         {
@@ -4117,7 +4117,7 @@
           ],
           "source_urls": [
             "https://openscad.org/documentation.html",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ]
         }
       ],
@@ -4157,7 +4157,7 @@
           "status": "existing_tool_entrypoint",
           "source_urls": [
             "https://openscad.org/documentation.html",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+            "${OCS_ROOT}/docs/automation/API-SPEC.md"
           ],
           "notes": "Documented application/API workflow. Human review steps remain manual; command/runtime not exercised in this research."
         }
@@ -4215,7 +4215,7 @@
       },
       "source_urls": [
         "https://openscad.org/documentation.html",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/API-SPEC.md"
+        "${OCS_ROOT}/docs/automation/API-SPEC.md"
       ],
       "source_ids": [
         "SRC-6398638998c9",
@@ -4281,9 +4281,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -4748,9 +4748,9 @@
         "https://www.blender.org/features/pipeline/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r03.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r09.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -4795,8 +4795,8 @@
             "existing OCS engineering skill; structured project schema proposal"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Input sources retained with identity and access terms."
@@ -4846,7 +4846,7 @@
             "Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
           ],
           "prerequisites": [
@@ -4886,7 +4886,7 @@
             "COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Overlapping sharp views, camera metadata/calibration where available, scene motion/lighting assessed and scale controls identified."
@@ -4924,7 +4924,7 @@
             "Open3D; CloudCompare"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Sensor model, calibration, units, extrinsics and depth validity/range known."
@@ -4964,8 +4964,8 @@
             "COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "At least one common frame datum and distributed control points/lengths; scan sensor calibration available."
@@ -5044,7 +5044,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ],
           "prerequisites": [
             "Element-to-display mapping and length/orientation conversion are declared."
@@ -5232,7 +5232,7 @@
           "limitations_and_asset_terms": "Registry is proposed project data, not a supplied runtime tool.",
           "source_urls": [
             "https://github.com/IfcOpenShell/IfcOpenShell",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ]
         },
         {
@@ -5418,10 +5418,10 @@
         "https://github.com/boelnasr/CAD_TO_URDF",
         "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
         "https://mujoco.readthedocs.io/en/stable/programming/modeledit.html",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+        "${MODELING_ROOT}/research/domains-and-components.md"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -5459,8 +5459,8 @@
             "cad-solid"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/local-baseline.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${MODELING_ROOT}/research/local-baseline.md",
+            "${OCS_ROOT}/README.md"
           ],
           "summary": "Import a supplied neutral STEP file to the project CAD representation; a faceted STEP source remains faceted after import. **Exact adapter fidelity depends on importer.**",
           "tools": [
@@ -5546,7 +5546,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Geometry scale/frame and density or measured mass stated; inertia reference frame defined."
@@ -5693,7 +5693,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Tessellation settings and mesh local frame/units chosen."
@@ -6076,7 +6076,7 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r02.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -6148,7 +6148,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Tessellation settings and mesh local frame/units chosen."
@@ -6242,7 +6242,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Geometry scale/frame and density or measured mass stated; inertia reference frame defined."
@@ -6638,9 +6638,9 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r09.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r08.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -6763,7 +6763,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Tessellation settings and mesh local frame/units chosen."
@@ -6817,7 +6817,7 @@
             "COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Overlapping sharp views, camera metadata/calibration where available, scene motion/lighting assessed and scale controls identified."
@@ -6855,7 +6855,7 @@
             "Open3D; CloudCompare"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Sensor model, calibration, units, extrinsics and depth validity/range known."
@@ -6894,7 +6894,7 @@
             "COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Camera solution and image set correspond; scale/control transform is available for metric results."
@@ -6931,7 +6931,7 @@
             "Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Point cloud has known frame, scale, normals if required, and density/noise characteristics."
@@ -7161,8 +7161,8 @@
           "version_status": "documented source current at 2026-11-12; project install/runtime not exercised",
           "limitations_and_asset_terms": "Native editor/runtime remains required; helper code does not issue application commands.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md"
           ]
         },
         {
@@ -7223,8 +7223,8 @@
           "summary": "Use the software/API entry points below in the recorded procedure; manual CAD, joint and semantic authoring steps use the explicit frames and source data recorded for that step.",
           "related_entrypoints": [],
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md",
             "https://docs.blender.org/manual/en/latest/advanced/command_line/"
           ],
           "entrypoints": [
@@ -7282,13 +7282,13 @@
         ]
       },
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
         "https://docs.blender.org/manual/en/latest/advanced/command_line/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r02.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r02.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r04.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -7318,8 +7318,8 @@
             "OpenCADStudio; FreeCAD Sketcher; manual image tracing"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md"
           ],
           "prerequisites": [
             "Known scale or one or more dimension controls; sketch plane/orientation identified."
@@ -7365,8 +7365,8 @@
             "OpenCADStudio; FreeCAD Sketcher; CadQuery DXF import; OpenSCAD DXF linear_extrude"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/cad-and-skills.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Source units, layers/blocks, target sketch plane and intended entities identified."
@@ -7403,10 +7403,10 @@
             "OpenCADStudio baseline; FreeCAD; CadQuery; build123d; OpenSCAD"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md",
+            "${OCS_ROOT}/README.md",
+            "${OCS_ROOT}/src/io/step.rs"
           ],
           "prerequisites": [
             "Dimensions, datums, units and component boundaries resolved; backend supports required solid features."
@@ -7455,10 +7455,10 @@
             "OCS STEP exporter; FreeCAD/Open CASCADE STEP import/export"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/local-baseline.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs"
+            "${MODELING_ROOT}/research/local-baseline.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md",
+            "${OCS_ROOT}/README.md",
+            "${OCS_ROOT}/src/io/step.rs"
           ],
           "prerequisites": [
             "Source/target frame and units declared; recipient supports the chosen STEP schema."
@@ -7791,8 +7791,8 @@
         "https://huggingface.co/stabilityai/TripoSR"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -7868,7 +7868,7 @@
             "COLMAP/pycolmap; AliceVision/Meshroom; OpenMVG/OpenMVS"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Overlapping sharp views, camera metadata/calibration where available, scene motion/lighting assessed and scale controls identified."
@@ -7907,7 +7907,7 @@
             "COLMAP dense reconstruction; AliceVision/Meshroom; OpenMVS"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Camera solution and image set correspond; scale/control transform is available for metric results."
@@ -7947,8 +7947,8 @@
             "Open3D/CloudCompare measurement; OCS baseline; FreeCAD/OCCT solid modeling"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Source scan frame/scale calibrated; independent interface dimensions and target function stated."
@@ -7992,8 +7992,8 @@
             "CadQuery; build123d; OpenSCAD; FreeCAD Python"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/cad-and-skills.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Parameters, units, datum and solid design intent are explicit."
@@ -8031,7 +8031,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Tessellation settings and mesh local frame/units chosen."
@@ -8125,8 +8125,8 @@
             "content-addressed files; Git metadata; source/license registry"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Stable component ID, exact source bytes, item terms and conversion lineage recorded."
@@ -8404,7 +8404,7 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r01.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -8601,7 +8601,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ],
           "prerequisites": [
             "Element-to-display mapping and length/orientation conversion are declared."
@@ -8949,7 +8949,7 @@
         "https://mujoco.readthedocs.io/en/latest/XMLreference.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r04.md"
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs.",
       "source_ids": [
@@ -8979,7 +8979,7 @@
             "Open3D surface reconstruction; CloudCompare mesh reconstruction; Blender mesh cleanup"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md"
+            "${MODELING_ROOT}/research/reconstruction.md"
           ],
           "prerequisites": [
             "Point cloud has known frame, scale, normals if required, and density/noise characteristics."
@@ -9216,8 +9216,8 @@
           "name": "model brief schema",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -9225,8 +9225,8 @@
           "name": "human review",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -9234,8 +9234,8 @@
           "name": "OCS engineering skill",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -9273,7 +9273,7 @@
           "name": "Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell",
           "role": "Raster floor plan to IFC building",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -9360,8 +9360,8 @@
           "name": "COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference",
           "role": "Register scan to building frame",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -9371,7 +9371,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
@@ -9547,8 +9547,8 @@
             "Ambiguities affecting geometry are listed separately."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -9623,7 +9623,7 @@
             "Wall thickness, openings, elevations, spatial containment, area/element checks and IFC validation."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
           ]
         },
@@ -9806,8 +9806,8 @@
             "Registration residuals and held-out distances; check local regions separately and flag occlusion."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ]
         },
         {
@@ -9839,7 +9839,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ]
         }
       ],
@@ -9871,11 +9871,11 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
             "https://alicevision.org/",
             "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
@@ -9941,11 +9941,11 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3dmodeling/research/reconstruction.md",
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/reconstruction.md",
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
         "https://alicevision.org/",
         "https://diglib.eg.org/bitstream/handle/10.1111/cgf15007/v43i2_03_15007.pdf",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
@@ -9967,10 +9967,10 @@
         "https://www.kicad.org/libraries/license/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r03.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r03.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r07.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -10168,8 +10168,8 @@
             "OCS engineering skill"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -10271,7 +10271,7 @@
             "Image calibration; OCS/FreeCAD sketching; Bonsai/IfcOpenShell"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html"
           ],
           "prerequisites": [
@@ -10492,8 +10492,8 @@
             "COLMAP/AliceVision; Open3D/CloudCompare; IFC geometry as reference"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/reconstruction.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/reconstruction.md",
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "At least one common frame datum and distributed control points/lengths; scan sensor calibration available."
@@ -10533,7 +10533,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ],
           "prerequisites": [
             "Element-to-display mapping and length/orientation conversion are declared."
@@ -10610,8 +10610,8 @@
           "name": "model brief schema",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10619,8 +10619,8 @@
           "name": "human review",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10628,8 +10628,8 @@
           "name": "OCS engineering skill",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10640,8 +10640,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10652,8 +10652,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10664,8 +10664,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10676,8 +10676,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10687,7 +10687,7 @@
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10697,7 +10697,7 @@
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10707,7 +10707,7 @@
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10719,7 +10719,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10731,7 +10731,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10743,7 +10743,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10755,7 +10755,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10785,7 +10785,7 @@
           "role": "Place reusable component in assembly",
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10814,7 +10814,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10834,7 +10834,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -10903,8 +10903,8 @@
             "Ambiguities affecting geometry are listed separately."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -10946,8 +10946,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ]
         },
         {
@@ -10998,7 +10998,7 @@
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -11053,7 +11053,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ]
         },
         {
@@ -11160,7 +11160,7 @@
           ],
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ]
         },
         {
@@ -11271,7 +11271,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ]
         },
         {
@@ -11353,7 +11353,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ]
         },
         {
@@ -11466,12 +11466,12 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${OCS_ROOT}/README.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/docs/cadkernel-body-path.md",
             "https://build123d.readthedocs.io/en/latest/operations.html",
             "https://cadquery.readthedocs.io/en/stable/",
             "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
@@ -11543,12 +11543,12 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/README.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/docs/cadkernel-body-path.md",
         "https://build123d.readthedocs.io/en/latest/operations.html",
         "https://cadquery.readthedocs.io/en/stable/",
         "https://choreonoid.org/en/documents/latest/handling-models/modelfile/modelfile-urdf.html",
@@ -11576,10 +11576,10 @@
         "https://www.kicad.org/libraries/license/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r04.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r08.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r04.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r08.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r02.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r03.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -11643,8 +11643,8 @@
             "OCS engineering skill"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -11702,8 +11702,8 @@
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md",
             "https://ezdxf.readthedocs.io/en/stable/",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/README.md"
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/README.md"
           ],
           "prerequisites": [
             "Preserve source file and hash.",
@@ -11749,7 +11749,7 @@
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Specify units, support plane and datum.",
@@ -11808,7 +11808,7 @@
             "https://cadquery.readthedocs.io/en/stable/",
             "https://openscad.org/documentation",
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md"
+            "${OCS_ROOT}/docs/cadkernel-body-path.md"
           ],
           "prerequisites": [
             "Declare units, feature parameters, direction/axis and part boundary.",
@@ -11956,7 +11956,7 @@
           ],
           "source_urls": [
             "https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Assembly_Workbench.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Component has named interface frames or measured mounting datums; target assembly frame known."
@@ -12084,7 +12084,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Tessellation settings and mesh local frame/units chosen."
@@ -12178,7 +12178,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Geometry scale/frame and density or measured mass stated; inertia reference frame defined."
@@ -12373,8 +12373,8 @@
           "name": "model brief schema",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -12382,8 +12382,8 @@
           "name": "human review",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -12391,8 +12391,8 @@
           "name": "OCS engineering skill",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -12539,8 +12539,8 @@
           "name": "OCS blocks/groups",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12549,8 +12549,8 @@
           "name": "FreeCAD App::Link/Assembly",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12559,8 +12559,8 @@
           "name": "build123d/CadQuery Assembly",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12569,8 +12569,8 @@
           "name": "unit and frame mapping",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12579,9 +12579,9 @@
           "name": "OCS read/measure/audit/save_verified",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12590,9 +12590,9 @@
           "name": "FreeCAD B-rep readback",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12601,9 +12601,9 @@
           "name": "build123d/CadQuery shape checks",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12612,9 +12612,9 @@
           "name": "independent importer",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12623,9 +12623,9 @@
           "name": "mesh validation",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -12655,7 +12655,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -12675,7 +12675,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -12734,8 +12734,8 @@
             "Ambiguities affecting geometry are listed separately."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -13025,8 +13025,8 @@
             "Collision/clearance only with supported exact geometry and query"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ]
         },
@@ -13092,9 +13092,9 @@
             "Persist operation IDs, artifact revision/hash, units, result values and failed checks in verification-report."
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ]
         },
@@ -13206,7 +13206,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ]
         },
         {
@@ -13288,7 +13288,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ]
         },
         {
@@ -13365,11 +13365,11 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
             "https://alicevision.org/",
             "https://build123d.readthedocs.io/en/stable/",
             "https://cadquery.readthedocs.io/en/stable/",
@@ -13441,11 +13441,11 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://alicevision.org/",
         "https://build123d.readthedocs.io/en/stable/",
         "https://cadquery.readthedocs.io/en/stable/",
@@ -13473,10 +13473,10 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r06.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r06.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r03.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r06.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r06.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r03.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -13538,8 +13538,8 @@
             "OCS engineering skill"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -13875,8 +13875,8 @@
             "unit and frame mapping"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -13932,9 +13932,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -14089,7 +14089,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Tessellation settings and mesh local frame/units chosen."
@@ -14183,7 +14183,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/modeling.rst",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Geometry scale/frame and density or measured mass stated; inertia reference frame defined."
@@ -14461,8 +14461,8 @@
           "name": "OCS blocks/groups",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14471,8 +14471,8 @@
           "name": "FreeCAD App::Link/Assembly",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14481,8 +14481,8 @@
           "name": "build123d/CadQuery Assembly",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14491,8 +14491,8 @@
           "name": "unit and frame mapping",
           "role": "Assemble existing CAD or source-library components",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14501,9 +14501,9 @@
           "name": "OCS read/measure/audit/save_verified",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14512,9 +14512,9 @@
           "name": "FreeCAD B-rep readback",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14523,9 +14523,9 @@
           "name": "build123d/CadQuery shape checks",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14534,9 +14534,9 @@
           "name": "independent importer",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14545,9 +14545,9 @@
           "name": "mesh validation",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -14568,8 +14568,8 @@
           "name": "content-addressed files; Git metadata; source/license registry",
           "role": "Version and reuse component revision",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
@@ -14869,8 +14869,8 @@
             "Collision/clearance only with supported exact geometry and query"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ]
         },
@@ -14936,9 +14936,9 @@
             "Persist operation IDs, artifact revision/hash, units, result values and failed checks in verification-report."
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ]
         },
@@ -15003,8 +15003,8 @@
             "Hash consistency, dependency/license closure, revision pinning and reproducible export manifests."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ]
         }
       ],
@@ -15030,11 +15030,11 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
             "https://build123d.readthedocs.io/en/stable/",
             "https://cadquery.readthedocs.io/en/stable/",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
@@ -15095,11 +15095,11 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://build123d.readthedocs.io/en/stable/",
         "https://cadquery.readthedocs.io/en/stable/",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
@@ -15116,8 +15116,8 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r07.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r04.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r07.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r04.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -15450,8 +15450,8 @@
             "unit and frame mapping"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${OCS_ROOT}/docs/automation/README.md",
             "https://cadquery.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -15507,9 +15507,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -15624,8 +15624,8 @@
             "content-addressed files; Git metadata; source/license registry"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Stable component ID, exact source bytes, item terms and conversion lineage recorded."
@@ -16154,9 +16154,9 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_odometry.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r04.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r09.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r04.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r08.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r09.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -16578,7 +16578,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
@@ -16709,7 +16709,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ]
         }
       ],
@@ -16727,7 +16727,7 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
             "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
             "https://docs.ifcopenshell.org/introduction.html",
@@ -16782,7 +16782,7 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json",
+        "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
         "https://docs.ifcopenshell.org/introduction.html",
@@ -16793,8 +16793,8 @@
         "https://www.blender.org/features/pipeline/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r08.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r07.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r08.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -16952,7 +16952,7 @@
           "source_urls": [
             "https://docs.ifcopenshell.org/introduction.html",
             "https://www.blender.org/features/pipeline/",
-            "/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json"
+            "${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json"
           ],
           "prerequisites": [
             "Element-to-display mapping and length/orientation conversion are declared."
@@ -17033,8 +17033,8 @@
           "name": "model brief schema",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -17042,8 +17042,8 @@
           "name": "human review",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -17051,8 +17051,8 @@
           "name": "OCS engineering skill",
           "role": "Extract a model brief from text and dimensions",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -17150,9 +17150,9 @@
           "name": "OCS read/measure/audit/save_verified",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -17161,9 +17161,9 @@
           "name": "FreeCAD B-rep readback",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -17172,9 +17172,9 @@
           "name": "build123d/CadQuery shape checks",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -17183,9 +17183,9 @@
           "name": "independent importer",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -17194,9 +17194,9 @@
           "name": "mesh validation",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -17205,8 +17205,8 @@
           "name": "Native CAD drawing/workbench; STEP/DXF/PDF exporters",
           "role": "Create fabrication package",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
@@ -17255,8 +17255,8 @@
             "Ambiguities affecting geometry are listed separately."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -17471,9 +17471,9 @@
             "Persist operation IDs, artifact revision/hash, units, result values and failed checks in verification-report."
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ]
         },
@@ -17512,8 +17512,8 @@
             "Dimension source trace, drawing/model revision agreement, units, holes/bounds, recipient reopen."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md"
           ]
         }
       ],
@@ -17532,11 +17532,11 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
             "https://build123d.readthedocs.io/en/stable/",
             "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
             "https://docs.blender.org/api/current/bpy.types.Scene.html",
@@ -17589,11 +17589,11 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/cad-and-skills.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://build123d.readthedocs.io/en/stable/",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
         "https://docs.blender.org/api/current/bpy.types.Scene.html",
@@ -17602,9 +17602,9 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r07.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r05.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r01.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r07.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r05.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r01.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -17646,8 +17646,8 @@
             "OCS engineering skill"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ],
           "prerequisites": [
             "Identify each value as supplied, measured, inferred, assumed, or calculated.",
@@ -17873,9 +17873,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -17946,8 +17946,8 @@
             "Native CAD drawing/workbench; STEP/DXF/PDF exporters"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3dmodeling/research/cad-and-skills.md"
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/cad-and-skills.md"
           ],
           "prerequisites": [
             "Design revision, manufacturing process, required dimensions/tolerances and materials sourced."
@@ -18146,9 +18146,9 @@
           "name": "OCS read/measure/audit/save_verified",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -18157,9 +18157,9 @@
           "name": "FreeCAD B-rep readback",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -18168,9 +18168,9 @@
           "name": "build123d/CadQuery shape checks",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -18179,9 +18179,9 @@
           "name": "independent importer",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -18190,9 +18190,9 @@
           "name": "mesh validation",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -18213,8 +18213,8 @@
           "name": "content-addressed files; Git metadata; source/license registry",
           "role": "Version and reuse component revision",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
@@ -18451,9 +18451,9 @@
             "Persist operation IDs, artifact revision/hash, units, result values and failed checks in verification-report."
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ]
         },
@@ -18518,8 +18518,8 @@
             "Hash consistency, dependency/license closure, revision pinning and reproducible export manifests."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ]
         }
       ],
@@ -18529,11 +18529,11 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
             "https://build123d.readthedocs.io/en/stable/",
             "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
             "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
@@ -18593,11 +18593,11 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://build123d.readthedocs.io/en/stable/",
         "https://docs.opencv.org/4.13.0/d3/dc0/group__imgproc__shape.html",
         "https://docs.opencv.org/4.13.0/dd/d1a/group__imgproc__feature.html",
@@ -18613,8 +18613,8 @@
         "https://xnjdxb.swjtu.edu.cn/en/article/id/9616"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r05.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/cad-r09.md"
+        "${MODELING_ROOT}/research/workflows/details/cad-r05.md",
+        "${MODELING_ROOT}/research/workflows/details/cad-r09.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -18851,9 +18851,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -18968,8 +18968,8 @@
             "content-addressed files; Git metadata; source/license registry"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Stable component ID, exact source bytes, item terms and conversion lineage recorded."
@@ -19172,9 +19172,9 @@
           "name": "OCS read/measure/audit/save_verified",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -19183,9 +19183,9 @@
           "name": "FreeCAD B-rep readback",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -19194,9 +19194,9 @@
           "name": "build123d/CadQuery shape checks",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -19205,9 +19205,9 @@
           "name": "independent importer",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -19216,9 +19216,9 @@
           "name": "mesh validation",
           "role": "Verify model geometry and saved output",
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
@@ -19543,9 +19543,9 @@
             "Persist operation IDs, artifact revision/hash, units, result values and failed checks in verification-report."
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ]
         },
@@ -19626,9 +19626,9 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
             "https://alicevision.org/",
             "https://build123d.readthedocs.io/en/stable/",
             "https://docs.nerf.studio/nerfology/methods/splat.html",
@@ -19689,9 +19689,9 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-        "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+        "${OCS_ROOT}/docs/automation/README.md",
+        "${OCS_ROOT}/src/io/step.rs",
         "https://alicevision.org/",
         "https://build123d.readthedocs.io/en/stable/",
         "https://docs.nerf.studio/nerfology/methods/splat.html",
@@ -19708,8 +19708,8 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r01.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/rec-r06.md"
+        "${MODELING_ROOT}/research/workflows/details/rec-r01.md",
+        "${MODELING_ROOT}/research/workflows/details/rec-r06.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -20032,9 +20032,9 @@
             "mesh validation"
           ],
           "source_urls": [
-            "/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md",
-            "/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+            "${OCS_ROOT}/docs/automation/README.md",
+            "${OCS_ROOT}/src/io/step.rs",
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
             "https://build123d.readthedocs.io/en/stable/"
           ],
           "prerequisites": [
@@ -20220,7 +20220,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         },
@@ -20238,8 +20238,8 @@
           "name": "content-addressed files; Git metadata; source/license registry",
           "role": "Version and reuse component revision",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "dependency_contract": "Use the linked branch dossier and original software documentation for the selected backend and version."
         }
@@ -20383,7 +20383,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ]
         },
         {
@@ -20477,8 +20477,8 @@
             "Hash consistency, dependency/license closure, revision pinning and reproducible export manifests."
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ]
         }
       ],
@@ -20504,8 +20504,8 @@
           "status": "existing_tool_entrypoint",
           "role": "Complete the remaining source-backed CAD, reconstruction, IFC or robot steps with their explicit human interpretation points.",
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md",
             "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
             "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
@@ -20565,8 +20565,8 @@
       },
       "classification_status": "Analyst assessment under the comparison conditions, using the recorded operation requirements.",
       "source_urls": [
-        "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-        "/home/leo/projects/3dmodeling/research/implementation-plan.md",
+        "${MODELING_ROOT}/research/domains-and-components.md",
+        "${MODELING_ROOT}/research/implementation-plan.md",
         "https://docs.ifcopenshell.org/autoapi/ifcopenshell/geom/index.html",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_creation.html",
         "https://docs.ifcopenshell.org/ifcopenshell-python/geometry_processing.html",
@@ -20582,8 +20582,8 @@
         "https://www.kicad.org/libraries/license/"
       ],
       "branch_dossiers": [
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r07.md",
-        "/home/leo/projects/3dmodeling/research/workflows/details/dom-r02.md"
+        "${MODELING_ROOT}/research/workflows/details/dom-r07.md",
+        "${MODELING_ROOT}/research/workflows/details/dom-r02.md"
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks.",
       "source_ids": [
@@ -20750,7 +20750,7 @@
           "source_urls": [
             "https://github.com/google-deepmind/mujoco/blob/main/doc/overview.rst",
             "https://github.com/google-deepmind/mujoco/blob/main/doc/programming/extension.rst",
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md"
+            "${MODELING_ROOT}/research/domains-and-components.md"
           ],
           "prerequisites": [
             "Tessellation settings and mesh local frame/units chosen."
@@ -20884,8 +20884,8 @@
             "content-addressed files; Git metadata; source/license registry"
           ],
           "source_urls": [
-            "/home/leo/projects/3dmodeling/research/domains-and-components.md",
-            "/home/leo/projects/3dmodeling/research/implementation-plan.md"
+            "${MODELING_ROOT}/research/domains-and-components.md",
+            "${MODELING_ROOT}/research/implementation-plan.md"
           ],
           "prerequisites": [
             "Stable component ID, exact source bytes, item terms and conversion lineage recorded."
@@ -21033,7 +21033,7 @@
         "https://github.com/colmap/colmap/blob/main/doc/cli.rst",
         "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://github.com/cdcseacave/openMVS/blob/develop/docs/wiki/Usage.md",
         "https://colmap.github.io/faq.html",
         "https://colmap.github.io/cameras.html",
@@ -22082,7 +22082,7 @@
         "https://www.open3d.org/docs/latest/tutorial/geometry/pointcloud.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
         "https://cloudcompare.org/doc/wiki/index.php?title=Command_line_mode",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-09",
@@ -22765,7 +22765,7 @@
         "https://docs.nerf.studio/nerfology/methods/splat.html",
         "https://openmvg.readthedocs.io/en/stable/software/MVS/OpenMVS/",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-03",
@@ -23108,7 +23108,7 @@
           "entrypoint": "depsgraph = bpy.context.evaluated_depsgraph_get(); hit, location, normal, face_index, obj, matrix = bpy.context.scene.ray_cast(depsgraph, origin, direction); origin/direction are world-space rays computed from the calibrated camera and stroke pixel.",
           "source_urls": [
             "https://docs.blender.org/api/current/bpy.types.Scene.html",
-            "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+            "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -23146,7 +23146,7 @@
       },
       "source_urls": [
         "https://docs.opencv.org/4.x/d5/d1f/calib3d_solvePnP.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-13",
@@ -23660,7 +23660,7 @@
         "https://www.open3d.org/docs/latest/tutorial/pipelines/rgbd_integration.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/global_registration.html",
         "https://www.open3d.org/docs/latest/tutorial/pipelines/icp_registration.html",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md"
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md"
       ],
       "operation_ids": [
         "REC-05",
@@ -24020,7 +24020,7 @@
         "https://github.com/microsoft/TRELLIS.2",
         "https://huggingface.co/microsoft/TRELLIS.2-4B",
         "https://github.com/facebookresearch/sam-3d-objects",
-        "/home/leo/.codex/skills/ocs-engineering/SKILL.md",
+        "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
         "https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md"
       ],
       "operation_ids": [

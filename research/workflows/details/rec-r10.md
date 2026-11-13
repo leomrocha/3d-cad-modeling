@@ -87,7 +87,7 @@ If inferred backside is inconsistent with extra views, retain proxy as visual pl
 3. [https://github.com/microsoft/TRELLIS.2](https://github.com/microsoft/TRELLIS.2)
 4. [https://huggingface.co/microsoft/TRELLIS.2-4B](https://huggingface.co/microsoft/TRELLIS.2-4B)
 5. [https://github.com/facebookresearch/sam-3d-objects](https://github.com/facebookresearch/sam-3d-objects)
-6. [/home/leo/.codex/skills/ocs-engineering/SKILL.md](/home/leo/.codex/skills/ocs-engineering/SKILL.md)
+6. ${CODEX_HOME}/skills/ocs-engineering/SKILL.md (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`)
 7. [https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md](https://github.com/VAST-AI-Research/TripoSR/blob/main/README.md)
 
-Full source summaries: [source register](/home/leo/projects/3dmodeling/research/sources/source-register.md).
+Full source summaries: [source register](../../sources/source-register.md).

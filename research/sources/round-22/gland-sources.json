@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-drawing.pdf",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-drawing.pdf",
     "title": "ESKV25 WH original manufacturer datasheet",
     "summary": "Original WH10102748 sheet supplies M25 thread,10mm length,29mm flats,32mm collar and38\u201347mm total length. Family diagram associates TL,L,D,SW/E;exactLG identity stays with its own page.",
     "access_date": "2026-11-12",
@@ -12,7 +12,7 @@
     "url": "https://www.wiska.com/en/pdf/10102748/ESKV-25.pdf"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-LG-10066413-product-page.html",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-LG-10066413-product-page.html",
     "title": "Exact ESKV25 LG manufacturer product page",
     "summary": "Original HTML identifies10066413,RAL7035 and matching dimensional values; links exact-order CAD selector and datasheet href.",
     "access_date": "2026-11-12",
@@ -24,7 +24,7 @@
     "url": "https://www.wiska.com/en/30/pde/10066413/eskv-25-lg.html"
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/source-notes.md",
     "title": "Gland variant and drawn-feature review",
     "summary": "Separates exactLG page fromWH datasheet, assigns explicit dimension labels,retains variable length/clamp range meanings and actual CAD acquisition outcomes.",
     "access_date": "2026-11-12",
@@ -35,7 +35,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/acquisition.json",
     "title": "Gland source acquisition metadata",
     "summary": "Records original PDF and HTML hashes,URLs,retrieval outcomes,rendered images and exact-order CAD selector availability.",
     "access_date": "2026-11-12",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-1.png",
     "title": "WISKA-ESKV-25-page-1.png",
     "summary": "RenderedWH datasheet page1:material,thread,length,flats,collar,TLrange andpartidentity.",
     "access_date": "2026-11-12",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-2.png",
     "title": "WISKA-ESKV-25-page-2.png",
     "summary": "RenderedWH datasheet page2:accessoryordercodes andprinteddate.",
     "access_date": "2026-11-12",
@@ -68,7 +68,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page-3.png",
     "title": "WISKA-ESKV-25-page-3.png",
     "summary": "RenderedWH datasheet page3:axialschematic withTL,L,D,SW/E leaders.",
     "access_date": "2026-11-12",
@@ -79,7 +79,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source/WISKA-ESKV-25-page3-detail.png",
     "title": "WISKA-ESKV-25-page3-detail.png",
     "summary": "Detailed page3 rasterused for actual drawnfeatureassociation;no additional numerical segmentheights.",
     "access_date": "2026-11-12",
@@ -90,7 +90,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/source-job.json",
     "title": "Gland source feature contract",
     "summary": "Pins exactmanufacturer page findings through acquisition hash andnames three required geometry inputs.",
     "access_date": "2026-11-12",
@@ -101,7 +101,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/readiness.json",
     "title": "Gland source-readiness result",
     "summary": "Existing gate returns NEEDS_INPUT forcap/bodysegmentheights,assembledposition andpassagegeometry.",
     "access_date": "2026-11-12",
@@ -112,7 +112,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c041-build-01/result.json",
     "title": "Gland source-stage result",
     "summary": "Connects exactLGidentity,familyWHdrawing,locatedCADselector andsourcegate.",
     "access_date": "2026-11-12",
@@ -123,7 +123,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/c041-cable-gland-source.md",
+    "local_original": "${MODELING_ROOT}/execution/c041-cable-gland-source.md",
     "title": "Gland source-stage execution report",
     "summary": "Documents exactvariant,dimensionedsourcefields,actualsourceinspection andnextdependentgeometryinputs.",
     "access_date": "2026-11-12",

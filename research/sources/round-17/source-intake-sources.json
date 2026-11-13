@@ -1,6 +1,6 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/source_intake.py",
+    "local_original": "${MODELING_ROOT}/scripts/source_intake.py",
     "title": "Implemented immutable source intake",
     "summary": "New script validates source/scope records, preserves exact text and corrections, reuses existing JSON/hash helpers, checks prior revisions and protects completed outputs through staged publication and failure records.",
     "access_date": "2026-11-12",
@@ -11,7 +11,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/tests/test_source_intake.py",
+    "local_original": "${MODELING_ROOT}/tests/test_source_intake.py",
     "title": "Source-intake fidelity and failure tests",
     "summary": "Twelve passing cases cover sources, corrections, changed revisions, zero-network URL registration, invalid records, interrupted publication and protected earlier artifacts. Final reference checks reject repeated conflict identities.",
     "access_date": "2026-11-12",
@@ -22,7 +22,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md",
+    "local_original": "${MODELING_ROOT}/skills/source-intake/SKILL.md",
     "title": "Implemented source-intake skill",
     "summary": "Documents the actual input schema, command, output layout, failure exit codes, recovery, reusable completed revisions and agent/software responsibility boundary.",
     "access_date": "2026-11-12",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/skills/README.md",
+    "local_original": "${MODELING_ROOT}/skills/README.md",
     "title": "Skill index with implemented source intake",
     "summary": "Adds the actual source-intake skill and execution-report links while preserving the earlier researched catalogue.",
     "access_date": "2026-11-12",
@@ -44,7 +44,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/component_records.py",
+    "local_original": "${MODELING_ROOT}/scripts/component_records.py",
     "title": "Existing stable file observer reused",
     "summary": "Streaming SHA-256 and before/after file identity checks are imported by source intake; existing implementation is reused unchanged.",
     "access_date": "2026-11-12",
@@ -55,7 +55,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/scripts/part_index.py",
+    "local_original": "${MODELING_ROOT}/scripts/part_index.py",
     "title": "Existing strict JSON reader reused",
     "summary": "Duplicate-key and nonfinite-token rejection is reused by the new intake implementation; no CAD or network client is imported.",
     "access_date": "2026-11-12",
@@ -66,7 +66,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/first-action-plan.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/first-action-plan.md",
     "title": "Existing unfinished first-action design",
     "summary": "Defines source intake with correction/source relationships, retained revisions, protected publication, scope review and required software tests. This batch implements its script and skill.",
     "access_date": "2026-11-12",
@@ -77,7 +77,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/implementation-queue/implementation-status.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/implementation-queue/implementation-status.json",
     "title": "Observed implementation status overlay",
     "summary": "Marks source intake as implemented with actual code, skill, test and execution paths while preserving the original planning queue.",
     "access_date": "2026-11-12",
@@ -88,7 +88,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake.md",
+    "local_original": "${MODELING_ROOT}/execution/source-intake.md",
     "title": "Source-intake execution and scope report",
     "summary": "Records the new implementation, reused helpers, actual four-source capture, twelve tests, agent scope review and staged-publication design.",
     "access_date": "2026-11-12",
@@ -99,7 +99,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/job-input.json",
+    "local_original": "${MODELING_ROOT}/execution/source-intake/job-input.json",
     "title": "Actual implementation job input",
     "summary": "Preserves exact current execution/no-redo instructions and identifies project rules plus the existing first-action plan as local source inputs.",
     "access_date": "2026-11-12",
@@ -110,7 +110,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/source-index.json",
+    "local_original": "${MODELING_ROOT}/execution/source-intake/live-01/revision/source-index.json",
     "title": "Published four-source intake index",
     "summary": "Actual execution retains two exact user messages, two file observations, byte hashes, scope and request identity with no network acquisition.",
     "access_date": "2026-11-12",
@@ -121,7 +121,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/scope.md",
+    "local_original": "${MODELING_ROOT}/execution/source-intake/live-01/revision/scope.md",
     "title": "Published exact request and scope",
     "summary": "Actual Markdown output preserves the supplied request and explicitly limits implementation to the unfinished intake action and its deliverables.",
     "access_date": "2026-11-12",
@@ -132,7 +132,7 @@
     ]
   },
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/receipt.json",
+    "local_original": "${MODELING_ROOT}/execution/source-intake/live-01/revision/receipt.json",
     "title": "Actual intake completion receipt",
     "summary": "Records COMPLETE publication, tool/input/artifact hashes, Python runtime, elapsed time and zero network requests for the executed capture.",
     "access_date": "2026-11-12",

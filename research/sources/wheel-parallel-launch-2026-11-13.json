@@ -1,46 +1,46 @@
 [
   {
-    "local_original": "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/launch.md",
+    "local_original": "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/launch.md",
     "title": "Parallel wheel work dispatch",
     "summary": "Records three explicitly authorized concurrent tyre/rim/hub source and construction-readiness assignments, their disjoint paths, local-first checks and single native writer.",
     "evidence_status": "executed_agent_dispatch",
     "access_date": "2026-11-13",
     "sha256": "d4779a4504985ea2ed76df1dcd41273d35dbe8dc95fe291144251013218ef033",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/launch.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/launch.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json",
+    "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json",
     "title": "Existing exact tyre source-stage result",
     "summary": "Prior manufacturer source review and bead/section input gate reused by the running tyre assignment.",
     "evidence_status": "inspected_local_executed_result",
     "access_date": "2026-11-13",
     "sha256": "d5590449528115ccb8d743057dd72b8b7f6c81fbe205686258954e4714ebc4f2",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/launch.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/launch.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/research/wheel-mount-battery-details-2026-11-12/01-steel-rims.md",
+    "local_original": "${FERME_ROOT}/research/wheel-mount-battery-details-2026-11-12/01-steel-rims.md",
     "title": "Existing steel rim findings",
     "summary": "Exact Keiyama and Knott rim identities, wheel-mount interface and separate hole/seat variants reused for the running rim assignment.",
     "evidence_status": "inspected_local_research",
     "access_date": "2026-11-13",
     "sha256": "6dad07f6b9d70f783b8a1cbea101ab227c94009c193b419e443ba3b176160b67",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/launch.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/launch.md"
     ]
   },
   {
-    "local_original": "/home/leo/projects/ferme/research/wheel-mount-battery-details-2026-11-12/02-hubs-shafts-bearings-brakes.md",
+    "local_original": "${FERME_ROOT}/research/wheel-mount-battery-details-2026-11-12/02-hubs-shafts-bearings-brakes.md",
     "title": "Existing wheel hub and shaft findings",
     "summary": "Named hub, shaft, bearing and brake component interfaces and route alternatives reused by the running hub/adapter assignment.",
     "evidence_status": "inspected_local_research",
     "access_date": "2026-11-13",
     "sha256": "9fa510fe56360c69589addc5ba717ecd3e5731e39d4a6378808a126c474e57aa",
     "referring_documents": [
-      "/home/leo/projects/3dmodeling/execution/wheel-parallel-2026-11-13/launch.md"
+      "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/launch.md"
     ]
   }
 ]

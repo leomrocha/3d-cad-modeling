@@ -11,8 +11,8 @@
     "colmap": null,
     "CloudCompare": null,
     "meshlab": null,
-    "python3": "/home/leo/.pyenv/versions/3.12.9/bin/python3",
-    "uv": "/home/leo/.local/bin/uv",
+    "python3": "${USER_HOME}/.pyenv/versions/3.12.9/bin/python3",
+    "uv": "${USER_HOME}/.local/bin/uv",
     "docker": "/bin/docker",
     "nvidia-smi": null
   },

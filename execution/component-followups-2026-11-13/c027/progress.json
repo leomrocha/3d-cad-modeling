@@ -6,7 +6,7 @@
   "updated_utc": "2026-11-13T08:48:48Z",
   "existing_model_gate": {
     "result": "NEW_MODEL_REQUIRED",
-    "command": "python scripts/model_inventory.py --index /home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json --work-index /home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root /home/leo/projects/ferme/engineering/module-development/cad --project-root /home/leo/projects/ferme --id C027",
+    "command": "python scripts/model_inventory.py --index ${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json --work-index ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root ${FERME_ROOT}/engineering/module-development/cad --project-root ${FERME_ROOT} --id C027",
     "existing_model_found": false,
     "inventory_checked": 45
   },

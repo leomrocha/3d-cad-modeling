@@ -1,7 +1,7 @@
 [
   {
-    "source_path": "/home/leo/projects/3dmodeling/README.md",
-    "local_original": "/home/leo/projects/3dmodeling/README.md",
+    "source_path": "${MODELING_ROOT}/README.md",
+    "local_original": "${MODELING_ROOT}/README.md",
     "title": "3D modeling",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -13,8 +13,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/README.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/README.md",
+    "source_path": "${MODELING_ROOT}/research/README.md",
+    "local_original": "${MODELING_ROOT}/research/README.md",
     "title": "Research and proposed implementation",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -26,8 +26,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/skills/README.md",
-    "local_original": "/home/leo/projects/3dmodeling/skills/README.md",
+    "source_path": "${MODELING_ROOT}/skills/README.md",
+    "local_original": "${MODELING_ROOT}/skills/README.md",
     "title": "Project skill catalogue",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -39,8 +39,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/research-log.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/research-log.md",
+    "source_path": "${MODELING_ROOT}/research/research-log.md",
+    "local_original": "${MODELING_ROOT}/research/research-log.md",
     "title": "Research record",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -52,8 +52,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/README.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/README.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/README.md",
     "title": "Action-by-action workflow audit",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -65,8 +65,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/point-index.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/point-index.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/point-index.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/point-index.md",
     "title": "Detailed point procedures and reviews",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -78,8 +78,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/sequence.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/sequence.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/sequence.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/sequence.json",
     "title": "sequence",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -91,8 +91,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/operation-inventory.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/operation-inventory.md",
     "title": "Existing operation inventory and detailed-review state",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -104,8 +104,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/operation-inventory.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/operation-inventory.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/operation-inventory.json",
     "title": "operation-inventory",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -117,8 +117,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/ideas.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/ideas.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/ideas.json",
     "title": "ideas",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -130,8 +130,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/verification-method.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/verification-method.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/verification-method.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/verification-method.md",
     "title": "Documentary verification method",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -143,8 +143,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/findings.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/findings.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/findings.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/findings.md",
     "title": "Source contract findings and implementation conditions",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -156,8 +156,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/workflow-to-actions.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/workflow-to-actions.md",
     "title": "Workflow routes linked to detailed actions",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -169,8 +169,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/workflow-to-actions.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/workflow-to-actions.json",
     "title": "workflow-to-actions",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -182,8 +182,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/skill-to-actions.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/skill-to-actions.md",
     "title": "Proposed skills linked to reviewed action procedures",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -195,8 +195,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.json",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.json",
+    "source_path": "${MODELING_ROOT}/research/action-audit/skill-to-actions.json",
+    "local_original": "${MODELING_ROOT}/research/action-audit/skill-to-actions.json",
     "title": "skill-to-actions",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",
@@ -208,8 +208,8 @@
     ]
   },
   {
-    "source_path": "/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md",
-    "local_original": "/home/leo/projects/3dmodeling/research/action-audit/reviews/full-sequence-independent.md",
+    "source_path": "${MODELING_ROOT}/research/action-audit/reviews/full-sequence-independent.md",
+    "local_original": "${MODELING_ROOT}/research/action-audit/reviews/full-sequence-independent.md",
     "title": "Full-sequence independent integration review",
     "summary": "Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.",
     "access_date": "2026-11-12",

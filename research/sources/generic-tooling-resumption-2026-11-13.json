@@ -4,58 +4,58 @@
   "worker_model": "gpt-6-luna",
   "records": [
     {
-      "local_path": "/home/leo/projects/3dmodeling/scripts/envelope_reference.py",
+      "local_path": "${MODELING_ROOT}/scripts/envelope_reference.py",
       "title": "envelope reference",
       "summary": "Optional source-coverage metadata is preflighted, written in the same CADTOOLS_SOURCE replacement as identity/frame/job, and carried as a job expectation in verification results.",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "sha256": "3d8c9292e315bbb54e4fb7cd712bf45b045e070084404f42fc267a0459a30c9f",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-tooling-resumption-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-tooling-resumption-2026-11-13.md"
       ]
     },
     {
-      "local_path": "/home/leo/projects/3dmodeling/tests/test_envelope_reference.py",
+      "local_path": "${MODELING_ROOT}/tests/test_envelope_reference.py",
       "title": "test envelope reference",
       "summary": "Ten synthetic tests cover the existing envelope preflight/readback contract, legacy absence of scope, combined metadata payload and rejection of blank scope before native writes.",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "sha256": "efcd21f12eb8d88bd16178173a3e45435a7bedf0b24c23f3cf89fe1abb74966b",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-tooling-resumption-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-tooling-resumption-2026-11-13.md"
       ]
     },
     {
-      "local_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/envelope-reference.md",
+      "local_path": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md",
       "title": "envelope reference",
       "summary": "Procedure documents external source-pinned jobs, optional source coverage, one replacement metadata write and separate actual native xdata persistence inspection.",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "sha256": "42bdeb17f6b589cd0d316202495beaeadec903e8281db2738f9f6dab1f9926c7",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-tooling-resumption-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-tooling-resumption-2026-11-13.md"
       ]
     },
     {
-      "local_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/drawing-feature-checks.md",
+      "local_path": "${MODELING_ROOT}/skills/component-cad/references/drawing-feature-checks.md",
       "title": "drawing feature checks",
       "summary": "Procedure binds drawing extension-line endpoints to the measured feature, separates hole pitch, complete curved bounds and reachable-point extrema, and preserves independently valid saved checks after a source-binding finding.",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "sha256": "0efed8a7f8ba2c12aedd141ae6f82c0e7feb7afc144b1b7dc9d25570f2a6fd57",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-tooling-resumption-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-tooling-resumption-2026-11-13.md"
       ]
     },
     {
-      "local_path": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+      "local_path": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
       "title": "SKILL",
       "summary": "Shared component skill routes drawing-feature comparisons to the added procedure while preserving the current implementation and existing-model checks.",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "sha256": "0f20b241073a94b7eabdc9896f7698a9948c2cbd4244856b03a2c7db82983472",
       "referring_documents": [
-        "/home/leo/projects/3dmodeling/execution/generic-tooling-resumption-2026-11-13.md"
+        "${MODELING_ROOT}/execution/generic-tooling-resumption-2026-11-13.md"
       ]
     }
   ],
@@ -64,8 +64,8 @@
     "skill_frontmatter_validation": "PASS: quick_validate.py"
   },
   "application_evidence": [
-    "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/coordinator-source-review.json",
-    "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c055-build-01/envelope-reference-job.json"
+    "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c027-build-01/coordinator-source-review.json",
+    "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c055-build-01/envelope-reference-job.json"
   ],
   "ferme_completed_model_commit": "e5fcf1e"
 }
