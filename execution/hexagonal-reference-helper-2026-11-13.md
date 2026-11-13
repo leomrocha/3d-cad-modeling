@@ -1,0 +1,9 @@
+# Source-bound hexagonal reference implementation
+
+Observed 13 November 2026. Implementation: `gpt-6-luna`. Coordination, source-image inspection, code review and independent test execution: `gpt-6.1-sol`.
+
+1. **Reusable implementation:** `scripts/hexagonal_reference.py` constructs a regular hexagonal prism from externally bound across-flats dimension, axial height and placement frame. An optional bore has its own pinned diameter feature. The polygon utility also supplies source-defined hex head vertices to an external component driver.
+2. **Preflight:** required source files and hashes, explicit representation and units, positive finite dimensions, an orthonormal right-handed frame, finite polygon vertices, bore-cutter radius/height and distinct placement are checked before geometry mutation. Runtime source paths and portable stored source locators remain separate fields.
+3. **Native verification contract:** all unique planar surfaces must match the six side planes and two cap stations. Coincident analytic patches are deduplicated. Every cylinder must belong to the optional sourced bore; source-bore jobs also require open boundary loops at both caps. Connected-body topology, exact CADTOOLS_SOURCE metadata and stable document/geometry revision checks complete the readback.
+4. **Executed tests:** twelve synthetic tests passed. They cover source-defined across-flats size, arbitrary-frame rotation planning, malformed inputs before geometry creation, bore subtraction, extra surfaces, closed bore ends, duplicate patches, portable metadata and stale record epochs. Native component execution has separate saved-file evidence.
+5. **Component application:** FERME owns the DIN 985 nut external-reference job and the ISO 4014 bolt reference job at `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c068-build-01/` and `c066-build-01/`. Their source editions, dimension symbols, model scopes and source originals remain there.

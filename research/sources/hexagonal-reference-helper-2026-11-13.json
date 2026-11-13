@@ -1,0 +1,43 @@
+{
+  "implementation_model": "gpt-6-luna",
+  "coordinator_and_test_model": "gpt-6.1-sol",
+  "synthetic_tests": {
+    "result": "PASS",
+    "count": 12
+  },
+  "records": [
+    {
+      "title": "Hexagonal reference helper",
+      "summary": "Reusable external-source prism construction and regular-hexagon points, optional independently sourced bore, explicit frame, full analytic surface inventory and exact portable source metadata.",
+      "local_path": "scripts/hexagonal_reference.py",
+      "sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/hexagonal-reference-helper-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Hexagonal reference regression tests",
+      "summary": "Twelve synthetic tests verify source dimensions, frame planning, source-input guards, extra/incorrect surface rejection, bore end loops, duplicate surface patches and record revision binding.",
+      "local_path": "tests/test_hexagonal_reference.py",
+      "sha256": "bc1e2301fd19457613bd1545f098ec67798efb15d4994976862c7225a69b5136",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/hexagonal-reference-helper-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Hexagonal skill procedure",
+      "summary": "Documents component-owned source contracts, standard dimension limits, optional bore representation, local/world frame mapping, native readback and stored source-locator binding.",
+      "local_path": "skills/component-cad/references/hexagonal-reference.md",
+      "sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/hexagonal-reference-helper-2026-11-13.md"
+      ]
+    }
+  ]
+}
