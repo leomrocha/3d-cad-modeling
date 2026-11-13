@@ -1,0 +1,77 @@
+{
+  "subject": "Additional mast and FERME image findings",
+  "date": "2026-11-13",
+  "research_model": "gpt-6-luna",
+  "reporting_model": "gpt-6.1-sol",
+  "sources": [
+    {
+      "id": "mast-section",
+      "title": "Televes M180 lattice mast section",
+      "local_source_path": "${ENERGY_ROOT}/eoliennes/models/mast-component-study/televes-m180-middle-section-native-view.png",
+      "context_path": "${ENERGY_ROOT}/eoliennes/models/mast-component-study/CURRENT-CAD-INDEX.md",
+      "summary": "Native CAD viewport capture of the isolated lattice middle section, showing vertical chords and crossed bracing.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected_by_research_agent",
+      "provenance": "manufacturer-derived native CAD model",
+      "content_type": "image/png",
+      "sha256": "d2c1a475b2ddafbe2922b9faaa9c19b5014ca7b96f2c8b378156664a2d78df61",
+      "original_source_urls_from_existing_records": [],
+      "referring_documents": [
+        "execution/additional-gallery-images-2026-11-13.json"
+      ]
+    },
+    {
+      "id": "mast-wind-response",
+      "title": "Mast wind-response study",
+      "local_source_path": "${ENERGY_ROOT}/eoliennes/research/mast-base-independent-studies/astra/wind-response.png",
+      "context_path": "${ENERGY_ROOT}/eoliennes/research/mast-base-independent-studies/astra/REPORT.md",
+      "summary": "Calculated mast-top displacement and base moment versus wind speed for four guy configurations, using the report's assumed load scenario.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected_by_research_agent",
+      "provenance": "calculated study plot",
+      "content_type": "image/png",
+      "sha256": "c8da78ef9ad3abae963c8b75876cb72715f13ecd4a134d18edd46eb5c34b7f00",
+      "original_source_urls_from_existing_records": [],
+      "referring_documents": [
+        "execution/additional-gallery-images-2026-11-13.json"
+      ]
+    },
+    {
+      "id": "victron-battery",
+      "title": "Victron Lithium NG 25.6 V 100 Ah battery assembly",
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/corrected-isometric.png",
+      "context_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c023-build-01/result.json",
+      "summary": "CAD viewport capture of the source-corrected manufacturer battery exterior assembly and terminal hardware.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected_by_research_agent",
+      "provenance": "corrected manufacturer STEP assembly",
+      "content_type": "image/png",
+      "sha256": "4faed36a5a9c04ab44f8f15a5668d0f86e29376a32ffb123b0a90ad6fef628e5",
+      "original_source_urls_from_existing_records": [
+        "https://www.victronenergy.com/upload/documents/LiFePO4-Battery-25.6V100Ah-NG-(stp-).STEP"
+      ],
+      "referring_documents": [
+        "execution/additional-gallery-images-2026-11-13.json"
+      ]
+    },
+    {
+      "id": "fibox-enclosure",
+      "title": "Fibox ARCA 203015T enclosure assembly",
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/corrected-isometric.png",
+      "context_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c029-build-01/result.json",
+      "summary": "CAD viewport capture of the open manufacturer enclosure assembly, including cover, hinges, lock and internal mounting plate.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected_by_research_agent",
+      "provenance": "imported manufacturer STEP assembly",
+      "content_type": "image/png",
+      "sha256": "33656dd896474c05364f5b7a83b84ccedcb420715b60816970d3503453fec3c7",
+      "original_source_urls_from_existing_records": [
+        "https://www.fibox.com/products/arca-iec/arca-203015/8121020",
+        "https://9349002.fs1.hubspotusercontent-na1.net/hubfs/9349002/assets/8121020_FIBOX%20ARCA%20IEC%20203015T.step"
+      ],
+      "referring_documents": [
+        "execution/additional-gallery-images-2026-11-13.json"
+      ]
+    }
+  ]
+}
