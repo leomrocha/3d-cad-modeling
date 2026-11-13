@@ -60,3 +60,6 @@ Thumbs.db
 /docs/examples/files/wind-generator/support-assembly.*
 /docs/examples/files/wind-generator/support-model-record.*
 /docs/examples/files/wind-generator/transmission.*
+
+# Personal publishing plans and action records
+/chores/

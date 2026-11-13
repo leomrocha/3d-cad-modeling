@@ -1,5 +1,5 @@
 {
-  "skill": "component-cad",
+  "skill": "cad-ocs-engineering",
   "generated_by": "scripts/build_skill_packages.py",
   "files": {
     "LICENSE": {
@@ -104,7 +104,7 @@
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
-      "sha256": "f8193ecd0fca779066dc6a4ecad452754653955d66a699d720e5b9a731af84b6"
+      "sha256": "427f7255ad6a5eba935772c1bb36a2a7c8ce45928e283a9a4d7b1ea47118f990"
     },
     "scripts/part_index.py": {
       "source": "scripts/part_index.py",
