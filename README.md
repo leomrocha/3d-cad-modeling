@@ -19,13 +19,18 @@ Research includes OpenCADStudio, Blender, MuJoCo, FreeCAD, Open CASCADE tooling,
 
 ## Repository
 
-1. `AGENTS.md` — instructions initially copied from `../ferme/AGENTS.md`, extended with this project’s documentation and commit rules; farm-specific sections retain their stated scope. The current project scope is defined in this README and the current user request.
-2. `skills/` — project skill catalogue and proposed workflow skills.
-3. `research/` — tool assessments, source evidence and the proposed implementation plan.
+1. [skills/](/home/leo/projects/3dmodeling/skills/README.md) — shared modeling procedures and skill catalogue; keep reusable instructions here.
+2. [scripts/](/home/leo/projects/3dmodeling/scripts/README.md) — shared modeling and inspection code; component recipes belong in FERME.
+3. [tests/](/home/leo/projects/3dmodeling/tests/README.md) — shared-code tests; FERME owns component integration data and component-specific cases.
+4. [research/](/home/leo/projects/3dmodeling/research/README.md) — generic methods, workflow/action contracts and sources; FERME owns component research and originals.
+5. [execution/](/home/leo/projects/3dmodeling/execution/README.md) — tooling development evidence; FERME owns component execution records. Historical mixed files are covered by the split preparation.
+6. `.git/` — local repository history. `.agents/`, `.codex/` and `.aws/` were empty environment directories at inspection; keep environment data outside tracked project content.
+7. [AGENTS.md](/home/leo/projects/3dmodeling/AGENTS.md) — scoped working rules. [Component development plan](/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md) — existing iteration plan and repository ownership.
+8. [Separation preparation](/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md) — proposed migration manifest, script changes and instructions for the continuing modeling agent. This batch prepares documentation; existing artifact and code paths stay in place.
 
 ## Current stage
 
-The repository contains tool assessments and 245 action definitions covering all 77 recorded operations. The [seven-point procedure index](/home/leo/projects/3dmodeling/research/action-audit/point-index.md), [38 routes linked to actions](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md), [15 proposed skill groups](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) and [source contract findings](/home/leo/projects/3dmodeling/research/action-audit/findings.md) connect the research to detailed implementation specifications. Each action states existing software/API dependencies, agent and software responsibilities, inputs/outputs, checks, recovery and resource conditions. Review records and receipts identify the executed document/source checks; helper implementations and modeling cases retain proposal status.
+The repository contains tool assessments and 245 action definitions covering all 77 recorded operations. The [seven-point procedure index](/home/leo/projects/3dmodeling/research/action-audit/point-index.md), [38 routes linked to actions](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md), [15 proposed skill groups](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) and [source contract findings](/home/leo/projects/3dmodeling/research/action-audit/findings.md) connect the research to detailed implementation specifications. Each action states existing software/API dependencies, agent and software responsibilities, inputs/outputs, checks, recovery and resource conditions. Review records and receipts identify executed document/source checks. Source intake, DXF inspection, model inventory and native geometry/placement helpers have implementation and execution records. The broader workflow catalogue retains its individual proposal statuses; component model/check records belong to the consuming project.
 
 ## Research records and changes
 
