@@ -37,6 +37,19 @@
       "referring_documents": [
         "execution/pdf-vector-boundary-review-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Applied source-vector plug reference",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c062-build-01/result.json",
+      "original_url": "https://www.amphenol-sine.com/pdf/datasheet/AHDBM06-24-91SR.pdf",
+      "summary": "Source-vector contour corrections applied to a native rotational reference with separate retainer and contact markers; source and saved-file hashes and successful feature/metadata/persistence receipts reviewed.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result_review",
+      "original_result_sha256": "a6036f79c191914b25d32999548c38eddec1f48b74067c0f714e18519b79d556",
+      "native_model_sha256": "c44caa0c92754cea85d73218c4eec88defc0ec3ae7a56e1d866ba15458f246ae",
+      "referring_documents": [
+        "execution/pdf-vector-boundary-review-2026-11-13.md"
+      ]
     }
   ]
 }
