@@ -126,11 +126,14 @@
       "summary": "Records 22 owned documents closed, Start 1 retained, per-target removal and other-tab preservation, and eleven unchanged saved-model hashes. Native execution gpt-6.1-sol; documentation gpt-6-luna.",
       "registered_at": "2026-11-13",
       "evidence_status": "executed_result_review",
-      "sha256": "2b82e3c1d160d4bbd37280d82eb2a76cdab0d5ea9ff4312b9cd393d390910617",
+      "sha256": "98eb6a0548af3be0374bdf98965cb49becf5abfb1f1942673d3e712b2c0ee68c",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
         "skills/component-cad/references/document-cleanup.md"
-      ]
+      ],
+      "original_sha256": "2b82e3c1d160d4bbd37280d82eb2a76cdab0d5ea9ff4312b9cd393d390910617",
+      "original_local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/document-cleanup/source-metadata-before-normalization/receipt.json",
+      "derivation": "Portable source locators and field-specific preservation wording; original first receipt retained unchanged."
     }
   ]
 }
