@@ -1,0 +1,48 @@
+{
+  "records": [
+    {
+      "local_path": "skills/component-cad/references/dimension-limits-and-datums.md",
+      "title": "Drawing scale and literal dual-unit callouts",
+      "summary": "Adds printed scale restrictions and separate conversion/correction evidence to the existing source-datum procedure.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "applied_source_review_procedure",
+      "sha256": "f1152475887926202430bf48ff07dedc86830ba11a77d5bb15658d83412f33e4",
+      "referring_documents": [
+        "execution/drawing-scale-and-dual-unit-review-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/drawing-scale-and-dual-unit-review-2026-11-13.md",
+      "title": "Scale restriction source-review application",
+      "summary": "Records actual inspection of both boot drawing page renders, installed-body scope distinctions and successful skill validation.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_source_review_report",
+      "sha256": "d87ddaffb1aa870de6f952d1aeb239aff61b9fb6e6265d6134639b550a4ecc63",
+      "referring_documents": [
+        "execution/drawing-scale-and-dual-unit-review-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c060-build-01/source/anderson-115376S1-official.pdf",
+      "title": "Anderson 115376S1 load-side boot drawing rev1",
+      "summary": "Inspected page 1 identifies load-side variants, installed connector views, printed scale restriction and the literal dual-unit cover-height callout retained in the component review.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "downloaded_original",
+      "sha256": "97e051dca3a23b6e51af3da8076ffadcd1652a81f833adf479e770ddacf3d69a",
+      "referring_documents": [
+        "execution/drawing-scale-and-dual-unit-review-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c061-build-01/source/anderson-115376S2-official.pdf",
+      "title": "Anderson 115376S2 source-side boot drawing rev1",
+      "summary": "Inspected page 1 identifies source-side variants and their installed-context views with printed scale restriction; body-feature scope is recorded separately from installed dimensions.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "downloaded_original",
+      "sha256": "0b44b9cc7643c6327eea30145ddf03ffe79e72321266289ba5de6d29ff96f74c",
+      "referring_documents": [
+        "execution/drawing-scale-and-dual-unit-review-2026-11-13.md"
+      ]
+    }
+  ]
+}

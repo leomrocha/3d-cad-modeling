@@ -7,3 +7,7 @@ Keep the source leader endpoints with the dimension. A height from a base top pl
 For drawing-derived mounting references, keep three records separate: printed dimensions, arithmetic relationships between printed dimensions, and image-traced coordinates. Record the view, original image frame, point-pick uncertainty, calibration dimensions and resulting coordinate uncertainty. A symmetry-derived centerline is a coordinate convention supported by view geometry; it is not an additional printed ordinate.
 
 Independent checks compare the resulting geometry with source callouts and leader endpoints. Repeating the same recipe values in a construction check does not independently validate a source feature.
+
+Record printed `SCALE NONE`, `NTS` and `DO NOT SCALE DRAWING` conditions. Use directly dimensioned features for numerical construction inputs. A calibrated image reconstruction needs its own representation label, independent dimensional support and uncertainty assessment; a pixel measurement alone does not turn such a drawing into a dimensioned feature.
+
+Preserve dual-unit callouts exactly, including inconsistent pairs. Record the stated primary units and each printed value beside its leader. Any conversion or proposed correction is a separate calculation or interpretation with its evidence; keep the original callout unchanged.
