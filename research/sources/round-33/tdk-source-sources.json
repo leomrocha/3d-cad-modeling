@@ -1,0 +1,200 @@
+[
+  {
+    "url": "https://product.tdk.com/en/search/power/switching-power/dc-dc-converter/info?part_no=I1C2W010A120V-000-R",
+    "title": "TDK Product Center exact-part page — I1C2W010A120V-000-R",
+    "summary": "The exact-part product page lists a manufacturer 3D STEP outline. The STEP link resolves to i1c_000_001.stp. The manufacturer's usage restrictions state that the 3D data is for internal company use, prohibits sharing with third parties, may be simplified, and must be checked against the delivery specification before use.",
+    "evidence_status": "manufacturer_product_page_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "inspected by requested Luna research model; original HTML not downloaded"
+  },
+  {
+    "url": "https://product.tdk.com/en/search/power/switching-power/dc-dc-converter/tec_data/ps_i1c",
+    "title": "TDK Product Center i1C technical data and STEP association",
+    "summary": "The technical-data table associates shared STEP file i1c_000_001.stp with base model I1C2W010A120V options -000-R and -001-R. The separate -004-R/-005-R pair links i1c_004_005.stp, consistent with the different pin-length option. The table explains that CAD files are compressed.",
+    "evidence_status": "manufacturer_technical_data_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "inspected by requested Luna research model; original HTML not downloaded"
+  },
+  {
+    "url": "https://product.tdk.com/system/files/dam/doc/product/power/switching-power/dc-dc-converter/3doutline_step/i1c_000_001.stp",
+    "title": "TDK i1C shared STEP outline for -000-R / -001-R",
+    "summary": "TDK explicitly links this STEP to both I1C2W010A120V-000-R and -001-R. It is a shared outline for variants with the same package and pin geometry. TDK does not expose a different official host for the same STEP. No STEP bytes were retained or geometrically inspected locally.",
+    "evidence_status": "manufacturer_step_listed_but_not_downloaded",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "listed on exact manufacturer page; direct fetch returned HTTP 403 from AkamaiGHost (text/html, 528 bytes); browser-profile retry also returned HTTP 403"
+  },
+  {
+    "url": "https://product.tdk.com/system/files/dam/doc/product/power/switching-power/dc-dc-converter/specification/i1c_spec.pdf",
+    "title": "TDK i1C Series specification — mechanical drawing",
+    "summary": "The mechanical drawing covers -00x-R options and states dimensions in mm [in]. Exact -000-R pin length comes from the option table. The drawing provides footprint, nominal body height, six pin diameters, pin-view order, pitch callouts and keepout callouts. Direct drawing bytes were not retained locally.",
+    "evidence_status": "manufacturer_specification_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "PDF inspected and text extracted by requested Luna research model; direct local retrieval failed"
+  },
+  {
+    "url": "https://www.emea.lambda.tdk.com/uk/products/i1c",
+    "title": "TDK-Lambda EMEA i1C product and CAD listing",
+    "summary": "The regional page independently lists the i1C Datasheet and i1C 3D Drawing (STEP file). Its STEP download resolves to the same Product Center asset, not a different file host.",
+    "evidence_status": "manufacturer_regional_catalog_route_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "inspected by requested Luna research model; no alternate STEP host found"
+  },
+  {
+    "url": "https://www.emea.lambda.tdk.com/dk/technical-data/data?resource=3D-Drawings",
+    "title": "TDK-Lambda EMEA 3D drawings library",
+    "summary": "The official regional 3D drawing catalog routes to the same i1c_000_001.stp Product Center URL.",
+    "evidence_status": "manufacturer_catalog_route_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "inspected by requested Luna research model"
+  },
+  {
+    "url": "https://www.digikey.com/en/products/detail/tdk-lambda/I1C2W010A120V-000-R/25281353",
+    "title": "DigiKey exact-part listing and CAD model route",
+    "summary": "The DigiKey part page identifies manufacturer part I1C2W010A120V-000-R. Its datasheet link routes to TDK's i1C series catalog PDF. Its CAD link routes to the DigiKey model page showing I1C 000 001.STP; no direct DigiKey-hosted copy of the STEP or detailed i1C specification PDF was found.",
+    "evidence_status": "distributor_exact_part_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "exact-part page and model listing inspected by requested Luna research model; DigiKey model page reports Model download failed and exposes no direct file URL or downloadable bytes"
+  },
+  {
+    "url": "https://www.sg.lambda.tdk.com/wp-content/uploads/i1c_e.pdf",
+    "title": "TDK-Lambda i1C series datasheet",
+    "summary": "Manufacturer series brochure repeats the outline and top-view PCB hole pattern. The mechanical specification PDF is the more explicit source for pin diameter and exact option pin length.",
+    "evidence_status": "manufacturer_series_brochure_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ],
+    "retrieval_status": "manufacturer link inspected by requested Luna research model; direct retrieval returned HTTP 403"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/existing-model-start.json",
+    "title": "existing model start",
+    "summary": "Fresh actual-file lookup identifies C046 as requiring a new model; existing completed components retain their models.",
+    "evidence_status": "executed_filesystem_start_check",
+    "access_date": "2026-11-13",
+    "sha256": "92538c2a64ab1892b4db2a5e16c57919f4a2839c929ef0ee3af13c9748833ab7",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/result.json",
+    "title": "result",
+    "summary": "Names the six-pin geometry input and exact failed acquisition routes; component NEEDS_INPUT, native CAD mutations zero.",
+    "evidence_status": "executed_source_stage_result",
+    "access_date": "2026-11-13",
+    "sha256": "0f3772f25ed5e6a323a2a2a2cdb7fb83397feed9ffb4c0284e11fac2f064eba6",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/acquisition.json",
+    "title": "acquisition",
+    "summary": "Individual manufacturer and distributor URLs, exact variant dimensions, source locators and actual HTTP/TLS/model-download outcomes.",
+    "evidence_status": "executed_acquisition_record",
+    "access_date": "2026-11-13",
+    "sha256": "379715aa736fd58adda7aa7483e3b0c5f63564fc9cbe03fcfa18156105cde8e6",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/source-review.md",
+    "title": "source review",
+    "summary": "Separates exact -000 pin length, top-view pattern callouts and acquisition failures; no pin centers inferred from extracted text.",
+    "evidence_status": "delegated_source_review_record",
+    "access_date": "2026-11-13",
+    "sha256": "4c0ca83d7f1e0ef002df6c6dff6b4ce9a6d63329da88d65568894f1cba099dd1",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-series-datasheet-response-headers.txt",
+    "title": "tdk i1c series datasheet response headers",
+    "summary": "Actual acquisition response headers for tdk i1c series datasheet response headers, retained to identify HTTP status and returned content type.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "0380bc7ed2cd9385bbe6953bebbf0d0ba9c47b7701f0158f4b0d82fdbbba9af8",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers-retry.txt",
+    "title": "tdk i1c spec response headers retry",
+    "summary": "Actual acquisition response headers for tdk i1c spec response headers retry, retained to identify HTTP status and returned content type.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "76ff5644436dc6691c4b76119d3d1af733a2e162da2ee95ebfe5ec03db202a81",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers.txt",
+    "title": "tdk i1c spec response headers",
+    "summary": "Actual acquisition response headers for tdk i1c spec response headers, retained to identify HTTP status and returned content type.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers-retry.txt",
+    "title": "tdk i1c step response headers retry",
+    "summary": "Actual acquisition response headers for tdk i1c step response headers retry, retained to identify HTTP status and returned content type.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "3b90958bf0fecb77a0065e97ea104fa515a0bb99c3ac9479e0e3d5bab48ce528",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers.txt",
+    "title": "tdk i1c step response headers",
+    "summary": "Actual acquisition response headers for tdk i1c step response headers, retained to identify HTTP status and returned content type.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "63a6a431ef6b5e8d5e2f81c80c0b0fe68733d1a6ddaa0e98b4cd50003e89d7dc",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md",
+    "title": "TDK converter source-stage execution report",
+    "summary": "Exact variant evidence, acquisition errors, construction input gate and next eligible component selection; coordinator and researcher identities attributed separately.",
+    "evidence_status": "executed_work_report",
+    "access_date": "2026-11-13",
+    "sha256": "0c27c4b21ca1c0032066c581153ee6bd43693a55bfeac726fe78f171e611752e",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md"
+    ]
+  }
+]

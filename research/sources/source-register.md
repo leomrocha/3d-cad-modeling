@@ -15711,3 +15711,149 @@ Original source: [Installed OCS REVOLVE command declaration](/home/leo/projects/
 Summary: Read installed REVOLVE command schema during source-stage preflight; declaration retained separately from construction execution.
 
 Evidence: executed_native_capability_read.
+
+## TDK converter source stage — 13 November 2026
+
+### TDK Product Center exact-part page — I1C2W010A120V-000-R — SRC-9f5f0a78c8a0
+
+Source: [TDK Product Center exact-part page — I1C2W010A120V-000-R](https://product.tdk.com/en/search/power/switching-power/dc-dc-converter/info?part_no=I1C2W010A120V-000-R)
+
+Summary: The exact-part product page lists a manufacturer 3D STEP outline. The STEP link resolves to i1c_000_001.stp. The manufacturer's usage restrictions state that the 3D data is for internal company use, prohibits sharing with third parties, may be simplified, and must be checked against the delivery specification before use.
+
+Evidence: manufacturer_product_page_web_inspection.
+
+### TDK Product Center i1C technical data and STEP association — SRC-ec801c6b5cde
+
+Source: [TDK Product Center i1C technical data and STEP association](https://product.tdk.com/en/search/power/switching-power/dc-dc-converter/tec_data/ps_i1c)
+
+Summary: The technical-data table associates shared STEP file i1c_000_001.stp with base model I1C2W010A120V options -000-R and -001-R. The separate -004-R/-005-R pair links i1c_004_005.stp, consistent with the different pin-length option. The table explains that CAD files are compressed.
+
+Evidence: manufacturer_technical_data_web_inspection.
+
+### TDK i1C shared STEP outline for -000-R / -001-R — SRC-51f1aab9e632
+
+Source: [TDK i1C shared STEP outline for -000-R / -001-R](https://product.tdk.com/system/files/dam/doc/product/power/switching-power/dc-dc-converter/3doutline_step/i1c_000_001.stp)
+
+Summary: TDK explicitly links this STEP to both I1C2W010A120V-000-R and -001-R. It is a shared outline for variants with the same package and pin geometry. TDK does not expose a different official host for the same STEP. No STEP bytes were retained or geometrically inspected locally.
+
+Evidence: manufacturer_step_listed_but_not_downloaded.
+
+### TDK i1C Series specification — mechanical drawing — SRC-46710b5f460b
+
+Source: [TDK i1C Series specification — mechanical drawing](https://product.tdk.com/system/files/dam/doc/product/power/switching-power/dc-dc-converter/specification/i1c_spec.pdf)
+
+Summary: The mechanical drawing covers -00x-R options and states dimensions in mm [in]. Exact -000-R pin length comes from the option table. The drawing provides footprint, nominal body height, six pin diameters, pin-view order, pitch callouts and keepout callouts. Direct drawing bytes were not retained locally.
+
+Evidence: manufacturer_specification_web_inspection.
+
+### TDK-Lambda EMEA i1C product and CAD listing — SRC-f03a1d26c3a0
+
+Source: [TDK-Lambda EMEA i1C product and CAD listing](https://www.emea.lambda.tdk.com/uk/products/i1c)
+
+Summary: The regional page independently lists the i1C Datasheet and i1C 3D Drawing (STEP file). Its STEP download resolves to the same Product Center asset, not a different file host.
+
+Evidence: manufacturer_regional_catalog_route_web_inspection.
+
+### TDK-Lambda EMEA 3D drawings library — SRC-cb9f7650a8ea
+
+Source: [TDK-Lambda EMEA 3D drawings library](https://www.emea.lambda.tdk.com/dk/technical-data/data?resource=3D-Drawings)
+
+Summary: The official regional 3D drawing catalog routes to the same i1c_000_001.stp Product Center URL.
+
+Evidence: manufacturer_catalog_route_web_inspection.
+
+### DigiKey exact-part listing and CAD model route — SRC-742ac0b5bd12
+
+Source: [DigiKey exact-part listing and CAD model route](https://www.digikey.com/en/products/detail/tdk-lambda/I1C2W010A120V-000-R/25281353)
+
+Summary: The DigiKey part page identifies manufacturer part I1C2W010A120V-000-R. Its datasheet link routes to TDK's i1C series catalog PDF. Its CAD link routes to the DigiKey model page showing I1C 000 001.STP; no direct DigiKey-hosted copy of the STEP or detailed i1C specification PDF was found.
+
+Evidence: distributor_exact_part_web_inspection.
+
+### TDK-Lambda i1C series datasheet — SRC-277b9dcbad32
+
+Source: [TDK-Lambda i1C series datasheet](https://www.sg.lambda.tdk.com/wp-content/uploads/i1c_e.pdf)
+
+Summary: Manufacturer series brochure repeats the outline and top-view PCB hole pattern. The mechanical specification PDF is the more explicit source for pin diameter and exact option pin length.
+
+Evidence: manufacturer_series_brochure_web_inspection.
+
+### existing model start — SRC-9cdf6153dc98
+
+Source: [existing model start](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/existing-model-start.json)
+
+Summary: Fresh actual-file lookup identifies C046 as requiring a new model; existing completed components retain their models.
+
+Evidence: executed_filesystem_start_check.
+
+### result — SRC-758fb57013c6
+
+Source: [result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/result.json)
+
+Summary: Names the six-pin geometry input and exact failed acquisition routes; component NEEDS_INPUT, native CAD mutations zero.
+
+Evidence: executed_source_stage_result.
+
+### acquisition — SRC-f4fa3d9206c2
+
+Source: [acquisition](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/acquisition.json)
+
+Summary: Individual manufacturer and distributor URLs, exact variant dimensions, source locators and actual HTTP/TLS/model-download outcomes.
+
+Evidence: executed_acquisition_record.
+
+### source review — SRC-243a0dcd9117
+
+Source: [source review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/source-review.md)
+
+Summary: Separates exact -000 pin length, top-view pattern callouts and acquisition failures; no pin centers inferred from extracted text.
+
+Evidence: delegated_source_review_record.
+
+### tdk i1c series datasheet response headers — SRC-c04f80f53d85
+
+Source: [tdk i1c series datasheet response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-series-datasheet-response-headers.txt)
+
+Summary: Actual acquisition response headers for tdk i1c series datasheet response headers, retained to identify HTTP status and returned content type.
+
+Evidence: executed_retrieval_metadata.
+
+### tdk i1c spec response headers retry — SRC-9379662c6e30
+
+Source: [tdk i1c spec response headers retry](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers-retry.txt)
+
+Summary: Actual acquisition response headers for tdk i1c spec response headers retry, retained to identify HTTP status and returned content type.
+
+Evidence: executed_retrieval_metadata.
+
+### tdk i1c spec response headers — SRC-4dd718bf4ffe
+
+Source: [tdk i1c spec response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-spec-response-headers.txt)
+
+Summary: Actual acquisition response headers for tdk i1c spec response headers, retained to identify HTTP status and returned content type.
+
+Evidence: executed_retrieval_metadata.
+
+### tdk i1c step response headers retry — SRC-9c06519d3e5d
+
+Source: [tdk i1c step response headers retry](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers-retry.txt)
+
+Summary: Actual acquisition response headers for tdk i1c step response headers retry, retained to identify HTTP status and returned content type.
+
+Evidence: executed_retrieval_metadata.
+
+### tdk i1c step response headers — SRC-4ead276ff16f
+
+Source: [tdk i1c step response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/source/tdk-i1c-step-response-headers.txt)
+
+Summary: Actual acquisition response headers for tdk i1c step response headers, retained to identify HTTP status and returned content type.
+
+Evidence: executed_retrieval_metadata.
+
+### TDK converter source-stage execution report — SRC-5159849b1129
+
+Source: [TDK converter source-stage execution report](/home/leo/projects/3dmodeling/execution/c046-tdk-source-2026-11-13.md)
+
+Summary: Exact variant evidence, acquisition errors, construction input gate and next eligible component selection; coordinator and researcher identities attributed separately.
+
+Evidence: executed_work_report.
