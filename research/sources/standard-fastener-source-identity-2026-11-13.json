@@ -1,0 +1,40 @@
+{
+  "coordinator_model": "gpt-6.1-sol",
+  "component_source_model": "gpt-6-luna",
+  "records": [
+    {
+      "title": "Shared standard-fastener source procedure",
+      "summary": "Adds edition-specific geometry binding and distinct nominal thread, entry, usable-thread and plain-shank features.",
+      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "evidence_status": "implementation_artifact",
+      "registered_at": "2026-11-13",
+      "sha256": "1b4259afb51313fe54be42ce9939040946f387a41dcb4a042d00abbb037c4fc7",
+      "referring_documents": [
+        "execution/standard-fastener-source-identity-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Bolt ISO and seller source observations",
+      "summary": "The Luna source observation separates ISO 4014:2022 table values and reference/limit symbols from the exact seller combined-standard label.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c066-build-01/source/iso4014-2022-web-observation.json",
+      "evidence_status": "existing_source_review_registration",
+      "registered_at": "2026-11-13",
+      "sha256": "8db40fd90e135417f37f168bd9ab5d0bde98b2abfbfdaf61ad5011187d55a713",
+      "referring_documents": [
+        "execution/standard-fastener-source-identity-2026-11-13.md"
+      ],
+      "original_url": "https://www.iso.org/standard/72579.html"
+    },
+    {
+      "title": "DIN985 manufacturer drawing inspection",
+      "summary": "The retained manufacturer PDF and inspected page bind the DIN985 size row to source symbols, endpoints and dimensional ranges.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c068-build-01/source/boellhoff-din985-m12-datasheet.response",
+      "evidence_status": "downloaded_original",
+      "registered_at": "2026-11-13",
+      "sha256": "953082bd3d8791fd439a54f24da29337bb8d9883947f76a4a50ae071ba047702",
+      "referring_documents": [
+        "execution/standard-fastener-source-identity-2026-11-13.md"
+      ]
+    }
+  ]
+}
