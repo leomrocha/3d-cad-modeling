@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "local_path": "tests/test_source_variant_table.py",
+      "title": "Row-oriented catalogue selection regression",
+      "summary": "Ten passing synthetic tests cover exact labels and provenance, duplicate/malformed tables and product rows with dimension columns.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_test_source",
+      "referring_documents": [
+        "execution/catalogue-row-binding-2026-11-13.md"
+      ],
+      "sha256": "a4e12ce94c9b229673faa0c30411a778aa205eb00f0da810071405150f757c33"
+    },
+    {
+      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "title": "Exact product-row and dimension-column procedure",
+      "summary": "Reuses select_cell with an exact dimension header and exact product row while retaining the original table orientation and selected-cell provenance.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "referring_documents": [
+        "execution/catalogue-row-binding-2026-11-13.md"
+      ],
+      "sha256": "f3999777a630e441d9bd5294e13659cf8620cf61cd390a89412e00dd3ce48d11"
+    },
+    {
+      "local_path": "skills/component-cad/references/drawing-feature-checks.md",
+      "title": "Catalogue diagram endpoint review",
+      "summary": "Binds dimension letters to actual extension lines and distinguishes direct table dimensions, derived station arithmetic and source contour approximations.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "referring_documents": [
+        "execution/catalogue-row-binding-2026-11-13.md"
+      ],
+      "sha256": "b1ea1440762729cb2aa1693c522d06d50bd86e45f3b43c17c8379614dcabc9f2"
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c058-build-01/source/variant-table-selection.json",
+      "title": "CPC-T5008 source-row selection receipt",
+      "summary": "Nine selected catalogue cells retain exact CPC-T5008 row, column headers, source page, original PDF hash and dimension-endpoint mapping. Coordinator checked receipt structure and original hash.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_source_selection_review",
+      "referring_documents": [
+        "execution/catalogue-row-binding-2026-11-13.md"
+      ],
+      "original_url": "https://exhibitorsearch.messefrankfurt.com/images/original/userdata/bata/128220/5e43c19426435.pdf",
+      "sha256": "baa22cc2b4f5b0d9d0ea8f31565995698ba41826f3df0bfa290d2987667461c3"
+    }
+  ]
+}

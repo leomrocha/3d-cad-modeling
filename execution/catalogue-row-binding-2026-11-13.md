@@ -1,0 +1,7 @@
+# Catalogue row binding and dimension endpoints
+
+1. The existing `source_variant_table.select_cell` now has a documented row-oriented use: retain the source table orientation, pass the exact dimension header and product row, and preserve both labels with the selected text. The helper implementation is reused unchanged.
+2. Added synthetic coverage selects Variant Beta / Depth [mm] = 11 while preserving its exact row, column and source location. Executed `python -m unittest tests.test_source_variant_table -v`: 10 tests PASS. Fixtures contain arbitrary values.
+3. The drawing procedure now binds each dimension letter to its extension-line endpoints before deriving axial stations. A shared catalogue illustration supplies its own shape evidence; direct tabulated dimensions and approximated contours are recorded separately.
+4. Applied source preparation: `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c058-build-01/source/variant-table-selection.json`. The cable-lug job selects nine cells from the exact CPC-T5008 row, retains the original catalogue SHA-256 and checks selected values against the external job. Native CAD verification has its own component receipts.
+5. Original catalogue: https://exhibitorsearch.messefrankfurt.com/images/original/userdata/bata/128220/5e43c19426435.pdf ; printed page 44. The retained original and endpoint review belong to FERME. Source preparation: gpt-6-luna; source review, generic regression and procedure integration: gpt-6.1-sol.

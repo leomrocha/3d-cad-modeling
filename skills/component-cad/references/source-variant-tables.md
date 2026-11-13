@@ -1,4 +1,4 @@
-# Exact variant columns in source tables
+# Exact product rows and variant columns in source tables
 
 Use `${MODELING_ROOT}/scripts/source_variant_table.py` when a manufacturer or engineering table places specifications for multiple variants in adjacent columns. The helper selects one cell from an explicitly transcribed table using the exact column header and exact row label.
 
@@ -8,5 +8,6 @@ Use `${MODELING_ROOT}/scripts/source_variant_table.py` when a manufacturer or en
 4. The helper rejects missing or repeated headers, a header with no exact match, repeated row labels, malformed rows, empty cells, and a missing exact row label. Header and row duplicate detection is case-insensitive after trimming whitespace; selection itself requires exact case-sensitive text.
 5. Keep adjacent variant values as separate source claims. A value from a neighboring column cannot support the requested product unless the source explicitly maps that column to that product.
 6. Apply product-specific units, evidence status, original source URL/path, source hash, date, and concrete feature checks in the external component job. A successful selector result is not a geometry or native CAD check.
+7. For a catalogue with product variants in rows and named dimensions in columns, keep that original orientation. Pass the exact dimension-column label as the second argument to `select_cell` (its current parameter name is `variant_header`) and the exact product code as `row_label`. The returned column and row identify the source claim together. Retain neighboring rows as separate products and each dimension letter's drawing-leader endpoints separately from its tabulated value.
 
 `tests/test_source_variant_table.py` uses synthetic table records. It checks exact column association, duplicate and malformed input rejection, and neighbor-column separation. It does not inspect a product source or validate a component.
