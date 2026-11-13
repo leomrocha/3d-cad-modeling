@@ -38,6 +38,49 @@
       "referring_documents": [
         "execution/hexagonal-reference-helper-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Executed C066 M12×80 bolt nominal reference application",
+      "summary": "Native saved/reopened application of the shared hexagonal helper: one fused closed solid with ISO 4014:2022 nominal 18 mm AF × 7.5 mm hex head and nominal Ø12 mm × 80 mm continuous shaft. Reopened checks passed for six directed distinct flats, one shaft cylinder, axial stations, topology, source metadata, and vertex persistence. This geometry represents the ISO reference; the seller’s DIN/ISO and property-class choices remain separate source claims.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c066-build-01/result.json",
+      "result_sha256": "8a8c3551e3c15405978f5f84de7803769eaee9423b8f91c5c4626c245d06dd96",
+      "native_model": "${FERME_ROOT}/engineering/module-development/cad/parts/m12x80-iso4014-2022-nominal-reference.dwg",
+      "native_model_sha256": "89e7fa899b3f1ddf84d08a8349b750272139fb812db4ad6a51c9992b68147b9b",
+      "evidence_status": "executed_result",
+      "execution_model": "gpt-6-luna",
+      "coordinator_model": "gpt-6.1-sol",
+      "shared_method_revisions": {
+        "source_variant_table": "cf692ce",
+        "hexagonal_reference": "feaf602"
+      },
+      "referring_documents": [
+        "execution/hexagonal-reference-helper-2026-11-13.md",
+        "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c066-build-01/source-contract.md"
+      ],
+      "registered_at": "2026-11-13",
+      "component_result_commit": "ae661cb",
+      "source_acquisition_status": "Original ISO sample PDF and seller HTML inspected as web sources; local observation records retained."
+    },
+    {
+      "title": "Executed C068 M12 DIN 985 Nylstop nut external clearance reference application",
+      "summary": "Native saved/reopened application of the shared hexagonal helper: maximum-dimension 19 mm AF × 12 mm high regular hexagonal prism with a filled centre. Reopened analytic-surface, axial-station, topology, source-metadata, persistence and save/reopen checks passed. The geometry is an exterior maximum-dimension reference.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c068-build-01/result.json",
+      "result_sha256": "129c04d7ff4aed3e939366601c8a15478bafdc3ec3bf590ea6dcfc3ce8ecc5bb",
+      "native_model": "${FERME_ROOT}/engineering/module-development/cad/parts/m12-din985-nylstop-nut-agz000028626-envelope-reference.dwg",
+      "native_model_sha256": "f05cb27d7ac31371b131e36784c2401f657afa457b081753c253041231845780",
+      "evidence_status": "executed_result",
+      "execution_model": "gpt-6-luna",
+      "coordinator_model": "gpt-6.1-sol",
+      "shared_method_revisions": {
+        "source_variant_table": "cf692ce",
+        "hexagonal_reference": "feaf602"
+      },
+      "referring_documents": [
+        "execution/hexagonal-reference-helper-2026-11-13.md",
+        "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c068-build-01/source-contract.md"
+      ],
+      "registered_at": "2026-11-13",
+      "component_result_commit": "ae661cb"
     }
   ]
 }
