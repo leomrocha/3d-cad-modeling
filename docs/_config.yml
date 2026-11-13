@@ -1,0 +1,28 @@
+title: 3D CAD Modeling
+description: Reusable tools and agent instructions for creating, inspecting and modifying 3D models.
+url: https://leomrocha.github.io
+baseurl: /3d-cad-modeling
+repository_url: https://github.com/leomrocha/3d-cad-modeling
+source_branch: master
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+exclude:
+  - examples
+  - tools.md
+  - PAGES.md
+navigation:
+  - title: "License"
+    id: license
+  - title: "Introduction"
+    id: introduction
+  - title: "Project"
+    id: project
+  - title: "Repository"
+    id: repository
+  - title: "Examples"
+    id: examples
+  - title: "Installing"
+    id: installing

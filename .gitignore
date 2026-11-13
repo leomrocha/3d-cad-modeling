@@ -26,6 +26,11 @@ env/
 htmlcov/
 /coverage.xml
 
+# Jekyll generated output and caches
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
 # Local environment configuration; keep example templates
 .env
 .env.*
