@@ -1,0 +1,155 @@
+[
+  {
+    "url": "https://www.victronenergy.com/dc-dc-converters/orion-tr-smart",
+    "title": "Victron Orion-Tr Smart DC-DC Charger Isolated",
+    "summary": "The page offers an official STEP labeled Orion-Tr Smart Charger Isolated 12V-24V 360W. This label and associated product family do not identify ORI482438120, a 48/24-16A, 380W target. The page's target photos identify the exact product but provide no dimensioned interfaces.",
+    "evidence_status": "manufacturer_exact_product_page_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "url": "https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W-%28stp%29.STEP",
+    "title": "Orion-Tr Smart Charger Isolated 12V-24V 360W — STEP",
+    "summary": "Official page labels the file 12V-24V 360W Smart family. Existing STEP product labels identify Orion-Tr Smart 24-12-30A outer body and heat sink; no ORI482438120 label or exact variant mapping. Do not treat as exact C044 geometry.",
+    "evidence_status": "official_manufacturer_step_related_family_not_target",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ],
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP",
+    "sha256": "fc14a78bdd73ca3fe5a6a429fb5e38aed4d2ee2d8d6358354c2dcf749dfa2b28"
+  },
+  {
+    "url": "https://www.victronenergy.com/upload/documents/Orion-Tr_Smart_DC-DC_Charger_-_Isolated/34439-Orion-Tr_Smart_DC-DC_Charger-pdf-en.pdf",
+    "title": "Orion-Tr Smart DC-DC Charger Isolated manual",
+    "summary": "Supports target model family and the 130 x 186 x 70 mm envelope. The exact target is not listed in the dimension drawing's model association. Do not use drawing mounting-hole or terminal dimensions as target-specific.",
+    "evidence_status": "manufacturer_manual_exact_electrical_model_table_and_group_envelope",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ],
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-manual.pdf",
+    "sha256": "902fd7c4a8bc28f6711de8875a4e25f4a3ab6015fe54f36684ba89c383154f2d"
+  },
+  {
+    "url": "https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W.pdf",
+    "title": "Dimension Drawing - Orion-Large, Rev01",
+    "summary": "This related 12V-24V 360W drawing is already preserved in C043 source. It does not provide source-supported mounting or terminal geometry for exact target C044.",
+    "evidence_status": "manufacturer_related_dimension_drawing_existing_copy",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ],
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family-dimension-drawing.pdf",
+    "sha256": "d97dab715a4813919127ce5e3b377776f024aaf8b6611a9bf9fdc169baa05c3a"
+  },
+  {
+    "url": "https://www.victronenergy.com/media/pg/Orion-Tr_Smart_DC-DC_Charger_-_Isolated/en/specifications.html",
+    "title": "Victron Orion-Tr Smart isolated specifications",
+    "summary": "The exact model row confirms 48V input / 24V output, 16A, 380W at 40°C. The dimensional group gives 130 x 186 x 70 mm for models without a 12V input or output. It does not show mounting or terminal geometry.",
+    "evidence_status": "manufacturer_manual_specification_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "url": "https://www.victronenergy.com/dc-dc-converters/orion-tr-smart",
+    "title": "Victron Orion-Tr Smart exact 48/24-16 product photos",
+    "summary": "The exact target product photos show external form, input/output ends and top-face arrangement. They contain no stated dimensions and cannot establish the mounting pattern.",
+    "evidence_status": "manufacturer_product_photo_web_inspection",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "url": "https://www.victronenergy.com/upload/documents/DimensionDrawing-Orion-Tr-%28380-400W%29.pdf",
+    "title": "Dimension Drawing - Orion 380W-400W isolated, Rev01",
+    "summary": "Drawing lists ORI482441110, the non-Smart 48/24-16 model, not ORI482438120. It is not used to attribute mounting features to C044.",
+    "evidence_status": "manufacturer_non_smart_drawing_excluded",
+    "access_date": "2026-11-13",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/existing-model-start.json",
+    "title": "existing model start",
+    "summary": "Fresh inventory identifies C044 as NEW_MODEL_REQUIRED; 43 model/reference files checked.",
+    "evidence_status": "executed_filesystem_start_check",
+    "access_date": "2026-11-13",
+    "sha256": "f7ad7f203e38053229fa3465abdf57d81c9dc9fd8021d1d6d98a288bd585fa56",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/initial-state.json",
+    "title": "initial state",
+    "summary": "Read-only OCS session and document state before source-qualified converter work.",
+    "evidence_status": "executed_native_state_read",
+    "access_date": "2026-11-13",
+    "sha256": "d66ed7c341bb85b2145d50a9b0f930051c0be5f525968c9f975a01c862b0c0a5",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/prior-model-hashes.json",
+    "title": "prior model hashes",
+    "summary": "Hashes of all 26 prior final DWGs retained before the new component source stage.",
+    "evidence_status": "executed_existing_model_hashes",
+    "access_date": "2026-11-13",
+    "sha256": "b48dcd44d8cc9803f162fad56b5070395a286e828df90be4ec13c421f07722a5",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/result.json",
+    "title": "result",
+    "summary": "Names the exact-model mounting/terminal input gate and source-family mismatch; CAD mutations zero.",
+    "evidence_status": "executed_source_stage_result",
+    "access_date": "2026-11-13",
+    "sha256": "d14fc2a31acead21f5d46227f68f5325bd212627780a41737c1060783be7751e",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/acquisition.json",
+    "title": "acquisition",
+    "summary": "Original URLs, reused source bytes and hashes, exact model associations, manual envelope and actual web-inspection attribution.",
+    "evidence_status": "executed_source_review_record",
+    "access_date": "2026-11-13",
+    "sha256": "8e3d7d91d4ff6796673aa1b572fb9c14a2db2f04c659b661b2790df6e4a2a587",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/source-review.md",
+    "title": "source review",
+    "summary": "Manufacturer source findings separate the exact Smart target from listed 12/24 V variants and the non-Smart drawing.",
+    "evidence_status": "delegated_source_review_record",
+    "access_date": "2026-11-13",
+    "sha256": "0c2bdb64b1075a22a72de3b2cd6b053ef4682d6b645a834c6d5f6db930c48fa1",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md",
+    "title": "c044 orion source 2026 11 13",
+    "summary": "Execution report identifies source reuse, target attribution, component state and next sequential selection.",
+    "evidence_status": "executed_work_report",
+    "access_date": "2026-11-13",
+    "sha256": "f476c41da3859c2566603e94b8d3ecbe1cf6955dce2d90e7c95f39296c2ebf20",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md"
+    ]
+  }
+]

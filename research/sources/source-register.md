@@ -15857,3 +15857,117 @@ Source: [TDK converter source-stage execution report](/home/leo/projects/3dmodel
 Summary: Exact variant evidence, acquisition errors, construction input gate and next eligible component selection; coordinator and researcher identities attributed separately.
 
 Evidence: executed_work_report.
+
+## Orion 48/24 source stage — 13 November 2026
+
+### Victron Orion-Tr Smart DC-DC Charger Isolated — SRC-83ad3c89cbcc
+
+Source: [Victron Orion-Tr Smart DC-DC Charger Isolated](https://www.victronenergy.com/dc-dc-converters/orion-tr-smart)
+
+Summary: The page offers an official STEP labeled Orion-Tr Smart Charger Isolated 12V-24V 360W. This label and associated product family do not identify ORI482438120, a 48/24-16A, 380W target. The page's target photos identify the exact product but provide no dimensioned interfaces.
+
+Evidence: manufacturer_exact_product_page_web_inspection.
+
+### Orion-Tr Smart Charger Isolated 12V-24V 360W — STEP — SRC-994ff56f9968
+
+Source: [Orion-Tr Smart Charger Isolated 12V-24V 360W — STEP](https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W-%28stp%29.STEP)
+
+Summary: Official page labels the file 12V-24V 360W Smart family. Existing STEP product labels identify Orion-Tr Smart 24-12-30A outer body and heat sink; no ORI482438120 label or exact variant mapping. Do not treat as exact C044 geometry.
+
+Evidence: official_manufacturer_step_related_family_not_target.
+
+### Orion-Tr Smart DC-DC Charger Isolated manual — SRC-f4c2cf5fb241
+
+Source: [Orion-Tr Smart DC-DC Charger Isolated manual](https://www.victronenergy.com/upload/documents/Orion-Tr_Smart_DC-DC_Charger_-_Isolated/34439-Orion-Tr_Smart_DC-DC_Charger-pdf-en.pdf)
+
+Summary: Supports target model family and the 130 x 186 x 70 mm envelope. The exact target is not listed in the dimension drawing's model association. Do not use drawing mounting-hole or terminal dimensions as target-specific.
+
+Evidence: manufacturer_manual_exact_electrical_model_table_and_group_envelope.
+
+### Dimension Drawing - Orion-Large, Rev01 — SRC-3a0be7d2ba98
+
+Source: [Dimension Drawing - Orion-Large, Rev01](https://www.victronenergy.com/upload/documents/Orion-Tr-Smart-Charger-Isolated-12V-24V-360W.pdf)
+
+Summary: This related 12V-24V 360W drawing is already preserved in C043 source. It does not provide source-supported mounting or terminal geometry for exact target C044.
+
+Evidence: manufacturer_related_dimension_drawing_existing_copy.
+
+### Victron Orion-Tr Smart isolated specifications — SRC-95ac79e87962
+
+Source: [Victron Orion-Tr Smart isolated specifications](https://www.victronenergy.com/media/pg/Orion-Tr_Smart_DC-DC_Charger_-_Isolated/en/specifications.html)
+
+Summary: The exact model row confirms 48V input / 24V output, 16A, 380W at 40°C. The dimensional group gives 130 x 186 x 70 mm for models without a 12V input or output. It does not show mounting or terminal geometry.
+
+Evidence: manufacturer_manual_specification_web_inspection.
+
+### Victron Orion-Tr Smart exact 48/24-16 product photos — SRC-83ad3c89cbcc
+
+Source: [Victron Orion-Tr Smart exact 48/24-16 product photos](https://www.victronenergy.com/dc-dc-converters/orion-tr-smart)
+
+Summary: The exact target product photos show external form, input/output ends and top-face arrangement. They contain no stated dimensions and cannot establish the mounting pattern.
+
+Evidence: manufacturer_product_photo_web_inspection.
+
+### Dimension Drawing - Orion 380W-400W isolated, Rev01 — SRC-536366b54ef5
+
+Source: [Dimension Drawing - Orion 380W-400W isolated, Rev01](https://www.victronenergy.com/upload/documents/DimensionDrawing-Orion-Tr-%28380-400W%29.pdf)
+
+Summary: Drawing lists ORI482441110, the non-Smart 48/24-16 model, not ORI482438120. It is not used to attribute mounting features to C044.
+
+Evidence: manufacturer_non_smart_drawing_excluded.
+
+### existing model start — SRC-e35b2a1b7a0c
+
+Source: [existing model start](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/existing-model-start.json)
+
+Summary: Fresh inventory identifies C044 as NEW_MODEL_REQUIRED; 43 model/reference files checked.
+
+Evidence: executed_filesystem_start_check.
+
+### initial state — SRC-9f8bf013cc70
+
+Source: [initial state](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/initial-state.json)
+
+Summary: Read-only OCS session and document state before source-qualified converter work.
+
+Evidence: executed_native_state_read.
+
+### prior model hashes — SRC-bbc7e71e7aa0
+
+Source: [prior model hashes](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/prior-model-hashes.json)
+
+Summary: Hashes of all 26 prior final DWGs retained before the new component source stage.
+
+Evidence: executed_existing_model_hashes.
+
+### result — SRC-921d733e06a7
+
+Source: [result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/result.json)
+
+Summary: Names the exact-model mounting/terminal input gate and source-family mismatch; CAD mutations zero.
+
+Evidence: executed_source_stage_result.
+
+### acquisition — SRC-bc97944dd4fa
+
+Source: [acquisition](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/acquisition.json)
+
+Summary: Original URLs, reused source bytes and hashes, exact model associations, manual envelope and actual web-inspection attribution.
+
+Evidence: executed_source_review_record.
+
+### source review — SRC-a2878ff6a7f7
+
+Source: [source review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c044-build-01/source/source-review.md)
+
+Summary: Manufacturer source findings separate the exact Smart target from listed 12/24 V variants and the non-Smart drawing.
+
+Evidence: delegated_source_review_record.
+
+### c044 orion source 2026 11 13 — SRC-3cbd18cb5a50
+
+Source: [c044 orion source 2026 11 13](/home/leo/projects/3dmodeling/execution/c044-orion-source-2026-11-13.md)
+
+Summary: Execution report identifies source reuse, target attribution, component state and next sequential selection.
+
+Evidence: executed_work_report.
