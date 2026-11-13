@@ -44,6 +44,17 @@
       ],
       "original_url": "https://exhibitorsearch.messefrankfurt.com/images/original/userdata/bata/128220/5e43c19426435.pdf",
       "sha256": "baa22cc2b4f5b0d9d0ea8f31565995698ba41826f3df0bfa290d2987667461c3"
+    },
+    {
+      "title": "Applied catalogue-row native reference review",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c058-build-01/coordinator-result-review.json",
+      "summary": "Exact source-row binding used by saved lug reference; coordinator verified original save response, one-solid audit, source-defined projected extents and source/model hashes. Comparator states retain worker-observation attribution.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_saved_file_and_original_journal_review",
+      "sha256": "9594e5d2eed557a72daa02cd8d6cada5e7bbeb83eec81d4fddb74548fca0b716",
+      "referring_documents": [
+        "execution/catalogue-row-binding-2026-11-13.md"
+      ]
     }
   ]
 }
