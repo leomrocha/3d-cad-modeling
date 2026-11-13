@@ -94,3 +94,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 1. Implemented shared procedures include component iteration, source intake, drawing inspection and existing-model checking. The fifteen workflow groups above retain their recorded proposal/implementation status.
 2. [Modeling-agent instructions](../research/repository-split-preparation/modeling-agent-instructions.md) define output routing: component recipes/evidence in FERME; shared helper/skill improvements here. Preserve active paths while historical migration is prepared.
 3. [Script-change specification](../research/repository-split-preparation/script-changes.md) records the external cadtools dependency, component recipe extraction and integration-test changes proposed for migration.
+
+## Circular opening inspection
+
+1. [Saved circular boundaries](cad-ocs-engineering/references/circular-boundary-checks.md) — associates full circular cap loops, analytic curve parameters and reciprocal cylindrical face boundaries.

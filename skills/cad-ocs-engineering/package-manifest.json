@@ -96,7 +96,7 @@
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",
-      "sha256": "aef3c95104792dcd44e3a2a92e13270d533c82b52ca604c83e2841712a44044f"
+      "sha256": "14efb7ac9055f0d67bc8eb0585b317875766e5c61ad01896b1bee33f5e010883"
     },
     "scripts/ocs_control.py": {
       "source": "scripts/ocs_control.py",

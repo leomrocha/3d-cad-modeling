@@ -52,7 +52,7 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 
 Some of these are specialized tools for particular geometries. I still have work to do on these things.
 
-1. [native_acis.py](../scripts/native_acis.py) — reads supported native solid records for geometry inspection.
+1. [native_acis.py](../scripts/native_acis.py) — reads supported native solids, analytic surfaces and optional [circular boundary curves and adjacent faces](../skills/cad-ocs-engineering/references/circular-boundary-checks.md).
 2. [step_solid_inventory.py](../scripts/step_solid_inventory.py) — inventories STEP solid definitions without counting nested shells as additional solids.
 3. [step_placements.py](../scripts/step_placements.py) — reads supported STEP/native placement matrices and compares component positions.
 4. [assembly_units.py](../scripts/assembly_units.py) — prepares a unit-change plan for specified assembly root inserts, preserving internal geometry.

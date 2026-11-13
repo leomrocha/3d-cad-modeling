@@ -100,7 +100,7 @@ def _torus_surface(tokens, Tags, world):
             'major_radius': major, 'minor_radius': minor}
 
 
-def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,include_loops=False,allow_tori=False):
+def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,include_loops=False,allow_tori=False,include_edge_curves=False):
     from ezdxf.acis.sab import parse_sab,SabDataLoader
     from ezdxf.acis.const import Tags
     if not isinstance(data,(bytes,bytearray)) or not data:
@@ -135,14 +135,28 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
         values=list(token.value)
         if len(values)!=3 or not all(math.isfinite(v) for v in values):raise ValueError('Invalid native vector')
         return values
+    def linked(first,next_slot,kind,circular=False):
+        rows=[];current=first;visited=set()
+        while current.name!='null-ptr':
+            if id(current) in visited:
+                if circular and current is first:return rows
+                raise ValueError('Unexpected native link cycle')
+            if current.name!=kind:raise ValueError('Unexpected native linked record')
+            visited.add(id(current));rows.append(current);current=current.data[next_slot].value
+        if circular:raise ValueError('Open native boundary loop')
+        return rows
+    surface_feature_by_id={}
     for e in surfaces.values():
         t=e.data
-        if e.name=='plane-surface':out['planes'].append({'origin':world(vec(t[1]),True),'normal':world(vec(t[2]))})
+        if e.name=='plane-surface':
+            row={'origin':world(vec(t[1]),True),'normal':world(vec(t[2]))}
+            out['planes'].append(row);surface_feature_by_id[id(e)]=row
         elif e.name=='torus-surface':
-            out['tori'].append(_torus_surface(t,Tags,world))
+            row=_torus_surface(t,Tags,world);out['tori'].append(row);surface_feature_by_id[id(e)]=row
         elif e.name=='sphere-surface':
             if t[2].tag!=Tags.DOUBLE or not math.isfinite(t[2].value) or t[2].value<=0:raise ValueError('Invalid native sphere radius')
-            out['spheres'].append({'origin':world(vec(t[1]),True),'radius':t[2].value})
+            row={'origin':world(vec(t[1]),True),'radius':t[2].value}
+            out['spheres'].append(row);surface_feature_by_id[id(e)]=row
         else:
             loader=SabDataLoader(t,b.header.version);loader.read_ptr()
             origin=loader.read_vec3();axis=loader.read_vec3();major=loader.read_vec3()
@@ -154,9 +168,11 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
             radius=math.sqrt(sum(v*v for v in major))
             if radius<=0 or abs(radius-native_radius)>1e-7:raise ValueError('Contradictory native radii')
             record={'origin':world(origin,True),'axis':world(axis),'radius':radius}
-            if abs(sine)<=1e-9 and abs(cosine-1)<=1e-9:out['cylinders'].append(record)
+            if abs(sine)<=1e-9 and abs(cosine-1)<=1e-9:
+                out['cylinders'].append(record);surface_feature_by_id[id(e)]=record
             elif allow_cones:
-                record.update(sin_angle=sine,cos_angle=cosine);out['cones'].append(record)
+                record.update(sin_angle=sine,cos_angle=cosine)
+                out['cones'].append(record);surface_feature_by_id[id(e)]=record
             else:raise ValueError('Noncylindrical cone requires explicit cone option')
     for e in reachable:
         if e.name=='point':out['points'].append(world(vec(e.data[1]),True))
@@ -170,16 +186,6 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
         closed=closed and partner.name=='coedge' and partner.data[3].value is e
     if include_loops:
         out['planar_face_loops']=[]
-        def linked(first,next_slot,kind,circular=False):
-            rows=[];current=first;visited=set()
-            while current.name!='null-ptr':
-                if id(current) in visited:
-                    if circular and current is first:return rows
-                    raise ValueError('Unexpected native link cycle')
-                if current.name!=kind:raise ValueError('Unexpected native linked record')
-                visited.add(id(current));rows.append(current);current=current.data[next_slot].value
-            if circular:raise ValueError('Open native boundary loop')
-            return rows
         for face in faces:
             surf=next(e for e in refs(face) if e.name.endswith('-surface'))
             if surf.name!='plane-surface':continue
@@ -237,6 +243,110 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
                      'shells':sum(e.name=='shell' for e in reachable),'faces':len(faces),
                      'coedges':len(coedges),'reciprocal_closed_partners':closed}
     if body_transform:out['body_transform']=body_transform
+    if include_edge_curves:
+        # Preserve the face -> loop -> coedge -> edge graph and its analytic
+        # boundary curves. This is opt-in because older callers consume the
+        # compact loop summaries above. The typed edge layout is accepted only
+        # for the observed ACIS700 straight/ellipse records.
+        coedge_owner={}
+        face_surfaces=[]
+        for i,face in enumerate(faces):
+            surf=next(e for e in refs(face) if e.name.endswith('-surface'))
+            face_surfaces.append(surf)
+            for loop in linked(face.data[2].value,1,'loop'):
+                for coedge in linked(loop.data[2].value,1,'coedge',True):
+                    old=coedge_owner.get(id(coedge))
+                    if old is not None and old!=i:
+                        raise ValueError('Coedge belongs to multiple faces')
+                    coedge_owner[id(coedge)]=i
+        boundary_faces=[]
+        for i,face in enumerate(faces):
+            surf=face_surfaces[i]
+            face_row={'face_index':i,'surface_type':surf.name,'loops':[]}
+            support=surface_feature_by_id.get(id(surf))
+            if support is None:
+                raise ValueError('Face surface has no decoded analytic support')
+            face_row['support']=support
+            for loop in linked(face.data[2].value,1,'loop'):
+                edge_rows=[]
+                for coedge in linked(loop.data[2].value,1,'coedge',True):
+                    edge=coedge.data[4].value
+                    curves=[e for e in refs(edge) if e.name.endswith('-curve')]
+                    if len(curves)!=1:
+                        raise ValueError('Each edge needs one supported analytic curve')
+                    curve=curves[0]
+                    vertices=[e for e in refs(edge) if e.name=='vertex']
+                    if len(vertices)!=2:
+                        raise ValueError('Each boundary edge needs two vertices')
+                    endpoints=[]
+                    for vertex in vertices:
+                        point=next((e for e in refs(vertex) if e.name=='point'),None)
+                        if point is None or len(point.data)<2:
+                            raise ValueError('Boundary vertex has no point')
+                        endpoints.append(world(vec(point.data[1]),True))
+                    if (len(edge.data)<=6 or edge.data[2].tag!=Tags.DOUBLE
+                            or edge.data[4].tag!=Tags.DOUBLE):
+                        raise ValueError('Unsupported edge parameter token layout')
+                    start=edge.data[2].value
+                    end=edge.data[4].value
+                    if (not isinstance(start,(int,float)) or isinstance(start,bool)
+                            or not isinstance(end,(int,float)) or isinstance(end,bool)
+                            or not math.isfinite(start) or not math.isfinite(end)):
+                        raise ValueError('Boundary edge parameter interval must be finite')
+                    span=end-start
+                    if not math.isfinite(span):
+                        raise ValueError('Boundary edge parameter span must be finite')
+                    partner=coedge.data[3].value
+                    partner_index=coedge_owner.get(id(partner))
+                    if (partner.name!='coedge' or partner_index is None
+                            or partner is coedge or partner.data[3].value is not coedge
+                            or partner.data[4].value is not edge):
+                        raise ValueError('Boundary coedge partner must belong to a supported face')
+                    if coedge.data[5].tag not in [Tags.BOOL_TRUE,Tags.BOOL_FALSE]:
+                        raise ValueError('Unsupported coedge sense token')
+                    row={'curve_type':curve.name,'start_parameter':start,'end_parameter':end,
+                         'parameter_span':span,
+                         'full_period_2pi':abs(abs(span)-2*math.pi)<=1e-9,
+                         'endpoints':endpoints,'coedge_sense':coedge.data[5].value,
+                         'partner_face_index':partner_index,
+                         'partner_surface_type':face_surfaces[partner_index].name}
+                    if curve.name=='straight-curve':
+                        expected=[Tags.POINTER,Tags.LOCATION_VEC,Tags.DIRECTION_VEC,
+                                  Tags.BOOL_FALSE,Tags.BOOL_FALSE]
+                        if len(curve.data)!=len(expected) or [t.tag for t in curve.data]!=expected:
+                            raise ValueError('Unsupported straight-curve token layout')
+                        origin=vec(curve.data[1]);direction=vec(curve.data[2])
+                        if abs(sum(v*v for v in direction)-1)>1e-8:
+                            raise ValueError('Straight-curve direction must be unit length')
+                        row['line']={'origin':world(origin,True),'direction':world(direction)}
+                    elif curve.name=='ellipse-curve':
+                        expected=[Tags.POINTER,Tags.LOCATION_VEC,Tags.DIRECTION_VEC,
+                                  Tags.DIRECTION_VEC,Tags.DOUBLE,Tags.BOOL_FALSE,Tags.BOOL_FALSE]
+                        if len(curve.data)!=len(expected) or [t.tag for t in curve.data]!=expected:
+                            raise ValueError('Unsupported ellipse-curve token layout')
+                        center=world(vec(curve.data[1]),True)
+                        normal=world(vec(curve.data[2]))
+                        major_axis=world(vec(curve.data[3]))
+                        ratio=curve.data[4].value
+                        major_radius=math.sqrt(sum(v*v for v in major_axis))
+                        if (not math.isfinite(ratio) or not 0<ratio<=1
+                                or not math.isfinite(major_radius) or major_radius<=0
+                                or abs(sum(v*v for v in normal)-1)>1e-8
+                                or abs(sum(a*b for a,b in zip(normal,major_axis)))>1e-8*max(1.0,major_radius)):
+                            raise ValueError('Unsupported or invalid ellipse-curve parameters')
+                        row['ellipse']={'center':center,'normal':normal,
+                                        'major_axis':major_axis,
+                                        'major_radius':major_radius,
+                                        'minor_to_major_ratio':ratio,
+                                        'minor_radius':major_radius*ratio,
+                                        'is_circle':abs(ratio-1)<=1e-9}
+                    else:
+                        raise ValueError('Unsupported boundary curve: '+curve.name)
+                    edge_rows.append(row)
+                face_row['loops'].append({'edge_count':len(edge_rows),'edges':edge_rows})
+            boundary_faces.append(face_row)
+        out['face_boundary_edges']=boundary_faces
+        out['face_boundary_edge_index_scope']='face_index and partner_face_index refer only to rows in this payload'
     out['encoding']='SAB';out['decoder']='ezdxf.acis.sab.parse_sab'
     out['acis_header_units_in_mm']=b.header.units_in_mm
     return out
