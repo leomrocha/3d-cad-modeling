@@ -7,7 +7,7 @@
 
 ## Skills
 
-1. [cad-ocs-engineering](../skills/cad-ocs-engineering/SKILL.md) — guides the agent through an existing-model check, component construction, geometry checks and a reusable tooling improvement.
+1. [cad-ocs-engineering](../skills/cad-ocs-engineering/SKILL.md) — combines the full OCS modeling contract, session control, component iteration, geometry checks, saved-model verification and computational handoff instructions.
 2. [cad-drawing-inspection](../skills/cad-drawing-inspection/SKILL.md) — guides the agent through reading a DXF's units, layers, blocks and source shapes.
 3. [cad-source-intake](../skills/cad-source-intake/SKILL.md) — records the request, source files, hashes and corrections as a new input revision.
 
