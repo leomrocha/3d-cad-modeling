@@ -1,4 +1,4 @@
-"""Source-bound saved-shell and terminal checks for the exercised Leaf geometry.
+"""Source-bound saved-shell, terminal and tabbed-case battery checks.
 
 Dimensions and reconstruction choices are supplied by the external component
 job. This module reads native records and creates no geometry or files.
@@ -47,3 +47,26 @@ def check(record,job,tolerance=1e-7):
                 checks=checks,job_id=job['job_id'],document_id=record['document_id'],geometry_revision=record['geometry_revision'],
                 method='actual saved SAB surfaces, transformed vertices and source-bound named parts',
                 representation=job['representation'],units='mm')
+
+
+def check_tabbed_case(record,job,tolerance=1e-6):
+    """Inspect a named multi-solid battery exterior and repeated cover recesses."""
+    from feature_checks import planar_boundary_pattern
+    require_ready(job)
+    if job['units']!='mm' or not math.isfinite(tolerance) or tolerance<=0:
+        raise ValueError('Millimetres and positive finite numerical threshold required')
+    p=named_parts(record,job['metadata_app'],job['required_parts'],allow_rigid=True,include_loops=True)
+    v={f['name']:f['value'] for f in job['features']};g=job['measurement_parts'];checks=[]
+    for name,part in p.items():checks.append(closed_body(name+' closed connected body',part))
+    def span(names,axis):
+        points=[point for name in names for point in p[name]['points']]
+        return max(a[axis] for a in points)-min(a[axis] for a in points)
+    for label,names,axis,key in [('Overall tab length',g['support'],0,'overall tab length'),('Case support width',g['support'],1,'case width'),('Body length',g['body'],0,'body length'),('Case height',g['height'],2,'case height')]:
+        checks.append(comparison(label,span(names,axis),v[key],tolerance))
+    expected=[(x,y) for x in [-v['mount X offset'],v['mount X offset']] for y in [-v['mount Y offset'],v['mount Y offset']]]
+    if len(g['support'])!=1:raise ValueError('One named mounting support required')
+    checks.append(cylinder_pattern('Four mounting bores',p[g['support'][0]],v['mount bore diameter'],2,expected,tolerance))
+    checks.append(planar_boundary_pattern('Cover recess pattern',p[g['cover']],2,v['cover floor level'],[v['cover pocket width'],v['cover pocket height']],v['cover pocket centres'],tolerance))
+    return dict(result='PASS' if all(c['result']=='PASS' for c in checks) else 'FAIL',checks=checks,
+                job_id=job['job_id'],document_id=record['document_id'],geometry_revision=record['geometry_revision'],
+                method='Source-bound native SAB body, cylinder and repeated planar-boundary checks',units='mm')
