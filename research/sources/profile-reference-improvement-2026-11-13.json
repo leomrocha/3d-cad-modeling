@@ -68,6 +68,28 @@
       "referring_documents": [
         "execution/profile-reference-improvement-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Applied profile extrusion and native persistence result",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c050-build-01/portable-evidence/result.json",
+      "summary": "Native profile extrusion saved and reopened with source-bound span, vertex, topology and metadata checks passing. Component evidence retains the separate opening overlays, runtime path-resolution correction and save-audit label/bounds discrepancy.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result_review",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md",
+        "skills/component-cad/references/profile-reference.md"
+      ]
+    },
+    {
+      "title": "Paired runtime source-path resolution procedure",
+      "local_path": "skills/component-cad/references/profile-reference.md",
+      "summary": "Resolves feature-source paths and source-file paths together in a runtime copy before source pinning; preserves the portable job and metadata payload separately.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "applied_procedure_update",
+      "sha256": "1abc0c14d8c4acee26bf3433bc3050d2580098cd5105043ce5eaaa8b568aea06",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md"
+      ]
     }
   ],
   "checks": {
