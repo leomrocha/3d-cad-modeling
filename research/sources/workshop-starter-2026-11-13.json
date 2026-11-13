@@ -1,0 +1,226 @@
+{
+  "registered_at": "2026-11-13",
+  "sources": [
+    {
+      "id": "START-01",
+      "title": "Lincoln E6013 electrode sheet",
+      "url": "https://ch-delivery.lincolnelectric.com/api/public/content/0a466bf3e2b44d0395103d46fd69a940?v=778bc671",
+      "summary": "E6013: 2.5x350 mm 60–85 A; 3.2x350 mm 100–125 A; AC/DC−/DC+. Values apply to this electrode sheet.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-02",
+      "title": "Lincoln electrode storage guidance",
+      "url": "https://ch-delivery.lincolnelectric.com/api/public/content/8f62b7daa7104f118facf6c320f497f0?v=2fd828e3",
+      "summary": "Storage and redrying instructions; specific product label takes precedence.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-03",
+      "title": "Lincoln stick welding setup guide",
+      "url": "https://ch-delivery.lincolnelectric.com/api/public/content/0f1ee250caf14f8abd252f612b628b18?v=153dd1b8",
+      "summary": "Electrode holder, electrode lead, work-return clamp/lead; clean return contact near work.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-04",
+      "title": "Lincoln training equipment listing",
+      "url": "https://classes.lincolnelectric.com/search/publicCourseSearchDetails.do?courseId=1055475&method=load&selectedProgramAreaId=1050137",
+      "summary": "Training list includes chipping hammer and wire brush.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-05",
+      "title": "INRS welding fumes",
+      "url": "https://www.inrs.fr/risques/fumees-soudage/ce-qu-il-faut-retenir",
+      "summary": "Source capture with supplementary general ventilation; emissions depend on process and material.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-06",
+      "title": "INRS wood dust fire and explosion",
+      "url": "https://ftweb.inrs.fr/metiers/metiers-du-bois/transformation-du-bois/poussiere/incendie-explosion.html",
+      "summary": "Wood dust deposits/clouds can ignite with heat and welding sparks.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-07",
+      "title": "HSE welding in vehicle repair",
+      "url": "https://www.hse.gov.uk/mvr/mechanical-repair/welding.htm",
+      "summary": "Fume control in repair: paint, underseal, galvanizing, stainless and confined spaces.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-08",
+      "title": "DEWALT aluminium cutting permissions",
+      "url": "https://support.dewalt.com/hc/en-ae/articles/360016679337-Can-I-use-my-saw-to-cut-sheet-Aluminium",
+      "summary": "Only approved saw models with appropriate nonferrous blade; consult exact manual.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-09",
+      "title": "Lincoln Steelcore 71T-GS",
+      "url": "https://ch-delivery.lincolnelectric.com/api/public/content/4b116c2b3b5f46fdaa024bac101c8e4b?v=e32391fd",
+      "summary": "Self-shielded wire 0.8/0.9 mm with DC− product instructions; exact wire governs polarity.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-10",
+      "title": "ESAB Coreshield11",
+      "url": "https://esab.com/us/nam_en/products-solutions/product/filler-metals/mild-steel/self-shielded-flux-cored-wires-fcaw/coreshield-11/",
+      "summary": "Self-shielded mild-steel wire; DCEN.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-11",
+      "title": "Lincoln MIG and flux polarity guide",
+      "url": "https://ch-delivery.lincolnelectric.com/api/public/content/87cc0123c9014e23ad25f0d8721ef755?v=5266f7fb",
+      "summary": "Guide illustrates gas MIG DC+ and its gasless flux DC−.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-12",
+      "title": "Lincoln constant current and constant voltage outputs",
+      "url": "https://qacd10.lincolnelectric.com/en/Welding-and-Cutting-Resource-Center/Process-and-Theory/Constant-Current-vs-Constant-Voltage-Output",
+      "summary": "Constant current appropriate to manual SMAW.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-13",
+      "title": "Bosch GCB127 metal bandsaw application",
+      "url": "https://www.bosch-professional.com/gb/en/products/gcb-18v-127-06012B7000",
+      "summary": "Portable18 V example for metal profiles/pipes; application evidence, not a230 V product recommendation.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-14",
+      "title": "Evolution metal-cutting saw range",
+      "url": "https://sklep.evolutionpowertools.com/pages/metal-cutting-chop-saws",
+      "summary": "Carbide blade applications material-dependent; range page.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-15",
+      "title": "Evolution saw manual084",
+      "url": "https://www.evolutionpowertools.com/downloads/manuals/2025/084.pdf?ref=reachdog&sub_id=",
+      "summary": "Material applications with corresponding approved blade.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-16",
+      "title": "Bosch abrasive metal saw category",
+      "url": "https://www.bosch-professional.com/om/en/metal-cut-off-saws-131477-ocs-c/",
+      "summary": "GCO240 abrasive355 mm,3800 rpm; category page supports tool type.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "START-17",
+      "title": "DEWALT DW716 manual",
+      "url": "https://www.dewalt.com/GLOBALBOM/QU/DW716/3/Instruction_Manual/EN/N039235_DW716_EN.pdf",
+      "summary": "Specific saw manual prohibits ferrous cutting.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "primary-source web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-advice.md"
+      ],
+      "original_downloaded": false
+    }
+  ]
+}
