@@ -1,0 +1,42 @@
+{
+  "records": [
+    {
+      "title": "PdfPage.get_objects installed source",
+      "local_path": "${USER_HOME}/.pyenv/versions/3.12.9/lib/python3.12/site-packages/pypdfium2/_helpers/page.py",
+      "summary": "Installed page-object iterator used to enumerate original drawing paths; its docstring specifies object filtering and Form recursion depth.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "installed_local_source_inspection",
+      "package": "pypdfium2",
+      "version": "5.13.0",
+      "sha256": "fc55fc48f7cef945c6b0666b20caf57420fd62302fe81a53df1ade2f84bb5eaf",
+      "referring_documents": [
+        "skills/component-cad/references/drawing-feature-checks.md",
+        "execution/pdf-vector-boundary-review-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "PdfObject.get_bounds installed source",
+      "local_path": "${USER_HOME}/.pyenv/versions/3.12.9/lib/python3.12/site-packages/pypdfium2/_helpers/pageobjects.py",
+      "summary": "Installed object bounds reader returns left, bottom, right and top in PDF page coordinates; used with an explicit page-to-raster mapping.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "installed_local_source_inspection",
+      "package": "pypdfium2",
+      "version": "5.13.0",
+      "sha256": "99dd9963904eec05f0e5f2bad0e2524726f2001329cfc1e80337cecec02133c2",
+      "referring_documents": [
+        "skills/component-cad/references/drawing-feature-checks.md",
+        "execution/pdf-vector-boundary-review-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Component original-vector source review",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c062-build-01/records/coordinator-vector-source-review.json",
+      "summary": "Executed original PDF object inspection identifies dimension-line contamination, interior contour picks and a contact-center/axis mismatch before native construction.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_local_original_vector_inspection",
+      "referring_documents": [
+        "execution/pdf-vector-boundary-review-2026-11-13.md"
+      ]
+    }
+  ]
+}
