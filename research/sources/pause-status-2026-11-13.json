@@ -18,7 +18,7 @@
     {
       "local_original": "execution/paused-work-2026-11-13/manifest.json",
       "title": "Paused generic source snapshots and actual validation states",
-      "summary": "Pins seven retained text snapshots with original/derivative hashes. Records 22passing annular recovery tests and 8passing screw helper tests executed by Luna; native recovery and screw construction remain unexecuted.",
+      "summary": "Pins seven retained text snapshots with original/derivative hashes. Records 22 passing annular recovery tests and 8 passing screw helper tests executed by Luna; native recovery and screw construction remain unexecuted.",
       "evidence_status": "retained_unfinished_implementation_snapshots",
       "observation_date": "2026-11-13",
       "referring_documents": [

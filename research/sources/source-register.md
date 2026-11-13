@@ -17254,7 +17254,7 @@ Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summar
 
 Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/manifest.json](../../execution/paused-work-2026-11-13/manifest.json)
 
-Summary: Pins seven retained text snapshots with original/derivative hashes. Records 22passing annular recovery tests and 8passing screw helper tests executed by Luna; native recovery and screw construction remain unexecuted.
+Summary: Pins seven retained text snapshots with original/derivative hashes. Records 22 passing annular recovery tests and 8 passing screw helper tests executed by Luna; native recovery and screw construction remain unexecuted.
 
 Evidence: retained_unfinished_implementation_snapshots.
 
