@@ -1072,7 +1072,9 @@
         "input_alternatives": [],
         "input_choice_groups": []
       },
-      "downstream_operations": [],
+      "downstream_operations": [
+        "Display/inspection consumer"
+      ],
       "handoff_conditions": "Pass the named outputs, original source hashes, unit/frame record and operation check results to the identified display consumer. Preserve proposal/source status and reconcile any failed dimensional or frame checks before dependent use."
     },
     {

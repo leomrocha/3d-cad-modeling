@@ -281,7 +281,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 11. **Information changed/inferred:** BIM objects become render nodes/meshes; semantic/relationship data may be reduced or remapped.
 12. **Checks:** ID-to-node coverage, bounds, orientation, selected geometry hashes or residuals, output hashes.
 13. **Alternatives:** Use IFC-native viewer when BIM relationships/properties are the primary task.
-14. **Downstream operations:** 
+14. **Downstream operations:** Display/inspection consumer
 15. **Handoff conditions:** Pass the named outputs, original source hashes, unit/frame record and operation check results to the identified display consumer. Preserve proposal/source status and reconcile any failed dimensional or frame checks before dependent use.
 
 <a id="dom-18"></a>
