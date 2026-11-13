@@ -1,0 +1,169 @@
+{
+  "title": "Independently installable CAD skill packages",
+  "date": "2026-11-13",
+  "evidence_status": "implemented and locally exercised; checks recorded in execution report",
+  "sources": [
+    {
+      "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/runtime.py",
+      "title": "Existing generic implementation: runtime.py",
+      "summary": "copied generic runtime; added a package-relative default control-helper path",
+      "original_sha256": "42b90c0839d5bc12b292fccf771ee08f92f5c2c2fb542aca694c2d8ae5755d49",
+      "derived_path": "scripts/cadtools/runtime.py",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local original inspected and reused",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "execution/skill-packaging-2026-11-13.md"
+      ],
+      "derived_sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05"
+    },
+    {
+      "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/geometry.py",
+      "title": "Existing generic implementation: geometry.py",
+      "summary": "unchanged generic module",
+      "original_sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+      "derived_path": "scripts/cadtools/geometry.py",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local original inspected and reused",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "execution/skill-packaging-2026-11-13.md"
+      ],
+      "derived_sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408"
+    },
+    {
+      "local_original": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/verification.py",
+      "title": "Existing generic implementation: verification.py",
+      "summary": "retained generic comparisons, audit and save/reopen; excluded wheel-specific checker and catalogue dependency",
+      "original_sha256": "5863d2b586a0b696be6c5002270dc33b88c9d8c270e422580b0ec4bd2482b6f7",
+      "derived_path": "scripts/cadtools/verification.py",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local original inspected and reused",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "execution/skill-packaging-2026-11-13.md"
+      ],
+      "derived_sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a"
+    },
+    {
+      "local_original": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py",
+      "title": "Existing generic implementation: ocs_control.py",
+      "summary": "unchanged generic helper",
+      "original_sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+      "derived_path": "scripts/ocs_control.py",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local original inspected and reused",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "execution/skill-packaging-2026-11-13.md"
+      ],
+      "derived_sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e"
+    },
+    {
+      "local_original": "${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py",
+      "title": "Existing generic implementation: check_contract.py",
+      "summary": "unchanged generic helper",
+      "original_sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+      "derived_path": "scripts/check_contract.py",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local original inspected and reused",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "execution/skill-packaging-2026-11-13.md"
+      ],
+      "derived_sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8"
+    },
+    {
+      "local_original": "${FERME_ROOT}/skills/cad-construction/tests/test_cadtools.py",
+      "title": "Existing generic implementation: test_packaged_cadtools.py",
+      "summary": "retained generic FakeHelper, RuntimeTests and PersistenceTests; used standard temporary directories; imports local runtime",
+      "original_sha256": "2667897d8e42afea75c944ccbc7083eedc5bcd8c61f4553091141a9af2e76db0",
+      "derived_path": "tests/test_packaged_cadtools.py",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local original inspected and reused",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "execution/skill-packaging-2026-11-13.md"
+      ],
+      "derived_sha256": "e16d5d81fd1501313b0f7993e56b7974b9495f9a61e78c94442c61c25c794a81"
+    },
+    {
+      "local_original": "${NPM_CACHE_ROOT}/_npx/ac0ed6aa23b37c1e/node_modules/skills",
+      "original_url": "https://github.com/vercel-labs/skills",
+      "title": "Cached skills CLI 1.8.1",
+      "summary": "Local CLI parser, discovery and copy installation inspected and exercised using local source paths and temporary projects; telemetry disabled.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local source inspection and CLI execution",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "execution/skill-packaging-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "requirements-native.txt",
+      "title": "Pinned native-reader software dependencies",
+      "summary": "Existing pinned ezdxf, fonttools, numpy, pyparsing and typing_extensions requirements copied into the drawing and component packages. Source intake uses Python standard library.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing local dependency declaration",
+      "referring_documents": [
+        "docs/skill-packaging.md",
+        "README.md"
+      ]
+    },
+    {
+      "local_original": "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md",
+      "title": "OCS model-contract instructions",
+      "summary": "Reused the source, frame and caller-supplied coordinate-check contract; adapted command paths to the installed skill and removed the unrelated computational-engineering reference.",
+      "original_sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+      "derived_path": "skills/component-cad/references/model-contract.md",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local original inspected and reused",
+      "referring_documents": [
+        "skills/component-cad/references/ocs-runtime.md",
+        "docs/skill-packaging.md"
+      ],
+      "derived_sha256": "2312fc74bf60ce9355413fee2ae5f41c1e8c862a29b21e83691754ce8b3920ea"
+    }
+  ],
+  "referring_documents": [
+    "docs/skill-packaging.md",
+    "README.md",
+    "scripts/README.md",
+    "skills/README.md",
+    "research/repository-split-preparation/script-changes.md"
+  ],
+  "operations": [
+    {
+      "operation": "Generate skill-local distribution files",
+      "inputs": [
+        "canonical scripts/ modules",
+        "requirements-native.txt",
+        "LICENSE",
+        "per-skill instructions"
+      ],
+      "outputs": [
+        "skill-local scripts, requirements, notices, licenses and hash manifests"
+      ],
+      "prerequisites": [
+        "Python 3.12",
+        "inspected generic source ownership and attribution"
+      ],
+      "tool_api": "scripts/build_skill_packages.py; --check compares canonical bytes",
+      "representation": "Python source, Markdown, JSON and pinned requirements text",
+      "units_frame": "byte identity; caller-supplied geometry units and frames remain in job inputs",
+      "metric_evidence": "SHA-256 for each generated file; explicit per-skill module inventory",
+      "information_changes": "Copies canonical implementations; excludes component dictionaries, models, source originals and action evidence",
+      "checks": [
+        "generated-byte comparison",
+        "local references",
+        "isolated imports and fixtures",
+        "individual CLI copy installation"
+      ],
+      "alternatives": [
+        "full-checkout runtime retained as developer route",
+        "generated per-skill distribution used for installation"
+      ],
+      "downstream_handoff": "Skill directory alone plus documented installed dependencies and caller job inputs; OCS route uses selected existing session."
+    }
+  ]
+}

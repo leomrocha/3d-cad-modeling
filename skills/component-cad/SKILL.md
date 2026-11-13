@@ -5,12 +5,25 @@ description: Execute a component CAD job using an external project's part index 
 
 # Component CAD iterations
 
-Use this skill when a real component job develops the reusable tools in this repository. Use the installed OCS engineering skill for native control and geometry. The component project owns its parts data, CAD artifacts and raw job evidence; this repository owns reusable code, tests and instructions.
+Use this skill when a real component job develops the reusable tools in this repository. Use the bundled [OCS runtime instructions](references/ocs-runtime.md) for native control and geometry. The component project owns its parts data, CAD artifacts and raw job evidence; this repository owns reusable code, tests and instructions.
+
+## Package setup
+
+Set `SKILL_ROOT` to this installed skill directory, containing `SKILL.md`, `scripts/`, `references/` and `requirements.txt`. All `scripts/` locators below refer to this directory. Use Python 3.12 on Linux or macOS and install the pinned dependencies in a caller-owned environment:
+
+```sh
+python3 -m venv "$JOB_ROOT/cad-env"
+. "$JOB_ROOT/cad-env/bin/activate"
+python -m pip install -r "$SKILL_ROOT/requirements.txt"
+python "$SKILL_ROOT/scripts/package_check.py"
+```
+
+The package includes its OCS control helper and `cadtools` runtime, geometry and save/reopen code. Select the caller's already-running OpenCADStudio session explicitly. Use `package_check.py --session SESSION` or `--descriptor DESCRIPTOR_JSON` for a read-only connection check. [Runtime and model contract](references/ocs-runtime.md). [Portable job roots](references/paths.md).
 
 ## Read current implementations first
 
-1. Before every component start, check both its work status and the actual 3D files. Read the input manifest, work record, sheet links, existing CAD index and filesystem inventory, including available manufacturer models. Run the [existing-model start check](references/existing-model-start-check.md). A matching existing model is DONE for the current build list: record its path and reuse its existing checks, then select an unfinished component. A stale NOT_STARTED or IN_PROGRESS entry does not start another construction, inspection or capture cycle for that model. Existing FERME implementations are indexed in `${FERME_ROOT}/skills/cad-automation-and-reuse.md`.
-2. Reuse the existing `Client`, `Journal`, `Geometry` and verification functions for their supported actions. Select their helper, session, document and journal explicitly. Read the installed OCS control instructions before connecting.
+1. Before every component start, check both its work status and the actual 3D files. Read the input manifest, work record, sheet links, existing CAD index and filesystem inventory, including available manufacturer models. Run the [existing-model start check](references/existing-model-start-check.md). A matching existing model is DONE for the current build list: record its path and reuse its existing checks, then select an unfinished component. A stale NOT_STARTED or IN_PROGRESS entry does not start another construction, inspection or capture cycle for that model.
+2. Reuse the existing `Client`, `Journal`, `Geometry` and verification functions for their supported actions. Select their helper, session, document and journal explicitly. Read the bundled [OCS runtime instructions](references/ocs-runtime.md) before connecting.
 3. Use `scripts/part_index.py --index PATH --id PART_ID` to read the actual external index. Add another `--index` for an existing dictionary. Results retain source namespaces, original records and source hashes. A matching name/ID in two indexes remains two attributed records.
 
 ## Bind the component requirements
@@ -53,9 +66,9 @@ Use this skill when a real component job develops the reusable tools in this rep
 24. For a source-defined plain ring, use the [annular-reference procedure](references/annular-reference.md). Supply bore diameter, outside diameter, thickness, local frame and source bindings from the component job. The helper checks analytic cylindrical surfaces, annular end-face loops, connected-body topology and the actual stored metadata application.
 25. For a source-defined regular hexagonal reference, use the [hexagonal-reference procedure](references/hexagonal-reference.md). Supply across-flats dimension, height, frame and pinned source features. Bind an optional bore to its own source dimension; retain thread designations and standard limits separately. The helper checks all expected planar surface families, optional bore surfaces, topology and portable source metadata.
 
-24. For saved source labels, use the [native metadata procedure](references/source-metadata.md). Compare actual entity string chunks with the expected source lines before and after saving.
-25. For SAT-to-SAB geometry persistence, use the [smallBMS comparison procedure](references/small-bms.md) within its supported frame and body conditions.
-26. For the source-dimensioned Pixhawk 6C clearance envelope and mounting references, use the [Pixhawk procedure](references/pixhawk.md).
-27. After final provenance and path edits, use the [retained-artifact manifest check](references/retained-artifact-checks.md). Keep the emitted receipt with the component records in the owning project.
+26. For saved source labels, use the [native metadata procedure](references/source-metadata.md). Compare actual entity string chunks with the expected source lines before and after saving.
+27. For SAT-to-SAB geometry persistence, use the [smallBMS comparison procedure](references/small-bms.md) within its supported frame and body conditions.
+28. For the source-dimensioned Pixhawk 6C clearance envelope and mounting references, use the [Pixhawk procedure](references/pixhawk.md).
+29. After final provenance and path edits, use the [retained-artifact manifest check](references/retained-artifact-checks.md). Keep the emitted receipt with the component records in the owning project.
 
-28. For a circular-section ring defined by inside diameter and section diameter, use the [toroidal-reference procedure](references/toroidal-reference.md). Supply source-bound dimensions and an explicit centre and axis. Preserve saved native surface records before extending their decoder; verify analytic radii and body closure before completing the component.
+30. For a circular-section ring defined by inside diameter and section diameter, use the [toroidal-reference procedure](references/toroidal-reference.md). Supply source-bound dimensions and an explicit centre and axis. Preserve saved native surface records before extending their decoder; verify analytic radii and body closure before completing the component.

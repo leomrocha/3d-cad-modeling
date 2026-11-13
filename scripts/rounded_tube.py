@@ -245,7 +245,9 @@ def inspect(client,handle,job,record_path=None):
 def main():
     ap=argparse.ArgumentParser(description=__doc__)
     ap.add_argument('job',type=Path)
-    for name in ['cad-modules','control','session','namespace','journal','work-dir','output']:ap.add_argument('--'+name,required=True)
+    for name in ['session','namespace','journal','work-dir','output']:ap.add_argument('--'+name,required=True)
+    ap.add_argument('--cad-modules', default=str(Path(__file__).resolve().parent), help='Legacy argument; runtime is bundled beside this script')
+    ap.add_argument('--control', default=str(Path(__file__).resolve().with_name('ocs_control.py')))
     ap.add_argument('--allow-write',action='store_true')
     ap.add_argument('--route',choices=['solid-subtract','planar-region','bounded-area'],default='bounded-area')
     ap.add_argument('--resume-profile',help='Verified surviving outer profile after a definitive no-effect extrusion')
@@ -256,7 +258,6 @@ def main():
     if (work/'initial-state.json').exists() and not a.resume_profile:
         raise ValueError('Existing build evidence requires explicit stage inspection')
     if Path(a.journal).exists() and not a.resume_profile:raise ValueError('Existing journal requires stage inspection and same-ID recovery')
-    sys.path.insert(0,a.cad_modules)
     from cadtools.runtime import Client,Journal,load_helper
     from cadtools.verification import save_reopen
     helper=load_helper(a.control);ds=helper.descriptors(session=a.session)

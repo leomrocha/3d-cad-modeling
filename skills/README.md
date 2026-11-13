@@ -6,7 +6,7 @@
 2. [drawing-inspection](drawing-inspection/SKILL.md) — inventories DXF entities, units, layers, spaces and nested transforms.
 3. [source-intake](source-intake/SKILL.md) — preserves source files, hashes, request scope and corrected input revisions.
 
-Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Native CAD control uses the separately installed `ocs-engineering` skill.
+Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Each skill directory includes its runtime files and dependencies. Component CAD includes its OCS control and geometry adapters. [Package maintenance](../docs/skill-packaging.md).
 
 ## Component CAD procedure index
 
@@ -20,6 +20,11 @@ Install these skills using the [README instructions](../README.md#installing). T
 8. **Completion:** [saved source metadata](component-cad/references/source-metadata.md), [retained-file manifests](component-cad/references/retained-artifact-checks.md), [owned-document cleanup](component-cad/references/document-cleanup.md).
 
 The circular-section torus procedure is being added in the modeling work. Its current development status is listed on the [tools page](../docs/tools.md#helpers-in-progress).
+
+## Installed package references
+
+1. [Bundled OCS runtime](component-cad/references/ocs-runtime.md), [model and coordinate-check contract](component-cad/references/model-contract.md) and [caller-owned paths](component-cad/references/paths.md) explain component-cad execution from its installed directory.
+2. [Package maintenance](../docs/skill-packaging.md) records canonical code ownership, distribution generation and isolated checks.
 
 ## Research catalogue
 

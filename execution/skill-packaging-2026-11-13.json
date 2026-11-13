@@ -1,0 +1,196 @@
+{
+  "date": "2026-11-13",
+  "status": "DONE",
+  "actual_executing_model": "unavailable",
+  "isolated_checks": {
+    "cli": "1.8.1",
+    "telemetry": "disabled",
+    "source": "local copied skills",
+    "isolation": "temporary virtualenv; copied declared software dependencies; cleared Python path; separate HOME and cwd",
+    "skills": {
+      "component-cad": {
+        "cli_discovery": "PASS",
+        "individual_copy_install": "PASS",
+        "defaults": {
+          "result": "PASS",
+          "runtime": "bundled",
+          "runner_defaults": "bundled",
+          "dependency_preflight": "PASS",
+          "native_mutations": 0
+        },
+        "local_links": 70,
+        "package_check": {
+          "result": "PASS",
+          "skill": "component-cad",
+          "hashed_files": 39,
+          "imported_modules": [
+            "annular_reference",
+            "assembly_repair",
+            "assembly_units",
+            "axial_motor",
+            "battery_module",
+            "calibrated_trace",
+            "check_contract",
+            "component_records",
+            "driver_checks",
+            "dxf_inspect",
+            "envelope_job_runner",
+            "envelope_reference",
+            "feature_checks",
+            "hexagonal_reference",
+            "model_inventory",
+            "native_acis",
+            "ocs_control",
+            "ocs_document_cleanup",
+            "part_index",
+            "pillow_block",
+            "pixhawk",
+            "profile_reference",
+            "retained_artifacts",
+            "rounded_tube",
+            "small_bms",
+            "source_intake",
+            "source_metadata",
+            "source_variant_table",
+            "step_placements",
+            "step_solid_inventory",
+            "toroidal_reference",
+            "cadtools.runtime",
+            "cadtools.geometry",
+            "cadtools.verification"
+          ],
+          "dependencies": {
+            "ezdxf": "1.4.5",
+            "fonttools": "4.68.0",
+            "numpy": "2.5.4",
+            "pyparsing": "3.3.3",
+            "typing_extensions": "4.16.0"
+          }
+        },
+        "command_help_entries": [
+          "envelope_job_runner",
+          "rounded_tube",
+          "model_inventory",
+          "retained_artifacts",
+          "ocs_control",
+          "check_contract"
+        ],
+        "read_only_ocs": {
+          "result": "PASS",
+          "operation": "state",
+          "mutations": 0,
+          "document_id": 1,
+          "revision": 0
+        }
+      },
+      "drawing-inspection": {
+        "cli_discovery": "PASS",
+        "individual_copy_install": "PASS",
+        "fixture": {
+          "result": "PASS",
+          "units": "mm",
+          "circle_count": 1,
+          "source_preserved": true
+        },
+        "local_links": 1,
+        "package_check": {
+          "result": "PASS",
+          "skill": "drawing-inspection",
+          "hashed_files": 7,
+          "imported_modules": [
+            "component_records",
+            "dxf_inspect",
+            "part_index"
+          ],
+          "dependencies": {
+            "ezdxf": "1.4.5",
+            "fonttools": "4.68.0",
+            "numpy": "2.5.4",
+            "pyparsing": "3.3.3",
+            "typing_extensions": "4.16.0"
+          }
+        },
+        "command_help_entries": [
+          "dxf_inspect",
+          "part_index",
+          "component_records"
+        ]
+      },
+      "source-intake": {
+        "cli_discovery": "PASS",
+        "individual_copy_install": "PASS",
+        "local_links": 0,
+        "package_check": {
+          "result": "PASS",
+          "skill": "source-intake",
+          "hashed_files": 7,
+          "imported_modules": [
+            "component_records",
+            "part_index",
+            "source_intake"
+          ],
+          "dependencies": {}
+        },
+        "command_help_entries": [
+          "source_intake",
+          "part_index",
+          "component_records"
+        ],
+        "fixture": {
+          "result": "PASS",
+          "source_preserved": true,
+          "receipt_verified": true
+        }
+      }
+    }
+  },
+  "regression": {
+    "tests_run": 153,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "result": "PASS",
+    "modules": [
+      "test_source_intake",
+      "test_dxf_inspect",
+      "test_envelope_job_runner",
+      "test_rounded_tube",
+      "test_packaged_cadtools",
+      "test_request_recovery",
+      "test_annular_reference",
+      "test_hexagonal_reference",
+      "test_toroidal_reference",
+      "test_component_tools",
+      "test_model_inventory"
+    ],
+    "earlier_run": "Two runner cases exposed a stale modeling_root variable in the helper-hash receipt after import-path removal; corrected to hash the executed package sibling."
+  },
+  "documentation": {
+    "result": "PASS",
+    "pages": 43,
+    "local_links_and_anchors": 224,
+    "shell_blocks": 19
+  },
+  "private_workspace_preservation": {
+    "contents_unchanged": true,
+    "ignored": true,
+    "tracked_files": 0
+  },
+  "baseline_installed_links": [
+    {
+      "skill": "component-cad",
+      "broken_reference_occurrences": 34,
+      "installed_skill_matches_checkout": true
+    },
+    {
+      "skill": "drawing-inspection",
+      "broken_reference_occurrences": 2,
+      "installed_skill_matches_checkout": true
+    },
+    {
+      "skill": "source-intake",
+      "broken_reference_occurrences": 3,
+      "installed_skill_matches_checkout": true
+    }
+  ]
+}

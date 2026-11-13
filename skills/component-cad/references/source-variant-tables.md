@@ -1,6 +1,6 @@
 # Exact product rows and variant columns in source tables
 
-Use `${MODELING_ROOT}/scripts/source_variant_table.py` when a manufacturer or engineering table places specifications for multiple variants in adjacent columns. The helper selects one cell from an explicitly transcribed table using the exact column header and exact row label.
+Use `${SKILL_ROOT}/scripts/source_variant_table.py` when a manufacturer or engineering table places specifications for multiple variants in adjacent columns. The helper selects one cell from an explicitly transcribed table using the exact column header and exact row label.
 
 1. The caller records the original source URL or local source path, retrieval or observation date, source title, content type, source hash when a file was retained, the table location, and a reviewer-checked transcription. The helper does not fetch, parse, authenticate, or compare the transcription with the source.
 2. Supply a table object with the numbered fields `table_id`, `source_location`, `headers`, and `rows`. `headers` preserves the source column labels. Each row contains `label` and a `values` list in the same order as `headers`; each row must have one nonempty string cell per header.

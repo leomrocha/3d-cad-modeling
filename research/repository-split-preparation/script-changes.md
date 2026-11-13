@@ -21,3 +21,14 @@ Status: proposal; existing Python files and commands retain current behavior in 
 2. FERME integration suite receives explicit project root, shared tools path and cadtools path; reports results for the exact retained fixture hashes.
 3. Existing-model inventory identifies the same completed component files. Original CAD/source hashes are preserved.
 4. Each current caller resolves its imports and outputs after transition. The executing agent adopts changes at an affected component checkpoint.
+
+## Independent skill packaging
+
+Implementation scope authorized 13 November 2026: distribute each skill with the reusable code and instructions needed by its installation. The existing component-project runtime remains intact for concurrent callers.
+
+1. **Generic code ownership:** maintain the required `cadtools.runtime`, `cadtools.geometry` and generic `cadtools.verification` functions under `scripts/cadtools/`. Keep the wheel-specific verification and catalogue code in the component project. Preserve source hashes and attribution in the [packaging source record](../sources/skill-packaging-2026-11-13.json).
+2. **OCS transport:** maintain the copied generic control and coordinate-contract helpers under `scripts/`. Component skill instructions carry their own session, model-contract, journal, recovery and persistence instructions.
+3. **Distribution:** generate skill-local script copies, licenses, dependency files, notices and hash manifests using `scripts/build_skill_packages.py`. Source intake and drawing inspection receive their dependency closures; component CAD receives the shared helper set. Canonical source remains in one location.
+4. **Import transition:** the envelope and tube runners default to bundled control/runtime locations. The envelope runner's named project roots resolve job data and metadata; they supply no Python imports. Legacy explicit arguments remain accepted for existing callers. Installed instructions execute the skill-local defaults.
+5. **Handoff:** leave existing FERME callers and runtime files intact. Each continuing component job can adopt an exact committed shared-tool revision at its checkpoint. Historical models, recipes, source files and evidence retain the migration plan's separate scope.
+6. **Verification:** check each copied skill with an isolated interpreter, its declared dependencies and caller-supplied fixtures. Use the cached skills CLI for local discovery and individual temporary copy installation. Read the selected running OCS state through the bundled helper; retain package checks separately from component modeling results.

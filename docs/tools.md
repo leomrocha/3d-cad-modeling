@@ -63,6 +63,14 @@ Some of these are specialized tools for particular geometries. I still have work
 
 1. [ocs_document_cleanup.py](../scripts/ocs_document_cleanup.py) — closes the active owned document after matching its saved-file hash, persistence receipt and geometry revision; checks that unrelated documents retain their paths and dirty states. [Cleanup procedure](../skills/component-cad/references/document-cleanup.md).
 
+## Installed packages and maintenance
+
+1. [build_skill_packages.py](../scripts/build_skill_packages.py) — generates per-skill copies from canonical reusable code and checks them with `--check`.
+2. [package_check.py](../scripts/package_check.py) — verifies installed package hashes, imports and pinned dependency versions; component CAD also accepts a selected OCS session for a read-only state check.
+3. [ocs_control.py](../scripts/ocs_control.py) — reads an existing authenticated native session and guards explicitly authorized mutation requests.
+4. [check_contract.py](../scripts/check_contract.py) — checks caller-supplied point, axis and plane measurements against an explicit coordinate contract.
+5. [cadtools runtime](../scripts/cadtools/runtime.py), [geometry](../scripts/cadtools/geometry.py) and [save/reopen verification](../scripts/cadtools/verification.py) — shared OCS adapters included in the component package. [Package contents and maintenance](skill-packaging.md).
+
 ## Running the tools
 
 The file, index and DXF command-line helpers can be run from a terminal. Construction and check modules are imported by component jobs with their source values, model records and CAD client. [Setup and command examples](../README.md#installing).

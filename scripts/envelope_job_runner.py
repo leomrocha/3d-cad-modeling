@@ -409,13 +409,11 @@ def run(args):
     job_dir = args.job_dir.resolve()
     job_path = args.job.resolve()
     roots = parse_roots(args.root)
-    if args.modeling_root_name not in roots:
+    if args.modeling_root_name and args.modeling_root_name not in roots:
         raise ValueError('--modeling-root-name must refer to a caller-supplied root')
     output = resolve_locator(args.output, roots, job_path.parent)
     write_gate = check_write_targets(output, job_dir, args.allow_write)
 
-    modeling_root = roots[args.modeling_root_name]
-    sys.path[:0] = [str(modeling_root / 'scripts'), str(args.cadtools_root.resolve())]
     job, params, readiness = resolve_runtime_job(job_path, roots)
     metadata_lines = expected_metadata(job, params)
     job_locator = source_locator(job_path, roots)
@@ -539,7 +537,7 @@ def run(args):
         'native_model': source_locator(output, roots),
         'native_model_sha256': sha256(output), 'native_model_bytes': output.stat().st_size,
         'helper_sha256': sha256(Path(__file__)),
-        'envelope_helper_sha256': sha256(modeling_root / 'scripts/envelope_reference.py'),
+        'envelope_helper_sha256': sha256(Path(__file__).resolve().with_name('envelope_reference.py')),
     }
     write_json(job_dir / 'reopened-records.json', portableize(reopened_records, roots))
     write_json(job_dir / 'reopened-feature-checks.json', portableize(reopened_geometry, roots))
@@ -622,11 +620,11 @@ def main(argv=None):
     parser.add_argument('--job-dir', required=True, type=Path)
     parser.add_argument('--output', required=True)
     parser.add_argument('--session', required=True)
-    parser.add_argument('--control', required=True, type=Path)
-    parser.add_argument('--cadtools-root', required=True, type=Path,
+    parser.add_argument('--control', type=Path, default=Path(__file__).resolve().with_name('ocs_control.py'))
+    parser.add_argument('--cadtools-root', type=Path, default=Path(__file__).resolve().parent,
                         help='Explicit directory containing cadtools/runtime.py')
-    parser.add_argument('--modeling-root-name', required=True,
-                        help='Caller-supplied root name containing reusable scripts')
+    parser.add_argument('--modeling-root-name',
+                        help='Optional named root for legacy provenance; code is loaded from this package')
     parser.add_argument('--execution-model', required=True,
                         help='Actual execution-model identity supplied by the caller')
     parser.add_argument('--root', action='append', default=[], metavar='NAME=ABSOLUTE_PATH')
