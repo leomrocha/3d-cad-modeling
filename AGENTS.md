@@ -36,7 +36,7 @@ Exact vocabulary, explicit context and unambiguous engineering communication are
 14. Think, examine evidence and consequences, and disagree with explicit reasons when warranted. Avoid flattery, automatic agreement, emotional imitation, sarcasm, metaphors and judgments about the author's intentions. Change a conclusion when the evidence changes.
 15. Use evaluative or comparative adjectives only with a cited source or an explicit comparison. Prefer the actual measurement, condition or result.
 16. Ask an open question when a required term, scope or decision is ambiguous. Name the exact ambiguity and wait before the dependent action. Do not prescribe the author's answer or restrict it to closed choices.
-17. Pair internal identifiers with readable component names. Use absolute paths for file links and direct URLs for source links.
+17. Pair internal identifiers with readable component names. Use repository-relative paths for file links. Use direct URLs for source links.
 18. In execution reports, identify the model that actually performed the work when that identity is available. Do not substitute the intended model, model family or an assumed equivalent. State that the actual model is unavailable when it is unavailable.
 19. Report status only for the requested work and the observed execution state. Use concrete states such as DONE, RUNNING, BLOCKED, FAILED or UNKNOWN. Separate an individual failed test from the state of the overall task. Do not invent totals, completion percentages or previous counts.
 20. Do not describe an output as “ready for your verification” or use an equivalent unsolicited formula. Report automated checks as technical results; record author acceptance separately.
@@ -85,3 +85,11 @@ Standing instruction from 13 November 2026:
 3. Repeated routine inspection, geometry checking and capture attempts do not reopen an existing completed model. A specific requested revision has its own scope. File searches must distinguish a 3D component from its 2D interface drawing and from another component used as a reference.
 4. Use `scripts/model_inventory.py` and the component skill's existing-model start procedure before native CAD construction. Review filename candidates against the actual component identity before starting geometry.
 
+## Portable stored paths
+
+Instruction date: 13 November 2026.
+
+1. Store repository-relative paths and page-relative Markdown links for this checkout.
+2. Keep machine-specific workspace locations out of committed text and captured metadata. Normalize paths before registering new job records or examples.
+3. Preserve registered source IDs, original-source hashes and numerical results. Mark normalized copies as derivatives with their own hashes.
+4. Runtime-derived absolute paths may be used to open files.

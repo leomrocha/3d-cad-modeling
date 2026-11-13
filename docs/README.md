@@ -21,3 +21,5 @@
 2. Edit subject pages directly and link related pages with repository-relative paths.
 3. Preserve source attribution, operating conditions and the distinction between recorded results and workflow proposals.
 4. Run local-link, operation-record and asset-hash checks after edits.
+
+[Portable path conventions](paths.md) describe relative links and configured source roots.

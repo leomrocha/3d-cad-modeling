@@ -18,9 +18,9 @@ Use for **Preserve the input revision and state the job boundary (INTAKE-A01)**.
 ## Execute
 
 ```sh
-python3 /home/leo/projects/3dmodeling/scripts/source_intake.py \
-  --input /absolute/path/job-input.json \
-  --output /absolute/path/new-intake-directory
+python3 ${MODELING_ROOT}/scripts/source_intake.py \
+  --input ${SOURCE_ROOT}/job-input.json \
+  --output ${SOURCE_ROOT}/new-intake-directory
 ```
 
 1. Reuses `part_index.parse_json` for duplicate-key/nonfinite-token rejection and `component_records.observe_file` for streaming hashes with change detection. Additional validation checks references, cycles, dates, required scope fields and overflowing numeric input.
@@ -34,13 +34,13 @@ python3 /home/leo/projects/3dmodeling/scripts/source_intake.py \
 1. Call `source_intake.verify_revision(path_to_source_index)` to verify the completed index/scope hashes against the receipt.
 2. The agent compares the recorded request, scope, corrections and affected source conflicts. Numerical capture checks establish source identity and output integrity. Source interpretation retains its own action.
 3. Hand the completed revision to **Select the execution mode and define candidate branches (INTAKE-A02)**. Preserve the source/revision IDs in its inputs. Required source-priority decisions affect the named dependent feature.
-4. The [actual executed input](/home/leo/projects/3dmodeling/execution/source-intake/job-input.json), [published index](/home/leo/projects/3dmodeling/execution/source-intake/live-01/revision/source-index.json) and [execution report](/home/leo/projects/3dmodeling/execution/source-intake.md) document the exercised interface.
+4. The [actual executed input](../../execution/source-intake/job-input.json), [published index](../../execution/source-intake/live-01/revision/source-index.json) and [execution report](../../execution/source-intake.md) document the exercised interface.
 
 ## Verification
 
 ```sh
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover \
-  -s /home/leo/projects/3dmodeling/tests -p test_source_intake.py
+  -s ${MODELING_ROOT}/tests -p test_source_intake.py
 ```
 
 The cases cover actual file hashes and source preservation, exact Unicode/text/corrections, zero-network URL registration, new source revisions, equal bytes at distinct locators, invalid references/cycles, duplicate keys and overflowing numbers, pinned-source conflicts, changing files, interrupted publication and prior-artifact protection.

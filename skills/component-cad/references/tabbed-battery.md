@@ -1,6 +1,6 @@
 # Check a battery case formed from named exterior solids
 
-Executed case: [BMW i3 94 Ah saved exterior](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json). Model: gpt-6.1-sol.
+Executed case: BMW i3 94 Ah saved exterior (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json`). Model: gpt-6.1-sol.
 
 1. Reuse the original saved model and its source/reconstruction record. The BMW exterior has 13 separate solids. Seller dimensions define tab-to-tab length 410 mm, body length 385 mm, support width 310 mm and case height 150 mm. Mounting centres, 8.5 mm clearance bores, cover recesses and cable pose retain their existing reconstruction attribution.
 2. Read the saved SAB geometry and exact component metadata. `battery_module.check_tabbed_case(record, job)` receives required part names, measurement groups and source-bound values from the external job. It reuses the existing named-part reader, closed-body checks and cylinder-pattern checker.
@@ -9,6 +9,6 @@ Executed case: [BMW i3 94 Ah saved exterior](/home/leo/projects/ferme/engineerin
 5. Six retained-native tests cover the actual saved case, incorrect body length, shifted recess centres, a missing boundary, incorrect floor level and an open boundary. They verify the measured pattern and rejection of specific failures. Native saved checks pass 19 comparisons.
 6. Inspect actual captured images separately. The initial BMW capture, explicit activation capture, native pointer-event capture and byte-identical isolated-copy capture all return the previous Lynx view. Their hashes and active document states are retained as failed visual evidence. The original saved BMW file remains byte-identical. The component's geometric-check stage passes; its visual stage requires an image showing the BMW component.
 
-Implementation: [battery_module.py](/home/leo/projects/3dmodeling/scripts/battery_module.py), [feature_checks.py](/home/leo/projects/3dmodeling/scripts/feature_checks.py), [tests](/home/leo/projects/3dmodeling/tests/test_tabbed_battery.py).
+Implementation: [battery_module.py](../../../scripts/battery_module.py), [feature_checks.py](../../../scripts/feature_checks.py), [tests](../../../tests/test_tabbed_battery.py).
 
 Source evidence review: case dimensions follow the existing geometry report’s attributed EVShop values. The retained HTML copies contain no 410/385/310 mm dimension text; source revision 2 binds those values to that report. The initial direct-HTML binding is retained in the component job history.

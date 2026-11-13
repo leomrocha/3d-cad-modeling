@@ -2,7 +2,7 @@
 
 Use this procedure for C052 when the currently retained source is the Holybro
 Pixhawk 6C dimension drawing. The drawing is an original JPEG at
-`/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c052-build-01/source/holybro-pixhawk-6c-dimensions.jpg`.
+`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c052-build-01/source/holybro-pixhawk-6c-dimensions.jpg`.
 Its exact URL, retrieval time, MIME type and SHA-256 are recorded in that job's
 `source-records.json`. The official download page lists a “Pixhawk 6C Case CAD
 3D File”, but its published attachment currently returns HTTP 404. The Pixhawk
@@ -61,7 +61,7 @@ from this exterior drawing. Keep C055 Holybro PM02 V3 as a separate component.
 
 ## Executed C052 reference — 13 November 2026
 
-The current reference is `/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c052-build-01/holybro-pixhawk-6c-mechanical-reference.dwg`.
+The current reference is `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c052-build-01/holybro-pixhawk-6c-mechanical-reference.dwg`.
 The build used isolated document 93 and reopened document 94; active document
 92 stayed unchanged. Saved SHA-256:
 `1431c006fa758a4978533b52c398e6f4a9e5d52113d713fd14ebbd75e491de6f`.
@@ -69,7 +69,7 @@ The reopened file contains one closed connected 3D solid, and the audit reports
 zero errors and zero warnings. Independent post-reopen checks pass for the
 84.8 × 44 × 12.4 mm extrema, the four M2 reference axes at (±30, ±16) mm, and
 all four bottom planes at z=6 mm. SAB parsing used the already available
-`/tmp/3dmodeling-native-reader` environment; no package was installed.
+`${NATIVE_READER_ROOT}` environment; no package was installed.
 
 This result completes the **source-dimensioned mechanical reference**. The
 rectangular solid is a clearance envelope with mounting references. It is not

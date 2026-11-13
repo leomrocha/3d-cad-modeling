@@ -1,7 +1,7 @@
 {
-  "source": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/raw-results.json",
-  "field_source": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/stress-and-member-forces.npz",
-  "native_cell_map": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/native-cell-map.json",
+  "source": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/raw-results.json",
+  "field_source": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/stress-and-member-forces.npz",
+  "native_cell_map": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/native-cell-map.json",
   "wind_m_s": 15.0,
   "wind_km_h": 54.0,
   "incoming_wind_direction_deg": 0,
@@ -14,7 +14,7 @@
     "passed": true,
     "maximum_absolute_pad_reference_reaction_N": null,
     "numerical_tolerance_N": null,
-    "tolerance_source": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/input-register.json",
+    "tolerance_source": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/input-register.json",
     "reactions": {},
     "scope": "Numerical pad-position references must not provide physical support"
   },

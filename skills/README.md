@@ -6,7 +6,7 @@ Status: researched catalogue and proposed implementation sequence, 12 November 2
 
 | Skill or package | Concrete use | Proposed action and evidence |
 | --- | --- | --- |
-| [Local OCS engineering skill](/home/leo/.codex/skills/ocs-engineering/SKILL.md) | Live OCS inspection, model contract, component/frame discipline, measured checks and verified saves | Reuse existing skill and its scripts. User reports partial local success. Record capability gaps through the first modeling fixture. |
+| Local OCS engineering skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) | Live OCS inspection, model contract, component/frame discipline, measured checks and verified saves | Reuse existing skill and its scripts. User reports partial local success. Record capability gaps through the first modeling fixture. |
 | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | Code-defined parametric models with `cadgen`/build123d, saved-file measurement and preview | Assess pinned runtime/bootstrap, telemetry, source conventions and output checks. The separately advertised `step-parts` skill searches a component catalogue. |
 | [glotoff/freecad-skills](https://github.com/glotoff/freecad-skills) | FreeCAD user/power-user modeling and API references | Adapt only the exercised operations needed for constrained sketches and editable features. |
 | [GitHub Copilot FreeCAD scripting skill](https://github.com/github/awesome-copilot) | FreeCAD Python documents, Part/Sketcher geometry and recompute | Reuse as an API reference, with pinned-version geometry fixtures. Archived exact skill is available in the existing CAD research. |
@@ -15,7 +15,7 @@ Status: researched catalogue and proposed implementation sequence, 12 November 2
 | [Foster1202/cad-modeling-fusion-skill](https://github.com/Foster1202/cad-modeling-fusion-skill) | ModelSpec schema and code-generation patterns with Fusion, FreeCAD and OpenSCAD backends | Assess reusable schema and open-backend content under its licence. Use the open software backends for this project. |
 | Blender workflow skills and MCP bridges | Scene/mesh authoring and interactive inspection | Compare reviewed bridges with native `bpy` scripts. Match each bridge's supported Blender version to the installed version. |
 
-Detailed source, licence and dependency assessments: [CAD and skills](../research/cad-and-skills.md). Original archived candidate files remain in `/home/leo/projects/energy/raw/wind-prototypes/cad-workflow/skills/` with the existing research manifests.
+Detailed source, licence and dependency assessments: [CAD and skills](../research/cad-and-skills.md). Original archived candidate files remain in `${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/skills/` with the existing research manifests.
 
 ## Proposed project workflows
 
@@ -41,21 +41,21 @@ The [workflow operation catalogue](../research/workflows/operation-catalogue.md)
 
 ## Detailed action and helper contracts
 
-The [skill-to-action map](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) links the fifteen catalogue entries to all 77 audited operations. Each operation's action records state proposed helper inputs/outputs, existing API dependencies, software and agent decisions, validation cases and recovery. The [workflow-to-action index](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md) preserves the original 38 routes and their ordered steps. The existing OCS skill retains its documented capability; the map records proposed packaging and supported-backend conditions.
+The [skill-to-action map](../research/action-audit/skill-to-actions.md) links the fifteen catalogue entries to all 77 audited operations. Each operation's action records state proposed helper inputs/outputs, existing API dependencies, software and agent decisions, validation cases and recovery. The [workflow-to-action index](../research/action-audit/workflow-to-actions.md) preserves the original 38 routes and their ordered steps. The existing OCS skill retains its documented capability; the map records proposed packaging and supported-backend conditions.
 
 ## Component-driven implementation
 
-[Component CAD iterations](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md) uses the external project's existing part index/dictionary, checks source readiness, records individual action occurrences and requires an applied verified skill/script improvement per completed CAD design. [Python part-index access](/home/leo/projects/3dmodeling/scripts/part_index.py) and [component source/action records](/home/leo/projects/3dmodeling/scripts/component_records.py) operate on explicit data paths; FERME retains its parts data, CAD and component evidence.
+[Component CAD iterations](component-cad/SKILL.md) uses the external project's existing part index/dictionary, checks source readiness, records individual action occurrences and requires an applied verified skill/script improvement per completed CAD design. [Python part-index access](../scripts/part_index.py) and [component source/action records](../scripts/component_records.py) operate on explicit data paths; FERME retains its parts data, CAD and component evidence.
 # Implemented source intake
 
-1. [Record source files, revisions and job scope](/home/leo/projects/3dmodeling/skills/source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. [Execution evidence](/home/leo/projects/3dmodeling/execution/source-intake.md).
+1. [Record source files, revisions and job scope](source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. [Execution evidence](../execution/source-intake.md).
 
 ## Implemented DXF inspection
 
-1. [Inspect a DXF drawing before selecting a profile](/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. [Execution evidence](/home/leo/projects/3dmodeling/execution/dxf-inspection.md).
+1. [Inspect a DXF drawing before selecting a profile](drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. [Execution evidence](../execution/dxf-inspection.md).
 
 ## Continuing iterations and repository ownership
 
 1. Implemented shared procedures include component iteration, source intake, drawing inspection and existing-model checking. The fifteen workflow groups above retain their recorded proposal/implementation status.
-2. [Modeling-agent instructions](/home/leo/projects/3dmodeling/research/repository-split-preparation/modeling-agent-instructions.md) define output routing: component recipes/evidence in FERME; shared helper/skill improvements here. Preserve active paths while historical migration is prepared.
-3. [Script-change specification](/home/leo/projects/3dmodeling/research/repository-split-preparation/script-changes.md) records the external cadtools dependency, component recipe extraction and integration-test changes proposed for migration.
+2. [Modeling-agent instructions](../research/repository-split-preparation/modeling-agent-instructions.md) define output routing: component recipes/evidence in FERME; shared helper/skill improvements here. Preserve active paths while historical migration is prepared.
+3. [Script-change specification](../research/repository-split-preparation/script-changes.md) records the external cadtools dependency, component recipe extraction and integration-test changes proposed for migration.

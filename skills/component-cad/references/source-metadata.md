@@ -1,6 +1,6 @@
 # Check saved native source metadata
 
-Use [source_metadata.py](/home/leo/projects/3dmodeling/scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.
+Use [source_metadata.py](../../../scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.
 
 1. Retain the actual native entity record from the intended document and geometry revision. Pass that record, its requested handle, the metadata application name and the expected source lines to `compare_source_metadata`. The caller retains document and revision binding with the read receipt.
 2. The comparator reads `properties.common.extended_data.records`, selects the unique matching `application_name` and compares its ordered `String` values with the expected lines split into 100-character chunks. This matches the exercised adapter's string-chunk format. A different chunk size is an explicit caller input for a different known writer.

@@ -8,7 +8,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 
 ## CAD-01 — Extract a model brief from text and dimensions
 
-1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](../../research/implementation-plan.md); Registered local source 2: `/home/leo/.codex/skills/ocs-engineering/SKILL.md`
+1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](../../research/implementation-plan.md); Registered local source 2: `${CODEX_HOME}/skills/ocs-engineering/SKILL.md`
 2. **Evidence status:** proposed_composition
 3. **Inputs:** ; alternatives: text; dimensions; text; dimensions
 4. **Outputs:** model-brief
@@ -28,7 +28,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 
 ## CAD-08 — Read and clean vector drawing geometry
 
-1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md); [Supporting source 2](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md); [Supporting source 3](https://ezdxf.readthedocs.io/en/stable/); Registered local source 4: `/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md`; Registered local source 5: `/home/leo/projects/3rdparty/OpenCADStudio/README.md`
+1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md); [Supporting source 2](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_SVG.md); [Supporting source 3](https://ezdxf.readthedocs.io/en/stable/); Registered local source 4: `${OCS_ROOT}/docs/automation/README.md`; Registered local source 5: `${OCS_ROOT}/README.md`
 2. **Evidence status:** documented_capability
 3. **Inputs:** vector-drawing
 4. **Outputs:** vector-drawing
@@ -48,7 +48,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 
 ## CAD-09 — Build and constrain an editable planar sketch
 
-1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md); [Supporting source 2](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md); Registered local source 3: `/home/leo/.codex/skills/ocs-engineering/SKILL.md`
+1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Sketcher_scripting.md); [Supporting source 2](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Draft_DXF.md); Registered local source 3: `${CODEX_HOME}/skills/ocs-engineering/SKILL.md`
 2. **Evidence status:** documented_capability
 3. **Inputs:** vector-drawing; alternatives: model-brief; dimensions; measurement-set
 4. **Outputs:** constrained-sketch
@@ -68,7 +68,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 
 ## CAD-10 — Create a kernel solid and native model document from confirmed parameters
 
-1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](https://build123d.readthedocs.io/en/latest/operations.html); [Supporting source 2](https://cadquery.readthedocs.io/en/stable/); [Supporting source 3](https://openscad.org/documentation); [Supporting source 4](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md); Registered local source 5: `/home/leo/projects/3rdparty/OpenCADStudio/docs/cadkernel-body-path.md`
+1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](https://build123d.readthedocs.io/en/latest/operations.html); [Supporting source 2](https://cadquery.readthedocs.io/en/stable/); [Supporting source 3](https://openscad.org/documentation); [Supporting source 4](https://github.com/FreeCAD/FreeCAD-documentation/blob/main/wiki/Part_scripting.md); Registered local source 5: `${OCS_ROOT}/docs/cadkernel-body-path.md`
 2. **Evidence status:** documented_capability
 3. **Inputs:** ; alternatives: constrained-sketch; parametric-source; model-brief; dimensions
 4. **Outputs:** cad-solid; native-model-document
@@ -88,7 +88,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 
 ## CAD-12 — Assemble existing CAD or source-library components
 
-1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](../../research/domains-and-components.md); Registered local source 2: `/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md`; [Supporting source 3](https://cadquery.readthedocs.io/en/stable/)
+1. **Sources:** [Source contract](../../research/workflows/cad-paths.json); [Supporting source 1](../../research/domains-and-components.md); Registered local source 2: `${OCS_ROOT}/docs/automation/README.md`; [Supporting source 3](https://cadquery.readthedocs.io/en/stable/)
 2. **Evidence status:** proposed_composition
 3. **Inputs:** cad-solid; alternatives: source-library; cad-solid
 4. **Outputs:** cad-assembly
@@ -108,7 +108,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 
 ## CAD-13 — Verify model geometry and saved output
 
-1. **Sources:** [Bearing result](../examples/files/ferme/bearing-result.json); [Battery result](../examples/files/ferme/battery-result.json); [Source contract](../../research/workflows/cad-paths.json); Registered local source 1: `/home/leo/projects/3rdparty/OpenCADStudio/docs/automation/README.md`; Registered local source 2: `/home/leo/projects/3rdparty/OpenCADStudio/src/io/step.rs`; Registered local source 3: `/home/leo/.codex/skills/ocs-engineering/SKILL.md`; [Supporting source 4](https://build123d.readthedocs.io/en/stable/)
+1. **Sources:** [Bearing result](../examples/files/ferme/bearing-result.json); [Battery result](../examples/files/ferme/battery-result.json); [Source contract](../../research/workflows/cad-paths.json); Registered local source 1: `${OCS_ROOT}/docs/automation/README.md`; Registered local source 2: `${OCS_ROOT}/src/io/step.rs`; Registered local source 3: `${CODEX_HOME}/skills/ocs-engineering/SKILL.md`; [Supporting source 4](https://build123d.readthedocs.io/en/stable/)
 2. **Evidence status:** proposed_composition
 3. **Inputs:** ; alternatives: cad-solid; cad-assembly; parametric-source; constrained-sketch; fabrication-package; mesh; native-model-document
 4. **Outputs:** measurement-set; verification-report
@@ -268,7 +268,7 @@ Each record identifies the source-backed operation and its handoff. Capability/p
 
 ## DOM-17 — IFC to GLB display scene
 
-1. **Sources:** [Source contract](../../research/workflows/domain-paths.json); [Supporting source 1](https://docs.ifcopenshell.org/introduction.html); [Supporting source 2](https://www.blender.org/features/pipeline/); Registered local source 3: `/home/leo/projects/energy-sim-3d/data/real-house-ifc/provenance.json`
+1. **Sources:** [Source contract](../../research/workflows/domain-paths.json); [Supporting source 1](https://docs.ifcopenshell.org/introduction.html); [Supporting source 2](https://www.blender.org/features/pipeline/); Registered local source 3: `${ENERGY_SIM_ROOT}/data/real-house-ifc/provenance.json`
 2. **Evidence status:** documented_capability
 3. **Inputs:** ifc
 4. **Outputs:** visual-scene
