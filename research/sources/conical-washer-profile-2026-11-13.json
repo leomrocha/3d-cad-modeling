@@ -46,6 +46,54 @@
       "referring_documents": [
         "execution/conical-washer-profile-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Saved nominal free washer M5-2L",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2L/result-r01.json",
+      "sha256": "1f8f797996cd5fcb3ffe7367d247aa3b0d2ea41ac80f72346d0c1a072e7c9d08",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_native_geometry_and_persistence_result",
+      "execution_model": "gpt-6.1-sol",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Saved nominal free washer M6-2L",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2L/result-r01.json",
+      "sha256": "b550ab62885adf61db9ffc9db7d2cb29c91793128e09caea00b4e95e28549cfa",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_native_geometry_and_persistence_result",
+      "execution_model": "gpt-6.1-sol",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Saved nominal free washer M5-2H",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2H/result-r01.json",
+      "sha256": "754b8ec204895528a04bb736c318554da5af564f0706a0fdc0c2597718558c2d",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_native_geometry_and_persistence_result",
+      "execution_model": "gpt-6.1-sol",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Saved nominal free washer M6-2H",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2H/result-r01.json",
+      "sha256": "7c5d99c3634ef470d953caa354538263e6508c471f84f5bd36a32989e75e066f",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_native_geometry_and_persistence_result",
+      "execution_model": "gpt-6.1-sol",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
     }
   ],
   "original_source": {
