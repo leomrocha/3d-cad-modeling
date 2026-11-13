@@ -52,6 +52,33 @@ When I see things are ready enough I send then the automated 3D modeling pipelin
 
 ## Installing and Using it
 
+### How to install the skills
+
+For Codex on Linux or macOS, complete the [Python helper setup](#set-up-the-python-helpers) below, then run these commands from the repository directory:
+
+```sh
+export MODELING_ROOT="$(pwd -P)"
+mkdir -p "$HOME/.agents/skills"
+for skill in component-cad drawing-inspection source-intake; do
+  target="$HOME/.agents/skills/$skill"
+  if [ -e "$target" ] || [ -L "$target" ]; then
+    printf 'Already exists: %s\n' "$target"
+  else
+    ln -s "$MODELING_ROOT/skills/$skill" "$target"
+  fi
+done
+```
+
+This registers the three skills for your Codex projects. Existing entries are preserved. Keep this checkout: the skills use its shared scripts and reference files. When working in another project, tell the agent to set `MODELING_ROOT` to this checkout before running the helpers.
+
+In Codex CLI or the IDE extension, use `/skills` to list the installed skills. Invoke one by name, for example:
+
+```text
+Use $component-cad to model this component from the supplied drawing.
+```
+
+Codex detects skill changes automatically. Restart Codex if a newly linked skill does not appear. See the official [Codex skill installation and discovery documentation](https://developers.openai.com/codex/skills).
+
 ### Set up the Python helpers
 
 The recorded examples used Python 3.12. From a terminal:
