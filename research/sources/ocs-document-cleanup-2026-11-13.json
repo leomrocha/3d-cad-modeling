@@ -134,6 +134,30 @@
       "original_sha256": "2b82e3c1d160d4bbd37280d82eb2a76cdab0d5ea9ff4312b9cd393d390910617",
       "original_local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/document-cleanup/source-metadata-before-normalization/receipt.json",
       "derivation": "Portable source locators and field-specific preservation wording; original first receipt retained unchanged."
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c057-build-01/configurations/folded/document-cleanup.json",
+      "title": "RadioMaster Pocket folded automatic document cleanup",
+      "summary": "Executed shared runner 0c77cd8 closed reopened saved-model and owned dirty construction documents after geometry, metadata and persistence checks; Start document 1 remained active and other document paths/dirty flags were unchanged. Saved model hash rechecked by coordinator.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result_review",
+      "sha256": "b49b24a8ce83460e3b974219351dd4ac7ff22a75ffa089866357df1b8f150477",
+      "referring_documents": [
+        "execution/ocs-document-cleanup-2026-11-13.md",
+        "execution/ocs-document-cleanup-checks-2026-11-13.json"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c057-build-01/configurations/unfolded/document-cleanup.json",
+      "title": "RadioMaster Pocket unfolded automatic document cleanup",
+      "summary": "Executed shared runner 0c77cd8 closed reopened saved-model and owned dirty construction documents after geometry, metadata and persistence checks; Start document 1 remained active and other document paths/dirty flags were unchanged. Saved model hash rechecked by coordinator.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result_review",
+      "sha256": "10ff09df5137d07088e5d3b88db3a6b52b8ae7dd5357c91a7faeeca5330e16d8",
+      "referring_documents": [
+        "execution/ocs-document-cleanup-2026-11-13.md",
+        "execution/ocs-document-cleanup-checks-2026-11-13.json"
+      ]
     }
   ]
 }

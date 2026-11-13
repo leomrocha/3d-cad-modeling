@@ -15,5 +15,33 @@
     "unchanged_saved_models": 11,
     "evidence": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/document-cleanup-2026-11-13/receipt.json"
   },
-  "model_geometry": "Existing saved models reused; file hashes checked for closure evidence"
+  "model_geometry": "Existing saved models reused; file hashes checked for closure evidence",
+  "automatic_native_runs": [
+    {
+      "configuration": "folded",
+      "receipt": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c057-build-01/configurations/folded/document-cleanup.json",
+      "sha256": "b49b24a8ce83460e3b974219351dd4ac7ff22a75ffa089866357df1b8f150477",
+      "closed_document_ids": [
+        125,
+        124
+      ],
+      "active_document_after": 1,
+      "saved_model_sha256": "81fdea1fe7d152ded2fee106654933ab32b2ea2f8d56891cc85e440c95cbd67c",
+      "result": "PASS",
+      "executing_model": "gpt-6-luna"
+    },
+    {
+      "configuration": "unfolded",
+      "receipt": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c057-build-01/configurations/unfolded/document-cleanup.json",
+      "sha256": "10ff09df5137d07088e5d3b88db3a6b52b8ae7dd5357c91a7faeeca5330e16d8",
+      "closed_document_ids": [
+        127,
+        126
+      ],
+      "active_document_after": 1,
+      "saved_model_sha256": "a6bf7f8d1e5c5c1ebb2b9283dba8feff6773a4b0cd0f9ec4e337a63bc96f754e",
+      "result": "PASS",
+      "executing_model": "gpt-6-luna"
+    }
+  ]
 }
