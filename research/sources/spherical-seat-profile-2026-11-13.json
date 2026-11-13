@@ -1,0 +1,46 @@
+{
+  "registered_at": "2026-11-13",
+  "implementation_model": "gpt-6-luna",
+  "review_execution_model": "gpt-6.1-sol",
+  "records": [
+    {
+      "title": "Bounded spherical seat profile implementation",
+      "summary": "Computes bounded collar/sphere and sphere/blend tangent junctions and signed exact circular arcs; checks finite values, radius order and axial stations before construction.",
+      "local_path": "scripts/spherical_seat_profile.py",
+      "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/spherical-seat-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Synthetic spherical seat tests",
+      "summary": "Independent chord/bulge circle recovery, tangency equations, scale variation, invalid inputs and overflow/collapse checks. Five tests passed under coordinator execution.",
+      "local_path": "tests/test_spherical_seat_profile.py",
+      "sha256": "f321023feb76356bcb67fbd824964f29f5312ff5b26acb2ba5549facc50cc11f",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_synthetic_tests",
+      "referring_documents": [
+        "execution/spherical-seat-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Bounded spherical seat modeling procedure",
+      "summary": "Specifies external source bindings, approximate-radius labels, supported contour family and required native geometry, metadata, persistence and closure checks.",
+      "local_path": "skills/component-cad/references/spherical-seat-profile.md",
+      "sha256": "f361fceac276aac40f3b99f4a5a9b5da65f46c0dfb7e02f1bbdfd721fb45da29",
+      "registered_at": "2026-11-13",
+      "evidence_status": "documented_procedure",
+      "referring_documents": [
+        "execution/spherical-seat-profile-2026-11-13.md"
+      ]
+    }
+  ],
+  "component_source": {
+    "path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c120-build-01/source/knott-drawing-46465-rev6.pdf",
+    "sha256": "b5f8fbeea64dbacaf7efd4fd5016c5ab6ae9d59a0f7b17e02afecdefd1d2c83b",
+    "summary": "Knott drawing 46465 rev6 supplies the exact 46465.01 fastener dimensions. Original URL and acquisition details are retained in the FERME source record.",
+    "evidence_status": "retained_manufacturer_original_inspected_locally"
+  }
+}
