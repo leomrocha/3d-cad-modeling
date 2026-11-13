@@ -64,6 +64,28 @@
       "referring_documents": [
         "execution/variant-table-and-opening-checks-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Applied EP1 variant-selection native result",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c051-build-01/result.json",
+      "summary": "Exact manufacturer EP1 source column bound to a nominal envelope; saved/reopened geometry, connected closed-body topology and actual metadata receipts pass. Initial reader-dependency failure and read-only recovery retained.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result_review",
+      "sha256": "bdfdfabade77ab4e32f04d28522af45094337654c737f504ae5835976781c0cd",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Applied connected-slot surface result",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c037-build-01/result.json",
+      "summary": "Original IGES imported as native surfaces; both opposed busbar faces retain one connected slot boundary through save/reopen, with per-handle point and topology persistence checks.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result_review",
+      "sha256": "1dd4d34871138cbdabb42076d35eb95232c4d827c6f6c49bc864f3053b78e466",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
     }
   ]
 }
