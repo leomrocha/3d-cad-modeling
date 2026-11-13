@@ -1,0 +1,48 @@
+{
+  "records": [
+    {
+      "local_path": "scripts/model_inventory.py",
+      "title": "Existing-model inventory with inherited 2D role",
+      "summary": "Uses exact SHA-256 association with known 2D originals so retained copies remain references; records role source paths and preserves distinct model classification.",
+      "registered_at": "2026-11-13",
+      "sha256": "179522036260347ac8e67ff0998b808367523b6a71dd2cfcff0a70d53af6ddcc",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/retained-drawing-role-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "tests/test_model_inventory.py",
+      "title": "Existing-model inventory regression tests",
+      "summary": "Twenty-nine tests passed, including retained-copy and distinct-model behavioral cases, configuration-aware reuse and source-model routing.",
+      "registered_at": "2026-11-13",
+      "sha256": "2b894f6ace55dda19e6c7cc12144424f7fd1d35ffbf5277ee6da3a17dae723e3",
+      "evidence_status": "executed_synthetic_tests",
+      "referring_documents": [
+        "execution/retained-drawing-role-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/existing-model-start-check.md",
+      "title": "Existing-model start procedure",
+      "summary": "Documents inherited 2D-copy role and actual existing-model reuse before component construction.",
+      "registered_at": "2026-11-13",
+      "sha256": "624893f054fcd76fda8324fc621a1eb507b0855903fcc865238331c9ca10d6d6",
+      "evidence_status": "applied_procedure",
+      "referring_documents": [
+        "execution/retained-drawing-role-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/retained-drawing-role-2026-11-13.md",
+      "title": "Retained drawing role application report",
+      "summary": "Records the observed copied Category 1 interface drawing, exact byte identity and successful live read-only role correction.",
+      "registered_at": "2026-11-13",
+      "sha256": "fea23f36be7176eb2727b0d4257ee964f0bf26f8e014718c8b799221a47faa8a",
+      "evidence_status": "executed_change_report",
+      "referring_documents": [
+        "execution/retained-drawing-role-2026-11-13.md"
+      ]
+    }
+  ]
+}

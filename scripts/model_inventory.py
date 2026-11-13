@@ -41,6 +41,17 @@ def inventory_models(project_root):
         rows.append(dict(path=str(p),format=p.suffix.lower()[1:],bytes=p.stat().st_size,
                          sha256=hashlib.sha256(p.read_bytes()).hexdigest(),
                          role='2d_reference' if '2d_schemas' in p.parts else '3d_model_file'))
+    # Retaining a source drawing in an evidence packet does not change its
+    # dimensional role. Reuse the known original's bytes rather than reopening
+    # the drawing or treating its new directory as proof of a component model.
+    known_2d={}
+    for row in rows:
+        if row['role']=='2d_reference':
+            known_2d.setdefault(row['sha256'],[]).append(row['path'])
+    for row in rows:
+        if row['role']=='3d_model_file' and row['sha256'] in known_2d:
+            row.update(role='2d_reference',role_basis='byte_identical_known_2d_reference',
+                       role_source_paths=known_2d[row['sha256']])
     return rows
 
 
