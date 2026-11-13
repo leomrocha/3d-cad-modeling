@@ -35,6 +35,17 @@
       "referring_documents": [
         "execution/spherical-seat-profile-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Spherical-seat package integration checks",
+      "summary": "The component-cad bundle includes the new spherical-seat helper. Current-name package hashes match committed canonical source and four isolated installation/import/fixture/default tests passed. Optional live OCS test skipped.",
+      "local_path": "execution/spherical-seat-profile-package-checks-2026-11-13.json",
+      "sha256": "b667c05b035e8195e12c1911d73a6ecfa319243982dc6409681bc8d672bfa70a",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_package_checks",
+      "referring_documents": [
+        "execution/spherical-seat-profile-2026-11-13.md"
+      ]
     }
   ],
   "component_source": {

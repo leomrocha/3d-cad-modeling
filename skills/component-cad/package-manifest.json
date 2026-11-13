@@ -146,6 +146,10 @@
       "source": "scripts/source_variant_table.py",
       "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d"
     },
+    "scripts/spherical_seat_profile.py": {
+      "source": "scripts/spherical_seat_profile.py",
+      "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450"
+    },
     "scripts/step_placements.py": {
       "source": "scripts/step_placements.py",
       "sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d"
