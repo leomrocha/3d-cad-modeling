@@ -1,0 +1,418 @@
+[
+  {
+    "local_source_path": "execution/c009-bearing.md",
+    "title": "c009-bearing.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "9b749f1cf0fc8f2e47e6e392eaae94b8bd93c8b54524670d15f55d8d16a71c6e",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "execution/c021-leaf-module.md",
+    "title": "c021-leaf-module.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "28101f3c467838dff3850bdb85353e5b5f6aff2990648f759df3050ea5f927ac",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "execution/c005-me0907.md",
+    "title": "c005-me0907.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "d307a8bd818b915865db9f0ade36595814aa1ae8cdbcb53812d8ce7b70b9fc57",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "execution/p01-rail-build.md",
+    "title": "p01-rail-build.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "fd496311405d301a5e9ceb753944a8c3bff4fad809e192244f8ab3285f4fdf77",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "execution/p01-saved-verification.md",
+    "title": "p01-saved-verification.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "5caf7699bbcbece2ee186d3a047659b1d498cbb77998ef16f4b98756c797d856",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "requirements-native.txt",
+    "title": "requirements-native.txt",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "skills/component-cad/SKILL.md",
+    "title": "SKILL.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "fc5304b4c9dbc4c91a85ab06d56a10c70f613695de6a792ea096b9eacd472a7d",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "skills/drawing-inspection/SKILL.md",
+    "title": "SKILL.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "6ed47e38f09d9178dff6862b439452ec264963f91910f38feeef963e1a29f6ea",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "skills/source-intake/SKILL.md",
+    "title": "SKILL.md",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "e1b74a9277123464883ef33742f7905eeb2669f9edc8f8ee575b8671df173fa2",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/assembly_repair.py",
+    "title": "assembly_repair.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "abb7e5e98bab566051f8d101cb827471b9831d868f373a6ce5e61285b0a704b8",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/assembly_units.py",
+    "title": "assembly_units.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/axial_motor.py",
+    "title": "axial_motor.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/battery_module.py",
+    "title": "battery_module.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "fafa8c57d579d5329b93b0681d890d7dc28c5706c1d9f9531ac53b53380a0d08",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/calibrated_trace.py",
+    "title": "calibrated_trace.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/component_records.py",
+    "title": "component_records.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "e9a6f2ef7e14ba9ca0de4f201d55a27e0d4c58f09df15f0601d919333de573e0",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/driver_checks.py",
+    "title": "driver_checks.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "f1c8ec5b6075031048c0724c6eb40b9b69b94343a5f744e6f6000a9d5ef4adcd",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/dxf_inspect.py",
+    "title": "dxf_inspect.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/envelope_reference.py",
+    "title": "envelope_reference.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "3d8c9292e315bbb54e4fb7cd712bf45b045e070084404f42fc267a0459a30c9f",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/feature_checks.py",
+    "title": "feature_checks.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "1b476719a1f042727a1ce53fdcf91d756442f52ed4be80b44a96ae9dc401dd77",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/model_inventory.py",
+    "title": "model_inventory.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "8f59184ffd4da463250274d29cad24ac1081d722769667819c361c3002a468e4",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/native_acis.py",
+    "title": "native_acis.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "84d9df7572868cfeefbc8d68c10613cc3c26431dbd3912754931856533f11937",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/part_index.py",
+    "title": "part_index.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/pillow_block.py",
+    "title": "pillow_block.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "da3ba1a80c4887a5588a271c100264e3b9e4a456ca0babe27a8e6bcc75cf8859",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/pixhawk.py",
+    "title": "pixhawk.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/profile_reference.py",
+    "title": "profile_reference.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/rounded_tube.py",
+    "title": "rounded_tube.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "6871633fc173bf7bfd75bbce11568abf4921e24986eb33dd58c6f16d1948660a",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/small_bms.py",
+    "title": "small_bms.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "6a54793b62f539f94d974ff6dc510b9176e2215da76b52a046000fbb1e21bdd0",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/source_intake.py",
+    "title": "source_intake.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "cc8bfae3ba3ecd630dffb09b58fc4b2e325a6b8bfefb876c83d4c5ab98a66f92",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/source_metadata.py",
+    "title": "source_metadata.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/source_variant_table.py",
+    "title": "source_variant_table.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/step_placements.py",
+    "title": "step_placements.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  },
+  {
+    "local_source_path": "scripts/step_solid_inventory.py",
+    "title": "step_solid_inventory.py",
+    "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_file_inspected",
+    "sha256": "3495aee7471f64d2dc7bfb327cf491f14ea78938ef48b521ec814842dae6f4f0",
+    "referring_documents": [
+      "README.md",
+      "docs/tools.md",
+      "docs/examples/mechanical_components.md"
+    ]
+  }
+]

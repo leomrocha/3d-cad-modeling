@@ -27,13 +27,12 @@ The project develops a common workflow for mechanical parts, assemblies, buildin
 
 The main pipeline done for a 3D recreation from known things is:
 
-TODO MAKE THE WORKFLOW CLEAR AND ELI 5 NOT FUCKGIN BLABBERY
-1. **Record the request and sources.** Identify the model, required features, output representation and source revisions. 
-2. **Inspect existing models.** Find matching geometry and recorded checks before starting construction. 
-3. **Interpret the inputs.** Bind dimensions and units from text, vector drawings or measured image points. 
-4. **Construct or modify geometry.** Create source-bound profiles and solids, retaining part identity and native geometry. 
-5. **Verification.** Compare required features with source expectations, save, reopen and inspect the actual revision. 
-6. Iterate
+1. Give the agent the part name, drawings, pictures and known measurements.
+2. The agent checks whether a matching 3D model already exists.
+3. It reads the dimensions and identifies the separate pieces, holes and mounting points.
+4. It builds the missing shapes in CAD, or updates the existing model.
+5. It measures the result, compares it with the references, saves it and opens it again to check the saved file.
+6. It records the result and improves the reusable instructions or code for the next part.
 
 And the main pipeline that I use for NEW things is:
 
@@ -53,15 +52,51 @@ When I see things are ready enough I send then the automated 3D modeling pipelin
 
 ## Installing and Using it
 
-TODO HERE ADD THAT PART on how to do this install use and so on
+### Set up the Python helpers
 
+The recorded examples used Python 3.12. From a terminal:
+
+```sh
+git clone https://github.com/leomrocha/3d-cad-modeling.git
+cd 3d-cad-modeling
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements-native.txt
+```
+
+The Python dependencies are listed in [requirements-native.txt](requirements-native.txt). CAD construction uses an existing [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) installation, the OCS engineering skill and the `cadtools` runtime described in the [component CAD skill](skills/component-cad/SKILL.md).
+
+### Use the skills with your agent
+
+1. Give the agent the drawing, pictures or dimensions and describe the model you need.
+2. Ask it to read [component-cad](skills/component-cad/SKILL.md) for a component job, [drawing-inspection](skills/drawing-inspection/SKILL.md) for a DXF, or [source-intake](skills/source-intake/SKILL.md) to record the inputs.
+3. Specify the component project's input and output locations and the CAD session it should use.
+4. Review the resulting model and the changes recorded for that iteration.
+
+### Run a helper directly
+
+For a DXF file named `drawing.dxf`:
+
+```sh
+python scripts/dxf_inspect.py drawing.dxf --output drawing-inventory.json
+```
+
+For the command-line options:
+
+```sh
+python scripts/part_index.py --help
+python scripts/model_inventory.py --help
+python scripts/source_intake.py --help
+```
+
+The [tools page](docs/tools.md) lists the current skills and Python helpers.
 
 ## Documentation
 
 1. [Documentation home](docs/README.md) — guide to the pages.
-2. [Workflow](docs/workflow.md) — inputs, modeling, checking and handoffs.
+2. [Workflow](#project) — inputs, modeling, checking and handoffs.
 3. [Tools](docs/tools.md) — software roles, agent responsibilities and implementation status.
-4. [Example gallery](docs/examples/README.md) — wind-generator, FERME and building applications.
+4. [Example gallery](docs/examples/README.md) — mast, mechanical component and building examples.
 
 ## Repository
 
@@ -87,17 +122,17 @@ This is the first thign I did at this complexity level with AI + drawing + pictu
 
 I'm working on a wind generator idea, so I started to check how to model and see how a mast support would behave for the particular geometry I'm trying to get on the top part, many of the thigns I did there for the 3d modeling came ata good port so I add them here as examples of what the predating things allowed me to do (with a lot of interaction and effort)
 
-A square mast model and recorded Code_Aster wind cases. [Models, simulation inputs and results](docs/examples/wind-generator.md).
+A square mast model and recorded Code_Aster wind cases. [Mast model and simulation pictures](docs/examples/wind-generator.md).
 
-![Mast displacement for 15 m/s wind from 0 and 45 degrees](docs/images/wind-generator/mast-displacement.png)
+![Mast displacement for 15 m/s wind from 0 and 45 degrees](docs/images/mast/mast-displacement.png)
 
 ### Mechanical component models
 
 Another current project is about making a remote controlled 2 wheel tractor, but I do not have time to work on it really so I'm automating all that I can this includes a (mostly) automated pipeline that gets available components from standards and pictures and manufacturer details that kind of fit int eh base idea I have, 
 
-![SKF SY20TF component geometry](./docs/images/ferme/bearing.png)
+![SKF SY20TF component geometry](./docs/images/mechanical_components/bearing.png)
 
-Selected frame, motor, bearing and battery examples show source-based construction, component boundaries and saved-model checks. [FERME examples](docs/examples/ferme.md).
+Selected frame, motor, bearing and battery examples show source-based construction, component boundaries and saved-model checks. [Mechanical component examples](docs/examples/mechanical_components.md).
 
 ### Buildings
 

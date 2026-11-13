@@ -37,7 +37,7 @@
     "content_type": "image/png",
     "local_copy": "${MODELING_ROOT}/docs/images/ferme/frame.png",
     "referring_documents": [
-      "docs/examples/ferme.md"
+      "docs/examples/mechanical_components.md"
     ]
   },
   {
@@ -50,7 +50,7 @@
     "content_type": "image/png",
     "local_copy": "${MODELING_ROOT}/docs/images/ferme/motor.png",
     "referring_documents": [
-      "docs/examples/ferme.md"
+      "docs/examples/mechanical_components.md"
     ]
   },
   {
@@ -63,7 +63,7 @@
     "content_type": "image/png",
     "local_copy": "${MODELING_ROOT}/docs/images/ferme/bearing.png",
     "referring_documents": [
-      "docs/examples/ferme.md"
+      "docs/examples/mechanical_components.md"
     ]
   },
   {
@@ -76,7 +76,7 @@
     "content_type": "image/png",
     "local_copy": "${MODELING_ROOT}/docs/images/ferme/battery.png",
     "referring_documents": [
-      "docs/examples/ferme.md"
+      "docs/examples/mechanical_components.md"
     ]
   },
   {
@@ -87,7 +87,7 @@
     "evidence_status": "existing_native_model_example_copy",
     "sha256": "db6d67c37347b3418dac645efd348eb226b58afce3cce170e45cd6383b3227c5",
     "content_type": "image/vnd.dwg",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/square-mast.dwg",
+    "local_copy": "${MODELING_ROOT}/docs/examples/models/square-mast.dwg",
     "referring_documents": [
       "docs/examples/wind-generator.md"
     ]
@@ -100,13 +100,12 @@
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "182b7edd88fe966fd541cd7e543d0e1faf58c31d2f218209201abe21284a76fe",
     "content_type": "application/json",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/0deg-metrics.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
     ],
-    "local_copy_sha256": "eba8f07e14eb0832017e10c16ce62d79e5fbead3f613b09a791b689e82b09987",
-    "copy_transformation": "Portable path normalization; original source hash retained."
+    "copy_transformation": "Portable path normalization; original source hash retained.",
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from0deg-retry02/job.json",
@@ -116,13 +115,12 @@
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "350a5152f1c99b6e924cef64944aa3e3a310ebd53467915185d1823ed88f3c3e",
     "content_type": "application/json",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/0deg-job.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
     ],
-    "local_copy_sha256": "8b15bd2915243da9676432673986e74bb5244bbdf231d95cf133e44fd25facab",
-    "copy_transformation": "Portable path normalization; original source hash retained."
+    "copy_transformation": "Portable path normalization; original source hash retained.",
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/metrics.json",
@@ -132,13 +130,12 @@
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "7fb221356f561783babe1959fcf94b69e24305cc8ae1048c8eedeeaee9e76ed0",
     "content_type": "application/json",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/45deg-metrics.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
     ],
-    "local_copy_sha256": "537d9ebb3a98d8a6521b712e9b318ea4de5150f98f9a739b129f80fd4342f774",
-    "copy_transformation": "Portable path normalization; original source hash retained."
+    "copy_transformation": "Portable path normalization; original source hash retained.",
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/job.json",
@@ -148,13 +145,12 @@
     "evidence_status": "existing_simulation_record_copied_unchanged",
     "sha256": "3b9909229f662b88adce14e1804f05b9037750d2f6c91d0a8c61d903ca9e02d4",
     "content_type": "application/json",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/45deg-job.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
     ],
-    "local_copy_sha256": "b846aedbdb6553b28f40864bea262e8800bd8e1027bbc55e239d506b7827d33a",
-    "copy_transformation": "Portable path normalization; original source hash retained."
+    "copy_transformation": "Portable path normalization; original source hash retained.",
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/input-register.json",
@@ -164,11 +160,11 @@
     "evidence_status": "existing_report_or_input_copied_unchanged",
     "sha256": "41516296753962a96dcf9657ee6a4f7b56029fa55162fc3a2e38dff435f76d8c",
     "content_type": "application/json",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/input-register.json",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
-    ]
+    ],
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${EOLIENNES_ROOT}/models/mast-assembly-variants/SIMULATION-HANDOFF.md",
@@ -178,11 +174,11 @@
     "evidence_status": "existing_report_or_input_copied_unchanged",
     "sha256": "16d9ade6ad41cc9a227054c05392b384f34601b9147c07cad912b34871688cd8",
     "content_type": "text/markdown",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/simulation-handoff.md",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
-    ]
+    ],
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${EOLIENNES_ROOT}/simulations/code-aster-mast/IDEAL-BASE-SCREENING.md",
@@ -192,11 +188,11 @@
     "evidence_status": "existing_report_or_input_copied_unchanged",
     "sha256": "ed6b525cb193f353750abe3cc196a926fd5290fcfdc343b9a5dd5625f5ad3035",
     "content_type": "text/markdown",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/wind-generator/ideal-base-screening.md",
     "referring_documents": [
       "docs/examples/wind-generator.md",
       "docs/reference/operations.md"
-    ]
+    ],
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c009-reuse-01/result.json",
@@ -206,12 +202,11 @@
     "evidence_status": "existing_component_result_copied_unchanged",
     "sha256": "0e1c25505a1f1a7f8ec599e577be7345611c5176c737040d80d32b565590a4bf",
     "content_type": "application/json",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/ferme/bearing-result.json",
     "referring_documents": [
-      "docs/examples/ferme.md"
+      "docs/examples/mechanical_components.md"
     ],
-    "local_copy_sha256": "d8a0a287ef90e8765d98bdabfe496c7bba213f9da21a3ada8004bb9390264020",
-    "copy_transformation": "Portable path normalization; original source hash retained."
+    "copy_transformation": "Portable path normalization; original source hash retained.",
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c021-reuse-01/result.json",
@@ -221,12 +216,11 @@
     "evidence_status": "existing_component_result_copied_unchanged",
     "sha256": "7f89e3ac39db08427d78be0b43ac16e9d5e98a86cd01e63ab74cc130e7ce1dd3",
     "content_type": "application/json",
-    "local_copy": "${MODELING_ROOT}/docs/examples/files/ferme/battery-result.json",
     "referring_documents": [
-      "docs/examples/ferme.md"
+      "docs/examples/mechanical_components.md"
     ],
-    "local_copy_sha256": "a309fea2af195dc0d7818a59e07aa1ba8b3c6612f62dc83e4f4be9b10f55c6fb",
-    "copy_transformation": "Portable path normalization; original source hash retained."
+    "copy_transformation": "Portable path normalization; original source hash retained.",
+    "public_copy_removed_at": "2026-11-13"
   },
   {
     "local_original": "${MODELING_ROOT}/research/workflows/cad-paths.json",

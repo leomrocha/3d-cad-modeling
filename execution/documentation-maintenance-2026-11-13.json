@@ -1,0 +1,46 @@
+{
+  "model": "gpt-6.1-sol",
+  "status": "DONE",
+  "removed_public_technical_records": [
+    "docs/examples/files/ferme/battery-result.json",
+    "docs/examples/files/ferme/bearing-result.json",
+    "docs/examples/files/wind-generator/0deg-job.json",
+    "docs/examples/files/wind-generator/0deg-metrics.json",
+    "docs/examples/files/wind-generator/45deg-job.json",
+    "docs/examples/files/wind-generator/45deg-metrics.json",
+    "docs/examples/files/wind-generator/ideal-base-screening.md",
+    "docs/examples/files/wind-generator/input-register.json",
+    "docs/examples/files/wind-generator/simulation-handoff.md"
+  ],
+  "renamed_page": {
+    "from": "docs/examples/ferme.md",
+    "to": "docs/examples/mechanical_components.md"
+  },
+  "retained_mast_model": "docs/examples/models/square-mast.dwg",
+  "retained_mast_model_sha256": "db6d67c37347b3418dac645efd348eb226b58afce3cce170e45cd6383b3227c5",
+  "metadata_updates": [
+    "research/sources/documentation-rewrite-2026-11-13.json"
+  ],
+  "todo_items_addressed": 4,
+  "scope": "Requested TODO text, actual tool inventory, page rename, local links and removal of technical records from public docs.",
+  "date": "2026-11-13",
+  "checks": {
+    "markdown_pages": 7,
+    "local_links_and_anchors": 77,
+    "broken_links": [],
+    "remaining_todos": [],
+    "obsolete_doc_references": [],
+    "machine_specific_paths": [],
+    "technical_json_records_in_docs": 0,
+    "python_helpers_listed": 23,
+    "skills_listed": 3,
+    "mast_model_hash": "UNCHANGED",
+    "helper_help_commands": [
+      "part_index.py",
+      "model_inventory.py",
+      "source_intake.py",
+      "dxf_inspect.py"
+    ],
+    "scope": "Documentation only; no installation, CAD writes or simulation execution."
+  }
+}
