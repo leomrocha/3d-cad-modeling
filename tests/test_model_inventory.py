@@ -96,6 +96,66 @@ class ExistingModelTests(unittest.TestCase):
         p=self.cad/'parts/C001-existing.dwg';p.write_bytes(b'Possible component model')
         self.assertEqual(self.check()['action'],'REVIEW_EXISTING_CANDIDATES')
 
+    def non_geometric_job(self):
+        import hashlib
+        return {'part_id':'C001','state':'NOT_STARTED',
+                'geometry_requirement':{'kind':'non_geometric_consumable','cad_required':False,
+                    'source':{'path':'${PROJECT_ROOT}/part.md',
+                              'sha256':hashlib.sha256(self.sheet.read_bytes()).hexdigest(),
+                              'location':'Explicit no-CAD instruction in fixture input'}}}
+
+    def test_source_bound_non_geometric_job_skips_new_model_requirement(self):
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),
+                           self.non_geometric_job(),{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'SKIP_NON_GEOMETRIC')
+        self.assertEqual(result['geometry_requirement']['kind'],'non_geometric_consumable')
+
+    def test_non_geometric_classification_preserves_matching_model_and_candidates(self):
+        existing=self.cad/'parts/existing.dwg';existing.write_bytes(b'Existing model')
+        self.part['existing_cad']='parts/existing.dwg'
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),
+                           self.non_geometric_job(),{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL')
+        self.assertEqual(result['models'][0]['path'],str(existing))
+        self.part['existing_cad']=''
+        candidate=self.root/'C001-possible.dwg';candidate.write_bytes(b'Candidate model')
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),
+                           self.non_geometric_job(),{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'REVIEW_EXISTING_CANDIDATES')
+        self.assertEqual(result['candidates'][0]['path'],str(candidate))
+
+    def test_non_geometric_done_state_skips_missing_model_after_candidate_scan(self):
+        job=self.non_geometric_job();job['state']='DONE'
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),
+                           job,{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'SKIP_NON_GEOMETRIC')
+        candidate=self.root/'C001-possible.dwg';candidate.write_bytes(b'Candidate model')
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),
+                           job,{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'REVIEW_EXISTING_CANDIDATES')
+
+    def test_geometric_done_candidate_and_existing_model_precedence_is_unchanged(self):
+        candidate=self.root/'C001-possible.dwg';candidate.write_bytes(b'Candidate model')
+        self.assertEqual(self.check({'state':'DONE'})['action'],'LOCATE_COMPLETED_MODEL')
+        self.assertEqual(self.check({'state':'DONE','features':[]})['action'],'LOCATE_COMPLETED_MODEL')
+        existing=self.cad/'parts/existing.dwg';existing.write_bytes(b'Existing model')
+        self.part['existing_cad']='parts/existing.dwg'
+        result=self.check({'state':'DONE'})
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL')
+
+    def test_non_geometric_classification_rejects_bad_source_or_part_binding(self):
+        job=self.non_geometric_job();job['geometry_requirement']['source']['sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'source revision changed'):
+            start_check(self.part,self.index,self.cad,inventory_models(self.root),job,{'PROJECT_ROOT':self.root})
+        job=self.non_geometric_job();job['part_id']='C099'
+        with self.assertRaisesRegex(ValueError,'part_id must match'):
+            start_check(self.part,self.index,self.cad,inventory_models(self.root),job,{'PROJECT_ROOT':self.root})
+
+    def test_non_geometric_classification_rejects_configuration_mode(self):
+        job=self.non_geometric_job();job['configurations']=[{'name':'Loctite'}]
+        with self.assertRaisesRegex(ValueError,'cannot be combined'):
+            start_check(self.part,self.index,self.cad,inventory_models(self.root),job,{'PROJECT_ROOT':self.root},'Loctite')
+
     def config_check(self,job,configuration):
         return start_check(self.part,self.index,self.cad,inventory_models(self.root),job,configuration=configuration)
     def test_selected_pending_configuration_proceeds_with_other_configuration_model(self):

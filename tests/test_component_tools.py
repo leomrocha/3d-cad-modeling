@@ -112,6 +112,49 @@ class JobTests(unittest.TestCase):
         self.job['features'].append({'name':'optional finish','value':None,'required':False})
         self.assertEqual(cr.readiness(self.job)['state'],'SOURCE_READY')
 
+    def non_geometric_job(self):
+        return {'job_id':'fixture-consumable','part_id':'fixture','part_name':'Fixture compound',
+                'representation':'installation consumable record','units':'mm','frame':'mating pilot frame',
+                'geometry_requirement':{'kind':'non_geometric_consumable','cad_required':False,
+                    'source':{'path':'${PROJECT_ROOT}/source.md',
+                              'sha256':hashlib.sha256(self.source.read_bytes()).hexdigest(),
+                              'location':'Geometry and provenance, line 1'}}}
+
+    def test_explicit_non_geometric_requirement_is_pinned_and_blocks_cad_builders(self):
+        job=self.non_geometric_job()
+        result=cr.readiness(job,{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['state'],'SOURCE_READY_NON_GEOMETRIC')
+        self.assertEqual(result['geometry_requirement']['source']['sha256'],job['geometry_requirement']['source']['sha256'])
+        with self.assertRaisesRegex(cr.RecordError,'CAD construction is prohibited'):
+            cr.require_ready(job,{'PROJECT_ROOT':self.root})
+
+    def test_non_geometric_requirement_rejects_changed_source(self):
+        job=self.non_geometric_job();job['geometry_requirement']['source']['sha256']='0'*64
+        with self.assertRaisesRegex(cr.RecordError,'source revision changed'):
+            cr.readiness(job,{'PROJECT_ROOT':self.root})
+
+    def test_non_geometric_requirement_rejects_malformed_declarations(self):
+        mutations=[
+            lambda r:r.update(cad_required=True),
+            lambda r:r.update(cad_required='false'),
+            lambda r:r.update(kind='skip'),
+            lambda r:r.pop('source'),
+        ]
+        for mutate in mutations:
+            job=self.non_geometric_job();mutate(job['geometry_requirement'])
+            with self.subTest(requirement=job['geometry_requirement']), self.assertRaises(cr.RecordError):
+                cr.readiness(job,{'PROJECT_ROOT':self.root})
+        job=self.non_geometric_job();job['geometry_role']='reference_envelope'
+        with self.assertRaisesRegex(cr.RecordError,'conflicts'):
+            cr.readiness(job,{'PROJECT_ROOT':self.root})
+
+    def test_non_geometric_cli_accepts_named_source_root(self):
+        job=self.non_geometric_job();p=self.root/'non-geometric-job.json';p.write_text(json.dumps(job))
+        r=subprocess.run([sys.executable,str(ROOT/'scripts/component_records.py'),str(p),
+                          '--root','PROJECT_ROOT='+str(self.root)],capture_output=True,text=True)
+        self.assertEqual(r.returncode,0,r.stderr)
+        self.assertEqual(json.loads(r.stdout)['state'],'SOURCE_READY_NON_GEOMETRIC')
+
     def test_cli_returns_named_question_and_preserves_input(self):
         self.feature['value']=None;self.feature['question']='What value applies?'
         p=self.root/'job.json';p.write_text(json.dumps(self.job));before=p.read_bytes()
