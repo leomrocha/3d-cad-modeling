@@ -1,0 +1,69 @@
+{
+  "records": [
+    {
+      "title": "scripts/source_variant_table.py",
+      "local_path": "scripts/source_variant_table.py",
+      "summary": "Selects an exact variant/header and row association from a validated normalized table, retaining raw text and table provenance.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "tests/test_source_variant_table.py",
+      "local_path": "tests/test_source_variant_table.py",
+      "summary": "Nine passing synthetic tests cover exact labels, adjacent columns, ambiguous duplicates, malformed row widths, empty cells and source location.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_test_source",
+      "sha256": "9248e32339dd49bc80f31400d35335a517d7f9feb6db099d92a60387a3549ca6",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "skills/component-cad/references/source-variant-tables.md",
+      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "summary": "Defines source retention and transcription review before exact variant selection and downstream source-feature binding.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "sha256": "485b42a3f090b8a7f170520a452a083668a74e71a2ac7f62ae58342509bf6d4c",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "skills/component-cad/references/drawing-feature-checks.md",
+      "local_path": "skills/component-cad/references/drawing-feature-checks.md",
+      "summary": "Defines feature-matched drawing comparison, independent source checks and complete boundary identification before counting openings.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "sha256": "f17c2e3840fc65d345d463a58753c23050425c102f26a6f9bbe88092e94498d1",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Receiver variant source application",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c051-build-01/",
+      "summary": "Receiver source job retains adjacent product variants and the exact requested variant table association alongside the proposed-input discrepancy.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "component_source_review_registration",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Busbar opening source review",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c037-build-01/source/cdr-slpirbbpso0-01-000.pdf",
+      "original_url": "https://www.amphenol-industrial.de/en/products/xev-connectors/surlok/male-receptacle-1-pole-slpirbbpso0",
+      "summary": "Retained manufacturer-linked Rev J drawing visually reviewed: busbar terminal has a single elongated opening with connected end arcs; the source-feature record is being corrected to retain that boundary identity.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "local_original_visual_inspection",
+      "referring_documents": [
+        "execution/variant-table-and-opening-checks-2026-11-13.md"
+      ]
+    }
+  ]
+}
