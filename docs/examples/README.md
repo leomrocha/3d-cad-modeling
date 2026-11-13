@@ -1,17 +1,17 @@
 # Examples
 
-[Documentation](../README.md) · [Workflow](../workflow.md)
+[Documentation](../README.md) · [Workflow](../../README.md#project)
 
 ## Wind generator
 
 
 [Mast models and physics](wind-generator.md): mast models; 15 m/s wind cases; displacement and yield-comparison plots.
 
-## FERME components
+## Mechanical components
 
-![FERME bearing component model](../images/ferme/bearing.png)
+![SKF bearing component model](../images/mechanical_components/bearing.png)
 
-[Selected FERME models](ferme.md): a hollow frame member, motor interfaces, bearing unit and battery module, with source-based geometry and saved-model checks.
+[Mechanical component examples](mechanical_components.md): a hollow frame member, motor interfaces, bearing unit and battery module, with source-based geometry and saved-model checks.
 
 ## Buildings
 

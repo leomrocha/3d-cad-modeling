@@ -1,6 +1,6 @@
 # Buildings
 
-[Examples](README.md) · [Workflow](../workflow.md) · [Tools](../tools.md)
+[Examples](README.md) · [Workflow](../../README.md#project) · [Tools](../tools.md)
 
 Status: proposed workflow based on the retained building-model research.
 
@@ -12,9 +12,9 @@ The proposed output is a semantic IFC model containing building elements, placem
 
 ## Workflow
 
-1. **Interpret the plan.** Record plan scale, units, axes, levels and wall/opening identities. [Plan-to-IFC operation](../reference/operations.md#dom-18).
-2. **Create building elements.** Author walls, slabs and openings with explicit placements and properties using IfcOpenShell or Bonsai. [IFC authoring operation](../reference/operations.md#dom-15).
-3. **Check the model.** Compare element dimensions, openings, storey assignments and measured controls using the operation's acceptance criteria.
-4. **Create a display derivative.** Preserve the IFC element mapping and coordinate transform when producing a GLB inspection scene. [Display export operation](../reference/operations.md#dom-17).
+1. **Interpret the plan.** Record plan scale, units, axes, levels and wall/opening identities.
+2. **Create building elements.** Author walls, slabs and openings with explicit placements and properties using IfcOpenShell or Bonsai.
+3. **Check the model.** Compare element dimensions, openings, storey assignments and measured controls against the source plan and dimensions.
+4. **Create a display derivative.** Preserve the IFC element mapping and coordinate transform when producing a GLB inspection scene.
 
-IFC retains the building elements and relationships; display meshes represent visible surfaces. Photographs and scans can be registered as additional evidence through the [measured reconstruction route](../workflow.md#photographs-and-scans).
+IFC retains the building elements and relationships; display meshes represent visible surfaces. Photographs and scans can be registered as additional evidence using calibrated image or scan measurements.
