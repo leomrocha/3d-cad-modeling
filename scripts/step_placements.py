@@ -35,15 +35,18 @@ def basis(z):
 
 def xyz(v):return [v[k] for k in ['x','y','z']]
 
-def native_matrix(p):
+def native_matrix(p, *, allow_uniform_scale=False):
     if p.get('column_count',1)!=1 or p.get('row_count',1)!=1:raise ValueError('Array inserts unsupported')
     axes=basis(xyz(p['normal']));a=p['rotation'];c,s=math.cos(a),math.sin(a)
     x=[axes[0][i]*c+axes[1][i]*s for i in range(3)];y=[-axes[0][i]*s+axes[1][i]*c for i in range(3)]
     scales=[p[k] for k in ['x_scale','y_scale','z_scale']]
-    if any(abs(v-1)>1e-7 for v in scales):raise ValueError('Unit-scale insert required')
+    if not all(math.isfinite(v) and v>0 for v in scales):raise ValueError('Positive finite insert scales required')
+    if allow_uniform_scale:
+        if any(not math.isclose(v,scales[0],rel_tol=1e-9,abs_tol=0) for v in scales):raise ValueError('Uniform insert scale required')
+    elif any(abs(v-1)>1e-7 for v in scales):raise ValueError('Unit-scale insert required')
     m=eye();o=xyz(p['insert_point'])
     for i in range(3):
-        m[i][:3]=[x[i],y[i],axes[2][i]]
+        m[i][:3]=[x[i]*scales[0],y[i]*scales[1],axes[2][i]*scales[2]]
         m[i][3]=sum(axes[j][i]*o[j] for j in range(3))
     return m
 
@@ -106,11 +109,11 @@ def reversed_placement_plan(records,placements):
     return changes
 
 
-def solid_instances(records,block_records,root_handles,max_instances=10000):
+def solid_instances(records,block_records,root_handles,max_instances=10000, *, allow_uniform_scale=False):
     """Traverse native block membership with instance identity and rigid frames.
 
-    This exercised reader requires zero block base points, single inserts and
-    unit scales. Unsupported leaves/cycles fail before returning partial data.
+    This exercised reader requires zero block base points and single inserts.
+    Unit scales are the default; positive uniform scales require explicit opt-in. Unsupported leaves/cycles fail before returning partial data.
     """
     if type(max_instances) is not int or max_instances<=0:raise ValueError('Positive instance bound required')
     by_handle={r['handle']:r for r in records};blocks={r['name']:r['properties'] for r in block_records};out=[]
@@ -123,7 +126,7 @@ def solid_instances(records,block_records,root_handles,max_instances=10000):
         if r['type']!='Insert':raise ValueError('Unsupported native assembly leaf '+r['type'])
         p=r['properties'];b=blocks[p['block_name']]
         if any(abs(v)>1e-9 for v in xyz(b['base_point'])):raise ValueError('Nonzero block base requires another reader')
-        for child in b['entity_handles']:visit(format(child,'X'),multiply(m,native_matrix(p)),path+[handle],active|{handle})
+        for child in b['entity_handles']:visit(format(child,'X'),multiply(m,native_matrix(p,allow_uniform_scale=allow_uniform_scale)),path+[handle],active|{handle})
     for root in root_handles:visit(root,eye(),[],set())
     if not out:raise ValueError('No solid instances reached')
     return out

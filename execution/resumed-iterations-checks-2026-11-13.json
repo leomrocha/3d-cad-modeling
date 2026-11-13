@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "result": "PASS",
+  "components": {
+    "C045 converter": "DONE",
+    "C026 Lynx BMS": "DONE"
+  },
+  "lynx_saved_checks": 159,
+  "helper_tests": 100,
+  "skill_validation": "PASS",
+  "source_observations": 134,
+  "existing_source_registration_dates_preserved": 1137,
+  "existing_native_models_preserved": 25,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "action_occurrences_append_only": true,
+  "registration_method": "Append current batch source observations without rebuilding unrelated workflow research dates",
+  "test_history": "Initial scale fixture expected 189 instances; recorded hierarchy has 130. Corrected fixture passes; full 100-test regression passes."
+}

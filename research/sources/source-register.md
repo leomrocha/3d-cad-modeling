@@ -13647,3 +13647,1077 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+## Component iterations — 13 November 2026
+
+### Lynx audit evidence — SRC-a4a7445ec595
+
+Original source: [Lynx audit evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/audit.json)
+
+Summary: Existing Lynx audit reports 95 solids and 128 block references; compared with the saved derivative audit.
+
+Evidence: executed_native_state_read.
+
+### Original Lynx CAD and source hashes — SRC-9f96098ee90a
+
+Original source: [Original Lynx CAD and source hashes](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/baseline.json)
+
+Summary: Pins the original DWG and manufacturer STEP bytes before correction; source hash matches the retained acquisition record.
+
+Evidence: executed_file_inspection.
+
+### Lynx blocks evidence — SRC-2fb804239b51
+
+Original source: [Lynx blocks evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/blocks.json)
+
+Summary: Native block membership at blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.
+
+Evidence: executed_native_state_read.
+
+### Lynx corrected blocks evidence — SRC-8383735f7fe8
+
+Original source: [Lynx corrected blocks evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-blocks.json)
+
+Summary: Native block membership at corrected blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.
+
+Evidence: executed_native_state_read.
+
+### Corrected Lynx placed solid hierarchy — SRC-5c766056233f
+
+Original source: [Corrected Lynx placed solid hierarchy](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-instances.json)
+
+Summary: 130 complete native solid instance paths and matrices after reviewed correction; outer millimetre-to-metre scale retained.
+
+Evidence: executed_assembly_inspection.
+
+### Lynx corrected records 0 native records — SRC-be2093995f07
+
+Original source: [Lynx corrected records 0 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-0.json)
+
+Summary: Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 104 native records — SRC-9781d66101ed
+
+Original source: [Lynx corrected records 104 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-104.json)
+
+Summary: Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 112 native records — SRC-c8dfce5c7575
+
+Original source: [Lynx corrected records 112 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-112.json)
+
+Summary: Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 120 native records — SRC-1a99c0bf98d7
+
+Original source: [Lynx corrected records 120 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-120.json)
+
+Summary: Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 128 native records — SRC-fcb3e15bb17b
+
+Original source: [Lynx corrected records 128 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-128.json)
+
+Summary: Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 136 native records — SRC-b3bfb5570f38
+
+Original source: [Lynx corrected records 136 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-136.json)
+
+Summary: Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 144 native records — SRC-71bf5f751f30
+
+Original source: [Lynx corrected records 144 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-144.json)
+
+Summary: Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 152 native records — SRC-8ed937c0b7b8
+
+Original source: [Lynx corrected records 152 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-152.json)
+
+Summary: Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 16 native records — SRC-836615063de7
+
+Original source: [Lynx corrected records 16 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-16.json)
+
+Summary: Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 160 native records — SRC-0d314595fa4a
+
+Original source: [Lynx corrected records 160 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-160.json)
+
+Summary: Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 168 native records — SRC-fd8367c1e3f3
+
+Original source: [Lynx corrected records 168 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-168.json)
+
+Summary: Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 176 native records — SRC-6a7e1cdf3015
+
+Original source: [Lynx corrected records 176 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-176.json)
+
+Summary: Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 184 native records — SRC-5eac9403ed9d
+
+Original source: [Lynx corrected records 184 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-184.json)
+
+Summary: Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 192 native records — SRC-ccdbf25e82c6
+
+Original source: [Lynx corrected records 192 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-192.json)
+
+Summary: Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 200 native records — SRC-97954e9ed7ce
+
+Original source: [Lynx corrected records 200 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-200.json)
+
+Summary: Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 208 native records — SRC-c65cf5c41654
+
+Original source: [Lynx corrected records 208 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-208.json)
+
+Summary: Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 216 native records — SRC-f0e03c5ef882
+
+Original source: [Lynx corrected records 216 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-216.json)
+
+Summary: Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 24 native records — SRC-45e10de48de3
+
+Original source: [Lynx corrected records 24 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-24.json)
+
+Summary: Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 32 native records — SRC-07381c175a35
+
+Original source: [Lynx corrected records 32 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-32.json)
+
+Summary: Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 40 native records — SRC-f60856cbdfb4
+
+Original source: [Lynx corrected records 40 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-40.json)
+
+Summary: Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 48 native records — SRC-d31478416fae
+
+Original source: [Lynx corrected records 48 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-48.json)
+
+Summary: Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 56 native records — SRC-f272cb0c9c5c
+
+Original source: [Lynx corrected records 56 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-56.json)
+
+Summary: Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 64 native records — SRC-74ea95f4c61a
+
+Original source: [Lynx corrected records 64 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-64.json)
+
+Summary: Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 72 native records — SRC-550c25dedf92
+
+Original source: [Lynx corrected records 72 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-72.json)
+
+Summary: Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 8 native records — SRC-f64b6c2462f9
+
+Original source: [Lynx corrected records 8 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-8.json)
+
+Summary: Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 80 native records — SRC-fce472423429
+
+Original source: [Lynx corrected records 80 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-80.json)
+
+Summary: Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 88 native records — SRC-b2615d68e946
+
+Original source: [Lynx corrected records 88 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-88.json)
+
+Summary: Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx corrected records 96 native records — SRC-e7b396f933b9
+
+Original source: [Lynx corrected records 96 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-96.json)
+
+Summary: Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage corrected working model.
+
+Evidence: executed_native_record_read.
+
+### Lynx document checkpoint evidence — SRC-256d9dcd0f49
+
+Original source: [Lynx document checkpoint evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/document-checkpoint.json)
+
+Summary: Native state and document identity at the document checkpoint boundary; preserves the operation revision used for subsequent checks.
+
+Evidence: executed_native_state_read.
+
+### Executed Lynx driver check_lynx — SRC-eeed397bd2e6
+
+Original source: [Executed Lynx driver check_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/check_lynx.py)
+
+Summary: Compares 95 saved solid definitions, 60 source placements, 130 instance paths, metre units, outer scale and original-file hash; calculates explicit metre and millimetre vertex ranges.
+
+Evidence: executed_implementation_artifact.
+
+### Executed Lynx driver lynx_views — SRC-a2a785715504
+
+Original source: [Executed Lynx driver lynx_views](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/lynx_views.py)
+
+Summary: Sets native top and front views of saved document 89, captures both and recovers bounded capture requests under their original identities.
+
+Evidence: executed_implementation_artifact.
+
+### Lynx provenance evidence — SRC-75d0575521ec
+
+Original source: [Lynx provenance evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/provenance.json)
+
+Summary: Hashes the exact executed Lynx driver files and identifies their local helper bootstrap without recording authentication tokens.
+
+Evidence: executed_artifact_provenance.
+
+### Executed Lynx driver read_lynx — SRC-ca32afe0f973
+
+Original source: [Executed Lynx driver read_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/read_lynx.py)
+
+Summary: Recovers the original open, reads document 88 audit, 223 entity records and block membership, then captures the displaced initial assembly.
+
+Evidence: executed_implementation_artifact.
+
+### Executed Lynx driver record_lynx_source — SRC-6188c6fbaa58
+
+Original source: [Executed Lynx driver record_lynx_source](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/record_lynx_source.py)
+
+Summary: Writes the source-linked Lynx job and runs its source-readiness validation using retained STEP identity, units and placement frames.
+
+Evidence: executed_implementation_artifact.
+
+### Executed Lynx driver reopen_lynx — SRC-fe62091d82e4
+
+Original source: [Executed Lynx driver reopen_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/reopen_lynx.py)
+
+Summary: Recovers the pending derivative reopen, verifies saved hash and manifest, reads document 89 geometry and header and requests its isometric view.
+
+Evidence: executed_implementation_artifact.
+
+### Executed Lynx driver repair_lynx — SRC-7ec44d4b4885
+
+Original source: [Executed Lynx driver repair_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/repair_lynx.py)
+
+Summary: Builds the reviewed 60-placement source plan, retains the outer 0.001 scale, applies guarded corrections, reads corrected records and saves a separate checked derivative.
+
+Evidence: executed_implementation_artifact.
+
+### Executed Lynx driver resume_lynx — SRC-082426c6d5f2
+
+Original source: [Executed Lynx driver resume_lynx](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/resume_lynx.py)
+
+Summary: Pins the original Lynx DWG and manufacturer STEP hashes and starts opening the existing saved assembly under a journaled request.
+
+Evidence: executed_implementation_artifact.
+
+### Lynx existing isometric view — SRC-9377f9a6519a
+
+Original source: [Lynx existing isometric view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/existing-isometric.png)
+
+Summary: Actual initial image shows hardware displaced from the enclosure.
+
+Evidence: executed_native_capture.
+
+### Lynx front capture evidence — SRC-6bf28649add0
+
+Original source: [Lynx front capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/front-capture.json)
+
+Summary: Completed original capture request response for the front capture image, retained beside the inspected native image.
+
+Evidence: executed_native_capture_result.
+
+### Original Lynx drawing units — SRC-5cd1611c89a0
+
+Original source: [Original Lynx drawing units](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/header.json)
+
+Summary: Native header declares insertion unit code 6, metres, providing the interpretation of the retained 0.001 outer insertion scale.
+
+Evidence: executed_native_state_read.
+
+### Lynx isometric capture evidence — SRC-6ce289f7395b
+
+Original source: [Lynx isometric capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/isometric-capture.json)
+
+Summary: Completed original capture request response for the isometric capture image, retained beside the inspected native image.
+
+Evidence: executed_native_capture_result.
+
+### Lynx native operation journal — SRC-36ecfc230ce2
+
+Original source: [Lynx native operation journal](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/ocs-journal.jsonl)
+
+Summary: Append-only intent and response history for existing-model inspection, 60 guarded placement writes, verified save, reopen and view captures.
+
+Evidence: executed_native_operation_journal.
+
+### Lynx verified save and reopen — SRC-019bb82ec263
+
+Original source: [Lynx verified save and reopen](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/persistence.json)
+
+Summary: Separate checked derivative passes file hash, manifest and zero-error audit comparisons; original pending reopen request was recovered.
+
+Evidence: executed_persistence_check.
+
+### Lynx guarded correction readback — SRC-45f98d367645
+
+Original source: [Lynx guarded correction readback](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/placement-corrections.json)
+
+Summary: Sixty source placement writes pass readback; all 95 solid definitions remain unchanged.
+
+Evidence: executed_native_correction.
+
+### Lynx query evidence — SRC-727ae37a310c
+
+Original source: [Lynx query evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/query.json)
+
+Summary: Existing Lynx entity inventory identifies 223 native entities for bounded record inspection.
+
+Evidence: executed_native_state_read.
+
+### Lynx source readiness — SRC-d88062a24ef8
+
+Original source: [Lynx source readiness](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/readiness.json)
+
+Summary: Executed requirement validation for the exact manufacturer assembly and source-backed frame inputs.
+
+Evidence: executed_input_validation.
+
+### Lynx records 0 native records — SRC-ab9d1cc0b15b
+
+Original source: [Lynx records 0 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-0.json)
+
+Summary: Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 104 native records — SRC-23b2720611ee
+
+Original source: [Lynx records 104 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-104.json)
+
+Summary: Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 112 native records — SRC-b8a5068c8697
+
+Original source: [Lynx records 112 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-112.json)
+
+Summary: Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 120 native records — SRC-058be1c6022d
+
+Original source: [Lynx records 120 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-120.json)
+
+Summary: Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 128 native records — SRC-510fdce758c7
+
+Original source: [Lynx records 128 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-128.json)
+
+Summary: Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 136 native records — SRC-e9bbfc1a980e
+
+Original source: [Lynx records 136 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-136.json)
+
+Summary: Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 144 native records — SRC-2751b2ee10da
+
+Original source: [Lynx records 144 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-144.json)
+
+Summary: Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 152 native records — SRC-33a0a0ddc238
+
+Original source: [Lynx records 152 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-152.json)
+
+Summary: Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 16 native records — SRC-567fe01db45e
+
+Original source: [Lynx records 16 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-16.json)
+
+Summary: Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 160 native records — SRC-da6832088dfd
+
+Original source: [Lynx records 160 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-160.json)
+
+Summary: Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 168 native records — SRC-b02199f3c627
+
+Original source: [Lynx records 168 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-168.json)
+
+Summary: Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 176 native records — SRC-26c2d547c0a8
+
+Original source: [Lynx records 176 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-176.json)
+
+Summary: Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 184 native records — SRC-89ab56f3445e
+
+Original source: [Lynx records 184 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-184.json)
+
+Summary: Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 192 native records — SRC-9005f607e412
+
+Original source: [Lynx records 192 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-192.json)
+
+Summary: Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 200 native records — SRC-9f0bd1cc0d2c
+
+Original source: [Lynx records 200 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-200.json)
+
+Summary: Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 208 native records — SRC-9f0195c3ab12
+
+Original source: [Lynx records 208 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-208.json)
+
+Summary: Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 216 native records — SRC-37a036bdf257
+
+Original source: [Lynx records 216 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-216.json)
+
+Summary: Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 24 native records — SRC-500cc7b95998
+
+Original source: [Lynx records 24 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-24.json)
+
+Summary: Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 32 native records — SRC-169e80504fc9
+
+Original source: [Lynx records 32 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-32.json)
+
+Summary: Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 40 native records — SRC-b9c57ffb89e0
+
+Original source: [Lynx records 40 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-40.json)
+
+Summary: Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 48 native records — SRC-a7eb4b31ed51
+
+Original source: [Lynx records 48 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-48.json)
+
+Summary: Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 56 native records — SRC-a258fd85727d
+
+Original source: [Lynx records 56 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-56.json)
+
+Summary: Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 64 native records — SRC-09b214595569
+
+Original source: [Lynx records 64 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-64.json)
+
+Summary: Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 72 native records — SRC-8ff54e1de411
+
+Original source: [Lynx records 72 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-72.json)
+
+Summary: Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 8 native records — SRC-080bd6b4503a
+
+Original source: [Lynx records 8 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-8.json)
+
+Summary: Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 80 native records — SRC-d5211fa06d19
+
+Original source: [Lynx records 80 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-80.json)
+
+Summary: Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 88 native records — SRC-42ef68c0a219
+
+Original source: [Lynx records 88 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-88.json)
+
+Summary: Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx records 96 native records — SRC-7087a96dadb8
+
+Original source: [Lynx records 96 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-96.json)
+
+Summary: Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage existing original import.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened blocks evidence — SRC-467e7131ee59
+
+Original source: [Lynx reopened blocks evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-blocks.json)
+
+Summary: Native block membership at reopened blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.
+
+Evidence: executed_native_state_read.
+
+### Lynx reopened checkpoint evidence — SRC-0a751f4d81c2
+
+Original source: [Lynx reopened checkpoint evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-checkpoint.json)
+
+Summary: Native state and document identity at the reopened checkpoint boundary; preserves the operation revision used for subsequent checks.
+
+Evidence: executed_native_state_read.
+
+### Lynx reopened front view — SRC-d11186282897
+
+Original source: [Lynx reopened front view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-front.png)
+
+Summary: Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is front.
+
+Evidence: executed_native_capture.
+
+### Saved Lynx drawing units — SRC-bdfdc162dfc5
+
+Original source: [Saved Lynx drawing units](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-header.json)
+
+Summary: Reopened checked derivative retains insertion unit code 6, metres.
+
+Evidence: executed_native_state_read.
+
+### Lynx reopened isometric view — SRC-aaaf6c5dd563
+
+Original source: [Lynx reopened isometric view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-isometric.png)
+
+Summary: Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is isometric.
+
+Evidence: executed_native_capture.
+
+### Lynx reopened records 0 native records — SRC-c43671ae8097
+
+Original source: [Lynx reopened records 0 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-0.json)
+
+Summary: Native document 89 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 104 native records — SRC-9ca25aacaf1c
+
+Original source: [Lynx reopened records 104 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-104.json)
+
+Summary: Native document 89 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 112 native records — SRC-ff6e7f977ca2
+
+Original source: [Lynx reopened records 112 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-112.json)
+
+Summary: Native document 89 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 120 native records — SRC-148f28990b68
+
+Original source: [Lynx reopened records 120 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-120.json)
+
+Summary: Native document 89 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 128 native records — SRC-b14a6a2b185d
+
+Original source: [Lynx reopened records 128 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-128.json)
+
+Summary: Native document 89 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 136 native records — SRC-c7081b3be440
+
+Original source: [Lynx reopened records 136 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-136.json)
+
+Summary: Native document 89 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 144 native records — SRC-49c894b64172
+
+Original source: [Lynx reopened records 144 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-144.json)
+
+Summary: Native document 89 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 152 native records — SRC-f0168c67c897
+
+Original source: [Lynx reopened records 152 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-152.json)
+
+Summary: Native document 89 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 16 native records — SRC-38cef6ed62af
+
+Original source: [Lynx reopened records 16 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-16.json)
+
+Summary: Native document 89 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 160 native records — SRC-03d1a09f78f8
+
+Original source: [Lynx reopened records 160 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-160.json)
+
+Summary: Native document 89 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 168 native records — SRC-56a0f5891cd3
+
+Original source: [Lynx reopened records 168 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-168.json)
+
+Summary: Native document 89 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 176 native records — SRC-9919cced30fa
+
+Original source: [Lynx reopened records 176 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-176.json)
+
+Summary: Native document 89 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 184 native records — SRC-1a7c8d68bce8
+
+Original source: [Lynx reopened records 184 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-184.json)
+
+Summary: Native document 89 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 192 native records — SRC-01f96907504c
+
+Original source: [Lynx reopened records 192 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-192.json)
+
+Summary: Native document 89 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 200 native records — SRC-91332cccbebc
+
+Original source: [Lynx reopened records 200 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-200.json)
+
+Summary: Native document 89 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 208 native records — SRC-064e69f97070
+
+Original source: [Lynx reopened records 208 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-208.json)
+
+Summary: Native document 89 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 216 native records — SRC-c5392ad41c00
+
+Original source: [Lynx reopened records 216 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-216.json)
+
+Summary: Native document 89 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 24 native records — SRC-daa51fe3fdd2
+
+Original source: [Lynx reopened records 24 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-24.json)
+
+Summary: Native document 89 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 32 native records — SRC-9e08629c78a3
+
+Original source: [Lynx reopened records 32 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-32.json)
+
+Summary: Native document 89 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 40 native records — SRC-f09ccd9cf02a
+
+Original source: [Lynx reopened records 40 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-40.json)
+
+Summary: Native document 89 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 48 native records — SRC-70229263a540
+
+Original source: [Lynx reopened records 48 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-48.json)
+
+Summary: Native document 89 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 56 native records — SRC-c2acb8079d68
+
+Original source: [Lynx reopened records 56 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-56.json)
+
+Summary: Native document 89 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 64 native records — SRC-dbebc08b0ba9
+
+Original source: [Lynx reopened records 64 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-64.json)
+
+Summary: Native document 89 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 72 native records — SRC-d4820d22dee4
+
+Original source: [Lynx reopened records 72 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-72.json)
+
+Summary: Native document 89 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 8 native records — SRC-71ccf5670468
+
+Original source: [Lynx reopened records 8 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-8.json)
+
+Summary: Native document 89 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 80 native records — SRC-3311aa5fea40
+
+Original source: [Lynx reopened records 80 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-80.json)
+
+Summary: Native document 89 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 88 native records — SRC-3569e6d94947
+
+Original source: [Lynx reopened records 88 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-88.json)
+
+Summary: Native document 89 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened records 96 native records — SRC-816e64244f99
+
+Original source: [Lynx reopened records 96 native records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-96.json)
+
+Summary: Native document 89 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage saved derivative.
+
+Evidence: executed_native_record_read.
+
+### Lynx reopened top view — SRC-7f94a2475be7
+
+Original source: [Lynx reopened top view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-top.png)
+
+Summary: Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is top.
+
+Evidence: executed_native_capture.
+
+### Completed Lynx component iteration — SRC-7798e76e43a5
+
+Original source: [Completed Lynx component iteration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/result.json)
+
+Summary: Records the checked DWG, source correction, scale-aware Python improvement, three inspected views and actual test/recovery history.
+
+Evidence: executed_component_result.
+
+### Lynx saved geometry checks — SRC-6c9c15d8564c
+
+Original source: [Lynx saved geometry checks](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/saved-assembly-checks.json)
+
+Summary: 159 comparisons pass for solid equality, 60 source placements, 130 instance paths/matrices, metre units, preserved 0.001 scale and original DWG bytes. Point ranges are explicitly converted into millimetres.
+
+Evidence: executed_saved_geometry_check.
+
+### Lynx source-linked feature requirements — SRC-426f459cb6f3
+
+Original source: [Lynx source-linked feature requirements](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-job.json)
+
+Summary: Binds exact rev04 M10 assembly, STEP length units and source placement frames to the retained manufacturer original.
+
+Evidence: implementation_artifact.
+
+### Reviewed Lynx placement corrections — SRC-e1fe7974d0c3
+
+Original source: [Reviewed Lynx placement corrections](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-placement-plan.json)
+
+Summary: Sixty internal insertions uniquely match inverted source frames. Outer 0.001 scaling is preserved because source millimetres convert into native drawing metres.
+
+Evidence: executed_source_comparison.
+
+### Lynx state evidence — SRC-9c538ca9300c
+
+Original source: [Lynx state evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/state.json)
+
+Summary: Existing Lynx opened in document 88 with current camera and document identities recorded.
+
+Evidence: executed_native_state_read.
+
+### Lynx top capture evidence — SRC-2b1e0de0467b
+
+Original source: [Lynx top capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/top-capture.json)
+
+Summary: Completed original capture request response for the top capture image, retained beside the inspected native image.
+
+Evidence: executed_native_capture_result.
+
+### Converter front capture evidence — SRC-e9e70b8fbc2d
+
+Original source: [Converter front capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front-capture.json)
+
+Summary: Native front capture observation from document 87 during completion of the converter orthographic view checks.
+
+Evidence: executed_native_capture_result.
+
+### Converter front view — SRC-d03faba9877b
+
+Original source: [Converter front view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front.png)
+
+Summary: Actual native front image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view.
+
+Evidence: executed_native_capture.
+
+### Converter orthographic capture journal — SRC-f98bb31e988b
+
+Original source: [Converter orthographic capture journal](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/ocs-journal.jsonl)
+
+Summary: Native top/front commands, capture intents and same-request recovery responses used to finish visual verification.
+
+Evidence: executed_native_operation_journal.
+
+### Completed converter iteration — SRC-fb7487babc95
+
+Original source: [Completed converter iteration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/result.json)
+
+Summary: Combines the existing 39 passing saved geometry checks with three successful component views, preserving earlier failed result records.
+
+Evidence: executed_component_result.
+
+### Converter state after evidence — SRC-9303bc078b8c
+
+Original source: [Converter state after evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-after.json)
+
+Summary: Native state after observation from document 87 during completion of the converter orthographic view checks.
+
+Evidence: executed_native_state_read.
+
+### Converter state before evidence — SRC-77a21a6666d5
+
+Original source: [Converter state before evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-before.json)
+
+Summary: Native state before observation from document 87 during completion of the converter orthographic view checks.
+
+Evidence: executed_native_state_read.
+
+### Converter top capture evidence — SRC-b682e9c40220
+
+Original source: [Converter top capture evidence](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top-capture.json)
+
+Summary: Native top capture observation from document 87 during completion of the converter orthographic view checks.
+
+Evidence: executed_native_capture_result.
+
+### Converter top view — SRC-2d34ea14c9fd
+
+Original source: [Converter top view](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top.png)
+
+Summary: Actual native top image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view.
+
+Evidence: executed_native_capture.
+
+### Scale-aware native assembly traversal — SRC-ef86743da4af
+
+Original source: [Scale-aware native assembly traversal](/home/leo/projects/3dmodeling/scripts/step_placements.py)
+
+Summary: Adds explicit positive uniform-scale support to native matrices and nested instance traversal, preserving default unit-scale guards. Exercised on the Lynx metre drawing and 130 placed solids.
+
+Evidence: implementation_artifact.
+
+### Uniform-scale assembly regression tests — SRC-1365d8cb5b94
+
+Original source: [Uniform-scale assembly regression tests](/home/leo/projects/3dmodeling/tests/test_scaled_assembly.py)
+
+Summary: Four cases verify rotation/translation with scale, invalid scales, unequal scales and all 130 recorded Lynx instance paths.
+
+Evidence: implementation_artifact.
+
+### Procedure for source-to-drawing unit conversion — SRC-e24ea3f3e131
+
+Original source: [Procedure for source-to-drawing unit conversion](/home/leo/projects/3dmodeling/skills/component-cad/references/scaled-assemblies.md)
+
+Summary: Documents the actual Lynx millimetre-source/metre-drawing conversion, separate internal correction and saved geometry handoffs.
+
+Evidence: implementation_artifact.
+
+### Resumed CAD helper regression execution — SRC-8bab030cd5d3
+
+Original source: [Resumed CAD helper regression execution](/home/leo/projects/3dmodeling/execution/resumed-cad-tests-2026-11-13.txt)
+
+Summary: Full recorded unittest execution: 100 tests pass in 15.323 seconds. The protected-output test intentionally emits its rejected-write result.
+
+Evidence: executed_software_test_result.
+
+### Lynx completed iteration report — SRC-6b5bcf790212
+
+Original source: [Lynx completed iteration report](/home/leo/projects/3dmodeling/execution/c026-lynx-2026-11-13.md)
+
+Summary: Reports corrected manufacturer assembly, 159 saved checks, explicit units, applied scale reader improvement and actual source and recovery evidence.
+
+Evidence: executed_verification_report.
+
+### Converter completed iteration report — SRC-36b3ef66e551
+
+Original source: [Converter completed iteration report](/home/leo/projects/3dmodeling/execution/c045-completion-2026-11-13.md)
+
+Summary: Reports reuse of saved converter geometry, newly successful orthographic views and the applied capture verification procedure.
+
+Evidence: executed_verification_report.
+
+### Lynx Smart BMS 500 NG M10 rev04 STEP original — SRC-a6c30a318e46
+
+Original source: [Lynx Smart BMS 500 NG M10 rev04 STEP original](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp)
+
+Summary: Existing retained manufacturer AP214 assembly declares millimetres and explicit source placement frames. Reused unchanged for the 60 internal correction comparisons.
+
+Evidence: existing_local_manufacturer_original_inspected.

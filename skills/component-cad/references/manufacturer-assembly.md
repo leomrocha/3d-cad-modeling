@@ -41,3 +41,9 @@ Observed case: [Victron Smart 24/12 converter capture check](/home/leo/projects/
 6. This procedure change was applied to the current case: the repeated enclosure captures were classified as failed visual evidence while the native geometry checks retained their measured results. Native activate completed;REGEN completed;the captures retained the previous image. These outcomes are recorded in the component journal and capture check.
 
 7. Native plotting was also exercised for the saved converter:the plot operation completed andproduced aone-page PDF,butits Poppler render was entirelywhite. Preserve that output asfailed visual evidence. It supplies no successful substitute for the required component view.
+
+## Completed converter view checks — 13 November 2026
+
+1. The user-rotated converter capture and subsequent native top/front captures show the correct converter. [Completion record](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/result.json) retains all three images and their distinct hashes.
+2. Each orthographic capture reached the client polling bound. Recovering its original request returned completion; the capture was sent once. Native top/front camera commands then produced corresponding converter views.
+3. Keep the original failed capture and plot records as historical observations. Advance the component work record using a new result revision that combines the existing saved-geometry checks with the successful views. The converter DWG bytes remain unchanged.

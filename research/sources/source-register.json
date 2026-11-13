@@ -34434,10 +34434,17 @@
           "referring_documents": [
             "execution/c023-victron-battery.md"
           ]
+        },
+        {
+          "evidence_status": "implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d",
+          "summary": "Adds explicit positive uniform-scale support to native matrices and nested instance traversal, preserving default unit-scale guards. Exercised on the Lynx metre drawing and 130 placed solids."
         }
       ],
       "referring_documents": [
-        "research/sources/round-20/component-sources.json"
+        "research/sources/round-20/component-sources.json",
+        "research/sources/round-29/resumed-component-sources.json"
       ]
     },
     {
@@ -36813,6 +36820,2932 @@
       ],
       "referring_documents": [
         "research/sources/round-02/archive-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a4a7445ec595",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/audit.json",
+      "title": "Lynx audit evidence",
+      "summary": "Existing Lynx audit reports 95 solids and 128 block references; compared with the saved derivative audit.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "7ec694d322164af8f1f3d2ccaac012d0b3677810bac4f57e03f6383dffe21001",
+          "summary": "Existing Lynx audit reports 95 solids and 128 block references; compared with the saved derivative audit."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9f96098ee90a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/baseline.json",
+      "title": "Original Lynx CAD and source hashes",
+      "summary": "Pins the original DWG and manufacturer STEP bytes before correction; source hash matches the retained acquisition record.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_file_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_file_inspection",
+          "access_date": "2026-11-13",
+          "sha256": "cbaecb20443445a939337aac282e4cd7457e3b56e6946292458ea8b22fa7584d",
+          "summary": "Pins the original DWG and manufacturer STEP bytes before correction; source hash matches the retained acquisition record."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2fb804239b51",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/blocks.json",
+      "title": "Lynx blocks evidence",
+      "summary": "Native block membership at blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "827dcdfb4a66668732de4b54e5c0939aa2ef7c5dcae07a670610711a98487343",
+          "summary": "Native block membership at blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-8383735f7fe8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-blocks.json",
+      "title": "Lynx corrected blocks evidence",
+      "summary": "Native block membership at corrected blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "4857cadf6dc57cd7a3351e192074bcc3297b202febcda56c7b528565bd5aafae",
+          "summary": "Native block membership at corrected blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5c766056233f",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-instances.json",
+      "title": "Corrected Lynx placed solid hierarchy",
+      "summary": "130 complete native solid instance paths and matrices after reviewed correction; outer millimetre-to-metre scale retained.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_assembly_inspection"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_assembly_inspection",
+          "access_date": "2026-11-13",
+          "sha256": "d1a9e2b7fa789e00dd1de244fd0ad5798fd217044037b4bd36ae7c66b14447ca",
+          "summary": "130 complete native solid instance paths and matrices after reviewed correction; outer millimetre-to-metre scale retained."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-be2093995f07",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-0.json",
+      "title": "Lynx corrected records 0 native records",
+      "summary": "Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "081219489b5ca2478adef548d810ec495dfb89568955c1b9c5d87b39a16c3973",
+          "summary": "Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9781d66101ed",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-104.json",
+      "title": "Lynx corrected records 104 native records",
+      "summary": "Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "cd927354aca63b956698810494bcab35ac724bf6cc912a03a77592e0e3b016a4",
+          "summary": "Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c8dfce5c7575",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-112.json",
+      "title": "Lynx corrected records 112 native records",
+      "summary": "Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "df4580d675c83dffd9e2b723db080c7ecc35357f9ec4e6be5466abf40a73fc3f",
+          "summary": "Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1a99c0bf98d7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-120.json",
+      "title": "Lynx corrected records 120 native records",
+      "summary": "Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "2c43f9a61966accb93db6deca9bfa91740bbcebdd8baadbff1b7db1a1364736d",
+          "summary": "Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fcb3e15bb17b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-128.json",
+      "title": "Lynx corrected records 128 native records",
+      "summary": "Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "a1e72d122c83a8767b2c5827477280a8efb0f7d2423c984e963a72235afda0a3",
+          "summary": "Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b3bfb5570f38",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-136.json",
+      "title": "Lynx corrected records 136 native records",
+      "summary": "Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "f69aabb58d40d7bdb2b00ca39c6c7acf4f538eaf851aa37e83e6f679890f823d",
+          "summary": "Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-71bf5f751f30",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-144.json",
+      "title": "Lynx corrected records 144 native records",
+      "summary": "Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "95c97db2223b54d66d4c5c8570f02e30a82029a314546eb07ba747cc4746303c",
+          "summary": "Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-8ed937c0b7b8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-152.json",
+      "title": "Lynx corrected records 152 native records",
+      "summary": "Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "e90d3f02b589c059eb1dfcd30680d5918d4913055e1b10673633ac716d399b1f",
+          "summary": "Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-836615063de7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-16.json",
+      "title": "Lynx corrected records 16 native records",
+      "summary": "Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "25bd9c5a4f78f8cae9def646ec90e726b098d3604dac92f1e42f30b895c95dfd",
+          "summary": "Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-0d314595fa4a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-160.json",
+      "title": "Lynx corrected records 160 native records",
+      "summary": "Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "1fd39efc9d309e61f024ba4f834668266c413823b4728b9de5a55bd4045f9c67",
+          "summary": "Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fd8367c1e3f3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-168.json",
+      "title": "Lynx corrected records 168 native records",
+      "summary": "Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "4d69c0b3c1d9d6e308299f2e78eb495e21bc126c2552ba2718c0152dfadeb630",
+          "summary": "Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6a7e1cdf3015",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-176.json",
+      "title": "Lynx corrected records 176 native records",
+      "summary": "Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "0848e97be48e66a2c4028c36f26e46eb8874ac9c34c85474503f523867332d0e",
+          "summary": "Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5eac9403ed9d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-184.json",
+      "title": "Lynx corrected records 184 native records",
+      "summary": "Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "8d1c5d5a638229dc18612c3616fa947eeae2b85bf4f45a647a5947c81601885f",
+          "summary": "Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ccdbf25e82c6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-192.json",
+      "title": "Lynx corrected records 192 native records",
+      "summary": "Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "59181e2a51d04ddbc9d145b76fa77f06e930f5d7da4b576212d8b652daa5be0d",
+          "summary": "Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-97954e9ed7ce",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-200.json",
+      "title": "Lynx corrected records 200 native records",
+      "summary": "Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "f98ace2faf882e1c8a2b985eb51a2f3ff920cc7d6edbdc0a9dc86f7cbdf433ae",
+          "summary": "Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c65cf5c41654",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-208.json",
+      "title": "Lynx corrected records 208 native records",
+      "summary": "Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "a1e4e85c4b85e0b7e96c35899818c8db9b52a9f3dd45421a29d2dbf2b5ce7a67",
+          "summary": "Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f0e03c5ef882",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-216.json",
+      "title": "Lynx corrected records 216 native records",
+      "summary": "Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "f2ebd805514ca4fc0506014d168c5232dde406b6dbd40d3c2ce20b44b76f8fb2",
+          "summary": "Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-45e10de48de3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-24.json",
+      "title": "Lynx corrected records 24 native records",
+      "summary": "Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "66ede781aad1e7df508a03e26c98033591feec7f4386f9f741bf0b05fec07cac",
+          "summary": "Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-07381c175a35",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-32.json",
+      "title": "Lynx corrected records 32 native records",
+      "summary": "Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "3723757064f0131c82b06f6416560a0940a9bb198ef815e3940eb704f2a7c45f",
+          "summary": "Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f60856cbdfb4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-40.json",
+      "title": "Lynx corrected records 40 native records",
+      "summary": "Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "0b46e1fc253a7a78935e360bc0c61c37cca1361cbc7216ce381a7f189008c77b",
+          "summary": "Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d31478416fae",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-48.json",
+      "title": "Lynx corrected records 48 native records",
+      "summary": "Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "ea5ff91efc57c6fd5801fca3cbc34e98cd50ee2137d396439a95a559943b49f8",
+          "summary": "Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f272cb0c9c5c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-56.json",
+      "title": "Lynx corrected records 56 native records",
+      "summary": "Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "aa599386fc043061b8eaae1ac9d01a96b587c4bd6244478c7d74ccd52b34088f",
+          "summary": "Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-74ea95f4c61a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-64.json",
+      "title": "Lynx corrected records 64 native records",
+      "summary": "Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "13349aad2f798f25ed70e4fb1fc7d2aed339c3de3a12ff890edb7e5822afde1e",
+          "summary": "Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-550c25dedf92",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-72.json",
+      "title": "Lynx corrected records 72 native records",
+      "summary": "Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "4f069525d1ca01a8d0beadb2ba566beffa35d0d8646bbdcc90a329eb5e4a71a4",
+          "summary": "Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f64b6c2462f9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-8.json",
+      "title": "Lynx corrected records 8 native records",
+      "summary": "Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "344e7731619e607481e34726224b0aaa4b421bae4957b52ad46284703d115cf6",
+          "summary": "Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fce472423429",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-80.json",
+      "title": "Lynx corrected records 80 native records",
+      "summary": "Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "a55250fe7b40322d2960cf03ada30ecbe3da5d271c1f53f15bde29ee6ce46c8e",
+          "summary": "Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b2615d68e946",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-88.json",
+      "title": "Lynx corrected records 88 native records",
+      "summary": "Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "28613cf6c65a02e9202a5a5182a270f0ca7387c789c192906a966f64fb54702c",
+          "summary": "Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e7b396f933b9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/corrected-records-96.json",
+      "title": "Lynx corrected records 96 native records",
+      "summary": "Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage corrected working model.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "901bc24b84c561b84f235cb4b29d81b9c3f440de6982713fe43e6eb9128da855",
+          "summary": "Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage corrected working model."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-256d9dcd0f49",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/document-checkpoint.json",
+      "title": "Lynx document checkpoint evidence",
+      "summary": "Native state and document identity at the document checkpoint boundary; preserves the operation revision used for subsequent checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "d93ddc745b64686fe599565d00bf1f617b693fb08d633e14d074ad3bd896c984",
+          "summary": "Native state and document identity at the document checkpoint boundary; preserves the operation revision used for subsequent checks."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-eeed397bd2e6",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/check_lynx.py",
+      "title": "Executed Lynx driver check_lynx",
+      "summary": "Compares 95 saved solid definitions, 60 source placements, 130 instance paths, metre units, outer scale and original-file hash; calculates explicit metre and millimetre vertex ranges.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "ea4357e604e1c096206e5750bc1be2979b4625586ea825db70a801089ec4ae69",
+          "summary": "Compares 95 saved solid definitions, 60 source placements, 130 instance paths, metre units, outer scale and original-file hash; calculates explicit metre and millimetre vertex ranges."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a2a785715504",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/lynx_views.py",
+      "title": "Executed Lynx driver lynx_views",
+      "summary": "Sets native top and front views of saved document 89, captures both and recovers bounded capture requests under their original identities.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "2908457c1f1de222550a2ded7cea27a985684aed0fd7e2faa3560ebb21687893",
+          "summary": "Sets native top and front views of saved document 89, captures both and recovers bounded capture requests under their original identities."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-75d0575521ec",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/provenance.json",
+      "title": "Lynx provenance evidence",
+      "summary": "Hashes the exact executed Lynx driver files and identifies their local helper bootstrap without recording authentication tokens.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_artifact_provenance"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_artifact_provenance",
+          "access_date": "2026-11-13",
+          "sha256": "c2899a39a375e9fcba4e54e4f087103d9387585d9ac8ba2c0582d4ca8202f301",
+          "summary": "Hashes the exact executed Lynx driver files and identifies their local helper bootstrap without recording authentication tokens."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ca32afe0f973",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/read_lynx.py",
+      "title": "Executed Lynx driver read_lynx",
+      "summary": "Recovers the original open, reads document 88 audit, 223 entity records and block membership, then captures the displaced initial assembly.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "2bf0374881af43ddb4669263b50b4f575feb4c960bd5af9c4eb8de6225fdfb5c",
+          "summary": "Recovers the original open, reads document 88 audit, 223 entity records and block membership, then captures the displaced initial assembly."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6188c6fbaa58",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/record_lynx_source.py",
+      "title": "Executed Lynx driver record_lynx_source",
+      "summary": "Writes the source-linked Lynx job and runs its source-readiness validation using retained STEP identity, units and placement frames.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "d4defbd724391de5b5fda33a876da03f04c753f9f1033214ee40fbe4df41ea6d",
+          "summary": "Writes the source-linked Lynx job and runs its source-readiness validation using retained STEP identity, units and placement frames."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fe62091d82e4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/reopen_lynx.py",
+      "title": "Executed Lynx driver reopen_lynx",
+      "summary": "Recovers the pending derivative reopen, verifies saved hash and manifest, reads document 89 geometry and header and requests its isometric view.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "51eb0b5dbaee4fa26edddc130433c75081ebbd7270c2037b4374341665395830",
+          "summary": "Recovers the pending derivative reopen, verifies saved hash and manifest, reads document 89 geometry and header and requests its isometric view."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7ec44d4b4885",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/repair_lynx.py",
+      "title": "Executed Lynx driver repair_lynx",
+      "summary": "Builds the reviewed 60-placement source plan, retains the outer 0.001 scale, applies guarded corrections, reads corrected records and saves a separate checked derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "1a7b2e1c37663e41ae3b326a52f7449f3aa285f0b0a4667a0a07a6aab369ac51",
+          "summary": "Builds the reviewed 60-placement source plan, retains the outer 0.001 scale, applies guarded corrections, reads corrected records and saves a separate checked derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-082426c6d5f2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/executed-drivers/resume_lynx.py",
+      "title": "Executed Lynx driver resume_lynx",
+      "summary": "Pins the original Lynx DWG and manufacturer STEP hashes and starts opening the existing saved assembly under a journaled request.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "a962d2eebb0f09167bebf15108eacc5452b659c9563400fa4a69be24f60c4b72",
+          "summary": "Pins the original Lynx DWG and manufacturer STEP hashes and starts opening the existing saved assembly under a journaled request."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9377f9a6519a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/existing-isometric.png",
+      "title": "Lynx existing isometric view",
+      "summary": "Actual initial image shows hardware displaced from the enclosure.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture",
+          "access_date": "2026-11-13",
+          "sha256": "a565680ce4488316a4936fa735590eda302d9a183af98377a6c0532171ac14c7",
+          "summary": "Actual initial image shows hardware displaced from the enclosure."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6bf28649add0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/front-capture.json",
+      "title": "Lynx front capture evidence",
+      "summary": "Completed original capture request response for the front capture image, retained beside the inspected native image.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture_result",
+          "access_date": "2026-11-13",
+          "sha256": "76f2c0fae703531150c596b036a6cdf9890dd61b504f5fc0b407ead07c2eb116",
+          "summary": "Completed original capture request response for the front capture image, retained beside the inspected native image."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-5cd1611c89a0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/header.json",
+      "title": "Original Lynx drawing units",
+      "summary": "Native header declares insertion unit code 6, metres, providing the interpretation of the retained 0.001 outer insertion scale.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "d93ed6c0792fe74440eeefaef4a5458f60d394f39f484ad3dc22754b9ca8a489",
+          "summary": "Native header declares insertion unit code 6, metres, providing the interpretation of the retained 0.001 outer insertion scale."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6ce289f7395b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/isometric-capture.json",
+      "title": "Lynx isometric capture evidence",
+      "summary": "Completed original capture request response for the isometric capture image, retained beside the inspected native image.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture_result",
+          "access_date": "2026-11-13",
+          "sha256": "cbea7db6758079b25f8bc7c618c6ab32893421af6c6006862f201cd261f7c306",
+          "summary": "Completed original capture request response for the isometric capture image, retained beside the inspected native image."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-36ecfc230ce2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/ocs-journal.jsonl",
+      "title": "Lynx native operation journal",
+      "summary": "Append-only intent and response history for existing-model inspection, 60 guarded placement writes, verified save, reopen and view captures.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_operation_journal"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_operation_journal",
+          "access_date": "2026-11-13",
+          "sha256": "b2abf65050863dcc867bf4d6f20ea60e22b6a114366fb90829933d9aeaa3cb6f",
+          "summary": "Append-only intent and response history for existing-model inspection, 60 guarded placement writes, verified save, reopen and view captures."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-019bb82ec263",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/persistence.json",
+      "title": "Lynx verified save and reopen",
+      "summary": "Separate checked derivative passes file hash, manifest and zero-error audit comparisons; original pending reopen request was recovered.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_persistence_check"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_persistence_check",
+          "access_date": "2026-11-13",
+          "sha256": "f6faecfb8a0a885279def68200bfaf81bd849520b632f3408efd09034272af40",
+          "summary": "Separate checked derivative passes file hash, manifest and zero-error audit comparisons; original pending reopen request was recovered."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-45f98d367645",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/placement-corrections.json",
+      "title": "Lynx guarded correction readback",
+      "summary": "Sixty source placement writes pass readback; all 95 solid definitions remain unchanged.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_correction"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_correction",
+          "access_date": "2026-11-13",
+          "sha256": "72918fa93e5146288250dde38c88ad39af34db9206e242ec544c0e3fd72ba6b9",
+          "summary": "Sixty source placement writes pass readback; all 95 solid definitions remain unchanged."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-727ae37a310c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/query.json",
+      "title": "Lynx query evidence",
+      "summary": "Existing Lynx entity inventory identifies 223 native entities for bounded record inspection.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "1057e9038eb488666e68a28c315955120d2f76418f8eafb7e6ec70a58cef2294",
+          "summary": "Existing Lynx entity inventory identifies 223 native entities for bounded record inspection."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d88062a24ef8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/readiness.json",
+      "title": "Lynx source readiness",
+      "summary": "Executed requirement validation for the exact manufacturer assembly and source-backed frame inputs.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_input_validation"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_input_validation",
+          "access_date": "2026-11-13",
+          "sha256": "5809b0d41230d3080e8c842415c8305dc9500a13603d87ba5966c7993ddfd494",
+          "summary": "Executed requirement validation for the exact manufacturer assembly and source-backed frame inputs."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ab9d1cc0b15b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-0.json",
+      "title": "Lynx records 0 native records",
+      "summary": "Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "524b0a00dc222f1e6ec1e1ad03373fe2dcf2dd104cdb2d4bd4f5886d9f24ac94",
+          "summary": "Native document 88 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-23b2720611ee",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-104.json",
+      "title": "Lynx records 104 native records",
+      "summary": "Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "2976a9b8b9045e71f3d9142e140930c180089be454330515f44898df7f6d105a",
+          "summary": "Native document 88 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b8a5068c8697",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-112.json",
+      "title": "Lynx records 112 native records",
+      "summary": "Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "5ae9dd64e4360cdbbd71c026366110cd3e4ae69993bef10527e14d2ffa0d5ffa",
+          "summary": "Native document 88 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-058be1c6022d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-120.json",
+      "title": "Lynx records 120 native records",
+      "summary": "Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "cd31931260158d16e2d16d717bc19990725e6a90ab43beea68b482ceef77ca61",
+          "summary": "Native document 88 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-510fdce758c7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-128.json",
+      "title": "Lynx records 128 native records",
+      "summary": "Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "7fb3d4f02a81e8d0b8f0b5a66cbd6bb4824f4c4dd26ddcc29b04c5246f0bcd94",
+          "summary": "Native document 88 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e9bbfc1a980e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-136.json",
+      "title": "Lynx records 136 native records",
+      "summary": "Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "1d314e4656802f18df58ba5aa2f6b8167673af3a5a04a81deb8658a97ce8904b",
+          "summary": "Native document 88 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2751b2ee10da",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-144.json",
+      "title": "Lynx records 144 native records",
+      "summary": "Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "7608c1022f25e202682787ca4d9f8c7a650d72af6a61df780b4bcfce82539326",
+          "summary": "Native document 88 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-33a0a0ddc238",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-152.json",
+      "title": "Lynx records 152 native records",
+      "summary": "Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "332dc3ebefe246ac9662c02682c02b26d1cfd706caecca96e9b6311e97834750",
+          "summary": "Native document 88 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-567fe01db45e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-16.json",
+      "title": "Lynx records 16 native records",
+      "summary": "Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "626073c49821d65d72d87fb2a8bebace41b17868ac8400e9802569414559e309",
+          "summary": "Native document 88 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-da6832088dfd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-160.json",
+      "title": "Lynx records 160 native records",
+      "summary": "Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "739289da114d768191fee13500ae5e69b042c412134f8019e723051f9ac25933",
+          "summary": "Native document 88 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b02199f3c627",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-168.json",
+      "title": "Lynx records 168 native records",
+      "summary": "Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "40c581ec2e2f7425a919d17229d94e2b010eefb67570e1f4ca4f082fa700c3bd",
+          "summary": "Native document 88 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-26c2d547c0a8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-176.json",
+      "title": "Lynx records 176 native records",
+      "summary": "Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "c5b6374e1d8ce0604bd68c4024390b13ea9e835aa56ba95e9cad374c4329f593",
+          "summary": "Native document 88 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-89ab56f3445e",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-184.json",
+      "title": "Lynx records 184 native records",
+      "summary": "Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "528f57911e95388ebe2e73640dd7732ff46d1508a11c48c135104d2a64697be7",
+          "summary": "Native document 88 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9005f607e412",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-192.json",
+      "title": "Lynx records 192 native records",
+      "summary": "Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "00230ccc0828a00edbbcc3611015a2e84127cdefc388d0f0a594f3c79c8a41c6",
+          "summary": "Native document 88 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9f0bd1cc0d2c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-200.json",
+      "title": "Lynx records 200 native records",
+      "summary": "Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "c8fde97bc8c971be32183f85919e0a86c281c1ea3569dd314fbc3a12c9718504",
+          "summary": "Native document 88 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9f0195c3ab12",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-208.json",
+      "title": "Lynx records 208 native records",
+      "summary": "Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "f4f4e5949fbb963fc3b8c4c9a3f89f3c3e1f14017841bb3fe0bbf7f18ca15aa1",
+          "summary": "Native document 88 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-37a036bdf257",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-216.json",
+      "title": "Lynx records 216 native records",
+      "summary": "Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "974dd6332a4978d09d983da751b997cf0e4a48efcda0e930b55fb9d054c3b355",
+          "summary": "Native document 88 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-500cc7b95998",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-24.json",
+      "title": "Lynx records 24 native records",
+      "summary": "Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "dafc82b7e3e0e6f3bfe59b4be9231999e47739526707cfae41a56f3f5d9c6b7d",
+          "summary": "Native document 88 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-169e80504fc9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-32.json",
+      "title": "Lynx records 32 native records",
+      "summary": "Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "32ba3ab53f5efc8ff0cd69bc108c0bfcded3ab3a138c585617a650ae188e8012",
+          "summary": "Native document 88 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b9c57ffb89e0",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-40.json",
+      "title": "Lynx records 40 native records",
+      "summary": "Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "8fee642b57eb9cb86abd5741e1f26900e2afeb2515202b5b87ed166dc34278a4",
+          "summary": "Native document 88 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a7eb4b31ed51",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-48.json",
+      "title": "Lynx records 48 native records",
+      "summary": "Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "5f8f717881e2e336705a0bb788006a60d7d21b140c7a362859e61343c210a043",
+          "summary": "Native document 88 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a258fd85727d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-56.json",
+      "title": "Lynx records 56 native records",
+      "summary": "Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "ad503ffdf28e994f7c900f6878e249ee08e86c68eb86c9b0c9489fd2073335e6",
+          "summary": "Native document 88 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-09b214595569",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-64.json",
+      "title": "Lynx records 64 native records",
+      "summary": "Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "fb6cc1a9c627961e690486ac59392e721746cdc046004dbf5e74bc97226dec88",
+          "summary": "Native document 88 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-8ff54e1de411",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-72.json",
+      "title": "Lynx records 72 native records",
+      "summary": "Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "92d817ff9f395186c67dcc80ec0878f2940512e6dcb27fe21df46de8a4a57c47",
+          "summary": "Native document 88 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-080bd6b4503a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-8.json",
+      "title": "Lynx records 8 native records",
+      "summary": "Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "1d0ba1bcf64778fdcf3a56b2c3fdefa01a6064ef4a6375593afbd9ff1f860cea",
+          "summary": "Native document 88 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d5211fa06d19",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-80.json",
+      "title": "Lynx records 80 native records",
+      "summary": "Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "a65d95a81b661a4e698df4ee4d4953e18491f20ebaa44b6cd8c7921a7fb6744c",
+          "summary": "Native document 88 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-42ef68c0a219",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-88.json",
+      "title": "Lynx records 88 native records",
+      "summary": "Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "47ad77603053ac27157c098584b5ea88fbd47e200baa7fb3a5942e1049659107",
+          "summary": "Native document 88 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7087a96dadb8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/records-96.json",
+      "title": "Lynx records 96 native records",
+      "summary": "Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage existing original import.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "8595ea78a42ca9d223a1ab8da2214a267750b6e0c7bc7fd368bf9f73b6c8398e",
+          "summary": "Native document 88 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage existing original import."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-467e7131ee59",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-blocks.json",
+      "title": "Lynx reopened blocks evidence",
+      "summary": "Native block membership at reopened blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "eb72f848982c1430777069c22244cc182a13cb18c8bcb319d8c46133dcd6c668",
+          "summary": "Native block membership at reopened blocks stage; used to traverse the 130 placed solids and preserve their full insertion paths."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-0a751f4d81c2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-checkpoint.json",
+      "title": "Lynx reopened checkpoint evidence",
+      "summary": "Native state and document identity at the reopened checkpoint boundary; preserves the operation revision used for subsequent checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "c27d99f3a6c0f040a7136e14e955d734093fd22c073f1873e80e91612fa1a979",
+          "summary": "Native state and document identity at the reopened checkpoint boundary; preserves the operation revision used for subsequent checks."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d11186282897",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-front.png",
+      "title": "Lynx reopened front view",
+      "summary": "Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is front.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture",
+          "access_date": "2026-11-13",
+          "sha256": "dd099bc9cb7204fe00a3db1f7c9a644301e36a98321f953bfdc089cd3dfd8d33",
+          "summary": "Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is front."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-bdfdc162dfc5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-header.json",
+      "title": "Saved Lynx drawing units",
+      "summary": "Reopened checked derivative retains insertion unit code 6, metres.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "8ef6092b48483f5d2dab754e38c841f4caf22922469f040e8fbadfaf6a8679a7",
+          "summary": "Reopened checked derivative retains insertion unit code 6, metres."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-aaaf6c5dd563",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-isometric.png",
+      "title": "Lynx reopened isometric view",
+      "summary": "Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is isometric.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture",
+          "access_date": "2026-11-13",
+          "sha256": "4a47aaafa1a64e96a3e7a8d811697142dd1c08dfa92deb8417e18c6545703c0f",
+          "summary": "Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is isometric."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c43671ae8097",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-0.json",
+      "title": "Lynx reopened records 0 native records",
+      "summary": "Native document 89 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "dda0410a4f60d39ba7ef39119b653f7644358f4eea6771092765027a4a8def08",
+          "summary": "Native document 89 records for handles 81, 85, 89, 8D, 91, 95, 99, 9D. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9ca25aacaf1c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-104.json",
+      "title": "Lynx reopened records 104 native records",
+      "summary": "Native document 89 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "333020179b05b814cb08594d01510521e5aaa7654ce04c3ecbed707f7ae135ef",
+          "summary": "Native document 89 records for handles 1BB, 1BF, 1C3, 1C7, 1CB, 1CF, 1D3, 1D7. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-ff6e7f977ca2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-112.json",
+      "title": "Lynx reopened records 112 native records",
+      "summary": "Native document 89 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "9a7d24083681eb5b6b9a901535135d4299f7b5e4df0d863641ac15d1704fef02",
+          "summary": "Native document 89 records for handles 1DB, 1DF, 1E3, 1E7, 1EB, 1EF, 1F3, 1F7. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-148f28990b68",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-120.json",
+      "title": "Lynx reopened records 120 native records",
+      "summary": "Native document 89 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "e667fd022f845b188f4343f576bd439bbeeb59c161528dce1ec34e92bd0de7b5",
+          "summary": "Native document 89 records for handles 1FB, 1FF, 203, 207, 20B, 20F, 213, 214. Contains 6 solid definitions and 2 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b14a6a2b185d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-128.json",
+      "title": "Lynx reopened records 128 native records",
+      "summary": "Native document 89 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "8838946298798a388187318d1ea267f7e8e649209e91d00afee007a1dc1db9c3",
+          "summary": "Native document 89 records for handles 215, 216, 217, 218, 219, 21A, 21B, 21C. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c7081b3be440",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-136.json",
+      "title": "Lynx reopened records 136 native records",
+      "summary": "Native document 89 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "5a3372dcb1aa439ee7e95b349a5c03cb496c6e65152ebf9c43c1212b8c99d6f4",
+          "summary": "Native document 89 records for handles 21D, 21E, 21F, 220, 221, 222, 223, 224. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-49c894b64172",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-144.json",
+      "title": "Lynx reopened records 144 native records",
+      "summary": "Native document 89 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "3b84b26f39fc8c4fba644c5bdf87253d47f428a330060280c524af14a439d3f9",
+          "summary": "Native document 89 records for handles 225, 226, 227, 228, 229, 22A, 22B, 22C. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f0168c67c897",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-152.json",
+      "title": "Lynx reopened records 152 native records",
+      "summary": "Native document 89 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "0b6d0c33b5d753c409cad98d939c72250e23103a914d078e769c4298be1f033d",
+          "summary": "Native document 89 records for handles 22D, 22E, 22F, 230, 231, 232, 233, 234. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-38cef6ed62af",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-16.json",
+      "title": "Lynx reopened records 16 native records",
+      "summary": "Native document 89 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "91acd7c562f6da65178ae04c2a0d506252393c5743c6396dab699e49ff0264b6",
+          "summary": "Native document 89 records for handles BB, BC, BD, BE, BF, C3, C4, C5. Contains 3 solid definitions and 5 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-03d1a09f78f8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-160.json",
+      "title": "Lynx reopened records 160 native records",
+      "summary": "Native document 89 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "9d28e5bf237c0f08eccefa9b5c05678dfe9d5916d6ebcc8b714fa6601defd543",
+          "summary": "Native document 89 records for handles 235, 236, 237, 238, 239, 23A, 23E, 23F. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-56a0f5891cd3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-168.json",
+      "title": "Lynx reopened records 168 native records",
+      "summary": "Native document 89 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "16eda1538aecd38f875e6699bbc4a473b9f95de38519e60f19944726f912d981",
+          "summary": "Native document 89 records for handles 240, 241, 242, 243, 244, 245, 246, 247. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9919cced30fa",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-176.json",
+      "title": "Lynx reopened records 176 native records",
+      "summary": "Native document 89 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "9a0387f589640e6534c13fdd42e3ef3db41f4268f74500f2ff1d3b5487f82f62",
+          "summary": "Native document 89 records for handles 248, 249, 24A, 24B, 24C, 24D, 24E, 24F. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1a7c8d68bce8",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-184.json",
+      "title": "Lynx reopened records 184 native records",
+      "summary": "Native document 89 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "9119b605d085c516e1a8be40910e087dbfa19d4905f5a2ca5c18eaa2832e85a9",
+          "summary": "Native document 89 records for handles 250, 251, 252, 253, 254, 255, 256, 257. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-01f96907504c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-192.json",
+      "title": "Lynx reopened records 192 native records",
+      "summary": "Native document 89 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "013bf5bd3ac6fdf57fff573fd31fa6a3b57b72db91274bc7d47209ca21199d1d",
+          "summary": "Native document 89 records for handles 258, 259, 25A, 25B, 25C, 25D, 25E, 25F. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-91332cccbebc",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-200.json",
+      "title": "Lynx reopened records 200 native records",
+      "summary": "Native document 89 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "ecdd172a51b9065c1c1203bec4552033029d41152d3ad53c97b966ba7f844a09",
+          "summary": "Native document 89 records for handles 260, 261, 262, 263, 264, 265, 266, 267. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-064e69f97070",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-208.json",
+      "title": "Lynx reopened records 208 native records",
+      "summary": "Native document 89 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "70dfab19a5f6de9cb90e63029b6210c5e98758edb63604d453aec565da1868f3",
+          "summary": "Native document 89 records for handles 268, 269, 26A, 26B, 26C, 26D, 26E, 26F. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c5392ad41c00",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-216.json",
+      "title": "Lynx reopened records 216 native records",
+      "summary": "Native document 89 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "3211c52a6f8ce204d92a4bedc3846344fad66f57fa6246c099ba137398a93dee",
+          "summary": "Native document 89 records for handles 270, 271, 272, 273, 274, 275, 276. Contains 0 solid definitions and 7 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-daa51fe3fdd2",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-24.json",
+      "title": "Lynx reopened records 24 native records",
+      "summary": "Native document 89 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "f1c39003566aae36d30cb36a58a0b3737e68f42fa5125292a4dcc2d8855a9190",
+          "summary": "Native document 89 records for handles C9, CD, D1, D2, D6, DA, DE, E2. Contains 5 solid definitions and 3 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9e08629c78a3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-32.json",
+      "title": "Lynx reopened records 32 native records",
+      "summary": "Native document 89 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "0b82c817c09ca3b8db77bbb0fdcbf1869a52c0866a9b94655676a33b49231a49",
+          "summary": "Native document 89 records for handles E3, E4, E8, EC, F0, F4, F8, F9. Contains 6 solid definitions and 2 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f09ccd9cf02a",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-40.json",
+      "title": "Lynx reopened records 40 native records",
+      "summary": "Native document 89 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "e5d1cf29db0c7e9d6fd99d4f3985844d9894202ebaddeb7e4f781105b4622d87",
+          "summary": "Native document 89 records for handles FA, FB, FC, FD, 101, 102, 103, 104. Contains 4 solid definitions and 4 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-70229263a540",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-48.json",
+      "title": "Lynx reopened records 48 native records",
+      "summary": "Native document 89 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "ac57afb36363beaddc5c7afea090117275708989632c3774884a98016e823b6c",
+          "summary": "Native document 89 records for handles 105, 109, 10D, 111, 115, 119, 11D, 11E. Contains 5 solid definitions and 3 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-c2acb8079d68",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-56.json",
+      "title": "Lynx reopened records 56 native records",
+      "summary": "Native document 89 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "aab3d43c549b10a3e734ca0076255dacdf4b4ce6d83713bb6c7f3d7182e4a9cc",
+          "summary": "Native document 89 records for handles 122, 126, 12A, 12E, 132, 136, 13A, 13E. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-dbebc08b0ba9",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-64.json",
+      "title": "Lynx reopened records 64 native records",
+      "summary": "Native document 89 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "a22ac207dddbf63cb97b86936c2dc7e49fe7b225653dc8f78484581f07731fde",
+          "summary": "Native document 89 records for handles 142, 146, 14A, 14E, 152, 156, 15A, 15E. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d4820d22dee4",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-72.json",
+      "title": "Lynx reopened records 72 native records",
+      "summary": "Native document 89 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "dfa8b76767f05aaa750fd6258a5aaead28f0198e8e433d1829d62d58d9454eb9",
+          "summary": "Native document 89 records for handles 162, 163, 164, 165, 166, 167, 168, 169. Contains 0 solid definitions and 8 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-71ccf5670468",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-8.json",
+      "title": "Lynx reopened records 8 native records",
+      "summary": "Native document 89 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "fe24bea7805adf3a550a3ab5a1f41dc11053891c520db5cc40996bdcf54d0d4e",
+          "summary": "Native document 89 records for handles A1, A5, A9, AD, B1, B2, B3, B7. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-3311aa5fea40",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-80.json",
+      "title": "Lynx reopened records 80 native records",
+      "summary": "Native document 89 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "06effd3ad514e22279ae8532ae950fefd791475ac7e7569a610ae7f6691111f0",
+          "summary": "Native document 89 records for handles 16A, 16B, 16C, 16D, 16E, 16F, 173, 177. Contains 2 solid definitions and 6 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-3569e6d94947",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-88.json",
+      "title": "Lynx reopened records 88 native records",
+      "summary": "Native document 89 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "637bcf7da62c5428b5e3fc563351202bbfe2478da581d09a4e94491cf39ad3e9",
+          "summary": "Native document 89 records for handles 17B, 17F, 183, 187, 18B, 18F, 193, 197. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-816e64244f99",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-records-96.json",
+      "title": "Lynx reopened records 96 native records",
+      "summary": "Native document 89 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage saved derivative.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_record_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_record_read",
+          "access_date": "2026-11-13",
+          "sha256": "df2146df0ee4e9954c027b37c2112b063e2814a89480fd0f9e3d887a5caf347b",
+          "summary": "Native document 89 records for handles 19B, 19F, 1A3, 1A7, 1AB, 1AF, 1B3, 1B7. Contains 8 solid definitions and 0 insertions; stage saved derivative."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7f94a2475be7",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-top.png",
+      "title": "Lynx reopened top view",
+      "summary": "Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is top.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture",
+          "access_date": "2026-11-13",
+          "sha256": "15af59dfed02b1c4fcefab13301273710a4fb7bfdaadde1dcb75d8022e6cee85",
+          "summary": "Actual reopened native view shows the assembled BMS cover, busbars and connection hardware; orientation is top."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-7798e76e43a5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/result.json",
+      "title": "Completed Lynx component iteration",
+      "summary": "Records the checked DWG, source correction, scale-aware Python improvement, three inspected views and actual test/recovery history.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_component_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_result",
+          "access_date": "2026-11-13",
+          "sha256": "9017693d89aa9a5e16d0c8feee989b65e9d687916ec7f43a0b6525248e17e5ff",
+          "summary": "Records the checked DWG, source correction, scale-aware Python improvement, three inspected views and actual test/recovery history."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6c9c15d8564c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/saved-assembly-checks.json",
+      "title": "Lynx saved geometry checks",
+      "summary": "159 comparisons pass for solid equality, 60 source placements, 130 instance paths/matrices, metre units, preserved 0.001 scale and original DWG bytes. Point ranges are explicitly converted into millimetres.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_saved_geometry_check"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_saved_geometry_check",
+          "access_date": "2026-11-13",
+          "sha256": "8f928b0d67c1510929bdb8b1657fa7117de43aeefdc4114ce9e18347c2423bc8",
+          "summary": "159 comparisons pass for solid equality, 60 source placements, 130 instance paths/matrices, metre units, preserved 0.001 scale and original DWG bytes. Point ranges are explicitly converted into millimetres."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-426f459cb6f3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-job.json",
+      "title": "Lynx source-linked feature requirements",
+      "summary": "Binds exact rev04 M10 assembly, STEP length units and source placement frames to the retained manufacturer original.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "44197d06b51ed4b700d8e566661b700ad093c5b0cbac93480d20807379e239b6",
+          "summary": "Binds exact rev04 M10 assembly, STEP length units and source placement frames to the retained manufacturer original."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e1fe7974d0c3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/source-placement-plan.json",
+      "title": "Reviewed Lynx placement corrections",
+      "summary": "Sixty internal insertions uniquely match inverted source frames. Outer 0.001 scaling is preserved because source millimetres convert into native drawing metres.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_source_comparison"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_source_comparison",
+          "access_date": "2026-11-13",
+          "sha256": "a70f84f809a2bc06872dac19a7afd18efacef2f24730fab50f5352983b770500",
+          "summary": "Sixty internal insertions uniquely match inverted source frames. Outer 0.001 scaling is preserved because source millimetres convert into native drawing metres."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9c538ca9300c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/state.json",
+      "title": "Lynx state evidence",
+      "summary": "Existing Lynx opened in document 88 with current camera and document identities recorded.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "b6fdd89cf168d74421a094b60c3b8a37af6636e9482b3407c16f343c2a86391b",
+          "summary": "Existing Lynx opened in document 88 with current camera and document identities recorded."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2b1e0de0467b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/top-capture.json",
+      "title": "Lynx top capture evidence",
+      "summary": "Completed original capture request response for the top capture image, retained beside the inspected native image.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture_result",
+          "access_date": "2026-11-13",
+          "sha256": "64d88a9323d33e91e2e738846f031e0fa5f9b1cb9534e6b263175ae0cff31c18",
+          "summary": "Completed original capture request response for the top capture image, retained beside the inspected native image."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e9e70b8fbc2d",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front-capture.json",
+      "title": "Converter front capture evidence",
+      "summary": "Native front capture observation from document 87 during completion of the converter orthographic view checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture_result",
+          "access_date": "2026-11-13",
+          "sha256": "0c6482d843bf446a949086c3ecdd93d7a31e6600d3d629d9fe77306db0c71d64",
+          "summary": "Native front capture observation from document 87 during completion of the converter orthographic view checks."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-d03faba9877b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/front.png",
+      "title": "Converter front view",
+      "summary": "Actual native front image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture",
+          "access_date": "2026-11-13",
+          "sha256": "c9e1cbecf2ddbf18d82d0e6e010aaa8fd2acb4f7602000cd9571deeccd8c01b8",
+          "summary": "Actual native front image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-f98bb31e988b",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/ocs-journal.jsonl",
+      "title": "Converter orthographic capture journal",
+      "summary": "Native top/front commands, capture intents and same-request recovery responses used to finish visual verification.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_operation_journal"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_operation_journal",
+          "access_date": "2026-11-13",
+          "sha256": "90a6bbdc615889b3e7ed41b5399dbad6dd17aab7a4ac3c3187bbfc7605bb5851",
+          "summary": "Native top/front commands, capture intents and same-request recovery responses used to finish visual verification."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-fb7487babc95",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/result.json",
+      "title": "Completed converter iteration",
+      "summary": "Combines the existing 39 passing saved geometry checks with three successful component views, preserving earlier failed result records.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_component_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_component_result",
+          "access_date": "2026-11-13",
+          "sha256": "ec5b75d3394082c59ee90740004fcfd96df65d3dfdb7c34bf611a6ecd29c52e7",
+          "summary": "Combines the existing 39 passing saved geometry checks with three successful component views, preserving earlier failed result records."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-9303bc078b8c",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-after.json",
+      "title": "Converter state after evidence",
+      "summary": "Native state after observation from document 87 during completion of the converter orthographic view checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "8450f76e99746c9a2921310665aaf6aba6d24a6196cb40b39a439cb5a8325898",
+          "summary": "Native state after observation from document 87 during completion of the converter orthographic view checks."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-77a21a6666d5",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/state-before.json",
+      "title": "Converter state before evidence",
+      "summary": "Native state before observation from document 87 during completion of the converter orthographic view checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_state_read"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_state_read",
+          "access_date": "2026-11-13",
+          "sha256": "b39782361dfa57f1f898e8e9ecc75ea611e1792b115e18c4af3f642395960c6d",
+          "summary": "Native state before observation from document 87 during completion of the converter orthographic view checks."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-b682e9c40220",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top-capture.json",
+      "title": "Converter top capture evidence",
+      "summary": "Native top capture observation from document 87 during completion of the converter orthographic view checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture_result",
+          "access_date": "2026-11-13",
+          "sha256": "2b7124b5fccd20f4b118c10a00a3563b2ddfa52ff403e01ef984301f7446a543",
+          "summary": "Native top capture observation from document 87 during completion of the converter orthographic view checks."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-2d34ea14c9fd",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/completion-2026-11-13/top.png",
+      "title": "Converter top view",
+      "summary": "Actual native top image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_capture"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_native_capture",
+          "access_date": "2026-11-13",
+          "sha256": "b75e6ff72ac9f4fe2e31ee882fba133aae49d97eb5ab41c1344f7d468b15b60a",
+          "summary": "Actual native top image shows the converter terminal/cover or mounting/heatsink face. Inspected alongside the earlier successful rotated view."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-1365d8cb5b94",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/tests/test_scaled_assembly.py",
+      "title": "Uniform-scale assembly regression tests",
+      "summary": "Four cases verify rotation/translation with scale, invalid scales, unequal scales and all 130 recorded Lynx instance paths.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "19fa7c776ba2d96601a1ef79a275e527e89ee38899c6737fa6732138fdc4cfb4",
+          "summary": "Four cases verify rotation/translation with scale, invalid scales, unequal scales and all 130 recorded Lynx instance paths."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-e24ea3f3e131",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/scaled-assemblies.md",
+      "title": "Procedure for source-to-drawing unit conversion",
+      "summary": "Documents the actual Lynx millimetre-source/metre-drawing conversion, separate internal correction and saved geometry handoffs.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "implementation_artifact"
+      ],
+      "observations": [
+        {
+          "evidence_status": "implementation_artifact",
+          "access_date": "2026-11-13",
+          "sha256": "d484238d3bec81cdc1af678beb315dfc05717888411b7c5514db2acad4225613",
+          "summary": "Documents the actual Lynx millimetre-source/metre-drawing conversion, separate internal correction and saved geometry handoffs."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-8bab030cd5d3",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/resumed-cad-tests-2026-11-13.txt",
+      "title": "Resumed CAD helper regression execution",
+      "summary": "Full recorded unittest execution: 100 tests pass in 15.323 seconds. The protected-output test intentionally emits its rejected-write result.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_software_test_result"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_software_test_result",
+          "access_date": "2026-11-13",
+          "sha256": "deaea61a06a1d004d34697e22ee922c51a5aed4ba8660cdc6079472e6a778179",
+          "summary": "Full recorded unittest execution: 100 tests pass in 15.323 seconds. The protected-output test intentionally emits its rejected-write result."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-6b5bcf790212",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c026-lynx-2026-11-13.md",
+      "title": "Lynx completed iteration report",
+      "summary": "Reports corrected manufacturer assembly, 159 saved checks, explicit units, applied scale reader improvement and actual source and recovery evidence.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_verification_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_verification_report",
+          "access_date": "2026-11-13",
+          "sha256": "8786f20b1059d51fca54e7da149208472f66a47922a93d147c0a1167e751ed07",
+          "summary": "Reports corrected manufacturer assembly, 159 saved checks, explicit units, applied scale reader improvement and actual source and recovery evidence."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-36b3ef66e551",
+      "url": null,
+      "local_source_path": "/home/leo/projects/3dmodeling/execution/c045-completion-2026-11-13.md",
+      "title": "Converter completed iteration report",
+      "summary": "Reports reuse of saved converter geometry, newly successful orthographic views and the applied capture verification procedure.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_verification_report"
+      ],
+      "observations": [
+        {
+          "evidence_status": "executed_verification_report",
+          "access_date": "2026-11-13",
+          "sha256": "fd96d69a2cd92b0715779608e54dc31ab7ebcdc35d9cc065a4e2eeaaadf00c47",
+          "summary": "Reports reuse of saved converter geometry, newly successful orthographic views and the applied capture verification procedure."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
+      ]
+    },
+    {
+      "id": "SRC-a6c30a318e46",
+      "url": null,
+      "local_source_path": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp",
+      "title": "Lynx Smart BMS 500 NG M10 rev04 STEP original",
+      "summary": "Existing retained manufacturer AP214 assembly declares millimetres and explicit source placement frames. Reused unchanged for the 60 internal correction comparisons.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "existing_local_manufacturer_original_inspected"
+      ],
+      "observations": [
+        {
+          "evidence_status": "existing_local_manufacturer_original_inspected",
+          "access_date": "2026-11-13",
+          "sha256": "0ed439011e5d62139b89182f49f6d3c1d54af8f0cd6e25a5de4bcf5c0b82ba22",
+          "summary": "Existing retained manufacturer AP214 assembly declares millimetres and explicit source placement frames. Reused unchanged for the 60 internal correction comparisons."
+        }
+      ],
+      "referring_documents": [
+        "research/sources/round-29/resumed-component-sources.json"
       ]
     }
   ]
