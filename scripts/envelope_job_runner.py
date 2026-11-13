@@ -424,7 +424,7 @@ def run(args):
     client.mutate('set-world-ucs', 'run', cmd='UCS W')
     handle = build_envelope(client, job)
     from envelope_reference import geometry
-    geometry(client).metadata(job['geometry_name'] + ' source metadata',
+    geometry(client).metadata(job['geometry_name'] + ' complete source binding',
                               [handle], metadata_lines)
     records, geometry_check = inspect(client, {'envelope': handle}, job)
     metadata_check = compare_source_metadata(records['records'][0], str(handle),
