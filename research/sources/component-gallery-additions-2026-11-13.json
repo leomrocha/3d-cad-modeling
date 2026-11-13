@@ -1,0 +1,45 @@
+{
+  "subject": "Two additional mechanical CAD gallery images",
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "sources": [
+    {
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c012-reuse-01/reopened-isometric.png",
+      "title": "Sumitomo CH52308 controller CAD reconstruction",
+      "summary": "Existing reopened CAD capture shows the reconstructed housing, six power terminals, connector contacts, mounting bores and text labels.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_capture_visually_inspected_and_copied_unchanged",
+      "sha256": "37dc597908e70402149d0feb32b55f8e9319b225d7ef16c29dc705aca06faa1b",
+      "content_type": "image/png",
+      "gallery_copy": "docs/images/mechanical_components/motor-controller.png",
+      "existing_execution_report": "execution/c012-driver.md",
+      "original_model_or_drawing_source_url": "https://assets.sumitomodrive.com/sites/default/files/2023-09/smartris-eco.pdf",
+      "source_evidence": "Original URL reused from the inspected execution report.",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01/reopened-isometric.png",
+      "title": "Victron Lynx Smart BMS manufacturer CAD assembly",
+      "summary": "Existing reopened CAD capture shows the imported manufacturer assembly after source-based placement corrections, including ventilation slots, connectors and housing parts.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_capture_visually_inspected_and_copied_unchanged",
+      "sha256": "4a47aaafa1a64e96a3e7a8d811697142dd1c08dfa92deb8417e18c6545703c0f",
+      "content_type": "image/png",
+      "gallery_copy": "docs/images/mechanical_components/smart-bms.png",
+      "existing_execution_report": "execution/c026-lynx-2026-11-13.md",
+      "original_model_or_drawing_source_url": "https://www.victronenergy.com/upload/documents/Lynx-Smart-BMS-500-NG-%28M10%29-3D.STEP",
+      "source_evidence": "Original URL reused from the inspected execution report.",
+      "referring_documents": [
+        "README.md"
+      ]
+    }
+  ],
+  "checks": {
+    "status": "PASS",
+    "new_images_embedded": 2,
+    "copied_image_hashes_match_sources": true,
+    "local_documentation_links_checked": 68
+  }
+}
