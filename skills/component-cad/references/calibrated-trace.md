@@ -1,0 +1,9 @@
+# Calibrate a 2D drawing trace
+
+Use `scripts/calibrated_trace.py` when reconstructing external geometry from a dimensioned raster drawing and no manufacturer 3D CAD is available. The helper receives source pixel points, a pixel origin, signed per-axis scale, point-pick/origin/scale uncertainties, and optional coordinate units. It returns source pixels, mapped coordinates, and a conservative per-axis worst-case interval. It performs no image tracing and does not choose datums, dimensions, units, or geometry.
+
+For point `p`, origin `o`, and signed scale `s`, coordinates are `qᵢ=(pᵢ−oᵢ)sᵢ`. The worst-case interval is `uᵢ=u_deltaᵢ|sᵢ|+|pᵢ−oᵢ|u_scaleᵢ+u_deltaᵢu_scaleᵢ`, where `u_deltaᵢ=u_pointᵢ+u_originᵢ`. The final cross-term bounds simultaneous endpoint variation of the pixel difference and scale. The helper also rejects finite inputs that overflow into nonfinite mapped coordinates or bounds. Signed scale controls axis reversal; uncertainty remains non-negative. Reject zero or nonfinite scales, nonfinite coordinates, and negative/nonfinite uncertainties.
+
+Keep the drawing's direct dimension callouts as the controlling values and label traced values as raster measurements with their pixel points, scale, transform, and uncertainty. A raster trace does not establish manufacturing tolerance or hidden wall, fastener, or internal dimensions. Keep those values unknown until another source supplies them.
+
+Synthetic coverage in `tests/test_calibrated_trace.py` checks signed-axis mapping, endpoint-enumerated worst-case uncertainty, zero uncertainty, invalid/degenerate calibration, overflow, and malformed coordinate inputs. Component-specific feature points and direct dimensions remain in that component's FERME job; pass them as inputs and record this helper's file hash with the generated trace.
