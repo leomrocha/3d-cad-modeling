@@ -1,10 +1,8 @@
 # Mechanical component examples
 
-[Examples](README.md) · [Workflow](../workflow.md) · [Tools](../tools.md)
-
 ## Introduction
 
-One of the reasons for the current project is thigns I've been using this project
+One of the reasons for the current project is thigns I've been creating and using this project is to automate as much as possible the building of a control remote 2 wheel tractor that I'd like to have for my small farm (that of course later I plan to make a robot out of it) 
 
 ## Examples
 
