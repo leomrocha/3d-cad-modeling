@@ -1,0 +1,48 @@
+{
+  "registered_at": "2026-11-13",
+  "authoring_model": "gpt-6-luna",
+  "review_execution_model": "gpt-6.1-sol",
+  "records": [
+    {
+      "title": "Conical free-washer implementation",
+      "summary": "Validates external source dimensions and solves the unique supported shallow strip geometry; constructs by existing revolution and verifies saved conical surfaces and metadata.",
+      "local_path": "scripts/conical_washer_profile.py",
+      "sha256": "44ae2415db876fa3213a5d1952ee35573950709146e71b6e26709ab3f6675c1e",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Synthetic conical washer tests",
+      "summary": "Ten passing tests cover independent forward-generated section geometry, source hash/root resolution, normal thickness and area invariants, invalid/ambiguous inputs, guarded construction and native inspection epochs.",
+      "local_path": "tests/test_conical_washer_profile.py",
+      "sha256": "130fb3ece4cbe07409cea38a9ce6d012f50ee6e8f30bbed65652e2749ec54ae8",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_synthetic_tests",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Conical washer modeling procedure",
+      "summary": "Records exact source dimension directions, supported shallow branch, source/loaded height separation, native cone checks, persistence and completed-document closure.",
+      "local_path": "skills/cad-ocs-engineering/references/conical-washer-profile.md",
+      "sha256": "62097355c1c46be700b13e6a685ce3923ed89abab99cfe96cdf9c7b23aa7c5c1",
+      "registered_at": "2026-11-13",
+      "evidence_status": "documented_procedure",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    }
+  ],
+  "original_source": {
+    "title": "Heiwa Hatsujyo conical spring washer Type2 dimension sheet",
+    "original_url": "https://www.hhk.co.jp/files/2019/02/cfacce01b1321012401dd9006ddd96d9.pdf",
+    "local_path": "${FERME_ROOT}/research/sources/evidence/c076-source-review-2026-11-13/sources/heiwa-jis-b1251-sarabane-dimensions.pdf",
+    "sha256": "ea71db2dd60ce7ef42af356936b56177db7961ba8adbf8a19c4d39421b3ac7a6",
+    "summary": "Retained manufacturer drawing binds inside/outside diameter extrema, free reference height and material thickness normal to the inclined strip; exact variant table values remain in external source jobs.",
+    "evidence_status": "downloaded_original_inspected_locally"
+  }
+}
