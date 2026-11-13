@@ -1,0 +1,135 @@
+[
+  {
+    "local_original": "/home/leo/projects/3dmodeling/README.md",
+    "title": "Shared modeling project scope",
+    "summary": "Defines generic geometry workflows and folder ownership.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "e77a0e76c8fc166dce0992945546287910c57a148aa668a61e2d7a16280d0107",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/AGENTS.md",
+    "title": "Working rules and continuing-output separation",
+    "summary": "Requires source records, scoped commits, existing-model reuse and separation of ongoing component/tool outputs.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "3d657306b840ce9126e7ba95ce4a7621334811cc17a553f578141af613763273",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+    "title": "Component development ownership contract",
+    "summary": "Section 2 assigns component models, data and execution to FERME and shared tooling here.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "3f4db81bc38b9c24aa297abf4571be0ad0ad043a0f8c8e30fe9c06e926417993",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/rounded_tube.py",
+    "title": "External runtime integration",
+    "summary": "Parameterized constructor accepts cad-modules and imports FERME cadtools.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "6871633fc173bf7bfd75bbce11568abf4921e24986eb33dd58c6f16d1948660a",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/pixhawk.py",
+    "title": "C052-specific construction recipe",
+    "summary": "Requires Pixhawk 6C component identity and source-bound M2 reference features.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/small_bms.py",
+    "title": "Assembly persistence comparisons",
+    "summary": "Compares SAT/SAB points and placed assembly instances with supplied records.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "6a54793b62f539f94d974ff6dc510b9176e2215da76b52a046000fbb1e21bdd0",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_small_bms.py",
+    "title": "Current C054 integration data paths",
+    "summary": "Reads execution component files and a temporary reader path.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "943eaa6ca67abd48ac3d4909abf8e0133c9ddfe08b1f9b96e60f80fb4275161f",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/tools/build_workflow_register.py",
+    "title": "Source-register generator",
+    "summary": "Scans local round source files and generates source/idea/workflow outputs.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "e7bc20940a4b1e3594ad29316c928aa7e4167edb37ce378495bcb8cae9a9195e",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/script-changes.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/README.md",
+    "title": "Existing FERME model index",
+    "summary": "Existing external project path inspected for reuse and proposed handoff; retained in place.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "60d58d7ecf590d704e039f57c8ecb23540507b1d89d94d26b2d59c9eeedd956b",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/skills/cad-construction/scripts/cadtools/geometry.py",
+    "title": "Existing FERME geometry runtime",
+    "summary": "Existing external project path inspected for reuse and proposed handoff; retained in place.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "local_file_inspected",
+    "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md",
+    "title": "Current split-preparation instructions",
+    "summary": "Prepare documentation and plans up to before the split; preserve ongoing modeling and fixes; instruct the executing agent to separate generic and FERME work.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "registered_user_instruction",
+    "supplied_text": [
+      "prepare those DO NOT YET make the split",
+      "THERE ARE ONGOING CHANGES AND FIXES DO NOT INTERRUPT THEM"
+    ],
+    "referring_documents": [
+      "research/repository-split-preparation/plan.md",
+      "research/repository-split-preparation/modeling-agent-instructions.md"
+    ]
+  }
+]

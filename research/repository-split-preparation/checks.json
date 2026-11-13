@@ -1,0 +1,40 @@
+{
+  "date": "2026-11-13",
+  "status": "PASS",
+  "scope": "Documentation preparation only; migration remains proposed.",
+  "actual_model": "unavailable",
+  "checkpoint_commit": "abaac0c",
+  "checked_document_links": 83,
+  "broken_document_links": [],
+  "manifest_rows": 383,
+  "manifest_paths_unique": true,
+  "python_changes_in_tracked_diff": [],
+  "baseline_python_files_changed_since_snapshot": [],
+  "baseline_note": "Changes after a snapshot can come from the continuing modeling agent. This batch writes only its listed documentation paths.",
+  "split_executed": false,
+  "ferme_writes_by_this_batch": false,
+  "existing_component_paths_relocated": false,
+  "owned_files": [
+    "AGENTS.md",
+    "README.md",
+    "execution/README.md",
+    "research/README.md",
+    "research/repository-split-preparation/README.md",
+    "research/repository-split-preparation/checks.json",
+    "research/repository-split-preparation/ideas.json",
+    "research/repository-split-preparation/manifest.json",
+    "research/repository-split-preparation/modeling-agent-instructions.md",
+    "research/repository-split-preparation/plan.md",
+    "research/repository-split-preparation/script-changes.md",
+    "research/sources/repository-separation-2026-11-13.json",
+    "scripts/README.md",
+    "skills/README.md",
+    "tests/README.md"
+  ],
+  "instruction_delivery": {
+    "status": "sent",
+    "thread_id": "01a1ced4-2b26-7a82-8a12-69de4d2a7b9d",
+    "thread_title": "Plan 3D modeling skills and tools",
+    "scope": "Continue authorized modeling and fixes; apply output ownership; preserve active paths; leave preparation documents to this batch."
+  }
+}

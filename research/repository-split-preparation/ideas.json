@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-13",
+  "ideas": [
+    {
+      "id": "SPLIT-I01",
+      "name": "Separate shared tooling from FERME component work",
+      "status": "proposal",
+      "summary": "Classify existing files by content, migrate component artifacts with provenance and maintain per-iteration output ownership. Preparation is executed; migration remains proposed.",
+      "source_paths": [
+        "/home/leo/projects/3dmodeling/COMPONENT_DEVELOPMENT_PLAN.md",
+        "/home/leo/projects/3dmodeling/research/repository-split-preparation/plan.md"
+      ],
+      "alternatives": [
+        "Reuse an identical attributed FERME record after hash comparison.",
+        "Preserve a historical original in FERME and retain a generic linked summary here."
+      ],
+      "next_checks": [
+        "Refresh manifest at affected component checkpoints.",
+        "Review mixed functions and source observations individually.",
+        "Verify imports and explicit integration-data paths before migration."
+      ]
+    }
+  ]
+}

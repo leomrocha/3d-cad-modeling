@@ -39,3 +39,10 @@ The workflow-research extension preserves the implementation plan and prior tool
 ## Action-by-action software and AI audit
 
 [Detailed procedures, operation inventory and reviews](/home/leo/projects/3dmodeling/research/action-audit/README.md) cover all 77 original operations through 245 action definitions. The [38-route index](/home/leo/projects/3dmodeling/research/action-audit/workflow-to-actions.md) maps 220 original steps to their action contracts and explicitly lists eight additional audited operations. The [skill packaging map](/home/leo/projects/3dmodeling/research/action-audit/skill-to-actions.md) groups all 77 operations under the existing fifteen proposed skill names. [Source contract findings](/home/leo/projects/3dmodeling/research/action-audit/findings.md) preserve original contradictions and the detailed procedures' conditional clarifications. Per-point review records and check receipts state the observed evidence.
+
+## Generic research and component research
+
+1. This repository owns modeling methods, software/API findings, workflow contracts and generic tool evidence. FERME owns component specifications, originals, geometry inputs and component execution evidence.
+2. Preserve exact URLs, dates, source labels and hashes. Link a general finding here to its component evidence in FERME when both subjects occur in one investigation.
+3. [Separation preparation](/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md) contains the dated file manifest, proposed extraction/move operations and script changes. Current modeling continues with its existing active paths.
+4. [Preparation source register](/home/leo/projects/3dmodeling/research/sources/repository-separation-2026-11-13.json) and [proposal register](/home/leo/projects/3dmodeling/research/repository-split-preparation/ideas.json) record this batch independently of source-register generation used by ongoing work.

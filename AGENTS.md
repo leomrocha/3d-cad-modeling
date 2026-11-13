@@ -122,3 +122,12 @@ Read on 9 November 2026:
 5. `/home/leo/projects/CocoLeCoq/blog/AGENTS.md`.
 
 The communication, scope, evidence, preservation and reuse rules are adapted here together with the author's instructions in this project. Other projects' simulation architecture, territorial datasets, turbine solver settings, blog infrastructure, VPN workflow and project-specific commit authorizations remain scoped to those projects.
+
+## Continuing modeling work: repository separation
+
+Instruction date: 13 November 2026. Preparation and ongoing modeling have separate owners. Preserve ongoing iterations and fixes.
+
+1. For future outputs, place FERME component recipes, source originals, source reviews, measurements, model files, captures, job records, progress and action occurrences in FERME under its applicable instructions. Place reusable functions, generic tests, modeling methods, shared skills and tooling-improvement reports in 3dmodeling.
+2. Follow the [modeling-agent instructions](/home/leo/projects/3dmodeling/research/repository-split-preparation/modeling-agent-instructions.md). Keep project values and paths as inputs to shared tools; link each component result to the exact shared-tool revision.
+3. The preparation agent owns separation documents. The modeling agent continues its authorized component/tool improvements and preserves the preparation files. Current active paths remain intact; the split coordinator migrates historical files in a separately scoped batch at affected component checkpoints.
+4. Read the [split preparation](/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md) before changing repository ownership, imports or fixture paths. The manifest is a dated proposal; refresh it against concurrent work before migration.

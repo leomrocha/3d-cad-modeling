@@ -53,3 +53,9 @@ The [skill-to-action map](/home/leo/projects/3dmodeling/research/action-audit/sk
 ## Implemented DXF inspection
 
 1. [Inspect a DXF drawing before selecting a profile](/home/leo/projects/3dmodeling/skills/drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. [Execution evidence](/home/leo/projects/3dmodeling/execution/dxf-inspection.md).
+
+## Continuing iterations and repository ownership
+
+1. Implemented shared procedures include component iteration, source intake, drawing inspection and existing-model checking. The fifteen workflow groups above retain their recorded proposal/implementation status.
+2. [Modeling-agent instructions](/home/leo/projects/3dmodeling/research/repository-split-preparation/modeling-agent-instructions.md) define output routing: component recipes/evidence in FERME; shared helper/skill improvements here. Preserve active paths while historical migration is prepared.
+3. [Script-change specification](/home/leo/projects/3dmodeling/research/repository-split-preparation/script-changes.md) records the external cadtools dependency, component recipe extraction and integration-test changes proposed for migration.
