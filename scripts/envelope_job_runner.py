@@ -163,6 +163,13 @@ def resolve_runtime_job(job_path, roots):
     from envelope_reference import parameters
     readiness = require_ready(runtime_job)
     parameters_value = parameters(runtime_job)
+    # Geometry uses the readable name in stable mutation labels. Validate the
+    # longest generated suffix before creating an isolated native document.
+    metadata_request_id = (job['namespace'] + ':' + job['geometry_name']
+                           + ' complete source binding')
+    if len(metadata_request_id.encode('utf-8')) > 128:
+        raise ValueError('Envelope geometry_name and namespace produce a request ID '
+                         'longer than 128 UTF-8 bytes; shorten the job labels before construction')
     return runtime_job, parameters_value, portableize(readiness, roots)
 
 

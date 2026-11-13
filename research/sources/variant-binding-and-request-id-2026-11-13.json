@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "title": "Family revisions and exact image association",
+      "summary": "Applied procedure preserves family/revision/configuration scope and binds product dimensions independently from shared gallery images.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "applied_procedure",
+      "sha256": "679353ebb3e00be8b92f8db4abb032f3b924f55fb2c2a94dd22d2cea8bfff6c9",
+      "referring_documents": [
+        "execution/variant-binding-and-request-id-preflight-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "scripts/envelope_job_runner.py",
+      "title": "Envelope request-ID preflight",
+      "summary": "Checks the combined stable mutation ID byte length before loading OCS or creating a document; derived from the bracket metadata guard failure.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "9a104a02f354ae9401011d006e78d55ee56fa2de214c905858f843162d2796c4",
+      "referring_documents": [
+        "execution/variant-binding-and-request-id-preflight-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "tests/test_envelope_job_runner.py",
+      "title": "Envelope runner regression tests",
+      "summary": "Eleven synthetic tests passed, including exact 128-byte acceptance and multibyte overflow rejection before any OCS helper call.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_synthetic_test_result",
+      "sha256": "fc431808fe09b064904b15247924034d9b7448de34552da73074f68db76c8a0f",
+      "referring_documents": [
+        "execution/variant-binding-and-request-id-preflight-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/variant-binding-and-request-id-preflight-2026-11-13.md",
+      "title": "Variant and request-ID improvement report",
+      "summary": "Records the source associations, actual runtime failure, targeted generic changes, first regression failure and final successful test result.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_change_report",
+      "sha256": "8c4cad34563ea249f55b70212ca8fb44aa4941890dba0008b78923499429e852",
+      "referring_documents": [
+        "execution/variant-binding-and-request-id-preflight-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/runtime.py",
+      "title": "Installed CAD client request identity guard",
+      "summary": "Inspected mutate implementation forms namespace:label and rejects encoded IDs above 128 bytes before state reads or mutation.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "inspected_local_source",
+      "sha256": "42b90c0839d5bc12b292fccf771ee08f92f5c2c2fb542aca694c2d8ae5755d49",
+      "referring_documents": [
+        "execution/variant-binding-and-request-id-preflight-2026-11-13.md"
+      ]
+    }
+  ]
+}
