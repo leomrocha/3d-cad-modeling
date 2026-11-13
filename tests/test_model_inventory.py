@@ -46,5 +46,24 @@ class ExistingModelTests(unittest.TestCase):
         self.assertEqual(self.check({'state':'NOT_STARTED'})['action'],'LOCATE_COMPLETED_MODEL')
     def test_new_component_requires_actual_filesystem_scan(self):
         result=self.check();self.assertEqual(result['action'],'NEW_MODEL_REQUIRED');self.assertEqual(result['filesystem_model_files_checked'],0)
+    def test_named_root_job_model_is_found(self):
+        p=self.cad/'parts/existing.dwg';p.write_bytes(b'AC1032 fixture')
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),
+            {'model':'${PROJECT_ROOT}/cad/parts/existing.dwg'}, {'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL')
+    def test_relative_job_path_uses_cad_root(self):
+        p=self.cad/'parts/existing.dwg';p.write_bytes(b'AC1032 fixture')
+        self.assertEqual(self.check({'native_model':'parts/existing.dwg'})['action'],'SKIP_EXISTING_MODEL')
+    def test_missing_root_blocks_false_new_model_result(self):
+        with self.assertRaisesRegex(ValueError,'Missing configured path root'):
+            self.check({'model':'${PROJECT_ROOT}/cad/parts/existing.dwg'})
+    def test_sheet_named_root_link_is_resolved(self):
+        p=self.cad/'parts/existing.dwg';p.write_bytes(b'AC1032 fixture')
+        self.sheet.write_text('[Model](${PROJECT_ROOT}/cad/parts/existing.dwg)')
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),root_map={'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL')
+    def test_relative_root_configuration_is_rejected(self):
+        with self.assertRaisesRegex(ValueError,'must be absolute'):
+            start_check(self.part,self.index,self.cad,[],{'model':'${ROOT}/part.dwg'},{'ROOT':'relative'})
 
 if __name__=='__main__':unittest.main()
