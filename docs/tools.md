@@ -37,6 +37,7 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 8. [envelope_job_runner.py](../scripts/envelope_job_runner.py) — runs read-only preflight by default; an authorized write run builds a source-bound rectangular envelope, checks saved geometry and metadata, and closes its completed owned document. [Runner procedure](../skills/cad-ocs-engineering/references/envelope-job-runner.md).
 
 9. [annular_reference.py](../scripts/annular_reference.py) — constructs a plain ring from source-bound bore diameter, outside diameter and thickness in millimetres. Checks analytic cylinder surfaces, end-face loops, closed-body topology and stored source metadata. [Annular-reference procedure](../skills/cad-ocs-engineering/references/annular-reference.md).
+   [annular_job_runner.py](../scripts/annular_job_runner.py) executes caller-supplied source-bound annular jobs through preflight, guarded construction, readback, save/reopen and owned-document cleanup. [Annular job procedure](../skills/cad-ocs-engineering/references/annular-job-runner.md).
 
 10. [hexagonal_reference.py](../scripts/hexagonal_reference.py) — constructs a regular hexagonal prism from source-bound across-flats dimension, height and a placement frame, with an optional source-bound bore. Checks side and cap planes, bore surfaces, topology and metadata. [Hexagonal-reference procedure](../skills/cad-ocs-engineering/references/hexagonal-reference.md).
 
