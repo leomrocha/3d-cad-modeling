@@ -22,6 +22,10 @@ def parameters(job):
         raise ValueError('Explicit geometry_role=reference_envelope is required')
     if not isinstance(job.get('local_frame'), str) or not job['local_frame'].strip():
         raise ValueError('Explicit local_frame description is required')
+    envelope_scope = job.get('envelope_scope')
+    if envelope_scope is not None and (
+            not isinstance(envelope_scope, str) or not envelope_scope.strip()):
+        raise ValueError('envelope_scope must be a nonempty string when supplied')
     if not isinstance(job.get('geometry_name'), str) or not job['geometry_name'].strip():
         raise ValueError('Explicit readable geometry_name is required')
     axis_features = job.get('dimension_features')
@@ -57,7 +61,7 @@ def parameters(job):
             or not math.isfinite(tolerance) or tolerance <= 0:
         raise ValueError('Positive finite readback_tolerance required')
     return {'dimensions': dimensions, 'origin': [float(v) for v in origin],
-            'tolerance': float(tolerance)}
+            'tolerance': float(tolerance), 'envelope_scope': envelope_scope}
 
 
 def geometry(client):
@@ -76,12 +80,15 @@ def build_envelope(client, job):
     profile = [[x, y], [x + dx, y], [x + dx, y + dy], [x, y + dy]]
     g = geometry(client)
     solid = g.extrude(job['geometry_name'], profile, z, dz)
-    g.metadata(job['geometry_name'] + ' source metadata', [solid], [
+    metadata = [
         job['part_name'], job['representation'],
         'Reference envelope; units ' + job['units'],
         'Local frame: ' + job['local_frame'],
         'Source job: ' + job['job_id'],
-    ])
+    ]
+    if p['envelope_scope'] is not None:
+        metadata.append('Envelope scope: ' + p['envelope_scope'])
+    g.metadata(job['geometry_name'] + ' source metadata', [solid], metadata)
     return solid
 
 
@@ -96,11 +103,14 @@ def verify(features, job):
     if 'topology' in features:
         checks.append(closed_body('Reference envelope is one closed connected body',
                                   features))
-    return {'result': 'PASS' if all(c['result'] == 'PASS' for c in checks) else 'FAIL',
+    result = {'result': 'PASS' if all(c['result'] == 'PASS' for c in checks) else 'FAIL',
             'method': 'native vertex extrema; closed-body topology when available',
             'numeric_tolerance_mm': p['tolerance'],
             'source_measurements': {axis: dims[axis] for axis in ('x', 'y', 'z')},
             'representation': job['representation'], 'checks': checks}
+    if p['envelope_scope'] is not None:
+        result['envelope_scope'] = p['envelope_scope']
+    return result
 
 
 def inspect(client, handles, job):
