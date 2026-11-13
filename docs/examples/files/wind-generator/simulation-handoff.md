@@ -1,0 +1,59 @@
+# Mast variant simulation connection and input records
+
+Scope: preparation accompanying the native CAD structures. No solver run or file-format conversion is included in this batch.
+
+## Geometry and connections
+
+1. Mast foot: retain each corrected native hinge, fixation pin, ground-fixed support, moving base and full-face reinforcement. Foot pin centres remain in the moving base-plate midplane. The steel-contact and rubber-contact feet are separate assemblies.
+2. Mast-to-foot: chord ends meet the moving base top. Record the chord/base and reinforcement/base connections as welded connections. Preserve tube lumens in subsequent solid meshing.
+3. Mast lattice: retain the source brace pattern and member sizes. The square section copies the same braced face onto four sides. Crossed rods and rod/chord intersections require explicit common mesh topology or a verified welded coupling; coincident CAD display alone supplies no simulation connection.
+4. Section joints: the source M180 uses threaded section splices. The CAD end faces meet at module interfaces. For these simulations, the author specifies continuous mast sections with no relative translation or rotation at module joins; retain the tube lumens. The square top component contains a proposed100mm closing panel.
+5. Reinforcement: crossed face plates, central full-face walls, horizontal diaphragms, tip perimeter rods and intersecting mast members form the welded group. Triangular copies retain the existing three-tip frame and add end diaphragms over the mast section. The author specified four reinforcement arms following the square mast geometry; the four-tip component is inserted in each square assembly.
+6. Cable terminals: retain the separate thimble, clamp, shackle, turnbuckle and lug CAD parts. Cable-end pins transfer forces through their pin/bore contact; they permit joint rotation. Weld each host/lug assembly to its identified steel reinforcement or anchor interface.
+7. Cable elements: use tension-only response and an explicitly stated installed pretension. Use the placed terminal pin geometry and cable route records in the assembly sidecar before generating the cable centreline mesh; calculate the loaded cable shape from the assigned constitutive inputs. Preserve the three/six-guy comparison if the author selects both counts.
+8. Foot contact: steel contact uses the actual moving-base/ground interface. Rubber contact uses the full-footprint pad shown in its native CAD file. Separate pad compression, tangential contact and uplift restraint from the hinge/fixation-pin connections. Preserve the pad's physical thickness and the shifted hinge/support heights.
+9. Ground connection: ground-fixed mounting plate anchors and guy-anchor host points require separate constraints and force outputs. The cable tensioner CAD shows an anchor-host excerpt. Soil and concrete geometry are not assigned by that excerpt.
+
+## Material and preload sources
+
+1. Chord steel: ST37-2, minimum yield235MPa, manufacturer input from `${ENERGY_RAW_ROOT}/wind-prototypes/mast-section-options-2026-10-23/lattice/televes-m180-guyed-tower-manual.pdf`, printed pp4-5. The author's square section reuses the same chord dimensions.
+2. Brace steel: S275JR, minimum yield275MPa, manufacturer input from the same manual and pages.
+3. Existing calculation inputs: steel E210GPa, density7850kg/m3; cable diameter10mm, EA8027500N and pretension500N; rubber E12MPa. These are inherited assumed inputs in `${EOLIENNES_ROOT}/research/mast-torsion-evaluation/pyramid-frame-128-2026-10-23/inputs.json`. They have not been adopted as measured properties for the newly drawn hardware or pad. The current prepared rubber analysis instead uses the manufacturer bearing constants described below. The inherited 12 MPa value is not used.
+4. Reinforcement plate stock grade, tip-bar grade, pin grade, weld properties, cable construction and terminal assembly capacity require their explicit source/selection records. The8mm tip-bar envelope and5mm reinforcement plate thickness are author geometry inputs; their geometry supplies no material strength.
+5. SIMA turnbuckle source material: stamped mild-steel body and jaw ends, zinc coated, `${ENERGY_RAW_ROOT}/wind-prototypes/shared-design/components/turnbuckle-sima.pdf`, page1. Its manufacturer working-load specification is distinct from a raw material yield input.
+6. Author load and resistance factors remain1. New hardware strength is not derived from the former terminal model's breaking-force fields.
+
+## Head load locations and wind cases
+
+1. Mast-axis head reference: at the CAD mast top, centred on the mast axis. The previous balanced-head mass118.47609570315359kg is an assumed calculation input in the existing `inputs.json` cited above. Its gravity load belongs at the balanced centre of mass, not automatically at the end of the rotor arm.
+2. Rotor-hub reference: the author's1000mm arm datum extends horizontally from the mast top. Aerodynamic loads and shaft moments must state their application point and direction. Shaft torque, imbalance, yaw acceleration and overspeed loads remain separate inputs.
+3. Rotor clearance: use the author's 3000 mm blade-radius comparison case and 1000 mm rotor offset. The source routes at the inherited 8000 mm reinforcement height intersect the full-yaw rotor sweep; the original check is preserved in `${EOLIENNES_ROOT}/models/mast-assembly-variants/SOURCE-ROUTE-CLEARANCE.json`. The applied triangular CAD revision lowers the reinforcement tips to 7700 mm above the mast base for 300 mm reach and 7550 mm for 400 mm reach, with both foot contacts checked. `${EOLIENNES_ROOT}/models/mast-assembly-variants/GUY-CLEARANCE-REVISION.json` records calculated cable-surface clearances above the author's 100 mm geometric reserve. Straight cable envelopes retain the source three-guy and six-tension member topology. Actual terminal pin positions, cable sag and blade bending require their physical geometry and deformation inputs; these are not calculated by the clearance script.
+4. Author simulation winds:8m/s(28.8km/h),15m/s(54km/h),25m/s(90km/h),45m/s(162km/h). Source: `${EOLIENNES_ROOT}/models/MAST-COMPONENT-EXECUTION-PLAN.md`, step7. Do not substitute the older4/5m/s sweep for these comparison cases.
+
+## Review and export boundary
+
+The exact source DWG, target format and installed conversion route must be specified and authorized before export. The current batch preserves native DWG geometry. The author inspects the complete assembly geometry before the export phase.
+
+## In-place CAD completion
+
+The eight existing native assemblies now contain their terminated service guys/tension members and removable lifting assemblies. Per-file sidecars record every copied part handle, terminal frame, free-cable endpoint and provisional lifting dimension. Round mast remains deferred. Geometric capsule checks cover the hardware extents against the full-yaw rotor sweep. The winch product, complete hardware load ratings, cable sag, blade bending and structural response are not computed by the CAD assembly script.
+
+## Rounded welded cable supports — 25 October 2026
+
+1. The existing full mast-side collar wall is the base of each mast cable attachment. The tapered holed plate has a rounded nose and rounded root corners. No small backing patch or doubled collar thickness is added.
+2. Reinforcement-arm cable supports are welded by their broad roots to the complete existing crossed arm plates. The native root overlaps its parent by 1 mm so the solid union has shared volume; this is a geometric weld representation, not an extra material thickness or a strength input. The solver shell root reaches the parent reference surface and shares its mesh nodes.
+3. Ground attachments retain their separate ground-anchor base geometry and use the same tapered/rounded holed-plate outline. The operating model fixes their backing interfaces; soil, concrete and anchor resistance are not supplied by this constraint.
+4. The L arm retains one mast-to-arm cable. A local ground-fixed stand and removable transverse pin replace the long arm-to-ground line. The arm, stand, removable pin and lifting cable are excluded from operating wind cases. Their retained mast-side welded collar and cable plate remain in the operating model.
+5. Support shape source: `${ENERGY_RAW_ROOT}/wind-prototypes/author-sketches/rounded-guy-cable-support-2026-10-25.jpg`. L-arm source: `${ENERGY_RAW_ROOT}/wind-prototypes/author-sketches/L-arm-local-pinned-stand-2026-10-25.jpg`. These are unchanged author attachments. Per-support CAD sidecars distinguish provisional dimensions from source geometry.
+6. Cable terminals are represented numerically by tension-only pin-to-pin elements coupled in translation to the actual holed-plate bore. Metal terminal axial lengths are rigid in this approximation; wire axial compliance is retained. Pin clearance, metal terminal elasticity and clamp slip are excluded from this approximation. Native CAD retains the separate terminal hardware.
+7. Rubber elastic analysis input: LT Rubber NR BS1154 Group Z60; shear modulus 0.9 N/mm² and bulk modulus 2000 N/mm², manufacturer design values, *Elastomeric Bearings Catalogue*, PDF page 6. Original: `${ENERGY_RAW_ROOT}/wind-prototypes/rubber-springs-2026-10-24/lt-rubber-elastomeric-bearings-catalogue.pdf`. The model enters these directly as MU and K with the three-field nearly incompressible 3D_INCO_UPG formulation and PETIT small-strain elastic deformation. This is an analysis assumption, not a project pad procurement selection. No density for this grade was found; pad self-weight is excluded. No nonlinear pad compression curve is assigned.
+8. Prepared wind screening remains 15 m/s (54 km/h), two directions per existing assembly, with all load and resistance factors equal to 1. Other wind speeds are outside this first screening batch. Code_Aster execution remains disabled.
+
+
+## Preparation checks — 25 October 2026
+
+1. All eight saved assembly DWGs passed cold reopen, positive solid-volume, terminal-position and full-yaw blade-clearance checks. The existing per-DWG `-saved-check.json` files record those checks. `${EOLIENNES_ROOT}/models/mast-assembly-variants/CABLE-SUPPORT-PRESERVATION-CHECK.json` confirms preservation of measured solids outside the authorized cable-support, arm-weld and L-support edits.
+2. The eight changed upper meshes passed common-node weld topology checks. Actual MED files passed MEDCoupling readback for exclusive shell integration groups, attachment bores and fixed ground-backing groups. Evidence: `${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/tower-support-med-readback.json`. The unchanged lower-foot meshes were reused after lower-definition and construction-AST equality checks and saved MED hash/quality checks.
+3. `${EOLIENNES_ROOT}/simulations/code-aster-mast/screening-15ms/setup.json` contains the prepared case matrix, source-bound input files, gravity/preload seed jobs and result-display template. The applied-wind input is 15 m/s (54 km/h), as specified in `${EOLIENNES_ROOT}/simulations/code-aster-mast/SCREENING-15MS-PLAN.md`. Load and resistance factors are 1. No equilibrium calculation, native solver validation or installation calibration was executed.
+4. Native screenshot requests returned one identical cached viewport for different documents and cameras. Those captures were rejected and removed; they are not evidence of the revised assembly geometry. `${EOLIENNES_ROOT}/models/mast-assembly-variants/tower-side-attachment-native-captures.json` records the rejected capture hashes. The saved DWGs and their cold native measurements are the geometry outputs.
+5. The executing model identifier was unavailable. Luna's source research and the primary agent's CAD/script preparation do not establish a different model identifier.

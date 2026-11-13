@@ -1,35 +1,43 @@
 # 3D CAD Modeling
 
-Reusable skills, Python tools and documented workflows for building 3D models from descriptions, dimensions, sketches, drawings, photographs and existing CAD files.
+Reusable tools and agent instructions for creating, inspecting and modifying 3D models from descriptions, dimensions, drawings, photographs and existing geometry.
 
-The project covers mechanical parts and assemblies, building models, surface reconstruction and geometry handoffs to simulation tools. Work connects each model to its source evidence, units, coordinate frames and checks.
+The project develops a common workflow for mechanical parts, assemblies, buildings and model handoffs to physics simulation. Each job connects its geometry to source evidence, units, coordinate frames and recorded checks.
 
+## Examples
+
+### Wind generator: CAD and mast physics
+
+
+A square mast model and recorded Code_Aster wind cases. [Models, simulation inputs and results](docs/examples/wind-generator.md).
+
+![Mast displacement for 15 m/s wind from 0 and 45 degrees](docs/images/wind-generator/mast-displacement.png)
+
+### FERME: component modeling
+
+![Motenergy ME0907 component geometry](docs/images/ferme/motor.png)
+
+Selected frame, motor, bearing and battery examples show source-based construction, component boundaries and saved-model checks. [FERME examples](docs/examples/ferme.md).
+
+### Buildings
+
+The proposed building route combines plans, dimensions and component geometry into walls, floors, openings and semantic IFC models. [Building workflow](docs/examples/buildings.md).
 
 ## Documentation
 
-The [documentation index](docs/README.md) links the Markdown pages:
-
-1. [Modeling workflow](docs/modeling-workflow.md) — sources, geometry, assemblies and saved-model checks.
-2. [Mechanical examples](docs/wind-generator.md) — wind-generator mast simulation captures.
-3. [Building models](docs/building-models.md) — plans, building elements, IFC and display geometry.
-4. [Photographs and scans](docs/reconstruction.md) — calibration, reconstruction and CAD remodeling.
-5. [Tools and usage](docs/tools.md) — implemented helpers, dependencies and researched integrations.
-6. [Sources and images](docs/sources.md) — evidence, image provenance and upstream documentation.
-7. [Contributing](docs/contributing.md) — editing pages, recording evidence and testing changes.
+1. [Documentation home](docs/README.md) — guide to the pages.
+2. [Workflow](docs/workflow.md) — inputs, modeling, checking and handoffs.
+3. [Tools](docs/tools.md) — software roles, agent responsibilities and implementation status.
+4. [Example gallery](docs/examples/README.md) — wind-generator, FERME and building applications.
 
 ## Repository
 
-1. `docs/` — linked documentation and example images.
-2. `skills/` — instructions for modeling and inspection tasks.
-3. `scripts/` — Python helpers for sources, drawings, geometry and model checks.
-4. `tests/` — helper regression tests and retained integration cases.
-5. `research/` — tool assessments, workflow specifications and source registers.
-6. `execution/` — recorded execution evidence.
-
-## Development
-
-Implemented helpers include source intake, DXF inspection, existing-model lookup, native solid checks, assembly-placement checks and calibrated image tracing. Broader building, reconstruction and simulation routes are documented workflow proposals. [Tool status and usage](docs/tools.md).
+1. `docs/` — linked documentation, selected example copies and images.
+2. `skills/` — agent task instructions.
+3. `scripts/` and `tests/` — reusable helpers and their checks.
+4. `research/` — method assessments, workflow definitions and sources.
+5. `execution/` — recorded execution reports.
 
 ## License
 
-Project code and documentation are released under the [MIT License](LICENSE). Third-party software and source assets retain their own license terms; [source records](docs/sources.md) identify their provenance.
+[MIT](LICENSE) for project code and documentation. Imported source assets retain their recorded terms and attribution.

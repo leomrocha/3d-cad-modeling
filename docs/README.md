@@ -2,16 +2,22 @@
 
 [Project](../README.md)
 
-A linked Markdown guide to the modeling methods, implemented helpers and example geometry in this project.
+1. [Workflow](workflow.md) — how inputs become checked models and simulation handoffs.
+2. [Tools](tools.md) — implemented helpers, CAD applications and researched integrations.
+3. [Examples](examples/README.md) — illustrated applications and their model/result files.
+4. [Wind generator](examples/wind-generator.md) — mast models with physics simulation results.
+5. [FERME](examples/ferme.md) — selected component models and the procedures they exercise.
+6. [Buildings](examples/buildings.md) — the proposed plan-to-IFC workflow.
 
-1. [Modeling workflow](modeling-workflow.md): follow a job from evidence to checked geometry.
-2. [Wind-generator example](wind-generator.md): inspect existing assembly and transmission captures.
-3. [Building models](building-models.md): understand the proposed route from plans to semantic IFC.
-4. [Photographs and scans](reconstruction.md): establish scale and reconstruct surface references.
-5. [Tools and usage](tools.md): distinguish implemented helpers and researched integrations.
-6. [Sources and images](sources.md): find original image identities, evidence and documentation sources.
-7. [Contributing](contributing.md): edit these pages and preserve their technical meaning.
+## Technical records
 
-## Reading the examples
+1. [Operation contracts](reference/operations.md) connect each workflow operation to its sources, tools, inputs, outputs, units, frames, checks and downstream conditions.
+2. [Sources and attribution](reference/sources.md) identifies the existing records used in these pages.
+3. [Example manifest](images/manifest.json) records original paths and hashes for the selected model, image and result copies.
 
-The wind-generator images are captures of existing native CAD work. Building and reconstruction pages describe proposed workflow compositions from the retained research. Individual execution reports identify the software, model revision and checks exercised by a particular job.
+## Editing these pages
+
+1. Keep the main README as the project introduction and this page as the documentation index.
+2. Edit subject pages directly and link related pages with repository-relative paths.
+3. Preserve source attribution, operating conditions and the distinction between recorded results and workflow proposals.
+4. Run local-link, operation-record and asset-hash checks after edits.

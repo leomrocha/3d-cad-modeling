@@ -1,0 +1,295 @@
+{
+  "source": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/raw-results.json",
+  "field_source": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/stress-and-member-forces.npz",
+  "native_cell_map": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/cases/square-reach400-steel-structure-15ms-from45deg/native-cell-map.json",
+  "wind_m_s": 15.0,
+  "wind_km_h": 54.0,
+  "incoming_wind_direction_deg": 45,
+  "assembly": "square-reach400-steel-structure",
+  "load_factor": 1,
+  "resistance_factor": 1,
+  "base_support_model": "rigid_assembled_base_at_mast_cut",
+  "physical_reference_check": {
+    "applicable": false,
+    "passed": true,
+    "maximum_absolute_pad_reference_reaction_N": null,
+    "numerical_tolerance_N": null,
+    "tolerance_source": "/home/leo/projects/energy/eoliennes/simulations/code-aster-mast/screening-15ms/input-register.json",
+    "reactions": {},
+    "scope": "Numerical pad-position references must not provide physical support"
+  },
+  "physical_result_valid": true,
+  "mast_top_translation_m": [
+    -0.02315884805292245,
+    -0.02373266198127755,
+    -0.0013766541752141365
+  ],
+  "mast_top_horizontal_displacement_m": 0.03315978721065512,
+  "base_force_N": [
+    -706.4751903895956,
+    -591.3456507311064,
+    14357.378454438693
+  ],
+  "base_shear_N": 921.3017275977567,
+  "base_vertical_force_N": 14357.378454438693,
+  "base_moment_about_mast_base_Nm": [
+    1506.1110682544759,
+    -1821.2851166833207,
+    -1564.485584839611
+  ],
+  "base_moment_reference_m": [
+    0.0,
+    0.0,
+    0.05
+  ],
+  "maximum_ground_guy_tension_N": 6363.562738960405,
+  "maximum_internal_stay_tension_N": 5946.410268614744,
+  "member_force_and_stress_metrics": [
+    {
+      "component": "CHORD",
+      "outer_diameter_m": 0.02,
+      "wall_thickness_m": 0.002,
+      "maximum_axial_force_N": 16344.859342542639,
+      "maximum_compression_N": 16344.859342542639,
+      "maximum_shear_N": 4744.30791728632,
+      "maximum_bending_moment_Nm": 83.4010181920305,
+      "maximum_torsion_Nm": 354.09415029248476,
+      "calculated_combined_stress_Pa": 813403913.0571114,
+      "input_yield_stress_Pa": 235000000.0,
+      "yield_resistance_over_load": 0.2889093551526841,
+      "yield_exceeded": true,
+      "native_cell_id_0based": 1732,
+      "containing_cell_centroid_m": [
+        0.08,
+        0.08,
+        10.0475
+      ],
+      "location_method": "Containing-cell centroid, not the integration-point coordinate"
+    },
+    {
+      "component": "BRACE",
+      "outer_diameter_m": 0.006,
+      "wall_thickness_m": 0.003,
+      "maximum_axial_force_N": 10587.106690996576,
+      "maximum_compression_N": 9308.272650457035,
+      "maximum_shear_N": 3432.7376030936666,
+      "maximum_bending_moment_Nm": 35.36729229981511,
+      "maximum_torsion_Nm": 10.423548383658773,
+      "calculated_combined_stress_Pa": 1908755142.2333078,
+      "input_yield_stress_Pa": 275000000.0,
+      "yield_resistance_over_load": 0.14407295829377084,
+      "yield_exceeded": true,
+      "native_cell_id_0based": 1742,
+      "containing_cell_centroid_m": [
+        -0.07599999999999944,
+        0.08,
+        10.0475
+      ],
+      "location_method": "Containing-cell centroid, not the integration-point coordinate"
+    },
+    {
+      "component": "RING",
+      "outer_diameter_m": 0.008,
+      "wall_thickness_m": 0.004,
+      "maximum_axial_force_N": 8309.997464103206,
+      "maximum_compression_N": 0.0,
+      "maximum_shear_N": 48.199828790375335,
+      "maximum_bending_moment_Nm": 4.174649498915044,
+      "maximum_torsion_Nm": 0.3743755166386712,
+      "calculated_combined_stress_Pa": 234372364.18341544,
+      "input_yield_stress_Pa": null,
+      "yield_resistance_over_load": null,
+      "yield_exceeded": null,
+      "native_cell_id_0based": 1067,
+      "containing_cell_centroid_m": [
+        0.4714285714285715,
+        -0.008571428571428535,
+        7.55
+      ],
+      "location_method": "Containing-cell centroid, not the integration-point coordinate"
+    }
+  ],
+  "shell_and_solid_stress_metrics": [
+    {
+      "component": "PLATE",
+      "generalized_resultants": {
+        "NXX": {
+          "maximum_absolute_value": 1926749.9009890363,
+          "units": "N/m",
+          "native_cell_id_0based": 9275,
+          "containing_cell_centroid_m": [
+            0.07733333333333296,
+            0.07733333333333296,
+            10.045
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        },
+        "NYY": {
+          "maximum_absolute_value": 1871008.7771073768,
+          "units": "N/m",
+          "native_cell_id_0based": 9378,
+          "containing_cell_centroid_m": [
+            -0.0724590661568358,
+            -0.07261380528186741,
+            10.045000000000002
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        },
+        "NXY": {
+          "maximum_absolute_value": 805188.5298301927,
+          "units": "N/m",
+          "native_cell_id_0based": 9116,
+          "containing_cell_centroid_m": [
+            0.0757356783022486,
+            -0.062402344968914586,
+            10.045000000000002
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        },
+        "MXX": {
+          "maximum_absolute_value": 7833.198762662699,
+          "units": "N",
+          "native_cell_id_0based": 16894,
+          "containing_cell_centroid_m": [
+            0.08,
+            -0.07733333333333295,
+            10.046666666666667
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        },
+        "MYY": {
+          "maximum_absolute_value": 5375.7339611851985,
+          "units": "N",
+          "native_cell_id_0based": 9276,
+          "containing_cell_centroid_m": [
+            -0.07733333333333296,
+            0.07733333333333295,
+            10.045
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        },
+        "MXY": {
+          "maximum_absolute_value": 2051.578475203264,
+          "units": "N",
+          "native_cell_id_0based": 9116,
+          "containing_cell_centroid_m": [
+            0.0757356783022486,
+            -0.062402344968914586,
+            10.045000000000002
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        },
+        "QX": {
+          "maximum_absolute_value": 0.0,
+          "units": "N/m",
+          "native_cell_id_0based": 6480,
+          "containing_cell_centroid_m": [
+            -0.0006084021956964687,
+            0.05252365172187654,
+            7.249999999999999
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        },
+        "QY": {
+          "maximum_absolute_value": 0.0,
+          "units": "N/m",
+          "native_cell_id_0based": 6480,
+          "containing_cell_centroid_m": [
+            -0.0006084021956964687,
+            0.05252365172187654,
+            7.249999999999999
+          ],
+          "location_method": "Containing-cell centroid, not the integration-point coordinate"
+        }
+      },
+      "maximum_von_mises_stress_Pa": null,
+      "stress_recovery_status": "Not calculated: verify eccentric DKTG resultant reference before recovering surface stresses"
+    }
+  ],
+  "anchor_metrics": [
+    {
+      "component": "GA0",
+      "reaction_N": [
+        3776.2173882510515,
+        -46.738080971861585,
+        -5104.027596802314
+      ],
+      "moment_reference_m": [
+        6.0,
+        0.0,
+        0.042
+      ],
+      "reaction_moment_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "component": "GA3",
+      "reaction_N": [
+        57.59679029481763,
+        3771.5911086486153,
+        -5095.659834329099
+      ],
+      "moment_reference_m": [
+        3.6739403974420594e-16,
+        6.0,
+        0.042
+      ],
+      "reaction_moment_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "component": "GA6",
+      "reaction_N": [
+        -538.7067679491648,
+        12.51998074760331,
+        -716.700199089536
+      ],
+      "moment_reference_m": [
+        -6.0,
+        7.347880794884119e-16,
+        0.042
+      ],
+      "reaction_moment_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "component": "GA9",
+      "reaction_N": [
+        -3.123906663706693,
+        -560.5190477683396,
+        -746.6365833969388
+      ],
+      "moment_reference_m": [
+        -1.1021821192326177e-15,
+        -6.0,
+        0.042
+      ],
+      "reaction_moment_Nm": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "numerical_pin_reference_reactions": [],
+  "uncomputed_metrics": [
+    "Base, hinge, pin and ground capacity/compliance",
+    "DKTG eccentric plate surface stresses",
+    "Physical-panel buckling resistance",
+    "Weld resistance",
+    "Unassigned plate/pin/tip-bar/terminal capacities",
+    "Terminal elastic stresses in equivalent model",
+    "Blade bending",
+    "Stress mesh convergence"
+  ],
+  "actual_execution_model": "unavailable"
+}
