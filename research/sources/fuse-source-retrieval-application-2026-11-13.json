@@ -51,7 +51,7 @@
     {
       "title": "Shared exact-drawing access procedure",
       "summary": "Applied procedure for recovering exact drawing images through source-bound alternate access and local rendering; revision 0c0d87a.",
-      "local_path": "skills/component-cad/references/source-view-evidence.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-view-evidence.md",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "sha256": "a16d906309d91c8d5e7932911a85a40a5e7c4606993d30210bdd159466b25eae",

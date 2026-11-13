@@ -1,7 +1,7 @@
 {
   "records": [
     {
-      "local_path": "skills/component-cad/references/dimension-limits-and-datums.md",
+      "local_path": "skills/cad-ocs-engineering/references/dimension-limits-and-datums.md",
       "title": "Drawing scale and literal dual-unit callouts",
       "summary": "Adds printed scale restrictions and separate conversion/correction evidence to the existing source-datum procedure.",
       "registered_at": "2026-11-13",

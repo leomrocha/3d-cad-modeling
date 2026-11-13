@@ -23,7 +23,7 @@
       ]
     },
     {
-      "local_path": "skills/component-cad/references/existing-model-start-check.md",
+      "local_path": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
       "title": "Configuration-aware component start procedure",
       "summary": "Documents explicit configuration declarations, selected-model reuse, unknown-candidate blocking and the remaining ordinary lookup route.",
       "registered_at": "2026-11-13",

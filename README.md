@@ -118,7 +118,7 @@ I would directly ASK the AI agent you are using to install this and make it avai
 Use the skills CLI to install the skill you need:
 
 ```sh
-npx skills add leomrocha/3d-cad-modeling --skill component-cad
+npx skills add leomrocha/3d-cad-modeling --skill cad-ocs-engineering
 npx skills add leomrocha/3d-cad-modeling --skill cad-drawing-inspection
 npx skills add leomrocha/3d-cad-modeling --skill cad-source-intake
 ```
@@ -128,7 +128,7 @@ Each selected skill carries its scripts, instructions, dependency file and licen
 For a local copy installation, run from this checkout and select one skill:
 
 ```sh
-npx skills add . --skill component-cad --copy
+npx skills add . --skill cad-ocs-engineering --copy
 ```
 
 ### Set up the Python helpers
@@ -153,7 +153,7 @@ The connection check reads OCS state. Its report contains dependency and package
 ### Use the skills with your agent
 
 1. Give the agent the drawing, pictures or dimensions and describe the model you need.
-2. Ask it to read [component-cad](skills/component-cad/SKILL.md) for a component job, [cad-drawing-inspection](skills/cad-drawing-inspection/SKILL.md) for a DXF, or [cad-source-intake](skills/cad-source-intake/SKILL.md) to record the inputs.
+2. Ask it to read [cad-ocs-engineering](skills/cad-ocs-engineering/SKILL.md) for a component job, [cad-drawing-inspection](skills/cad-drawing-inspection/SKILL.md) for a DXF, or [cad-source-intake](skills/cad-source-intake/SKILL.md) to record the inputs.
 3. Specify the component project's input and output locations and the CAD session it should use.
 4. Review the resulting model and the changes recorded for that iteration.
 
@@ -165,7 +165,7 @@ For a DXF file named `drawing.dxf`:
 python "$SKILL_ROOT/scripts/dxf_inspect.py" drawing.dxf --output drawing-inventory.json
 ```
 
-Command-line options for the installed component-cad package:
+Command-line options for the installed cad-ocs-engineering package:
 
 ```sh
 python "$SKILL_ROOT/scripts/part_index.py" --help
@@ -175,7 +175,7 @@ python "$SKILL_ROOT/scripts/source_intake.py" --help
 
 ### Tools
 
-To get a list of all skills and Python helpers, read the [tools page](docs/tools.md). The [skill catalogue](skills/README.md) links the component procedures for source interpretation, construction, assemblies and saved-result checks. The tools page also covers source-bound annular and hexagonal geometry, plus the toroidal helper in progress.
+To get a list of all skills and Python helpers, read the [tools page](docs/tools.md). The [skill catalogue](skills/README.md) links the component procedures for source interpretation, construction, assemblies and saved-result checks. The tools page also covers source-bound annular, hexagonal and toroidal geometry and spherical-seat profiles.
 
 ### DISCLAIMER
 

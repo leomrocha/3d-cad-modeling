@@ -3,7 +3,7 @@
   "implementation_model": "gpt-6-luna",
   "review_model": "gpt-6.1-sol",
   "title": "Saved-body reader runtime preflight",
-  "local_path": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md",
+  "local_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-reference.md",
   "sha256": "814e0f38fa9d728b55af0dbd4baa3b2c8239a0f6957149a58dbf8c17b5af525e",
   "summary": "The envelope procedure checks the exact selected interpreter and Python path for SAB parser imports before native writes. This follows the executed reader-import failure after save/reopen and the successful read-only recovery using the already installed reader environment.",
   "evidence_status": "documented_procedure_with_executed_dependency_import_check",

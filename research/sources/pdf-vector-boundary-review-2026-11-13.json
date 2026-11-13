@@ -10,7 +10,7 @@
       "version": "5.13.0",
       "sha256": "fc55fc48f7cef945c6b0666b20caf57420fd62302fe81a53df1ade2f84bb5eaf",
       "referring_documents": [
-        "skills/component-cad/references/drawing-feature-checks.md",
+        "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
         "execution/pdf-vector-boundary-review-2026-11-13.md"
       ]
     },
@@ -24,7 +24,7 @@
       "version": "5.13.0",
       "sha256": "99dd9963904eec05f0e5f2bad0e2524726f2001329cfc1e80337cecec02133c2",
       "referring_documents": [
-        "skills/component-cad/references/drawing-feature-checks.md",
+        "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
         "execution/pdf-vector-boundary-review-2026-11-13.md"
       ]
     },

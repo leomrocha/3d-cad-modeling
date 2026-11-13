@@ -31,7 +31,7 @@
     {
       "title": "Toroidal reference skill procedure",
       "summary": "Describes source-bound inside and section dimensions, derived radii, exact circular revolve construction and the native torus observation contract.",
-      "local_path": "skills/component-cad/references/toroidal-reference.md",
+      "local_path": "skills/cad-ocs-engineering/references/toroidal-reference.md",
       "sha256": "56271a93b495ab4d19b1bd15246148b64ffffefaab039f51d314d422926fb1f2",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",

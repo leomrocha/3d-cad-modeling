@@ -23,6 +23,7 @@
   },
   {
     "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md",
+    "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-reference.md",
     "title": "Reference-volume procedure",
     "summary": "Defines supported millimetres/frame/role inputs, source pinning, native readback and external result ownership.",
     "observation_date": "2026-11-13",
@@ -56,6 +57,7 @@
   },
   {
     "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/calibrated-trace.md",
+    "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/calibrated-trace.md",
     "title": "Calibrated image trace procedure",
     "summary": "External point calibration inputs and explicit coordinate uncertainty; actual image/point data stays in the component project.",
     "observation_date": "2026-11-13",
@@ -89,6 +91,7 @@
   },
   {
     "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/assembly-units.md",
+    "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/assembly-units.md",
     "title": "Assembly unit-planning procedure",
     "summary": "Preserves source unit evidence, supplied conversion definitions and separate native application/check records.",
     "observation_date": "2026-11-13",

@@ -32,4 +32,4 @@ Run `python "$SKILL_ROOT/scripts/check_contract.py" CONTRACT_JSON`.
 
 Exit 0: all supplied checks pass; 1: some fail; 2: invalid input/calculation. Missing/empty checks fail input validation. Output preserves evidence and units, and states these are checks of supplied numbers, not direct CAD queries or physical validation. Do not label manually asserted numbers as measurements.
 
-Use supported OCS measurements for checks, then inspect orthographic views of the same geometry. AABB overlap only identifies candidate collision pairs. Gear axes at 90 degrees do not prove tooth engagement, shaft support or clearance. A line/circle belt depiction does not prove tangent spans and wrap geometry.
+Use supported OCS measurements for checks, then inspect orthographic views of the same geometry. AABB overlap only identifies candidate collision pairs. Gear axes at 90 degrees do not prove tooth engagement, shaft support or clearance. A line/circle belt depiction does not prove tangent spans and wrap geometry. See [computational-engineering.md](computational-engineering.md) for solver-specific data.

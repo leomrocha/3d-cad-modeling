@@ -2669,3 +2669,9 @@ Status: proposal. Execution authorized by the subsequent user instruction.
 Rename the two installable skills to `cad-drawing-inspection` and `cad-source-intake`, including packaging, installation commands, documentation and links. [Plan](skill-renaming-plan.md). [Source and reference inventory](sources/skill-renaming-plan-2026-11-13.json).
 
 Execution of CAD-SKILL-RENAME-2026-11-13: DONE. [Rename report](../execution/skill-renaming-2026-11-13.md).
+
+## CAD-OCS-MERGE-2026-11-13 — Complete OCS and component skill merge
+
+Status: proposal. Execution explicitly authorized.
+
+Merge both complete workflows directly into `cad-ocs-engineering/SKILL.md`, preserving all original OCS material and repository additions inside the skill folder. [Plan](cad-ocs-engineering-merge-plan.md). [Source inventory](sources/cad-ocs-engineering-merge-2026-11-13.json).

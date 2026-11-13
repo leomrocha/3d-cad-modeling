@@ -45,8 +45,8 @@
       ]
     },
     {
-      "title": "skills/component-cad/references/existing-model-start-check.md",
-      "local_path": "skills/component-cad/references/existing-model-start-check.md",
+      "title": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
+      "local_path": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
       "summary": "Defines explicit root configuration, relative model path bases and failure before new-model classification when a required root is absent.",
       "registered_at": "2026-11-13",
       "evidence_status": "procedure_update",
@@ -56,8 +56,8 @@
       ]
     },
     {
-      "title": "skills/component-cad/references/step-solid-inventory.md",
-      "local_path": "skills/component-cad/references/step-solid-inventory.md",
+      "title": "skills/cad-ocs-engineering/references/step-solid-inventory.md",
+      "local_path": "skills/cad-ocs-engineering/references/step-solid-inventory.md",
       "summary": "Defines the supported STEP inventory contract and its handoff to independent native topology, placement and persisted-geometry checks.",
       "registered_at": "2026-11-13",
       "evidence_status": "procedure_update",
@@ -85,7 +85,7 @@
       "sha256": "8f59184ffd4da463250274d29cad24ac1081d722769667819c361c3002a468e4",
       "referring_documents": [
         "execution/portable-lookup-and-step-inventory-2026-11-13.md",
-        "skills/component-cad/references/existing-model-start-check.md"
+        "skills/cad-ocs-engineering/references/existing-model-start-check.md"
       ]
     }
   ]

@@ -79,6 +79,7 @@
   },
   {
     "local_source_path": "skills/component-cad/SKILL.md",
+    "current_local_source_path": "skills/cad-ocs-engineering/SKILL.md",
     "title": "SKILL.md",
     "summary": "Existing component procedure, execution evidence, dependency file or helper implementation inspected for the requested documentation maintenance.",
     "observation_date": "2026-11-13",

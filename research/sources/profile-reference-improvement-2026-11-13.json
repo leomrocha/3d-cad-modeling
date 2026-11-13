@@ -27,7 +27,7 @@
     },
     {
       "title": "profile reference",
-      "path": "skills/component-cad/references/profile-reference.md",
+      "path": "skills/cad-ocs-engineering/references/profile-reference.md",
       "summary": "Defines the external job contract, independent source intervals, explicit construction frame and separate geometry, metadata and source-evidence checks.",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
@@ -38,7 +38,7 @@
     },
     {
       "title": "drawing feature checks",
-      "path": "skills/component-cad/references/drawing-feature-checks.md",
+      "path": "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
       "summary": "Requires independent source-callout comparison before geometry, consistent image coordinate frames and feature-specific measurements; preserves failed records and supported persistence results.",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
@@ -49,7 +49,7 @@
     },
     {
       "title": "calibrated trace",
-      "path": "skills/component-cad/references/calibrated-trace.md",
+      "path": "skills/cad-ocs-engineering/references/calibrated-trace.md",
       "summary": "Clarifies that a picked span includes both endpoint uncertainties and that image resizing or cropping needs a recorded coordinate transform before calibration.",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
@@ -60,7 +60,7 @@
     },
     {
       "title": "SKILL",
-      "path": "skills/component-cad/SKILL.md",
+      "path": "skills/cad-ocs-engineering/SKILL.md",
       "summary": "Routes source-profile construction to the reusable helper contract and retains existing model-reuse and source-feature procedures.",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
@@ -77,12 +77,12 @@
       "evidence_status": "executed_result_review",
       "referring_documents": [
         "execution/profile-reference-improvement-2026-11-13.md",
-        "skills/component-cad/references/profile-reference.md"
+        "skills/cad-ocs-engineering/references/profile-reference.md"
       ]
     },
     {
       "title": "Paired runtime source-path resolution procedure",
-      "local_path": "skills/component-cad/references/profile-reference.md",
+      "local_path": "skills/cad-ocs-engineering/references/profile-reference.md",
       "summary": "Resolves feature-source paths and source-file paths together in a runtime copy before source pinning; preserves the portable job and metadata payload separately.",
       "registered_at": "2026-11-13",
       "evidence_status": "applied_procedure_update",

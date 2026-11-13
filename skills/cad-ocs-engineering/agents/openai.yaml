@@ -1,0 +1,4 @@
+interface:
+  display_name: "CAD OCS Engineering"
+  short_description: "OCS modeling, geometry checks and simulation handoffs"
+  default_prompt: "Use $cad-ocs-engineering to inspect the OCS session and prepare the authorized engineering model with explicit units, parts and checks."

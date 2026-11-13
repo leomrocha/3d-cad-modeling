@@ -4,14 +4,14 @@ Each skill directory is its installation unit. The skills CLI copies the selecte
 
 1. **Source intake:** source capture, component-record hashing and part-index parsing; Python standard library.
 2. **Drawing inspection:** DXF inspection, component-record hashing and part-index parsing; pinned native-reader dependencies.
-3. **Component CAD:** the shared modeling and inspection helpers, `cadtools` geometry/runtime/save-reopen code, OCS transport and coordinate-contract checker; pinned native-reader dependencies and a running OpenCADStudio session.
+3. **CAD OCS Engineering:** the shared modeling and inspection helpers, `cadtools` geometry/runtime/save-reopen code, OCS transport and coordinate-contract checker; pinned native-reader dependencies and a running OpenCADStudio session.
 
 Set `SKILL_ROOT` to the installed directory. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
 
 ## Maintain the packages
 
 1. Edit reusable implementations under `scripts/`; edit each skill's instructions and references in its skill directory.
-2. Run `python scripts/build_skill_packages.py`. It copies only the modules needed by source intake and drawing inspection, and the current shared helper set into component CAD. Each package also receives its dependency declaration, MIT license, attribution notice and a manifest of generated-file hashes.
+2. Run `python scripts/build_skill_packages.py`. It copies only the modules needed by source intake and drawing inspection, and the current shared helper set into CAD OCS Engineering. Each package also receives its dependency declaration, MIT license, attribution notice and a manifest of generated-file hashes.
 3. Run `python scripts/build_skill_packages.py --check` to check that generated copies match the canonical code. Commit source changes and regenerated copies in the same authorized batch. During concurrent work, `--committed` reads canonical bytes from local Git HEAD; use `--committed --check` to verify packages against that committed source while preserving another agent’s pending edits.
 4. Run [isolated package checks](../tests/test_skill_packages.py) using the existing pinned dependency directory and cached skills CLI as explicit test inputs. The checks copy dependencies into a temporary Python environment, install skills individually into temporary projects, check local references/imports/commands and exercise source-intake and DXF fixtures. A separate read-only OCS state check uses the caller's selected descriptor.
 
@@ -26,3 +26,9 @@ Package and dependency checks establish software execution and retained bytes. C
 1. `drawing-inspection` is now `cad-drawing-inspection`; `source-intake` is now `cad-source-intake`. Installation commands use the CAD-prefixed names.
 2. An existing old-name installation remains its own local copy. Install the new skill by its current name; review and remove an old local copy separately when migrating that environment.
 3. Historical source locators retain their original values. Added current locators and the [rename record](../execution/skill-renaming-2026-11-13.md) identify the moved packages.
+
+## Complete OCS engineering merge
+
+1. `cad-ocs-engineering` combines the full original OCS engineering skill and this repository’s component workflow. Both workflows are merged directly into its main `SKILL.md`.
+2. The package retains the component procedures, generic helpers, tests and source checks developed here. It also includes the original OCS control, computational-engineering and capability references and adapted agent metadata.
+3. The former `component-cad` package is now `cad-ocs-engineering`. [Merge inventory and verification](../execution/cad-ocs-engineering-merge-2026-11-13.md).

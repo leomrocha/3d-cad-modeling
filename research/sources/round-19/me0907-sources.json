@@ -8,7 +8,7 @@
     "sha256": "7c2fa6fefe5dabfd06143dd568ea90355622c6d6c0e1d3e22c518fa572e98c04",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ],
     "original_url": "https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf"
   },
@@ -21,7 +21,7 @@
     "sha256": "c8f0d421a40e38c75e03a6cf005321cebc596dc5e308c330b1717392ab6302a8",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -33,7 +33,7 @@
     "sha256": "2a8c6933fc2873d9b478ee54f7b936ea3cb8fd8dd64dc21e75004ab2a60a3293",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -45,7 +45,7 @@
     "sha256": "2cad2e9626e585e7271debdeb015703dc76d2f38e60f919de14df4a05d17ed81",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -57,7 +57,7 @@
     "sha256": "97749b64c796622db2a27700461d13b98593802f915350469de363533feffc0c",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -69,7 +69,7 @@
     "sha256": "3fc0912ad322723f27951ebc0126cef33e7fbbd961d2cb4c7881bb52ca03c9ed",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -81,7 +81,7 @@
     "sha256": "af76044665112b253e66be247d707190552a5e513410d1331e6fe5369ad2096a",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -93,7 +93,7 @@
     "sha256": "86cb0dd9935098af2c0875aa246e10bc91e7c8d2260e0f9689ff49a5aea7efb5",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -105,7 +105,7 @@
     "sha256": "04c8c157a870f9034970f846af1f05571be1446098462d1508b3dfaffa7d05ab",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -117,7 +117,7 @@
     "sha256": "5a2af068ad96188255c1c58bc852acfd714ab987db07fead8c01e4af95ad8ae1",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -129,7 +129,7 @@
     "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -141,11 +141,12 @@
     "sha256": "b5d1942b18fe67181b156f3667ff91a405720452e57b3d98a1508de2e07bcd99",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/axial-motor.md",
     "title": "Executed axial motor procedure",
     "summary": "Documents source-leader review, explicit keyway reconstruction, bounded native construction, surface-based dimensions, save/reopen recovery and per-feature downstream handoffs established by this actual motor.",
     "access_date": "2026-11-12",
@@ -153,7 +154,7 @@
     "sha256": "5ca6a06dc546a6075ae590d5513cd52d92df2c787d9bbf432c2cb13aaeb51750",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -165,7 +166,7 @@
     "sha256": "e99e3aceee040a7c0ef42c6392aa3a6c63ba02bffce27d67caf03db593b2e3aa",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -177,7 +178,7 @@
     "sha256": "0f24b6623bef575afa1371969a7acd201d20f2191814ebce3d1f19fe119c3304",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ],
     "original_url": "https://sep.turbifycdn.com/ty/cdn/yhst-129399866319704/ME0907.pdf?t=1783724599"
   },
@@ -190,7 +191,7 @@
     "sha256": "1ce9294773164fd97f66bc740b4f1a1d98344f33d50dd07387f93c062af8ca86",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ],
     "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
   },
@@ -203,7 +204,7 @@
     "sha256": "23ab4fe38cb476b8b0895cda3335605f6dbf0ab0b09be755fc6fe881b3fe7c12",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ],
     "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
   },
@@ -216,7 +217,7 @@
     "sha256": "c85a65afaa33e27182e9a2eb236da04892d08f7490e1faff993262d2f87c2ec9",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {
@@ -228,7 +229,7 @@
     "sha256": "821896120daafddfee106d28d098cfd9300982dca8131a3626ceaa8ce8ad7949",
     "referring_documents": [
       "execution/c005-me0907.md",
-      "skills/component-cad/references/axial-motor.md"
+      "skills/cad-ocs-engineering/references/axial-motor.md"
     ]
   },
   {

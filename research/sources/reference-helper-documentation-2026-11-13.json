@@ -18,7 +18,7 @@
       ]
     },
     {
-      "path": "skills/component-cad/references/annular-reference.md",
+      "path": "skills/cad-ocs-engineering/references/annular-reference.md",
       "title": "Annular-reference procedure",
       "summary": "Defines external source inputs, local frame, construction and native checks.",
       "observation_date": "2026-11-13",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "path": "skills/component-cad/references/source-variant-tables.md",
+      "path": "skills/cad-ocs-engineering/references/source-variant-tables.md",
       "title": "Variant and fastener source rules",
       "summary": "Binds dimensions to exact standard editions, grades, rows and dimension symbols.",
       "observation_date": "2026-11-13",

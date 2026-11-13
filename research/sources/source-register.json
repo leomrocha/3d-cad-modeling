@@ -20,7 +20,7 @@
           "sha256": "f1c8ec5b6075031048c0724c6eb40b9b69b94343a5f744e6f6000a9d5ef4adcd",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -123,7 +123,7 @@
           "sha256": "7769b284647ff97e32b7f9fd60af3b3eb7c9ba726028abae408717920946dc5f",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -235,7 +235,7 @@
           "sha256": "29bdea70113d72cca53a510214389c8d994c1bee32d52dc38338641fd67f0353",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -263,7 +263,7 @@
           "sha256": "b73184e2ce7c5044454a8adfcdf6020b99822f28c57230bad3b1d1c31de79604",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -393,7 +393,7 @@
           "sha256": "001bb19d41a04b8fbeeae80a2eb7d9c38c39f6653aff1a5e26bc9489d4663852",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -513,7 +513,7 @@
           "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -539,7 +539,7 @@
           "sha256": "7f89e3ac39db08427d78be0b43ac16e9d5e98a86cd01e63ab74cc130e7ce1dd3",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -807,7 +807,7 @@
           "sha256": "2349f3e7fd3868183759a2f0fc3273518cdf772f1f61a89c55bd99d42eec9a48",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -1002,7 +1002,7 @@
           "sha256": "04c8c157a870f9034970f846af1f05571be1446098462d1508b3dfaffa7d05ab",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -1161,7 +1161,7 @@
           "sha256": "e9a6f2ef7e14ba9ca0de4f201d55a27e0d4c58f09df15f0601d919333de573e0",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -1347,7 +1347,7 @@
           "sha256": "71fbc6af7486690767c6cb0fcc40ee6d00fed8f3a8592a124394a1203e4febea",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -1373,7 +1373,7 @@
           "sha256": "0f3a2147c71c0fa2e36279abfec9d4ed5435a388f93da89481f53976e37c0b8d",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -1468,6 +1468,7 @@
       "id": "SRC-0895e33945c4",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/axial-motor.md",
       "title": "Executed axial motor procedure",
       "summary": "Documents source-leader review, explicit keyway reconstruction, bounded native construction, surface-based dimensions, save/reopen recovery and per-feature downstream handoffs established by this actual motor.",
       "registered_at": "2026-11-13",
@@ -1478,11 +1479,12 @@
         {
           "evidence_status": "executed_procedure_documentation",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/axial-motor.md",
           "access_date": "2026-11-12",
           "sha256": "5ca6a06dc546a6075ae590d5513cd52d92df2c787d9bbf432c2cb13aaeb51750",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -1559,7 +1561,7 @@
           "sha256": "5a2af068ad96188255c1c58bc852acfd714ab987db07fead8c01e4af95ad8ae1",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -1701,7 +1703,7 @@
           "sha256": "93fcab51540e0b9ca5fb1081372f64164c3a9af907dbf4f173e6ea6adb68f987",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -1880,7 +1882,7 @@
           "sha256": "6ebcf928dfbab8a0bd33f38b4507750e05c753faf85555bb8c3c01b65cd0972b",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -2075,7 +2077,7 @@
           "sha256": "ad9e1f0520ba88a64dc1f3ae8b95edf6954526e12f88dc75325db74a97dd6a04",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -2198,7 +2200,7 @@
           "sha256": "bd6da34eadfddac172f7c12bb83f5e4ddaf9f82319196daa2a24580c8f92b443",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -2344,7 +2346,7 @@
           "sha256": "bb5a4c70993ba8861e78d06fb84bcbb01ea69518644e6312955687c1f32ddcfb",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -2643,7 +2645,7 @@
           "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -2990,7 +2992,7 @@
           "sha256": "f1d77f0318b02d093cd98bbbae4c0f1faa329d9dc9d906cba9d7a43c460965a5",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -3016,7 +3018,7 @@
           "sha256": "589aa13074d72f2fddbf315a76c5f02e63a8998ed48f8b4b660eaea3dd4ceb06",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -3160,7 +3162,7 @@
           "sha256": "2d54fed4118d964443b0d934f60cd9533fdf24cceec5459350a1b235ac32a7c3",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -3208,7 +3210,7 @@
           "sha256": "6abe7072ea02033e2a8443dde1b3ffb0641d566e4ce098212295ed57c66e2bf7",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -3259,7 +3261,7 @@
           "sha256": "9a965cb69fdf1cbf4dc6b6895a42964242ed3e3f25efbd8b22c591cad65050fe",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -3269,7 +3271,7 @@
           "sha256": "da3ba1a80c4887a5588a271c100264e3b9e4a456ca0babe27a8e6bcc75cf8859",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -3347,7 +3349,7 @@
           "sha256": "5ad571d3a72b94110087c09bfdc69cf9b04de207af009293f4b325670ac8981a",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -3650,7 +3652,7 @@
           "sha256": "78dd392bee67a9e8c23b5bdfa449638683569619fa8cf262970633b95006ff87",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -3677,7 +3679,7 @@
           "sha256": "8738a3355d31a63cbc351cc3435b3cf41039c0629b9cf487b4ca9e73a326002f",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -3760,7 +3762,7 @@
           "sha256": "c0c15d2038c2bd43d11f0e83eba928b4a0d2b370632dae420d4ba80f7b61663b",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -3897,7 +3899,7 @@
           "sha256": "3b7fa173c296c9c5adde533dde0bcfdcf3058286e1df18e0f8da39ac8fce3545",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -4013,7 +4015,7 @@
           "sha256": "5893c7af06e614aedd66dc84884705cd9cc59e8ad626c018a6dfefed64cc5fca",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -4089,7 +4091,7 @@
           "sha256": "b5d1942b18fe67181b156f3667ff91a405720452e57b3d98a1508de2e07bcd99",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -4115,7 +4117,7 @@
           "sha256": "4011e97cdcd5e1f4f5aa289b4f5fcf25dc34076b365701ab316ceee4cdc22fd1",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -4192,7 +4194,7 @@
           "sha256": "3354f474ba65c97574e8a0c2bf62008670e167d6d45dc94e0f6481f42bebef2e",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -4436,7 +4438,7 @@
           "sha256": "192a093293b609f99f34f4181a4aff187603b698956330518bec953ba56ce2bf",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -4462,7 +4464,7 @@
           "sha256": "11c914835678e7576832a619bb0b3372a87b426c989870a4ea02f4f5579e6dcd",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -4474,6 +4476,7 @@
       "id": "SRC-208dce2b3f17",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-battery.md",
       "title": "Saved battery inspection and source-bound check procedure",
       "summary": "Details exact source variant, metadata identity, unchanged-file persistence, transformed shell and terminal checks, source/model views and verified shared-reader extraction.",
       "registered_at": "2026-11-13",
@@ -4484,11 +4487,12 @@
         {
           "evidence_status": "local_source_or_execution_record_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-battery.md",
           "access_date": "2026-11-12",
           "sha256": "6a682556a2ae084a102fbbc60a7b83e322506d00c1c68a2455ba27d3fa3ab860",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -4837,7 +4841,7 @@
           "sha256": "2ab3757762c02208291bd13649c77fd921e9635a1ed2e6e19abc411805ecbb00",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -4863,7 +4867,7 @@
           "sha256": "6d3e127caa5d12f447fd1939a360fdac5a3ca4a15888f33cb31a75025ca0cc24",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -5178,7 +5182,7 @@
           "sha256": "c4cd1fc6b0d76345740e5cfc295de5cd1512900c3ff6230126b961b021681def",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -5188,7 +5192,7 @@
           "sha256": "7206669f1275dc8a68c6dcdd372f83de184dc0e442f446e09468ace94213472a",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -5198,7 +5202,7 @@
           "sha256": "f16e84bf60d993f984e75d1e1008e21c800093ba1dbbaa8c99e277f8b0bcb093",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -5262,7 +5266,7 @@
           "sha256": "5a3990ad03f698d0cbd5728356d97f3dfc4ee56aeea7584cfc8fd0993e7a7df7",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -5599,7 +5603,7 @@
           "sha256": "8c84aa75035e1c3db64eb1db9078a16b303f4945fd96389f41ed1d5dcdeac13a",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -6081,7 +6085,7 @@
           "sha256": "5fca02835cfea7da3160f254f784755c1b7f11082b8aeedf78ac3c37df4eb252",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -6114,7 +6118,7 @@
           "sha256": "c85a65afaa33e27182e9a2eb236da04892d08f7490e1faff993262d2f87c2ec9",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -6140,7 +6144,7 @@
           "sha256": "cb069ebe06bdcd0837d1f07c8dbdd7d3baed93f89c0a3be43fdc5901097b8330",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -6203,7 +6207,7 @@
           "sha256": "2cad2e9626e585e7271debdeb015703dc76d2f38e60f919de14df4a05d17ed81",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -6563,7 +6567,7 @@
           "sha256": "aa8bb19fe4a9b47ef2cbdc3b31b3c3646e6f8ebce4499ac0fa15265a30088e15",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -6590,7 +6594,7 @@
           "sha256": "d71c0bd0392f045f2f5c027d537375d61312fe68b8bce7144db7f36160d7c8bd",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -6706,7 +6710,7 @@
           "sha256": "bffca9d626a9bc4a4119a0858d4616006aad170f2d34f188abcfba975df80066",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -6888,7 +6892,7 @@
           "sha256": "6c6b1dd46dfe1a76658904e2dbc8bb6158316ddbc553c1ac5afe74bafbdfa08d",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -6914,7 +6918,7 @@
           "sha256": "cafe78c847f8be3ad37325eaf078909cf29da9b7e01d69b03632c3760b807c7c",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -6940,7 +6944,7 @@
           "sha256": "97749b64c796622db2a27700461d13b98593802f915350469de363533feffc0c",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -6990,7 +6994,7 @@
           "sha256": "8dcafc0cdd8fb60c9665bd6e05542acb00f101d3fca48d036b47c090d050be88",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -7018,7 +7022,7 @@
           "sha256": "a11d317b36cfa49fe14e3b3b56c52edb461c56e27ae8b8c66f0069f846879b25",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -7181,7 +7185,7 @@
           "sha256": "4d6f8eb52addd7a4c5b3ee687cd3118364360a7a162713e6185101b369bb9ef7",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -7535,7 +7539,7 @@
           "sha256": "5a93b1b1516db6961c6de77c66a54758f139d89612b0175de4fdc172e666e0e4",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -7618,7 +7622,7 @@
           "sha256": "81979963ed959526dc42bff1cdcb328bc31152314c557033b54f9a21ce81d173",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -7821,7 +7825,7 @@
           "sha256": "d10228fbd00a92c9035a57d4df851a203feb27d814ba27344b80b631b37ce539",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -7936,7 +7940,7 @@
           "sha256": "86cb0dd9935098af2c0875aa246e10bc91e7c8d2260e0f9689ff49a5aea7efb5",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -7997,7 +8001,7 @@
           "sha256": "00ec5b9969b6d642b6671c69770fc6ba0a7b5e672c84956902b7674e223cbde1",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -8126,7 +8130,7 @@
           "sha256": "575890f87566f5a0b72b6c8364fe5bba07ca5ba6c3e4a473957d0e16ccc6eea6",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -8187,7 +8191,7 @@
           "sha256": "68b1bfaf36948eb5d87ec3efb19e23b2572506a8db7f928d2dd31bb089b531df",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -8378,7 +8382,7 @@
           "sha256": "6ba9d70753671291c5c6a510562f72ee60fe44dc01a706b61bf3bdc210fea888",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -8544,7 +8548,7 @@
           "sha256": "2254d8df602405ae125ccd456e929c99ea50e90d7e3ac60df1ce8b1c0ffe7227",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -8679,7 +8683,7 @@
           "sha256": "6389806ef93f1701725a6b7335ab0f864bfef092fe9bc975d1290b8d4a9eef61",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -8775,7 +8779,7 @@
           "sha256": "92752b5e45c9d49757e28cc59972d7f9a29411108638374819ec4120639997a0",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -8826,7 +8830,7 @@
           "sha256": "fbccbd4a5ab54c0954a853aee3e9fbfaf012d79f508f9d49fa18dbe3bae9c815",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -8892,7 +8896,7 @@
           "sha256": "4c8c12631464a7fe7e7ee90b34e5146837972323adcf139bb7756b21a0dadb11",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -9172,7 +9176,7 @@
           "sha256": "2cc2191778cd0b6ab9ca60f07263d664bcf97ecc58aaafb08e2ae50b9e81acf2",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -9428,7 +9432,7 @@
           "sha256": "7bf8eebd0cd1d248e06f0df05966d65d2d0f7cc8b719af421480f6351e979cd3",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -9481,7 +9485,7 @@
           "sha256": "4a36ee5ea0f8ee440c5f69f21e547e2f10b4726bfffed4d75f53c0071ead6cec",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -9761,6 +9765,7 @@
       "id": "SRC-4285b32bca80",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
       "title": "Executed manufacturer assembly import procedure",
       "summary": "Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.",
       "registered_at": "2026-11-13",
@@ -9773,6 +9778,7 @@
         {
           "evidence_status": "executed_procedure_documentation",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
           "access_date": "2026-11-12",
           "sha256": "956084a4d2f2da5616c4dbd7917229b0e0f59c8b17b53c1ce20e6b61d3a3c262",
           "referring_documents": [
@@ -9782,6 +9788,7 @@
         {
           "evidence_status": "executed_case_procedure",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
           "access_date": "2026-11-12",
           "sha256": "35333560a4ae65aca07ca638e78ad9dc9b55514016030430588c1dead7fdbb9d",
           "referring_documents": [
@@ -9791,6 +9798,7 @@
         {
           "evidence_status": "applied_case_procedure",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
           "access_date": "2026-11-12",
           "sha256": "c5c5caf78f743ad40f3725b3a0ad3dfbc1bf1c1f664799532cfdfa419e135542",
           "referring_documents": [
@@ -10096,7 +10104,7 @@
           "sha256": "3a26fa2ad1d7382fa18bbfcbad56c2a0e0d96670600dcfaeaa6bfb066b0d4e5c",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -10122,7 +10130,7 @@
           "sha256": "5863d2b586a0b696be6c5002270dc33b88c9d8c270e422580b0ec4bd2482b6f7",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -10175,7 +10183,7 @@
           "sha256": "34155ad7dc79bff3195e79700fd931fef896a4cf17bc23de88d012216b174e2a",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -10328,7 +10336,7 @@
           "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -10354,7 +10362,7 @@
           "sha256": "b31da4d1d44d82e8a6deec5f55b82c0770960e5217e42aa02789e820c5f8481b",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -10408,7 +10416,7 @@
           "sha256": "be38f73d23c176abe2b15dee2b4ed61856a0002f52cc2b9e8a5d521ea85a8bfc",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
@@ -10454,7 +10462,7 @@
           "sha256": "f2fdc84f0572a29df1e6842f2eb8ae1b4a63902b97bba07697eed6e1e5b21f27",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -10715,7 +10723,7 @@
           "sha256": "3fc0912ad322723f27951ebc0126cef33e7fbbd961d2cb4c7881bb52ca03c9ed",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -10843,7 +10851,7 @@
           "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -11021,7 +11029,7 @@
           "sha256": "86a5a127ed764305a237d6a5aa09b7e3702fec41b41b1733390be4126d98885f",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -11125,7 +11133,7 @@
           "sha256": "4bfc89d5b1b042938cdfd51456203dc606ed9f1a38f645805392eecea8092597",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -11181,7 +11189,7 @@
           "sha256": "0edbbba367cf59345eea6a1d203ccada1091bc6aa5a235bc0cdd1d354d890999",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -11257,7 +11265,7 @@
           "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -11456,7 +11464,7 @@
           "sha256": "e4afd368a616924bf45d53f1caf265fd3fc43c7165b1c5e92bb86b013e4bb2ba",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -11466,7 +11474,7 @@
           "sha256": "aff14ef25e9faa4261b351e013feffa2bbe4adf5e62c3792550a2e042df4fc4b",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
@@ -11494,7 +11502,7 @@
           "sha256": "03607c928366fdab6e661e5d52dd435980a0fb9ef35e9c81568db7418758ac80",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -11504,7 +11512,7 @@
           "sha256": "aae63f921d44b612d78be074c0cbac826531a4c083ac298f5369fc3e0279151b",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -11514,7 +11522,7 @@
           "sha256": "4de3ab52e2b9213b0fc83e1cd5840c5ef1f55664f7d4cd3aea1a83265f9f032d",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -11887,7 +11895,7 @@
           "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -12080,7 +12088,7 @@
           "sha256": "c8f0d421a40e38c75e03a6cf005321cebc596dc5e308c330b1717392ab6302a8",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -12424,7 +12432,7 @@
           "sha256": "8b43a394f1a3a7ecdc9d5ecddbc49e87f9b76ba5dc36b719072be3b1fbb950ab",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -12548,7 +12556,7 @@
           "sha256": "85f09df1d159caac541d4a59c35960785014a9beb715498e9d55b53fc0218c0e",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -12586,7 +12594,7 @@
           "sha256": "aab7a5c5f2bbe9bf73968a5895e231851a6ad996e4197f00b0bc32bbb1ddbabe",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -12599,6 +12607,7 @@
       "id": "SRC-5545b27ec2a0",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/shared-feature-checks.md",
       "title": "Cross-component feature-check procedure",
       "summary": "Explains how an action becomes shared software using independent expectations and actual native measurements. Driver and Leaf mounting-hole patterns exercise one function with different dimensions.",
       "registered_at": "2026-11-13",
@@ -12609,11 +12618,12 @@
         {
           "evidence_status": "local_source_or_execution_record_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/shared-feature-checks.md",
           "access_date": "2026-11-12",
           "sha256": "a967c27ea573ac78d26d0af6c963bb29b17b091bfabb3e193760ebb0f4931ecf",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -12696,7 +12706,7 @@
           "sha256": "a704900e10ffd570c0936a331a57a5bcaa6be5d3fda56f54818b4a4367ccd1e1",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -12958,7 +12968,7 @@
           "sha256": "2a370b3c1f612de19edec955b2807fe685b96b2f9d51b9320994cf41b42cbf71",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -13287,7 +13297,7 @@
           "sha256": "4ad10526c820378353ed69016ee15d66b250d57c38daf105d952062af97c735a",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -13405,7 +13415,7 @@
           "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -13489,7 +13499,7 @@
           "sha256": "4f69169a1f5a454ca658d7e08c63d1441d7a7e9ecbecf447f23a93be9274e84d",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -13523,7 +13533,7 @@
           "sha256": "94dd235468e260ba90537fd4dffc664e20f9c64460a25ad7786170c8d991d91c",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -13603,7 +13613,7 @@
           "sha256": "6b40bc5b2c48ec3b9e6515f014747ee8270dd29419614c026e37f87e40e2e1c3",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -13613,7 +13623,7 @@
           "sha256": "42857fd13f6afca4b6d84fcaeecf48ed058bdda3acc4e67782d56eb3b20cbbd4",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -14044,7 +14054,7 @@
           "sha256": "f064e3457d21e84e477b58a15f3bac7bb2a51904a12e82f617b6ec1e86fb9f29",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -14428,7 +14438,7 @@
           "sha256": "821896120daafddfee106d28d098cfd9300982dca8131a3626ceaa8ce8ad7949",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -14483,7 +14493,7 @@
           "sha256": "d46e45da64dabdb1de7b49eb072bc6d79c2761feed57d4b25ce0a8cf8e2c8704",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -14509,7 +14519,7 @@
           "sha256": "7a9368f69e43e7b33333ade722493ce03b3dd5e184a68191fc2b994f12925f9e",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -14776,7 +14786,7 @@
           "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -14812,7 +14822,7 @@
           "sha256": "d74da044456356a4bdcab02a00f67cbab8fce0621c1954b5a10b1a73371990c7",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -14911,7 +14921,7 @@
           "sha256": "dca6b6868e00c20da3ab8e75fa7440d3b8653116a8c6688f83579d620c0222e3",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -14938,7 +14948,7 @@
           "sha256": "d18e0c186ddaabf0678f6c2ad065521ff5f1815c1f93cadc42d3fd0841314ee7",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -14999,7 +15009,7 @@
           "sha256": "ebd64115db39e403892ed219fc3c308195338d9b0cd7876716d8089e30d26389",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -15050,7 +15060,7 @@
           "sha256": "7c8a97ee93f298161fefe563bd9ad6adf1eff007f6dafcd490d5ce2f41a4de61",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -15227,7 +15237,7 @@
           "sha256": "0c78555916e8e86a9ea44e1e3f94baebf464a90dc335b49afdd8371244132be5",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -15484,7 +15494,7 @@
           "sha256": "67fc7e43f0ab18f50693db212eb36e55f02bdead7944c5cacae3aa72a4469b79",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -15512,6 +15522,7 @@
       "id": "SRC-6b239a9bfdd1",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
       "title": "SKILL.md",
       "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
       "registered_at": "2026-11-13",
@@ -15525,58 +15536,64 @@
       "observations": [
         {
           "evidence_status": "authored_document_or_code_inspected",
-          "source_path": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "4ae30ede1c0dd5c1e775a128215925709a5fd671183b3e57e2531f1eb79910e7",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
           "evidence_status": "authored_code_or_procedure_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "b1778fa0d8e1163f7f2f540e6d1b6c90718c27ca30d18266f10bd5e539b94ba7",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
           "evidence_status": "local_source_or_execution_record_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "03ae74ea1360888420a6edcaf69d11f98a5d2a59f372d546b2ae6ccfd82816ec",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
           "evidence_status": "local_source_or_execution_record_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "27d431942c8f1d557a0bf00b0c927a4f785f791b33086dca02c8141d5a9d6003",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
           "evidence_status": "local_source_or_execution_record_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "ba2a7ff12e5085545e7b9e230d51d59c0b3f2a59648cea464ebbccf0c815a618",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
           "evidence_status": "implemented_skill_guidance",
           "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "86ab7071c8c425d907792643c7161e919112f87402d52d4f77ec325d41cb0913",
           "referring_documents": [
@@ -15586,6 +15603,7 @@
         {
           "evidence_status": "implemented_skill_guidance",
           "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "86b6b892ee7aceec6997f90737746efa2ed3e9b11b382cf242ab1e3bca566b9f",
           "referring_documents": [
@@ -15650,7 +15668,7 @@
           "sha256": "31f27ab3b2db87bde9e904c97d8adf4d218d27cee3eee0de36e4066e7ab8f50e",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -15865,7 +15883,7 @@
           "sha256": "1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -16007,7 +16025,7 @@
           "sha256": "a3076d393e5b6be8ce74e8740cd864609846fba7e5f7fdc322ec59bbed0860e2",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -16060,7 +16078,7 @@
           "sha256": "6cc691552271bf4c03d2c8cb4d0539e719b33f7d273956f68c12bb5e347e421a",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -16112,7 +16130,7 @@
           "sha256": "57fe3c83c8d73e5d26cf178bb8c49a7d2fdd520a9cd6c00190c70f240f7cb679",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -16513,7 +16531,7 @@
           "sha256": "2a8c6933fc2873d9b478ee54f7b936ea3cb8fd8dd64dc21e75004ab2a60a3293",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -16908,7 +16926,7 @@
           "sha256": "8f86700762ae70f2ee90a0e0cc5f00028e87fcc194f17f83fe4ff002969059e5",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -16988,7 +17006,7 @@
           "sha256": "95b09d288dce2567b1f3ffb7fcb72dfda90ab1e854f20ecd88463706c596e007",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -17014,7 +17032,7 @@
           "sha256": "ae34a9035929a6053aa846ddf95cd3e6faddfab425646a3333a8dbf6760ce7d7",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -17477,7 +17495,7 @@
           "sha256": "e36b31ded45160d7ba162d82c346d3a96f1e44f1616f1fd294b5a677ab26357d",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -18092,7 +18110,7 @@
           "sha256": "f195ee8b8c3bd9000d1fab8c2d1ff0ff97640885d5020615a349c26deeb17f9f",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -18329,7 +18347,7 @@
           "sha256": "eae4f702cd3b8654e6330664363b9a28166374a493ede5f71fa888016ac104d4",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -18405,7 +18423,7 @@
           "sha256": "979206d7bb9f12abd10de2e0d76240860854365480c3f76390483ea5637485b9",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -18606,7 +18624,7 @@
           "sha256": "14e551ecc0f7c756c7a04a513f57102c2fed32da58d39551081be38b2fac0b98",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -18911,7 +18929,7 @@
           "sha256": "5d68c48e30f29527a49c0a8e571612010b52b59d617f61c219237e7f164b97b2",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -19094,7 +19112,7 @@
           "sha256": "4de111e819742c7f5b267e392b16d40325ae11b5c19773f0fd2f4de9977b7a33",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -19147,7 +19165,7 @@
           "sha256": "60c5eb6a6fab0e4dbf053a37f7944bfc43e002c536cb02deded4fbe793726ca4",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -19311,7 +19329,7 @@
           "sha256": "4af9d76752785decd45e85dc87b3e25bc3411da8fd17cb539a60d7b7c8070ec6",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -19338,7 +19356,7 @@
           "sha256": "dd3168fc8697bbee25bd6af7aab1e875749d832de03a8a8a4f67765d72a0c2f6",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -19401,7 +19419,7 @@
           "sha256": "b0314fe2082561b4227840f813eee1a829af318214228c909c6f876d1399943a",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -19477,7 +19495,7 @@
           "sha256": "fbf9bf5fed091ba3a9ce0bfe9b5f60e5bdfb3b72aa46899d14088d989f73e4e1",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -19871,7 +19889,7 @@
           "sha256": "74ac8273745e31b329de91c5316f21eff0a5a59af26472048d49a2cada0fb7b8",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -19925,7 +19943,7 @@
           "sha256": "37dc597908e70402149d0feb32b55f8e9319b225d7ef16c29dc705aca06faa1b",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -20026,7 +20044,7 @@
           "sha256": "d0935a70ee2d854e20c0e27a855afcb6ceb0edd62f1bd1b656501f50ccc861bc",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -20205,7 +20223,7 @@
           "sha256": "9b24115066a412be6a2bd426544f05ba0de8dfa4d1af681e302da9a9d17e58cf",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -20259,7 +20277,7 @@
           "sha256": "aa12473a536b24a1dad037f481ddea416d3ce6c9d2ef0de904f8abb4a67a8772",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -20312,7 +20330,7 @@
           "sha256": "5610dfeb2f0a4de02647cc9bda0c48f5c2bf6c6b3eb400ef5d833f1d5ce27325",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -20422,7 +20440,7 @@
           "sha256": "1ce9294773164fd97f66bc740b4f1a1d98344f33d50dd07387f93c062af8ca86",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ],
           "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
         }
@@ -20449,7 +20467,7 @@
           "sha256": "0242270e6704f16d801f7218267bf1b0f92ae0c62d8dd01b3b4f3f49e8041aaf",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -20655,7 +20673,7 @@
           "sha256": "55a4769a8ea7d69edf20fc33c2fa45298eea52df4737b661c8b4c240bbfc0a9a",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -20742,7 +20760,7 @@
           "sha256": "511b9fa71fffeb3013b78de2425a5be7dda67163d4875429748276ef290bf81b",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -20991,7 +21009,7 @@
           "sha256": "5dfd02cb8f60e69b4e3d197e21886ca45d7ab3141ebfaa3fb19fd283d4b7e415",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -21001,7 +21019,7 @@
           "sha256": "e3fbe54c9c3d42ff21961da488afa27b1f5fc9df1b843660bfd2e8e8454505d5",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -21011,7 +21029,7 @@
           "sha256": "96d1c9822d5c4ad41d8cb99559dc3b5fc32e4134c5af157c2fd2f69b56a774fa",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -21094,7 +21112,7 @@
           "sha256": "4e9c98483e6111ad1a328f1d9d7581a4bb6595d9f2b6b67dcf71f6f9166035cf",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -21581,7 +21599,7 @@
           "sha256": "edfbba10d377d41edced165be77041ce2e6d597698565886e51d5162fa6926e4",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -22290,7 +22308,7 @@
           "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -22440,7 +22458,7 @@
           "sha256": "4a3cbf1642fbabdef9f96df70e36b7fcf2b36880241a8c990b6b6ce3dc23c9bc",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -22500,7 +22518,7 @@
           "sha256": "bee46f63db5042d6c59280e3a8fb191a4b55c6f1fcd35ca09c70ac3085ad2213",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -22650,7 +22668,7 @@
           "sha256": "5aead359e93b92649093bc504ec6a1882fe06a052e1607ab81fcbd1c0f6f207c",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -22826,7 +22844,7 @@
           "sha256": "aa9c900fd33a9672092a4f9413c36eb4a1802197718320ff49c168057ff3d40f",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -22877,7 +22895,7 @@
           "sha256": "25cadc2dc3d0e6bd99ba2078af31a4d0367810fd7a5b91c96ff8b1b56a27603e",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -22918,7 +22936,7 @@
           "sha256": "1338241825163b2896bfd166e2f31bcd432b7e312d3fc4cbd61a64558a317df1",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -23030,7 +23048,7 @@
           "sha256": "2d5d08b0ffcad7712e6cf3faee653314ec817d048869a857228d240fd799b224",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -23194,7 +23212,7 @@
           "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -23367,7 +23385,7 @@
           "sha256": "a6990ce68b29eed70a4979cec5ca49ad7ba80120275957b0bf082724711d7102",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -23437,7 +23455,7 @@
           "sha256": "847abe3c7d1804b1f3013cf40f35b37d8efe95786bde4fc7eeb6e877b62e77ac",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -23447,7 +23465,7 @@
           "sha256": "4fdf2c1ac1c1f8956c9d836f45c08a5099731b4888bfe733cd7b41cfffa42751",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
@@ -23475,7 +23493,7 @@
           "sha256": "b10e676b9dd39eb85148ae348a3ddb501aef35da4198b61c67ae7defb1a9ef51",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -23485,7 +23503,7 @@
           "sha256": "e071b5a2731c0348794945bb75c9fb91c51d18d2ab1711863d24c266ca7e90dc",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -23495,7 +23513,7 @@
           "sha256": "64c208ef26aee9535fd0cd092a4f9bf0a081882a4bb3dc908cfc01cb3b8acd99",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -23716,7 +23734,7 @@
           "sha256": "2d99a22526ec1077844b841da48e0ef6f92189419dc006e098e6fdd79cac9347",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -23887,7 +23905,7 @@
           "sha256": "07e6c2661e893a6a254009e6247957143a301c6a048f433d26bd889a981dd554",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -23913,7 +23931,7 @@
           "sha256": "00e8f0e866395763b7ee7e7a7eec59bdefa2d3578493457132388b9ec2e04450",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -24314,7 +24332,7 @@
           "sha256": "6ce365c13110d33a9267a35b7f383e6111c8b7edec86fcda4710548b48c21719",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -24347,7 +24365,7 @@
           "sha256": "c83a8e9a300489327734739cf46e087116065f4dc7e7330327007cafc0cb9cd1",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -24373,7 +24391,7 @@
           "sha256": "2c7f0ac2f1d1ffffc1aa3bd301a10f4c75531fe9489cbc1239d7b7e79f608ed2",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -24441,7 +24459,7 @@
           "sha256": "546c67ef20a34d59294166acff9231223226dd4360ae66648d7ef6f6cf8200fe",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -24595,7 +24613,7 @@
           "sha256": "0c6d03e57137c922e883c3fddc1921abc779767a10235cd29ca26ccd3c556ab0",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -24621,7 +24639,7 @@
           "sha256": "f3460858dc241eb9577eac7402950cf09394737b4b2f63a7e67553b67945b35d",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -24647,7 +24665,7 @@
           "sha256": "7c2fa6fefe5dabfd06143dd568ea90355622c6d6c0e1d3e22c518fa572e98c04",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ],
           "original_url": "https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf"
         }
@@ -24726,7 +24744,7 @@
           "sha256": "a5a38b031408d9a358834f690dd9d742d1ebb56c859d4a1824de16d7cb81c7c4",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -25204,7 +25222,7 @@
           "sha256": "2bb58692b75586060d522499cb21e140a5332f7b03e910cb2d51bce681d7f9c4",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -25372,7 +25390,7 @@
           "sha256": "371339e5b10d8acd5eca283d87b5a677d054bbab41a0c19b4a05786610dfdfae",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -25459,7 +25477,7 @@
           "sha256": "196f77acce1f488a35289cbc81ca606b92ee65b43202ebb15df9ecfc3cb9255c",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -25534,7 +25552,7 @@
           "sha256": "0e1c25505a1f1a7f8ec599e577be7345611c5176c737040d80d32b565590a4bf",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -26180,7 +26198,7 @@
           "sha256": "9fae6aa6372199d65570831d2293c4951e86cfa36f3544c1f89d0fec5c39b57d",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -26248,7 +26266,7 @@
           "sha256": "7e607d246c89ad09c11ea1b91756512c98f2d28bf5be2b6dcd5c7f5d36ea3365",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -26504,7 +26522,7 @@
           "sha256": "c1ed3b75123fe208da1b9bd1e4c28b8fc74b170774048b4d5bcb71f8a682cea6",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -26853,7 +26871,7 @@
           "sha256": "362585030a5d4153458559d42eb6670114a50b160d421b613c08077cbcf1c07c",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -26906,7 +26924,7 @@
           "sha256": "f833553eff0f96bdf455cbffdd47946f66512e5d4ace39c23492e3a496a7534c",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -26962,7 +26980,7 @@
           "sha256": "486943d4d558ad4e5a650ebfdbeba087976c88d8ccc3daaf9d86101cf2f686e6",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -26988,7 +27006,7 @@
           "sha256": "98bc9cae5299b7b9aedff8ecbc83d2c633a2fc9351bfbe14315ed923cd28d921",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -27222,7 +27240,7 @@
           "sha256": "a0d2fe4311621d88f8b0e1490cab11ed95cfd9e16a7a19944df536a34ce7227e",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -27503,7 +27521,7 @@
           "sha256": "deeda7289743ed5e0ec09b83abccf20c80e8f21e76e4828706a2798775c3e002",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -27639,7 +27657,7 @@
           "sha256": "94212529a5ca29f0adddde7232ab1f9e8597fded64b9dc3f08bd077415d1d6da",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -28159,7 +28177,7 @@
           "sha256": "0f24b6623bef575afa1371969a7acd201d20f2191814ebce3d1f19fe119c3304",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ],
           "original_url": "https://sep.turbifycdn.com/ty/cdn/yhst-129399866319704/ME0907.pdf?t=1783724599"
         }
@@ -28403,7 +28421,7 @@
           "sha256": "d36d735800a4f3f864093bb7bca1d525e77f887e4e94892ddc3a6960efee1f83",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -28624,7 +28642,7 @@
           "sha256": "da3389f1eb8495e977739a9e96d5108a2b14f2a5a948e9c502040a78d9062064",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -28868,7 +28886,7 @@
           "sha256": "1c8ae77e717523487bfb2b86d2603c76f6bb6a7fe4bde4423ce7005b94821376",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -29066,7 +29084,7 @@
           "sha256": "e99e3aceee040a7c0ef42c6392aa3a6c63ba02bffce27d67caf03db593b2e3aa",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -29169,7 +29187,7 @@
           "sha256": "3a145ef41f5597aa67b0458178a9cb2a2a91cb99e770e412ad26663ccc6b772a",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -29255,7 +29273,7 @@
           "sha256": "4f1bfab163d6828aaf8d6ce9c71e01fdc4d4af6c23c7f7939325d2e2ad986fc7",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
@@ -29274,7 +29292,7 @@
           "sha256": "40dbd80cda18037b5e19a6dd1780748ed9bb2e22d80009286852ab2521ffad1f",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -29284,7 +29302,7 @@
           "sha256": "697054040864bb0c9e70a364c0a9f1c29550c682705ada261daa40f96f171392",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -29294,7 +29312,7 @@
           "sha256": "54de4c750e7c4f301a077936dd78205748f66a09c402e50b18715244e1e2176d",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         },
         {
@@ -29729,7 +29747,7 @@
           "sha256": "89ea858bea4b953e042fb717fe2d22c6654685cb0efe019ddd9182ecc159df7f",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -30204,7 +30222,7 @@
           "sha256": "1d690f050d02698b837d669baab36542578338a08a4c76496e4f42ef16f21bdc",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -30621,7 +30639,7 @@
           "sha256": "dc914a0eb63c4b85b8fff9fe9b61279b5b612f1480d212db54ef85c2ca88af11",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -30672,7 +30690,7 @@
           "sha256": "dcdd23db2cf00e8a4028d560c5ef4f5cda9ffb835dc7e9582c9a3d2dc947c76f",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -30802,7 +30820,7 @@
           "sha256": "aeb6f8e1d0655f87cb3cd90822afe1e029c59ccbbd12eab4d3857876c9977a26",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -31032,7 +31050,7 @@
           "sha256": "535dc804124556ae856efda3be2e606e5660c06b995d32738bc3401f367e0530",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -31159,7 +31177,7 @@
           "sha256": "196f77acce1f488a35289cbc81ca606b92ee65b43202ebb15df9ecfc3cb9255c",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -31213,7 +31231,7 @@
           "sha256": "71191fda7ac620ddf978d50fbf4480e9ca07029aaa522a38ae280d2a8ac90b07",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -31323,7 +31341,7 @@
           "sha256": "15cca994a0571a73e64cd62c8b3d62a36079b71fb177b485b88f37124b129c4f",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -31601,7 +31619,7 @@
           "sha256": "f746c47e1df51680d21f290a03f21645be4e4f95b71b2fabd200cdfbac3bc909",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -31654,7 +31672,7 @@
           "sha256": "058ad04ff4894ccd26c0e7536297f974b5b35cddc2dc97ca2b730c2db14cb63f",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -31810,7 +31828,7 @@
           "sha256": "257d965943e2de25431b79553626bbb224e4df259146d7d8ea23a2c0f0f29e97",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -31861,7 +31879,7 @@
           "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -32038,7 +32056,7 @@
           "sha256": "26e437ef7db17d1f2f4363230cb9b761195d18bfc7c1b3498bddb5969b1b55a9",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -32065,7 +32083,7 @@
           "sha256": "2667897d8e42afea75c944ccbc7083eedc5bcd8c61f4553091141a9af2e76db0",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -32392,7 +32410,7 @@
           "sha256": "af76044665112b253e66be247d707190552a5e513410d1331e6fe5369ad2096a",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ]
         }
       ],
@@ -32471,7 +32489,7 @@
           "sha256": "5ac7d680a5039c3616af3b8d3497fb8309c100ba81991af02a02a3a06c2fedd0",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -33023,6 +33041,7 @@
       "id": "SRC-e4113edcaa23",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-bearing.md",
       "title": "Existing bearing inspection and selective revision procedure",
       "summary": "Defines source binding, transformed native checks, coplanar fragment cancellation, exact source-defined plane cuts, preserved nine-solid geometry, same-ID recovery and save/view completion.",
       "registered_at": "2026-11-13",
@@ -33033,11 +33052,12 @@
         {
           "evidence_status": "local_source_or_execution_record_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-bearing.md",
           "access_date": "2026-11-12",
           "sha256": "f2a7dc4584237eed07e569b1fe6526b653ca01224d9f3aaf80ec51ba15c4405b",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -33321,7 +33341,7 @@
           "sha256": "3622292d02376f68f660ff149a1e7b767e744a6599b472cf5b15aa62210ca6e4",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -33505,7 +33525,7 @@
           "sha256": "ad744425a8a3e07dc2ea2d46e1c96cb4fa787bf501a232dcc685b2b8bc66eeab",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -33643,6 +33663,7 @@
       "id": "SRC-e9161d79c2fb",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/component-procedure.md",
       "title": "component-procedure.md",
       "summary": "Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.",
       "registered_at": "2026-11-13",
@@ -33652,13 +33673,14 @@
       "observations": [
         {
           "evidence_status": "authored_document_or_code_inspected",
-          "source_path": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md",
+          "source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/component-procedure.md",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/component-procedure.md",
           "access_date": "2026-11-12",
           "sha256": "6acc5810a4c0be04352e696ecaf130704ea4ae7e1a73e5967c0023f54391b9aa",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -33758,7 +33780,7 @@
           "sha256": "4eabb05101f181a9ab8fbf29bd0e6f8f45b823c273eecd2e684e3e870053b13c",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -33958,7 +33980,7 @@
           "sha256": "23ab4fe38cb476b8b0895cda3335605f6dbf0ab0b09be755fc6fe881b3fe7c12",
           "referring_documents": [
             "execution/c005-me0907.md",
-            "skills/component-cad/references/axial-motor.md"
+            "skills/cad-ocs-engineering/references/axial-motor.md"
           ],
           "original_url": "https://media.kellycontroller.com/new/ME0907.zip"
         }
@@ -34122,7 +34144,7 @@
           "sha256": "26e437ef7db17d1f2f4363230cb9b761195d18bfc7c1b3498bddb5969b1b55a9",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -34293,7 +34315,7 @@
           "sha256": "1a61806ec6f801c396f056f1b5b36db7f0d91d366c20bb827c2325bc20f9a3ed",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -34827,7 +34849,7 @@
           "sha256": "e9b915d4d426274e0bc15438d40b53bd3429aa05024cbf6848405b018f8221bd",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         }
       ],
@@ -34953,6 +34975,7 @@
       "id": "SRC-f22443c65bee",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
       "title": "Source-first tube construction and recovery procedure",
       "summary": "Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.",
       "registered_at": "2026-11-13",
@@ -34965,16 +34988,18 @@
         {
           "evidence_status": "authored_code_or_procedure_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
           "access_date": "2026-11-12",
           "sha256": "78ee0535480d6a122bf9bea5d1328971b2556eed27e25a92d03b3a76dfe39813",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
           "evidence_status": "local_execution_evidence_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
           "access_date": "2026-11-12",
           "sha256": "95954624ac11393d00e47ec00235939266c3a81723c708d4a112895580ce9865",
           "referring_documents": [
@@ -34984,6 +35009,7 @@
         {
           "evidence_status": "local_execution_source_inspected",
           "local_original": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
           "access_date": "2026-11-12",
           "sha256": "0129141b4288bd933079247350cd2d7e5f25b99544a41980e1ab6869835d5485",
           "referring_documents": [
@@ -35042,7 +35068,7 @@
           "sha256": "ae8e6a033a2a034a4df91c3b1cbbfa4e89e0332778ffff93bac1903129a2c319",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -35348,7 +35374,7 @@
           "sha256": "42b90c0839d5bc12b292fccf771ee08f92f5c2c2fb542aca694c2d8ae5755d49",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -35358,7 +35384,7 @@
           "sha256": "42b90c0839d5bc12b292fccf771ee08f92f5c2c2fb542aca694c2d8ae5755d49",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -35566,7 +35592,7 @@
           "sha256": "0fab86de92ea4b653d1d90241ab39a5e0ae6d5b8bce72afad40624ecb3bb4c9d",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -35640,7 +35666,7 @@
           "sha256": "587d75a938b164adaaa784de8adb1ef5e92d8f48063d868351812b84060809d2",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -35815,7 +35841,7 @@
           "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -35825,7 +35851,7 @@
           "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         }
       ],
@@ -36099,7 +36125,7 @@
           "sha256": "fa576554a7f2ddc37f0e5d2144a46d2d032465db908ae4e21eed1910b26572ba",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         }
       ],
@@ -36129,7 +36155,7 @@
           "sha256": "b59defb8c63025f7c55f4bb6e55c45944f2562d1d0e6c340f3885f3822466e81",
           "referring_documents": [
             "execution/2026-11-12-component-led.md",
-            "skills/component-cad/SKILL.md"
+            "skills/cad-ocs-engineering/SKILL.md"
           ]
         },
         {
@@ -36139,7 +36165,7 @@
           "sha256": "3b40510c005bcd041a270a823e0ff380aca827637ef07843ef0408dfd92e458e",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
@@ -36167,7 +36193,7 @@
           "sha256": "de90bab5683f1a138a164f9ca8e30c7bc926a96c4ad1cc68b350f02aff65c379",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         },
         {
@@ -36177,7 +36203,7 @@
           "sha256": "43b8d0bac2f1badc4575d00ca378f9ece4016dae455acc7aad26d07acc119430",
           "referring_documents": [
             "execution/c021-leaf-module.md",
-            "skills/component-cad/references/existing-battery.md"
+            "skills/cad-ocs-engineering/references/existing-battery.md"
           ]
         },
         {
@@ -36187,7 +36213,7 @@
           "sha256": "592da9a7083a0b34785207c4dcd3529bb00b9fbf322f7c274c8100fcef6f02fc",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -36268,7 +36294,7 @@
           "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
           "referring_documents": [
             "execution/c009-bearing.md",
-            "skills/component-cad/references/existing-bearing.md"
+            "skills/cad-ocs-engineering/references/existing-bearing.md"
           ]
         }
       ],
@@ -36681,7 +36707,7 @@
           "sha256": "e7bd8c78f2bd07126b170becccc9475d9b9c80becde387d458dc048c2c755e90",
           "referring_documents": [
             "execution/p01-rail-build.md",
-            "skills/component-cad/references/source-first-and-tube.md"
+            "skills/cad-ocs-engineering/references/source-first-and-tube.md"
           ]
         },
         {
@@ -36875,7 +36901,7 @@
           "sha256": "ecc25c5d52c13e5a9dc4fe4c769f77aade1a6077091ea1b1744595d3f6d66231",
           "referring_documents": [
             "execution/c012-driver.md",
-            "skills/component-cad/references/shared-feature-checks.md"
+            "skills/cad-ocs-engineering/references/shared-feature-checks.md"
           ]
         }
       ],
@@ -39824,6 +39850,7 @@
       "id": "SRC-e24ea3f3e131",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/scaled-assemblies.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/scaled-assemblies.md",
       "title": "Procedure for source-to-drawing unit conversion",
       "summary": "Documents the actual Lynx millimetre-source/metre-drawing conversion, separate internal correction and saved geometry handoffs.",
       "registered_at": "2026-11-13",
@@ -40544,6 +40571,7 @@
       "id": "SRC-240f5a0db534",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/tabbed-battery.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/tabbed-battery.md",
       "title": "Tabbed battery and cover-pattern procedure",
       "summary": "Records the saved BMW case measurement groups, source/reconstruction attribution, repeated-boundary checker and concrete stale-capture failure.",
       "registered_at": "2026-11-13",
@@ -40764,6 +40792,7 @@
       "id": "SRC-758d94d927aa",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-model-start-check.md",
       "title": "Existing-model start procedure",
       "summary": "Documents each lookup result, exact FERME command, identity review, reuse of existing checks and separation of 2D references.",
       "registered_at": "2026-11-13",

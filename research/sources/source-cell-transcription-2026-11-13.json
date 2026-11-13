@@ -1,7 +1,7 @@
 {
   "records": [
     {
-      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-variant-tables.md",
       "title": "Malformed source-cell procedure",
       "summary": "Preserves exact raw dimension text and headers, binds a reviewed ordered interpretation to source location, and gates conflicting interpretations before geometry.",
       "registered_at": "2026-11-13",
@@ -14,7 +14,7 @@
     {
       "local_path": "execution/source-cell-transcription-2026-11-13.md",
       "title": "Applied Indus1S source transcription improvement",
-      "summary": "Records manufacturer raw cell 120 x 60 30 mm, its L\u00d7W\u00d7H header, the ordered 120/60/30 mm interpretation and reuse of completed native results.",
+      "summary": "Records manufacturer raw cell 120 x 60 30 mm, its L×W×H header, the ordered 120/60/30 mm interpretation and reuse of completed native results.",
       "registered_at": "2026-11-13",
       "evidence_status": "executed_source_review",
       "sha256": "0b4e8933cad18907949f73ef08dfecc8e424406142a55d788bff86c601c3c85f",

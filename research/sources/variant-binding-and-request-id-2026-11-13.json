@@ -1,7 +1,7 @@
 {
   "records": [
     {
-      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-variant-tables.md",
       "title": "Family revisions and exact image association",
       "summary": "Applied procedure preserves family/revision/configuration scope and binds product dimensions independently from shared gallery images.",
       "registered_at": "2026-11-13",

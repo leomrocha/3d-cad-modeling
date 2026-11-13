@@ -23,6 +23,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
     "title": "Component iteration skill with mandatory file lookup",
     "summary": "Requires actual 3D file and prior-record inspection before every component start and reuse of existing completed models.",
     "evidence_status": "implementation_artifact",
@@ -34,6 +35,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-model-start-check.md",
     "title": "Existing-model start procedure",
     "summary": "Documents each lookup result, exact FERME command, identity review, reuse of existing checks and separation of 2D references.",
     "evidence_status": "implementation_artifact",
@@ -188,7 +190,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-ps310k-support-wheel-reference.dwg",
-    "title": "blickle-ls-ps310k-support-wheel-reference.dwg \u2014 existing file inventory",
+    "title": "blickle-ls-ps310k-support-wheel-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -199,7 +201,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-vle250k-support-wheel-reference.dwg",
-    "title": "blickle-ls-vle250k-support-wheel-reference.dwg \u2014 existing file inventory",
+    "title": "blickle-ls-vle250k-support-wheel-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -210,7 +212,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/hy400-hy70716a-rim-interface-reference.dwg",
-    "title": "hy400-hy70716a-rim-interface-reference.dwg \u2014 existing file inventory",
+    "title": "hy400-hy70716a-rim-interface-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -221,7 +223,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1-interface-reference.dwg",
-    "title": "iso730-category-1-interface-reference.dwg \u2014 existing file inventory",
+    "title": "iso730-category-1-interface-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -232,7 +234,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1n-interface-reference.dwg",
-    "title": "iso730-category-1n-interface-reference.dwg \u2014 existing file inventory",
+    "title": "iso730-category-1n-interface-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -243,7 +245,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/item-line8-m8-connection-interface-reference.dwg",
-    "title": "item-line8-m8-connection-interface-reference.dwg \u2014 existing file inventory",
+    "title": "item-line8-m8-connection-interface-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -254,7 +256,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/kc14940-square-tube-connection-reference.dwg",
-    "title": "kc14940-square-tube-connection-reference.dwg \u2014 existing file inventory",
+    "title": "kc14940-square-tube-connection-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -265,7 +267,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/quadboss-steely-608489-rim-interface-reference.dwg",
-    "title": "quadboss-steely-608489-rim-interface-reference.dwg \u2014 existing file inventory",
+    "title": "quadboss-steely-608489-rim-interface-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -276,7 +278,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/skf-sy20tf-mounting-reference.dwg",
-    "title": "skf-sy20tf-mounting-reference.dwg \u2014 existing file inventory",
+    "title": "skf-sy20tf-mounting-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -287,7 +289,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/2d_schemas/drawings/spp-zsk0750-trailer-interface-reference.dwg",
-    "title": "spp-zsk0750-trailer-interface-reference.dwg \u2014 existing file inventory",
+    "title": "spp-zsk0750-trailer-interface-reference.dwg — existing file inventory",
     "summary": "Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.",
     "evidence_status": "existing_local_2d_file_inventory",
     "access_date": "2026-11-13",
@@ -298,8 +300,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/bmw-i3-94ah-module.dwg",
-    "title": "bmw-i3-94ah-module.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C022 \u2014 BMW i3 94Ah battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "bmw-i3-94ah-module.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C022 — BMW i3 94Ah battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "95404b6f6410cf73dffd875f34d33959afcc8d6c99a7cb8506f0e694b6589e2c",
@@ -309,8 +311,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg",
-    "title": "fibox-arca-203015t-8121020.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C029 \u2014 Fibox ARCA203015 enclosure. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "fibox-arca-203015t-8121020.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C029 — Fibox ARCA203015 enclosure. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "2938b38109e7481e9e73fa2c56924b5371e30ec7f7aeb9ab27ba93d8b10e6d82",
@@ -320,7 +322,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/item-angle-bracket-set-8-40x40-41115.dwg",
-    "title": "item-angle-bracket-set-8-40x40-41115.dwg \u2014 existing file inventory",
+    "title": "item-angle-bracket-set-8-40x40-41115.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -331,7 +333,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/item-profile-8-40x40-light-02633-segment-100mm.dwg",
-    "title": "item-profile-8-40x40-light-02633-segment-100mm.dwg \u2014 existing file inventory",
+    "title": "item-profile-8-40x40-light-02633-segment-100mm.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -342,7 +344,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/item-t-slot-nut-8-st-m8-02618.dwg",
-    "title": "item-t-slot-nut-8-st-m8-02618.dwg \u2014 existing file inventory",
+    "title": "item-t-slot-nut-8-st-m8-02618.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -353,8 +355,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg",
-    "title": "motenergy-me0907-mechanical-reference.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C005 \u2014 Motenergy ME0907 motor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "motenergy-me0907-mechanical-reference.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C005 — Motenergy ME0907 motor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "6c9c1505c3beb528b10cb27c5a2af0406c16e00a2f766cfaa27bed8c132d1a33",
@@ -364,7 +366,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/neugart-ngv064-wheel-160.dwg",
-    "title": "neugart-ngv064-wheel-160.dwg \u2014 existing file inventory",
+    "title": "neugart-ngv064-wheel-160.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -375,7 +377,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/neugart-ngv090-wheel-200.dwg",
-    "title": "neugart-ngv090-wheel-200.dwg \u2014 existing file inventory",
+    "title": "neugart-ngv090-wheel-200.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -386,7 +388,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/neugart-ngv110-wheel-250.dwg",
-    "title": "neugart-ngv110-wheel-250.dwg \u2014 existing file inventory",
+    "title": "neugart-ngv110-wheel-250.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -397,8 +399,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg",
-    "title": "nissan-leaf-gen2-module-300x222x34.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C021 \u2014 Nissan Leaf Gen2 battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "nissan-leaf-gen2-module-300x222x34.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C021 — Nissan Leaf Gen2 battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "4eabb05101f181a9ab8fbf29bd0e6f8f45b823c273eecd2e684e3e870053b13c",
@@ -408,8 +410,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg",
-    "title": "p01-main-frame-longitudinal-rail-reference.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with P01 \u2014 Main frame longitudinal rail. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "p01-main-frame-longitudinal-rail-reference.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with P01 — Main frame longitudinal rail. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "e7bd8c78f2bd07126b170becccc9475d9b9c80becde387d458dc048c2c755e90",
@@ -419,8 +421,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg",
-    "title": "p02-main-frame-crossmember-reference.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with P02 \u2014 Main frame crossmember. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "p02-main-frame-crossmember-reference.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with P02 — Main frame crossmember. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "f2cd4fdf0b6f1c7b2ddc58fbbe1f9680c92ecac4fee7365acececf92c55104c2",
@@ -430,7 +432,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/roboteq-mdc2x-manufacturer-assembly.dwg",
-    "title": "roboteq-mdc2x-manufacturer-assembly.dwg \u2014 existing file inventory",
+    "title": "roboteq-mdc2x-manufacturer-assembly.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -441,8 +443,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg",
-    "title": "skf-sy20tf-checked.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C009 \u2014 SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "skf-sy20tf-checked.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C009 — SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "94dd235468e260ba90537fd4dffc664e20f9c64460a25ad7786170c8d991d91c",
@@ -452,8 +454,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/skf-sy20tf.dwg",
-    "title": "skf-sy20tf.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C009 \u2014 SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "skf-sy20tf.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C009 — SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "6ce365c13110d33a9267a35b7f383e6111c8b7edec86fcda4710548b48c21719",
@@ -463,7 +465,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-eco-m-ch52578.dwg",
-    "title": "sumitomo-eco-m-ch52578.dwg \u2014 existing file inventory",
+    "title": "sumitomo-eco-m-ch52578.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -474,7 +476,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-eco-s-absolute-ch54149.dwg",
-    "title": "sumitomo-eco-s-absolute-ch54149.dwg \u2014 existing file inventory",
+    "title": "sumitomo-eco-s-absolute-ch54149.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -485,7 +487,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-eco-s-resolver-ch51944.dwg",
-    "title": "sumitomo-eco-s-resolver-ch51944.dwg \u2014 existing file inventory",
+    "title": "sumitomo-eco-s-resolver-ch51944.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -496,8 +498,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-pro-l-ch54527.dwg",
-    "title": "sumitomo-pro-l-ch54527.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C011 \u2014 Sumitomo PRO-L CH54527G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "sumitomo-pro-l-ch54527.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C011 — Sumitomo PRO-L CH54527G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "b1b7bcf18175ac36093cdd3038df4a89ab43864889af17db1b47ae3a09fac451",
@@ -507,8 +509,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-pro-m-ch54065.dwg",
-    "title": "sumitomo-pro-m-ch54065.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C010 \u2014 Sumitomo PRO-M CH54065G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "sumitomo-pro-m-ch54065.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C010 — Sumitomo PRO-M CH54065G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "0c20ad9051413e95ff1307d7c7f52e3633f5f40dfe01b34f5ecfe0896334073d",
@@ -518,8 +520,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg",
-    "title": "sumitomo-smartris-driver-ch52308-checked.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C012 \u2014 Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "sumitomo-smartris-driver-ch52308-checked.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C012 — Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "5fca02835cfea7da3160f254f784755c1b7f11082b8aeedf78ac3c37df4eb252",
@@ -529,8 +531,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg",
-    "title": "sumitomo-smartris-driver-ch52308.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C012 \u2014 Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "sumitomo-smartris-driver-ch52308.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C012 — Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "d18e0c186ddaabf0678f6c2ad065521ff5f1815c1f93cadc42d3fd0841314ee7",
@@ -540,8 +542,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/victron-lithium-ng-25.6v-100ah.dwg",
-    "title": "victron-lithium-ng-25.6v-100ah.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C023 \u2014 Victron NG25.6V100Ah battery. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "victron-lithium-ng-25.6v-100ah.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C023 — Victron NG25.6V100Ah battery. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "9f224665801055ba70d9ca0841a29282855ea2bb5729deb3eb8680c65fce9289",
@@ -551,8 +553,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10-checked.dwg",
-    "title": "victron-lynx-smart-bms-500-ng-m10-checked.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C026 \u2014 Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "victron-lynx-smart-bms-500-ng-m10-checked.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C026 — Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "bedf6dc7c6203901e14f1282cda082dfdef6f3ddef7c76a067fd247c20e31b98",
@@ -562,8 +564,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10.dwg",
-    "title": "victron-lynx-smart-bms-500-ng-m10.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C026 \u2014 Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "victron-lynx-smart-bms-500-ng-m10.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C026 — Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "cdd79bbf47f01e033af1ba3a154a2531a5aefadbf367910697e782a22b732dab",
@@ -573,8 +575,8 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg",
-    "title": "victron-orion-tr-smart-24-12-30a.dwg \u2014 existing file inventory",
-    "summary": "Existing 3D file associated with C045 \u2014 Victron Orion24-12 converter. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
+    "title": "victron-orion-tr-smart-24-12-30a.dwg — existing file inventory",
+    "summary": "Existing 3D file associated with C045 — Victron Orion24-12 converter. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
     "sha256": "f0b416f53ac67066fa79affd47c3b5d2b69167185e1bf02fefbdcd45c39adc33",
@@ -584,7 +586,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg",
-    "title": "visual-inspection-copy.dwg \u2014 existing file inventory",
+    "title": "visual-inspection-copy.dwg — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -595,7 +597,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp",
-    "title": "LiFePO4-Battery-25.6V100Ah-NG.stp \u2014 existing file inventory",
+    "title": "LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -606,7 +608,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020.step",
-    "title": "Fibox-ARCA-203015T-8121020.step \u2014 existing file inventory",
+    "title": "Fibox-ARCA-203015T-8121020.step — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -617,7 +619,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP",
-    "title": "Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP \u2014 existing file inventory",
+    "title": "Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -628,7 +630,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp",
-    "title": "Lynx-Smart-BMS-500-NG-M10-3D.stp \u2014 existing file inventory",
+    "title": "Lynx-Smart-BMS-500-NG-M10-3D.stp — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -639,7 +641,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/Roboteq-MDC2x-step3d.stp",
-    "title": "Roboteq-MDC2x-step3d.stp \u2014 existing file inventory",
+    "title": "Roboteq-MDC2x-step3d.stp — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",
@@ -650,7 +652,7 @@
   },
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/parts/dimension-evidence/source-files/victron-ng/LiFePO4-Battery-25.6V100Ah-NG.stp",
-    "title": "LiFePO4-Battery-25.6V100Ah-NG.stp \u2014 existing file inventory",
+    "title": "LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory",
     "summary": "Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.",
     "evidence_status": "existing_local_3d_file_inventory",
     "access_date": "2026-11-13",

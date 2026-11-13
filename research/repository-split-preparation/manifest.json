@@ -7503,7 +7503,10 @@
       "existing_ferme_references": [
         "${FERME_ROOT}/skills/cad-automation-and-reuse.md"
       ],
-      "operation_status": "PROPOSED"
+      "operation_status": "PROPOSED",
+      "current_relative_path": "skills/cad-ocs-engineering/SKILL.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/axial-motor.md",
@@ -7522,7 +7525,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/axial-motor.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/axial-motor.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/component-procedure.md",
@@ -7539,7 +7545,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/component-procedure.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/component-procedure.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/existing-battery.md",
@@ -7554,7 +7563,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/existing-battery.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-battery.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md",
@@ -7569,7 +7581,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/existing-bearing.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-bearing.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md",
@@ -7589,7 +7604,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-model-start-check.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
@@ -7611,7 +7629,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/manufacturer-assembly.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/pixhawk.md",
@@ -7629,7 +7650,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/pixhawk.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/pixhawk.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/scaled-assemblies.md",
@@ -7647,7 +7671,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/scaled-assemblies.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/scaled-assemblies.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md",
@@ -7662,7 +7689,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/shared-feature-checks.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/shared-feature-checks.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/small-bms.md",
@@ -7677,7 +7707,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/small-bms.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/small-bms.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
@@ -7694,7 +7727,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/source-first-and-tube.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/component-cad/references/tabbed-battery.md",
@@ -7711,7 +7747,10 @@
       "operation_status": "PROPOSED",
       "destination_exists": false,
       "destination_sha256": null,
-      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction."
+      "collision_policy": "Reuse only after identity and hash comparison; preserve differing versions. Review mixed content before extraction.",
+      "current_relative_path": "skills/cad-ocs-engineering/references/tabbed-battery.md",
+      "current_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/tabbed-battery.md",
+      "current_path_record": "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md",

@@ -320,6 +320,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
     "title": "Current component iteration skill",
     "summary": "Routes component work through existing source, native geometry, persistence, visual identity and checked improvement procedures, including scaled assemblies and multi-solid battery cases.",
     "access_date": "2026-11-13",
@@ -331,6 +332,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/tabbed-battery.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/tabbed-battery.md",
     "title": "Tabbed battery and cover-pattern procedure",
     "summary": "Records the saved BMW case measurement groups, source/reconstruction attribution, repeated-boundary checker and concrete stale-capture failure.",
     "access_date": "2026-11-13",

@@ -8,7 +8,7 @@
     "sha256": "c4cd1fc6b0d76345740e5cfc295de5cd1512900c3ff6230126b961b021681def",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -20,7 +20,7 @@
     "sha256": "9a965cb69fdf1cbf4dc6b6895a42964242ed3e3f25efbd8b22c591cad65050fe",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -32,11 +32,12 @@
     "sha256": "5dfd02cb8f60e69b4e3d197e21886ca45d7ab3141ebfaa3fb19fd283d4b7e415",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
     "title": "Component iteration skill with bearing procedure",
     "summary": "Adds the exercised bearing inspection/derivative reference alongside the existing source-ready tube route; component-owned evidence and tool-owned code remain separate.",
     "access_date": "2026-11-12",
@@ -44,11 +45,12 @@
     "sha256": "03ae74ea1360888420a6edcaf69d11f98a5d2a59f372d546b2ae6ccfd82816ec",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-bearing.md",
     "title": "Existing bearing inspection and selective revision procedure",
     "summary": "Defines source binding, transformed native checks, coplanar fragment cancellation, exact source-defined plane cuts, preserved nine-solid geometry, same-ID recovery and save/view completion.",
     "access_date": "2026-11-12",
@@ -56,7 +58,7 @@
     "sha256": "f2a7dc4584237eed07e569b1fe6526b653ca01224d9f3aaf80ec51ba15c4405b",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -68,7 +70,7 @@
     "sha256": "a3076d393e5b6be8ce74e8740cd864609846fba7e5f7fdc322ec59bbed0860e2",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -80,7 +82,7 @@
     "sha256": "c1ed3b75123fe208da1b9bd1e4c28b8fc74b170774048b4d5bcb71f8a682cea6",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -92,7 +94,7 @@
     "sha256": "2bb58692b75586060d522499cb21e140a5332f7b03e910cb2d51bce681d7f9c4",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -104,7 +106,7 @@
     "sha256": "3354f474ba65c97574e8a0c2bf62008670e167d6d45dc94e0f6481f42bebef2e",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -116,7 +118,7 @@
     "sha256": "6ce365c13110d33a9267a35b7f383e6111c8b7edec86fcda4710548b48c21719",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -128,7 +130,7 @@
     "sha256": "94dd235468e260ba90537fd4dffc664e20f9c64460a25ad7786170c8d991d91c",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -140,7 +142,7 @@
     "sha256": "6cc691552271bf4c03d2c8cb4d0539e719b33f7d273956f68c12bb5e347e421a",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -152,7 +154,7 @@
     "sha256": "e36b31ded45160d7ba162d82c346d3a96f1e44f1616f1fd294b5a677ab26357d",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -164,7 +166,7 @@
     "sha256": "5ad571d3a72b94110087c09bfdc69cf9b04de207af009293f4b325670ac8981a",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -176,7 +178,7 @@
     "sha256": "03607c928366fdab6e661e5d52dd435980a0fb9ef35e9c81568db7418758ac80",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -188,7 +190,7 @@
     "sha256": "de90bab5683f1a138a164f9ca8e30c7bc926a96c4ad1cc68b350f02aff65c379",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -200,7 +202,7 @@
     "sha256": "b10e676b9dd39eb85148ae348a3ddb501aef35da4198b61c67ae7defb1a9ef51",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -212,7 +214,7 @@
     "sha256": "40dbd80cda18037b5e19a6dd1780748ed9bb2e22d80009286852ab2521ffad1f",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -224,7 +226,7 @@
     "sha256": "535dc804124556ae856efda3be2e606e5660c06b995d32738bc3401f367e0530",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ],
     "url": "https://docs.rs-online.com/9fa3/A700000007995170.pdf"
   },
@@ -237,7 +239,7 @@
     "sha256": "7bf8eebd0cd1d248e06f0df05966d65d2d0f7cc8b719af421480f6351e979cd3",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -249,7 +251,7 @@
     "sha256": "8c84aa75035e1c3db64eb1db9078a16b303f4945fd96389f41ed1d5dcdeac13a",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -261,7 +263,7 @@
     "sha256": "aa9c900fd33a9672092a4f9413c36eb4a1802197718320ff49c168057ff3d40f",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -273,7 +275,7 @@
     "sha256": "3b7fa173c296c9c5adde533dde0bcfdcf3058286e1df18e0f8da39ac8fce3545",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -285,7 +287,7 @@
     "sha256": "0c6d03e57137c922e883c3fddc1921abc779767a10235cd29ca26ccd3c556ab0",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -297,7 +299,7 @@
     "sha256": "98bc9cae5299b7b9aedff8ecbc83d2c633a2fc9351bfbe14315ed923cd28d921",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -309,7 +311,7 @@
     "sha256": "71fbc6af7486690767c6cb0fcc40ee6d00fed8f3a8592a124394a1203e4febea",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -321,7 +323,7 @@
     "sha256": "8b43a394f1a3a7ecdc9d5ecddbc49e87f9b76ba5dc36b719072be3b1fbb950ab",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -333,7 +335,7 @@
     "sha256": "2d99a22526ec1077844b841da48e0ef6f92189419dc006e098e6fdd79cac9347",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -345,7 +347,7 @@
     "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -357,7 +359,7 @@
     "sha256": "1a61806ec6f801c396f056f1b5b36db7f0d91d366c20bb827c2325bc20f9a3ed",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -369,7 +371,7 @@
     "sha256": "6d3e127caa5d12f447fd1939a360fdac5a3ca4a15888f33cb31a75025ca0cc24",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -381,7 +383,7 @@
     "sha256": "deeda7289743ed5e0ec09b83abccf20c80e8f21e76e4828706a2798775c3e002",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -393,7 +395,7 @@
     "sha256": "5893c7af06e614aedd66dc84884705cd9cc59e8ad626c018a6dfefed64cc5fca",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -405,7 +407,7 @@
     "sha256": "192a093293b609f99f34f4181a4aff187603b698956330518bec953ba56ce2bf",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -417,7 +419,7 @@
     "sha256": "4de111e819742c7f5b267e392b16d40325ae11b5c19773f0fd2f4de9977b7a33",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -429,7 +431,7 @@
     "sha256": "11c914835678e7576832a619bb0b3372a87b426c989870a4ea02f4f5579e6dcd",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -441,7 +443,7 @@
     "sha256": "1c8ae77e717523487bfb2b86d2603c76f6bb6a7fe4bde4423ce7005b94821376",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -453,7 +455,7 @@
     "sha256": "d46e45da64dabdb1de7b49eb072bc6d79c2761feed57d4b25ce0a8cf8e2c8704",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -465,7 +467,7 @@
     "sha256": "b31da4d1d44d82e8a6deec5f55b82c0770960e5217e42aa02789e820c5f8481b",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -477,7 +479,7 @@
     "sha256": "0fab86de92ea4b653d1d90241ab39a5e0ae6d5b8bce72afad40624ecb3bb4c9d",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -489,7 +491,7 @@
     "sha256": "71191fda7ac620ddf978d50fbf4480e9ca07029aaa522a38ae280d2a8ac90b07",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -501,7 +503,7 @@
     "sha256": "a0d2fe4311621d88f8b0e1490cab11ed95cfd9e16a7a19944df536a34ce7227e",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -513,7 +515,7 @@
     "sha256": "2c7f0ac2f1d1ffffc1aa3bd301a10f4c75531fe9489cbc1239d7b7e79f608ed2",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -525,7 +527,7 @@
     "sha256": "ae8e6a033a2a034a4df91c3b1cbbfa4e89e0332778ffff93bac1903129a2c319",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -537,7 +539,7 @@
     "sha256": "0e1c25505a1f1a7f8ec599e577be7345611c5176c737040d80d32b565590a4bf",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -549,7 +551,7 @@
     "sha256": "00e8f0e866395763b7ee7e7a7eec59bdefa2d3578493457132388b9ec2e04450",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -561,7 +563,7 @@
     "sha256": "d74da044456356a4bdcab02a00f67cbab8fce0621c1954b5a10b1a73371990c7",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   },
   {
@@ -573,7 +575,7 @@
     "sha256": "ae34a9035929a6053aa846ddf95cd3e6faddfab425646a3333a8dbf6760ce7d7",
     "referring_documents": [
       "execution/c009-bearing.md",
-      "skills/component-cad/references/existing-bearing.md"
+      "skills/cad-ocs-engineering/references/existing-bearing.md"
     ]
   }
 ]

@@ -12,7 +12,7 @@
       "sha256": "a4e12ce94c9b229673faa0c30411a778aa205eb00f0da810071405150f757c33"
     },
     {
-      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-variant-tables.md",
       "title": "Exact product-row and dimension-column procedure",
       "summary": "Reuses select_cell with an exact dimension header and exact product row while retaining the original table orientation and selected-cell provenance.",
       "registered_at": "2026-11-13",
@@ -23,7 +23,7 @@
       "sha256": "f3999777a630e441d9bd5294e13659cf8620cf61cd390a89412e00dd3ce48d11"
     },
     {
-      "local_path": "skills/component-cad/references/drawing-feature-checks.md",
+      "local_path": "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
       "title": "Catalogue diagram endpoint review",
       "summary": "Binds dimension letters to actual extension lines and distinguishes direct table dimensions, derived station arithmetic and source contour approximations.",
       "registered_at": "2026-11-13",

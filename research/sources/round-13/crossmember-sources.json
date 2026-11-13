@@ -23,6 +23,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
     "title": "Repeated-section and interface-check procedure",
     "summary": "Documents reuse of the same nominal section at600mm and260mm cut lengths, preserving separate datums and adding the nominal frame-gap/local-midpoint check with supported conditions.",
     "access_date": "2026-11-12",

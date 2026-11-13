@@ -1549,6 +1549,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/scaled-assemblies.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/scaled-assemblies.md",
     "title": "Procedure for source-to-drawing unit conversion",
     "summary": "Documents the actual Lynx millimetre-source/metre-drawing conversion, separate internal correction and saved geometry handoffs.",
     "access_date": "2026-11-13",

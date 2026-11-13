@@ -1,7 +1,7 @@
 {
   "records": [
     {
-      "local_path": "skills/component-cad/references/source-view-evidence.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-view-evidence.md",
       "title": "Exact drawing retrieval and inspected views",
       "summary": "Adds bounded alternate-document acquisition, local rendering and revision/variant inspection after an image or direct-download route fails.",
       "registered_at": "2026-11-13",

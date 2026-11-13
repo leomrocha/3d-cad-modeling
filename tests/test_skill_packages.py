@@ -17,7 +17,7 @@ from urllib.parse import unquote, urlsplit
 import venv
 
 ROOT = Path(__file__).resolve().parents[1]
-NAMES = ('component-cad', 'cad-drawing-inspection', 'cad-source-intake')
+NAMES = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake')
 
 
 @unittest.skipUnless(os.environ.get('SKILLS_CLI_ROOT') and os.environ.get('NATIVE_READER_ROOT'),
@@ -105,6 +105,14 @@ class IndependentSkills(unittest.TestCase):
                 result = self.run_python(name, "from package_check import check; import json; from pathlib import Path; print(json.dumps(check(Path(sys.argv[1]).parent)))")
                 self.assertEqual(result['result'], 'PASS')
                 self.results['skills'][name].update(local_links=links, package_check=result)
+                if name == 'cad-ocs-engineering':
+                    self.assertIn('$cad-ocs-engineering', (package / 'agents/openai.yaml').read_text())
+                    for reference in ['ocs-control.md', 'model-contract.md', 'computational-engineering.md', 'sources-and-capabilities.md']:
+                        self.assertTrue((package / 'references' / reference).is_file())
+                    main = (package / 'SKILL.md').read_text()
+                    self.assertIn('## Establish the modeling contract', main)
+                    self.assertIn('### Execute and improve component jobs', main)
+                    self.results['skills'][name]['full_original_and_component_instructions'] = 'PASS'
                 entries = ['source_intake', 'part_index', 'component_records'] if name == 'cad-source-intake' else \
                           ['dxf_inspect', 'part_index', 'component_records'] if name == 'cad-drawing-inspection' else \
                           ['envelope_job_runner', 'rounded_tube', 'model_inventory', 'retained_artifacts', 'ocs_control', 'check_contract']
@@ -141,6 +149,16 @@ with tempfile.TemporaryDirectory() as folder:
  print(json.dumps({'result':'PASS','units':'mm','circle_count':1,'source_preserved':True}))'''
         self.results['skills']['cad-drawing-inspection']['fixture'] = self.run_python('cad-drawing-inspection', code)
 
+    def test_ocs_coordinate_contract_fixture(self):
+        code = """import json
+from check_contract import run
+contract={'length_unit':'mm','tolerance':{'length':0.001,'angle_deg':0.01},'observations':{'point':{'kind':'point','origin':[0,0,0]},'plane':{'kind':'plane','origin':[0,0,0],'normal':[0,0,1]}},'checks':[{'id':'point-on-plane','kind':'on_plane','point':'point','plane':'plane'}],'evidence':{'kind':'synthetic_fixture','source':'isolated OCS merge fixture'}}
+assert run(contract)['all_passed'] is True
+contract['observations']['point']['origin']=[0,0,1]
+assert run(contract)['all_passed'] is False
+print(json.dumps({'result':'PASS','passing_and_failing_coordinates_checked':True,'native_mutations':0}))"""
+        self.results['skills']['cad-ocs-engineering']['coordinate_contract_fixture'] = self.run_python('cad-ocs-engineering', code)
+
     def test_component_defaults_use_bundled_code_and_read_only_transport(self):
         code = '''import json
 from pathlib import Path
@@ -167,15 +185,15 @@ with patch('socket.socket',BlockSocket):
  p=envelope_job_runner.sab_reader_preflight()
  assert p['result']=='PASS'
 print(json.dumps({'result':'PASS','runtime':'bundled','runner_defaults':'bundled','dependency_preflight':'PASS','native_mutations':0}))'''
-        self.results['skills']['component-cad']['defaults'] = self.run_python('component-cad', code)
+        self.results['skills']['cad-ocs-engineering']['defaults'] = self.run_python('cad-ocs-engineering', code)
 
     @unittest.skipUnless(os.environ.get('OCS_DESCRIPTOR'), 'Requires caller-selected running OCS descriptor')
     def test_read_only_ocs_connection(self):
         code = "from package_check import check; import json; from pathlib import Path; print(json.dumps(check(Path(sys.argv[1]).parent, descriptor=sys.argv[2])))"
-        result = self.run_python('component-cad', code, os.environ['OCS_DESCRIPTOR'])
+        result = self.run_python('cad-ocs-engineering', code, os.environ['OCS_DESCRIPTOR'])
         self.assertEqual(result['ocs']['result'], 'PASS')
         self.assertEqual(result['ocs']['mutations'], 0)
-        self.results['skills']['component-cad']['read_only_ocs'] = result['ocs']
+        self.results['skills']['cad-ocs-engineering']['read_only_ocs'] = result['ocs']
 
     @classmethod
     def tearDownClass(cls):

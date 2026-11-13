@@ -4374,6 +4374,19 @@
       "next_check": "Execute the scoped rename and independent installation checks under the recorded plan.",
       "execution_status": "DONE",
       "execution_report": "execution/skill-renaming-2026-11-13.md"
+    },
+    {
+      "id": "CAD-OCS-MERGE-2026-11-13",
+      "name": "Complete OCS and component skill merge",
+      "status": "proposal",
+      "execution_authorization": "Explicit user instruction to execute the ten-point merge plan and merge both workflows directly in cad-ocs-engineering.",
+      "summary": "Combine all original OCS skill instructions, references, helpers and metadata with all repository component workflow additions in one independently installable skill.",
+      "source_urls": [
+        "research/cad-ocs-engineering-merge-plan.md",
+        "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
+      ],
+      "source_ids": [],
+      "next_check": "Complete retained-file, workflow-section, isolated installation and read-only OCS checks."
     }
   ]
 }

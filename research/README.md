@@ -50,3 +50,5 @@ The workflow-research extension preserves the implementation plan and prior tool
 ## Skill naming
 
 1. [CAD skill renaming plan](skill-renaming-plan.md) — requested `cad-drawing-inspection` and `cad-source-intake` identities, documentation updates, package regeneration and verification.
+
+2. [Complete OCS skill merge](cad-ocs-engineering-merge-plan.md) — full original OCS engineering and all component additions merged under `cad-ocs-engineering`.

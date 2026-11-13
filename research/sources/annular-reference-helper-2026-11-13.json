@@ -31,7 +31,7 @@
     {
       "title": "Annular skill procedure",
       "summary": "Documents external job values, source pinning, local axis, bore-cutter overrun, native surface and boundary checks, metadata writer application and comparison scope.",
-      "local_path": "skills/component-cad/references/annular-reference.md",
+      "local_path": "skills/cad-ocs-engineering/references/annular-reference.md",
       "sha256": "ec7abbad9f69212119a5918e97d08d8713b5d21666cfbe1f7702487de0d44e4c",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",

@@ -31,7 +31,7 @@
     {
       "title": "Hexagonal skill procedure",
       "summary": "Documents component-owned source contracts, standard dimension limits, optional bore representation, local/world frame mapping, native readback and stored source-locator binding.",
-      "local_path": "skills/component-cad/references/hexagonal-reference.md",
+      "local_path": "skills/cad-ocs-engineering/references/hexagonal-reference.md",
       "sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",

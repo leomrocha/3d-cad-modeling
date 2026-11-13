@@ -476,7 +476,7 @@ Documents: research/sources/round-05/point-02-local-sources.json, research/sourc
 
 ## SRC-0895e33945c4 — Executed axial motor procedure
 
-Original source: [${MODELING_ROOT}/skills/component-cad/references/axial-motor.md](../../skills/component-cad/references/axial-motor.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/axial-motor.md](../../skills/cad-ocs-engineering/references/axial-motor.md)
 
 Summary: Documents source-leader review, explicit keyway reconstruction, bounded native construction, surface-based dimensions, save/reopen recovery and per-feature downstream handoffs established by this actual motor.
 
@@ -1688,7 +1688,7 @@ Documents: research/sources/round-14/bearing-sources.json.
 
 ## SRC-208dce2b3f17 — Saved battery inspection and source-bound check procedure
 
-Original source: [${MODELING_ROOT}/skills/component-cad/references/existing-battery.md](../../skills/component-cad/references/existing-battery.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/existing-battery.md](../../skills/cad-ocs-engineering/references/existing-battery.md)
 
 Summary: Details exact source variant, metadata identity, unchanged-file persistence, transformed shell and terminal checks, source/model views and verified shared-reader extraction.
 
@@ -3584,7 +3584,7 @@ Documents: research/action-audit/reviews/point-06-designer.md, research/action-a
 
 ## SRC-4285b32bca80 — Executed manufacturer assembly import procedure
 
-Original source: [${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md](../../skills/component-cad/references/manufacturer-assembly.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md](../../skills/cad-ocs-engineering/references/manufacturer-assembly.md)
 
 Summary: Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.
 
@@ -4700,7 +4700,7 @@ Documents: research/sources/round-08/component-plan-sources.json, research/sourc
 
 ## SRC-5545b27ec2a0 — Cross-component feature-check procedure
 
-Original source: [${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md](../../skills/component-cad/references/shared-feature-checks.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/shared-feature-checks.md](../../skills/cad-ocs-engineering/references/shared-feature-checks.md)
 
 Summary: Explains how an action becomes shared software using independent expectations and actual native measurements. Driver and Leaf mounting-hole patterns exercise one function with different dimensions.
 
@@ -5792,7 +5792,7 @@ Documents: research/action-audit/reviews/point-03-independent.md, research/actio
 
 ## SRC-6b239a9bfdd1 — SKILL.md
 
-Original source: [${MODELING_ROOT}/skills/component-cad/SKILL.md](../../skills/component-cad/SKILL.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/SKILL.md](../../skills/cad-ocs-engineering/SKILL.md)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -12224,7 +12224,7 @@ Documents: research/sources/round-24/converter-sources.json.
 
 ## SRC-e4113edcaa23 — Existing bearing inspection and selective revision procedure
 
-Original source: [${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md](../../skills/component-cad/references/existing-bearing.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/existing-bearing.md](../../skills/cad-ocs-engineering/references/existing-bearing.md)
 
 Summary: Defines source binding, transformed native checks, coplanar fragment cancellation, exact source-defined plane cuts, preserved nine-solid geometry, same-ID recovery and save/view completion.
 
@@ -12488,7 +12488,7 @@ Documents: research/sources/round-08/component-plan-sources.json.
 
 ## SRC-e9161d79c2fb — component-procedure.md
 
-Original source: [${MODELING_ROOT}/skills/component-cad/references/component-procedure.md](../../skills/component-cad/references/component-procedure.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/component-procedure.md](../../skills/cad-ocs-engineering/references/component-procedure.md)
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
@@ -12956,7 +12956,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-f22443c65bee — Source-first tube construction and recovery procedure
 
-Original source: [${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md](../../skills/component-cad/references/source-first-and-tube.md)
+Original source: [${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md](../../skills/cad-ocs-engineering/references/source-first-and-tube.md)
 
 Summary: Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.
 
@@ -14684,7 +14684,7 @@ Evidence: implementation_artifact.
 
 ### Procedure for source-to-drawing unit conversion — SRC-e24ea3f3e131
 
-Original source: [Procedure for source-to-drawing unit conversion](../../skills/component-cad/references/scaled-assemblies.md)
+Original source: [Procedure for source-to-drawing unit conversion](../../skills/cad-ocs-engineering/references/scaled-assemblies.md)
 
 Summary: Documents the actual Lynx millimetre-source/metre-drawing conversion, separate internal correction and saved geometry handoffs.
 
@@ -14958,7 +14958,7 @@ Evidence: implementation_artifact.
 
 ### Current component iteration skill — SRC-6b239a9bfdd1
 
-Original source: [Current component iteration skill](../../skills/component-cad/SKILL.md)
+Original source: [Current component iteration skill](../../skills/cad-ocs-engineering/SKILL.md)
 
 Summary: Routes component work through existing source, native geometry, persistence, visual identity and checked improvement procedures, including scaled assemblies and multi-solid battery cases.
 
@@ -14966,7 +14966,7 @@ Evidence: implementation_artifact.
 
 ### Tabbed battery and cover-pattern procedure — SRC-240f5a0db534
 
-Original source: [Tabbed battery and cover-pattern procedure](../../skills/component-cad/references/tabbed-battery.md)
+Original source: [Tabbed battery and cover-pattern procedure](../../skills/cad-ocs-engineering/references/tabbed-battery.md)
 
 Summary: Records the saved BMW case measurement groups, source/reconstruction attribution, repeated-boundary checker and concrete stale-capture failure.
 
@@ -15056,7 +15056,7 @@ Evidence: implementation_artifact.
 
 ### Component iteration skill with mandatory file lookup — SRC-6b239a9bfdd1
 
-Original source: [Component iteration skill with mandatory file lookup](../../skills/component-cad/SKILL.md)
+Original source: [Component iteration skill with mandatory file lookup](../../skills/cad-ocs-engineering/SKILL.md)
 
 Summary: Requires actual 3D file and prior-record inspection before every component start and reuse of existing completed models.
 
@@ -15064,7 +15064,7 @@ Evidence: implementation_artifact.
 
 ### Existing-model start procedure — SRC-758d94d927aa
 
-Original source: [Existing-model start procedure](../../skills/component-cad/references/existing-model-start-check.md)
+Original source: [Existing-model start procedure](../../skills/cad-ocs-engineering/references/existing-model-start-check.md)
 
 Summary: Documents each lookup result, exact FERME command, identity review, reuse of existing checks and separation of 2D references.
 

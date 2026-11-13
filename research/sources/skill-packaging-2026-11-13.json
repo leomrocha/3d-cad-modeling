@@ -116,10 +116,11 @@
       "summary": "Reused the source, frame and caller-supplied coordinate-check contract; adapted command paths to the installed skill and removed the unrelated computational-engineering reference.",
       "original_sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
       "derived_path": "skills/component-cad/references/model-contract.md",
+      "current_derived_path": "skills/cad-ocs-engineering/references/model-contract.md",
       "observation_date": "2026-11-13",
       "evidence_status": "local original inspected and reused",
       "referring_documents": [
-        "skills/component-cad/references/ocs-runtime.md",
+        "skills/cad-ocs-engineering/references/ocs-runtime.md",
         "docs/skill-packaging.md"
       ],
       "derived_sha256": "2312fc74bf60ce9355413fee2ae5f41c1e8c862a29b21e83691754ce8b3920ea"

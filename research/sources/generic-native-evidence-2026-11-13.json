@@ -27,7 +27,7 @@
     },
     {
       "title": "source metadata",
-      "local_path": "${MODELING_ROOT}/skills/component-cad/references/source-metadata.md",
+      "local_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-metadata.md",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "summary": "Describes actual extended-data inspection, caller-owned document/revision binding, exact chunk comparison and replacement semantics for the existing metadata writer.",
@@ -60,7 +60,7 @@
     },
     {
       "title": "calibrated trace",
-      "local_path": "${MODELING_ROOT}/skills/component-cad/references/calibrated-trace.md",
+      "local_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/calibrated-trace.md",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "summary": "Defines the external dimension/pixel-span calibration contract, endpoint evidence, scale uncertainty and its propagation through the existing trace helper.",
@@ -71,7 +71,7 @@
     },
     {
       "title": "envelope reference",
-      "local_path": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md",
+      "local_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-reference.md",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "summary": "Routes native metadata persistence checks to the new read-only comparator while preserving external source-pinned envelope construction and geometry verification.",

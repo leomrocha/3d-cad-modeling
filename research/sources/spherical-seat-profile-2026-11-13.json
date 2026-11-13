@@ -28,7 +28,7 @@
     {
       "title": "Bounded spherical seat modeling procedure",
       "summary": "Specifies external source bindings, approximate-radius labels, supported contour family and required native geometry, metadata, persistence and closure checks.",
-      "local_path": "skills/component-cad/references/spherical-seat-profile.md",
+      "local_path": "skills/cad-ocs-engineering/references/spherical-seat-profile.md",
       "sha256": "f361fceac276aac40f3b99f4a5a9b5da65f46c0dfb7e02f1bbdfd721fb45da29",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",

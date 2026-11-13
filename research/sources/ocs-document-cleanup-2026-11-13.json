@@ -9,7 +9,7 @@
       "sha256": "a87e0ebf053c4f2df99557309355dbe00fe873dd800e3348327f5a3427b665e5",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -21,7 +21,7 @@
       "sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -33,7 +33,7 @@
       "sha256": "efde6cf88470db1c46f93fbc605e64a7759cce5e41cff0f5ca9bcd5146b4f33e",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -45,7 +45,7 @@
       "sha256": "960781c3090b15b88d82db21c31e6ad82c9e16aa51ed0eeefeb4f296a754222b",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -57,11 +57,11 @@
       "sha256": "940f42a6634879c89cecaa8afca46e7fe254ac185f4421d171c68763eb37d5c0",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
-      "local_path": "skills/component-cad/references/document-cleanup.md",
+      "local_path": "skills/cad-ocs-engineering/references/document-cleanup.md",
       "title": "Completed document lifecycle procedure",
       "summary": "Defines ownership and persistence inputs, dirty-copy geometry guard, exact-ID close/recovery, remaining-tab checks and the synthetic/live evidence boundaries.",
       "registered_at": "2026-11-13",
@@ -69,7 +69,7 @@
       "sha256": "8d698abaf930266206e34a246c2a4d236aeb5af4ae0fb10c4c5c5e52bfc53fd0",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -81,7 +81,7 @@
       "sha256": "49b779f75bf8c142243035ef1002e3d3f06d5ffe236942744612f6a9f98048cb",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -93,7 +93,7 @@
       "sha256": "7cb0911c6e2e74381bbe4675b4bcbda56387f909cfbf527f4a2db1b659b775a4",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -105,7 +105,7 @@
       "sha256": "9b508a0ab2d4a2e392127d15242a2a964b2757923bbd338600742f15383c7882",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -117,7 +117,7 @@
       "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ]
     },
     {
@@ -129,7 +129,7 @@
       "sha256": "98eb6a0548af3be0374bdf98965cb49becf5abfb1f1942673d3e712b2c0ee68c",
       "referring_documents": [
         "execution/ocs-document-cleanup-2026-11-13.md",
-        "skills/component-cad/references/document-cleanup.md"
+        "skills/cad-ocs-engineering/references/document-cleanup.md"
       ],
       "original_sha256": "2b82e3c1d160d4bbd37280d82eb2a76cdab0d5ea9ff4312b9cd393d390910617",
       "original_local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/document-cleanup/source-metadata-before-normalization/receipt.json",

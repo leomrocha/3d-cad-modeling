@@ -5,7 +5,7 @@
     {
       "title": "Shared standard-fastener source procedure",
       "summary": "Adds edition-specific geometry binding and distinct nominal thread, entry, usable-thread and plain-shank features.",
-      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-variant-tables.md",
       "evidence_status": "implementation_artifact",
       "registered_at": "2026-11-13",
       "sha256": "1b4259afb51313fe54be42ce9939040946f387a41dcb4a042d00abbb037c4fc7",

@@ -8,7 +8,7 @@
       "evidence_status": "executed_result_synthesis",
       "sha256": "ace80bebcab7c7226b0f6418060f1c3e9bef6d712eccbde22e9a8dd9599af196",
       "referring_documents": [
-        "skills/component-cad/SKILL.md",
+        "skills/cad-ocs-engineering/SKILL.md",
         "execution/resumed-component-workflows-2026-11-13.md"
       ]
     }

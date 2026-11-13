@@ -71,7 +71,7 @@
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/coordinator-review.md",
     "title": "Fibox dimension-leader corrections",
-    "summary": "Recordsactualimageassociationreview:152.5fromrearbodyplane;261.5\u00d7161innerbodyopening;keepsinitialnotes andsavedMPSplate observationsseparate.",
+    "summary": "Recordsactualimageassociationreview:152.5fromrearbodyplane;261.5×161innerbodyopening;keepsinitialnotes andsavedMPSplate observationsseparate.",
     "access_date": "2026-11-12",
     "evidence_status": "executed_coordinator_review",
     "sha256": "8f63d8fbf524303501ec911e74a5e44f67b61f161c7502f49a69c34015ba5705",
@@ -82,7 +82,7 @@
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020-drawing-page-1.png",
     "title": "Full Fibox dimension drawing render",
-    "summary": "Actualrear/sectiondrawingviewwith300\u00d7200body,152.5depth,10footprojection andwall/covercallouts.",
+    "summary": "Actualrear/sectiondrawingviewwith300×200body,152.5depth,10footprojection andwall/covercallouts.",
     "access_date": "2026-11-12",
     "evidence_status": "derived_pdf_render",
     "sha256": "91b8dceef1ba61299465c6e66c4c1fbb4b93ed4b4033e8840575a04990b443bb",
@@ -302,7 +302,7 @@
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/feature-checks.json",
     "title": "feature-checks.json",
-    "summary": "15passingchecks:300\u00d7200\u00d7152.5body/coververtexspansand12closededgepartnergraphs;sourcecounts/frameobservations.",
+    "summary": "15passingchecks:300×200×152.5body/coververtexspansand12closededgepartnergraphs;sourcecounts/frameobservations.",
     "access_date": "2026-11-12",
     "evidence_status": "executed_native_observation",
     "sha256": "bb881b060f393e7c4f8cf9a56ce07f7f6cf7a3ce45045b8fb4c11d2694135818",
@@ -763,6 +763,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
     "title": "Manufacturerassemblyprocedure",
     "summary": "ExtendsbatteryprocedurewithactualFiboxcase,extractedwritehelper,recoveryandmember-specificsavedchecks.",
     "access_date": "2026-11-12",
@@ -774,6 +775,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
     "title": "ComponentCADskillrouter",
     "summary": "Routesmanufacturerassemblyworktoextractedhelperwithsourceplanreviewandreadbackpreservationchecks.",
     "access_date": "2026-11-12",

@@ -32,3 +32,9 @@ Implementation scope authorized 13 November 2026: distribute each skill with the
 4. **Import transition:** the envelope and tube runners default to bundled control/runtime locations. The envelope runner's named project roots resolve job data and metadata; they supply no Python imports. Legacy explicit arguments remain accepted for existing callers. Installed instructions execute the skill-local defaults.
 5. **Handoff:** leave existing FERME callers and runtime files intact. Each continuing component job can adopt an exact committed shared-tool revision at its checkpoint. Historical models, recipes, source files and evidence retain the migration plan's separate scope.
 6. **Verification:** check each copied skill with an isolated interpreter, its declared dependencies and caller-supplied fixtures. Use the cached skills CLI for local discovery and individual temporary copy installation. Read the selected running OCS state through the bundled helper; retain package checks separately from component modeling results.
+
+## Complete OCS skill ownership
+
+1. `skills/cad-ocs-engineering/` combines the original OCS skill and repository component workflow, with both instruction sets merged directly in its main entrypoint. Original control helpers are reused from canonical `scripts/`; original references and adapted agent metadata are included in the package.
+2. All component helpers and added procedures retain their supported source-bound behavior. Component recipes, dimensions, models, sources and evidence retain their owning-project routing. Existing external skill installations remain unchanged.
+3. [Merge plan and coverage](../cad-ocs-engineering-merge-plan.md) record the checkpoint, source provenance, destination inventory and verification.

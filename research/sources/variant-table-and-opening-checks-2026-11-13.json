@@ -23,8 +23,8 @@
       ]
     },
     {
-      "title": "skills/component-cad/references/source-variant-tables.md",
-      "local_path": "skills/component-cad/references/source-variant-tables.md",
+      "title": "skills/cad-ocs-engineering/references/source-variant-tables.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-variant-tables.md",
       "summary": "Defines source retention and transcription review before exact variant selection and downstream source-feature binding.",
       "registered_at": "2026-11-13",
       "evidence_status": "procedure_update",
@@ -34,8 +34,8 @@
       ]
     },
     {
-      "title": "skills/component-cad/references/drawing-feature-checks.md",
-      "local_path": "skills/component-cad/references/drawing-feature-checks.md",
+      "title": "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
+      "local_path": "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
       "summary": "Defines feature-matched drawing comparison, independent source checks and complete boundary identification before counting openings.",
       "registered_at": "2026-11-13",
       "evidence_status": "procedure_update",

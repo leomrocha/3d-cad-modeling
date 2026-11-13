@@ -56,6 +56,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
     "title": "Updated native verification procedure",
     "summary": "Adds supported ACIS700 binary reading, native body traversal, dependency setup and saved-model regression; retains the failed Boolean and selection history from the first rail build.",
     "access_date": "2026-11-12",

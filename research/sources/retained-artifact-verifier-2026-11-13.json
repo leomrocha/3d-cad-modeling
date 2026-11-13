@@ -23,7 +23,7 @@
       ]
     },
     {
-      "local_path": "skills/component-cad/references/retained-artifact-checks.md",
+      "local_path": "skills/cad-ocs-engineering/references/retained-artifact-checks.md",
       "title": "Retained artifact check procedure",
       "summary": "Documents manifest formats, caller roots, result semantics and successful receipt storage after final provenance edits.",
       "registered_at": "2026-11-13",
@@ -34,7 +34,7 @@
       ]
     },
     {
-      "local_path": "skills/component-cad/references/component-procedure.md",
+      "local_path": "skills/cad-ocs-engineering/references/component-procedure.md",
       "title": "Component procedure with retained-file verification",
       "summary": "Links source readiness and action occurrences to the reusable final artifact check before a component result commit.",
       "registered_at": "2026-11-13",

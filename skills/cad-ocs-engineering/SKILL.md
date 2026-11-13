@@ -1,9 +1,11 @@
 ---
-name: component-cad
-description: Execute a component CAD job using an external project's part index and existing OCS tools, recording source readiness, action occurrences and a verified reusable improvement.
+name: cad-ocs-engineering
+description: Create, inspect and revise engineering geometry in OpenCADStudio (OCS), with explicit parts, units, coordinate frames, measured checks and simulation handoffs. Use for OCS modeling and CAD automation; not for illustrative images or silently selecting designs, dimensions, materials or another CAD application. Execute a component CAD job using an external project's part index and existing OCS tools, recording source readiness, action occurrences and a verified reusable improvement.
 ---
 
-# Component CAD iterations
+# CAD OCS Engineering
+
+Use installed OCS geometry and control capabilities. Keep author requirements, engineering inputs and agent proposals distinct. A generated picture is not a geometric model or physical validation.
 
 Use this skill when a real component job develops the reusable tools in this repository. Use the bundled [OCS runtime instructions](references/ocs-runtime.md) for native control and geometry. The component project owns its parts data, CAD artifacts and raw job evidence; this repository owns reusable code, tests and instructions.
 
@@ -20,13 +22,16 @@ python "$SKILL_ROOT/scripts/package_check.py"
 
 The package includes its OCS control helper and `cadtools` runtime, geometry and save/reopen code. Select the caller's already-running OpenCADStudio session explicitly. Use `package_check.py --session SESSION` or `--descriptor DESCRIPTOR_JSON` for a read-only connection check. [Runtime and model contract](references/ocs-runtime.md). [Portable job roots](references/paths.md).
 
-## Read current implementations first
+## Establish the modeling contract
 
-1. Before every component start, check both its work status and the actual 3D files. Read the input manifest, work record, sheet links, existing CAD index and filesystem inventory, including available manufacturer models. Run the [existing-model start check](references/existing-model-start-check.md). A matching existing model is DONE for the current build list: record its path and reuse its existing checks, then select an unfinished component. A stale NOT_STARTED or IN_PROGRESS entry does not start another construction, inspection or capture cycle for that model.
-2. Reuse the existing `Client`, `Journal`, `Geometry` and verification functions for their supported actions. Select their helper, session, document and journal explicitly. Read the bundled [OCS runtime instructions](references/ocs-runtime.md) before connecting.
-3. Use `scripts/part_index.py --index PATH --id PART_ID` to read the actual external index. Add another `--index` for an existing dictionary. Results retain source namespaces, original records and source hashes. A matching name/ID in two indexes remains two attributed records.
+1. Read project instructions and the current request. Identify the authorized scope: inspection, document setup, geometry, revision, save, conversion or simulation. Preserve project authorization and exact-format conversion rules; do not impose a new approval convention.
+2. Inspect supplied source views. Record the references, current corrections and accepted/rejected/unresolved items. Do not reuse rejected images as design evidence. Sketch arrangement is not a dimension unless dimensioned.
+3. Establish units, origin, axes, datums, part boundaries and motion. Separate lateral displacement from height and axial position. Record author-defined constraints before modeling. Ask in ordinary chat about a missing input that blocks the next action; do not invent dimensions or move parts to avoid a collision.
+4. Connected parts are not necessarily fused or monolithic. Keep display color, visibility layer, render material and physical material separate. Use provisional values only when that kind of provisional modeling is authorized, with labels.
 
-## Bind the component requirements
+Read [model-contract.md](references/model-contract.md) for multi-part modeling and numeric constraint inputs. It is not a turbine design.
+
+### Bind component requirements
 
 1. Preserve original source bytes, proposal/source labels, required features, units, local datums and assembly frame. `scripts/component_records.py JOB.json` checks required feature coverage and pinned source revisions. Its code/output contract is described in [the procedure](references/component-procedure.md).
 2. A required feature with a named unresolved input produces `NEEDS_INPUT`. Resolve that feature before dependent construction. The first FERME tube case has supplied 40 x 40 x 3 mm nominal dimensions and separate cut lengths; its corner profile requires the recorded source or task input. Keep the exact question with that feature.
@@ -34,7 +39,34 @@ The package includes its OCS control helper and `cadtools` runtime, geometry and
 4. Before comparing drawing dimensions with native geometry, use the [drawing-feature check procedure](references/drawing-feature-checks.md). Identify extension-line endpoints and match the measurement kind; keep hole pitch, full surface bounds and reachable-point extrema distinct in the result records.
 5. For standard-defined features, read the [source-first and hollow-section procedure](references/source-first-and-tube.md). Record stock lookup, standards search, source-access review and formula calculation as individual actions before binding the construction inputs.
 
-## Execute and improve
+## Inspect the actual OCS session
+
+Read [ocs-control.md](references/ocs-control.md) before first connection or unfamiliar control work.
+
+- Prefer exposed `ocs_sessions`, `ocs_read`, `ocs_execute`, `ocs_capture` tools. When absent, `scripts/ocs_control.py` uses an existing authenticated native local session. It does not launch, install or reconfigure OCS.
+- Discover the session; read state, capabilities, document identity/revision and unit settings. Session descriptors contain private tokens: never print them.
+- Read installed command/entity/record schemas before constructing unfamiliar requests. A command declaration is not a successful operation; upstream API examples are not proof of installed support.
+- Preserve unsaved and concurrent work. Do not clear, close, replace or save an open document as a side effect of making another model.
+- Do not infer scale from screenshots or camera zoom.
+
+### Check existing component implementations
+
+1. Before every component start, check both its work status and the actual 3D files. Read the input manifest, work record, sheet links, existing CAD index and filesystem inventory, including available manufacturer models. Run the [existing-model start check](references/existing-model-start-check.md). A matching existing model is DONE for the current build list: record its path and reuse its existing checks, then select an unfinished component. A stale NOT_STARTED or IN_PROGRESS entry does not start another construction, inspection or capture cycle for that model.
+2. Reuse the existing `Client`, `Journal`, `Geometry` and verification functions for their supported actions. Select their helper, session, document and journal explicitly. Read the bundled [OCS runtime instructions](references/ocs-runtime.md) before connecting.
+3. Use `scripts/part_index.py --index PATH --id PART_ID` to read the actual external index. Add another `--index` for an existing dictionary. Results retain source namespaces, original records and source hashes. A matching name/ID in two indexes remains two attributed records.
+
+## Construct and check bounded changes
+
+1. Plan the next edit using stable readable part names, current handles and the installed schema. Do not substitute FreeCAD, Fusion or build123d calls for unknown OCS APIs.
+2. Bind authorized mutations to the session, document, expected revision and caller-stable `request_id`. For selection-dependent edits, use explicit expected handles/selection supported by the installed protocol, not an unexamined GUI selection. Use state returned by the preceding operation. `accepted`, `running` and `waiting_input` are not completion. A failed batch can have committed earlier steps.
+3. On timeout/lost response, query the operation with the same identity; do not replay under a new ID because completion is unknown. Refresh after a definitive stale-state rejection and reconsider the edit. Never restart a partially completed batch blindly.
+4. Read back changed parts, properties and geometry. Tie numeric checks to document revision and source handles. `scripts/check_contract.py` checks supplied point/axis/plane measurements; it does not query OCS or validate solids.
+5. Inspect corresponding orthographic views from the same model, after authorized view changes. Do not invent separate geometry for each view or generate authoritative CAD views with imagegen. Turn a visible concern into an actual measured check when supported.
+6. Unsupported/failed checks stay unverified. Overlapping bounding boxes do not prove collision; disjoint boxes only rule out overlap for the represented geometry/pose. A screenshot does not prove a dimension. Axis checks do not establish gear teeth engagement or bearing fit.
+
+Inspect layer/material/group/block schemas before organizing parts. Name parts and functional visibility groups as agreed. Do not fuse separate components just to color them. Rendered metal supplies no density, modulus, strength or anisotropy. Keep unselected engineering materials unselected.
+
+### Execute and improve component jobs
 
 1. Map each job step to its readable action name and graph reference. Append component-specific occurrences with input/output revisions, representation, units/frames, preserved/changed information, alternatives, downstream conditions and actual check evidence.
 2. Use one writer for the selected CAD document. Preserve unrelated open work. Use stable request IDs and the existing same-ID recovery mechanism for uncertain completion.
@@ -72,3 +104,21 @@ The package includes its OCS control helper and `cadtools` runtime, geometry and
 29. After final provenance and path edits, use the [retained-artifact manifest check](references/retained-artifact-checks.md). Keep the emitted receipt with the component records in the owning project.
 
 30. For a circular-section ring defined by inside diameter and section diameter, use the [toroidal-reference procedure](references/toroidal-reference.md). Supply source-bound dimensions and an explicit centre and axis. Preserve saved native surface records before extending their decoder; verify analytic radii and body closure before completing the component.
+
+### Additional component procedures
+
+1. For an explicitly source-pinned non-geometric task, use the [non-geometric requirement procedure](references/non-geometric-requirements.md). Preserve its classification and source hash through readiness and existing-model checks.
+2. For a bounded spherical seat with a collar, shaft and tangent blend, use the [spherical-seat profile procedure](references/spherical-seat-profile.md). Supply all source dimensions through the component job; retain analytic surface, transition and persistence checks.
+
+## Save and computational handoff
+
+- Save only to an authorized path, format and version. Follow exact conversion authorization requirements; preserve originals. Mesh visibility is not editable-solid or feature-history equivalence.
+- Where supported, audit the intended target and use `save_verified`; inspect dropped data and reopen results. Record the output hash and checked properties, not just a success label.
+- Read [computational-engineering.md](references/computational-engineering.md) for equations, procedural geometry or solver work. OCS remains selected CAD. PicoGK/ShapeKernel are optional supplements, not installed or enabled by this skill. Noyron's public description is not a public executable physics engine.
+- Do not run a solver with invented materials, loads, boundary conditions or convergence criteria. Separate measured experiments, analytical checks, numerical predictions and manufacturer statements.
+
+## Report and preserve evidence
+
+Report actual actions, paths, measurements and unresolved errors. State actual executing model if exposed; otherwise unavailable, never the requested model as a substitute. Automated checks and author acceptance are different facts.
+
+Initial evidence is linked in [sources-and-capabilities.md](references/sources-and-capabilities.md). Recheck the installed build after updates. Follow project original-source archiving/provenance rules; reference existing originals rather than duplicate them.

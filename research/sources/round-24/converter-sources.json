@@ -2,7 +2,7 @@
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family-dimension-drawing.pdf",
     "title": "Dimension Drawing - Orion-Large, Rev01",
-    "summary": "Manufacturer Rev01 drawing explicitly names24/12 ORI241236120;187 flange,174\u00d771 slot pitches,86 depth reference andR4 open slots.",
+    "summary": "Manufacturer Rev01 drawing explicitly names24/12 ORI241236120;187 flange,174×71 slot pitches,86 depth reference andR4 open slots.",
     "access_date": "2026-11-12",
     "evidence_status": "downloaded_original",
     "sha256": "d97dab715a4813919127ce5e3b377776f024aaf8b6611a9bf9fdc169baa05c3a",
@@ -26,7 +26,7 @@
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-manual.pdf",
     "title": "Orion-Tr Smart DC-DC Charger Isolated",
-    "summary": "Retained manual page29 names48/12-20;higher-power table includes24/12-30 and130\u00d7186\u00d780 nominal envelope. Coordinator separates this from the delegated48/12-30 price-list observation.",
+    "summary": "Retained manual page29 names48/12-20;higher-power table includes24/12-30 and130×186×80 nominal envelope. Coordinator separates this from the delegated48/12-30 price-list observation.",
     "access_date": "2026-11-12",
     "evidence_status": "downloaded_original",
     "sha256": "902fd7c4a8bc28f6711de8875a4e25f4a3ab6015fe54f36684ba89c383154f2d",
@@ -324,7 +324,7 @@
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/heatsink-analytic-features.json",
     "title": "heatsink-analytic-features.json",
-    "summary": "Existing SAB reader observes heatsink planes,cylinders,cones andloops;R4 slot centres identify174.3\u00d771mm pattern.",
+    "summary": "Existing SAB reader observes heatsink planes,cylinders,cones andloops;R4 slot centres identify174.3×71mm pattern.",
     "access_date": "2026-11-12",
     "evidence_status": "executed_native_observation",
     "sha256": "54125d04d57a57d01f93f69965c2d708a0705b10e3670f694310a151224c91c9",
@@ -390,7 +390,7 @@
   {
     "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/native-plot-result.json",
     "title": "native-plot-result.json",
-    "summary": "Completed native PDF plot response fordocument87,one297\u00d7210mm page;visual content checked separately.",
+    "summary": "Completed native PDF plot response fordocument87,one297×210mm page;visual content checked separately.",
     "access_date": "2026-11-12",
     "evidence_status": "executed_native_observation",
     "sha256": "20711257f0e988ee4a8de25519f918c051f48ec7f4054096eac47f32aafb273f",
@@ -873,6 +873,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
     "title": "Actual component capture-identity procedure",
     "summary": "Adds current converter failure case:separate native document state,numeric geometry andactual image identity;retain repeated hashes andsource-revision interface differences.",
     "access_date": "2026-11-12",
@@ -884,6 +885,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
     "title": "Component CAD skill capture routing",
     "summary": "Routes assembly work toactual captured component-identity check after native readback.",
     "access_date": "2026-11-12",

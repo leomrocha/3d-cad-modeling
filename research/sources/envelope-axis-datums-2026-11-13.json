@@ -59,7 +59,7 @@
     {
       "title": "Envelope source-axis procedure",
       "summary": "Documents optional source-feature/datum mapping, separate construction origin and persisted native metadata comparison.",
-      "local_path": "skills/component-cad/references/envelope-reference.md",
+      "local_path": "skills/cad-ocs-engineering/references/envelope-reference.md",
       "sha256": "543197d968706d4f28575cc062fb181620a0c782156f54c05fb4212e8f7e27b7",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",

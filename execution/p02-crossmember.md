@@ -13,4 +13,4 @@ Date: 12 November 2026. Executing model: gpt-6.1-sol. State: **DONE**. Checkpoin
 
 ## Reproduction
 
-Use the [tube procedure and dependency setup](../skills/component-cad/references/source-first-and-tube.md) with the source revision above, a fresh namespace/journal/work directory, the current OCS session and a new output path. Run the source-linked native checks after reopening, then call `crossmember_checks(rail_features, crossmember_features, frame_width, source_length)` using the retained source340 mm/260 mm values. Numerical comparison threshold is1e−7 mm. Manufacturing limits retain their own source attribution.
+Use the [tube procedure and dependency setup](../skills/cad-ocs-engineering/references/source-first-and-tube.md) with the source revision above, a fresh namespace/journal/work directory, the current OCS session and a new output path. Run the source-linked native checks after reopening, then call `crossmember_checks(rail_features, crossmember_features, frame_width, source_length)` using the retained source340 mm/260 mm values. Numerical comparison threshold is1e−7 mm. Manufacturing limits retain their own source attribution.

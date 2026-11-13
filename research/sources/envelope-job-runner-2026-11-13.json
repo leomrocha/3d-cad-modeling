@@ -23,7 +23,7 @@
       ]
     },
     {
-      "local_path": "skills/component-cad/references/envelope-job-runner.md",
+      "local_path": "skills/cad-ocs-engineering/references/envelope-job-runner.md",
       "title": "Envelope runner input and execution contract",
       "summary": "Documents explicit CLI job/root/session inputs, preflight order, native writes, saved-file checks and the reference-envelope geometry scope.",
       "evidence_status": "procedure_update",
@@ -78,7 +78,7 @@
       ]
     },
     {
-      "local_path": "skills/component-cad/references/envelope-job-runner.md",
+      "local_path": "skills/cad-ocs-engineering/references/envelope-job-runner.md",
       "title": "Documented metadata action identities",
       "summary": "Documents the basic and complete source metadata writes as separate journalled actions.",
       "registered_at": "2026-11-13",

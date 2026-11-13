@@ -22,4 +22,4 @@ The existing [SAT/SAB comparator](../scripts/small_bms.py) reuses the native bod
 
 1. New reusable algorithms, synthetic tests and general procedures are in 3dmodeling. New component sources, recipes, models, measurements, execution records and real-case fixtures are in FERME.
 2. Active historical paths are preserved. The preparation documents and proposed migration manifest remain under their current owner. This batch performs no migration or import relocation.
-3. The [shared skill](../skills/component-cad/SKILL.md) routes to the three new generic procedures. Each FERME result identifies its actual shared-file hash; the coordinator records the result commit in the component checkpoint.
+3. The [shared skill](../skills/cad-ocs-engineering/SKILL.md) routes to the three new generic procedures. Each FERME result identifies its actual shared-file hash; the coordinator records the result commit in the component checkpoint.

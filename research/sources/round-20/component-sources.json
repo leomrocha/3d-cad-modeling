@@ -301,6 +301,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/manufacturer-assembly.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
     "title": "Executed manufacturer assembly import procedure",
     "summary": "Documents prior import-field reuse,definition/instance counts,inverse source placement diagnosis,guarded correction,persistence,35 saved checks,view differences and source dimensional handoffs.",
     "access_date": "2026-11-12",

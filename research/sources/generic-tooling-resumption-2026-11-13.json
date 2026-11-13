@@ -26,7 +26,7 @@
       ]
     },
     {
-      "local_path": "${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md",
+      "local_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-reference.md",
       "title": "envelope reference",
       "summary": "Procedure documents external source-pinned jobs, optional source coverage, one replacement metadata write and separate actual native xdata persistence inspection.",
       "registered_at": "2026-11-13",
@@ -37,7 +37,7 @@
       ]
     },
     {
-      "local_path": "${MODELING_ROOT}/skills/component-cad/references/drawing-feature-checks.md",
+      "local_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/drawing-feature-checks.md",
       "title": "drawing feature checks",
       "summary": "Procedure binds drawing extension-line endpoints to the measured feature, separates hole pitch, complete curved bounds and reachable-point extrema, and preserves independently valid saved checks after a source-binding finding.",
       "registered_at": "2026-11-13",
@@ -48,7 +48,7 @@
       ]
     },
     {
-      "local_path": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+      "local_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
       "title": "SKILL",
       "summary": "Shared component skill routes drawing-feature comparisons to the added procedure while preserving the current implementation and existing-model checks.",
       "registered_at": "2026-11-13",

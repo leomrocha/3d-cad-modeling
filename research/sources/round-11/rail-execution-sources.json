@@ -8,7 +8,7 @@
     "sha256": "be38f73d23c176abe2b15dee2b4ed61856a0002f52cc2b9e8a5d521ea85a8bfc",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -20,11 +20,12 @@
     "sha256": "f833553eff0f96bdf455cbffdd47946f66512e5d4ace39c23492e3a496a7534c",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/SKILL.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
     "title": "Updated component CAD skill",
     "summary": "Routes standard-defined feature questions through recorded supplier lookup, standards search, evidence review and calculation. Links the observed P01 selection/extrusion procedure and recovery before native component work.",
     "access_date": "2026-11-12",
@@ -32,11 +33,12 @@
     "sha256": "b1778fa0d8e1163f7f2f540e6d1b6c90718c27ca30d18266f10bd5e539b94ba7",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
     "local_original": "${MODELING_ROOT}/skills/component-cad/references/source-first-and-tube.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
     "title": "Source-first tube construction and recovery procedure",
     "summary": "Numbered source preparation, installed schema/selection interpretation, exact rounded-profile construction, bounded-area extrusion, native checks, save/reopen and content inspection steps. Records refused Boolean routes, same-ID capture recovery and the reopened SAB-reader/bounds issues.",
     "access_date": "2026-11-12",
@@ -44,7 +46,7 @@
     "sha256": "78ee0535480d6a122bf9bea5d1328971b2556eed27e25a92d03b3a76dfe39813",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -56,7 +58,7 @@
     "sha256": "6abe7072ea02033e2a8443dde1b3ffb0641d566e4ce098212295ed57c66e2bf7",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -68,7 +70,7 @@
     "sha256": "fbccbd4a5ab54c0954a853aee3e9fbfaf012d79f508f9d49fa18dbe3bae9c815",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -80,7 +82,7 @@
     "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -92,7 +94,7 @@
     "sha256": "5863d2b586a0b696be6c5002270dc33b88c9d8c270e422580b0ec4bd2482b6f7",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -104,7 +106,7 @@
     "sha256": "1d8f89b4b2b5701b694d194e980112897425137390f09593b44cd64c328c60c4",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -116,7 +118,7 @@
     "sha256": "86a5a127ed764305a237d6a5aa09b7e3702fec41b41b1733390be4126d98885f",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -128,7 +130,7 @@
     "sha256": "7c8a97ee93f298161fefe563bd9ad6adf1eff007f6dafcd490d5ce2f41a4de61",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -140,7 +142,7 @@
     "sha256": "42b90c0839d5bc12b292fccf771ee08f92f5c2c2fb542aca694c2d8ae5755d49",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -152,7 +154,7 @@
     "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -164,7 +166,7 @@
     "sha256": "e7bd8c78f2bd07126b170becccc9475d9b9c80becde387d458dc048c2c755e90",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -176,7 +178,7 @@
     "sha256": "92752b5e45c9d49757e28cc59972d7f9a29411108638374819ec4120639997a0",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -188,7 +190,7 @@
     "sha256": "93fcab51540e0b9ca5fb1081372f64164c3a9af907dbf4f173e6ea6adb68f987",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -200,7 +202,7 @@
     "sha256": "575890f87566f5a0b72b6c8364fe5bba07ca5ba6c3e4a473957d0e16ccc6eea6",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -212,7 +214,7 @@
     "sha256": "78dd392bee67a9e8c23b5bdfa449638683569619fa8cf262970633b95006ff87",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -224,7 +226,7 @@
     "sha256": "aeb6f8e1d0655f87cb3cd90822afe1e029c59ccbbd12eab4d3857876c9977a26",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -236,7 +238,7 @@
     "sha256": "aa8bb19fe4a9b47ef2cbdc3b31b3c3646e6f8ebce4499ac0fa15265a30088e15",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -248,7 +250,7 @@
     "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -260,7 +262,7 @@
     "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -272,7 +274,7 @@
     "sha256": "b2bc3712f1a00820520bad426b37e3a62db6bca7fbf89527d69e26cfdc48921f",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -284,7 +286,7 @@
     "sha256": "371339e5b10d8acd5eca283d87b5a677d054bbab41a0c19b4a05786610dfdfae",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -296,7 +298,7 @@
     "sha256": "0edbbba367cf59345eea6a1d203ccada1091bc6aa5a235bc0cdd1d354d890999",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -308,7 +310,7 @@
     "sha256": "07e6c2661e893a6a254009e6247957143a301c6a048f433d26bd889a981dd554",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -320,7 +322,7 @@
     "sha256": "d36d735800a4f3f864093bb7bca1d525e77f887e4e94892ddc3a6960efee1f83",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -332,7 +334,7 @@
     "sha256": "15cca994a0571a73e64cd62c8b3d62a36079b71fb177b485b88f37124b129c4f",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -344,7 +346,7 @@
     "sha256": "9a1d0c1d0a68ed710fe3add780c2c80bedfff9752c7a5d56b82a8f1b6248eda7",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -356,7 +358,7 @@
     "sha256": "4a3cbf1642fbabdef9f96df70e36b7fcf2b36880241a8c990b6b6ce3dc23c9bc",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -368,7 +370,7 @@
     "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -380,7 +382,7 @@
     "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -392,7 +394,7 @@
     "sha256": "ddab1cee22d62fb2ea54550a401e51fead2d6502cad15e9714cc36dc24b93e08",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -404,7 +406,7 @@
     "sha256": "5a3990ad03f698d0cbd5728356d97f3dfc4ee56aeea7584cfc8fd0993e7a7df7",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -416,7 +418,7 @@
     "sha256": "edfbba10d377d41edced165be77041ce2e6d597698565886e51d5162fa6926e4",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -428,7 +430,7 @@
     "sha256": "589aa13074d72f2fddbf315a76c5f02e63a8998ed48f8b4b660eaea3dd4ceb06",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -440,7 +442,7 @@
     "sha256": "587d75a938b164adaaa784de8adb1ef5e92d8f48063d868351812b84060809d2",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -452,7 +454,7 @@
     "sha256": "eae4f702cd3b8654e6330664363b9a28166374a493ede5f71fa888016ac104d4",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -464,7 +466,7 @@
     "sha256": "a11d317b36cfa49fe14e3b3b56c52edb461c56e27ae8b8c66f0069f846879b25",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -476,7 +478,7 @@
     "sha256": "4e9c98483e6111ad1a328f1d9d7581a4bb6595d9f2b6b67dcf71f6f9166035cf",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -488,7 +490,7 @@
     "sha256": "81979963ed959526dc42bff1cdcb328bc31152314c557033b54f9a21ce81d173",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -500,7 +502,7 @@
     "sha256": "8f86700762ae70f2ee90a0e0cc5f00028e87fcc194f17f83fe4ff002969059e5",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -512,7 +514,7 @@
     "sha256": "c0c15d2038c2bd43d11f0e83eba928b4a0d2b370632dae420d4ba80f7b61663b",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -524,7 +526,7 @@
     "sha256": "dcdd23db2cf00e8a4028d560c5ef4f5cda9ffb835dc7e9582c9a3d2dc947c76f",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -536,7 +538,7 @@
     "sha256": "a5a38b031408d9a358834f690dd9d742d1ebb56c859d4a1824de16d7cb81c7c4",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -548,7 +550,7 @@
     "sha256": "bffca9d626a9bc4a4119a0858d4616006aad170f2d34f188abcfba975df80066",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -560,7 +562,7 @@
     "sha256": "7e607d246c89ad09c11ea1b91756512c98f2d28bf5be2b6dcd5c7f5d36ea3365",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -572,7 +574,7 @@
     "sha256": "dd3168fc8697bbee25bd6af7aab1e875749d832de03a8a8a4f67765d72a0c2f6",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -584,7 +586,7 @@
     "sha256": "5aead359e93b92649093bc504ec6a1882fe06a052e1607ab81fcbd1c0f6f207c",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -596,7 +598,7 @@
     "sha256": "a704900e10ffd570c0936a331a57a5bcaa6be5d3fda56f54818b4a4367ccd1e1",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -608,7 +610,7 @@
     "sha256": "fbf9bf5fed091ba3a9ce0bfe9b5f60e5bdfb3b72aa46899d14088d989f73e4e1",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -620,7 +622,7 @@
     "sha256": "511b9fa71fffeb3013b78de2425a5be7dda67163d4875429748276ef290bf81b",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -632,7 +634,7 @@
     "sha256": "4011e97cdcd5e1f4f5aa289b4f5fcf25dc34076b365701ab316ceee4cdc22fd1",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -644,7 +646,7 @@
     "sha256": "5a93b1b1516db6961c6de77c66a54758f139d89612b0175de4fdc172e666e0e4",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -656,7 +658,7 @@
     "sha256": "7a9368f69e43e7b33333ade722493ce03b3dd5e184a68191fc2b994f12925f9e",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -668,7 +670,7 @@
     "sha256": "362585030a5d4153458559d42eb6670114a50b160d421b613c08077cbcf1c07c",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -680,7 +682,7 @@
     "sha256": "058ad04ff4894ccd26c0e7536297f974b5b35cddc2dc97ca2b730c2db14cb63f",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -692,7 +694,7 @@
     "sha256": "cb069ebe06bdcd0837d1f07c8dbdd7d3baed93f89c0a3be43fdc5901097b8330",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -704,7 +706,7 @@
     "sha256": "979206d7bb9f12abd10de2e0d76240860854365480c3f76390483ea5637485b9",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -716,7 +718,7 @@
     "sha256": "4ad10526c820378353ed69016ee15d66b250d57c38daf105d952062af97c735a",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -728,7 +730,7 @@
     "sha256": "cafe78c847f8be3ad37325eaf078909cf29da9b7e01d69b03632c3760b807c7c",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -740,7 +742,7 @@
     "sha256": "d0935a70ee2d854e20c0e27a855afcb6ceb0edd62f1bd1b656501f50ccc861bc",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -752,7 +754,7 @@
     "sha256": "0242270e6704f16d801f7218267bf1b0f92ae0c62d8dd01b3b4f3f49e8041aaf",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -764,7 +766,7 @@
     "sha256": "2ab3757762c02208291bd13649c77fd921e9635a1ed2e6e19abc411805ecbb00",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -776,7 +778,7 @@
     "sha256": "6ba9d70753671291c5c6a510562f72ee60fe44dc01a706b61bf3bdc210fea888",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -788,7 +790,7 @@
     "sha256": "3b40510c005bcd041a270a823e0ff380aca827637ef07843ef0408dfd92e458e",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -800,7 +802,7 @@
     "sha256": "aff14ef25e9faa4261b351e013feffa2bbe4adf5e62c3792550a2e042df4fc4b",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -812,7 +814,7 @@
     "sha256": "4fdf2c1ac1c1f8956c9d836f45c08a5099731b4888bfe733cd7b41cfffa42751",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   },
   {
@@ -824,7 +826,7 @@
     "sha256": "4f1bfab163d6828aaf8d6ce9c71e01fdc4d4af6c23c7f7939325d2e2ad986fc7",
     "referring_documents": [
       "execution/p01-rail-build.md",
-      "skills/component-cad/references/source-first-and-tube.md"
+      "skills/cad-ocs-engineering/references/source-first-and-tube.md"
     ]
   }
 ]

@@ -52,7 +52,7 @@
     {
       "title": "Non-geometric workflow procedure",
       "summary": "Documents the explicit source contract, status meanings, existing-model precedence and separate geometric alternatives.",
-      "local_path": "skills/component-cad/references/non-geometric-requirements.md",
+      "local_path": "skills/cad-ocs-engineering/references/non-geometric-requirements.md",
       "sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",

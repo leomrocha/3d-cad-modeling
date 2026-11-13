@@ -6,7 +6,7 @@ Date: 12 November 2026. Executing model: **gpt-6.1-sol**. State: **setup impleme
 
 1. User instruction: execute the [component development plan](../COMPONENT_DEVELOPMENT_PLAN.md) after it is written. The current work implements initial data access, action/source records and the first rail's source-readiness check.
 2. FERME retains the existing 103-component input index (`${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json`), eight-entry parts/standards dictionary (`${FERME_ROOT}/skills/dictionaries/parts-and-standards.json`), native models and new component work/action evidence (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/README.md`).
-3. This project supplies [part-index access](../scripts/part_index.py), [source-readiness and action-occurrence records](../scripts/component_records.py), [component iteration skill](../skills/component-cad/SKILL.md) and [tests](../tests/test_component_tools.py).
+3. This project supplies [part-index access](../scripts/part_index.py), [source-readiness and action-occurrence records](../scripts/component_records.py), [component iteration skill](../skills/cad-ocs-engineering/SKILL.md) and [tests](../tests/test_component_tools.py).
 4. The newly inspected FERME automation modules (`${FERME_ROOT}/skills/cad-automation-and-reuse.md`) already implement Client/Journal/Geometry/recipes/verification. Reuse those functions rather than the earlier temporary fixed-session wrappers. Their actual source files are registered in this batch.
 
 ## 2. Actual results

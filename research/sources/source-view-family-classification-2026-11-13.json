@@ -5,7 +5,7 @@
     {
       "title": "Source-view and variant correspondence procedure",
       "summary": "Adds family versus exact-variant scope classification, explicit shared-geometry mapping and separate raw-endpoint/uncertainty evidence for quantitative comparisons.",
-      "local_path": "skills/component-cad/references/source-view-evidence.md",
+      "local_path": "skills/cad-ocs-engineering/references/source-view-evidence.md",
       "sha256": "5cebe3896c1318a861b06d7597869ce84c0d23d31467e256a0f7d0f75c3ceb60",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
