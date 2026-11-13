@@ -1,5 +1,7 @@
 # Execution plan: define one workflow point at a time
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: authorized documentation work; procedure and component designs are proposals. The current point is descriptions and explicit dimensions → model brief.
 
 ## 1. Required action record

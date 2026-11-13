@@ -16,6 +16,8 @@ Bind purpose, source claims, dimensions, feature criteria and candidate branches
 
 ## ocs-engineering
 
+Current package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). The heading retains the dated workflow identifier and incoming anchors.
+
 Reuse the existing session, native geometry, source/frame and readback contract for supported OCS capabilities. Alternate backend requirements retain their own procedure.
 
 1. **CAD-09 — Build and constrain an editable planar sketch:** [procedure](point-03-vector-and-solid.md); [action/helper contracts](point-03-operations.json).

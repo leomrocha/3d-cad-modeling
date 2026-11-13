@@ -1,5 +1,7 @@
 # MIX-R01 — Raster plan + site photographs + controls + library → IFC and registered context
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Classification: analyst assessment under the stated conditions.
 
 **Manual effort 4/5; setup 4/5; computing 4/5.**

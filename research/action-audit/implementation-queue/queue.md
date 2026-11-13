@@ -1,5 +1,7 @@
 # Ordered implementation queue
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: proposed implementation order. Coordinator: gpt-6.1-sol.
 
 Coverage: 245 distinct action definitions, all 77 operations and 38 original routes. Each entry retains the original action and operation input contracts in [structured queue](queue.json).

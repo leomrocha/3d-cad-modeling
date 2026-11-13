@@ -10,3 +10,9 @@ Date: 2026-11-13. Coordination: gpt-6.1-sol. Component execution: gpt-6-luna in 
 6. **Document memory:** all five saved reference results record successful geometry, source metadata and save/reopen checks, followed by closure of both owned construction/reopened documents. The shared cleanup code preserves unrelated documents. Component hashes and native request histories stay in FERME.
 7. **Reuse and completion records:** Curtis, Kelly and Pilz were registered DONE and committed in FERME `c267a4d`; subsequent inventory queries returned `SKIP_EXISTING_MODEL`. The bracket and contactor central records identify their completed reference geometry and separate detailed-part source gates. Component-specific source originals and measurements remain in FERME; reusable procedures and code remain here.
 8. **Source versions:** current reachable generic revisions are `6ca4af3` for the source guides, `cf6c257` for their application reports, and `eba99de` for variant association and request-ID preflight. Concurrent repository history maintenance changed their earlier IDs `4ace120`, `bf9a1d1` and `b136f35`, respectively. Preserve the original execution references and helper hashes alongside these current equivalents.
+
+## Current procedure links
+
+1. `skills/component-cad/references/dimension-limits-and-datums.md` → [dimension limits and datums](../skills/cad-ocs-engineering/references/dimension-limits-and-datums.md)
+2. `skills/component-cad/references/source-view-evidence.md` → [source view evidence](../skills/cad-ocs-engineering/references/source-view-evidence.md)
+3. `skills/component-cad/references/source-perimeter-chains.md` → [source perimeter chains](../skills/cad-ocs-engineering/references/source-perimeter-chains.md)

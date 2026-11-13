@@ -1,5 +1,7 @@
 # Point 07 visual and evidence review — photographs, depth and learned reconstruction
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registration date: 2026-11-12. Status: **DONE — local documentary review**. The evidence packages, procedures, component designs, validation cases and resource records below are proposals. Scope: CAD-16; REC-03, REC-04, REC-05, REC-06, REC-10, REC-11, REC-17, REC-18, REC-19, REC-20; DOM-20, DOM-21, DOM-22, DOM-28, DOM-29 and DOM-30.
 
 Requested assignment: `gpt-6.1-sol`, reasoning effort `xhigh`. Actual executing model identity: **unavailable in this agent environment**. Inspected evidence consists of local project instructions, audit plan/sequence, original operations, reconstruction reports/dossiers and registered source summaries. Images, reconstruction outputs and runtime measurements were not supplied or inspected. This review's executed output is this document; its image, geometry, training and measurement actions describe future work.

@@ -113,6 +113,7 @@ def main():
                  f'Date: {args.date}. Classification: analyst assessment under the stated conditions.', '',
                  f'**Manual effort {score["human"]}/5; setup {score["setup"]}/5; computing {score["compute"]}/5.**', '',
                  f'Output: {plain(record["output_scope"])}', '']
+        lines += ['Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.', '']
         for title, key in [
             ('Comparison conditions', 'comparison_conditions'), ('Registered starting artifact types', 'registered_recipe_inputs'), ('Detailed source and preparation artifacts', 'inputs'),
             ('Reference points, datums and coordinate frames', 'reference_points'),
@@ -128,7 +129,7 @@ def main():
             lines += [record['branch_software_selection'], '']
         lines += ['## Original sources', '']
         lines += [f'{i}. [{url}]({url})' for i, url in enumerate(record['source_urls'], 1)]
-        lines += ['', f'Full source summaries: [source register]({ROOT / "research/sources/source-register.md"}).', '']
+        lines += ['', 'Full source summaries: [source register](../../sources/source-register.md).', '']
         (DETAILS / f'{record["id"].lower()}.md').write_text('\n'.join(line.rstrip() for line in lines).rstrip() + '\n')
     dump(DETAILS / 'workflow-details.json', {'schema_version': 1, 'date': args.date,
          'classification_status': contract['rating_status'], 'workflows': records})

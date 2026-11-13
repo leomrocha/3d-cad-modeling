@@ -4400,7 +4400,9 @@
         "${MODELING_ROOT}/research/documentation-rename-audit/README.md",
         "${MODELING_ROOT}/research/sources/documentation-rename-audit-2026-11-13.json"
       ],
-      "next_check": "Execute the ordered repair batches after plan review, refreshing concurrent changes."
+      "next_check": "Retain current package mappings when regenerating documentation.",
+      "execution_status": "DONE",
+      "execution_record": "execution/documentation-rename-repairs-2026-11-13.md"
     }
   ]
 }

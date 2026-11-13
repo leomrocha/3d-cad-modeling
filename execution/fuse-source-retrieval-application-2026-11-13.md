@@ -11,3 +11,7 @@ Observed 13 November 2026. Coordinator: `gpt-6.1-sol`. Source inspection, case i
 7. **Execution evidence:** component `result-r03.json`, `reopened-feature-checks.json` and the journal retain native execution. A filesystem permission failure occurred while writing preflight, before native access; the escalated command performed the single native build. Model geometry and source metadata remain a drawing-derived external reference.
 
 8. **Committed component result:** FERME revision `25eb7c5` retains the native model, selected source contract, case program and result. Its selected-evidence manifest is `${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c030-build-01/native-build-r03/retention-hashes.json`, SHA-256 `4d38e0f593a5d642ac27c784bda7518d40d305975dd2d35c99a568802029c8f6`. Root verified twelve selected immutable artifacts; the action log is explicitly local-only under the current ignore policy.
+
+## Current procedure links
+
+1. `skills/component-cad/references/source-view-evidence.md` → [source view evidence](../skills/cad-ocs-engineering/references/source-view-evidence.md)

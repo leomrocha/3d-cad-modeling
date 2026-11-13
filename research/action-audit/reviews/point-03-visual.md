@@ -1,5 +1,7 @@
 # Point 03 visual and evidence review — vectors, sketches and small solids
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registration date: 2026-11-12. Status: **DONE — local documentary review**. The procedures and cases below are proposals. Scope: CAD-08, CAD-09, CAD-10, CAD-13, CAD-14, CAD-15, DOM-03, DOM-04, DOM-05 and DOM-40, with readable operation names below.
 
 Requested assignment: `gpt-6.1-sol`, reasoning effort `xhigh`. Actual executing model identity: **unavailable in this agent environment**. Evidence: live project instructions, audit plan, original operation records, local reports and registered source summaries. Original URLs are reused from those records. The executed output is this review document.

@@ -1,5 +1,7 @@
 # Independent procedure review — Point 01 model brief
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Review type: static document consistency and source inspection. Scope: **CAD-01 — Extract a model brief from text and dimensions** and **DOM-01 — Normalize model brief**. The reviewed output is [Point 01 — Descriptions and explicit dimensions to a model brief](../point-01-model-brief.md).
 
 Requested dispatch: separate `gpt-6.1-sol` reviewer, reasoning effort `xhigh`. Actual executing model identity: unavailable in the exposed runtime. Dispatch and observed identity are recorded separately.

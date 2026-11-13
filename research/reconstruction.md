@@ -1,5 +1,7 @@
 # Image, video and scan reconstruction for CAD remodeling
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Research date: 12 November 2026. Sources below are project documentation, repositories or papers accessed on this date. Search-result and web-read content was not downloaded as a local original. No software was installed or executed. Recommendations are proposals for staged experiments.
 
 ## Decision

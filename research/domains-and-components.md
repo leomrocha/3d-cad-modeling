@@ -1,5 +1,7 @@
 # Domain and component library architecture
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Research status: web pages inspected on 12 November 2026. No web source file was downloaded; the links below are the inspected sources. The report records primary documentation, project repositories and vendor terms. It does not claim local software execution or validation. Research agent model identity: Luna, as assigned; exact model version is unavailable in the execution record.
 
 ## Recommended architecture

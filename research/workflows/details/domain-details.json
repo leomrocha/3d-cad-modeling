@@ -131,7 +131,7 @@
             "uncertainty",
             "survey method"
           ],
-          "frame": "survey/map frame \u2194 project frame",
+          "frame": "survey/map frame ↔ project frame",
           "source_status": "measured control"
         },
         {
@@ -174,7 +174,7 @@
             "rig-to-world pose",
             "timestamps"
           ],
-          "frame": "camera optical \u2192 rig \u2192 project/world",
+          "frame": "camera optical → rig → project/world",
           "source_status": "calibrated or estimated; store residual/status"
         },
         {
@@ -185,7 +185,7 @@
             "X-axis abscissa/ordinate",
             "scale"
           ],
-          "frame": "project engineering frame \u2192 map frame",
+          "frame": "project engineering frame → map frame",
           "source_status": "survey/CRS authority; never inferred from image appearance"
         }
       ],
@@ -502,7 +502,7 @@
             "unit scale",
             "assembly placement if supplied"
           ],
-          "frame": "STEP product frame \u2192 CAD import frame",
+          "frame": "STEP product frame → CAD import frame",
           "source_status": "manufacturer file"
         },
         {
@@ -513,7 +513,7 @@
             "shaft/bore axis",
             "bolt-circle data"
           ],
-          "frame": "component frame \u2192 parent link frame",
+          "frame": "component frame → parent link frame",
           "source_status": "drawing/measurement"
         },
         {
@@ -535,7 +535,7 @@
             "symmetric inertia tensor kg m^2",
             "inertial axes/quaternion"
           ],
-          "frame": "link frame \u2194 inertial frame",
+          "frame": "link frame ↔ inertial frame",
           "source_status": "manufacturer/test/calculation provenance"
         },
         {
@@ -543,7 +543,7 @@
           "fields": [
             "mesh origin, scale and transform"
           ],
-          "frame": "CAD part local \u2192 robot link local",
+          "frame": "CAD part local → robot link local",
           "source_status": "export transform checked against solid"
         }
       ],
@@ -833,7 +833,7 @@
             "part origin",
             "placement transform"
           ],
-          "frame": "part-local \u2192 assembly frame",
+          "frame": "part-local → assembly frame",
           "source_status": "CAD source"
         },
         {
@@ -841,7 +841,7 @@
           "fields": [
             "origin, axis, limits"
           ],
-          "frame": "child link \u2192 parent link",
+          "frame": "child link → parent link",
           "source_status": "joint authoring record"
         },
         {
@@ -1083,7 +1083,7 @@
             "base pose",
             "mounting datum"
           ],
-          "frame": "robot base \u2192 world",
+          "frame": "robot base → world",
           "source_status": "survey/design"
         },
         {
@@ -1092,7 +1092,7 @@
             "point cloud origin",
             "registration matrix"
           ],
-          "frame": "sensor/cloud \u2192 world",
+          "frame": "sensor/cloud → world",
           "source_status": "measured registration"
         },
         {
@@ -1100,7 +1100,7 @@
           "fields": [
             "Menagerie joint bodies/axes"
           ],
-          "frame": "model-local joint \u2192 world via base pose",
+          "frame": "model-local joint → world via base pose",
           "source_status": "pinned XML"
         }
       ],
@@ -1329,7 +1329,7 @@
             "model coordinate",
             "uncertainty"
           ],
-          "frame": "sketch pixels \u2192 model plane/frame",
+          "frame": "sketch pixels → model plane/frame",
           "source_status": "measured dimensions/model datums"
         },
         {
@@ -1337,7 +1337,7 @@
           "fields": [
             "dimension and feature references"
           ],
-          "frame": "new sketch plane \u2192 model coordinates",
+          "frame": "new sketch plane → model coordinates",
           "source_status": "author instruction"
         }
       ],
@@ -1536,7 +1536,7 @@
             "camera intrinsics/extrinsics",
             "reprojection error"
           ],
-          "frame": "camera \u2192 object frame",
+          "frame": "camera → object frame",
           "source_status": "COLMAP output"
         },
         {
@@ -1544,7 +1544,7 @@
           "fields": [
             "control lengths/points"
           ],
-          "frame": "object local \u2192 metric frame",
+          "frame": "object local → metric frame",
           "source_status": "measured scale/targets"
         },
         {
@@ -1552,7 +1552,7 @@
           "fields": [
             "mount faces/axes/holes"
           ],
-          "frame": "mesh frame \u2192 component frame",
+          "frame": "mesh frame → component frame",
           "source_status": "measurement set"
         }
       ],
@@ -1781,7 +1781,7 @@
             "local origin/axes",
             "dimensions"
           ],
-          "frame": "asset-local \u2192 building frame",
+          "frame": "asset-local → building frame",
           "source_status": "library source"
         },
         {
@@ -1789,7 +1789,7 @@
           "fields": [
             "elevation and placement"
           ],
-          "frame": "storey \u2192 project frame",
+          "frame": "storey → project frame",
           "source_status": "IFC source"
         },
         {
@@ -1797,7 +1797,7 @@
           "fields": [
             "MuJoCo obstacle transform"
           ],
-          "frame": "building frame \u2192 simulation world",
+          "frame": "building frame → simulation world",
           "source_status": "authored mapping"
         }
       ],
@@ -2031,7 +2031,7 @@
           "fields": [
             "4x4 registration transform"
           ],
-          "frame": "scan sensor \u2192 MJCF world",
+          "frame": "scan sensor → MJCF world",
           "source_status": "survey control/registration"
         },
         {
@@ -2039,7 +2039,7 @@
           "fields": [
             "mesh origin/scale"
           ],
-          "frame": "mesh-local \u2192 world",
+          "frame": "mesh-local → world",
           "source_status": "export manifest"
         },
         {
@@ -2047,7 +2047,7 @@
           "fields": [
             "camera/lidar extrinsics"
           ],
-          "frame": "sensor \u2192 scan frame",
+          "frame": "sensor → scan frame",
           "source_status": "calibration record"
         }
       ],
@@ -2220,5 +2220,27 @@
       ],
       "branch_software_selection": "Follow the linked branch procedure for the referenced input preparation and tool/API requirements. Apply the recorded units, frames and measurement checks before merging its outputs."
     }
-  ]
+  ],
+  "current_skill_packages": {
+    "ocs-engineering": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "component-cad": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "drawing-inspection": {
+      "name": "Drawing inspection",
+      "skill_name": "cad-drawing-inspection",
+      "path": "skills/cad-drawing-inspection/SKILL.md"
+    },
+    "source-intake": {
+      "name": "Source intake",
+      "skill_name": "cad-source-intake",
+      "path": "skills/cad-source-intake/SKILL.md"
+    }
+  }
 }

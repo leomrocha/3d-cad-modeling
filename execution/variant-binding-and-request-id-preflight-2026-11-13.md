@@ -10,3 +10,7 @@ Date: 2026-11-13. Coordinator model: gpt-6.1-sol. Component execution model: gpt
 6. **Skill validation:** the component skill validator passed after the variant procedure additions. The source association was inspected from retained component evidence. The running Altec job retains its original execution history and uses its component recovery route.
 
 The generic procedure contains source association rules and the runner contains a label-length check. Product dimensions, original downloads, geometry and native receipts remain in FERME.
+
+## Current procedure links
+
+1. `skills/component-cad/references/source-variant-tables.md` → [source variant tables](../skills/cad-ocs-engineering/references/source-variant-tables.md)

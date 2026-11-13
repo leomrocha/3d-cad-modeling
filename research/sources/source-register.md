@@ -1176,9 +1176,9 @@ Original source: [${MODELING_ROOT}/skills/README.md](../../skills/README.md)
 
 Summary: Full sequential audit integration record: exact operation/action, workflow/skill relationships, original-contract findings, current execution state or observed documentary review. Readable content and evidence scope are preserved in this original local record.
 
-Evidence: authored_document_inspected, authored_document_or_code_inspected, local_implementation_or_execution_record_inspected, local_source_or_executed_inspection.
+Evidence: authored_document_inspected, authored_document_or_code_inspected, local_implementation_or_execution_record_inspected, local_source_or_executed_inspection, locally edited and checked.
 
-Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json, research/sources/round-18/dxf-inspection-sources.json.
+Documents: research/sources/round-05/audit-index-sources.json, research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json, research/sources/round-18/dxf-inspection-sources.json, research/sources/documentation-rename-repairs-2026-11-13.json, research/documentation-rename-audit/README.md, execution/documentation-rename-repairs-2026-11-13.md.
 
 <a id="src-17a777175a39"></a>
 
@@ -8784,9 +8784,9 @@ Original source: [${MODELING_ROOT}/research/tools/build_workflow_register.py](..
 
 Summary: Combines retained sources and round-specific evidence; checks operation inputs and recipe types; parses Markdown-link destinations separately from bare URLs to preserve original source addresses.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, locally edited and checked.
 
-Documents: research/sources/round-03/project-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-06/implementation-queue-sources.json.
+Documents: research/sources/round-03/project-detail-sources.json, research/sources/round-04/audit-local-sources.json, research/sources/round-06/implementation-queue-sources.json, research/sources/documentation-rename-repairs-2026-11-13.json, research/documentation-rename-audit/README.md, execution/documentation-rename-repairs-2026-11-13.md.
 
 <a id="src-a234ddd91071"></a>
 
@@ -11724,9 +11724,9 @@ Original source: [${MODELING_ROOT}/research/tools/build_workflow_details.py](../
 
 Summary: Documentation renderer validating recipe coverage, classification values and source references; builds workflow pages and independent sorted tables.
 
-Evidence: local_source_inspected.
+Evidence: local_source_inspected, locally edited and checked.
 
-Documents: research/sources/round-03/project-detail-sources.json.
+Documents: research/sources/round-03/project-detail-sources.json, research/sources/documentation-rename-repairs-2026-11-13.json, research/documentation-rename-audit/README.md, execution/documentation-rename-repairs-2026-11-13.md.
 
 <a id="src-d946b31f68ec"></a>
 
@@ -16462,7 +16462,7 @@ Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md,
 
 Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md](../../skills/cad-ocs-engineering/references/manufacturer-assembly.md)
 
-Summary: Executed case: Victron BAT524110620 battery (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json`). Coordinator/model: gpt-6.1-sol. Reusable implementation: [step_placements.py](../scripts/step_placements.py), with the existing [native ACIS reader](../scripts/native_acis.py).
+Summary: Executed case: Victron BAT524110620 battery (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json`). Coordinator/model: gpt-6.1-sol. Reusable implementation: [step_placements.py](../../skills/cad-ocs-engineering/scripts/step_placements.py), with the existing [native ACIS reader](../../skills/cad-ocs-engineering/scripts/native_acis.py).
 
 Evidence: local_artifact_inspected_and_registered.
 
@@ -16486,7 +16486,7 @@ Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md,
 
 Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/shared-feature-checks.md](../../skills/cad-ocs-engineering/references/shared-feature-checks.md)
 
-Summary: Executed evidence: [driver iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c012-driver.md), [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md). Code: [feature_checks.py](../scripts/feature_checks.py).
+Summary: Executed evidence: [driver iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c012-driver.md), [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md). Code: [feature_checks.py](../../skills/cad-ocs-engineering/scripts/feature_checks.py).
 
 Evidence: local_artifact_inspected_and_registered.
 
@@ -16510,7 +16510,7 @@ Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md,
 
 Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/ocs-runtime.md](../../skills/cad-ocs-engineering/references/ocs-runtime.md)
 
-Summary: 1. **Software:** Python 3.12 on Linux or macOS, the pinned packages in [requirements.txt](../requirements.txt), and an already-running OpenCADStudio native-control session. The transport uses a local TCP socket and the existing session descriptor. It reads the session's authentication token privately.
+Summary: 1. **Software:** Python 3.12 on Linux or macOS, the pinned packages in [requirements.txt](../../skills/cad-ocs-engineering/requirements.txt), and an already-running OpenCADStudio native-control session. The transport uses a local TCP socket and the existing session descriptor. It reads the session's authentication token privately.
 
 Evidence: local_artifact_inspected_and_registered.
 
@@ -16764,9 +16764,9 @@ Original source: [${MODELING_ROOT}/tests/test_source_registration.py](../../test
 
 Summary: Focused source-register merges preserve history and validate both indexes.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, locally edited and checked.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, docs/skill-packaging.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, docs/skill-packaging.md, research/sources/documentation-rename-repairs-2026-11-13.json, research/documentation-rename-audit/README.md, execution/documentation-rename-repairs-2026-11-13.md.
 
 <a id="src-b3ff112677ac"></a>
 
@@ -16774,7 +16774,7 @@ Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md,
 
 Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-reference.md](../../skills/cad-ocs-engineering/references/annular-reference.md)
 
-Summary: Use [`annular_reference.py`](../scripts/annular_reference.py) when a component source defines a plain ring by bore diameter, outside diameter and axial thickness.
+Summary: Use [`annular_reference.py`](../../skills/cad-ocs-engineering/scripts/annular_reference.py) when a component source defines a plain ring by bore diameter, outside diameter and axial thickness.
 
 Evidence: local_artifact_inspected_and_registered.
 
@@ -16822,7 +16822,7 @@ Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md,
 
 Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/toroidal-reference.md](../../skills/cad-ocs-engineering/references/toroidal-reference.md)
 
-Summary: Use [`toroidal_reference.py`](../scripts/toroidal_reference.py) when a
+Summary: Use [`toroidal_reference.py`](../../skills/cad-ocs-engineering/scripts/toroidal_reference.py) when a
 
 Evidence: local_artifact_inspected_and_registered.
 
@@ -16882,7 +16882,7 @@ Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md,
 
 Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-metadata.md](../../skills/cad-ocs-engineering/references/source-metadata.md)
 
-Summary: Use [source_metadata.py](../scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.
+Summary: Use [source_metadata.py](../../skills/cad-ocs-engineering/scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.
 
 Evidence: local_artifact_inspected_and_registered.
 
@@ -16930,7 +16930,7 @@ Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md,
 
 Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/axial-motor.md](../../skills/cad-ocs-engineering/references/axial-motor.md)
 
-Summary: Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../scripts/axial_motor.py). Runtime model: gpt-6.1-sol.
+Summary: Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../../skills/cad-ocs-engineering/scripts/axial_motor.py). Runtime model: gpt-6.1-sol.
 
 Evidence: local_artifact_inspected_and_registered.
 
@@ -17367,3 +17367,15 @@ Summary: Retains ${TEMP_ROOT}/hex-screw-reference-draft/test_hex_screw_reference
 Evidence: retained_unfinished_source_text.
 
 Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-26cc76286779"></a>
+
+## SRC-26cc76286779 — GitHub Pages skill names
+
+Original source: [${MODELING_ROOT}/docs/index.md](../../docs/index.md)
+
+Summary: Current three skill names match README installation choices.
+
+Evidence: locally edited and checked.
+
+Documents: research/sources/documentation-rename-repairs-2026-11-13.json, research/documentation-rename-audit/README.md, execution/documentation-rename-repairs-2026-11-13.md.

@@ -724,5 +724,27 @@
       "status": "proposal",
       "next_check": "Run the relevant fixture and preserve actual execution evidence for each supported route."
     }
-  ]
+  ],
+  "current_skill_packages": {
+    "ocs-engineering": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "component-cad": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "drawing-inspection": {
+      "name": "Drawing inspection",
+      "skill_name": "cad-drawing-inspection",
+      "path": "skills/cad-drawing-inspection/SKILL.md"
+    },
+    "source-intake": {
+      "name": "Source intake",
+      "skill_name": "cad-source-intake",
+      "path": "skills/cad-source-intake/SKILL.md"
+    }
+  }
 }

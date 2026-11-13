@@ -1,5 +1,7 @@
 # Software review: CAD, photographs and scans alignment
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Scope: CAD-11, CAD-02B, REC-01, REC-02, REC-07, REC-08, REC-09, REC-12, REC-13, REC-14, REC-15, REC-16, DOM-19 and DOM-23. Status: local source/document inspection and proposed software contracts. Requested model and effort: gpt-6.1-terra, xhigh. Actual model identity: unavailable. No external research, image processing, calibration, registration, geometry, installation or CAD operation was performed. A read-only Python command extracted operation records from JSON. Original online documentation was reused from existing project records.
 
 ## Findings for procedure design

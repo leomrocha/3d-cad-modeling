@@ -1,5 +1,7 @@
 # Point 05 — Alignment and parametric remodeling
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **procedure proposal**. Scope: 14 operations and 42 actions. Requested procedure-design dispatch: `gpt-6-astra`, `xhigh`; actual executing model identity: **unavailable**.
 
 [Structured records](point-05-operations.json) contain all 15 fields for each action, four operation modes, alternatives, source URLs, merging, migration and future cases. This document supplies the readable actions and concrete frame/output conditions. The [audit plan](plan.md), [CAD records](../workflows/cad-paths.json), [reconstruction records](../workflows/reconstruction-paths.json), [domain records](../workflows/domain-paths.json), OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) and [retained implementation plan](../implementation-plan.md) remain the original contracts. Helpers and procedures are proposals; acceptance labels use `MARK AS ACCEPTED`.

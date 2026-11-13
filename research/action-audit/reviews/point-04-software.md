@@ -1,5 +1,7 @@
 # Software review: raster drawings and interpreted dimensions
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Scope: CAD-02, CAD-03, CAD-04, CAD-05, CAD-06, CAD-07, CAD-17, DOM-02 and DOM-18. Status: local source inspection and proposed software contracts. Requested reviewer model and effort: gpt-6.1-terra, xhigh. Actual model identity: unavailable. No external search, image processing, OCR, CAD/IFC generation, installation, program or model runtime was performed. Online documentation below is reused from existing project records, with their recorded evidence status.
 
 ## Findings for procedure design

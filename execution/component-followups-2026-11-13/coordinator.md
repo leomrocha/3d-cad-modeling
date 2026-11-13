@@ -14,3 +14,8 @@ Date: 13 November 2026. Coordinator: gpt-6.1-sol. Worker execution models observ
 4. The coordinator reviews original source hashes, source/model identity, numerical observations, affected code checks and actual output files before integrating shared manifest, source register, skill routing and action records. Workers write only their assigned component/code/report paths and perform no commits.
 5. CAD and parts data remain in FERME. Reusable Python, skills and usage guidance remain in 3dmodeling. Current concurrent input-index changes and all previously completed models are preserved.
 6. The full remaining component plan remains [Component-led CAD and tooling development plan](../../COMPONENT_DEVELOPMENT_PLAN.md). Individual source-gated parts retain their precise feature questions while other unfinished parts progress through the available workers.
+
+## Current procedure links
+
+1. `skills/component-cad/references/pixhawk.md` → [pixhawk](../../skills/cad-ocs-engineering/references/pixhawk.md)
+2. `skills/component-cad/references/small-bms.md` → [small bms](../../skills/cad-ocs-engineering/references/small-bms.md)

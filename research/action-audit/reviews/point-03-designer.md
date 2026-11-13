@@ -1,5 +1,7 @@
 # Point 03 designer notes — vector profiles and small solids
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **DONE — documentary procedure design**. Procedure and software-development status: **proposal**. Requested dispatch: `gpt-6-astra`, reasoning effort `xhigh`. Actual executing model identity: **unavailable**.
 
 Assigned outputs: [readable procedure](../point-03-vector-and-solid.md), [structured operations](../point-03-operations.json) and this evidence note. The procedure covers CAD-08, CAD-09, CAD-10, CAD-13, CAD-14, CAD-15, DOM-03, DOM-04, DOM-05 and DOM-40. Each of the 31 actions records all 15 fields required by the [audit plan](../plan.md).

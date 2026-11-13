@@ -8,6 +8,7 @@ import re
 import os
 import copy
 from pathlib import Path
+from urllib.parse import urlsplit, unquote, quote
 
 ROOT = Path(__file__).resolve().parents[2]
 RESEARCH = ROOT / 'research'
@@ -50,6 +51,50 @@ def canonical_locator(locator):
     if locator.startswith(('scripts/', 'skills/', 'tests/', 'docs/', 'research/', 'execution/')):
         return '${MODELING_ROOT}/' + locator
     return locator
+
+
+def current_skill_locator(locator):
+    """Resolve navigation after package renames while retaining source labels."""
+    for old, new in (('component-cad', 'cad-ocs-engineering'),
+                     ('drawing-inspection', 'cad-drawing-inspection'),
+                     ('source-intake', 'cad-source-intake')):
+        locator = locator.replace('skills/' + old + '/', 'skills/' + new + '/')
+    return locator
+
+
+def source_link(item, root, directory):
+    locator = item.get('url') or item['local_source_path']
+    current = current_skill_locator(locator)
+    if current.startswith('${MODELING_ROOT}/'):
+        target = os.path.relpath(root / current.removeprefix('${MODELING_ROOT}/'), directory)
+        return f'[{locator}]({quote(target, safe="/#")})'
+    if locator.startswith(('https://', 'http://')):
+        return f'[{locator}]({locator})'
+    return f'`{locator}`'
+
+
+def render_summary(item, root, directory):
+    """Rebase source-document links for display; preserve stored observations."""
+    summary = item['summary']
+    origin = item.get('summary_source_path') or item.get('local_source_path') or ''
+    origin = current_skill_locator(origin).removeprefix('${MODELING_ROOT}/')
+    if not origin or '${' in origin or urlsplit(origin).scheme:
+        return summary
+    origin_path = root / origin
+    if origin_path.suffix.lower() != '.md':
+        return summary
+    def rebase(match):
+        parsed = urlsplit(match.group(2))
+        if parsed.scheme or parsed.netloc or '${' in match.group(2):
+            return match.group(0)
+        target = (origin_path.parent / unquote(parsed.path)) if parsed.path else origin_path
+        path = quote(os.path.relpath(target, directory), safe='/')
+        if parsed.query:
+            path += '?' + parsed.query
+        if parsed.fragment:
+            path += '#' + parsed.fragment
+        return match.group(1) + path + match.group(3)
+    return re.sub(r'(!?\[[^\]]*\]\()([^\s)]+)(\))', rebase, summary)
 
 
 def merge_source_records(root, documents, date, check=False):
@@ -96,17 +141,11 @@ def merge_source_records(root, documents, date, check=False):
     for item in result['sources']:
         if item['id'] not in touched:
             continue
-        locator = item['url'] or item['local_source_path']
-        if locator.startswith('${MODELING_ROOT}/'):
-            target = os.path.relpath(root / locator.removeprefix('${MODELING_ROOT}/'), directory)
-            source = f'[{locator}]({target})'
-        elif locator.startswith(('https://', 'http://')):
-            source = f'[{locator}]({locator})'
-        else:
-            source = f'`{locator}`'
+        source = source_link(item, root, directory)
+        summary = render_summary(item, root, directory)
         block = '\n'.join([f'<a id="{item["id"].lower()}"></a>', '',
                            f'## {item["id"]} — {item["title"]}', '',
-                           f'Original source: {source}', '', f'Summary: {item["summary"]}', '',
+                           f'Original source: {source}', '', f'Summary: {summary}', '',
                            'Evidence: ' + ', '.join(item['evidence_statuses']) + '.', '',
                            'Documents: ' + ', '.join(item['referring_documents']) + '.', '']) + '\n'
         pattern = (r'<a id="' + re.escape(item['id'].lower()) +
@@ -306,6 +345,7 @@ def main():
     graph = {
         'schema_version': 1, 'research_date': date,
         'scope': 'Reusable operation families and explicitly documented composed recipes',
+        'current_skill_packages': read_json(RESEARCH / 'workflows/cad-paths.json').get('current_skill_packages', {}),
         'semantics': {
             'inputs': 'All inputs are required; input_alternatives requires one complete alternative set; input_choice_groups requires one complete alternative set from each independent choice group.',
             'edges': 'Candidate data flow only; prerequisites, units, frames, geometry and evidence status must also hold.',
@@ -326,12 +366,13 @@ def main():
     lines = ['# Source register', '', f'Registered: {date}.', '',
              'Each entry preserves the original URL or local source path and records '
              'its summary, evidence status and referring documents. Detailed observations '
-             f'are retained in [source-register.json]({RESEARCH / "sources/source-register.json"}).', '']
+             'are retained in [source-register.json](source-register.json).', '']
     for item in sorted(records.values(), key=lambda x: x['id']):
-        locator = item['url'] or item['local_source_path']
+        source = source_link(item, ROOT, RESEARCH / 'sources')
+        summary = render_summary(item, ROOT, RESEARCH / 'sources')
         lines += [f'<a id="{item["id"].lower()}"></a>', '', f'## {item["id"]} — {item["title"]}', '',
-                  f'Original source: [{locator}]({locator})', '',
-                  f'Summary: {item["summary"]}', '',
+                  f'Original source: {source}', '',
+                  f'Summary: {summary}', '',
                   'Evidence: ' + ', '.join(item['evidence_statuses']) + '.', '',
                   'Documents: ' + ', '.join(item['referring_documents']) + '.', '']
     (RESEARCH / 'sources/source-register.md').write_text('\n'.join(lines).rstrip() + '\n')
@@ -339,7 +380,7 @@ def main():
         merge_source_records(ROOT, supplemental_documents, date)
     idea_lines = ['# Ideas and research questions', '', f'Registered: {date}.', '',
                   'The records retain project proposals, experiment questions and the earlier implementation-plan ideas. '
-                  f'Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json]({RESEARCH / "ideas-register.json"}).', '']
+                  'Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](ideas-register.json).', '']
     for idea in ideas:
         idea_lines += [f'## {idea["id"]} — {idea["name"]}', '',
                        f'Status: {idea["status"]}.', '', idea['summary'], '']
@@ -352,7 +393,7 @@ def main():
     (RESEARCH / 'ideas-register.md').write_text('\n'.join(idea_lines).rstrip() + '\n')
     catalog = ['# Operation catalogue', '', f'Registered: {date}.', '',
                'All `inputs` apply together. Alternative sets and independent choice groups are recorded explicitly. '
-               f'Full prerequisites, changes, checks and evidence are in [workflow-map.json]({RESEARCH / "workflows/workflow-map.json"}) and the domain reports.', '',
+               'Full prerequisites, changes, checks and evidence are in [workflow-map.json](workflow-map.json) and the domain reports.', '',
                '| Operation | Required inputs and choices | Outputs | Summary and original sources |',
                '| --- | --- | --- | --- |']
     for op in operations:

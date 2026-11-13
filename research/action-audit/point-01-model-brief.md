@@ -1,5 +1,7 @@
 # Point 01 — Descriptions and explicit dimensions to a model brief
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Procedure status: proposal. Evidence: local source inspection and requirements synthesis. Recorded operations: **CAD-01 — Extract a model brief from text and dimensions** and **DOM-01 — Normalize model brief**.
 
 ## 1. Purpose and result

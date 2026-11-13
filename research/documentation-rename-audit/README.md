@@ -1,6 +1,8 @@
 # Documentation and GitHub Pages repair plan
 
-Date: 2026-11-13. Status: proposal. Audit: executed. Repair work: proposed.
+Date: 2026-11-13. Plan status: proposal. Audit: executed. Authorized repair execution: DONE.
+
+[Executed changes and verification](../../execution/documentation-rename-repairs-2026-11-13.md). [Occurrence resolutions](repair-results.json). The observations below retain the pre-repair audit state.
 
 ## Current skill identities
 

@@ -1,5 +1,7 @@
 # Point 05 designer notes — alignment and parametric remodeling
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **DONE — documentary procedure design**. Procedures, helper designs and validation cases: **proposal**. Requested dispatch: `gpt-6-astra`, reasoning effort `xhigh`; actual executing model identity: **unavailable**.
 
 Assigned outputs: [readable procedure](../point-05-alignment-and-remodeling.md), [structured operations](../point-05-operations.json) and this note. Scope: CAD-11, CAD-02B, REC-01, REC-02, REC-07, REC-08, REC-09, REC-12, REC-13, REC-14, REC-15, REC-16, DOM-19 and DOM-23. The 42 actions carry the 15 required fields. Original operation records and the implementation plan remain preserved.

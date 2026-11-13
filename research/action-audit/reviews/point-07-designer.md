@@ -1,5 +1,7 @@
 # Point 07 designer notes — reconstruction procedures
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: **DONE — documentary checks and independent review; designer files frozen**. Requested dispatch: `gpt-6-astra`, reasoning effort `xhigh`. Actual runtime model identity: **unavailable**. The checkpoint recorded in the live sequence is `0e3c0f9`; the coordinator owns Git and batch registration.
 
 ## 1. Delivered scope

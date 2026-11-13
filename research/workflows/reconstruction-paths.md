@@ -239,7 +239,7 @@ fx, fy, cx+0.5, cy+0.5, k1, k2, p1, p2, k3, 0, 0, 0
 
 The zero values fill COLMAP `k4,k5,k6`; this adapter assumes OpenCV's five-coefficient calibration output and a compatible pinhole lens. Pass the resulting comma-separated values to `--ImageReader.camera_params` during feature extraction. Use `--ImageReader.single_camera 1` only when every image has the same physical camera, crop, resolution and focus state. Read the camera back with `pycolmap.Database.read_camera`, verify model/dimensions/parameter order, and select whether bundle adjustment may refine the values. COLMAP refines intrinsics by default. Do not edit its binary SQLite parameter blob manually. Sources: [COLMAP known-intrinsics FAQ](https://colmap.github.io/faq.html), [camera models](https://colmap.github.io/cameras.html).
 
-```sh
+```text
 colmap feature_extractor --database_path <database.db> --image_path <images> \
   --ImageReader.single_camera 1 --ImageReader.camera_model FULL_OPENCV \
   --ImageReader.camera_params '<adapter-produced-12-values>'
@@ -256,7 +256,7 @@ The COLMAP/OpenMVS handoff is `image_undistorter` → `InterfaceCOLMAP`; the imp
 
 ### Other documented CLI routes
 
-```sh
+```text
 # AliceVision Meshroom photogrammetry graph
 meshroom_batch --input <images-folder> --output <output-folder>
 

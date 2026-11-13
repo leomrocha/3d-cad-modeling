@@ -1,5 +1,7 @@
 # REC-R10 — Single-image mesh proxy and evidence-based CAD remodel
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Classification: analyst assessment under the stated conditions.
 
 **Manual effort 4/5; setup 4/5; computing 4/5.**

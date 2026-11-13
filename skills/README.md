@@ -6,7 +6,7 @@
 2. [cad-drawing-inspection](cad-drawing-inspection/SKILL.md) — inventories DXF entities, units, layers, spaces and nested transforms.
 3. [cad-source-intake](cad-source-intake/SKILL.md) — preserves source files, hashes, request scope and corrected input revisions.
 
-Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Each skill directory includes its runtime files and dependencies. Component CAD includes its OCS control and geometry adapters. [Package maintenance](../docs/skill-packaging.md).
+Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Each skill directory includes its runtime files and dependencies. OCS engineering (`cad-ocs-engineering`) includes its OCS control and geometry adapters. [Package maintenance](../docs/skill-packaging.md).
 
 ## Component CAD procedure index
 
@@ -41,7 +41,7 @@ The following catalogue records external candidates and proposed workflow groups
 
 | Skill or package | Concrete use | Proposed action and evidence |
 | --- | --- | --- |
-| Local OCS engineering skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) | Live OCS inspection, model contract, component/frame discipline, measured checks and verified saves | Reuse existing skill and its scripts. User reports partial local success. Record capability gaps through the first modeling fixture. |
+| [OCS engineering (`cad-ocs-engineering`)](cad-ocs-engineering/SKILL.md); original source: `${CODEX_HOME}/skills/ocs-engineering/SKILL.md` | Live OCS inspection, model contract, component/frame discipline, measured checks and verified saves | Use the merged repository package and its bundled scripts. The external locator records the inspected original source. |
 | [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | Code-defined parametric models with `cadgen`/build123d, saved-file measurement and preview | Assess pinned runtime/bootstrap, telemetry, source conventions and output checks. The separately advertised `step-parts` skill searches a component catalogue. |
 | [glotoff/freecad-skills](https://github.com/glotoff/freecad-skills) | FreeCAD user/power-user modeling and API references | Adapt only the exercised operations needed for constrained sketches and editable features. |
 | [GitHub Copilot FreeCAD scripting skill](https://github.com/github/awesome-copilot) | FreeCAD Python documents, Part/Sketcher geometry and recompute | Reuse as an API reference, with pinned-version geometry fixtures. Archived exact skill is available in the existing CAD research. |
@@ -55,7 +55,7 @@ Detailed source, licence and dependency assessments: [CAD and skills](../researc
 ## Proposed project workflows
 
 1. `model-brief` — descriptions, dimensions, reference views, part boundaries, units and source evidence.
-2. `ocs-engineering` — reuse the existing skill for OCS modeling and inspection.
+2. OCS engineering (`cad-ocs-engineering`) — use the [merged skill](cad-ocs-engineering/SKILL.md) for OCS modeling and inspection. The original proposal called this workflow `ocs-engineering`.
 3. `parametric-solid-modeling` — scripted solid geometry and editable parameters.
 4. `drawing-to-cad` — sketch, DXF and SVG interpretation into constrained geometry.
 5. `blender-modeling` — scene/mesh authoring, inspection and visual derivatives.

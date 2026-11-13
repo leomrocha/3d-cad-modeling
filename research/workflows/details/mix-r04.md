@@ -1,5 +1,7 @@
 # MIX-R04 — Existing housing CAD + depth scan + drawing → revised interface and reusable component
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Classification: analyst assessment under the stated conditions.
 
 **Manual effort 4/5; setup 3/5; computing 3/5.**

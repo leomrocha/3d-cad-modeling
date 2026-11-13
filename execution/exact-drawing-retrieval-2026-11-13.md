@@ -7,3 +7,7 @@ Date: 2026-11-13. Source retrieval: gpt-6-luna. Coordinator inspection and share
 3. Actual coordinator inspection of the local render bound dimension leaders to overall length, hole-centre pitch, central-body length and diameter, tab width, hole diameter and tab thickness. The component contract records raster-only contour points and coordinate conventions separately from these printed dimensions.
 4. `skills/component-cad/references/source-view-evidence.md` now records this approved-source retrieval route: preserve a failed response, identify the exact alternate document, retain its revision and original bytes, render locally, and inspect actual product/view evidence before construction.
 5. Component originals, responses, render and contract: `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/`. The original PDF is `littelfuse-20ev-series-rev-2024-chipdip.pdf`; the source contract is `geometry-contract-r02.json`.
+
+## Current procedure links
+
+1. `skills/component-cad/references/source-view-evidence.md` → [source view evidence](../skills/cad-ocs-engineering/references/source-view-evidence.md)

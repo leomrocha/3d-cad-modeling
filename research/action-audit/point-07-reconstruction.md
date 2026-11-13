@@ -1,5 +1,7 @@
 # Point 07 — Capture, reconstruction and appearance scenes
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: **DONE — documentation and independent review**. The 17 operation definitions, 51 actions, helper specifications and future cases are proposals. Requested designer dispatch: `gpt-6-astra`, effort `xhigh`. Actual runtime model identity: **unavailable**.
 
 The [structured action records](point-07-operations.json) contain all fifteen required fields per action. This document gives the ordered actions, actual tool boundaries, helper contracts, execution choices and validation. The [audit plan](plan.md), [sequence](sequence.json) and [original implementation plan](../implementation-plan.md) retain their existing scope. Source evidence is recorded in the [primary-source review](reviews/point-07-sources.md) and [26 successful inspections plus four failed attempts](../sources/round-05/point-07-web-sources.json). The designer read these local records; Luna performed the external inspection.

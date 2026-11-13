@@ -1,5 +1,7 @@
 # Point 02 visual, semantic and evidence-merge review
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registration date: 2026-11-12. Status: **DONE — local documentary review**. The procedures, component designs and validation cases below are proposals. Scope: **CAD-12 — Assemble existing CAD or source-library components; DOM-06 — Library asset intake and rights record; DOM-07 — Place reusable component in assembly; DOM-26 — Version and reuse component revision; DOM-38 — Import STEP solid into CAD representation; DOM-39 — Export STEP assembly**.
 
 Requested assignment: `gpt-6.1-sol`, reasoning effort `xhigh`. Actual executing model identity: **unavailable in this agent environment**. Local operation records, reports, source-register entries and the OCS engineering contract were inspected. Original external URLs below are reused from those records. This review's executed result is this document; the examples describe future validation cases.

@@ -1,5 +1,7 @@
 # Domain workflows and representation handoffs
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: documented tool capabilities and proposed workflow compositions. Research agent: Luna; exact model build identifier unavailable. Web pages were inspected in the browser; no source originals were downloaded in this batch. Source evidence status is recorded per source below.
 
 ## Representation contracts

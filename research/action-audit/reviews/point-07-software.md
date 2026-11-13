@@ -1,5 +1,7 @@
 # Point 07 — reconstruction software and API review
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: documentary review and source-addendum reread. Requested dispatch: gpt-6.1-terra, xhigh. Actual executing model identity: unavailable. Each helper below is a proposal; no project helper, dataset reconstruction, model inference, CAD operation, installation or conversion was executed. The earlier source records distinguish `web_inspected` from `existing_report_registered`; this review reads those local records and does not itself inspect their web pages. The [reconstruction assessment](../../reconstruction.md), [detailed source records](../../sources/round-03/reconstruction-detail-sources.json), [operation graph](../../workflows/reconstruction-paths.json), [domain graph](../../workflows/domain-paths.json) and [CAD graph](../../workflows/cad-paths.json) are the inspected local inputs. No original external source files are downloaded by this review. The source-addendum reread below supersedes earlier lookup-gap wording where it supplies the specific documented source evidence.
 
 ## Operation contracts, proposed boundaries and failure cases

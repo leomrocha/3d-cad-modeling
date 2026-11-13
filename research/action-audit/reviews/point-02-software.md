@@ -1,5 +1,7 @@
 # Software review: existing components and CAD files to inspected reusable inputs
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Scope: CAD-12, DOM-06, DOM-07, DOM-26, DOM-38 and DOM-39. Status: local source inspection and proposed design. Requested reviewer model: gpt-6.1-terra, xhigh; actual model identity: unavailable. No CAD application, geometry operation, conversion, fixture or runtime test was executed in this review. Referenced web sources retain the evidence status of the existing project records; they were not re-inspected here.
 
 ## Findings

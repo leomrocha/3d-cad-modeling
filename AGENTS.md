@@ -148,7 +148,7 @@ Instruction date: 13 November 2026. The wind-generator head assembly is awaiting
 
 Instruction date: 13 November 2026.
 
-1. Store repository-relative paths and page-relative Markdown links for this checkout. Represent external project, tool, user and temporary locations through named root placeholders documented in docs/paths.md.
+1. Store repository-relative paths and page-relative Markdown links for this checkout. Represent external project, tool, user and temporary locations through named root placeholders documented in [the installed-skill path reference](skills/cad-ocs-engineering/references/paths.md).
 2. Keep machine-specific workspace locations out of committed text and captured metadata. Normalize paths before registering new job records or examples.
 3. Preserve registered source IDs, original-source hashes and numerical results. Mark normalized copies as derivatives with their own hashes.
 4. Resolve stored root placeholders with an explicit caller-supplied root map before file access. Runtime-derived absolute paths may be used to open files; stored documentation and source locators use portable roots.

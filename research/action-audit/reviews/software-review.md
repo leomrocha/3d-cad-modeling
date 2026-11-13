@@ -1,5 +1,7 @@
 # Software review: descriptions and dimensions to a model brief
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: source inspection and proposed design. Actual authoring model: unavailable. Scope: CAD-01, extract a model brief, and DOM-01, normalize a model brief. No tools were executed for intake or geometry in this review.
 
 ## Findings for the procedure designer

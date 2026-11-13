@@ -273,7 +273,9 @@
     {
       "id": "REC-07",
       "name": "Estimate coarse transform between point clouds",
-      "inputs": ["point-cloud"],
+      "inputs": [
+        "point-cloud"
+      ],
       "input_roles": [
         {
           "role": "source cloud",
@@ -1359,5 +1361,27 @@
       "status": "proposal",
       "next_check": "Define a scene manifest with representation role, transform, unit, source and checks for each layer."
     }
-  ]
+  ],
+  "current_skill_packages": {
+    "ocs-engineering": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "component-cad": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "drawing-inspection": {
+      "name": "Drawing inspection",
+      "skill_name": "cad-drawing-inspection",
+      "path": "skills/cad-drawing-inspection/SKILL.md"
+    },
+    "source-intake": {
+      "name": "Source intake",
+      "skill_name": "cad-source-intake",
+      "path": "skills/cad-source-intake/SKILL.md"
+    }
+  }
 }

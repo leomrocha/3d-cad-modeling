@@ -1,5 +1,7 @@
 # Software review: confirmed dimensions and vector drawings to CAD
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Scope: CAD-08, CAD-09, CAD-10, CAD-13, CAD-14, CAD-15, DOM-03, DOM-04, DOM-05 and DOM-40. Status: local source inspection and software-design proposals. Requested reviewer model and effort: gpt-6.1-terra, xhigh. Actual model identity: unavailable. No external search, CAD modeling, installation, conversion, solver, fixture or geometry runtime was performed. Original web sources below retain the inspection status recorded in the project; this review reused the records.
 
 ## Findings for procedure design

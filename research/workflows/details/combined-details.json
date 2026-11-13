@@ -3,7 +3,7 @@
   "workflows": [
     {
       "id": "MIX-R01",
-      "name": "Raster plan + site photographs + controls + library \u2192 IFC and registered context",
+      "name": "Raster plan + site photographs + controls + library → IFC and registered context",
       "output_scope": "Semantic building with sourced components, registered observed surfaces and visual scene",
       "comparison_conditions": "One room or small building; legible dimensioned plan, overlapping site photographs, measured controls and identified library assets. Output includes semantic IFC and registered observed surfaces.",
       "inputs": [
@@ -889,7 +889,7 @@
     },
     {
       "id": "MIX-R02",
-      "name": "Vector profile + dimensions + library parts \u2192 articulated CAD, MJCF and URDF",
+      "name": "Vector profile + dimensions + library parts → articulated CAD, MJCF and URDF",
       "output_scope": "Editable part/assembly with separate visual/collision derivatives and source-linked robot descriptions",
       "comparison_conditions": "Clean dimensioned vector profiles, a small library-backed articulated assembly, explicit joint intent and per-body physical data. Output includes CAD, MJCF and URDF.",
       "inputs": [
@@ -1910,7 +1910,7 @@
     },
     {
       "id": "MIX-R03",
-      "name": "Photographs + measured controls + component library \u2192 CAD assembly and MuJoCo model",
+      "name": "Photographs + measured controls + component library → CAD assembly and MuJoCo model",
       "output_scope": "Measured-reference CAD assembly with explicit robot structure and collision derivatives",
       "comparison_conditions": "A small photographed mechanism, independent dimensional controls, identified hardware and explicit material/physical-property evidence. Final output is an articulated model.",
       "inputs": [
@@ -3065,7 +3065,7 @@
     },
     {
       "id": "MIX-R04",
-      "name": "Existing housing CAD + depth scan + drawing \u2192 revised interface and reusable component",
+      "name": "Existing housing CAD + depth scan + drawing → revised interface and reusable component",
       "output_scope": "Revisioned replacement component fitted to the retained housing and registered scan",
       "comparison_conditions": "An existing CAD housing, a calibrated local depth capture and a dimensioned drawing. Only the selected interface/component is remodeled.",
       "inputs": [
@@ -3908,7 +3908,7 @@
     },
     {
       "id": "MIX-R05",
-      "name": "Robot CAD + Menagerie MJCF + depth environment \u2192 combined simulation scene",
+      "name": "Robot CAD + Menagerie MJCF + depth environment → combined simulation scene",
       "output_scope": "MuJoCo scene with explicit CAD-link mapping and scanned-environment collision geometry",
       "comparison_conditions": "A selected Menagerie model and corresponding robot CAD, explicit joint mapping and a calibrated local depth environment. No robot motion is inferred from mesh appearance.",
       "inputs": [
@@ -4415,7 +4415,7 @@
     },
     {
       "id": "MIX-R06",
-      "name": "IFC building + existing robot MJCF \u2192 building collision environment and semantic display",
+      "name": "IFC building + existing robot MJCF → building collision environment and semantic display",
       "output_scope": "Robot scene with building colliders and a retained IFC/GLB identity map",
       "comparison_conditions": "An existing semantic IFC building and an existing MJCF robot with stated frame mapping. Only selected building elements become colliders.",
       "inputs": [
@@ -4701,7 +4701,7 @@
     },
     {
       "id": "MIX-R07",
-      "name": "Sketch over registered 3D + dimensions \u2192 revised CAD and fabrication package",
+      "name": "Sketch over registered 3D + dimensions → revised CAD and fabrication package",
       "output_scope": "Source-linked native CAD revision, comparison record and fabrication derivatives",
       "comparison_conditions": "A registered small-part mesh with known camera, an annotation, explicit dimensions and material/process information. Output is revised CAD and specified fabrication derivatives.",
       "inputs": [
@@ -5328,7 +5328,7 @@
     },
     {
       "id": "MIX-R08",
-      "name": "Orthographic rasters + dimensions \u2192 candidate geometry and component record",
+      "name": "Orthographic rasters + dimensions → candidate geometry and component record",
       "output_scope": "Multi-view reconstruction hypothesis with checked projections and provenance",
       "comparison_conditions": "Registered engineering front/top/side drawings with dimension evidence. This baseline includes algorithmic correspondence/topology research and candidate-component registration.",
       "inputs": [
@@ -5963,7 +5963,7 @@
     },
     {
       "id": "MIX-R09",
-      "name": "One photo capture \u2192 Gaussian context + independent MVS mesh + CAD",
+      "name": "One photo capture → Gaussian context + independent MVS mesh + CAD",
       "output_scope": "Aligned visual scene, independently reconstructed measured surface and remodeled CAD",
       "comparison_conditions": "One overlapping photo capture with measured controls; outputs include a Gaussian scene, independently reconstructed dense mesh and remodeled CAD.",
       "inputs": [
@@ -6679,7 +6679,7 @@
     },
     {
       "id": "MIX-R10",
-      "name": "IFC + reusable library components \u2192 exact geometry branch and static MuJoCo environment",
+      "name": "IFC + reusable library components → exact geometry branch and static MuJoCo environment",
       "output_scope": "Semantic building revision with geometry derivatives and reusable source metadata",
       "comparison_conditions": "An existing IFC project, identified library components and placement measurements. Outputs include an exact-geometry extraction where supported and a static simulation environment.",
       "inputs": [
@@ -7112,5 +7112,27 @@
       ],
       "branch_software_selection": "The software lists include alternatives per operation. Select one compatible backend for each branch; follow the linked branch dossier for library/API dependencies and preserve the explicit operation handoff checks."
     }
-  ]
+  ],
+  "current_skill_packages": {
+    "ocs-engineering": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "component-cad": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "drawing-inspection": {
+      "name": "Drawing inspection",
+      "skill_name": "cad-drawing-inspection",
+      "path": "skills/cad-drawing-inspection/SKILL.md"
+    },
+    "source-intake": {
+      "name": "Source intake",
+      "skill_name": "cad-source-intake",
+      "path": "skills/cad-source-intake/SKILL.md"
+    }
+  }
 }

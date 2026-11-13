@@ -1,5 +1,7 @@
 # Visual interpretation review — descriptions and explicit dimensions to a model brief
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registration date: 2026-11-12. Status: documentation review completed; procedure additions below are proposals. Scope: generic **CAD-01 — Extract a model brief from text and dimensions** and **DOM-01 — Normalize model brief**, with optional supporting images or drawings. The reviewed material is the existing local workflow documentation and source register. This review uses no model specimen and reports no image interpretation or geometry execution result.
 
 Dispatcher identifier: `gpt-6.1-sol`; requested reasoning setting: `xhigh`. Actual executing model identity: unavailable in this agent environment. These dispatcher settings identify the assignment; they supply no measured performance result.

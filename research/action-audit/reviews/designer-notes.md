@@ -1,5 +1,7 @@
 # Procedure-design review notes — Point 01 model brief
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Scope: CAD-01 — Extract a model brief from text and dimensions; DOM-01 — Normalize model brief. Work: local evidence inspection and procedure design.
 
 ## 1. Output and identity

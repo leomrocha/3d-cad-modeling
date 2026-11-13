@@ -1,5 +1,7 @@
 # Point 05 visual and evidence review — existing CAD with photographs and scans
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registration date: 2026-11-12. Status: **DONE — local documentary review**. Procedures and validation cases below are proposals. Scope: CAD-11, CAD-02B, REC-01, REC-02, REC-07, REC-08, REC-09, REC-12, REC-13, REC-14, REC-15, REC-16, DOM-19 and DOM-23, with readable names below.
 
 Requested assignment: `gpt-6.1-sol`, reasoning effort `xhigh`. Actual executing model identity: **unavailable in this agent environment**. Live instructions, audit plan, original operation records, local reconstruction reports/dossiers and source summaries were inspected. External URLs are reused at their recorded evidence states. The executed output is this review document.

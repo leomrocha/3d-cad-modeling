@@ -1,5 +1,7 @@
 # Point 06 — Building and robot structure and properties
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **procedure proposal**. Scope: 19 operations and 57 actions. Requested procedure-design dispatch: `gpt-6-astra`, `xhigh`; actual executing model identity: **unavailable**.
 
 [Structured actions](point-06-operations.json) contain all 15 required fields for each action, four execution modes, sources, alternatives, merge rules, migration and future cases. This document supplies the concrete steps, outputs, checks and helper contracts. [Original domain records](../workflows/domain-paths.json), [audit plan](plan.md), [sequence](sequence.json), [implementation plan](../implementation-plan.md), OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) and model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) remain the source contracts. Procedures, helpers and cases are proposals; acceptance labels use `MARK AS ACCEPTED`.

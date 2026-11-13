@@ -1,5 +1,7 @@
 # Point 02 — Procedure designer notes
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Scope: CAD-12 — assemble existing components; DOM-06 — library intake; DOM-07 — occurrence placement; DOM-26 — component revisions; DOM-38 — STEP import; DOM-39 — STEP assembly export.
 
 ## 1. Deliverables and identity

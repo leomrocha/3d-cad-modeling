@@ -1,5 +1,7 @@
 # Point 05 independent procedure review — CAD, photographs and scans alignment
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **DONE — static source/procedure review and repair reread; frozen**. Scope: CAD-11, CAD-02B, REC-01, REC-02, REC-07, REC-08, REC-09, REC-12, REC-13, REC-14, REC-15, REC-16, DOM-19 and DOM-23. Procedure definitions, helper contracts, migration rules and future cases are proposals.
 
 Requested dispatch: `gpt-6.1-sol`, reasoning effort `xhigh`, separate independent reviewer. Actual executing model identity: **unavailable in this agent environment**. This record concerns document consistency and source correspondence. Checks performed here are local reads and static document inspection.

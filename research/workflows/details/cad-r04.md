@@ -1,5 +1,7 @@
 # CAD-R04 — Clean DXF or SVG profile to editable extrusion
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Classification: analyst assessment under the stated conditions.
 
 **Manual effort 2/5; setup 2/5; computing 1/5.**

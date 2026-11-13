@@ -20,3 +20,7 @@ The resulting native file is `${FERME_ROOT}/engineering/module-development/cad/p
 
 
 The native model passed pre-save and reopened checks: one closed reference solid spans X=0..198 mm, Y=−57..57 mm and Z=0..70 mm; three native Circle entities retain centers (16,−49,0), (16,49,0), and (189,−0.33,0) mm, radius 3.57 mm, +Z normal, and zero thickness. The −0.33 mm transverse location is raster-traced with ±0.9 mm uncertainty. Saved DWG: `${FERME_ROOT}/engineering/module-development/cad/parts/curtis-1243-4303-maximum-clearance-reference.dwg`, SHA-256 `5deadc16ac4e9f1ae0b36f58c1f01222f7a499a2cd83c2d42347ea6c8ec51674`. Retained numeric result: `${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c014-build-01/result.json`. The verified save/reopen manifest is one `3D Solid` and three `Circle` entities with zero dropped entities. OCS documents 128 and 129 were closed after checks; Start document 1 remained. Actual execution model: `gpt-6-luna`.
+
+## Current procedure links
+
+1. `skills/component-cad/references/dimension-limits-and-datums.md` → [dimension limits and datums](../skills/cad-ocs-engineering/references/dimension-limits-and-datums.md)

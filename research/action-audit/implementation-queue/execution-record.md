@@ -1,5 +1,7 @@
 # Implementation queue: batch record
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Coordinator/model: **gpt-6.1-sol**. Starting checkpoint: `c6eeb94`.
 
 ## 1. Authorisation and method

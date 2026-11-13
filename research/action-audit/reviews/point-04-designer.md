@@ -1,5 +1,7 @@
 # Point 04 designer notes — raster drawings and interpreted dimensions
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **DONE — documentary procedure design**. Procedures, helper designs and validation cases: **proposal**. Requested dispatch: `gpt-6-astra`, reasoning effort `xhigh`; actual executing model identity: **unavailable**.
 
 Assigned outputs: [readable procedure](../point-04-raster-drawings.md), [structured operations](../point-04-operations.json) and this note. Scope: CAD-02, CAD-03, CAD-04, CAD-05, CAD-06, CAD-07, CAD-17, DOM-02 and DOM-18. The 30 actions carry all 15 required fields. Previous point files and the original implementation plan remain preserved.

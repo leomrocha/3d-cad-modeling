@@ -1,5 +1,7 @@
 # Point 06 — software and API review
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: documentary review and source-addendum reread. Requested dispatch: gpt-6.1-terra, xhigh. Actual executing model identity: unavailable. The helper signatures and future cases below are proposals, not implemented APIs or executed tests. Existing source records describe documentation inspected in earlier research; the original web pages were not inspected during this review and the corresponding original files are not locally archived in the referenced records. The review did not run CAD, IFC, Blender, URDF or MuJoCo software. The later source-addendum reread below records the bounded primary-source findings and supersedes earlier lookup-gap wording where specifically resolved.
 
 ## Concrete operation findings and proposed interfaces

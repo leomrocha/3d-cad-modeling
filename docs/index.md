@@ -134,6 +134,8 @@ python3.12 --version
 
 ### Install an individual skill into a project
 
+Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), and `cad-source-intake` (source capture and revisions).
+
 This example installs for Claude Code. Run it from the project directory where you want the skill available. Choose `cad-ocs-engineering`, `cad-drawing-inspection` or `cad-source-intake` as `SKILL_NAME`.
 
 ```sh

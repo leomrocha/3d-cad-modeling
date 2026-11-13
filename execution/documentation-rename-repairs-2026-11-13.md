@@ -1,0 +1,14 @@
+# Documentation and GitHub Pages repairs
+
+Date: 2026-11-13. Execution: DONE. Actual execution model: unavailable.
+
+1. **Scope:** executed the [repair plan](../research/documentation-rename-audit/README.md) under the instruction “execute fix plan”. Checkpoint: `1102ea1`. Local result commit records this report and its scoped file list.
+2. **Skill identities:** README and Pages name OCS engineering (`cad-ocs-engineering`), drawing inspection (`cad-drawing-inspection`) and source intake (`cad-source-intake`). The catalogue and current execution guidance point to the merged repository skill. Original external-source identities remain attributed.
+3. **Workflow and report navigation:** structured workflow records carry current package mappings; dated research pages link current OCS execution; historical reports retain old path text with working current procedure links. Existing anchors and operation IDs remain intact.
+4. **Register rendering:** eight relative links in seven source-summary entries are rebased from the originating skill references. Both targeted and full source-register rendering use this rule. Original stored summaries, locators, source IDs, observations and hashes are preserved. Workflow detail generation emits the current skill link and a portable source-register link.
+5. **Path and examples:** AGENTS points to the existing packaged path reference. Three proposed command blocks use literal-text fences for their schematic placeholders. Runnable shell blocks retain shell syntax checking.
+6. **Website:** native Jekyll builds from `docs/`; baseurl, layout, example assets and repository destinations retain their source arrangement. README and Pages text compare equal after normalizing renderer-specific links and image paths. Build output stays in a temporary directory.
+7. **Regression and packages:** three source-register tests pass. Package `--finalize` and `--verify` both pass in an isolated copy of the local checkpoint plus authorized documentation edits: fourteen lifecycle checks, three source-register checks and five isolated installation checks pass per run. The optional live OCS check is skipped. Package generation retains the same committed package bytes. The concurrent annular runner, its procedure and its tests remain in the original checkout with their owner.
+8. **Detailed evidence:** [final verification and occurrence resolutions](../research/documentation-rename-audit/repair-results.json); [attributed local sources](../research/sources/documentation-rename-repairs-2026-11-13.json). The final audit statistics in the JSON record were obtained after the documentation writes.
+
+9. **Final documentation checks:** 288 Markdown pages and 4,187 local or own-repository link occurrences checked; zero unresolved targets or anchors. 30 runnable shell blocks pass syntax checks. The Jekyll homepage has 17 passing local navigation/asset references. External HTTP availability was outside this local check.

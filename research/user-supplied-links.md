@@ -1,5 +1,7 @@
 # Assessment of the supplied links
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Access date: 12 November 2026. The detailed reports distinguish page content, upstream source inspection and access failures.
 
 | Supplied source | Finding from the research | Detailed assessment |

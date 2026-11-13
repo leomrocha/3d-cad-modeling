@@ -1,5 +1,7 @@
 # Existing implementations and evidence
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Inspection model: gpt-6.1-sol. Local source reading and retained check-file inspection.
 
 ## cad-workflow-findings.md — ferme-findings

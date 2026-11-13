@@ -1,5 +1,7 @@
 # First implementation task: Record source files, revisions and job scope
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: **implementation proposal**. Planning model: **gpt-6.1-sol**.
 
 ## 1. Exact action and selection
@@ -47,7 +49,7 @@ Date: 12 November 2026. Status: **implementation proposal**. Planning model: **g
 
 Commands below describe the future interface. Input fixtures and output directories are supplied to that future implementation.
 
-```sh
+```text
 python3 scripts/source_intake.py --input <job-input.json> --output <new-intake-directory>
 python3 -m unittest discover -s tests -p test_source_intake.py
 ```

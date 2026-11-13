@@ -1,5 +1,7 @@
 # MIX-R08 — Orthographic rasters + dimensions → candidate geometry and component record
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Classification: analyst assessment under the stated conditions.
 
 **Manual effort 5/5; setup 5/5; computing 3/5.**

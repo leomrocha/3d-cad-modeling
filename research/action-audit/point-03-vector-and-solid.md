@@ -1,5 +1,7 @@
 # Point 03 — Confirmed dimensions and vector drawings to small CAD models
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **procedure proposal**. Scope: ten operations and 31 actions. Requested procedure-design dispatch: `gpt-6-astra`, `xhigh`; actual executing model identity: **unavailable**.
 
 [Structured action records](point-03-operations.json) contain all 15 required fields for every action: purpose, intended use, inputs, outputs, accuracy, evidence, software, agent, user decisions, dependencies, proposed development, procedure, validation, failure/resumption and resources. This document supplies the readable sequence and concrete representation boundaries. The [execution plan](plan.md), [original CAD records](../workflows/cad-paths.json), [original domain records](../workflows/domain-paths.json), OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) and [retained implementation plan](../implementation-plan.md) supply the governing contracts. Procedures, proposed helpers and future cases describe work to execute under its own authorized task. Acceptance labels use the explicit `MARK AS ACCEPTED` instruction.

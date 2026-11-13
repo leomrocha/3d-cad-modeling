@@ -1,5 +1,7 @@
 # CAD-R10 — OpenSCAD source to mesh and checked CAD handoff
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Classification: analyst assessment under the stated conditions.
 
 **Manual effort 1/5; setup 1/5; computing 2/5.**

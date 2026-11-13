@@ -1,5 +1,7 @@
 # Point 06 visual and evidence review — building and robot structure and properties
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registration date: 2026-11-12. Status: **DONE — local documentary review**. The evidence packages, reasoning actions, software components, validation cases and resource records below are proposals. Scope: DOM-08, DOM-09, DOM-10, DOM-11, DOM-12, DOM-13, DOM-14, DOM-15, DOM-16, DOM-17, DOM-24, DOM-25, DOM-27, DOM-31, DOM-32, DOM-33, DOM-34, DOM-35 and DOM-37.
 
 Requested assignment: `gpt-6.1-sol`, reasoning effort `xhigh`. Actual executing model identity: **unavailable in this agent environment**. Evidence inspected: live project instructions, audit plan and sequence, original domain operations, existing local reports/dossiers, source-register summaries, the OCS engineering contract and the local IFC provenance example. Rendered images were not supplied or inspected. This review's executed output is this document; the image-review actions below describe future work.

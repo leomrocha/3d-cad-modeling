@@ -1,5 +1,7 @@
 # Operation catalogue
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registered: 2026-11-13.
 
 All `inputs` apply together. Alternative sets and independent choice groups are recorded explicitly. Full prerequisites, changes, checks and evidence are in [workflow-map.json](workflow-map.json) and the domain reports.

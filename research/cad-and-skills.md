@@ -1,5 +1,7 @@
 # CAD tools, workflows and agent skills
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Research inspected 2026-11-12. Model identity: Luna (delegated research agent; exact model build identifier unavailable). External sources were viewed through official project documentation and repositories; no web originals were downloaded or archived. Local source assessment inspected `${OCS_ROOT}` and preserved skill findings under `${EOLIENNES_ROOT}/research/cad-workflow/` and `${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/skills/`.
 
 ## Recommendations

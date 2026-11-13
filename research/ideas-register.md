@@ -1,5 +1,7 @@
 # Ideas and research questions
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Registered: 2026-11-13.
 
 The records retain project proposals, experiment questions and the earlier implementation-plan ideas. Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](ideas-register.json).
@@ -2683,3 +2685,5 @@ Execution of CAD-OCS-MERGE-2026-11-13: DONE. [Complete merge report](../executio
 Status: proposal. Audit: DONE.
 
 Repair current skill instructions, register summary links and report navigation; validate native Jekyll output while preserving historical provenance. [Repair plan](documentation-rename-audit/README.md). [Audit sources](sources/documentation-rename-audit-2026-11-13.json).
+
+Execution of CAD-DOCUMENTATION-RENAME-AUDIT-2026-11-13: DONE. [Repair execution](../execution/documentation-rename-repairs-2026-11-13.md).

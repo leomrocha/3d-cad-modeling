@@ -1,5 +1,7 @@
 # Independent review — Point 02 component and CAD reuse
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **DONE — static review and repair reread**. Scope: CAD-12, DOM-06, DOM-07, DOM-26, DOM-38 and DOM-39. Review type: static document and source inspection. All three findings below have observed documentation repairs.
 
 Requested dispatch: inherited `gpt-6.1-sol`, reasoning effort `xhigh`, independent-review role. Actual executing model identity: unavailable in the exposed runtime. This review records source/document observations and proposed repairs. Intake, CAD modeling, conversion and future validation fixtures have no execution result from this review.

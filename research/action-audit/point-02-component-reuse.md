@@ -1,5 +1,7 @@
 # Point 02 — Existing components and CAD files to inspected reusable inputs
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: proposed procedures and development specifications. The executed work is documentation and source inspection. Requested designer dispatch: `gpt-6-astra`, `xhigh`; actual runtime model identity: unavailable.
 
 ## 1. Scope and source basis

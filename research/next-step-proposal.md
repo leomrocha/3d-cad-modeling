@@ -1,5 +1,7 @@
 # Proposed next stages
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 12 November 2026. Status: proposal.
 
 This proposal develops the existing [implementation plan](implementation-plan.md) using the [workflow map](workflows/README.md). It preserves that plan's sequence and adds a focused evidence review before implementation. The starting checkpoint for documenting this proposal is `6ef39be`.
@@ -30,7 +32,7 @@ Evidence: [component contract](implementation-plan.md#6-component-library-contra
 
 ## 3. Establish the OCS modeling baseline
 
-1. Reuse the installed OCS engineering skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) and record the actual session/build capabilities used by the fixture.
+1. Reuse [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md) and record the actual session/build capabilities used by the fixture. Original source: `${CODEX_HOME}/skills/ocs-engineering/SKILL.md`.
 2. Model the bracket and mating plate with named parts, declared datums and dimensions; make one parameter or dimension revision through the supported native workflow.
 3. Read back dimensions, part identity and geometry; save and reopen the native document; inspect the requested derivative in its receiving application.
 4. Record the STEP export's actual surface representation alongside native-solid results. The inspected exporter consumes tessellated meshes.

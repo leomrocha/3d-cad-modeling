@@ -1,0 +1,66 @@
+{
+  "title": "Documentation rename repair execution",
+  "date": "2026-11-13",
+  "sources": [
+    {
+      "local_original": "research/tools/build_workflow_register.py",
+      "title": "Source-register rendering",
+      "summary": "Rebases relative Markdown summary links from their originating reference and maps renamed skill navigation while retaining original locators and observations.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "locally edited and checked",
+      "sha256": "b3452c0ee8172aa4b184d0beca06e66ede0960644369005e163b3dca61252e6f",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md",
+        "execution/documentation-rename-repairs-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "research/tools/build_workflow_details.py",
+      "title": "Workflow detail rendering",
+      "summary": "Emits the current OCS engineering package link and portable source-register navigation.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "locally edited and checked",
+      "sha256": "04d71739f8fce4e03725e8a5d166ae96efa33f2e9e164cf1c1dd6afdf180566b",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md",
+        "execution/documentation-rename-repairs-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "tests/test_source_registration.py",
+      "title": "Source-register regression checks",
+      "summary": "Checks summary-link rebasing, renamed-package navigation, original observation retention and repeated merge stability.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "locally edited and checked",
+      "sha256": "b04d0ca66f3b113a54f16295f4461f71b21769b4059dc3496ebdd0e4d164b834",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md",
+        "execution/documentation-rename-repairs-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "docs/index.md",
+      "title": "GitHub Pages skill names",
+      "summary": "Current three skill names match README installation choices.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "locally edited and checked",
+      "sha256": "888553890b547b5ed91763acc95c12d9f308e81a1ae3a89b9ff201a00a0f1191",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md",
+        "execution/documentation-rename-repairs-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "skills/README.md",
+      "title": "Current skill catalogue",
+      "summary": "Uses the merged OCS engineering package while retaining original external provenance.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "locally edited and checked",
+      "sha256": "1c71acf27a83355124e23b63ed266063fe7254e212e230779d65d3d872558a91",
+      "referring_documents": [
+        "research/documentation-rename-audit/README.md",
+        "execution/documentation-rename-repairs-2026-11-13.md"
+      ]
+    }
+  ]
+}

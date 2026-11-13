@@ -1271,5 +1271,27 @@
     "CAD-10 outputs an internal/kernel cad-solid; exact-format export is a separate handoff and OCS STEP is faceted in the inspected checkout. CAD-15 outputs mesh from OpenSCAD source. Mesh and cad-solid remain separate representation types.",
     "Additional types: native-model-document is the editable saved model in its owning CAD application; it preserves available application features/history but does not imply a common editable feature tree across applications. CAD-16 makes the photo-set → camera-solution/point-cloud/mesh transition explicit before CAD-11 fitting.",
     "native-model-document is an additional representation type: a saved editable document in its owning CAD application; available feature history depends on that application."
-  ]
+  ],
+  "current_skill_packages": {
+    "ocs-engineering": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "component-cad": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "drawing-inspection": {
+      "name": "Drawing inspection",
+      "skill_name": "cad-drawing-inspection",
+      "path": "skills/cad-drawing-inspection/SKILL.md"
+    },
+    "source-intake": {
+      "name": "Source intake",
+      "skill_name": "cad-source-intake",
+      "path": "skills/cad-source-intake/SKILL.md"
+    }
+  }
 }

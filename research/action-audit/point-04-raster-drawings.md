@@ -1,5 +1,7 @@
 # Point 04 — Raster drawings and interpreted dimensions
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **procedure proposal**. Scope: nine operations and 30 actions. Requested procedure-design dispatch: `gpt-6-astra`, `xhigh`; actual executing model identity: **unavailable**.
 
 [Structured operation records](point-04-operations.json) contain all 15 fields per action, operation-specific alternatives, four execution modes, merging, migration and future cases. This readable procedure retains the same stable action IDs. The [audit plan](plan.md), [original CAD records](../workflows/cad-paths.json), [domain records](../workflows/domain-paths.json), OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`), model contract (`${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md`) and [retained implementation plan](../implementation-plan.md) govern source identity, units, frames and evidence. All helper interfaces and execution procedures are proposals; acceptance labels require `MARK AS ACCEPTED`.

@@ -1,5 +1,7 @@
 # Local baseline
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Observed: 2026-11-12. Executing primary model identity is unavailable. Probe receipt: [local-inventory.json](local-inventory.json). Existing-source hashes: [local-evidence.json](sources/local-evidence.json).
 
 ## Existing assets to reuse

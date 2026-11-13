@@ -2,6 +2,8 @@
 
 Date: 13 November 2026. State: DONE. Execution: [rename report](../execution/skill-renaming-2026-11-13.md).
 
+Current OCS package: [OCS engineering (`cad-ocs-engineering`)](../skills/cad-ocs-engineering/SKILL.md), created by the subsequent [complete merge](cad-ocs-engineering-merge-plan.md). The sequence below records the earlier two-skill rename.
+
 1. **Requested names:** `drawing-inspection` becomes `cad-drawing-inspection`; `source-intake` becomes `cad-source-intake`. The supplied reason is public-repository indexing. `component-cad` retains its name.
 2. **Scope:** rename the two installable skills and update their package identities, installation commands, active documentation, references, generators and tests. The Python helper names `dxf_inspect.py` and `source_intake.py` retain their existing APIs and filenames.
 3. **Inventory:** the [source and reference inventory](sources/skill-renaming-plan-2026-11-13.json) records matching tracked files, hashes and reference categories. Refresh it against concurrent work immediately before implementation.

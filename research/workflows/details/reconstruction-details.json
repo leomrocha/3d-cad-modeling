@@ -20,7 +20,7 @@
           "format_and_quality": "Text naming components, datums and intended CAD feature scope; it supplies semantics, not dimensions."
         }
       ],
-      "reference_points": "Board corners: object coordinates in target frame and pixel detections. Calibration target establishes intrinsics and target-frame units; camera calibration alone does not scale the object capture. At least two separated measured scale/control distances are used to set/check reconstruction scale; reserve one or more controls from fitting. COLMAP adapter detail: OpenCV pixel-center principal point is shifted +0.5 px in x and y for COLMAP; OpenCV\u2019s five coefficients [k1,k2,p1,p2,k3] map into COLMAP FULL_OPENCV [k1,k2,p1,p2,k3,k4,k5,k6] with the final three set to zero. Verify COLMAP camera database readback after feature extraction. COLMAP bundle adjustment refines parameters by default unless controlled; choose this based on calibration evidence.",
+      "reference_points": "Board corners: object coordinates in target frame and pixel detections. Calibration target establishes intrinsics and target-frame units; camera calibration alone does not scale the object capture. At least two separated measured scale/control distances are used to set/check reconstruction scale; reserve one or more controls from fitting. COLMAP adapter detail: OpenCV pixel-center principal point is shifted +0.5 px in x and y for COLMAP; OpenCV’s five coefficients [k1,k2,p1,p2,k3] map into COLMAP FULL_OPENCV [k1,k2,p1,p2,k3,k4,k5,k6] with the final three set to zero. Verify COLMAP camera database readback after feature extraction. COLMAP bundle adjustment refines parameters by default unless controlled; choose this based on calibration evidence.",
       "software": [
         {
           "name": "OpenCV",
@@ -60,7 +60,7 @@
         },
         {
           "step": 2,
-          "action": "Adapt the calibration JSON to COLMAP explicitly. For an OpenCV five-coefficient calibration result, use COLMAP FULL_OPENCV parameters [fx, fy, cx+0.5, cy+0.5, k1, k2, p1, p2, k3, 0, 0, 0]. The +0.5 shifts OpenCV pixel-center coordinates to COLMAP\u2019s corner-based convention. Supply these during feature_extractor with --ImageReader.camera_model FULL_OPENCV --ImageReader.camera_params <comma-separated values> and --ImageReader.single_camera 1 only if every image has identical sensor/crop/focus settings. Read the stored camera back through pycolmap.Database.read_camera and compare width, height, model and every parameter before mapping; choose whether bundle adjustment may refine intrinsics. Never edit the binary SQLite camera parameter blob by hand."
+          "action": "Adapt the calibration JSON to COLMAP explicitly. For an OpenCV five-coefficient calibration result, use COLMAP FULL_OPENCV parameters [fx, fy, cx+0.5, cy+0.5, k1, k2, p1, p2, k3, 0, 0, 0]. The +0.5 shifts OpenCV pixel-center coordinates to COLMAP’s corner-based convention. Supply these during feature_extractor with --ImageReader.camera_model FULL_OPENCV --ImageReader.camera_params <comma-separated values> and --ImageReader.single_camera 1 only if every image has identical sensor/crop/focus settings. Read the stored camera back through pycolmap.Database.read_camera and compare width, height, model and every parameter before mapping; choose whether bundle adjustment may refine intrinsics. Never edit the binary SQLite camera parameter blob by hand."
         },
         {
           "step": 3,
@@ -72,7 +72,7 @@
         },
         {
           "step": 5,
-          "action": "Set the reconstruction\u2019s metric frame/scale from distributed measured controls, reserve independent control lengths, then remodel selected features in OCS with dimensions labeled by evidence and read back the CAD revision."
+          "action": "Set the reconstruction’s metric frame/scale from distributed measured controls, reserve independent control lengths, then remodel selected features in OCS with dimensions labeled by evidence and read back the CAD revision."
         }
       ],
       "code": [
@@ -863,7 +863,7 @@
         },
         {
           "step": 2,
-          "action": "Prepare the images with `ns-process-data images --data <images-folder> --output-dir <processed-data>`; Nerfstudio\u2019s image pipeline uses COLMAP and requires FFmpeg."
+          "action": "Prepare the images with `ns-process-data images --data <images-folder> --output-dir <processed-data>`; Nerfstudio’s image pipeline uses COLMAP and requires FFmpeg."
         },
         {
           "step": 3,
@@ -1174,5 +1174,27 @@
     "human_effort_and_compute_are_independent_ordinal_axes": "Scores use contract scales 1-5, conditions and reasons above. Equal numeric scores tie. They are not runtimes, hardware benchmarks, accuracy scores or measured human action counts.",
     "task_granularity": "operation_stage_count counts listed reference stages only; it does not count clicks, processing jobs or elapsed time.",
     "rank_order": "Lower tie rank means lower effort/compute; stage_count_order sorts listed stage counts ascending then workflow ID."
+  },
+  "current_skill_packages": {
+    "ocs-engineering": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "component-cad": {
+      "name": "OCS engineering",
+      "skill_name": "cad-ocs-engineering",
+      "path": "skills/cad-ocs-engineering/SKILL.md"
+    },
+    "drawing-inspection": {
+      "name": "Drawing inspection",
+      "skill_name": "cad-drawing-inspection",
+      "path": "skills/cad-drawing-inspection/SKILL.md"
+    },
+    "source-intake": {
+      "name": "Source intake",
+      "skill_name": "cad-source-intake",
+      "path": "skills/cad-source-intake/SKILL.md"
+    }
   }
 }

@@ -11,3 +11,7 @@ Native checks PASS: reopened document 98, geometry revision 10602, handle 7F; ex
 Generic tooling addition: `${MODELING_ROOT}/scripts/envelope_reference.py`, with eight passing synthetic tests and procedure at `${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md`. Hashes and runtime dependencies are recorded in FERME `c028-build-01/evidence/tooling-link.json`.
 
 Detailed geometry state remains NEEDS_INPUT for the PCB outline, mounting holes, connector locations and connector bodies. The source repository contains documentation and configuration, with no board CAD or mechanical drawing. Continue detailed geometry only from an original mechanical drawing/CAD or a physical sample with measurements and uncertainty. A Python summary wrapper raised a JSON serialization error after the native build evidence was written; the geometry was not replayed, and the saved file, reopened checks and persistence comparison passed independently.
+
+## Current procedure links
+
+1. `${MODELING_ROOT}/skills/component-cad/references/envelope-reference.md` → [envelope reference](../../../skills/cad-ocs-engineering/references/envelope-reference.md)

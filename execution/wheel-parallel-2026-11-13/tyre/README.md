@@ -51,3 +51,7 @@ The coordinator can now consume the source-backed **7.00I-8 rim contour** when t
 - `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md`
 - `${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md`
 - `${FERME_ROOT}/skills/cad-construction/SKILL.md`
+
+## Current procedure links
+
+1. `${MODELING_ROOT}/skills/component-cad/references/existing-model-start-check.md` → [existing model start check](../../../skills/cad-ocs-engineering/references/existing-model-start-check.md)

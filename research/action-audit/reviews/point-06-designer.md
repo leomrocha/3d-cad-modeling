@@ -1,5 +1,7 @@
 # Point 06 designer notes — building and robot structure and properties
 
+Current execution package: [OCS engineering (`cad-ocs-engineering`)](../../../skills/cad-ocs-engineering/SKILL.md). External OCS skill locators below identify the original inspected sources.
+
 Date: 2026-11-12. Status: **DONE — documentary procedure design**. Procedures, helpers and test cases: **proposal**. Requested dispatch: `gpt-6-astra`, reasoning effort `xhigh`; actual executing model identity: **unavailable**.
 
 Assigned outputs: [readable procedure](../point-06-building-and-robot.md), [structured operations](../point-06-operations.json) and this note. Scope: DOM-08, DOM-09, DOM-10, DOM-11, DOM-12, DOM-13, DOM-14, DOM-15, DOM-16, DOM-17, DOM-24, DOM-25, DOM-27, DOM-31, DOM-32, DOM-33, DOM-34, DOM-35 and DOM-37. The structured document contains 57 actions with all 15 substantive fields.
