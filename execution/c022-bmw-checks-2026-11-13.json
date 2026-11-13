@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "result": "PASS for executed saved-check and helper-improvement stage",
+  "component_state": "IN_PROGRESS",
+  "saved_geometry_checks": {
+    "result": "PASS",
+    "count": 19
+  },
+  "visual_identity": {
+    "result": "FAIL",
+    "stage": "BLOCKED",
+    "observation": "Four actual images repeat the previous Lynx view"
+  },
+  "new_recorded_native_tests": 6,
+  "full_helper_tests": 106,
+  "skill_validation": "PASS",
+  "source_revision": 2,
+  "source_status": "Existing report attribution for seller dimensions; reconstruction inputs labelled separately",
+  "source_observations": 39,
+  "existing_source_registration_dates_preserved": 1270,
+  "original_native_models_preserved": 26,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "action_occurrence_prefix_preserved": true
+}

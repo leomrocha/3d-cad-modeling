@@ -44,3 +44,30 @@ def cylinder_pattern(name,features,diameter,axis,centres,tolerance):
         if not any(all(abs(a-b)<=tolerance for a,b in zip(point,p)) for p in positions):positions.append(point)
     return comparison(name,sorted(positions),sorted([list(p) for p in centres]),tolerance,
                       method='native circular cylinders; coincident patches deduplicated; axis projection')
+
+
+def planar_boundary_pattern(name,features,axis,level,spans,centres,tolerance):
+    """Compare closed native planar boundaries with a sourced position pattern."""
+    if type(axis) is not int or axis not in [0,1,2]:
+        raise ValueError('Cartesian plane axis required')
+    comparison(name+' input validation',[level]+list(spans),[level]+list(spans),tolerance)
+    if len(spans)!=2 or any(v<=0 for v in spans) or not centres:
+        raise ValueError('Two positive spans and nonempty centres required')
+    for centre in centres:
+        if len(centre)!=2:raise ValueError('Two coordinates per plane centre required')
+        comparison(name+' centre validation',centre,centre,tolerance)
+    if len({tuple(p) for p in centres})!=len(centres):raise ValueError('Distinct expected centres required')
+    coordinates=[i for i in range(3) if i!=axis];actual=[];closed=True
+    for plane in features['planar_boundary_components']:
+        normal=plane['plane_normal']
+        if abs(abs(normal[axis])-1)>tolerance:continue
+        if abs(plane['plane_offset']/normal[axis]-level)>tolerance:continue
+        for boundary in plane['components']:
+            b=boundary['bounds'];closed=closed and boundary['closed_degree_two']
+            actual.append([[(b['min'][i]+b['max'][i])/2 for i in coordinates],
+                           [b['max'][i]-b['min'][i] for i in coordinates]])
+    actual.sort(key=lambda x:tuple(x[0]));expected=sorted([[list(p),list(spans)] for p in centres],key=lambda x:tuple(x[0]))
+    result=comparison(name,actual,expected,tolerance,method='native coplanar boundary components, centres and spans')
+    result['all_boundaries_closed']=closed
+    if not closed:result['result']='FAIL'
+    return result

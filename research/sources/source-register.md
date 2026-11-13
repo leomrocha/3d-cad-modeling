@@ -14721,3 +14721,317 @@ Original source: [Lynx Smart BMS 500 NG M10 rev04 STEP original](/home/leo/proje
 Summary: Existing retained manufacturer AP214 assembly declares millimetres and explicit source placement frames. Reused unchanged for the 60 internal correction comparisons.
 
 Evidence: existing_local_manufacturer_original_inspected.
+
+## BMW saved-check iteration — 13 November 2026
+
+### BMW activated isometric capture — SRC-c1cd17605690
+
+Original source: [BMW activated isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/activated-isometric.png)
+
+Summary: Actual inspected activated isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
+
+Evidence: executed_native_capture_failed_identity.
+
+### BMW current native audit — SRC-7c43c07f98cd
+
+Original source: [BMW current native audit](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/audit.json)
+
+Summary: Saved document reports 13 solids and zero audit errors/warnings.
+
+Evidence: executed_native_audit.
+
+### BMW document native capabilities — SRC-8c2f0d50aa2d
+
+Original source: [BMW document native capabilities](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/capabilities.json)
+
+Summary: Installed native automation capabilities and document record collections were read before additional viewport inspection.
+
+Evidence: executed_native_capability_read.
+
+### BMW copy isometric capture — SRC-8a2300ee7ccd
+
+Original source: [BMW copy isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-isometric.png)
+
+Summary: Actual inspected copy isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
+
+Evidence: executed_native_capture_failed_identity.
+
+### BMW isolated inspection document state — SRC-100b4715becf
+
+Original source: [BMW isolated inspection document state](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-state.json)
+
+Summary: Fresh document 90 addresses an exact-byte BMW inspection copy; captured image retains the earlier Lynx view.
+
+Evidence: executed_native_state_read.
+
+### Executed BMW isolated-view driver — SRC-f35676bd27f5
+
+Original source: [Executed BMW isolated-view driver](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/bmw_isolated_view.py)
+
+Summary: Copies exact original DWG bytes into a diagnostic path and opens a fresh document for a component-identity capture.
+
+Evidence: executed_implementation_artifact.
+
+### Executed BMW source and geometry driver — SRC-5cc1a26a5c2b
+
+Original source: [Executed BMW source and geometry driver](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/check_bmw_iteration.py)
+
+Summary: Writes the initial source job and compares native case, mounting and cover features; later source revision 2 retains corrected report attribution separately.
+
+Evidence: executed_implementation_artifact.
+
+### BMW executed driver provenance — SRC-202743c156fc
+
+Original source: [BMW executed driver provenance](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/provenance.json)
+
+Summary: Hashes retained inspection drivers and source reconstruction program; identifies the restricted helper bootstrap and preserves the original construction program as source.
+
+Evidence: executed_artifact_provenance.
+
+### Executed BMW inspection driver — SRC-e433169a1ce6
+
+Original source: [Executed BMW inspection driver](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/start_bmw_iteration.py)
+
+Summary: Opens the existing module, checks original hash, reads header/audit and 13 saved native solids, then requests the first isometric capture.
+
+Evidence: executed_implementation_artifact.
+
+### BMW drawing units — SRC-ed75a17d7f36
+
+Original source: [BMW drawing units](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/header.json)
+
+Summary: Saved drawing insertion units code 4 identifies millimetres for source-bound geometry checks.
+
+Evidence: executed_native_state_read.
+
+### BMW isometric capture — SRC-b33b1135609a
+
+Original source: [BMW isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/isometric.png)
+
+Summary: Actual inspected isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
+
+Evidence: executed_native_capture_failed_identity.
+
+### BMW saved native geometry records — SRC-12777a7a34c9
+
+Original source: [BMW saved native geometry records](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/native-records.json)
+
+Summary: Document 79 readback contains all 13 exterior solids with component metadata and native SAB geometry used by the new checker.
+
+Evidence: executed_native_record_read.
+
+### BMW current native request journal — SRC-13f3a3686de7
+
+Original source: [BMW current native request journal](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/ocs-journal.jsonl)
+
+Summary: Stable request intents and responses preserve existing open, view setup, explicit activation, pointer event, exact-byte-copy open and captures.
+
+Evidence: executed_native_operation_journal.
+
+### BMW pointer isometric capture — SRC-b0614d34bbd7
+
+Original source: [BMW pointer isometric capture](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-isometric.png)
+
+Summary: Actual inspected pointer isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.
+
+Evidence: executed_native_capture_failed_identity.
+
+### BMW native pointer response — SRC-b02693d9042f
+
+Original source: [BMW native pointer response](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-result.json)
+
+Summary: Supported native pointer move and wheel action completed; subsequent capture still shows the Lynx BMS.
+
+Evidence: executed_native_view_action.
+
+### BMW input coverage check — SRC-5ae53054d5c4
+
+Original source: [BMW input coverage check](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/readiness.json)
+
+Summary: Current source revision passes required feature/hash coverage before the 19 saved-geometry comparisons.
+
+Evidence: executed_input_validation.
+
+### BMW iteration stage result — SRC-da0f92d3a5e0
+
+Original source: [BMW iteration stage result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/result.json)
+
+Summary: Saved geometry and the applied planar-pattern helper pass; component remains IN_PROGRESS with a blocked visual identity stage. Original BMW file hash stays unchanged.
+
+Evidence: executed_component_result.
+
+### BMW saved geometry comparisons — SRC-f5b9e2c34e6f
+
+Original source: [BMW saved geometry comparisons](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/saved-checks.json)
+
+Summary: 19 passing comparisons cover 13 closed solids, case dimensions, four mounting bores and all 24 closed cover recesses.
+
+Evidence: executed_saved_geometry_check.
+
+### Existing BMW reconstruction source program — SRC-94d4b9997579
+
+Original source: [Existing BMW reconstruction source program](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source/build_bmw_i3_94ah.py)
+
+Summary: Preserved original construction parameters supply the six-by-four pressing grid and existing exterior interpretation. Its construction function was not rerun.
+
+Evidence: existing_local_implementation_source_inspected.
+
+### BMW initial source requirements — SRC-4bf57d873df3
+
+Original source: [BMW initial source requirements](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job-r01.json)
+
+Summary: Preserves the initial direct-HTML dimension binding before source review identified the report as the actual retained dimensional evidence.
+
+Evidence: historical_implementation_artifact.
+
+### BMW source requirements revision 2 — SRC-6bfdf70ce9d1
+
+Original source: [BMW source requirements revision 2](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json)
+
+Summary: Binds reported case dimensions to the existing geometry report and reconstruction features to their retained records; includes exact expected 24 recess centres.
+
+Evidence: implementation_artifact.
+
+### BMW source evidence review — SRC-e8db5a8bec64
+
+Original source: [BMW source evidence review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-review.json)
+
+Summary: Three retained EVShop HTML copies lack the recorded dimension text; current source revision attributes dimensions through the existing geometry report. Numeric expectations stay unchanged.
+
+Evidence: executed_local_source_review.
+
+### BMW existing document state — SRC-79b348f11de4
+
+Original source: [BMW existing document state](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/state.json)
+
+Summary: Records existing saved BMW document 79, its camera and document identity before current inspection.
+
+Evidence: executed_native_state_read.
+
+### BMW failed capture identity checks — SRC-cc7a5085d90e
+
+Original source: [BMW failed capture identity checks](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-checks.json)
+
+Summary: Four native images have the same SHA-256 and show the previous Lynx BMS while native BMW documents are 79 and 90.
+
+Evidence: executed_visual_verification.
+
+### BMW diagnostic copy provenance — SRC-9a7e251c187a
+
+Original source: [BMW diagnostic copy provenance](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-copy.json)
+
+Summary: Pins original and inspection-copy paths and their identical DWG SHA-256; purpose is viewport diagnosis with zero geometry or format changes.
+
+Evidence: executed_file_copy_provenance.
+
+### BMW byte-identical inspection copy — SRC-35c99d126bf6
+
+Original source: [BMW byte-identical inspection copy](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg)
+
+Summary: Exact original saved geometry opened in isolated document 90 to test stale existing-tab rendering; this is a diagnostic work artifact.
+
+Evidence: executed_byte_identical_copy.
+
+### Shared repeated planar-boundary checker — SRC-5b8f29b55228
+
+Original source: [Shared repeated planar-boundary checker](/home/leo/projects/3dmodeling/scripts/feature_checks.py)
+
+Summary: Adds a source-bound plane level, complete closed-boundary count, centres and span comparison for repeated recesses.
+
+Evidence: implementation_artifact.
+
+### Named battery case measurement groups — SRC-5c74a56ff439
+
+Original source: [Named battery case measurement groups](/home/leo/projects/3dmodeling/scripts/battery_module.py)
+
+Summary: Adds check_tabbed_case, reusing source readiness, named native parts, closed-body and mounting-pattern checks with explicit component measurement groups.
+
+Evidence: implementation_artifact.
+
+### BMW saved-case and recess regression tests — SRC-c4061056ed3f
+
+Original source: [BMW saved-case and recess regression tests](/home/leo/projects/3dmodeling/tests/test_tabbed_battery.py)
+
+Summary: Six actual-record cases pass; they exercise correct geometry and detection of incorrect length, shifted/missing recesses, incorrect floor and open boundary.
+
+Evidence: implementation_artifact.
+
+### Current component iteration skill — SRC-6b239a9bfdd1
+
+Original source: [Current component iteration skill](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md)
+
+Summary: Routes component work through existing source, native geometry, persistence, visual identity and checked improvement procedures, including scaled assemblies and multi-solid battery cases.
+
+Evidence: implementation_artifact.
+
+### Tabbed battery and cover-pattern procedure — SRC-240f5a0db534
+
+Original source: [Tabbed battery and cover-pattern procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/tabbed-battery.md)
+
+Summary: Records the saved BMW case measurement groups, source/reconstruction attribution, repeated-boundary checker and concrete stale-capture failure.
+
+Evidence: implementation_artifact.
+
+### BMW saved-check iteration report — SRC-de515b0eea67
+
+Original source: [BMW saved-check iteration report](/home/leo/projects/3dmodeling/execution/c022-bmw-2026-11-13.md)
+
+Summary: Reports 19 passing saved comparisons, the applied six-test improvement, report-bound dimensional evidence and blocked visual identity stage.
+
+Evidence: executed_verification_report.
+
+### BMW iteration full regression result — SRC-2cf3d0d9c4d9
+
+Original source: [BMW iteration full regression result](/home/leo/projects/3dmodeling/execution/bmw-iteration-tests-2026-11-13.txt)
+
+Summary: Records the final full helper test run after source revision 2. All 106 tests pass; protected-output rejection is an intentional test case.
+
+Evidence: executed_software_test_result.
+
+### Retained BMW seller HTML evshop_page_fr.html — SRC-d8586951cbe6
+
+Original source: [Retained BMW seller HTML evshop_page_fr.html](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_fr.html)
+
+Summary: Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.
+
+Evidence: existing_local_original_inspected.
+
+### Retained BMW seller HTML evshop_page_de.html — SRC-149df552e1f9
+
+Original source: [Retained BMW seller HTML evshop_page_de.html](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_de.html)
+
+Summary: Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.
+
+Evidence: existing_local_original_inspected.
+
+### Retained BMW seller HTML evshop_page_en.html — SRC-a351e9134375
+
+Original source: [Retained BMW seller HTML evshop_page_en.html](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_en.html)
+
+Summary: Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.
+
+Evidence: existing_local_original_inspected.
+
+### Existing BMW geometry and attribution record — SRC-c170afb93281
+
+Original source: [Existing BMW geometry and attribution record](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/bmw-i3-94ah-geometry.md)
+
+Summary: Records EVShop-attributed 410/385/310/150 mm case dimensions and separately labelled reconstructed mounting centres, cover pattern and loose cable pose. Supplies current component-check inputs.
+
+Evidence: existing_local_report_inspected.
+
+### Local OCS control source actions.rs — SRC-c8f3cb9eeded
+
+Original source: [Local OCS control source actions.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/actions.rs)
+
+Summary: Local source read to identify native pointer, document activation and capture actions. The current pointer call completed and its observed capture result is retained separately.
+
+Evidence: local_implementation_source_inspected.
+
+### Local OCS control source mod.rs — SRC-0d1de3da8732
+
+Original source: [Local OCS control source mod.rs](/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs)
+
+Summary: Local source read to identify native pointer, document activation and capture actions. The current pointer call completed and its observed capture result is retained separately.
+
+Evidence: local_implementation_source_inspected.

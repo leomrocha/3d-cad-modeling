@@ -1,0 +1,431 @@
+[
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/activated-isometric.png",
+    "title": "BMW activated isometric capture",
+    "summary": "Actual inspected activated isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.",
+    "access_date": "2026-11-13",
+    "sha256": "250b3b7eb6e61e9da8e19adc997702019ec8e78a8cca3bd8fbfab7924e348bca",
+    "evidence_status": "executed_native_capture_failed_identity",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/audit.json",
+    "title": "BMW current native audit",
+    "summary": "Saved document reports 13 solids and zero audit errors/warnings.",
+    "access_date": "2026-11-13",
+    "sha256": "cb5b384aad055ef99df4e9bfe822baa1c79732cd99807f5bd4266b94c7c38e97",
+    "evidence_status": "executed_native_audit",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/capabilities.json",
+    "title": "BMW document native capabilities",
+    "summary": "Installed native automation capabilities and document record collections were read before additional viewport inspection.",
+    "access_date": "2026-11-13",
+    "sha256": "f7f3e1fd3abcdffecf7adcd2c98bbaee967045cfc82ccb164bc1644913e09dbe",
+    "evidence_status": "executed_native_capability_read",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-isometric.png",
+    "title": "BMW copy isometric capture",
+    "summary": "Actual inspected copy isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.",
+    "access_date": "2026-11-13",
+    "sha256": "250b3b7eb6e61e9da8e19adc997702019ec8e78a8cca3bd8fbfab7924e348bca",
+    "evidence_status": "executed_native_capture_failed_identity",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/copy-state.json",
+    "title": "BMW isolated inspection document state",
+    "summary": "Fresh document 90 addresses an exact-byte BMW inspection copy; captured image retains the earlier Lynx view.",
+    "access_date": "2026-11-13",
+    "sha256": "803a2e73a11c4db9f215927816c05faa0d2e684ceb952ed5ad314de22f8bf08e",
+    "evidence_status": "executed_native_state_read",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/bmw_isolated_view.py",
+    "title": "Executed BMW isolated-view driver",
+    "summary": "Copies exact original DWG bytes into a diagnostic path and opens a fresh document for a component-identity capture.",
+    "access_date": "2026-11-13",
+    "sha256": "376664c11d42355994a8e644d2f4cab21020655cfae8564db386698120418fd8",
+    "evidence_status": "executed_implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/check_bmw_iteration.py",
+    "title": "Executed BMW source and geometry driver",
+    "summary": "Writes the initial source job and compares native case, mounting and cover features; later source revision 2 retains corrected report attribution separately.",
+    "access_date": "2026-11-13",
+    "sha256": "dd6efcea77ac9eddcdba45355e58adf686cc1ddfb20e50b3ba731221bff553b8",
+    "evidence_status": "executed_implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/provenance.json",
+    "title": "BMW executed driver provenance",
+    "summary": "Hashes retained inspection drivers and source reconstruction program; identifies the restricted helper bootstrap and preserves the original construction program as source.",
+    "access_date": "2026-11-13",
+    "sha256": "3d573939250e1608f6b3ee2c2d72633ceb27422f39797d8595bf228cd35ca2cb",
+    "evidence_status": "executed_artifact_provenance",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/executed-drivers/start_bmw_iteration.py",
+    "title": "Executed BMW inspection driver",
+    "summary": "Opens the existing module, checks original hash, reads header/audit and 13 saved native solids, then requests the first isometric capture.",
+    "access_date": "2026-11-13",
+    "sha256": "7c71154b95265e45d3e96c2cb9209e71801256bf50b2b95a787bc75fdc772387",
+    "evidence_status": "executed_implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/header.json",
+    "title": "BMW drawing units",
+    "summary": "Saved drawing insertion units code 4 identifies millimetres for source-bound geometry checks.",
+    "access_date": "2026-11-13",
+    "sha256": "001bb19d41a04b8fbeeae80a2eb7d9c38c39f6653aff1a5e26bc9489d4663852",
+    "evidence_status": "executed_native_state_read",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/isometric.png",
+    "title": "BMW isometric capture",
+    "summary": "Actual inspected isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.",
+    "access_date": "2026-11-13",
+    "sha256": "250b3b7eb6e61e9da8e19adc997702019ec8e78a8cca3bd8fbfab7924e348bca",
+    "evidence_status": "executed_native_capture_failed_identity",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/native-records.json",
+    "title": "BMW saved native geometry records",
+    "summary": "Document 79 readback contains all 13 exterior solids with component metadata and native SAB geometry used by the new checker.",
+    "access_date": "2026-11-13",
+    "sha256": "8143cfdbb8cb6868a5cdf72f90a8b5ce19ca84c1e68edce287ccbf383d7aac0a",
+    "evidence_status": "executed_native_record_read",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/ocs-journal.jsonl",
+    "title": "BMW current native request journal",
+    "summary": "Stable request intents and responses preserve existing open, view setup, explicit activation, pointer event, exact-byte-copy open and captures.",
+    "access_date": "2026-11-13",
+    "sha256": "3ea2ce7d5244db0e6c1349fc66184a9fa81d093608d8070337fd34348333de53",
+    "evidence_status": "executed_native_operation_journal",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-isometric.png",
+    "title": "BMW pointer isometric capture",
+    "summary": "Actual inspected pointer isometric image shows the previous Lynx BMS. The four capture bytes are identical despite the recorded BMW document and camera actions.",
+    "access_date": "2026-11-13",
+    "sha256": "250b3b7eb6e61e9da8e19adc997702019ec8e78a8cca3bd8fbfab7924e348bca",
+    "evidence_status": "executed_native_capture_failed_identity",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/pointer-result.json",
+    "title": "BMW native pointer response",
+    "summary": "Supported native pointer move and wheel action completed; subsequent capture still shows the Lynx BMS.",
+    "access_date": "2026-11-13",
+    "sha256": "231927591461d8b55ebabe923ff59c614580ff96753d028f9ff71a822acb466d",
+    "evidence_status": "executed_native_view_action",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/readiness.json",
+    "title": "BMW input coverage check",
+    "summary": "Current source revision passes required feature/hash coverage before the 19 saved-geometry comparisons.",
+    "access_date": "2026-11-13",
+    "sha256": "2a8760886f6e6e11846e072783657aca7d283d476ff611806253c0aa598b8040",
+    "evidence_status": "executed_input_validation",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/result.json",
+    "title": "BMW iteration stage result",
+    "summary": "Saved geometry and the applied planar-pattern helper pass; component remains IN_PROGRESS with a blocked visual identity stage. Original BMW file hash stays unchanged.",
+    "access_date": "2026-11-13",
+    "sha256": "c332ab15aa6055b19032afbcacf930d3f679d583c8f4bad5ecca1e4be9640231",
+    "evidence_status": "executed_component_result",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/saved-checks.json",
+    "title": "BMW saved geometry comparisons",
+    "summary": "19 passing comparisons cover 13 closed solids, case dimensions, four mounting bores and all 24 closed cover recesses.",
+    "access_date": "2026-11-13",
+    "sha256": "4238bb3fb518a041658c886ed7b64325b5dbd299262526dafbf286c0f5f5ba8f",
+    "evidence_status": "executed_saved_geometry_check",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source/build_bmw_i3_94ah.py",
+    "title": "Existing BMW reconstruction source program",
+    "summary": "Preserved original construction parameters supply the six-by-four pressing grid and existing exterior interpretation. Its construction function was not rerun.",
+    "access_date": "2026-11-13",
+    "sha256": "4bacd498f12f1dab482e6cb5f050e8a7dc2c5efc61473ee2127d2e8be5fa5c16",
+    "evidence_status": "existing_local_implementation_source_inspected",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job-r01.json",
+    "title": "BMW initial source requirements",
+    "summary": "Preserves the initial direct-HTML dimension binding before source review identified the report as the actual retained dimensional evidence.",
+    "access_date": "2026-11-13",
+    "sha256": "4497a04b9242d66bb46a8d1907d9b5a779f894f29693b5988f1cca74db7c3dd5",
+    "evidence_status": "historical_implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json",
+    "title": "BMW source requirements revision 2",
+    "summary": "Binds reported case dimensions to the existing geometry report and reconstruction features to their retained records; includes exact expected 24 recess centres.",
+    "access_date": "2026-11-13",
+    "sha256": "707af66e13a34bddfd4496230665e697f0fef6f5a3b7f84e76c5bbe9434cdeaa",
+    "evidence_status": "implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-review.json",
+    "title": "BMW source evidence review",
+    "summary": "Three retained EVShop HTML copies lack the recorded dimension text; current source revision attributes dimensions through the existing geometry report. Numeric expectations stay unchanged.",
+    "access_date": "2026-11-13",
+    "sha256": "93e16488915936738875c0f99412751659df26d2367d9306eda66246fd956d32",
+    "evidence_status": "executed_local_source_review",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/state.json",
+    "title": "BMW existing document state",
+    "summary": "Records existing saved BMW document 79, its camera and document identity before current inspection.",
+    "access_date": "2026-11-13",
+    "sha256": "5123b7f2fbd47246fb892f09fecc018055dcd0149b9cd7d3db804e49721301c1",
+    "evidence_status": "executed_native_state_read",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-checks.json",
+    "title": "BMW failed capture identity checks",
+    "summary": "Four native images have the same SHA-256 and show the previous Lynx BMS while native BMW documents are 79 and 90.",
+    "access_date": "2026-11-13",
+    "sha256": "ea258628ac0dcc7ad4949cc0c5f3142aaca5c69264f4b74aff03bbbb5e300ce0",
+    "evidence_status": "executed_visual_verification",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-copy.json",
+    "title": "BMW diagnostic copy provenance",
+    "summary": "Pins original and inspection-copy paths and their identical DWG SHA-256; purpose is viewport diagnosis with zero geometry or format changes.",
+    "access_date": "2026-11-13",
+    "sha256": "68d335e0fe9d3b3cced990434ccda76e9f29b82c5e11c2e5f18146aad2901009",
+    "evidence_status": "executed_file_copy_provenance",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg",
+    "title": "BMW byte-identical inspection copy",
+    "summary": "Exact original saved geometry opened in isolated document 90 to test stale existing-tab rendering; this is a diagnostic work artifact.",
+    "access_date": "2026-11-13",
+    "sha256": "95404b6f6410cf73dffd875f34d33959afcc8d6c99a7cb8506f0e694b6589e2c",
+    "evidence_status": "executed_byte_identical_copy",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/feature_checks.py",
+    "title": "Shared repeated planar-boundary checker",
+    "summary": "Adds a source-bound plane level, complete closed-boundary count, centres and span comparison for repeated recesses.",
+    "access_date": "2026-11-13",
+    "sha256": "1b476719a1f042727a1ce53fdcf91d756442f52ed4be80b44a96ae9dc401dd77",
+    "evidence_status": "implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/battery_module.py",
+    "title": "Named battery case measurement groups",
+    "summary": "Adds check_tabbed_case, reusing source readiness, named native parts, closed-body and mounting-pattern checks with explicit component measurement groups.",
+    "access_date": "2026-11-13",
+    "sha256": "fafa8c57d579d5329b93b0681d890d7dc28c5706c1d9f9531ac53b53380a0d08",
+    "evidence_status": "implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/tests/test_tabbed_battery.py",
+    "title": "BMW saved-case and recess regression tests",
+    "summary": "Six actual-record cases pass; they exercise correct geometry and detection of incorrect length, shifted/missing recesses, incorrect floor and open boundary.",
+    "access_date": "2026-11-13",
+    "sha256": "2811c370f4036b04f1f7b9258f0621db12f34e808fb74d483831a829c57060fb",
+    "evidence_status": "implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md",
+    "title": "Current component iteration skill",
+    "summary": "Routes component work through existing source, native geometry, persistence, visual identity and checked improvement procedures, including scaled assemblies and multi-solid battery cases.",
+    "access_date": "2026-11-13",
+    "sha256": "56baf2a807a6c703d66c2fb36b64d719bc448240b625d0b8ee1e6994309c54ad",
+    "evidence_status": "implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/skills/component-cad/references/tabbed-battery.md",
+    "title": "Tabbed battery and cover-pattern procedure",
+    "summary": "Records the saved BMW case measurement groups, source/reconstruction attribution, repeated-boundary checker and concrete stale-capture failure.",
+    "access_date": "2026-11-13",
+    "sha256": "1faf6c05d85621e1c8e84f2dc9a00ea0f2f14789a7591acb8265a09fe47bddf9",
+    "evidence_status": "implementation_artifact",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c022-bmw-2026-11-13.md",
+    "title": "BMW saved-check iteration report",
+    "summary": "Reports 19 passing saved comparisons, the applied six-test improvement, report-bound dimensional evidence and blocked visual identity stage.",
+    "access_date": "2026-11-13",
+    "sha256": "ab08d2e2f44658e2fe724afb12d9f8f5249f25945cb2290fabe1296fa4ca61e1",
+    "evidence_status": "executed_verification_report",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/bmw-iteration-tests-2026-11-13.txt",
+    "title": "BMW iteration full regression result",
+    "summary": "Records the final full helper test run after source revision 2. All 106 tests pass; protected-output rejection is an intentional test case.",
+    "access_date": "2026-11-13",
+    "sha256": "1a3cb59672e9ba7be0748cb3f74b726e669782c926e8e1ee5f8eeb76d75fed5e",
+    "evidence_status": "executed_software_test_result",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_fr.html",
+    "title": "Retained BMW seller HTML evshop_page_fr.html",
+    "summary": "Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.",
+    "access_date": "2026-11-13",
+    "sha256": "5d40615936e1b75f815c9fbb02b03ade19fa02599edc0fc63177882ef437efd4",
+    "evidence_status": "existing_local_original_inspected",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_de.html",
+    "title": "Retained BMW seller HTML evshop_page_de.html",
+    "summary": "Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.",
+    "access_date": "2026-11-13",
+    "sha256": "50f0334a83f1dac931883ee97fe7019f67e4260d4940cd41354d8b6a49a46454",
+    "evidence_status": "existing_local_original_inspected",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/bmw-i3-94ah/evshop_page_en.html",
+    "title": "Retained BMW seller HTML evshop_page_en.html",
+    "summary": "Inspected exact retained HTML content during source review. This inspection led to current report-based dimension binding; the original file remains unchanged.",
+    "access_date": "2026-11-13",
+    "sha256": "464e06a77922f32af376d6b2dc9c999e279dabeb663ec8c46d6ce205cbf74c35",
+    "evidence_status": "existing_local_original_inspected",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/bmw-i3-94ah-geometry.md",
+    "title": "Existing BMW geometry and attribution record",
+    "summary": "Records EVShop-attributed 410/385/310/150 mm case dimensions and separately labelled reconstructed mounting centres, cover pattern and loose cable pose. Supplies current component-check inputs.",
+    "access_date": "2026-11-13",
+    "sha256": "17ab67a58ef98865f85bb07d9ac0af6327be41c2f88f944717c5a7d6bd8ca053",
+    "evidence_status": "existing_local_report_inspected",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/actions.rs",
+    "title": "Local OCS control source actions.rs",
+    "summary": "Local source read to identify native pointer, document activation and capture actions. The current pointer call completed and its observed capture result is retained separately.",
+    "access_date": "2026-11-13",
+    "sha256": "a15021f2b2fb15cb1e41604c347858b3d55164b8525dff0c8b44d1c08e4e6f4e",
+    "evidence_status": "local_implementation_source_inspected",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3rdparty/OpenCADStudio/src/app/control/mod.rs",
+    "title": "Local OCS control source mod.rs",
+    "summary": "Local source read to identify native pointer, document activation and capture actions. The current pointer call completed and its observed capture result is retained separately.",
+    "access_date": "2026-11-13",
+    "sha256": "2c1045eaaa5e396ae1400f8e8050cac6db8990238e6292b33f4dddae7fc1645b",
+    "evidence_status": "local_implementation_source_inspected",
+    "referring_documents": [
+      "execution/c022-bmw-2026-11-13.md"
+    ]
+  }
+]
