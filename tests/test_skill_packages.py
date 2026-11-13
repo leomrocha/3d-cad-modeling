@@ -17,7 +17,7 @@ from urllib.parse import unquote, urlsplit
 import venv
 
 ROOT = Path(__file__).resolve().parents[1]
-NAMES = ('component-cad', 'drawing-inspection', 'source-intake')
+NAMES = ('component-cad', 'cad-drawing-inspection', 'cad-source-intake')
 
 
 @unittest.skipUnless(os.environ.get('SKILLS_CLI_ROOT') and os.environ.get('NATIVE_READER_ROOT'),
@@ -105,8 +105,8 @@ class IndependentSkills(unittest.TestCase):
                 result = self.run_python(name, "from package_check import check; import json; from pathlib import Path; print(json.dumps(check(Path(sys.argv[1]).parent)))")
                 self.assertEqual(result['result'], 'PASS')
                 self.results['skills'][name].update(local_links=links, package_check=result)
-                entries = ['source_intake', 'part_index', 'component_records'] if name == 'source-intake' else \
-                          ['dxf_inspect', 'part_index', 'component_records'] if name == 'drawing-inspection' else \
+                entries = ['source_intake', 'part_index', 'component_records'] if name == 'cad-source-intake' else \
+                          ['dxf_inspect', 'part_index', 'component_records'] if name == 'cad-drawing-inspection' else \
                           ['envelope_job_runner', 'rounded_tube', 'model_inventory', 'retained_artifacts', 'ocs_control', 'check_contract']
                 for entry in entries:
                     process = subprocess.run([str(self.python), '-E', '-s', '-B', str(package / 'scripts' / (entry + '.py')), '--help'],
@@ -125,7 +125,7 @@ with tempfile.TemporaryDirectory() as folder:
  assert source.read_bytes()==b'original fixture\\n'
  assert index['sources'][0]['observation']['sha256']==hashlib.sha256(source.read_bytes()).hexdigest()
  print(json.dumps({'result':'PASS','source_preserved':True,'receipt_verified':True}))'''
-        self.results['skills']['source-intake']['fixture'] = self.run_python('source-intake', code)
+        self.results['skills']['cad-source-intake']['fixture'] = self.run_python('cad-source-intake', code)
 
     def test_dxf_fixture(self):
         code = '''import json,tempfile,hashlib
@@ -139,7 +139,7 @@ with tempfile.TemporaryDirectory() as folder:
  assert result['counts']['by_type']=={'CIRCLE':1}
  assert before==hashlib.sha256(source.read_bytes()).hexdigest()
  print(json.dumps({'result':'PASS','units':'mm','circle_count':1,'source_preserved':True}))'''
-        self.results['skills']['drawing-inspection']['fixture'] = self.run_python('drawing-inspection', code)
+        self.results['skills']['cad-drawing-inspection']['fixture'] = self.run_python('cad-drawing-inspection', code)
 
     def test_component_defaults_use_bundled_code_and_read_only_transport(self):
         code = '''import json

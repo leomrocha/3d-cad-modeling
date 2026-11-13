@@ -2,7 +2,7 @@
 
 Date: 12 November 2026. Executing model: gpt-6.1-sol. Checkpoint: `e6bd1c5`. Action: **Record source files, revisions and job scope (INTAKE-A01)**.
 
-1. **New implementation:** [source_intake.py](../scripts/source_intake.py), [source-intake skill](../skills/source-intake/SKILL.md) and [tests](../tests/test_source_intake.py) implement the existing [first-action plan](../research/action-audit/implementation-queue/first-action-plan.md). Source inspection established that these paths were absent before this batch. Existing `part_index.parse_json` and `component_records.observe_file` are reused.
+1. **New implementation:** [source_intake.py](../scripts/source_intake.py), [source-intake skill](../skills/cad-source-intake/SKILL.md) and [tests](../tests/test_source_intake.py) implement the existing [first-action plan](../research/action-audit/implementation-queue/first-action-plan.md). Source inspection established that these paths were absent before this batch. Existing `part_index.parse_json` and `component_records.observe_file` are reused.
 2. **Software work:** validate source IDs, dates, correction/parent references, source cycles and scope fields; preserve exact text and URL locators; hash local files; compare pinned bytes; link new revisions to checked prior artifacts; publish the output set; preserve failed attempts and earlier revisions. The script makes zero network requests and imports no CAD client.
 3. **Agent work:** interpret authorization, write the scope statement, identify source meanings, preserve correction wording and review attributed conflicts. Software records those statements and checks references and byte identities. Design interpretation retains the next action's boundary.
 4. **Actual execution:** [input](source-intake/job-input.json) records the current implementation instruction, the preceding no-redo instruction, project rules and existing first-action plan. The [published source index](source-intake/live-01/revision/source-index.json), [scope](source-intake/live-01/revision/scope.md) and [receipt](source-intake/live-01/revision/receipt.json) retain four actual sources. Original local source bytes are preserved. The receipt records its captured tool SHA and runtime.
@@ -18,4 +18,4 @@ python3 ${MODELING_ROOT}/scripts/source_intake.py \
   --output ${SOURCE_ROOT}/new-intake-directory
 ```
 
-The [skill](../skills/source-intake/SKILL.md) documents the input fields, output paths, exit codes and recovery.
+The [skill](../skills/cad-source-intake/SKILL.md) documents the input fields, output paths, exit codes and recovery.

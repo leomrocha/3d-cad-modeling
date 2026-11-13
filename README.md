@@ -119,8 +119,8 @@ Use the skills CLI to install the skill you need:
 
 ```sh
 npx skills add leomrocha/3d-cad-modeling --skill component-cad
-npx skills add leomrocha/3d-cad-modeling --skill drawing-inspection
-npx skills add leomrocha/3d-cad-modeling --skill source-intake
+npx skills add leomrocha/3d-cad-modeling --skill cad-drawing-inspection
+npx skills add leomrocha/3d-cad-modeling --skill cad-source-intake
 ```
 
 Each selected skill carries its scripts, instructions, dependency file and license. Set `SKILL_ROOT` to its installed directory containing `SKILL.md`. Give the agent your source files, job location and output paths. Component CAD also needs your running OpenCADStudio session.
@@ -153,7 +153,7 @@ The connection check reads OCS state. Its report contains dependency and package
 ### Use the skills with your agent
 
 1. Give the agent the drawing, pictures or dimensions and describe the model you need.
-2. Ask it to read [component-cad](skills/component-cad/SKILL.md) for a component job, [drawing-inspection](skills/drawing-inspection/SKILL.md) for a DXF, or [source-intake](skills/source-intake/SKILL.md) to record the inputs.
+2. Ask it to read [component-cad](skills/component-cad/SKILL.md) for a component job, [cad-drawing-inspection](skills/cad-drawing-inspection/SKILL.md) for a DXF, or [cad-source-intake](skills/cad-source-intake/SKILL.md) to record the inputs.
 3. Specify the component project's input and output locations and the CAD session it should use.
 4. Review the resulting model and the changes recorded for that iteration.
 

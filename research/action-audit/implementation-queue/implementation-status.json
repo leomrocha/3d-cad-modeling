@@ -8,7 +8,7 @@
       "name": "Record source files, revisions and job scope",
       "state": "IMPLEMENTED",
       "script": "${MODELING_ROOT}/scripts/source_intake.py",
-      "skill": "${MODELING_ROOT}/skills/source-intake/SKILL.md",
+      "skill": "${MODELING_ROOT}/skills/cad-source-intake/SKILL.md",
       "report": "${MODELING_ROOT}/execution/source-intake.md",
       "tests": "12 PASS",
       "local_execution": "${MODELING_ROOT}/execution/source-intake/live-01/revision/receipt.json",
@@ -23,7 +23,7 @@
       "state": "IMPLEMENTED_BRANCH",
       "branch": "DXF entity/context inventory",
       "script": "${MODELING_ROOT}/scripts/dxf_inspect.py",
-      "skill": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md",
+      "skill": "${MODELING_ROOT}/skills/cad-drawing-inspection/SKILL.md",
       "report": "${MODELING_ROOT}/execution/dxf-inspection.md",
       "tests": "8 PASS",
       "local_execution": [

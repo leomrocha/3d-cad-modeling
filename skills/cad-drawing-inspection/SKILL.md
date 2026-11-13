@@ -1,5 +1,5 @@
 ---
-name: drawing-inspection
+name: cad-drawing-inspection
 description: Inspect a DXF drawing's original entities, declared units, spaces, layers, nested blocks and source coordinate systems before selecting geometry for CAD construction.
 ---
 

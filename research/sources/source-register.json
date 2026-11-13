@@ -1180,7 +1180,7 @@
           "sha256": "e9a6f2ef7e14ba9ca0de4f201d55a27e0d4c58f09df15f0601d919333de573e0",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -3179,7 +3179,7 @@
           "sha256": "213b4ba2db3478369c5843e437c01427036658175599ddf0662c933461d3afe4",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -3374,7 +3374,7 @@
           "sha256": "9a9e8d3fffd9e23d4280665ad7e4faadb980dd206f318890c32d78c2a27e63fc",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -3870,7 +3870,7 @@
           "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -10380,7 +10380,7 @@
           "sha256": "5aef42cc45174ea9faeeeaa12667a0f62d94215435736edf9461fe1eed91ef9f",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -17272,6 +17272,7 @@
       "id": "SRC-7606cf6527a4",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/source-intake/SKILL.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-source-intake/SKILL.md",
       "title": "Implemented source-intake skill",
       "summary": "Documents the actual input schema, command, output layout, failure exit codes, recovery, reusable completed revisions and agent/software responsibility boundary.",
       "registered_at": "2026-11-13",
@@ -17282,6 +17283,7 @@
         {
           "evidence_status": "local_implementation_or_execution_record_inspected",
           "local_original": "${MODELING_ROOT}/skills/source-intake/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-source-intake/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "e8d9db557c28093a832814241454822032c56a05c625af5ed0bd19524da2f491",
           "referring_documents": [
@@ -20556,7 +20558,7 @@
           "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -22551,7 +22553,7 @@
           "sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -23163,7 +23165,7 @@
           "sha256": "a32c803b5dabb0762423de33cc276078acf6f7e544fc45e1a7f69e583a945e46",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -24672,7 +24674,7 @@
           "sha256": "60372c545843be004c820a364f06d891845ccf15c319795a6b63c170ac17a21e",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -24775,7 +24777,7 @@
           "sha256": "9bc58f2a06ac833fa0bc962c28b76722f81a53737e223535dca5e3ddccefef27",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -24801,7 +24803,7 @@
           "sha256": "46d3b5657389de88c899c34e7c361ce349f0df6caccd3fdaa4661d9c3b6f9e77",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -24877,7 +24879,7 @@
           "sha256": "1215685c442f16ae9e57c04588b0dba07276fb9b8fc0d313ad9b8e2ae0892e5c",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -25431,7 +25433,7 @@
           "sha256": "511f29c6ec9642803c122fcb1ddb6d2c3347c0d2ba668197ce330c607862544a",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -29852,7 +29854,7 @@
           "sha256": "2e9752b049fbdf4d31fc0ef0d2e3aa20559412f28d9de5227d6c1fbb7d05511a",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -32263,7 +32265,7 @@
           "sha256": "b1490ad03abfe8ae6d74b06d6d5772cff69098cfc7aa4b56005807004bb444fa",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -32427,6 +32429,7 @@
       "id": "SRC-dec8ef1082c6",
       "url": null,
       "local_source_path": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md",
+      "current_local_source_path": "${MODELING_ROOT}/skills/cad-drawing-inspection/SKILL.md",
       "title": "Implemented drawing-inspection skill",
       "summary": "Documents the tested DXF command, dependency setup, coordinate matrix semantics, source-unit evidence, resource limits and agent handoff to mapped derivative selection.",
       "registered_at": "2026-11-13",
@@ -32437,11 +32440,12 @@
         {
           "evidence_status": "local_source_or_executed_inspection",
           "local_original": "${MODELING_ROOT}/skills/drawing-inspection/SKILL.md",
+          "current_local_original": "${MODELING_ROOT}/skills/cad-drawing-inspection/SKILL.md",
           "access_date": "2026-11-12",
           "sha256": "1be5a78986959cf8aed0a33932495b8b4dd398c9e6a2523cbe6be89775e681f6",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],
@@ -33096,7 +33100,7 @@
           "sha256": "ae1cbae14c0d7facbc9dd982f54757c1cac0cca1b322a53b1aa8c52b419dbb88",
           "referring_documents": [
             "execution/dxf-inspection.md",
-            "skills/drawing-inspection/SKILL.md"
+            "skills/cad-drawing-inspection/SKILL.md"
           ]
         }
       ],

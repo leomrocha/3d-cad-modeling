@@ -14,7 +14,7 @@ Date: 12 November 2026. Status: **implementation proposal**. Planning model: **g
 1. Reuse the inspected [source register builder](../../tools/build_workflow_register.py) conventions: `sid` uses a locator digest, records preserve exact URLs/local paths, and observations carry evidence and dates. The existing builder operates on project-global research records. The proposed addition is a per-job adapter with explicit inputs/output paths and retained revisions.
 2. Reuse ferme's construction skill (`${FERME_ROOT}/skills/cad-construction/SKILL.md`), sections **Build the source and parameter record** and **Establish the deliverable and inspect existing work**, for original/derivative attribution and task boundaries.
 3. Reuse the installed OCS skill (`${CODEX_HOME}/skills/ocs-engineering/SKILL.md`) modeling-contract instructions for exact scope and correction preservation. OCS construction and session mutations belong to their documented downstream actions.
-4. Proposed implementation files, relative to this project: `scripts/source_intake.py`, `tests/test_source_intake.py`, and `skills/source-intake/SKILL.md`. The script performs source bookkeeping; the skill supplies scope/evidence instructions. These paths specify future implementation work.
+4. Proposed implementation files, relative to this project: `scripts/source_intake.py`, `tests/test_source_intake.py`, and `skills/cad-source-intake/SKILL.md`. The script performs source bookkeeping; the skill supplies scope/evidence instructions. These paths specify future implementation work.
 
 ## 3. Proposed input contract
 

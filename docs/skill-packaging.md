@@ -20,3 +20,9 @@ Set `SKILL_ROOT` to the installed directory. Resolve bundled helpers from `SKILL
 Generic `cadtools` runtime, geometry and persistence functions are maintained here. The existing component-project copies remain intact for current callers. Component recipes, dimensions, model files, source originals and job results retain their owning project. [Runtime provenance](../scripts/cadtools/NOTICE.md). [Migration update](../research/repository-split-preparation/script-changes.md#independent-skill-packaging).
 
 Package and dependency checks establish software execution and retained bytes. Component geometry and saved-file checks are recorded by their own modeling job.
+
+## Skill name migration
+
+1. `drawing-inspection` is now `cad-drawing-inspection`; `source-intake` is now `cad-source-intake`. Installation commands use the CAD-prefixed names.
+2. An existing old-name installation remains its own local copy. Install the new skill by its current name; review and remove an old local copy separately when migrating that environment.
+3. Historical source locators retain their original values. Added current locators and the [rename record](../execution/skill-renaming-2026-11-13.md) identify the moved packages.

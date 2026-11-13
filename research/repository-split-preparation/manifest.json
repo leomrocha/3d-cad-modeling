@@ -7723,7 +7723,10 @@
       "rationale": "Shared tooling, procedure, research or project documentation.",
       "proposed_destination": null,
       "existing_ferme_references": [],
-      "operation_status": "PROPOSED"
+      "operation_status": "PROPOSED",
+      "current_path": "${MODELING_ROOT}/skills/cad-drawing-inspection/SKILL.md",
+      "current_relative_path": "skills/cad-drawing-inspection/SKILL.md",
+      "current_path_record": "research/sources/skill-renaming-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/skills/source-intake/SKILL.md",
@@ -7735,7 +7738,10 @@
       "rationale": "Shared tooling, procedure, research or project documentation.",
       "proposed_destination": null,
       "existing_ferme_references": [],
-      "operation_status": "PROPOSED"
+      "operation_status": "PROPOSED",
+      "current_path": "${MODELING_ROOT}/skills/cad-source-intake/SKILL.md",
+      "current_relative_path": "skills/cad-source-intake/SKILL.md",
+      "current_path_record": "research/sources/skill-renaming-2026-11-13.json"
     },
     {
       "path": "${MODELING_ROOT}/tests/README.md",

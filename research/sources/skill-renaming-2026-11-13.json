@@ -1,0 +1,74 @@
+{
+  "title": "Executed CAD skill renaming",
+  "date": "2026-11-13",
+  "status": "DONE",
+  "canonical_source_revision": "a248645",
+  "sources": [
+    {
+      "local_source_path": "research/skill-renaming-plan.md",
+      "title": "CAD skill rename plan",
+      "summary": "Executed folder, metadata, documentation and test changes under the recorded plan.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local inspection and scoped implementation",
+      "referring_documents": [
+        "execution/skill-renaming-2026-11-13.md"
+      ]
+    },
+    {
+      "local_source_path": "scripts/build_skill_packages.py",
+      "title": "Skill package generator",
+      "summary": "Current skill names select dependency closures and generated package identities.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local inspection and scoped implementation",
+      "referring_documents": [
+        "execution/skill-renaming-2026-11-13.md"
+      ]
+    },
+    {
+      "local_source_path": "tests/test_skill_packages.py",
+      "title": "Independent installation checks",
+      "summary": "Exercised the renamed install selectors, file references, import checks and fixtures.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local inspection and scoped implementation",
+      "referring_documents": [
+        "execution/skill-renaming-2026-11-13.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/skill-packaging.md",
+      "title": "Installation name migration",
+      "summary": "Explains current names, old local copies and retained historical source locators.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local inspection and scoped implementation",
+      "referring_documents": [
+        "execution/skill-renaming-2026-11-13.md"
+      ]
+    }
+  ],
+  "path_mappings": [
+    {
+      "original_skill": "drawing-inspection",
+      "current_skill": "cad-drawing-inspection",
+      "original_path": "skills/drawing-inspection/SKILL.md",
+      "current_path": "skills/cad-drawing-inspection/SKILL.md",
+      "reason": "Requested CAD-prefixed installation names for public-repository indexing",
+      "reason_evidence_status": "user-supplied rationale"
+    },
+    {
+      "original_skill": "source-intake",
+      "current_skill": "cad-source-intake",
+      "original_path": "skills/source-intake/SKILL.md",
+      "current_path": "skills/cad-source-intake/SKILL.md",
+      "reason": "Requested CAD-prefixed installation names for public-repository indexing",
+      "reason_evidence_status": "user-supplied rationale"
+    }
+  ],
+  "referring_documents": [
+    "README.md",
+    "docs/index.md",
+    "docs/skill-packaging.md",
+    "skills/README.md",
+    "execution/skill-renaming-2026-11-13.md"
+  ],
+  "information_preservation": "Historical original locators, captured receipts, source IDs and hashes remain; current locators and navigation targets follow renamed directories."
+}

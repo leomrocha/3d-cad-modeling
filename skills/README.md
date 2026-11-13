@@ -3,8 +3,8 @@
 ## Skills supplied by this repository
 
 1. [component-cad](component-cad/SKILL.md) — checks for existing models, binds source requirements, guides native CAD construction and verifies saved results.
-2. [drawing-inspection](drawing-inspection/SKILL.md) — inventories DXF entities, units, layers, spaces and nested transforms.
-3. [source-intake](source-intake/SKILL.md) — preserves source files, hashes, request scope and corrected input revisions.
+2. [cad-drawing-inspection](cad-drawing-inspection/SKILL.md) — inventories DXF entities, units, layers, spaces and nested transforms.
+3. [cad-source-intake](cad-source-intake/SKILL.md) — preserves source files, hashes, request scope and corrected input revisions.
 
 Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Each skill directory includes its runtime files and dependencies. Component CAD includes its OCS control and geometry adapters. [Package maintenance](../docs/skill-packaging.md).
 
@@ -76,11 +76,11 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Component CAD iterations](component-cad/SKILL.md) uses the external project's existing part index/dictionary, checks source readiness, records individual action occurrences and requires an applied verified skill/script improvement per completed CAD design. [Python part-index access](../scripts/part_index.py) and [component source/action records](../scripts/component_records.py) operate on explicit data paths; FERME retains its parts data, CAD and component evidence.
 # Implemented source intake
 
-1. [Record source files, revisions and job scope](source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. [Execution evidence](../execution/source-intake.md).
+1. [Record source files, revisions and job scope](cad-source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. [Execution evidence](../execution/source-intake.md).
 
 ## Implemented DXF inspection
 
-1. [Inspect a DXF drawing before selecting a profile](drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. [Execution evidence](../execution/dxf-inspection.md).
+1. [Inspect a DXF drawing before selecting a profile](cad-drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. [Execution evidence](../execution/dxf-inspection.md).
 
 ## Continuing iterations and repository ownership
 

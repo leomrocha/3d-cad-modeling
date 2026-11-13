@@ -6452,7 +6452,7 @@ Documents: research/sources/round-23/enclosure-sources.json.
 
 ## SRC-7606cf6527a4 — Implemented source-intake skill
 
-Original source: [${MODELING_ROOT}/skills/source-intake/SKILL.md](../../skills/source-intake/SKILL.md)
+Original source: [${MODELING_ROOT}/skills/source-intake/SKILL.md](../../skills/cad-source-intake/SKILL.md)
 
 Summary: Documents the actual input schema, command, output layout, failure exit codes, recovery, reusable completed revisions and agent/software responsibility boundary.
 
@@ -12008,7 +12008,7 @@ Documents: research/sources/round-12/saved-rail-reader-sources.json.
 
 ## SRC-dec8ef1082c6 — Implemented drawing-inspection skill
 
-Original source: [${MODELING_ROOT}/skills/drawing-inspection/SKILL.md](../../skills/drawing-inspection/SKILL.md)
+Original source: [${MODELING_ROOT}/skills/drawing-inspection/SKILL.md](../../skills/cad-drawing-inspection/SKILL.md)
 
 Summary: Documents the tested DXF command, dependency setup, coordinate matrix semantics, source-unit evidence, resource limits and agent handoff to mapped derivative selection.
 

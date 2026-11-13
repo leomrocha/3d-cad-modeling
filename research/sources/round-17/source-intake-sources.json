@@ -23,6 +23,7 @@
   },
   {
     "local_original": "${MODELING_ROOT}/skills/source-intake/SKILL.md",
+    "current_local_original": "${MODELING_ROOT}/skills/cad-source-intake/SKILL.md",
     "title": "Implemented source-intake skill",
     "summary": "Documents the actual input schema, command, output layout, failure exit codes, recovery, reusable completed revisions and agent/software responsibility boundary.",
     "access_date": "2026-11-12",

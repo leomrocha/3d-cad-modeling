@@ -2667,3 +2667,5 @@ Next check: Use the associated workflow operation and stage checks.
 Status: proposal. Execution authorized by the subsequent user instruction.
 
 Rename the two installable skills to `cad-drawing-inspection` and `cad-source-intake`, including packaging, installation commands, documentation and links. [Plan](skill-renaming-plan.md). [Source and reference inventory](sources/skill-renaming-plan-2026-11-13.json).
+
+Execution of CAD-SKILL-RENAME-2026-11-13: DONE. [Rename report](../execution/skill-renaming-2026-11-13.md).

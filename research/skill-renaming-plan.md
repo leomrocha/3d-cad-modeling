@@ -1,6 +1,6 @@
 # CAD skill renaming plan
 
-Date: 13 November 2026. State: PLAN PREPARED.
+Date: 13 November 2026. State: DONE. Execution: [rename report](../execution/skill-renaming-2026-11-13.md).
 
 1. **Requested names:** `drawing-inspection` becomes `cad-drawing-inspection`; `source-intake` becomes `cad-source-intake`. The supplied reason is public-repository indexing. `component-cad` retains its name.
 2. **Scope:** rename the two installable skills and update their package identities, installation commands, active documentation, references, generators and tests. The Python helper names `dxf_inspect.py` and `source_intake.py` retain their existing APIs and filenames.

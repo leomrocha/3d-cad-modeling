@@ -6,8 +6,8 @@
 4. Inputs: provide the actual external project index, work index, job, CAD root and source paths. Outputs: component inspection/build records and models go to FERME; a tooling self-test writes its own tooling evidence here. The [tools catalogue](../docs/tools.md) lists every current Python helper and its purpose.
 5. `part_index.py --index PATH --id ID` searches an index; `component_records.py JOB.json` reports source readiness. Both print JSON.
 6. `model_inventory.py --index PATH --work-index PATH --cad-root PATH --project-root PATH [--id ID] [--configuration EXACT_NAME] [--root NAME=ABSOLUTE_PATH]` prints model lookup JSON and reads existing files. Configuration selection requires `--id`; [selection and retained-drawing rules](../skills/component-cad/references/existing-model-start-check.md).
-7. `source_intake.py --input SPEC.json --output NEW_DIRECTORY` writes a protected source revision. [Input contract](../skills/source-intake/SKILL.md).
-8. `dxf_inspect.py SOURCE.dxf --output NEW.json [--space Model] [--layer NAME]` writes a bounded source inventory. [Drawing contract](../skills/drawing-inspection/SKILL.md).
+7. `source_intake.py --input SPEC.json --output NEW_DIRECTORY` writes a protected source revision. [Input contract](../skills/cad-source-intake/SKILL.md).
+8. `dxf_inspect.py SOURCE.dxf --output NEW.json [--space Model] [--layer NAME]` writes a bounded source inventory. [Drawing contract](../skills/cad-drawing-inspection/SKILL.md).
 9. Construction requires an authorized source-bound job, current CAD session, explicit destinations and existing-model check. [Component procedure](../skills/component-cad/SKILL.md).
 10. `retained_artifacts.py MANIFEST.json --root NAME=ABSOLUTE_PATH` verifies manifest paths, file hashes and saved JSON/JSONL syntax. [Retained-file contract](../skills/component-cad/references/retained-artifact-checks.md).
 11. `envelope_job_runner.py --help` lists the required job, session, runtime and named-root inputs. Its default is read-only preflight; `--allow-write` enables the guarded native route for an authorized job. [Runner contract](../skills/component-cad/references/envelope-job-runner.md).

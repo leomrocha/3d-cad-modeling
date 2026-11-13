@@ -1,5 +1,5 @@
 {
-  "skill": "drawing-inspection",
+  "skill": "cad-source-intake",
   "generated_by": "scripts/build_skill_packages.py",
   "files": {
     "LICENSE": {
@@ -11,16 +11,12 @@
       "sha256": "9f209d7c15cf4e651dff54678c89ec05a47ddbda1577aa14f06783bcee5f06c3"
     },
     "requirements.txt": {
-      "source": "requirements-native.txt",
-      "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47"
+      "source": "standard-library declaration",
+      "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
     },
     "scripts/component_records.py": {
       "source": "scripts/component_records.py",
       "sha256": "e9a6f2ef7e14ba9ca0de4f201d55a27e0d4c58f09df15f0601d919333de573e0"
-    },
-    "scripts/dxf_inspect.py": {
-      "source": "scripts/dxf_inspect.py",
-      "sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
@@ -29,6 +25,10 @@
     "scripts/part_index.py": {
       "source": "scripts/part_index.py",
       "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb"
+    },
+    "scripts/source_intake.py": {
+      "source": "scripts/source_intake.py",
+      "sha256": "cc8bfae3ba3ecd630dffb09b58fc4b2e325a6b8bfefb876c83d4c5ab98a66f92"
     }
   }
 }

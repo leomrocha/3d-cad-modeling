@@ -17,6 +17,7 @@
     },
     {
       "local_source_path": "skills/source-intake/SKILL.md",
+      "current_local_source_path": "skills/cad-source-intake/SKILL.md",
       "title": "Source intake skill",
       "summary": "Uses MODELING_ROOT for shared Python helpers and relative links into execution records; retaining the checkout preserves these dependencies.",
       "observation_date": "2026-11-13",
