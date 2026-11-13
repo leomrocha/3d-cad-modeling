@@ -109,6 +109,7 @@ Inspect layer/material/group/block schemas before organizing parts. Name parts a
 
 1. For an explicitly source-pinned non-geometric task, use the [non-geometric requirement procedure](references/non-geometric-requirements.md). Preserve its classification and source hash through readiness and existing-model checks.
 2. For a bounded spherical seat with a collar, shaft and tangent blend, use the [spherical-seat profile procedure](references/spherical-seat-profile.md). Supply all source dimensions through the component job; retain analytic surface, transition and persistence checks.
+3. For a free conical washer defined by normal material thickness and radial/axial bounds, use the [conical-washer profile procedure](references/conical-washer-profile.md). Keep each source variant separate and compare the saved cone geometry with its own source job.
 
 ## Save and computational handoff
 
