@@ -39,3 +39,19 @@ profile construction, invalid-input rejection before geometry creation,
 analytic torus observations, closed-body checks, metadata and document-revision
 binding. They do not exercise the installed OCS command or establish physical
 seal fit.
+
+## Saved native torus reader
+
+Use `native_acis.sab_features(data, allow_tori=True)` for the observed ACIS700
+ring-shaped torus records. The reader traverses the actual body graph and reads
+each reachable face surface. The typed record starts with an attribute pointer,
+location vector, direction vector, major-radius double, minor-radius double and
+reference-direction vector. These slots were inspected in retained native SAB;
+the linked SAT implementation review supplies a separate source comparison.
+
+The decoder checks token types, finite vectors/radii, positive major radius
+greater than minor radius, and orthonormal axis/reference directions. Existing
+rigid-frame mapping transforms the centre and axis. It reports every torus patch;
+the component verifier compares every patch with independently sourced dimensions.
+The default reader option continues to reject torus surfaces. See the
+[decoder execution record](../../../execution/torus-native-reader-2026-11-13.md).

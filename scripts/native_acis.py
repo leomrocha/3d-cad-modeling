@@ -73,7 +73,34 @@ def named_parts(record, metadata_app, required_parts, aliases=None, **reader_opt
     return parts
 
 
-def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,include_loops=False):
+def _torus_surface(tokens, Tags, world):
+    """Read the observed ACIS700 typed torus record, after its attribute pointer.
+
+    Source: retained native records and the linked SAT format review in
+    execution/torus-native-reader-2026-11-13.md. No component dimensions enter
+    the decoder. Surface parameter bounds remain outside this observation API.
+    """
+    expected = [Tags.POINTER, Tags.LOCATION_VEC, Tags.DIRECTION_VEC,
+                Tags.DOUBLE, Tags.DOUBLE, Tags.DIRECTION_VEC]
+    if len(tokens) < len(expected) or [t.tag for t in tokens[:6]] != expected:
+        raise ValueError('Unsupported native torus token layout')
+    center, axis, radial = [list(tokens[i].value) for i in (1, 2, 5)]
+    if any(len(v) != 3 or not all(math.isfinite(x) for x in v)
+           for v in (center, axis, radial)):
+        raise ValueError('Invalid native torus vectors')
+    major, minor = tokens[3].value, tokens[4].value
+    if (not math.isfinite(major) or not math.isfinite(minor)
+            or not major > minor > 0):
+        raise ValueError('Only positive ring-shaped native tori supported')
+    if (abs(sum(x*x for x in axis)-1) > 1e-9
+            or abs(sum(x*x for x in radial)-1) > 1e-9
+            or abs(sum(a*b for a,b in zip(axis,radial))) > 1e-9):
+        raise ValueError('Native torus requires orthonormal axis/reference directions')
+    return {'center': world(center, True), 'axis': world(axis),
+            'major_radius': major, 'minor_radius': minor}
+
+
+def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,include_loops=False,allow_tori=False):
     from ezdxf.acis.sab import parse_sab,SabDataLoader
     from ezdxf.acis.const import Tags
     if not isinstance(data,(bytes,bytearray)) or not data:
@@ -97,11 +124,12 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
     for f in faces:
         surf=[e for e in refs(f) if e.name.endswith('-surface')]
         if len(surf)!=1:raise ValueError('Face needs one supported analytic surface')
-        allowed=['plane-surface','cone-surface']+(['sphere-surface'] if allow_spheres else [])
+        allowed=['plane-surface','cone-surface']+(['sphere-surface'] if allow_spheres else [])+(['torus-surface'] if allow_tori else [])
         if surf[0].name not in allowed:
             raise ValueError('Unsupported surface: '+surf[0].name)
         surfaces[id(surf[0])]=surf[0]
     out={'planes':[],'cylinders':[],'cones':[],'spheres':[],'points':[]}
+    if allow_tori:out['tori']=[]
     def vec(token):
         if token.tag not in [Tags.LOCATION_VEC,Tags.DIRECTION_VEC]:raise ValueError('Expected native vector token')
         values=list(token.value)
@@ -110,6 +138,8 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
     for e in surfaces.values():
         t=e.data
         if e.name=='plane-surface':out['planes'].append({'origin':world(vec(t[1]),True),'normal':world(vec(t[2]))})
+        elif e.name=='torus-surface':
+            out['tori'].append(_torus_surface(t,Tags,world))
         elif e.name=='sphere-surface':
             if t[2].tag!=Tags.DOUBLE or not math.isfinite(t[2].value) or t[2].value<=0:raise ValueError('Invalid native sphere radius')
             out['spheres'].append({'origin':world(vec(t[1]),True),'radius':t[2].value})

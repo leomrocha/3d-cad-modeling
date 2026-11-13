@@ -1,0 +1,79 @@
+{
+  "implementation_model": "gpt-6.1-sol",
+  "source_review_model": "gpt-6-luna",
+  "new_tests": {
+    "passed": 4
+  },
+  "existing_regression": {
+    "ran": 24,
+    "passed": 17,
+    "skipped": 4,
+    "errors": 3,
+    "baseline_reproduced_errors": 3
+  },
+  "records": [
+    {
+      "title": "Native analytic torus decoder",
+      "summary": "Adds opt-in typed ACIS700 ring-torus surface decoding with finite, radius, frame and token guards; preserves existing graph traversal and rigid-world mapping.",
+      "local_path": "scripts/native_acis.py",
+      "sha256": "aef3c95104792dcd44e3a2a92e13270d533c82b52ca604c83e2841712a44044f",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/torus-native-reader-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Torus decoder tests",
+      "summary": "Four executed tests cover malformed tokens, numerical/frame guards, rigid mapping, explicit option enforcement and decoding of the retained four-patch native torus.",
+      "local_path": "tests/test_native_torus.py",
+      "sha256": "be0002467488f85c3d45391fd8905b5a895e54b134236f0429bbb7dc6b6b30f2",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/torus-native-reader-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Observed native torus binary",
+      "summary": "Actual reopened native SAB supplied typed surface slot evidence, four surface patches and seam-point topology for generic reader implementation.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c071-build-01/reopened-entity.sab",
+      "sha256": "c82fa0d1ee3508cd457da9467ccd49ebfa7174a8ab863149de3a92116b3b0f55",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "referring_documents": [
+        "execution/torus-native-reader-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "acadrust SAT torus surface types",
+      "summary": "Published SAT record accessors describe centre, normal and radius order; Luna inspected the source page. SAB typed slots were independently inspected from retained binary.",
+      "url": "https://docs.rs/acadrust/latest/src/acadrust/entities/acis/types.rs.html",
+      "registered_at": "2026-11-13",
+      "evidence_status": "web_inspection_by_gpt-6-luna",
+      "referring_documents": [
+        "execution/torus-native-reader-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "acadrust SAT torus writer",
+      "summary": "Published writer emits centre, normal, major/minor radii and reference direction in the SAT representation. Luna inspected the page; no code copied.",
+      "url": "https://docs.rs/acadrust/latest/src/acadrust/entities/acis/writer.rs.html",
+      "registered_at": "2026-11-13",
+      "evidence_status": "web_inspection_by_gpt-6-luna",
+      "referring_documents": [
+        "execution/torus-native-reader-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "acadrust license metadata",
+      "summary": "Published crate metadata declares MPL-2.0; source review supplies attribution for format research.",
+      "url": "https://docs.rs/acadrust/latest/acadrust/",
+      "registered_at": "2026-11-13",
+      "evidence_status": "web_inspection_by_gpt-6-luna",
+      "referring_documents": [
+        "execution/torus-native-reader-2026-11-13.md"
+      ]
+    }
+  ]
+}
