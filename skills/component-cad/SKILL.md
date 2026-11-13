@@ -9,7 +9,7 @@ Use this skill when a real component job develops the reusable tools in this rep
 
 ## Read current implementations first
 
-1. Read the component input sheet, exact variant, existing model/check records and current component-project skills. Existing FERME implementations are indexed in `/home/leo/projects/ferme/skills/cad-automation-and-reuse.md`.
+1. Before every component start, check both its work status and the actual 3D files. Read the input manifest, work record, sheet links, existing CAD index and filesystem inventory, including available manufacturer models. Run the [existing-model start check](/home/leo/projects/3dmodeling/skills/component-cad/references/existing-model-start-check.md). A matching existing model is DONE for the current build list: record its path and reuse its existing checks, then select an unfinished component. A stale NOT_STARTED or IN_PROGRESS entry does not start another construction, inspection or capture cycle for that model. Existing FERME implementations are indexed in `/home/leo/projects/ferme/skills/cad-automation-and-reuse.md`.
 2. Reuse the existing `Client`, `Journal`, `Geometry` and verification functions for their supported actions. Select their helper, session, document and journal explicitly. Read the installed OCS control instructions before connecting.
 3. Use `scripts/part_index.py --index PATH --id PART_ID` to read the actual external index. Add another `--index` for an existing dictionary. Results retain source namespaces, original records and source hashes. A matching name/ID in two indexes remains two attributed records.
 
