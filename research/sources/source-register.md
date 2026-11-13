@@ -17235,3 +17235,135 @@ Summary: Luna reviewed the frozen runner and source binding, reran14passing test
 Evidence: executed_local_review.
 
 Documents: research/sources/annular-runner-completion-2026-11-13.json, execution/annular-job-runner-2026-11-13.md.
+
+<a id="src-9ccb7e7ea1fe"></a>
+
+## SRC-9ccb7e7ea1fe — Requested tooling pause report
+
+Original source: [${MODELING_ROOT}/execution/pause-summary-2026-11-13.md](../../execution/pause-summary-2026-11-13.md)
+
+Summary: Reports three applied recent improvements, two unfinished tooling items, three finished agents, the completed package baseline and current unpackaged recovery changes. Links FERME component counts to its owning report.
+
+Evidence: documented_execution_and_agent_results.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-56038a21575c"></a>
+
+## SRC-56038a21575c — Paused generic source snapshots and actual validation states
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/manifest.json](../../execution/paused-work-2026-11-13/manifest.json)
+
+Summary: Pins seven retained text snapshots with original/derivative hashes. Records 22passing annular recovery tests and 8passing screw helper tests executed by Luna; native recovery and screw construction remain unexecuted.
+
+Evidence: retained_unfinished_implementation_snapshots.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-aa88f7f88a94"></a>
+
+## SRC-aa88f7f88a94 — Observed empty SAB construction-record failure
+
+Original source: [${MODELING_ROOT}/execution/annular-runner-native-recovery-2026-11-13.json](../../execution/annular-runner-native-recovery-2026-11-13.json)
+
+Summary: Records the M6 native run stopping at pre-save records after constructing its solid. The raw record has 0 SAB bytes and 2448 SAT characters; original failure and geometry were preserved for a bounded continuation.
+
+Evidence: executed_native_failure.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-8e4a21261ed8"></a>
+
+## SRC-8e4a21261ed8 — FERME complete component status snapshot
+
+Original source: `${FERME_ROOT}/engineering/module-development/cad/reports/pause-summary-2026-11-13.md`
+
+Summary: Status-only catalogue snapshot: 394 entries, 49 CAD completions with existing saved links, 1 non-geometric completion, 344 unfinished entries; full component CSVs and recent source/native/reuse results stay in FERME.
+
+Evidence: executed_local_status_inventory.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-9ce603417458"></a>
+
+## SRC-9ce603417458 — Paused source snapshot — annular_job_runner.py.txt
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/annular_job_runner.py.txt](../../execution/paused-work-2026-11-13/annular_job_runner.py.txt)
+
+Summary: Retains ${MODELING_ROOT}/scripts/annular_job_runner.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.
+
+Evidence: retained_unfinished_source_text.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-7606f4e8e712"></a>
+
+## SRC-7606f4e8e712 — Paused source snapshot — test_annular_job_runner.py.txt
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/test_annular_job_runner.py.txt](../../execution/paused-work-2026-11-13/test_annular_job_runner.py.txt)
+
+Summary: Retains ${MODELING_ROOT}/tests/test_annular_job_runner.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.
+
+Evidence: retained_unfinished_source_text.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-3c390392f21d"></a>
+
+## SRC-3c390392f21d — Paused source snapshot — annular-procedure.md.txt
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/annular-procedure.md.txt](../../execution/paused-work-2026-11-13/annular-procedure.md.txt)
+
+Summary: Retains ${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-job-runner.md as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.
+
+Evidence: retained_unfinished_source_text.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-84e2b5ae5274"></a>
+
+## SRC-84e2b5ae5274 — Paused source snapshot — draft-status.md.txt
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/draft-status.md.txt](../../execution/paused-work-2026-11-13/draft-status.md.txt)
+
+Summary: Retains ${TEMP_ROOT}/hex-screw-reference-draft/draft-status.md as named-root path normalization. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.
+
+Evidence: retained_unfinished_source_text.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-511a1af105bb"></a>
+
+## SRC-511a1af105bb — Paused source snapshot — hex_screw_reference.py.txt
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/hex_screw_reference.py.txt](../../execution/paused-work-2026-11-13/hex_screw_reference.py.txt)
+
+Summary: Retains ${TEMP_ROOT}/hex-screw-reference-draft/hex_screw_reference.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.
+
+Evidence: retained_unfinished_source_text.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-99c71880dd80"></a>
+
+## SRC-99c71880dd80 — Paused source snapshot — method-review.md.txt
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/method-review.md.txt](../../execution/paused-work-2026-11-13/method-review.md.txt)
+
+Summary: Retains ${TEMP_ROOT}/hex-screw-reference-draft/method-review.md as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.
+
+Evidence: retained_unfinished_source_text.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.
+
+<a id="src-ee891117dd30"></a>
+
+## SRC-ee891117dd30 — Paused source snapshot — test_hex_screw_reference.py.txt
+
+Original source: [${MODELING_ROOT}/execution/paused-work-2026-11-13/test_hex_screw_reference.py.txt](../../execution/paused-work-2026-11-13/test_hex_screw_reference.py.txt)
+
+Summary: Retains ${TEMP_ROOT}/hex-screw-reference-draft/test_hex_screw_reference.py as named-root path normalization. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.
+
+Evidence: retained_unfinished_source_text.
+
+Documents: research/sources/pause-status-2026-11-13.json, execution/pause-summary-2026-11-13.md.

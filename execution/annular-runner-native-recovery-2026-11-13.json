@@ -1,0 +1,35 @@
+{
+  "date": "2026-11-13",
+  "execution_model": "gpt-6.1-sol",
+  "implementation_model": "gpt-6-luna",
+  "component_result_locator": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c156-build-01/native-failure.json",
+  "observed_run": {
+    "state": "FAILED",
+    "stage": "pre_save_records",
+    "error": "Nonempty native SAB bytes required",
+    "constructed_document_id": 166,
+    "constructed_handle": "7E",
+    "empty_sab_bytes": 0,
+    "sat_characters": 2448,
+    "construction_count": 1,
+    "saved_output_created": false
+  },
+  "finding": "Construction records expose an empty SAB field alongside valid SAT. The runner selected SAB by presence rather than nonempty content.",
+  "preserved_evidence": [
+    "pre-save-entity-response.json",
+    "pre-save-read-states.json",
+    "native-handles.json",
+    "document-start.json",
+    "ocs-journal.jsonl",
+    "native-failure.json"
+  ],
+  "recovery_scope": "Reuse the existing source-bound solid and original journal; validate its document, handle, source hashes and geometry epoch before the unexecuted save/reopen stages.",
+  "initial_runner_revision": "82bd383",
+  "initial_runner_sha256": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa",
+  "visual_result": {
+    "identity": "FAILED",
+    "observed_image": "OpenAEC start screen",
+    "attempts": 1,
+    "evidence": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c156-build-01/pre-save-viewport.png"
+  }
+}

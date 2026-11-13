@@ -1,0 +1,26 @@
+# Parameterized hex-head screw reference draft
+
+Status: **OFFLINE_TESTED; NATIVE_UNEXECUTED**. This is a non-canonical draft for coordinator review. No OCS session or CAD file was opened or modified.
+
+## Extracted method
+
+The completed C066 ISO 4014 case uses the existing `hexagonal_reference.build_hexagonal_reference` head prism, creates a separate axial cylinder with `Geometry.cylinder`, joins the two with `Geometry.combine`, and assigns whole-body `CADTOOLS_SOURCE` metadata. The C066 executed script SHA-256 is `24c87d7d8ba429b23abf849233a60fb8c4da2b8c37e2d738539dce2baaca8698`. The reusable hex helper SHA-256 is `21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61`. C066 geometry and attribution were not reused as inputs.
+
+The draft job supplies all feature values, source locators, metadata, frame and tolerance. Its head occupies the negative axial side of the under-head plane; a nominal thread-envelope cylinder runs from that plane in the positive axis direction. The draft validates source readiness, numeric/frame validity, shaft containment inside the hex head's across-flats inradius, expected unique analytic plane/cylinder identities, axial vertex stations and one-body closed topology. It uses only synthetic test geometry; native analytic records were not produced.
+
+## C124 source job
+
+`source-job-r01.json` pins its dimension feature records to the existing C124 source contract, SHA-256 `08f96e13b75c0c1e1828d4b754c83decc589b4f404a1405e4e1cec84c538e8a4`. A caller supplying `FERME_ROOT=${FERME_ROOT}` obtains `SOURCE_READY_REFERENCE_CANDIDATE`: AF 16 mm, head height 6.4 mm, shaft diameter 10 mm, under-head length 35 mm; datum z=0, head base z=-6.4 mm and shaft tip z=35 mm. The job records the source-claim and proposal status; it does not state that the Böllhoff PDF was downloaded. The existing source record says its direct PDF retrieval failed by DNS and the ISO sample was web-inspected, not downloaded.
+
+## Validation and limits
+
+`test_hex_screw_reference.py` ran eight synthetic offline tests: valid axial and rotated frames, source hash/root/readiness failures, pre-geometry readiness gating, joined-body plane/cylinder/topology checks, unexpected surface rejection, construction order and portable source metadata. Result: **8 PASS**. C124 JSON parsed successfully and the draft parameter check returned the expected source-pinned values and frame.
+
+Open findings: native OCS construction, actual save/reopen SAB checks, metadata readback and cleanup have not been exercised; the exact vendor product-file/source confirmation remains as described in the existing C124 source contract. This draft does not add helix, runout, chamfers, fillet or detailed manufacturing features. No canonical modeling repository paths, shared skills, indexes, source contracts or manifests were changed.
+
+## Files and SHA-256
+
+- `hex_screw_reference.py`: `f7ec31bad39c48022fa31cdb4f0afe522f900cb9c505ad7d553e70810f5ca216`.
+- `test_hex_screw_reference.py`: `3d6919172a87b2547a35a7d7fc57c9432e5b401932cab46b203a1778f0c5c0f8`.
+- `method-review.md`: `4f012037880d25dcfcaf6f78ef68c3cb0c98f0cd2fabe101161e491b3334109a`.
+- FERME `c124-build-01/source/source-job-r01.json`: `495d75d242fa4bb0d09bc783df1bbc4e671bc66c46e735f867067581b069d0e9`.

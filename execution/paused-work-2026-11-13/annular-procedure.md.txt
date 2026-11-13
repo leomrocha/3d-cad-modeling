@@ -1,0 +1,19 @@
+# Execute a source-bound annular part job
+
+Use [annular_job_runner.py](../scripts/annular_job_runner.py) for the repeated build, readback, save and cleanup procedure. The caller supplies component data and paths. The runner uses the existing [annular geometry helper](annular-reference.md), [model start check](existing-model-start-check.md), guarded OCS client, save/reopen checks and [completed-document cleanup](document-cleanup.md).
+
+1. **Job inputs:** source-pinned bore diameter, outside diameter and thickness in millimetres; explicit XY centre, lower-face Z, numerical comparison tolerance, cutter overrun, source metadata, readable component identity and stable request namespace. Its geometry is a plain nominal annulus around +Z with circular sharp reference edges. Keep material/hardness claims and published dimensional limits separate from the nominal shape.
+2. **Caller inputs:** source-job and job-directory paths, new DWG destination, component/work indexes, CAD/project roots, named root mappings, existing control helper and runtime paths, selected OCS session and actual execution-model identity. Component/project values remain in the caller's repository.
+3. **Preflight:** run without `--allow-write` to record source/readiness, dependency, existing-model and OCS state checks. Review actual filesystem candidates and known geometry equivalents alongside the selected inventory row. Existing completed geometry is reused with its recorded scope and checks.
+4. **Native execution:** add `--allow-write` for the reviewed job. The runner creates one owned document, preserves other document paths and dirty states, constructs with the shared annular helper, captures before final saving and retains raw source-metadata/entity records before decoding.
+5. **Saved evidence:** compare analytic cylinders, end planes, annular boundaries, closed-body topology and metadata. Record saved-file audit/hash and pre-save/reopened point persistence using the declared numerical tolerance. Retain native SAB bytes before the decoder runs. Record captured image identity separately from capture-command completion.
+6. **Completion:** close the owned construction and reopened documents after retaining saved checks. The job result and action occurrence preserve source/output paths, source hashes, units/frame, preserved/changed information, alternatives and compatible downstream records supplied by the job.
+7. **Recovery:** an existing output, native journal, handles, failure or prior occurrence prevents another construction run. Inspect the existing artifact and original request journal. Recover an uncertain native operation under the same request identity. Preserve its partial geometry and failure evidence.
+
+Use `--help` for the current explicit caller arguments. [Required package completion](package-completion.md) applies when maintaining the runner or its dependency code.
+
+## Construction record with SAT and an empty SAB field
+
+A construction record can contain valid SAT text and an empty SAB array. Use the SAT vertices for pre-save persistence observations. Retain the complete raw response. The reopened DWG supplies the SAB used for analytic annular surfaces and boundary checks.
+
+The guarded pre-save recovery route applies to the retained `pre_save_records` failure after construction. It checks the original source job and feature hashes, document-start record, solid handle, retained native response, document/geometry epochs, stored source metadata and original journal. The remaining save/reopen requests must have no previous intent or output. It reuses the owned solid and journal, retains the original failure and uses separate recovery receipts. Its remaining operations are pre-save observations, save/reopen, saved geometry checks and owned-document cleanup.

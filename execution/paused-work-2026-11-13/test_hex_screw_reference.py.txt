@@ -1,0 +1,167 @@
+import hashlib
+import json
+from pathlib import Path
+import sys
+import tempfile
+import unittest
+from unittest.mock import patch
+
+sys.path.insert(0, '${MODELING_ROOT}/scripts')
+sys.path.insert(0, '${TEMP_ROOT}/hex-screw-reference-draft')
+import hex_screw_reference as screw
+from hexagonal_reference import parameters as hex_parameters
+
+
+def fixture_job(folder, axis=(0, 0, 1), radial=(1, 0, 0)):
+    source = Path(folder) / 'synthetic-source.txt'
+    source.write_text('Synthetic standard geometry fixture.\n', encoding='utf-8')
+    digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    locator = str(source)
+    dimensions = [
+        ('AF', 18.0, 'head AF'), ('K', 7.0, 'head height'),
+        ('D', 12.0, 'shaft diameter'), ('L', 44.0, 'under-head length')]
+    features = [{'name':name,'value':value,'unit':'mm','required':True,
+                 'source':locator,'source_sha256':digest,
+                 'source_location':location,'evidence_status':'synthetic test source'}
+                for name,value,location in dimensions]
+    return {'schema':'ferme.component-source-job.r01','job_id':'SYNTH-HEX-SCREW-01',
+            'part_id':'SYNTH','part_name':'Synthetic hex-head screw',
+            'representation':'Synthetic nominal external screw reference',
+            'geometry_role':screw.GEOMETRY_ROLE,'geometry_name':'Synthetic screw',
+            'units':'mm','frame':'Under-head datum and explicit axis in world coordinates.',
+            'local_frame':'Head negative along axis; shaft positive along axis.',
+            'metadata_request_label':'synthetic-screw-metadata',
+            'metadata_application':'CADTOOLS_SOURCE',
+            'dimension_features':{'head_across_flats':'AF','head_height':'K',
+                                  'shaft_diameter':'D','under_head_length':'L'},
+            'placement':{'under_head_origin':[3.0,-2.0,5.0], 'axis':list(axis),
+                         'radial_x':list(radial)},
+            'features':features,'source_files':[{'path':locator,'locator':'${TEST_ROOT}/synthetic-source.txt','sha256':digest}],
+            'metadata':['Thread designation is metadata only; no helix is constructed.'],
+            'readback_tolerance_mm':1e-7}
+
+
+def synthetic_features(job):
+    p=screw.parameters(job)
+    hp=hex_parameters(p['head_job'])
+    planes=[]
+    points=[]
+    for i,a in enumerate(hp['profile_points']):
+        b=hp['profile_points'][(i+1)%6]
+        dx,dy=b[0]-a[0],b[1]-a[1]
+        nl=[dy/(dx*dx+dy*dy)**0.5,-dx/(dx*dx+dy*dy)**0.5,0.0]
+        n=[nl[0]*p['radial_x'][j]+nl[1]*p['radial_y'][j] for j in range(3)]
+        mid=[(a[0]+b[0])/2,(a[1]+b[1])/2]
+        bottom=[p['head_base'][j]+mid[0]*p['radial_x'][j]+mid[1]*p['radial_y'][j] for j in range(3)]
+        planes.append({'normal':n,'origin':bottom})
+        for z in (0.0, -p['values']['head_height']):
+            points.append([p['origin'][j]+z*p['axis'][j]+a[0]*p['radial_x'][j]+a[1]*p['radial_y'][j] for j in range(3)])
+    planes.extend([{'normal':p['axis'],'origin':p['head_base']},
+                   {'normal':p['axis'],'origin':p['tip']}])
+    points.append(p['tip'])
+    return {'planes':planes,
+            'cylinders':[{'axis':p['axis'],'origin':p['origin'],'radius':p['shaft_radius']}],
+            'cones':[],'spheres':[],'tori':[],'points':points,
+            'topology':{'bodies':1,'lumps':1,'shells':1,'reciprocal_closed_partners':1}}
+
+
+class HexScrewReferenceTests(unittest.TestCase):
+    def setUp(self):
+        self.temp = tempfile.TemporaryDirectory()
+        self.job = fixture_job(self.temp.name)
+
+    def tearDown(self):
+        self.temp.cleanup()
+
+    def test_valid_job_and_analytic_joined_body_contract(self):
+        p=screw.parameters(self.job)
+        self.assertEqual(p['values'], {'head_across_flats':18.0,'head_height':7.0,
+                                       'shaft_diameter':12.0,'under_head_length':44.0})
+        self.assertEqual(p['head_base'],[3.0,-2.0,-2.0])
+        result=screw.verify(synthetic_features(self.job),self.job)
+        self.assertEqual(result['result'],'PASS',result)
+        self.assertEqual([x['result'] for x in result['checks']],['PASS']*5)
+
+    def test_rotated_explicit_frame(self):
+        job=fixture_job(self.temp.name,axis=(0,1,0),radial=(1,0,0))
+        p=screw.parameters(job)
+        self.assertEqual(p['axis'],[0.0,1.0,0.0])
+        self.assertEqual(screw.verify(synthetic_features(job),job)['result'],'PASS')
+
+    def test_invalid_readiness_dimensions_and_collapsed_geometry_reject(self):
+        job=json.loads(json.dumps(self.job)); job['features'][0]['value']=None; job['features'][0]['question']='Supply AF'
+        with self.assertRaisesRegex(ValueError,'Input required'):
+            screw.parameters(job)
+        for value in (0,-1,float('inf'),True,1e308):
+            bad=json.loads(json.dumps(self.job)); bad['features'][2]['value']=value
+            with self.assertRaises(ValueError): screw.parameters(bad)
+        bad=json.loads(json.dumps(self.job)); bad['features'][2]['value']=18.0
+        with self.assertRaisesRegex(ValueError,'inside the hex head'):
+            screw.parameters(bad)
+        bad=json.loads(json.dumps(self.job)); bad['placement']['radial_x']=[0,0,1]
+        with self.assertRaisesRegex(ValueError,'perpendicular'):
+            screw.parameters(bad)
+
+    def test_bad_source_hash_or_unresolved_named_root_rejects(self):
+        job=json.loads(json.dumps(self.job)); job['features'][0]['source_sha256']='0'*64
+        with self.assertRaisesRegex(ValueError,'Source revision changed'):
+            screw.parameters(job)
+        job=fixture_job(self.temp.name)
+        named='${TEST_ROOT}/synthetic-source.txt'
+        for f in job['features']: f['source']=named
+        job['source_files'][0]['path']=named
+        with self.assertRaisesRegex(ValueError,'Missing caller-supplied source root'):
+            screw.parameters(job)
+        self.assertEqual(screw.parameters(job,{'TEST_ROOT':self.temp.name})['values']['head_height'],7.0)
+
+    def test_unready_source_stops_before_any_geometry_factory_or_head_build(self):
+        bad=json.loads(json.dumps(self.job)); bad['features'][0]['value']=None
+        bad['features'][0]['question']='Supply head AF'
+        with patch.object(screw,'build_hexagonal_reference') as head, \
+             patch.object(screw,'geometry') as factory:
+            with self.assertRaises(ValueError):
+                screw.build_hex_screw_reference(object(),bad)
+        head.assert_not_called(); factory.assert_not_called()
+
+    def test_build_orders_head_shaft_union_and_metadata(self):
+        events=[]
+        class FakeGeometry:
+            def cylinder(self,*args): events.append(('cylinder',args)); return 'shaft'
+            def rotate(self,*args): events.append(('rotate',args))
+            def move(self,*args): events.append(('move',args))
+            def combine(self,*args): events.append(('combine',args)); return 'body'
+            def metadata(self,*args): events.append(('metadata',args))
+        with patch.object(screw,'build_hexagonal_reference',side_effect=lambda client,job: events.append(('head',job)) or 'head'), \
+             patch.object(screw,'geometry',return_value=FakeGeometry()):
+            handles,p=screw.build_hex_screw_reference(object(),self.job)
+        self.assertEqual(handles,{'body':'body'})
+        self.assertEqual([x[0] for x in events],['head','cylinder','move','combine','metadata'])
+        self.assertEqual(events[1][1][1],[0.0,0.0,0.0])
+        self.assertEqual(events[1][1][2:],(6.0,44.0))
+        self.assertIn('Source: ${TEST_ROOT}/synthetic-source.txt', '\n'.join(events[-1][1][2]))
+        self.assertNotIn(self.temp.name,'\n'.join(events[-1][1][2]))
+
+    def test_extra_plane_or_wrong_cylinder_fails_analytic_identity_gate(self):
+        features=synthetic_features(self.job)
+        features['planes'].append({'normal':[1,0,0],'origin':[500,0,0]})
+        self.assertEqual(screw.verify(features,self.job)['result'],'FAIL')
+        features=synthetic_features(self.job); features['cylinders'][0]['radius']=5.0
+        self.assertEqual(screw.verify(features,self.job)['result'],'FAIL')
+        features=synthetic_features(self.job); features['tori']=[{'center':[0,0,0]}]
+        self.assertEqual(screw.verify(features,self.job)['result'],'FAIL')
+        features=synthetic_features(self.job); features['topology']['reciprocal_closed_partners']=0
+        self.assertEqual(screw.verify(features,self.job)['result'],'FAIL')
+
+    def test_source_metadata_uses_portable_source_identity(self):
+        captured={}
+        with patch.object(screw,'compare_source_metadata',side_effect=lambda record,handle,app,expected: captured.update({'record':record,'handle':handle,'app':app,'expected':expected}) or {'result':'PASS'}):
+            answer=screw.verify_metadata({'type':'Solid3D'},'A1',self.job)
+        self.assertEqual(answer['result'],'PASS')
+        joined='\n'.join(captured['expected'])
+        self.assertIn('${TEST_ROOT}/synthetic-source.txt',joined)
+        self.assertNotIn(self.temp.name,joined)
+        self.assertEqual(captured['app'],'CADTOOLS_SOURCE')
+
+
+if __name__ == '__main__':
+    unittest.main()

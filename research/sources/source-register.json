@@ -47350,6 +47350,325 @@
         "research/sources/annular-runner-completion-2026-11-13.json",
         "execution/annular-job-runner-2026-11-13.md"
       ]
+    },
+    {
+      "id": "SRC-9ccb7e7ea1fe",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/pause-summary-2026-11-13.md",
+      "title": "Requested tooling pause report",
+      "summary": "Reports three applied recent improvements, two unfinished tooling items, three finished agents, the completed package baseline and current unpackaged recovery changes. Links FERME component counts to its owning report.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "documented_execution_and_agent_results"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/pause-summary-2026-11-13.md",
+          "title": "Requested tooling pause report",
+          "summary": "Reports three applied recent improvements, two unfinished tooling items, three finished agents, the completed package baseline and current unpackaged recovery changes. Links FERME component counts to its owning report.",
+          "evidence_status": "documented_execution_and_agent_results",
+          "observation_date": "2026-11-13",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "sha256": "aed289883d6c67d629535d86fb5ba110dd11555fb680d0744bac3f48d45c649e",
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-56038a21575c",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/manifest.json",
+      "title": "Paused generic source snapshots and actual validation states",
+      "summary": "Pins seven retained text snapshots with original/derivative hashes. Records 22passing annular recovery tests and 8passing screw helper tests executed by Luna; native recovery and screw construction remain unexecuted.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_implementation_snapshots"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/manifest.json",
+          "title": "Paused generic source snapshots and actual validation states",
+          "summary": "Pins seven retained text snapshots with original/derivative hashes. Records 22passing annular recovery tests and 8passing screw helper tests executed by Luna; native recovery and screw construction remain unexecuted.",
+          "evidence_status": "retained_unfinished_implementation_snapshots",
+          "observation_date": "2026-11-13",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "sha256": "2357fd34e7cb73f9ef1c2eb0bfe7ff0ccf754ae8e85e74d3d03051e6795c1e58",
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-aa88f7f88a94",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/annular-runner-native-recovery-2026-11-13.json",
+      "title": "Observed empty SAB construction-record failure",
+      "summary": "Records the M6 native run stopping at pre-save records after constructing its solid. The raw record has 0 SAB bytes and 2448 SAT characters; original failure and geometry were preserved for a bounded continuation.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_failure"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/annular-runner-native-recovery-2026-11-13.json",
+          "title": "Observed empty SAB construction-record failure",
+          "summary": "Records the M6 native run stopping at pre-save records after constructing its solid. The raw record has 0 SAB bytes and 2448 SAT characters; original failure and geometry were preserved for a bounded continuation.",
+          "evidence_status": "executed_native_failure",
+          "observation_date": "2026-11-13",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "sha256": "62d19f1106b33f41a8e81af61a7b1a52af705e64542f9977c07591747814b490",
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-8e4a21261ed8",
+      "url": null,
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/reports/pause-summary-2026-11-13.md",
+      "title": "FERME complete component status snapshot",
+      "summary": "Status-only catalogue snapshot: 394 entries, 49 CAD completions with existing saved links, 1 non-geometric completion, 344 unfinished entries; full component CSVs and recent source/native/reuse results stay in FERME.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_local_status_inventory"
+      ],
+      "observations": [
+        {
+          "local_original": "${FERME_ROOT}/engineering/module-development/cad/reports/pause-summary-2026-11-13.md",
+          "title": "FERME complete component status snapshot",
+          "summary": "Status-only catalogue snapshot: 394 entries, 49 CAD completions with existing saved links, 1 non-geometric completion, 344 unfinished entries; full component CSVs and recent source/native/reuse results stay in FERME.",
+          "evidence_status": "executed_local_status_inventory",
+          "observation_date": "2026-11-13",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "sha256": "a195d6f9d1698704b23c21da9b7851421d78992c536f3ee1c205255cd53d863b",
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-9ce603417458",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/annular_job_runner.py.txt",
+      "title": "Paused source snapshot — annular_job_runner.py.txt",
+      "summary": "Retains ${MODELING_ROOT}/scripts/annular_job_runner.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_source_text"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/annular_job_runner.py.txt",
+          "title": "Paused source snapshot — annular_job_runner.py.txt",
+          "summary": "Retains ${MODELING_ROOT}/scripts/annular_job_runner.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+          "evidence_status": "retained_unfinished_source_text",
+          "observation_date": "2026-11-13",
+          "sha256": "6f2a8b4e05abcf9a05a6d9ad9441d6ce79895ca9d3fb72355d5f35fc985f422f",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-7606f4e8e712",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/test_annular_job_runner.py.txt",
+      "title": "Paused source snapshot — test_annular_job_runner.py.txt",
+      "summary": "Retains ${MODELING_ROOT}/tests/test_annular_job_runner.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_source_text"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/test_annular_job_runner.py.txt",
+          "title": "Paused source snapshot — test_annular_job_runner.py.txt",
+          "summary": "Retains ${MODELING_ROOT}/tests/test_annular_job_runner.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+          "evidence_status": "retained_unfinished_source_text",
+          "observation_date": "2026-11-13",
+          "sha256": "717136812776536389c83117cec138c86067119dfadc468d63cc709142c31104",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-3c390392f21d",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/annular-procedure.md.txt",
+      "title": "Paused source snapshot — annular-procedure.md.txt",
+      "summary": "Retains ${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-job-runner.md as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_source_text"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/annular-procedure.md.txt",
+          "title": "Paused source snapshot — annular-procedure.md.txt",
+          "summary": "Retains ${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-job-runner.md as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+          "evidence_status": "retained_unfinished_source_text",
+          "observation_date": "2026-11-13",
+          "sha256": "3c84d2842347cd00a01386343d0d4c9b0b06bb125f7d89269c6068798657efc0",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-84e2b5ae5274",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/draft-status.md.txt",
+      "title": "Paused source snapshot — draft-status.md.txt",
+      "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/draft-status.md as named-root path normalization. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_source_text"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/draft-status.md.txt",
+          "title": "Paused source snapshot — draft-status.md.txt",
+          "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/draft-status.md as named-root path normalization. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+          "evidence_status": "retained_unfinished_source_text",
+          "observation_date": "2026-11-13",
+          "sha256": "f3c47942fada3ab9950f29ace4200be23da0aa2b98bfa2567443981a96b5001c",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-511a1af105bb",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/hex_screw_reference.py.txt",
+      "title": "Paused source snapshot — hex_screw_reference.py.txt",
+      "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/hex_screw_reference.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_source_text"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/hex_screw_reference.py.txt",
+          "title": "Paused source snapshot — hex_screw_reference.py.txt",
+          "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/hex_screw_reference.py as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+          "evidence_status": "retained_unfinished_source_text",
+          "observation_date": "2026-11-13",
+          "sha256": "f7ec31bad39c48022fa31cdb4f0afe522f900cb9c505ad7d553e70810f5ca216",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-99c71880dd80",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/method-review.md.txt",
+      "title": "Paused source snapshot — method-review.md.txt",
+      "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/method-review.md as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_source_text"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/method-review.md.txt",
+          "title": "Paused source snapshot — method-review.md.txt",
+          "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/method-review.md as byte-identical text snapshot. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+          "evidence_status": "retained_unfinished_source_text",
+          "observation_date": "2026-11-13",
+          "sha256": "4f012037880d25dcfcaf6f78ef68c3cb0c98f0cd2fabe101161e491b3334109a",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-ee891117dd30",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/paused-work-2026-11-13/test_hex_screw_reference.py.txt",
+      "title": "Paused source snapshot — test_hex_screw_reference.py.txt",
+      "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/test_hex_screw_reference.py as named-root path normalization. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "retained_unfinished_source_text"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/paused-work-2026-11-13/test_hex_screw_reference.py.txt",
+          "title": "Paused source snapshot — test_hex_screw_reference.py.txt",
+          "summary": "Retains ${TEMP_ROOT}/hex-screw-reference-draft/test_hex_screw_reference.py as named-root path normalization. Original bytes and source location remain preserved; synthetic test/native execution status is recorded in the pause manifest.",
+          "evidence_status": "retained_unfinished_source_text",
+          "observation_date": "2026-11-13",
+          "sha256": "fdc385e4fcfece62cb008fbd260521173a5f1345fce15d295c22f349c7bd9d31",
+          "referring_documents": [
+            "execution/pause-summary-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/pause-status-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/pause-status-2026-11-13.json",
+        "execution/pause-summary-2026-11-13.md"
+      ]
     }
   ],
   "source_record_documents": [
@@ -47357,6 +47676,7 @@
     "research/sources/annular-runner-completion-2026-11-13.json",
     "research/sources/circular-boundary-reader-2026-11-13.json",
     "research/sources/conical-washer-profile-2026-11-13.json",
+    "research/sources/pause-status-2026-11-13.json",
     "research/sources/skill-completion-gate-2026-11-13.json",
     "research/sources/skill-synchronisation-2026-11-13.json",
     "research/sources/skills-compliance-2026-11-13.json",

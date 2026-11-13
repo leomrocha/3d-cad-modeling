@@ -1,0 +1,14 @@
+# Generic hex-head and axial-shaft reference method review
+
+Observed successful method: FERME C066's `build_iso4014_reference.py` invokes the existing `hexagonal_reference.build_hexagonal_reference(client, head_job)`, constructs a separate shaft with guarded `Geometry.cylinder(...)`, joins both with `Geometry.combine(...)`, and adds whole-body `CADTOOLS_SOURCE` metadata. Its reopened reader checks analytic cylinder radius/axis, all six hex flats, axial plane stations, closed-body topology, metadata and pre-save/SAB point persistence. C066 is a completed ISO 4014 M12×80 reference; its dimensions, source attribution and orientation are not inputs to this generic draft.
+
+The existing `scripts/hexagonal_reference.py` helper validates source-pinned AF and prism height, placement frame and optional bore, then creates one regular-hex prism. Its `verify()` expects exactly that prism's two caps and does not validate a joined shaft; the screw draft therefore uses its point-generation/orientation parameters and head builder but adds a source-job-driven shaft and a separate joined-body surface contract.
+
+Draft construction contract:
+
+1. Resolve only source feature file locators with caller-supplied roots; preserve source `locator` strings for metadata.
+2. Run `component_records.require_ready` and validate four distinct required mm dimensions: head AF, head height, shaft diameter and under-head length. Validate positive finite values, frame orthonormality, and that shaft radius remains inside the hexagon's AF/2 inradius before any geometry factory call.
+3. Use the generic hex helper for a prism whose upper axial plane is the under-head datum. Build a local +Z cylinder from the same datum, rotate it by the helper's validated frame rotations, translate it to the datum origin, and combine head and shaft. Preserve the thread designation/pitch in metadata only; the cylinder is a nominal thread envelope.
+4. On the reopened SAB, check all six source AF side-plane identities, the head-top and shaft-tip planes, exactly one coaxial nominal-radius cylinder, no unexpected analytic surface families, and one closed connected solid. Compare native source metadata and retain the reader's document/revision/geometry-revision bracket. Use source-derived values from the job; no component-specific values belong in the helper.
+
+Status: method extracted from existing local implementations. No native CAD operation is performed by this draft.

@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-13",
+  "state": "PAUSED",
+  "native_resume": "UNEXECUTED",
+  "canonical_integration": "PENDING",
+  "files": [
+    {
+      "path": "execution/paused-work-2026-11-13/annular_job_runner.py.txt",
+      "source_locator": "${MODELING_ROOT}/scripts/annular_job_runner.py",
+      "original_sha256": "6f2a8b4e05abcf9a05a6d9ad9441d6ce79895ca9d3fb72355d5f35fc985f422f",
+      "retained_sha256": "6f2a8b4e05abcf9a05a6d9ad9441d6ce79895ca9d3fb72355d5f35fc985f422f",
+      "derivative": "byte-identical text snapshot"
+    },
+    {
+      "path": "execution/paused-work-2026-11-13/test_annular_job_runner.py.txt",
+      "source_locator": "${MODELING_ROOT}/tests/test_annular_job_runner.py",
+      "original_sha256": "717136812776536389c83117cec138c86067119dfadc468d63cc709142c31104",
+      "retained_sha256": "717136812776536389c83117cec138c86067119dfadc468d63cc709142c31104",
+      "derivative": "byte-identical text snapshot"
+    },
+    {
+      "path": "execution/paused-work-2026-11-13/annular-procedure.md.txt",
+      "source_locator": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-job-runner.md",
+      "original_sha256": "3c84d2842347cd00a01386343d0d4c9b0b06bb125f7d89269c6068798657efc0",
+      "retained_sha256": "3c84d2842347cd00a01386343d0d4c9b0b06bb125f7d89269c6068798657efc0",
+      "derivative": "byte-identical text snapshot"
+    },
+    {
+      "path": "execution/paused-work-2026-11-13/draft-status.md.txt",
+      "source_locator": "${TEMP_ROOT}/hex-screw-reference-draft/draft-status.md",
+      "original_sha256": "77dc01bcdb0f2bdf84b42a2c164af7563889d113fafde74b2a68a99c44b4bee7",
+      "retained_sha256": "f3c47942fada3ab9950f29ace4200be23da0aa2b98bfa2567443981a96b5001c",
+      "derivative": "named-root path normalization"
+    },
+    {
+      "path": "execution/paused-work-2026-11-13/hex_screw_reference.py.txt",
+      "source_locator": "${TEMP_ROOT}/hex-screw-reference-draft/hex_screw_reference.py",
+      "original_sha256": "f7ec31bad39c48022fa31cdb4f0afe522f900cb9c505ad7d553e70810f5ca216",
+      "retained_sha256": "f7ec31bad39c48022fa31cdb4f0afe522f900cb9c505ad7d553e70810f5ca216",
+      "derivative": "byte-identical text snapshot"
+    },
+    {
+      "path": "execution/paused-work-2026-11-13/method-review.md.txt",
+      "source_locator": "${TEMP_ROOT}/hex-screw-reference-draft/method-review.md",
+      "original_sha256": "4f012037880d25dcfcaf6f78ef68c3cb0c98f0cd2fabe101161e491b3334109a",
+      "retained_sha256": "4f012037880d25dcfcaf6f78ef68c3cb0c98f0cd2fabe101161e491b3334109a",
+      "derivative": "byte-identical text snapshot"
+    },
+    {
+      "path": "execution/paused-work-2026-11-13/test_hex_screw_reference.py.txt",
+      "source_locator": "${TEMP_ROOT}/hex-screw-reference-draft/test_hex_screw_reference.py",
+      "original_sha256": "3d6919172a87b2547a35a7d7fc57c9432e5b401932cab46b203a1778f0c5c0f8",
+      "retained_sha256": "fdc385e4fcfece62cb008fbd260521173a5f1345fce15d295c22f349c7bd9d31",
+      "derivative": "named-root path normalization"
+    }
+  ],
+  "annular_recovery_tests": {
+    "passed": 22,
+    "execution_model": "gpt-6-luna"
+  },
+  "hex_screw_tests": {
+    "passed": 8,
+    "execution_model": "gpt-6-luna"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-13",
+  "execution_model": "gpt-6.1-sol",
+  "result": "PASS",
+  "catalogue_rows": 394,
+  "unfinished_rows": 344,
+  "count_sum": 394,
+  "recorded_completed_cad_file_links": 49,
+  "issues_in_done_link_check": 0,
+  "conical_configuration_hashes_checked": 4,
+  "retained_generic_snapshots_verified": 7,
+  "generic_source_record_hashes_verified": 11,
+  "native_cad_operations": 0,
+  "packaging_after_recovery_patch": "UNEXECUTED",
+  "new_model_geometry_tests": "UNEXECUTED"
+}
