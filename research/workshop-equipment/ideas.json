@@ -55,6 +55,23 @@
       "referring_documents": [
         "research/workshop-equipment/starter-advice.md"
       ]
+    },
+    {
+      "id": "WORKSHOP-I04",
+      "title": "Low-cost starter kit options and staged budget",
+      "status": "proposal",
+      "summary": "Reuse Bosch electronic pillar drill. Compare80\u2013225 EUR MMA-only and280\u2013460 EUR gas/flux/MMA machine routes with DIY steel bench, workholding, PPE and consumables. Price gas, saw and plasma/air additions separately.",
+      "source_ids": [
+        "KIT-01",
+        "KIT-03",
+        "KIT-08",
+        "KIT-10",
+        "WELD-01",
+        "WELD-02"
+      ],
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md"
+      ]
     }
   ],
   "decisions": []

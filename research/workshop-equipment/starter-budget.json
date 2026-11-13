@@ -1,0 +1,222 @@
+{
+  "date": "2026-11-13",
+  "status": "proposal",
+  "currency": "EUR",
+  "tax_basis": "TTC target for allowances; quoted prices as attributed",
+  "owned_equipment": [
+    {
+      "name": "Bosch electronic pillar drill",
+      "purchase_cost": 0,
+      "evidence_status": "user report"
+    }
+  ],
+  "scope": "New low-cost equipment; each proposed machine well below EUR1000. Startup allowances are estimates, not observed market minimum/maximum prices.",
+  "calculation_method": "Sum one of each core row; add chosen upgrade rows once. Dedicated suitable hot-work location; delivery and site electrical/indoor extraction works excluded from these subtotal scenarios.",
+  "core_rows": [
+    {
+      "id": "BUDGET-01",
+      "item": "Gas/flux/MMA welder",
+      "min_eur": 280,
+      "max_eur": 460,
+      "basis": "Rounded previously observed STAHLWERK160M and200ST prices",
+      "source_ids": [
+        "WELD-01",
+        "WELD-02"
+      ]
+    },
+    {
+      "id": "BUDGET-02",
+      "item": "125 mm grinder",
+      "min_eur": 45,
+      "max_eur": 65,
+      "basis": "Planning allowance; Bosch quoted anchor62.90",
+      "source_ids": [
+        "KIT-02"
+      ]
+    },
+    {
+      "id": "BUDGET-03",
+      "item": "Automatic welding helmet",
+      "min_eur": 35,
+      "max_eur": 70,
+      "basis": "Planning allowance; select exact automatic model and shade range",
+      "source_ids": []
+    },
+    {
+      "id": "BUDGET-04",
+      "item": "Welding gloves",
+      "min_eur": 10,
+      "max_eur": 20,
+      "basis": "Planning allowance; Payper quoted anchor9.16",
+      "source_ids": [
+        "KIT-05"
+      ]
+    },
+    {
+      "id": "BUDGET-05",
+      "item": "Clothing, eye/face and hearing protection",
+      "min_eur": 60,
+      "max_eur": 100,
+      "basis": "Planning allowance; items bought new",
+      "source_ids": [
+        "START-05"
+      ]
+    },
+    {
+      "id": "BUDGET-06",
+      "item": "Respiratory protection allowance",
+      "min_eur": 40,
+      "max_eur": 100,
+      "basis": "Planning allowance; appropriate equipment and fit are chosen from exposure assessment; source capture priced separately for indoor work.",
+      "source_ids": []
+    },
+    {
+      "id": "BUDGET-07",
+      "item": "E6013 electrodes2.5 and3.2 mm",
+      "min_eur": 25,
+      "max_eur": 35,
+      "basis": "Planning allowance; two quoted packs total24.07",
+      "source_ids": [
+        "KIT-06"
+      ]
+    },
+    {
+      "id": "BUDGET-08",
+      "item": "Self-shielded flux wire",
+      "min_eur": 15,
+      "max_eur": 25,
+      "basis": "Planning allowance",
+      "source_ids": [
+        "START-09",
+        "START-10"
+      ]
+    },
+    {
+      "id": "BUDGET-09",
+      "item": "Chipping hammer and steel brush",
+      "min_eur": 5,
+      "max_eur": 15,
+      "basis": "Planning allowance; category-price anchor3.94",
+      "source_ids": [
+        "KIT-07"
+      ]
+    },
+    {
+      "id": "BUDGET-10",
+      "item": "Cutting/grinding/flap discs",
+      "min_eur": 20,
+      "max_eur": 40,
+      "basis": "Planning allowance",
+      "source_ids": []
+    },
+    {
+      "id": "BUDGET-11",
+      "item": "Bench vice",
+      "min_eur": 25,
+      "max_eur": 50,
+      "basis": "Planning allowance; quoted125 mm vice22.50",
+      "source_ids": [
+        "KIT-08"
+      ]
+    },
+    {
+      "id": "BUDGET-12",
+      "item": "Four clamps and two locking pliers",
+      "min_eur": 30,
+      "max_eur": 60,
+      "basis": "Planning allowance",
+      "source_ids": []
+    },
+    {
+      "id": "BUDGET-13",
+      "item": "Metal bits and cutting fluid",
+      "min_eur": 25,
+      "max_eur": 50,
+      "basis": "Planning allowance; complete Bosch bit set39.90 anchor; minimum uses smaller starter selection",
+      "source_ids": [
+        "KIT-09"
+      ]
+    },
+    {
+      "id": "BUDGET-14",
+      "item": "Square, marking and deburring tools",
+      "min_eur": 20,
+      "max_eur": 45,
+      "basis": "Planning allowance; reuse owned suitable measuring tools to reduce cost",
+      "source_ids": []
+    },
+    {
+      "id": "BUDGET-15",
+      "item": "DIY steel bench materials",
+      "min_eur": 120,
+      "max_eur": 250,
+      "basis": "Assumed procurement allowance; no priced bill of materials or selected bench dimensions",
+      "source_ids": []
+    },
+    {
+      "id": "BUDGET-16",
+      "item": "Extinguisher and hot-work accessories",
+      "min_eur": 30,
+      "max_eur": 60,
+      "basis": "Planning allowance",
+      "source_ids": [
+        "START-06"
+      ]
+    }
+  ],
+  "core_total_eur": [
+    785,
+    1445
+  ],
+  "additions": [
+    {
+      "item": "Gas MIG bottle, regulator/hose as needed and solid wire",
+      "min_eur": 300,
+      "max_eur": 450,
+      "status": "planning allowance using GAS-01/GAS-03 anchors"
+    },
+    {
+      "item": "Dedicated metal saw",
+      "min_eur": 289,
+      "max_eur": 350,
+      "status": "planning allowance anchored EvolutionR355CPS289"
+    },
+    {
+      "item": "Plasma, larger compressor and air accessories",
+      "min_eur": 705,
+      "max_eur": 1000,
+      "status": "planning allowance: cutter375\u2013440, compressor300\u2013500, air accessories30\u201360; verify matched pressure/flow"
+    }
+  ],
+  "scenario_totals_eur": {
+    "core": [
+      785,
+      1445
+    ],
+    "core_with_gas": [
+      1085,
+      1895
+    ],
+    "core_with_gas_and_saw": [
+      1374,
+      2245
+    ],
+    "core_with_gas_saw_plasma_air": [
+      2079,
+      3245
+    ]
+  },
+  "standalone_mma_alternative": {
+    "machine_min_eur": 80,
+    "machine_max_eur": 225,
+    "source_ids": [
+      "KIT-01",
+      "KIT-10"
+    ],
+    "kit_total_eur": [
+      565,
+      1185
+    ],
+    "calculation": "Low:785\u2212280+80\u221215 flux\u22125 included cleaning tools. High:1445\u2212460+225\u221225 flux; cleaning tools retained in high GYS basket."
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "registered_at": "2026-11-13",
+  "sources": [
+    {
+      "id": "KIT-01",
+      "title": "STAHLWERK ARC160 MD",
+      "url": "https://www.stahlwerk-schweissgeraete.de/e-hand-schweissgeraet-arc-160-md-fr",
+      "page_type": "product",
+      "summary": "New;20\u2013160 A MMA;230 V; duty40C15%160 A,60%80 A,100%62 A; holder, return lead, hammer, brush and case included.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Export shipping additional or separately determined",
+      "price_eur": 79.99,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-02",
+      "title": "Bosch125 mm750 W grinder preliminary listing",
+      "url": "https://www.castorama.fr/meuleuse-d-angle-filaire-bosch-125-mm-750w/4059952603834_CAFR.prd",
+      "page_type": "product",
+      "summary": "Preliminary agent observation; final agent review reported inconsistent product details, so budget uses an estimate rather than this as a verified exact model quote.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 62.9,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-03",
+      "title": "Evolution R355CPS saw",
+      "url": "https://www.leroymerlin.fr/produits/tronconneuse-a-metaux-electrique-evolution-r355cps-82494125.html",
+      "page_type": "product",
+      "summary": "New;355 mm carbide multi-material saw; seller cites mild steel, aluminium, copper, wood and plastics.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 289,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-04",
+      "title": "GYS Techno fixed shade11 helmet",
+      "url": "https://www.tecnomat.fr/produits/masque-lcd-teinte-fixe-11-techno-gys-1119013.html",
+      "page_type": "product",
+      "summary": "Corrected exact listing: fixed shade11. Earlier9/13 and34.90 observation was not matched to this exact listing. Variable-shade automatic helmet budget remains an estimate.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 26.39,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-05",
+      "title": "Payper Fire307R welding gloves",
+      "url": "https://www.laboutiquedupro.com/gants-soudeur-en-cuir-fire-307r-payper/",
+      "page_type": "product",
+      "summary": "New; leather gloves EN12477 typeA for MMA/MIG.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 9.16,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-06",
+      "title": "Rutile electrodes2.5 and3.2 mm",
+      "url": "https://www.comptoirdespros.com/soudage-brasage/accessoires/baguette-electrode/electrode-rutile.html",
+      "page_type": "category",
+      "summary": "New;110 electrodes2.5 mm12.13 EUR plus70 electrodes3.2 mm11.94 EUR; selected pack prices reported from category.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 24.07,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-07",
+      "title": "GYS hammer and brush",
+      "url": "https://toolsidee.fr/categorie-432/",
+      "page_type": "category",
+      "summary": "New; hammer/brush listing observed on category page.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 3.94,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-08",
+      "title": "125 mm bench vice",
+      "url": "https://www.bricodepot.fr/p/3663602819837/etau-d-etabli-capacite-de-serrage-de-125-mm",
+      "page_type": "product",
+      "summary": "New;125 mm vice advertised.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 22.5,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-09",
+      "title": "Bosch10 metal drill bits1\u201310 mm",
+      "url": "https://www.castorama.fr/foret-metal-vendu-par-10-bosch-taille-de-1-a-10-mm/3165140517058_CAFR.prd",
+      "page_type": "product",
+      "summary": "New;10-piece drill set; existing Bosch electronic pillar drill reused.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 39.9,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-10",
+      "title": "GYS GYSMI160P MMA welder with case",
+      "url": "https://materiel-soudure.fr/poste-a-souder-mma-220v-monophase/2144-poste-a-souder-mma-inverter-160a-gysmi-160p-avec-valise-gys.html",
+      "page_type": "product",
+      "summary": "New; MMA160 A; seller reports stock and case.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 225,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-11",
+      "title": "4A Metal600x600x6 mm welding tabletop",
+      "url": "https://www.4a-metal.com/collections/table-de-soudure-6mm-avec-rebord/products/table-de-soudure-avec-rebord-en-6mm-600x600",
+      "page_type": "product with variants",
+      "summary": "New; S235 top with rim/holes,400 EUR variant observation; legs/frame depend on configuration. Separate reference option from plain DIY bench materials allowance.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 400,
+      "tax": "TTC as reported",
+      "condition": "new"
+    },
+    {
+      "id": "KIT-12",
+      "title": "Brico Depot clamp category",
+      "url": "https://www.bricodepot.fr/produits/outillage/outillage-electroportatif-a-main-et-accessoire/outillage-a-main/serre-joint-et-pince-de-serrage",
+      "page_type": "category",
+      "summary": "Agent saw11.70 EUR but size/quantity unresolved; budget uses an estimate for four clamps/two locking pliers.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured"
+    },
+    {
+      "id": "KIT-13",
+      "title": "HSE exposure reduction guidance",
+      "url": "https://www.hse.gov.uk/welding/protect-your-workers/avoid-reduce-exposure.htm",
+      "page_type": "regulator guidance",
+      "summary": "URL supplied by research agent; exact outdoor RPE passage not verified during this research pass. Use existing inspected INRS source for capture guidance.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Not applicable"
+    },
+    {
+      "id": "KIT-14",
+      "title": "Mobile filtered welding fume extractors",
+      "url": "https://modiprosolutions.com/fr/c/extracteurs-de-fumees-de-soudage-mobiles-fr/",
+      "page_type": "category",
+      "summary": "Agent reports mobile230 V1000 m3/h H13 extraction equipment around2100 EUR and above. Outside requested low-cost machine options; site fume capture is a separate budget.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "research-agent reported web observation; seller/source claim",
+      "referring_documents": [
+        "research/workshop-equipment/starter-budget.md",
+        "research/workshop-equipment/starter-budget.json"
+      ],
+      "original_downloaded": false,
+      "fees": "Shipping not captured",
+      "price_eur": 2100,
+      "tax": "TTC as reported",
+      "condition": "new"
+    }
+  ]
+}
