@@ -75,6 +75,18 @@
       "referring_documents": [
         "execution/portable-lookup-and-step-inventory-2026-11-13.md"
       ]
+    },
+    {
+      "title": "IGES source reuse in existing-model lookup",
+      "local_path": "scripts/model_inventory.py",
+      "summary": "Adds both IGES extensions to the existing-model scan, with matching linked files routed to reuse and unattributed candidates routed to identity review. Seventeen synthetic lookup tests pass after the two IGES cases.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_implementation_test",
+      "sha256": "8f59184ffd4da463250274d29cad24ac1081d722769667819c361c3002a468e4",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md",
+        "skills/component-cad/references/existing-model-start-check.md"
+      ]
     }
   ]
 }
