@@ -13,18 +13,10 @@
 
 ## Photographs and scans
 
-Proposed measured-reconstruction route:
+I'd like to implement many things like these in the future btu they'll be done when I need them or if there is enough demand, or if somebody wants to add it OR if I get paid to do it (hey! I also have to earn my living I'd gladly leave where I'm today to make these kind of work full time though)
 
 1. [Calibrate the camera](reference/operations.md#rec-01) from known target coordinates and images.
 2. [Recover camera poses and sparse points](reference/operations.md#rec-03) from overlapping photographs.
 3. [Reconstruct a dense surface](reference/operations.md#rec-17) using the retained camera solution.
 4. [Register and compare surfaces](reference/operations.md#rec-08) in an explicitly scaled frame.
 5. [Remodel selected features as CAD](reference/operations.md#rec-14), then [compare revisions](reference/operations.md#rec-16).
-
-The linked operation records specify their supporting sources, prerequisites, software/API, representations, units/frames, metric evidence, information changes, checks, alternatives and handoff conditions.
-
-## Examples of the workflow
-
-1. [FERME](examples/ferme.md) connects component source features to native geometry and reusable check functions.
-2. [Wind generator](examples/wind-generator.md) connects CAD geometry, a documented structural idealization, solver inputs and saved results.
-3. [Buildings](examples/buildings.md) describes a proposed route from plans and dimensions to semantic building elements.
