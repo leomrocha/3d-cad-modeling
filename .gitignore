@@ -1,0 +1,46 @@
+# Python bytecode and tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.hypothesis/
+
+# Python environments
+.venv/
+venv/
+env/
+.tox/
+.nox/
+
+# Python packaging outputs
+/build/
+/dist/
+*.egg-info/
+.eggs/
+
+# Test coverage outputs
+.coverage
+.coverage.*
+htmlcov/
+/coverage.xml
+
+# Local environment configuration; keep example templates
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local agent/cloud configuration
+/.agents/
+/.codex/
+/.aws/
+
+# Editor and operating-system temporary files
+/.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
