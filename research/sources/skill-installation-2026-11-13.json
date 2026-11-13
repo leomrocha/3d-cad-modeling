@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-13",
+  "subject": "Install the repository skills in Codex",
+  "evidence_status": "official_documentation_inspected_by_research_agent",
+  "research_model": "gpt-6-luna",
+  "executing_model": "gpt-6.1-sol",
+  "sources": [
+    {
+      "url": "https://developers.openai.com/codex/skills",
+      "title": "Codex skills / Build skills",
+      "summary": "Codex discovers user skills under ~/.agents/skills, follows symlinked skill folders, detects changes automatically, and supports /skills and $skill-name invocation in CLI and IDE.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "official_source_claim",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "skills/source-intake/SKILL.md",
+      "title": "Source intake skill",
+      "summary": "Uses MODELING_ROOT for shared Python helpers and relative links into execution records; retaining the checkout preserves these dependencies.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local_file_inspected",
+      "referring_documents": [
+        "README.md"
+      ]
+    }
+  ],
+  "implementation": "README commands link the three existing skill folders from a retained checkout into the Codex user skill directory; existing destinations are preserved.",
+  "checks": {
+    "shell_syntax": "PASS",
+    "isolated_temporary_home": "PASS: three links resolve to the checkout skills; shared script and execution links resolve",
+    "repeat_execution": "PASS: existing destinations preserved",
+    "existing_directory": "PASS: contents preserved and no nested link created",
+    "scope": "Shell commands exercised with a temporary HOME; Codex skill discovery is an official source claim."
+  }
+}
