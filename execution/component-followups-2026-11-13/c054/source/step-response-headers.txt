@@ -1,0 +1,15 @@
+HTTP/2 200 
+date: Fri, 13 Nov 2026 08:32:29 GMT
+content-type: application/octet-stream
+content-length: 7509127
+server: PWS/8.3.1.0.8
+last-modified: Thu, 20 Mar 2025 08:07:49 GMT
+etag: "67dbccd5-729487"
+access-control-allow-origin: https://cms.victronenergy.com
+accept-ranges: bytes
+cache-control: max-age=604800
+age: 112707
+via: 1.1 PSfgblPAR2gc184:6 (W), 1.1 PSfgblPAR1ke67:4 (W)
+x-px: ms PSfgblPAR1ke67CDG, ht PSfgblPAR2gc184CDG
+x-ws-request-id: 6af6cb1d_PSfgblPAR1ke67_51397-6795
+

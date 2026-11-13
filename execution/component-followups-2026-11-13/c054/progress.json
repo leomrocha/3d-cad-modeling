@@ -1,0 +1,51 @@
+{
+  "task": "C054 \u2014 Victron smallBMS NG exact manufacturer CAD and mechanical drawing",
+  "observed_at_utc": "2026-11-13T08:50Z",
+  "status": "DONE",
+  "runtime_model": "gpt-6-luna",
+  "existing_model_gate": "NEW_MODEL_REQUIRED; NOT_STARTED; 43 component 3D files scanned; no attributed model or candidate.",
+  "source_identity": "Victron smallBMS NG BMS400100300; official Rev00 mechanical drawing and AP214 STEP acquired.",
+  "source_files": [
+    {
+      "key": "step",
+      "filename": "DimensionDrawing_SmallBMS-NG-3D.STEP",
+      "supplied_url": "https://www.victronenergy.com/upload/documents/DimensionDrawing_SmallBMS-NG-3D.STEP",
+      "final_url": "https://www.victronenergy.com/upload/documents/DimensionDrawing_SmallBMS-NG-3D.STEP",
+      "retrieved_at_utc": "2026-11-13T08:32Z",
+      "http_status": 200,
+      "content_type": "application/octet-stream",
+      "size_bytes": 7509127,
+      "sha256": "9ffe0d59f07b2fa9d1a74cb609d2c18b99203a139de08bb8c73e6148261af51f",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c054-build-01/source/DimensionDrawing_SmallBMS-NG-3D.STEP",
+      "original_preserved_unchanged": true,
+      "binding_evidence": "manufacturer product page labels enclosure drawing STEP; STEP AP214 header calls file DimensionDrawing_SmallBMS NG-rev00x-3D.STEP; source explicitly includes BMS400100300 association through companion drawing"
+    },
+    {
+      "key": "drawing",
+      "filename": "DimensionDrawing_SmallBMS-NG.pdf",
+      "supplied_url": "https://www.victronenergy.com/upload/documents/DimensionDrawing_SmallBMS-NG.pdf",
+      "final_url": "https://www.victronenergy.com/upload/documents/DimensionDrawing_SmallBMS-NG.pdf",
+      "retrieved_at_utc": "2026-11-13T08:32Z",
+      "http_status": 200,
+      "content_type": "application/pdf",
+      "size_bytes": 650438,
+      "sha256": "84a8aa25736a1893271ab9e1c13ad480f69fd91993ecc66d8b3dd9e0d02c12d4",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c054-build-01/source/DimensionDrawing_SmallBMS-NG.pdf",
+      "original_preserved_unchanged": true,
+      "binding_evidence": "Manufacturer Rev00 drawing; title block names BMS400100300 smallBMS NG; dimensions in mm"
+    }
+  ],
+  "native_model": {
+    "status": "saved_reopened",
+    "path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-smallbms-ng-bms400100300.dwg",
+    "sha256": "4c784fbf6a14346179404d55dff7ad1cff0b4984f8726a8676702abd26cf9f3a",
+    "bytes": 903202,
+    "initial_document_id": 91,
+    "reopened_document_id": 92,
+    "audit": "9 solids,13 block references,0 errors,0 warnings,0 dropped entities"
+  },
+  "checks": "9/9 SAT-to-SAB reachable vertex comparisons PASS; 8/8 corrected STEP placement matrices PASS; all 9 bodies show reciprocal closed coedge partners.",
+  "geometry_observation": "No analytic cylindrical R1.75 mm face was found in the nine imported SAT solids. Point ranges are recorded separately and do not establish curved-surface extrema.",
+  "script_improvement": "Added scripts/small_bms.py SAT-to-SAB persistence comparator; three actual-case tests pass, including coordinate-change failure and unsupported-transform rejection.",
+  "output_scope": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c054"
+}

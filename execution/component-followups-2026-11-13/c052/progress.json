@@ -1,0 +1,19 @@
+{
+  "component_id": "C052",
+  "part_name": "Holybro Pixhawk 6C hardware",
+  "overall_state": "NEEDS_INPUT",
+  "reference_geometry_state": "DONE",
+  "native_build_save_reopen_state": "DONE",
+  "detailed_case_geometry_state": "NEEDS_INPUT",
+  "actual_model_identity": "gpt-6-luna",
+  "created_document_id": 93,
+  "reopened_document_id": 94,
+  "preserved_active_document_id": 92,
+  "canonical_native_path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/holybro-pixhawk-6c-mechanical-reference.dwg",
+  "source_save_path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c052-build-01/holybro-pixhawk-6c-mechanical-reference.dwg",
+  "native_sha256": "1431c006fa758a4978533b52c398e6f4a9e5d52113d713fd14ebbd75e491de6f",
+  "post_reopen_feature_checks": "PASS",
+  "reopened_audit": {"3D Solid": 1, "errors": 0, "warnings": 0},
+  "offline_tests": "9 passed",
+  "remaining_input": "Holybro Pixhawk 6C case CAD attachment or dimensioned detailed case and connector geometry for the full exterior model."
+}

@@ -1,0 +1,22 @@
+{
+  "job_id": "C055-PM02V3-2026-11-13-01",
+  "part_id": "C055",
+  "part_name": "Holybro PM02V3 module",
+  "representation": "physical source geometry; current coverage contains a nominal envelope constraint only",
+  "units": "mm",
+  "frame": "component-local support-face origin per input sheet; assembly frame X forward/Y left/Z up; exact physical face datum unresolved",
+  "features": [
+    {"name":"Nominal manufacturer envelope","required":true,"value":[25,25,10],"unit":"mm","evidence_status":"manufacturer specification; envelope only","source":"/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md","source_sha256":"306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8","source_location":"Holybro Power Module Comparison, Analog Power Module row, PM02 V3 columns"},
+    {"name":"Mounting-hole availability","required":true,"value":"N/A","unit":"source status","evidence_status":"manufacturer specification","source":"/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md","source_sha256":"306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8","source_location":"Holybro Power Module Comparison, PM02 V3 Mounting Hole row"},
+    {"name":"Power wiring and connectors","required":true,"value":"Holybro states pre-soldered 12 AWG wires and XT60 connectors at both ends.","unit":"source description","evidence_status":"manufacturer claim; exact genders, lengths and poses absent","source":"/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md","source_sha256":"306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8","source_location":"Holybro product description"},
+    {"name":"Signal cables","required":true,"value":"One 6-position Molex cable, 150 mm; one 6-position JST-GH cable, 150 mm.","unit":"mm length","evidence_status":"manufacturer package description; geometry incomplete","source":"/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md","source_sha256":"306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8","source_location":"Holybro product page package list"},
+    {"name":"Installed capacitor","required":true,"value":"220 µF, 63 V, pre-installed","unit":"rating","evidence_status":"manufacturer description; physical dimensions/placement absent","source":"/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md","source_sha256":"306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8","source_location":"Holybro product page and manual"},
+    {"name":"Physical support datum","required":true,"value":null,"question":"Which physical PM02 V3 face defines the input sheet's support-face origin, and what coordinates define that face relative to the body?"},
+    {"name":"Power-wire exit coordinates and vectors","required":true,"value":null,"question":"What are the coordinates and direction vectors of both power-wire exits relative to the physical body datum?"},
+    {"name":"XT60 connector variants and poses","required":true,"value":null,"question":"Which exact XT60 shell genders/variants are fitted at each lead, and what are their body poses and connector-face directions?"},
+    {"name":"Six-position connector models and poses","required":true,"value":null,"question":"What exact Molex series/part number, JST-GH housing part number, and connector orientations are fitted on the 150 mm signal cables?"},
+    {"name":"Capacitor dimensions and location","required":true,"value":null,"question":"What are the installed capacitor case dimensions, terminal spacing, and coordinates/orientation on the board?"},
+    {"name":"Cable OD and source route","required":true,"value":null,"question":"What is the insulated outside diameter and exact centerline path/length of each power lead from its board exit to its XT60 body?"},
+    {"name":"Body outline and envelope scope","required":true,"value":null,"question":"Does the 25 x 25 x 10 mm source envelope include the installed capacitor and shrink tube, and what are the board outline, corner radii, and envelope datum?"}
+  ]
+}

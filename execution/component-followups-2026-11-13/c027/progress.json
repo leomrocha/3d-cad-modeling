@@ -1,0 +1,30 @@
+{
+  "part_id": "C027",
+  "part_name": "Orion Jr 2 16-cell BMS J2BMS16C",
+  "status": "SOURCE_READY_FOR_MANUFACTURER_ASSEMBLY_IMPORT; NATIVE_BUILD_NOT_STARTED",
+  "model": "gpt-6-luna",
+  "updated_utc": "2026-11-13T08:48:48Z",
+  "existing_model_gate": {
+    "result": "NEW_MODEL_REQUIRED",
+    "command": "python scripts/model_inventory.py --index /home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json --work-index /home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root /home/leo/projects/ferme/engineering/module-development/cad --project-root /home/leo/projects/ferme --id C027",
+    "existing_model_found": false,
+    "inventory_checked": 45
+  },
+  "source_evidence_status": "Official Orion product page inspected; linked manufacturer PDF and ZIP acquired; exact STEP member safely extracted, byte size/CRC/SHA pinned; PDF rendered and inspected; source identity/units/placement records parsed.",
+  "geometry_state": "Source geometry ready for native import and saved/readback checks. No native OCS geometry created or altered.",
+  "checks": {
+    "step_ap214": "PASS",
+    "unit_record": "PASS: INCH conversion-based units present",
+    "step_placement_parse": "PASS: 6 explicit source placements parsed",
+    "pdf": "PASS: 3 pages; product variants read as Polycase SL-64 / SL-64B / SL-64C",
+    "native_import": "NOT_RUN",
+    "geometry_readback": "NOT_RUN",
+    "save_reopen": "NOT_RUN",
+    "visual_check": "NOT_RUN"
+  },
+  "alternatives": [
+    "Preserve imported manufacturer assembly with all provided case variants",
+    "Select an individual case only when the exact J2BMS16C mapping is evidenced; none selected"
+  ],
+  "downstream_handoff": "Import the exact member as an inch-based manufacturer assembly. Read source placement frames and native INSUNITS; use scripts/step_placements.py with allow_uniform_scale=True only after explicit unit review. Check retained solids, exact source transformations, drawing-linked case dimensions/holes, saved geometry, reopened geometry and component identity. Keep assembly pose explicit and separate."
+}

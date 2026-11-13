@@ -1,0 +1,336 @@
+{
+  "status": "PASS",
+  "pre_save_document_id": 91,
+  "reopened_document_id": 92,
+  "saved_native_path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-smallbms-ng-bms400100300.dwg",
+  "saved_native_sha256": "4c784fbf6a14346179404d55dff7ad1cff0b4984f8726a8676702abd26cf9f3a",
+  "solid_geometry_checks": [
+    {
+      "handle": "81",
+      "component_block": "SmallBMS NG Sticker-rev01",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 16,
+      "pre_save_unique_vertex_count": 16,
+      "reopened_vertex_count": 16,
+      "reopened_unique_vertex_count": 16,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 10,
+        "coedges": 48,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "85",
+      "component_block": "VEBUSBLE_PCBR3V16_BOTTOM-MOD",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 793,
+      "pre_save_unique_vertex_count": 793,
+      "reopened_vertex_count": 793,
+      "reopened_unique_vertex_count": 793,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 422,
+        "coedges": 2426,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "spline-surface",
+        "torus-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "89",
+      "component_block": "VEBUSBLE_PCBR3V16_TOP-MOD",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 588,
+      "pre_save_unique_vertex_count": 588,
+      "reopened_vertex_count": 588,
+      "reopened_unique_vertex_count": 588,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 310,
+        "coedges": 1790,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "spline-surface",
+        "torus-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "92",
+      "component_block": "moer voor bms kabeltjes 2",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 53,
+      "pre_save_unique_vertex_count": 53,
+      "reopened_vertex_count": 53,
+      "reopened_unique_vertex_count": 53,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 36,
+        "coedges": 174,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "spline-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "96",
+      "component_block": "moer voor bms kabeltjes 1",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 53,
+      "pre_save_unique_vertex_count": 53,
+      "reopened_vertex_count": 53,
+      "reopened_unique_vertex_count": 53,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 36,
+        "coedges": 174,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "spline-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "9A",
+      "component_block": "bmsfemale conn",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 93,
+      "pre_save_unique_vertex_count": 93,
+      "reopened_vertex_count": 93,
+      "reopened_unique_vertex_count": 93,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 60,
+        "coedges": 290,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "spline-surface",
+        "torus-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "9E",
+      "component_block": "bmsmale conn",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 84,
+      "pre_save_unique_vertex_count": 84,
+      "reopened_vertex_count": 84,
+      "reopened_unique_vertex_count": 84,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 53,
+        "coedges": 260,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "spline-surface",
+        "torus-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "A2",
+      "component_block": "Admi09D8FD158ovt_1",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 1500,
+      "pre_save_unique_vertex_count": 1500,
+      "reopened_vertex_count": 1500,
+      "reopened_unique_vertex_count": 1500,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 7,
+        "faces": 785,
+        "coedges": 4442,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "torus-surface"
+      ],
+      "reopened_body_transform": null
+    },
+    {
+      "handle": "AA",
+      "component_block": "Admi13887A0B0ocf_1",
+      "result": "PASS",
+      "method": "canonical reachable SAT/SAB vertex sets; native body graph",
+      "coordinate_unit": "mm as recorded by the source STEP/import job",
+      "rounding_decimals": 7,
+      "pre_save_vertex_count": 1041,
+      "pre_save_unique_vertex_count": 1041,
+      "reopened_vertex_count": 1041,
+      "reopened_unique_vertex_count": 1041,
+      "topology": {
+        "bodies": 1,
+        "lumps": 1,
+        "shells": 1,
+        "faces": 594,
+        "coedges": 3194,
+        "reciprocal_closed_partners": true
+      },
+      "surface_types": [
+        "cone-surface",
+        "plane-surface",
+        "spline-surface"
+      ],
+      "reopened_body_transform": null
+    }
+  ],
+  "source_placement_checks": [
+    {
+      "handle": "B2",
+      "component_block": "SmallBMS NG Sticker-rev01",
+      "source_STEP_item_defined_transformation": 5952,
+      "result": "PASS"
+    },
+    {
+      "handle": "B3",
+      "component_block": "SmallBMS__2020 model improved locking",
+      "source_STEP_item_defined_transformation": 59518,
+      "result": "PASS"
+    },
+    {
+      "handle": "B4",
+      "component_block": "moer voor bms kabeltjes 2",
+      "source_STEP_item_defined_transformation": 25660,
+      "result": "PASS"
+    },
+    {
+      "handle": "B5",
+      "component_block": "moer voor bms kabeltjes 1",
+      "source_STEP_item_defined_transformation": 73232,
+      "result": "PASS"
+    },
+    {
+      "handle": "B6",
+      "component_block": "bmsfemale conn",
+      "source_STEP_item_defined_transformation": 14517,
+      "result": "PASS"
+    },
+    {
+      "handle": "B7",
+      "component_block": "bmsmale conn",
+      "source_STEP_item_defined_transformation": 2504,
+      "result": "PASS"
+    },
+    {
+      "handle": "B8",
+      "component_block": "15EDGK-5.08-07P-1Y-00A&Z(H)",
+      "source_STEP_item_defined_transformation": 41913,
+      "result": "PASS"
+    },
+    {
+      "handle": "B9",
+      "component_block": "15EDGRC-5.08-07P-1Y-00A&Z(H)",
+      "source_STEP_item_defined_transformation": 48321,
+      "result": "PASS"
+    }
+  ],
+  "assembly_point_observation": {
+    "measurement": "placed native vertex-point ranges",
+    "coordinate_unit": "mm",
+    "instances": 9,
+    "vertex_point_count": 4221,
+    "ranges": [
+      [
+        -51.13599999999996,
+        55.50000000000005
+      ],
+      [
+        -10.49999999999965,
+        12.336202529408675
+      ],
+      [
+        -22.64612815155122,
+        23.178223638648788
+      ]
+    ],
+    "spans": [
+      106.63600000000001,
+      22.836202529408325,
+      45.82435179020001
+    ],
+    "curved_surface_extrema": "not established by vertex points"
+  },
+  "source_drawing_dimensions_mm": {
+    "housing_envelope": [
+      107,
+      46,
+      23
+    ],
+    "slot_pitch": 97,
+    "slot_arc_centres_separation": 12,
+    "slot_end_radius": 1.75,
+    "mounting_foot_thickness": 3
+  },
+  "analytic_cylindrical_slot_end_radius_1_75_mm_found": false,
+  "analytic_cylinder_surface_count": 482,
+  "slot_surface_observation": "No R1.75 mm analytic cylindrical face among the nine imported SAT solids. This checks cone-surface records only and does not treat point coordinates as slot profiles."
+}

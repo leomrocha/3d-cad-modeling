@@ -1,0 +1,11 @@
+{
+  "status": "SOURCE_READY",
+  "scope": "manufacturer STEP assembly import and source-linked checks",
+  "job": "source-job.json",
+  "limitations_by_feature": {
+    "case_variant_mapping": "preserve variants; exact J2BMS16C mapping not identified",
+    "board_and_connector_details": "not labeled by retained CAD/drawing sources"
+  },
+  "native_build": "NOT_STARTED",
+  "writer_slot": "WAITING_FOR_C054_RELEASE"
+}

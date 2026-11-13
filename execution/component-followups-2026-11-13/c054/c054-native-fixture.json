@@ -1,0 +1,13 @@
+{
+  "source_model": "Victron smallBMS NG BMS400100300",
+  "source_component_block": "SmallBMS NG Sticker-rev01",
+  "pre_save_document_id": 91,
+  "reopened_document_id": 92,
+  "pre_save_solid_handle": "81",
+  "reopened_solid_handle": "81",
+  "pre_save_sat_sha256": "a572e6532f217c0b6ec7854d0b43639799110e86a45aeb1c4280a50f782dc2d9",
+  "reopened_sab_sha256": "6c129b32e72ad065cf4368bb8fd1d8c06920183510219a198fb2f3a3f0bb4ba9",
+  "pre_save_sat_path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c054/c054-real-pre-save.sat",
+  "reopened_sab_path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c054/c054-real-reopened.sab",
+  "fixture_is_derived_actual_model_data": true
+}

@@ -1,0 +1,56 @@
+{
+  "result": "PASS",
+  "stage": "reopened after same-ID recovery",
+  "request_id": "c054-smallbms-save-01:reopen",
+  "document_id": 92,
+  "path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-smallbms-ng-bms400100300.dwg",
+  "sha256": "4c784fbf6a14346179404d55dff7ad1cff0b4984f8726a8676702abd26cf9f3a",
+  "bytes": 903202,
+  "reopened_audit": {
+    "bounds": {
+      "max": [
+        130.06058548656202,
+        48.52614774354955,
+        41.04785836516121
+      ],
+      "min": [
+        -69.33941451343775,
+        -27.19385225645117,
+        -43.04785836516122
+      ]
+    },
+    "document_id": 92,
+    "issues": [],
+    "manifest": {
+      "by_layer": {
+        "0": 22
+      },
+      "by_type": {
+        "3D Solid": 9,
+        "Block Reference": 13
+      },
+      "total": 22
+    },
+    "ok": true,
+    "source": {
+      "dxf_structure": null,
+      "format": "dwg",
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-smallbms-ng-bms400100300.dwg",
+      "sha256": "4c784fbf6a14346179404d55dff7ad1cff0b4984f8726a8676702abd26cf9f3a",
+      "version": "AC1032"
+    },
+    "status": "passed",
+    "summary": {
+      "errors": 0,
+      "warnings": 0
+    },
+    "target": {
+      "dropped_on_save": 0,
+      "format": "dwg",
+      "lossless": true,
+      "version": "AC1032"
+    },
+    "unknown_entities": 0
+  },
+  "actual_model": "gpt-6-luna"
+}

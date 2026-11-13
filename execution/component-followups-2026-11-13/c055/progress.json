@@ -1,0 +1,126 @@
+{
+  "part_id": "C055",
+  "part_name": "Holybro PM02V3 module",
+  "observation_date": "2026-11-13",
+  "state": "SOURCE_REVIEW_COMPLETE_NATIVE_SLOT_WAITING",
+  "actual_model": "gpt-6-luna",
+  "scope": {
+    "component": "PM02V3 power module only; separate from Pixhawk 6C",
+    "ferme_job_directory": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c055-build-01/",
+    "report_directory": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/",
+    "native_ocs_mutation": "WAITING_FOR_ROOT_WRITER_SLOT"
+  },
+  "local_sources_reviewed": [
+    {
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/c055-holybro-pm02v3-module.md",
+      "status": "existing source sheet inspected",
+      "facts": [
+        "mm units",
+        "origin at module support face",
+        "mark power-cable direction",
+        "assembly frame X forward/Y left/Z up",
+        "preserve actual wire exits",
+        "record board/package, lead exits, connector bodies and source fixing method",
+        "PM02V3 input 2S-12S"
+      ]
+    },
+    {
+      "path": "/home/leo/projects/ferme/engineering/module-development/parts/control-power/holybro-pixhawk-6c-pm02.md",
+      "status": "existing related research inspected",
+      "facts": [
+        "records set-level statement PM02V3 input 2S-12S",
+        "records manual/product-document route from Reichelt listing",
+        "Pixhawk 6C remains a separately identified component",
+        "no module CAD/license recorded"
+      ]
+    },
+    {
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json",
+      "status": "C055 manifest record inspected",
+      "facts": [
+        "electrical",
+        "auxiliary controller supply proposal",
+        "quantity 1",
+        "manufacturer hardware reference",
+        "NOT_STARTED",
+        "existing_cad empty"
+      ]
+    },
+    {
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json",
+      "status": "C055 work entry inspected",
+      "facts": [
+        "NOT_STARTED",
+        "geometry_inputs empty"
+      ]
+    }
+  ],
+  "model_gate": {
+    "command": "python scripts/model_inventory.py --index /home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json --work-index /home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json --cad-root /home/leo/projects/ferme/engineering/module-development/cad --project-root /home/leo/projects/ferme --id C055",
+    "result": "NEW_MODEL_REQUIRED",
+    "filesystem_model_files_checked": 44,
+    "attributed_models": [],
+    "candidate_models": [],
+    "2d_references": [],
+    "dependency_models": [],
+    "recorded_state": "NOT_STARTED"
+  },
+  "implementation": {
+    "source_ready": false,
+    "native_model": "NOT_STARTED",
+    "saved_readback": "NOT_STARTED",
+    "reason": "Only the nominal envelope is source-backed; the input sheet requires a full part with physical exits/fixing. Native writer slot held by C054."
+  },
+  "official_sources": [
+    {
+      "title": "Holybro PM02 V3 Power Module (12S) product page",
+      "url": "https://holybro.com/collections/power-modules-pdbs/products/pm02-v3-12s-power-module",
+      "status": "web inspection 2026-11-13; not downloaded; source review in source-review.md"
+    },
+    {
+      "title": "Holybro Power Module Comparison",
+      "url": "https://docs.holybro.com/power-module-and-pdb/power-module-comparison",
+      "status": "web inspection 2026-11-13; 25x25x10 mm and Mounting Hole N/A for PM02 V3; not downloaded"
+    },
+    {
+      "title": "PM02 V3 Power Module Manual",
+      "url": "https://cdn.shopify.com/s/files/1/0604/5905/7341/files/Holybro_PM02_v3_PowerModule_Manual.pdf?v=1646987798",
+      "status": "official PDF inspected through web, 3 pages; local curl failed DNS before transfer; not downloaded"
+    },
+    {
+      "title": "Holybro power-module 3D CAD download index",
+      "url": "https://docs.holybro.com/power-module-and-pdb/power-module/download",
+      "status": "official index inspected; lists PM02D, PM03D, PCBA-PM06, PM07, PM08, PM08D; no analog PM02 V3 model"
+    },
+    {
+      "title": "JST GH Connector series drawing",
+      "url": "https://www.jst-mfg.com/product/pdf/eng/eGH.pdf",
+      "status": "manufacturer drawing inspected through web; GHR-06V-S housing A=6.25 mm, B=8.75 mm; pitch 1.25 mm; does not identify exact mating assembly polarity"
+    }
+  ],
+  "source_readiness": {
+    "state": "NEEDS_INPUT_FOR_FULL_PHYSICAL_MODEL",
+    "envelope_feature": {
+      "value_mm": [
+        25,
+        25,
+        10
+      ],
+      "status": "manufacturer nominal envelope, not measured; datum/body volume scope not defined"
+    },
+    "source_ready_feature_group": "envelope constraint only",
+    "required_inputs": [
+      "support face/physical datum identity and support coordinates",
+      "power cable exit coordinates, lead length and insulated OD or an exact manufacturer assembly model",
+      "XT60 genders/orientations and body poses",
+      "signal connector exact Molex series/model, JST housing/mating-header model and orientations",
+      "installed capacitor case dimensions, terminal geometry and coordinates",
+      "wire routing geometry or source-defined local direction vectors"
+    ]
+  },
+  "original_acquisition": {
+    "new_original_downloaded": false,
+    "official_pdf_curl_attempt": "FAILED before transfer: DNS resolution for cdn.shopify.com unavailable",
+    "sha256": null
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "job_id": "C055-PM02V3-2026-11-13-01",
+  "part_id": "C055",
+  "part_name": "Holybro PM02V3 module",
+  "state": "NEEDS_INPUT",
+  "questions": [
+    {
+      "feature": "Physical support datum",
+      "question": "Which physical PM02 V3 face defines the input sheet's support-face origin, and what coordinates define that face relative to the body?"
+    },
+    {
+      "feature": "Power-wire exit coordinates and vectors",
+      "question": "What are the coordinates and direction vectors of both power-wire exits relative to the physical body datum?"
+    },
+    {
+      "feature": "XT60 connector variants and poses",
+      "question": "Which exact XT60 shell genders/variants are fitted at each lead, and what are their body poses and connector-face directions?"
+    },
+    {
+      "feature": "Six-position connector models and poses",
+      "question": "What exact Molex series/part number, JST-GH housing part number, and connector orientations are fitted on the 150 mm signal cables?"
+    },
+    {
+      "feature": "Capacitor dimensions and location",
+      "question": "What are the installed capacitor case dimensions, terminal spacing, and coordinates/orientation on the board?"
+    },
+    {
+      "feature": "Cable OD and source route",
+      "question": "What is the insulated outside diameter and exact centerline path/length of each power lead from its board exit to its XT60 body?"
+    },
+    {
+      "feature": "Body outline and envelope scope",
+      "question": "Does the 25 x 25 x 10 mm source envelope include the installed capacitor and shrink tube, and what are the board outline, corner radii, and envelope datum?"
+    }
+  ],
+  "source_observations": [
+    {
+      "feature": "Nominal manufacturer envelope",
+      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
+      "bytes": 6444
+    },
+    {
+      "feature": "Mounting-hole availability",
+      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
+      "bytes": 6444
+    },
+    {
+      "feature": "Power wiring and connectors",
+      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
+      "bytes": 6444
+    },
+    {
+      "feature": "Signal cables",
+      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
+      "bytes": 6444
+    },
+    {
+      "feature": "Installed capacitor",
+      "path": "/home/leo/projects/3dmodeling/execution/component-followups-2026-11-13/c055/source-review.md",
+      "sha256": "306144f210fc096fb8d34bd66ace56156ae8050474a7b0dc0209ddf55b91ffd8",
+      "bytes": 6444
+    }
+  ],
+  "meaning": "Required input coverage and source revision checks; geometry construction and measurement have separate results."
+}

@@ -1,0 +1,16 @@
+HTTP/2 200 
+date: Fri, 13 Nov 2026 08:32:28 GMT
+content-type: application/pdf
+content-length: 650438
+expires: Fri, 13 Nov 2026 11:12:41 GMT
+server: PWS/8.3.1.0.8
+last-modified: Thu, 20 Mar 2025 08:06:28 GMT
+etag: "67dbcc84-9ecc6"
+cache-control: private, no-cache
+access-control-allow-origin: https://cms.victronenergy.com
+accept-ranges: bytes
+age: 4793
+via: 1.1 kf160:4 (W), 1.1 PSfgblPAR1ke67:2 (W)
+x-px: ms PSfgblPAR1ke67CDG, ht kf160000
+x-ws-request-id: 6af6cb1c_PSfgblPAR1ke67_49952-3126
+
