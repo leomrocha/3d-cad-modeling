@@ -14,6 +14,10 @@
       "source": "requirements-native.txt",
       "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47"
     },
+    "scripts/annular_job_runner.py": {
+      "source": "scripts/annular_job_runner.py",
+      "sha256": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa"
+    },
     "scripts/annular_reference.py": {
       "source": "scripts/annular_reference.py",
       "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334"

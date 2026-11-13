@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-13",
+  "executing_model": "gpt-6.1-sol",
+  "status": "DONE",
+  "scope": "Current worktree, including annular runner; no snapshot exclusions",
+  "finalize": "PASS",
+  "verify": "PASS",
+  "synchronisation": "PASS",
+  "registrations": "PASS",
+  "isolated_installation_checks": "PASS",
+  "annular_tests_passed": 14,
+  "package_tests_passed": 20,
+  "optional_live_ocs_tests_skipped": 1,
+  "telemetry": "disabled",
+  "hashes": {
+    "scripts/annular_job_runner.py": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa",
+    "skills/cad-ocs-engineering/scripts/annular_job_runner.py": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa",
+    "skills/cad-ocs-engineering/references/annular-job-runner.md": "c7120226153ad0c3719a7c7efc1f1ae3812fa6fde38fdcf0e8ff56a326364270",
+    "skills/cad-ocs-engineering/package-manifest.json": "1590ef1bc38709e7f0807363bea2ffd345ce4f06ecd5cae1c78f619cc774cdbc",
+    "tests/test_annular_job_runner.py": "ca9bff5b8ea8b64a4cc0283d752a51225e5e8cc5059408e3dec2489f41800e70"
+  }
+}

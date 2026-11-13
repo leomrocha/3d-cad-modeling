@@ -46896,12 +46896,112 @@
         "docs/skill-packaging.md",
         "execution/skills-installation-guide-2026-11-13.md"
       ]
+    },
+    {
+      "id": "SRC-a73bb7336eb2",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/annular_job_runner.py",
+      "title": "Source-bound annular job runner",
+      "summary": "Caller-supplied source pins, dimensions in millimetres, +Z annular frame and paths feed the existing geometry, OCS transport and persistence helpers; default preflight is read-only and native execution requires --allow-write.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_tested"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/annular_job_runner.py",
+          "title": "Source-bound annular job runner",
+          "summary": "Caller-supplied source pins, dimensions in millimetres, +Z annular frame and paths feed the existing geometry, OCS transport and persistence helpers; default preflight is read-only and native execution requires --allow-write.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_tested",
+          "sha256": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa",
+          "referring_documents": [
+            "execution/skill-synchronisation-2026-11-13.md",
+            "docs/tools.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/skill-synchronisation-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skill-synchronisation-2026-11-13.json",
+        "execution/skill-synchronisation-2026-11-13.md",
+        "docs/tools.md",
+        "skills/README.md"
+      ]
+    },
+    {
+      "id": "SRC-7cdf74680cbf",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-job-runner.md",
+      "title": "Source-bound annular job procedure",
+      "summary": "Documents source/readiness inputs, caller-owned roots, units/frame, guarded execution, native and saved evidence, cleanup and recovery.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_tested"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/annular-job-runner.md",
+          "title": "Source-bound annular job procedure",
+          "summary": "Documents source/readiness inputs, caller-owned roots, units/frame, guarded execution, native and saved evidence, cleanup and recovery.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_tested",
+          "sha256": "c7120226153ad0c3719a7c7efc1f1ae3812fa6fde38fdcf0e8ff56a326364270",
+          "referring_documents": [
+            "execution/skill-synchronisation-2026-11-13.md",
+            "docs/tools.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/skill-synchronisation-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skill-synchronisation-2026-11-13.json",
+        "execution/skill-synchronisation-2026-11-13.md",
+        "docs/tools.md",
+        "skills/README.md"
+      ]
+    },
+    {
+      "id": "SRC-afde8243a693",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/tests/test_annular_job_runner.py",
+      "title": "Annular runner regression tests",
+      "summary": "Fourteen existing tests exercise model reuse gates, source pin changes, request identities, replay receipts, point persistence and read-only preflight.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_tested"
+      ],
+      "observations": [
+        {
+          "local_original": "tests/test_annular_job_runner.py",
+          "title": "Annular runner regression tests",
+          "summary": "Fourteen existing tests exercise model reuse gates, source pin changes, request identities, replay receipts, point persistence and read-only preflight.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_tested",
+          "sha256": "ca9bff5b8ea8b64a4cc0283d752a51225e5e8cc5059408e3dec2489f41800e70",
+          "referring_documents": [
+            "execution/skill-synchronisation-2026-11-13.md",
+            "docs/tools.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/skill-synchronisation-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skill-synchronisation-2026-11-13.json",
+        "execution/skill-synchronisation-2026-11-13.md",
+        "docs/tools.md",
+        "skills/README.md"
+      ]
     }
   ],
   "source_record_documents": [
     "research/sources/circular-boundary-reader-2026-11-13.json",
     "research/sources/conical-washer-profile-2026-11-13.json",
     "research/sources/skill-completion-gate-2026-11-13.json",
+    "research/sources/skill-synchronisation-2026-11-13.json",
     "research/sources/skills-compliance-2026-11-13.json",
     "research/sources/tooling-registration-2026-11-13.json"
   ]

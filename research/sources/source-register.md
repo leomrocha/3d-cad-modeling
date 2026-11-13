@@ -17139,3 +17139,39 @@ Summary: Collaborator antfu confirms installation telemetry indexes skills autom
 Evidence: delegated_web_inspection_report.
 
 Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.
+
+<a id="src-a73bb7336eb2"></a>
+
+## SRC-a73bb7336eb2 — Source-bound annular job runner
+
+Original source: [${MODELING_ROOT}/scripts/annular_job_runner.py](../../scripts/annular_job_runner.py)
+
+Summary: Caller-supplied source pins, dimensions in millimetres, +Z annular frame and paths feed the existing geometry, OCS transport and persistence helpers; default preflight is read-only and native execution requires --allow-write.
+
+Evidence: local_artifact_inspected_and_tested.
+
+Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md.
+
+<a id="src-7cdf74680cbf"></a>
+
+## SRC-7cdf74680cbf — Source-bound annular job procedure
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-job-runner.md](../../skills/cad-ocs-engineering/references/annular-job-runner.md)
+
+Summary: Documents source/readiness inputs, caller-owned roots, units/frame, guarded execution, native and saved evidence, cleanup and recovery.
+
+Evidence: local_artifact_inspected_and_tested.
+
+Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md.
+
+<a id="src-afde8243a693"></a>
+
+## SRC-afde8243a693 — Annular runner regression tests
+
+Original source: [${MODELING_ROOT}/tests/test_annular_job_runner.py](../../tests/test_annular_job_runner.py)
+
+Summary: Fourteen existing tests exercise model reuse gates, source pin changes, request identities, replay receipts, point persistence and read-only preflight.
+
+Evidence: local_artifact_inspected_and_tested.
+
+Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md.
