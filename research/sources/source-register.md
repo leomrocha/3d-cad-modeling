@@ -16143,3 +16143,867 @@ Source: [Keiyama JA08-700-4T100-02 steel rim](https://www.keiyama.eu/jante-nue-a
 Summary: Exact KeiyamaJA08-700-4T100-02 listing for7x8,4x100,Ø60,ET0 andØ13.5 fixing/Ø11.3 valve holes.
 
 Evidence: web_inspected_source_claim.
+
+<a id="src-0ee6f66e73f1"></a>
+
+## SRC-0ee6f66e73f1 — Existing isolated skill installation suite
+
+Original source: [${MODELING_ROOT}/tests/test_skill_packages.py](../../tests/test_skill_packages.py)
+
+Summary: Reused actual local CLI copy installations, isolated Python environments, local-link and import checks, intake/DXF fixtures and optional state check.
+
+Evidence: local_source_inspected_and_reused.
+
+Documents: research/sources/skill-completion-gate-2026-11-13.json, execution/skill-completion-gate-2026-11-13.md, docs/skill-packaging.md, skills/cad-ocs-engineering/references/package-completion.md.
+
+<a id="src-2a5b2783d970"></a>
+
+## SRC-2a5b2783d970 — Saved nominal free washer M5-2H
+
+Original source: `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2H/result-r01.json`
+
+Summary: Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.
+
+Evidence: executed_native_geometry_and_persistence_result.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-2b01d57fa463"></a>
+
+## SRC-2b01d57fa463 — Saved nominal free washer M6-2L
+
+Original source: `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2L/result-r01.json`
+
+Summary: Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.
+
+Evidence: executed_native_geometry_and_persistence_result.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-387295c13815"></a>
+
+## SRC-387295c13815 — Conical-washer package integration
+
+Original source: [${MODELING_ROOT}/execution/conical-washer-package-checks-2026-11-13.json](../../execution/conical-washer-package-checks-2026-11-13.json)
+
+Summary: Current merged cad-ocs-engineering package includes the helper and procedure; five isolated package tests passed and optional live OCS test skipped. Generated files match committed canonical source.
+
+Evidence: executed_package_checks.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-4ef2a718e505"></a>
+
+## SRC-4ef2a718e505 — Conical free-washer implementation
+
+Original source: [${MODELING_ROOT}/scripts/conical_washer_profile.py](../../scripts/conical_washer_profile.py)
+
+Summary: Validates external source dimensions and solves the unique supported shallow strip geometry; constructs by existing revolution and verifies saved conical surfaces and metadata.
+
+Evidence: implementation_artifact.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-4f408aece302"></a>
+
+## SRC-4f408aece302 — Conical washer modeling procedure
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/conical-washer-profile.md](../../skills/cad-ocs-engineering/references/conical-washer-profile.md)
+
+Summary: Records exact source dimension directions, supported shallow branch, source/loaded height separation, native cone checks, persistence and completed-document closure.
+
+Evidence: documented_procedure.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-668e7636873a"></a>
+
+## SRC-668e7636873a — Existing installed package checker
+
+Original source: [${MODELING_ROOT}/scripts/package_check.py](../../scripts/package_check.py)
+
+Summary: Reused packaged hashes, isolated imports, pinned dependencies and optional read-only OCS state check; kept CAD-only runtime imports conditional.
+
+Evidence: local_source_inspected_and_reused.
+
+Documents: research/sources/skill-completion-gate-2026-11-13.json, execution/skill-completion-gate-2026-11-13.md, docs/skill-packaging.md, skills/cad-ocs-engineering/references/package-completion.md.
+
+<a id="src-7246d756742b"></a>
+
+## SRC-7246d756742b — Saved nominal free washer M5-2L
+
+Original source: `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2L/result-r01.json`
+
+Summary: Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.
+
+Evidence: executed_native_geometry_and_persistence_result.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-76a35b7a97b4"></a>
+
+## SRC-76a35b7a97b4 — Saved nominal free washer M6-2H
+
+Original source: `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2H/result-r01.json`
+
+Summary: Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.
+
+Evidence: executed_native_geometry_and_persistence_result.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-bb12be45b6cf"></a>
+
+## SRC-bb12be45b6cf — Existing skill package builder
+
+Original source: [${MODELING_ROOT}/scripts/build_skill_packages.py](../../scripts/build_skill_packages.py)
+
+Summary: Reused source discovery, per-package copying and source/hash manifests; extended registration, dependency traversal and completion gates.
+
+Evidence: local_source_inspected_and_reused.
+
+Documents: research/sources/skill-completion-gate-2026-11-13.json, execution/skill-completion-gate-2026-11-13.md, docs/skill-packaging.md, skills/cad-ocs-engineering/references/package-completion.md.
+
+<a id="src-d03221452d4f"></a>
+
+## SRC-d03221452d4f — Current component development workflow
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md](../../skills/cad-ocs-engineering/SKILL.md)
+
+Summary: Added mandatory package completion and validation before recording a reusable tooling improvement complete.
+
+Evidence: local_source_inspected_and_reused.
+
+Documents: research/sources/skill-completion-gate-2026-11-13.json, execution/skill-completion-gate-2026-11-13.md, docs/skill-packaging.md, skills/cad-ocs-engineering/references/package-completion.md.
+
+<a id="src-e867218640dd"></a>
+
+## SRC-e867218640dd — Synthetic conical washer tests
+
+Original source: [${MODELING_ROOT}/tests/test_conical_washer_profile.py](../../tests/test_conical_washer_profile.py)
+
+Summary: Ten passing tests cover independent forward-generated section geometry, source hash/root resolution, normal thickness and area invariants, invalid/ambiguous inputs, guarded construction and native inspection epochs.
+
+Evidence: executed_synthetic_tests.
+
+Documents: research/sources/conical-washer-profile-2026-11-13.json, execution/conical-washer-profile-2026-11-13.md.
+
+<a id="src-00583f58b6df"></a>
+
+## SRC-00583f58b6df — Envelope reference
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-reference.md](../../skills/cad-ocs-engineering/references/envelope-reference.md)
+
+Summary: Use `${SKILL_ROOT}/scripts/envelope_reference.py` when the source supports an overall product or clearance envelope and a detailed component body is not available. The output is one axis-aligned reference volume. It carries no implied PCB outline, mounting surface, connector locations or physical construction.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-073a85efa0cf"></a>
+
+## SRC-073a85efa0cf — Source variant table
+
+Original source: [${MODELING_ROOT}/scripts/source_variant_table.py](../../scripts/source_variant_table.py)
+
+Summary: Select one value from a reviewer-transcribed variant comparison table.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-09518fd8874a"></a>
+
+## SRC-09518fd8874a — Existing bearing
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-bearing.md](../../skills/cad-ocs-engineering/references/existing-bearing.md)
+
+Summary: Executed case: [SKF SY20TF iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c009-bearing.md). Runtime: gpt-6.1-sol, 12 November 2026.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-09a3bbda44d7"></a>
+
+## SRC-09a3bbda44d7 — Component procedure
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/component-procedure.md](../../skills/cad-ocs-engineering/references/component-procedure.md)
+
+Summary: 1. **Index reading:** `scripts/part_index.py` accepts explicit `--index` paths. It reads a FERME-style component list or an existing dictionary with `entries`. `--id` selects an exact identity; `--query` matches all supplied case-insensitive text terms in the original record. Returned rows retain record kind, source path, source SHA-256 and original fields.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-194f723b82c9"></a>
+
+## SRC-194f723b82c9 — Tabbed battery
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/tabbed-battery.md](../../skills/cad-ocs-engineering/references/tabbed-battery.md)
+
+Summary: Executed case: BMW i3 94 Ah saved exterior (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json`). Model: gpt-6.1-sol.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-1d565b48e952"></a>
+
+## SRC-1d565b48e952 — Envelope job runner
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-job-runner.md](../../skills/cad-ocs-engineering/references/envelope-job-runner.md)
+
+Summary: Use `scripts/envelope_job_runner.py` to run an external, source-pinned envelope job through the existing OCS `Client`, `Journal`, `envelope_reference`, `source_metadata`, and `save_reopen` APIs. Component names, source values, request namespace, output path, and scope stay in the caller's job directory. The generic runner contains no product identifiers or dimensions.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-1d84d83da1e5"></a>
+
+## SRC-1d84d83da1e5 — Small bms
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/small-bms.md](../../skills/cad-ocs-engineering/references/small-bms.md)
+
+Summary: The official Rev00 dimension drawing identifies `BMS400100300 smallBMS NG`, states millimetres, and gives the housing envelope as 107 × 46 × 23 mm. Its mounting detail gives 97 mm slot-axis pitch, 12 mm slot-end-arc centre separation, `R1.75 (4x)`, and 3 mm mounting-foot thickness. The STEP AP214 file is linked from the same official product page and contains nine placed solids inside thirteen block references. Preserve the drawing values as source claims and record the STEP member names and coordinates as separate model observations.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-2299f268daed"></a>
+
+## SRC-2299f268daed — Dimension limits and datums
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/dimension-limits-and-datums.md](../../skills/cad-ocs-engineering/references/dimension-limits-and-datums.md)
+
+Summary: Use a source callout as a dimensional limit when its label includes `Max`, `Min`, or another explicit bound. Preserve the bound in metadata and checks. A clearance-reference volume may use the bound as its limit surface, but its solid thickness or envelope is not a claim that the manufactured part equals that bound.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-2552764ce2c1"></a>
+
+## SRC-2552764ce2c1 — Hexagonal reference
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/hexagonal-reference.md](../../skills/cad-ocs-engineering/references/hexagonal-reference.md)
+
+Summary: Use `scripts/hexagonal_reference.py` when an external component job supplies a regular hexagonal across-flats dimension and axial height. The helper creates one six-sided prism reference with the caller's placement frame. A caller may add a source-dimensioned coaxial through-bore by binding a required diameter feature; a nominal thread designation by itself remains axis metadata.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-25547b53182a"></a>
+
+## SRC-25547b53182a — Assembly units
+
+Original source: [${MODELING_ROOT}/scripts/assembly_units.py](../../scripts/assembly_units.py)
+
+Summary: Plan a drawing-unit change for explicit native assembly root inserts.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-27305c93cb67"></a>
+
+## SRC-27305c93cb67 — Profile reference
+
+Original source: [${MODELING_ROOT}/scripts/profile_reference.py](../../scripts/profile_reference.py)
+
+Summary: Build and inspect a source-traced polygon extruded as a reference volume.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-2c4d624166ce"></a>
+
+## SRC-2c4d624166ce — Verification
+
+Original source: [${MODELING_ROOT}/scripts/cadtools/verification.py](../../scripts/cadtools/verification.py)
+
+Summary: Offline feature checks and explicit live save/reopen checks.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-2d515a15b8e7"></a>
+
+## SRC-2d515a15b8e7 — Document cleanup
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/document-cleanup.md](../../skills/cad-ocs-engineering/references/document-cleanup.md)
+
+Summary: Use `scripts/ocs_document_cleanup.py` after a component model has passed its save/reopen persistence checks. The helper returns a separate cleanup result; it never changes the component's completed model status.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-2d89ba45ac89"></a>
+
+## SRC-2d89ba45ac89 — Small bms
+
+Original source: [${MODELING_ROOT}/scripts/small_bms.py](../../scripts/small_bms.py)
+
+Summary: Source-recorded smallBMS assembly persistence checks.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-31b9e4edfeca"></a>
+
+## SRC-31b9e4edfeca — Manufacturer assembly
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md](../../skills/cad-ocs-engineering/references/manufacturer-assembly.md)
+
+Summary: Executed case: Victron BAT524110620 battery (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json`). Coordinator/model: gpt-6.1-sol. Reusable implementation: [step_placements.py](../scripts/step_placements.py), with the existing [native ACIS reader](../scripts/native_acis.py).
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-463c9a6ee135"></a>
+
+## SRC-463c9a6ee135 — Annular reference
+
+Original source: [${MODELING_ROOT}/scripts/annular_reference.py](../../scripts/annular_reference.py)
+
+Summary: Build and check a source-bound annular solid reference.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-4b20bd4fb621"></a>
+
+## SRC-4b20bd4fb621 — Shared feature checks
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/shared-feature-checks.md](../../skills/cad-ocs-engineering/references/shared-feature-checks.md)
+
+Summary: Executed evidence: [driver iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c012-driver.md), [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md). Code: [feature_checks.py](../scripts/feature_checks.py).
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-4b9adca071bd"></a>
+
+## SRC-4b9adca071bd — Envelope reference
+
+Original source: [${MODELING_ROOT}/scripts/envelope_reference.py](../../scripts/envelope_reference.py)
+
+Summary: Build and inspect a source-dimensioned axis-aligned reference envelope.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-4c498075e81e"></a>
+
+## SRC-4c498075e81e — Ocs runtime
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/ocs-runtime.md](../../skills/cad-ocs-engineering/references/ocs-runtime.md)
+
+Summary: 1. **Software:** Python 3.12 on Linux or macOS, the pinned packages in [requirements.txt](../requirements.txt), and an already-running OpenCADStudio native-control session. The transport uses a local TCP socket and the existing session descriptor. It reads the session's authentication token privately.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-508abf022105"></a>
+
+## SRC-508abf022105 — Pixhawk
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/pixhawk.md](../../skills/cad-ocs-engineering/references/pixhawk.md)
+
+Summary: Use this procedure for C052 when the currently retained source is the Holybro
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-5866f70afb27"></a>
+
+## SRC-5866f70afb27 — Calibrated trace
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/calibrated-trace.md](../../skills/cad-ocs-engineering/references/calibrated-trace.md)
+
+Summary: Use `scripts/calibrated_trace.py` when reconstructing external geometry from a dimensioned raster drawing and no manufacturer 3D CAD is available. The helper receives source pixel points, a pixel origin, signed per-axis scale, point-pick/origin/scale uncertainties, and optional coordinate units. It returns source pixels, mapped coordinates, and a conservative per-axis worst-case interval. It performs no image tracing and does not choose datums, dimensions, units, or geometry.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-5fdb93056178"></a>
+
+## SRC-5fdb93056178 — Toroidal reference
+
+Original source: [${MODELING_ROOT}/scripts/toroidal_reference.py](../../scripts/toroidal_reference.py)
+
+Summary: Construct and inspect source-bound circular-section torus references.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-60725e76bcc2"></a>
+
+## SRC-60725e76bcc2 — Ocs control
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/ocs-control.md](../../skills/cad-ocs-engineering/references/ocs-control.md)
+
+Summary: Initial live evidence: OCS 2026.42, Linux, 2026-10-20. Native control works even without MCP tools exposed in this chat. Existing session descriptors under OCS configuration (normal or Snap) contain a session ID, local port and private token. Never print tokens. Do not launch another editor/headless process or change connection settings to evade a connection failure.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-64b83159bd9a"></a>
+
+## SRC-64b83159bd9a — Hexagonal reference
+
+Original source: [${MODELING_ROOT}/scripts/hexagonal_reference.py](../../scripts/hexagonal_reference.py)
+
+Summary: Construct and verify a source-bound regular hexagonal prism reference.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-694cbef94f11"></a>
+
+## SRC-694cbef94f11 — Source perimeter chains
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-perimeter-chains.md](../../skills/cad-ocs-engineering/references/source-perimeter-chains.md)
+
+Summary: Use this procedure when a technical drawing stores a projected outline as separate vector paths and a source-traced profile reference needs one closed boundary. Keep the source drawing, vector extraction, trace, and constructed profile as separate records.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-70ca2e222888"></a>
+
+## SRC-70ca2e222888 — Computational engineering
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/computational-engineering.md](../../skills/cad-ocs-engineering/references/computational-engineering.md)
+
+Summary: Read for actual equations, procedural geometry or solver preparation. This reference installs nothing and selects no model fidelity.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-76d4d724e45e"></a>
+
+## SRC-76d4d724e45e — Retained artifacts
+
+Original source: [${MODELING_ROOT}/scripts/retained_artifacts.py](../../scripts/retained_artifacts.py)
+
+Summary: Verify an external retained-file manifest without changing its artifacts.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-78b4c1846983"></a>
+
+## SRC-78b4c1846983 — Pixhawk
+
+Original source: [${MODELING_ROOT}/scripts/pixhawk.py](../../scripts/pixhawk.py)
+
+Summary: Build and check the source-dimensioned Pixhawk 6C mechanical envelope.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-7a2c10dcacbb"></a>
+
+## SRC-7a2c10dcacbb — Source first and tube
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md](../../skills/cad-ocs-engineering/references/source-first-and-tube.md)
+
+Summary: Observed case: main frame longitudinal rail (P01), 12 November 2026. Executing model: gpt-6.1-sol. [Execution evidence](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/p01-rail-build.md).
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-7acf2b76d395"></a>
+
+## SRC-7acf2b76d395 — Ocs control
+
+Original source: [${MODELING_ROOT}/scripts/ocs_control.py](../../scripts/ocs_control.py)
+
+Summary: Existing-session OCS native control. Discovery/read default; explicit guarded writes.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-7f29357f014b"></a>
+
+## SRC-7f29357f014b — Profile reference
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/profile-reference.md](../../skills/cad-ocs-engineering/references/profile-reference.md)
+
+Summary: Use `scripts/profile_reference.py` when an external project supplies a closed, straight-segment profile trace and a source-defined extrusion depth for a reference volume. This representation can preserve a manufacturer-view silhouette for packaging or clearance work. It does not infer curved edges, hidden features, wall thickness or manufacturing construction.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-8407d03dcbf7"></a>
+
+## SRC-8407d03dcbf7 — Step solid inventory
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/step-solid-inventory.md](../../skills/cad-ocs-engineering/references/step-solid-inventory.md)
+
+Summary: Use `scripts/step_solid_inventory.py::inventory_step_solids` before comparing
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-8781126ff549"></a>
+
+## SRC-8781126ff549 — Paths
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/paths.md](../../skills/cad-ocs-engineering/references/paths.md)
+
+Summary: 1. `SKILL_ROOT` is the installed cad-ocs-engineering directory containing `SKILL.md`. Resolve its bundled code from `SKILL_ROOT/scripts`; keep the package intact.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-887904ceece4"></a>
+
+## SRC-887904ceece4 — Geometry
+
+Original source: [${MODELING_ROOT}/scripts/cadtools/geometry.py](../../scripts/cadtools/geometry.py)
+
+Summary: OCS recipes adapted from ngv064_ocs.py and item_ocs_parts.py.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-8da213acf424"></a>
+
+## SRC-8da213acf424 — Spherical seat profile
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/spherical-seat-profile.md](../../skills/cad-ocs-engineering/references/spherical-seat-profile.md)
+
+Summary: 1. **Inputs:** caller-owned sphere radius and axial centre, collar radius and start station, shaft radius and tip station, and blend radius. Use one unit for all inputs. Bind printed dimensions, source approximations and calculated reconstruction points separately in the component job.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-90298e431c37"></a>
+
+## SRC-90298e431c37 — Source metadata
+
+Original source: [${MODELING_ROOT}/scripts/source_metadata.py](../../scripts/source_metadata.py)
+
+Summary: Compare string metadata with an actual native entity record.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-9480873c9e5a"></a>
+
+## SRC-9480873c9e5a — Runtime
+
+Original source: [${MODELING_ROOT}/scripts/cadtools/runtime.py](../../scripts/cadtools/runtime.py)
+
+Summary: Guarded OCS adapter; extracted from the inspected ocs_control/NGV workflow.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-94eb405ef343"></a>
+
+## SRC-94eb405ef343 — Check contract
+
+Original source: [${MODELING_ROOT}/scripts/check_contract.py](../../scripts/check_contract.py)
+
+Summary: Check supplied geometric measurements; does not query CAD or validate physical performance.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-97262ee882c7"></a>
+
+## SRC-97262ee882c7 — Spherical seat profile
+
+Original source: [${MODELING_ROOT}/scripts/spherical_seat_profile.py](../../scripts/spherical_seat_profile.py)
+
+Summary: Derive an exact circular-arc profile for a spherical-seat shaft transition.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-b02ebb04744c"></a>
+
+## SRC-b02ebb04744c — Test source registration
+
+Original source: [${MODELING_ROOT}/tests/test_source_registration.py](../../tests/test_source_registration.py)
+
+Summary: Focused source-register merges preserve history and validate both indexes.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, docs/skill-packaging.md.
+
+<a id="src-b3ff112677ac"></a>
+
+## SRC-b3ff112677ac — Annular reference
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-reference.md](../../skills/cad-ocs-engineering/references/annular-reference.md)
+
+Summary: Use [`annular_reference.py`](../scripts/annular_reference.py) when a component source defines a plain ring by bore diameter, outside diameter and axial thickness.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-c12bedd365cc"></a>
+
+## SRC-c12bedd365cc — Source variant tables
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-variant-tables.md](../../skills/cad-ocs-engineering/references/source-variant-tables.md)
+
+Summary: Use `${SKILL_ROOT}/scripts/source_variant_table.py` when a manufacturer or engineering table places specifications for multiple variants in adjacent columns. The helper selects one cell from an explicitly transcribed table using the exact column header and exact row label.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-c88d4b2c97ac"></a>
+
+## SRC-c88d4b2c97ac — Package completion
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/package-completion.md](../../skills/cad-ocs-engineering/references/package-completion.md)
+
+Summary: This development operation runs from the 3D CAD Modeling source repository root after an authorized reusable tooling change. The source repository owns `scripts/build_skill_packages.py` and its tests. The installed skill carries its runtime code.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-c8f378e73049"></a>
+
+## SRC-c8f378e73049 — Non geometric requirements
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/non-geometric-requirements.md](../../skills/cad-ocs-engineering/references/non-geometric-requirements.md)
+
+Summary: Use this classification only when the component input explicitly states that no CAD geometry is required. The classification is a caller-supplied job declaration; the checker does not infer it from a component name, group, prose or feature values.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-cc2786c6982f"></a>
+
+## SRC-cc2786c6982f — Toroidal reference
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/toroidal-reference.md](../../skills/cad-ocs-engineering/references/toroidal-reference.md)
+
+Summary: Use [`toroidal_reference.py`](../scripts/toroidal_reference.py) when a
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-cf9699adeab7"></a>
+
+## SRC-cf9699adeab7 — Existing battery
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-battery.md](../../skills/cad-ocs-engineering/references/existing-battery.md)
+
+Summary: Executed case: [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md), 12 November 2026, gpt-6.1-sol.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-d1cb0e75b1e3"></a>
+
+## SRC-d1cb0e75b1e3 — Calibrated trace
+
+Original source: [${MODELING_ROOT}/scripts/calibrated_trace.py](../../scripts/calibrated_trace.py)
+
+Summary: Map source-image points into calibrated 2D coordinates with uncertainty.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-d4cb9b6ed7a6"></a>
+
+## SRC-d4cb9b6ed7a6 — Drawing feature checks
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/drawing-feature-checks.md](../../skills/cad-ocs-engineering/references/drawing-feature-checks.md)
+
+Summary: Use this procedure when a drawing dimension is compared with imported or reconstructed geometry.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-d864b71e4224"></a>
+
+## SRC-d864b71e4224 — Ocs document cleanup
+
+Original source: [${MODELING_ROOT}/scripts/ocs_document_cleanup.py](../../scripts/ocs_document_cleanup.py)
+
+Summary: Safely close one active OCS document owned by a completed CAD job.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-e4457f692304"></a>
+
+## SRC-e4457f692304 — Source metadata
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-metadata.md](../../skills/cad-ocs-engineering/references/source-metadata.md)
+
+Summary: Use [source_metadata.py](../scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-e718961d3c9e"></a>
+
+## SRC-e718961d3c9e — Step solid inventory
+
+Original source: [${MODELING_ROOT}/scripts/step_solid_inventory.py](../../scripts/step_solid_inventory.py)
+
+Summary: Inventory STEP solid-definition entities without counting nested shells.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-e9dc4d4b63a4"></a>
+
+## SRC-e9dc4d4b63a4 — Envelope job runner
+
+Original source: [${MODELING_ROOT}/scripts/envelope_job_runner.py](../../scripts/envelope_job_runner.py)
+
+Summary: Run an external source-bound envelope job through guarded OCS APIs.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-ea5cca4068c6"></a>
+
+## SRC-ea5cca4068c6 — Scaled assemblies
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/scaled-assemblies.md](../../skills/cad-ocs-engineering/references/scaled-assemblies.md)
+
+Summary: Executed component: Victron Lynx Smart BMS NG 500 M10, LYN034163010. Model: gpt-6.1-sol.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-ec804e897334"></a>
+
+## SRC-ec804e897334 — Axial motor
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/axial-motor.md](../../skills/cad-ocs-engineering/references/axial-motor.md)
+
+Summary: Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../scripts/axial_motor.py). Runtime model: gpt-6.1-sol.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-f2991edcea4f"></a>
+
+## SRC-f2991edcea4f — Assembly units
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/assembly-units.md](../../skills/cad-ocs-engineering/references/assembly-units.md)
+
+Summary: Use `scripts/assembly_units.py::plan_root_unit_change` to prepare a read-only plan when an assembly root insertion converts coordinates between drawing units. Supply the complete root insert records and explicit source and destination unit mappings from the caller's job. Each mapping contains a readable `label`, an integer `code`, and `millimetres_per_drawing_unit`; codes are descriptive inputs and do not determine scale.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-f2dd7dc83962"></a>
+
+## SRC-f2dd7dc83962 — Existing model start check
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-model-start-check.md](../../skills/cad-ocs-engineering/references/existing-model-start-check.md)
+
+Summary: 1. Run this check before every component start. It reads the external input manifest, work index, model paths, input-sheet links and files. It runs no CAD operations. Existing model paths, recorded scope and checks supply reuse evidence.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-f5a8295df542"></a>
+
+## SRC-f5a8295df542 — Model contract
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/model-contract.md](../../skills/cad-ocs-engineering/references/model-contract.md)
+
+Summary: Record project-specific facts, not an invented design:
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-f5b63a29220e"></a>
+
+## SRC-f5b63a29220e — Retained artifact checks
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/retained-artifact-checks.md](../../skills/cad-ocs-engineering/references/retained-artifact-checks.md)
+
+Summary: Use `scripts/retained_artifacts.py` after the final source/path/provenance edits and before the component result commit. It reads caller-owned files and prints a JSON result; it changes no artifact or manifest and connects to no CAD session.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-fa769befc290"></a>
+
+## SRC-fa769befc290 — Sources and capabilities
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/sources-and-capabilities.md](../../skills/cad-ocs-engineering/references/sources-and-capabilities.md)
+
+Summary: Original OCS-specific synthesis, research date2026-10-20. No third-party skill code/instructions were copied or installed. Archived original sources/licenses remain in the project.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-fab6a72dd382"></a>
+
+## SRC-fab6a72dd382 — Source view evidence
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-view-evidence.md](../../skills/cad-ocs-engineering/references/source-view-evidence.md)
+
+Summary: Use this procedure when a manufacturer drawing is available as a retained raster image or as a rendered page from a retained original PDF. It records how a source view supports dimensions, a traced outline, or both.
+
+Evidence: local_artifact_inspected_and_registered.
+
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.

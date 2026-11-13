@@ -43332,6 +43332,3186 @@
       "referring_documents": [
         "${MODELING_ROOT}/execution/wheel-parallel-2026-11-13/integration.md"
       ]
+    },
+    {
+      "id": "SRC-00583f58b6df",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-reference.md",
+      "title": "Envelope reference",
+      "summary": "Use `${SKILL_ROOT}/scripts/envelope_reference.py` when the source supports an overall product or clearance envelope and a detailed component body is not available. The output is one axis-aligned reference volume. It carries no implied PCB outline, mounting surface, connector locations or physical construction.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/envelope-reference.md",
+          "title": "Envelope reference",
+          "summary": "Use `${SKILL_ROOT}/scripts/envelope_reference.py` when the source supports an overall product or clearance envelope and a detailed component body is not available. The output is one axis-aligned reference volume. It carries no implied PCB outline, mounting surface, connector locations or physical construction.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "543197d968706d4f28575cc062fb181620a0c782156f54c05fb4212e8f7e27b7",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/envelope-reference.md",
+          "title": "Envelope reference",
+          "summary": "Use `${SKILL_ROOT}/scripts/envelope_reference.py` when the source supports an overall product or clearance envelope and a detailed component body is not available. The output is one axis-aligned reference volume. It carries no implied PCB outline, mounting surface, connector locations or physical construction.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "543197d968706d4f28575cc062fb181620a0c782156f54c05fb4212e8f7e27b7",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-073a85efa0cf",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/source_variant_table.py",
+      "title": "Source variant table",
+      "summary": "Select one value from a reviewer-transcribed variant comparison table.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/source_variant_table.py",
+          "title": "Source variant table",
+          "summary": "Select one value from a reviewer-transcribed variant comparison table.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/source_variant_table.py",
+          "title": "Source variant table",
+          "summary": "Select one value from a reviewer-transcribed variant comparison table.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-09518fd8874a",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-bearing.md",
+      "title": "Existing bearing",
+      "summary": "Executed case: [SKF SY20TF iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c009-bearing.md). Runtime: gpt-6.1-sol, 12 November 2026.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/existing-bearing.md",
+          "title": "Existing bearing",
+          "summary": "Executed case: [SKF SY20TF iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c009-bearing.md). Runtime: gpt-6.1-sol, 12 November 2026.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "ebc946ffcaec625704e72e9d08d7751b9b92b196961f5318b615af40bb27b1b5",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/existing-bearing.md",
+          "title": "Existing bearing",
+          "summary": "Executed case: [SKF SY20TF iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c009-bearing.md). Runtime: gpt-6.1-sol, 12 November 2026.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "ebc946ffcaec625704e72e9d08d7751b9b92b196961f5318b615af40bb27b1b5",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-09a3bbda44d7",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/component-procedure.md",
+      "title": "Component procedure",
+      "summary": "1. **Index reading:** `scripts/part_index.py` accepts explicit `--index` paths. It reads a FERME-style component list or an existing dictionary with `entries`. `--id` selects an exact identity; `--query` matches all supplied case-insensitive text terms in the original record. Returned rows retain record kind, source path, source SHA-256 and original fields.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/component-procedure.md",
+          "title": "Component procedure",
+          "summary": "1. **Index reading:** `scripts/part_index.py` accepts explicit `--index` paths. It reads a FERME-style component list or an existing dictionary with `entries`. `--id` selects an exact identity; `--query` matches all supplied case-insensitive text terms in the original record. Returned rows retain record kind, source path, source SHA-256 and original fields.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8519f4d9a8bfac38d5d0a12be58d116e88a684a96ae729ccd4aed7cf99dd679f",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/component-procedure.md",
+          "title": "Component procedure",
+          "summary": "1. **Index reading:** `scripts/part_index.py` accepts explicit `--index` paths. It reads a FERME-style component list or an existing dictionary with `entries`. `--id` selects an exact identity; `--query` matches all supplied case-insensitive text terms in the original record. Returned rows retain record kind, source path, source SHA-256 and original fields.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8519f4d9a8bfac38d5d0a12be58d116e88a684a96ae729ccd4aed7cf99dd679f",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-0ee6f66e73f1",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/tests/test_skill_packages.py",
+      "title": "Existing isolated skill installation suite",
+      "summary": "Reused actual local CLI copy installations, isolated Python environments, local-link and import checks, intake/DXF fixtures and optional state check.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_source_inspected_and_reused"
+      ],
+      "observations": [
+        {
+          "local_original": "tests/test_skill_packages.py",
+          "original_revision": "bc6a53a",
+          "original_sha256": "068fdb4429ff0e46370ec26eb565f5310925a9c62bbeba2d0723d6362f46f7fb",
+          "title": "Existing isolated skill installation suite",
+          "summary": "Reused actual local CLI copy installations, isolated Python environments, local-link and import checks, intake/DXF fixtures and optional state check.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_source_inspected_and_reused",
+          "referring_documents": [
+            "execution/skill-completion-gate-2026-11-13.md",
+            "docs/skill-packaging.md",
+            "skills/cad-ocs-engineering/references/package-completion.md"
+          ],
+          "source_record_document": "research/sources/skill-completion-gate-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skill-completion-gate-2026-11-13.json",
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    },
+    {
+      "id": "SRC-194f723b82c9",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/tabbed-battery.md",
+      "title": "Tabbed battery",
+      "summary": "Executed case: BMW i3 94 Ah saved exterior (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json`). Model: gpt-6.1-sol.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/tabbed-battery.md",
+          "title": "Tabbed battery",
+          "summary": "Executed case: BMW i3 94 Ah saved exterior (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json`). Model: gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "137babc4a8c928f1c0e0aee2df9cd8a2299ffe30fe36373e3732ac8ec8bd6acb",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/tabbed-battery.md",
+          "title": "Tabbed battery",
+          "summary": "Executed case: BMW i3 94 Ah saved exterior (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json`). Model: gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "137babc4a8c928f1c0e0aee2df9cd8a2299ffe30fe36373e3732ac8ec8bd6acb",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-1d565b48e952",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/envelope-job-runner.md",
+      "title": "Envelope job runner",
+      "summary": "Use `scripts/envelope_job_runner.py` to run an external, source-pinned envelope job through the existing OCS `Client`, `Journal`, `envelope_reference`, `source_metadata`, and `save_reopen` APIs. Component names, source values, request namespace, output path, and scope stay in the caller's job directory. The generic runner contains no product identifiers or dimensions.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/envelope-job-runner.md",
+          "title": "Envelope job runner",
+          "summary": "Use `scripts/envelope_job_runner.py` to run an external, source-pinned envelope job through the existing OCS `Client`, `Journal`, `envelope_reference`, `source_metadata`, and `save_reopen` APIs. Component names, source values, request namespace, output path, and scope stay in the caller's job directory. The generic runner contains no product identifiers or dimensions.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f8d3f5996c30bf50c593e4da9635900f12c4940b5a770a9348c47baee3c26466",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/envelope-job-runner.md",
+          "title": "Envelope job runner",
+          "summary": "Use `scripts/envelope_job_runner.py` to run an external, source-pinned envelope job through the existing OCS `Client`, `Journal`, `envelope_reference`, `source_metadata`, and `save_reopen` APIs. Component names, source values, request namespace, output path, and scope stay in the caller's job directory. The generic runner contains no product identifiers or dimensions.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f8d3f5996c30bf50c593e4da9635900f12c4940b5a770a9348c47baee3c26466",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-1d84d83da1e5",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/small-bms.md",
+      "title": "Small bms",
+      "summary": "The official Rev00 dimension drawing identifies `BMS400100300 smallBMS NG`, states millimetres, and gives the housing envelope as 107 × 46 × 23 mm. Its mounting detail gives 97 mm slot-axis pitch, 12 mm slot-end-arc centre separation, `R1.75 (4x)`, and 3 mm mounting-foot thickness. The STEP AP214 file is linked from the same official product page and contains nine placed solids inside thirteen block references. Preserve the drawing values as source claims and record the STEP member names and coordinates as separate model observations.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/small-bms.md",
+          "title": "Small bms",
+          "summary": "The official Rev00 dimension drawing identifies `BMS400100300 smallBMS NG`, states millimetres, and gives the housing envelope as 107 × 46 × 23 mm. Its mounting detail gives 97 mm slot-axis pitch, 12 mm slot-end-arc centre separation, `R1.75 (4x)`, and 3 mm mounting-foot thickness. The STEP AP214 file is linked from the same official product page and contains nine placed solids inside thirteen block references. Preserve the drawing values as source claims and record the STEP member names and coordinates as separate model observations.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "b54c5f2b1ffb05c83f16a20b79bb6d0022e8741ecff2a18cd4986e3339661970",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/small-bms.md",
+          "title": "Small bms",
+          "summary": "The official Rev00 dimension drawing identifies `BMS400100300 smallBMS NG`, states millimetres, and gives the housing envelope as 107 × 46 × 23 mm. Its mounting detail gives 97 mm slot-axis pitch, 12 mm slot-end-arc centre separation, `R1.75 (4x)`, and 3 mm mounting-foot thickness. The STEP AP214 file is linked from the same official product page and contains nine placed solids inside thirteen block references. Preserve the drawing values as source claims and record the STEP member names and coordinates as separate model observations.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "b54c5f2b1ffb05c83f16a20b79bb6d0022e8741ecff2a18cd4986e3339661970",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-2299f268daed",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/dimension-limits-and-datums.md",
+      "title": "Dimension limits and datums",
+      "summary": "Use a source callout as a dimensional limit when its label includes `Max`, `Min`, or another explicit bound. Preserve the bound in metadata and checks. A clearance-reference volume may use the bound as its limit surface, but its solid thickness or envelope is not a claim that the manufactured part equals that bound.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/dimension-limits-and-datums.md",
+          "title": "Dimension limits and datums",
+          "summary": "Use a source callout as a dimensional limit when its label includes `Max`, `Min`, or another explicit bound. Preserve the bound in metadata and checks. A clearance-reference volume may use the bound as its limit surface, but its solid thickness or envelope is not a claim that the manufactured part equals that bound.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f1152475887926202430bf48ff07dedc86830ba11a77d5bb15658d83412f33e4",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/dimension-limits-and-datums.md",
+          "title": "Dimension limits and datums",
+          "summary": "Use a source callout as a dimensional limit when its label includes `Max`, `Min`, or another explicit bound. Preserve the bound in metadata and checks. A clearance-reference volume may use the bound as its limit surface, but its solid thickness or envelope is not a claim that the manufactured part equals that bound.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f1152475887926202430bf48ff07dedc86830ba11a77d5bb15658d83412f33e4",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-2552764ce2c1",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/hexagonal-reference.md",
+      "title": "Hexagonal reference",
+      "summary": "Use `scripts/hexagonal_reference.py` when an external component job supplies a regular hexagonal across-flats dimension and axial height. The helper creates one six-sided prism reference with the caller's placement frame. A caller may add a source-dimensioned coaxial through-bore by binding a required diameter feature; a nominal thread designation by itself remains axis metadata.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/hexagonal-reference.md",
+          "title": "Hexagonal reference",
+          "summary": "Use `scripts/hexagonal_reference.py` when an external component job supplies a regular hexagonal across-flats dimension and axial height. The helper creates one six-sided prism reference with the caller's placement frame. A caller may add a source-dimensioned coaxial through-bore by binding a required diameter feature; a nominal thread designation by itself remains axis metadata.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/hexagonal-reference.md",
+          "title": "Hexagonal reference",
+          "summary": "Use `scripts/hexagonal_reference.py` when an external component job supplies a regular hexagonal across-flats dimension and axial height. The helper creates one six-sided prism reference with the caller's placement frame. A caller may add a source-dimensioned coaxial through-bore by binding a required diameter feature; a nominal thread designation by itself remains axis metadata.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-25547b53182a",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/assembly_units.py",
+      "title": "Assembly units",
+      "summary": "Plan a drawing-unit change for explicit native assembly root inserts.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/assembly_units.py",
+          "title": "Assembly units",
+          "summary": "Plan a drawing-unit change for explicit native assembly root inserts.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/assembly_units.py",
+          "title": "Assembly units",
+          "summary": "Plan a drawing-unit change for explicit native assembly root inserts.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-27305c93cb67",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/profile_reference.py",
+      "title": "Profile reference",
+      "summary": "Build and inspect a source-traced polygon extruded as a reference volume.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/profile_reference.py",
+          "title": "Profile reference",
+          "summary": "Build and inspect a source-traced polygon extruded as a reference volume.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/profile_reference.py",
+          "title": "Profile reference",
+          "summary": "Build and inspect a source-traced polygon extruded as a reference volume.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-2a5b2783d970",
+      "url": null,
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2H/result-r01.json",
+      "title": "Saved nominal free washer M5-2H",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_geometry_and_persistence_result"
+      ],
+      "observations": [
+        {
+          "title": "Saved nominal free washer M5-2H",
+          "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+          "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2H/result-r01.json",
+          "sha256": "754b8ec204895528a04bb736c318554da5af564f0706a0fdc0c2597718558c2d",
+          "registered_at": "2026-11-13",
+          "evidence_status": "executed_native_geometry_and_persistence_result",
+          "execution_model": "gpt-6.1-sol",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-2b01d57fa463",
+      "url": null,
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2L/result-r01.json",
+      "title": "Saved nominal free washer M6-2L",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_geometry_and_persistence_result"
+      ],
+      "observations": [
+        {
+          "title": "Saved nominal free washer M6-2L",
+          "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+          "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2L/result-r01.json",
+          "sha256": "b550ab62885adf61db9ffc9db7d2cb29c91793128e09caea00b4e95e28549cfa",
+          "registered_at": "2026-11-13",
+          "evidence_status": "executed_native_geometry_and_persistence_result",
+          "execution_model": "gpt-6.1-sol",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-2c4d624166ce",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/cadtools/verification.py",
+      "title": "Verification",
+      "summary": "Offline feature checks and explicit live save/reopen checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/cadtools/verification.py",
+          "title": "Verification",
+          "summary": "Offline feature checks and explicit live save/reopen checks.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/cadtools/verification.py",
+          "title": "Verification",
+          "summary": "Offline feature checks and explicit live save/reopen checks.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-2d515a15b8e7",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/document-cleanup.md",
+      "title": "Document cleanup",
+      "summary": "Use `scripts/ocs_document_cleanup.py` after a component model has passed its save/reopen persistence checks. The helper returns a separate cleanup result; it never changes the component's completed model status.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/document-cleanup.md",
+          "title": "Document cleanup",
+          "summary": "Use `scripts/ocs_document_cleanup.py` after a component model has passed its save/reopen persistence checks. The helper returns a separate cleanup result; it never changes the component's completed model status.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8d698abaf930266206e34a246c2a4d236aeb5af4ae0fb10c4c5c5e52bfc53fd0",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/document-cleanup.md",
+          "title": "Document cleanup",
+          "summary": "Use `scripts/ocs_document_cleanup.py` after a component model has passed its save/reopen persistence checks. The helper returns a separate cleanup result; it never changes the component's completed model status.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8d698abaf930266206e34a246c2a4d236aeb5af4ae0fb10c4c5c5e52bfc53fd0",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-2d89ba45ac89",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/small_bms.py",
+      "title": "Small bms",
+      "summary": "Source-recorded smallBMS assembly persistence checks.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/small_bms.py",
+          "title": "Small bms",
+          "summary": "Source-recorded smallBMS assembly persistence checks.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "6a54793b62f539f94d974ff6dc510b9176e2215da76b52a046000fbb1e21bdd0",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/small_bms.py",
+          "title": "Small bms",
+          "summary": "Source-recorded smallBMS assembly persistence checks.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "6a54793b62f539f94d974ff6dc510b9176e2215da76b52a046000fbb1e21bdd0",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-31b9e4edfeca",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/manufacturer-assembly.md",
+      "title": "Manufacturer assembly",
+      "summary": "Executed case: Victron BAT524110620 battery (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json`). Coordinator/model: gpt-6.1-sol. Reusable implementation: [step_placements.py](../scripts/step_placements.py), with the existing [native ACIS reader](../scripts/native_acis.py).",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/manufacturer-assembly.md",
+          "title": "Manufacturer assembly",
+          "summary": "Executed case: Victron BAT524110620 battery (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json`). Coordinator/model: gpt-6.1-sol. Reusable implementation: [step_placements.py](../scripts/step_placements.py), with the existing [native ACIS reader](../scripts/native_acis.py).",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "1a231bea238cbf56c26521b6080b98d6d6815eb37f740c10c5bd7877f461f478",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/manufacturer-assembly.md",
+          "title": "Manufacturer assembly",
+          "summary": "Executed case: Victron BAT524110620 battery (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/result.json`). Coordinator/model: gpt-6.1-sol. Reusable implementation: [step_placements.py](../scripts/step_placements.py), with the existing [native ACIS reader](../scripts/native_acis.py).",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "1a231bea238cbf56c26521b6080b98d6d6815eb37f740c10c5bd7877f461f478",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-387295c13815",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/conical-washer-package-checks-2026-11-13.json",
+      "title": "Conical-washer package integration",
+      "summary": "Current merged cad-ocs-engineering package includes the helper and procedure; five isolated package tests passed and optional live OCS test skipped. Generated files match committed canonical source.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_package_checks"
+      ],
+      "observations": [
+        {
+          "title": "Conical-washer package integration",
+          "summary": "Current merged cad-ocs-engineering package includes the helper and procedure; five isolated package tests passed and optional live OCS test skipped. Generated files match committed canonical source.",
+          "local_path": "execution/conical-washer-package-checks-2026-11-13.json",
+          "sha256": "aa6b0093b3065998b7ca17735f87013dd0ab8f2559d8a2fcddb36c0237b385ca",
+          "registered_at": "2026-11-13",
+          "evidence_status": "executed_package_checks",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-463c9a6ee135",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/annular_reference.py",
+      "title": "Annular reference",
+      "summary": "Build and check a source-bound annular solid reference.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/annular_reference.py",
+          "title": "Annular reference",
+          "summary": "Build and check a source-bound annular solid reference.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/annular_reference.py",
+          "title": "Annular reference",
+          "summary": "Build and check a source-bound annular solid reference.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-4b20bd4fb621",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/shared-feature-checks.md",
+      "title": "Shared feature checks",
+      "summary": "Executed evidence: [driver iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c012-driver.md), [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md). Code: [feature_checks.py](../scripts/feature_checks.py).",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/shared-feature-checks.md",
+          "title": "Shared feature checks",
+          "summary": "Executed evidence: [driver iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c012-driver.md), [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md). Code: [feature_checks.py](../scripts/feature_checks.py).",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "5cb7108be043cc6541c6f32644e40445ef663accc0eb7f186aa44d6f233897a9",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/shared-feature-checks.md",
+          "title": "Shared feature checks",
+          "summary": "Executed evidence: [driver iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c012-driver.md), [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md). Code: [feature_checks.py](../scripts/feature_checks.py).",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "5cb7108be043cc6541c6f32644e40445ef663accc0eb7f186aa44d6f233897a9",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-4b9adca071bd",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/envelope_reference.py",
+      "title": "Envelope reference",
+      "summary": "Build and inspect a source-dimensioned axis-aligned reference envelope.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/envelope_reference.py",
+          "title": "Envelope reference",
+          "summary": "Build and inspect a source-dimensioned axis-aligned reference envelope.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d03ade53f6181206314712ab23b8d7176fe52ec3d931e32801ba083acff41854",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/envelope_reference.py",
+          "title": "Envelope reference",
+          "summary": "Build and inspect a source-dimensioned axis-aligned reference envelope.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d03ade53f6181206314712ab23b8d7176fe52ec3d931e32801ba083acff41854",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-4c498075e81e",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/ocs-runtime.md",
+      "title": "Ocs runtime",
+      "summary": "1. **Software:** Python 3.12 on Linux or macOS, the pinned packages in [requirements.txt](../requirements.txt), and an already-running OpenCADStudio native-control session. The transport uses a local TCP socket and the existing session descriptor. It reads the session's authentication token privately.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/ocs-runtime.md",
+          "title": "Ocs runtime",
+          "summary": "1. **Software:** Python 3.12 on Linux or macOS, the pinned packages in [requirements.txt](../requirements.txt), and an already-running OpenCADStudio native-control session. The transport uses a local TCP socket and the existing session descriptor. It reads the session's authentication token privately.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "5b69affdb6f2e1a7951c06000eb3d5ff0a653fa2bf9c2a0a77a9d297e9dcbc1b",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/ocs-runtime.md",
+          "title": "Ocs runtime",
+          "summary": "1. **Software:** Python 3.12 on Linux or macOS, the pinned packages in [requirements.txt](../requirements.txt), and an already-running OpenCADStudio native-control session. The transport uses a local TCP socket and the existing session descriptor. It reads the session's authentication token privately.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "5b69affdb6f2e1a7951c06000eb3d5ff0a653fa2bf9c2a0a77a9d297e9dcbc1b",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-4ef2a718e505",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/conical_washer_profile.py",
+      "title": "Conical free-washer implementation",
+      "summary": "Validates external source dimensions and solves the unique supported shallow strip geometry; constructs by existing revolution and verifies saved conical surfaces and metadata.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "implementation_artifact"
+      ],
+      "observations": [
+        {
+          "title": "Conical free-washer implementation",
+          "summary": "Validates external source dimensions and solves the unique supported shallow strip geometry; constructs by existing revolution and verifies saved conical surfaces and metadata.",
+          "local_path": "scripts/conical_washer_profile.py",
+          "sha256": "44ae2415db876fa3213a5d1952ee35573950709146e71b6e26709ab3f6675c1e",
+          "registered_at": "2026-11-13",
+          "evidence_status": "implementation_artifact",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-4f408aece302",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/conical-washer-profile.md",
+      "title": "Conical washer modeling procedure",
+      "summary": "Records exact source dimension directions, supported shallow branch, source/loaded height separation, native cone checks, persistence and completed-document closure.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "documented_procedure"
+      ],
+      "observations": [
+        {
+          "title": "Conical washer modeling procedure",
+          "summary": "Records exact source dimension directions, supported shallow branch, source/loaded height separation, native cone checks, persistence and completed-document closure.",
+          "local_path": "skills/cad-ocs-engineering/references/conical-washer-profile.md",
+          "sha256": "62097355c1c46be700b13e6a685ce3923ed89abab99cfe96cdf9c7b23aa7c5c1",
+          "registered_at": "2026-11-13",
+          "evidence_status": "documented_procedure",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-508abf022105",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/pixhawk.md",
+      "title": "Pixhawk",
+      "summary": "Use this procedure for C052 when the currently retained source is the Holybro",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/pixhawk.md",
+          "title": "Pixhawk",
+          "summary": "Use this procedure for C052 when the currently retained source is the Holybro",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "3577313671b773ef3cc4c40c01c7c5f689220c1788bcdaf2023991807ba4adcb",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/pixhawk.md",
+          "title": "Pixhawk",
+          "summary": "Use this procedure for C052 when the currently retained source is the Holybro",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "3577313671b773ef3cc4c40c01c7c5f689220c1788bcdaf2023991807ba4adcb",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-5866f70afb27",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/calibrated-trace.md",
+      "title": "Calibrated trace",
+      "summary": "Use `scripts/calibrated_trace.py` when reconstructing external geometry from a dimensioned raster drawing and no manufacturer 3D CAD is available. The helper receives source pixel points, a pixel origin, signed per-axis scale, point-pick/origin/scale uncertainties, and optional coordinate units. It returns source pixels, mapped coordinates, and a conservative per-axis worst-case interval. It performs no image tracing and does not choose datums, dimensions, units, or geometry.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/calibrated-trace.md",
+          "title": "Calibrated trace",
+          "summary": "Use `scripts/calibrated_trace.py` when reconstructing external geometry from a dimensioned raster drawing and no manufacturer 3D CAD is available. The helper receives source pixel points, a pixel origin, signed per-axis scale, point-pick/origin/scale uncertainties, and optional coordinate units. It returns source pixels, mapped coordinates, and a conservative per-axis worst-case interval. It performs no image tracing and does not choose datums, dimensions, units, or geometry.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "da02629d49a739f4ec1bcee96202eed9148038013207a9c2e8499441257c34ba",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/calibrated-trace.md",
+          "title": "Calibrated trace",
+          "summary": "Use `scripts/calibrated_trace.py` when reconstructing external geometry from a dimensioned raster drawing and no manufacturer 3D CAD is available. The helper receives source pixel points, a pixel origin, signed per-axis scale, point-pick/origin/scale uncertainties, and optional coordinate units. It returns source pixels, mapped coordinates, and a conservative per-axis worst-case interval. It performs no image tracing and does not choose datums, dimensions, units, or geometry.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "da02629d49a739f4ec1bcee96202eed9148038013207a9c2e8499441257c34ba",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-5fdb93056178",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/toroidal_reference.py",
+      "title": "Toroidal reference",
+      "summary": "Construct and inspect source-bound circular-section torus references.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/toroidal_reference.py",
+          "title": "Toroidal reference",
+          "summary": "Construct and inspect source-bound circular-section torus references.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f6f0cb56e797731c76f4f11d293487d84215446bf74f384dfb5c8c3504c989ff",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/toroidal_reference.py",
+          "title": "Toroidal reference",
+          "summary": "Construct and inspect source-bound circular-section torus references.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f6f0cb56e797731c76f4f11d293487d84215446bf74f384dfb5c8c3504c989ff",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-60725e76bcc2",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/ocs-control.md",
+      "title": "Ocs control",
+      "summary": "Initial live evidence: OCS 2026.42, Linux, 2026-10-20. Native control works even without MCP tools exposed in this chat. Existing session descriptors under OCS configuration (normal or Snap) contain a session ID, local port and private token. Never print tokens. Do not launch another editor/headless process or change connection settings to evade a connection failure.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/ocs-control.md",
+          "title": "Ocs control",
+          "summary": "Initial live evidence: OCS 2026.42, Linux, 2026-10-20. Native control works even without MCP tools exposed in this chat. Existing session descriptors under OCS configuration (normal or Snap) contain a session ID, local port and private token. Never print tokens. Do not launch another editor/headless process or change connection settings to evade a connection failure.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "7f63ee82f81818939ae49b3a2a87a94a924e43422883893fe18be9b77aa13eba",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/ocs-control.md",
+          "title": "Ocs control",
+          "summary": "Initial live evidence: OCS 2026.42, Linux, 2026-10-20. Native control works even without MCP tools exposed in this chat. Existing session descriptors under OCS configuration (normal or Snap) contain a session ID, local port and private token. Never print tokens. Do not launch another editor/headless process or change connection settings to evade a connection failure.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "7f63ee82f81818939ae49b3a2a87a94a924e43422883893fe18be9b77aa13eba",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-64b83159bd9a",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/hexagonal_reference.py",
+      "title": "Hexagonal reference",
+      "summary": "Construct and verify a source-bound regular hexagonal prism reference.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/hexagonal_reference.py",
+          "title": "Hexagonal reference",
+          "summary": "Construct and verify a source-bound regular hexagonal prism reference.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/hexagonal_reference.py",
+          "title": "Hexagonal reference",
+          "summary": "Construct and verify a source-bound regular hexagonal prism reference.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-668e7636873a",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/package_check.py",
+      "title": "Existing installed package checker",
+      "summary": "Reused packaged hashes, isolated imports, pinned dependencies and optional read-only OCS state check; kept CAD-only runtime imports conditional.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_source_inspected_and_reused"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/package_check.py",
+          "original_revision": "bc6a53a",
+          "original_sha256": "427f7255ad6a5eba935772c1bb36a2a7c8ce45928e283a9a4d7b1ea47118f990",
+          "title": "Existing installed package checker",
+          "summary": "Reused packaged hashes, isolated imports, pinned dependencies and optional read-only OCS state check; kept CAD-only runtime imports conditional.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_source_inspected_and_reused",
+          "referring_documents": [
+            "execution/skill-completion-gate-2026-11-13.md",
+            "docs/skill-packaging.md",
+            "skills/cad-ocs-engineering/references/package-completion.md"
+          ],
+          "source_record_document": "research/sources/skill-completion-gate-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skill-completion-gate-2026-11-13.json",
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    },
+    {
+      "id": "SRC-694cbef94f11",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-perimeter-chains.md",
+      "title": "Source perimeter chains",
+      "summary": "Use this procedure when a technical drawing stores a projected outline as separate vector paths and a source-traced profile reference needs one closed boundary. Keep the source drawing, vector extraction, trace, and constructed profile as separate records.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-perimeter-chains.md",
+          "title": "Source perimeter chains",
+          "summary": "Use this procedure when a technical drawing stores a projected outline as separate vector paths and a source-traced profile reference needs one closed boundary. Keep the source drawing, vector extraction, trace, and constructed profile as separate records.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f09f592e1ca1fb842680aa66b5a33a644a9142fa86222d5b054029cf5dae844b",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-perimeter-chains.md",
+          "title": "Source perimeter chains",
+          "summary": "Use this procedure when a technical drawing stores a projected outline as separate vector paths and a source-traced profile reference needs one closed boundary. Keep the source drawing, vector extraction, trace, and constructed profile as separate records.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "f09f592e1ca1fb842680aa66b5a33a644a9142fa86222d5b054029cf5dae844b",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-70ca2e222888",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/computational-engineering.md",
+      "title": "Computational engineering",
+      "summary": "Read for actual equations, procedural geometry or solver preparation. This reference installs nothing and selects no model fidelity.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/computational-engineering.md",
+          "title": "Computational engineering",
+          "summary": "Read for actual equations, procedural geometry or solver preparation. This reference installs nothing and selects no model fidelity.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0268ffbe0803964551e66009052f6f00d4fe16db21afb360c88ac48e992138c2",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/computational-engineering.md",
+          "title": "Computational engineering",
+          "summary": "Read for actual equations, procedural geometry or solver preparation. This reference installs nothing and selects no model fidelity.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0268ffbe0803964551e66009052f6f00d4fe16db21afb360c88ac48e992138c2",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-7246d756742b",
+      "url": null,
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2L/result-r01.json",
+      "title": "Saved nominal free washer M5-2L",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_geometry_and_persistence_result"
+      ],
+      "observations": [
+        {
+          "title": "Saved nominal free washer M5-2L",
+          "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+          "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M5-2L/result-r01.json",
+          "sha256": "1f8f797996cd5fcb3ffe7367d247aa3b0d2ea41ac80f72346d0c1a072e7c9d08",
+          "registered_at": "2026-11-13",
+          "evidence_status": "executed_native_geometry_and_persistence_result",
+          "execution_model": "gpt-6.1-sol",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-76a35b7a97b4",
+      "url": null,
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2H/result-r01.json",
+      "title": "Saved nominal free washer M6-2H",
+      "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_native_geometry_and_persistence_result"
+      ],
+      "observations": [
+        {
+          "title": "Saved nominal free washer M6-2H",
+          "summary": "Executed source-bound revolution; six saved cone/body geometry checks, source metadata and point persistence passed. Both owned documents closed. Individual source dimensions remain in the external job.",
+          "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c076-build-01/configurations/M6-2H/result-r01.json",
+          "sha256": "7c5d99c3634ef470d953caa354538263e6508c471f84f5bd36a32989e75e066f",
+          "registered_at": "2026-11-13",
+          "evidence_status": "executed_native_geometry_and_persistence_result",
+          "execution_model": "gpt-6.1-sol",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-76d4d724e45e",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/retained_artifacts.py",
+      "title": "Retained artifacts",
+      "summary": "Verify an external retained-file manifest without changing its artifacts.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/retained_artifacts.py",
+          "title": "Retained artifacts",
+          "summary": "Verify an external retained-file manifest without changing its artifacts.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8d61d4b042d3ca128105aa5e032504ce7a4e6adcbad8d95f54acf8be34604729",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/retained_artifacts.py",
+          "title": "Retained artifacts",
+          "summary": "Verify an external retained-file manifest without changing its artifacts.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8d61d4b042d3ca128105aa5e032504ce7a4e6adcbad8d95f54acf8be34604729",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-78b4c1846983",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/pixhawk.py",
+      "title": "Pixhawk",
+      "summary": "Build and check the source-dimensioned Pixhawk 6C mechanical envelope.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/pixhawk.py",
+          "title": "Pixhawk",
+          "summary": "Build and check the source-dimensioned Pixhawk 6C mechanical envelope.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/pixhawk.py",
+          "title": "Pixhawk",
+          "summary": "Build and check the source-dimensioned Pixhawk 6C mechanical envelope.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-7a2c10dcacbb",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-first-and-tube.md",
+      "title": "Source first and tube",
+      "summary": "Observed case: main frame longitudinal rail (P01), 12 November 2026. Executing model: gpt-6.1-sol. [Execution evidence](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/p01-rail-build.md).",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-first-and-tube.md",
+          "title": "Source first and tube",
+          "summary": "Observed case: main frame longitudinal rail (P01), 12 November 2026. Executing model: gpt-6.1-sol. [Execution evidence](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/p01-rail-build.md).",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "c3aebb108440dc4c6d0071bc8e6d2f1a493e87ebf989119273f6c0038dde6ef1",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-first-and-tube.md",
+          "title": "Source first and tube",
+          "summary": "Observed case: main frame longitudinal rail (P01), 12 November 2026. Executing model: gpt-6.1-sol. [Execution evidence](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/p01-rail-build.md).",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "c3aebb108440dc4c6d0071bc8e6d2f1a493e87ebf989119273f6c0038dde6ef1",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-7acf2b76d395",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/ocs_control.py",
+      "title": "Ocs control",
+      "summary": "Existing-session OCS native control. Discovery/read default; explicit guarded writes.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/ocs_control.py",
+          "title": "Ocs control",
+          "summary": "Existing-session OCS native control. Discovery/read default; explicit guarded writes.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/ocs_control.py",
+          "title": "Ocs control",
+          "summary": "Existing-session OCS native control. Discovery/read default; explicit guarded writes.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-7f29357f014b",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/profile-reference.md",
+      "title": "Profile reference",
+      "summary": "Use `scripts/profile_reference.py` when an external project supplies a closed, straight-segment profile trace and a source-defined extrusion depth for a reference volume. This representation can preserve a manufacturer-view silhouette for packaging or clearance work. It does not infer curved edges, hidden features, wall thickness or manufacturing construction.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/profile-reference.md",
+          "title": "Profile reference",
+          "summary": "Use `scripts/profile_reference.py` when an external project supplies a closed, straight-segment profile trace and a source-defined extrusion depth for a reference volume. This representation can preserve a manufacturer-view silhouette for packaging or clearance work. It does not infer curved edges, hidden features, wall thickness or manufacturing construction.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "2d48495b1d931716f3b803c0fa68f6791db1186c9b3dc6b735a973821e12e71d",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/profile-reference.md",
+          "title": "Profile reference",
+          "summary": "Use `scripts/profile_reference.py` when an external project supplies a closed, straight-segment profile trace and a source-defined extrusion depth for a reference volume. This representation can preserve a manufacturer-view silhouette for packaging or clearance work. It does not infer curved edges, hidden features, wall thickness or manufacturing construction.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "2d48495b1d931716f3b803c0fa68f6791db1186c9b3dc6b735a973821e12e71d",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-8407d03dcbf7",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/step-solid-inventory.md",
+      "title": "Step solid inventory",
+      "summary": "Use `scripts/step_solid_inventory.py::inventory_step_solids` before comparing",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/step-solid-inventory.md",
+          "title": "Step solid inventory",
+          "summary": "Use `scripts/step_solid_inventory.py::inventory_step_solids` before comparing",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0b88f613487333bcfe3d468483eae3260122013decfda083b5fca60ed2791e86",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/step-solid-inventory.md",
+          "title": "Step solid inventory",
+          "summary": "Use `scripts/step_solid_inventory.py::inventory_step_solids` before comparing",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0b88f613487333bcfe3d468483eae3260122013decfda083b5fca60ed2791e86",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-8781126ff549",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/paths.md",
+      "title": "Paths",
+      "summary": "1. `SKILL_ROOT` is the installed cad-ocs-engineering directory containing `SKILL.md`. Resolve its bundled code from `SKILL_ROOT/scripts`; keep the package intact.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/paths.md",
+          "title": "Paths",
+          "summary": "1. `SKILL_ROOT` is the installed cad-ocs-engineering directory containing `SKILL.md`. Resolve its bundled code from `SKILL_ROOT/scripts`; keep the package intact.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8076a76a1692625d845c1172a4907bf64b6b8bc77d6c0cec6b9257be70486119",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/paths.md",
+          "title": "Paths",
+          "summary": "1. `SKILL_ROOT` is the installed cad-ocs-engineering directory containing `SKILL.md`. Resolve its bundled code from `SKILL_ROOT/scripts`; keep the package intact.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8076a76a1692625d845c1172a4907bf64b6b8bc77d6c0cec6b9257be70486119",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-887904ceece4",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/cadtools/geometry.py",
+      "title": "Geometry",
+      "summary": "OCS recipes adapted from ngv064_ocs.py and item_ocs_parts.py.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/cadtools/geometry.py",
+          "title": "Geometry",
+          "summary": "OCS recipes adapted from ngv064_ocs.py and item_ocs_parts.py.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/cadtools/geometry.py",
+          "title": "Geometry",
+          "summary": "OCS recipes adapted from ngv064_ocs.py and item_ocs_parts.py.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-8da213acf424",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/spherical-seat-profile.md",
+      "title": "Spherical seat profile",
+      "summary": "1. **Inputs:** caller-owned sphere radius and axial centre, collar radius and start station, shaft radius and tip station, and blend radius. Use one unit for all inputs. Bind printed dimensions, source approximations and calculated reconstruction points separately in the component job.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/spherical-seat-profile.md",
+          "title": "Spherical seat profile",
+          "summary": "1. **Inputs:** caller-owned sphere radius and axial centre, collar radius and start station, shaft radius and tip station, and blend radius. Use one unit for all inputs. Bind printed dimensions, source approximations and calculated reconstruction points separately in the component job.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "e2309a39fdab737e202a9ca1c62e1b270b9ac4239c5d91274788be340b17402a",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/spherical-seat-profile.md",
+          "title": "Spherical seat profile",
+          "summary": "1. **Inputs:** caller-owned sphere radius and axial centre, collar radius and start station, shaft radius and tip station, and blend radius. Use one unit for all inputs. Bind printed dimensions, source approximations and calculated reconstruction points separately in the component job.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "e2309a39fdab737e202a9ca1c62e1b270b9ac4239c5d91274788be340b17402a",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-90298e431c37",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/source_metadata.py",
+      "title": "Source metadata",
+      "summary": "Compare string metadata with an actual native entity record.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/source_metadata.py",
+          "title": "Source metadata",
+          "summary": "Compare string metadata with an actual native entity record.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/source_metadata.py",
+          "title": "Source metadata",
+          "summary": "Compare string metadata with an actual native entity record.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-9480873c9e5a",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/cadtools/runtime.py",
+      "title": "Runtime",
+      "summary": "Guarded OCS adapter; extracted from the inspected ocs_control/NGV workflow.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/cadtools/runtime.py",
+          "title": "Runtime",
+          "summary": "Guarded OCS adapter; extracted from the inspected ocs_control/NGV workflow.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/cadtools/runtime.py",
+          "title": "Runtime",
+          "summary": "Guarded OCS adapter; extracted from the inspected ocs_control/NGV workflow.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-94eb405ef343",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/check_contract.py",
+      "title": "Check contract",
+      "summary": "Check supplied geometric measurements; does not query CAD or validate physical performance.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/check_contract.py",
+          "title": "Check contract",
+          "summary": "Check supplied geometric measurements; does not query CAD or validate physical performance.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/check_contract.py",
+          "title": "Check contract",
+          "summary": "Check supplied geometric measurements; does not query CAD or validate physical performance.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-97262ee882c7",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/spherical_seat_profile.py",
+      "title": "Spherical seat profile",
+      "summary": "Derive an exact circular-arc profile for a spherical-seat shaft transition.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/spherical_seat_profile.py",
+          "title": "Spherical seat profile",
+          "summary": "Derive an exact circular-arc profile for a spherical-seat shaft transition.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/spherical_seat_profile.py",
+          "title": "Spherical seat profile",
+          "summary": "Derive an exact circular-arc profile for a spherical-seat shaft transition.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-b02ebb04744c",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/tests/test_source_registration.py",
+      "title": "Test source registration",
+      "summary": "Focused source-register merges preserve history and validate both indexes.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "tests/test_source_registration.py",
+          "title": "Test source registration",
+          "summary": "Focused source-register merges preserve history and validate both indexes.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "c763825ec5b639e5ee3fb7b8d2bbe7147239aa09d7638c21e489aa9f2e662dd0",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "tests/test_source_registration.py",
+          "title": "Test source registration",
+          "summary": "Focused source-register merges preserve history and validate both indexes.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d75d17316f971b6f975809d84435fe17456ef563f238a9d18db5902b47ed52b7",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "tests/test_source_registration.py",
+          "title": "Test source registration",
+          "summary": "Focused source-register merges preserve history and validate both indexes.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d0a8d3f15205f12e37a095e37603577d9e5d653f0c2ed8a8bf634ab493c4b298",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "tests/test_source_registration.py",
+          "title": "Test source registration",
+          "summary": "Focused source-register merges preserve history and validate both indexes.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d0a8d3f15205f12e37a095e37603577d9e5d653f0c2ed8a8bf634ab493c4b298",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/skill-packaging.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md",
+        "docs/skill-packaging.md"
+      ]
+    },
+    {
+      "id": "SRC-b3ff112677ac",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular-reference.md",
+      "title": "Annular reference",
+      "summary": "Use [`annular_reference.py`](../scripts/annular_reference.py) when a component source defines a plain ring by bore diameter, outside diameter and axial thickness.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/annular-reference.md",
+          "title": "Annular reference",
+          "summary": "Use [`annular_reference.py`](../scripts/annular_reference.py) when a component source defines a plain ring by bore diameter, outside diameter and axial thickness.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d9595d484df064222b24b87fa280ff81f15e0ad01a3e4fcb36da1b4efdc23b6c",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/annular-reference.md",
+          "title": "Annular reference",
+          "summary": "Use [`annular_reference.py`](../scripts/annular_reference.py) when a component source defines a plain ring by bore diameter, outside diameter and axial thickness.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d9595d484df064222b24b87fa280ff81f15e0ad01a3e4fcb36da1b4efdc23b6c",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-bb12be45b6cf",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/build_skill_packages.py",
+      "title": "Existing skill package builder",
+      "summary": "Reused source discovery, per-package copying and source/hash manifests; extended registration, dependency traversal and completion gates.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_source_inspected_and_reused"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/build_skill_packages.py",
+          "original_revision": "bc6a53a",
+          "original_sha256": "63a4554aa0b4a5bed00c07d5694f7e9aaddd5376f31200deb36f1abe7df1b296",
+          "title": "Existing skill package builder",
+          "summary": "Reused source discovery, per-package copying and source/hash manifests; extended registration, dependency traversal and completion gates.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_source_inspected_and_reused",
+          "referring_documents": [
+            "execution/skill-completion-gate-2026-11-13.md",
+            "docs/skill-packaging.md",
+            "skills/cad-ocs-engineering/references/package-completion.md"
+          ],
+          "source_record_document": "research/sources/skill-completion-gate-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skill-completion-gate-2026-11-13.json",
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    },
+    {
+      "id": "SRC-c12bedd365cc",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-variant-tables.md",
+      "title": "Source variant tables",
+      "summary": "Use `${SKILL_ROOT}/scripts/source_variant_table.py` when a manufacturer or engineering table places specifications for multiple variants in adjacent columns. The helper selects one cell from an explicitly transcribed table using the exact column header and exact row label.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-variant-tables.md",
+          "title": "Source variant tables",
+          "summary": "Use `${SKILL_ROOT}/scripts/source_variant_table.py` when a manufacturer or engineering table places specifications for multiple variants in adjacent columns. The helper selects one cell from an explicitly transcribed table using the exact column header and exact row label.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "ebb158d296d44fefe673693853648f6396cb1fda82348467aa962abb57381670",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-variant-tables.md",
+          "title": "Source variant tables",
+          "summary": "Use `${SKILL_ROOT}/scripts/source_variant_table.py` when a manufacturer or engineering table places specifications for multiple variants in adjacent columns. The helper selects one cell from an explicitly transcribed table using the exact column header and exact row label.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "ebb158d296d44fefe673693853648f6396cb1fda82348467aa962abb57381670",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-c88d4b2c97ac",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/package-completion.md",
+      "title": "Package completion",
+      "summary": "This development operation runs from the 3D CAD Modeling source repository root after an authorized reusable tooling change. The source repository owns `scripts/build_skill_packages.py` and its tests. The installed skill carries its runtime code.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/package-completion.md",
+          "title": "Package completion",
+          "summary": "This development operation runs from the 3D CAD Modeling source repository root after an authorized reusable tooling change. The source repository owns `scripts/build_skill_packages.py` and its tests. The installed skill carries its runtime code.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "bdaac8577e7c1476a468ce9dae7ed20244957d89f65f15b37de6f13ce7fa9b70",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/package-completion.md",
+          "title": "Package completion",
+          "summary": "This development operation runs from the 3D CAD Modeling source repository root after an authorized reusable tooling change. The source repository owns `scripts/build_skill_packages.py` and its tests. The installed skill carries its runtime code.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "b3a82c9c50897b3821b294171312bba99b5c1e6ba59db0e17bd0fcb301801e8c",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/package-completion.md",
+          "title": "Package completion",
+          "summary": "This development operation runs from the 3D CAD Modeling source repository root after an authorized reusable tooling change. The source repository owns `scripts/build_skill_packages.py` and its tests. The installed skill carries its runtime code.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "b3a82c9c50897b3821b294171312bba99b5c1e6ba59db0e17bd0fcb301801e8c",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-c8f378e73049",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/non-geometric-requirements.md",
+      "title": "Non geometric requirements",
+      "summary": "Use this classification only when the component input explicitly states that no CAD geometry is required. The classification is a caller-supplied job declaration; the checker does not infer it from a component name, group, prose or feature values.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/non-geometric-requirements.md",
+          "title": "Non geometric requirements",
+          "summary": "Use this classification only when the component input explicitly states that no CAD geometry is required. The classification is a caller-supplied job declaration; the checker does not infer it from a component name, group, prose or feature values.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/non-geometric-requirements.md",
+          "title": "Non geometric requirements",
+          "summary": "Use this classification only when the component input explicitly states that no CAD geometry is required. The classification is a caller-supplied job declaration; the checker does not infer it from a component name, group, prose or feature values.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-cc2786c6982f",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/toroidal-reference.md",
+      "title": "Toroidal reference",
+      "summary": "Use [`toroidal_reference.py`](../scripts/toroidal_reference.py) when a",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/toroidal-reference.md",
+          "title": "Toroidal reference",
+          "summary": "Use [`toroidal_reference.py`](../scripts/toroidal_reference.py) when a",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "56271a93b495ab4d19b1bd15246148b64ffffefaab039f51d314d422926fb1f2",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/toroidal-reference.md",
+          "title": "Toroidal reference",
+          "summary": "Use [`toroidal_reference.py`](../scripts/toroidal_reference.py) when a",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "56271a93b495ab4d19b1bd15246148b64ffffefaab039f51d314d422926fb1f2",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-cf9699adeab7",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-battery.md",
+      "title": "Existing battery",
+      "summary": "Executed case: [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md), 12 November 2026, gpt-6.1-sol.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/existing-battery.md",
+          "title": "Existing battery",
+          "summary": "Executed case: [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md), 12 November 2026, gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "7a378982fb3dca1b374a83c3041925f99a0f174bdd006fd1625fd58bac0bc6ce",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/existing-battery.md",
+          "title": "Existing battery",
+          "summary": "Executed case: [Leaf module iteration](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/c021-leaf-module.md), 12 November 2026, gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "7a378982fb3dca1b374a83c3041925f99a0f174bdd006fd1625fd58bac0bc6ce",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-d03221452d4f",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/SKILL.md",
+      "title": "Current component development workflow",
+      "summary": "Added mandatory package completion and validation before recording a reusable tooling improvement complete.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_source_inspected_and_reused"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/SKILL.md",
+          "original_revision": "bc6a53a",
+          "original_sha256": "33459c74b485961ac0de7c7e8189212a2c00a015248287081d734db269a4be1c",
+          "title": "Current component development workflow",
+          "summary": "Added mandatory package completion and validation before recording a reusable tooling improvement complete.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_source_inspected_and_reused",
+          "referring_documents": [
+            "execution/skill-completion-gate-2026-11-13.md",
+            "docs/skill-packaging.md",
+            "skills/cad-ocs-engineering/references/package-completion.md"
+          ],
+          "source_record_document": "research/sources/skill-completion-gate-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skill-completion-gate-2026-11-13.json",
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    },
+    {
+      "id": "SRC-d1cb0e75b1e3",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/calibrated_trace.py",
+      "title": "Calibrated trace",
+      "summary": "Map source-image points into calibrated 2D coordinates with uncertainty.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/calibrated_trace.py",
+          "title": "Calibrated trace",
+          "summary": "Map source-image points into calibrated 2D coordinates with uncertainty.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/calibrated_trace.py",
+          "title": "Calibrated trace",
+          "summary": "Map source-image points into calibrated 2D coordinates with uncertainty.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-d4cb9b6ed7a6",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/drawing-feature-checks.md",
+      "title": "Drawing feature checks",
+      "summary": "Use this procedure when a drawing dimension is compared with imported or reconstructed geometry.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
+          "title": "Drawing feature checks",
+          "summary": "Use this procedure when a drawing dimension is compared with imported or reconstructed geometry.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "b1ea1440762729cb2aa1693c522d06d50bd86e45f3b43c17c8379614dcabc9f2",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
+          "title": "Drawing feature checks",
+          "summary": "Use this procedure when a drawing dimension is compared with imported or reconstructed geometry.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "b1ea1440762729cb2aa1693c522d06d50bd86e45f3b43c17c8379614dcabc9f2",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-d864b71e4224",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/ocs_document_cleanup.py",
+      "title": "Ocs document cleanup",
+      "summary": "Safely close one active OCS document owned by a completed CAD job.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/ocs_document_cleanup.py",
+          "title": "Ocs document cleanup",
+          "summary": "Safely close one active OCS document owned by a completed CAD job.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/ocs_document_cleanup.py",
+          "title": "Ocs document cleanup",
+          "summary": "Safely close one active OCS document owned by a completed CAD job.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-e4457f692304",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-metadata.md",
+      "title": "Source metadata",
+      "summary": "Use [source_metadata.py](../scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-metadata.md",
+          "title": "Source metadata",
+          "summary": "Use [source_metadata.py](../scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "13d01b130d74d3ecf0fd513aaf4ae47d79b9d7297ceead2414a40f4bd15515e7",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-metadata.md",
+          "title": "Source metadata",
+          "summary": "Use [source_metadata.py](../scripts/source_metadata.py) when verifying the string metadata written by the existing OCS `Geometry.metadata` adapter.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "13d01b130d74d3ecf0fd513aaf4ae47d79b9d7297ceead2414a40f4bd15515e7",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-e718961d3c9e",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/step_solid_inventory.py",
+      "title": "Step solid inventory",
+      "summary": "Inventory STEP solid-definition entities without counting nested shells.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/step_solid_inventory.py",
+          "title": "Step solid inventory",
+          "summary": "Inventory STEP solid-definition entities without counting nested shells.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "3495aee7471f64d2dc7bfb327cf491f14ea78938ef48b521ec814842dae6f4f0",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/step_solid_inventory.py",
+          "title": "Step solid inventory",
+          "summary": "Inventory STEP solid-definition entities without counting nested shells.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "3495aee7471f64d2dc7bfb327cf491f14ea78938ef48b521ec814842dae6f4f0",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-e867218640dd",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/tests/test_conical_washer_profile.py",
+      "title": "Synthetic conical washer tests",
+      "summary": "Ten passing tests cover independent forward-generated section geometry, source hash/root resolution, normal thickness and area invariants, invalid/ambiguous inputs, guarded construction and native inspection epochs.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_synthetic_tests"
+      ],
+      "observations": [
+        {
+          "title": "Synthetic conical washer tests",
+          "summary": "Ten passing tests cover independent forward-generated section geometry, source hash/root resolution, normal thickness and area invariants, invalid/ambiguous inputs, guarded construction and native inspection epochs.",
+          "local_path": "tests/test_conical_washer_profile.py",
+          "sha256": "130fb3ece4cbe07409cea38a9ce6d012f50ee6e8f30bbed65652e2749ec54ae8",
+          "registered_at": "2026-11-13",
+          "evidence_status": "executed_synthetic_tests",
+          "referring_documents": [
+            "execution/conical-washer-profile-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/conical-washer-profile-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/conical-washer-profile-2026-11-13.json",
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-e9dc4d4b63a4",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/scripts/envelope_job_runner.py",
+      "title": "Envelope job runner",
+      "summary": "Run an external source-bound envelope job through guarded OCS APIs.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "scripts/envelope_job_runner.py",
+          "title": "Envelope job runner",
+          "summary": "Run an external source-bound envelope job through guarded OCS APIs.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "scripts/envelope_job_runner.py",
+          "title": "Envelope job runner",
+          "summary": "Run an external source-bound envelope job through guarded OCS APIs.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "docs/tools.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-ea5cca4068c6",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/scaled-assemblies.md",
+      "title": "Scaled assemblies",
+      "summary": "Executed component: Victron Lynx Smart BMS NG 500 M10, LYN034163010. Model: gpt-6.1-sol.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/scaled-assemblies.md",
+          "title": "Scaled assemblies",
+          "summary": "Executed component: Victron Lynx Smart BMS NG 500 M10, LYN034163010. Model: gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "6e83e20a415bf65e16d5d1b5f052062e193f3d5ee0031b713ab594b4cf52e16f",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/scaled-assemblies.md",
+          "title": "Scaled assemblies",
+          "summary": "Executed component: Victron Lynx Smart BMS NG 500 M10, LYN034163010. Model: gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "6e83e20a415bf65e16d5d1b5f052062e193f3d5ee0031b713ab594b4cf52e16f",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-ec804e897334",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/axial-motor.md",
+      "title": "Axial motor",
+      "summary": "Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../scripts/axial_motor.py). Runtime model: gpt-6.1-sol.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/axial-motor.md",
+          "title": "Axial motor",
+          "summary": "Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../scripts/axial_motor.py). Runtime model: gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "47e5abd2eb282eace4f86c8f66c5a4cadedca55b7fcf3a19105ec8de213edb91",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/axial-motor.md",
+          "title": "Axial motor",
+          "summary": "Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../scripts/axial_motor.py). Runtime model: gpt-6.1-sol.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "47e5abd2eb282eace4f86c8f66c5a4cadedca55b7fcf3a19105ec8de213edb91",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-f2991edcea4f",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/assembly-units.md",
+      "title": "Assembly units",
+      "summary": "Use `scripts/assembly_units.py::plan_root_unit_change` to prepare a read-only plan when an assembly root insertion converts coordinates between drawing units. Supply the complete root insert records and explicit source and destination unit mappings from the caller's job. Each mapping contains a readable `label`, an integer `code`, and `millimetres_per_drawing_unit`; codes are descriptive inputs and do not determine scale.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/assembly-units.md",
+          "title": "Assembly units",
+          "summary": "Use `scripts/assembly_units.py::plan_root_unit_change` to prepare a read-only plan when an assembly root insertion converts coordinates between drawing units. Supply the complete root insert records and explicit source and destination unit mappings from the caller's job. Each mapping contains a readable `label`, an integer `code`, and `millimetres_per_drawing_unit`; codes are descriptive inputs and do not determine scale.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "da183736a81a4204c69769e0e2a87a55912261ffc73addd13f6a4d12319c79e6",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/assembly-units.md",
+          "title": "Assembly units",
+          "summary": "Use `scripts/assembly_units.py::plan_root_unit_change` to prepare a read-only plan when an assembly root insertion converts coordinates between drawing units. Supply the complete root insert records and explicit source and destination unit mappings from the caller's job. Each mapping contains a readable `label`, an integer `code`, and `millimetres_per_drawing_unit`; codes are descriptive inputs and do not determine scale.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "da183736a81a4204c69769e0e2a87a55912261ffc73addd13f6a4d12319c79e6",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-f2dd7dc83962",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/existing-model-start-check.md",
+      "title": "Existing model start check",
+      "summary": "1. Run this check before every component start. It reads the external input manifest, work index, model paths, input-sheet links and files. It runs no CAD operations. Existing model paths, recorded scope and checks supply reuse evidence.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
+          "title": "Existing model start check",
+          "summary": "1. Run this check before every component start. It reads the external input manifest, work index, model paths, input-sheet links and files. It runs no CAD operations. Existing model paths, recorded scope and checks supply reuse evidence.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0908f12f02e28dbae1e2d29f33f7fe89a95094d1b6d0476e37fb27bfb89e0df3",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
+          "title": "Existing model start check",
+          "summary": "1. Run this check before every component start. It reads the external input manifest, work index, model paths, input-sheet links and files. It runs no CAD operations. Existing model paths, recorded scope and checks supply reuse evidence.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "0908f12f02e28dbae1e2d29f33f7fe89a95094d1b6d0476e37fb27bfb89e0df3",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-f5a8295df542",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/model-contract.md",
+      "title": "Model contract",
+      "summary": "Record project-specific facts, not an invented design:",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/model-contract.md",
+          "title": "Model contract",
+          "summary": "Record project-specific facts, not an invented design:",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "1d52c3c8104d8abb9643030d2432cec06ea1e5ee28a428f8dae49c033103c76e",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/model-contract.md",
+          "title": "Model contract",
+          "summary": "Record project-specific facts, not an invented design:",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "1d52c3c8104d8abb9643030d2432cec06ea1e5ee28a428f8dae49c033103c76e",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-f5b63a29220e",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/retained-artifact-checks.md",
+      "title": "Retained artifact checks",
+      "summary": "Use `scripts/retained_artifacts.py` after the final source/path/provenance edits and before the component result commit. It reads caller-owned files and prints a JSON result; it changes no artifact or manifest and connects to no CAD session.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/retained-artifact-checks.md",
+          "title": "Retained artifact checks",
+          "summary": "Use `scripts/retained_artifacts.py` after the final source/path/provenance edits and before the component result commit. It reads caller-owned files and prints a JSON result; it changes no artifact or manifest and connects to no CAD session.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "68bee503ac58a25dc54bce0d3ea8d9722996fcf76a6e7ab7abd0510528f007e4",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/retained-artifact-checks.md",
+          "title": "Retained artifact checks",
+          "summary": "Use `scripts/retained_artifacts.py` after the final source/path/provenance edits and before the component result commit. It reads caller-owned files and prints a JSON result; it changes no artifact or manifest and connects to no CAD session.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "68bee503ac58a25dc54bce0d3ea8d9722996fcf76a6e7ab7abd0510528f007e4",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-fa769befc290",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/sources-and-capabilities.md",
+      "title": "Sources and capabilities",
+      "summary": "Original OCS-specific synthesis, research date2026-10-20. No third-party skill code/instructions were copied or installed. Archived original sources/licenses remain in the project.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/sources-and-capabilities.md",
+          "title": "Sources and capabilities",
+          "summary": "Original OCS-specific synthesis, research date2026-10-20. No third-party skill code/instructions were copied or installed. Archived original sources/licenses remain in the project.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d78209cc661232016b793860bc848e2263f34949d45b743594ea78318360a776",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/sources-and-capabilities.md",
+          "title": "Sources and capabilities",
+          "summary": "Original OCS-specific synthesis, research date2026-10-20. No third-party skill code/instructions were copied or installed. Archived original sources/licenses remain in the project.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "d78209cc661232016b793860bc848e2263f34949d45b743594ea78318360a776",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-fab6a72dd382",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/source-view-evidence.md",
+      "title": "Source view evidence",
+      "summary": "Use this procedure when a manufacturer drawing is available as a retained raster image or as a rendered page from a retained original PDF. It records how a source view supports dimensions, a traced outline, or both.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "local_artifact_inspected_and_registered"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-view-evidence.md",
+          "title": "Source view evidence",
+          "summary": "Use this procedure when a manufacturer drawing is available as a retained raster image or as a rendered page from a retained original PDF. It records how a source view supports dimensions, a traced outline, or both.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "5cebe3896c1318a861b06d7597869ce84c0d23d31467e256a0f7d0f75c3ceb60",
+          "referring_documents": [
+            "docs/tools.md",
+            "skills/README.md",
+            "execution/tooling-registration-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        },
+        {
+          "local_original": "skills/cad-ocs-engineering/references/source-view-evidence.md",
+          "title": "Source view evidence",
+          "summary": "Use this procedure when a manufacturer drawing is available as a retained raster image or as a rendered page from a retained original PDF. It records how a source view supports dimensions, a traced outline, or both.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "local_artifact_inspected_and_registered",
+          "sha256": "5cebe3896c1318a861b06d7597869ce84c0d23d31467e256a0f7d0f75c3ceb60",
+          "referring_documents": [
+            "execution/tooling-registration-2026-11-13.md",
+            "skills/README.md"
+          ],
+          "source_record_document": "research/sources/tooling-registration-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/tooling-registration-2026-11-13.json",
+        "docs/tools.md",
+        "skills/README.md",
+        "execution/tooling-registration-2026-11-13.md"
+      ]
     }
+  ],
+  "source_record_documents": [
+    "research/sources/conical-washer-profile-2026-11-13.json",
+    "research/sources/skill-completion-gate-2026-11-13.json",
+    "research/sources/tooling-registration-2026-11-13.json"
   ]
 }

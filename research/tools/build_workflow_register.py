@@ -5,6 +5,8 @@ import argparse
 import hashlib
 import json
 import re
+import os
+import copy
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -44,11 +46,99 @@ def urls(text):
     return sorted(found)
 
 
+def canonical_locator(locator):
+    if locator.startswith(('scripts/', 'skills/', 'tests/', 'docs/', 'research/', 'execution/')):
+        return '${MODELING_ROOT}/' + locator
+    return locator
+
+
+def merge_source_records(root, documents, date, check=False):
+    """Merge attributed source records without rebuilding unrelated workflow outputs."""
+    root = Path(root)
+    directory = root / 'research/sources'
+    json_path, markdown_path = directory / 'source-register.json', directory / 'source-register.md'
+    original = read_json(json_path)
+    result = copy.deepcopy(original)
+    result['source_record_documents'] = sorted(set(result.get('source_record_documents', [])) | set(map(str, documents)))
+    by_locator = {canonical_locator(item.get('url') or item['local_source_path']): item
+                  for item in result['sources']}
+    touched = set()
+    for document in documents:
+        document = str(document)
+        value = read_json(root / document)
+        entries = value if isinstance(value, list) else value.get('sources', value.get('records', []))
+        if not isinstance(entries, list) or not entries:
+            raise ValueError('Source record document has no records: ' + document)
+        for entry in entries:
+            locator = next((entry.get(key) for key in ('url', 'local_original', 'local_path', 'source_path')
+                            if entry.get(key)), None)
+            if not all((locator, entry.get('title'), entry.get('summary'), entry.get('evidence_status'))):
+                raise ValueError('Incomplete attributed source record in ' + document)
+            locator = canonical_locator(locator)
+            item = by_locator.get(locator)
+            if item is None:
+                item = {'id': sid(locator), 'url': locator if locator.startswith(('https://', 'http://')) else None,
+                        'local_source_path': None if locator.startswith(('https://', 'http://')) else locator,
+                        'title': entry['title'], 'summary': entry['summary'], 'registered_at': date,
+                        'evidence_statuses': [], 'observations': [], 'referring_documents': []}
+                result['sources'].append(item)
+                by_locator[locator] = item
+            observation = dict(entry, source_record_document=document)
+            if observation not in item['observations']:
+                item['observations'].append(observation)
+            if entry['evidence_status'] not in item['evidence_statuses']:
+                item['evidence_statuses'].append(entry['evidence_status'])
+            for referring in [document] + entry.get('referring_documents', []):
+                if referring not in item['referring_documents']:
+                    item['referring_documents'].append(referring)
+            touched.add(item['id'])
+    markdown = markdown_path.read_text()
+    for item in result['sources']:
+        if item['id'] not in touched:
+            continue
+        locator = item['url'] or item['local_source_path']
+        if locator.startswith('${MODELING_ROOT}/'):
+            target = os.path.relpath(root / locator.removeprefix('${MODELING_ROOT}/'), directory)
+            source = f'[{locator}]({target})'
+        elif locator.startswith(('https://', 'http://')):
+            source = f'[{locator}]({locator})'
+        else:
+            source = f'`{locator}`'
+        block = '\n'.join([f'<a id="{item["id"].lower()}"></a>', '',
+                           f'## {item["id"]} — {item["title"]}', '',
+                           f'Original source: {source}', '', f'Summary: {item["summary"]}', '',
+                           'Evidence: ' + ', '.join(item['evidence_statuses']) + '.', '',
+                           'Documents: ' + ', '.join(item['referring_documents']) + '.', '']) + '\n'
+        pattern = (r'<a id="' + re.escape(item['id'].lower()) +
+                   r'"></a>\n\n*#{2,3} [^\n]*\n.*?(?=<a id="|^#{2,3} |\Z)')
+        if re.search(pattern, markdown, re.S | re.M):
+            markdown = re.sub(pattern, lambda match: block, markdown, flags=re.S | re.M)
+        else:
+            markdown = markdown.rstrip() + '\n\n' + block
+    markdown = markdown.rstrip() + '\n'
+    if check:
+        if result != original or markdown != markdown_path.read_text():
+            raise ValueError('Combined source register is stale for: ' + ', '.join(map(str, documents)))
+    else:
+        write_json(json_path, result)
+        markdown_path.write_text(markdown)
+    return {'result': 'PASS', 'mode': 'check' if check else 'merge', 'source_records': len(touched)}
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--date', required=True, help='Explicit client date YYYY-MM-DD')
+    parser.add_argument('--source-record', action='append', help='Merge only this attributed source-record document; repeat as needed')
+    parser.add_argument('--check', action='store_true', help='Check the selected source-record merge without writing')
     args = parser.parse_args()
     date = args.date
+    if args.source_record:
+        print(merge_source_records(ROOT, args.source_record, date, check=args.check))
+        return
+    if args.check:
+        parser.error('--check requires --source-record')
+    existing_register = RESEARCH / 'sources/source-register.json'
+    supplemental_documents = read_json(existing_register).get('source_record_documents', []) if existing_register.exists() else []
     records = {}
 
     def register(url, title, summary, evidence, document, **extra):
@@ -245,6 +335,8 @@ def main():
                   'Evidence: ' + ', '.join(item['evidence_statuses']) + '.', '',
                   'Documents: ' + ', '.join(item['referring_documents']) + '.', '']
     (RESEARCH / 'sources/source-register.md').write_text('\n'.join(lines).rstrip() + '\n')
+    if supplemental_documents:
+        merge_source_records(ROOT, supplemental_documents, date)
     idea_lines = ['# Ideas and research questions', '', f'Registered: {date}.', '',
                   'The records retain project proposals, experiment questions and the earlier implementation-plan ideas. '
                   f'Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json]({RESEARCH / "ideas-register.json"}).', '']

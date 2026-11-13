@@ -19,6 +19,9 @@ class CurrentPackages(unittest.TestCase):
         # Runs in ordinary final unittest discovery, without optional CLI inputs.
         self.assertEqual(builder.build(check=True)['result'], 'PASS')
 
+    def test_catalogues_and_source_register_cover_current_tools(self):
+        self.assertEqual(builder.check_registrations()['result'], 'PASS')
+
 
 class PackageLifecycle(unittest.TestCase):
     def setUp(self):
@@ -50,6 +53,16 @@ class PackageLifecycle(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content)
         return path
+
+    def register_fixture(self):
+        paths = [p for p in builder.source_paths() if Path(p).name != '__init__.py']
+        self.write('docs/tools.md', '\n'.join('[tool](../' + p + ')' for p in paths))
+        self.write('skills/README.md', '# Fixture catalogue\n')
+        self.write('skills/cad-ocs-engineering/SKILL.md', '# Fixture skill\n')
+        records = [{'id': 'fixture-' + Path(p).stem, 'local_source_path': p} for p in paths]
+        self.write('research/sources/source-register.json', json.dumps({'sources': records}))
+        self.write('research/sources/source-register.md', '\n'.join(
+            '<a id="' + r['id'] + '"></a>\n\n## ' + r['id'] + ' — Fixture source' for r in records))
 
     def test_creation_modification_deletion_and_transitive_registration(self):
         builder.build()
@@ -123,6 +136,7 @@ class PackageLifecycle(unittest.TestCase):
             run.assert_not_called()
 
     def test_finalize_propagates_installation_check_failure(self):
+        self.register_fixture()
         failed = subprocess.CompletedProcess([], 1, '', 'installation fixture failed')
         with patch.object(builder.subprocess, 'run', return_value=failed):
             with self.assertRaisesRegex(ValueError, 'completion checks failed'):
@@ -130,12 +144,29 @@ class PackageLifecycle(unittest.TestCase):
         self.assertEqual(builder.build(check=True)['result'], 'PASS')
 
     def test_source_change_during_checks_prevents_completion(self):
+        self.register_fixture()
         def mutate(command, **kwargs):
             self.write('scripts/new_helper.py', 'VALUE = 1\n')
             return subprocess.CompletedProcess(command, 0, '', '')
         with patch.object(builder.subprocess, 'run', side_effect=mutate):
             with self.assertRaisesRegex(ValueError, 'differs from canonical'):
                 builder.complete(regenerate=True, cli_root=self.cli, reader_root=self.reader)
+
+    def test_missing_catalogue_and_source_entries_are_reported(self):
+        self.register_fixture()
+        self.write('scripts/new_helper.py', 'VALUE = 1\n')
+        with self.assertRaisesRegex(ValueError, 'Tool catalogue entry missing'):
+            builder.check_registrations()
+        self.write('docs/tools.md', (self.root / 'docs/tools.md').read_text() + '\n[new](../scripts/new_helper.py)\n')
+        with self.assertRaisesRegex(ValueError, 'Combined source registration missing'):
+            builder.check_registrations()
+
+    def test_missing_procedure_index_entry_is_reported(self):
+        self.register_fixture()
+        self.write('skills/cad-ocs-engineering/references/new.md', '# Fixture procedure\n')
+        self.write('skills/cad-ocs-engineering/SKILL.md', '[procedure](references/new.md)\n')
+        with self.assertRaisesRegex(ValueError, 'Skill procedure index entry missing'):
+            builder.check_registrations()
 
     def test_previous_manifest_cannot_delete_outside_package(self):
         builder.build()
