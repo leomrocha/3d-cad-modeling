@@ -1,6 +1,6 @@
 # Tools
 
-## Software 
+## Software
 
 1. **Python** runs the helper scripts. Dependencies are pinned in [requirements-native.txt](../requirements-native.txt).
 2. **OpenCADStudio** provides the native CAD session via MCP server used by the construction and inspection skills.
@@ -32,7 +32,7 @@
 
 ## Geometry, assemblies and component checks
 
-Note that some of these are specialized tools for particular geometries, I still have work to do on these things.
+Some of these are specialized tools for particular geometries. I still have work to do on these things.
 
 1. [native_acis.py](../scripts/native_acis.py) — reads supported native solid records for geometry inspection.
 2. [step_solid_inventory.py](../scripts/step_solid_inventory.py) — inventories STEP solid definitions without counting nested shells as additional solids.
@@ -47,4 +47,4 @@ Note that some of these are specialized tools for particular geometries, I still
 
 ## Running the tools
 
-The file, index and DXF command-line helpers can be run from a terminal. Construction and check modules are imported by component jobs with their source values, model records and CAD client. [Setup and command examples](../README.md#installing-and-using-it).
+The file, index and DXF command-line helpers can be run from a terminal. Construction and check modules are imported by component jobs with their source values, model records and CAD client. [Setup and command examples](../README.md#installing).

@@ -2,11 +2,11 @@
 
 ## Introduction
 
-One of the reasons for the current project is thigns I've been creating and using this project is to automate as much as possible the building of a control remote 2 wheel tractor that I'd like to have for my small farm (that of course later I plan to make a robot out of it)
+One of the reasons for the current project is to automate as much as possible the building of a remote-controlled 2-wheel tractor that I'd like to have for my small farm (which, of course, I later plan to make a robot out of).
 
 ## Examples
 
-The following examples are fully automated reconstructions from specs, the general pipeline for these component reconstructions is:
+The following examples are fully automated reconstructions from specs. The general pipeline for these component reconstructions is:
 
 1. Read the exact product's drawings, specifications and pictures, and reuse any existing model.
 2. List the dimensions needed for the body, holes, shafts, terminals and mounting points. Keep drawing dimensions and reconstructed details labelled separately.
@@ -37,7 +37,6 @@ The battery iteration reopened the existing module, identified its separate shel
 ![Motenergy ME0907 housing and shaft interfaces](../images/mechanical_components/motor.png)
 
 The Motenergy ME0907 model represents the source-dimensioned housing, pilot, blind mounting patterns and keyed shaft. This example exercises axial features, mounting-hole patterns and shaft interfaces. [Axial motor helper](../../scripts/axial_motor.py).
-
 
 The motor build made the housing and locating pilot, cut the two blind mounting-hole patterns, added the keyed shaft, then checked the saved diameters, depths and positions.
 

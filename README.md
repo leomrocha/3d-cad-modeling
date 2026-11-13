@@ -2,34 +2,34 @@
 
 Reusable tools and agent instructions for creating, inspecting and modifying 3D models from descriptions, dimensions, drawings, photographs and existing geometry.
 
-The current repo has been used and implemented to generate CAD models using the [OpenCADStudio](https://www.opencadstudio.com/) MCP Server. 
+This repo has been used to generate CAD models using the [OpenCADStudio](https://www.opencadstudio.com/) MCP Server.
 
-This is an ONGOING WORK, for now is the first pre-pre-pre-alpha release, I'll be updating it, do please collaborate, copy it, share it, that is why the license is MIT
+This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it. Please collaborate, copy it and share it; that is why the license is MIT.
 
 ## License
 
-[MIT](LICENSE) for project code and documentation. 
-All external sources and assets have their own. IF I have accidentally left some thigns without the real check please do contact me and I'll be really pleased to take that out.
+[MIT](LICENSE) for project code and documentation.
+All external sources and assets have their own licenses. If I have accidentally left some things without the real check, please contact me and I'll be really pleased to take them out.
 
 ## Introduction
 
-If you do not want to read this and directly check the [Examples](#examples)
+If you want to go directly to the examples, check the [Examples](#examples).
 
-I've been working for some time on some cad modeling. As the last time I really touched cad was OpenSCAD (cause I've done software for 20+ years now), the last time I really did something manually in a CAD thign was Autocad 2000 some 25+ years ago AND that I'm too lazy now to learn again to use another CAD  software now I decided I'd make AI agents model things for me. I draw as I learnt 3 decades ago in paper then take pictures and show the things to the model, I have my computer running while sometimes I manage things from my phone.
+I've been working for some time on CAD modeling. The last time I really touched CAD was OpenSCAD (cause I've done software for 20+ years now). The last time I really did something manually in CAD was AutoCAD 2000, some 25+ years ago. I'm too lazy now to learn to use another CAD application, so I decided I'd make AI agents model things for me. I draw on paper as I learnt 3 decades ago, then take pictures and show them to the model. I have my computer running while I sometimes manage things from my phone.
 
-This adventure has not been without problems, blockers, often cursing and of course AI SLOPE that I try to keep to a minimum, so after so much work and learnings and improving my processes I've started to consolidate all thigns into a single Skills and Scripts repository that takes learnings from all those "adventures".
+This adventure has not been without problems, blockers, frequent cursing and, of course, AI SLOP that I try to keep to a minimum. After so much work, learning and process improvement, I've started to consolidate all things into a single skills and scripts repository that takes lessons from all those "adventures".
 
-This time, this repo is now a bed for my recursive self improving skill (RSI - yes this is an exageration) that I'm using for yet another project to make it better. This skill set is far from done, It is thouth already in use by me and I'll keep improving it (it is already improving with each new model and I have 100+ models queued for the automated workflow)
+This repo is now a test bed for my recursive self-improving skill (RSI - yes, this is an exaggeration) that I'm using for yet another project to make it better. This skill set is far from done, though I already use it and I'll keep improving it (it is already improving with each new model, and I have 100+ models queued for the automated workflow).
 
-The idea is to share and see if somebody can use it learn new things and make things faster and simpler.
+The idea is to share and see if somebody can use it, learn new things and make things faster and simpler.
 
-I'll share also the things that I've been working on in other repositories when I consider they are ready enough, although here you'll get some example screenshots from those projects.
+I'll also share the things that I've been working on in other repositories when I consider they are ready enough, although here you'll get some example screenshots from those projects.
 
 ## Project
 
-The project develops a common workflow for mechanical parts, assemblies, buildings and model handoffs to physics simulation. 
+The project develops a common workflow for mechanical parts, assemblies, buildings and model handoffs to physics simulation.
 
-The main pipeline done for a 3D recreation from known things is:
+The main pipeline for a 3D recreation from known things is:
 
 1. Give the agent the part name, drawings, pictures and known measurements.
 2. The agent checks whether a matching 3D model already exists.
@@ -40,18 +40,18 @@ The main pipeline done for a 3D recreation from known things is:
 
 And the main pipeline that I use for NEW things is:
 
-1. I create some hand sketches and descriptions
-2. Send those to an agent
-3. Make the agent spawn a swarm of research light agents online for similar things, ideas, concepts and so on
-4. Review those results
-5. Select a few things ideas drop others rephrase, rewrite, restate and review the definitions, references and so on
-6. Get pissed off cause AI changed somethign withotu permission and without instruction
-7. write down all findings and ideas git commit changes to keep those
-8. Make AI use the skills for 3d modeling till it blocks (it can not create things from nothing)
-9. review thigns and get pissed off again
-10. iterate  
+1. I create some hand sketches and descriptions.
+2. Send those to an agent.
+3. Make the agent spawn a swarm of lightweight research agents to look online for similar things, ideas, concepts and so on.
+4. Review those results.
+5. Select a few things and ideas, drop others, rephrase, rewrite, restate and review the definitions, references and so on.
+6. Get pissed off cause AI changed something without permission and without instruction.
+7. Write down all findings and ideas, then commit the changes to Git to keep them.
+8. Make AI use the skills for 3D modeling till it blocks (it cannot create things from nothing).
+9. Review things and get pissed off again.
+10. Iterate.
 
-When I see things are ready enough I send then the automated 3D modeling pipeline to work.
+When I see things are ready enough, I send the automated 3D modeling pipeline to work.
 
 ## Repository
 
@@ -65,11 +65,13 @@ When I see things are ready enough I send then the automated 3D modeling pipelin
 
 ### House modeling
 
-This is the first thign I did at this complexity level with AI + drawing + pictures + a lot of iterations, is kind of a model house that I sent to a 3D model that was interpreted with a custom three.js library for 3D many nice things there, output was finally done in  [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser  
+This is the first thing I did at this complexity level with AI + drawings + pictures + a lot of iterations. It is a kind of model house that I sent to a 3D model and that was interpreted with a custom three.js library for 3D. Many nice things there. The output was finally done in [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser.
+
+TODO get a house model here?
 
 ### Mast physics for a wind generator
 
-I'm working on a wind generator idea, so I started to check how to model and see how a mast support would behave for the particular geometry I'm trying to get on the top part, many of the thigns I did there for the 3d modeling came ata good port so I add them here as examples of what the predating things allowed me to do (with a lot of interaction and effort)
+I'm working on a wind generator idea, so I started to check how to model a mast support and see how it would behave for the particular geometry I'm trying to get on the top part. Many of the things I did there for the 3D modeling worked out, so I add them here as examples of what the earlier work allowed me to do (with a lot of interaction and effort).
 
 A square mast model and recorded Code_Aster wind cases. [Mast model and simulation pictures](docs/examples/mast.md).
 
@@ -79,9 +81,9 @@ A square mast model and recorded Code_Aster wind cases. [Mast model and simulati
 
 ### Mechanical component models
 
-Another current project is about making a remote controlled 2 wheel tractor, but I do not have time to work on it really so I'm automating all that I can this includes a (mostly) automated pipeline that gets available components from standards and pictures and manufacturer details that kind of fit int eh base idea I have, 
+Another current project is about making a remote-controlled 2-wheel tractor, but I do not really have time to work on it in detail, so I'm automating all that I can. This includes a (mostly) automated pipeline that gets available components from standards, pictures and manufacturer details that kind of fit in the base idea I have. I basically iterate.
 
-Selected frame, motor, bearing and battery examples show source-based construction, component boundaries and saved-model checks. [Mechanical component examples](docs/examples/mechanical_components.md).
+Selected motor, controller, bearing, battery and BMS examples show source-based construction, component boundaries and saved-model checks. [Mechanical component examples](docs/examples/mechanical_components.md).
 
 #### Bearing unit
 
@@ -107,16 +109,9 @@ Manufacturer CAD assembly with corrected component placements, showing ventilati
 
 ![Victron Lynx Smart BMS manufacturer CAD assembly](docs/images/mechanical_components/smart-bms.png)
 
-#### Frame member
+## Installing
 
-![Native hollow frame rail](docs/images/mechanical_components/frame.png)
-
-
-## Installing and Using it
-
-### How to install the skills
-
-I would directly ASK the AI agent you are using to install this and make it available as skill and scripts, that should do the job. But if you want to do it manually here some pointers.
+I would directly ASK the AI agent you are using to install this and make it available as skills and scripts. That should do the job. But if you want to do it manually, here are some pointers.
 
 For Codex on Linux or macOS, complete the [Python helper setup](#set-up-the-python-helpers) below, then run these commands from the repository directory:
 
@@ -136,17 +131,18 @@ done
 This registers the three skills for your Codex projects. Existing entries are preserved. Keep this checkout: the skills use its shared scripts and reference files. When working in another project, tell the agent to set `MODELING_ROOT` to this checkout before running the helpers.
 
 In Codex CLI or the IDE extension, use `/skills` to list the installed skills. Invoke one by name, for example:
+
 ```text
 Use $component-cad to model this component from the supplied drawing.
 ```
 
 Codex detects skill changes automatically. Restart Codex if a newly linked skill does not appear. See the official [Codex skill installation and discovery documentation](https://developers.openai.com/codex/skills).
 
-
 ### Set up the Python helpers
 
-The current status is with Python 3.12. 
+The current setup uses Python 3.12.
 From a terminal:
+
 ```sh
 git clone https://github.com/leomrocha/3d-cad-modeling.git
 cd 3d-cad-modeling
@@ -155,7 +151,7 @@ python3 -m venv .venv
 python -m pip install -r requirements-native.txt
 ```
 
-Python dependencies are listed in [requirements-native.txt](requirements-native.txt). 
+Python dependencies are listed in [requirements-native.txt](requirements-native.txt).
 CAD construction uses an existing [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) installation, the OCS engineering skill and the `cadtools` runtime described in the [component CAD skill](skills/component-cad/SKILL.md).
 
 ### Use the skills with your agent
@@ -168,22 +164,27 @@ CAD construction uses an existing [OpenCADStudio](https://github.com/HakanSeven1
 ### Run a helper directly
 
 For a DXF file named `drawing.dxf`:
+
 ```sh
 python scripts/dxf_inspect.py drawing.dxf --output drawing-inventory.json
 ```
 
 Command-line options:
-```s
+
+```sh
 python scripts/part_index.py --help
 python scripts/model_inventory.py --help
 python scripts/source_intake.py --help
 ```
 
 ### Tools
-To get a list of all skills and python helpers do go read the  [tools page](docs/tools.md).
+
+To get a list of all skills and Python helpers, read the [tools page](docs/tools.md).
 
 ### DISCLAIMER
+
 AI use:
-* code and skills are all Written with ai I instruct, reinstruct and review things then I tell it to modify and update things. But as this is for AI use the parts that are only dedicated to it I do not correct the phrasing for humans.
-* README and main HUMAN targetted documentations files were sketched by me, written by AI then I drop almost everything cause I do not like it and rewrite things, then I send AI agents to fix some small things and details.
-* For the AI documentation I let AI do the writing and try not to get too angry about that cause they are instructions for AI so ...
+
+* Code and skills are all written with AI. I instruct, reinstruct and review things, then I tell it to modify and update things. But as this is for AI use, I do not correct the phrasing for humans in the parts that are only dedicated to AI.
+* The README and main HUMAN-targeted documentation files were sketched by me and written by AI. Then I drop almost everything cause I do not like it and rewrite things, then I send AI agents to fix some small things and details.
+* For the AI documentation, I let AI do the writing and try not to get too angry about that cause they are instructions for AI, so ...
