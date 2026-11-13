@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.description | escape }}">
+    <title>{{ site.title | escape }}</title>
+    <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="{{ '/' | relative_url }}">3D CAD Modeling</a>
+        <a class="repository-link" href="{{ site.repository_url }}">View project on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <div class="page">
+      <aside class="sidebar">
+        <nav aria-label="Page sections">
+          <p class="nav-label">On this page</p>
+          <ul>
+            {% for section in site.navigation %}
+            <li><a href="#{{ section.id | escape }}">{{ section.title | escape }}</a></li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </aside>
+      <main id="main" tabindex="-1">
+        <article class="readme">{{ content }}</article>
+      </main>
+    </div>
+    <footer class="site-footer">
+      <a href="{{ site.repository_url }}/blob/{{ site.source_branch }}/README.md">README source</a>
+      <span aria-hidden="true">·</span>
+      <a href="{{ site.repository_url }}/blob/{{ site.source_branch }}/LICENSE">MIT license</a>
+    </footer>
+  </body>
+</html>
