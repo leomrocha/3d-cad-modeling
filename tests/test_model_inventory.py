@@ -65,5 +65,12 @@ class ExistingModelTests(unittest.TestCase):
     def test_relative_root_configuration_is_rejected(self):
         with self.assertRaisesRegex(ValueError,'must be absolute'):
             start_check(self.part,self.index,self.cad,[],{'model':'${ROOT}/part.dwg'},{'ROOT':'relative'})
+    def test_existing_iges_source_blocks_reconstruction(self):
+        p=self.cad/'parts/ZX1234.igs';p.write_text('IGES source fixture')
+        self.part['existing_cad']='parts/ZX1234.igs'
+        self.assertEqual(self.check()['action'],'SKIP_EXISTING_MODEL')
+    def test_unattributed_iges_candidate_requires_identity_review(self):
+        p=self.cad/'parts/ZX1234.iges';p.write_text('IGES source fixture')
+        self.assertEqual(self.check()['action'],'REVIEW_EXISTING_CANDIDATES')
 
 if __name__=='__main__':unittest.main()

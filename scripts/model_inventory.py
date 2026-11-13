@@ -11,7 +11,7 @@ from pathlib import Path
 import re
 from part_index import load_index, read_json
 
-MODEL_SUFFIXES={'.dwg','.step','.stp','.stl','.obj','.glb','.gltf','.blend','.3mf','.fcstd'}
+MODEL_SUFFIXES={'.dwg','.step','.stp','.iges','.igs','.stl','.obj','.glb','.gltf','.blend','.3mf','.fcstd'}
 
 
 def resolve_locator(value, base, root_map=None):
