@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-13",
+  "relocations": {
+    "docs/modeling-workflow.md": "docs/workflow.md",
+    "docs/building-models.md": "docs/examples/buildings.md",
+    "docs/reconstruction.md": "docs/workflow.md#photographs-and-scans",
+    "docs/contributing.md": "docs/README.md#editing-these-pages",
+    "docs/sources.md": "docs/reference/sources.md",
+    "docs/wind-generator.md": "docs/examples/wind-generator.md",
+    "docs/assets/manifest.json": "docs/images/manifest.json"
+  },
+  "scope": "Public documentation/example layout only; component project originals remain at their source paths."
+}
