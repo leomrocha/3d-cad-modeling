@@ -271,7 +271,7 @@ def validate_save_receipt(receipt, output, expected_by_type):
             for item in value:
                 collect(item)
 
-    collect(saved)
+    collect({'save': saved, 'reopened_audit': reopened_audit})
     if not dropped or any(value != 0 for value in dropped):
         raise ValueError('Save result must report zero dropped entities at every location')
     file_hash = sha256(output)

@@ -1,0 +1,59 @@
+{
+  "records": [
+    {
+      "local_path": "scripts/envelope_job_runner.py",
+      "title": "External source-bound envelope orchestration",
+      "summary": "Caller-driven guarded OCS sequence with source/readiness/reader preflight, isolated native construction, portable metadata, exact-ID uncertainty recovery and saved-file verification.",
+      "evidence_status": "implementation_artifact",
+      "registered_at": "2026-11-13",
+      "sha256": "03187ebb0e76e94420b7b54d7a143fa356d1cf9a8c8a0584a2a79f2d3645acdc",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "tests/test_envelope_job_runner.py",
+      "title": "Envelope runner synthetic regression",
+      "summary": "Nine executed passing tests exercise fake orchestration, no-write default, preflight failures, portable metadata, replay rejection, original-request recovery and nested save drops.",
+      "evidence_status": "executed_test_source",
+      "registered_at": "2026-11-13",
+      "sha256": "dd615254d142c5cf1adab2b950d1f8ea3a5b7c19ae288f1bfe0bfcb167c25e1a",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/envelope-job-runner.md",
+      "title": "Envelope runner input and execution contract",
+      "summary": "Documents explicit CLI job/root/session inputs, preflight order, native writes, saved-file checks and the reference-envelope geometry scope.",
+      "evidence_status": "procedure_update",
+      "registered_at": "2026-11-13",
+      "sha256": "54c541ad03c6e02457eabb856567a4581a82bd15a0c40f96df0717bf904ee36a",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/skills/cad-construction/scripts/cadtools/verification.py",
+      "title": "Existing guarded save and reopen helper",
+      "summary": "Checks pre-save entity audit, verified-save hash and manifest, original request IDs, reopened document identity and reopened manifest; reused by the shared runner.",
+      "evidence_status": "inspected_local_source",
+      "registered_at": "2026-11-13",
+      "sha256": "5863d2b586a0b696be6c5002270dc33b88c9d8c270e422580b0ec4bd2482b6f7",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/scripts/component-led-2026-11-12/c051-build-01/build_reference.py",
+      "title": "Retained source-bound receiver envelope driver",
+      "summary": "Existing applied receiver driver supplied the repeated envelope construction and saved-readback sequence extracted into the generic runner.",
+      "evidence_status": "inspected_local_source",
+      "registered_at": "2026-11-13",
+      "sha256": "f569df6ce8a6b8b1f6335ba2f184e04f6465f6129c5b48499e11f825e8791865",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
+    }
+  ]
+}
