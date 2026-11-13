@@ -28,6 +28,26 @@ class ExistingModelTests(unittest.TestCase):
         p=self.cad/'2d_schemas/drawings/ZX1234-interface.dwg';p.parent.mkdir(parents=True);p.write_bytes(b'AC1032 fixture')
         self.part['existing_cad']='2d_schemas/drawings/ZX1234-interface.dwg'
         result=self.check();self.assertEqual(result['action'],'NEW_MODEL_REQUIRED');self.assertEqual(len(result['references_2d']),1)
+    def test_retained_copy_of_known_2d_drawing_stays_a_reference(self):
+        original=self.cad/'2d_schemas/drawings/ZX1234-interface.dwg'
+        original.parent.mkdir(parents=True);original.write_bytes(b'known 2D drawing')
+        copied=self.cad/'checks/packet/source/ZX1234.dwg'
+        copied.parent.mkdir(parents=True);copied.write_bytes(original.read_bytes())
+        self.part['existing_cad']=str(copied)
+        result=self.check()
+        self.assertEqual(result['action'],'NEW_MODEL_REQUIRED')
+        self.assertEqual(result['models'],[])
+        self.assertEqual(result['candidates'],[])
+        reference=next(row for row in result['references_2d'] if row['path']==str(copied))
+        self.assertEqual(reference['role_source_paths'],[str(original)])
+    def test_distinct_model_bytes_keep_model_role_beside_known_2d_reference(self):
+        original=self.cad/'2d_schemas/drawings/ZX1234-interface.dwg'
+        original.parent.mkdir(parents=True);original.write_bytes(b'known 2D drawing')
+        model=self.cad/'parts/ZX1234.dwg';model.write_bytes(b'distinct completed 3D model')
+        self.part['existing_cad']=str(model)
+        result=self.check()
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL')
+        self.assertEqual(result['models'][0]['path'],str(model))
     def test_completed_record_with_missing_path_requires_location(self):
         self.assertEqual(self.check({'state':'DONE'})['action'],'LOCATE_COMPLETED_MODEL')
     def test_recorded_native_model_path_skips_construction(self):
