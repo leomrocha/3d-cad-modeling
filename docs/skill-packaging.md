@@ -6,7 +6,7 @@ Each skill directory is its installation unit. The skills CLI copies the selecte
 2. **Drawing inspection:** DXF inspection, component-record hashing and part-index parsing; pinned native-reader dependencies.
 3. **CAD OCS Engineering:** the complete OCS and component workflows, original OCS references and agent metadata, shared modeling and inspection helpers, `cadtools` geometry/runtime/save-reopen code, OCS transport and coordinate-contract checker; pinned native-reader dependencies and a running OpenCADStudio session.
 
-Set `SKILL_ROOT` to the installed directory. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
+The [installation examples](../README.md#installing) select an agent and project/global scope, assign `SKILL_ROOT` to the installed directory, create a Python 3.12 environment and execute the package checker. The skills CLI requires Node.js >=22.20 and npm/npx. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
 
 ## Maintain the packages
 

@@ -113,42 +113,78 @@ Manufacturer CAD assembly with corrected component placements, showing ventilati
 
 I would directly ASK the AI agent you are using to install this and make it available as skills and scripts. That should do the job. But if you want to do it manually, here are some pointers.
 
-### Install an individual skill
+### Prerequisites
 
-Use the skills CLI to install the skill you need:
+1. Node.js **22.20 or later**, with npm and npx, for the [skills CLI](https://github.com/vercel-labs/skills).
+2. Python **3.12** on Linux or macOS, including the `venv` module and pip, for the packaged helpers.
+3. A running [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) session for CAD operations.
+
+Check the command versions:
 
 ```sh
-npx skills add leomrocha/3d-cad-modeling --skill cad-ocs-engineering
-npx skills add leomrocha/3d-cad-modeling --skill cad-drawing-inspection
-npx skills add leomrocha/3d-cad-modeling --skill cad-source-intake
+node --version
+npm --version
+npx --version
+python3.12 --version
 ```
 
-Each selected skill carries its scripts, instructions, dependency file and license. Set `SKILL_ROOT` to its installed directory containing `SKILL.md`. Give the agent your source files, job location and output paths. Component CAD also needs your running OpenCADStudio session.
+### Install an individual skill into a project
 
-For a local copy installation, run from this checkout and select one skill:
+This example installs for Claude Code. Run it from the project directory where you want the skill available. Choose `cad-ocs-engineering`, `cad-drawing-inspection` or `cad-source-intake` as `SKILL_NAME`.
 
 ```sh
-npx skills add . --skill cad-ocs-engineering --copy
+SKILL_NAME=cad-ocs-engineering
+npx skills add leomrocha/3d-cad-modeling --skill "$SKILL_NAME" --agent claude-code --copy --yes
+SKILL_ROOT="$PWD/.claude/skills/$SKILL_NAME"
+test -f "$SKILL_ROOT/SKILL.md"
 ```
 
-### Set up the Python helpers
+The project installation is available in that project's `.claude/skills/` directory. `--copy` creates an independent package copy. For a shared symlink installation targeting Claude Code and Codex together, replace `--agent claude-code --copy` with `--agent claude-code codex`. Claude Code's `SKILL_ROOT` path remains the same. The CLI uses copy mode for a single target agent. The [CLI command reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) lists other supported agents and their installation options.
 
-Use Python 3.12 on Linux or macOS. Source intake uses the standard library. Drawing inspection and component CAD use the pinned dependencies included in each package. Create an environment at a location you choose:
+### Alternative: install for all projects
+
+For a user-wide Claude Code installation, use `--global` and its user directory. `CLAUDE_CONFIG_DIR`, when set, supplies Claude Code's configuration directory.
 
 ```sh
-python3 -m venv "$HOME/.venvs/3d-cad-modeling"
-. "$HOME/.venvs/3d-cad-modeling/bin/activate"
+SKILL_NAME=cad-ocs-engineering
+npx skills add leomrocha/3d-cad-modeling --skill "$SKILL_NAME" --agent claude-code --global --copy --yes
+SKILL_ROOT="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/skills/$SKILL_NAME"
+test -f "$SKILL_ROOT/SKILL.md"
+```
+
+### Alternative: install from a local checkout
+
+Run this example from the 3D CAD Modeling checkout. It installs the current local skill for Claude Code in this checkout:
+
+```sh
+SKILL_NAME=cad-ocs-engineering
+npx skills add . --skill "$SKILL_NAME" --agent claude-code --copy --yes
+SKILL_ROOT="$PWD/.claude/skills/$SKILL_NAME"
+test -f "$SKILL_ROOT/SKILL.md"
+```
+
+### Set up and check the selected package
+
+Continue in the same shell after one of the installation examples, retaining its `SKILL_NAME` and `SKILL_ROOT` assignments. Each package carries its scripts, instructions, dependency file and license. This creates a separate Python environment for the selected skill:
+
+```sh
+python3.12 -m venv "$HOME/.venvs/3d-cad-modeling/$SKILL_NAME"
+. "$HOME/.venvs/3d-cad-modeling/$SKILL_NAME/bin/activate"
 python -m pip install -r "$SKILL_ROOT/requirements.txt"
 python "$SKILL_ROOT/scripts/package_check.py"
 ```
 
-The `cad-ocs-engineering` package includes the complete OCS engineering workflow, all component procedures, the OCS control transport, geometry adapter and save/reopen helpers. With [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) already running, check your selected connection:
+The checker prints JSON with `"result": "PASS"` after checking the packaged file hashes, imports and declared dependency versions. Source intake uses the Python standard library; drawing inspection and CAD use pinned dependencies. Repeat the installation and setup with another `SKILL_NAME` to install another package.
+
+Give the agent your source files, job location and output paths. The `cad-ocs-engineering` package includes the OCS engineering workflow, component procedures, OCS control transport, geometry adapter and save/reopen helpers.
+
+For `cad-ocs-engineering`, check a running OCS connection by replacing `SESSION` with its existing session ID:
 
 ```sh
 python "$SKILL_ROOT/scripts/package_check.py" --session SESSION
 ```
 
-The connection check reads OCS state. Its report contains dependency and package results plus the observed document ID and revision. [Package contents and maintenance](docs/skill-packaging.md).
+The connection check reads OCS state and reports the observed document ID and revision. [Package contents and maintenance](docs/skill-packaging.md).
 
 ### Use the skills with your agent
 
@@ -159,7 +195,7 @@ The connection check reads OCS state. Its report contains dependency and package
 
 ### Run a helper directly
 
-For a DXF file named `drawing.dxf`:
+With `SKILL_ROOT` pointing to `cad-drawing-inspection` or `cad-ocs-engineering`, inspect a DXF file named `drawing.dxf`:
 
 ```sh
 python "$SKILL_ROOT/scripts/dxf_inspect.py" drawing.dxf --output drawing-inventory.json
