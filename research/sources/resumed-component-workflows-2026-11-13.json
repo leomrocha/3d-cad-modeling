@@ -1,0 +1,14 @@
+{
+  "records": [
+    {
+      "local_path": "execution/resumed-component-workflows-2026-11-13.md",
+      "title": "Resumed three-agent component execution",
+      "summary": "Records disjoint Luna assignments for Pilz, Curtis and Kelly; actual existing-file start results; completed remote-model reconciliation; and shared-tool/result commit relationships.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_coordination_and_file_inspection",
+      "referring_documents": [
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    }
+  ]
+}
