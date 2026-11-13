@@ -67,8 +67,6 @@ When I see things are ready enough, I send the automated 3D modeling pipeline to
 
 This is the first thing I did at this complexity level with AI + drawings + pictures + a lot of iterations. It is a kind of model house that I sent to a 3D model and that was interpreted with a custom three.js library for 3D. Many nice things there. The output was finally done in [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser.
 
-
-
 TODO get a house model here?
 
 ### Mast physics for a wind generator
