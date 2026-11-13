@@ -46,3 +46,7 @@ The workflow-research extension preserves the implementation plan and prior tool
 2. Preserve exact URLs, dates, source labels and hashes. Link a general finding here to its component evidence in FERME when both subjects occur in one investigation.
 3. [Separation preparation](repository-split-preparation/README.md) contains the dated file manifest, proposed extraction/move operations and script changes. Current modeling continues with its existing active paths.
 4. [Preparation source register](sources/repository-separation-2026-11-13.json) and [proposal register](repository-split-preparation/ideas.json) record this batch independently of source-register generation used by ongoing work.
+
+## Skill naming
+
+1. [CAD skill renaming plan](skill-renaming-plan.md) — requested `cad-drawing-inspection` and `cad-source-intake` identities, documentation updates, package regeneration and verification.

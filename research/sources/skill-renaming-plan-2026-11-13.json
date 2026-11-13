@@ -1,0 +1,316 @@
+{
+  "title": "CAD skill renaming plan and local reference inventory",
+  "date": "2026-11-13",
+  "status": "PLAN PREPARED",
+  "requested_mapping": {
+    "drawing-inspection": "cad-drawing-inspection",
+    "source-intake": "cad-source-intake"
+  },
+  "reason": {
+    "summary": "Public-repository indexing motivates the requested CAD-prefixed skill names.",
+    "evidence_status": "user-supplied rationale"
+  },
+  "sources": [
+    {
+      "local_source_path": "scripts/build_skill_packages.py",
+      "title": "Skill package generator",
+      "summary": "Skill identities appear in the directory list, dependency branches and generated manifests.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "research/skill-renaming-plan.md"
+      ]
+    },
+    {
+      "local_source_path": "tests/test_skill_packages.py",
+      "title": "Independent installation tests",
+      "summary": "Skill selectors, directory expectations and fixture routes use the old skill identities.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "research/skill-renaming-plan.md"
+      ]
+    },
+    {
+      "local_source_path": "README.md",
+      "title": "Installation instructions",
+      "summary": "Installation commands and skill documentation links need the requested identifiers.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "research/skill-renaming-plan.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/index.md",
+      "title": "Jekyll site source",
+      "summary": "Mirrors the skill installation names and links.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "research/skill-renaming-plan.md"
+      ]
+    },
+    {
+      "local_source_path": "skills/README.md",
+      "title": "Skill catalogue",
+      "summary": "Links the current skill directory names.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "research/skill-renaming-plan.md"
+      ]
+    }
+  ],
+  "referring_documents": [
+    "research/skill-renaming-plan.md"
+  ],
+  "inventory": [
+    {
+      "path": "README.md",
+      "sha256_at_inspection": "78ffab45ca07b8ae3ef018d2cd3c29046b3897d0dcb74a9dd4f38d6293281bd9",
+      "occurrences": 6,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "docs/index.md",
+      "sha256_at_inspection": "8b1602276fdead4fe1000b91684963f05ef9cb396024cf01cd24155519833b17",
+      "occurrences": 6,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "docs/skill-packaging.md",
+      "sha256_at_inspection": "a13c1d2e2475ed61fd4f408d48d372705cd8c74975d6fa1724cf50ce5dbee91b",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "docs/tools.md",
+      "sha256_at_inspection": "9723b09fd3ef78cff0e647e030909a840bf2000508b9d34ca73d9eff17a3b063",
+      "occurrences": 4,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "execution/README.md",
+      "sha256_at_inspection": "328f8e692a61141507baaf0278b25e418885e86aadcec7b1e262e5d290094432",
+      "occurrences": 1,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/dxf-inspection.md",
+      "sha256_at_inspection": "c8ebecab4c864e25946344ad95fe02f72cb6bd664d97d73e6d2d1478b09cb22a",
+      "occurrences": 3,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/skill-packaging-2026-11-13.json",
+      "sha256_at_inspection": "6ce3218531cc654cdcd6cd1c7d8afb3be809b357dd8b5b071fbe7e73920d09ff",
+      "occurrences": 6,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/skill-packaging-2026-11-13.md",
+      "sha256_at_inspection": "24c563df5dcf63cf25d00648c2f6f98b4829834c72d74252e8bc01e335e5a17e",
+      "occurrences": 3,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/source-intake.md",
+      "sha256_at_inspection": "22937af55fe72120ea23bf5f509e2ace5fd9eaa293793344c0c2544ef8920504",
+      "occurrences": 8,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/source-intake/job-input.json",
+      "sha256_at_inspection": "9f8b2b1258d0e3a6e91ecf16ff56acc05a373aa9cda046b5d1faf9035e158457",
+      "occurrences": 5,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/source-intake/live-01/revision/receipt.json",
+      "sha256_at_inspection": "ae835761b431594c16ea13071459feda206210fb2949e29bf78933168d922652",
+      "occurrences": 2,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/source-intake/live-01/revision/scope.md",
+      "sha256_at_inspection": "3b6c19bdd7b43ca299bdafe339bba8a4e15ba205f9f81a6839d0cdfaee56105e",
+      "occurrences": 3,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "execution/source-intake/live-01/revision/source-index.json",
+      "sha256_at_inspection": "fd679248f3d11384b81a06d52c77b48e3346499d4102745d809cb3188d38d9b7",
+      "occurrences": 5,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "research/action-audit/implementation-queue/first-action-plan.md",
+      "sha256_at_inspection": "13f6dec4d79417f521f538cf847b19bb0e7e0bee6dbfdae70c2ab75e62b010e7",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/action-audit/implementation-queue/implementation-status.json",
+      "sha256_at_inspection": "cbe85d608c16ee1f1b4104f30ad1a08197fbf0f6cc8a9c85168acf3336810ee7",
+      "occurrences": 4,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/action-audit/point-01-model-brief.md",
+      "sha256_at_inspection": "5fcb25ea198c13c4debd98f28365695c33415df95122341e5a5d3296c35c2c09",
+      "occurrences": 3,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/action-audit/reviews/designer-notes.md",
+      "sha256_at_inspection": "f037100b18b3cab2fabbec92fe16adb8cb56ee9f3098a8c2bc7fe45f14886ffc",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/action-audit/reviews/independent-review.md",
+      "sha256_at_inspection": "cb890fc480cced491a51cc241b6b979b8971b1f7db26279dce80960ac6301b9b",
+      "occurrences": 2,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/repository-split-preparation/manifest.json",
+      "sha256_at_inspection": "281996bb4aecb32bad71f9eaa83a33228747549c85da63f3c4310feff9ca1206",
+      "occurrences": 19,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/repository-split-preparation/plan.md",
+      "sha256_at_inspection": "018b9ead47f215c6f29f34c973bcfbd7e2a24b9ff508efc3eb05819fa7db6770",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/repository-split-preparation/script-changes.md",
+      "sha256_at_inspection": "e7d4d46f1cf44e41bd7e158b4aa219140df3fc2d3558a446028192dd2643657b",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "research/sources/documentation-maintenance-2026-11-13.json",
+      "sha256_at_inspection": "6c3f3c7ccae2671aaf939195da67eb2a5a873f2037492d1e3dae4263b8b8b4bf",
+      "occurrences": 2,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "research/sources/round-17/source-intake-sources.json",
+      "sha256_at_inspection": "4a21ecacc3ffc245be50aad9e262baf2b02e4a441939f39da544e8512ebbdc55",
+      "occurrences": 21,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "research/sources/round-18/dxf-inspection-sources.json",
+      "sha256_at_inspection": "6cceaec298a51a7a7f27db45e753fbf4c102825319719d41942fa01611ce7fab",
+      "occurrences": 21,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "research/sources/skill-installation-2026-11-13.json",
+      "sha256_at_inspection": "7bfb63585cbf054698b7d344dad7780cefc81bfff6eac7f4fcf4fba250aa73cf",
+      "occurrences": 1,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "research/sources/source-register.json",
+      "sha256_at_inspection": "27200a28dcaaf2db3769aa975d9a3f3d2b75941bf0beb5b1e281b9f4ef2b8678",
+      "occurrences": 59,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "research/sources/source-register.md",
+      "sha256_at_inspection": "fd357ab3a555039afb6a7feddf508de27fa33a7fb722ecbab97ef6bc10a1fb6d",
+      "occurrences": 29,
+      "category": "historical source or execution evidence",
+      "review_action": "Review current links and names; preserve original source locators, artifact paths, IDs and evidence hashes."
+    },
+    {
+      "path": "scripts/README.md",
+      "sha256_at_inspection": "68c3775f2d700de86411f2926ed97a5028544d082909d72595f6751dc63b8b4a",
+      "occurrences": 2,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "scripts/build_skill_packages.py",
+      "sha256_at_inspection": "848cd9746164963d50a4a587b829ec28904d74e7c6ddde5fbb283adf5b278c25",
+      "occurrences": 6,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "skills/README.md",
+      "sha256_at_inspection": "b40ac7800e0c81dd904067db5307c931b481bbc32f45c595cfc837b77748efa9",
+      "occurrences": 7,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "skills/drawing-inspection/SKILL.md",
+      "sha256_at_inspection": "0aa8cc17913d27263f2bf7a0505979543982b67b262719970f901957ec30f15f",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "skills/drawing-inspection/package-manifest.json",
+      "sha256_at_inspection": "661b05ed829092ecdbdacda191b5197809584dc27a9afa21c3d50deebe8426ac",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "skills/source-intake/SKILL.md",
+      "sha256_at_inspection": "710b2bbbc1aeba5b167bc50609fb3c982eb2a591cf8b118950355eb72ae90490",
+      "occurrences": 5,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "skills/source-intake/package-manifest.json",
+      "sha256_at_inspection": "458ec079076e519df9704638002fe8d27e46aa42015833a7bb9aabe0699d65a9",
+      "occurrences": 1,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    },
+    {
+      "path": "tests/test_skill_packages.py",
+      "sha256_at_inspection": "f61876596cea08693ed9a2e9786b68de2f8eddf15e97f217c0349b7d0a9d498f",
+      "occurrences": 8,
+      "category": "active documentation, packaging or workflow reference",
+      "review_action": "Update skill identity, live paths, commands or expectations where the match names the installable skill."
+    }
+  ],
+  "verification_status": "plan links, inventory JSON and exact requested name mapping checked; implementation checks are planned"
+}
