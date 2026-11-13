@@ -95,6 +95,18 @@ Selected frame, motor, bearing and battery examples show source-based constructi
 
 ![Motenergy ME0907 housing and shaft interfaces](docs/images/mechanical_components/motor.png)
 
+#### Sumitomo motor controller
+
+Reconstructed housing, power terminals, connector pins, mounting holes and labels.
+
+![Sumitomo CH52308 motor controller CAD reconstruction](docs/images/mechanical_components/motor-controller.png)
+
+#### Victron Lynx Smart BMS
+
+Manufacturer CAD assembly with corrected component placements, showing ventilation slots, connectors, fasteners and separate housing parts.
+
+![Victron Lynx Smart BMS manufacturer CAD assembly](docs/images/mechanical_components/smart-bms.png)
+
 #### Frame member
 
 ![Native hollow frame rail](docs/images/mechanical_components/frame.png)
