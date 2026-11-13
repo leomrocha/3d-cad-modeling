@@ -9,6 +9,7 @@ Use this procedure when a manufacturer drawing is available as a retained raster
 3. Bind each dimension and geometry feature to the exact source revision, product caption, page, figure, view, leader endpoints and measurement kind. Keep manufacturer callouts, raster measurements and calculated coordinates labelled separately.
 4. Label evidence as extracted source text, a tool-generated visual description, or inspected source-image pixels. Bind a drawing leader to an inspected source view or explicit numerical source text; a generated description does not establish which source pixels its leader reaches.
 5. Record inaccessible alternate revisions as failed retrieval attempts with the actual response. Do not transfer dimensions between revisions without inspecting the exact product view.
+6. A failed image or direct-download request records an access-route result. Within the approved source task, reuse the known document identity to check an official alternate delivery URL or manufacturer-authored distributor copy. Preserve each response and the downloaded original with its actual URL, revision, type and hash. Render an acquired PDF locally with existing tools, then inspect the exact product row and leader endpoints. Keep a different revision as a separate source; a text reader or generated visual description alone does not supply inspected drawing pixels.
 
 ## Bind a view to metric geometry
 

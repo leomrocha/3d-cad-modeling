@@ -1,0 +1,41 @@
+{
+  "records": [
+    {
+      "local_path": "skills/component-cad/references/source-view-evidence.md",
+      "title": "Exact drawing retrieval and inspected views",
+      "summary": "Adds bounded alternate-document acquisition, local rendering and revision/variant inspection after an image or direct-download route fails.",
+      "registered_at": "2026-11-13",
+      "sha256": "a16d906309d91c8d5e7932911a85a40a5e7c4606993d30210bdd159466b25eae",
+      "evidence_status": "applied_procedure",
+      "referring_documents": [
+        "execution/exact-drawing-retrieval-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/exact-drawing-retrieval-2026-11-13.md",
+      "title": "Fuse drawing retrieval application",
+      "summary": "Records the preserved original 403, successful manufacturer-authored distributor PDF acquisition and actual coordinator leader inspection supporting the fuse contract.",
+      "registered_at": "2026-11-13",
+      "sha256": "33e0d12e39aee590d702b04dbb46481cdd31c19bce7300068602170ffbe61efb",
+      "evidence_status": "executed_source_review_report",
+      "referring_documents": [
+        "execution/exact-drawing-retrieval-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/littelfuse-20ev-series-rev-2024-chipdip.pdf",
+      "title": "Littelfuse 20EV series 2024 distributor original",
+      "summary": "Unchanged manufacturer-authored three-page 03/27/2024 PDF contains the M6 ordering family, exact 100 A row and source dimensional view inspected for the external reference contract.",
+      "registered_at": "2026-11-13",
+      "sha256": "992b465d387b547ad3a9e3c387761de0de293c2c942a9bfd3729eb252af27294",
+      "evidence_status": "downloaded_original",
+      "referring_documents": [
+        "execution/exact-drawing-retrieval-2026-11-13.md"
+      ],
+      "original_url": "https://static.chipdip.ru/lib/223/DOC050223602.pdf",
+      "retrieval_date": "2026-11-13",
+      "content_type": "application/pdf",
+      "bytes": 267298
+    }
+  ]
+}
