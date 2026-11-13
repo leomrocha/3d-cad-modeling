@@ -1,0 +1,9 @@
+# Source-profile extrusion and independent drawing checks
+
+Date: 13 November 2026. Implementation: gpt-6-luna. Coordinator review: gpt-6.1-sol.
+
+1. [The reusable profile helper](../scripts/profile_reference.py) consumes an external source-pinned polygon, depth, frame and metadata. It validates a simple polygon, compares its spans with independent source intervals, rejects numeric collapse before writes and uses the existing guarded native extrusion adapter. Readback compares actual vertices, bounds, topology and document revisions.
+2. Review added rejection of boolean source depth, nonpositive source extents, translated-point collapse and positive extrusion depths lost at large coordinates. Seventeen synthetic tests pass. Their wrong-scale case verifies rejection before loading the native geometry adapter.
+3. [Drawing-feature checks](../skills/component-cad/references/drawing-feature-checks.md) now compare the input profile with direct source callouts before construction. The applied component review found a mismatched raster coordinate frame despite successful output-to-input persistence checks. The component project retains the measured discrepancy, failed result and targeted correction; the reusable method keeps independent source validation separate from faithful reproduction of supplied coordinates.
+4. [Trace calibration](../skills/component-cad/references/calibrated-trace.md) records both picked-endpoint uncertainties and the image coordinate frame. [The profile procedure](../skills/component-cad/references/profile-reference.md) keeps geometry and native metadata persistence separate.
+5. Actual source originals, source points, product dimensions, component recipes and native results stay in the consuming project. [The source register](../research/sources/profile-reference-improvement-2026-11-13.json) contains exact helper/test/procedure hashes and named-root locators for the prepared application job.

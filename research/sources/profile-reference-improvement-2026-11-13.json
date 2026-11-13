@@ -1,0 +1,82 @@
+{
+  "date": "2026-11-13",
+  "implementation_model": "gpt-6-luna",
+  "coordinator_review_model": "gpt-6.1-sol",
+  "records": [
+    {
+      "title": "profile reference",
+      "path": "scripts/profile_reference.py",
+      "summary": "Source-pinned polygon reference extrusion with independent source extent gates, simple-polygon validation, numeric-collapse preflight, guarded native construction and document-bound vertex/topology comparisons.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "test profile reference",
+      "path": "tests/test_profile_reference.py",
+      "summary": "Seventeen synthetic tests cover independent source dimensions, wrong-scale rejection before writes, polygon shape readback, source pinning, native identity and numeric-collapse cases.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_synthetic_test_source",
+      "sha256": "c1709f73efbc598f4746aaa7dd20bb20caa62190511bcd80efe9bc22a59a3d26",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "profile reference",
+      "path": "skills/component-cad/references/profile-reference.md",
+      "summary": "Defines the external job contract, independent source intervals, explicit construction frame and separate geometry, metadata and source-evidence checks.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "documented_procedure",
+      "sha256": "e46ccf0422e9b3ca9ac875f9a35c28c304d781e23bdc09c7c6c55fc4e5168202",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "drawing feature checks",
+      "path": "skills/component-cad/references/drawing-feature-checks.md",
+      "summary": "Requires independent source-callout comparison before geometry, consistent image coordinate frames and feature-specific measurements; preserves failed records and supported persistence results.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "documented_procedure",
+      "sha256": "7a7905dc810ff4581cd813704d58d1ff14f1792ea90f0ce72d825d5b3f89b437",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "calibrated trace",
+      "path": "skills/component-cad/references/calibrated-trace.md",
+      "summary": "Clarifies that a picked span includes both endpoint uncertainties and that image resizing or cropping needs a recorded coordinate transform before calibration.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "documented_procedure",
+      "sha256": "da02629d49a739f4ec1bcee96202eed9148038013207a9c2e8499441257c34ba",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "SKILL",
+      "path": "skills/component-cad/SKILL.md",
+      "summary": "Routes source-profile construction to the reusable helper contract and retains existing model-reuse and source-feature procedures.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "documented_procedure",
+      "sha256": "3a3619b80352a69778e3fb137f4ceba8b38a01da7a4ca4f519d1e8da97cfd9a3",
+      "referring_documents": [
+        "execution/profile-reference-improvement-2026-11-13.md"
+      ]
+    }
+  ],
+  "checks": {
+    "synthetic_profile_tests": "PASS: 17",
+    "skill_frontmatter_validation": "PASS"
+  },
+  "external_application": {
+    "prepared_source_job": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c050-build-01/profile-reference-job.json",
+    "source_failure_that_motivated_independent_gate": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c040-build-01/coordinator-source-dimension-failure.json"
+  },
+  "stored_path_convention": "repository-relative paths and caller-resolved named roots"
+}
