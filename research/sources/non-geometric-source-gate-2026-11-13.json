@@ -1,0 +1,64 @@
+{
+  "implementation_model": "gpt-6-luna",
+  "coordinator_and_test_model": "gpt-6.1-sol",
+  "tests": {
+    "passed": 57
+  },
+  "records": [
+    {
+      "title": "Explicit non-geometric readiness",
+      "summary": "Validates the non-geometric consumable declaration, exact source pin and location; supports caller-named source roots and preserves the CAD-construction guard.",
+      "local_path": "scripts/component_records.py",
+      "sha256": "7a7a4685b51e2dcce8b6b5a51193916ec5912eabee2205bd6f3b7db63d2462b9",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/non-geometric-source-gate-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Non-geometric inventory action",
+      "summary": "Produces SKIP_NON_GEOMETRIC after source validation and actual existing-model/candidate inspection; preserves geometric completed-task lookup behavior.",
+      "local_path": "scripts/model_inventory.py",
+      "sha256": "26fbc6993ef05133a02e9eacf3888be14f781c381176e8a39ba1f9026154f878",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/non-geometric-source-gate-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Component source-record tests",
+      "summary": "Tests source-bound non-geometric readiness, malformed declarations, changed source hashes, explicit root mapping and geometry-construction rejection alongside existing tool behavior.",
+      "local_path": "tests/test_component_tools.py",
+      "sha256": "ed0152137b98de980c1a375e9081b3bfd0187abfd80f5ffa90625695a35c5a37",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/non-geometric-source-gate-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Inventory regression tests",
+      "summary": "Tests explicit non-geometric skip, actual model and candidate precedence, completed-task classification and unchanged geometric inventory behavior.",
+      "local_path": "tests/test_model_inventory.py",
+      "sha256": "5c28c0cf160a98d2c919b1bee857e210a2fb4fa5c332f409527ba099ba4e1fa3",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/non-geometric-source-gate-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Non-geometric workflow procedure",
+      "summary": "Documents the explicit source contract, status meanings, existing-model precedence and separate geometric alternatives.",
+      "local_path": "skills/component-cad/references/non-geometric-requirements.md",
+      "sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/non-geometric-source-gate-2026-11-13.md"
+      ]
+    }
+  ]
+}

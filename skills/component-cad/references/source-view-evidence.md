@@ -21,6 +21,14 @@ Use this procedure when a manufacturer drawing is available as a retained raster
 6. Keep mounting circles, axes, slots and datums as separate reference features where the source establishes them. A printed diameter and pitch do not establish a hole depth or a through-cut.
 7. State what the resulting solid represents: a traced external surface, projected clearance volume, packaging envelope or another named representation. Preserve unresolved body construction, walls, feature depths and hidden geometry as separate source requirements.
 
+## Classify source shape and exact-variant dimensions
+
+1. Classify each view as an exact-variant drawing, a family illustration, or another explicitly named scope. Bind the classification to the visible product designation, family/range labels, configuration labels and revision on the retained source page.
+2. Record the family scope of a view covering a size range or multiple configurations. Identify any manufacturer statement mapping a shared contour or CAD model to the requested variant. A silhouette with family-level correspondence supports a family-shape approximation; label its derived solid as a family-shape reference or illustration.
+3. A table can give exact-variant dimensions beside a family illustration. Bind each printed table value to its exact product row and keep it independent from dimensions measured on the family image. Use exact-row values for separately identified interface references when their feature and datum are explicit; do not move or deform the family trace to make those references coincide.
+4. Keep source variant mismatch separate from raster measurement uncertainty. Before claiming that two dimensions quantitatively disagree beyond trace uncertainty, retain the raw source pixel endpoints for both measurements, endpoint-pick uncertainties, origin and scale inputs, and derived interval calculation. When those inputs are absent, label the comparison as nominal observed proportions and preserve the missing endpoint record as an evidence limitation; do not infer a tolerance result.
+5. Bind an exact external-shape claim to the requested variant through its own drawing or an explicit manufacturer mapping to shared geometry. Keep exact source-dimensioned interfaces and a proposed family-shape illustration as separate representations when only family-level contour evidence is available.
+
 ## Evidence and result records
 
 The component job retains the original-source identity, derived-image provenance, per-feature source locators, trace points, calibration inputs, uncertainty bounds, native frame and geometry role. The result records source-readiness separately from native construction, numerical readback and saved-file checks. A pixel-perfect visual resemblance alone does not establish dimensional correctness; a numerical source-bound comparison alone does not establish detailed product construction.

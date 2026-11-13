@@ -10,6 +10,10 @@ import json
 from pathlib import Path
 import re
 from part_index import load_index, read_json
+try:
+    from component_records import validate_geometry_requirement, RecordError
+except ImportError:
+    from .component_records import validate_geometry_requirement, RecordError
 
 MODEL_SUFFIXES={'.dwg','.step','.stp','.iges','.igs','.stl','.obj','.glb','.gltf','.blend','.3mf','.fcstd'}
 
@@ -74,6 +78,15 @@ def _declared_configurations(job):
 def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,configuration=None):
     """Use attributed file links first; block construction on discovered candidates."""
     cad_root=Path(cad_root).resolve();job=job or {};files={p['path']:p for p in inventory}
+    try:
+        non_geometric=validate_geometry_requirement(job,root_map)
+    except RecordError as error:
+        raise ValueError(str(error)) from error
+    if non_geometric is not None:
+        if job.get('part_id') != part.get('id'):
+            raise ValueError('Non-geometric job part_id must match the indexed part')
+        if configuration is not None or job.get('configurations'):
+            raise ValueError('Non-geometric classification cannot be combined with configuration-scoped geometry')
     if configuration is not None:
         declared=_declared_configurations(job)
         if configuration not in declared:
@@ -145,12 +158,15 @@ def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,config
     codes={compact(v) for v in [part['id']]+re.findall(r'[A-Za-z]*\d[A-Za-z0-9.\-]*',part['name']) if len(compact(v))>=4}
     candidates=[p for p in inventory if p['role']=='3d_model_file' and p['bytes']>0 and p not in matches and any(v in compact(Path(p['path']).stem) for v in codes)]
     if matches:action='SKIP_EXISTING_MODEL'
+    elif non_geometric is not None and candidates:action='REVIEW_EXISTING_CANDIDATES'
+    elif non_geometric is not None:action='SKIP_NON_GEOMETRIC'
     elif job.get('state')=='DONE' or part.get('cad_state')=='DONE':action='LOCATE_COMPLETED_MODEL'
     elif candidates:action='REVIEW_EXISTING_CANDIDATES'
     else:action='NEW_MODEL_REQUIRED'
     return dict(part_id=part['id'],part_name=part['name'],recorded_state=job.get('state','NOT_STARTED'),
                 action=action,models=matches,candidates=candidates,references_2d=references,
-                input_sheet=str(sheet),filesystem_model_files_checked=len(inventory))
+                input_sheet=str(sheet),filesystem_model_files_checked=len(inventory),
+                geometry_requirement=non_geometric)
 
 
 def audit(index_path,work_index,cad_root,project_root,root_map=None,configuration=None,part_id=None):
