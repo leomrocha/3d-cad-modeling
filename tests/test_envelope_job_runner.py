@@ -270,6 +270,23 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         self.assertFalse(any(call[0] == 'mutate' for call in helper.calls))
         self.assertFalse(any(call[0] == 'descriptors' for call in helper.calls))
 
+    def test_request_id_byte_budget_is_checked_before_session_discovery(self):
+        job = self.job()
+        roots = runner.parse_roots(self.args().root)
+        suffix = ' complete source binding'
+        budget = 128 - len((job['namespace'] + ':' + suffix).encode('utf-8'))
+        job['geometry_name'] = 'x' * budget
+        runner.resolve_runtime_job(self._write_job(job), roots)
+        # A single non-ASCII character can exceed the byte budget even when
+        # the number of characters remains unchanged.
+        job['geometry_name'] = 'x' * (budget - 1) + 'é'
+        oversized_job = self._write_job(job)
+        helper = FakeHelper()
+        with patch.dict(sys.modules, self.fake_imports(helper)):
+            with self.assertRaisesRegex(ValueError, '128 UTF-8 bytes'):
+                runner.run(self.args(job=oversized_job, allow_write=True))
+        self.assertFalse(helper.calls)
+
     def test_invalid_metadata_and_root_fail_before_ocs_discovery(self):
         helper = FakeHelper()
         job = self.job()
