@@ -48,8 +48,13 @@ class FakeClient:
         self.journal = journal
         self.allow_write = allow_write
         self.solid_count = 0
+        self.mutation_labels = set()
 
     def mutate(self, label, operation, **fields):
+        if operation == 'xdata_set' and label in self.mutation_labels:
+            raise RuntimeError('duplicate request label: ' + label)
+        if operation == 'xdata_set':
+            self.mutation_labels.add(label)
         self.helper.calls.append(('mutate', label, operation))
         if operation == 'new':
             self.helper.active = 2
@@ -171,8 +176,17 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         cadtools = types.ModuleType('cadtools')
         envelope = types.ModuleType('envelope_reference')
 
+        class Geometry:
+            def __init__(self, client):
+                self.client = client
+
+            def metadata(self, label, handles, lines):
+                return self.client.mutate(label, 'xdata_set', handles=handles, data=lines)
+
         def build_envelope(client, job):
             client.solid_count = 1
+            Geometry(client).metadata(job['geometry_name'] + ' source metadata',
+                                     ['H1'], ['basic source-bound metadata'])
             return 'H1'
 
         def inspect(client, handles, job):
@@ -181,15 +195,11 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
                      'document_revision': 1, 'geometry_revision': 1}
             return {'records': [record]}, check
 
-        class Geometry:
-            def metadata(self, *args):
-                return None
-
         envelope.build_envelope = build_envelope
         envelope.inspect = inspect
         envelope.parameters = lambda job: {'dimensions': {'x': 10, 'y': 20, 'z': 30},
                                            'origin': [0, 0, 0], 'tolerance': 1e-7}
-        envelope.geometry = lambda client: Geometry()
+        envelope.geometry = lambda client: Geometry(client)
         metadata = types.ModuleType('source_metadata')
         metadata.compare_source_metadata = lambda *args: {'result': 'PASS'}
         modules = {
@@ -303,6 +313,12 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         self.assertTrue((self.job_dir / 'pre-save-feature-checks.json').is_file())
         self.assertTrue((self.job_dir / 'reopened-source-metadata-check.json').is_file())
         self.assertTrue(any(call[:2] == ('mutate', 'create-isolated-document') for call in helper.calls))
+        metadata_mutations = [call[1] for call in helper.calls
+                              if call[0] == 'mutate' and call[2] == 'xdata_set']
+        self.assertEqual(metadata_mutations, [
+            'Synthetic envelope source metadata',
+            'Synthetic envelope complete source binding',
+        ])
         self.assertTrue((self.job_dir / 'action-occurrences.jsonl').is_file())
 
     def test_uncertain_mutation_recovers_original_request_without_resubmission(self):

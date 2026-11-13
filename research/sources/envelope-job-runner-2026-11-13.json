@@ -54,6 +54,39 @@
       "referring_documents": [
         "execution/envelope-job-runner-2026-11-13.md"
       ]
+    },
+    {
+      "local_path": "scripts/envelope_job_runner.py",
+      "title": "Distinct source-metadata action labels",
+      "summary": "Second metadata action uses complete source binding, preserving the reused construction helper basic metadata request identity.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_revision",
+      "sha256": "f81f2a06c14cf7c2e8573eeca58dd149f7c193662b5a8c3cd96a949e63d16150",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "tests/test_envelope_job_runner.py",
+      "title": "Metadata action integration regression",
+      "summary": "Synthetic build performs the basic metadata mutation; the fake client rejects duplicate metadata labels and the test asserts the two distinct action names.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_regression_and_procedure_review",
+      "sha256": "c8047a4b7ba3dc11045b6a15397bcc5836d0993b7e146e5706a95aafba2b86c9",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/envelope-job-runner.md",
+      "title": "Documented metadata action identities",
+      "summary": "Documents the basic and complete source metadata writes as separate journalled actions.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "sha256": "f1cd62910bdb4561af67a55e136d0fe73bf333e37af48f7128c8beb5f5d12b2b",
+      "referring_documents": [
+        "execution/envelope-job-runner-2026-11-13.md"
+      ]
     }
   ]
 }
