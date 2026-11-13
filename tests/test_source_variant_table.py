@@ -72,6 +72,22 @@ class SourceVariantTableTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'source_location'):
             select_cell(self.table, 'Variant Beta (bare)', 'Envelope')
 
+    def test_product_rows_keep_dimension_column_and_variant_row(self):
+        table = {
+            'table_id': 'synthetic-row-variants',
+            'source_location': 'synthetic catalogue, table 2',
+            'headers': ['Width [mm]', 'Depth [mm]'],
+            'rows': [
+                {'label': 'Variant Alpha', 'values': ['27', '4']},
+                {'label': 'Variant Beta', 'values': ['33', '11']},
+            ],
+        }
+        cell = select_cell(table, 'Depth [mm]', 'Variant Beta')
+        self.assertEqual(cell['value'], '11')
+        self.assertEqual(cell['row_label'], 'Variant Beta')
+        self.assertEqual(cell['variant_header'], 'Depth [mm]')
+        self.assertEqual(cell['source_location'], table['source_location'])
+
 
 if __name__ == '__main__':
     unittest.main()
