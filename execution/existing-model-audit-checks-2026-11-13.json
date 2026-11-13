@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "result": "PASS",
+  "component_rows": 103,
+  "matching_existing_models": 13,
+  "corrected_statuses": 4,
+  "filesystem_files": 43,
+  "all_inventory_file_hashes_preserved": true,
+  "existing_manifest_fields_preserved": true,
+  "source_registration_dates_preserved": 1305,
+  "source_observations": 60,
+  "start_check_tests": 10,
+  "skill_validation": "PASS",
+  "original_plan_and_action_graph_preserved": true,
+  "next_component": "C001 \u2014 Trelleborg T539 tyre",
+  "next_file_check": "NEW_MODEL_REQUIRED",
+  "cad_operations": 0
+}

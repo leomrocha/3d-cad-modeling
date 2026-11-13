@@ -1,0 +1,15 @@
+test_2d_reference_is_separate_from_component_model (test_model_inventory.ExistingModelTests.test_2d_reference_is_separate_from_component_model) ... ok
+test_completed_bmw_style_record_is_not_reopened (test_model_inventory.ExistingModelTests.test_completed_bmw_style_record_is_not_reopened) ... ok
+test_completed_manifest_also_prevents_rebuilding (test_model_inventory.ExistingModelTests.test_completed_manifest_also_prevents_rebuilding) ... ok
+test_completed_record_with_missing_path_requires_location (test_model_inventory.ExistingModelTests.test_completed_record_with_missing_path_requires_location) ... ok
+test_dependency_motor_is_not_mistaken_for_its_mounting_plate (test_model_inventory.ExistingModelTests.test_dependency_motor_is_not_mistaken_for_its_mounting_plate) ... ok
+test_file_link_in_sheet_is_found_without_manifest_model (test_model_inventory.ExistingModelTests.test_file_link_in_sheet_is_found_without_manifest_model) ... ok
+test_filesystem_candidate_blocks_new_construction (test_model_inventory.ExistingModelTests.test_filesystem_candidate_blocks_new_construction) ... ok
+test_new_component_requires_actual_filesystem_scan (test_model_inventory.ExistingModelTests.test_new_component_requires_actual_filesystem_scan) ... ok
+test_recorded_native_model_path_skips_construction (test_model_inventory.ExistingModelTests.test_recorded_native_model_path_skips_construction) ... ok
+test_stale_not_started_record_skips_existing_file (test_model_inventory.ExistingModelTests.test_stale_not_started_record_skips_existing_file) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.004s
+
+OK

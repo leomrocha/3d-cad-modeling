@@ -15035,3 +15035,485 @@ Original source: [Local OCS control source mod.rs](/home/leo/projects/3rdparty/O
 Summary: Local source read to identify native pointer, document activation and capture actions. The current pointer call completed and its observed capture result is retained separately.
 
 Evidence: local_implementation_source_inspected.
+
+## Existing-model reconciliation — 13 November 2026
+
+### Actual-file component start check — SRC-33d3e8961151
+
+Original source: [Actual-file component start check](/home/leo/projects/3dmodeling/scripts/model_inventory.py)
+
+Summary: Reads manifest and work-record model/output/native_model paths, sheet links and filesystem files. Returns skip, locate, review or new-model action without opening CAD.
+
+Evidence: implementation_artifact.
+
+### Existing-model start regression tests — SRC-cb2e35b829eb
+
+Original source: [Existing-model start regression tests](/home/leo/projects/3dmodeling/tests/test_model_inventory.py)
+
+Summary: Ten tests cover stale status, recorded path fields, sheet discovery, unlinked files, dependency models, 2D references and completed-state preservation.
+
+Evidence: implementation_artifact.
+
+### Component iteration skill with mandatory file lookup — SRC-6b239a9bfdd1
+
+Original source: [Component iteration skill with mandatory file lookup](/home/leo/projects/3dmodeling/skills/component-cad/SKILL.md)
+
+Summary: Requires actual 3D file and prior-record inspection before every component start and reuse of existing completed models.
+
+Evidence: implementation_artifact.
+
+### Existing-model start procedure — SRC-758d94d927aa
+
+Original source: [Existing-model start procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/existing-model-start-check.md)
+
+Summary: Documents each lookup result, exact FERME command, identity review, reuse of existing checks and separation of 2D references.
+
+Evidence: implementation_artifact.
+
+### Standing existing-model reuse instruction — SRC-8f9b6f25cd0d
+
+Original source: [Standing existing-model reuse instruction](/home/leo/projects/3dmodeling/AGENTS.md)
+
+Summary: Records the 13 November instruction to check actual files before every start and mark matching existing models DONE in the current list.
+
+Evidence: registered_user_instruction.
+
+### Existing-model reconciliation report — SRC-2adf14e1a45e
+
+Original source: [Existing-model reconciliation report](/home/leo/projects/3dmodeling/execution/existing-model-audit-2026-11-13.md)
+
+Summary: Reports 103 checked rows, 43 files, 13 existing matching models and four stale status corrections, with the next tyre file lookup.
+
+Evidence: executed_reconciliation_report.
+
+### Existing-model guard test result — SRC-f6862578e31e
+
+Original source: [Existing-model guard test result](/home/leo/projects/3dmodeling/execution/existing-model-start-tests-2026-11-13.txt)
+
+Summary: Recorded execution of ten focused start-check tests; all pass.
+
+Evidence: executed_software_test_result.
+
+### Full before-and-after component file audit — SRC-67b43e6b7da4
+
+Original source: [Full before-and-after component file audit](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/audit.json)
+
+Summary: Contains all 103 before/after entries and 43 file hashes; identifies 13 matching existing 3D components and four status corrections.
+
+Evidence: executed_filesystem_reconciliation.
+
+### Human-readable completed component file list — SRC-d32e5f329b48
+
+Original source: [Human-readable completed component file list](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/README.md)
+
+Summary: Lists 13 DONE components with actual file paths, the four status corrections and next-component file check.
+
+Evidence: executed_reconciliation_report.
+
+### Trelleborg T539 actual-file start check — SRC-cd1b7c790611
+
+Original source: [Trelleborg T539 actual-file start check](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/next-component-check.json)
+
+Summary: C001 tyre lookup scans all 43 available model/reference files and returns NEW_MODEL_REQUIRED. Existing completed components stay outside this construction candidate.
+
+Evidence: executed_filesystem_start_check.
+
+### Current component manifest with CAD completion states — SRC-41482c223014
+
+Original source: [Current component manifest with CAD completion states](/home/leo/projects/ferme/engineering/module-development/cad-inputs/parts.json)
+
+Summary: Preserves all 103 component identities and source/dependency fields; adds current CAD states and preferred existing paths for 13 modeled components.
+
+Evidence: implementation_data_artifact.
+
+### Reconciled component work states — SRC-4f0c8d392a38
+
+Original source: [Reconciled component work states](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json)
+
+Summary: Four stale statuses become DONE with linked existing geometry, preserved prior records and current filesystem-check evidence. All existing CAD is reused.
+
+Evidence: implementation_data_artifact.
+
+### CAD model index with current completion list — SRC-c66fe74bfd16
+
+Original source: [CAD model index with current completion list](/home/leo/projects/ferme/engineering/module-development/cad/README.md)
+
+Summary: Adds the current 13-component completion list and mandatory actual-file lookup above the preserved component table and dated iteration records.
+
+Evidence: implementation_documentation.
+
+### Motenergy ME0907 motor completion reconciliation — SRC-30a98a34cb6d
+
+Original source: [Motenergy ME0907 motor completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C005.json)
+
+Summary: Marks C005 DONE from its existing matching 3D file and retained checks. Previous state IN_PROGRESS and historical result reference are preserved.
+
+Evidence: executed_status_reconciliation.
+
+### Sumitomo PRO-M CH54065G10 gearmotor completion reconciliation — SRC-78e4e9208e59
+
+Original source: [Sumitomo PRO-M CH54065G10 gearmotor completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C010.json)
+
+Summary: Marks C010 DONE from its existing matching 3D file and retained checks. Previous state NOT_STARTED and historical result reference are preserved.
+
+Evidence: executed_status_reconciliation.
+
+### Sumitomo PRO-L CH54527G10 gearmotor completion reconciliation — SRC-1e186a487fe5
+
+Original source: [Sumitomo PRO-L CH54527G10 gearmotor completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C011.json)
+
+Summary: Marks C011 DONE from its existing matching 3D file and retained checks. Previous state NOT_STARTED and historical result reference are preserved.
+
+Evidence: executed_status_reconciliation.
+
+### BMW i3 94Ah battery module completion reconciliation — SRC-afdbd5edcfcc
+
+Original source: [BMW i3 94Ah battery module completion reconciliation](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/component-results/C022.json)
+
+Summary: Marks C022 DONE from its existing matching 3D file and retained checks. Previous state IN_PROGRESS and historical result reference are preserved.
+
+Evidence: executed_status_reconciliation.
+
+### blickle-ls-ps310k-support-wheel-reference.dwg — existing file inventory — SRC-e4d0aa2ce4b4
+
+Original source: [blickle-ls-ps310k-support-wheel-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-ps310k-support-wheel-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### blickle-ls-vle250k-support-wheel-reference.dwg — existing file inventory — SRC-f4e146422d3e
+
+Original source: [blickle-ls-vle250k-support-wheel-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/blickle-ls-vle250k-support-wheel-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### hy400-hy70716a-rim-interface-reference.dwg — existing file inventory — SRC-622a7b1a5254
+
+Original source: [hy400-hy70716a-rim-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/hy400-hy70716a-rim-interface-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### iso730-category-1-interface-reference.dwg — existing file inventory — SRC-76dc483c3633
+
+Original source: [iso730-category-1-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1-interface-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### iso730-category-1n-interface-reference.dwg — existing file inventory — SRC-9806f18177c5
+
+Original source: [iso730-category-1n-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/iso730-category-1n-interface-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### item-line8-m8-connection-interface-reference.dwg — existing file inventory — SRC-aa161a4cd4c0
+
+Original source: [item-line8-m8-connection-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/item-line8-m8-connection-interface-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### kc14940-square-tube-connection-reference.dwg — existing file inventory — SRC-e4b4947b4986
+
+Original source: [kc14940-square-tube-connection-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/kc14940-square-tube-connection-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### quadboss-steely-608489-rim-interface-reference.dwg — existing file inventory — SRC-419bd0e5cdaf
+
+Original source: [quadboss-steely-608489-rim-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/quadboss-steely-608489-rim-interface-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### skf-sy20tf-mounting-reference.dwg — existing file inventory — SRC-487528ab019b
+
+Original source: [skf-sy20tf-mounting-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/skf-sy20tf-mounting-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### spp-zsk0750-trailer-interface-reference.dwg — existing file inventory — SRC-133be125123c
+
+Original source: [spp-zsk0750-trailer-interface-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/2d_schemas/drawings/spp-zsk0750-trailer-interface-reference.dwg)
+
+Summary: Existing 2D interface reference included in the filesystem inventory and kept separate from completed 3D component files.
+
+Evidence: existing_local_2d_file_inventory.
+
+### bmw-i3-94ah-module.dwg — existing file inventory — SRC-f66bd429303e
+
+Original source: [bmw-i3-94ah-module.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/bmw-i3-94ah-module.dwg)
+
+Summary: Existing 3D file associated with C022 — BMW i3 94Ah battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### fibox-arca-203015t-8121020.dwg — existing file inventory — SRC-b2d596e125f6
+
+Original source: [fibox-arca-203015t-8121020.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/fibox-arca-203015t-8121020.dwg)
+
+Summary: Existing 3D file associated with C029 — Fibox ARCA203015 enclosure. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### item-angle-bracket-set-8-40x40-41115.dwg — existing file inventory — SRC-32ccc223976e
+
+Original source: [item-angle-bracket-set-8-40x40-41115.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/item-angle-bracket-set-8-40x40-41115.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### item-profile-8-40x40-light-02633-segment-100mm.dwg — existing file inventory — SRC-cbf5e1960412
+
+Original source: [item-profile-8-40x40-light-02633-segment-100mm.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/item-profile-8-40x40-light-02633-segment-100mm.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### item-t-slot-nut-8-st-m8-02618.dwg — existing file inventory — SRC-cf54653f6b35
+
+Original source: [item-t-slot-nut-8-st-m8-02618.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/item-t-slot-nut-8-st-m8-02618.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### motenergy-me0907-mechanical-reference.dwg — existing file inventory — SRC-bac57ae3a67d
+
+Original source: [motenergy-me0907-mechanical-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/motenergy-me0907-mechanical-reference.dwg)
+
+Summary: Existing 3D file associated with C005 — Motenergy ME0907 motor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### neugart-ngv064-wheel-160.dwg — existing file inventory — SRC-b0ae08bfa359
+
+Original source: [neugart-ngv064-wheel-160.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/neugart-ngv064-wheel-160.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### neugart-ngv090-wheel-200.dwg — existing file inventory — SRC-d9bf927f1b4a
+
+Original source: [neugart-ngv090-wheel-200.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/neugart-ngv090-wheel-200.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### neugart-ngv110-wheel-250.dwg — existing file inventory — SRC-98e16cfbc51e
+
+Original source: [neugart-ngv110-wheel-250.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/neugart-ngv110-wheel-250.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### nissan-leaf-gen2-module-300x222x34.dwg — existing file inventory — SRC-e941de7f22bc
+
+Original source: [nissan-leaf-gen2-module-300x222x34.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/nissan-leaf-gen2-module-300x222x34.dwg)
+
+Summary: Existing 3D file associated with C021 — Nissan Leaf Gen2 battery module. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### p01-main-frame-longitudinal-rail-reference.dwg — existing file inventory — SRC-fe0ed186d8d8
+
+Original source: [p01-main-frame-longitudinal-rail-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/p01-main-frame-longitudinal-rail-reference.dwg)
+
+Summary: Existing 3D file associated with P01 — Main frame longitudinal rail. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### p02-main-frame-crossmember-reference.dwg — existing file inventory — SRC-26613ca599a7
+
+Original source: [p02-main-frame-crossmember-reference.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/p02-main-frame-crossmember-reference.dwg)
+
+Summary: Existing 3D file associated with P02 — Main frame crossmember. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### roboteq-mdc2x-manufacturer-assembly.dwg — existing file inventory — SRC-e3336ac55611
+
+Original source: [roboteq-mdc2x-manufacturer-assembly.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/roboteq-mdc2x-manufacturer-assembly.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### skf-sy20tf-checked.dwg — existing file inventory — SRC-5c0d49b55a8f
+
+Original source: [skf-sy20tf-checked.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf-checked.dwg)
+
+Summary: Existing 3D file associated with C009 — SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### skf-sy20tf.dwg — existing file inventory — SRC-a60085185158
+
+Original source: [skf-sy20tf.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/skf-sy20tf.dwg)
+
+Summary: Existing 3D file associated with C009 — SKF SY20TF bearing unit. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### sumitomo-eco-m-ch52578.dwg — existing file inventory — SRC-2d9d30506fd3
+
+Original source: [sumitomo-eco-m-ch52578.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-eco-m-ch52578.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### sumitomo-eco-s-absolute-ch54149.dwg — existing file inventory — SRC-179ceac88c1a
+
+Original source: [sumitomo-eco-s-absolute-ch54149.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-eco-s-absolute-ch54149.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### sumitomo-eco-s-resolver-ch51944.dwg — existing file inventory — SRC-79411293ac82
+
+Original source: [sumitomo-eco-s-resolver-ch51944.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-eco-s-resolver-ch51944.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### sumitomo-pro-l-ch54527.dwg — existing file inventory — SRC-0dd3c026cbac
+
+Original source: [sumitomo-pro-l-ch54527.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-l-ch54527.dwg)
+
+Summary: Existing 3D file associated with C011 — Sumitomo PRO-L CH54527G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### sumitomo-pro-m-ch54065.dwg — existing file inventory — SRC-8746a0585203
+
+Original source: [sumitomo-pro-m-ch54065.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-pro-m-ch54065.dwg)
+
+Summary: Existing 3D file associated with C010 — Sumitomo PRO-M CH54065G10 gearmotor. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### sumitomo-smartris-driver-ch52308-checked.dwg — existing file inventory — SRC-2bdc86cc68a8
+
+Original source: [sumitomo-smartris-driver-ch52308-checked.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308-checked.dwg)
+
+Summary: Existing 3D file associated with C012 — Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### sumitomo-smartris-driver-ch52308.dwg — existing file inventory — SRC-665cfb1ddd3b
+
+Original source: [sumitomo-smartris-driver-ch52308.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/sumitomo-smartris-driver-ch52308.dwg)
+
+Summary: Existing 3D file associated with C012 — Sumitomo standard driver CH52308G10G10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### victron-lithium-ng-25.6v-100ah.dwg — existing file inventory — SRC-e8bdba090964
+
+Original source: [victron-lithium-ng-25.6v-100ah.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-lithium-ng-25.6v-100ah.dwg)
+
+Summary: Existing 3D file associated with C023 — Victron NG25.6V100Ah battery. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### victron-lynx-smart-bms-500-ng-m10-checked.dwg — existing file inventory — SRC-4b603333faf9
+
+Original source: [victron-lynx-smart-bms-500-ng-m10-checked.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10-checked.dwg)
+
+Summary: Existing 3D file associated with C026 — Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### victron-lynx-smart-bms-500-ng-m10.dwg — existing file inventory — SRC-3e0b8d150d0e
+
+Original source: [victron-lynx-smart-bms-500-ng-m10.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-lynx-smart-bms-500-ng-m10.dwg)
+
+Summary: Existing 3D file associated with C026 — Victron Lynx Smart BMS NG500 M10. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### victron-orion-tr-smart-24-12-30a.dwg — existing file inventory — SRC-7d065c90de76
+
+Original source: [victron-orion-tr-smart-24-12-30a.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/parts/victron-orion-tr-smart-24-12-30a.dwg)
+
+Summary: Existing 3D file associated with C045 — Victron Orion24-12 converter. Checked file existence, size and SHA-256; existing geometry and recorded checks are reused.
+
+Evidence: existing_local_3d_file_inventory.
+
+### visual-inspection-copy.dwg — existing file inventory — SRC-35c99d126bf6
+
+Original source: [visual-inspection-copy.dwg — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/visual-inspection-copy.dwg)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory — SRC-7fc6417a02f1
+
+Original source: [LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c023-build-01/source/LiFePO4-Battery-25.6V100Ah-NG.stp)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### Fibox-ARCA-203015T-8121020.step — existing file inventory — SRC-ec27d08dafa1
+
+Original source: [Fibox-ARCA-203015T-8121020.step — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c029-build-01/source/Fibox-ARCA-203015T-8121020.step)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP — existing file inventory — SRC-3814905f350e
+
+Original source: [Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP — existing file inventory](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c043-build-01/source/Victron-Orion-Tr-Smart-Isolated-12-24-360W-family.STEP)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### Lynx-Smart-BMS-500-NG-M10-3D.stp — existing file inventory — SRC-a6c30a318e46
+
+Original source: [Lynx-Smart-BMS-500-NG-M10-3D.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Lynx-Smart-BMS-500-NG-M10-3D.stp)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### Roboteq-MDC2x-step3d.stp — existing file inventory — SRC-8207668e8d28
+
+Original source: [Roboteq-MDC2x-step3d.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/Roboteq-MDC2x-step3d.stp)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.
+
+### LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory — SRC-d628632cecd6
+
+Original source: [LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory](/home/leo/projects/ferme/engineering/module-development/parts/dimension-evidence/source-files/victron-ng/LiFePO4-Battery-25.6V100Ah-NG.stp)
+
+Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
+
+Evidence: existing_local_3d_file_inventory.

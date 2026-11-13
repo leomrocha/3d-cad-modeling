@@ -102,6 +102,15 @@ Use this context only when the task concerns the prototype. It does not expand a
 8. Display an existing requested image directly using its absolute path. Do not regenerate, crop or replace it to answer a display request. Keep explanations in the chat and labels in the image.
 9. A file-format conversion needs explicit scope: source, target format, tool and information changes. Preserve the original and identify the derivative. Opening or showing an existing file does not authorize an unrelated conversion.
 
+## Existing-model check before every component start
+
+Standing instruction from 13 November 2026:
+
+1. Check the actual component 3D files before starting each component, including when its work record says NOT_STARTED. Inspect the manifest model links, work-record model/output/native_model paths, input-sheet links, existing CAD index and filesystem inventory.
+2. Mark a component with an existing matching 3D model DONE in the current work list, retain its readable name and actual path, and reuse the recorded checks. Move to an unfinished component. Preserve the scope and source attribution of the existing geometry.
+3. Repeated routine inspection, geometry checking and capture attempts do not reopen an existing completed model. A specific requested revision has its own scope. File searches must distinguish a 3D component from its 2D interface drawing and from another component used as a reference.
+4. Use `scripts/model_inventory.py` and the component skill's existing-model start procedure before native CAD construction. Review filename candidates against the actual component identity before starting geometry.
+
 ## Source instructions used for this file
 
 Read on 9 November 2026:
