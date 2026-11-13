@@ -86,6 +86,50 @@ class EnvelopeReferenceTests(unittest.TestCase):
                 build_envelope(object(), self.job)
         fake_geometry_factory.assert_not_called()
 
+    def test_axis_datums_are_written_once_and_returned_as_source_bindings(self):
+        self.job['axis_datums'] = {
+            'x': {'feature': 'width', 'datum': 'source body span mapped to +X'},
+            'y': {'feature': 'height', 'datum': 'source body span mapped to +Y'},
+            'z': {'feature': 'depth', 'datum': 'source body span mapped to +Z'},
+        }
+        fake_geometry = Mock()
+        fake_geometry.extrude.return_value = 'solid-handle'
+        with patch('envelope_reference.geometry', return_value=fake_geometry):
+            build_envelope(object(), self.job)
+        self.assertEqual(1, fake_geometry.metadata.call_count)
+        lines = fake_geometry.metadata.call_args.args[2]
+        self.assertEqual([
+            'Axis datum X (source feature "width"): source body span mapped to +X',
+            'Axis datum Y (source feature "height"): source body span mapped to +Y',
+            'Axis datum Z (source feature "depth"): source body span mapped to +Z',
+        ], lines[-3:])
+        points = [[x, y, z] for x in (1, 11) for y in (2, 7) for z in (3, 6)]
+        self.assertEqual(self.job['axis_datums'],
+                         verify({'points': points}, self.job)['axis_datums'])
+
+    def test_invalid_axis_datums_rejected_before_geometry_or_write(self):
+        invalid = [
+            {'x': {'feature': 'width', 'datum': 'x'},
+             'y': {'feature': 'height', 'datum': 'y'}},
+            {'x': {'feature': 'height', 'datum': 'x'},
+             'y': {'feature': 'height', 'datum': 'y'},
+             'z': {'feature': 'depth', 'datum': 'z'}},
+            {'x': {'feature': 'width', 'datum': ' '},
+             'y': {'feature': 'height', 'datum': 'y'},
+             'z': {'feature': 'depth', 'datum': 'z'}},
+            {'x': {'feature': 'width', 'datum': 'x', 'extra': 'unexpected'},
+             'y': {'feature': 'height', 'datum': 'y'},
+             'z': {'feature': 'depth', 'datum': 'z'}},
+        ]
+        for axis_datums in invalid:
+            with self.subTest(axis_datums=axis_datums):
+                self.job['axis_datums'] = axis_datums
+                fake_geometry_factory = Mock()
+                with patch('envelope_reference.geometry', fake_geometry_factory):
+                    with self.assertRaisesRegex(ValueError, '(?i)axis datum|axis_datums'):
+                        build_envelope(object(), self.job)
+                fake_geometry_factory.assert_not_called()
+
     def test_invalid_zero_dimension_is_rejected_before_geometry_or_write(self):
         self.job['features'][2]['value'] = 0
         fake_geometry_factory = Mock()

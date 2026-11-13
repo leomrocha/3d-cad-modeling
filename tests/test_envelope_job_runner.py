@@ -251,6 +251,23 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         self.assertEqual(runner.resolve_locator('../source/manufacturer-source.txt', roots,
                                                 self.job_dir), self.source)
 
+    def test_validated_axis_datums_reach_final_runner_metadata_once(self):
+        job = self.job()
+        datums = {
+            'x': {'feature': 'length', 'datum': 'manufacturer extent mapped to +X'},
+            'y': {'feature': 'width', 'datum': 'manufacturer extent mapped to +Y'},
+            'z': {'feature': 'height', 'datum': 'manufacturer height mapped to +Z'},
+        }
+        lines = runner.expected_metadata(job, {'axis_datums': datums})
+        expected = [
+            'Axis datum X (source feature "length"): manufacturer extent mapped to +X',
+            'Axis datum Y (source feature "width"): manufacturer extent mapped to +Y',
+            'Axis datum Z (source feature "height"): manufacturer height mapped to +Z',
+        ]
+        for line in expected:
+            self.assertEqual(1, lines.count(line))
+        self.assertEqual(3, sum(line.startswith('Axis datum ') for line in lines))
+
     def test_rejects_missing_or_oversized_namespace_and_conflicting_output(self):
         job = self.job()
         del job['namespace']

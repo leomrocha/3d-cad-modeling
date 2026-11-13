@@ -1,0 +1,9 @@
+# Source-bound envelope axis datums
+
+Observed 13 November 2026. Implementation: `gpt-6-luna`. Code review and independent test execution: `gpt-6.1-sol`.
+
+1. **Applied implementation:** an optional `axis_datums` mapping binds each construction axis to the same required source feature as `dimension_features` and a readable description of that dimension's endpoints or covered body features. The origin remains a separately stated construction convention.
+2. **Guards:** the mapping requires exactly x/y/z, and each entry requires exactly feature/datum. Its feature must match the validated dimension feature; the datum description must be nonempty. Existing jobs keep their earlier input behavior.
+3. **Native metadata:** the envelope helper appends the bindings to its metadata. The guarded runner also includes them in its final complete source metadata record, which replaces the earlier record. Its preflight and geometry expectation report carry the mapping. This closes the integration omission found during coordinator review.
+4. **Executed tests:** 24 tests passed across the envelope helper and guarded runner. Added tests cover malformed mappings before geometry writes, propagation through the helper, and each axis line appearing once in the runner's final metadata expectation. Existing orchestration, output/replay gates, same-ID recovery, document closure and portable source binding tests passed.
+5. **Component application:** FERME's C046 TDK converter body-clearance reference uses the binding to identify the package body extents separately from pin dimensions and board geometry. Source records, numerical values and the native recipe remain at `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c046-build-01/`. Native execution has its own component result.
