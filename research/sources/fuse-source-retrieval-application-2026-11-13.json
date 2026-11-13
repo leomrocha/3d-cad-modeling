@@ -1,0 +1,63 @@
+{
+  "coordinator_model": "gpt-6.1-sol",
+  "component_execution_model": "gpt-6-luna",
+  "applied_shared_revision": "0c0d87a",
+  "records": [
+    {
+      "title": "Manufacturer-authored 20EV Series drawing copy",
+      "summary": "Exact page-2 20EV100.ZXBDMC ordering row and printed dimension leaders used by the guarded native fuse reference; distinct from later web text.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/source/littelfuse-20ev-series-rev-2024-chipdip.pdf",
+      "registered_at": "2026-11-13",
+      "evidence_status": "downloaded_original",
+      "sha256": "992b465d387b547ad3a9e3c387761de0de293c2c942a9bfd3729eb252af27294",
+      "referring_documents": [
+        "execution/fuse-source-retrieval-application-2026-11-13.md"
+      ],
+      "original_url": "https://static.chipdip.ru/lib/223/DOC050223602.pdf"
+    },
+    {
+      "title": "Littelfuse fuse case recipe",
+      "summary": "Newly authored component-specific Python recipe reuses shared CAD construction, source metadata, saved-body readers and two-document closure. Its reviewed native execution created the three-solid reference.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/scripts/build_littelfuse_20ev100_reference.py",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "9fb64486afd1ce07c76cd192fe282202bad1ac4cdeef3d2f9aa78085d585d62d",
+      "referring_documents": [
+        "execution/fuse-source-retrieval-application-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Executed Littelfuse fuse result",
+      "summary": "Records verified native save/reopen, exact model hash, three persistence comparisons and successful closure of the two owned documents.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/result-r03.json",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "sha256": "d50db90cd2f5dbb23c583f6a459d64f6523116341d02c316112802464369fabf",
+      "referring_documents": [
+        "execution/fuse-source-retrieval-application-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Reopened Littelfuse fuse checks",
+      "summary": "Contains fifteen passing source-bound geometry/metadata comparisons on the saved reference, including connected bodies, dimensions and mounting bores.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c030-build-01/reopened-feature-checks.json",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "sha256": "973fed60bd3aa114af3f7cf090107f25eef6a29c5924cd0adf666fa60c03dcd2",
+      "referring_documents": [
+        "execution/fuse-source-retrieval-application-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Shared exact-drawing access procedure",
+      "summary": "Applied procedure for recovering exact drawing images through source-bound alternate access and local rendering; revision0c0d87a.",
+      "local_path": "skills/component-cad/references/source-view-evidence.md",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "a16d906309d91c8d5e7932911a85a40a5e7c4606993d30210bdd159466b25eae",
+      "referring_documents": [
+        "execution/fuse-source-retrieval-application-2026-11-13.md"
+      ]
+    }
+  ]
+}
