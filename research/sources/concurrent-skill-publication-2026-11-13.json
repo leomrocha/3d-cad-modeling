@@ -1,0 +1,44 @@
+{
+  "coordinator_model": "gpt-6.1-sol",
+  "instruction": {
+    "date": "2026-11-13",
+    "evidence_status": "user_instruction",
+    "summary": "Keep publishing-related skill renames, moves, ordering and structure; reload/recheck periodically.",
+    "recorded_in": "execution/concurrent-skill-publication-2026-11-13.md"
+  },
+  "records": [
+    {
+      "title": "Current skill packaging ownership",
+      "summary": "Defines canonical reusable modules, generated dependency closures, installed SKILL_ROOT execution and committed-source generation/check modes during concurrent work.",
+      "local_path": "docs/skill-packaging.md",
+      "sha256": "a13c1d2e2475ed61fd4f408d48d372705cd8c74975d6fa1724cf50ce5dbee91b",
+      "registered_at": "2026-11-13",
+      "evidence_status": "inspected_local_source_at_coordination_checkpoint",
+      "referring_documents": [
+        "execution/concurrent-skill-publication-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Current runtime and split transition",
+      "summary": "Preserves existing component callers while assigning generic cadtools/control code to reusable scripts and packaged skills; requires component-checkpoint adoption and recorded tests.",
+      "local_path": "research/repository-split-preparation/script-changes.md",
+      "sha256": "e7d4d46f1cf44e41bd7e158b4aa219140df3fc2d3558a446028192dd2643657b",
+      "registered_at": "2026-11-13",
+      "evidence_status": "inspected_local_source_at_coordination_checkpoint",
+      "referring_documents": [
+        "execution/concurrent-skill-publication-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "Current project execution and preservation rules",
+      "summary": "Requires scoped authorization, local-first model reuse, source documentation, separate project ownership and preservation of unrelated concurrent work.",
+      "local_path": "AGENTS.md",
+      "sha256": "a87e0ebf053c4f2df99557309355dbe00fe873dd800e3348327f5a3427b665e5",
+      "registered_at": "2026-11-13",
+      "evidence_status": "inspected_local_source_at_coordination_checkpoint",
+      "referring_documents": [
+        "execution/concurrent-skill-publication-2026-11-13.md"
+      ]
+    }
+  ]
+}
