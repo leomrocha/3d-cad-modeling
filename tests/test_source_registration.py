@@ -46,5 +46,51 @@ class SourceRegistration(unittest.TestCase):
             self.assertEqual(len(json.loads((sources / 'source-register.json').read_text())['sources'][0]['observations']), 2)
 
 
+    def test_summary_links_rebase_without_changing_source_observations(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            directory = root / 'research/sources'
+            directory.mkdir(parents=True)
+            origin = 'skills/component-cad/references/example.md'
+            summary = '[Helper](../scripts/helper.py) [Section](#checks) [Web](https://example.com/a#b)'
+            item = {'local_source_path': '${MODELING_ROOT}/' + origin, 'summary': summary}
+            rendered = registry.render_summary(item, root, directory)
+            self.assertEqual(rendered, '[Helper](../../skills/cad-ocs-engineering/scripts/helper.py) '
+                             '[Section](../../skills/cad-ocs-engineering/references/example.md#checks) '
+                             '[Web](https://example.com/a#b)')
+            self.assertEqual(item['summary'], summary)
+            self.assertEqual(item['local_source_path'], '${MODELING_ROOT}/' + origin)
+            self.assertEqual(registry.source_link(item, root, directory),
+                             '[${MODELING_ROOT}/skills/component-cad/references/example.md]'
+                             '(../../skills/cad-ocs-engineering/references/example.md)')
+
+    def test_repeated_merge_rebases_existing_summary_and_preserves_history(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            sources = root / 'research/sources'
+            sources.mkdir(parents=True)
+            origin = 'skills/cad-ocs-engineering/references/example.md'
+            item = {'id': 'SRC-stable', 'url': None, 'local_source_path': '${MODELING_ROOT}/' + origin,
+                    'title': 'Example', 'summary': '[Helper](../scripts/helper.py#entry)',
+                    'registered_at': '2026-11-12', 'evidence_statuses': ['inspected'],
+                    'observations': [{'sha256': 'keep-original'}], 'referring_documents': []}
+            registry.write_json(sources / 'source-register.json', {'sources': [item]})
+            (sources / 'source-register.md').write_text('# Sources\n')
+            doc = 'research/sources/fixture.json'
+            entry = {'local_original': origin, 'title': 'Example', 'summary': 'New observation',
+                     'evidence_status': 'inspected', 'observation_date': '2026-11-13'}
+            registry.write_json(root / doc, {'sources': [entry]})
+            registry.merge_source_records(root, [doc], '2026-11-13')
+            first = (sources / 'source-register.md').read_bytes()
+            self.assertIn(b'../../skills/cad-ocs-engineering/scripts/helper.py#entry', first)
+            registry.merge_source_records(root, [doc], '2026-11-13')
+            self.assertEqual(first, (sources / 'source-register.md').read_bytes())
+            registry.merge_source_records(root, [doc], '2026-11-13', check=True)
+            result = registry.read_json(sources / 'source-register.json')['sources'][0]
+            self.assertEqual(result['id'], 'SRC-stable')
+            self.assertEqual(result['summary'], item['summary'])
+            self.assertEqual(result['observations'][0], {'sha256': 'keep-original'})
+
+
 if __name__ == '__main__':
     unittest.main()
