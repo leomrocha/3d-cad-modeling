@@ -148,3 +148,12 @@ Instruction date: 13 November 2026.
 2. Keep machine-specific workspace locations out of committed text and captured metadata. Normalize paths before registering new job records or examples.
 3. Preserve registered source IDs, original-source hashes and numerical results. Mark normalized copies as derivatives with their own hashes.
 4. Resolve stored root placeholders with an explicit caller-supplied root map before file access. Runtime-derived absolute paths may be used to open files; stored documentation and source locators use portable roots.
+
+## Close completed OCS documents
+
+Standing instruction from 13 November 2026: close finished CAD models and temporary drawings when their iteration no longer needs them, to release document memory.
+
+1. After saved-model, geometry, metadata and persistence checks are recorded, close the iteration's saved/reopened document and its owned construction or inspection documents.
+2. Close a dirty construction copy with `discard:true` only when its ownership is recorded, its geometry revision matches the completed evidence, and its saved result exists with the recorded SHA-256. Record the closure beside that component's result.
+3. Preserve ongoing work and unrelated open documents. Each close uses a stable request ID, current document/revision checks and same-ID recovery after uncertain completion. Verify the target ID is removed and other document paths/dirty states remain unchanged.
+4. Shared runners and skills include this completion step. Keep model files, source originals, recipes, checks and failed-attempt evidence in their owning repository after closing the editor documents.

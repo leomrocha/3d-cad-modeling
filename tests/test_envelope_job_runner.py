@@ -47,6 +47,7 @@ class FakeClient:
         self.namespace = namespace
         self.journal = journal
         self.allow_write = allow_write
+        self.timeout = timeout
         self.solid_count = 0
         self.mutation_labels = set()
 
@@ -60,6 +61,15 @@ class FakeClient:
             self.helper.active = 2
             self.helper.documents.append({'id': 2, 'path': None, 'dirty': False})
             return {'document_id': 2}
+        if operation == 'xdata_set':
+            next(row for row in self.helper.documents
+                 if row['id'] == self.document_id)['dirty'] = True
+        if operation == 'close':
+            self.helper.documents = [row for row in self.helper.documents
+                                     if row['id'] != self.document_id]
+            self.helper.active = self.helper.documents[-1]['id']
+            return {'result': {'closed': True,
+                               'closed_document_id': self.document_id}}
         if operation == 'save_verified':
             return {'result': {'sha256': 'not-used', 'manifest': {'by_type': {'3D Solid': 1}},
                                'dropped_on_save': 0, 'verified': True}}
@@ -158,8 +168,10 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
 
         def save_reopen(client, path, counts):
             Path(path).write_bytes(b'synthetic native output')
-            client.helper.active = client.document_id
-            client.helper.documents[-1]['path'] = str(path)
+            client.document_id = 3
+            client.helper.active = 3
+            client.helper.documents.append({'id': 3, 'path': str(path),
+                                            'dirty': False})
             client.solid_count = 1
             digest = hashlib.sha256(Path(path).read_bytes()).hexdigest()
             manifest = {'total': 1, 'by_type': {'3D Solid': 1}}
@@ -220,6 +232,10 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         lines = runner.expected_metadata(job)
         self.assertTrue(any(self.source_hash in line for line in lines))
         self.assertFalse(any(str(self.base) in line for line in lines))
+        self.assertEqual(runner.portableize('Saved model check failed: ' +
+                                           str(self.source), roots),
+                         'Saved model check failed: ${PROJECT_ROOT}/source/'
+                         'manufacturer-source.txt')
         self.assertIn('Part ID: SYNTHETIC-01', lines)
         self.assertIn('Envelope scope: Synthetic test dimensions only', lines)
         job['features'].append({
@@ -320,6 +336,31 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
             'Synthetic envelope complete source binding',
         ])
         self.assertTrue((self.job_dir / 'action-occurrences.jsonl').is_file())
+        self.assertEqual(result['document_cleanup']['status'], 'DONE')
+        self.assertEqual([event['document_id'] for event in
+                          result['document_cleanup']['events']], [3, 2])
+        self.assertEqual(helper.documents,
+                         [{'id': 1, 'path': None, 'dirty': False}])
+        self.assertTrue((self.job_dir / 'document-cleanup.json').is_file())
+
+    def test_cleanup_refusal_preserves_completed_model_result(self):
+        helper = FakeHelper()
+        original_mutate = FakeClient.mutate
+
+        def refuse_close(client, label, operation, **fields):
+            if operation == 'close':
+                raise RuntimeError('synthetic close refusal')
+            return original_mutate(client, label, operation, **fields)
+
+        with patch.dict(sys.modules, self.fake_imports(helper)):
+            with patch.object(FakeClient, 'mutate', refuse_close):
+                result = runner.run(self.args(allow_write=True))
+        self.assertEqual(result['state'], 'REFERENCE_DONE')
+        self.assertEqual(result['document_cleanup']['status'], 'NEEDS_FOLLOWUP')
+        self.assertEqual(result['document_cleanup']['events'][0]['cleanup_status'],
+                         'CLOSE_REJECTED')
+        self.assertTrue(self.output.exists())
+        self.assertEqual([row['id'] for row in helper.documents], [1, 2, 3])
 
     def test_uncertain_mutation_recovers_original_request_without_resubmission(self):
         uncertain = type('Uncertain', (RuntimeError,), {})

@@ -63,13 +63,11 @@ def portableize(value, roots):
         return {key: portableize(item, roots) for key, item in value.items()}
     if isinstance(value, (list, tuple)):
         return [portableize(item, roots) for item in value]
-    if isinstance(value, str) and value.startswith('/'):
-        path = Path(value)
-        for name, root in roots.items():
-            try:
-                return '${' + name + '}/' + path.resolve().relative_to(root).as_posix()
-            except ValueError:
-                continue
+    if isinstance(value, str):
+        for name, root in sorted(roots.items(),
+                                 key=lambda item: len(str(item[1])), reverse=True):
+            pattern = re.escape(str(root)) + r'''(?=/|$|[\s'"),;:\]])'''
+            value = re.sub(pattern, lambda match: '${' + name + '}', value)
     return value
 
 
@@ -330,6 +328,59 @@ class RecoveringClient:
                                         allow_wait=allow_wait)
 
 
+def cleanup_completed_envelope(*, helper, descriptor, client, namespace, output,
+                               saved_sha256, pre_save_geometry,
+                               reopened_geometry, construction_path=None):
+    """Close this completed job's two owned tabs after retaining its checks."""
+    from cadtools.runtime import Client, Uncertain
+    from ocs_document_cleanup import cleanup_active_owned_document
+
+    receipt = {'result': 'PASS', 'saved_path': str(output),
+               'sha256': saved_sha256}
+    owned = {}
+    for record, path, construction in (
+            (pre_save_geometry, construction_path, True),
+            (reopened_geometry, str(output), False)):
+        identity = record['document_id']
+        owned[identity] = {
+            'document_id': identity, 'expected_path': path,
+            'expected_geometry_revision': record['geometry_revision'],
+            'construction_copy': construction,
+            'dirty_discard_allowed': construction,
+            'saved_model_path': str(output),
+            'saved_model_sha256': saved_sha256,
+            'persistence_receipt': receipt,
+        }
+
+    def state_reader():
+        return helper.request(descriptor, {'op': 'state'}, client.timeout)
+
+    def client_factory(identity, request_namespace):
+        return Client(helper, descriptor, identity, request_namespace,
+                      client.journal, allow_write=True, timeout=client.timeout)
+
+    events = []
+    try:
+        for _ in owned:
+            event = cleanup_active_owned_document(
+                state_reader=state_reader, client_factory=client_factory,
+                owned_documents=list(owned.values()), namespace=namespace,
+                uncertain_type=Uncertain)
+            events.append(event)
+            if event.get('result') != 'PASS':
+                return {'status': 'NEEDS_FOLLOWUP', 'events': events,
+                        'remaining_owned_document_ids':
+                            event['remaining_owned_document_ids']}
+            if not event['remaining_owned_document_ids']:
+                return {'status': 'DONE', 'events': events,
+                        'remaining_owned_document_ids': []}
+    except Exception as error:
+        return {'status': 'NEEDS_FOLLOWUP', 'events': events,
+                'error': str(error), 'owned_document_ids': sorted(owned)}
+    return {'status': 'NEEDS_FOLLOWUP', 'events': events,
+            'owned_document_ids': sorted(owned)}
+
+
 def run(args):
     job_dir = args.job_dir.resolve()
     job_path = args.job.resolve()
@@ -373,6 +424,7 @@ def run(args):
     from cadtools.verification import save_reopen
     from envelope_reference import build_envelope, inspect
     from source_metadata import compare_source_metadata
+    import ocs_document_cleanup
 
     control = args.control.resolve()
     helper = load_helper(control)
@@ -468,6 +520,19 @@ def run(args):
     write_json(job_dir / 'reopened-feature-checks.json', portableize(reopened_geometry, roots))
     write_json(job_dir / 'reopened-source-metadata-check.json', portableize(reopened_metadata, roots))
     write_json(job_dir / 'save-reopen.json', portableize(persisted, roots))
+    write_json(job_dir / 'result.json', portableize(result, roots))
+    construction_path = next(row['path'] for row in state_snapshot['documents']
+                             if row['id'] == geometry_check['document_id'])
+    result['document_cleanup'] = cleanup_completed_envelope(
+        helper=helper, descriptor=descriptor, client=client,
+        namespace=job['namespace'], output=output,
+        saved_sha256=result['native_model_sha256'],
+        pre_save_geometry=geometry_check, reopened_geometry=reopened_geometry,
+        construction_path=construction_path)
+    result['document_cleanup_helper_sha256'] = sha256(
+        Path(ocs_document_cleanup.__file__))
+    write_json(job_dir / 'document-cleanup.json',
+               portableize(result['document_cleanup'], roots))
     write_json(job_dir / 'result.json', portableize(result, roots))
     from component_records import append_occurrence
     source_inputs = [job_locator, *job['_resolved_source_locators']]

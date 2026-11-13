@@ -1,0 +1,19 @@
+{
+  "executing_model": "gpt-6.1-sol",
+  "date": "2026-11-13",
+  "tests": {
+    "cleanup": 16,
+    "envelope_runner": 10,
+    "result": "PASS"
+  },
+  "skill_validation": "PASS",
+  "native_procedure": {
+    "closed_documents": 22,
+    "remaining_document_ids": [
+      1
+    ],
+    "unchanged_saved_models": 11,
+    "evidence": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/document-cleanup-2026-11-13/receipt.json"
+  },
+  "model_geometry": "Existing saved models reused; file hashes checked for closure evidence"
+}
