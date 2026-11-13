@@ -7,14 +7,14 @@ from pathlib import Path
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ('component-cad', 'drawing-inspection', 'source-intake')
+SKILLS = ('component-cad', 'cad-drawing-inspection', 'cad-source-intake')
 
 
 def inputs(name):
     common = ['scripts/component_records.py', 'scripts/part_index.py', 'scripts/package_check.py']
-    if name == 'source-intake':
+    if name == 'cad-source-intake':
         return common + ['scripts/source_intake.py']
-    if name == 'drawing-inspection':
+    if name == 'cad-drawing-inspection':
         return common + ['scripts/dxf_inspect.py']
     return sorted(str(p.relative_to(ROOT)) for p in (ROOT / 'scripts').rglob('*.py')
                   if p.name not in {'build_skill_packages.py'} and '__pycache__' not in p.parts)
@@ -32,10 +32,10 @@ def expected(name, committed=False):
     result['LICENSE'] = source_bytes('LICENSE', committed)
     result['NOTICE.md'] = source_bytes('scripts/cadtools/NOTICE.md', committed)
     result['requirements.txt'] = (source_bytes('requirements-native.txt', committed)
-                                  if name != 'source-intake' else b'# Python 3.12 standard library only.\n')
+                                  if name != 'cad-source-intake' else b'# Python 3.12 standard library only.\n')
     manifest = {'skill': name, 'generated_by': 'scripts/build_skill_packages.py',
                 'files': {target: {'source': files.get(target.removeprefix('scripts/'),
-                           'requirements-native.txt' if target == 'requirements.txt' and name != 'source-intake'
+                           'requirements-native.txt' if target == 'requirements.txt' and name != 'cad-source-intake'
                            else 'LICENSE' if target == 'LICENSE' else 'scripts/cadtools/NOTICE.md' if target == 'NOTICE.md' else 'standard-library declaration'),
                            'sha256': hashlib.sha256(data).hexdigest()}
                           for target, data in sorted(result.items())}}

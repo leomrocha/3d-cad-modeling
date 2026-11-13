@@ -8,8 +8,8 @@
 ## Skills
 
 1. [component-cad](../skills/component-cad/SKILL.md) — guides the agent through an existing-model check, component construction, geometry checks and a reusable tooling improvement.
-2. [drawing-inspection](../skills/drawing-inspection/SKILL.md) — guides the agent through reading a DXF's units, layers, blocks and source shapes.
-3. [source-intake](../skills/source-intake/SKILL.md) — records the request, source files, hashes and corrections as a new input revision.
+2. [cad-drawing-inspection](../skills/cad-drawing-inspection/SKILL.md) — guides the agent through reading a DXF's units, layers, blocks and source shapes.
+3. [cad-source-intake](../skills/cad-source-intake/SKILL.md) — records the request, source files, hashes and corrections as a new input revision.
 
 The [skill catalogue](../skills/README.md) separates these installed skills from proposed workflows. Component-specific procedures are indexed in [component-cad](../skills/component-cad/SKILL.md).
 

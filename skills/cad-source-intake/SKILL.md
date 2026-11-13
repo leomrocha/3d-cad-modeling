@@ -1,5 +1,5 @@
 ---
-name: source-intake
+name: cad-source-intake
 description: Record a new job's exact request, source identities, file hashes, corrections and scope as a protected revision using local files and supplied text or URLs.
 ---
 
