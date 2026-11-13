@@ -1,0 +1,121 @@
+{
+  "subject": "Public documentation proofreading and link checks",
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "sources": [
+    {
+      "local_source_path": "README.md",
+      "title": "3D CAD Modeling",
+      "summary": "Existing public documentation checked for spelling, punctuation, Markdown structure and local link targets.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_local_document_inspected",
+      "before_sha256": "90a7ed6a9e6ac4974757e838ec1c667e0968ecef10a15c1f4d6e6edfb6cd4fed",
+      "after_sha256": "6d930fa04b23ae817ef07b1c3e9c707d7519da89d7a29e814afd31d65f3d8827",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/examples/mast.md",
+      "title": "Mast physics for a wind generator",
+      "summary": "Existing public documentation checked for spelling, punctuation, Markdown structure and local link targets.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_local_document_inspected",
+      "before_sha256": "68b1ec1e6bfcd842945f61a6b2e5a4bf1c19c59000be7e6a9050a88070129df4",
+      "after_sha256": "8b75df97e88846bab73e21fe965f98cb085d222b60e60c301ebc5c16c7e3a4ef",
+      "referring_documents": [
+        "docs/examples/mast.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/examples/mechanical_components.md",
+      "title": "Mechanical component examples",
+      "summary": "Existing public documentation checked for spelling, punctuation, Markdown structure and local link targets.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_local_document_inspected",
+      "before_sha256": "ff374630f6b57f003ed126d91eb8b104dc4756cefacaabea6ebeadb1b6f156f2",
+      "after_sha256": "145101e6b47b8ef46a37419b2b5e3af21c44a66b1e9560cf89b1a68d2aec4836",
+      "referring_documents": [
+        "docs/examples/mechanical_components.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/tools.md",
+      "title": "Tools",
+      "summary": "Existing public documentation checked for spelling, punctuation, Markdown structure and local link targets.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_local_document_inspected",
+      "before_sha256": "e4b6d67fc48ca19aa5a0e78de96ebb89c50243bcfb075b8136df8e53420767d5",
+      "after_sha256": "a4d572c9b2b3075f77a70ade0bfb6bbe270c9d9eec55e6c185e9ecf2012fe6dc",
+      "referring_documents": [
+        "docs/tools.md"
+      ]
+    }
+  ],
+  "external_link_checks": [
+    {
+      "original_url": "https://developers.openai.com/codex/skills",
+      "observed_final_url": "https://learn.chatgpt.com/docs/build-skills",
+      "title": "Build skills | ChatGPT Learn",
+      "summary": "Supplied Codex skills URL opens the Build skills page through a redirect.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "web_inspection_by_research_agent",
+      "result": "REACHABLE",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "original_url": "https://en.wikipedia.org/wiki/Industry_Foundation_Classes",
+      "observed_final_url": "https://en.wikipedia.org/wiki/Industry_Foundation_Classes",
+      "title": "Industry Foundation Classes",
+      "summary": "Linked IFC overview opens successfully.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "web_inspection_by_research_agent",
+      "result": "REACHABLE",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "original_url": "https://github.com/HakanSeven12/OpenCADStudio",
+      "observed_final_url": "https://github.com/HakanSeven12/OpenCADStudio",
+      "title": "GitHub - HakanSeven12/OpenCADStudio",
+      "summary": "Linked OpenCADStudio source repository opens successfully.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "web_inspection_by_research_agent",
+      "result": "REACHABLE",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "original_url": "https://www.opencadstudio.com/",
+      "observed_final_url": "https://www.opencadstudio.com/",
+      "title": "Open CAD Studio \u2014 Free DWG & DXF CAD",
+      "summary": "Linked OpenCADStudio product site opens successfully.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "web_inspection_by_research_agent",
+      "result": "REACHABLE",
+      "referring_documents": [
+        "README.md"
+      ]
+    }
+  ],
+  "changes": [
+    "Correct spelling and sentence punctuation while preserving the existing informal tone.",
+    "Repair the tools page setup link to README.md#installing.",
+    "Use sh for the shell example and normalize Markdown spacing.",
+    "Update the README component summary to match the displayed gallery."
+  ],
+  "checks": {
+    "status": "PASS",
+    "markdown_pages_parsed": 6,
+    "local_links_and_anchors": 68,
+    "broken_local_links": [],
+    "external_links_opened_by_research_agent": 4,
+    "broken_external_links_observed": [],
+    "shell_blocks_syntax_checked": 4
+  },
+  "hash_scope": "after_sha256 records the reviewed correction candidate committed by this batch; concurrent edits remain in the worktree."
+}
