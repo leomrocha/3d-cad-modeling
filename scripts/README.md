@@ -22,6 +22,6 @@
 
 ## Package maintenance
 
-1. `python scripts/build_skill_packages.py` copies canonical reusable code into each skill directory and writes per-file hashes. `--check` detects source/distribution differences.
+1. `python3 scripts/build_skill_packages.py --finalize` registers new helpers, regenerates skill copies and source/hash manifests, and requires lifecycle and isolated installation checks. Supply `SKILLS_CLI_ROOT` and `NATIVE_READER_ROOT` as existing software inputs. Use `--verify` for read-only final validation. `--check` detects source/distribution differences; the ordinary test suite also enforces synchronisation. [Completion procedure](../skills/cad-ocs-engineering/references/package-completion.md).
 2. `package_check.py` runs from an installed skill and checks its own files, imports and dependency versions. Component CAD accepts `--session` or `--descriptor` for a read-only OCS state check.
 3. `ocs_control.py`, `check_contract.py` and `cadtools/` hold the generic control, coordinate checks, geometry and persistence code. [Runtime provenance](cadtools/NOTICE.md).

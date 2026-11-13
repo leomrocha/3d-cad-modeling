@@ -45,14 +45,14 @@ def check(package, session=None, descriptor=None):
             if not Path(module.__file__).resolve().is_relative_to(scripts):
                 raise ValueError('OCS adapter came from outside the package')
             imported.append(name)
-        import envelope_job_runner
+        envelope_job_runner = importlib.import_module('envelope_job_runner')
         envelope_job_runner.sab_reader_preflight()
     result = {'result': 'PASS', 'skill': manifest['skill'], 'hashed_files': checked,
               'imported_modules': imported, 'dependencies': dependencies}
     if session or descriptor:
         if manifest['skill'] != 'cad-ocs-engineering':
             raise ValueError('OCS connection belongs to cad-ocs-engineering')
-        import ocs_control
+        ocs_control = importlib.import_module('ocs_control')
         descriptors = ocs_control.descriptors(explicit=descriptor, session=session)
         if len(descriptors) != 1:
             raise ValueError('Select exactly one existing OCS session')

@@ -20,7 +20,7 @@
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
-      "sha256": "427f7255ad6a5eba935772c1bb36a2a7c8ce45928e283a9a4d7b1ea47118f990"
+      "sha256": "ee353ceefa62bd1939a64ebd3bdffb52294137488610a6bcc9c7d51c76d9cc2a"
     },
     "scripts/part_index.py": {
       "source": "scripts/part_index.py",
