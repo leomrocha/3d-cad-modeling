@@ -1,11 +1,11 @@
 # Examples
 
-[Documentation](../README.md) · [Workflow](../../README.md#project)
+[Project](../../README.md) · [Workflow](../../README.md#project)
 
 ## Wind generator
 
 
-[Mast models and physics](wind-generator.md): mast models; 15 m/s wind cases; displacement and yield-comparison plots.
+[Mast models and physics](mast.md): mast models; 15 m/s wind cases; displacement and yield-comparison plots.
 
 ## Mechanical components
 
