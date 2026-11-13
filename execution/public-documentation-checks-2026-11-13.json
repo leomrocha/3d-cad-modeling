@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-13",
+  "status": "PASS",
+  "executing_model": "gpt-6.1-sol",
+  "markdown_pages_checked": 9,
+  "local_links_checked": 76,
+  "broken_links": [],
+  "unchanged_image_copies": 3,
+  "public_page_application_references": "absent",
+  "public_links": "repository-relative; no machine-specific paths",
+  "json_parsing": "PASS",
+  "license_text": "MIT notice, permission and warranty clauses present",
+  "scope": "Documentation, image copies and license only; no migration or modeling execution."
+}

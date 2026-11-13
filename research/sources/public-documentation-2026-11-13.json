@@ -1,0 +1,54 @@
+[
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/domains-and-components.md",
+    "title": "domains-and-components.md",
+    "summary": "Existing building semantics, IFC, display and simulation representation research.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_source_inspected",
+    "sha256": "2ea611d1e414672c034124f70f04380b6c12df04c9daf7ea51dae97df4b4e369",
+    "referring_documents": [
+      "docs/tools.md",
+      "docs/building-models.md",
+      "docs/reconstruction.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/reconstruction.md",
+    "title": "reconstruction.md",
+    "summary": "Existing reconstruction and calibrated-input workflow research.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_source_inspected",
+    "sha256": "b5a642b418efb97a7dab1d2f4a5dca2d10581cf3d5ca8d152d732c3ec696d031",
+    "referring_documents": [
+      "docs/tools.md",
+      "docs/building-models.md",
+      "docs/reconstruction.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/research/cad-and-skills.md",
+    "title": "cad-and-skills.md",
+    "summary": "Existing CAD software and automation assessment.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_source_inspected",
+    "sha256": "2b70e7d011720c9c5713924df0fd7efbadc8bd6f766a1947b2997d89135c2844",
+    "referring_documents": [
+      "docs/tools.md",
+      "docs/building-models.md",
+      "docs/reconstruction.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/scripts/calibrated_trace.py",
+    "title": "calibrated_trace.py",
+    "summary": "Inspected implementation of signed-scale image point mapping and worst-case uncertainty bounds.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "existing_local_source_inspected",
+    "sha256": "c6346c0b7d3a42d16c10c0330ad00a3d494e5d184021c1c0436efde0ea413343",
+    "referring_documents": [
+      "docs/tools.md",
+      "docs/building-models.md",
+      "docs/reconstruction.md"
+    ]
+  }
+]
