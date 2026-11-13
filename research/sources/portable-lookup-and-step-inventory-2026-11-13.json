@@ -1,0 +1,80 @@
+{
+  "records": [
+    {
+      "title": "scripts/model_inventory.py",
+      "local_path": "scripts/model_inventory.py",
+      "summary": "Resolves named-root model locators from an explicit caller map, reads relative job paths against the CAD root, and rejects unresolved roots before deciding whether construction is needed.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "a542a53f8642d7a990b3b8a8a13366099d02e10a04dcda28762a044343435bdf",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "tests/test_model_inventory.py",
+      "local_path": "tests/test_model_inventory.py",
+      "summary": "Fifteen synthetic tests cover existing-file reuse, dependency separation, completed records and portable root resolution; all passed in this batch.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_test_source",
+      "sha256": "8dc763b48bf034799529dfc4e4b022ce954050dc40b20784cba08a533b1d001c",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "scripts/step_solid_inventory.py",
+      "local_path": "scripts/step_solid_inventory.py",
+      "summary": "Inventories supported STEP solid entity IDs including BREP_WITH_VOIDS; separates nested shells and complex entity instances from the supported solid count.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "3495aee7471f64d2dc7bfb327cf491f14ea78938ef48b521ec814842dae6f4f0",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "tests/test_step_solid_inventory.py",
+      "local_path": "tests/test_step_solid_inventory.py",
+      "summary": "Five synthetic tests passed for supported solid definitions, comment/string exclusion, complex entities, duplicate identifiers and required DATA sections.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_test_source",
+      "sha256": "d60435cd7dfbae30df164923ddef6533abeeeb263cf8912042cbf1e0c89f1e15",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "skills/component-cad/references/existing-model-start-check.md",
+      "local_path": "skills/component-cad/references/existing-model-start-check.md",
+      "summary": "Defines explicit root configuration, relative model path bases and failure before new-model classification when a required root is absent.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "sha256": "7bd6af058231fde1d9469aead0a6cb9f02115f6e4ebee39035e0f7e83afbb642",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "skills/component-cad/references/step-solid-inventory.md",
+      "local_path": "skills/component-cad/references/step-solid-inventory.md",
+      "summary": "Defines the supported STEP inventory contract and its handoff to independent native topology, placement and persisted-geometry checks.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "sha256": "0b88f613487333bcfe3d468483eae3260122013decfda083b5fca60ed2791e86",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md"
+      ]
+    },
+    {
+      "title": "SurLok plug applied STEP inventory and saved-model evidence",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c036-build-01/",
+      "summary": "Component job records the initial solid-count failure, corrected inclusion of the solid with voids, native topology readback and save/reopen results.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "existing_report_registration",
+      "referring_documents": [
+        "execution/portable-lookup-and-step-inventory-2026-11-13.md"
+      ]
+    }
+  ]
+}

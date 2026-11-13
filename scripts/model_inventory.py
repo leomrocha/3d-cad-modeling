@@ -14,6 +14,24 @@ from part_index import load_index, read_json
 MODEL_SUFFIXES={'.dwg','.step','.stp','.stl','.obj','.glb','.gltf','.blend','.3mf','.fcstd'}
 
 
+def resolve_locator(value, base, root_map=None):
+    """Resolve a stored path with explicit roots; reject unresolved placeholders."""
+    roots=root_map or {}
+    def replace(match):
+        name=match.group(1)
+        if name not in roots:
+            raise ValueError('Missing configured path root: '+name)
+        root=Path(roots[name])
+        if not root.is_absolute():
+            raise ValueError('Configured path root must be absolute: '+name)
+        return str(root)
+    value=re.sub(r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}',replace,str(value))
+    if '${' in value:
+        raise ValueError('Malformed path root locator: '+value)
+    path=Path(value)
+    return (path if path.is_absolute() else Path(base)/path).resolve()
+
+
 def inventory_models(project_root):
     rows=[]
     for p in sorted(Path(project_root).resolve().rglob('*')):
@@ -26,20 +44,20 @@ def inventory_models(project_root):
     return rows
 
 
-def start_check(part,index_path,cad_root,inventory,job=None):
+def start_check(part,index_path,cad_root,inventory,job=None,root_map=None):
     """Use attributed file links first; block construction on discovered candidates."""
     cad_root=Path(cad_root).resolve();job=job or {};files={p['path']:p for p in inventory}
     links=[]
     for key in ['model','output','native_model']:
-        if job.get(key):links.append(str(Path(job[key]).resolve()))
+        if job.get(key):links.append(str(resolve_locator(job[key],cad_root,root_map)))
     if part.get('existing_cad'):
-        p=Path(part['existing_cad']);links.append(str(p.resolve() if p.is_absolute() else (cad_root/p).resolve()))
-    sheet=Path(index_path).resolve().parent/part['file']
+        links.append(str(resolve_locator(part['existing_cad'],cad_root,root_map)))
+    sheet=resolve_locator(part['file'],Path(index_path).resolve().parent,root_map)
     if sheet.is_file():
         for target in re.findall(r'\]\(([^)]+)\)',sheet.read_text()):
             if target.startswith(('http:','https:')):continue
-            p=Path(target)
-            if p.suffix.lower() in MODEL_SUFFIXES:links.append(str((p if p.is_absolute() else sheet.parent/p).resolve()))
+            if Path(target).suffix.lower() in MODEL_SUFFIXES:
+                links.append(str(resolve_locator(target,sheet.parent,root_map)))
     matches=[files[p] for p in dict.fromkeys(links) if p in files and files[p]['role']=='3d_model_file' and files[p]['bytes']>0]
     references=[files[p] for p in dict.fromkeys(links) if p in files and files[p]['role']=='2d_reference']
     compact=lambda s:re.sub('[^a-z0-9]','',s.casefold())
@@ -54,10 +72,10 @@ def start_check(part,index_path,cad_root,inventory,job=None):
                 input_sheet=str(sheet),filesystem_model_files_checked=len(inventory))
 
 
-def audit(index_path,work_index,cad_root,project_root):
+def audit(index_path,work_index,cad_root,project_root,root_map=None):
     parts=load_index(index_path);work=read_json(work_index);jobs={p['part_id']:p for p in work['jobs']}
     inventory=inventory_models(project_root)
-    components=[start_check(p['record'],index_path,cad_root,inventory,jobs.get(p['id'])) for p in parts]
+    components=[start_check(p['record'],index_path,cad_root,inventory,jobs.get(p['id']),root_map) for p in parts]
     owners={}
     for row in components:
         for model in row['models']:owners.setdefault(model['path'],set()).add(row['part_id'])
@@ -74,7 +92,16 @@ def main():
     parser=argparse.ArgumentParser(description=__doc__)
     for name in ['index','work-index','cad-root','project-root']:parser.add_argument('--'+name,type=Path,required=True)
     parser.add_argument('--id')
-    a=parser.parse_args();result=audit(a.index,a.work_index,a.cad_root,a.project_root)
+    parser.add_argument('--root',action='append',default=[],metavar='NAME=ABSOLUTE_PATH')
+    a=parser.parse_args();roots={}
+    for entry in a.root:
+        name,sep,path=entry.partition('=')
+        if not sep or not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*',name) or not Path(path).is_absolute():
+            parser.error('--root requires NAME=ABSOLUTE_PATH')
+        if name in roots:parser.error('Duplicate configured path root: '+name)
+        roots[name]=path
+    try:result=audit(a.index,a.work_index,a.cad_root,a.project_root,roots)
+    except ValueError as exc:parser.error(str(exc))
     if a.id:
         result['components']=[p for p in result['components'] if p['part_id']==a.id]
         if not result['components']:parser.error('Component ID absent from the input index')

@@ -8,6 +8,7 @@ python3 ${MODELING_ROOT}/scripts/model_inventory.py \
   --work-index ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json \
   --cad-root ${FERME_ROOT}/engineering/module-development/cad \
   --project-root ${FERME_ROOT} \
+  --root FERME_ROOT="${FERME_ROOT}" \
   --id C001
 ```
 
@@ -17,3 +18,4 @@ python3 ${MODELING_ROOT}/scripts/model_inventory.py \
 5. **NEW_MODEL_REQUIRED:** the completed-file lookup found no attributed model or unresolved filename candidate for this component. Continue its existing source-readiness and construction procedure. Keep the filesystem result beside that particular start so it establishes which files were checked.
 6. `2d_schemas` files are recorded as 2D references. Their existing model-link field does not classify them as 3D components. The current FERME list contains these interface references for the Blickle casters and SPP trailer coupling.
 7. The initial reconciliation found existing 3D models for the ME0907 motor, both Sumitomo PRO gearmotors, BMW/Leaf/Victron batteries, SKF bearing, Sumitomo driver, Lynx BMS, Fibox enclosure, Victron 24/12 converter and both frame members. Their geometry and prior checks are reused. Reconciliation record (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/existing-model-audit-2026-11-13/audit.json`).
+8. Stored `${ROOT_NAME}` locators require an explicit `--root ROOT_NAME=ABSOLUTE_PATH` for every referenced root. Python callers pass `root_map` to `audit` or `start_check`. An unresolved root raises an error before a new-model decision. Relative manifest and job model paths use `cad_root`; relative input-sheet links use the sheet directory. Absolute runtime paths remain supported. The returned inventory contains runtime paths; normalize them to named-root locators before storing the result.
