@@ -2,12 +2,14 @@
 
 Reusable tools and agent instructions for creating, inspecting and modifying 3D models from descriptions, dimensions, drawings, photographs and existing geometry.
 
+The current repo has been used and implemented to generate CAD models using the [OpenCADStudio](https://www.opencadstudio.com/) MCP Server. 
+
 This is an ONGOING WORK, for now is the first pre-pre-pre-alpha release, I'll be updating it, do please collaborate, copy it, share it, that is why the license is MIT
 
 AI use:
 * code and skills are all Written with ai I instruct, reinstruct and review things then I tell it to modify and update things. But as this is for AI use the parts that are only dedicated to it I do not correct the phrasing for humans.
 * README and main HUMAN targetted documentations files were sketched by me, written by AI then I drop almost everything cause I do not like it and rewrite things, then I send AI agents to fix some small things and details.
-* For the AI documentation you'll notice the files and docs are really really ugly like every AI written thing.
+* For the AI documentation I let AI do the writing and try not to get too angry about that cause they are instructions for AI so ...
 
 ## Introduction
 
@@ -81,8 +83,8 @@ Codex detects skill changes automatically. Restart Codex if a newly linked skill
 
 ### Set up the Python helpers
 
-The recorded examples used Python 3.12. From a terminal:
-
+The current status is with Python 3.12. 
+From a terminal:
 ```sh
 git clone https://github.com/leomrocha/3d-cad-modeling.git
 cd 3d-cad-modeling
@@ -91,7 +93,8 @@ python3 -m venv .venv
 python -m pip install -r requirements-native.txt
 ```
 
-The Python dependencies are listed in [requirements-native.txt](requirements-native.txt). CAD construction uses an existing [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) installation, the OCS engineering skill and the `cadtools` runtime described in the [component CAD skill](skills/component-cad/SKILL.md).
+Python dependencies are listed in [requirements-native.txt](requirements-native.txt). 
+CAD construction uses an existing [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) installation, the OCS engineering skill and the `cadtools` runtime described in the [component CAD skill](skills/component-cad/SKILL.md).
 
 ### Use the skills with your agent
 
@@ -103,14 +106,12 @@ The Python dependencies are listed in [requirements-native.txt](requirements-nat
 ### Run a helper directly
 
 For a DXF file named `drawing.dxf`:
-
 ```sh
 python scripts/dxf_inspect.py drawing.dxf --output drawing-inventory.json
 ```
 
-For the command-line options:
-
-```sh
+Command-line options:
+```s
 python scripts/part_index.py --help
 python scripts/model_inventory.py --help
 python scripts/source_intake.py --help
