@@ -146,7 +146,7 @@ python -m pip install -r "$SKILL_ROOT/requirements.txt"
 python "$SKILL_ROOT/scripts/package_check.py"
 ```
 
-Component CAD includes the OCS control transport, geometry adapter and save/reopen helpers. With [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) already running, check your selected connection:
+The `cad-ocs-engineering` package includes the complete OCS engineering workflow, all component procedures, the OCS control transport, geometry adapter and save/reopen helpers. With [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) already running, check your selected connection:
 
 ```sh
 python "$SKILL_ROOT/scripts/package_check.py" --session SESSION

@@ -4,7 +4,7 @@ Each skill directory is its installation unit. The skills CLI copies the selecte
 
 1. **Source intake:** source capture, component-record hashing and part-index parsing; Python standard library.
 2. **Drawing inspection:** DXF inspection, component-record hashing and part-index parsing; pinned native-reader dependencies.
-3. **CAD OCS Engineering:** the shared modeling and inspection helpers, `cadtools` geometry/runtime/save-reopen code, OCS transport and coordinate-contract checker; pinned native-reader dependencies and a running OpenCADStudio session.
+3. **CAD OCS Engineering:** the complete OCS and component workflows, original OCS references and agent metadata, shared modeling and inspection helpers, `cadtools` geometry/runtime/save-reopen code, OCS transport and coordinate-contract checker; pinned native-reader dependencies and a running OpenCADStudio session.
 
 Set `SKILL_ROOT` to the installed directory. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
 
@@ -32,3 +32,5 @@ Package and dependency checks establish software execution and retained bytes. C
 1. `cad-ocs-engineering` combines the full original OCS engineering skill and this repository’s component workflow. Both workflows are merged directly into its main `SKILL.md`.
 2. The package retains the component procedures, generic helpers, tests and source checks developed here. It also includes the original OCS control, computational-engineering and capability references and adapted agent metadata.
 3. The former `component-cad` package is now `cad-ocs-engineering`. [Merge inventory and verification](../execution/cad-ocs-engineering-merge-2026-11-13.md).
+
+The dated merge comparison can be rechecked with `VERIFY_OCS_MERGE_SNAPSHOT=1 python -m unittest discover -s tests -p test_ocs_skill_merge.py`. It validates the retained snapshot; ordinary component improvements keep their own current checks and evidence.

@@ -2675,3 +2675,5 @@ Execution of CAD-SKILL-RENAME-2026-11-13: DONE. [Rename report](../execution/ski
 Status: proposal. Execution explicitly authorized.
 
 Merge both complete workflows directly into `cad-ocs-engineering/SKILL.md`, preserving all original OCS material and repository additions inside the skill folder. [Plan](cad-ocs-engineering-merge-plan.md). [Source inventory](sources/cad-ocs-engineering-merge-2026-11-13.json).
+
+Execution of CAD-OCS-MERGE-2026-11-13: DONE. [Complete merge report](../execution/cad-ocs-engineering-merge-2026-11-13.md).

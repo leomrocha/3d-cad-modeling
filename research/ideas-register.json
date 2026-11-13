@@ -4386,7 +4386,9 @@
         "research/sources/cad-ocs-engineering-merge-2026-11-13.json"
       ],
       "source_ids": [],
-      "next_check": "Complete retained-file, workflow-section, isolated installation and read-only OCS checks."
+      "next_check": "Delivery checks recorded in the execution report.",
+      "execution_status": "DONE",
+      "execution_report": "execution/cad-ocs-engineering-merge-2026-11-13.md"
     }
   ]
 }

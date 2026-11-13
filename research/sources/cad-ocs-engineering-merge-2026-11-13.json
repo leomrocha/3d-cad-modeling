@@ -1,0 +1,1065 @@
+{
+  "title": "Complete OCS and component skill merge",
+  "date": "2026-11-13",
+  "status": "DONE",
+  "baseline_component_revision": "74a54f2b13318888c194a1ea277bc251f5fb97c6",
+  "canonical_generation_revision": "c4ca76f3e3e97b8938a88ed312a1c22dade1d7f8",
+  "source_subjects": [
+    {
+      "local_original": "${CODEX_HOME}/skills/ocs-engineering/",
+      "title": "Complete original OCS engineering skill",
+      "summary": "Eight source files: main instructions, four references, two control/check helpers and agent metadata. Every source file is included in the merged skill, with normalized paths and identity.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local source inspection and content comparison",
+      "referring_documents": [
+        "research/cad-ocs-engineering-merge-plan.md",
+        "execution/cad-ocs-engineering-merge-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "skills/component-cad/",
+      "current_locator": "skills/cad-ocs-engineering/",
+      "title": "Repository component CAD additions",
+      "summary": "All 75 baseline package files retained; complete workflow sections merged directly into the main entrypoint. Generic helpers, detailed procedures, dependency declarations and licenses are preserved.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "committed-source snapshot and retained-content comparison",
+      "referring_documents": [
+        "research/cad-ocs-engineering-merge-plan.md",
+        "execution/cad-ocs-engineering-merge-2026-11-13.md"
+      ]
+    }
+  ],
+  "inventory": [
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/SKILL.md",
+      "relative_path": "SKILL.md",
+      "sha256": "d910a4f545aa1575bed507f7b27c9e5476404cfe6a9ce21db5259d1248df8058",
+      "bytes": 6101,
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "disposition": "direct main-entrypoint merge",
+      "destination_sha256": "6767685c7f5b804120f6a76a0f85c289794c8367e2282ba0b370347c00e8f002",
+      "verification": "all source body sections present directly in the merged main entrypoint"
+    },
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/agents/openai.yaml",
+      "relative_path": "agents/openai.yaml",
+      "sha256": "2cf1c0cfb1a39e8148521ccf42265c2425bf65196b885dbf6547224a9843a454",
+      "bytes": 274,
+      "destination": "skills/cad-ocs-engineering/agents/openai.yaml",
+      "disposition": "imported original reference or metadata",
+      "destination_sha256": "0c244b9dd1be5d294e210ec6502fb304dd2431e4da247a99d79c5e7801ac905e",
+      "verification": "complete source content with explicit path, identity or computational-link normalization"
+    },
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/references/computational-engineering.md",
+      "relative_path": "references/computational-engineering.md",
+      "sha256": "b663c895b6dae3f9dfbbed454e20f15066863484a0449daca1d16423cb22ca2f",
+      "bytes": 3130,
+      "destination": "skills/cad-ocs-engineering/references/computational-engineering.md",
+      "disposition": "imported original reference or metadata",
+      "destination_sha256": "0268ffbe0803964551e66009052f6f00d4fe16db21afb360c88ac48e992138c2",
+      "verification": "complete source content with explicit path, identity or computational-link normalization"
+    },
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/references/model-contract.md",
+      "relative_path": "references/model-contract.md",
+      "sha256": "56ec10b64a3397d6ce494720648702f2ae2ca06c0ed1896118c4428525e041ef",
+      "bytes": 3153,
+      "destination": "skills/cad-ocs-engineering/references/model-contract.md",
+      "disposition": "merged common contract: retained installed-path command and restored original computational handoff link",
+      "destination_sha256": "1d52c3c8104d8abb9643030d2432cec06ea1e5ee28a428f8dae49c033103c76e",
+      "verification": "complete source content with explicit path, identity or computational-link normalization"
+    },
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/references/ocs-control.md",
+      "relative_path": "references/ocs-control.md",
+      "sha256": "4042f3c4d9bbaac339360d9aa0786c102aa9d83b6cb5e6c269be57d79c3298dc",
+      "bytes": 3484,
+      "destination": "skills/cad-ocs-engineering/references/ocs-control.md",
+      "disposition": "imported original reference or metadata",
+      "destination_sha256": "7f63ee82f81818939ae49b3a2a87a94a924e43422883893fe18be9b77aa13eba",
+      "verification": "complete source content with explicit path, identity or computational-link normalization"
+    },
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/references/sources-and-capabilities.md",
+      "relative_path": "references/sources-and-capabilities.md",
+      "sha256": "f8c8ad4085fa58e4b8ccaa710cfea23b4a10b5a80dac6e6892e99fa4229b65a5",
+      "bytes": 2059,
+      "destination": "skills/cad-ocs-engineering/references/sources-and-capabilities.md",
+      "disposition": "imported original reference or metadata",
+      "destination_sha256": "d78209cc661232016b793860bc848e2263f34949d45b743594ea78318360a776",
+      "verification": "complete source content with explicit path, identity or computational-link normalization"
+    },
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/scripts/check_contract.py",
+      "relative_path": "scripts/check_contract.py",
+      "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+      "bytes": 6771,
+      "destination": "skills/cad-ocs-engineering/scripts/check_contract.py",
+      "disposition": "existing canonical and packaged helper already byte-identical to original",
+      "destination_sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+      "verification": "byte-identical"
+    },
+    {
+      "origin": "original_ocs",
+      "source": "${CODEX_HOME}/skills/ocs-engineering/scripts/ocs_control.py",
+      "relative_path": "scripts/ocs_control.py",
+      "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+      "bytes": 8545,
+      "destination": "skills/cad-ocs-engineering/scripts/ocs_control.py",
+      "disposition": "existing canonical and packaged helper already byte-identical to original",
+      "destination_sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+      "verification": "byte-identical"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/LICENSE",
+      "relative_path": "LICENSE",
+      "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc",
+      "bytes": 1060,
+      "destination": "skills/cad-ocs-engineering/LICENSE",
+      "disposition": "retained component addition",
+      "destination_sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/NOTICE.md",
+      "relative_path": "NOTICE.md",
+      "sha256": "9f209d7c15cf4e651dff54678c89ec05a47ddbda1577aa14f06783bcee5f06c3",
+      "bytes": 1042,
+      "destination": "skills/cad-ocs-engineering/NOTICE.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "9f209d7c15cf4e651dff54678c89ec05a47ddbda1577aa14f06783bcee5f06c3",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/SKILL.md",
+      "relative_path": "SKILL.md",
+      "sha256": "d79649b1573d88d3ef3400c53c66aba13df9973de602387e0d565ff54cdb0de7",
+      "bytes": 12800,
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "disposition": "direct main-entrypoint merge",
+      "destination_sha256": "6767685c7f5b804120f6a76a0f85c289794c8367e2282ba0b370347c00e8f002",
+      "verification": "all source body sections present directly in the merged main entrypoint"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/package-manifest.json",
+      "relative_path": "package-manifest.json",
+      "sha256": "e979210b8464e6db00098779a6acbcd94919bb6591fefc59f0e19baac19c4802",
+      "bytes": 6739,
+      "destination": "skills/cad-ocs-engineering/package-manifest.json",
+      "disposition": "retained component addition",
+      "destination_sha256": "8bb8e9d8284d0e47763e39ae166ff61801ce3e884e44bd53e80f0bbf2d426b40",
+      "verification": "skill identity and canonical checker hash adapted; committed concurrent helper additions retained; earlier entries unchanged"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/annular-reference.md",
+      "relative_path": "references/annular-reference.md",
+      "sha256": "d9595d484df064222b24b87fa280ff81f15e0ad01a3e4fcb36da1b4efdc23b6c",
+      "bytes": 2566,
+      "destination": "skills/cad-ocs-engineering/references/annular-reference.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "d9595d484df064222b24b87fa280ff81f15e0ad01a3e4fcb36da1b4efdc23b6c",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/assembly-units.md",
+      "relative_path": "references/assembly-units.md",
+      "sha256": "da183736a81a4204c69769e0e2a87a55912261ffc73addd13f6a4d12319c79e6",
+      "bytes": 2170,
+      "destination": "skills/cad-ocs-engineering/references/assembly-units.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "da183736a81a4204c69769e0e2a87a55912261ffc73addd13f6a4d12319c79e6",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/axial-motor.md",
+      "relative_path": "references/axial-motor.md",
+      "sha256": "47e5abd2eb282eace4f86c8f66c5a4cadedca55b7fcf3a19105ec8de213edb91",
+      "bytes": 4882,
+      "destination": "skills/cad-ocs-engineering/references/axial-motor.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "47e5abd2eb282eace4f86c8f66c5a4cadedca55b7fcf3a19105ec8de213edb91",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/calibrated-trace.md",
+      "relative_path": "references/calibrated-trace.md",
+      "sha256": "da02629d49a739f4ec1bcee96202eed9148038013207a9c2e8499441257c34ba",
+      "bytes": 3004,
+      "destination": "skills/cad-ocs-engineering/references/calibrated-trace.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "da02629d49a739f4ec1bcee96202eed9148038013207a9c2e8499441257c34ba",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/component-procedure.md",
+      "relative_path": "references/component-procedure.md",
+      "sha256": "8519f4d9a8bfac38d5d0a12be58d116e88a684a96ae729ccd4aed7cf99dd679f",
+      "bytes": 3248,
+      "destination": "skills/cad-ocs-engineering/references/component-procedure.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "8519f4d9a8bfac38d5d0a12be58d116e88a684a96ae729ccd4aed7cf99dd679f",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/dimension-limits-and-datums.md",
+      "relative_path": "references/dimension-limits-and-datums.md",
+      "sha256": "f1152475887926202430bf48ff07dedc86830ba11a77d5bb15658d83412f33e4",
+      "bytes": 1929,
+      "destination": "skills/cad-ocs-engineering/references/dimension-limits-and-datums.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "f1152475887926202430bf48ff07dedc86830ba11a77d5bb15658d83412f33e4",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/document-cleanup.md",
+      "relative_path": "references/document-cleanup.md",
+      "sha256": "8d698abaf930266206e34a246c2a4d236aeb5af4ae0fb10c4c5c5e52bfc53fd0",
+      "bytes": 3638,
+      "destination": "skills/cad-ocs-engineering/references/document-cleanup.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "8d698abaf930266206e34a246c2a4d236aeb5af4ae0fb10c4c5c5e52bfc53fd0",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/drawing-feature-checks.md",
+      "relative_path": "references/drawing-feature-checks.md",
+      "sha256": "b1ea1440762729cb2aa1693c522d06d50bd86e45f3b43c17c8379614dcabc9f2",
+      "bytes": 4178,
+      "destination": "skills/cad-ocs-engineering/references/drawing-feature-checks.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "b1ea1440762729cb2aa1693c522d06d50bd86e45f3b43c17c8379614dcabc9f2",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/envelope-job-runner.md",
+      "relative_path": "references/envelope-job-runner.md",
+      "sha256": "f8d3f5996c30bf50c593e4da9635900f12c4940b5a770a9348c47baee3c26466",
+      "bytes": 6807,
+      "destination": "skills/cad-ocs-engineering/references/envelope-job-runner.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "f8d3f5996c30bf50c593e4da9635900f12c4940b5a770a9348c47baee3c26466",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/envelope-reference.md",
+      "relative_path": "references/envelope-reference.md",
+      "sha256": "543197d968706d4f28575cc062fb181620a0c782156f54c05fb4212e8f7e27b7",
+      "bytes": 5367,
+      "destination": "skills/cad-ocs-engineering/references/envelope-reference.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "543197d968706d4f28575cc062fb181620a0c782156f54c05fb4212e8f7e27b7",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/existing-battery.md",
+      "relative_path": "references/existing-battery.md",
+      "sha256": "7a378982fb3dca1b374a83c3041925f99a0f174bdd006fd1625fd58bac0bc6ce",
+      "bytes": 2849,
+      "destination": "skills/cad-ocs-engineering/references/existing-battery.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "7a378982fb3dca1b374a83c3041925f99a0f174bdd006fd1625fd58bac0bc6ce",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/existing-bearing.md",
+      "relative_path": "references/existing-bearing.md",
+      "sha256": "ebc946ffcaec625704e72e9d08d7751b9b92b196961f5318b615af40bb27b1b5",
+      "bytes": 4349,
+      "destination": "skills/cad-ocs-engineering/references/existing-bearing.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "ebc946ffcaec625704e72e9d08d7751b9b92b196961f5318b615af40bb27b1b5",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/existing-model-start-check.md",
+      "relative_path": "references/existing-model-start-check.md",
+      "sha256": "0908f12f02e28dbae1e2d29f33f7fe89a95094d1b6d0476e37fb27bfb89e0df3",
+      "bytes": 5037,
+      "destination": "skills/cad-ocs-engineering/references/existing-model-start-check.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "0908f12f02e28dbae1e2d29f33f7fe89a95094d1b6d0476e37fb27bfb89e0df3",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/hexagonal-reference.md",
+      "relative_path": "references/hexagonal-reference.md",
+      "sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3",
+      "bytes": 3518,
+      "destination": "skills/cad-ocs-engineering/references/hexagonal-reference.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/manufacturer-assembly.md",
+      "relative_path": "references/manufacturer-assembly.md",
+      "sha256": "1a231bea238cbf56c26521b6080b98d6d6815eb37f740c10c5bd7877f461f478",
+      "bytes": 12225,
+      "destination": "skills/cad-ocs-engineering/references/manufacturer-assembly.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "1a231bea238cbf56c26521b6080b98d6d6815eb37f740c10c5bd7877f461f478",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/model-contract.md",
+      "relative_path": "references/model-contract.md",
+      "sha256": "2312fc74bf60ce9355413fee2ae5f41c1e8c862a29b21e83691754ce8b3920ea",
+      "bytes": 3084,
+      "destination": "skills/cad-ocs-engineering/references/model-contract.md",
+      "disposition": "merged common contract: retained installed-path command and restored original computational handoff link",
+      "destination_sha256": "1d52c3c8104d8abb9643030d2432cec06ea1e5ee28a428f8dae49c033103c76e",
+      "verification": "explicit package-identity or shared-reference merge adaptation"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/non-geometric-requirements.md",
+      "relative_path": "references/non-geometric-requirements.md",
+      "sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0",
+      "bytes": 1799,
+      "destination": "skills/cad-ocs-engineering/references/non-geometric-requirements.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/ocs-runtime.md",
+      "relative_path": "references/ocs-runtime.md",
+      "sha256": "5b69affdb6f2e1a7951c06000eb3d5ff0a653fa2bf9c2a0a77a9d297e9dcbc1b",
+      "bytes": 3537,
+      "destination": "skills/cad-ocs-engineering/references/ocs-runtime.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "5b69affdb6f2e1a7951c06000eb3d5ff0a653fa2bf9c2a0a77a9d297e9dcbc1b",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/paths.md",
+      "relative_path": "references/paths.md",
+      "sha256": "1b9fc9a11510e3d65cf93ddb3069d3e18ba464517ee63a23ad5f31968fbca7d6",
+      "bytes": 900,
+      "destination": "skills/cad-ocs-engineering/references/paths.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "8076a76a1692625d845c1172a4907bf64b6b8bc77d6c0cec6b9257be70486119",
+      "verification": "explicit package-identity or shared-reference merge adaptation"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/pixhawk.md",
+      "relative_path": "references/pixhawk.md",
+      "sha256": "3577313671b773ef3cc4c40c01c7c5f689220c1788bcdaf2023991807ba4adcb",
+      "bytes": 4915,
+      "destination": "skills/cad-ocs-engineering/references/pixhawk.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "3577313671b773ef3cc4c40c01c7c5f689220c1788bcdaf2023991807ba4adcb",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/profile-reference.md",
+      "relative_path": "references/profile-reference.md",
+      "sha256": "2d48495b1d931716f3b803c0fa68f6791db1186c9b3dc6b735a973821e12e71d",
+      "bytes": 7071,
+      "destination": "skills/cad-ocs-engineering/references/profile-reference.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "2d48495b1d931716f3b803c0fa68f6791db1186c9b3dc6b735a973821e12e71d",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/retained-artifact-checks.md",
+      "relative_path": "references/retained-artifact-checks.md",
+      "sha256": "68bee503ac58a25dc54bce0d3ea8d9722996fcf76a6e7ab7abd0510528f007e4",
+      "bytes": 1946,
+      "destination": "skills/cad-ocs-engineering/references/retained-artifact-checks.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "68bee503ac58a25dc54bce0d3ea8d9722996fcf76a6e7ab7abd0510528f007e4",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/scaled-assemblies.md",
+      "relative_path": "references/scaled-assemblies.md",
+      "sha256": "6e83e20a415bf65e16d5d1b5f052062e193f3d5ee0031b713ab594b4cf52e16f",
+      "bytes": 2732,
+      "destination": "skills/cad-ocs-engineering/references/scaled-assemblies.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "6e83e20a415bf65e16d5d1b5f052062e193f3d5ee0031b713ab594b4cf52e16f",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/shared-feature-checks.md",
+      "relative_path": "references/shared-feature-checks.md",
+      "sha256": "5cb7108be043cc6541c6f32644e40445ef663accc0eb7f186aa44d6f233897a9",
+      "bytes": 3624,
+      "destination": "skills/cad-ocs-engineering/references/shared-feature-checks.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "5cb7108be043cc6541c6f32644e40445ef663accc0eb7f186aa44d6f233897a9",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/small-bms.md",
+      "relative_path": "references/small-bms.md",
+      "sha256": "b54c5f2b1ffb05c83f16a20b79bb6d0022e8741ecff2a18cd4986e3339661970",
+      "bytes": 2919,
+      "destination": "skills/cad-ocs-engineering/references/small-bms.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "b54c5f2b1ffb05c83f16a20b79bb6d0022e8741ecff2a18cd4986e3339661970",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/source-first-and-tube.md",
+      "relative_path": "references/source-first-and-tube.md",
+      "sha256": "c3aebb108440dc4c6d0071bc8e6d2f1a493e87ebf989119273f6c0038dde6ef1",
+      "bytes": 9612,
+      "destination": "skills/cad-ocs-engineering/references/source-first-and-tube.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "c3aebb108440dc4c6d0071bc8e6d2f1a493e87ebf989119273f6c0038dde6ef1",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/source-metadata.md",
+      "relative_path": "references/source-metadata.md",
+      "sha256": "13d01b130d74d3ecf0fd513aaf4ae47d79b9d7297ceead2414a40f4bd15515e7",
+      "bytes": 1744,
+      "destination": "skills/cad-ocs-engineering/references/source-metadata.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "13d01b130d74d3ecf0fd513aaf4ae47d79b9d7297ceead2414a40f4bd15515e7",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/source-perimeter-chains.md",
+      "relative_path": "references/source-perimeter-chains.md",
+      "sha256": "f09f592e1ca1fb842680aa66b5a33a644a9142fa86222d5b054029cf5dae844b",
+      "bytes": 3384,
+      "destination": "skills/cad-ocs-engineering/references/source-perimeter-chains.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "f09f592e1ca1fb842680aa66b5a33a644a9142fa86222d5b054029cf5dae844b",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/source-variant-tables.md",
+      "relative_path": "references/source-variant-tables.md",
+      "sha256": "ebb158d296d44fefe673693853648f6396cb1fda82348467aa962abb57381670",
+      "bytes": 5166,
+      "destination": "skills/cad-ocs-engineering/references/source-variant-tables.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "ebb158d296d44fefe673693853648f6396cb1fda82348467aa962abb57381670",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/source-view-evidence.md",
+      "relative_path": "references/source-view-evidence.md",
+      "sha256": "5cebe3896c1318a861b06d7597869ce84c0d23d31467e256a0f7d0f75c3ceb60",
+      "bytes": 6068,
+      "destination": "skills/cad-ocs-engineering/references/source-view-evidence.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "5cebe3896c1318a861b06d7597869ce84c0d23d31467e256a0f7d0f75c3ceb60",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/spherical-seat-profile.md",
+      "relative_path": "references/spherical-seat-profile.md",
+      "sha256": "f361fceac276aac40f3b99f4a5a9b5da65f46c0dfb7e02f1bbdfd721fb45da29",
+      "bytes": 1974,
+      "destination": "skills/cad-ocs-engineering/references/spherical-seat-profile.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "f361fceac276aac40f3b99f4a5a9b5da65f46c0dfb7e02f1bbdfd721fb45da29",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/step-solid-inventory.md",
+      "relative_path": "references/step-solid-inventory.md",
+      "sha256": "0b88f613487333bcfe3d468483eae3260122013decfda083b5fca60ed2791e86",
+      "bytes": 1542,
+      "destination": "skills/cad-ocs-engineering/references/step-solid-inventory.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "0b88f613487333bcfe3d468483eae3260122013decfda083b5fca60ed2791e86",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/tabbed-battery.md",
+      "relative_path": "references/tabbed-battery.md",
+      "sha256": "137babc4a8c928f1c0e0aee2df9cd8a2299ffe30fe36373e3732ac8ec8bd6acb",
+      "bytes": 2852,
+      "destination": "skills/cad-ocs-engineering/references/tabbed-battery.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "137babc4a8c928f1c0e0aee2df9cd8a2299ffe30fe36373e3732ac8ec8bd6acb",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/references/toroidal-reference.md",
+      "relative_path": "references/toroidal-reference.md",
+      "sha256": "56271a93b495ab4d19b1bd15246148b64ffffefaab039f51d314d422926fb1f2",
+      "bytes": 4027,
+      "destination": "skills/cad-ocs-engineering/references/toroidal-reference.md",
+      "disposition": "retained component addition",
+      "destination_sha256": "56271a93b495ab4d19b1bd15246148b64ffffefaab039f51d314d422926fb1f2",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/requirements.txt",
+      "relative_path": "requirements.txt",
+      "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47",
+      "bytes": 161,
+      "destination": "skills/cad-ocs-engineering/requirements.txt",
+      "disposition": "retained component addition",
+      "destination_sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/annular_reference.py",
+      "relative_path": "scripts/annular_reference.py",
+      "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334",
+      "bytes": 16732,
+      "destination": "skills/cad-ocs-engineering/scripts/annular_reference.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/assembly_repair.py",
+      "relative_path": "scripts/assembly_repair.py",
+      "sha256": "abb7e5e98bab566051f8d101cb827471b9831d868f373a6ce5e61285b0a704b8",
+      "bytes": 3329,
+      "destination": "skills/cad-ocs-engineering/scripts/assembly_repair.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "abb7e5e98bab566051f8d101cb827471b9831d868f373a6ce5e61285b0a704b8",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/assembly_units.py",
+      "relative_path": "scripts/assembly_units.py",
+      "sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081",
+      "bytes": 5534,
+      "destination": "skills/cad-ocs-engineering/scripts/assembly_units.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/axial_motor.py",
+      "relative_path": "scripts/axial_motor.py",
+      "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6",
+      "bytes": 8702,
+      "destination": "skills/cad-ocs-engineering/scripts/axial_motor.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/battery_module.py",
+      "relative_path": "scripts/battery_module.py",
+      "sha256": "fafa8c57d579d5329b93b0681d890d7dc28c5706c1d9f9531ac53b53380a0d08",
+      "bytes": 5773,
+      "destination": "skills/cad-ocs-engineering/scripts/battery_module.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "fafa8c57d579d5329b93b0681d890d7dc28c5706c1d9f9531ac53b53380a0d08",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/cadtools/__init__.py",
+      "relative_path": "scripts/cadtools/__init__.py",
+      "sha256": "3b3d2bdc01158b2647f603599d53cd7493ee6f4bd3c7d79eaa20160dba925b3d",
+      "bytes": 76,
+      "destination": "skills/cad-ocs-engineering/scripts/cadtools/__init__.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "3b3d2bdc01158b2647f603599d53cd7493ee6f4bd3c7d79eaa20160dba925b3d",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/cadtools/geometry.py",
+      "relative_path": "scripts/cadtools/geometry.py",
+      "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+      "bytes": 8084,
+      "destination": "skills/cad-ocs-engineering/scripts/cadtools/geometry.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/cadtools/runtime.py",
+      "relative_path": "scripts/cadtools/runtime.py",
+      "sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05",
+      "bytes": 10497,
+      "destination": "skills/cad-ocs-engineering/scripts/cadtools/runtime.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/cadtools/verification.py",
+      "relative_path": "scripts/cadtools/verification.py",
+      "sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a",
+      "bytes": 5257,
+      "destination": "skills/cad-ocs-engineering/scripts/cadtools/verification.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/calibrated_trace.py",
+      "relative_path": "scripts/calibrated_trace.py",
+      "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025",
+      "bytes": 6290,
+      "destination": "skills/cad-ocs-engineering/scripts/calibrated_trace.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/check_contract.py",
+      "relative_path": "scripts/check_contract.py",
+      "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+      "bytes": 6771,
+      "destination": "skills/cad-ocs-engineering/scripts/check_contract.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/component_records.py",
+      "relative_path": "scripts/component_records.py",
+      "sha256": "7a7a4685b51e2dcce8b6b5a51193916ec5912eabee2205bd6f3b7db63d2462b9",
+      "bytes": 10403,
+      "destination": "skills/cad-ocs-engineering/scripts/component_records.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "7a7a4685b51e2dcce8b6b5a51193916ec5912eabee2205bd6f3b7db63d2462b9",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/driver_checks.py",
+      "relative_path": "scripts/driver_checks.py",
+      "sha256": "f1c8ec5b6075031048c0724c6eb40b9b69b94343a5f744e6f6000a9d5ef4adcd",
+      "bytes": 3758,
+      "destination": "skills/cad-ocs-engineering/scripts/driver_checks.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "f1c8ec5b6075031048c0724c6eb40b9b69b94343a5f744e6f6000a9d5ef4adcd",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/dxf_inspect.py",
+      "relative_path": "scripts/dxf_inspect.py",
+      "sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e",
+      "bytes": 7756,
+      "destination": "skills/cad-ocs-engineering/scripts/dxf_inspect.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/envelope_job_runner.py",
+      "relative_path": "scripts/envelope_job_runner.py",
+      "sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab",
+      "bytes": 33839,
+      "destination": "skills/cad-ocs-engineering/scripts/envelope_job_runner.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/envelope_reference.py",
+      "relative_path": "scripts/envelope_reference.py",
+      "sha256": "d03ade53f6181206314712ab23b8d7176fe52ec3d931e32801ba083acff41854",
+      "bytes": 10686,
+      "destination": "skills/cad-ocs-engineering/scripts/envelope_reference.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "d03ade53f6181206314712ab23b8d7176fe52ec3d931e32801ba083acff41854",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/feature_checks.py",
+      "relative_path": "scripts/feature_checks.py",
+      "sha256": "1b476719a1f042727a1ce53fdcf91d756442f52ed4be80b44a96ae9dc401dd77",
+      "bytes": 4553,
+      "destination": "skills/cad-ocs-engineering/scripts/feature_checks.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "1b476719a1f042727a1ce53fdcf91d756442f52ed4be80b44a96ae9dc401dd77",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/hexagonal_reference.py",
+      "relative_path": "scripts/hexagonal_reference.py",
+      "sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61",
+      "bytes": 25896,
+      "destination": "skills/cad-ocs-engineering/scripts/hexagonal_reference.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/model_inventory.py",
+      "relative_path": "scripts/model_inventory.py",
+      "sha256": "26fbc6993ef05133a02e9eacf3888be14f781c381176e8a39ba1f9026154f878",
+      "bytes": 12179,
+      "destination": "skills/cad-ocs-engineering/scripts/model_inventory.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "26fbc6993ef05133a02e9eacf3888be14f781c381176e8a39ba1f9026154f878",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/native_acis.py",
+      "relative_path": "scripts/native_acis.py",
+      "sha256": "aef3c95104792dcd44e3a2a92e13270d533c82b52ca604c83e2841712a44044f",
+      "bytes": 14976,
+      "destination": "skills/cad-ocs-engineering/scripts/native_acis.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "aef3c95104792dcd44e3a2a92e13270d533c82b52ca604c83e2841712a44044f",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/ocs_control.py",
+      "relative_path": "scripts/ocs_control.py",
+      "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+      "bytes": 8545,
+      "destination": "skills/cad-ocs-engineering/scripts/ocs_control.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/ocs_document_cleanup.py",
+      "relative_path": "scripts/ocs_document_cleanup.py",
+      "sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4",
+      "bytes": 16074,
+      "destination": "skills/cad-ocs-engineering/scripts/ocs_document_cleanup.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/package_check.py",
+      "relative_path": "scripts/package_check.py",
+      "sha256": "f8193ecd0fca779066dc6a4ecad452754653955d66a699d720e5b9a731af84b6",
+      "bytes": 3560,
+      "destination": "skills/cad-ocs-engineering/scripts/package_check.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "427f7255ad6a5eba935772c1bb36a2a7c8ce45928e283a9a4d7b1ea47118f990",
+      "verification": "explicit package-identity or shared-reference merge adaptation"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/part_index.py",
+      "relative_path": "scripts/part_index.py",
+      "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb",
+      "bytes": 3129,
+      "destination": "skills/cad-ocs-engineering/scripts/part_index.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/pillow_block.py",
+      "relative_path": "scripts/pillow_block.py",
+      "sha256": "da3ba1a80c4887a5588a271c100264e3b9e4a456ca0babe27a8e6bcc75cf8859",
+      "bytes": 7120,
+      "destination": "skills/cad-ocs-engineering/scripts/pillow_block.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "da3ba1a80c4887a5588a271c100264e3b9e4a456ca0babe27a8e6bcc75cf8859",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/pixhawk.py",
+      "relative_path": "scripts/pixhawk.py",
+      "sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f",
+      "bytes": 8438,
+      "destination": "skills/cad-ocs-engineering/scripts/pixhawk.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/profile_reference.py",
+      "relative_path": "scripts/profile_reference.py",
+      "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0",
+      "bytes": 21011,
+      "destination": "skills/cad-ocs-engineering/scripts/profile_reference.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/retained_artifacts.py",
+      "relative_path": "scripts/retained_artifacts.py",
+      "sha256": "8d61d4b042d3ca128105aa5e032504ce7a4e6adcbad8d95f54acf8be34604729",
+      "bytes": 5021,
+      "destination": "skills/cad-ocs-engineering/scripts/retained_artifacts.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "8d61d4b042d3ca128105aa5e032504ce7a4e6adcbad8d95f54acf8be34604729",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/rounded_tube.py",
+      "relative_path": "scripts/rounded_tube.py",
+      "sha256": "d9b76b03f0c93452f70ae123c6311ecaaf5779d827a36acd1f88d90844c419c8",
+      "bytes": 17309,
+      "destination": "skills/cad-ocs-engineering/scripts/rounded_tube.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "d9b76b03f0c93452f70ae123c6311ecaaf5779d827a36acd1f88d90844c419c8",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/small_bms.py",
+      "relative_path": "scripts/small_bms.py",
+      "sha256": "6a54793b62f539f94d974ff6dc510b9176e2215da76b52a046000fbb1e21bdd0",
+      "bytes": 4159,
+      "destination": "skills/cad-ocs-engineering/scripts/small_bms.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "6a54793b62f539f94d974ff6dc510b9176e2215da76b52a046000fbb1e21bdd0",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/source_intake.py",
+      "relative_path": "scripts/source_intake.py",
+      "sha256": "cc8bfae3ba3ecd630dffb09b58fc4b2e325a6b8bfefb876c83d4c5ab98a66f92",
+      "bytes": 10345,
+      "destination": "skills/cad-ocs-engineering/scripts/source_intake.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "cc8bfae3ba3ecd630dffb09b58fc4b2e325a6b8bfefb876c83d4c5ab98a66f92",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/source_metadata.py",
+      "relative_path": "scripts/source_metadata.py",
+      "sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1",
+      "bytes": 3124,
+      "destination": "skills/cad-ocs-engineering/scripts/source_metadata.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/source_variant_table.py",
+      "relative_path": "scripts/source_variant_table.py",
+      "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d",
+      "bytes": 3569,
+      "destination": "skills/cad-ocs-engineering/scripts/source_variant_table.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/step_placements.py",
+      "relative_path": "scripts/step_placements.py",
+      "sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d",
+      "bytes": 8112,
+      "destination": "skills/cad-ocs-engineering/scripts/step_placements.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/step_solid_inventory.py",
+      "relative_path": "scripts/step_solid_inventory.py",
+      "sha256": "3495aee7471f64d2dc7bfb327cf491f14ea78938ef48b521ec814842dae6f4f0",
+      "bytes": 4430,
+      "destination": "skills/cad-ocs-engineering/scripts/step_solid_inventory.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "3495aee7471f64d2dc7bfb327cf491f14ea78938ef48b521ec814842dae6f4f0",
+      "verification": "byte-identical to inspected component snapshot"
+    },
+    {
+      "origin": "component_package",
+      "source": "skills/component-cad/scripts/toroidal_reference.py",
+      "relative_path": "scripts/toroidal_reference.py",
+      "sha256": "f6f0cb56e797731c76f4f11d293487d84215446bf74f384dfb5c8c3504c989ff",
+      "bytes": 13432,
+      "destination": "skills/cad-ocs-engineering/scripts/toroidal_reference.py",
+      "disposition": "retained component addition",
+      "destination_sha256": "f6f0cb56e797731c76f4f11d293487d84215446bf74f384dfb5c8c3504c989ff",
+      "verification": "byte-identical to inspected component snapshot"
+    }
+  ],
+  "concurrent_committed_additions": [
+    {
+      "source": "scripts/spherical_seat_profile.py",
+      "destination": "skills/cad-ocs-engineering/scripts/spherical_seat_profile.py",
+      "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450"
+    }
+  ],
+  "workflow_section_coverage": [
+    {
+      "origin": "original_ocs",
+      "source_section": "Establish the modeling contract",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "756ec4870d00667c5a821f40686f2eb8bc4ed3386c460798f8a590bbb509f574",
+      "verbatim_body_present": true,
+      "destination_heading": "Establish the modeling contract"
+    },
+    {
+      "origin": "original_ocs",
+      "source_section": "Inspect the actual OCS session",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "129bdcf1436f91fd0633a3ba6a4143081e21e1c6fb19464eb2bb4d86995cff94",
+      "verbatim_body_present": true,
+      "destination_heading": "Inspect the actual OCS session"
+    },
+    {
+      "origin": "original_ocs",
+      "source_section": "Construct and check bounded changes",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "69830763d1f5ad3a2dd8674506b0409fee35c2ac03ee224db51f9057f5f38c44",
+      "verbatim_body_present": true,
+      "destination_heading": "Construct and check bounded changes"
+    },
+    {
+      "origin": "original_ocs",
+      "source_section": "Save and computational handoff",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "b3c277443517f6f392bb18bf83ec199ccc7bf9a03e045773c25e63256363fb40",
+      "verbatim_body_present": true,
+      "destination_heading": "Save and computational handoff"
+    },
+    {
+      "origin": "original_ocs",
+      "source_section": "Report and preserve evidence",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "8f3a56a4529fe19fdfdaacadb9331b18c400de16a0cc245ff3332a813e365237",
+      "verbatim_body_present": true,
+      "destination_heading": "Report and preserve evidence"
+    },
+    {
+      "origin": "component_package",
+      "source_section": "Package setup",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "0e71d860987afd976e41724e26c7ed0a1aac7f77c97d1883f702c8681c50c65c",
+      "verbatim_body_present": true,
+      "destination_heading": "Package setup"
+    },
+    {
+      "origin": "component_package",
+      "source_section": "Read current implementations first",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "d265b208b6f8d8c9a6d335e6adbd52fa494864749202aca629af7796848b54f2",
+      "verbatim_body_present": true,
+      "destination_heading": "Check existing component implementations"
+    },
+    {
+      "origin": "component_package",
+      "source_section": "Bind the component requirements",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "88de7e4244605a11ac5cb76466cda76d35417eed48905b3b4a2779dd5e2d4351",
+      "verbatim_body_present": true,
+      "destination_heading": "Bind component requirements"
+    },
+    {
+      "origin": "component_package",
+      "source_section": "Execute and improve",
+      "destination": "skills/cad-ocs-engineering/SKILL.md",
+      "body_sha256": "8bd14a7de49521487aa692eee316e7707f1fb33d91189bef34e7fe3c1c65c217",
+      "verbatim_body_present": true,
+      "destination_heading": "Execute and improve component jobs"
+    }
+  ],
+  "referring_documents": [
+    "README.md",
+    "skills/README.md",
+    "docs/skill-packaging.md"
+  ],
+  "operations": [
+    {
+      "operation": "Merge original OCS and component skill instructions",
+      "inputs": [
+        "original OCS skill files",
+        "committed component package and canonical helpers"
+      ],
+      "outputs": [
+        "skills/cad-ocs-engineering/",
+        "updated package and installation references"
+      ],
+      "prerequisites": [
+        "explicit merge authorization",
+        "source inventory and checkpoint"
+      ],
+      "tool_api": "local Python file merge; committed-source package generator; cached skills CLI",
+      "representation": "Markdown instructions, Python modules, YAML metadata, JSON inventory and pinned dependency text",
+      "units_frame": "source geometry units, frames and metric evidence remain job inputs; file equality uses SHA-256",
+      "information_changes": "Both workflows are directly integrated into one main entrypoint. Supporting references and helpers remain inside the same package. Paths and installation names are normalized.",
+      "checks": [
+        "all nine source workflow section hashes",
+        "every original and component file destination",
+        "isolated discovery, install, import and fixtures",
+        "read-only OCS state",
+        "regression tests"
+      ],
+      "alternatives": [
+        "retained original and component instructions under one merged skill identity"
+      ],
+      "downstream_handoff": "An installed merged package plus declared software dependencies, caller-owned source jobs and an existing OCS connection."
+    }
+  ]
+}

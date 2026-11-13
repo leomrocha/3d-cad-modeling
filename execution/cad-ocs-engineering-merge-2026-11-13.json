@@ -1,0 +1,220 @@
+{
+  "date": "2026-11-13",
+  "status": "DONE",
+  "actual_executing_model": "unavailable",
+  "checkpoint": "18f9c9a",
+  "canonical_identity_commit": "76f35e5",
+  "merged_package_commit": "d4bcb35",
+  "preservation": {
+    "original_skill_files": 8,
+    "component_snapshot_files": 75,
+    "directly_merged_workflow_sections": 9,
+    "all_source_destinations_and_source_comparisons": "PASS",
+    "original_external_skill_hashes": "unchanged",
+    "ignored_chores_hashes": "unchanged",
+    "additional_committed_helpers": [
+      {
+        "source": "scripts/spherical_seat_profile.py",
+        "destination": "skills/cad-ocs-engineering/scripts/spherical_seat_profile.py",
+        "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450"
+      }
+    ]
+  },
+  "isolated_checks": {
+    "cli": "1.8.1",
+    "telemetry": "disabled",
+    "source": "local copied skills",
+    "isolation": "temporary virtualenv; copied declared software dependencies; cleared Python path; separate HOME and cwd",
+    "skills": {
+      "cad-ocs-engineering": {
+        "cli_discovery": "PASS",
+        "individual_copy_install": "PASS",
+        "defaults": {
+          "result": "PASS",
+          "runtime": "bundled",
+          "runner_defaults": "bundled",
+          "dependency_preflight": "PASS",
+          "native_mutations": 0
+        },
+        "local_links": 78,
+        "package_check": {
+          "result": "PASS",
+          "skill": "cad-ocs-engineering",
+          "hashed_files": 40,
+          "imported_modules": [
+            "annular_reference",
+            "assembly_repair",
+            "assembly_units",
+            "axial_motor",
+            "battery_module",
+            "calibrated_trace",
+            "check_contract",
+            "component_records",
+            "driver_checks",
+            "dxf_inspect",
+            "envelope_job_runner",
+            "envelope_reference",
+            "feature_checks",
+            "hexagonal_reference",
+            "model_inventory",
+            "native_acis",
+            "ocs_control",
+            "ocs_document_cleanup",
+            "part_index",
+            "pillow_block",
+            "pixhawk",
+            "profile_reference",
+            "retained_artifacts",
+            "rounded_tube",
+            "small_bms",
+            "source_intake",
+            "source_metadata",
+            "source_variant_table",
+            "spherical_seat_profile",
+            "step_placements",
+            "step_solid_inventory",
+            "toroidal_reference",
+            "cadtools.runtime",
+            "cadtools.geometry",
+            "cadtools.verification"
+          ],
+          "dependencies": {
+            "ezdxf": "1.4.5",
+            "fonttools": "4.68.0",
+            "numpy": "2.5.4",
+            "pyparsing": "3.3.3",
+            "typing_extensions": "4.16.0"
+          }
+        },
+        "full_original_and_component_instructions": "PASS",
+        "command_help_entries": [
+          "envelope_job_runner",
+          "rounded_tube",
+          "model_inventory",
+          "retained_artifacts",
+          "ocs_control",
+          "check_contract"
+        ],
+        "coordinate_contract_fixture": {
+          "result": "PASS",
+          "passing_and_failing_coordinates_checked": true,
+          "native_mutations": 0
+        },
+        "read_only_ocs": {
+          "result": "PASS",
+          "operation": "state",
+          "mutations": 0,
+          "document_id": 1,
+          "revision": 0
+        }
+      },
+      "cad-drawing-inspection": {
+        "cli_discovery": "PASS",
+        "individual_copy_install": "PASS",
+        "fixture": {
+          "result": "PASS",
+          "units": "mm",
+          "circle_count": 1,
+          "source_preserved": true
+        },
+        "local_links": 1,
+        "package_check": {
+          "result": "PASS",
+          "skill": "cad-drawing-inspection",
+          "hashed_files": 7,
+          "imported_modules": [
+            "component_records",
+            "dxf_inspect",
+            "part_index"
+          ],
+          "dependencies": {
+            "ezdxf": "1.4.5",
+            "fonttools": "4.68.0",
+            "numpy": "2.5.4",
+            "pyparsing": "3.3.3",
+            "typing_extensions": "4.16.0"
+          }
+        },
+        "command_help_entries": [
+          "dxf_inspect",
+          "part_index",
+          "component_records"
+        ]
+      },
+      "cad-source-intake": {
+        "cli_discovery": "PASS",
+        "individual_copy_install": "PASS",
+        "local_links": 0,
+        "package_check": {
+          "result": "PASS",
+          "skill": "cad-source-intake",
+          "hashed_files": 7,
+          "imported_modules": [
+            "component_records",
+            "part_index",
+            "source_intake"
+          ],
+          "dependencies": {}
+        },
+        "command_help_entries": [
+          "source_intake",
+          "part_index",
+          "component_records"
+        ],
+        "fixture": {
+          "result": "PASS",
+          "source_preserved": true,
+          "receipt_verified": true
+        }
+      }
+    }
+  },
+  "regression": {
+    "result": "PASS",
+    "tests_run": 254,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "modules": [
+      "test_source_intake",
+      "test_dxf_inspect",
+      "test_component_tools",
+      "test_model_inventory",
+      "test_envelope_job_runner",
+      "test_rounded_tube",
+      "test_packaged_cadtools",
+      "test_request_recovery",
+      "test_annular_reference",
+      "test_hexagonal_reference",
+      "test_toroidal_reference",
+      "test_spherical_seat_profile",
+      "test_source_metadata",
+      "test_assembly_repair",
+      "test_assembly_units",
+      "test_calibrated_trace",
+      "test_envelope_reference",
+      "test_profile_reference",
+      "test_step_solid_inventory",
+      "test_ocs_document_cleanup",
+      "test_source_variant_table",
+      "test_ocs_skill_merge"
+    ]
+  },
+  "distribution_consistency": {
+    "result": "PASS",
+    "command": "python scripts/build_skill_packages.py --committed --check"
+  },
+  "frontmatter_validation": "PASS for all three skills",
+  "documentation": {
+    "result": "PASS",
+    "pages": 48,
+    "local_links_and_anchors": 249,
+    "shell_blocks": 22,
+    "JSON_records": 52,
+    "skill_identities": [
+      "cad-drawing-inspection",
+      "cad-ocs-engineering",
+      "cad-source-intake"
+    ]
+  }
+}
