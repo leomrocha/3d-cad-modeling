@@ -1,0 +1,88 @@
+{
+  "records": [
+    {
+      "local_path": "skills/component-cad/references/dimension-limits-and-datums.md",
+      "title": "Source dimension limits and datums",
+      "summary": "Separates printed limits, datum planes, calculated relationships and traced coordinates; applied to the Curtis reference.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_applied_in_native_iteration",
+      "sha256": "5a778011d91ad13431a8da103c4aad0e2342681446e78f6f6e0a1125a6abc269",
+      "referring_documents": [
+        "skills/component-cad/SKILL.md",
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/source-view-evidence.md",
+      "title": "Source-view evidence method",
+      "summary": "Identifies retained original and derived views, evidence types, exact revision, calibrated pixels, hull representation and separate mounting markers; applied to Kelly.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_applied_in_native_iteration",
+      "sha256": "d61b11e0e8b5b21fbcbfd3b7229bbdc7806a8219f7076ffa692c116ff193c5b0",
+      "referring_documents": [
+        "skills/component-cad/SKILL.md",
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/source-perimeter-chains.md",
+      "title": "Source-vector perimeter chains",
+      "summary": "Verifies source-local path/segment identities and transformed endpoints, joins a simple closed chain and checks its spans against independent printed dimensions.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_applied_in_source_reconstruction",
+      "sha256": "ef7dab3e868effb87fcad35d01ead97d72a46e60bf0aa99b89e66f66257ee9e4",
+      "referring_documents": [
+        "skills/component-cad/SKILL.md",
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/profile-reference.md",
+      "title": "Saved profile topology gate",
+      "summary": "Documents structured post-save topology checks and same-artifact read-only recovery after a caller failure, with separate pre-save SAT capability.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update_from_executed_failure",
+      "sha256": "3db4354d039f05ee0d11f5bbf1783d0ea5c19f60955d62e694af5370c81f4e80",
+      "referring_documents": [
+        "skills/component-cad/SKILL.md",
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/c014-dimension-limits-2026-11-13.md",
+      "title": "Curtis limit/datum application",
+      "summary": "Records the applied shared method, actual source limits/datum interpretation and linked saved model/check receipts.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_application_report",
+      "sha256": "d9bd97e837bad05406b67d6bea614d27477f5df4b31c9091fbd2db178465686f",
+      "referring_documents": [
+        "skills/component-cad/SKILL.md",
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/c015-source-view-evidence-2026-11-13.md",
+      "title": "Kelly source-view application",
+      "summary": "Records actual manufacturer view inspection, pixel calibration/hull assumptions and source-revision associations used by the reference job.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_source_review_application",
+      "sha256": "6293a5eeee134a89495dbe263d06793da261cca88476b33f4612b3c81d87c5f0",
+      "referring_documents": [
+        "skills/component-cad/SKILL.md",
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/profile-postsave-validation-2026-11-13.md",
+      "title": "Saved-reader caller failure and recovery",
+      "summary": "Records the encoding-label failure, structured topology correction and reuse of the existing saved artifact.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result_review",
+      "sha256": "f1314ddd4e5802762a27e0c39d35615841c9cbea129febcfb6b7a0c3b18d7fe0",
+      "referring_documents": [
+        "skills/component-cad/SKILL.md",
+        "execution/resumed-component-workflows-2026-11-13.md"
+      ]
+    }
+  ]
+}
