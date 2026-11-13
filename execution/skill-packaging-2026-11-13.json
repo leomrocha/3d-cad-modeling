@@ -192,5 +192,10 @@
       "broken_reference_occurrences": 3,
       "installed_skill_matches_checkout": true
     }
-  ]
+  ],
+  "distribution_source_check": {
+    "result": "PASS",
+    "command": "python scripts/build_skill_packages.py --committed --check",
+    "meaning": "Generated files match canonical source in local HEAD; concurrent uncommitted component-record and model-inventory edits retain their owner."
+  }
 }

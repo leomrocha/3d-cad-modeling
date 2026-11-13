@@ -157,7 +157,8 @@
         "generated-byte comparison",
         "local references",
         "isolated imports and fixtures",
-        "individual CLI copy installation"
+        "individual CLI copy installation",
+        "Committed-source comparison isolates package generation from concurrent uncommitted implementations."
       ],
       "alternatives": [
         "full-checkout runtime retained as developer route",

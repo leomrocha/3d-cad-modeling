@@ -12,7 +12,7 @@ Set `SKILL_ROOT` to the installed directory. Resolve bundled helpers from `SKILL
 
 1. Edit reusable implementations under `scripts/`; edit each skill's instructions and references in its skill directory.
 2. Run `python scripts/build_skill_packages.py`. It copies only the modules needed by source intake and drawing inspection, and the current shared helper set into component CAD. Each package also receives its dependency declaration, MIT license, attribution notice and a manifest of generated-file hashes.
-3. Run `python scripts/build_skill_packages.py --check` to check that generated copies match the canonical code. Commit source changes and regenerated copies in the same authorized batch.
+3. Run `python scripts/build_skill_packages.py --check` to check that generated copies match the canonical code. Commit source changes and regenerated copies in the same authorized batch. During concurrent work, `--committed` reads canonical bytes from local Git HEAD; use `--committed --check` to verify packages against that committed source while preserving another agent’s pending edits.
 4. Run [isolated package checks](../tests/test_skill_packages.py) using the existing pinned dependency directory and cached skills CLI as explicit test inputs. The checks copy dependencies into a temporary Python environment, install skills individually into temporary projects, check local references/imports/commands and exercise source-intake and DXF fixtures. A separate read-only OCS state check uses the caller's selected descriptor.
 
 ## Runtime ownership
