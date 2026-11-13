@@ -113,6 +113,7 @@ Inspect layer/material/group/block schemas before organizing parts. Name parts a
 3. For a free conical washer defined by normal material thickness and radial/axial bounds, use the [conical-washer profile procedure](references/conical-washer-profile.md). Keep each source variant separate and compare the saved cone geometry with its own source job.
 
 4. For a saved solid with circular openings, use the [circular-boundary procedure](references/circular-boundary-checks.md) to associate full circular edges, end-plane loops and adjacent cylinder faces.
+5. For a repeated source-defined annular job, use the [guarded annular job runner](references/annular-job-runner.md). Supply the job, paths, model indexes, caller roots, OCS control/session and actual execution-model identity explicitly. Run the default read-only preflight first; native writes require `--allow-write` and a fresh passing source/model gate.
 
 ## Save and computational handoff
 
