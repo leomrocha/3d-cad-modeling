@@ -1,0 +1,52 @@
+{
+  "title": "Skill and script documentation refresh",
+  "date": "2026-11-13",
+  "evidence_status": "local implementation inspection",
+  "summary": "Indexed all current Python helpers and three repository skills; linked component references and updated CLI and cache descriptions. Documentation contains navigation and concise summaries; detailed procedure contracts remain in skills.",
+  "sources": [
+    {
+      "path": "scripts/",
+      "title": "Python helper implementation",
+      "summary": "Inspected helper interfaces and command-line parsers.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "scripts/README.md",
+        "skills/README.md"
+      ]
+    },
+    {
+      "path": "skills/",
+      "title": "Repository skills and references",
+      "summary": "Inspected installed skill definitions and existing procedure contracts.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "scripts/README.md",
+        "skills/README.md"
+      ]
+    },
+    {
+      "path": ".gitignore",
+      "title": "Runtime output exclusions",
+      "summary": "Confirmed Python caches, environments and Jekyll output are ignored.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local file inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "scripts/README.md",
+        "skills/README.md"
+      ]
+    }
+  ],
+  "referring_documents": [
+    "README.md",
+    "docs/index.md",
+    "docs/tools.md",
+    "scripts/README.md",
+    "skills/README.md",
+    "skills/component-cad/SKILL.md"
+  ]
+}

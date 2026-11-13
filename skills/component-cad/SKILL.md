@@ -50,3 +50,8 @@ Use this skill when a real component job develops the reusable tools in this rep
 21. For source `Max`/`Min` dimensions and measurements from different datum planes, use the [dimension-limit and datum procedure](references/dimension-limits-and-datums.md). Preserve printed limits, arithmetic relations and image-traced coordinates as separate inputs.
 22. Before binding image-based dimensions, use the [source-view evidence procedure](references/source-view-evidence.md). Record actual inspected pixels and source revision separately from web-generated descriptions.
 23. For a perimeter assembled from source vector segments, use the [source-vector chain procedure](references/source-perimeter-chains.md). Retain resolvable source segment identities, endpoint joins and independent printed-dimension checks.
+
+24. For saved source labels, use the [native metadata procedure](references/source-metadata.md). Compare actual entity string chunks with the expected source lines before and after saving.
+25. For SAT-to-SAB geometry persistence, use the [smallBMS comparison procedure](references/small-bms.md) within its supported frame and body conditions.
+26. For the source-dimensioned Pixhawk 6C clearance envelope and mounting references, use the [Pixhawk procedure](references/pixhawk.md).
+27. After final provenance and path edits, use the [retained-artifact manifest check](references/retained-artifact-checks.md). Keep the emitted receipt with the component records in the owning project.

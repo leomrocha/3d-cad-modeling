@@ -1,6 +1,27 @@
 # Project skill catalogue
 
-Status: researched catalogue and proposed implementation sequence, 12 November 2026. The existing local `ocs-engineering` skill is the baseline for OCS work. This catalogue records reusable candidates and proposed workflow skills.
+## Skills supplied by this repository
+
+1. [component-cad](component-cad/SKILL.md) — checks for existing models, binds source requirements, guides native CAD construction and verifies saved results.
+2. [drawing-inspection](drawing-inspection/SKILL.md) — inventories DXF entities, units, layers, spaces and nested transforms.
+3. [source-intake](source-intake/SKILL.md) — preserves source files, hashes, request scope and corrected input revisions.
+
+Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Native CAD control uses the separately installed `ocs-engineering` skill.
+
+## Component CAD procedure index
+
+1. **Job contract:** [component requirements and action records](component-cad/references/component-procedure.md).
+2. **Model reuse:** [existing-model checks and configuration selection](component-cad/references/existing-model-start-check.md).
+3. **Source interpretation:** [drawing features](component-cad/references/drawing-feature-checks.md), [limits, datums, drawing scale and dual units](component-cad/references/dimension-limits-and-datums.md), [source-image inspection and retrieval routes](component-cad/references/source-view-evidence.md), [variant tables](component-cad/references/source-variant-tables.md).
+4. **Traced geometry:** [calibrated coordinates](component-cad/references/calibrated-trace.md), [source-vector perimeter chains](component-cad/references/source-perimeter-chains.md), [profile extrusion](component-cad/references/profile-reference.md).
+5. **Construction:** [rounded hollow sections](component-cad/references/source-first-and-tube.md), [axial motors](component-cad/references/axial-motor.md), [rectangular envelopes](component-cad/references/envelope-reference.md), [guarded envelope runner](component-cad/references/envelope-job-runner.md), [Pixhawk clearance geometry](component-cad/references/pixhawk.md).
+6. **Component checks:** [bearing geometry](component-cad/references/existing-bearing.md), [battery shells and terminals](component-cad/references/existing-battery.md), [tabbed battery cases](component-cad/references/tabbed-battery.md), [smallBMS saved geometry](component-cad/references/small-bms.md), [shared feature comparisons](component-cad/references/shared-feature-checks.md).
+7. **Assemblies:** [manufacturer placements](component-cad/references/manufacturer-assembly.md), [scaled imports](component-cad/references/scaled-assemblies.md), [root unit-change plans](component-cad/references/assembly-units.md), [STEP solid inventories](component-cad/references/step-solid-inventory.md).
+8. **Completion:** [saved source metadata](component-cad/references/source-metadata.md), [retained-file manifests](component-cad/references/retained-artifact-checks.md), [owned-document cleanup](component-cad/references/document-cleanup.md).
+
+## Research catalogue
+
+The following catalogue records external candidates and proposed workflow groups from 12 November 2026. Each entry retains its recorded implementation status.
 
 ## Existing skills to reuse or assess
 
