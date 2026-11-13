@@ -1,0 +1,70 @@
+{
+  "records": [
+    {
+      "local_path": "scripts/retained_artifacts.py",
+      "title": "Retained artifact verifier",
+      "summary": "Read-only manifest verifier reuses stable hashing and root resolution, checks retained derivative hashes and saved JSON, and distinguishes unique files, repeated attributions and work-only omissions.",
+      "registered_at": "2026-11-13",
+      "sha256": "8d61d4b042d3ca128105aa5e032504ce7a4e6adcbad8d95f54acf8be34604729",
+      "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/retained-artifact-verifier-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "tests/test_retained_artifacts.py",
+      "title": "Retained artifact regression tests",
+      "summary": "Seven synthetic tests passed for tampering, literal-backslash JSON, derivative hash selection, explicit omissions, conflicting repeated attribution and declared path boundaries.",
+      "registered_at": "2026-11-13",
+      "sha256": "19cfe5d104512204ac75e4ee293b32ea4cf4eedb20a5a1edabbf0b7b5974b5be",
+      "evidence_status": "executed_synthetic_tests",
+      "referring_documents": [
+        "execution/retained-artifact-verifier-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/retained-artifact-checks.md",
+      "title": "Retained artifact check procedure",
+      "summary": "Documents manifest formats, caller roots, result semantics and successful receipt storage after final provenance edits.",
+      "registered_at": "2026-11-13",
+      "sha256": "68bee503ac58a25dc54bce0d3ea8d9722996fcf76a6e7ab7abd0510528f007e4",
+      "evidence_status": "applied_procedure",
+      "referring_documents": [
+        "execution/retained-artifact-verifier-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/component-procedure.md",
+      "title": "Component procedure with retained-file verification",
+      "summary": "Links source readiness and action occurrences to the reusable final artifact check before a component result commit.",
+      "registered_at": "2026-11-13",
+      "sha256": "935348b27a65c522212c69385972cc4f182c54974f23a4fd6700d011b3be1bdf",
+      "evidence_status": "applied_procedure",
+      "referring_documents": [
+        "execution/retained-artifact-verifier-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "execution/retained-artifact-verifier-2026-11-13.md",
+      "title": "Verifier implementation and real-packet application",
+      "summary": "Records observed provenance structures, first real-packet failures, targeted parser improvements, seven passing tests and five successful final packet verifications.",
+      "registered_at": "2026-11-13",
+      "sha256": "7ac0c82f6fcc902cf07835f0a0c693cf51496fa5d48bd1cd45646008ab60cee8",
+      "evidence_status": "executed_change_report",
+      "referring_documents": [
+        "execution/retained-artifact-verifier-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/tooling/retained-artifact-verification-2026-11-13.json",
+      "title": "Five-packet retained artifact receipt",
+      "summary": "Successful read-only hash/JSON results identify exact manifest hashes, unique retained files, repeated attributions and work-only omissions for the five completed reference iterations.",
+      "registered_at": "2026-11-13",
+      "sha256": "db66a8f1a374968402c3abc32381388f2fadaa4f6cc781de9d49889ef7d1a704",
+      "evidence_status": "executed_inspection_result",
+      "referring_documents": [
+        "execution/retained-artifact-verifier-2026-11-13.md"
+      ]
+    }
+  ]
+}
