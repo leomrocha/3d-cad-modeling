@@ -27,6 +27,13 @@ The project develops a common workflow for mechanical parts, assemblies, buildin
 
 The main pipeline done for a 3D recreation from known things is:
 
+TODO MAKE THE WORKFLOW CLEAR AND ELI 5 NOT FUCKGIN BLABBERY
+1. **Record the request and sources.** Identify the model, required features, output representation and source revisions. 
+2. **Inspect existing models.** Find matching geometry and recorded checks before starting construction. 
+3. **Interpret the inputs.** Bind dimensions and units from text, vector drawings or measured image points. 
+4. **Construct or modify geometry.** Create source-bound profiles and solids, retaining part identity and native geometry. 
+5. **Verification.** Compare required features with source expectations, save, reopen and inspect the actual revision. 
+6. Iterate
 
 And the main pipeline that I use for NEW things is:
 
