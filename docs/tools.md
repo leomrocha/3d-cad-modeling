@@ -11,14 +11,18 @@
 2. [drawing-inspection](../skills/drawing-inspection/SKILL.md) — guides the agent through reading a DXF's units, layers, blocks and source shapes.
 3. [source-intake](../skills/source-intake/SKILL.md) — records the request, source files, hashes and corrections as a new input revision.
 
+The [skill catalogue](../skills/README.md) separates these installed skills from proposed workflows. Component-specific procedures are indexed in [component-cad](../skills/component-cad/SKILL.md).
+
 ## Files, sources and component records
 
 1. [part_index.py](../scripts/part_index.py) — reads and searches a supplied parts index.
-2. [model_inventory.py](../scripts/model_inventory.py) — finds existing model files and checks their component identity before a new build.
+2. [model_inventory.py](../scripts/model_inventory.py) — finds attributed models and filename candidates before a new build, supports exact configuration selection, and preserves known 2D drawing roles through retained-copy hashes. [Start-check procedure](../skills/component-cad/references/existing-model-start-check.md).
 3. [source_intake.py](../scripts/source_intake.py) — saves source indexes, request scope and revision receipts.
 4. [component_records.py](../scripts/component_records.py) — checks required source values and records individual modeling actions.
 5. [source_metadata.py](../scripts/source_metadata.py) — compares expected source labels with the strings stored on a CAD entity.
 6. [source_variant_table.py](../scripts/source_variant_table.py) — selects a value from a reviewed table for the specified product variant.
+
+7. [retained_artifacts.py](../scripts/retained_artifacts.py) — verifies retained-file hashes, JSON/JSONL syntax and manifest paths using caller-supplied roots. [Manifest procedure](../skills/component-cad/references/retained-artifact-checks.md).
 
 ## Drawings and construction
 
@@ -29,6 +33,8 @@
 5. [axial_motor.py](../scripts/axial_motor.py) — builds and checks the supported housing, shaft and mounting features of a source-bound motor job.
 6. [envelope_reference.py](../scripts/envelope_reference.py) — builds and checks a rectangular reference volume from source dimensions.
 7. [pixhawk.py](../scripts/pixhawk.py) — builds and checks the Pixhawk 6C mechanical envelope and nominal mounting-thread references.
+
+8. [envelope_job_runner.py](../scripts/envelope_job_runner.py) — runs read-only preflight by default; an authorized write run builds a source-bound rectangular envelope, checks saved geometry and metadata, and closes its completed owned document. [Runner procedure](../skills/component-cad/references/envelope-job-runner.md).
 
 ## Geometry, assemblies and component checks
 
@@ -44,6 +50,10 @@ Some of these are specialized tools for particular geometries. I still have work
 8. [pillow_block.py](../scripts/pillow_block.py) — checks the supported bearing housing, rings, mounting slots and associated parts.
 9. [battery_module.py](../scripts/battery_module.py) — checks the supported battery shells, terminals and tabbed-case patterns.
 10. [driver_checks.py](../scripts/driver_checks.py) — checks the supported Sumitomo driver exterior and component features.
+
+## CAD document cleanup
+
+1. [ocs_document_cleanup.py](../scripts/ocs_document_cleanup.py) — closes the active owned document after matching its saved-file hash, persistence receipt and geometry revision; checks that unrelated documents retain their paths and dirty states. [Cleanup procedure](../skills/component-cad/references/document-cleanup.md).
 
 ## Running the tools
 

@@ -179,7 +179,7 @@ python scripts/source_intake.py --help
 
 ### Tools
 
-To get a list of all skills and Python helpers, read the [tools page](docs/tools.md).
+To get a list of all skills and Python helpers, read the [tools page](docs/tools.md). The [skill catalogue](skills/README.md) links the component procedures for source interpretation, construction, assemblies and saved-result checks.
 
 ### DISCLAIMER
 

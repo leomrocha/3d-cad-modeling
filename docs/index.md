@@ -183,7 +183,7 @@ python scripts/source_intake.py --help
 
 ### Tools
 
-To get a list of all skills and Python helpers, read the [tools page](https://github.com/leomrocha/3d-cad-modeling/blob/master/docs/tools.md).
+To get a list of all skills and Python helpers, read the [tools page](https://github.com/leomrocha/3d-cad-modeling/blob/master/docs/tools.md). The [skill catalogue](https://github.com/leomrocha/3d-cad-modeling/blob/master/skills/README.md) links the component procedures for source interpretation, construction, assemblies and saved-result checks.
 
 ### DISCLAIMER
 
