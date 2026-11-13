@@ -1,0 +1,11 @@
+# Check circular boundaries on saved solids
+
+1. **Inputs:** unchanged source model, source author/licence, original hash, units/frame and independently identified cylinder axes/radii and boundary planes. Keep published standard dimensions and the source model creator's representative outline as separate evidence.
+2. **Reuse the saved model:** preserve its native SAB before decoding. Call `sab_features(..., include_edge_curves=True)` in the [native reader](../scripts/native_acis.py). Enable an existing supported body transform explicitly when needed. Component dimensions, source entity IDs and measurements stay in the external job.
+3. **Read the boundary graph:** each returned face has its decoded analytic support and its loops, edges and adjacent face indexes. Ellipse records contain centre, normal, major axis, axis ratio and parameter interval. Straight edges retain their line and endpoints. Face indexes identify associations within this returned payload.
+4. **Identify a circular boundary:** require a circular axis ratio, the expected radius/centre/plane, a full period and a closed loop. A seam vertex alone supplies one point on that boundary. Compare the reciprocal adjacent face with the expected cylinder axis/radius.
+5. **Check a through opening:** connect each end-plane circular loop to the same cylindrical face; check that face's boundary loops reach both required axial planes. Preserve the actual graph evidence and separate the source-model opening from installation or load calculations.
+6. **Persistence:** compare pre-save and saved point sets, source metadata and placed-instance transforms separately. Save/reopen and capture identity retain their own receipts. Apply this check offline to an already retained SAB; completed CAD requires no reopening for this analysis.
+7. **Unsupported cases:** retain the decoder's concrete error and the original bytes. Its optional straight/ellipse boundary route checks the exercised ACIS700 layouts; it rejects unsupported curves and invalid parameters. Default reader output remains available to existing callers.
+
+[Source-preserving assembly import procedure](manufacturer-assembly.md). [Native metadata checks](source-metadata.md). [Package completion](package-completion.md).

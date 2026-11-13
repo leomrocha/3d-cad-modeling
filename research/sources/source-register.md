@@ -1944,9 +1944,9 @@ Original source: [${MODELING_ROOT}/scripts/native_acis.py](../../scripts/native_
 
 Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.
 
-Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected, implementation_artifact.
+Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected, implementation_artifact, implementation_exercised_on_saved_native_geometry.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-20/component-sources.json.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-20/component-sources.json, research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md, skills/cad-ocs-engineering/SKILL.md.
 
 <a id="src-2626ebf073f7"></a>
 
@@ -17007,3 +17007,51 @@ Summary: Use this procedure when a manufacturer drawing is available as a retain
 Evidence: local_artifact_inspected_and_registered.
 
 Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+
+<a id="src-a0d612cd0827"></a>
+
+## SRC-a0d612cd0827 — Synthetic boundary decoder tests
+
+Original source: [${MODELING_ROOT}/tests/test_native_circle_boundaries.py](../../tests/test_native_circle_boundaries.py)
+
+Summary: Twelve passing synthetic cases cover full/partial circles, ellipses, straight curves, transforms, token layouts, nonfinite spans and invalid partner edges.
+
+Evidence: executed_synthetic_tests.
+
+Documents: research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md, skills/cad-ocs-engineering/SKILL.md.
+
+<a id="src-429533a8f966"></a>
+
+## SRC-429533a8f966 — Saved circular boundary procedure
+
+Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/circular-boundary-checks.md](../../skills/cad-ocs-engineering/references/circular-boundary-checks.md)
+
+Summary: Records source attribution and the graph conditions required to connect circular cap loops to cylindrical side faces across required planes.
+
+Evidence: documented_exercised_procedure.
+
+Documents: research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md, skills/cad-ocs-engineering/SKILL.md.
+
+<a id="src-563e96314ba9"></a>
+
+## SRC-563e96314ba9 — Saved retaining-ring circular opening checks
+
+Original source: `${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c112-build-01/saved-hole-boundary-checks-r01.json`
+
+Summary: Two source-bound circular opening checks passed through the opt-in reader, using preserved saved SAB; no CAD reopening or geometry reconstruction.
+
+Evidence: executed_offline_native_geometry_check.
+
+Documents: research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md.
+
+<a id="src-3f52f358d61b"></a>
+
+## SRC-3f52f358d61b — Circular boundary package completion checks
+
+Original source: [${MODELING_ROOT}/execution/circular-boundary-package-checks-2026-11-13.json](../../execution/circular-boundary-package-checks-2026-11-13.json)
+
+Summary: Finalize and final verify passed lifecycle, source-registration and isolated installation checks; packaged reader hash matches canonical source.
+
+Evidence: executed_package_completion_checks.
+
+Documents: research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md.

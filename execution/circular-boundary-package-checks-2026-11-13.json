@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-13",
+  "execution_model": "gpt-6.1-sol",
+  "finalize": {
+    "result": "PASS",
+    "lifecycle_tests_passed": 14,
+    "source_registration_tests_passed": 1,
+    "isolated_installation_tests_passed": 5,
+    "optional_live_state_tests_skipped": 1
+  },
+  "verify": {
+    "result": "PASS",
+    "synchronisation": "PASS",
+    "registrations": "PASS",
+    "isolated_installation_checks": "PASS",
+    "lifecycle_tests_passed": 14,
+    "source_registration_tests_passed": 1,
+    "isolated_installation_tests_passed": 5,
+    "optional_live_state_tests_skipped": 1
+  },
+  "focused_regression": {
+    "result": "PASS",
+    "tests_run": 39,
+    "passed": 37,
+    "optional_retained_torus_fixture_skips": 2
+  },
+  "skill_frontmatter_validation": "PASS",
+  "reader_sha256": "14efb7ac9055f0d67bc8eb0585b317875766e5c61ad01896b1bee33f5e010883",
+  "bundled_reader_sha256": "14efb7ac9055f0d67bc8eb0585b317875766e5c61ad01896b1bee33f5e010883"
+}

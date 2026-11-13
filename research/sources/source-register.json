@@ -5163,7 +5163,8 @@
       "evidence_statuses": [
         "local_execution_evidence_inspected",
         "local_source_or_execution_record_inspected",
-        "implementation_artifact"
+        "implementation_artifact",
+        "implementation_exercised_on_saved_native_geometry"
       ],
       "observations": [
         {
@@ -5213,6 +5214,19 @@
           "referring_documents": [
             "execution/c023-victron-battery.md"
           ]
+        },
+        {
+          "local_original": "scripts/native_acis.py",
+          "title": "Saved ACIS face-boundary reader",
+          "summary": "Opt-in analytic boundary curves and reciprocal face associations; default compact result preserved.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "implementation_exercised_on_saved_native_geometry",
+          "sha256": "14efb7ac9055f0d67bc8eb0585b317875766e5c61ad01896b1bee33f5e010883",
+          "referring_documents": [
+            "execution/circular-boundary-reader-2026-11-13.md",
+            "skills/cad-ocs-engineering/SKILL.md"
+          ],
+          "source_record_document": "research/sources/circular-boundary-reader-2026-11-13.json"
         }
       ],
       "referring_documents": [
@@ -5220,7 +5234,10 @@
         "research/sources/round-14/bearing-sources.json",
         "research/sources/round-15/leaf-sources.json",
         "research/sources/round-16/driver-sources.json",
-        "research/sources/round-20/component-sources.json"
+        "research/sources/round-20/component-sources.json",
+        "research/sources/circular-boundary-reader-2026-11-13.json",
+        "execution/circular-boundary-reader-2026-11-13.md",
+        "skills/cad-ocs-engineering/SKILL.md"
       ]
     },
     {
@@ -46507,9 +46524,130 @@
         "skills/README.md",
         "execution/tooling-registration-2026-11-13.md"
       ]
+    },
+    {
+      "id": "SRC-a0d612cd0827",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/tests/test_native_circle_boundaries.py",
+      "title": "Synthetic boundary decoder tests",
+      "summary": "Twelve passing synthetic cases cover full/partial circles, ellipses, straight curves, transforms, token layouts, nonfinite spans and invalid partner edges.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_synthetic_tests"
+      ],
+      "observations": [
+        {
+          "local_original": "tests/test_native_circle_boundaries.py",
+          "title": "Synthetic boundary decoder tests",
+          "summary": "Twelve passing synthetic cases cover full/partial circles, ellipses, straight curves, transforms, token layouts, nonfinite spans and invalid partner edges.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "executed_synthetic_tests",
+          "sha256": "ba82218c91566286d2c183a4fe6039bda1872567063d556c28853c8b5e116959",
+          "referring_documents": [
+            "execution/circular-boundary-reader-2026-11-13.md",
+            "skills/cad-ocs-engineering/SKILL.md"
+          ],
+          "source_record_document": "research/sources/circular-boundary-reader-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/circular-boundary-reader-2026-11-13.json",
+        "execution/circular-boundary-reader-2026-11-13.md",
+        "skills/cad-ocs-engineering/SKILL.md"
+      ]
+    },
+    {
+      "id": "SRC-429533a8f966",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/skills/cad-ocs-engineering/references/circular-boundary-checks.md",
+      "title": "Saved circular boundary procedure",
+      "summary": "Records source attribution and the graph conditions required to connect circular cap loops to cylindrical side faces across required planes.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "documented_exercised_procedure"
+      ],
+      "observations": [
+        {
+          "local_original": "skills/cad-ocs-engineering/references/circular-boundary-checks.md",
+          "title": "Saved circular boundary procedure",
+          "summary": "Records source attribution and the graph conditions required to connect circular cap loops to cylindrical side faces across required planes.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "documented_exercised_procedure",
+          "sha256": "6ac6c24ccbe4a7d777a6586b84d25b710a1f21ed599bb259d5f8663004905f8f",
+          "referring_documents": [
+            "execution/circular-boundary-reader-2026-11-13.md",
+            "skills/cad-ocs-engineering/SKILL.md"
+          ],
+          "source_record_document": "research/sources/circular-boundary-reader-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/circular-boundary-reader-2026-11-13.json",
+        "execution/circular-boundary-reader-2026-11-13.md",
+        "skills/cad-ocs-engineering/SKILL.md"
+      ]
+    },
+    {
+      "id": "SRC-563e96314ba9",
+      "url": null,
+      "local_source_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c112-build-01/saved-hole-boundary-checks-r01.json",
+      "title": "Saved retaining-ring circular opening checks",
+      "summary": "Two source-bound circular opening checks passed through the opt-in reader, using preserved saved SAB; no CAD reopening or geometry reconstruction.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_offline_native_geometry_check"
+      ],
+      "observations": [
+        {
+          "local_original": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c112-build-01/saved-hole-boundary-checks-r01.json",
+          "title": "Saved retaining-ring circular opening checks",
+          "summary": "Two source-bound circular opening checks passed through the opt-in reader, using preserved saved SAB; no CAD reopening or geometry reconstruction.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "executed_offline_native_geometry_check",
+          "sha256": "5ba88412bfadb4a13368b0387d2ffed8ad6d8081017b164a25cb3200af13e14a",
+          "referring_documents": [
+            "execution/circular-boundary-reader-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/circular-boundary-reader-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/circular-boundary-reader-2026-11-13.json",
+        "execution/circular-boundary-reader-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-3f52f358d61b",
+      "url": null,
+      "local_source_path": "${MODELING_ROOT}/execution/circular-boundary-package-checks-2026-11-13.json",
+      "title": "Circular boundary package completion checks",
+      "summary": "Finalize and final verify passed lifecycle, source-registration and isolated installation checks; packaged reader hash matches canonical source.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "executed_package_completion_checks"
+      ],
+      "observations": [
+        {
+          "local_original": "execution/circular-boundary-package-checks-2026-11-13.json",
+          "title": "Circular boundary package completion checks",
+          "summary": "Finalize and final verify passed lifecycle, source-registration and isolated installation checks; packaged reader hash matches canonical source.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "executed_package_completion_checks",
+          "sha256": "e9d3ab6cd51318ae8650df32a661d480dfa78904ded59627264046930453e1bc",
+          "referring_documents": [
+            "execution/circular-boundary-reader-2026-11-13.md"
+          ],
+          "source_record_document": "research/sources/circular-boundary-reader-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/circular-boundary-reader-2026-11-13.json",
+        "execution/circular-boundary-reader-2026-11-13.md"
+      ]
     }
   ],
   "source_record_documents": [
+    "research/sources/circular-boundary-reader-2026-11-13.json",
     "research/sources/conical-washer-profile-2026-11-13.json",
     "research/sources/skill-completion-gate-2026-11-13.json",
     "research/sources/tooling-registration-2026-11-13.json"
