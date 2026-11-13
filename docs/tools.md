@@ -1,11 +1,9 @@
 # Tools
 
-[Documentation](README.md) · [Workflow](../README.md#project) · [Examples](examples/README.md)
-
 ## Software 
 
 1. **Python** runs the helper scripts. Dependencies are pinned in [requirements-native.txt](../requirements-native.txt).
-2. **OpenCADStudio** provides the native CAD session used by the construction and inspection skills.
+2. **OpenCADStudio** provides the native CAD session via MCP server used by the construction and inspection skills.
 
 ## Skills
 

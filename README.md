@@ -6,12 +6,14 @@ The current repo has been used and implemented to generate CAD models using the 
 
 This is an ONGOING WORK, for now is the first pre-pre-pre-alpha release, I'll be updating it, do please collaborate, copy it, share it, that is why the license is MIT
 
-AI use:
-* code and skills are all Written with ai I instruct, reinstruct and review things then I tell it to modify and update things. But as this is for AI use the parts that are only dedicated to it I do not correct the phrasing for humans.
-* README and main HUMAN targetted documentations files were sketched by me, written by AI then I drop almost everything cause I do not like it and rewrite things, then I send AI agents to fix some small things and details.
-* For the AI documentation I let AI do the writing and try not to get too angry about that cause they are instructions for AI so ...
+## License
+
+[MIT](LICENSE) for project code and documentation. 
+All external sources and assets have their own. IF I have accidentally left some thigns without the real check please do contact me and I'll be really pleased to take that out.
 
 ## Introduction
+
+If you do not want to read this and directly check the [Examples](TODO LINK TO EXMAPLES)
 
 I've been working for some time on some cad modeling. As the last time I really touched cad was OpenSCAD (cause I've done software for 20+ years now), the last time I really did something manually in a CAD thign was Autocad 2000 some 25+ years ago AND that I'm too lazy now to learn again to use another CAD  software now I decided I'd make AI agents model things for me. I draw as I learnt 3 decades ago in paper then take pictures and show the things to the model, I have my computer running while sometimes I manage things from my phone.
 
@@ -51,10 +53,42 @@ And the main pipeline that I use for NEW things is:
 
 When I see things are ready enough I send then the automated 3D modeling pipeline to work.
 
+## Repository
+
+1. `docs/` — linked documentation, selected example copies and images.
+2. `skills/` — agent task instructions.
+3. `scripts/` and `tests/` — reusable helpers and their checks.
+4. `research/` — method assessments, workflow definitions and sources.
+5. `execution/` — recorded execution reports.
+
+## Examples
+
+## House modeling
+
+This is the first thign I did at this complexity level with AI + drawing + pictures + a lot of iterations, is kind of a model house that I sent to a 3D model that was interpreted with a custom three.js library for 3D many nice things there, output was finally done in  [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser  
+
+### Mast physics for a wind generator
+
+I'm working on a wind generator idea, so I started to check how to model and see how a mast support would behave for the particular geometry I'm trying to get on the top part, many of the thigns I did there for the 3d modeling came ata good port so I add them here as examples of what the predating things allowed me to do (with a lot of interaction and effort)
+
+A square mast model and recorded Code_Aster wind cases. [Mast model and simulation pictures](docs/examples/wind-generator.md).
+
+![Mast displacement for 15 m/s wind from 0 and 45 degrees](docs/images/mast/mast-displacement.png)
+
+### Mechanical component models
+
+Another current project is about making a remote controlled 2 wheel tractor, but I do not have time to work on it really so I'm automating all that I can this includes a (mostly) automated pipeline that gets available components from standards and pictures and manufacturer details that kind of fit int eh base idea I have, 
+
+![SKF SY20TF component geometry](./docs/images/mechanical_components/bearing.png)
+
+Selected frame, motor, bearing and battery examples show source-based construction, component boundaries and saved-model checks. [Mechanical component examples](docs/examples/mechanical_components.md).
+
 
 ## Installing and Using it
 
 ### How to install the skills
+
+I would directly ASK the AI agent you are using to install this and make it available as skill and scripts, that should do the job. But if you want to do it manually here some pointers.
 
 For Codex on Linux or macOS, complete the [Python helper setup](#set-up-the-python-helpers) below, then run these commands from the repository directory:
 
@@ -74,12 +108,12 @@ done
 This registers the three skills for your Codex projects. Existing entries are preserved. Keep this checkout: the skills use its shared scripts and reference files. When working in another project, tell the agent to set `MODELING_ROOT` to this checkout before running the helpers.
 
 In Codex CLI or the IDE extension, use `/skills` to list the installed skills. Invoke one by name, for example:
-
 ```text
 Use $component-cad to model this component from the supplied drawing.
 ```
 
 Codex detects skill changes automatically. Restart Codex if a newly linked skill does not appear. See the official [Codex skill installation and discovery documentation](https://developers.openai.com/codex/skills).
+
 
 ### Set up the Python helpers
 
@@ -117,51 +151,11 @@ python scripts/model_inventory.py --help
 python scripts/source_intake.py --help
 ```
 
-The [tools page](docs/tools.md) lists the current skills and Python helpers.
+### Tools
+To get a list of all skills and python helpers do go read the  [tools page](docs/tools.md).
 
-## Documentation
-
-1. [Documentation home](docs/README.md) — guide to the pages.
-2. [Workflow](#project) — inputs, modeling, checking and handoffs.
-3. [Tools](docs/tools.md) — software roles, agent responsibilities and implementation status.
-4. [Example gallery](docs/examples/README.md) — mast, mechanical component and building examples.
-
-## Repository
-
-1. `docs/` — linked documentation, selected example copies and images.
-2. `skills/` — agent task instructions.
-3. `scripts/` and `tests/` — reusable helpers and their checks.
-4. `research/` — method assessments, workflow definitions and sources.
-5. `execution/` — recorded execution reports.
-
-## License
-
-[MIT](LICENSE) for project code and documentation. 
-All external sources and assets have their own. IF I have accidentally left some thigns without the real check please do contact me and I'll be really pleased to take that out.
-
-
-## Examples
-
-## House modeling
-
-This is the first thign I did at this complexity level with AI + drawing + pictures + a lot of iterations, is kind of a model house that I sent to a 3D model that was interpreted with a custom three.js library for 3D many nice things there, output was finally done in  [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser  
-
-### Mast physics for a wind generator
-
-I'm working on a wind generator idea, so I started to check how to model and see how a mast support would behave for the particular geometry I'm trying to get on the top part, many of the thigns I did there for the 3d modeling came ata good port so I add them here as examples of what the predating things allowed me to do (with a lot of interaction and effort)
-
-A square mast model and recorded Code_Aster wind cases. [Mast model and simulation pictures](docs/examples/wind-generator.md).
-
-![Mast displacement for 15 m/s wind from 0 and 45 degrees](docs/images/mast/mast-displacement.png)
-
-### Mechanical component models
-
-Another current project is about making a remote controlled 2 wheel tractor, but I do not have time to work on it really so I'm automating all that I can this includes a (mostly) automated pipeline that gets available components from standards and pictures and manufacturer details that kind of fit int eh base idea I have, 
-
-![SKF SY20TF component geometry](./docs/images/mechanical_components/bearing.png)
-
-Selected frame, motor, bearing and battery examples show source-based construction, component boundaries and saved-model checks. [Mechanical component examples](docs/examples/mechanical_components.md).
-
-### Buildings
-
-The proposed building route combines plans, dimensions and component geometry into walls, floors, openings and semantic IFC models. [Building workflow](docs/examples/buildings.md).
+### DISCLAIMER
+AI use:
+* code and skills are all Written with ai I instruct, reinstruct and review things then I tell it to modify and update things. But as this is for AI use the parts that are only dedicated to it I do not correct the phrasing for humans.
+* README and main HUMAN targetted documentations files were sketched by me, written by AI then I drop almost everything cause I do not like it and rewrite things, then I send AI agents to fix some small things and details.
+* For the AI documentation I let AI do the writing and try not to get too angry about that cause they are instructions for AI so ...
