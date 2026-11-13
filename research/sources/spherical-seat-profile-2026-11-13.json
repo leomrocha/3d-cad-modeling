@@ -27,14 +27,16 @@
     },
     {
       "title": "Bounded spherical seat modeling procedure",
-      "summary": "Specifies external source bindings, approximate-radius labels, supported contour family and required native geometry, metadata, persistence and closure checks.",
+      "summary": "Specifies external source bindings, approximate-radius labels, supported contour family and required native geometry, metadata, persistence and closure checks. Records the exercised view-dirty cleanup condition, bounded view-state save and exposed annular-plane check.",
       "local_path": "skills/cad-ocs-engineering/references/spherical-seat-profile.md",
-      "sha256": "f361fceac276aac40f3b99f4a5a9b5da65f46c0dfb7e02f1bbdfd721fb45da29",
+      "sha256": "e2309a39fdab737e202a9ca1c62e1b270b9ac4239c5d91274788be340b17402a",
       "registered_at": "2026-11-13",
       "evidence_status": "documented_procedure",
       "referring_documents": [
         "execution/spherical-seat-profile-2026-11-13.md"
-      ]
+      ],
+      "previous_sha256": "f361fceac276aac40f3b99f4a5a9b5da65f46c0dfb7e02f1bbdfd721fb45da29",
+      "updated_at": "2026-11-13"
     },
     {
       "title": "Spherical-seat package integration checks",
@@ -46,12 +48,24 @@
       "referring_documents": [
         "execution/spherical-seat-profile-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Knott spherical wheel bolt saved native application",
+      "summary": "The external component job applied generic spherical-seat helper revision acadf52 through cad-ocs-engineering. Seventeen native saved-geometry checks and metadata passed. Capture identity failed; the view-dirty cleanup guard and bounded QSAVE completion are retained. Final owned documents are absent.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c120-build-01/result-r03.json",
+      "sha256": "49aab649ad2ae23bf011fcbee911bc6beb4826c8f2c12fe4049ff1e87631e8a5",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_native_geometry_metadata_persistence_and_cleanup_with_separate_capture_failure",
+      "referring_documents": [
+        "execution/spherical-seat-profile-2026-11-13.md"
+      ]
     }
   ],
   "component_source": {
     "path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c120-build-01/source/knott-drawing-46465-rev6.pdf",
     "sha256": "b5f8fbeea64dbacaf7efd4fd5016c5ab6ae9d59a0f7b17e02afecdefd1d2c83b",
     "summary": "Knott drawing 46465 rev6 supplies the exact 46465.01 fastener dimensions. Original URL and acquisition details are retained in the FERME source record.",
-    "evidence_status": "retained_manufacturer_original_inspected_locally"
+    "evidence_status": "retained_manufacturer_original_inspected_locally",
+    "original_url": "https://cdn.trailerplus.com/picdb/filedb/4576/A5431.pdf"
   }
 }
