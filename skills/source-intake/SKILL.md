@@ -7,6 +7,14 @@ description: Record a new job's exact request, source identities, file hashes, c
 
 Use for **Preserve the input revision and state the job boundary (INTAKE-A01)**. Read the existing job record first. Reuse a completed intake whose request, source observations and scope match the current task. A changed source or instruction creates a new revision referring to the completed prior index.
 
+## Package setup
+
+Set `SKILL_ROOT` to this installed skill directory, containing `SKILL.md`, `scripts/` and `requirements.txt`. Run with Python 3.12 on Linux or macOS; the helpers use only the standard library. `SOURCE_ROOT` is your caller-owned input/output directory.
+
+```sh
+python3 "$SKILL_ROOT/scripts/package_check.py"
+```
+
 ## Prepare the input
 
 1. Read the request and source records. Supply a readable `job_name`, unique `revision_id` and actual agent `model` identity where available. `request.text` preserves the exact request; `request.location` identifies its message/document location.
@@ -18,7 +26,7 @@ Use for **Preserve the input revision and state the job boundary (INTAKE-A01)**.
 ## Execute
 
 ```sh
-python3 ${MODELING_ROOT}/scripts/source_intake.py \
+python3 ${SKILL_ROOT}/scripts/source_intake.py \
   --input ${SOURCE_ROOT}/job-input.json \
   --output ${SOURCE_ROOT}/new-intake-directory
 ```
@@ -34,13 +42,8 @@ python3 ${MODELING_ROOT}/scripts/source_intake.py \
 1. Call `source_intake.verify_revision(path_to_source_index)` to verify the completed index/scope hashes against the receipt.
 2. The agent compares the recorded request, scope, corrections and affected source conflicts. Numerical capture checks establish source identity and output integrity. Source interpretation retains its own action.
 3. Hand the completed revision to **Select the execution mode and define candidate branches (INTAKE-A02)**. Preserve the source/revision IDs in its inputs. Required source-priority decisions affect the named dependent feature.
-4. The [actual executed input](../../execution/source-intake/job-input.json), [published index](../../execution/source-intake/live-01/revision/source-index.json) and [execution report](../../execution/source-intake.md) document the exercised interface.
+4. The [actual executed input](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/source-intake/job-input.json), [published index](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/source-intake/live-01/revision/source-index.json) and [execution report](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/source-intake.md) document the exercised interface.
 
 ## Verification
 
-```sh
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover \
-  -s ${MODELING_ROOT}/tests -p test_source_intake.py
-```
-
-The cases cover actual file hashes and source preservation, exact Unicode/text/corrections, zero-network URL registration, new source revisions, equal bytes at distinct locators, invalid references/cycles, duplicate keys and overflowing numbers, pinned-source conflicts, changing files, interrupted publication and prior-artifact protection.
+Run the bundled `scripts/package_check.py` to check package hashes and imports. After intake, call `source_intake.verify_revision()` on the completed source index to check the published index and scope against their receipt. The repository's [source-intake tests](https://github.com/leomrocha/3d-cad-modeling/blob/master/tests/test_source_intake.py) exercise source conflicts, corrections and interrupted publication.

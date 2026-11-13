@@ -1,6 +1,6 @@
 # Source-bound axial motor construction and checks
 
-Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../../../scripts/axial_motor.py). Runtime model: gpt-6.1-sol.
+Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source-job.json`). Original: [Motenergy outline 0JWT.301.073](https://eveurope.eu/wp-content/uploads/2024/03/ME0907.pdf). Reusable code: [axial_motor.py](../scripts/axial_motor.py). Runtime model: gpt-6.1-sol.
 
 1. **Interpret the drawing:** inspect enlarged section and front views. Associate each leader with its feature before binding values. This case's reviewed section identifies 19.58 mm as opposite-tangent-to-keyway-floor distance; thread depth is 30 mm. Cardinal 149.2 mm PCD holes are 3/8-16; diagonal 106.4 mm PCD holes are 5/16-18. Preserve the initial transcription and the coordinator's corrections (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c005-build-01/source/coordinator-review.md`).
 2. **Bind geometry inputs:** the caller supplies source/hash/location for each dimension, mm units, the local frame, representation and cutting overrun. `parameters(job)` checks source readiness, positive finite values and supported shaft/keyway extents before construction. Use separate evidence labels for drawing dimensions and construction choices.
@@ -15,7 +15,7 @@ Executed case: Motenergy ME0907 source job (`${FERME_ROOT}/engineering/module-de
 Run the focused software regression:
 
 ```bash
-PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s ${MODELING_ROOT}/tests -p test_axial_motor.py -v
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s ${SKILL_ROOT}/tests -p test_axial_motor.py -v
 ```
 
 Eight cases exercise seam-only vertices, missing holes, swapped group depths, wrong blind depth, wrong keyway floor, wrong cylinder radius, invalid extents and units/overrun. Live construction and saved-geometry observations are retained in FERME; these software cases exercise controlled failure conditions.

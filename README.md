@@ -113,46 +113,42 @@ Manufacturer CAD assembly with corrected component placements, showing ventilati
 
 I would directly ASK the AI agent you are using to install this and make it available as skills and scripts. That should do the job. But if you want to do it manually, here are some pointers.
 
-For Codex on Linux or macOS, complete the [Python helper setup](#set-up-the-python-helpers) below, then run these commands from the repository directory:
+### Install an individual skill
+
+Use the skills CLI to install the skill you need:
 
 ```sh
-export MODELING_ROOT="$(pwd -P)"
-mkdir -p "$HOME/.agents/skills"
-for skill in component-cad drawing-inspection source-intake; do
-  target="$HOME/.agents/skills/$skill"
-  if [ -e "$target" ] || [ -L "$target" ]; then
-    printf 'Already exists: %s\n' "$target"
-  else
-    ln -s "$MODELING_ROOT/skills/$skill" "$target"
-  fi
-done
+npx skills add leomrocha/3d-cad-modeling --skill component-cad
+npx skills add leomrocha/3d-cad-modeling --skill drawing-inspection
+npx skills add leomrocha/3d-cad-modeling --skill source-intake
 ```
 
-This registers the three skills for your Codex projects. Existing entries are preserved. Keep this checkout: the skills use its shared scripts and reference files. When working in another project, tell the agent to set `MODELING_ROOT` to this checkout before running the helpers.
+Each selected skill carries its scripts, instructions, dependency file and license. Set `SKILL_ROOT` to its installed directory containing `SKILL.md`. Give the agent your source files, job location and output paths. Component CAD also needs your running OpenCADStudio session.
 
-In Codex CLI or the IDE extension, use `/skills` to list the installed skills. Invoke one by name, for example:
+For a local copy installation, run from this checkout and select one skill:
 
-```text
-Use $component-cad to model this component from the supplied drawing.
+```sh
+npx skills add . --skill component-cad --copy
 ```
-
-Codex detects skill changes automatically. Restart Codex if a newly linked skill does not appear. See the official [Codex skill installation and discovery documentation](https://developers.openai.com/codex/skills).
 
 ### Set up the Python helpers
 
-The current setup uses Python 3.12.
-From a terminal:
+Use Python 3.12 on Linux or macOS. Source intake uses the standard library. Drawing inspection and component CAD use the pinned dependencies included in each package. Create an environment at a location you choose:
 
 ```sh
-git clone https://github.com/leomrocha/3d-cad-modeling.git
-cd 3d-cad-modeling
-python3 -m venv .venv
-. .venv/bin/activate
-python -m pip install -r requirements-native.txt
+python3 -m venv "$HOME/.venvs/3d-cad-modeling"
+. "$HOME/.venvs/3d-cad-modeling/bin/activate"
+python -m pip install -r "$SKILL_ROOT/requirements.txt"
+python "$SKILL_ROOT/scripts/package_check.py"
 ```
 
-Python dependencies are listed in [requirements-native.txt](requirements-native.txt).
-CAD construction uses an existing [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) installation, the OCS engineering skill and the `cadtools` runtime described in the [component CAD skill](skills/component-cad/SKILL.md).
+Component CAD includes the OCS control transport, geometry adapter and save/reopen helpers. With [OpenCADStudio](https://github.com/HakanSeven12/OpenCADStudio) already running, check your selected connection:
+
+```sh
+python "$SKILL_ROOT/scripts/package_check.py" --session SESSION
+```
+
+The connection check reads OCS state. Its report contains dependency and package results plus the observed document ID and revision. [Package contents and maintenance](docs/skill-packaging.md).
 
 ### Use the skills with your agent
 
@@ -166,15 +162,15 @@ CAD construction uses an existing [OpenCADStudio](https://github.com/HakanSeven1
 For a DXF file named `drawing.dxf`:
 
 ```sh
-python scripts/dxf_inspect.py drawing.dxf --output drawing-inventory.json
+python "$SKILL_ROOT/scripts/dxf_inspect.py" drawing.dxf --output drawing-inventory.json
 ```
 
-Command-line options:
+Command-line options for the installed component-cad package:
 
 ```sh
-python scripts/part_index.py --help
-python scripts/model_inventory.py --help
-python scripts/source_intake.py --help
+python "$SKILL_ROOT/scripts/part_index.py" --help
+python "$SKILL_ROOT/scripts/model_inventory.py" --help
+python "$SKILL_ROOT/scripts/source_intake.py" --help
 ```
 
 ### Tools

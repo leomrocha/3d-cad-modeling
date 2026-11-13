@@ -9,6 +9,6 @@ Executed case: BMW i3 94 Ah saved exterior (`${FERME_ROOT}/engineering/module-de
 5. Six retained-native tests cover the actual saved case, incorrect body length, shifted recess centres, a missing boundary, incorrect floor level and an open boundary. They verify the measured pattern and rejection of specific failures. Native saved checks pass 19 comparisons.
 6. Inspect actual captured images separately. The initial BMW capture, explicit activation capture, native pointer-event capture and byte-identical isolated-copy capture all return the previous Lynx view. Their hashes and active document states are retained as failed visual evidence. The original saved BMW file remains byte-identical. The component's geometric-check stage passes; its visual stage requires an image showing the BMW component.
 
-Implementation: [battery_module.py](../../../scripts/battery_module.py), [feature_checks.py](../../../scripts/feature_checks.py), [tests](../../../tests/test_tabbed_battery.py).
+Implementation: [battery_module.py](../scripts/battery_module.py), [feature_checks.py](../scripts/feature_checks.py), [tests](https://github.com/leomrocha/3d-cad-modeling/blob/master/tests/test_tabbed_battery.py).
 
 Source evidence review: case dimensions follow the existing geometry report’s attributed EVShop values. The retained HTML copies contain no 410/385/310 mm dimension text; source revision 2 binds those values to that report. The initial direct-HTML binding is retained in the component job history.

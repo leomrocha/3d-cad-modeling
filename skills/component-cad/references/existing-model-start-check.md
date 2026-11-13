@@ -3,7 +3,7 @@
 1. Run this check before every component start. It reads the external input manifest, work index, model paths, input-sheet links and files. It runs no CAD operations. Existing model paths, recorded scope and checks supply reuse evidence.
 
 ```sh
-python3 ${MODELING_ROOT}/scripts/model_inventory.py \
+python3 ${SKILL_ROOT}/scripts/model_inventory.py \
   --index ${FERME_ROOT}/engineering/module-development/cad-inputs/parts.json \
   --work-index ${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/component-work.json \
   --cad-root ${FERME_ROOT}/engineering/module-development/cad \

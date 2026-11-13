@@ -1,0 +1,162 @@
+{
+  "skill": "component-cad",
+  "generated_by": "scripts/build_skill_packages.py",
+  "files": {
+    "LICENSE": {
+      "source": "LICENSE",
+      "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc"
+    },
+    "NOTICE.md": {
+      "source": "scripts/cadtools/NOTICE.md",
+      "sha256": "9f209d7c15cf4e651dff54678c89ec05a47ddbda1577aa14f06783bcee5f06c3"
+    },
+    "requirements.txt": {
+      "source": "requirements-native.txt",
+      "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47"
+    },
+    "scripts/annular_reference.py": {
+      "source": "scripts/annular_reference.py",
+      "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334"
+    },
+    "scripts/assembly_repair.py": {
+      "source": "scripts/assembly_repair.py",
+      "sha256": "abb7e5e98bab566051f8d101cb827471b9831d868f373a6ce5e61285b0a704b8"
+    },
+    "scripts/assembly_units.py": {
+      "source": "scripts/assembly_units.py",
+      "sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081"
+    },
+    "scripts/axial_motor.py": {
+      "source": "scripts/axial_motor.py",
+      "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6"
+    },
+    "scripts/battery_module.py": {
+      "source": "scripts/battery_module.py",
+      "sha256": "fafa8c57d579d5329b93b0681d890d7dc28c5706c1d9f9531ac53b53380a0d08"
+    },
+    "scripts/cadtools/__init__.py": {
+      "source": "scripts/cadtools/__init__.py",
+      "sha256": "3b3d2bdc01158b2647f603599d53cd7493ee6f4bd3c7d79eaa20160dba925b3d"
+    },
+    "scripts/cadtools/geometry.py": {
+      "source": "scripts/cadtools/geometry.py",
+      "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408"
+    },
+    "scripts/cadtools/runtime.py": {
+      "source": "scripts/cadtools/runtime.py",
+      "sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05"
+    },
+    "scripts/cadtools/verification.py": {
+      "source": "scripts/cadtools/verification.py",
+      "sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a"
+    },
+    "scripts/calibrated_trace.py": {
+      "source": "scripts/calibrated_trace.py",
+      "sha256": "6a29f3774ee7290599dd35dde7832dd72ff889bdcf04477ebaf5bbcb847ae025"
+    },
+    "scripts/check_contract.py": {
+      "source": "scripts/check_contract.py",
+      "sha256": "e64e24976352c5c9ecb74a6729b6e67a1847d608c78a84e2bd27d7535f7603a8"
+    },
+    "scripts/component_records.py": {
+      "source": "scripts/component_records.py",
+      "sha256": "7a7a4685b51e2dcce8b6b5a51193916ec5912eabee2205bd6f3b7db63d2462b9"
+    },
+    "scripts/driver_checks.py": {
+      "source": "scripts/driver_checks.py",
+      "sha256": "f1c8ec5b6075031048c0724c6eb40b9b69b94343a5f744e6f6000a9d5ef4adcd"
+    },
+    "scripts/dxf_inspect.py": {
+      "source": "scripts/dxf_inspect.py",
+      "sha256": "edbf6a836d9c62fd59d23c60453ac5514030af695fd1e8ce8c548658b24f494e"
+    },
+    "scripts/envelope_job_runner.py": {
+      "source": "scripts/envelope_job_runner.py",
+      "sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab"
+    },
+    "scripts/envelope_reference.py": {
+      "source": "scripts/envelope_reference.py",
+      "sha256": "d03ade53f6181206314712ab23b8d7176fe52ec3d931e32801ba083acff41854"
+    },
+    "scripts/feature_checks.py": {
+      "source": "scripts/feature_checks.py",
+      "sha256": "1b476719a1f042727a1ce53fdcf91d756442f52ed4be80b44a96ae9dc401dd77"
+    },
+    "scripts/hexagonal_reference.py": {
+      "source": "scripts/hexagonal_reference.py",
+      "sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61"
+    },
+    "scripts/model_inventory.py": {
+      "source": "scripts/model_inventory.py",
+      "sha256": "179d8d3021af430f84f1bc0dfa237a22d6063640404742384c93176887b8ae63"
+    },
+    "scripts/native_acis.py": {
+      "source": "scripts/native_acis.py",
+      "sha256": "aef3c95104792dcd44e3a2a92e13270d533c82b52ca604c83e2841712a44044f"
+    },
+    "scripts/ocs_control.py": {
+      "source": "scripts/ocs_control.py",
+      "sha256": "ceae138056ec8d0522181706fd686bf19936814fe13337cb89dd0dd197949f8e"
+    },
+    "scripts/ocs_document_cleanup.py": {
+      "source": "scripts/ocs_document_cleanup.py",
+      "sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4"
+    },
+    "scripts/package_check.py": {
+      "source": "scripts/package_check.py",
+      "sha256": "f8193ecd0fca779066dc6a4ecad452754653955d66a699d720e5b9a731af84b6"
+    },
+    "scripts/part_index.py": {
+      "source": "scripts/part_index.py",
+      "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb"
+    },
+    "scripts/pillow_block.py": {
+      "source": "scripts/pillow_block.py",
+      "sha256": "da3ba1a80c4887a5588a271c100264e3b9e4a456ca0babe27a8e6bcc75cf8859"
+    },
+    "scripts/pixhawk.py": {
+      "source": "scripts/pixhawk.py",
+      "sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f"
+    },
+    "scripts/profile_reference.py": {
+      "source": "scripts/profile_reference.py",
+      "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0"
+    },
+    "scripts/retained_artifacts.py": {
+      "source": "scripts/retained_artifacts.py",
+      "sha256": "8d61d4b042d3ca128105aa5e032504ce7a4e6adcbad8d95f54acf8be34604729"
+    },
+    "scripts/rounded_tube.py": {
+      "source": "scripts/rounded_tube.py",
+      "sha256": "d9b76b03f0c93452f70ae123c6311ecaaf5779d827a36acd1f88d90844c419c8"
+    },
+    "scripts/small_bms.py": {
+      "source": "scripts/small_bms.py",
+      "sha256": "6a54793b62f539f94d974ff6dc510b9176e2215da76b52a046000fbb1e21bdd0"
+    },
+    "scripts/source_intake.py": {
+      "source": "scripts/source_intake.py",
+      "sha256": "cc8bfae3ba3ecd630dffb09b58fc4b2e325a6b8bfefb876c83d4c5ab98a66f92"
+    },
+    "scripts/source_metadata.py": {
+      "source": "scripts/source_metadata.py",
+      "sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1"
+    },
+    "scripts/source_variant_table.py": {
+      "source": "scripts/source_variant_table.py",
+      "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d"
+    },
+    "scripts/step_placements.py": {
+      "source": "scripts/step_placements.py",
+      "sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d"
+    },
+    "scripts/step_solid_inventory.py": {
+      "source": "scripts/step_solid_inventory.py",
+      "sha256": "3495aee7471f64d2dc7bfb327cf491f14ea78938ef48b521ec814842dae6f4f0"
+    },
+    "scripts/toroidal_reference.py": {
+      "source": "scripts/toroidal_reference.py",
+      "sha256": "f6f0cb56e797731c76f4f11d293487d84215446bf74f384dfb5c8c3504c989ff"
+    }
+  }
+}

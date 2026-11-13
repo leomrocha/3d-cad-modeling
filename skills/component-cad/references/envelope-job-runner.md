@@ -8,9 +8,9 @@ Use `scripts/envelope_job_runner.py` to run an external, source-pinned envelope 
 2. `--job-dir`: existing external directory for run receipts. Existing journal, native handles, failure, result, or geometry-check receipts block a new native run.
 3. `--output`: requested new `.dwg` path. This CLI value controls the output; an optional job `output_path` must resolve to the same path.
 4. `--session`: selected OCS session.
-5. `--control`: path to the existing OCS control helper.
-6. `--cadtools-root`: explicit directory containing `cadtools/runtime.py` and `cadtools/verification.py`.
-7. `--modeling-root-name`: name of the caller-supplied root containing reusable `scripts/` helpers.
+5. `--control`: optional helper override for legacy callers; the default is bundled `scripts/ocs_control.py`.
+6. `--cadtools-root`: optional legacy preflight location; defaults to the packaged scripts directory. Python imports use the packaged runtime.
+7. `--modeling-root-name`: optional legacy provenance root name; it supplies no Python imports.
 8. `--root NAME=ABSOLUTE_PATH`: repeat for each explicit portable root needed by the job. Root names are supplied by the caller. Relative source/output locators resolve from the external job file's directory.
 9. `--execution-model`: observed model identity for the run record.
 10. `--allow-write`: explicit native-write switch. Omit for read-only preflight.
@@ -18,16 +18,12 @@ Use `scripts/envelope_job_runner.py` to run an external, source-pinned envelope 
 Example shape (values supplied by the external job):
 
 ```text
-python scripts/envelope_job_runner.py \
+python "$SKILL_ROOT/scripts/envelope_job_runner.py" \
   --job /external/job/envelope.json \
   --job-dir /external/job \
   --output '${PROJECT_ROOT}/cad/parts/reference.dwg' \
   --session SESSION \
-  --control /path/to/ocs_control.py \
-  --cadtools-root /path/to/cad-construction/scripts \
-  --modeling-root-name TOOL_ROOT \
   --root PROJECT_ROOT=/path/to/project \
-  --root TOOL_ROOT=/path/to/3dmodeling \
   --execution-model OBSERVED_MODEL
 ```
 
@@ -60,4 +56,4 @@ uncertain response. If immediate recovery also exhausts while the operation is
 running, it makes three further recovery calls after 0.25, 0.5 and 1 second.
 The mutation is sent once. Definite rejection or error propagates immediately;
 persistent uncertainty propagates at the fixed bound. Preserve that request and
-its journal for read-only follow-up. See the [executed recovery record](../../../execution/bounded-request-recovery-2026-11-13.md).
+its journal for read-only follow-up. See the [executed recovery record](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/bounded-request-recovery-2026-11-13.md).

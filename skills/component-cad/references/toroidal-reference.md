@@ -1,6 +1,6 @@
 # Source-bound toroidal reference solids
 
-Use [`toroidal_reference.py`](../../../scripts/toroidal_reference.py) when a
+Use [`toroidal_reference.py`](../scripts/toroidal_reference.py) when a
 source defines a circular-section ring by nominal inside diameter and section
 diameter. The helper accepts an external source job and derives the circular
 profile and torus radii; it contains no component-specific values.
@@ -54,6 +54,6 @@ greater than minor radius, and orthonormal axis/reference directions. Existing
 rigid-frame mapping transforms the centre and axis. It reports every torus patch;
 the component verifier compares every patch with independently sourced dimensions.
 The default reader option continues to reject torus surfaces. See the
-[decoder execution record](../../../execution/torus-native-reader-2026-11-13.md).
+[decoder execution record](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/torus-native-reader-2026-11-13.md).
 
 For offline native-reader tests, supply `NATIVE_TORUS_SAB` and `NATIVE_TORUS_EXPECTATIONS` as runtime file paths. The second input is a geometry check record with source-derived expected centre, axis and major/minor radii. The generic tests contain no component fixture paths or dimensions.
