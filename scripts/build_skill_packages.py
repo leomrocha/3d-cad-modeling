@@ -7,7 +7,7 @@ from pathlib import Path
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ('component-cad', 'cad-drawing-inspection', 'cad-source-intake')
+SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake')
 
 
 def inputs(name):
