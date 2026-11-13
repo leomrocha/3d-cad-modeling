@@ -4359,6 +4359,19 @@
       "source_urls": [],
       "source_ids": [],
       "next_check": "Use the associated workflow operation and stage checks."
+    },
+    {
+      "id": "CAD-SKILL-RENAME-2026-11-13",
+      "name": "CAD-prefixed installation skill names",
+      "status": "proposal",
+      "execution_authorization": "User explicitly requested execution after completing the planning work.",
+      "summary": "Rename drawing-inspection to cad-drawing-inspection and source-intake to cad-source-intake; update package identities, documentation, installation commands, links, generator and tests.",
+      "source_urls": [
+        "research/skill-renaming-plan.md",
+        "research/sources/skill-renaming-plan-2026-11-13.json"
+      ],
+      "source_ids": [],
+      "next_check": "Execute the scoped rename and independent installation checks under the recorded plan."
     }
   ]
 }
