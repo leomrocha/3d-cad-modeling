@@ -173,7 +173,7 @@ def resolve_runtime_job(job_path, roots):
     return runtime_job, parameters_value, portableize(readiness, roots)
 
 
-def expected_metadata(job):
+def expected_metadata(job, validated_parameters=None):
     required_strings = ('part_id', 'part_name', 'representation', 'units',
                         'local_frame', 'job_id')
     for key in required_strings:
@@ -187,6 +187,12 @@ def expected_metadata(job):
         if not isinstance(job['envelope_scope'], str):
             raise ValueError('envelope_scope must be a string')
         lines.append('Envelope scope: ' + job['envelope_scope'])
+    axis_datums = (validated_parameters or {}).get('axis_datums')
+    if axis_datums is not None:
+        for axis in ('x', 'y', 'z'):
+            datum = axis_datums[axis]
+            lines.append('Axis datum ' + axis.upper() + ' (source feature "'
+                         + datum['feature'] + '"): ' + datum['datum'])
     for feature in job.get('_portable_features', job['features']):
         if not isinstance(feature.get('name'), str) or not feature['name'].strip():
             raise ValueError('Each metadata source feature needs a name')
@@ -400,7 +406,7 @@ def run(args):
     modeling_root = roots[args.modeling_root_name]
     sys.path[:0] = [str(modeling_root / 'scripts'), str(args.cadtools_root.resolve())]
     job, params, readiness = resolve_runtime_job(job_path, roots)
-    metadata_lines = expected_metadata(job)
+    metadata_lines = expected_metadata(job, params)
     job_locator = source_locator(job_path, roots)
     job_dir_locator = source_locator(job_dir, roots)
     progress_path = job_dir / 'progress.json'
@@ -452,7 +458,8 @@ def run(args):
         'result': 'PASS', 'part_id': job['part_id'], 'part_name': job['part_name'],
         'mode': write_gate['mode'], 'source_readiness': readiness,
         'source_dimensions_mm': params['dimensions'], 'origin_mm': params['origin'],
-        'geometry_scope': job.get('envelope_scope'), 'sab_reader_preflight': sab,
+        'geometry_scope': job.get('envelope_scope'),
+        'axis_datums': params.get('axis_datums'), 'sab_reader_preflight': sab,
         'session_id': descriptor['session_id'],
         'active_document_before': before_snapshot,
         'output_path': source_locator(output, roots),

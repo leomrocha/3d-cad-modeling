@@ -51,6 +51,23 @@ def parameters(job):
                 or not math.isfinite(value) or value <= 0:
             raise ValueError('Positive finite envelope dimension required: ' + name)
         dimensions[axis] = float(value)
+    axis_datums = job.get('axis_datums')
+    if axis_datums is not None:
+        if not isinstance(axis_datums, dict) or set(axis_datums) != {'x', 'y', 'z'}:
+            raise ValueError('axis_datums must map x, y and z when supplied')
+        normalized_datums = {}
+        for axis in ('x', 'y', 'z'):
+            datum = axis_datums[axis]
+            if not isinstance(datum, dict) or set(datum) != {'feature', 'datum'}:
+                raise ValueError('Each axis datum must contain exactly feature and datum')
+            feature_name, description = datum['feature'], datum['datum']
+            if not isinstance(feature_name, str) or not feature_name.strip() \
+                    or feature_name != axis_features[axis]:
+                raise ValueError('Axis datum feature must match dimension_features for ' + axis)
+            if not isinstance(description, str) or not description.strip():
+                raise ValueError('Axis datum description must be nonempty for ' + axis)
+            normalized_datums[axis] = {'feature': feature_name, 'datum': description}
+        axis_datums = normalized_datums
     origin = job.get('origin')
     if not isinstance(origin, (list, tuple)) or len(origin) != 3 \
             or any(isinstance(v, bool) or not isinstance(v, (int, float))
@@ -61,7 +78,8 @@ def parameters(job):
             or not math.isfinite(tolerance) or tolerance <= 0:
         raise ValueError('Positive finite readback_tolerance required')
     return {'dimensions': dimensions, 'origin': [float(v) for v in origin],
-            'tolerance': float(tolerance), 'envelope_scope': envelope_scope}
+            'tolerance': float(tolerance), 'envelope_scope': envelope_scope,
+            'axis_datums': axis_datums}
 
 
 def geometry(client):
@@ -88,6 +106,11 @@ def build_envelope(client, job):
     ]
     if p['envelope_scope'] is not None:
         metadata.append('Envelope scope: ' + p['envelope_scope'])
+    if p['axis_datums'] is not None:
+        for axis in ('x', 'y', 'z'):
+            datum = p['axis_datums'][axis]
+            metadata.append('Axis datum ' + axis.upper() + ' (source feature "'
+                            + datum['feature'] + '"): ' + datum['datum'])
     g.metadata(job['geometry_name'] + ' source metadata', [solid], metadata)
     return solid
 
@@ -110,6 +133,8 @@ def verify(features, job):
             'representation': job['representation'], 'checks': checks}
     if p['envelope_scope'] is not None:
         result['envelope_scope'] = p['envelope_scope']
+    if p['axis_datums'] is not None:
+        result['axis_datums'] = p['axis_datums']
     return result
 
 
