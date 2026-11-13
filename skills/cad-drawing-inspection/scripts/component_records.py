@@ -11,6 +11,7 @@ import json
 import math
 import os
 from pathlib import Path
+import re
 import sys
 
 try:
@@ -21,6 +22,59 @@ except ImportError:
 
 class RecordError(ValueError):
     pass
+
+
+def resolve_source_locator(locator, root_map=None):
+    """Resolve an absolute or explicitly rooted source path for validation."""
+    if not isinstance(locator, str) or not locator.strip():
+        raise RecordError('Source path must be a nonempty locator')
+    roots = root_map or {}
+    def replace(match):
+        name = match.group(1)
+        if name not in roots:
+            raise RecordError('Missing configured path root: ' + name)
+        root = Path(roots[name])
+        if not root.is_absolute():
+            raise RecordError('Configured path root must be absolute: ' + name)
+        return str(root)
+    value = re.sub(r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}', replace, locator)
+    if '${' in value:
+        raise RecordError('Malformed source path root locator')
+    path = Path(value)
+    if not path.is_absolute():
+        raise RecordError('Source path must be absolute or use an explicit named root')
+    return path.resolve()
+
+
+def validate_geometry_requirement(job, root_map=None):
+    """Validate explicit non-geometric scope; return its observed source pin."""
+    requirement = job.get('geometry_requirement')
+    if requirement is None:
+        return None
+    if not isinstance(requirement, dict) or set(requirement) != {'kind', 'cad_required', 'source'}:
+        raise RecordError('geometry_requirement must contain exactly kind, cad_required and source')
+    if requirement.get('kind') != 'non_geometric_consumable':
+        raise RecordError('Unsupported geometry_requirement kind')
+    if requirement.get('cad_required') is not False:
+        raise RecordError('non_geometric_consumable requires cad_required=false')
+    if job.get('geometry_required') is True or job.get('geometry_role'):
+        raise RecordError('Non-geometric classification conflicts with an explicit geometry declaration')
+    source = requirement.get('source')
+    if not isinstance(source, dict) or set(source) != {'path', 'sha256', 'location'}:
+        raise RecordError('Non-geometric classification needs exact source path, sha256 and location')
+    digest = source.get('sha256')
+    if not isinstance(digest, str) or not re.fullmatch(r'[0-9a-fA-F]{64}', digest):
+        raise RecordError('Non-geometric source needs a SHA-256 digest')
+    location = source.get('location')
+    if not isinstance(location, str) or not location.strip():
+        raise RecordError('Non-geometric source needs a readable location')
+    path = resolve_source_locator(source.get('path'), root_map)
+    observation = observe_file(path)
+    if observation['sha256'].casefold() != digest.casefold():
+        raise RecordError('Non-geometric source revision changed')
+    return {'kind': requirement['kind'], 'cad_required': False,
+            'source': {'sha256': digest.casefold(), 'location': location.strip(),
+                       'bytes': observation['bytes']}}
 
 
 def finite(value):
@@ -43,10 +97,17 @@ def observe_file(path):
     return {'path': str(path), 'sha256': digest.hexdigest(), 'bytes': after.st_size}
 
 
-def readiness(job):
+def readiness(job, root_map=None):
     for key in ('job_id', 'part_id', 'part_name', 'representation', 'units', 'frame'):
         if not job.get(key):
             raise RecordError('Missing job field: ' + key)
+    geometry_requirement = validate_geometry_requirement(job, root_map)
+    if geometry_requirement is not None:
+        return {'job_id': job['job_id'], 'part_id': job['part_id'],
+                'part_name': job['part_name'], 'state': 'SOURCE_READY_NON_GEOMETRIC',
+                'questions': [], 'source_observations': [],
+                'geometry_requirement': geometry_requirement,
+                'meaning': 'Pinned source explicitly classifies this task as requiring no CAD geometry.'}
     if not isinstance(job.get('features'), list) or not job['features']:
         raise RecordError('Nonempty feature requirements are required')
     if not any(f.get('required') is True for f in job['features'] if isinstance(f, dict)):
@@ -87,9 +148,11 @@ def readiness(job):
             'meaning': 'Required input coverage and source revision checks; geometry construction and measurement have separate results.'}
 
 
-def require_ready(job):
-    result = readiness(job)
+def require_ready(job, root_map=None):
+    result = readiness(job, root_map)
     if result['state'] != 'SOURCE_READY':
+        if result['state'] == 'SOURCE_READY_NON_GEOMETRIC':
+            raise RecordError('CAD geometry is not required for this source-bound job; CAD construction is prohibited')
         raise RecordError('Input required: ' + '; '.join(x['question'] for x in result['questions']))
     return result
 
@@ -129,11 +192,20 @@ def append_occurrence(path, occurrence):
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('job', type=Path)
+    p.add_argument('--root', action='append', default=[], metavar='NAME=ABSOLUTE_PATH')
     args = p.parse_args(argv)
     try:
-        result = readiness(read_json(args.job))
+        roots = {}
+        for entry in args.root:
+            name, sep, path = entry.partition('=')
+            if not sep or not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', name) or not Path(path).is_absolute():
+                raise RecordError('--root requires NAME=ABSOLUTE_PATH')
+            if name in roots:
+                raise RecordError('Duplicate configured path root: ' + name)
+            roots[name] = path
+        result = readiness(read_json(args.job), roots)
         print(json.dumps(result, indent=2, ensure_ascii=False, allow_nan=False))
-        return 0 if result['state'] == 'SOURCE_READY' else 1
+        return 0 if result['state'] in {'SOURCE_READY', 'SOURCE_READY_NON_GEOMETRIC'} else 1
     except (OSError, ValueError, TypeError) as error:
         print(json.dumps({'error': str(error)}))
         return 2
