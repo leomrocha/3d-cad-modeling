@@ -32,9 +32,26 @@
       "title": "Toroidal reference skill procedure",
       "summary": "Describes source-bound inside and section dimensions, derived radii, exact circular revolve construction and the native torus observation contract.",
       "local_path": "skills/component-cad/references/toroidal-reference.md",
-      "sha256": "4da64ca86880e384e1a04461fc415a867ba51518513530ee6cc1a197f4454314",
+      "sha256": "bdf06f04c5b37b2575c58c023e66edb73f9842bc6ffefcc225153b564afcaaed",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
+      "referring_documents": [
+        "execution/toroidal-reference-helper-2026-11-13.md"
+      ],
+      "previous_sha256": "4da64ca86880e384e1a04461fc415a867ba51518513530ee6cc1a197f4454314",
+      "updated_at": "2026-11-13"
+    },
+    {
+      "title": "Executed G-140 torus application",
+      "summary": "Four analytic surface patches match source-derived major/minor radii and local frame; source metadata, recovered persistence and closed connected topology passed. Owned saved and construction documents closed, preserving Start.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c071-build-01/final-readback-check-r01.json",
+      "sha256": "2e2dd594e4d9f9c83693bdd3c468ec3e255e32e1b1ce207c2f8e00942f8472a9",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "execution_model": "gpt-6-luna",
+      "coordinator_model": "gpt-6.1-sol",
+      "helper_revision": "a359449",
+      "decoder_revision": "61f3dc4",
       "referring_documents": [
         "execution/toroidal-reference-helper-2026-11-13.md"
       ]
