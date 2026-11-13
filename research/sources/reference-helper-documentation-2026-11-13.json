@@ -1,0 +1,76 @@
+{
+  "title": "Reference-helper documentation update",
+  "date": "2026-11-13",
+  "baseline_revision": "546b223",
+  "evidence_status": "local implementation and procedure inspection",
+  "summary": "Updated the public catalogues for annular and hexagonal references and fastener source rules. Identified concurrent toroidal additions as in progress; implementation files remain with the modeling work.",
+  "sources": [
+    {
+      "path": "scripts/annular_reference.py",
+      "title": "Annular-reference helper",
+      "summary": "Builds and checks source-bound annular solids through the existing CAD adapter.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local committed-file inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "skills/README.md",
+        "scripts/README.md"
+      ]
+    },
+    {
+      "path": "skills/component-cad/references/annular-reference.md",
+      "title": "Annular-reference procedure",
+      "summary": "Defines external source inputs, local frame, construction and native checks.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local committed-file inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "skills/README.md",
+        "scripts/README.md"
+      ]
+    },
+    {
+      "path": "skills/component-cad/references/source-variant-tables.md",
+      "title": "Variant and fastener source rules",
+      "summary": "Binds dimensions to exact standard editions, grades, rows and dimension symbols.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local committed-file inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "skills/README.md",
+        "scripts/README.md"
+      ]
+    },
+    {
+      "path": "scripts/hexagonal_reference.py",
+      "title": "Hexagonal-reference helper",
+      "summary": "Committed implementation of a regular hexagonal prism with an optional source-defined bore.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local committed-file inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "skills/README.md",
+        "scripts/README.md"
+      ]
+    },
+    {
+      "path": "scripts/toroidal_reference.py",
+      "title": "Toroidal-reference helper in progress",
+      "summary": "Working-tree implementation of a circular-section ring; readback requires native analytic torus observations.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local working-tree inspection",
+      "referring_documents": [
+        "docs/tools.md",
+        "skills/README.md",
+        "scripts/README.md"
+      ]
+    }
+  ],
+  "referring_documents": [
+    "README.md",
+    "docs/index.md",
+    "docs/tools.md",
+    "scripts/README.md",
+    "skills/README.md"
+  ]
+}

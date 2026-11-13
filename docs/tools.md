@@ -20,7 +20,7 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 3. [source_intake.py](../scripts/source_intake.py) — saves source indexes, request scope and revision receipts.
 4. [component_records.py](../scripts/component_records.py) — checks required source values and records individual modeling actions.
 5. [source_metadata.py](../scripts/source_metadata.py) — compares expected source labels with the strings stored on a CAD entity.
-6. [source_variant_table.py](../scripts/source_variant_table.py) — selects a value from a reviewed table for the specified product variant.
+6. [source_variant_table.py](../scripts/source_variant_table.py) — selects a value from a reviewed table for the specified product variant. The [source procedure](../skills/component-cad/references/source-variant-tables.md) also binds fastener dimensions to the exact standard edition, grade, row and drawing symbol.
 
 7. [retained_artifacts.py](../scripts/retained_artifacts.py) — verifies retained-file hashes, JSON/JSONL syntax and manifest paths using caller-supplied roots. [Manifest procedure](../skills/component-cad/references/retained-artifact-checks.md).
 
@@ -35,6 +35,14 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 7. [pixhawk.py](../scripts/pixhawk.py) — builds and checks the Pixhawk 6C mechanical envelope and nominal mounting-thread references.
 
 8. [envelope_job_runner.py](../scripts/envelope_job_runner.py) — runs read-only preflight by default; an authorized write run builds a source-bound rectangular envelope, checks saved geometry and metadata, and closes its completed owned document. [Runner procedure](../skills/component-cad/references/envelope-job-runner.md).
+
+9. [annular_reference.py](../scripts/annular_reference.py) — constructs a plain ring from source-bound bore diameter, outside diameter and thickness in millimetres. Checks analytic cylinder surfaces, end-face loops, closed-body topology and stored source metadata. [Annular-reference procedure](../skills/component-cad/references/annular-reference.md).
+
+10. [hexagonal_reference.py](../scripts/hexagonal_reference.py) — constructs a regular hexagonal prism from source-bound across-flats dimension, height and a placement frame, with an optional source-bound bore. Checks side and cap planes, bore surfaces, topology and metadata. [Hexagonal-reference procedure](../skills/component-cad/references/hexagonal-reference.md).
+
+## Helpers in progress
+
+1. **Toroidal references** — `toroidal_reference.py` constructs a circular-section ring from inside diameter and section diameter in millimetres. Its helper, procedure and tests are being added in the modeling work; inspection requires analytic torus observations from the native reader.
 
 ## Geometry, assemblies and component checks
 
