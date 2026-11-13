@@ -15517,3 +15517,197 @@ Original source: [LiFePO4-Battery-25.6V100Ah-NG.stp — existing file inventory]
 Summary: Existing 3D library/source/work file included in the project-wide lookup. Its actual path, size and SHA-256 are retained for component identity review.
 
 Evidence: existing_local_3d_file_inventory.
+
+## Tyre source stage — 13 November 2026
+
+### Trelleborg Technical manual — SRC-40bcecc74df2
+
+Original source: [Trelleborg Technical manual](https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/technical-manual/trelleborg-technical-manual-en.pdf?hash=AB0C897622FFD6443624A33BDFA5552E&rev=258948143820400e9a05c5a63b8c7ae0&sc_lang=en)
+
+Summary: The exact 18x8.50-8, PR 6, T539 Farming row lists 7.00I rim, permitted 6.50-8, OD 466 mm ±1.5%, section width 222 mm ±2%, max air pressure 2.8 bar, max load 475 kg at 30 km/h, and rolling circumference 1384 mm ±2.5%. This is exterior envelope and nominal rim-contour evidence. The row gives no bead-seat, bead profile, wall, tread-depth or sectional profile dimensions. PDF metadata dates creation 2026-10-05 and modification 2026-10-06.
+
+Evidence: downloaded_original.
+
+### Trelleborg Light service tires brochure — SRC-f7d0f172c13c
+
+Original source: [Trelleborg Light service tires brochure](https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/brochure/trelleborgtires_light_services_tire_eng.pdf?hash=B973556E3AB61ED5496649FACDE2834A%3F&openpdf=1&rev=9426684de3c84c7f8f90224ee3eccacc&sc_lang=en)
+
+Summary: Lists 18x8.50-8 T539 TL, 4 PR, with rim 7.00I, OD 472 mm, section 222 mm, 1.5 bar, 375 kg at 30 km/h, rolling circumference 1402 mm. This is a different 4PR tubeless row and does not supply dimensions for C001's 6PR tube-type variant. No profile or bead drawing found.
+
+Evidence: downloaded_original.
+
+### Trelleborg Visual Folder — SRC-83397b2076da
+
+Original source: [Trelleborg Visual Folder](https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/brochure/trelleborgtires-visual-folder-en.pdf?hash=F1F4348D02B7B629FEE0733E5A80B6B0&rev=1544b91184bf44bfbf71dc7ecd5da91f&sc_lang=en)
+
+Summary: Manufacturer visual folder contains a T539 family label. It provides no size-specific 18x8.50-8 drawing or dimensioned tyre profile.
+
+Evidence: downloaded_original.
+
+### Trelleborg T539 product image, 575x575 — SRC-e1ef859bc0e3
+
+Original source: [Trelleborg T539 product image, 575x575](https://www.trelleborg-tires.com/-/media/tires-aft/tires-images/light-service-tires/light-service-575x575/trelleborgt539-575x575.jpg?h=575&iar=0&w=575&rev=5e7c124eacaf40c4b510185dcfe12cea&hash=0E3DE6519BDC6FD8343FB5A78A15BACB)
+
+Summary: Exact T539 manufacturer product image linked by the T539 product page. It shows a three-quarter tyre and mounted rim, with tread and sidewall visible. The page and image do not associate this image with the 18x8.50-8 size; use it as visual tread/sidewall reference only, not as a dimensioned interface source.
+
+Evidence: downloaded_manufacturer_product_image.
+
+### Trelleborg T539 product page (English) — SRC-803fb306f940
+
+Original source: [Trelleborg T539 product page (English)](https://www.trelleborg-tires.com/en/products-and-solutions/agriculture-and-forestry-tires/gardening-club-cars-and-snow-tires/gardening/t539)
+
+Summary: The official product page identifies T539, links the Light service tires brochure and Visual Folder, and embeds the retained T539 product image. Its page HTML does not contain a STEP/CAD file or a dimensioned section/bead drawing.
+
+Evidence: downloaded_web_page_snapshot.
+
+### trelleborg light service brochure response headers — SRC-bc2905798e67
+
+Original source: [trelleborg light service brochure response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure-response-headers.txt)
+
+Summary: Retained HTTP response headers for trelleborg-light-service-brochure acquisition, including actual response status/content type when provided.
+
+Evidence: executed_retrieval_metadata.
+
+### trelleborg manual response headers — SRC-c3e6932e4972
+
+Original source: [trelleborg manual response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-manual-response-headers.txt)
+
+Summary: Retained HTTP response headers for trelleborg-manual acquisition, including actual response status/content type when provided.
+
+Evidence: executed_retrieval_metadata.
+
+### trelleborg t539 page response headers — SRC-2126824b9855
+
+Original source: [trelleborg t539 page response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-page-response-headers.txt)
+
+Summary: Retained HTTP response headers for trelleborg-t539-page acquisition, including actual response status/content type when provided.
+
+Evidence: executed_retrieval_metadata.
+
+### trelleborg t539 photo response headers — SRC-f1f846f920ea
+
+Original source: [trelleborg t539 photo response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-photo-response-headers.txt)
+
+Summary: Retained HTTP response headers for trelleborg-t539-photo acquisition, including actual response status/content type when provided.
+
+Evidence: executed_retrieval_metadata.
+
+### trelleborg visual folder response headers — SRC-6e85c2c8ade7
+
+Original source: [trelleborg visual folder response headers](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder-response-headers.txt)
+
+Summary: Retained HTTP response headers for trelleborg-visual-folder acquisition, including actual response status/content type when provided.
+
+Evidence: executed_retrieval_metadata.
+
+### Tyre original acquisition manifest — SRC-d09376951e70
+
+Original source: [Tyre original acquisition manifest](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json)
+
+Summary: Individual original URLs, actual retrieval outcomes, content types, times, local paths, hashes and source summaries; requested and actual model identities kept distinct.
+
+Evidence: executed_source_acquisition.
+
+### Tyre manufacturer geometry review — SRC-da905bba09d5
+
+Original source: [Tyre manufacturer geometry review](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md)
+
+Summary: Separates the exact 6PR manual row, different 4PR brochure row and undimensioned family photo; identifies the bead/section input required for construction.
+
+Evidence: executed_source_review.
+
+### Exact tyre manual page rendering — SRC-847a7f8f1a9a
+
+Original source: [Exact tyre manual page rendering](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-pdf-page-111.png)
+
+Summary: Full PDF page 111, printed 220–221 spread, visually inspected for the 18x8.50-8 6PR T539 row and tolerance headings.
+
+Evidence: executed_pdf_render_and_inspection.
+
+### Tyre pre-start actual-file lookup — SRC-e055d2981083
+
+Original source: [Tyre pre-start actual-file lookup](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/existing-model-start.json)
+
+Summary: Fresh lookup finds no matching tyre 3D file among the project model/reference inventory; completed models remain reuse inputs.
+
+Evidence: executed_filesystem_start_check.
+
+### Initial tyre source job — SRC-8a8c1be024b8
+
+Original source: [Initial tyre source job](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r01.json)
+
+Summary: Existing recorded envelope dimensions and rim designation with a named required section-profile input.
+
+Evidence: implementation_data_artifact.
+
+### Tyre source job bound to original manual — SRC-d5b677175f7e
+
+Original source: [Tyre source job bound to original manual](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r02.json)
+
+Summary: Rebinds OD, width and rim designation to the exact downloaded manufacturer row; preserves source tolerances and the initial revision.
+
+Evidence: implementation_data_artifact.
+
+### Initial tyre input gate — SRC-3824e4bbeff1
+
+Original source: [Initial tyre input gate](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r01.json)
+
+Summary: Existing requirement checker reports the named bead/section requirement before original-manual source review.
+
+Evidence: executed_input_validation.
+
+### Reviewed tyre input gate — SRC-68e0a74a126a
+
+Original source: [Reviewed tyre input gate](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json)
+
+Summary: Reviewed dimensional sources pass their hash bindings; the bead/section requirement remains the construction input question.
+
+Evidence: executed_input_validation.
+
+### OCS state before tyre work — SRC-275835f08b76
+
+Original source: [OCS state before tyre work](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/initial-state.json)
+
+Summary: Read-only state inspection preserves existing open drawings and establishes the native session for a later source-ready build.
+
+Evidence: executed_native_state_read.
+
+### Tyre source-stage result — SRC-281cdf03a461
+
+Original source: [Tyre source-stage result](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json)
+
+Summary: Source review completed; component state NEEDS_INPUT for its bead/section geometry. No native geometry operation was performed.
+
+Evidence: executed_source_stage_result.
+
+### Tyre source-stage execution report — SRC-c1d36f59f5e8
+
+Original source: [Tyre source-stage execution report](/home/leo/projects/3dmodeling/execution/c001-tyre-source-2026-11-13.md)
+
+Summary: Documents actual exact-variant evidence, source gate, completed lookup and coordinator/research identities.
+
+Evidence: executed_verification_report.
+
+### Installed OCS CIRCLE command declaration — SRC-38d1476f2f41
+
+Original source: [Installed OCS CIRCLE command declaration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-circle.json)
+
+Summary: Read installed CIRCLE command schema during source-stage preflight; declaration retained separately from construction execution.
+
+Evidence: executed_native_capability_read.
+
+### Installed OCS TORUS command declaration — SRC-c54dec652b41
+
+Original source: [Installed OCS TORUS command declaration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-torus.json)
+
+Summary: Read installed TORUS command schema during source-stage preflight; declaration retained separately from construction execution.
+
+Evidence: executed_native_capability_read.
+
+### Installed OCS REVOLVE command declaration — SRC-d199c522d4c1
+
+Original source: [Installed OCS REVOLVE command declaration](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-revolve.json)
+
+Summary: Read installed REVOLVE command schema during source-stage preflight; declaration retained separately from construction execution.
+
+Evidence: executed_native_capability_read.

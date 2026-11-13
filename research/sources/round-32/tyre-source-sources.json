@@ -1,0 +1,291 @@
+[
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-en.pdf",
+    "title": "Trelleborg Technical manual",
+    "summary": "The exact 18x8.50-8, PR 6, T539 Farming row lists 7.00I rim, permitted 6.50-8, OD 466 mm ±1.5%, section width 222 mm ±2%, max air pressure 2.8 bar, max load 475 kg at 30 km/h, and rolling circumference 1384 mm ±2.5%. This is exterior envelope and nominal rim-contour evidence. The row gives no bead-seat, bead profile, wall, tread-depth or sectional profile dimensions. PDF metadata dates creation 2026-10-05 and modification 2026-10-06.",
+    "evidence_status": "downloaded_original",
+    "access_date": "2026-11-13",
+    "sha256": "f9b0296a673b0fe14ca3649953a0feaa57963af88b23a58aa59350dfacf39cec",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ],
+    "url": "https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/technical-manual/trelleborg-technical-manual-en.pdf?hash=AB0C897622FFD6443624A33BDFA5552E&rev=258948143820400e9a05c5a63b8c7ae0&sc_lang=en",
+    "original_supplied_url": "https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/technical-manual/trelleborg-technical-manual-en.pdf?hash=AB0C897622FFD6443624A33BDFA5552E%3F&openpdf=1&rev=258948143820400e9a05c5a63b8c7ae0&sc_lang=en",
+    "retrieval_status": "downloaded HTTP 200",
+    "retrieved_at": "2026-11-13T08:54:26+01:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure.pdf",
+    "title": "Trelleborg Light service tires brochure",
+    "summary": "Lists 18x8.50-8 T539 TL, 4 PR, with rim 7.00I, OD 472 mm, section 222 mm, 1.5 bar, 375 kg at 30 km/h, rolling circumference 1402 mm. This is a different 4PR tubeless row and does not supply dimensions for C001's 6PR tube-type variant. No profile or bead drawing found.",
+    "evidence_status": "downloaded_original",
+    "access_date": "2026-11-13",
+    "sha256": "4b5c41be548190c542927ac536bcec945a086bb5e16644305f9dc86bfa81e4fc",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ],
+    "url": "https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/brochure/trelleborgtires_light_services_tire_eng.pdf?hash=B973556E3AB61ED5496649FACDE2834A%3F&openpdf=1&rev=9426684de3c84c7f8f90224ee3eccacc&sc_lang=en",
+    "original_supplied_url": null,
+    "retrieval_status": "downloaded HTTP 200",
+    "retrieved_at": "2026-11-13T08:56:43+01:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder.pdf",
+    "title": "Trelleborg Visual Folder",
+    "summary": "Manufacturer visual folder contains a T539 family label. It provides no size-specific 18x8.50-8 drawing or dimensioned tyre profile.",
+    "evidence_status": "downloaded_original",
+    "access_date": "2026-11-13",
+    "sha256": "3d166016bf3fe049021e86ba85164f390282df7d63bde196fbdb900d73abde19",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ],
+    "url": "https://www.trelleborg-tires.com/-/media/tires-aft/datatsheet/brochure/trelleborgtires-visual-folder-en.pdf?hash=F1F4348D02B7B629FEE0733E5A80B6B0&rev=1544b91184bf44bfbf71dc7ecd5da91f&sc_lang=en",
+    "original_supplied_url": null,
+    "retrieval_status": "downloaded HTTP 200",
+    "retrieved_at": "2026-11-13T08:56:40+01:00",
+    "content_type": "application/pdf"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-product-photo-575x575.webp",
+    "title": "Trelleborg T539 product image, 575x575",
+    "summary": "Exact T539 manufacturer product image linked by the T539 product page. It shows a three-quarter tyre and mounted rim, with tread and sidewall visible. The page and image do not associate this image with the 18x8.50-8 size; use it as visual tread/sidewall reference only, not as a dimensioned interface source.",
+    "evidence_status": "downloaded_manufacturer_product_image",
+    "access_date": "2026-11-13",
+    "sha256": "d671db97b7f9c475734dca5fe7e961e344199929c43b0035b4eb5d3057e0b63a",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ],
+    "url": "https://www.trelleborg-tires.com/-/media/tires-aft/tires-images/light-service-tires/light-service-575x575/trelleborgt539-575x575.jpg?h=575&iar=0&w=575&rev=5e7c124eacaf40c4b510185dcfe12cea&hash=0E3DE6519BDC6FD8343FB5A78A15BACB",
+    "original_supplied_url": null,
+    "retrieval_status": "downloaded HTTP 200; URL suffix is .jpg, response content is WebP",
+    "retrieved_at": "2026-11-13T08:55:42+01:00",
+    "content_type": "image/webp"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-product-page.html",
+    "title": "Trelleborg T539 product page (English)",
+    "summary": "The official product page identifies T539, links the Light service tires brochure and Visual Folder, and embeds the retained T539 product image. Its page HTML does not contain a STEP/CAD file or a dimensioned section/bead drawing.",
+    "evidence_status": "downloaded_web_page_snapshot",
+    "access_date": "2026-11-13",
+    "sha256": "b23f3d2c0c3f27ba0804828c1347e477064edf08ab0bdf0f9d1b4bb53ae44b04",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ],
+    "url": "https://www.trelleborg-tires.com/en/products-and-solutions/agriculture-and-forestry-tires/gardening-club-cars-and-snow-tires/gardening/t539",
+    "original_supplied_url": null,
+    "retrieval_status": "downloaded HTTP 200",
+    "retrieved_at": "2026-11-13T08:54:37+01:00",
+    "content_type": "text/html; charset=utf-8"
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-light-service-brochure-response-headers.txt",
+    "title": "trelleborg light service brochure response headers",
+    "summary": "Retained HTTP response headers for trelleborg-light-service-brochure acquisition, including actual response status/content type when provided.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "142f79d57a72b7051d9b318b5db339b8cd457e6ca8527692a14c32e1dd2ae6b2",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-manual-response-headers.txt",
+    "title": "trelleborg manual response headers",
+    "summary": "Retained HTTP response headers for trelleborg-manual acquisition, including actual response status/content type when provided.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "acee150336d15ab08dc5018cffd2741040d9a2601371334f15ac84255ce41e2e",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-page-response-headers.txt",
+    "title": "trelleborg t539 page response headers",
+    "summary": "Retained HTTP response headers for trelleborg-t539-page acquisition, including actual response status/content type when provided.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "ed578c036165c0abe76ca8616e67c5f480d4348df720ed0540e2b055c4c374bd",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-t539-photo-response-headers.txt",
+    "title": "trelleborg t539 photo response headers",
+    "summary": "Retained HTTP response headers for trelleborg-t539-photo acquisition, including actual response status/content type when provided.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "7593552a6857f8a4f179ddba4394ea35ce55345d225b36570723d57f1ab5dad4",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-visual-folder-response-headers.txt",
+    "title": "trelleborg visual folder response headers",
+    "summary": "Retained HTTP response headers for trelleborg-visual-folder acquisition, including actual response status/content type when provided.",
+    "evidence_status": "executed_retrieval_metadata",
+    "access_date": "2026-11-13",
+    "sha256": "626a11156aa75a107fa79da87475d9e7ff9fb9e130c5725c7904f6073b022d6c",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/acquisition.json",
+    "title": "Tyre original acquisition manifest",
+    "summary": "Individual original URLs, actual retrieval outcomes, content types, times, local paths, hashes and source summaries; requested and actual model identities kept distinct.",
+    "evidence_status": "executed_source_acquisition",
+    "access_date": "2026-11-13",
+    "sha256": "6660804c46f36966b78749c7bc402a52a8e65f0725373924ccd687f079abbdf3",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/source-review.md",
+    "title": "Tyre manufacturer geometry review",
+    "summary": "Separates the exact 6PR manual row, different 4PR brochure row and undimensioned family photo; identifies the bead/section input required for construction.",
+    "evidence_status": "executed_source_review",
+    "access_date": "2026-11-13",
+    "sha256": "ead67b219085803739f831c73f5aaa87f384729f3638c8d86439af44912cdcee",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-review/trelleborg-technical-manual-pdf-page-111.png",
+    "title": "Exact tyre manual page rendering",
+    "summary": "Full PDF page 111, printed 220–221 spread, visually inspected for the 18x8.50-8 6PR T539 row and tolerance headings.",
+    "evidence_status": "executed_pdf_render_and_inspection",
+    "access_date": "2026-11-13",
+    "sha256": "897273900d3b63ef61d5ac9030f807bb4cd89b7faf32c198201d1393c21d53b1",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/existing-model-start.json",
+    "title": "Tyre pre-start actual-file lookup",
+    "summary": "Fresh lookup finds no matching tyre 3D file among the project model/reference inventory; completed models remain reuse inputs.",
+    "evidence_status": "executed_filesystem_start_check",
+    "access_date": "2026-11-13",
+    "sha256": "429824795cc0113f52d87e256104a095624d2246326e0e00e2ed00213da710a9",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r01.json",
+    "title": "Initial tyre source job",
+    "summary": "Existing recorded envelope dimensions and rim designation with a named required section-profile input.",
+    "evidence_status": "implementation_data_artifact",
+    "access_date": "2026-11-13",
+    "sha256": "731f06f4165d89ed5b5bfb2388554fcbb0c6c716ea0be99307cd58a09de31012",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/source-job-r02.json",
+    "title": "Tyre source job bound to original manual",
+    "summary": "Rebinds OD, width and rim designation to the exact downloaded manufacturer row; preserves source tolerances and the initial revision.",
+    "evidence_status": "implementation_data_artifact",
+    "access_date": "2026-11-13",
+    "sha256": "405f9442ab593a0b0915dedd00e8247c1d0b596b8599aca0dc8f613d6dc0fb58",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r01.json",
+    "title": "Initial tyre input gate",
+    "summary": "Existing requirement checker reports the named bead/section requirement before original-manual source review.",
+    "evidence_status": "executed_input_validation",
+    "access_date": "2026-11-13",
+    "sha256": "e0fd31d324826e0bbf2034fa693ebc05a58f2c96062cea0ba39328b3d992478e",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/readiness-r02.json",
+    "title": "Reviewed tyre input gate",
+    "summary": "Reviewed dimensional sources pass their hash bindings; the bead/section requirement remains the construction input question.",
+    "evidence_status": "executed_input_validation",
+    "access_date": "2026-11-13",
+    "sha256": "b07f1643183eeb51c031eca14e0304e595e202bb4009c228a2911448bb780c40",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/initial-state.json",
+    "title": "OCS state before tyre work",
+    "summary": "Read-only state inspection preserves existing open drawings and establishes the native session for a later source-ready build.",
+    "evidence_status": "executed_native_state_read",
+    "access_date": "2026-11-13",
+    "sha256": "18915ae9e6cd3d25ff638cad67765043032c5907a7fea914292f25d10277fd16",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/result.json",
+    "title": "Tyre source-stage result",
+    "summary": "Source review completed; component state NEEDS_INPUT for its bead/section geometry. No native geometry operation was performed.",
+    "evidence_status": "executed_source_stage_result",
+    "access_date": "2026-11-13",
+    "sha256": "d5590449528115ccb8d743057dd72b8b7f6c81fbe205686258954e4714ebc4f2",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/3dmodeling/execution/c001-tyre-source-2026-11-13.md",
+    "title": "Tyre source-stage execution report",
+    "summary": "Documents actual exact-variant evidence, source gate, completed lookup and coordinator/research identities.",
+    "evidence_status": "executed_verification_report",
+    "access_date": "2026-11-13",
+    "sha256": "6c0b3cd7d50666a5b8abec9ad8d2ba074eb4965b5bd369a6aabe89a36183ffec",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-circle.json",
+    "title": "Installed OCS CIRCLE command declaration",
+    "summary": "Read installed CIRCLE command schema during source-stage preflight; declaration retained separately from construction execution.",
+    "evidence_status": "executed_native_capability_read",
+    "access_date": "2026-11-13",
+    "sha256": "0c0b10a93148cf9475f40febe3231dd58b94a3548c68ec4893990420499996bf",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-torus.json",
+    "title": "Installed OCS TORUS command declaration",
+    "summary": "Read installed TORUS command schema during source-stage preflight; declaration retained separately from construction execution.",
+    "evidence_status": "executed_native_capability_read",
+    "access_date": "2026-11-13",
+    "sha256": "61bda0661beb9f810e8177b28149e90445b89470ded3d3a2433fe3f806c645be",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  },
+  {
+    "local_original": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c001-build-01/command-revolve.json",
+    "title": "Installed OCS REVOLVE command declaration",
+    "summary": "Read installed REVOLVE command schema during source-stage preflight; declaration retained separately from construction execution.",
+    "evidence_status": "executed_native_capability_read",
+    "access_date": "2026-11-13",
+    "sha256": "5f68b655923752186c2adde4d1866708478fa04d0811e79976f02790710bc6a7",
+    "referring_documents": [
+      "execution/c001-tyre-source-2026-11-13.md"
+    ]
+  }
+]

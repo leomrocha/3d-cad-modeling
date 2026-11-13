@@ -1,0 +1,15 @@
+{
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "result": "PASS for source-stage records",
+  "component_state": "NEEDS_INPUT",
+  "source_records": 24,
+  "source_original_hashes": "PASS",
+  "manual_row_review": "Full rendered PDF page 111, printed page 221, inspected",
+  "existing_done_entries_preserved": 13,
+  "existing_native_file_hashes_preserved": 26,
+  "old_source_records_preserved": 1348,
+  "original_plan_and_graph_preserved": true,
+  "json_reparse": "PASS",
+  "cad_mutations": 0
+}
