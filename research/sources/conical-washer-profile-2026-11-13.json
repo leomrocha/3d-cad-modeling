@@ -35,6 +35,17 @@
       "referring_documents": [
         "execution/conical-washer-profile-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Conical-washer package integration",
+      "summary": "Current merged cad-ocs-engineering package includes the helper and procedure; five isolated package tests passed and optional live OCS test skipped. Generated files match committed canonical source.",
+      "local_path": "execution/conical-washer-package-checks-2026-11-13.json",
+      "sha256": "aa6b0093b3065998b7ca17735f87013dd0ab8f2559d8a2fcddb36c0237b385ca",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_package_checks",
+      "referring_documents": [
+        "execution/conical-washer-profile-2026-11-13.md"
+      ]
     }
   ],
   "original_source": {
