@@ -1,0 +1,110 @@
+{
+  "subject": "README example gallery and renamed-page links",
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "sources": [
+    {
+      "local_source_path": "docs/images/mast/mast-displacement.png",
+      "title": "Mast displacement",
+      "summary": "Side-by-side mast displacement plots for 15 m/s wind at 0 and 45 degrees; deformation scale 1 and displacement in metres.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected",
+      "sha256": "b6c166859bcee7d88d5e1d4b1d3bf41e74b030b83fa98758dc57c8ad0789b519",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/images/mast/mast-yield.png",
+      "title": "Mast yield comparison",
+      "summary": "Side-by-side plots of assigned yield strength divided by calculated mast stress at 0 and 45 degrees.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected",
+      "sha256": "eda39754895f39117ce10a46892fc889ef705da3fec05f088088f2e5cde19362",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/images/mechanical_components/bearing.png",
+      "title": "Bearing unit capture",
+      "summary": "Existing wireframe CAD capture of the SKF SY20TF bearing unit.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected",
+      "sha256": "71191fda7ac620ddf978d50fbf4480e9ca07029aaa522a38ae280d2a8ac90b07",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/images/mechanical_components/battery.png",
+      "title": "Battery module capture",
+      "summary": "Existing CAD capture of the Nissan Leaf Gen2 module shells, mounting features and terminals.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected",
+      "sha256": "4c8c12631464a7fe7e7ee90b34e5146837972323adcf139bb7756b21a0dadb11",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/images/mechanical_components/motor.png",
+      "title": "Motor interface capture",
+      "summary": "Existing CAD capture of the Motenergy ME0907 housing and shaft interfaces.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected",
+      "sha256": "7af4364ab874f8ad6f2a8d9b70c95e1d69ced16b16bbc17cae84fe7e278e5fdf",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/images/mechanical_components/frame.png",
+      "title": "Frame member capture",
+      "summary": "Existing wireframe CAD capture of a hollow frame rail.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_image_visually_inspected",
+      "sha256": "979206d7bb9f12abd10de2e0d76240860854365480c3f76390483ea5637485b9",
+      "referring_documents": [
+        "README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/examples/mast.md",
+      "title": "Mast physics for a wind generator",
+      "summary": "Existing renamed example page links the mast model and explains displacement and yield-comparison images.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_local_page_inspected",
+      "referring_documents": [
+        "README.md",
+        "docs/examples/README.md"
+      ]
+    },
+    {
+      "local_source_path": "docs/examples/mechanical_components.md",
+      "title": "Mechanical component examples",
+      "summary": "Existing example page identifies the bearing, battery module, motor interfaces and hollow rail shown in the captures.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_local_page_inspected",
+      "referring_documents": [
+        "README.md",
+        "docs/examples/README.md"
+      ]
+    }
+  ],
+  "changes": [
+    "Embed every current docs/images image in the README Examples section.",
+    "Update mast example links to docs/examples/mast.md.",
+    "Link the Examples shortcut to its README heading and the example index navigation to the main README.",
+    "Nest House modeling under Examples.",
+    "Remove the mast DWG download link whose target was removed from the checkout."
+  ],
+  "checks": {
+    "status": "PASS",
+    "markdown_pages": 6,
+    "local_links_and_anchors": 67,
+    "broken_local_links": [],
+    "readme_gallery_images": 6,
+    "image_files_unchanged": true
+  }
+}

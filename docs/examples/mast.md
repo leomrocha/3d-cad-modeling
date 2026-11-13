@@ -6,8 +6,6 @@ I'm working on a wind generator idea, so I started to check how to model and see
 
 ## Example results
 
-[Square mast 3D model (DWG)](models/square-mast.dwg).
-
 ![Calculated mast displacement at scale one for 0 and 45 degree wind](../images/mast/mast-displacement.png)
 
 The displacement image uses actual deformation scale 1 and colours in metres.

@@ -13,7 +13,7 @@ All external sources and assets have their own. IF I have accidentally left some
 
 ## Introduction
 
-If you do not want to read this and directly check the [Examples](TODO LINK TO EXMAPLES)
+If you do not want to read this and directly check the [Examples](#examples)
 
 I've been working for some time on some cad modeling. As the last time I really touched cad was OpenSCAD (cause I've done software for 20+ years now), the last time I really did something manually in a CAD thign was Autocad 2000 some 25+ years ago AND that I'm too lazy now to learn again to use another CAD  software now I decided I'd make AI agents model things for me. I draw as I learnt 3 decades ago in paper then take pictures and show the things to the model, I have my computer running while sometimes I manage things from my phone.
 
@@ -63,7 +63,7 @@ When I see things are ready enough I send then the automated 3D modeling pipelin
 
 ## Examples
 
-## House modeling
+### House modeling
 
 This is the first thign I did at this complexity level with AI + drawing + pictures + a lot of iterations, is kind of a model house that I sent to a 3D model that was interpreted with a custom three.js library for 3D many nice things there, output was finally done in  [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser  
 
@@ -71,17 +71,33 @@ This is the first thign I did at this complexity level with AI + drawing + pictu
 
 I'm working on a wind generator idea, so I started to check how to model and see how a mast support would behave for the particular geometry I'm trying to get on the top part, many of the thigns I did there for the 3d modeling came ata good port so I add them here as examples of what the predating things allowed me to do (with a lot of interaction and effort)
 
-A square mast model and recorded Code_Aster wind cases. [Mast model and simulation pictures](docs/examples/wind-generator.md).
+A square mast model and recorded Code_Aster wind cases. [Mast model and simulation pictures](docs/examples/mast.md).
 
 ![Mast displacement for 15 m/s wind from 0 and 45 degrees](docs/images/mast/mast-displacement.png)
+
+![Assigned yield strength divided by calculated mast stress for 0 and 45 degree wind](docs/images/mast/mast-yield.png)
 
 ### Mechanical component models
 
 Another current project is about making a remote controlled 2 wheel tractor, but I do not have time to work on it really so I'm automating all that I can this includes a (mostly) automated pipeline that gets available components from standards and pictures and manufacturer details that kind of fit int eh base idea I have, 
 
-![SKF SY20TF component geometry](./docs/images/mechanical_components/bearing.png)
-
 Selected frame, motor, bearing and battery examples show source-based construction, component boundaries and saved-model checks. [Mechanical component examples](docs/examples/mechanical_components.md).
+
+#### Bearing unit
+
+![SKF SY20TF component geometry](docs/images/mechanical_components/bearing.png)
+
+#### Battery module
+
+![Nissan Leaf Gen2 module shells, mounting bores and terminals](docs/images/mechanical_components/battery.png)
+
+#### Motor interfaces
+
+![Motenergy ME0907 housing and shaft interfaces](docs/images/mechanical_components/motor.png)
+
+#### Frame member
+
+![Native hollow frame rail](docs/images/mechanical_components/frame.png)
 
 
 ## Installing and Using it
