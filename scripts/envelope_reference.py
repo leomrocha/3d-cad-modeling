@@ -107,11 +107,30 @@ def inspect(client, handles, job):
     """Read one solid's SAT/SAB feature points and run the source-bound check."""
     if set(handles) != {'envelope'}:
         raise ValueError("Envelope inspection requires one handle named 'envelope'")
+    expected_document = getattr(client, 'document_id', None)
+    if expected_document is None:
+        raise ValueError('Client must be bound to an explicit document_id')
+    before = client.read('state')
+    if before.get('document_id') != expected_document:
+        raise ValueError('Active document differs from the bound client document')
+    before_geometry_revision = before.get('geometry_revision')
+    if before_geometry_revision is None:
+        raise ValueError('Pre-read state has no geometry_revision')
+    before_revision = before.get('revision')
+    if before_revision is None:
+        raise ValueError('Pre-read state has no document revision')
     response = client.read('records', collection='entities',
                            handles=[handles['envelope']], limit=1)
     records = response.get('records', [])
     if len(records) != 1:
         raise ValueError('Expected exactly one envelope solid record')
+    record = records[0]
+    if record.get('handle') != handles['envelope']:
+        raise ValueError('Native record handle differs from requested envelope handle')
+    if record.get('type') != 'Solid3D':
+        raise ValueError('Native envelope record must have type Solid3D')
+    if response.get('document_id') not in (None, expected_document):
+        raise ValueError('Native record response belongs to a different document')
     acis = records[0]['properties']['acis_data']
     sat = acis.get('sat_data')
     if sat:
@@ -124,9 +143,25 @@ def inspect(client, handles, job):
         from native_acis import sab_features
         features = sab_features(bytes(sab), allow_rigid=True)
         encoding = 'SAB native body graph'
+    after = client.read('state')
+    if after.get('document_id') != expected_document:
+        raise ValueError('Active document changed during envelope inspection')
+    after_geometry_revision = after.get('geometry_revision')
+    if after_geometry_revision != before_geometry_revision:
+        raise ValueError('Geometry revision changed during envelope inspection')
+    after_revision = after.get('revision')
+    if after_revision != before_revision:
+        raise ValueError('Document revision changed during envelope inspection')
+    for label, source in (('record response', response), ('record', record)):
+        response_document = source.get('document_id')
+        if response_document not in (None, expected_document):
+            raise ValueError(label + ' belongs to a different document')
+        response_geometry_revision = source.get('geometry_revision')
+        if response_geometry_revision not in (None, before_geometry_revision):
+            raise ValueError(label + ' geometry_revision differs from active state')
     result = verify(features, job)
-    result.update(document_id=response.get('document_id'),
-                  revision=response.get('revision'),
-                  geometry_revision=response.get('geometry_revision'),
+    result.update(document_id=expected_document,
+                  document_revision=after_revision,
+                  geometry_revision=after_geometry_revision,
                   handle=handles['envelope'], encoding=encoding, features=features)
     return response, result
