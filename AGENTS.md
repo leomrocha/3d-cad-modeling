@@ -131,3 +131,11 @@ Instruction date: 13 November 2026. Preparation and ongoing modeling have separa
 2. Follow the [modeling-agent instructions](/home/leo/projects/3dmodeling/research/repository-split-preparation/modeling-agent-instructions.md). Keep project values and paths as inputs to shared tools; link each component result to the exact shared-tool revision.
 3. The preparation agent owns separation documents. The modeling agent continues its authorized component/tool improvements and preserves the preparation files. Current active paths remain intact; the split coordinator migrates historical files in a separately scoped batch at affected component checkpoints.
 4. Read the [split preparation](/home/leo/projects/3dmodeling/research/repository-split-preparation/README.md) before changing repository ownership, imports or fixture paths. The manifest is a dated proposal; refresh it against concurrent work before migration.
+
+## Confidential wind-generator head assembly
+
+Instruction date: 13 November 2026. The wind-generator head assembly is awaiting a patent.
+
+1. Keep its models, images, geometry descriptions, source copies and derived design records out of this repository, its documentation and Git history. Keep original material in its owning private project.
+2. Mast-only models and mast simulation examples retain their separate scope. Review actual example content before staging; a filename alone does not establish that an asset is safe to include.
+3. Apply this restriction to ongoing agents and future documentation/modeling iterations until the user explicitly releases the protected material.

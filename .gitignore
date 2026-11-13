@@ -44,3 +44,14 @@ htmlcov/
 *~
 .DS_Store
 Thumbs.db
+
+# Confidential wind-generator head example assets
+/docs/assets/wind-generator-assembly.*
+/docs/assets/wind-generator-cutaway.*
+/docs/assets/wind-generator-transmission.*
+/docs/images/wind-generator/assembly.*
+/docs/images/wind-generator/cutaway.*
+/docs/images/wind-generator/transmission.*
+/docs/examples/files/wind-generator/support-assembly.*
+/docs/examples/files/wind-generator/support-model-record.*
+/docs/examples/files/wind-generator/transmission.*
