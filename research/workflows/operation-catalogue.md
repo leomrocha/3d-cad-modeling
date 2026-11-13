@@ -1,6 +1,6 @@
 # Operation catalogue
 
-Registered: 2026-11-12.
+Registered: 2026-11-13.
 
 All `inputs` apply together. Alternative sets and independent choice groups are recorded explicitly. Full prerequisites, changes, checks and evidence are in [workflow-map.json](/home/leo/projects/3dmodeling/research/workflows/workflow-map.json) and the domain reports.
 

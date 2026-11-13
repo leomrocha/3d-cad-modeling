@@ -1,6 +1,6 @@
 # Source register
 
-Registered: 2026-11-12.
+Registered: 2026-11-13.
 
 Each entry preserves the original URL or local source path and records its summary, evidence status and referring documents. Detailed observations are retained in [source-register.json](/home/leo/projects/3dmodeling/research/sources/source-register.json).
 
@@ -3388,6 +3388,18 @@ Evidence: model_capture_inspected.
 
 Documents: research/sources/round-20/component-sources.json.
 
+<a id="src-3fc1850b2202"></a>
+
+## SRC-3fc1850b2202 — Saved converter hash before recheck
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/file-before.json)
+
+Summary: Pins the existing native DWG path and hash before current-view capture, for preservation comparison.
+
+Evidence: executed_file_inspection.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
+
 <a id="src-3fe2f4ec6c23"></a>
 
 ## SRC-3fe2f4ec6c23 — Blender MCP license
@@ -4900,6 +4912,18 @@ Evidence: implemented_and_exercised_software.
 
 Documents: research/sources/round-23/enclosure-sources.json.
 
+<a id="src-58eb12a69f1a"></a>
+
+## SRC-58eb12a69f1a — Current rotated Victron 24/12 converter view
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/current-user-view.png)
+
+Summary: Actual inspected image shows cover, heatsink fins, mounting slots, terminal housing and hardware. Its hash differs from the earlier repeated enclosure image.
+
+Evidence: executed_native_capture.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
+
 <a id="src-59097305d36e"></a>
 
 ## SRC-59097305d36e — Battery exterior execution report
@@ -5511,6 +5535,18 @@ Summary: Links exact blue kit mapping andactual dimension directions;separates m
 Evidence: reviewed_source_interpretation.
 
 Documents: research/sources/round-25/connector-sources.json.
+
+<a id="src-65f2ca319152"></a>
+
+## SRC-65f2ca319152 — OCS state before the requested view recheck
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-before.json)
+
+Summary: Active document 87 is the saved Victron 24/12 converter. The camera records the current user-rotated view before capture.
+
+Evidence: executed_native_state_read.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 <a id="src-66546119d7fd"></a>
 
@@ -6628,6 +6664,18 @@ Evidence: executed_readiness_result.
 
 Documents: research/sources/round-25/connector-sources.json.
 
+<a id="src-7bd91f2e39d7"></a>
+
+## SRC-7bd91f2e39d7 — Completed current-view capture response
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/capture-result.json)
+
+Summary: Actual completed response for the original capture request c045-view-recheck-20261113:current-user-view.
+
+Evidence: executed_capture_result.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
+
 <a id="src-7be225e2793e"></a>
 
 ## SRC-7be225e2793e — cad-detail-sources.json
@@ -7264,6 +7312,18 @@ Evidence: existing_report_registered, web_inspected.
 
 Documents: research/action-audit/findings.md, research/action-audit/implementation-queue/queue.md, research/action-audit/point-07-reconstruction.md, research/action-audit/reviews/point-07-designer.md, research/action-audit/reviews/point-07-software.md, research/action-audit/reviews/point-07-sources.md, research/action-audit/reviews/point-07-visual.md, research/reconstruction.md, research/sources/round-02/reconstruction-sources.json, research/sources/round-03/reconstruction-detail-sources.json, research/sources/round-05/point-07-web-sources.json, research/workflows/details/mix-r09.md, research/workflows/details/rec-r05.md, research/workflows/details/rec-r06.md, research/workflows/details/rec-r08.md, research/workflows/reconstruction-paths.md.
 
+<a id="src-8700820313fd"></a>
+
+## SRC-8700820313fd — Victron converter current-view recheck report
+
+Original source: [/home/leo/projects/3dmodeling/execution/c045-view-recheck-2026-11-13.md](/home/leo/projects/3dmodeling/execution/c045-view-recheck-2026-11-13.md)
+
+Summary: Documents the newly successful current-view identity check, user rotation report, actual capture recovery and unchanged saved native CAD hash.
+
+Evidence: executed_verification_report.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
+
 <a id="src-878a429a2c73"></a>
 
 ## SRC-878a429a2c73 — Saved battery front view
@@ -7287,6 +7347,18 @@ Summary: Input sheet registered from the inspected ferme manifest: battery; BMW;
 Evidence: existing_report_registered.
 
 Documents: research/sources/round-08/component-plan-sources.json.
+
+<a id="src-882c011aea56"></a>
+
+## SRC-882c011aea56 — OCS state after the current-view capture
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/state-after.json)
+
+Summary: Native state retained after recovering and inspecting the captured converter view. Document and camera observations remain explicit.
+
+Evidence: executed_native_state_read.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 <a id="src-885be68868de"></a>
 
@@ -8175,6 +8247,18 @@ Summary: Existing archived source for CAD skill source instructions, references,
 Evidence: archived_original_referenced.
 
 Documents: research/sources/round-02/archive-sources.json.
+
+<a id="src-98af64fdd846"></a>
+
+## SRC-98af64fdd846 — Converter current-view recheck result
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/result.json)
+
+Summary: One current-view identity check passes. Saved DWG bytes match the earlier component record; prior failed captures remain preserved.
+
+Evidence: executed_visual_verification.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 <a id="src-98e17e4710fb"></a>
 
@@ -10779,6 +10863,18 @@ Summary: Existing local source cited by point 07 procedure/reviews; its concrete
 Evidence: local_reference_registered.
 
 Documents: research/sources/round-05/point-07-local-sources.json.
+
+<a id="src-c838814ff6f2"></a>
+
+## SRC-c838814ff6f2 — Current converter capture request and recovery
+
+Original source: [/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl](/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c045-build-01/recheck-2026-11-13/ocs-journal.jsonl)
+
+Summary: Write-ahead capture intent, initial polling-bound responses and original-request recovery for the current user view.
+
+Evidence: executed_capture_journal.
+
+Documents: research/sources/round-28/converter-view-recheck-sources.json.
 
 <a id="src-c84e8663456d"></a>
 

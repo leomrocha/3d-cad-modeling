@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-13",
+  "model": "gpt-6.1-sol",
+  "scope": "Current user-rotated converter view recheck",
+  "result": "PASS",
+  "source_records": 8,
+  "saved_CAD_hash_preserved": true,
+  "earlier_failed_capture_records_preserved": true,
+  "original_plan_queue_graph_preserved": true,
+  "mermaid_blocks_found_and_preserved": 2,
+  "documentation_rebuild": {
+    "result": "PASS",
+    "files_compared": 8,
+    "receipt_included": true
+  }
+}

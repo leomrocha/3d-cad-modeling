@@ -1,6 +1,6 @@
 # Ideas and research questions
 
-Registered: 2026-11-12.
+Registered: 2026-11-13.
 
 The records retain project proposals, experiment questions and the earlier implementation-plan ideas. Each record identifies its origin and supporting sources. Detailed records: [ideas-register.json](/home/leo/projects/3dmodeling/research/ideas-register.json).
 

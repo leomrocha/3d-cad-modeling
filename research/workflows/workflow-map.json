@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "research_date": "2026-11-12",
+  "research_date": "2026-11-13",
   "scope": "Reusable operation families and explicitly documented composed recipes",
   "semantics": {
     "inputs": "All inputs are required; input_alternatives requires one complete alternative set; input_choice_groups requires one complete alternative set from each independent choice group.",
