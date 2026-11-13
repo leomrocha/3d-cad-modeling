@@ -64,7 +64,8 @@ class FakeClient:
         self.helper.calls.append(('read', operation))
         if operation == 'audit':
             total = 0 if self.document_id == 2 and self.solid_count == 0 else 1
-            return {'manifest': {'total': total, 'by_type': {'3D Solid': total}}}
+            return {'ok': True, 'summary': {'errors': 0, 'warnings': 0},
+                    'manifest': {'total': total, 'by_type': {'3D Solid': total}}}
         if operation == 'state':
             return {'document_id': self.document_id, 'revision': 1,
                     'geometry_revision': 1}
@@ -80,11 +81,11 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
         self.base = Path(self.tmp.name)
-        self.ferme = self.base / 'ferme'
+        self.project = self.base / 'component_project'
         self.modeling = self.base / 'modeling'
-        self.job_dir = self.ferme / 'job'
-        self.source_dir = self.ferme / 'source'
-        self.output_dir = self.ferme / 'cad' / 'parts'
+        self.job_dir = self.project / 'job'
+        self.source_dir = self.project / 'source'
+        self.output_dir = self.project / 'cad' / 'parts'
         self.job_dir.mkdir(parents=True)
         self.source_dir.mkdir()
         self.output_dir.mkdir(parents=True)
@@ -100,6 +101,9 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         (self.cadtools / 'cadtools/verification.py').write_text('', encoding='utf-8')
         self.control = self.base / 'control.py'
         self.control.write_text('# synthetic helper fixture', encoding='utf-8')
+        (self.modeling / 'scripts').mkdir(parents=True)
+        (self.modeling / 'scripts/envelope_reference.py').write_text(
+            '# synthetic reusable helper pin', encoding='utf-8')
 
     def job(self):
         return {
@@ -123,9 +127,11 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
     def args(self, **changes):
         values = dict(
             job=self.job_path, job_dir=self.job_dir,
-            output='${FERME_ROOT}/cad/parts/synthetic-envelope.dwg',
+            output='${PROJECT_ROOT}/cad/parts/synthetic-envelope.dwg',
             session='test-session', control=self.control, cadtools_root=self.cadtools,
-            root=[f'FERME_ROOT={self.ferme}', f'MODELING_ROOT={self.modeling}'],
+            root=[f'PROJECT_ROOT={self.project}', f'TOOLS_ROOT={self.modeling}'],
+            modeling_root_name='TOOLS_ROOT',
+            execution_model='synthetic-test-agent',
             allow_write=False,
         )
         values.update(changes)
@@ -150,7 +156,16 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
             client.helper.active = client.document_id
             client.helper.documents[-1]['path'] = str(path)
             client.solid_count = 1
-            return {'result': 'PASS', 'method': 'synthetic fake orchestration'}
+            digest = hashlib.sha256(Path(path).read_bytes()).hexdigest()
+            manifest = {'total': 1, 'by_type': {'3D Solid': 1}}
+            audit = {'ok': True, 'summary': {'errors': 0, 'warnings': 0},
+                     'manifest': manifest, 'target': {'dropped_on_save': 0}}
+            save = {'ok': True, 'status': 'completed', 'verified': True,
+                    'target_format': 'dwg', 'dropped_on_save': 0,
+                    'sha256': digest, 'bytes': Path(path).stat().st_size,
+                    'manifest': manifest, 'audit': audit}
+            return {'stage': 'reopened', 'result': 'PASS', 'sha256': digest,
+                    'save': save, 'reopened_audit': audit}
 
         verification.save_reopen = save_reopen
         cadtools = types.ModuleType('cadtools')
@@ -187,15 +202,28 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
 
     def test_named_root_roundtrip_and_portable_metadata_include_source_hash(self):
         roots = runner.parse_roots(self.args().root)
-        self.assertEqual(runner.resolve_locator('${FERME_ROOT}/source/manufacturer-source.txt', roots),
+        self.assertEqual(runner.resolve_locator('${PROJECT_ROOT}/source/manufacturer-source.txt', roots),
                          self.source)
         self.assertEqual(runner.source_locator(self.source, roots),
-                         '${FERME_ROOT}/source/manufacturer-source.txt')
+                         '${PROJECT_ROOT}/source/manufacturer-source.txt')
         job, _, _ = runner.resolve_runtime_job(self.job_path, roots)
         lines = runner.expected_metadata(job)
         self.assertTrue(any(self.source_hash in line for line in lines))
+        self.assertFalse(any(str(self.base) in line for line in lines))
         self.assertIn('Part ID: SYNTHETIC-01', lines)
         self.assertIn('Envelope scope: Synthetic test dimensions only', lines)
+        job['features'].append({
+            'name': 'variant_note', 'required': False, 'value': '10 millimetres',
+            'unit': 'description', 'source': str(self.source),
+            'source_sha256': self.source_hash, 'source_location': 'synthetic variant note',
+            'evidence_status': 'synthetic_test_fixture',
+        })
+        alternate = self._write_job(job)
+        runtime, _, _ = runner.resolve_runtime_job(alternate, roots)
+        self.assertTrue(any('"10 millimetres"' in line
+                            for line in runner.expected_metadata(runtime)))
+        self.assertEqual(runner.resolve_locator('../source/manufacturer-source.txt', roots,
+                                                self.job_dir), self.source)
 
     def test_rejects_missing_or_oversized_namespace_and_conflicting_output(self):
         job = self.job()
@@ -205,14 +233,32 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         job['namespace'] = 'x' * 65
         with self.assertRaisesRegex(ValueError, '64 UTF-8 bytes'):
             runner.resolve_runtime_job(self._write_job(job), runner.parse_roots(self.args().root))
-        job['output_path'] = '${FERME_ROOT}/cad/parts/synthetic-envelope.dwg'
+        job['namespace'] = 'synthetic-envelope-test'
+        job['output_path'] = '${PROJECT_ROOT}/cad/parts/synthetic-envelope.dwg'
         self.job_path.write_text(json.dumps(job), encoding='utf-8')
-        args = self.args(output='${FERME_ROOT}/cad/parts/different.dwg')
+        args = self.args(output='${PROJECT_ROOT}/cad/parts/different.dwg')
         helper = FakeHelper()
         with patch.dict(sys.modules, self.fake_imports(helper)):
             with self.assertRaisesRegex(ValueError, 'conflicts'):
                 runner.run(args)
         self.assertFalse(any(call[0] == 'mutate' for call in helper.calls))
+        self.assertFalse(any(call[0] == 'descriptors' for call in helper.calls))
+
+    def test_invalid_metadata_and_root_fail_before_ocs_discovery(self):
+        helper = FakeHelper()
+        job = self.job()
+        job['envelope_scope'] = 17
+        self.job_path.write_text(json.dumps(job), encoding='utf-8')
+        with patch.dict(sys.modules, self.fake_imports(helper)):
+            with self.assertRaisesRegex(ValueError, 'envelope_scope'):
+                runner.run(self.args())
+        self.assertFalse(any(call[0] == 'descriptors' for call in helper.calls))
+        job['envelope_scope'] = 'Synthetic test dimensions only'
+        self.job_path.write_text(json.dumps(job), encoding='utf-8')
+        with patch.dict(sys.modules, self.fake_imports(helper)):
+            with self.assertRaisesRegex(ValueError, 'caller-supplied root'):
+                runner.run(self.args(modeling_root_name='MISSING_ROOT'))
+        self.assertFalse(any(call[0] == 'descriptors' for call in helper.calls))
 
     def test_existing_output_or_prior_native_receipt_blocks_replay(self):
         self.output.write_bytes(b'old')
@@ -257,6 +303,46 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         self.assertTrue((self.job_dir / 'pre-save-feature-checks.json').is_file())
         self.assertTrue((self.job_dir / 'reopened-source-metadata-check.json').is_file())
         self.assertTrue(any(call[:2] == ('mutate', 'create-isolated-document') for call in helper.calls))
+        self.assertTrue((self.job_dir / 'action-occurrences.jsonl').is_file())
+
+    def test_uncertain_mutation_recovers_original_request_without_resubmission(self):
+        uncertain = type('Uncertain', (RuntimeError,), {})
+        runtime = types.ModuleType('cadtools.runtime')
+        runtime.Uncertain = uncertain
+
+        class Client:
+            namespace = 'synthetic-request-set'
+            calls = []
+
+            def mutate(self, label, operation, allow_wait=False, **fields):
+                self.calls.append(('mutate', label, operation))
+                raise uncertain('completion not observed')
+
+            def recover(self, request_id, allow_wait=False):
+                self.calls.append(('recover', request_id))
+                return {'status': 'completed', 'request_id': request_id}
+
+        client = Client()
+        with patch.dict(sys.modules, {'cadtools.runtime': runtime}):
+            response = runner.RecoveringClient(client).mutate('make-solid', 'entities_create')
+        self.assertEqual(response['request_id'], 'synthetic-request-set:make-solid')
+        self.assertEqual(client.calls, [
+            ('mutate', 'make-solid', 'entities_create'),
+            ('recover', 'synthetic-request-set:make-solid'),
+        ])
+
+    def test_nested_dropped_on_save_count_fails_persistence_receipt(self):
+        self.output.write_bytes(b'synthetic output')
+        digest = hashlib.sha256(self.output.read_bytes()).hexdigest()
+        manifest = {'total': 1, 'by_type': {'3D Solid': 1}}
+        audit = {'ok': True, 'summary': {'errors': 0, 'warnings': 0},
+                 'manifest': manifest, 'target': {'dropped_on_save': 1}}
+        receipt = {'stage': 'reopened', 'result': 'PASS', 'sha256': digest,
+                   'save': {'verified': True, 'dropped_on_save': 0,
+                            'sha256': digest, 'manifest': manifest, 'audit': audit},
+                   'reopened_audit': audit}
+        with self.assertRaisesRegex(ValueError, 'dropped entities'):
+            runner.validate_save_receipt(receipt, self.output, {'3D Solid': 1})
 
     def _write_job(self, value):
         path = self.job_dir / 'alternate-job.json'
