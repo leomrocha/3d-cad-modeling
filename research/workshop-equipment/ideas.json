@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-13",
+  "ideas": [
+    {
+      "id": "WORKSHOP-I01",
+      "title": "Compare gas MIG/MAG and self-shielded flux welding",
+      "status": "proposal",
+      "summary": "Compare both modes on 230 V multiprocess machines for occasional full-day work, thin automotive sheet and I/T sections; MMA priority and TIG optional.",
+      "source_ids": [
+        "WELD-01",
+        "WELD-02",
+        "GYS-EASY",
+        "GAS-01"
+      ]
+    },
+    {
+      "id": "WORKSHOP-I02",
+      "title": "Plasma cutting steel and stainless steel 5\u201310 mm with matched compressor",
+      "status": "proposal",
+      "summary": "Compare published material-specific maximum thickness, duty, input circuit and delivered air at operating pressure.",
+      "source_ids": [
+        "PLASMA-01",
+        "PLASMA-02",
+        "PLASMA-03",
+        "AIR-01",
+        "AIR-02"
+      ]
+    }
+  ],
+  "decisions": []
+}

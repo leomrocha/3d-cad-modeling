@@ -1,0 +1,286 @@
+{
+  "registered_at": "2026-11-13",
+  "sources": [
+    {
+      "id": "WELD-01",
+      "title": "STAHLWERK MIG/MAG 160 M",
+      "url": "https://www.stahlwerk-schweissgeraete.de/schweissgeraet-migmag-160m-vollausstattung-fr",
+      "page_type": "Product page; manufacturer",
+      "summary": "20–160 A MIG/MAG; self-shielded flux; MMA; optional DC Lift TIG. 1 kg spools; fixed 2 m torch. Duty at 40 °C: 15% at 160 A, 60% at 80 A, 100% at 62 A. 230 V; maximum MIG input 26 A.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 279.99,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Torch and MMA leads; optional TIG torch excluded",
+      "fees": "Additional shipping",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "WELD-02",
+      "title": "STAHLWERK MIG/MAG 200 ST Digital",
+      "url": "https://www.stahlwerk-schweissgeraete.de/IGBT-Schutzgas-Schweissgeraet-MIG-MAG-200ST-Digital-vollausstattung-fr",
+      "page_type": "Product page; manufacturer",
+      "summary": "MIG 20–200 A; MMA 20–180 A; optional Lift TIG 20–200 A. Flux operation; 1–5 kg spools; spot function; 230 V. Maximum input reported as 34.6/40 A.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 459.99,
+      "tax": "TTC as reported by research agent",
+      "included_items": "AK15 3 m torch, regulator, 0.8 mm steel wire, MMA leads; optional TIG torch excluded",
+      "fees": "Additional shipping",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "PLASMA-01",
+      "title": "STAHLWERK CUT 50 P",
+      "url": "https://www.stahlwerk-schweissgeraete.de/plasmaschneider-cut-50-st-vollausstattung-en",
+      "page_type": "Product page; manufacturer",
+      "summary": "15–45 A; maximum ST37 steel 15 mm; V2A/V4A stainless steel 8 mm. Air minimum 100 L/min at 4 bar. 230 V; maximum input 31 A. Duty at 40 °C: 15% at 45 A, 60% at 22.5 A, 100% at 17.4 A.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 374.99,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Included-item inventory not transcribed by research agent",
+      "fees": "Additional shipping",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "PLASMA-02",
+      "title": "STAHLWERK CUT 50 P Digital",
+      "url": "https://www.stahlwerk-schweissgeraete.de/plasmaschneider-cut-50-p-digital-THC-CNC-fr",
+      "page_type": "Product page; manufacturer",
+      "summary": "230 V; 15–50 A; maximum ST37 steel 20 mm; V2A/V4A stainless steel 8 mm.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 439.99,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Included-item inventory not transcribed by research agent",
+      "fees": "Additional shipping",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "PLASMA-03",
+      "title": "GYS CUTTER 45 CT 014787, TPT40",
+      "url": "https://machinepro.fr/collections/decoupeurs-plasma",
+      "page_type": "Category page; seller",
+      "summary": "230 V / 16 A variant; 15–45 A. GYS range brochure reports maximum steel 20 mm and stainless steel 15 mm. Preserve reference/torch distinction from MT70 variants.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 1362.24,
+      "tax": "TTC as reported by research agent",
+      "included_items": "TPT40 torch named in category listing",
+      "fees": "Shipping, fees and stock unknown in observed extract",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "AIR-01",
+      "title": "DRAKKAR silent compressor 50 L, 11213",
+      "url": "https://www.vnequipement.com/compresseur-silencieux/compresseur-silencieux-50l-8-bar-2cv-1500w-150-lmin-niveau-sonore-64db-garantie-3-ans-2635.html",
+      "page_type": "Product page; seller",
+      "summary": "230 V; 2 hp; 50 L; maximum 8 bar; seller states delivered flow 150 L/min and 64 dB. Pressure associated with delivered flow not recorded.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 236.4,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Compressor; three-year warranty advertised",
+      "fees": "Shipping and additional fees not recorded",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GAS-01",
+      "title": "Full refillable argon/CO2 B10 cylinder 2.2 m³",
+      "url": "https://www.soudure.pro/213-bouteille-de-gaz-de-soudure",
+      "page_type": "Category page; seller",
+      "summary": "Argon/CO2 15%; 2.2 m³; 200 bar; flat-seat regulator connection.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 245,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Full cylinder; regulator separate",
+      "fees": "Shipping and additional fees not recorded",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GAS-02",
+      "title": "B10 argon/CO2 refill 2.2 m³",
+      "url": "https://www.soudure.pro/recharge-de-gaz-de-soudure/103234-recharge-bouteille-gaz-argon-co2-b10-22m.html",
+      "page_type": "Product page; seller",
+      "summary": "B10 refill, same brand. Advertised dispatch 5–7 days.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 129,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Refill service",
+      "fees": "Shipping and additional fees not recorded",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GAS-03",
+      "title": "Air Liquide Albee Weld ArMix 2.3 m³",
+      "url": "https://www.soudestock.com/bouteille-gaz-argon-co2/87-bouteille-de-gaz-albee-weld-armix-s11-argon-co2-23-m3-anciennement-atal-5.html",
+      "page_type": "Product page; seller",
+      "summary": "Owned cylinder without rental contract, 2.3 m³ argon/CO2.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 408,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Full cylinder with integrated regulator",
+      "fees": "Seller advertises free shipping above EUR150",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "AIR-02",
+      "title": "Mecafer Power N Silent 50 L",
+      "url": "https://www.mecafer.com/compresseurs/compresseur-power-n-silent-50l-2hp",
+      "page_type": "Product page; manufacturer",
+      "summary": "Delivered flow 146 L/min at 3 bar and 88 L/min at 7 bar.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; manufacturer/seller claims",
+      "condition": "new",
+      "price_eur": 159.98,
+      "tax": "TTC as reported by research agent",
+      "included_items": "Compressor",
+      "fees": "Shipping and additional fees not recorded",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GYS-SPEC",
+      "title": "GYS welding range 2025, manufacturer brochure on distributor mirror",
+      "url": "https://www.skb.ch/wp-content/uploads/2025/05/GYS_Welding_72dpi_2025_A.pdf",
+      "summary": "CUTTER45 CT material thickness and variant claims",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GYS-MANUAL",
+      "title": "GYS notice / conditions reference",
+      "url": "https://www.j-kesselshop.de/media/gpsr/gys_produkt_088399.pdf",
+      "summary": "Reference/torch conditions; associate exact model before using",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GYS-EASY",
+      "title": "GYS EASYMIG160 manufacturer sheet on Tecnomat",
+      "url": "https://www.tecnomat.fr/pub/media/catalog/product/e/6/6/0/poste_de_soudure_gaz_no_gaz_mma_easymig_a_1118761_helpguide.pdf",
+      "summary": "30–160 A MIG; 20–140 A MMA; 1/5 kg spools; Euro torch; 230 V 16 A. MIG duty 20%160 A and 60%95 A at 40 °C.",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GYS-PRICE",
+      "title": "GYS EASYMIG160 historical comparator price",
+      "url": "https://www.outilmalin.fr/produit/gys-easymig-160-poste-a-souder-inverter-mig-mag-gaz-sans-gaz-et-mma-a-k03154020032255/",
+      "summary": "EUR479.31 TTC Agrieuro offer recorded 2026-09-26, free delivery; historical comparator observation, not current direct seller price",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "GYS-SELLER",
+      "title": "GYS EASYMIG160 E.Leclerc product page",
+      "url": "https://www.e.leclerc/fp/p-soudure-easymig-160-3154020032255",
+      "summary": "Agent reported EUR630.54 from a preceding-month listing; historical price",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "AIR-CATALOG",
+      "title": "DRAKKAR catalogue distributor mirror",
+      "url": "https://www.artoisflexibles.fr/uploads/publications/catalogue-drakk-202511141041.pdf",
+      "summary": "11213 flow claims: generated150 L/min, aspirated242 L/min; catalogue215 EUR tax basis not established",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    },
+    {
+      "id": "STANLEY",
+      "title": "Stanley DN200/10/5 listing",
+      "url": "https://www.manelservice.com/en/compressors/6611-stanley-compressore-dn-200105.html",
+      "summary": "Example only, not identity of user compressor: 180 L/min intake, 5 L, 230 V",
+      "observation_date": "2026-11-13",
+      "registration_date": "2026-11-13",
+      "evidence_status": "web inspection reported by research agent; source claim",
+      "referring_documents": [
+        "research/workshop-equipment/findings.md"
+      ],
+      "original_downloaded": false
+    }
+  ]
+}
