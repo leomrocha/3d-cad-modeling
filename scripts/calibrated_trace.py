@@ -29,6 +29,62 @@ def _uncertainty_pair(value: Real | Sequence[Real], name: str) -> tuple[float, f
     return pair
 
 
+def calibrated_scale_from_reference(
+    reference_length_mm: Real,
+    measured_pixel_span: Real,
+    *,
+    length_uncertainty_mm: Real = 0,
+    span_uncertainty_px: Real = 0,
+) -> dict[str, float | list[float]]:
+    """Calibrate millimetres per pixel from a dimensioned raster reference.
+
+    The nominal scale is ``reference_length_mm / measured_pixel_span``.
+    Endpoint ratios bound independent uncertainty in the reference length and
+    traced pixel span. The returned symmetric uncertainty is the larger
+    distance from the nominal scale to either conservative endpoint.
+    """
+    def finite_number(value: Real, name: str) -> float:
+        if isinstance(value, bool) or not isinstance(value, Real):
+            raise ValueError(f"{name} must be a finite number")
+        try:
+            converted = float(value)
+        except (OverflowError, ValueError):
+            raise ValueError(f"{name} must be a finite number") from None
+        if not math.isfinite(converted):
+            raise ValueError(f"{name} must be a finite number")
+        return converted
+
+    length = finite_number(reference_length_mm, "reference_length_mm")
+    span = finite_number(measured_pixel_span, "measured_pixel_span")
+    length_u = finite_number(length_uncertainty_mm, "length_uncertainty_mm")
+    span_u = finite_number(span_uncertainty_px, "span_uncertainty_px")
+    if length <= 0 or span <= 0:
+        raise ValueError("reference length and pixel span must be positive")
+    if length_u < 0 or span_u < 0:
+        raise ValueError("uncertainties must be non-negative")
+    length_low, length_high = length - length_u, length + length_u
+    span_low, span_high = span - span_u, span + span_u
+    endpoints = (length_low, length_high, span_low, span_high)
+    if any(not math.isfinite(value) for value in endpoints):
+        raise ValueError("uncertainty endpoints must remain finite")
+    if length_low <= 0 or span_low <= 0:
+        raise ValueError("lower uncertainty endpoints must remain strictly positive")
+
+    nominal = length / span
+    lower = length_low / span_high
+    upper = length_high / span_low
+    uncertainty = max(nominal - lower, upper - nominal)
+    if not all(math.isfinite(value) and value > 0 for value in (nominal, lower, upper)):
+        raise ValueError("calibration produces a nonfinite or zero scale or bound")
+    if not math.isfinite(uncertainty):
+        raise ValueError("calibration produces nonfinite scale or bounds")
+    return {
+        "nominal_scale_mm_per_px": nominal,
+        "scale_interval_mm_per_px": [lower, upper],
+        "scale_uncertainty_mm_per_px": uncertainty,
+    }
+
+
 def calibrated_trace(
     points: Iterable[Sequence[Real]],
     pixel_origin: Sequence[Real],

@@ -1,0 +1,7 @@
+# Reusable native evidence helpers
+
+Date: 13 November 2026. Coordinator and metadata-helper implementation: gpt-6.1-sol. Calibration implementation: gpt-6-luna; coordinator review: gpt-6.1-sol.
+
+1. [Source metadata comparison](/home/leo/projects/3dmodeling/scripts/source_metadata.py) reads the actual retained entity record and compares the complete ordered application payload with supplied source lines. It rejects wrong entity identity and malformed/duplicate application records. Nine synthetic tests pass, including the demonstrated scope-only metadata replacement that loses preceding source identity. The [procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/source-metadata.md) retains actual native read and expected job scope as separate evidence.
+2. [Reference-scale calibration](/home/leo/projects/3dmodeling/scripts/calibrated_trace.py) computes scale and uncertainty from supplied drawing-dimension and raster-span intervals. Review added checks for overflowing interval endpoints before division and underflow-to-zero scales. Nine synthetic tests pass after the correction. Actual source images, dimension endpoints, traced pixels and recipes remain in the component project.
+3. The [source register](/home/leo/projects/3dmodeling/research/sources/generic-native-evidence-2026-11-13.json) records the exact implementation, synthetic test and procedure hashes. Component execution and application receipts are recorded in FERME; this report describes the reusable implementation and its synthetic verification.
