@@ -1,0 +1,84 @@
+{
+  "review_id": "annular-runner-independent-review-r01",
+  "observed_date": "2026-11-13",
+  "status": "REVIEW_COMPLETE_WITH_NONBLOCKING_GAPS",
+  "scope": "Read-only independent review of the annular native runner and its focused tests against the C156 ISO 7089 M6 washer source job. No OCS calls or source/code changes.",
+  "reviewer_model": "gpt-6-luna",
+  "files": [
+    {
+      "path": "/home/leo/projects/3dmodeling/scripts/annular_job_runner.py",
+      "sha256": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa"
+    },
+    {
+      "path": "/home/leo/projects/3dmodeling/tests/test_annular_job_runner.py",
+      "sha256": "ca9bff5b8ea8b64a4cc0283d752a51225e5e8cc5059408e3dec2489f41800e70"
+    },
+    {
+      "path": "/home/leo/projects/3dmodeling/scripts/annular_reference.py",
+      "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334"
+    },
+    {
+      "path": "/home/leo/projects/3dmodeling/scripts/envelope_job_runner.py",
+      "sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab"
+    },
+    {
+      "path": "/home/leo/projects/3dmodeling/scripts/native_acis.py",
+      "sha256": "14efb7ac9055f0d67bc8eb0585b317875766e5c61ad01896b1bee33f5e010883"
+    },
+    {
+      "path": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c156-build-01/source/source-job-r01.json",
+      "sha256": "6f05bf5ac7c00cdd16dd9cec28f7b7ca76c697c2dbbc19461426c59550dcf11c"
+    }
+  ],
+  "c156_job_observation": {
+    "job_id": "c156-iso7089-m6-annular-reference-r01",
+    "part_id": "C156",
+    "part_name": "ISO 7089 M6 plain washer, proposed 300 HV",
+    "source_readiness": "SOURCE_READY",
+    "annular_dimensions_mm": {
+      "bore_diameter": 6.4,
+      "outside_diameter": 12.0,
+      "thickness": 1.6
+    },
+    "frame": "Center at (0,0), annular axis along +Z, datum plane at z=0.",
+    "identity_check": "The current parts-index entry matches the job's ID and exact readable name. The source job resolves with three feature observations and the pinned source hash above.",
+    "live_model_gate": "Parent-reported read-only whole-project preflight passed: source hash, exact 95-file inventory, dependencies and Start1-only state. This review did not rerun that native/session check."
+  },
+  "test_run": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=scripts python3 -m unittest discover -s tests -p 'test_annular_job_runner.py' -v",
+    "result": "PASS",
+    "passed": 14,
+    "failed": 0
+  },
+  "reviewed_controls": [
+    "The runner resolves and validates the exact part job, three dimension source locators, source hashes, readiness, geometry parameters and request labels before native work.",
+    "Source pins are rechecked before mutation. Output collisions, prior receipts, non-portable document paths and invalid source/model gates block the write.",
+    "The exact component model gate uses the full project inventory and is repeated immediately before isolated document creation.",
+    "SAB dependencies are imported before session mutation. Mutation requests use stable request identities and same-request recovery rather than replaying uncertain writes.",
+    "Native reads require the requested handle, Solid3D type and stable active-document/revision state.",
+    "Pre-save SAT geometry is treated as provisional; reopened SAB checks analytic annular features, boundary loops and closed topology. Pre-save to reopened point persistence is compared one-to-one.",
+    "Save receipts check output hash, entity manifest and dropped-entity count. The successful path cleans up owned documents and preserves unrelated documents.",
+    "Image identity is recorded separately as NOT_ASSESSED rather than being treated as geometry validation."
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "P2",
+      "location": "scripts/annular_job_runner.py:106-121",
+      "finding": "model_gate selects the unique index row by part_id and validates its action/model/candidate/configuration state, but does not compare the row's readable part_name to the source job's part_name. A same-ID row with a changed product name could pass the final gate and allow construction under a mismatched identity.",
+      "c156_disposition": "No current C156 mismatch: the index row and source job have the same ID and exact readable name.",
+      "suggested_followup": "Add an exact readable-name comparison in the gate and a synthetic test that rejects a same-ID, wrong-name row."
+    },
+    {
+      "id": "F2",
+      "severity": "P2",
+      "location": "scripts/annular_job_runner.py:608-615",
+      "finding": "The execute exception path writes a failure receipt and rethrows, but does not inspect or close an owned construction document if failure occurs after isolated-document creation. Replay is blocked, which prevents duplicate construction, but a mid-run failure or uncertain create result can leave an owned document active.",
+      "c156_disposition": "This is a failure-path operational gap, not a blocker in the reviewed C156 success path. The parent reports the read-only start gate passed; this review made no native call.",
+      "suggested_followup": "Use same-request state recovery and a guarded owned-document cleanup path after a recorded failure, without resubmitting mutation requests; add focused execute-path tests."
+    }
+  ],
+  "coverage_note": "The 14 focused tests are synthetic unit tests for gates, source changes, request labels, epochs and persistence matching. They do not exercise a complete execute/save/reopen/cleanup flow against OCS or a real retained C156 job. This is a coverage limitation, not a failing test.",
+  "native_execution": "NONE",
+  "review_artifact": "/tmp/annular-runner-independent-review.json"
+}

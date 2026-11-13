@@ -372,9 +372,9 @@ Original source: [${MODELING_ROOT}/scripts/component_records.py](../../scripts/c
 
 Summary: Component-led execution source: actual reusable implementation, source-readiness/action job record, tests, skill guidance or retained FERME source. Evidence stage and observed results are detailed in execution/2026-11-12-component-led.md.
 
-Evidence: authored_document_or_code_inspected, local_implementation_or_execution_record_inspected, local_source_or_executed_inspection.
+Evidence: authored_document_or_code_inspected, local_implementation_or_execution_record_inspected, local_source_or_executed_inspection, existing_helper_inspected_and_reused.
 
-Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json, research/sources/round-18/dxf-inspection-sources.json.
+Documents: research/sources/round-09/component-execution-sources.json, research/sources/round-17/source-intake-sources.json, research/sources/round-18/dxf-inspection-sources.json, research/sources/annular-job-runner-2026-11-13.json, skills/cad-ocs-engineering/references/component-procedure.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-0697ecbb0ad0"></a>
 
@@ -1944,9 +1944,9 @@ Original source: [${MODELING_ROOT}/scripts/native_acis.py](../../scripts/native_
 
 Summary: Uses ezdxf1.4.5 parse_sab to traverse the actual single ACIS700 body graph, collect referenced planes/cylinders/points, and check closed reciprocal edge partners. Reports ACIS units metadata separately and rejects unsupported transforms/surfaces.
 
-Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected, implementation_artifact, implementation_exercised_on_saved_native_geometry.
+Evidence: local_execution_evidence_inspected, local_source_or_execution_record_inspected, implementation_artifact, implementation_exercised_on_saved_native_geometry, existing_reader_inspected_and_reused_by_route.
 
-Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-20/component-sources.json, research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md, skills/cad-ocs-engineering/SKILL.md.
+Documents: research/sources/round-12/saved-rail-reader-sources.json, research/sources/round-14/bearing-sources.json, research/sources/round-15/leaf-sources.json, research/sources/round-16/driver-sources.json, research/sources/round-20/component-sources.json, research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md, skills/cad-ocs-engineering/SKILL.md, research/sources/annular-job-runner-2026-11-13.json, skills/cad-ocs-engineering/references/annular-reference.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-2626ebf073f7"></a>
 
@@ -12828,9 +12828,9 @@ Original source: [${MODELING_ROOT}/scripts/step_placements.py](../../scripts/ste
 
 Summary: Exercised AP214 frame reader detects unique inverse matches,round-trips proposed native fields and traverses bounded single-insert unit-scale zero-base block trees. Includes identity-SAT point reader used for pre-save comparison.
 
-Evidence: implementation_artifact.
+Evidence: implementation_artifact, existing_reader_inspected_and_reused_by_route.
 
-Documents: research/sources/round-20/component-sources.json.
+Documents: research/sources/round-20/component-sources.json, research/sources/round-29/resumed-component-sources.json, research/sources/annular-job-runner-2026-11-13.json, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-f052fe7cc9cb"></a>
 
@@ -16428,9 +16428,9 @@ Original source: [${MODELING_ROOT}/scripts/cadtools/verification.py](../../scrip
 
 Summary: Offline feature checks and explicit live save/reopen checks.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, existing_runtime_inspected_and_reused_by_route.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, research/sources/annular-job-runner-2026-11-13.json, scripts/cadtools/NOTICE.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-2d515a15b8e7"></a>
 
@@ -16476,9 +16476,9 @@ Original source: [${MODELING_ROOT}/scripts/annular_reference.py](../../scripts/a
 
 Summary: Build and check a source-bound annular solid reference.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, existing_helper_reused_by_runner_design.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, research/sources/annular-job-runner-2026-11-13.json, execution/annular-reference-helper-2026-11-13.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-4b20bd4fb621"></a>
 
@@ -16692,9 +16692,9 @@ Original source: [${MODELING_ROOT}/scripts/cadtools/geometry.py](../../scripts/c
 
 Summary: OCS recipes adapted from ngv064_ocs.py and item_ocs_parts.py.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, existing_runtime_inspected_and_reused_by_route.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, research/sources/annular-job-runner-2026-11-13.json, scripts/cadtools/NOTICE.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-8da213acf424"></a>
 
@@ -16716,9 +16716,9 @@ Original source: [${MODELING_ROOT}/scripts/source_metadata.py](../../scripts/sou
 
 Summary: Compare string metadata with an actual native entity record.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, existing_helper_inspected_and_reused_by_route.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, research/sources/annular-job-runner-2026-11-13.json, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-9480873c9e5a"></a>
 
@@ -16728,9 +16728,9 @@ Original source: [${MODELING_ROOT}/scripts/cadtools/runtime.py](../../scripts/ca
 
 Summary: Guarded OCS adapter; extracted from the inspected ocs_control/NGV workflow.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, existing_runtime_inspected_and_reused_by_route.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, research/sources/annular-job-runner-2026-11-13.json, scripts/cadtools/NOTICE.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-94eb405ef343"></a>
 
@@ -16872,9 +16872,9 @@ Original source: [${MODELING_ROOT}/scripts/ocs_document_cleanup.py](../../script
 
 Summary: Safely close one active OCS document owned by a completed CAD job.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, existing_helper_inspected_and_reused_by_route.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, research/sources/annular-job-runner-2026-11-13.json, skills/cad-ocs-engineering/references/document-cleanup.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-e4457f692304"></a>
 
@@ -16908,9 +16908,9 @@ Original source: [${MODELING_ROOT}/scripts/envelope_job_runner.py](../../scripts
 
 Summary: Run an external source-bound envelope job through guarded OCS APIs.
 
-Evidence: local_artifact_inspected_and_registered.
+Evidence: local_artifact_inspected_and_registered, existing_helper_inspected_and_reused.
 
-Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md.
+Documents: research/sources/tooling-registration-2026-11-13.json, docs/tools.md, skills/README.md, execution/tooling-registration-2026-11-13.md, research/sources/annular-job-runner-2026-11-13.json, skills/cad-ocs-engineering/references/envelope-job-runner.md, execution/annular-job-runner-2026-11-13.md.
 
 <a id="src-ea5cca4068c6"></a>
 
@@ -17148,9 +17148,9 @@ Original source: [${MODELING_ROOT}/scripts/annular_job_runner.py](../../scripts/
 
 Summary: Caller-supplied source pins, dimensions in millimetres, +Z annular frame and paths feed the existing geometry, OCS transport and persistence helpers; default preflight is read-only and native execution requires --allow-write.
 
-Evidence: local_artifact_inspected_and_tested.
+Evidence: local_artifact_inspected_and_tested, implementation_artifact_native_use_pending.
 
-Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md.
+Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md, research/sources/annular-job-runner-2026-11-13.json, execution/annular-job-runner-2026-11-13.md, skills/cad-ocs-engineering/references/annular-job-runner.md.
 
 <a id="src-7cdf74680cbf"></a>
 
@@ -17160,9 +17160,9 @@ Original source: [${MODELING_ROOT}/skills/cad-ocs-engineering/references/annular
 
 Summary: Documents source/readiness inputs, caller-owned roots, units/frame, guarded execution, native and saved evidence, cleanup and recovery.
 
-Evidence: local_artifact_inspected_and_tested.
+Evidence: local_artifact_inspected_and_tested, documented_procedure.
 
-Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md.
+Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md, research/sources/annular-job-runner-2026-11-13.json, execution/annular-job-runner-2026-11-13.md, skills/cad-ocs-engineering/SKILL.md.
 
 <a id="src-afde8243a693"></a>
 
@@ -17172,6 +17172,66 @@ Original source: [${MODELING_ROOT}/tests/test_annular_job_runner.py](../../tests
 
 Summary: Fourteen existing tests exercise model reuse gates, source pin changes, request identities, replay receipts, point persistence and read-only preflight.
 
-Evidence: local_artifact_inspected_and_tested.
+Evidence: local_artifact_inspected_and_tested, executed_synthetic_tests.
 
-Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md.
+Documents: research/sources/skill-synchronisation-2026-11-13.json, execution/skill-synchronisation-2026-11-13.md, docs/tools.md, skills/README.md, research/sources/annular-job-runner-2026-11-13.json, execution/annular-job-runner-2026-11-13.md.
+
+<a id="src-33d3e8961151"></a>
+
+## SRC-33d3e8961151 — Actual-file component start check
+
+Original source: [${MODELING_ROOT}/scripts/model_inventory.py](../../scripts/model_inventory.py)
+
+Summary: Reads manifest and work-record model/output/native_model paths, sheet links and filesystem files. Returns skip, locate, review or new-model action without opening CAD.
+
+Evidence: implementation_artifact, existing_helper_inspected_and_reused.
+
+Documents: research/sources/round-31/model-inventory-sources.json, research/sources/annular-job-runner-2026-11-13.json, skills/cad-ocs-engineering/references/existing-model-start-check.md, execution/annular-job-runner-2026-11-13.md.
+
+<a id="src-0b0b1369ecea"></a>
+
+## SRC-0b0b1369ecea — Existing annular geometry helper tests
+
+Original source: [${MODELING_ROOT}/tests/test_annular_reference.py](../../tests/test_annular_reference.py)
+
+Summary: Eight earlier synthetic tests cover annular parameter validation, native analytic observations, stored source metadata and document/revision binding. These tests validate the geometry helper; they do not execute the new job runner against OCS.
+
+Evidence: existing_test_suite_inspected.
+
+Documents: research/sources/annular-job-runner-2026-11-13.json, execution/annular-reference-helper-2026-11-13.md, execution/annular-job-runner-2026-11-13.md.
+
+<a id="src-90e59b81045e"></a>
+
+## SRC-90e59b81045e — Failed OCS guide request requiring request_id
+
+Original source: [${MODELING_ROOT}/execution/ocs-guide-request-2026-11-13.json](../../execution/ocs-guide-request-2026-11-13.json)
+
+Summary: The recorded guide request returned status failed with code request_id_required and the message to supply a unique request_id of at most 128 bytes. No CAD action was executed from this request, and it was not retried.
+
+Evidence: failed_request_no_cad_action_not_retried.
+
+Documents: research/sources/annular-job-runner-2026-11-13.json, execution/annular-job-runner-2026-11-13.md.
+
+<a id="src-16363af2214a"></a>
+
+## SRC-16363af2214a — Annular runner package completion
+
+Original source: [${MODELING_ROOT}/execution/annular-runner-package-checks-2026-11-13.json](../../execution/annular-runner-package-checks-2026-11-13.json)
+
+Summary: Root finalize and verify passed synchronization, source coverage,14 lifecycle tests,1 source-registration test and5 isolated install tests; optional descriptor-dependent state test skipped.
+
+Evidence: executed_package_checks.
+
+Documents: research/sources/annular-runner-completion-2026-11-13.json, execution/annular-job-runner-2026-11-13.md.
+
+<a id="src-a0ed5b9f2ffe"></a>
+
+## SRC-a0ed5b9f2ffe — Independent annular runner review
+
+Original source: [${MODELING_ROOT}/execution/annular-runner-independent-review-2026-11-13.json](../../execution/annular-runner-independent-review-2026-11-13.json)
+
+Summary: Luna reviewed the frozen runner and source binding, reran14passing tests and matched current M6 source identity. Findings: readable names are reviewed externally to the ID gate; failed native constructions retain partial documents for bounded recovery.
+
+Evidence: executed_local_review.
+
+Documents: research/sources/annular-runner-completion-2026-11-13.json, execution/annular-job-runner-2026-11-13.md.

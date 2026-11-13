@@ -1,0 +1,6 @@
+{
+  "code": "request_id_required",
+  "error": "Supply a unique request_id (maximum 128 bytes)",
+  "ok": false,
+  "status": "failed"
+}

@@ -1,0 +1,202 @@
+{
+  "title": "Source-bound annular job runner",
+  "date": "2026-11-13",
+  "implementation_model": "gpt-6-luna",
+  "coordinator_model": "gpt-6.1-sol",
+  "summary": "Reusable caller-driven workflow for source-pinned annular jobs. It performs read-only source and model preflight by default; an explicit write flag enables one isolated guarded construction, source metadata and native readback, save/reopen persistence checks and owned-document cleanup. Synthetic runner tests passed; native use of this runner remains pending.",
+  "records": [
+    {
+      "local_original": "scripts/annular_job_runner.py",
+      "title": "Annular job runner implementation",
+      "summary": "Resolves source-job feature paths through caller-supplied named roots, validates annular inputs, rechecks source hashes and selected model inventory before the first mutation, and provides read-only preflight by default. The guarded write route creates one isolated document, captures before save, retains raw entity and SAB evidence before decoding, checks geometry/metadata/persistence, and closes the completed owned documents.",
+      "sha256": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa",
+      "observation_date": "2026-11-13",
+      "evidence_status": "implementation_artifact_native_use_pending",
+      "referring_documents": [
+        "execution/annular-job-runner-2026-11-13.md",
+        "skills/cad-ocs-engineering/references/annular-job-runner.md",
+        "docs/tools.md"
+      ]
+    },
+    {
+      "local_original": "tests/test_annular_job_runner.py",
+      "title": "Annular job runner synthetic tests",
+      "summary": "Fourteen executed synthetic tests cover default no-mutation preflight, source-hash changes before construction, exact inventory row/configuration selection, existing-model and candidate rejection, output and replay receipts, request-ID bounds, read-epoch checks and one-to-one point persistence at the caller tolerance.",
+      "sha256": "ca9bff5b8ea8b64a4cc0283d752a51225e5e8cc5059408e3dec2489f41800e70",
+      "observation_date": "2026-11-13",
+      "evidence_status": "executed_synthetic_tests",
+      "test_command": "python3 -m unittest tests.test_annular_job_runner -v",
+      "test_result": "PASS",
+      "test_count": 14,
+      "referring_documents": [
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "skills/cad-ocs-engineering/references/annular-job-runner.md",
+      "title": "Annular job runner procedure",
+      "summary": "Documents external job and CLI inputs, read-only preflight, explicit guarded execution, source and model gates, saved native evidence, recovery and cleanup scope.",
+      "sha256": "c7120226153ad0c3719a7c7efc1f1ae3812fa6fde38fdcf0e8ff56a326364270",
+      "observation_date": "2026-11-13",
+      "evidence_status": "documented_procedure",
+      "referring_documents": [
+        "execution/annular-job-runner-2026-11-13.md",
+        "skills/cad-ocs-engineering/SKILL.md",
+        "skills/README.md"
+      ]
+    },
+    {
+      "local_original": "scripts/annular_reference.py",
+      "title": "Annular geometry builder and checks",
+      "summary": "Existing shared helper constructs a plain annulus from the caller's source-bound bore, outside diameter, thickness and frame; it checks analytic cylinders, end planes, boundary loops, connected topology and stored metadata.",
+      "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_helper_reused_by_runner_design",
+      "referring_documents": [
+        "execution/annular-reference-helper-2026-11-13.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/envelope_job_runner.py",
+      "title": "Existing guarded job-runner utilities",
+      "summary": "Provides reused caller-root resolution, portable locators, output/replay checks, audit and save-receipt validation, SAB import preflight, same-request recovery and owned-document cleanup orchestration.",
+      "sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_helper_inspected_and_reused",
+      "referring_documents": [
+        "skills/cad-ocs-engineering/references/envelope-job-runner.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/model_inventory.py",
+      "title": "Existing component model inventory",
+      "summary": "Scans attributed CAD files and candidates and selects the exact component/configuration row used by the annular runner's prewrite gate.",
+      "sha256": "26fbc6993ef05133a02e9eacf3888be14f781c381176e8a39ba1f9026154f878",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_helper_inspected_and_reused",
+      "referring_documents": [
+        "skills/cad-ocs-engineering/references/existing-model-start-check.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/component_records.py",
+      "title": "Existing source readiness and action records",
+      "summary": "Validates external source-feature coverage and pinned file hashes; supplies the existing append-only action-occurrence writer used by the annular workflow.",
+      "sha256": "7a7a4685b51e2dcce8b6b5a51193916ec5912eabee2205bd6f3b7db63d2462b9",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_helper_inspected_and_reused",
+      "referring_documents": [
+        "skills/cad-ocs-engineering/references/component-procedure.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/cadtools/runtime.py",
+      "title": "Existing guarded OCS client and journal",
+      "summary": "Provides document-bound Client and append-only Journal request identities, state checks and same-ID recovery used by the annular runner.",
+      "sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_runtime_inspected_and_reused_by_route",
+      "referring_documents": [
+        "scripts/cadtools/NOTICE.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/cadtools/geometry.py",
+      "title": "Existing guarded OCS geometry adapter",
+      "summary": "Provides the existing cylinder, subtraction and source-metadata operations used by annular_reference; request labels are bounded by the Client namespace limit.",
+      "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_runtime_inspected_and_reused_by_route",
+      "referring_documents": [
+        "scripts/cadtools/NOTICE.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/cadtools/verification.py",
+      "title": "Existing OCS save/reopen verifier",
+      "summary": "Audits and saves a new DWG, reopens it and checks saved and reopened entity manifests and file hashes.",
+      "sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_runtime_inspected_and_reused_by_route",
+      "referring_documents": [
+        "scripts/cadtools/NOTICE.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/source_metadata.py",
+      "title": "Existing native source-metadata comparison",
+      "summary": "Compares the job's expected source identity/frame strings with the native entity metadata stored by the geometry adapter.",
+      "sha256": "73fc526330ef42c2992b8ae45903c364c4e7af85d14ad2af4de92b2cac1848a1",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_helper_inspected_and_reused_by_route",
+      "referring_documents": [
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/native_acis.py",
+      "title": "Existing native ACIS/SAB feature reader",
+      "summary": "Reads saved analytic annulus surfaces, end-face boundary loops and closed-body topology from native SAB records after the runner retains the raw record and SAB bytes.",
+      "sha256": "14efb7ac9055f0d67bc8eb0585b317875766e5c61ad01896b1bee33f5e010883",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_reader_inspected_and_reused_by_route",
+      "referring_documents": [
+        "skills/cad-ocs-engineering/references/annular-reference.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/step_placements.py",
+      "title": "Existing SAT vertex observation utility",
+      "summary": "Supplies the existing identity-transform SAT vertex reader as a pre-save point-observation fallback when a construction record does not expose SAB before saving.",
+      "sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_reader_inspected_and_reused_by_route",
+      "referring_documents": [
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "scripts/ocs_document_cleanup.py",
+      "title": "Existing owned-document cleanup checks",
+      "summary": "Closes only caller-identified owned documents after matching saved-file hash, persistence receipt and geometry epoch; checks preservation of other open tabs.",
+      "sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_helper_inspected_and_reused_by_route",
+      "referring_documents": [
+        "skills/cad-ocs-engineering/references/document-cleanup.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "tests/test_annular_reference.py",
+      "title": "Existing annular geometry helper tests",
+      "summary": "Eight earlier synthetic tests cover annular parameter validation, native analytic observations, stored source metadata and document/revision binding. These tests validate the geometry helper; they do not execute the new job runner against OCS.",
+      "sha256": "7d6c5a4de342589cbf07229af2fdfb27f09437dfcfc9c551c35dcb2aed6164a0",
+      "observation_date": "2026-11-13",
+      "evidence_status": "existing_test_suite_inspected",
+      "referring_documents": [
+        "execution/annular-reference-helper-2026-11-13.md",
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    },
+    {
+      "local_original": "execution/ocs-guide-request-2026-11-13.json",
+      "title": "Failed OCS guide request requiring request_id",
+      "summary": "The recorded guide request returned status failed with code request_id_required and the message to supply a unique request_id of at most 128 bytes. No CAD action was executed from this request, and it was not retried.",
+      "sha256": "371339e5b10d8acd5eca283d87b5a677d054bbab41a0c19b4a05786610dfdfae",
+      "observation_date": "2026-11-13",
+      "evidence_status": "failed_request_no_cad_action_not_retried",
+      "referring_documents": [
+        "execution/annular-job-runner-2026-11-13.md"
+      ]
+    }
+  ]
+}
