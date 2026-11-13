@@ -1,0 +1,63 @@
+{
+  "subject": "Required skill-building registration and package completion",
+  "date": "2026-11-13",
+  "scope": "APPLY: approved script registration and package synchronisation plan",
+  "sources": [
+    {
+      "local_original": "scripts/build_skill_packages.py",
+      "original_revision": "bc6a53a",
+      "original_sha256": "63a4554aa0b4a5bed00c07d5694f7e9aaddd5376f31200deb36f1abe7df1b296",
+      "title": "Existing skill package builder",
+      "summary": "Reused source discovery, per-package copying and source/hash manifests; extended registration, dependency traversal and completion gates.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local_source_inspected_and_reused",
+      "referring_documents": [
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    },
+    {
+      "local_original": "scripts/package_check.py",
+      "original_revision": "bc6a53a",
+      "original_sha256": "427f7255ad6a5eba935772c1bb36a2a7c8ce45928e283a9a4d7b1ea47118f990",
+      "title": "Existing installed package checker",
+      "summary": "Reused packaged hashes, isolated imports, pinned dependencies and optional read-only OCS state check; kept CAD-only runtime imports conditional.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local_source_inspected_and_reused",
+      "referring_documents": [
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    },
+    {
+      "local_original": "tests/test_skill_packages.py",
+      "original_revision": "bc6a53a",
+      "original_sha256": "068fdb4429ff0e46370ec26eb565f5310925a9c62bbeba2d0723d6362f46f7fb",
+      "title": "Existing isolated skill installation suite",
+      "summary": "Reused actual local CLI copy installations, isolated Python environments, local-link and import checks, intake/DXF fixtures and optional state check.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local_source_inspected_and_reused",
+      "referring_documents": [
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    },
+    {
+      "local_original": "skills/cad-ocs-engineering/SKILL.md",
+      "original_revision": "bc6a53a",
+      "original_sha256": "33459c74b485961ac0de7c7e8189212a2c00a015248287081d734db269a4be1c",
+      "title": "Current component development workflow",
+      "summary": "Added mandatory package completion and validation before recording a reusable tooling improvement complete.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "local_source_inspected_and_reused",
+      "referring_documents": [
+        "execution/skill-completion-gate-2026-11-13.md",
+        "docs/skill-packaging.md",
+        "skills/cad-ocs-engineering/references/package-completion.md"
+      ]
+    }
+  ]
+}

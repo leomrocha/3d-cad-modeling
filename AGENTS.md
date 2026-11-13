@@ -92,6 +92,10 @@ Use this context only when the task concerns the prototype. It does not expand a
 
 ## Calculations, implementation and CAD
 
+### Required skill-building completion
+
+After creating, changing or deleting reusable Python helpers, package dependencies or skill instructions in this source repository, run `python3 scripts/build_skill_packages.py --finalize`. Supply existing `SKILLS_CLI_ROOT` and `NATIVE_READER_ROOT` directories, or the equivalent CLI options. The operation assigns new generic helpers to the CAD package, follows local imports for the smaller skills, regenerates package files and source/hash manifests, and requires lifecycle and isolated installation checks. Run `--verify` for read-only final validation and record its actual PASS result before reporting the tooling improvement complete. Missing test prerequisites, stale files and failed checks keep that improvement incomplete. Include canonical source and generated copies in the same authorized result batch; preserve unrelated concurrent work. [Completion procedure](skills/cad-ocs-engineering/references/package-completion.md).
+
 1. Reuse existing code, methods, libraries, models and data before implementing replacements. Inspect actual files and document sources and changes. Preserve licences and attribution.
 2. Before an authorized calculation or implementation, identify the requirement, inputs, units, source evidence, method, affected files and verification. Do not introduce numerical assumptions silently.
 3. Every engineering value needs a component, units, source and status: measured value, manufacturer/seller claim, assumed input or calculated result. Include the operating conditions needed to interpret it.
