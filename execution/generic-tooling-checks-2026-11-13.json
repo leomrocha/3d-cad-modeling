@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-13",
+  "coordinator_model": "gpt-6.1-sol",
+  "worker_models": "gpt-6-luna",
+  "result": "PASS for reviewed generic helpers",
+  "regression_results": {
+    "reference_envelope": {
+      "passed": 8,
+      "fixtures": "synthetic"
+    },
+    "calibrated_trace": {
+      "passed": 6,
+      "fixtures": "synthetic"
+    },
+    "assembly_units": {
+      "passed": 6,
+      "fixtures": "synthetic"
+    },
+    "existing_saved_point_comparator": {
+      "passed": 3,
+      "fixtures": "existing recorded case at unchanged active paths"
+    }
+  },
+  "new_component_outputs": "FERME",
+  "migration_actions": 0,
+  "source_hashes": "PASS",
+  "json_reparse": "PASS"
+}

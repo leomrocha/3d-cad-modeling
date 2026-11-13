@@ -1,0 +1,112 @@
+[
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/scripts/envelope_reference.py",
+    "title": "Generic source-bound envelope implementation",
+    "summary": "External source/job inputs, guarded native extrusion and document/handle/revision-bound readback.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "implementation_artifact",
+    "sha256": "d562c483c2c779101e1ab1840696de1425b66b7a1cf7bf4e117c0cd6aa608471",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/tests/test_envelope_reference.py",
+    "title": "Synthetic envelope regression cases",
+    "summary": "Eight synthetic cases exercise input validation, emitted geometry parameters, extrema and record identity/revision rejection.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "executed_synthetic_regression_source",
+    "sha256": "f7dc11e846574433414a52939bf2374d7f2f0dcce87ebac66a0b1230c0910da6",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/envelope-reference.md",
+    "title": "Reference-volume procedure",
+    "summary": "Defines supported millimetres/frame/role inputs, source pinning, native readback and external result ownership.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "applied_generic_procedure",
+    "sha256": "a33459f289d62ea4243ad11404c01d9033226597fe51f160656944525882be62",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/scripts/calibrated_trace.py",
+    "title": "Generic calibrated image-point mapping",
+    "summary": "Signed axis scaling with point/origin/scale uncertainty, complete product-error bound and finite result checks.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "implementation_artifact",
+    "sha256": "c6346c0b7d3a42d16c10c0330ad00a3d494e5d184021c1c0436efde0ea413343",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/tests/test_calibrated_trace.py",
+    "title": "Synthetic image calibration regressions",
+    "summary": "Six synthetic cases cover signed axes, interval endpoint containment, invalid coordinates/scales and uncertainty inputs.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "executed_synthetic_regression_source",
+    "sha256": "a4564ae19a88b6561e7ce4a59b47f7f08945cc5bce19df473d82fc29b0f76bc7",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/calibrated-trace.md",
+    "title": "Calibrated image trace procedure",
+    "summary": "External point calibration inputs and explicit coordinate uncertainty; actual image/point data stays in the component project.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "applied_generic_procedure",
+    "sha256": "c182e940899e958b012dfcb1e397269750c44008ca2e5a8ed2a429ccaa5ad363",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/scripts/assembly_units.py",
+    "title": "Generic assembly-root unit planner",
+    "summary": "Read-only complete-root planning from explicit units; scales position and positive uniform scales together, checks finite matrices.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "implementation_artifact",
+    "sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/tests/test_assembly_units.py",
+    "title": "Synthetic root-unit planning regressions",
+    "summary": "Six cases cover translation/rotation/scaling, invalid units and transforms, arrays, duplicate roots and whole-plan preflight.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "executed_synthetic_regression_source",
+    "sha256": "5f88c12c0fdf9423fe1a5212e540dec355384181d6b42120dbcb1ead2b4e3a7e",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/assembly-units.md",
+    "title": "Assembly unit-planning procedure",
+    "summary": "Preserves source unit evidence, supplied conversion definitions and separate native application/check records.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "applied_generic_procedure",
+    "sha256": "da183736a81a4204c69769e0e2a87a55912261ffc73addd13f6a4d12319c79e6",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  },
+  {
+    "local_source_path": "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md",
+    "title": "Generic tooling iteration review",
+    "summary": "Records shared algorithms, observed checks, review corrections, externally owned case evidence and active-path preservation.",
+    "observation_date": "2026-11-13",
+    "evidence_status": "executed_tooling_review",
+    "sha256": "ae92eef0554e781299696083ba964fb629ee0de4e9182c4f01888eab716314ce",
+    "referring_documents": [
+      "/home/leo/projects/3dmodeling/execution/generic-tooling-improvements-2026-11-13.md"
+    ]
+  }
+]
