@@ -57,6 +57,35 @@ class EnvelopeReferenceTests(unittest.TestCase):
             [[1.0, 2.0], [11.0, 2.0], [11.0, 7.0], [1.0, 7.0]], 3.0, 3.0)
         fake_geometry.metadata.assert_called_once()
 
+    def test_optional_envelope_scope_is_saved_and_returned(self):
+        self.job['envelope_scope'] = 'manufacturer nominal module dimensions'
+        fake_geometry = Mock()
+        fake_geometry.extrude.return_value = 'solid-handle'
+        with patch('envelope_reference.geometry', return_value=fake_geometry):
+            build_envelope(object(), self.job)
+        self.assertEqual(1, fake_geometry.metadata.call_count)
+        self.assertEqual(
+            ('synthetic source envelope source metadata', ['solid-handle'], [
+                'synthetic reference object',
+                'synthetic axis-aligned reference envelope',
+                'Reference envelope; units mm',
+                'Local frame: lower-corner origin; +X, +Y, +Z follow supplied dimensions',
+                'Source job: synthetic-reference-test',
+                'Envelope scope: manufacturer nominal module dimensions',
+            ]),
+            fake_geometry.metadata.call_args.args)
+        points = [[x, y, z] for x in (1, 11) for y in (2, 7) for z in (3, 6)]
+        result = verify({'points': points}, self.job)
+        self.assertEqual('manufacturer nominal module dimensions', result['envelope_scope'])
+
+    def test_invalid_supplied_envelope_scope_is_rejected_before_geometry_or_write(self):
+        self.job['envelope_scope'] = '  '
+        fake_geometry_factory = Mock()
+        with patch('envelope_reference.geometry', fake_geometry_factory):
+            with self.assertRaisesRegex(ValueError, 'envelope_scope'):
+                build_envelope(object(), self.job)
+        fake_geometry_factory.assert_not_called()
+
     def test_invalid_zero_dimension_is_rejected_before_geometry_or_write(self):
         self.job['features'][2]['value'] = 0
         fake_geometry_factory = Mock()
@@ -75,7 +104,9 @@ class EnvelopeReferenceTests(unittest.TestCase):
 
     def test_native_vertex_extrema_pass_and_changed_extent_fail(self):
         points = [[x, y, z] for x in (1, 11) for y in (2, 7) for z in (3, 6)]
-        self.assertEqual('PASS', verify({'points': points}, self.job)['result'])
+        result = verify({'points': points}, self.job)
+        self.assertEqual('PASS', result['result'])
+        self.assertNotIn('envelope_scope', result)
         altered = [[x, y, z] for x in (1, 10.99) for y in (2, 7) for z in (3, 6)]
         self.assertEqual('FAIL', verify({'points': altered}, self.job)['result'])
 

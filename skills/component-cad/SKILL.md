@@ -18,7 +18,8 @@ Use this skill when a real component job develops the reusable tools in this rep
 1. Preserve original source bytes, proposal/source labels, required features, units, local datums and assembly frame. `scripts/component_records.py JOB.json` checks required feature coverage and pinned source revisions. Its code/output contract is described in [the procedure](references/component-procedure.md).
 2. A required feature with a named unresolved input produces `NEEDS_INPUT`. Resolve that feature before dependent construction. The first FERME tube case has supplied 40 x 40 x 3 mm nominal dimensions and separate cut lengths; its corner profile requires the recorded source or task input. Keep the exact question with that feature.
 3. `SOURCE_READY` records input coverage. Native construction, geometry readback, saved-file persistence and visual checks produce their own results.
-4. For standard-defined features, read the [source-first and hollow-section procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md). Record stock lookup, standards search, source-access review and formula calculation as individual actions before binding the construction inputs.
+4. Before comparing drawing dimensions with native geometry, use the [drawing-feature check procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/drawing-feature-checks.md). Identify extension-line endpoints and match the measurement kind; keep hole pitch, full surface bounds and reachable-point extrema distinct in the result records.
+5. For standard-defined features, read the [source-first and hollow-section procedure](/home/leo/projects/3dmodeling/skills/component-cad/references/source-first-and-tube.md). Record stock lookup, standards search, source-access review and formula calculation as individual actions before binding the construction inputs.
 
 ## Execute and improve
 
