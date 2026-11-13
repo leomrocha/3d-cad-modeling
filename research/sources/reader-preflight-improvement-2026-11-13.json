@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-13",
+  "implementation_model": "gpt-6-luna",
+  "review_model": "gpt-6.1-sol",
+  "title": "Saved-body reader runtime preflight",
+  "local_path": "/home/leo/projects/3dmodeling/skills/component-cad/references/envelope-reference.md",
+  "sha256": "814e0f38fa9d728b55af0dbd4baa3b2c8239a0f6957149a58dbf8c17b5af525e",
+  "summary": "The envelope procedure checks the exact selected interpreter and Python path for SAB parser imports before native writes. This follows the executed reader-import failure after save/reopen and the successful read-only recovery using the already installed reader environment.",
+  "evidence_status": "documented_procedure_with_executed_dependency_import_check",
+  "checks": {
+    "runtime": "python3 with PYTHONPATH=/tmp/3dmodeling-native-reader",
+    "imports": [
+      "ezdxf.acis.sab.parse_sab",
+      "ezdxf.acis.sab.SabDataLoader"
+    ],
+    "ezdxf_version": "1.4.5",
+    "import_result": "PASS",
+    "skill_frontmatter_validation": "PASS"
+  },
+  "application_evidence": "/home/leo/projects/ferme/engineering/module-development/cad/work/component-led-2026-11-12/c055-build-01/execution-status.json",
+  "ferme_component_result_commit": "133dd29",
+  "referring_documents": [
+    "/home/leo/projects/3dmodeling/execution/reader-preflight-improvement-2026-11-13.md"
+  ]
+}
