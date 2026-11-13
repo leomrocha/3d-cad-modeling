@@ -1,0 +1,49 @@
+{
+  "records": [
+    {
+      "local_path": "scripts/model_inventory.py",
+      "title": "Configuration-scoped actual-model lookup",
+      "summary": "Reads selected/other configuration assignments, preserves existing selected-model reuse and unscoped candidate review, reports 2D references and supports a bounded CLI selector.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "implementation_artifact",
+      "sha256": "9e0f7c2d1932d5977de421303bb53c35410536ff2497cdf7cffb13f9383ffa61",
+      "referring_documents": [
+        "execution/configuration-model-reuse-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "tests/test_model_inventory.py",
+      "title": "Configuration reuse regression",
+      "summary": "Twenty-seven executed passing tests cover previous lookup behavior and configuration-specific skip/review/location, multi-part scope and preserved 2D reference roles.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_test_source",
+      "sha256": "7f4fd748224bbb52f232b0ef347b39b74719aadd721b75dd955ed6524dc9aa1e",
+      "referring_documents": [
+        "execution/configuration-model-reuse-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "skills/component-cad/references/existing-model-start-check.md",
+      "title": "Configuration-aware component start procedure",
+      "summary": "Documents explicit configuration declarations, selected-model reuse, unknown-candidate blocking and the remaining ordinary lookup route.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "procedure_update",
+      "sha256": "7bc99528c291973ea02108e0cfafc3c1ca52221a1598697042471e6ec3b819e3",
+      "referring_documents": [
+        "execution/configuration-model-reuse-2026-11-13.md"
+      ]
+    },
+    {
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c057-build-01/records/configuration-work-record-r01.json",
+      "title": "Pocket folded and unfolded configuration assignments",
+      "summary": "External component work record declares distinct named source configurations and canonical model paths so one existing envelope cannot suppress the unfinished other configuration.",
+      "registered_at": "2026-11-13",
+      "evidence_status": "inspected_local_case_input",
+      "sha256": "4cd012fdb00096d4e32061e2c150416267bd35d02e4c335a452c127c6377b4ca",
+      "original_url": "https://radiomasterrc.com/products/pocket-radio-controller-m2",
+      "referring_documents": [
+        "execution/configuration-model-reuse-2026-11-13.md"
+      ]
+    }
+  ]
+}

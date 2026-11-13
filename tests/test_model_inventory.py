@@ -72,5 +72,76 @@ class ExistingModelTests(unittest.TestCase):
     def test_unattributed_iges_candidate_requires_identity_review(self):
         p=self.cad/'parts/ZX1234.iges';p.write_text('IGES source fixture')
         self.assertEqual(self.check()['action'],'REVIEW_EXISTING_CANDIDATES')
+    def test_component_id_filename_candidate_requires_review(self):
+        p=self.cad/'parts/C001-existing.dwg';p.write_bytes(b'Possible component model')
+        self.assertEqual(self.check()['action'],'REVIEW_EXISTING_CANDIDATES')
+
+    def config_check(self,job,configuration):
+        return start_check(self.part,self.index,self.cad,inventory_models(self.root),job,configuration=configuration)
+    def test_selected_pending_configuration_proceeds_with_other_configuration_model(self):
+        alpha=self.cad/'parts/ZX1234-alpha.dwg';alpha.write_bytes(b'Alpha model')
+        job={'state':'DONE','configurations':[
+            {'name':'State Alpha','state':'DONE','native_model':str(alpha)},
+            {'name':'State Beta','state':'NOT_STARTED','native_model':'parts/ZX1234-beta.dwg'}]}
+        result=self.config_check(job,'State Beta')
+        self.assertEqual(result['action'],'NEW_MODEL_REQUIRED')
+        self.assertEqual(result['models'],[])
+        self.assertEqual(result['other_configuration_models'][0]['configuration'],'State Alpha')
+    def test_selected_existing_configuration_skips(self):
+        beta=self.cad/'parts/beta.dwg';beta.write_bytes(b'Beta model')
+        job={'configurations':[{'name':'State Alpha'},{'name':'State Beta','native_model':str(beta)}]}
+        result=self.config_check(job,'State Beta')
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL');self.assertEqual(result['models'][0]['path'],str(beta))
+    def test_known_selected_model_is_reused_with_other_candidates_reported(self):
+        beta=self.cad/'parts/beta.dwg';beta.write_bytes(b'Beta model')
+        candidate=self.root/'candidate-ZX1234.dwg';candidate.write_bytes(b'Other candidate')
+        job={'configurations':[{'name':'State Beta','native_model':str(beta)}]}
+        result=self.config_check(job,'State Beta')
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL')
+        self.assertEqual(result['candidates'][0]['path'],str(candidate))
+    def test_unscoped_candidate_blocks_selected_configuration(self):
+        beta=self.cad/'parts/beta.dwg';beta.write_bytes(b'Beta model')
+        candidate=self.root/'candidate-ZX1234.dwg';candidate.write_bytes(b'Unscoped candidate')
+        job={'configurations':[{'name':'State Alpha','native_model':str(beta)},{'name':'State Beta'}]}
+        result=self.config_check(job,'State Beta')
+        self.assertEqual(result['action'],'REVIEW_EXISTING_CANDIDATES')
+        self.assertEqual(result['candidates'][0]['path'],str(candidate))
+    def test_configuration_mode_preserves_2d_links_as_references(self):
+        drawing=self.cad/'2d_schemas/drawings/ZX1234-interface.dwg';drawing.parent.mkdir(parents=True);drawing.write_bytes(b'2D fixture')
+        selected=self.cad/'2d_schemas/drawings/ZX1234-selected-config.dwg';selected.write_bytes(b'Selected config 2D fixture')
+        self.part['existing_cad']='2d_schemas/drawings/ZX1234-interface.dwg'
+        job={'configurations':[{'name':'State Alpha'},{'name':'State Beta','native_model':str(selected)}]}
+        result=self.config_check(job,'State Beta')
+        self.assertEqual(result['action'],'NEW_MODEL_REQUIRED')
+        self.assertEqual({r['path'] for r in result['references_2d']},{str(drawing),str(selected)})
+    def test_configuration_audit_only_selects_requested_component(self):
+        second_sheet=self.root/'second.md';second_sheet.write_text('Second input')
+        model=self.cad/'parts/ZX5678-existing.dwg';model.write_bytes(b'Second component model')
+        first=dict(id='C001',name='Example ZX1234 component',file='part.md',existing_cad='')
+        second=dict(id='C002',name='Example ZX5678 component',file='second.md',existing_cad='parts/ZX5678-existing.dwg')
+        self.index.write_text(json.dumps([first,second]));work=self.root/'work.json'
+        work.write_text(json.dumps({'jobs':[
+            {'part_id':'C001','state':'NOT_STARTED','configurations':[{'name':'State Alpha'},{'name':'State Beta'}]},
+            {'part_id':'C002','state':'DONE'}]}))
+        result=audit(self.index,work,self.cad,self.root,configuration='State Beta',part_id='C001')
+        rows={row['part_id']:row for row in result['components']}
+        self.assertEqual(rows['C001']['configuration'],'State Beta')
+        self.assertEqual(rows['C001']['action'],'NEW_MODEL_REQUIRED')
+        self.assertEqual(rows['C002']['action'],'SKIP_EXISTING_MODEL')
+    def test_unknown_duplicate_and_missing_configurations_reject(self):
+        with self.assertRaisesRegex(ValueError,'Unknown configuration'):
+            self.config_check({'configurations':[{'name':'State Alpha'}]},'State Beta')
+        with self.assertRaisesRegex(ValueError,'Duplicate declared configuration'):
+            self.config_check({'configurations':[{'name':'State Beta'},{'name':'State Beta'}]},'State Beta')
+        with self.assertRaisesRegex(ValueError,'nonempty configurations list'):
+            self.config_check({'state':'DONE'},'State Beta')
+    def test_selected_done_configuration_with_missing_model_requires_location(self):
+        job={'state':'DONE','configurations':[{'name':'State Alpha'},{'name':'State Beta','state':'DONE','native_model':'parts/missing.dwg'}]}
+        self.assertEqual(self.config_check(job,'State Beta')['action'],'LOCATE_COMPLETED_MODEL')
+    def test_configured_audit_requires_id(self):
+        self.index.write_text(json.dumps([self.part]));work=self.root/'work.json'
+        work.write_text(json.dumps({'jobs':[{'part_id':'C001','configurations':[{'name':'State Alpha'}]}]}))
+        with self.assertRaisesRegex(ValueError,'requires --id'):
+            audit(self.index,work,self.cad,self.root,configuration='State Alpha')
 
 if __name__=='__main__':unittest.main()
