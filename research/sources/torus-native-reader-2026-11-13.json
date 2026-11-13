@@ -25,14 +25,16 @@
     },
     {
       "title": "Torus decoder tests",
-      "summary": "Four executed tests cover malformed tokens, numerical/frame guards, rigid mapping, explicit option enforcement and decoding of the retained four-patch native torus.",
+      "summary": "Four executed tests cover malformed tokens, numerical/frame guards, rigid mapping, explicit option enforcement and decoding of caller-supplied native torus fixtures and independent expected geometry; no component values or fixture locations are embedded.",
       "local_path": "tests/test_native_torus.py",
-      "sha256": "be0002467488f85c3d45391fd8905b5a895e54b134236f0429bbb7dc6b6b30f2",
+      "sha256": "5541258f1db31c27414a2b96d90bc4081d2b0783e22da41e66a0a75d26325785",
       "registered_at": "2026-11-13",
       "evidence_status": "implementation_artifact",
       "referring_documents": [
         "execution/torus-native-reader-2026-11-13.md"
-      ]
+      ],
+      "previous_sha256": "be0002467488f85c3d45391fd8905b5a895e54b134236f0429bbb7dc6b6b30f2",
+      "updated_at": "2026-11-13"
     },
     {
       "title": "Observed native torus binary",

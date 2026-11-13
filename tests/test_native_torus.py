@@ -1,5 +1,5 @@
 """Synthetic token guards and offline decoding of a retained native torus."""
-import copy
+import json
 import os
 import sys
 import unittest
@@ -43,26 +43,30 @@ class TorusTokenTests(unittest.TestCase):
 @unittest.skipUnless(Tags is not None, 'Requires caller-supplied native SAB reader')
 class RetainedTorusTests(unittest.TestCase):
     def data(self):
-        root=Path(os.environ.get('FERME_ROOT',Path(__file__).resolve().parents[2]/'ferme'))
-        p=root/'engineering/module-development/cad/work/component-led-2026-11-12/c071-build-01/reopened-entity.sab'
-        if not p.is_file():self.skipTest('Requires retained external native torus record')
-        return p.read_bytes()
+        path=os.environ.get('NATIVE_TORUS_SAB')
+        if not path:self.skipTest('Supply external NATIVE_TORUS_SAB fixture')
+        return Path(path).read_bytes()
 
     def test_torus_support_requires_explicit_option(self):
         with self.assertRaisesRegex(ValueError,'Unsupported surface: torus-surface'):
             sab_features(self.data())
 
     def test_saved_torus_surfaces_and_topology_decode(self):
+        expectation_path=os.environ.get('NATIVE_TORUS_EXPECTATIONS')
+        if not expectation_path:self.skipTest('Supply external torus geometry check record')
+        geometry=json.loads(Path(expectation_path).read_text())['geometry']
+        expected=geometry['checks'][0]['expected']
+        tolerance=geometry['numeric_tolerance_mm']
         features=sab_features(self.data(),allow_tori=True)
-        self.assertEqual(4,len(features['tori']))
+        self.assertTrue(features['tori'])
         for row in features['tori']:
-            self.assertAlmostEqual(71.25,row['major_radius'])
-            self.assertAlmostEqual(1.55,row['minor_radius'])
-            for v in row['center']:self.assertAlmostEqual(0.,v)
-            for a,b in zip(row['axis'],[0,0,1]):self.assertAlmostEqual(a,b)
+            self.assertAlmostEqual(expected['major_radius_mm'],row['major_radius'],delta=tolerance)
+            self.assertAlmostEqual(expected['minor_radius_mm'],row['minor_radius'],delta=tolerance)
+            for a,b in zip(row['center'],expected['center']):self.assertAlmostEqual(a,b,delta=tolerance)
+            for a,b in zip(row['axis'],expected['axis']):self.assertAlmostEqual(a,b,delta=tolerance)
         self.assertEqual(1,features['topology']['bodies'])
         self.assertTrue(features['topology']['reciprocal_closed_partners'])
-        self.assertEqual(4,len(features['points']))
+        self.assertTrue(features['points'])
         for family in ['planes','cylinders','spheres','cones']:
             self.assertFalse(features[family])
 
