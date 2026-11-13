@@ -38,6 +38,19 @@
       "referring_documents": [
         "execution/annular-reference-helper-2026-11-13.md"
       ]
+    },
+    {
+      "title": "Executed washer application of the annular helper",
+      "summary": "Saved native ring passed eight geometry comparisons including analytic radii/axes, cap planes, open end loops and connected-body topology; metadata and save/reopen persistence passed and the two owned documents closed.",
+      "local_path": "${FERME_ROOT}/engineering/module-development/cad/checks/component-results/component-led-2026-11-12/c067-build-01/result.json",
+      "sha256": "d3339094419d23d4cb6d3489e5874dde064cd33fb8cf09a47fbe7f283f714e02",
+      "registered_at": "2026-11-13",
+      "evidence_status": "executed_result",
+      "referring_documents": [
+        "execution/annular-reference-helper-2026-11-13.md"
+      ]
     }
-  ]
+  ],
+  "applied_shared_revision": "456e328",
+  "component_result_commit": "611b93e"
 }
