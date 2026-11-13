@@ -46644,12 +46644,265 @@
         "research/sources/circular-boundary-reader-2026-11-13.json",
         "execution/circular-boundary-reader-2026-11-13.md"
       ]
+    },
+    {
+      "id": "SRC-f36ae4007ec3",
+      "url": "https://agentskills.io/specification",
+      "local_source_path": null,
+      "title": "Agent Skills specification",
+      "summary": "Required SKILL.md metadata, name constraints and optional fields; recommended progressive disclosure and document size.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "delegated_web_inspection_report"
+      ],
+      "observations": [
+        {
+          "original_url": "https://agentskills.io/specification",
+          "title": "Agent Skills specification",
+          "summary": "Required SKILL.md metadata, name constraints and optional fields; recommended progressive disclosure and document size.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "delegated_web_inspection_report",
+          "provenance": "publishing_research agent; actual runtime model identity unavailable",
+          "referring_documents": [
+            "README.md",
+            "docs/index.md",
+            "docs/skill-packaging.md",
+            "execution/skills-installation-guide-2026-11-13.md"
+          ],
+          "url": "https://agentskills.io/specification",
+          "source_record_document": "research/sources/skills-compliance-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skills-compliance-2026-11-13.json",
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-9a9e59417d11",
+      "url": "https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md",
+      "local_source_path": null,
+      "title": "Creating skills",
+      "summary": "Skill discovery layouts and packaging conventions.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "delegated_web_inspection_report"
+      ],
+      "observations": [
+        {
+          "original_url": "https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md",
+          "title": "Creating skills",
+          "summary": "Skill discovery layouts and packaging conventions.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "delegated_web_inspection_report",
+          "provenance": "publishing_research agent; actual runtime model identity unavailable",
+          "referring_documents": [
+            "README.md",
+            "docs/index.md",
+            "docs/skill-packaging.md",
+            "execution/skills-installation-guide-2026-11-13.md"
+          ],
+          "url": "https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md",
+          "source_record_document": "research/sources/skills-compliance-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skills-compliance-2026-11-13.json",
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-eea8cf0cd544",
+      "url": "https://github.com/vercel-labs/skills/blob/main/docs/commands.md",
+      "local_source_path": null,
+      "title": "Skills CLI commands",
+      "summary": "Repository syntax, skill selection, copy installation and project/global scope.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "delegated_web_inspection_report"
+      ],
+      "observations": [
+        {
+          "original_url": "https://github.com/vercel-labs/skills/blob/main/docs/commands.md",
+          "title": "Skills CLI commands",
+          "summary": "Repository syntax, skill selection, copy installation and project/global scope.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "delegated_web_inspection_report",
+          "provenance": "publishing_research agent; actual runtime model identity unavailable",
+          "referring_documents": [
+            "README.md",
+            "docs/index.md",
+            "docs/skill-packaging.md",
+            "execution/skills-installation-guide-2026-11-13.md"
+          ],
+          "url": "https://github.com/vercel-labs/skills/blob/main/docs/commands.md",
+          "source_record_document": "research/sources/skills-compliance-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skills-compliance-2026-11-13.json",
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-3888c0e32096",
+      "url": "https://github.com/vercel-labs/skills",
+      "local_source_path": null,
+      "title": "Skills CLI README",
+      "summary": "Node.js >=22.20 and npm/npx prerequisites.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "delegated_web_inspection_report"
+      ],
+      "observations": [
+        {
+          "original_url": "https://github.com/vercel-labs/skills",
+          "title": "Skills CLI README",
+          "summary": "Node.js >=22.20 and npm/npx prerequisites.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "delegated_web_inspection_report",
+          "provenance": "publishing_research agent; actual runtime model identity unavailable",
+          "referring_documents": [
+            "README.md",
+            "docs/index.md",
+            "docs/skill-packaging.md",
+            "execution/skills-installation-guide-2026-11-13.md"
+          ],
+          "url": "https://github.com/vercel-labs/skills",
+          "source_record_document": "research/sources/skills-compliance-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skills-compliance-2026-11-13.json",
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-05bbfa90e9fa",
+      "url": "https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md",
+      "local_source_path": null,
+      "title": "Skills CLI troubleshooting",
+      "summary": "Telemetry environment settings.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "delegated_web_inspection_report"
+      ],
+      "observations": [
+        {
+          "original_url": "https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md",
+          "title": "Skills CLI troubleshooting",
+          "summary": "Telemetry environment settings.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "delegated_web_inspection_report",
+          "provenance": "publishing_research agent; actual runtime model identity unavailable",
+          "referring_documents": [
+            "README.md",
+            "docs/index.md",
+            "docs/skill-packaging.md",
+            "execution/skills-installation-guide-2026-11-13.md"
+          ],
+          "url": "https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md",
+          "source_record_document": "research/sources/skills-compliance-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skills-compliance-2026-11-13.json",
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-c22ddeb6403b",
+      "url": "https://www.skills.sh/docs/faq",
+      "local_source_path": null,
+      "title": "skills.sh FAQ",
+      "summary": "Automatic directory listing through installation telemetry.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "delegated_web_inspection_report"
+      ],
+      "observations": [
+        {
+          "original_url": "https://www.skills.sh/docs/faq",
+          "title": "skills.sh FAQ",
+          "summary": "Automatic directory listing through installation telemetry.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "delegated_web_inspection_report",
+          "provenance": "publishing_research agent; actual runtime model identity unavailable",
+          "referring_documents": [
+            "README.md",
+            "docs/index.md",
+            "docs/skill-packaging.md",
+            "execution/skills-installation-guide-2026-11-13.md"
+          ],
+          "url": "https://www.skills.sh/docs/faq",
+          "source_record_document": "research/sources/skills-compliance-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skills-compliance-2026-11-13.json",
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ]
+    },
+    {
+      "id": "SRC-cf7ca0e991c1",
+      "url": "https://github.com/vercel-labs/skills/issues/880",
+      "local_source_path": null,
+      "title": "Skills automatic indexing issue",
+      "summary": "Collaborator antfu confirms installation telemetry indexes skills automatically.",
+      "registered_at": "2026-11-13",
+      "evidence_statuses": [
+        "delegated_web_inspection_report"
+      ],
+      "observations": [
+        {
+          "original_url": "https://github.com/vercel-labs/skills/issues/880",
+          "title": "Skills automatic indexing issue",
+          "summary": "Collaborator antfu confirms installation telemetry indexes skills automatically.",
+          "observation_date": "2026-11-13",
+          "evidence_status": "delegated_web_inspection_report",
+          "provenance": "publishing_research agent; actual runtime model identity unavailable",
+          "referring_documents": [
+            "README.md",
+            "docs/index.md",
+            "docs/skill-packaging.md",
+            "execution/skills-installation-guide-2026-11-13.md"
+          ],
+          "url": "https://github.com/vercel-labs/skills/issues/880",
+          "source_record_document": "research/sources/skills-compliance-2026-11-13.json"
+        }
+      ],
+      "referring_documents": [
+        "research/sources/skills-compliance-2026-11-13.json",
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ]
     }
   ],
   "source_record_documents": [
     "research/sources/circular-boundary-reader-2026-11-13.json",
     "research/sources/conical-washer-profile-2026-11-13.json",
     "research/sources/skill-completion-gate-2026-11-13.json",
+    "research/sources/skills-compliance-2026-11-13.json",
     "research/sources/tooling-registration-2026-11-13.json"
   ]
 }

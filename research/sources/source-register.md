@@ -17055,3 +17055,87 @@ Summary: Finalize and final verify passed lifecycle, source-registration and iso
 Evidence: executed_package_completion_checks.
 
 Documents: research/sources/circular-boundary-reader-2026-11-13.json, execution/circular-boundary-reader-2026-11-13.md.
+
+<a id="src-f36ae4007ec3"></a>
+
+## SRC-f36ae4007ec3 — Agent Skills specification
+
+Original source: [https://agentskills.io/specification](https://agentskills.io/specification)
+
+Summary: Required SKILL.md metadata, name constraints and optional fields; recommended progressive disclosure and document size.
+
+Evidence: delegated_web_inspection_report.
+
+Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.
+
+<a id="src-9a9e59417d11"></a>
+
+## SRC-9a9e59417d11 — Creating skills
+
+Original source: [https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md](https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md)
+
+Summary: Skill discovery layouts and packaging conventions.
+
+Evidence: delegated_web_inspection_report.
+
+Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.
+
+<a id="src-eea8cf0cd544"></a>
+
+## SRC-eea8cf0cd544 — Skills CLI commands
+
+Original source: [https://github.com/vercel-labs/skills/blob/main/docs/commands.md](https://github.com/vercel-labs/skills/blob/main/docs/commands.md)
+
+Summary: Repository syntax, skill selection, copy installation and project/global scope.
+
+Evidence: delegated_web_inspection_report.
+
+Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.
+
+<a id="src-3888c0e32096"></a>
+
+## SRC-3888c0e32096 — Skills CLI README
+
+Original source: [https://github.com/vercel-labs/skills](https://github.com/vercel-labs/skills)
+
+Summary: Node.js >=22.20 and npm/npx prerequisites.
+
+Evidence: delegated_web_inspection_report.
+
+Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.
+
+<a id="src-05bbfa90e9fa"></a>
+
+## SRC-05bbfa90e9fa — Skills CLI troubleshooting
+
+Original source: [https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md](https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md)
+
+Summary: Telemetry environment settings.
+
+Evidence: delegated_web_inspection_report.
+
+Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.
+
+<a id="src-c22ddeb6403b"></a>
+
+## SRC-c22ddeb6403b — skills.sh FAQ
+
+Original source: [https://www.skills.sh/docs/faq](https://www.skills.sh/docs/faq)
+
+Summary: Automatic directory listing through installation telemetry.
+
+Evidence: delegated_web_inspection_report.
+
+Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.
+
+<a id="src-cf7ca0e991c1"></a>
+
+## SRC-cf7ca0e991c1 — Skills automatic indexing issue
+
+Original source: [https://github.com/vercel-labs/skills/issues/880](https://github.com/vercel-labs/skills/issues/880)
+
+Summary: Collaborator antfu confirms installation telemetry indexes skills automatically.
+
+Evidence: delegated_web_inspection_report.
+
+Documents: research/sources/skills-compliance-2026-11-13.json, README.md, docs/index.md, docs/skill-packaging.md, execution/skills-installation-guide-2026-11-13.md.

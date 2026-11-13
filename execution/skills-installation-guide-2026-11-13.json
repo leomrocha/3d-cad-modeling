@@ -1,0 +1,261 @@
+{
+  "source": "current local skill snapshot substituted for GitHub owner/repository; no network acquisition",
+  "cli": "1.8.1",
+  "telemetry": "disabled",
+  "dependencies": "offline cached original wheels installed with pip into fresh environments",
+  "guide_sha256": "e09a1dfd23917bfd80f7cea45a89e36a8b559e30d1950d4aa8d8b11979c055e9",
+  "checks": [
+    {
+      "skill": "cad-ocs-engineering",
+      "scope": "project",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 41,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-drawing-inspection",
+      "scope": "project",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-source-intake",
+      "scope": "project",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {}
+    },
+    {
+      "skill": "cad-ocs-engineering",
+      "scope": "project",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 41,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-drawing-inspection",
+      "scope": "project",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-source-intake",
+      "scope": "project",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {}
+    },
+    {
+      "skill": "cad-ocs-engineering",
+      "scope": "global",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 41,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-drawing-inspection",
+      "scope": "global",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-source-intake",
+      "scope": "global",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {}
+    },
+    {
+      "skill": "cad-ocs-engineering",
+      "scope": "global",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 41,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-drawing-inspection",
+      "scope": "global",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-source-intake",
+      "scope": "global",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {}
+    },
+    {
+      "skill": "cad-ocs-engineering",
+      "scope": "local",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 41,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-drawing-inspection",
+      "scope": "local",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-source-intake",
+      "scope": "local",
+      "mode": "copy",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {}
+    },
+    {
+      "skill": "cad-ocs-engineering",
+      "scope": "local",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 41,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-drawing-inspection",
+      "scope": "local",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {
+        "ezdxf": "1.4.5",
+        "fonttools": "4.68.0",
+        "numpy": "2.5.4",
+        "pyparsing": "3.3.3",
+        "typing_extensions": "4.16.0"
+      }
+    },
+    {
+      "skill": "cad-source-intake",
+      "scope": "local",
+      "mode": "symlink",
+      "result": "PASS",
+      "hashed_files": 7,
+      "dependencies": {}
+    }
+  ],
+  "date": "2026-11-13",
+  "coordinator": "gpt-6.1-sol",
+  "research_agent_model": "Actual runtime model identity unavailable",
+  "status": "DONE",
+  "current_worktree_gate": {
+    "result": "FAILED",
+    "error": [
+      "cad-ocs-engineering/scripts/annular_job_runner.py differs from canonical source",
+      "cad-ocs-engineering/package-manifest.json differs from canonical source"
+    ],
+    "scope": "Concurrent unfinished runner; preserved unchanged"
+  },
+  "verification_scope": "Tracked HEAD plus authorized guide/source-register batch; exclude unrelated concurrent untracked implementation",
+  "batch_verification": {
+    "result": "PASS",
+    "mode": "verify",
+    "scope": "Tracked code plus authorized guide/source-registration batch; unrelated concurrent untracked annular runner excluded",
+    "tests_passed": 20,
+    "tests_skipped": 1,
+    "skip_reason": "Optional live OCS state test requires caller-selected descriptor",
+    "synchronisation": "PASS",
+    "registrations": "PASS",
+    "isolated_installation_checks": "PASS"
+  },
+  "documentation_checks": {
+    "shell_examples": 16,
+    "local_links": 35,
+    "guide_sections_identical": true,
+    "existing_source_ids_and_observations_preserved": true,
+    "file_hashes": {
+      "README.md": "e09a1dfd23917bfd80f7cea45a89e36a8b559e30d1950d4aa8d8b11979c055e9",
+      "docs/index.md": "3360d47062b578a28b5920d195f2dad162f27a13b5065bfa9ff124b59136c6a7",
+      "docs/skill-packaging.md": "2012668991054a7645fad52c7de3d54f650c5b982de85625977f2bb07ba5716c"
+    }
+  },
+  "source_records_checked": 7
+}

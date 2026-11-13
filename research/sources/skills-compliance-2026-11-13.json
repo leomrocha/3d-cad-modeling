@@ -1,0 +1,113 @@
+{
+  "subject": "Skills format, installation, telemetry and guide audit sources",
+  "observation_date": "2026-11-13",
+  "audit_coordinator": "gpt-6.1-sol",
+  "research_agent_model": "Actual runtime model identity unavailable",
+  "sources": [
+    {
+      "original_url": "https://agentskills.io/specification",
+      "title": "Agent Skills specification",
+      "summary": "Required SKILL.md metadata, name constraints and optional fields; recommended progressive disclosure and document size.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "delegated_web_inspection_report",
+      "provenance": "publishing_research agent; actual runtime model identity unavailable",
+      "referring_documents": [
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ],
+      "url": "https://agentskills.io/specification"
+    },
+    {
+      "original_url": "https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md",
+      "title": "Creating skills",
+      "summary": "Skill discovery layouts and packaging conventions.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "delegated_web_inspection_report",
+      "provenance": "publishing_research agent; actual runtime model identity unavailable",
+      "referring_documents": [
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ],
+      "url": "https://github.com/vercel-labs/skills/blob/main/docs/creating-skills.md"
+    },
+    {
+      "original_url": "https://github.com/vercel-labs/skills/blob/main/docs/commands.md",
+      "title": "Skills CLI commands",
+      "summary": "Repository syntax, skill selection, copy installation and project/global scope.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "delegated_web_inspection_report",
+      "provenance": "publishing_research agent; actual runtime model identity unavailable",
+      "referring_documents": [
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ],
+      "url": "https://github.com/vercel-labs/skills/blob/main/docs/commands.md"
+    },
+    {
+      "original_url": "https://github.com/vercel-labs/skills",
+      "title": "Skills CLI README",
+      "summary": "Node.js >=22.20 and npm/npx prerequisites.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "delegated_web_inspection_report",
+      "provenance": "publishing_research agent; actual runtime model identity unavailable",
+      "referring_documents": [
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ],
+      "url": "https://github.com/vercel-labs/skills"
+    },
+    {
+      "original_url": "https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md",
+      "title": "Skills CLI troubleshooting",
+      "summary": "Telemetry environment settings.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "delegated_web_inspection_report",
+      "provenance": "publishing_research agent; actual runtime model identity unavailable",
+      "referring_documents": [
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ],
+      "url": "https://github.com/vercel-labs/skills/blob/main/docs/troubleshooting.md"
+    },
+    {
+      "original_url": "https://www.skills.sh/docs/faq",
+      "title": "skills.sh FAQ",
+      "summary": "Automatic directory listing through installation telemetry.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "delegated_web_inspection_report",
+      "provenance": "publishing_research agent; actual runtime model identity unavailable",
+      "referring_documents": [
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ],
+      "url": "https://www.skills.sh/docs/faq"
+    },
+    {
+      "original_url": "https://github.com/vercel-labs/skills/issues/880",
+      "title": "Skills automatic indexing issue",
+      "summary": "Collaborator antfu confirms installation telemetry indexes skills automatically.",
+      "observation_date": "2026-11-13",
+      "evidence_status": "delegated_web_inspection_report",
+      "provenance": "publishing_research agent; actual runtime model identity unavailable",
+      "referring_documents": [
+        "README.md",
+        "docs/index.md",
+        "docs/skill-packaging.md",
+        "execution/skills-installation-guide-2026-11-13.md"
+      ],
+      "url": "https://github.com/vercel-labs/skills/issues/880"
+    }
+  ]
+}
