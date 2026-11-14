@@ -170,6 +170,214 @@ class AnnularJobRunnerTests(unittest.TestCase):
         self.assertEqual(check['result'], 'PASS')
         self.assertEqual(len(check['matches']), 2)
 
+    def test_empty_sab_uses_valid_sat_pre_save_vertices(self):
+        record = {'properties': {'acis_data': {'sab_data': [], 'sat_data': 'synthetic SAT'}}}
+        with patch.dict(sys.modules, {
+                'annular_reference': types.SimpleNamespace(verify=lambda features, job: {}),
+                'native_acis': types.SimpleNamespace(sab_features=lambda *a, **k: self.fail('empty SAB decoded')),
+                'step_placements': types.SimpleNamespace(
+                    identity_sat_vertices=lambda sat: [[0.0, 0.0, 0.0]])}):
+            result = runner._pre_save_geometry(record, self.job())
+        self.assertEqual(result['format'], 'SAT')
+        self.assertEqual(result['points'], [[0.0, 0.0, 0.0]])
+        self.assertEqual(result['geometry_status'], 'OBSERVED')
+
+    def test_empty_sab_without_sat_fails_before_save(self):
+        record = {'properties': {'acis_data': {'sab_data': b'', 'sat_data': ''}}}
+        with self.assertRaisesRegex(ValueError, 'neither nonempty SAB nor valid SAT'):
+            runner._pre_save_geometry(record, self.job())
+
+    def test_nonempty_sab_is_retained_before_decoder_access(self):
+        order = []
+        record = {'properties': {'acis_data': {'sab_data': b'abc', 'sat_data': ''}}}
+        modules = {
+            'annular_reference': types.SimpleNamespace(verify=lambda features, job: {'result': 'PASS'}),
+            'native_acis': types.SimpleNamespace(
+                sab_features=lambda raw, **kwargs: (order.append('decode') or {'points': [[0, 0, 0]]})),
+            'step_placements': types.SimpleNamespace(identity_sat_vertices=lambda sat: []),
+        }
+        with patch.dict(sys.modules, modules):
+            result = runner._pre_save_geometry(
+                record, self.job(), lambda raw: (order.append('retain') or raw))
+        self.assertEqual(order, ['retain', 'decode'])
+        self.assertEqual(result['format'], 'SAB')
+
+    def test_resume_requires_exact_readable_part_name(self):
+        with self.assertRaisesRegex(ValueError, 'part_name differs'):
+            runner._validate_resume_part_name(
+                {'part_name': 'Selected source part'}, {'part_name': 'Different row'})
+        runner._validate_resume_part_name(
+            {'part_name': 'Selected source part'}, {'part_name': 'Selected source part'})
+
+    def test_resume_checkpoint_rejects_any_save_intent_or_receipt(self):
+        job = self.job()
+        fixture = self.make_resume_checkpoint(job)
+        with self.assertRaisesRegex(ValueError, 'save or reopen request already has an intent'):
+            runner._resume_checkpoint(self.job_dir, job, fixture['source_job_sha256'],
+                                      self.output, {'PROJECT_ROOT': self.project})
+
+    def test_resume_checkpoint_requires_terminal_journal_responses(self):
+        job = self.job()
+        fixture = self.make_resume_checkpoint(job, save_intent=False)
+        journal = self.job_dir / 'ocs-journal.jsonl'
+        rows = [json.loads(line) for line in journal.read_text().splitlines()]
+        for row in rows:
+            if row.get('event') == 'response' \
+                    and row.get('request_id') == job['namespace'] + ':capture-pre-save-viewport':
+                row['response'] = {'status': 'running'}
+        journal.write_text(''.join(json.dumps(row) + '\n' for row in rows), encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'metadata and capture requests completed'):
+            runner._resume_checkpoint(self.job_dir, job, fixture['source_job_sha256'],
+                                      self.output, {'PROJECT_ROOT': self.project})
+
+    def test_resume_preflight_checks_current_document_without_native_mutation(self):
+        job = self.job()
+        fixture = self.make_resume_checkpoint(job, save_intent=False)
+        docs = [{'id': 1, 'path': None, 'dirty': False},
+                {'id': 166, 'path': None, 'dirty': True}]
+        self.helper.state.update({'document_id': 166, 'revision': 5,
+                                  'geometry_revision': 99,
+                                  'documents': docs, 'command': None, 'modal': None})
+        modules = self.fake_runtime_modules()
+        for name in ('native_acis', 'source_metadata', 'ocs_document_cleanup'):
+            modules[name] = types.ModuleType(name)
+        row = {'part_id': job['part_id'], 'part_name': job['part_name'],
+               'configuration': None, 'action': 'NEW_MODEL_REQUIRED',
+               'models': [], 'candidates': []}
+        with patch.dict(sys.modules, modules), \
+                patch.object(runner, 'sab_reader_preflight', return_value={'result': 'PASS'}), \
+                patch.object(runner, 'model_gate', return_value=row):
+            result, prepared = runner.prepare(self.args(allow_write=True, resume_pre_save=True))
+        self.assertEqual(result['mode'], 'RESUME_PRE_SAVE')
+        self.assertEqual(prepared['active_document_id'], 166)
+        self.assertEqual(prepared['resume_checkpoint']['handle'], '7E')
+        self.assertNotIn(('MUTATION',), self.helper.calls)
+        original_failure = (self.job_dir / 'native-failure.json').read_bytes()
+        original_body = (self.job_dir / 'pre-save-body.sab').read_bytes()
+        self.assertEqual(original_body, b'')
+        self.assertEqual((self.job_dir / 'native-failure.json').read_bytes(), original_failure)
+        journal = self.job_dir / 'ocs-journal.jsonl'
+        journal.write_text('', encoding='utf-8')
+        with self.assertRaisesRegex(ValueError, 'metadata and capture requests completed'):
+            runner._resume_checkpoint(self.job_dir, job, fixture['source_job_sha256'],
+                                      self.output, {'PROJECT_ROOT': self.project})
+
+    def test_resume_execution_skips_new_build_and_capture_and_preserves_failure(self):
+        job = self.job()
+        self.make_resume_checkpoint(job, save_intent=False)
+        state = {'ok': True, 'document_id': 166, 'revision': 5,
+                 'geometry_revision': 99, 'command': None, 'modal': None,
+                 'documents': [{'id': 1, 'path': None, 'dirty': False},
+                               {'id': 166, 'path': None, 'dirty': True}]}
+        self.helper.state.update(state)
+        record = json.loads((self.job_dir / 'pre-save-entity-response.json').read_text())['records'][0]
+        response = {'ok': True, 'document_id': 166, 'revision': 5,
+                    'geometry_revision': 99, 'records': [record]}
+        class ReadOnlyFakeClient:
+            document_id = 166
+            def __init__(self):
+                self.calls = []
+            def read(inner_self, op, **kwargs):
+                inner_self.calls.append(('read', op))
+                if op == 'state':
+                    return dict(state)
+                if op == 'records':
+                    return response
+                return {'ok': True}
+            def mutate(inner_self, *args, **kwargs):
+                inner_self.calls.append(('MUTATION', args, kwargs))
+                raise AssertionError('Resume validation must not mutate before save_reopen')
+        client = ReadOnlyFakeClient()
+        modules = self.fake_runtime_modules()
+        modules['cadtools.runtime'].Client = lambda *args, **kwargs: client
+        modules['cadtools.runtime'].Journal = lambda *args, **kwargs: object()
+        annular = types.ModuleType('annular_reference')
+        annular.build_annulus = lambda *args, **kwargs: self.fail('resume rebuilt geometry')
+        annular.inspect = lambda *args, **kwargs: self.fail('should stop at save_reopen')
+        annular.verify = lambda *args, **kwargs: {}
+        annular.verify_metadata = lambda *args, **kwargs: {'result': 'PASS'}
+        annular.parameters = lambda job: {
+            'dimensions': {'bore_diameter': 4.0, 'outside_diameter': 9.0, 'thickness': 1.25},
+            'tolerance': 1e-7}
+        modules['annular_reference'] = annular
+        modules['native_acis'] = types.ModuleType('native_acis')
+        modules['native_acis'].sab_features = lambda *args, **kwargs: self.fail('empty SAB decoded')
+        modules['step_placements'] = types.ModuleType('step_placements')
+        modules['step_placements'].identity_sat_vertices = lambda *args: [[0.0, 0.0, 0.0]]
+        modules['source_metadata'] = types.ModuleType('source_metadata')
+        modules['ocs_document_cleanup'] = types.ModuleType('ocs_document_cleanup')
+        modules['cadtools.verification'].save_reopen = lambda *args, **kwargs: (_ for _ in ()).throw(
+            RuntimeError('stop at existing save_reopen stage'))
+        row = {'part_id': job['part_id'], 'part_name': job['part_name'],
+               'configuration': None, 'action': 'NEW_MODEL_REQUIRED',
+               'models': [], 'candidates': []}
+        original_failure = (self.job_dir / 'native-failure.json').read_bytes()
+        original_body = (self.job_dir / 'pre-save-body.sab').read_bytes()
+        with patch.dict(sys.modules, modules), \
+                patch.object(runner, 'sab_reader_preflight', return_value={'result': 'PASS'}), \
+                patch.object(runner, 'model_gate', return_value=row), \
+                patch.object(runner, 'RecoveringClient', side_effect=lambda item: item), \
+                patch.object(runner, '_capture', side_effect=AssertionError('resume recaptured viewport')), \
+                patch('envelope_job_runner.check_audit', return_value=None):
+            _, prepared = runner.prepare(self.args(allow_write=True, resume_pre_save=True))
+            with self.assertRaisesRegex(RuntimeError, 'stop at existing save_reopen stage'):
+                runner.execute(prepared, self.args(allow_write=True, resume_pre_save=True))
+        self.assertFalse(any(call[0] == 'MUTATION' for call in client.calls))
+        self.assertEqual((self.job_dir / 'native-failure.json').read_bytes(), original_failure)
+        self.assertEqual((self.job_dir / 'pre-save-body.sab').read_bytes(), original_body)
+        self.assertTrue((self.job_dir / 'native-resume-failure.json').is_file())
+
+    def make_resume_checkpoint(self, job, *, save_intent=True):
+        namespace = job['namespace']
+        construction_id, handle = 166, '7E'
+        source_job_hash = runner.sha256(self.job_path)
+        preflight = {'result': 'PASS', 'job_id': job['job_id'],
+                     'request_namespace': namespace, 'source_job_sha256': source_job_hash,
+                     'session_id': 'synthetic-session',
+                     'active_documents_before': {
+                         'document_id': 1, 'revision': 0, 'geometry_revision': 0,
+                         'documents': [{'id': 1, 'path': None, 'dirty': False}]}}
+        docs = [{'id': 1, 'path': None, 'dirty': False},
+                {'id': construction_id, 'path': None, 'dirty': True}]
+        state = {'document_id': construction_id, 'revision': 5,
+                 'geometry_revision': 99, 'documents': docs}
+        record = {'handle': handle, 'type': 'Solid3D', 'properties': {'acis_data': {
+            'sab_data': [], 'sat_data': 'valid SAT fixture'}}}
+        response = {'document_id': construction_id, 'revision': 5,
+                    'geometry_revision': 99, 'records': [record]}
+        failure = {'result': 'FAIL', 'stage': 'pre_save_records',
+                   'part_id': job['part_id'], 'job_id': job['job_id'],
+                   'error': 'Nonempty native SAB bytes required'}
+        entries = {
+            'native-preflight.json': preflight,
+            'document-start.json': {'result': 'PASS', 'units': 'mm', 'INSUNITS': 4,
+                                    'UCS': 'world', 'construction_document_id': construction_id,
+                                    'construction_documents': docs},
+            'native-handles.json': {'annulus': handle},
+            'native-failure.json': failure,
+            'pre-save-entity-response.json': response,
+            'pre-save-read-states.json': {'before': state, 'after': state},
+            'pre-save-body.json': {'status': 'CAPTURED_BEFORE_DECODER', 'bytes': 0,
+                                   'sha256': hashlib.sha256(b'').hexdigest(),
+                                   'handle': handle, 'document_id': construction_id,
+                                   'geometry_revision': 99},
+            'capture-pre-save.json': {'result': 'CAPTURED', 'geometry_revision': 99},
+        }
+        for name, value in entries.items():
+            (self.job_dir / name).write_text(json.dumps(value), encoding='utf-8')
+        (self.job_dir / 'pre-save-body.sab').write_bytes(b'')
+        journal = [{'event': 'intent', 'request': {'request_id': namespace + ':capture-pre-save-viewport'}},
+                   {'event': 'response', 'request_id': namespace + ':capture-pre-save-viewport',
+                    'response': {'status': 'completed'}},
+                   {'event': 'intent', 'request': {'request_id': namespace + ':' + job['metadata_request_label']}},
+                   {'event': 'response', 'request_id': namespace + ':' + job['metadata_request_label'],
+                    'response': {'ok': True, 'error': None, 'result': {'updated': 1}}}]
+        if save_intent:
+            journal.append({'event': 'intent', 'request': {'request_id': namespace + ':verified-save'}})
+        (self.job_dir / 'ocs-journal.jsonl').write_text(
+            ''.join(json.dumps(row) + '\n' for row in journal), encoding='utf-8')
+        return {'source_job_sha256': source_job_hash}
+
     def test_model_gate_selects_exact_single_row_and_configuration(self):
         selected = {'part_id': 'SAMPLE-PART-17', 'configuration': 'variant-a',
                     'action': 'NEW_MODEL_REQUIRED', 'models': [], 'candidates': []}

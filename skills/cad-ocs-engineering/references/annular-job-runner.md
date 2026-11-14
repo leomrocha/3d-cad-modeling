@@ -11,3 +11,9 @@ Use [annular_job_runner.py](../scripts/annular_job_runner.py) for the repeated b
 7. **Recovery:** an existing output, native journal, handles, failure or prior occurrence prevents another construction run. Inspect the existing artifact and original request journal. Recover an uncertain native operation under the same request identity. Preserve its partial geometry and failure evidence.
 
 Use `--help` for the current explicit caller arguments. [Required package completion](package-completion.md) applies when maintaining the runner or its dependency code.
+
+## Construction record with SAT and an empty SAB field
+
+SAT is the text representation of the native solid; SAB is its binary representation. A construction record can contain valid SAT text and an empty SAB array. Use the SAT vertices for pre-save persistence observations. Retain the complete raw response. The reopened DWG supplies the SAB used for analytic annular surfaces and boundary checks.
+
+Run with --resume-pre-save --allow-write to continue the guarded pre-save recovery route for the retained `pre_save_records` failure after construction. It checks the original source job and feature hashes, document-start record, solid handle, retained native response, document/geometry epochs, stored source metadata and original journal. The remaining save/reopen requests must have no previous intent or output. It reuses the owned solid and journal, retains the original failure and uses separate recovery receipts. Its remaining operations are pre-save observations, save/reopen, saved geometry checks and owned-document cleanup.

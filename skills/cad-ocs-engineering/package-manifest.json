@@ -16,7 +16,7 @@
     },
     "scripts/annular_job_runner.py": {
       "source": "scripts/annular_job_runner.py",
-      "sha256": "dce65312f8b0566f13634ee7082be087a319d2a3e3e16326c91df1b9167532aa"
+      "sha256": "6f2a8b4e05abcf9a05a6d9ad9441d6ce79895ca9d3fb72355d5f35fc985f422f"
     },
     "scripts/annular_reference.py": {
       "source": "scripts/annular_reference.py",
