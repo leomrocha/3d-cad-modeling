@@ -97,3 +97,10 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Source-bound screw reference
 
 1. [hex_screw_reference.py](../scripts/hex_screw_reference.py) — constructs and inspects a caller-defined regular-hex head joined to a nominal cylindrical shaft. [Procedure](../skills/cad-ocs-engineering/references/hex-screw-reference.md).
+
+## Exact source and partial-work checks
+
+1. [exact_profiles.py](../scripts/exact_profiles.py) — complete ordered Line/Arc/clamped-NURBS loop matching and signed source extrusion direction.
+2. [source_solid_checks.py](../scripts/source_solid_checks.py) — ACIS face sense, retained halfspaces, convex planar cell boundary volume and planar bilinear corner correspondence.
+3. [Capture checks](../scripts/cadtools/captures.py) — document, revision, rendered frame, PNG integrity and stale-image diagnostics.
+4. [Component records](../scripts/component_records.py) — completion gate binding final model evidence to an applied verified reusable change.

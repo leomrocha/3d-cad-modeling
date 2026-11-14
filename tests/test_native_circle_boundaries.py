@@ -70,8 +70,8 @@ def circle_pair(*, parameter_end=2 * math.pi, ratio=1.0, curve_name='ellipse-cur
     loop_b.data = [ptr(null), ptr(null), ptr(co_b)]
     surf_a = Entity('plane-surface', [ptr(null), loc((0.0, 0.0, 0.0)), direction((0, 0, 1))])
     surf_b = Entity('plane-surface', [ptr(null), loc((0.0, 0.0, 1.0)), direction((0, 0, 1))])
-    face_a = Entity('face', [ptr(null), ptr(null), ptr(loop_a), ptr(surf_a)])
-    face_b = Entity('face', [ptr(null), ptr(null), ptr(loop_b), ptr(surf_b)])
+    face_a = Entity('face', [ptr(null), ptr(null), ptr(loop_a), ptr(null), ptr(null), ptr(surf_a), Token(Tags.BOOL_FALSE, False)])
+    face_b = Entity('face', [ptr(null), ptr(null), ptr(loop_b), ptr(null), ptr(null), ptr(surf_b), Token(Tags.BOOL_FALSE, False)])
     body_data = [ptr(face_a), ptr(face_b)]
     if transform is not None:
         body_data.append(ptr(Entity('transform', [
@@ -155,6 +155,15 @@ class NativeCircleBoundaryTests(unittest.TestCase):
         curve.data = [ptr(curve.data[0].value), loc((0, 0, 0)), direction((0, 0, 1))]
         with self.assertRaisesRegex(ValueError, 'straight-curve token layout'):
             self.read(sab, include_edge_curves=True)
+
+    def test_face_sense_true_reverses_surface_normal(self):
+        sab = circle_pair()
+        face = sab.entities[0].data[0].value
+        face.data[6] = Token(Tags.BOOL_TRUE, True)
+        decoded = self.read(sab, include_edge_curves=True)['face_boundary_edges']
+        first = next(row for row in decoded if row['support']['origin'] == [0.,0.,0.])
+        self.assertTrue(first['reversed'])
+        self.assertEqual(first['outward_normal'], [0.,0.,-1.])
 
     def test_unknown_curve_fails_closed_when_opted_in(self):
         with self.assertRaisesRegex(ValueError, 'Unsupported boundary curve'):

@@ -167,9 +167,11 @@ class PersistenceTests(unittest.TestCase):
             opened=False
             def __init__(self):self.helper=self
             def read(self,op,**fields):
+                if op=='state':
+                    return {'ok':True,'document_id':8 if self.opened else 7,'revision':0,'geometry_revision':20}
                 counts={'3D Solid':2}
                 if mode=='count_before' or (self.opened and mode=='count_after'):counts={'3D Solid':3}
-                return {'summary':{'errors':0,'warnings':0},'manifest':{'by_type':counts,'total':sum(counts.values())}}
+                return {'document_id':8 if self.opened else 7,'source':{'path':str(outer.path),'sha256':hashlib.sha256(outer.path.read_bytes()).hexdigest() if outer.path.exists() else None},'summary':{'errors':0,'warnings':0},'manifest':{'by_type':counts,'total':sum(counts.values())}}
             def mutate(self,label,op,**fields):
                 if op=='open':self.opened=True;return {'ok':True,'status':'completed','state':{'document_id':8}}
                 content=b'synthetic transport fixture, not a CAD file'

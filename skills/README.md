@@ -105,3 +105,8 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Source-bound screw construction
 
 1. [Hex-head and cylindrical-shaft reference](cad-ocs-engineering/references/hex-screw-reference.md) — source pins, explicit frame, joined solid and native feature checks.
+
+## Exact source and partial-work procedures
+
+1. [Exact source checks](cad-ocs-engineering/references/exact-source-checks.md) — complete curves, material-domain proofs, outward face orientation, ruled patches, persistence and capture identities.
+2. [Component completion](cad-ocs-engineering/references/component-completion.md) — incremental saves and final source/metadata/persistence/cleanup evidence plus an applied verified reusable improvement.

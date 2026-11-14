@@ -268,6 +268,12 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
             if support is None:
                 raise ValueError('Face surface has no decoded analytic support')
             face_row['support']=support
+            sense=face.data[6]
+            if sense.tag not in (Tags.BOOL_TRUE,Tags.BOOL_FALSE):
+                raise ValueError('Explicit ACIS face sense required')
+            face_row['reversed']=sense.tag==Tags.BOOL_TRUE
+            if surf.name=='plane-surface':
+                face_row['outward_normal']=[v*(-1 if face_row['reversed'] else 1) for v in support['normal']]
             for loop in linked(face.data[2].value,1,'loop'):
                 edge_rows=[]
                 for coedge in linked(loop.data[2].value,1,'coedge',True):

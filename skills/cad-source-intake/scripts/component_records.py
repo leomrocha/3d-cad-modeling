@@ -211,5 +211,30 @@ def main(argv=None):
         return 2
 
 
+def completion_check(job_id, *, model, evidence, root_map=None):
+    """Return DONE only for source-bound final evidence and an applied improvement.
+
+    Pins are {path: named-root or absolute runtime locator, sha256: digest}.
+    Evidence rows bind job_id/model_sha256 and result=PASS. Improvement evidence
+    adds applied=true, nonempty changed_files pins and passing verification rows.
+    Checkpoints remain caller-owned regardless of the returned completion state.
+    """
+    if not isinstance(job_id,str) or not job_id.strip(): raise RecordError('Readable job identity required')
+    def pin_ok(pin):
+        if not isinstance(pin,dict) or not re.fullmatch('[0-9a-f]{64}',str(pin.get('sha256',''))): return False
+        try: return observe_file(resolve_source_locator(pin['path'],root_map))['sha256']==pin['sha256']
+        except (OSError,ValueError,KeyError): return False
+    digest=model.get('sha256');checks=[{'name':'saved model hash','result':'PASS' if pin_ok(model) else 'FAIL'}]
+    for name in ('source_geometry','metadata','persistence','cleanup','reusable_improvement'):
+        row=evidence.get(name,{})
+        passed=row.get('result')=='PASS' and row.get('job_id')==job_id and row.get('model_sha256')==digest
+        if name=='reusable_improvement':
+            files=row.get('changed_files',[]); tests=row.get('verification',[])
+            passed=passed and row.get('applied') is True and bool(files) and all(pin_ok(p) for p in files) and bool(tests) and all(t.get('result')=='PASS' and t.get('name') for t in tests)
+        checks.append({'name':name,'result':'PASS' if passed else 'FAIL'})
+    return {'job_id':job_id,'state':'DONE' if all(c['result']=='PASS' for c in checks) else 'IN_PROGRESS',
+            'checks':checks,'model_sha256':digest}
+
+
 if __name__ == '__main__':
     sys.exit(main())

@@ -6,6 +6,7 @@ from pathlib import Path
 
 from .geometry import finite
 from .runtime import CadError, Uncertain
+from .records import identity
 
 
 def close(a,b,tolerance):
@@ -84,12 +85,27 @@ def require_audit(audit):
     return audit["manifest"]
 
 
+def owned_audit(client, *, expected_path=None, expected_sha256=None):
+    """Bind audit to a stable active document and optional persisted source pin."""
+    before = identity(client.read("state"))
+    if before[0] != client.document_id:
+        raise CadError("Audit target document is inactive")
+    audit = client.read("audit",target_format="dwg",target_version="2018")
+    if audit.get("document_id") != before[0] or identity(client.read("state")) != before:
+        raise CadError("Audit document or revision identity differs")
+    if expected_path is not None:
+        source = audit.get("source", {})
+        if source.get("path") != str(expected_path) or source.get("sha256") != expected_sha256:
+            raise CadError("Reopened audit source path/hash differs")
+    return audit
+
+
 def save_reopen(client,path,expected_counts):
     """Explicit existing-document save; no overwrite, format conversion or cleanup."""
     target = Path(path)
     if not target.is_absolute() or target.suffix.lower()!=".dwg" or target.exists():
         raise CadError("A new absolute .dwg destination is required")
-    before = client.read("audit",target_format="dwg",target_version="2018")
+    before = owned_audit(client)
     manifest = require_audit(before)
     if manifest.get("by_type")!=expected_counts:
         raise CadError("Unexpected entity types/counts before save")
@@ -110,8 +126,9 @@ def save_reopen(client,path,expected_counts):
     if not state.get("ok") or state.get('document_id')!=created or active is None or active.get("path")!=str(target):
         raise CadError("Reopened active document identity differs")
     client.document_id = state["document_id"]
-    reopened = client.read("audit",target_format="dwg",target_version="2018")
+    reopened = owned_audit(client, expected_path=target, expected_sha256=result["sha256"])
     if require_audit(reopened)!=manifest:
         raise CadError("Reopened manifest differs")
     return {"stage":"reopened","method":"audit_manifest_and_file_hash","sha256":result["sha256"],
+            "saved_path":str(target),"reopened_document_id":created,
             "save":result,"reopened_audit":reopened,"result":"PASS"}

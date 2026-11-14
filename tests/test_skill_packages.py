@@ -185,6 +185,28 @@ with tempfile.TemporaryDirectory() as tmp:
 print(json.dumps({'result':'PASS','matcher':'PASS','profile_area':'PASS','quantities':'PASS','checkpoint':'PASS','vector_parser':'PASS','svg_png_views':'PASS','native_mutations':0}))'''
         self.results['skills']['cad-ocs-engineering']['reusable_integration']=self.run_python('cad-ocs-engineering',code)
 
+    def test_partial_work_checks_inside_installed_copy(self):
+        code = """import json,tempfile,hashlib
+from pathlib import Path
+from exact_profiles import signed_extrusion,compare_loops
+from source_solid_checks import outward_normal,bilinear_patch_check,halfspace_check
+from component_records import completion_check
+from cadtools.captures import verify_capture
+assert signed_extrusion([0,0,-1],[0,0,2],angular_tolerance=1e-10)==-2
+assert outward_normal([0,0,1],True)==[0,0,-1]
+points=[[0,0],[2,0],[2,1],[0,1]]
+loop={'role':'outer','edges':[{'kind':'Line','start':a,'end':b} for a,b in zip(points,points[1:]+points[:1])]}
+assert compare_loops([loop],[loop],length_tolerance=1e-8,parameter_tolerance=1e-10)['result']=='PASS'
+a=[[[0,0,0],[0,1,0]],[[2,0,0],[2,1,0]]]
+assert bilinear_patch_check(a,a,plane_origin=[0,0,0],plane_normal=[0,0,1],length_tolerance=1e-8,jacobian_tolerance=1e-10)['result']=='PASS'
+assert halfspace_check([[0,0,-1]],[{'id':'plane','origin':[0,0,0],'normal':[0,0,1],'retained_sign':1}],tolerance=1e-8)['result']=='FAIL'
+with tempfile.TemporaryDirectory() as tmp:
+ p=Path(tmp)/'model.dwg';p.write_bytes(b'synthetic fixture')
+ pin={'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()}
+ assert completion_check('partial',model=pin,evidence={})['state']=='IN_PROGRESS'
+print(json.dumps({'result':'PASS','exact_profiles':'PASS','face_orientation':'PASS','halfspaces':'PASS','ruled_patch':'PASS','partial_completion':'PASS','native_mutations':0}))"""
+        self.results['skills']['cad-ocs-engineering']['partial_work_checks']=self.run_python('cad-ocs-engineering',code)
+
     def test_component_defaults_use_bundled_code_and_read_only_transport(self):
         code = '''import json
 from pathlib import Path
