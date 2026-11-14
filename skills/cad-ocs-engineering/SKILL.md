@@ -68,6 +68,14 @@ Every execution order and delegated component assignment starts with: **Check th
 
 Inspect layer/material/group/block schemas before organizing parts. Name parts and functional visibility groups as agreed. Do not fuse separate components just to color them. Rendered metal supplies no density, modulus, strength or anisotropy. Keep unselected engineering materials unselected.
 
+### Save work in progress
+
+1. **Save files and native models incrementally while their status is IN_PROGRESS.** Save the first meaningful geometry, after each bounded construction or revision batch, and before a long or failure-prone operation, pause or handoff. Set a maximum interval between saves for the job, using elapsed time or completed operations, and split long runs into batches that reach saveable boundaries within that interval. Completion requires another save of the final revision.
+2. Use caller-owned output paths and the authorized native format/version. Keep source originals unchanged. Retain the previous verified checkpoint while writing a new versioned checkpoint; for supporting files, use a verified temporary-file replacement when supported. Keep checkpoints in persistent job storage through restart and handoff.
+3. Save at an idle command boundary on the exact owned document, using its current revision and a stable request ID. Resolve a pending command or uncertain operation through its recorded identity before saving. An active command that prevents saving requires a shorter batch or a supported resumable boundary before more construction proceeds.
+4. Verify each save's actual completion, expected path, persisted file and SHA-256; inspect the save audit and dropped-data report where supported. Persist the document ID, geometry revision, checkpoint path/hash, completed operation and resume information with the job. Preserve the previous verified checkpoint if saving or verification fails, and resolve that failure before further model changes. Recover an uncertain save by its original request ID.
+5. Resume from the latest verified checkpoint together with the operation journal, checking document identity and already committed effects before further edits. Keep IN_PROGRESS and completed states explicit. Final geometry, metadata and save/reopen checks apply to the completed revision before document cleanup.
+
 ### Execute and improve component jobs
 
 1. Map each job step to its readable action name and graph reference. Append component-specific occurrences with input/output revisions, representation, units/frames, preserved/changed information, alternatives, downstream conditions and actual check evidence.
