@@ -1,4 +1,4 @@
-"""Guarded OCS adapter; extracted from the inspected ocs_control/NGV workflow.
+"""Guarded native OCS adapter with durable request identities.
 
 The bundled control helper supplies the transport and authorisation guard.
 Imports and offline planning never connect to OCS. Journals contain no descriptor.
@@ -11,6 +11,7 @@ import math
 import os
 from pathlib import Path
 import uuid
+import time
 
 
 class CadError(RuntimeError):
@@ -98,7 +99,8 @@ class Client:
     """
 
     def __init__(self, helper, descriptor, document_id, namespace, journal,
-                 allow_write=False, timeout=30, max_queries=8):
+                 allow_write=False, timeout=30, max_queries=8, poll_interval=0,
+                 recovery_deadline=None):
         if type(document_id) is not int or document_id < 1:
             raise CadError("A positive integer document ID is required")
         if not namespace or len(namespace.encode()) > 64:
@@ -109,6 +111,12 @@ class Client:
         self.document_id, self.namespace = document_id, namespace
         self.journal, self.allow_write = journal, allow_write
         self.timeout, self.max_queries = timeout, max_queries
+        if not math.isfinite(poll_interval) or poll_interval<0:
+            raise CadError('Nonnegative finite poll interval required')
+        self.poll_interval=poll_interval
+        self.recovery_deadline=recovery_deadline if recovery_deadline is not None else timeout*(max_queries+1)
+        if not math.isfinite(self.recovery_deadline) or self.recovery_deadline<=0:
+            raise CadError('Positive finite recovery deadline required')
 
     def read(self, op, **fields):
         if op not in self.helper.READ_OPS:
@@ -154,12 +162,22 @@ class Client:
         if context != {"session_id": self.descriptor["session_id"],
                        "document_id": self.document_id}:
             raise CadError("Recovery session/document differs from journal")
-        response = self.helper.request(self.descriptor,
-                                       {"op": "operation", "request_id": request_id,
-                                        "document_id": self.document_id}, self.timeout)
+        try:
+            response = self._operation_query(request_id,self.timeout)
+        except Exception as error:
+            raise Uncertain('Operation response unavailable: '+request_id) from error
         return self._finish(request_id, response, allow_wait)
 
+    def _operation_query(self,key,timeout):
+        budget=getattr(self,'_poll_budget',None)
+        if budget is not None:
+            remaining=budget['deadline']-time.monotonic()
+            if budget['queries']<=0 or remaining<=0:raise Uncertain('Total recovery bound reached: '+key)
+            budget['queries']-=1;timeout=min(timeout,remaining)
+        return self.helper.request(self.descriptor,{'op':'operation','request_id':key,'document_id':self.document_id},timeout)
+
     def _finish(self, key, response, allow_wait):
+        deadline=time.monotonic()+self.recovery_deadline
         for query in range(self.max_queries + 1):
             self.journal.append({"event": "response", "request_id": key, "response": response})
             pending = response.get("status") in {"accepted", "running"}
@@ -169,9 +187,12 @@ class Client:
             if query == self.max_queries:
                 raise Uncertain("Operation query bound reached: " + key)
             try:
-                response = self.helper.request(self.descriptor,
-                    {"op": "operation", "request_id": key,
-                     "document_id": self.document_id}, self.timeout)
+                remaining=deadline-time.monotonic()
+                if remaining<=self.poll_interval:
+                    raise Uncertain('Operation recovery deadline reached: '+key)
+                if self.poll_interval:time.sleep(self.poll_interval)
+                if time.monotonic()>=deadline:raise Uncertain('Operation recovery deadline reached: '+key)
+                response = self._operation_query(key,min(self.timeout,deadline-time.monotonic()))
             except Exception as error:
                 raise Uncertain("Operation response unavailable: " + key) from error
         if not response.get("ok") or response.get("status") in {"failed", "rejected", "cancelled"}:
@@ -193,6 +214,68 @@ class Client:
             json.dump({"document_id": self.document_id, "revision": state["revision"],
                        "geometry_revision": state.get("geometry_revision"), "parts": parts,
                        "namespace": self.namespace}, stream, indent=2, allow_nan=False)
+            stream.flush()
+            os.fsync(stream.fileno())
+
+
+class RecoveringClient:
+    """Compatibility proxy: recover the original mutation identity with bounded backoff."""
+    def __init__(self,client):object.__setattr__(self,'_client',client)
+    def __getattr__(self,name):return getattr(self._client,name)
+    def __setattr__(self,name,value):
+        if name=='_client':object.__setattr__(self,name,value)
+        else:setattr(self._client,name,value)
+    def mutate(self,label,operation,allow_wait=False,**fields):
+        bounded=isinstance(self._client,Client)
+        if bounded:self._client._poll_budget=dict(queries=self._client.max_queries,deadline=time.monotonic()+self._client.recovery_deadline)
+        try:
+            try:return self._client.mutate(label,operation,allow_wait=allow_wait,**fields)
+            except Uncertain:
+                for delay in (0,.25,.5,1.):
+                    if bounded:
+                        budget=self._client._poll_budget
+                        if budget['queries']<=0 or time.monotonic()+delay>=budget['deadline']:raise Uncertain('Total recovery bound reached')
+                    if delay:time.sleep(delay)
+                    try:return self._client.recover(self._client.namespace+':'+label,allow_wait=allow_wait)
+                    except Uncertain:
+                        if delay==1.:raise
+        finally:
+            if bounded:del self._client._poll_budget
+
+
+def owned_document(client,label,operation='new',**fields):
+    """Create/open once, or recover the original journalled operation after restart."""
+    if operation not in ('new','open'):raise CadError('NEW or OPEN required')
+    key=client.namespace+':'+label
+    intent=client.journal.requests.get(key)
+    previous=client.document_id
+    if intent:
+        request=intent['request'];context=intent['context']
+        if request['op']!=operation or any(request.get(k)!=v for k,v in fields.items()):
+            raise CadError('Owned document request differs from recorded intent')
+        if context.get('session_id')!=client.descriptor['session_id']:raise CadError('Session differs from ownership')
+        original=Client(client.helper,client.descriptor,context['document_id'],client.namespace,client.journal,
+                        timeout=client.timeout,max_queries=client.max_queries)
+        response=original.recover(key)
+        previous=context['document_id']
+    else:
+        response=RecoveringClient(client).mutate(label,operation,**fields)
+    created=response.get('state',{}).get('document_id')
+    if type(created) is not int or created==previous:raise CadError('Exact response must identify a separate document')
+    state=client.helper.request(client.descriptor,{'op':'state'},client.timeout)
+    if not state.get('ok') or state.get('document_id')!=created:raise CadError('External activation interrupted owned document operation')
+    row=next((r for r in state['documents'] if r['id']==created),None)
+    if row is None or (operation=='open' and row.get('path')!=str(fields['path'])):
+        raise CadError('Owned document path differs')
+    client.document_id=created
+    if operation=='new':client.created_document_id=created
+    client.journal.append(dict(event='ownership',request_id=key,document_id=created,
+                               geometry_revision=state.get('geometry_revision'),path=row.get('path')))
+    return response
+
+
+def new_owned_document(client,label='new'):
+    return owned_document(client,label,'new')
 
 
 class PlanClient:

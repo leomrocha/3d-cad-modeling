@@ -1,4 +1,4 @@
-"""OCS recipes adapted from ngv064_ocs.py and item_ocs_parts.py.
+"""Reusable native OCS geometry operations.
 
 Input units are millimetres/degrees. Geometry remains native to OCS; this module
 plans or sends known commands and does not substitute a geometry kernel.

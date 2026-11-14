@@ -4,8 +4,7 @@ Read-only: callers review the source/drawing association before any OCS write.
 Handles only explicit finite orthonormal AXIS2_PLACEMENT_3D frames, explicit
 point/direction triples and identity second frames. Native insert angles are
 radians and insertion points are stored in object coordinates in this case.
-Adapted matrix operations from FERME's inspect_victron_import.py; correction
-uses original STEP placements rather than a proximity-based alignment.
+Correction uses original STEP placements and explicit source frames.
 """
 import math
 import re
@@ -35,16 +34,23 @@ def basis(z):
 
 def xyz(v):return [v[k] for k in ['x','y','z']]
 
-def native_matrix(p, *, allow_uniform_scale=False):
+def native_matrix(p, *, allow_uniform_scale=False, allow_unit_reflection=False):
     if p.get('column_count',1)!=1 or p.get('row_count',1)!=1:raise ValueError('Array inserts unsupported')
-    axes=basis(xyz(p['normal']));a=p['rotation'];c,s=math.cos(a),math.sin(a)
+    if allow_uniform_scale and allow_unit_reflection:raise ValueError('Choose one explicit scale mode')
+    axes=basis(xyz(p['normal']));a=p['rotation']
+    if isinstance(a,bool) or not isinstance(a,(int,float)) or not math.isfinite(a):raise ValueError('Finite rotation required')
+    c,s=math.cos(a),math.sin(a)
     x=[axes[0][i]*c+axes[1][i]*s for i in range(3)];y=[-axes[0][i]*s+axes[1][i]*c for i in range(3)]
     scales=[p[k] for k in ['x_scale','y_scale','z_scale']]
-    if not all(math.isfinite(v) and v>0 for v in scales):raise ValueError('Positive finite insert scales required')
-    if allow_uniform_scale:
+    if not all(not isinstance(v,bool) and isinstance(v,(int,float)) and math.isfinite(v) and v!=0 for v in scales):raise ValueError('Finite nonzero insert scales required')
+    if allow_unit_reflection:
+        if any(abs(abs(v)-1)>1e-7 for v in scales):raise ValueError('Unit-scale reflection required')
+    elif any(v<0 for v in scales):raise ValueError('Positive finite insert scales required')
+    elif allow_uniform_scale:
         if any(not math.isclose(v,scales[0],rel_tol=1e-9,abs_tol=0) for v in scales):raise ValueError('Uniform insert scale required')
     elif any(abs(v-1)>1e-7 for v in scales):raise ValueError('Unit-scale insert required')
     m=eye();o=xyz(p['insert_point'])
+    if any(isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) for v in o):raise ValueError('Finite insertion point required')
     for i in range(3):
         m[i][:3]=[x[i]*scales[0],y[i]*scales[1],axes[2][i]*scales[2]]
         m[i][3]=sum(axes[j][i]*o[j] for j in range(3))
@@ -109,7 +115,7 @@ def reversed_placement_plan(records,placements):
     return changes
 
 
-def solid_instances(records,block_records,root_handles,max_instances=10000, *, allow_uniform_scale=False):
+def solid_instances(records,block_records,root_handles,max_instances=10000, *, allow_uniform_scale=False, allow_unit_reflection=False):
     """Traverse native block membership with instance identity and rigid frames.
 
     This exercised reader requires zero block base points and single inserts.
@@ -126,10 +132,23 @@ def solid_instances(records,block_records,root_handles,max_instances=10000, *, a
         if r['type']!='Insert':raise ValueError('Unsupported native assembly leaf '+r['type'])
         p=r['properties'];b=blocks[p['block_name']]
         if any(abs(v)>1e-9 for v in xyz(b['base_point'])):raise ValueError('Nonzero block base requires another reader')
-        for child in b['entity_handles']:visit(format(child,'X'),multiply(m,native_matrix(p,allow_uniform_scale=allow_uniform_scale)),path+[handle],active|{handle})
+        for child in b['entity_handles']:visit(child if isinstance(child,str) else format(child,'X'),multiply(m,native_matrix(p,allow_uniform_scale=allow_uniform_scale,allow_unit_reflection=allow_unit_reflection)),path+[handle],active|{handle})
     for root in root_handles:visit(root,eye(),[],set())
     if not out:raise ValueError('No solid instances reached')
     return out
+
+
+def classify_hand(matrix,tolerance=1e-7):
+    """Validate a finite orthonormal affine placement; return reflection class."""
+    if not math.isfinite(tolerance) or tolerance<=0:raise ValueError('Positive tolerance required')
+    if len(matrix)!=4 or any(len(row)!=4 for row in matrix):raise ValueError('4x4 matrix required')
+    if any(isinstance(x,bool) or not isinstance(x,(int,float)) or not math.isfinite(x) for row in matrix for x in row):raise ValueError('Finite matrix required')
+    if any(abs(a-b)>tolerance for a,b in zip(matrix[3],[0,0,0,1])):raise ValueError('Affine matrix required')
+    columns=[[matrix[i][j] for i in range(3)] for j in range(3)]
+    if any(abs(dot(a,b)-(1 if i==j else 0))>tolerance for i,a in enumerate(columns) for j,b in enumerate(columns)):
+        raise ValueError('Orthonormal unit placement required')
+    determinant=dot(columns[0],cross(columns[1],columns[2]))
+    return 'MIRRORED' if determinant<0 else 'SOURCE_HAND'
 
 
 def identity_sat_vertices(text):

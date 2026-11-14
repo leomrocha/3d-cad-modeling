@@ -23,4 +23,4 @@ Use `${SKILL_ROOT}/scripts/envelope_reference.py` when the source supports an ov
 
 ## Verification scope
 
-`tests/test_envelope_reference.py` uses synthetic, temporary source fixtures. It checks parameterized profile/extrusion values, rejects a zero dimension and a detailed-body role before loading geometry or issuing writes, and checks passing and failing native vertex extrema. These tests exercise the generic preflight and comparison contract; they do not validate a physical product or an OCS installation.
+synthetic regression coverage uses synthetic, temporary source fixtures. It checks parameterized profile/extrusion values, rejects a zero dimension and a detailed-body role before loading geometry or issuing writes, and checks passing and failing native vertex extrema. These tests exercise the generic preflight and comparison contract; they do not validate a physical product or an OCS installation.

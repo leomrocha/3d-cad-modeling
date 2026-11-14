@@ -1,17 +1,21 @@
 {
   "skill": "cad-source-intake",
-  "generated_by": "scripts/build_skill_packages.py",
+  "generated_by": "self-contained skill distribution",
   "files": {
     "LICENSE": {
       "source": "LICENSE",
       "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc"
     },
     "NOTICE.md": {
-      "source": "scripts/cadtools/NOTICE.md",
-      "sha256": "9f209d7c15cf4e651dff54678c89ec05a47ddbda1577aa14f06783bcee5f06c3"
+      "source": "NOTICE.md",
+      "sha256": "195b297f08e7057a7792412d12939fb8e3a875bce7cab43ed7cee03cb7c5d639"
+    },
+    "SKILL.md": {
+      "source": "SKILL.md",
+      "sha256": "cdf95f076909b39480abcc02296f5ba96fa0fec550cc1408e9974947eb6f250c"
     },
     "requirements.txt": {
-      "source": "standard-library declaration",
+      "source": "requirements.txt",
       "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
     },
     "scripts/component_records.py": {

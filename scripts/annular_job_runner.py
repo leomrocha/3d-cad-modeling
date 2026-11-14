@@ -820,7 +820,8 @@ def execute(prepared, args):
                 part_id=job['part_id'], configuration=prepared['configuration'])
             if fresh_gate.get('action') != 'NEW_MODEL_REQUIRED':
                 raise FileExistsError('Fresh model inventory no longer permits an annular construction')
-            client.mutate('create-isolated-document', 'new')
+            from cadtools.runtime import new_owned_document
+            new_owned_document(client, 'create-isolated-document')
             state = helper.request(descriptor, {'op': 'state'}, 30)
             construction_id = state.get('document_id')
             if state.get('ok') is not True or construction_id is None or construction_id == prior_id:

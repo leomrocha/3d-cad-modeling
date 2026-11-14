@@ -8,4 +8,4 @@ The helper validates every supplied root before returning any plan. It rejects e
 
 Read the source unit declaration and native drawing unit setting first. Compare the plan matrices and feature dimensions against the actual native drawing after an authorized edit. A successful plan and synthetic test establish planner behavior; they do not establish source association, physical fit, or saved CAD persistence.
 
-`tests/test_assembly_units.py` uses synthetic root records only. It covers translation and scale together, orientation preservation, zero-origin roots, invalid units, arrays, nonuniform or invalid scales, empty and duplicate handles, a NaN rotation that produces a nonfinite transform, and all-roots validation.
+synthetic regression coverage uses synthetic root records only. It covers translation and scale together, orientation preservation, zero-origin roots, invalid units, arrays, nonuniform or invalid scales, empty and duplicate handles, a NaN rotation that produces a nonfinite transform, and all-roots validation.

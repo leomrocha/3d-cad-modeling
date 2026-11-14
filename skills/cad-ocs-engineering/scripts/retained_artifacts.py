@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 """Verify an external retained-file manifest without changing its artifacts."""
 import argparse
+import csv
+import hashlib
 import json
 from pathlib import Path
 import re
@@ -8,6 +10,20 @@ import sys
 
 from component_records import observe_file
 from envelope_job_runner import parse_roots, portableize, resolve_locator
+
+
+def write_table(path,rows,fields):
+    """Write a new TSV and verify exact serialized rows; preserve existing outputs."""
+    path=Path(path);fields=list(fields);rows=list(rows)
+    if not fields or len(set(fields))!=len(fields) or any(not isinstance(f,str) or not f for f in fields):raise ValueError('Unique nonempty table fields required')
+    if any(set(row)!=set(fields) for row in rows):raise ValueError('Every row must match the declared table schema')
+    expected=[{k:'' if row[k] is None else str(row[k]) for k in fields} for row in rows]
+    with path.open('x',newline='',encoding='utf-8') as stream:
+        writer=csv.DictWriter(stream,fieldnames=fields,delimiter='\t',lineterminator='\n');writer.writeheader();writer.writerows(rows)
+    with path.open(newline='',encoding='utf-8') as stream:
+        reader=csv.DictReader(stream,delimiter='\t');actual=list(reader)
+        if reader.fieldnames!=fields or actual!=expected:raise ValueError('Table readback differs')
+    return dict(path=str(path),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),rows=len(rows),result='PASS')
 
 
 def verify_manifest(manifest_path, roots):
@@ -74,11 +90,34 @@ def verify_manifest(manifest_path, roots):
         raise ValueError('Manifest contains no retained artifacts to verify')
     if observe_file(manifest_path) != before:
         raise ValueError('Manifest changed during verification')
+    relationships=verify_relationships(manifest.get('relationships',[]),manifest,roots,package)
     return portableize({'result': 'PASS', 'manifest': str(manifest_path),
                         'manifest_sha256': before['sha256'],
                         'verified_count': len(checked), 'files': checked,
                         'duplicate_attributions': duplicates,
-                        'omitted_entries': omitted}, roots)
+                        'omitted_entries': omitted,'verified_relationships':relationships}, roots)
+
+
+def verify_relationships(bindings,manifest,roots,package):
+    """Verify JSON-pointer digest bindings between already registered artifacts."""
+    entries={r.get('retained_path',r.get('path')):r.get('retained_sha256',r.get('sha256')) for r in manifest['files']}
+    if not isinstance(bindings,list):raise ValueError('Relationship bindings must be a list')
+    results=[]
+    for binding in bindings:
+        record=binding['record'];artifact=binding['artifact'];pointer=binding['field']
+        if record not in entries or artifact not in entries or not isinstance(pointer,str) or not pointer.startswith('/'):
+            raise ValueError('Relationship needs registered artifacts and a JSON pointer')
+        prefix,_,suffix=record.partition('/')
+        path=(roots[prefix]/suffix).resolve() if prefix in roots else resolve_locator(record,roots,package)
+        before=observe_file(path)
+        if before['sha256']!=entries[record]:raise ValueError('Relationship record changed')
+        value=json.loads(path.read_text())
+        for field in pointer[1:].split('/'):
+            field=field.replace('~1','/').replace('~0','~')
+            value=value[int(field)] if isinstance(value,list) else value[field]
+        if value!=entries[artifact] or observe_file(path)!=before:raise ValueError('Artifact relationship hash mismatch')
+        results.append(dict(record=record,artifact=artifact,field=pointer,result='PASS'))
+    return results
 
 
 def main():

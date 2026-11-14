@@ -6,11 +6,11 @@ from battery_module import check_tabbed_case
 from native_acis import sab_features
 from feature_checks import planar_boundary_pattern
 
+@unittest.skipUnless(os.environ.get('CAD_TABBED_CASE_FIXTURE'), 'Optional caller-supplied named tabbed-case fixture')
 class TabbedBatteryTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
-        root=Path(os.environ.get('FERME_ROOT',Path(__file__).resolve().parents[2]/'ferme'))
-        b=root/'engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02'
+        b=Path(os.environ['CAD_TABBED_CASE_FIXTURE'])
         cls.record=json.loads((b/'native-records.json').read_text());cls.job=json.loads((b/'source-job.json').read_text())
         row=next(r for r in cls.record['records'] if r['properties']['common']['layer']=='removable_busbar_cover')
         cls.cover=sab_features(bytes(row['properties']['acis_data']['sab_data']),allow_rigid=True,include_loops=True)

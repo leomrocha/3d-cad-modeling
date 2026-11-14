@@ -99,7 +99,7 @@ class AssemblyUnitPlanTests(unittest.TestCase):
                                   destination_unit=unit("b", 2, 1))
 
     def test_rejects_nonfinite_transform_from_nan_rotation(self):
-        with self.assertRaisesRegex(ValueError, "transform must be finite"):
+        with self.assertRaisesRegex(ValueError, "Finite rotation required"):
             plan_root_unit_change([root(rotation=float("nan"))],
                                   source_unit=unit("a", 1, 1),
                                   destination_unit=unit("b", 2, 1))

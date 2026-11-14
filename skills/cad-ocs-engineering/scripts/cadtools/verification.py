@@ -5,7 +5,7 @@ import math
 from pathlib import Path
 
 from .geometry import finite
-from .runtime import CadError
+from .runtime import CadError, Uncertain
 
 
 def close(a,b,tolerance):
@@ -100,10 +100,14 @@ def save_reopen(client,path,expected_counts):
         raise CadError("Saved data differs; preserve output for diagnosis")
     if not target.is_file() or hashlib.sha256(target.read_bytes()).hexdigest()!=result.get("sha256"):
         raise CadError("Saved output hash does not match file")
-    client.mutate("reopen","open",path=str(target))
+    previous=client.document_id
+    try:opened=client.mutate("reopen","open",path=str(target))
+    except Uncertain:opened=client.recover(client.namespace+':reopen')
+    created=opened.get('state',{}).get('document_id')
+    if type(created) is not int or created==previous:raise CadError('Exact OPEN response must identify reopened document')
     state = client.helper.request(client.descriptor,{"op":"state"},client.timeout)
     active = next((d for d in state.get("documents",[]) if d["id"]==state.get("document_id")),None)
-    if not state.get("ok") or active is None or active.get("path")!=str(target):
+    if not state.get("ok") or state.get('document_id')!=created or active is None or active.get("path")!=str(target):
         raise CadError("Reopened active document identity differs")
     client.document_id = state["document_id"]
     reopened = client.read("audit",target_format="dwg",target_version="2018")

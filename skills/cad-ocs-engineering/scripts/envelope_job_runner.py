@@ -318,38 +318,7 @@ def sab_reader_preflight():
             'ezdxf_version': getattr(ezdxf, '__version__', 'UNKNOWN')}
 
 
-class RecoveringClient:
-    """Proxy that recovers the original request identity after uncertainty."""
-
-    def __init__(self, client):
-        object.__setattr__(self, '_client', client)
-
-    def __getattr__(self, name):
-        return getattr(self._client, name)
-
-    def __setattr__(self, name, value):
-        if name == '_client':
-            object.__setattr__(self, name, value)
-        else:
-            setattr(self._client, name, value)
-
-    def mutate(self, label, operation, allow_wait=False, **fields):
-        from cadtools.runtime import Uncertain
-        try:
-            return self._client.mutate(label, operation, allow_wait=allow_wait, **fields)
-        except Uncertain:
-            # Native operation queries may all return immediately while the
-            # asynchronous document open is still progressing. Poll the same
-            # journalled identity after bounded delays; never resend mutation.
-            for delay in (0, 0.25, 0.5, 1.0):
-                if delay:
-                    time.sleep(delay)
-                try:
-                    return self._client.recover(self._client.namespace + ':' + label,
-                                                allow_wait=allow_wait)
-                except Uncertain:
-                    if delay == 1.0:
-                        raise
+from cadtools.runtime import RecoveringClient
 
 
 def cleanup_completed_envelope(*, helper, descriptor, client, namespace, output,
@@ -482,7 +451,8 @@ def run(args):
     journal_path = job_dir / 'ocs-journal.jsonl'
     client = RecoveringClient(Client(helper, descriptor, prior_id, job['namespace'],
                                       Journal(journal_path), allow_write=True, timeout=60))
-    created = client.mutate('create-isolated-document', 'new')
+    from cadtools.runtime import new_owned_document
+    created = new_owned_document(client, 'create-isolated-document')
     state = helper.request(descriptor, {'op': 'state'}, 30)
     if not state.get('ok') or state.get('document_id') in (None, prior_id):
         raise RuntimeError('Isolated native document did not become active')

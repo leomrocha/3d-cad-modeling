@@ -1,14 +1,7 @@
-# Check a battery case formed from named exterior solids
+# Check named exterior solids and repeated planar recesses
 
-Executed case: BMW i3 94 Ah saved exterior (`${FERME_ROOT}/engineering/module-development/cad/work/component-led-2026-11-12/c022-reuse-02/source-job.json`). Model: gpt-6.1-sol.
-
-1. Reuse the original saved model and its source/reconstruction record. The BMW exterior has 13 separate solids. Seller dimensions define tab-to-tab length 410 mm, body length 385 mm, support width 310 mm and case height 150 mm. Mounting centres, 8.5 mm clearance bores, cover recesses and cable pose retain their existing reconstruction attribution.
-2. Read the saved SAB geometry and exact component metadata. `battery_module.check_tabbed_case(record, job)` receives required part names, measurement groups and source-bound values from the external job. It reuses the existing named-part reader, closed-body checks and cylinder-pattern checker.
-3. Select the physical parts for each measurement. The base supplies mounting-tab length and support width; the two end plates supply body length; base plus removable cover supply case height. Connector and loose-cable protrusions keep their separate geometry and do not enter these case dimensions.
-4. Use `feature_checks.planar_boundary_pattern` for repeated planar recesses. Supply the plane axis and level, in-plane spans and exact expected centres. It reads the existing native coplanar boundary components, requires closed boundaries and compares all centres and spans. The BMW cover has 24 reconstructed 72 × 32 mm recesses at floor Z = 148.6 mm, with four columns and six rows from the original construction parameters.
-5. Six retained-native tests cover the actual saved case, incorrect body length, shifted recess centres, a missing boundary, incorrect floor level and an open boundary. They verify the measured pattern and rejection of specific failures. Native saved checks pass 19 comparisons.
-6. Inspect actual captured images separately. The initial BMW capture, explicit activation capture, native pointer-event capture and byte-identical isolated-copy capture all return the previous Lynx view. Their hashes and active document states are retained as failed visual evidence. The original saved BMW file remains byte-identical. The component's geometric-check stage passes; its visual stage requires an image showing the BMW component.
-
-Implementation: [battery_module.py](../scripts/battery_module.py), [feature_checks.py](../scripts/feature_checks.py), [tests](https://github.com/leomrocha/3d-cad-modeling/blob/master/tests/test_tabbed_battery.py).
-
-Source evidence review: case dimensions follow the existing geometry report’s attributed EVShop values. The retained HTML copies contain no 410/385/310 mm dimension text; source revision 2 binds those values to that report. The initial direct-HTML binding is retained in the component job history.
+1. Supply the exact component source job, required native part names and independently sourced dimensions to [battery_module.check_tabbed_case](../scripts/battery_module.py). Keep source claims and reconstructed details separately labeled.
+2. Select named measurement groups for support extent, body extent, overall height and repeated recess boundaries. Read actual saved SAB records and metadata through the supported native reader.
+3. Coplanar Boolean fragments may share internal edges. The native reader cancels shared edges and groups the remaining outer/hole boundaries. [planar_boundary_pattern](../scripts/feature_checks.py) compares supplied plane level, closed-boundary centres and spans.
+4. Check required body closure, mounting cylinders, named measurement groups, recess count/positions and source metadata. Vertex extrema describe measured vertices; a general curved exterior may need analytic measurements.
+5. Preserve the exact source/model revision and actual failed observations. Save requested derivatives incrementally and verify final persisted geometry and view identity separately.

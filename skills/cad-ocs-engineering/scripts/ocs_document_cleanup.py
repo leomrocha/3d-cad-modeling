@@ -7,6 +7,7 @@ module never selects, activates, saves, or edits a document.
 from __future__ import annotations
 
 import hashlib
+import json
 from pathlib import Path
 import re
 
@@ -243,9 +244,16 @@ def cleanup_active_owned_document(*, state_reader, client_factory,
     client = client_factory(active, namespace)
     label = f"close-owned-document-{active}"
     request_id = namespace + ":" + label
+    journal=getattr(client,'journal',None)
+    if journal is not None and request_id not in journal.requests:
+        journal.append(dict(event='cleanup_snapshot',request_id=request_id,active_document_id=active,
+                            documents={str(k):dict(path=v['path'],dirty=v['dirty']) for k,v in docs.items()}))
     try:
-        response = client.mutate(label, "close", discard=observed["dirty"],
-                                 geometry_revision=geometry_revision)
+        if request_id in getattr(getattr(client,'journal',None),'requests',{}):
+            response=client.recover(request_id)
+        else:
+            response = client.mutate(label, "close", discard=observed["dirty"],
+                                     geometry_revision=geometry_revision)
     except uncertain_type:
         # Query the same stable request identity. Never replay the mutation.
         response = client.recover(request_id)
@@ -326,3 +334,108 @@ def cleanup_active_owned_document(*, state_reader, client_factory,
         "active_document_after": active_after,
         "other_documents_unchanged": True,
     }
+
+
+def _journalled_control(client,payload,context):
+    """Send once or poll an existing original intent, including inactive closes."""
+    import time
+    from cadtools.runtime import CadError,Uncertain
+    key=payload['request_id'];journal=client.journal
+    intent=journal.requests.get(key)
+    if intent:
+        original=intent['request']
+        if any(original.get(k)!=payload.get(k) for k in ('op','document_id','discard')):
+            raise CleanupError('Cleanup recovery target differs')
+        if intent['context'].get('session_id')!=client.descriptor['session_id']:raise CleanupError('Cleanup session differs')
+        response=None
+    else:
+        journal.intent(payload,dict(context,session_id=client.descriptor['session_id']))
+        try:response=client.helper.request(client.descriptor,payload,client.timeout)
+        except Exception:response=None
+    deadline=time.monotonic()+client.recovery_deadline
+    for query in range(client.max_queries+1):
+        if response is not None:
+            journal.append(dict(event='response',request_id=key,response=response))
+            if response.get('status')=='completed' and response.get('ok'):return response
+            if response.get('status') not in ('accepted','running') and response.get('code')!='response_timeout':
+                raise CadError('Cleanup operation failed or requires input')
+        if query==client.max_queries or time.monotonic()>=deadline:raise Uncertain('Cleanup original operation pending: '+key)
+        try:response=client.helper.request(client.descriptor,dict(op='operation',request_id=key),min(client.timeout,deadline-time.monotonic()))
+        except Exception:response=None
+    raise Uncertain(key)
+
+
+def cleanup_owned_documents(*,state_reader,client,owned_documents,namespace,
+                            exclusive_interval=False,allow_inactive_clean=False,allow_activate=False):
+    """Close explicit owned IDs, preserving recorded epochs and real persistence receipts.
+
+    Inactive close uses active-tab CAS fields; the caller must serialize the whole
+    interval and explicitly enable that installed protocol route. Activation is
+    separately opt-in and rechecks the recorded construction epoch before discard.
+    """
+    from cadtools.runtime import Client,CadError,Uncertain
+    owned=_owned_documents(owned_documents);results=[]
+    for target_id,evidence in owned.items():
+        before=state_reader();active,epoch,docs=_session_snapshot(before)
+        close_id=namespace+':close-inactive-'+str(target_id)
+        if target_id not in docs:
+            active_key=namespace+':close-owned-document-'+str(target_id)
+            was_active=close_id not in client.journal.requests and active_key in client.journal.requests
+            if was_active:close_id=active_key
+            if close_id in client.journal.requests:
+                intent=client.journal.requests[close_id];original=intent['request']
+                try:response=_journalled_control(client,original,{})
+                except Uncertain:
+                    results.append(dict(cleanup_status='UNKNOWN',document_id=target_id,request_id=close_id));break
+                context=intent['context'];snapshot=context.get('other_documents',{})
+                current={str(k):dict(path=v['path'],dirty=v['dirty']) for k,v in docs.items()}
+                if was_active:
+                    events=[json.loads(line) for line in client.journal.path.read_text().splitlines()]
+                    snapshots=[e for e in events if e.get('event')=='cleanup_snapshot' and e.get('request_id')==close_id]
+                    if not snapshots:raise CleanupError('Original close snapshot required for restart post-check')
+                    snapshot={k:v for k,v in snapshots[-1]['documents'].items() if k!=str(target_id)}
+                    matching=(current==snapshot if snapshot else len(current)==1 and all(v['path'] is None and not v['dirty'] for v in current.values()))
+                else:matching=active==context.get('active_document_id') and current==snapshot
+                passed=(response.get('result',{}).get('closed') is True and response['result'].get('closed_document_id')==target_id and matching)
+                results.append(dict(cleanup_status='CLOSED' if passed else 'POSTCHECK_FAILED',document_id=target_id,response=response,request_id=close_id))
+            else:results.append(dict(cleanup_status='ABSENT_WITHOUT_CLOSE_RECEIPT',document_id=target_id))
+            continue
+        target=docs[target_id]
+        if target['path']!=evidence['expected_path']:
+            results.append(dict(cleanup_status='OWNERSHIP_PATH_MISMATCH',document_id=target_id));break
+        if active!=target_id and target['dirty']:
+            if not client.allow_write:raise CadError('Cleanup requires write authorization')
+            if not (exclusive_interval and allow_activate and evidence['construction_copy'] and evidence['dirty_discard_allowed']):
+                results.append(dict(cleanup_status='INACTIVE_OWNED_DIRTY_DOCUMENT',document_id=target_id));break
+            if _persistence_binding(evidence['persistence_receipt'])!=(evidence['saved_model_path'],evidence['saved_model_sha256']) or _file_sha256_once(evidence['saved_model_path'])!=evidence['saved_model_sha256']:
+                raise CleanupError('Activation persistence binding differs')
+            payload=dict(op='activate',document_id=target_id,revision=before['revision'],geometry_revision=epoch,request_id=namespace+':activate-owned-'+str(target_id))
+            try:_journalled_control(client,payload,dict(owned_document_id=target_id))
+            except Uncertain:
+                results.append(dict(cleanup_status='UNKNOWN',document_id=target_id,request_id=payload['request_id']));break
+            now=state_reader();active,epoch,activated=_session_snapshot(now)
+            if active!=target_id or epoch!=evidence['expected_geometry_revision'] or set(activated)!=set(docs) or any(activated[k]!=docs[k] for k in docs):
+                raise CleanupError('Owned activation state differs; document retained')
+        if active==target_id:
+            def factory(identity,ns):
+                return Client(client.helper,client.descriptor,identity,ns,client.journal,allow_write=client.allow_write,timeout=client.timeout,max_queries=client.max_queries)
+            try:result=cleanup_active_owned_document(state_reader=state_reader,client_factory=factory,owned_documents=[evidence],namespace=namespace)
+            except Uncertain:
+                results.append(dict(cleanup_status='UNKNOWN',document_id=target_id,request_id=namespace+':close-owned-document-'+str(target_id)));break
+            results.append(result)
+            if result['cleanup_status']!='CLOSED':break
+            continue
+        if not exclusive_interval or not allow_inactive_clean:
+            results.append(dict(cleanup_status='ACTIVE_DOCUMENT_OUTSIDE_OWNED_SET',document_id=target_id));break
+        if not client.allow_write:raise CadError('Cleanup requires write authorization')
+        if _persistence_binding(evidence['persistence_receipt'])!=(evidence['saved_model_path'],evidence['saved_model_sha256']) or _file_sha256_once(evidence['saved_model_path'])!=evidence['saved_model_sha256']:
+            raise CleanupError('Inactive persistence binding differs')
+        payload=dict(op='close',document_id=target_id,revision=before['revision'],geometry_revision=epoch,discard=False,request_id=close_id)
+        try:response=_journalled_control(client,payload,dict(active_document_id=active,target=target,other_documents={str(k):dict(path=v['path'],dirty=v['dirty']) for k,v in docs.items() if k!=target_id}))
+        except Uncertain:
+            results.append(dict(cleanup_status='UNKNOWN',document_id=target_id,request_id=close_id));break
+        after=state_reader();after_active,_,after_docs=_session_snapshot(after)
+        passed=(response.get('result',{}).get('closed') is True and response['result'].get('closed_document_id')==target_id and target_id not in after_docs and after_active==active and set(after_docs)==set(docs)-{target_id} and all(after_docs[k]['path']==docs[k]['path'] and after_docs[k]['dirty']==docs[k]['dirty'] for k in after_docs))
+        results.append(dict(cleanup_status='CLOSED' if passed else 'POSTCHECK_FAILED',document_id=target_id,request_id=close_id,close_confirmed=target_id not in after_docs,other_documents_unchanged=passed))
+        if not passed:break
+    return dict(results=results,result='PASS' if all(r['cleanup_status']=='CLOSED' for r in results) else 'INCOMPLETE')

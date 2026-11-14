@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Source-bound rounded hollow-section construction using existing FERME OCS tools.
+"""Source-bound rounded hollow-section construction using bundled native CAD tools.
 
 Units: mm. Section is XY centred at origin; cut length is +Z. Native geometry
 checks read supported planar/cylindrical SAT or SAB surfaces and vertices.
@@ -66,7 +66,12 @@ class SelectionCheckedClient:
 
 
 def construct(client,job,outer_profile=None,route="bounded-area"):
+    if route not in ('solid-subtract','planar-region','bounded-area'):raise ValueError('Unsupported hollow-section route')
     p=dimensions(job)
+    overrun=None
+    if route=='solid-subtract':
+        overrun=job.get('construction',{}).get('cutter_overrun_mm')
+        if isinstance(overrun,bool) or not isinstance(overrun,(int,float)) or not math.isfinite(overrun) or overrun<=0:raise ValueError('Subtraction route requires positive caller-supplied cutter_overrun_mm')
     Geometry=importlib.import_module('cadtools.geometry').Geometry
     g=Geometry(SelectionCheckedClient(client))
     w,h,t,length,ro,ri=(p[n] for n in ['section width','section height','wall thickness',
@@ -120,8 +125,7 @@ def construct(client,job,outer_profile=None,route="bounded-area"):
             raise ValueError('Preserved profile differs from sourced construction profile')
         g.select('resume-outer-selection',[outer_profile])
         base=importlib.import_module('cadtools.geometry').added(g.run('resume-outer-extrude','EXTRUDE '+str(length)))
-    # Existing FERME profile recipe uses 0.1mm through-cut overrun on each end.
-    cutter=g.extrude('bore',inner,-0.1,length+0.2,ib)
+    cutter=g.extrude('bore',inner,-overrun,length+2*overrun,ib)
     solid=g.subtract('hollow',base,[cutter])
     g.metadata('source-label',[solid],[job['part_name'],job['representation'],
                  'Units mm; section XY; cut length +Z; local origin at front-end centre',
@@ -130,7 +134,7 @@ def construct(client,job,outer_profile=None,route="bounded-area"):
 
 
 def sat_features(text):
-    """Strict subset adapted from FERME check_ngv064_wheel.py surface reader.
+    """Strict planar/cylindrical SAT surface subset.
 
     This recipe's native unrotated extrusion has identity axes; reject transformed
     or unfamiliar bodies rather than interpreting them as supported observations.

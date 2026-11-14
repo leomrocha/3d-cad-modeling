@@ -9,9 +9,9 @@ import envelope_job_runner as runner
 
 class RecoveryBackoffTests(unittest.TestCase):
     def client(self):
-        class Uncertain(Exception): pass
+        from cadtools.runtime import Uncertain
         self.Uncertain = Uncertain
-        module=types.ModuleType('cadtools.runtime');module.Uncertain=Uncertain
+        module=sys.modules['cadtools.runtime']
         client=Mock();client.namespace='synthetic-request'
         client.mutate.side_effect=Uncertain('query bound')
         return client,module

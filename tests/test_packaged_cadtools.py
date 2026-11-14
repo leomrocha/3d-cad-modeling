@@ -171,7 +171,7 @@ class PersistenceTests(unittest.TestCase):
                 if mode=='count_before' or (self.opened and mode=='count_after'):counts={'3D Solid':3}
                 return {'summary':{'errors':0,'warnings':0},'manifest':{'by_type':counts,'total':sum(counts.values())}}
             def mutate(self,label,op,**fields):
-                if op=='open':self.opened=True;return {'ok':True,'status':'completed'}
+                if op=='open':self.opened=True;return {'ok':True,'status':'completed','state':{'document_id':8}}
                 content=b'synthetic transport fixture, not a CAD file'
                 outer.path.write_bytes(content)
                 result={'dropped_on_save':1 if mode=='loss' else 0,'verified':True,

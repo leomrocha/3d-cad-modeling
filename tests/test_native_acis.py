@@ -1,11 +1,10 @@
-"""Recorded native-geometry integration tests; FERME owns the source records."""
+"""Optional caller-supplied recorded native-geometry integration cases."""
 import json,os,sys,unittest
 from pathlib import Path
 R=Path(__file__).resolve().parents[1];sys.path.insert(0,str(R/'scripts'))
 from native_acis import sab_features
 from rounded_tube import verify_features,dimensions,sat_features,crossmember_checks
-F=Path(os.environ.get('FERME_ROOT',R.parent/'ferme'))
-W=F/'engineering/module-development/cad/work/component-led-2026-11-12'
+W=Path(os.environ['CAD_NATIVE_FIXTURE_ROOT']) if os.environ.get('CAD_NATIVE_FIXTURE_ROOT') else R/'tests/fixtures/native'
 try:import ezdxf
 except ImportError:ezdxf=None
 

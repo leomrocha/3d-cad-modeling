@@ -46,4 +46,4 @@ python3 \
 
 1. Identify source profile, annotations and construction geometry using the actual source/context. Review units, source dimensions, selected occurrence IDs, plane and any cyclic/missing-block issues.
 2. Pass the original source hash, chosen occurrence paths, units and target-plane decision to **Create a mapped and explicitly cleaned derivative (CAD-08-A02)**. The source-to-profile transformation belongs to that action.
-3. [Execution report](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/dxf-inspection.md) links two actual retained DXF runs and eight tests, including independent nested-transform controls.
+3. Retain the actual inventory and its source hash in caller-owned job storage. Verify nested transforms against independently supplied points before selecting geometry for construction.

@@ -47,13 +47,12 @@ ring-shaped torus records. The reader traverses the actual body graph and reads
 each reachable face surface. The typed record starts with an attribute pointer,
 location vector, direction vector, major-radius double, minor-radius double and
 reference-direction vector. These slots were inspected in retained native SAB;
-the linked SAT implementation review supplies a separate source comparison.
+independent source dimensions supply the verification expectations.
 
 The decoder checks token types, finite vectors/radii, positive major radius
 greater than minor radius, and orthonormal axis/reference directions. Existing
 rigid-frame mapping transforms the centre and axis. It reports every torus patch;
 the component verifier compares every patch with independently sourced dimensions.
-The default reader option continues to reject torus surfaces. See the
-[decoder execution record](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/torus-native-reader-2026-11-13.md).
+The default reader option continues to reject torus surfaces. Enable the torus option explicitly for this supported surface family.
 
-For offline native-reader tests, supply `NATIVE_TORUS_SAB` and `NATIVE_TORUS_EXPECTATIONS` as runtime file paths. The second input is a geometry check record with source-derived expected centre, axis and major/minor radii. The generic tests contain no component fixture paths or dimensions.
+For offline inspection, supply retained SAB bytes to the reader and independently sourced centre, axis and radii to the verifier. Keep the numerical comparison and source evidence with the caller job.

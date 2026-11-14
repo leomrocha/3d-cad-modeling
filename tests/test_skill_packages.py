@@ -46,6 +46,7 @@ class IndependentSkills(unittest.TestCase):
                    if key not in {'PYTHONPATH', 'PYTHONHOME', 'VIRTUAL_ENV', 'NODE_OPTIONS',
                                   'CODEX_HOME', 'NATIVE_READER_ROOT', 'SKILLS_CLI_ROOT'}}
         cls.env.update(HOME=str(cls.home), XDG_CONFIG_HOME=str(cls.home / '.config'),
+                       MPLCONFIGDIR=str(cls.home / '.cache/matplotlib'),
                        DISABLE_TELEMETRY='1', DO_NOT_TRACK='1', CI='1',
                        PYTHONDONTWRITEBYTECODE='1')
         cls.cli = Path(os.environ['SKILLS_CLI_ROOT']).resolve() / 'bin/cli.mjs'
@@ -158,6 +159,31 @@ contract['observations']['point']['origin']=[0,0,1]
 assert run(contract)['all_passed'] is False
 print(json.dumps({'result':'PASS','passing_and_failing_coordinates_checked':True,'native_mutations':0}))"""
         self.results['skills']['cad-ocs-engineering']['coordinate_contract_fixture'] = self.run_python('cad-ocs-engineering', code)
+
+    def test_reusable_integration_inside_installed_copy(self):
+        code='''import json,tempfile,hashlib,math
+from pathlib import Path
+from feature_checks import cylinder_pattern
+from assembly_occurrences import expand_occurrences
+from planar_profiles import clip_circular_openings
+from cadtools.checkpoints import write_stage_checkpoint
+from source_vector_paths import parse_path
+from native_views import render_views
+f={'cylinders':[{'radius':2,'axis':[0,0,1],'origin':[1e-10,8,0]},{'radius':2,'axis':[0,0,1],'origin':[-1e-10,-8,0]}]}
+assert cylinder_pattern('order',f,4,2,[[0,-8],[0,8]],1e-6)['result']=='PASS'
+loops=clip_circular_openings([[-5,-5],[5,-5],[5,5],[-5,5]],[[0,0]],2,tolerance=1e-8)
+assert abs(sum(l['signed_area_mm2'] for l in loops)-(100-4*math.pi))<1e-8
+groups={'root':{'sha256':'b'*64,'children':[{'name':'part','source':'part','source_sha256':'a'*64,'yscale':-1}]}}
+assert expand_occurrences('root',groups)['quantities'][0]['hand']=='MIRRORED'
+assert parse_path(3,'M0 0 L1 0 L1 1 Z')[0]['closed']
+with tempfile.TemporaryDirectory() as tmp:
+ p=Path(tmp)/'checkpoint.json';write_stage_checkpoint(p,'fixture','pre_save',{'result':'PASS'})
+ assert json.loads(p.read_text())['job_id']=='fixture'
+ views=render_views([{'points':[[0,0,0],[1,2,3]],'endpoints_only':False}],tmp,stem='native',title='Synthetic native boundary',formats=('svg','png'))
+ assert len(views)==8
+ for row in views:assert hashlib.sha256(Path(row['path']).read_bytes()).hexdigest()==row['sha256']
+print(json.dumps({'result':'PASS','matcher':'PASS','profile_area':'PASS','quantities':'PASS','checkpoint':'PASS','vector_parser':'PASS','svg_png_views':'PASS','native_mutations':0}))'''
+        self.results['skills']['cad-ocs-engineering']['reusable_integration']=self.run_python('cad-ocs-engineering',code)
 
     def test_component_defaults_use_bundled_code_and_read_only_transport(self):
         code = '''import json

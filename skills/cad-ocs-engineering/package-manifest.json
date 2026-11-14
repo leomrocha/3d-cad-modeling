@@ -1,26 +1,214 @@
 {
   "skill": "cad-ocs-engineering",
-  "generated_by": "scripts/build_skill_packages.py",
+  "generated_by": "self-contained skill distribution",
   "files": {
     "LICENSE": {
       "source": "LICENSE",
       "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc"
     },
     "NOTICE.md": {
-      "source": "scripts/cadtools/NOTICE.md",
-      "sha256": "9f209d7c15cf4e651dff54678c89ec05a47ddbda1577aa14f06783bcee5f06c3"
+      "source": "NOTICE.md",
+      "sha256": "195b297f08e7057a7792412d12939fb8e3a875bce7cab43ed7cee03cb7c5d639"
+    },
+    "SKILL.md": {
+      "source": "SKILL.md",
+      "sha256": "cf9844732cd5bab90e890c567763342a326bbb5f96166b80ea855bd7e3289b6f"
+    },
+    "agents/openai.yaml": {
+      "source": "agents/openai.yaml",
+      "sha256": "0c244b9dd1be5d294e210ec6502fb304dd2431e4da247a99d79c5e7801ac905e"
+    },
+    "references/annular-job-runner.md": {
+      "source": "references/annular-job-runner.md",
+      "sha256": "a48ce4886e389d75a52d1d879b412da2a0e04f67b9896afe7a879c504e729267"
+    },
+    "references/annular-reference.md": {
+      "source": "references/annular-reference.md",
+      "sha256": "d9595d484df064222b24b87fa280ff81f15e0ad01a3e4fcb36da1b4efdc23b6c"
+    },
+    "references/assembly-units.md": {
+      "source": "references/assembly-units.md",
+      "sha256": "ada33925225e42a0296fde022cf460f2746c673615e1b8dda320959c16708a7e"
+    },
+    "references/axial-motor.md": {
+      "source": "references/axial-motor.md",
+      "sha256": "8bd355cdae973921868d891cafb57c490b6755ed85ff3957f81291f4e1a84dcf"
+    },
+    "references/calibrated-trace.md": {
+      "source": "references/calibrated-trace.md",
+      "sha256": "4a7e79c1365acf9380d080ad7d1ea97aa5eb6937c51aa7bbea5b701030dbb606"
+    },
+    "references/circular-boundary-checks.md": {
+      "source": "references/circular-boundary-checks.md",
+      "sha256": "6ac6c24ccbe4a7d777a6586b84d25b710a1f21ed599bb259d5f8663004905f8f"
+    },
+    "references/component-procedure.md": {
+      "source": "references/component-procedure.md",
+      "sha256": "830af051d7416a4e26c03a5ad262ee6c83b3bc79302fc6f535766d7ec59019f8"
+    },
+    "references/computational-engineering.md": {
+      "source": "references/computational-engineering.md",
+      "sha256": "abdbc882464dcb5ef4edaa2506680009404b0cb535a6638c1b447999b6006421"
+    },
+    "references/conical-washer-profile.md": {
+      "source": "references/conical-washer-profile.md",
+      "sha256": "62097355c1c46be700b13e6a685ce3923ed89abab99cfe96cdf9c7b23aa7c5c1"
+    },
+    "references/dimension-limits-and-datums.md": {
+      "source": "references/dimension-limits-and-datums.md",
+      "sha256": "f1152475887926202430bf48ff07dedc86830ba11a77d5bb15658d83412f33e4"
+    },
+    "references/document-cleanup.md": {
+      "source": "references/document-cleanup.md",
+      "sha256": "05540eb30d67a90baa12627c7c08ff888f2444eb2087ab6a16593cb6e09a55bb"
+    },
+    "references/drawing-feature-checks.md": {
+      "source": "references/drawing-feature-checks.md",
+      "sha256": "b1ea1440762729cb2aa1693c522d06d50bd86e45f3b43c17c8379614dcabc9f2"
+    },
+    "references/envelope-job-runner.md": {
+      "source": "references/envelope-job-runner.md",
+      "sha256": "be08615e9c674597aea62a91f68d3d2fe3a6931d41a59f34de4f832dc4c0d348"
+    },
+    "references/envelope-reference.md": {
+      "source": "references/envelope-reference.md",
+      "sha256": "abd7f90a083be994b65dd5446813dd604cdb299dc70f7be910efd265c03bf507"
+    },
+    "references/existing-battery.md": {
+      "source": "references/existing-battery.md",
+      "sha256": "e7ccb460e43be2b8cbca7b948a3b715abb577b5b80bd0beabb2896fcd43716d8"
+    },
+    "references/existing-bearing.md": {
+      "source": "references/existing-bearing.md",
+      "sha256": "efba71870ab415743fab76e5d28825a7886a71a2b0c1172cda87046e2affee79"
+    },
+    "references/existing-model-start-check.md": {
+      "source": "references/existing-model-start-check.md",
+      "sha256": "bd80199d1a993a18eafde83f63b0ade29fb4a07db7b256cc2fb2b5c7e9a938a5"
+    },
+    "references/generic-integration.md": {
+      "source": "references/generic-integration.md",
+      "sha256": "6d87ae1476c435aa52d7983ecd2a83fdf849ac50e6badcf300bd57eb0d1287b8"
+    },
+    "references/hex-screw-reference.md": {
+      "source": "references/hex-screw-reference.md",
+      "sha256": "423f579c25d033e61e57fa450b38e08e877a0b64ce2ffe5865cb21741cb8f855"
+    },
+    "references/hexagonal-reference.md": {
+      "source": "references/hexagonal-reference.md",
+      "sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3"
+    },
+    "references/manufacturer-assembly.md": {
+      "source": "references/manufacturer-assembly.md",
+      "sha256": "7384b88acb3c02c2d36ce2a1abcec83d028c0e9d41a683c85c7310ee645de409"
+    },
+    "references/model-contract.md": {
+      "source": "references/model-contract.md",
+      "sha256": "1d52c3c8104d8abb9643030d2432cec06ea1e5ee28a428f8dae49c033103c76e"
+    },
+    "references/non-geometric-requirements.md": {
+      "source": "references/non-geometric-requirements.md",
+      "sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0"
+    },
+    "references/ocs-control.md": {
+      "source": "references/ocs-control.md",
+      "sha256": "96f2ef36c5e5549db14deec002187a0c95e29531d215f79db8ce865bfb0e8874"
+    },
+    "references/ocs-runtime.md": {
+      "source": "references/ocs-runtime.md",
+      "sha256": "c08e7f6b580c2b8b04ad879260dbd05e432b5ff792e871cabb31cab7dd0058d0"
+    },
+    "references/package-completion.md": {
+      "source": "references/package-completion.md",
+      "sha256": "35827d84b00a6975004244c4bcf34f4d0fcb44e4d6f2a5806ecf10cfc1690ac5"
+    },
+    "references/paths.md": {
+      "source": "references/paths.md",
+      "sha256": "348dd603605ebaca9ff4bc3387536821eeafadf62e9a4cd507be5e00681fd23b"
+    },
+    "references/pixhawk.md": {
+      "source": "references/pixhawk.md",
+      "sha256": "d1cfb4257f7b1d01bd6698fe1bf19ee1359624bddeb3bbb9a3015b94cb8c45bb"
+    },
+    "references/profile-reference.md": {
+      "source": "references/profile-reference.md",
+      "sha256": "c49593df209b57318f7a21c7c2c0c08fde5351a462033a84db8e2c7c5d4a51ae"
+    },
+    "references/retained-artifact-checks.md": {
+      "source": "references/retained-artifact-checks.md",
+      "sha256": "68bee503ac58a25dc54bce0d3ea8d9722996fcf76a6e7ab7abd0510528f007e4"
+    },
+    "references/scaled-assemblies.md": {
+      "source": "references/scaled-assemblies.md",
+      "sha256": "0e8106f4d2a17f806a6cfe1abfc0adaf23d77645f534fe4124f80b6c52c70959"
+    },
+    "references/shared-feature-checks.md": {
+      "source": "references/shared-feature-checks.md",
+      "sha256": "b671d54fe4fdec0fe08bcb545f294cd9a7fe35feb8decca6d7653ec1dec033c6"
+    },
+    "references/small-bms.md": {
+      "source": "references/small-bms.md",
+      "sha256": "16fab9c625aef1c7021cafed5812de337df8022323e914e2ef49175c9acf6088"
+    },
+    "references/source-first-and-tube.md": {
+      "source": "references/source-first-and-tube.md",
+      "sha256": "673147074507a6a87957d1548cea0fbe0d7fe4c5d68d9ed0d8aceaafed3600b6"
+    },
+    "references/source-metadata.md": {
+      "source": "references/source-metadata.md",
+      "sha256": "13d01b130d74d3ecf0fd513aaf4ae47d79b9d7297ceead2414a40f4bd15515e7"
+    },
+    "references/source-perimeter-chains.md": {
+      "source": "references/source-perimeter-chains.md",
+      "sha256": "0f5a116cbf31fd5d60753a5a86c20292058079a5862369bbfaaa951da98f3a55"
+    },
+    "references/source-variant-tables.md": {
+      "source": "references/source-variant-tables.md",
+      "sha256": "2b0ec48d3998efb1f4e5886f59ddac8cb9b68ee3dea3ad87707d9cd02c113ab9"
+    },
+    "references/source-view-evidence.md": {
+      "source": "references/source-view-evidence.md",
+      "sha256": "5cebe3896c1318a861b06d7597869ce84c0d23d31467e256a0f7d0f75c3ceb60"
+    },
+    "references/sources-and-capabilities.md": {
+      "source": "references/sources-and-capabilities.md",
+      "sha256": "99185d7d65866fbac6d89a884cfd9fff0b1f48973549b1f4a8433ebf3d49271b"
+    },
+    "references/spherical-seat-profile.md": {
+      "source": "references/spherical-seat-profile.md",
+      "sha256": "e2309a39fdab737e202a9ca1c62e1b270b9ac4239c5d91274788be340b17402a"
+    },
+    "references/step-solid-inventory.md": {
+      "source": "references/step-solid-inventory.md",
+      "sha256": "0b88f613487333bcfe3d468483eae3260122013decfda083b5fca60ed2791e86"
+    },
+    "references/tabbed-battery.md": {
+      "source": "references/tabbed-battery.md",
+      "sha256": "329fef06c9f8b5b9f7cbe3c683aae3a0be07561e88b6cb1dc37fd7759cb95938"
+    },
+    "references/toroidal-reference.md": {
+      "source": "references/toroidal-reference.md",
+      "sha256": "1dacca90a1ae83b2afcb95f38d48549c3f2ea3aa0ae4373816a6d253be773599"
     },
     "requirements.txt": {
-      "source": "requirements-native.txt",
-      "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47"
+      "source": "requirements.txt",
+      "sha256": "49e6cfc69cd56c2e14ad815b9ceffb35234787c4c1544f6585fc5a782a9aabc4"
     },
     "scripts/annular_job_runner.py": {
       "source": "scripts/annular_job_runner.py",
-      "sha256": "e9e9cda95987d62464b27fbde6e57fc8afcf14048e4453624ffea5c010e25655"
+      "sha256": "59bc5f47c6180275d27ab5259d4c1bf897d2c0c9cb4dec14d6887232bcebf538"
     },
     "scripts/annular_reference.py": {
       "source": "scripts/annular_reference.py",
       "sha256": "487c5f63563e8d956713b40a94fe0cd40f194e6861f20e893c42a0004c7cc334"
+    },
+    "scripts/assembly_build.py": {
+      "source": "scripts/assembly_build.py",
+      "sha256": "ac8f111632dbf4a9fc5d4c3a12cbcc5ed6f4fefaae44aacf56c0389f7f3dc3d5"
+    },
+    "scripts/assembly_occurrences.py": {
+      "source": "scripts/assembly_occurrences.py",
+      "sha256": "ad63cbae670602038507267604d196f89b33e2288f9d1d1710b07d111ab296a6"
     },
     "scripts/assembly_repair.py": {
       "source": "scripts/assembly_repair.py",
@@ -42,17 +230,25 @@
       "source": "scripts/cadtools/__init__.py",
       "sha256": "3b3d2bdc01158b2647f603599d53cd7493ee6f4bd3c7d79eaa20160dba925b3d"
     },
+    "scripts/cadtools/checkpoints.py": {
+      "source": "scripts/cadtools/checkpoints.py",
+      "sha256": "99387f4d24a28812fff10d337d083ecb52019620d15d47e7573525e731bdbb89"
+    },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
-      "sha256": "d29cad2157edf93b7aff220363a89e31b795f87f7ec67d4ca81e4f0c69931408"
+      "sha256": "10ff9d4996713659af7e096421e3bc06ff17bcc06d5d2ccf8a6e0917fa2b03b3"
+    },
+    "scripts/cadtools/records.py": {
+      "source": "scripts/cadtools/records.py",
+      "sha256": "4201640287d53c884469c57b1a807b4b56e02869a2ef017643cddffc12fcab0c"
     },
     "scripts/cadtools/runtime.py": {
       "source": "scripts/cadtools/runtime.py",
-      "sha256": "1418e1875009c44597722f05e48ae8fc034e676696b8c301c971d0a6753e7c05"
+      "sha256": "8ed4defe9b26989e86a072e3f54ac74dd79f47c54988eb7d3bf3467cdb314c0e"
     },
     "scripts/cadtools/verification.py": {
       "source": "scripts/cadtools/verification.py",
-      "sha256": "583a970519b5f989350132bca91dc0858f191a1647e883dbcda1088eec31538a"
+      "sha256": "84ae3bbe669281f64d5e65b7e5ac7b1ec423e39fd99e5556cb905ea4ce78fe3b"
     },
     "scripts/calibrated_trace.py": {
       "source": "scripts/calibrated_trace.py",
@@ -80,7 +276,7 @@
     },
     "scripts/envelope_job_runner.py": {
       "source": "scripts/envelope_job_runner.py",
-      "sha256": "acd739a8a789cfdaa14fcbbe1475b0f5e4092c2e21e0cc3a516d7f8a092658ab"
+      "sha256": "3e7a6b9f7907b140acd24c881fbdce11cc4932d189a7252b396e122a9dda1086"
     },
     "scripts/envelope_reference.py": {
       "source": "scripts/envelope_reference.py",
@@ -88,7 +284,7 @@
     },
     "scripts/feature_checks.py": {
       "source": "scripts/feature_checks.py",
-      "sha256": "1b476719a1f042727a1ce53fdcf91d756442f52ed4be80b44a96ae9dc401dd77"
+      "sha256": "9fed8825e1e7e76f37852cb4dcdd4550dad2cc39c804b8886f8bf0cdc81393af"
     },
     "scripts/hex_screw_reference.py": {
       "source": "scripts/hex_screw_reference.py",
@@ -104,7 +300,15 @@
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",
-      "sha256": "14efb7ac9055f0d67bc8eb0585b317875766e5c61ad01896b1bee33f5e010883"
+      "sha256": "bfb4ad3afe4608c05dda4bed0119b090a963fbc3ef8a5104c2f0bf2cd30cbc05"
+    },
+    "scripts/native_geometry.py": {
+      "source": "scripts/native_geometry.py",
+      "sha256": "50e6a69614095de4d808111300714199d7859f6e233ea306acbd81643631c42e"
+    },
+    "scripts/native_views.py": {
+      "source": "scripts/native_views.py",
+      "sha256": "3570c960971314a7c2acd8b236d6a1fb4cb45f51b77d259d4df583be8c73679e"
     },
     "scripts/ocs_control.py": {
       "source": "scripts/ocs_control.py",
@@ -112,7 +316,7 @@
     },
     "scripts/ocs_document_cleanup.py": {
       "source": "scripts/ocs_document_cleanup.py",
-      "sha256": "275f09cd09cb21dc02f5180e8b8f426b3ca79284bbf2504d109b9ea8eebd93d4"
+      "sha256": "437a34e827f2d2051ab735f9a05fa980f74c9c905834ba066cc1282c9db3506c"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",
@@ -128,7 +332,15 @@
     },
     "scripts/pixhawk.py": {
       "source": "scripts/pixhawk.py",
-      "sha256": "0a12ddc51f025f398c289e8315c82cf7dc820c5048c666fd6d84668476a8460f"
+      "sha256": "dd4562c66215d508c128849d6b8c4d698b4be8b9c19babfa7cfe4c7af3a79ec4"
+    },
+    "scripts/planar_profiles.py": {
+      "source": "scripts/planar_profiles.py",
+      "sha256": "cc00dd9332ef49af3782c62d19f37f1d0dc7fd8d678d27364fcdd791762614f3"
+    },
+    "scripts/plate_reference.py": {
+      "source": "scripts/plate_reference.py",
+      "sha256": "1d04e771027ab7c208e39952771d02615e5d60b362c3b04aaa95f066d9b8e57c"
     },
     "scripts/profile_reference.py": {
       "source": "scripts/profile_reference.py",
@@ -136,11 +348,11 @@
     },
     "scripts/retained_artifacts.py": {
       "source": "scripts/retained_artifacts.py",
-      "sha256": "8d61d4b042d3ca128105aa5e032504ce7a4e6adcbad8d95f54acf8be34604729"
+      "sha256": "e3b3d2b392c49019b2031c3e3bcdd9ac818386998bd05706047abea9f9f4ec77"
     },
     "scripts/rounded_tube.py": {
       "source": "scripts/rounded_tube.py",
-      "sha256": "d9b76b03f0c93452f70ae123c6311ecaaf5779d827a36acd1f88d90844c419c8"
+      "sha256": "3c79015c2f78216f89a30e455bf134b0f854e755e588a4fd36ffb48060b7a388"
     },
     "scripts/small_bms.py": {
       "source": "scripts/small_bms.py",
@@ -158,13 +370,17 @@
       "source": "scripts/source_variant_table.py",
       "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d"
     },
+    "scripts/source_vector_paths.py": {
+      "source": "scripts/source_vector_paths.py",
+      "sha256": "cee935c8f421273a9cb343fa867242d30f7febff63cb859453bfcd52e615624a"
+    },
     "scripts/spherical_seat_profile.py": {
       "source": "scripts/spherical_seat_profile.py",
       "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450"
     },
     "scripts/step_placements.py": {
       "source": "scripts/step_placements.py",
-      "sha256": "fd59a53303050ca474eda3002f928580575d9170309d20caafba58a498d2546d"
+      "sha256": "ae70a2c208a124d5691eaf9e1bdac09b67dd9a4b6509a87876fe3b5cf9646691"
     },
     "scripts/step_solid_inventory.py": {
       "source": "scripts/step_solid_inventory.py",

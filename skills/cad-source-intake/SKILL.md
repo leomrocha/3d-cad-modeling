@@ -42,8 +42,8 @@ python3 ${SKILL_ROOT}/scripts/source_intake.py \
 1. Call `source_intake.verify_revision(path_to_source_index)` to verify the completed index/scope hashes against the receipt.
 2. The agent compares the recorded request, scope, corrections and affected source conflicts. Numerical capture checks establish source identity and output integrity. Source interpretation retains its own action.
 3. Hand the completed revision to **Select the execution mode and define candidate branches (INTAKE-A02)**. Preserve the source/revision IDs in its inputs. Required source-priority decisions affect the named dependent feature.
-4. The [actual executed input](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/source-intake/job-input.json), [published index](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/source-intake/live-01/revision/source-index.json) and [execution report](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/source-intake.md) document the exercised interface.
+4. Keep each supplied input, source index, receipt and execution result together in caller-owned persistent storage. Bind subsequent work to the exact retained revision.
 
 ## Verification
 
-Run the bundled `scripts/package_check.py` to check package hashes and imports. After intake, call `source_intake.verify_revision()` on the completed source index to check the published index and scope against their receipt. The repository's [source-intake tests](https://github.com/leomrocha/3d-cad-modeling/blob/master/tests/test_source_intake.py) exercise source conflicts, corrections and interrupted publication.
+Run the bundled `scripts/package_check.py` to check package hashes and imports. After intake, call `source_intake.verify_revision()` on the completed source index to check the published index and scope against their receipt. Preserve source conflicts, corrections and interrupted publication as explicit results.

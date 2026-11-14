@@ -32,18 +32,53 @@ def vertex_extrema(name,features,expected,tolerance):
 
 
 def cylinder_pattern(name,features,diameter,axis,centres,tolerance):
+    comparison(name+' tolerance', [0], [0], tolerance)
     if type(axis) is not int or axis not in [0,1,2] or isinstance(diameter,bool) or not math.isfinite(diameter) or diameter<=0:
         raise ValueError('Positive finite diameter and Cartesian axis required')
     if not centres or any(len(p)!=2 or any(isinstance(x,bool) or not isinstance(x,(int,float)) or not math.isfinite(x) for x in p) for p in centres):
         raise ValueError('Nonempty finite expected axis centres required')
     coordinates=[i for i in range(3) if i!=axis];positions=[]
     for c in features['cylinders']:
+        comparison(name+' native cylinder', [c['radius']]+list(c['axis'])+list(c['origin']),
+                   [c['radius']]+list(c['axis'])+list(c['origin']), tolerance)
         if abs(c['radius']*2-diameter)>tolerance or abs(abs(c['axis'][axis])-1)>tolerance:continue
         if any(abs(c['axis'][i])>tolerance for i in coordinates):continue
         point=[c['origin'][i] for i in coordinates]
         if not any(all(abs(a-b)<=tolerance for a,b in zip(point,p)) for p in positions):positions.append(point)
-    return comparison(name,sorted(positions),sorted([list(p) for p in centres]),tolerance,
-                      method='native circular cylinders; coincident patches deduplicated; axis projection')
+    result=comparison(name,sorted(positions),sorted([list(p) for p in centres]),tolerance,
+                      method='native circular cylinders; coincident patches deduplicated; one-to-one coordinate tolerance matching')
+    remaining=list(range(len(result['observed'])));pairs=[]
+    for expected in result['expected']:
+        candidates=[i for i in remaining if all(abs(a-b)<=tolerance for a,b in zip(result['observed'][i],expected))]
+        if len(candidates)!=1:break
+        i=candidates[0];remaining.remove(i)
+        pairs.append(dict(observed=result['observed'][i],expected=expected))
+    result.update(result='PASS' if len(pairs)==len(centres) and not remaining else 'FAIL',matched_pairs=pairs)
+    return result
+
+
+def cylinder_wall_checks(name, faces, *, axis, centre, radius, side, outer, inner_limit, tolerance):
+    """Check actual cylinder-face boundary vertices on one declared sidewall (mm)."""
+    if type(axis) is not int or axis not in (0,1,2) or side not in (-1,1):
+        raise ValueError('Cartesian axis and side sign required')
+    comparison(name+' input',list(centre)+[radius,outer,inner_limit],list(centre)+[radius,outer,inner_limit],tolerance)
+    if len(centre)!=2 or not 0<inner_limit<outer or radius<=0:raise ValueError('Invalid wall dimensions')
+    coords=[i for i in range(3) if i!=axis];matches=[]
+    for face in faces:
+        support=face['support'];points=[p for loop in face['loops'] for edge in loop['edges'] for p in edge['endpoints']]
+        if face['surface_type']!='cone-surface' or 'sin_angle' in support or not points:continue
+        if abs(support['radius']-radius)>tolerance or abs(abs(support['axis'][axis])-1)>tolerance:continue
+        if any(abs(support['axis'][i])>tolerance for i in coords):continue
+        if any(abs(support['origin'][i]-v)>tolerance for i,v in zip(coords,centre)):continue
+        if all(side*p[axis]>=-tolerance for p in points):matches.append(points)
+    points=[p for group in matches for p in group]
+    for point in points:comparison(name+' vertex',point,point,tolerance)
+    axial=[side*p[axis] for p in points]
+    passed=bool(points) and any(abs(x-outer)<=tolerance for x in axial) and any(0<=x<=inner_limit+tolerance for x in axial)
+    passed=passed and all(abs(math.hypot(*(p[i]-v for i,v in zip(coords,centre)))-radius)<=tolerance for p in points)
+    return dict(check=name,result='PASS' if passed else 'FAIL',unit='mm',axis=axis,side=side,
+                observed_absolute_wall_vertex_span=[min(axial),max(axial)] if axial else [],
+                method='Native cylindrical face support and reciprocal face-boundary endpoints')
 
 
 def planar_boundary_pattern(name,features,axis,level,spans,centres,tolerance):

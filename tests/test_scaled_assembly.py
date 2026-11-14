@@ -20,9 +20,9 @@ class ScaledAssemblyTests(unittest.TestCase):
     def test_nonuniform_scale_rejected(self):
         p=self.properties();p['z_scale']=.002
         with self.assertRaisesRegex(ValueError,'Uniform'):native_matrix(p,allow_uniform_scale=True)
+    @unittest.skipUnless(os.environ.get('CAD_SCALED_ASSEMBLY_FIXTURE'), 'Optional caller-supplied scaled native assembly fixture')
     def test_recorded_lynx_preserves_all_instance_paths_and_unit_conversion(self):
-        root=Path(os.environ.get('FERME_ROOT',Path(__file__).resolve().parents[2]/'ferme'))
-        b=root/'engineering/module-development/cad/work/component-led-2026-11-12/c026-reuse-01'
+        b=Path(os.environ['CAD_SCALED_ASSEMBLY_FIXTURE'])
         rows=[r for p in b.glob('records-*.json') for r in json.loads(p.read_text())['records']]
         self.assertTrue(rows,'Retained Lynx records required')
         blocks=json.loads((b/'blocks.json').read_text())['records']

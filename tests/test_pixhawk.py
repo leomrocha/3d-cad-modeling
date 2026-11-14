@@ -105,16 +105,16 @@ class PixhawkChecks(unittest.TestCase):
         with self.assertRaises(ValueError):
             parameters(job)
 
-    def test_wrong_identity_units_and_thread_callout_are_rejected(self):
-        for field, value in [('part_id', 'C055'), ('units', 'inch')]:
-            job = copy.deepcopy(self.job)
-            job[field] = value
-            with self.assertRaises(ValueError):
-                parameters(job)
+    def test_caller_identity_and_nominal_metric_diameter_are_inputs(self):
+        job=copy.deepcopy(self.job);job['part_id']='synthetic-case';job['part_name']='Synthetic mounting envelope'
+        self.assertEqual(parameters(job)['nominal_thread_diameter'],2)
+        job['units']='inch'
+        with self.assertRaises(ValueError):parameters(job)
         job = copy.deepcopy(self.job)
         job['features'][-2]['value'] = 'M2.5'
-        with self.assertRaises(ValueError):
-            parameters(job)
+        self.assertEqual(parameters(job)['nominal_thread_diameter'],2.5)
+        job['features'][-2]['value']='unknown'
+        with self.assertRaises(ValueError):parameters(job)
 
 
 if __name__ == '__main__':

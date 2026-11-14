@@ -37,4 +37,4 @@ It never starts OCS, removes stale descriptors, automatically retries or saves a
 - Planar-curve intersection and XY filters are not 3D collision tests. An `INTERFERE` command name is not a verified numeric result.
 - Audit and verified save are documented, but fidelity is target-specific. No conversion is implicit.
 
-Original API/receipt evidence: `${ENERGY_ROOT}/heoliennes/research/cad-workflow/harness-findings.md`. Local source revision is not installed-binary revision.
+Original API/receipt evidence: caller-supplied source evidence. Local source revision is not installed-binary revision.

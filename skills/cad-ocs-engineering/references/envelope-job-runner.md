@@ -56,4 +56,4 @@ uncertain response. If immediate recovery also exhausts while the operation is
 running, it makes three further recovery calls after 0.25, 0.5 and 1 second.
 The mutation is sent once. Definite rejection or error propagates immediately;
 persistent uncertainty propagates at the fixed bound. Preserve that request and
-its journal for read-only follow-up. See the [executed recovery record](https://github.com/leomrocha/3d-cad-modeling/blob/master/execution/bounded-request-recovery-2026-11-13.md).
+its journal for read-only follow-up.

@@ -154,10 +154,18 @@ def expected(name, committed=False):
     result['NOTICE.md'] = source_bytes('scripts/cadtools/NOTICE.md', committed)
     result['requirements.txt'] = (source_bytes('requirements-native.txt', committed)
                                   if name != 'cad-source-intake' else b'# Python 3.12 standard library only.\n')
-    manifest = {'skill': name, 'generated_by': 'scripts/build_skill_packages.py',
-                'files': {target: {'source': files.get(target.removeprefix('scripts/'),
-                           'requirements-native.txt' if target == 'requirements.txt' and name != 'cad-source-intake'
-                           else 'LICENSE' if target == 'LICENSE' else 'scripts/cadtools/NOTICE.md' if target == 'NOTICE.md' else 'standard-library declaration'),
+    # Installed metadata refers only to bundled files. Canonical provenance is
+    # registered by the source repository, separately from this distribution.
+    package=ROOT/'skills'/name
+    if committed:
+        prefix=str(package.relative_to(ROOT))
+        names=subprocess.check_output(['git','ls-tree','-r','--name-only','HEAD','--',prefix],cwd=ROOT,text=True).splitlines()
+        docs=[ROOT/p for p in names if p==prefix+'/SKILL.md' or p.startswith(prefix+'/references/') and p.endswith('.md') or p.startswith(prefix+'/agents/') and p.endswith('.yaml')]
+    else:docs=[package/'SKILL.md']+list((package/'references').rglob('*.md'))+list((package/'agents').rglob('*.yaml'))
+    for path in docs:
+        if path.is_file():result[str(path.relative_to(package))]=source_bytes(str(path.relative_to(ROOT)),committed)
+    manifest = {'skill': name, 'generated_by': 'self-contained skill distribution',
+                'files': {target: {'source': target,
                            'sha256': hashlib.sha256(data).hexdigest()}
                           for target, data in sorted(result.items())}}
     result['package-manifest.json'] = (json.dumps(manifest, indent=2) + '\n').encode()

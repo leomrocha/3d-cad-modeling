@@ -77,7 +77,7 @@ def _torus_surface(tokens, Tags, world):
     """Read the observed ACIS700 typed torus record, after its attribute pointer.
 
     Source: retained native records and the linked SAT format review in
-    execution/torus-native-reader-2026-11-13.md. No component dimensions enter
+    the supported native torus layout. Caller dimensions enter
     the decoder. Surface parameter bounds remain outside this observation API.
     """
     expected = [Tags.POINTER, Tags.LOCATION_VEC, Tags.DIRECTION_VEC,
@@ -100,7 +100,8 @@ def _torus_surface(tokens, Tags, world):
             'major_radius': major, 'minor_radius': minor}
 
 
-def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,include_loops=False,allow_tori=False,include_edge_curves=False):
+def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,include_loops=False,allow_tori=False,include_edge_curves=False,edge_policy='strict'):
+    if edge_policy not in ('strict','endpoints'):raise ValueError('Unknown boundary policy')
     from ezdxf.acis.sab import parse_sab,SabDataLoader
     from ezdxf.acis.const import Tags
     if not isinstance(data,(bytes,bytearray)) or not data:
@@ -316,7 +317,7 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
                         if len(curve.data)!=len(expected) or [t.tag for t in curve.data]!=expected:
                             raise ValueError('Unsupported straight-curve token layout')
                         origin=vec(curve.data[1]);direction=vec(curve.data[2])
-                        if abs(sum(v*v for v in direction)-1)>1e-8:
+                        if abs(sum(v*v for v in direction)-1)>1e-8 and edge_policy=='strict':
                             raise ValueError('Straight-curve direction must be unit length')
                         row['line']={'origin':world(origin,True),'direction':world(direction)}
                     elif curve.name=='ellipse-curve':
@@ -341,7 +342,8 @@ def sab_features(data,allow_rigid=False,allow_spheres=False,allow_cones=False,in
                                         'minor_radius':major_radius*ratio,
                                         'is_circle':abs(ratio-1)<=1e-9}
                     else:
-                        raise ValueError('Unsupported boundary curve: '+curve.name)
+                        if edge_policy=='strict':raise ValueError('Unsupported boundary curve: '+curve.name)
+                        row['representation']='native trim endpoints'
                     edge_rows.append(row)
                 face_row['loops'].append({'edge_count':len(edge_rows),'edges':edge_rows})
             boundary_faces.append(face_row)

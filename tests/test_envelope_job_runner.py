@@ -10,6 +10,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 import envelope_job_runner as runner
+import cadtools.runtime as actual_runtime
 
 
 class FakeHelper:
@@ -60,7 +61,7 @@ class FakeClient:
         if operation == 'new':
             self.helper.active = 2
             self.helper.documents.append({'id': 2, 'path': None, 'dirty': False})
-            return {'document_id': 2}
+            return {'ok':True,'status':'completed','state':{'document_id':2}}
         if operation == 'xdata_set':
             next(row for row in self.helper.documents
                  if row['id'] == self.document_id)['dirty'] = True
@@ -161,9 +162,10 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         sab.SabDataLoader = object
         runtime = types.ModuleType('cadtools.runtime')
         runtime.Client = FakeClient
-        runtime.Journal = lambda path: object()
+        runtime.Journal = actual_runtime.Journal
+        runtime.new_owned_document = actual_runtime.new_owned_document
         runtime.load_helper = lambda path: helper
-        runtime.Uncertain = type('Uncertain', (RuntimeError,), {})
+        runtime.Uncertain = actual_runtime.Uncertain
         verification = types.ModuleType('cadtools.verification')
 
         def save_reopen(client, path, counts):
@@ -397,7 +399,7 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         self.assertEqual([row['id'] for row in helper.documents], [1, 2, 3])
 
     def test_uncertain_mutation_recovers_original_request_without_resubmission(self):
-        uncertain = type('Uncertain', (RuntimeError,), {})
+        uncertain = actual_runtime.Uncertain
         runtime = types.ModuleType('cadtools.runtime')
         runtime.Uncertain = uncertain
 

@@ -1,18 +1,22 @@
 {
   "skill": "cad-drawing-inspection",
-  "generated_by": "scripts/build_skill_packages.py",
+  "generated_by": "self-contained skill distribution",
   "files": {
     "LICENSE": {
       "source": "LICENSE",
       "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc"
     },
     "NOTICE.md": {
-      "source": "scripts/cadtools/NOTICE.md",
-      "sha256": "9f209d7c15cf4e651dff54678c89ec05a47ddbda1577aa14f06783bcee5f06c3"
+      "source": "NOTICE.md",
+      "sha256": "195b297f08e7057a7792412d12939fb8e3a875bce7cab43ed7cee03cb7c5d639"
+    },
+    "SKILL.md": {
+      "source": "SKILL.md",
+      "sha256": "beb9f54110a1efaa01e532af87d5bb14079b734ad8bd0318f7b9fde56860beb4"
     },
     "requirements.txt": {
-      "source": "requirements-native.txt",
-      "sha256": "f80a3d32290975cb6c8aee366ef0d806f0024ef6c8a7e57a95e1b5983c3ebf47"
+      "source": "requirements.txt",
+      "sha256": "49e6cfc69cd56c2e14ad815b9ceffb35234787c4c1544f6585fc5a782a9aabc4"
     },
     "scripts/component_records.py": {
       "source": "scripts/component_records.py",
