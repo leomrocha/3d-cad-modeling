@@ -98,3 +98,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Circular opening inspection
 
 1. [Saved circular boundaries](cad-ocs-engineering/references/circular-boundary-checks.md) — associates full circular cap loops, analytic curve parameters and reciprocal cylindrical face boundaries.
+
+## Source-bound screw construction
+
+1. [Hex-head and cylindrical-shaft reference](cad-ocs-engineering/references/hex-screw-reference.md) — source pins, explicit frame, joined solid and native feature checks.

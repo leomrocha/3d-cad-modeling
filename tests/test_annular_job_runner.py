@@ -337,8 +337,10 @@ class AnnularJobRunnerTests(unittest.TestCase):
                      'active_documents_before': {
                          'document_id': 1, 'revision': 0, 'geometry_revision': 0,
                          'documents': [{'id': 1, 'path': None, 'dirty': False}]}}
-        docs = [{'id': 1, 'path': None, 'dirty': False},
-                {'id': construction_id, 'path': None, 'dirty': True}]
+        docs = [{'id': 1, 'path': None, 'dirty': False,
+                 'revision': 0, 'title': 'Start', 'start': True},
+                {'id': construction_id, 'path': None, 'dirty': True,
+                 'revision': 5, 'title': 'Unsaved reference', 'start': False}]
         state = {'document_id': construction_id, 'revision': 5,
                  'geometry_revision': 99, 'documents': docs}
         record = {'handle': handle, 'type': 'Solid3D', 'properties': {'acis_data': {

@@ -115,6 +115,8 @@ Inspect layer/material/group/block schemas before organizing parts. Name parts a
 4. For a saved solid with circular openings, use the [circular-boundary procedure](references/circular-boundary-checks.md) to associate full circular edges, end-plane loops and adjacent cylinder faces.
 5. For a repeated source-defined annular job, use the [guarded annular job runner](references/annular-job-runner.md). Supply the job, paths, model indexes, caller roots, OCS control/session and actual execution-model identity explicitly. Run the default read-only preflight first; native writes require `--allow-write` and a fresh passing source/model gate.
 
+6. For a source-bound regular-hex head joined to a nominal cylindrical shaft, use the [hex-screw reference procedure](references/hex-screw-reference.md). Supply the dimensions, source bindings and frame through the external job; retain native execution and saved-model results in its component project.
+
 ## Save and computational handoff
 
 - Save only to an authorized path, format and version. Follow exact conversion authorization requirements; preserve originals. Mesh visibility is not editable-solid or feature-history equivalence.

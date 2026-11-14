@@ -16,7 +16,7 @@
     },
     "scripts/annular_job_runner.py": {
       "source": "scripts/annular_job_runner.py",
-      "sha256": "6f2a8b4e05abcf9a05a6d9ad9441d6ce79895ca9d3fb72355d5f35fc985f422f"
+      "sha256": "e9e9cda95987d62464b27fbde6e57fc8afcf14048e4453624ffea5c010e25655"
     },
     "scripts/annular_reference.py": {
       "source": "scripts/annular_reference.py",
@@ -89,6 +89,10 @@
     "scripts/feature_checks.py": {
       "source": "scripts/feature_checks.py",
       "sha256": "1b476719a1f042727a1ce53fdcf91d756442f52ed4be80b44a96ae9dc401dd77"
+    },
+    "scripts/hex_screw_reference.py": {
+      "source": "scripts/hex_screw_reference.py",
+      "sha256": "f7ec31bad39c48022fa31cdb4f0afe522f900cb9c505ad7d553e70810f5ca216"
     },
     "scripts/hexagonal_reference.py": {
       "source": "scripts/hexagonal_reference.py",

@@ -403,7 +403,8 @@ def _assert_resume_live_state(state, checkpoint, expected_snapshot):
         raise RuntimeError('Live OCS state differs from the retained pre-save document epoch')
 
     live = document_snapshot(state, checkpoint['roots'])
-    if live.get('documents') != expected_snapshot.get('documents'):
+    expected = document_snapshot(expected_snapshot, checkpoint['roots'])
+    if live.get('documents') != expected.get('documents'):
         raise RuntimeError('Live OCS document paths or dirty states differ from the retained epoch')
 
 
@@ -486,7 +487,8 @@ def prepare_resume(args):
     if not isinstance(expected_documents, list) or not isinstance(state.get('documents'), list):
         raise ValueError('Resume requires retained and live document inventories')
     current_snapshot = document_snapshot(state, roots)
-    if current_snapshot.get('documents') != expected_documents:
+    expected_snapshot = document_snapshot({'documents': expected_documents}, roots)
+    if current_snapshot.get('documents') != expected_snapshot.get('documents'):
         raise RuntimeError('Live OCS document paths or dirty states differ from the retained epoch')
     if descriptor.get('session_id') != prior.get('session_id'):
         raise RuntimeError('Selected OCS session differs from the retained write preflight')
