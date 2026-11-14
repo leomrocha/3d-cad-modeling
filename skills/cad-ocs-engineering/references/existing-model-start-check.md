@@ -1,5 +1,16 @@
 # Check existing 3D files before starting a component
 
+## Required execution order
+
+Include these instructions in every component execution order and delegated assignment:
+
+1. Select the item from the current implementation plan. Read its readable name, exact component/variant, required representation and work record.
+2. Inspect actual matching models and all manifest, work-record, input-sheet and CAD-index model references, together with the filesystem inventory. Apply this check even when the item says NOT_STARTED. Review candidate identity using the existing component evidence and saved checks.
+3. If a matching completed model exists, mark the item DONE in the current work list, retain its readable name, actual path and existing checks, and move to the next unfinished item. Reuse the completed geometry and recorded checks.
+4. Select construction only after the reconciliation establishes that the required matching model is absent. Keep the inspected references and candidate dispositions beside the selected job. Treat NEW_MODEL_REQUIRED as the script result within this recorded reconciliation.
+
+## Inventory procedure
+
 1. Run this check before every component start. It reads the external input manifest, work index, model paths, input-sheet links and files. It runs no CAD operations. Existing model paths, recorded scope and checks supply reuse evidence.
 
 ```sh

@@ -88,6 +88,7 @@ Standing instruction from 13 November 2026:
 2. Mark a component with an existing matching 3D model DONE in the current work list, retain its readable name and actual path, and reuse the recorded checks. Move to an unfinished component. Preserve the scope and source attribution of the existing geometry.
 3. Repeated routine inspection, geometry checking and capture attempts do not reopen an existing completed model. A specific requested revision has its own scope. File searches must distinguish a 3D component from its 2D interface drawing and from another component used as a reference.
 4. Use `scripts/model_inventory.py` and the component skill's existing-model start procedure before native CAD construction. Review filename candidates against the actual component identity before starting geometry.
+5. Every execution order and delegated component assignment must start with this instruction: inspect the actual matching component models and all manifest, work-record, input-sheet and CAD-index references, including when the status is NOT_STARTED. If a matching completed model exists, mark that item DONE with its readable name, actual model path and recorded checks, then move to the next unfinished item. Reuse its completed geometry and checks. Construction starts only after this reconciliation establishes that the required model is absent; a script's NEW_MODEL_REQUIRED label alone does not complete the reconciliation.
 
 ## Portable stored paths
 

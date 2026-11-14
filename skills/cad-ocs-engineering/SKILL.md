@@ -51,6 +51,8 @@ Read [ocs-control.md](references/ocs-control.md) before first connection or unfa
 
 ### Check existing component implementations
 
+Every execution order and delegated component assignment starts with: **Check the actual existing models and every manifest, work-record, input-sheet and CAD-index model reference. If the matching completed model exists, mark this item DONE with its readable name, path and recorded checks, then move to the next unfinished item.** Apply this even to NOT_STARTED entries. Follow the [start-check procedure](references/existing-model-start-check.md) before selecting construction; retain the reconciliation beside the selected job.
+
 1. Before every component start, check both its work status and the actual 3D files. Read the input manifest, work record, sheet links, existing CAD index and filesystem inventory, including available manufacturer models. Run the [existing-model start check](references/existing-model-start-check.md). A matching existing model is DONE for the current build list: record its path and reuse its existing checks, then select an unfinished component. A stale NOT_STARTED or IN_PROGRESS entry does not start another construction, inspection or capture cycle for that model.
 2. Reuse the existing `Client`, `Journal`, `Geometry` and verification functions for their supported actions. Select their helper, session, document and journal explicitly. Read the bundled [OCS runtime instructions](references/ocs-runtime.md) before connecting.
 3. Use `scripts/part_index.py --index PATH --id PART_ID` to read the actual external index. Add another `--index` for an existing dictionary. Results retain source namespaces, original records and source hashes. A matching name/ID in two indexes remains two attributed records.
