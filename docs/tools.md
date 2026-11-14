@@ -16,7 +16,7 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 ## Files, sources and component records
 
 1. [part_index.py](../scripts/part_index.py) — reads and searches a supplied parts index.
-2. [model_inventory.py](../scripts/model_inventory.py) — finds attributed models and filename candidates before a new build, supports exact configuration selection, and preserves known 2D drawing roles through retained-copy hashes. [Start-check procedure](../skills/cad-ocs-engineering/references/existing-model-start-check.md).
+2. [model_inventory.py](../scripts/model_inventory.py) — finds attributed models and filename candidates before a new build, retains exact path/hash-bound different-component reviews, supports exact configuration selection, and preserves known 2D drawing roles through retained-copy hashes. [Start-check procedure](../skills/cad-ocs-engineering/references/existing-model-start-check.md).
 3. [source_intake.py](../scripts/source_intake.py) — saves source indexes, request scope and revision receipts.
 4. [component_records.py](../scripts/component_records.py) — checks required source values and records individual modeling actions.
 5. [source_metadata.py](../scripts/source_metadata.py) — compares expected source labels with the strings stored on a CAD entity.

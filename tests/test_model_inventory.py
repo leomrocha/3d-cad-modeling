@@ -1,4 +1,4 @@
-import json,sys,tempfile,unittest
+import hashlib,json,sys,tempfile,unittest
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from model_inventory import inventory_models,start_check,audit
@@ -9,7 +9,15 @@ class ExistingModelTests(unittest.TestCase):
         self.root=Path(self.temp.name);self.cad=self.root/'cad';(self.cad/'parts').mkdir(parents=True)
         self.index=self.root/'parts.json';self.sheet=self.root/'part.md';self.sheet.write_text('Component input')
         self.part=dict(id='C001',name='Example ZX1234 component',file='part.md',existing_cad='')
-    def check(self,job=None):return start_check(self.part,self.index,self.cad,inventory_models(self.root),job)
+    def check(self,job=None,root_map=None):return start_check(self.part,self.index,self.cad,inventory_models(self.root),job,root_map)
+
+    def review(self,path,*,digest=None,decision='different_component',reason='The geometry belongs to another named component and has different source dimensions.',evidence=None):
+        evidence_path=Path(evidence) if evidence else self.root/'review-evidence.md'
+        evidence_path.write_text('Recorded geometry identity review.\n',encoding='utf-8')
+        return {'candidate_path':'${PROJECT_ROOT}/'+path.relative_to(self.root).as_posix(),
+                'sha256':digest or hashlib.sha256(path.read_bytes()).hexdigest(),
+                'decision':decision,'reason':reason,
+                'evidence_locator':'${PROJECT_ROOT}/'+evidence_path.relative_to(self.root).as_posix()}
     def test_stale_not_started_record_skips_existing_file(self):
         p=self.cad/'parts/existing.dwg';p.write_bytes(b'AC1032 fixture')
         self.part['existing_cad']='parts/existing.dwg'
@@ -95,6 +103,68 @@ class ExistingModelTests(unittest.TestCase):
     def test_component_id_filename_candidate_requires_review(self):
         p=self.cad/'parts/C001-existing.dwg';p.write_bytes(b'Possible component model')
         self.assertEqual(self.check()['action'],'REVIEW_EXISTING_CANDIDATES')
+
+    def test_exact_reviewed_candidate_is_preserved_as_different_component_evidence(self):
+        p=self.root/'standard-7089-ZX1234-M6.step';p.write_bytes(b'M6 washer geometry')
+        job={'candidate_reviews':[self.review(p)]}
+        result=self.check(job,{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'NEW_MODEL_REQUIRED')
+        self.assertEqual(result['candidates'],[])
+        self.assertEqual(len(result['reviewed_candidates']),1)
+        self.assertEqual(result['reviewed_candidates'][0]['path'],str(p))
+        self.assertEqual(result['reviewed_candidates'][0]['decision'],'different_component')
+        self.assertEqual(result['unmatched_candidate_reviews'],[])
+
+    def test_stale_hash_review_does_not_dismiss_candidate(self):
+        p=self.root/'standard-7089-ZX1234-M6.step';p.write_bytes(b'Changed M6 geometry')
+        job={'candidate_reviews':[self.review(p,digest='0'*64)]}
+        result=self.check(job,{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'REVIEW_EXISTING_CANDIDATES')
+        self.assertEqual(result['candidates'][0]['path'],str(p))
+        self.assertEqual(result['unmatched_candidate_reviews'][0]['status'],'STALE_HASH')
+
+    def test_new_unreviewed_candidate_still_blocks_after_exact_review(self):
+        reviewed=self.root/'standard-7089-ZX1234-M6.step';reviewed.write_bytes(b'M6 washer geometry')
+        newer=self.root/'standard-7089-ZX1234-M6-revision.step';newer.write_bytes(b'New candidate bytes')
+        job={'candidate_reviews':[self.review(reviewed)]}
+        result=self.check(job,{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'REVIEW_EXISTING_CANDIDATES')
+        self.assertEqual([row['path'] for row in result['candidates']],[str(newer)])
+        self.assertEqual(result['reviewed_candidates'][0]['path'],str(reviewed))
+        self.assertEqual(result['unmatched_candidate_reviews'],[])
+
+    def test_linked_existing_model_cannot_be_dismissed_by_candidate_review(self):
+        p=self.cad/'parts/ZX1234-existing.dwg';p.write_bytes(b'Linked completed model')
+        job={'model':'parts/ZX1234-existing.dwg',
+             'candidate_reviews':[self.review(p)]}
+        result=self.check(job,{'PROJECT_ROOT':self.root})
+        self.assertEqual(result['action'],'SKIP_EXISTING_MODEL')
+        self.assertEqual(result['models'][0]['path'],str(p))
+
+    def test_malformed_candidate_review_is_rejected(self):
+        p=self.root/'standard-7089-ZX1234-M6.step';p.write_bytes(b'M6 washer geometry')
+        review=self.review(p);review['decision']='same_component'
+        with self.assertRaisesRegex(ValueError,'decision must be different_component'):
+            self.check({'candidate_reviews':[review]},{'PROJECT_ROOT':self.root})
+
+    def test_candidate_review_paths_cannot_escape_named_root(self):
+        p=self.root/'standard-7089-ZX1234-M6.step';p.write_bytes(b'M6 washer geometry')
+        review=self.review(p);review['candidate_path']='${PROJECT_ROOT}/../outside.step'
+        with self.assertRaisesRegex(ValueError,'escapes its configured root'):
+            self.check({'candidate_reviews':[review]},{'PROJECT_ROOT':self.root})
+        review=self.review(p);review['evidence_locator']='${PROJECT_ROOT}/../evidence.md'
+        with self.assertRaisesRegex(ValueError,'escapes its configured root'):
+            self.check({'candidate_reviews':[review]},{'PROJECT_ROOT':self.root})
+
+    def test_selected_configuration_can_ignore_only_exact_reviewed_unscoped_candidate(self):
+        candidate=self.root/'standard-7089-ZX1234-M6.step';candidate.write_bytes(b'M6 washer geometry')
+        job={'configurations':[{'name':'State Beta','state':'NOT_STARTED'}],
+             'candidate_reviews':[self.review(candidate)]}
+        result=start_check(self.part,self.index,self.cad,inventory_models(self.root),job,
+                           {'PROJECT_ROOT':self.root},'State Beta')
+        self.assertEqual(result['action'],'NEW_MODEL_REQUIRED')
+        self.assertEqual(result['candidates'],[])
+        self.assertEqual(result['reviewed_candidates'][0]['path'],str(candidate))
 
     def non_geometric_job(self):
         import hashlib

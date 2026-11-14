@@ -56,6 +56,7 @@ def synthetic_features(job):
         for z in (0.0, -p['values']['head_height']):
             points.append([p['origin'][j]+z*p['axis'][j]+a[0]*p['radial_x'][j]+a[1]*p['radial_y'][j] for j in range(3)])
     planes.extend([{'normal':p['axis'],'origin':p['head_base']},
+                   {'normal':p['axis'],'origin':p['origin']},
                    {'normal':p['axis'],'origin':p['tip']}])
     points.append(p['tip'])
     return {'planes':planes,
@@ -79,7 +80,18 @@ class HexScrewReferenceTests(unittest.TestCase):
         self.assertEqual(p['head_base'],[3.0,-2.0,-2.0])
         result=screw.verify(synthetic_features(self.job),self.job)
         self.assertEqual(result['result'],'PASS',result)
-        self.assertEqual([x['result'] for x in result['checks']],['PASS']*5)
+        self.assertEqual([x['result'] for x in result['checks']],['PASS']*6)
+        self.assertEqual(result['checks'][0]['observed_unique_planes'],9)
+        self.assertEqual(result['checks'][0]['expected_axial_stations_mm'],[-2.0,5.0,49.0])
+
+    def test_missing_under_head_shoulder_plane_fails(self):
+        features=synthetic_features(self.job)
+        p=screw.parameters(self.job)
+        features['planes']=[row for row in features['planes'] if row['origin'] != p['origin']]
+        result=screw.verify(features,self.job)
+        self.assertEqual(result['result'],'FAIL')
+        self.assertEqual(result['checks'][1]['check'],'exposed head/shaft shoulder at under-head datum')
+        self.assertEqual(result['checks'][1]['result'],'FAIL')
 
     def test_rotated_explicit_frame(self):
         job=fixture_job(self.temp.name,axis=(0,1,0),radial=(1,0,0))

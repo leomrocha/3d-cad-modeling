@@ -286,7 +286,10 @@ def verify(features, job, root_map=None):
         plane_point = [p['head_base'][j] + midpoint[0]*p['radial_x'][j]
                        + midpoint[1]*p['radial_y'][j] for j in range(3)]
         expected_planes.append((normal, plane_point))
-    for station in (p['head_base'], p['tip']):
+    # The head and shaft meet at the under-head datum. Their union leaves
+    # the surrounding head face exposed as a planar shoulder at this station.
+    axial_stations = (p['head_base'], p['origin'], p['tip'])
+    for station in axial_stations:
         expected_planes.append((p['axis'], station))
 
     planes = features.get('planes')
@@ -304,6 +307,8 @@ def verify(features, job, root_map=None):
         plane_matches.append(found is not None)
         if found is not None:
             unmatched.pop(found)
+    shoulder_match = any(_plane_match(signature, (p['axis'], p['origin']), tol)
+                         for signature in unique_planes)
 
     cylinders = features.get('cylinders')
     if not isinstance(cylinders, list):
@@ -343,7 +348,8 @@ def verify(features, job, root_map=None):
               and closure.get('shells') == 1
               and closure.get('reciprocal_closed_partners') == 1)
     checks = [
-        {'check':'six unique hex side planes and two axial end planes','result':'PASS' if all(plane_matches) and not unmatched and len(unique_planes)==8 else 'FAIL','matches':plane_matches,'unexpected_unique_planes':len(unmatched),'observed_unique_planes':len(unique_planes)},
+        {'check':'six unique hex side planes and three axial planes','result':'PASS' if all(plane_matches) and not unmatched and len(unique_planes)==9 else 'FAIL','matches':plane_matches,'unexpected_unique_planes':len(unmatched),'observed_unique_planes':len(unique_planes),'expected_unique_planes':9,'expected_axial_stations_mm':[_dot(station,p['axis']) for station in axial_stations]},
+        {'check':'exposed head/shaft shoulder at under-head datum','result':'PASS' if shoulder_match else 'FAIL','expected_station_mm':_dot(p['origin'],p['axis']),'observed_match':shoulder_match,'method':'native analytic plane matching at the source-job under-head origin'},
         {'check':'one coaxial nominal-radius shaft cylinder','result':'PASS' if cylinder_ok else 'FAIL','observed_unique_cylinders':len(unique_cylinders),'expected_radius_mm':p['shaft_radius']},
         {'check':'no additional cone, sphere or torus surfaces','result':'PASS' if not unexpected else 'FAIL','unexpected':unexpected},
         {'check':'axial vertex extrema equal head top and shaft tip stations','result':'PASS' if extrema_ok else 'FAIL','observed_min_max_mm':[min(axial),max(axial)],'expected_min_max_mm':[expected_min,expected_max]},

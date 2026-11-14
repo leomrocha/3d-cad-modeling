@@ -92,7 +92,7 @@
     },
     "scripts/hex_screw_reference.py": {
       "source": "scripts/hex_screw_reference.py",
-      "sha256": "f7ec31bad39c48022fa31cdb4f0afe522f900cb9c505ad7d553e70810f5ca216"
+      "sha256": "ecdbd74fc17317b57a3a92b3cd76ddaf511b3675b55caa7af1b78d549ed1e35c"
     },
     "scripts/hexagonal_reference.py": {
       "source": "scripts/hexagonal_reference.py",
@@ -100,7 +100,7 @@
     },
     "scripts/model_inventory.py": {
       "source": "scripts/model_inventory.py",
-      "sha256": "26fbc6993ef05133a02e9eacf3888be14f781c381176e8a39ba1f9026154f878"
+      "sha256": "325ecdecaf1865f2f6ff2c653167e6bc0110171f725fc0771667be6e4f3cf15e"
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",

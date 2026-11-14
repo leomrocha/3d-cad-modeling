@@ -9,6 +9,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+from urllib.parse import urlparse
 from part_index import load_index, read_json
 try:
     from component_records import validate_geometry_requirement, RecordError
@@ -75,6 +76,99 @@ def _declared_configurations(job):
     return by_name
 
 
+def _candidate_review_records(job, root_map):
+    """Validate component-specific portable reviews of filename candidates."""
+    records=job.get('candidate_reviews', [])
+    if not isinstance(records,list):
+        raise ValueError('candidate_reviews must be a list')
+    prepared=[];seen=set()
+    required={'candidate_path','sha256','decision','reason','evidence_locator'}
+    for index,record in enumerate(records):
+        if not isinstance(record,dict) or set(record)!=required:
+            raise ValueError('candidate_reviews[%d] must contain exactly candidate_path, sha256, decision, reason and evidence_locator' % index)
+        candidate_path=record['candidate_path']
+        if not isinstance(candidate_path,str) or not re.fullmatch(r'\$\{[A-Za-z_][A-Za-z0-9_]*\}/.+',candidate_path):
+            raise ValueError('candidate_reviews[%d].candidate_path must use a named-root portable locator' % index)
+        resolved=_resolve_review_path(candidate_path,root_map,'candidate_path',index)
+        if resolved in seen:
+            raise ValueError('Duplicate candidate review path: '+candidate_path)
+        seen.add(resolved)
+        digest=record['sha256']
+        if not isinstance(digest,str) or not re.fullmatch(r'[0-9a-f]{64}',digest):
+            raise ValueError('candidate_reviews[%d].sha256 must be 64 lowercase hexadecimal characters' % index)
+        if record['decision']!='different_component':
+            raise ValueError('candidate_reviews[%d].decision must be different_component' % index)
+        reason=record['reason']
+        if not isinstance(reason,str) or len(reason.strip())<20:
+            raise ValueError('candidate_reviews[%d].reason must give a concrete explanation of at least 20 characters' % index)
+        evidence=record['evidence_locator']
+        if not isinstance(evidence,str) or not evidence.strip():
+            raise ValueError('candidate_reviews[%d].evidence_locator must be nonempty text' % index)
+        parsed=urlparse(evidence)
+        if parsed.scheme:
+            if parsed.scheme!='https' or not parsed.netloc:
+                raise ValueError('candidate_reviews[%d].evidence_locator must use HTTPS or a named-root path' % index)
+        else:
+            if not re.fullmatch(r'\$\{[A-Za-z_][A-Za-z0-9_]*\}/.+',evidence):
+                raise ValueError('candidate_reviews[%d].evidence_locator must use a named-root portable locator or HTTPS URL' % index)
+            evidence_path=_resolve_review_path(evidence,root_map,'evidence_locator',index)
+            if not evidence_path.is_file():
+                raise ValueError('Candidate review evidence file is absent: '+evidence)
+        prepared.append({'record':record,'resolved_path':str(resolved)})
+    return prepared
+
+
+def _resolve_review_path(locator, root_map, field, index):
+    match=re.fullmatch(r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}/(.+)',locator)
+    if not match:
+        raise ValueError('candidate_reviews[%d].%s must use a named-root portable locator' % (index,field))
+    name,suffix=match.groups()
+    if name not in root_map:
+        raise ValueError('Missing configured path root: '+name)
+    root=Path(root_map[name])
+    if not root.is_absolute():
+        raise ValueError('Configured path root must be absolute: '+name)
+    resolved=(root/suffix).resolve()
+    try:
+        resolved.relative_to(root.resolve())
+    except ValueError as error:
+        raise ValueError('candidate_reviews[%d].%s escapes its configured root' % (index,field)) from error
+    return resolved
+
+
+def _apply_candidate_reviews(candidates, job, root_map, protected_paths=()):
+    """Dismiss only exact path/hash reviewed filename candidates."""
+    reviews=_candidate_review_records(job,root_map)
+    by_path={row['resolved_path']:row['record'] for row in reviews}
+    protected=set(protected_paths)
+    remaining=[];reviewed=[];unmatched=[]
+    seen=set()
+    for candidate in candidates:
+        path=candidate['path'];record=by_path.get(path)
+        if record is None:
+            remaining.append(candidate)
+            continue
+        seen.add(path)
+        if record['sha256']!=candidate['sha256']:
+            remaining.append(candidate)
+            unmatched.append({'candidate_path':record['candidate_path'],
+                              'status':'STALE_HASH','reviewed_sha256':record['sha256'],
+                              'current_sha256':candidate['sha256']})
+            continue
+        if path in protected:
+            remaining.append(candidate)
+            unmatched.append({'candidate_path':record['candidate_path'],
+                              'status':'LINKED_MODEL_PRECEDENCE','current_sha256':candidate['sha256']})
+            continue
+        reviewed.append({**candidate,'decision':record['decision'],'reason':record['reason'],
+                         'evidence_locator':record['evidence_locator']})
+    for row in reviews:
+        if row['resolved_path'] not in seen:
+            unmatched.append({'candidate_path':row['record']['candidate_path'],
+                              'status':'NO_CURRENT_CANDIDATE','reviewed_sha256':row['record']['sha256']})
+    return remaining,reviewed,unmatched
+
+
 def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,configuration=None):
     """Use attributed file links first; block construction on discovered candidates."""
     cad_root=Path(cad_root).resolve();job=job or {};files={p['path']:p for p in inventory}
@@ -128,7 +222,9 @@ def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,config
         unscoped_candidates=[p for p in inventory if p['role']=='3d_model_file' and p['bytes']>0
             and p['path'] not in scoped_paths and any(v in compact(Path(p['path']).stem) for v in codes)]
         blockers={p['path']:p for p in unscoped_link_models+unscoped_candidates}
-        candidates=list(blockers.values())
+        candidates,reviewed_candidates,unmatched_candidate_reviews=_apply_candidate_reviews(
+            list(blockers.values()),job,root_map or {},
+            protected_paths=[p['path'] for p in unscoped_link_models])
         reference_paths=dict.fromkeys(scoped_links+unscoped_links)
         references=[files[p] for p in reference_paths if p in files and files[p]['role']=='2d_reference']
         selected_state=selected.get('state','NOT_STARTED')
@@ -139,6 +235,8 @@ def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,config
         return dict(part_id=part['id'],part_name=part['name'],recorded_state=selected_state,
             action=action,configuration=configuration,models=scoped_matches,
             other_configuration_models=other_matches,candidates=candidates,references_2d=references,
+            reviewed_candidates=reviewed_candidates,
+            unmatched_candidate_reviews=unmatched_candidate_reviews,
             input_sheet=str(sheet),filesystem_model_files_checked=len(inventory))
 
     links=[]
@@ -156,7 +254,9 @@ def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,config
     references=[files[p] for p in dict.fromkeys(links) if p in files and files[p]['role']=='2d_reference']
     compact=lambda s:re.sub('[^a-z0-9]','',s.casefold())
     codes={compact(v) for v in [part['id']]+re.findall(r'[A-Za-z]*\d[A-Za-z0-9.\-]*',part['name']) if len(compact(v))>=4}
-    candidates=[p for p in inventory if p['role']=='3d_model_file' and p['bytes']>0 and p not in matches and any(v in compact(Path(p['path']).stem) for v in codes)]
+    filename_candidates=[p for p in inventory if p['role']=='3d_model_file' and p['bytes']>0 and p not in matches and any(v in compact(Path(p['path']).stem) for v in codes)]
+    candidates,reviewed_candidates,unmatched_candidate_reviews=_apply_candidate_reviews(
+        filename_candidates,job,root_map or {},protected_paths=[p['path'] for p in matches])
     if matches:action='SKIP_EXISTING_MODEL'
     elif non_geometric is not None and candidates:action='REVIEW_EXISTING_CANDIDATES'
     elif non_geometric is not None:action='SKIP_NON_GEOMETRIC'
@@ -165,6 +265,8 @@ def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,config
     else:action='NEW_MODEL_REQUIRED'
     return dict(part_id=part['id'],part_name=part['name'],recorded_state=job.get('state','NOT_STARTED'),
                 action=action,models=matches,candidates=candidates,references_2d=references,
+                reviewed_candidates=reviewed_candidates,
+                unmatched_candidate_reviews=unmatched_candidate_reviews,
                 input_sheet=str(sheet),filesystem_model_files_checked=len(inventory),
                 geometry_requirement=non_geometric)
 
