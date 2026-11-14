@@ -7,7 +7,8 @@ from pathlib import Path
 import tempfile
 
 from .runtime import CadError, RecoveringClient
-from .verification import require_audit
+from .verification import require_audit, owned_audit
+from .records import identity
 
 
 def atomic_json(path,value):
@@ -53,9 +54,14 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
         raise CadError('Checkpoint intent differs')
     if path.exists() and not intent:raise CadError('Checkpoint already exists; retain it')
     state=client.read('state')
-    if state.get('document_id')!=client.document_id or state.get('command') or state.get('modal'):
+    if state.get('document_id')!=client.document_id or state.get('command') or state.get('modal') or state.get('operation'):
         raise CadError('Checkpoint requires idle owned document')
-    audit=client.read('audit',target_format='dwg',target_version='2018')
+    baseline=identity(state)
+    if intent and (intent['request'].get('geometry_revision')!=baseline[2]
+                   or intent.get('context',{}).get('document_id')!=client.document_id):
+        raise CadError('Checkpoint recovery belongs to another document or geometry epoch')
+    audit=owned_audit(client)
+    if identity(client.read('state'))!=baseline:raise CadError('Checkpoint epoch changed during audit')
     manifest=require_audit(audit)
     if manifest.get('by_type')!=expected_counts:raise CadError('Checkpoint entity counts differ')
     if intent:response=client.recover(key)
@@ -69,6 +75,7 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
     after=client.read('state')
     if after['document_id']!=client.document_id or after['geometry_revision']!=state['geometry_revision']:
         raise CadError('Geometry changed during checkpoint')
+    if hashlib.sha256(path.read_bytes()).hexdigest()!=digest:raise CadError('Checkpoint file changed before receipt')
     result=dict(result='PASS',state='IN_PROGRESS',saved_path=str(path),sha256=digest,
                 document_id=client.document_id,geometry_revision=state['geometry_revision'],request_id=key,save=saved)
     if receipt_path:

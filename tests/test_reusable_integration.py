@@ -143,10 +143,10 @@ class Checkpoints(unittest.TestCase):
     def test_native_progress_save_verifies_file_without_reopen(self):
         with tempfile.TemporaryDirectory() as tmp:
             path=Path(tmp)/'progress.dwg';receipt=Path(tmp)/'progress.json';journal=SimpleNamespace(requests={})
-            state=dict(document_id=1,geometry_revision=5,command=None,modal=None)
+            state=dict(ok=True,document_id=1,revision=0,geometry_revision=5,command=None,modal=None)
             manifest={'by_type':{'3D Solid':1}}
             c=Mock();c.namespace='job';c.journal=journal;c.document_id=1
-            c.read.side_effect=lambda op,**kw:state.copy() if op=='state' else dict(summary={'errors':0,'warnings':0},manifest=manifest)
+            c.read.side_effect=lambda op,**kw:state.copy() if op=='state' else dict(document_id=1,summary={'errors':0,'warnings':0},manifest=manifest)
             def mutate(label,op,**kw):
                 path.write_bytes(b'native transport fixture')
                 return dict(result=dict(saved=str(path),verified=True,dropped_on_save=0,manifest=manifest,sha256=hashlib.sha256(path.read_bytes()).hexdigest()))

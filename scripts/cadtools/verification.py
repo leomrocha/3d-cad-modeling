@@ -129,6 +129,8 @@ def save_reopen(client,path,expected_counts):
     reopened = owned_audit(client, expected_path=target, expected_sha256=result["sha256"])
     if require_audit(reopened)!=manifest:
         raise CadError("Reopened manifest differs")
+    if hashlib.sha256(target.read_bytes()).hexdigest()!=result["sha256"]:
+        raise CadError("Saved output changed during reopen verification")
     return {"stage":"reopened","method":"audit_manifest_and_file_hash","sha256":result["sha256"],
             "saved_path":str(target),"reopened_document_id":created,
             "save":result,"reopened_audit":reopened,"result":"PASS"}

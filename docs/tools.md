@@ -104,3 +104,9 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 2. [source_solid_checks.py](../scripts/source_solid_checks.py) — ACIS face sense, retained halfspaces, convex planar cell boundary volume and planar bilinear corner correspondence.
 3. [Capture checks](../scripts/cadtools/captures.py) — document, revision, rendered frame, PNG integrity and stale-image diagnostics.
 4. [Component records](../scripts/component_records.py) — completion gate binding final model evidence to an applied verified reusable change.
+
+## Reversible source workflows
+
+1. [profile_conditioning.py](../scripts/profile_conditioning.py) — caller-specified positive uniform profile/seed/depth conditioning and input roundtrip checks.
+2. [solid_transfer.py](../scripts/solid_transfer.py) — complete unchanged native payload and original metadata verification with explicit bijective mappings.
+3. [exact_profiles.py](../scripts/exact_profiles.py) — exact-fraction straight cubic certificates and explicitly allowed Line equivalence while preserving strict results.

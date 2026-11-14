@@ -130,3 +130,55 @@ def signed_extrusion(normal, displacement, *, angular_tolerance):
     if math.dist(d,[projection*x for x in n])/depth > tolerance:
         raise ValueError('Source displacement is not parallel to Region normal')
     return projection
+
+
+def straight_bezier_certificate(edge):
+    """Prove an exactly collinear monotone single-span unit-weight cubic is a line.
+
+    Fraction(str(value)) preserves each supplied decimal number exactly. No
+    geometric tolerance permits near-collinear or backtracking substitutions.
+    """
+    from fractions import Fraction
+    validate_edge(edge)
+    if (edge['kind'] != 'NURBS' or edge['degree'] != 3
+            or len(edge['control_points']) != 4 or len(edge['knots']) != 8
+            or edge['weights'] != [1, 1, 1, 1]):
+        return dict(result='FAIL', reason='Unit-weight single-span cubic required')
+    points = [[Fraction(str(v)) for v in p] for p in edge['control_points']]
+    a, b = points[0], points[-1]; delta = [y-x for x,y in zip(a,b)]
+    axis = next((i for i,v in enumerate(delta) if v), None)
+    if axis is None: return dict(result='FAIL', reason='Distinct source endpoints required')
+    parameters = [(p[axis]-a[axis])/delta[axis] for p in points]
+    collinear = all(all(p[k] == a[k]+t*delta[k] for k in range(2)) for p,t in zip(points,parameters))
+    monotone = all(x <= y for x,y in zip(parameters,parameters[1:]))
+    if not collinear or not monotone:
+        return dict(result='FAIL', reason='Source controls are not exactly collinear and monotone')
+    return dict(result='PASS', method='exact decimal-fraction collinearity and Bernstein monotonicity',
+                control_parameters=[str(v) for v in parameters],
+                equivalent_line=dict(kind='Line', start=list(edge['control_points'][0]),end=list(edge['control_points'][-1])))
+
+
+def compare_with_linear_cubics(source, observed, *, allowed_source_edges,
+                               length_tolerance, parameter_tolerance):
+    """Explicitly allow certified cubic-to-Line encoding changes; retain strict result.
+
+    allowed_source_edges is a unique list of [source_loop_index,edge_index]. All
+    other curves, topology/grouping and loop roles keep the strict comparison.
+    """
+    import copy
+    strict = compare_loops(source,observed,length_tolerance=length_tolerance,parameter_tolerance=parameter_tolerance)
+    converted = copy.deepcopy(source); seen=set(); certificates=[]
+    for pair in allowed_source_edges:
+        if len(pair)!=2 or any(type(i) is not int or i<0 for i in pair) or tuple(pair) in seen:
+            raise ValueError('Unique nonnegative source loop/edge indices required')
+        seen.add(tuple(pair)); li,ei=pair
+        if li>=len(source) or ei>=len(source[li]['edges']):raise ValueError('Source edge index outside profile')
+        certificate=straight_bezier_certificate(source[li]['edges'][ei])
+        certificates.append(dict(source_loop=li,source_edge=ei,**certificate))
+        if certificate['result']!='PASS':
+            return dict(result='FAIL',strict_result=strict,certificates=certificates,reason='Exact line equivalence not established')
+        converted[li]['edges'][ei]=certificate['equivalent_line']
+    equivalent=compare_loops(converted,observed,length_tolerance=length_tolerance,parameter_tolerance=parameter_tolerance)
+    return dict(result='PASS' if strict['result']=='PASS' or equivalent['result']=='PASS' else 'FAIL',
+                strict_result=strict,geometric_equivalence=equivalent,certificates=certificates,
+                information_change='Only explicitly certified source cubic edges may use a single bounded Line')

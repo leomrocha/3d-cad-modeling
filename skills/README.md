@@ -110,3 +110,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 
 1. [Exact source checks](cad-ocs-engineering/references/exact-source-checks.md) — complete curves, material-domain proofs, outward face orientation, ruled patches, persistence and capture identities.
 2. [Component completion](cad-ocs-engineering/references/component-completion.md) — incremental saves and final source/metadata/persistence/cleanup evidence plus an applied verified reusable improvement.
+
+## Reversible source workflows
+
+1. [Conditioning, exact equivalence and solid transfer](cad-ocs-engineering/references/reversible-source-workflows.md) — bounded input transforms, preserved strict failures, unchanged native evidence and checkpoint identity.

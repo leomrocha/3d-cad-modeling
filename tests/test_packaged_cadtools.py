@@ -205,3 +205,14 @@ class PersistenceTests(unittest.TestCase):
 
     def test_reopened_manifest_mismatch(self):
         with self.assertRaises(CadError):save_reopen(self.fixture('count_after'),self.path,{'3D Solid':2})
+
+    def test_saved_file_changed_after_reopened_audit_is_rejected(self):
+        client=self.fixture();reader=client.read;audited=False
+        def read(op,**fields):
+            nonlocal audited
+            response=reader(op,**fields)
+            if op=='audit' and client.opened:audited=True
+            elif op=='state' and audited:self.path.write_bytes(b'external replacement after audit')
+            return response
+        client.read=read
+        with self.assertRaisesRegex(CadError,'changed during reopen'):save_reopen(client,self.path,{'3D Solid':2})

@@ -207,6 +207,24 @@ with tempfile.TemporaryDirectory() as tmp:
 print(json.dumps({'result':'PASS','exact_profiles':'PASS','face_orientation':'PASS','halfspaces':'PASS','ruled_patch':'PASS','partial_completion':'PASS','native_mutations':0}))"""
         self.results['skills']['cad-ocs-engineering']['partial_work_checks']=self.run_python('cad-ocs-engineering',code)
 
+    def test_repeat_integration_inside_installed_copy(self):
+        code = """import json
+from exact_profiles import straight_bezier_certificate
+from profile_conditioning import conditioning_point,conditioning_depth
+from solid_transfer import verify_solid_transfer
+curve=dict(kind='NURBS',degree=3,control_points=[[0,0],[1,0],[2,0],[3,0]],weights=[1]*4,knots=[0]*4+[1]*4,periodic=False,fit_points=[])
+assert straight_bezier_certificate(curve)['result']=='PASS'
+curve['control_points'][1][1]=1e-15
+assert straight_bezier_certificate(curve)['result']=='FAIL'
+p=conditioning_point([2,3],anchor=[1,1],scale=10)
+assert conditioning_point(p,anchor=[1,1],scale=10,inverse=True)==[2,3]
+assert conditioning_depth(.5,10)==5
+source=dict(handle='A',type='Solid3D',record_type='Solid3D',properties=dict(acis_data={'version':1,'sat_data':'synthetic','sab_data':[]}))
+target=dict(source,handle='B')
+assert verify_solid_transfer([source],[target],[dict(source_handle='A',target_handle='B')])['result']=='PASS'
+print(json.dumps({'result':'PASS','exact_straight_cubic':'PASS','conditioning':'PASS','solid_transfer':'PASS','native_operations':0}))"""
+        self.results['skills']['cad-ocs-engineering']['repeat_integration']=self.run_python('cad-ocs-engineering',code)
+
     def test_component_defaults_use_bundled_code_and_read_only_transport(self):
         code = '''import json
 from pathlib import Path
