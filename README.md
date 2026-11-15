@@ -12,7 +12,7 @@ This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll
 npx skills add leomrocha/3d-cad-modeling
 ```
 
-Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to set up and use the installed skills.
+Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to use the installed skills.
 
 ## License
 
