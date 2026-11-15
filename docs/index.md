@@ -10,6 +10,14 @@ This repo has been used to generate CAD models using the [OpenCADStudio](https:/
 
 This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it. Please collaborate, copy it and share it; that is why the license is MIT.
 
+## TLDR Install
+
+```sh
+npx skills add leomrocha/3d-cad-modeling
+```
+
+Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to set up and use the installed skills.
+
 ## License
 
 [MIT](https://github.com/leomrocha/3d-cad-modeling/blob/master/LICENSE) for project code and documentation.
@@ -115,9 +123,34 @@ Manufacturer CAD assembly with corrected component placements, showing ventilati
 
 ## Installing
 
-I would directly ASK the AI agent you are using to install this and make it available as skills and scripts. That should do the job. But if you want to do it manually, here are some pointers.
+### Install with npx
 
-### Prerequisites
+Run this from the project where you want the skills available:
+
+```sh
+npx skills add leomrocha/3d-cad-modeling
+```
+
+Choose the skills and target AI agent in the installer.
+
+### Ask your AI agent
+
+I would directly ASK the AI agent you are using to install this and make it available as skills and scripts.
+
+For example:
+
+> Install the skills from leomrocha/3d-cad-modeling for this project, set up their Python dependencies and run the package checks. Use the installed skills for my modeling requests.
+
+#### Use the skills with your agent
+
+1. Give the agent the drawing, pictures or dimensions and describe the model you need.
+2. Ask it to read [cad-ocs-engineering](https://github.com/leomrocha/3d-cad-modeling/blob/master/skills/cad-ocs-engineering/SKILL.md) for a component job, [cad-drawing-inspection](https://github.com/leomrocha/3d-cad-modeling/blob/master/skills/cad-drawing-inspection/SKILL.md) for a DXF, or [cad-source-intake](https://github.com/leomrocha/3d-cad-modeling/blob/master/skills/cad-source-intake/SKILL.md) to record the inputs.
+3. Specify the component project's input and output locations and the CAD session it should use.
+4. Review the resulting model and the changes recorded for that iteration.
+
+### Manual procedures
+
+#### Prerequisites
 
 1. Node.js **22.20 or later**, with npm and npx, for the [skills CLI](https://github.com/vercel-labs/skills).
 2. Python **3.12** on Linux or macOS, including the `venv` module and pip, for the packaged helpers.
@@ -132,7 +165,7 @@ npx --version
 python3.12 --version
 ```
 
-### Install an individual skill into a project
+#### Install an individual skill into a project
 
 Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), and `cad-source-intake` (source capture and revisions).
 
@@ -147,7 +180,7 @@ test -f "$SKILL_ROOT/SKILL.md"
 
 The project installation is available in that project's `.claude/skills/` directory. `--copy` creates an independent package copy. For a shared symlink installation targeting Claude Code and Codex together, replace `--agent claude-code --copy` with `--agent claude-code codex`. Claude Code's `SKILL_ROOT` path remains the same. The CLI uses copy mode for a single target agent. The [CLI command reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) lists other supported agents and their installation options.
 
-### Alternative: install for all projects
+#### Alternative: install for all projects
 
 For a user-wide Claude Code installation, use `--global` and its user directory. `CLAUDE_CONFIG_DIR`, when set, supplies Claude Code's configuration directory.
 
@@ -158,7 +191,7 @@ SKILL_ROOT="${CLAUDE_CONFIG_DIR:-$HOME/.claude}/skills/$SKILL_NAME"
 test -f "$SKILL_ROOT/SKILL.md"
 ```
 
-### Alternative: install from a local checkout
+#### Alternative: install from a local checkout
 
 Run this example from the 3D CAD Modeling checkout. It installs the current local skill for Claude Code in this checkout:
 
@@ -169,7 +202,7 @@ SKILL_ROOT="$PWD/.claude/skills/$SKILL_NAME"
 test -f "$SKILL_ROOT/SKILL.md"
 ```
 
-### Set up and check the selected package
+#### Set up and check the selected package
 
 Continue in the same shell after one of the installation examples, retaining its `SKILL_NAME` and `SKILL_ROOT` assignments. Each package carries its scripts, instructions, dependency file and license. This creates a separate Python environment for the selected skill:
 
@@ -192,14 +225,7 @@ python "$SKILL_ROOT/scripts/package_check.py" --session SESSION
 
 The connection check reads OCS state and reports the observed document ID and revision. [Package contents and maintenance](https://github.com/leomrocha/3d-cad-modeling/blob/master/docs/skill-packaging.md).
 
-### Use the skills with your agent
-
-1. Give the agent the drawing, pictures or dimensions and describe the model you need.
-2. Ask it to read [cad-ocs-engineering](https://github.com/leomrocha/3d-cad-modeling/blob/master/skills/cad-ocs-engineering/SKILL.md) for a component job, [cad-drawing-inspection](https://github.com/leomrocha/3d-cad-modeling/blob/master/skills/cad-drawing-inspection/SKILL.md) for a DXF, or [cad-source-intake](https://github.com/leomrocha/3d-cad-modeling/blob/master/skills/cad-source-intake/SKILL.md) to record the inputs.
-3. Specify the component project's input and output locations and the CAD session it should use.
-4. Review the resulting model and the changes recorded for that iteration.
-
-### Run a helper directly
+#### Run a helper directly
 
 With `SKILL_ROOT` pointing to `cad-drawing-inspection` or `cad-ocs-engineering`, inspect a DXF file named `drawing.dxf`:
 

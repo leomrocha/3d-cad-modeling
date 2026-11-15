@@ -14,6 +14,8 @@ exclude:
   - tools.md
   - PAGES.md
 navigation:
+  - title: "TLDR Install"
+    id: tldr-install
   - title: "License"
     id: license
   - title: "Introduction"
