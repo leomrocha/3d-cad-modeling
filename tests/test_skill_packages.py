@@ -225,6 +225,26 @@ assert verify_solid_transfer([source],[target],[dict(source_handle='A',target_ha
 print(json.dumps({'result':'PASS','exact_straight_cubic':'PASS','conditioning':'PASS','solid_transfer':'PASS','native_operations':0}))"""
         self.results['skills']['cad-ocs-engineering']['repeat_integration']=self.run_python('cad-ocs-engineering',code)
 
+    def test_insertion_resume_verification_inside_installed_copy(self):
+        code = """import json,tempfile,hashlib
+from pathlib import Path
+from insert_recovery import insert_default_contract
+from assembly_verification import match_world_vertices,check_world_envelope
+from cadtools.checkpoints import verify_resume_checkpoint
+s=dict(ok=True,document_id=2,revision=0,geometry_revision=3,command=dict(name='-INSERT',accepts=['enter'],prompt='Enter X scale factor <1>:'),modal=None,operation=None)
+assert insert_default_contract(s,stage='xscale',planned_value=1)['value']=='1'
+def row(name,x):return dict(id=name,points=[[x,0,0],[x+1,0,0],[x,1,0],[x,0,1]],face_count=4,closed=True)
+r=match_world_vertices([row('A',.04),row('B',0)],[row('X',0),row('Y',.08)],length_tolerance=.05)
+assert r['result']=='PASS' and r['matching']=={0:1,1:0}
+assert check_world_envelope([[100,100,0]],[[0,10],[0,10],[-1,1]],length_tolerance=1e-8)['result']=='SOURCE_REVIEW_REQUIRED'
+with tempfile.TemporaryDirectory() as tmp:
+ p=Path(tmp)/'model.dwg';p.write_bytes(b'fixture')
+ receipt=dict(result='PASS',state='IN_PROGRESS',job_id='job',document_id=2,geometry_revision=3,saved_path=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest(),source_pins=[])
+ s['command']=None
+ assert verify_resume_checkpoint(receipt,job_id='job',source_pins=[],state=s)['result']=='PASS'
+print(json.dumps({'result':'PASS','guarded_default':'PASS','repeated_matching':'PASS','source_envelope':'PASS','resume':'PASS','native_operations':0}))"""
+        self.results['skills']['cad-ocs-engineering']['insertion_resume_verification']=self.run_python('cad-ocs-engineering',code)
+
     def test_component_defaults_use_bundled_code_and_read_only_transport(self):
         code = '''import json
 from pathlib import Path

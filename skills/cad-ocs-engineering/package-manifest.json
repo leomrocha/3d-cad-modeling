@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "a27b56f984f0d7ef0e12b32ef8fb86afea864c25bc06bf22d67c0d5ae59c16d4"
+      "sha256": "39f13987f529ccd15a4d03b8cce498393a3ccb206fa75d5b9eeccf17599a2d14"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -105,6 +105,10 @@
     "references/hexagonal-reference.md": {
       "source": "references/hexagonal-reference.md",
       "sha256": "9f2e50dd0c374e0a54fb8a17b607600dee7d21f5008968f1fcdb8459827b0be3"
+    },
+    "references/insertion-resume-verification.md": {
+      "source": "references/insertion-resume-verification.md",
+      "sha256": "4d419fbb8feb0c432cda2815d5aa1aaa799024a7cc0f2dc65899ee68270d2b32"
     },
     "references/manufacturer-assembly.md": {
       "source": "references/manufacturer-assembly.md",
@@ -216,7 +220,7 @@
     },
     "scripts/assembly_build.py": {
       "source": "scripts/assembly_build.py",
-      "sha256": "ac8f111632dbf4a9fc5d4c3a12cbcc5ed6f4fefaae44aacf56c0389f7f3dc3d5"
+      "sha256": "1b0d67c3b6a1985703021140707b758bc921ef955dac3dbef5f4ebda6f9cac08"
     },
     "scripts/assembly_occurrences.py": {
       "source": "scripts/assembly_occurrences.py",
@@ -229,6 +233,10 @@
     "scripts/assembly_units.py": {
       "source": "scripts/assembly_units.py",
       "sha256": "496b58430b994d72ade03bf5577d65ebf77234a5b356100ecc15745c00fb3081"
+    },
+    "scripts/assembly_verification.py": {
+      "source": "scripts/assembly_verification.py",
+      "sha256": "54d36a11e05b8a3a3ee8747b4bbed2b47f10dbc9bf411e8c2a0de5d374d64921"
     },
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",
@@ -248,7 +256,7 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "3bab1238929698f1a66de2a7493a3fa7bc0d29b40ea5d2b90e97c2a96278f6ab"
+      "sha256": "280fca7c43dbcfec2bb26dc9c834dae7b61c51b6c777197ebf4684018ccca1bf"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
@@ -313,6 +321,10 @@
     "scripts/hexagonal_reference.py": {
       "source": "scripts/hexagonal_reference.py",
       "sha256": "21353662db4fe60cb96a072825c457a1746122fad6c2056fde5002ca9a6a7a61"
+    },
+    "scripts/insert_recovery.py": {
+      "source": "scripts/insert_recovery.py",
+      "sha256": "d901bf516e15afd70b6356918d5063be92e4c97207493c2dede8201a57bf7b67"
     },
     "scripts/model_inventory.py": {
       "source": "scripts/model_inventory.py",

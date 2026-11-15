@@ -114,3 +114,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Reversible source workflows
 
 1. [Conditioning, exact equivalence and solid transfer](cad-ocs-engineering/references/reversible-source-workflows.md) — bounded input transforms, preserved strict failures, unchanged native evidence and checkpoint identity.
+
+## Insertion recovery and verified resume
+
+1. [Insertion, resume and assembly verification](cad-ocs-engineering/references/insertion-resume-verification.md) — verified defaults, point-only correction, pinned checkpoints, repeated-instance matching and preserved source anomalies.

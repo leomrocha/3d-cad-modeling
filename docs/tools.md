@@ -110,3 +110,10 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 1. [profile_conditioning.py](../scripts/profile_conditioning.py) — caller-specified positive uniform profile/seed/depth conditioning and input roundtrip checks.
 2. [solid_transfer.py](../scripts/solid_transfer.py) — complete unchanged native payload and original metadata verification with explicit bijective mappings.
 3. [exact_profiles.py](../scripts/exact_profiles.py) — exact-fraction straight cubic certificates and explicitly allowed Line equivalence while preserving strict results.
+
+## Insertion recovery, resume and assembly verification
+
+1. [insert_recovery.py](../scripts/insert_recovery.py) — exact native INSERT default contracts, durable same-request continuation and completion checkpoints.
+2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching and caller-defined envelope checks.
+3. [assembly_build.py](../scripts/assembly_build.py) — guarded insertion-point compare-and-set correction with complete placement readback.
+4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pinned incremental saves and verified live-document resume gates.

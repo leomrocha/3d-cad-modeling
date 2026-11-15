@@ -1,0 +1,36 @@
+# Guarded insertion recovery, resume and assembly verification
+
+## Source-pinned incremental checkpoints
+
+Use [save_checkpoint](../scripts/cadtools/checkpoints.py) with an explicit `job_id`, `source_pins=[{path,sha256}]` and an optional readable part-name-to-handle mapping. Source paths are runtime absolute paths or named-root locators resolved with the caller's `roots`. The helper checks sources before and after saving, records the source contract, job, session when exposed, document/geometry revision, saved file hash and handles, and preserves the preceding checkpoint on failure. Stored receipts require the caller's root map for portability. Rooted locators must remain inside their declared roots.
+
+`verify_resume_checkpoint` is an offline gate for a live, idle owned document. Supply the saved receipt, expected job/source pins, current native state, roots and both expected/actual handle mappings when checking them. It verifies the in-progress result, current source hashes, exact saved bytes, session when recorded and document/geometry epoch. It sends no CAD request and infers no completed recipe operations. Reconcile the original action journal before selecting the next operation. A restart that opens a new document needs an explicit new ownership/persistence contract.
+
+Save the created owned document immediately, after each meaningful construction step and before risk, switches or handoff. Resolve an uncertain operation using its original request ID before saving. Save failure stops further modeling. Finish-only resume and arbitrary interrupted construction are separate caller job contracts. Preserve unrelated open documents and original sources. Delete construction profiles only through recorded created-handle ownership; a base drawing can contain unrelated polylines.
+
+## Accept only verified INSERT defaults
+
+Use [insert_recovery.py](../scripts/insert_recovery.py) after resolving the previous request's known/unknown status and inspecting the live owned prompt. Select one serialized native writer interval. Existing [runtime](ocs-runtime.md) request bounds and recovery remain authoritative.
+
+1. `insert_default_contract(state, stage=..., planned_value=...)` supports the inspected English INSERT X-scale, Y-scale and rotation prompts. It checks document/revision identity, command name, Enter support, modal/pending-operation state and the complete displayed default. Numeric defaults must equal the caller's planned value. The symbolic Y default `use X scale factor` requires the immediately preceding verified X-scale receipt from the same document/revision/geometry epoch. Different or unrecognized defaults stop.
+2. Persist the returned contract with the caller's job. `accept_insert_default(client,label,contract,exclusive_interval=True,checkpoint=...)` binds it durably in the operation journal before one Enter. It checks the contract again, uses the original request ID for uncertain completion/restart, and verifies the expected next prompt. Never replay a prior point request because its error or cancellation message was observed.
+3. Rotation completion requires a checkpoint callback. The callback runs after the command is idle. A checkpoint exception stops the job with the completed Insert retained for recovery. Active intermediate prompts require bounded command continuation to the next saveable boundary.
+4. The supported prompt grammar is deliberately bounded to the inspected interface. Other installed prompt layouts require inspection and a separate supported contract. A command error alone does not establish whether geometry or placement changed.
+
+## Correct and verify the actual insertion point
+
+`correct_insert_point` in [assembly_build.py](../scripts/assembly_build.py) takes an exact owned Insert handle, caller point and complete intended 4x4 matrix, inspected schema paths, separate length/dimensionless matrix tolerances, serialized writer interval and a checkpoint callback.
+
+It requires an idle document, stable record read, schema support for `/insert_point` and proof that a point-only change produces the entire intended placement. It checkpoints before a new update, submits one expected-old-value property change with the geometry epoch, verifies all other Insert properties and the complete resulting matrix, then checkpoints again. A journalled update is recovered through the original request ID and its completed geometry epoch is checked against readback. It sends no replacement insertion, command cancellation, scale change or rotation change.
+
+The original requested point and actual saved point have separate evidence. Preserve the old record, compare-and-set request, result and failed attempt. Source files, intended transforms, tolerances, handles and metadata remain caller inputs. Existing `insert_component` keeps its explicit-prompt behavior; recovery is an explicitly selected procedure.
+
+## Repeated nested placements and source-world geometry
+
+Use [assembly_verification.py](../scripts/assembly_verification.py) with one declared XYZ frame and length unit.
+
+1. `verify_nested_placements` expands source/target roots with the existing nested instance reader, verifies complete ACIS/noncommon properties and original metadata through [solid transfer](reversible-source-workflows.md), and matches occurrence matrices against explicit source/target geometry bindings. It preserves repeated and coincident occurrence multiplicity. Unit reflection or uniform scale requires the existing explicit reader opt-in. Unsupported block bases, arrays, cycles and exceeded instance bounds stop through the reader.
+2. `compare_occurrence_matrices` accepts already expanded occurrences and bijective geometry-definition bindings. Translation tolerance uses the declared length unit; the linear matrix coefficient tolerance is dimensionless. Occurrence paths must be unique. Matching is one-to-one within the tolerance; a global matrix multiset cannot exchange different geometry definitions without detection.
+3. `match_world_vertices` takes unique occurrence IDs, complete world point sets, face counts and explicit closed-topology flags. A bounded augmenting-path match handles repeated geometry and multiple compatible candidates. It rejects missing occurrences, changed vertex sets, wrong face counts or open topology. Its scope is vertex sets and topology observations. Analytic surface equations, trims and source-domain coverage retain their own checks. Preserve the original source matrices used to construct the supplied world points.
+4. `check_world_envelope` compares actual world vertices with caller-supplied permitted bounds and length tolerance. It returns actual bounds, disjoint status and PASS or SOURCE_REVIEW_REQUIRED. It chooses no dimension threshold, assigns no placeholder identity and modifies no source/model. Preserve the selected candidate, original aggregate and their hashes. Any omission is an explicitly authorized operation on a separate owned derivative.
+5. Keep source bodies, repeated physical instances, construction solids and top-level roots separately named and counted. Verify final source hashes and saved/reopened model identity before [closing completed owned documents](document-cleanup.md). Protect active/unrelated paths, dirty states and revisions through every operation.
