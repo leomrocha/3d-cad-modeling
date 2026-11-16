@@ -245,6 +245,23 @@ with tempfile.TemporaryDirectory() as tmp:
 print(json.dumps({'result':'PASS','guarded_default':'PASS','repeated_matching':'PASS','source_envelope':'PASS','resume':'PASS','native_operations':0}))"""
         self.results['skills']['cad-ocs-engineering']['insertion_resume_verification']=self.run_python('cad-ocs-engineering',code)
 
+    def test_surface_mesh_methods_inside_installed_copy(self):
+        code = """import json
+from rational_surface import evaluate_rational_surface
+from mesh_checks import triangle_mesh_check
+from mesh_dxf import mesh_signature
+from step_placements import eye
+from insert_recovery import verify_cancelled_insert
+s=dict(control_points=[[[0,0,0],[0,1,0]],[[1,0,0],[1,1,0]]],weights=[[1,1],[1,1]],degree_u=1,degree_v=1,knots_u=[0,0,1,1],knots_v=[0,0,1,1])
+assert evaluate_rational_surface(s,[.25,.5],transform=eye(),precisions=(65,100))['point']==[.25,.5,0]
+assert triangle_mesh_check([[0,0,0],[1,0,0],[0,1,0]],[[0,1,2]],minimum_area=0)['result']=='PASS'
+import ezdxf
+d=ezdxf.new('R2018');m=d.modelspace().add_mesh()
+with m.edit_data() as data:data.vertices=[[0,0,0],[1,0,0],[0,1,0]];data.faces=[[0,1,2]]
+assert len(mesh_signature(d))==1
+print(json.dumps({'result':'PASS','rational_surface':'PASS','triangle_gate':'PASS','mesh_tags':'PASS','native_requests':0}))"""
+        self.results['skills']['cad-ocs-engineering']['surface_mesh_methods']=self.run_python('cad-ocs-engineering',code)
+
     def test_component_defaults_use_bundled_code_and_read_only_transport(self):
         code = '''import json
 from pathlib import Path

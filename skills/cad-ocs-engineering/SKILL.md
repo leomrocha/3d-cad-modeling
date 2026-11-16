@@ -39,6 +39,7 @@ Inspect actual matching models and all manifest, work-record, input-sheet and CA
 4. Use [stable records](scripts/cadtools/records.py), supported [native geometry](scripts/native_geometry.py) and [feature comparisons](references/shared-feature-checks.md). Keep expected source dimensions independent of measurements. Record actual handles and document/geometry revisions.
 5. Use [insertion, resume and assembly verification](references/insertion-resume-verification.md), [reversible source workflows](references/reversible-source-workflows.md), [exact source checks](references/exact-source-checks.md) and [reusable geometry and assembly methods](references/generic-integration.md) for plates, bounded profiles, rounded sections, sidewall cuts, placement matrices, insertion and quantities. Supply all component constants through the job.
 6. Inspect corresponding native model views. [Boundary rendering](scripts/native_views.py) uses the same saved solid records and actual nested placements. Record unsupported trim endpoints as displayed points. A displayed sample extent has its own measurement scope.
+7. Use [surface and mesh recovery](references/surface-mesh-recovery.md) for precision-controlled rational evaluation, open-triangle validity, DXF layer derivatives and recorded cancellation checks. Respect the caller's authorized save-only or save/reopen persistence method and label its evidence explicitly.
 
 ### Save work in progress
 
@@ -67,7 +68,7 @@ Inspect actual matching models and all manifest, work-record, input-sheet and CA
 
 ## Save and computational handoff
 
-Save IN_PROGRESS files and models incrementally and save the completed revision again. Use the authorized path, native format and version; preserve source originals. Audit saved data, inspect dropped information and verify file hashes and reopened geometry. Keep a previous verified checkpoint throughout long jobs.
+Save IN_PROGRESS files and models incrementally and save the completed revision again. Use the authorized path, native format and version; preserve source originals. Audit saved data, inspect dropped information and verify file hashes and geometry through the caller's authorized persistence method. Label current and reopened checks explicitly. Keep a previous verified checkpoint throughout long jobs.
 
 For calculations and solver work, use [computational engineering](references/computational-engineering.md) and the [model contract](references/model-contract.md). Supply actual material, load, boundary and convergence inputs. Format conversion records its source, target, tool and preserved/changed information.
 

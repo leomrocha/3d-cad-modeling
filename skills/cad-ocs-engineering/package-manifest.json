@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "39f13987f529ccd15a4d03b8cce498393a3ccb206fa75d5b9eeccf17599a2d14"
+      "sha256": "e37ac3bcb59d8d674106e2e236d7b14bf79a576814ce5c49eabd790f179c9978"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -44,7 +44,7 @@
     },
     "references/component-completion.md": {
       "source": "references/component-completion.md",
-      "sha256": "6895bcf94d44ab694f7cc4565e8710afdfb5ded224c2a95c1a76b59160f0bd17"
+      "sha256": "508285c01ca7a660e1629b0dcf243e2e6d61f671daaca4b1b0d2700ed0c36815"
     },
     "references/component-procedure.md": {
       "source": "references/component-procedure.md",
@@ -64,7 +64,7 @@
     },
     "references/document-cleanup.md": {
       "source": "references/document-cleanup.md",
-      "sha256": "05540eb30d67a90baa12627c7c08ff888f2444eb2087ab6a16593cb6e09a55bb"
+      "sha256": "d1512b782bcb037bd05abd8397b3a78277ce9f22f2277b790089bab92cdc1b34"
     },
     "references/drawing-feature-checks.md": {
       "source": "references/drawing-feature-checks.md",
@@ -198,6 +198,10 @@
       "source": "references/step-solid-inventory.md",
       "sha256": "0b88f613487333bcfe3d468483eae3260122013decfda083b5fca60ed2791e86"
     },
+    "references/surface-mesh-recovery.md": {
+      "source": "references/surface-mesh-recovery.md",
+      "sha256": "76443572715f7c5fcee7fb1ee5c41c446376385cda2e503a59588ad65c59ea07"
+    },
     "references/tabbed-battery.md": {
       "source": "references/tabbed-battery.md",
       "sha256": "329fef06c9f8b5b9f7cbe3c683aae3a0be07561e88b6cb1dc37fd7759cb95938"
@@ -324,7 +328,15 @@
     },
     "scripts/insert_recovery.py": {
       "source": "scripts/insert_recovery.py",
-      "sha256": "d901bf516e15afd70b6356918d5063be92e4c97207493c2dede8201a57bf7b67"
+      "sha256": "7a32f66064987aa7ddbc54c7ccc940c97582a523022a4c4e211cfdffe676207e"
+    },
+    "scripts/mesh_checks.py": {
+      "source": "scripts/mesh_checks.py",
+      "sha256": "540f647214242cebab18861e10998d5e014b5741dd8a2f0e716223dda5cbfc58"
+    },
+    "scripts/mesh_dxf.py": {
+      "source": "scripts/mesh_dxf.py",
+      "sha256": "a4e0889c076b7ef8c0d8ef9a5c229aa8743c07132149dff55ada5103b91b0b50"
     },
     "scripts/model_inventory.py": {
       "source": "scripts/model_inventory.py",
@@ -381,6 +393,10 @@
     "scripts/profile_reference.py": {
       "source": "scripts/profile_reference.py",
       "sha256": "2ecc024bb3c036f5ba85ab26e1002a8230179e3d5b8b7be19060a6ddcd9cc7d0"
+    },
+    "scripts/rational_surface.py": {
+      "source": "scripts/rational_surface.py",
+      "sha256": "8500688104fc5be843a503e3e640d5e8a5d6425a7b9fca148ceac8700742d018"
     },
     "scripts/retained_artifacts.py": {
       "source": "scripts/retained_artifacts.py",

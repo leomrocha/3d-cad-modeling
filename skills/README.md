@@ -118,3 +118,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Insertion recovery and verified resume
 
 1. [Insertion, resume and assembly verification](cad-ocs-engineering/references/insertion-resume-verification.md) — verified defaults, point-only correction, pinned checkpoints, repeated-instance matching and preserved source anomalies.
+
+## Surface and mesh recovery
+
+1. [Numerical surface and mesh recovery](cad-ocs-engineering/references/surface-mesh-recovery.md) — bounded rational evaluation, triangle checks, DXF layer derivatives, cancellation effects and caller-selected persistence operations.

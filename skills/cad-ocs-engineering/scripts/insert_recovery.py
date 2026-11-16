@@ -98,3 +98,43 @@ def accept_insert_default(client,label,contract,*,exclusive_interval=False,check
         checkpoint('insert-completed')
     elif _phase(after)[0]!=_NEXT[stage]:raise CadError('INSERT did not advance to the expected next prompt')
     return dict(result='PASS',stage=stage,value=contract['value'],after_identity=list(epoch),request_id=key,response=response)
+
+
+def verify_cancelled_insert(before,after,response,*,expected_request_id,
+                            before_snapshots,after_snapshots):
+    """Verify one recorded cancellation; send no request and grant no permission.
+
+    Caller supplies complete root, Insert and block snapshots after resolving
+    earlier requests. Snapshot equality covers only the supplied collections.
+    Save the recovered idle document before constructing another occurrence.
+    """
+    if not expected_request_id or response.get('request_id')!=expected_request_id:
+        raise CadError('Exact original cancellation request identity required')
+    if response.get('ok') is not True or response.get('status')!='cancelled':
+        raise CadError('Successful terminal cancelled response required')
+    original=identity(before)
+    if identity(after)!=original or identity(response.get('state',{}))!=original:
+        raise CadError('Cancellation changed document or geometry epoch')
+    if before.get('session_id') is not None and any(s.get('session_id')!=before['session_id'] for s in (after,response.get('state',{}))):
+        raise CadError('Cancellation native session differs')
+    if (before.get('command') or {}).get('name') not in ('INSERT','-INSERT') or before.get('operation') or before.get('modal'):
+        raise CadError('Inspected pending INSERT with no active operation required')
+    if after.get('command') or after.get('operation') or after.get('modal'):
+        raise CadError('Cancellation did not reach an idle document')
+    if set(before_snapshots)!={'roots','inserts','blocks'} or set(after_snapshots)!=set(before_snapshots):
+        raise CadError('Complete caller root, Insert and block collections required')
+    def indexed(rows):
+        out={}
+        for row in rows:
+            handle=row.get('handle')
+            if not isinstance(handle,str) or not handle or handle in out:raise CadError('Unique snapshot handles required')
+            out[handle]=row
+        return out
+    for name in before_snapshots:
+        old,new=indexed(before_snapshots[name]),indexed(after_snapshots[name])
+        if not old or old!=new:raise CadError('Cancellation changed supplied '+name+' records')
+    if not set(indexed(before_snapshots['roots']))<=set(indexed(before_snapshots['inserts'])):
+        raise CadError('Pending INSERT snapshot roots must be preserved Insert records')
+    return dict(result='PASS',request_id=expected_request_id,document_id=original[0],
+                geometry_revision=original[2],scope='unchanged supplied root, Insert and block record sets; idle state',
+                next_action='Save verified idle checkpoint before further construction')
