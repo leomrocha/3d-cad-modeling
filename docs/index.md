@@ -91,6 +91,24 @@ The blue deck in the drawing below is the removable group. Hide it and the fixed
 
 ![Full assembly, deck hidden, front view and clamp detail, coloured by role]({{ '/images/model-navigation/tractor-layers.png' | relative_url }})
 
+### Real-time OpenCADStudio builds
+
+#### Assemble the two-wheel tractor service deck
+
+Watch the frame, receiver rails, motor cartridge and clamp hardware come together in an empty millimetre drawing. The removable deck goes on last. The live terminal follows the commands through layer isolation, reopening the DWG and selecting the outboard washer.
+
+<video controls playsinline preload="none" width="960" style="max-width:100%;height:auto" aria-label="Assemble the two-wheel tractor service deck" poster="{{ '/images/model-navigation/tractor-live-ocs.png' | relative_url }}"><source src="{{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}" type="video/mp4"></video>
+
+[Play the complete take (1:43)]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}) · [0:04 Frame]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=4) · [0:24 M10 screw and first washer]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=24) · [0:57 Deck layer off]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=57) · [1:03 Receiver isolation]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=63) · [1:28 Fresh reopen and eleven-placement check]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=88)
+
+#### Build a glass-roof veranda against the house
+
+The existing house fixes the position of the veranda. With the ground floor at 0 mm and the terrace at −100 mm, OpenCADStudio builds the post shoes, oak frame, 17 rafters and roof covering. Watch the joint cuts, the glazing and timber layers, and the rafter selection after reopening.
+
+<video controls playsinline preload="none" width="960" style="max-width:100%;height:auto" aria-label="Build a glass-roof veranda against the house" poster="{{ '/images/model-navigation/veranda-live-ocs.png' | relative_url }}"><source src="{{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}" type="video/mp4"></video>
+
+[Play the complete take (2:04)]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}) · [0:05 Fabricate the post shoes]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=5) · [0:29 Seat the transverse members]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=29) · [1:08 Build seventeen rafters]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=68) · [1:39 Isolate timber frame]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=99) · [1:51 Close and reopen the native DWG]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=111)
+
 ### Clevis build and layer isolation
 
 | Complete joint | Fork hidden to inspect the pin and spacers |
