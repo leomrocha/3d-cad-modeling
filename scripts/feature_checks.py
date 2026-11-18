@@ -106,3 +106,30 @@ def planar_boundary_pattern(name,features,axis,level,spans,centres,tolerance):
     result['all_boundaries_closed']=closed
     if not closed:result['result']='FAIL'
     return result
+
+
+def feature_vertices(name, observed, expected, tolerance):
+    """Locate distinct feature corners among one reopened solid's vertices, in mm."""
+    if type(tolerance) not in (int, float) or not math.isfinite(tolerance) or tolerance <= 0:
+        raise ValueError("A positive finite tolerance in mm is required")
+
+    def points(values):
+        result = []
+        for point in values:
+            if len(point) != 3 or any(type(x) not in (float, int) or not math.isfinite(x) for x in point):
+                raise ValueError("Each vertex requires three finite coordinates in mm")
+            result.append(tuple(point))
+        return result
+
+    targets = points(expected)
+    if not targets or len(set(targets)) != len(targets):
+        raise ValueError("Distinct source feature corners are required")
+    vertices = sorted(set(points(observed)))
+    matches = []
+    for target in targets:
+        nearest = min(vertices, key=lambda p: math.dist(target, p), default=None)
+        distance = math.dist(target, nearest) if nearest is not None else None
+        matches.append(dict(expected=target, observed=nearest, distance_mm=distance))
+    passed = (len({m["observed"] for m in matches}) == len(targets)
+              and all(m["distance_mm"] is not None and m["distance_mm"] <= tolerance for m in matches))
+    return dict(check=name, result="PASS" if passed else "FAIL", tolerance_mm=tolerance, corners=matches)

@@ -140,3 +140,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 2. [Conversion command](../format_translation/convert.py) generates verified STL, STEP or translated Python with optional local runtimes.
 3. [SCAD source translator](../format_translation/scad_source.py) translates supported source constructs to editable CadQuery Python and reports unsupported source locations.
 4. [Blender mesh exchange](../format_translation/blend_exchange.py) reads and writes native Blender scenes and STL meshes with explicit units or a measured reference.
+
+[Native feature comparisons](../scripts/feature_checks.py) include `feature_vertices(name, observed, expected, tolerance)`. Supply corners from one reopened solid and distinct source corners in the same millimetre frame. The result records each nearest vertex and its distance. Missing corners, a shared nearest vertex and out-of-tolerance matches fail the check.
+
+[Recording checker](../skills/cad-model-navigation/scripts/check_recording.py) checks constant-rate video timing, chapter bounds and decoding using the installed ffprobe and ffmpeg commands.
