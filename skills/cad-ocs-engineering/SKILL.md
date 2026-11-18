@@ -74,6 +74,8 @@ Inspect actual matching models and all manifest, work-record, input-sheet and CA
 4. **Inspection:** [bearing assemblies](references/existing-bearing.md), [battery shell interfaces](references/existing-battery.md), [named tabbed solids](references/tabbed-battery.md), [saved body comparisons](references/small-bms.md), [circular boundaries](references/circular-boundary-checks.md), [native metadata](references/source-metadata.md).
 5. **Assemblies:** [source placements](references/manufacturer-assembly.md), [unit conversion and mirrors](references/scaled-assemblies.md), [unit planning](references/assembly-units.md), [STEP solid inventory](references/step-solid-inventory.md).
 
+For straight removal and installation paths, use the [service clearance procedure](references/service-clearance.md) with saved occurrence identities and caller-declared motion.
+
 ## Save and computational handoff
 
 Save IN_PROGRESS files and models incrementally and save the completed revision again. Use the authorized path, native format and version; preserve source originals. Audit saved data, inspect dropped information and verify file hashes and geometry through the caller's authorized persistence method. Label current and reopened checks explicitly. Keep a previous verified checkpoint throughout long jobs.

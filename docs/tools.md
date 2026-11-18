@@ -144,3 +144,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 [Native feature comparisons](../scripts/feature_checks.py) include `feature_vertices(name, observed, expected, tolerance)`. Supply corners from one reopened solid and distinct source corners in the same millimetre frame. The result records each nearest vertex and its distance. Missing corners, a shared nearest vertex and out-of-tolerance matches fail the check.
 
 [Recording checker](../skills/cad-model-navigation/scripts/check_recording.py) checks constant-rate video timing, chapter bounds and decoding using the installed ffprobe and ffmpeg commands.
+
+## Service clearance
+
+1. [service_clearance.py](../scripts/service_clearance.py) checks continuous box overlap during finite straight translation and supplies exact coincidence witnesses for verified shared definitions.

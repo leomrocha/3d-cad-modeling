@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "0f1e1c9d339b8c939f97a9d9235568bd63c97a47f142404970808c1e70bdb14e"
+      "sha256": "061e859ed47f5ee28117db86ebf9ab7136aea6adc45a2c30e01d23c18d6ab938"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -161,6 +161,10 @@
     "references/scaled-assemblies.md": {
       "source": "references/scaled-assemblies.md",
       "sha256": "0e8106f4d2a17f806a6cfe1abfc0adaf23d77645f534fe4124f80b6c52c70959"
+    },
+    "references/service-clearance.md": {
+      "source": "references/service-clearance.md",
+      "sha256": "e7a59a96cfb93a711b0e6789e3048d7546e3f3ea4c24ce5498fc83e5b8140eb3"
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
@@ -409,6 +413,10 @@
     "scripts/rounded_tube.py": {
       "source": "scripts/rounded_tube.py",
       "sha256": "3c79015c2f78216f89a30e455bf134b0f854e755e588a4fd36ffb48060b7a388"
+    },
+    "scripts/service_clearance.py": {
+      "source": "scripts/service_clearance.py",
+      "sha256": "a3d66628ca275b50c28bf7770c9c054311254dc34023f713f8d46fb95518ba1a"
     },
     "scripts/small_bms.py": {
       "source": "scripts/small_bms.py",

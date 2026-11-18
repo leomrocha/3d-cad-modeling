@@ -245,6 +245,14 @@ with tempfile.TemporaryDirectory() as tmp:
 print(json.dumps({'result':'PASS','guarded_default':'PASS','repeated_matching':'PASS','source_envelope':'PASS','resume':'PASS','native_operations':0}))"""
         self.results['skills']['cad-ocs-engineering']['insertion_resume_verification']=self.run_python('cad-ocs-engineering',code)
 
+    def test_service_clearance_inside_installed_copy(self):
+        code = """import json
+from service_clearance import translation_box_window
+r=translation_box_window([[0,0,0],[1,1,1]],[[0,0,2],[1,1,3]],[0,0,4])
+assert r=={'result':'CANDIDATE','candidate_fraction':['1/4','3/4']}
+print(json.dumps({'result':'PASS','candidate_fraction':r['candidate_fraction']}))"""
+        self.results['skills']['cad-ocs-engineering']['service_clearance']=self.run_python('cad-ocs-engineering',code)
+
     def test_surface_mesh_methods_inside_installed_copy(self):
         code = """import json
 from rational_surface import evaluate_rational_surface
