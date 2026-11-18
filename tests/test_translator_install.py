@@ -26,7 +26,7 @@ class TranslatorInstallation(unittest.TestCase):
                                                        ROOT / 'scripts/build_skill_packages.py')
         builder_module = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(builder_module)
-        self.assertEqual(set(LEGACY_INSTALL_CASES) | {NAME}, set(builder_module.SKILLS))
+        self.assertEqual(set(LEGACY_INSTALL_CASES) | {NAME, builder_module.FORMAT}, set(builder_module.SKILLS))
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             source = root / 'source'

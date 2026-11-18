@@ -47,6 +47,10 @@ class PackageLifecycle(unittest.TestCase):
             self.write('translator/' + name, 'VALUE = 1\n')
         for asset in builder.TRANSLATOR_ASSETS:
             self.write('skills/' + builder.TRANSLATOR + '/' + asset, 'fixture\n')
+        for name in builder.FORMAT_MODULES:
+            self.write('format_translation/' + name, 'VALUE = 1\n')
+        for asset in builder.FORMAT_ASSETS:
+            self.write('skills/' + builder.FORMAT + '/' + asset, 'fixture\n')
         self.cli = self.root / 'cli'
         self.reader = self.root / 'reader'
         self.write('cli/bin/cli.mjs', '// fixture\n')
@@ -61,9 +65,11 @@ class PackageLifecycle(unittest.TestCase):
     def register_fixture(self):
         paths = [p for p in builder.source_paths() if Path(p).name != '__init__.py']
         paths += ['translator/' + name for name in builder.TRANSLATOR_MODULES]
+        paths += ['format_translation/' + name for name in builder.FORMAT_MODULES]
         self.write('docs/tools.md', '\n'.join('[tool](../' + p + ')' for p in paths))
         refs = ['skills/' + builder.TRANSLATOR + '/' + asset for asset in builder.TRANSLATOR_ASSETS
                 if asset.startswith('references/')]
+        refs.append('skills/' + builder.FORMAT + '/references/conversion.md')
         self.write('skills/README.md', '\n'.join('[ref](../' + p + ')' for p in refs))
         paths += refs
         self.write('skills/cad-ocs-engineering/SKILL.md', '# Fixture skill\n')

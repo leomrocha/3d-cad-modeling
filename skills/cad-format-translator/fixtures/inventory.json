@@ -1,0 +1,12 @@
+{
+  "connection": "workshop-fixture", "host_version": "fixture-1", "bridge_version": "fixture-2",
+  "complete": true, "available_dependencies": [], "scope": "synthetic offline example",
+  "tools": [
+    {"name":"acquire_asset","inputSchema":{"type":"object","properties":{"input_uri":{"type":"string"}},"required":["input_uri"]}},
+    {"name":"emit_asset","inputSchema":{"type":"object","properties":{"item":{"type":"string"},"destination":{"type":"string"}},"required":["item","destination"]}}
+  ],
+  "operations": [
+    {"tool":"acquire_asset","from":"step-solid","to":"scratch:owned-solid-handle","bindings":{"input_uri":"source"},"evidence":"Synthetic contract: returns the owned solid handle in result.id","preserves":["mm","shape"],"losses":[],"dependencies":[],"accessible":true},
+    {"tool":"emit_asset","from":"scratch:owned-solid-handle","to":"stl-mesh","bindings":{"item":"previous.result.id","destination":"output"},"evidence":"Synthetic contract: triangulates in millimetres at the specified destination","preserves":["mm","shape"],"losses":["analytic-faces"],"dependencies":[],"accessible":true}
+  ]
+}

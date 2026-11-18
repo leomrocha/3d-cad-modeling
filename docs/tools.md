@@ -133,3 +133,9 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 2. [Local state ledger](../translator/state.py) stores verified revisions and unresolved native write intents.
 3. [Bore fixture checker](../translator/bore_check.py) checks the fixture’s bore rims and wall against ASCII STL triangles.
 4. [Installed package checker](../translator/package_check.py) checks the translator’s complete file inventory and hashes.
+
+## CAD format translation
+
+1. [Capability route planner](../format_translation/routes.py) checks directional tool declarations, argument bindings, dependencies and required properties across any selected connection.
+2. [Conversion command](../format_translation/convert.py) generates verified STL, STEP or translated Python with optional local runtimes.
+3. [SCAD source translator](../format_translation/scad_source.py) translates supported source constructs to editable CadQuery Python and reports unsupported source locations.

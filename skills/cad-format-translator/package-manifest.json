@@ -1,0 +1,46 @@
+{
+  "skill": "cad-format-translator",
+  "generated_by": "self-contained skill distribution",
+  "files": {
+    "LICENSE": {
+      "source": "LICENSE",
+      "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc"
+    },
+    "SKILL.md": {
+      "source": "SKILL.md",
+      "sha256": "b8e2edcefa75e94374bc49435b0783ca374637803af48c31d4c616b14c02130f"
+    },
+    "fixtures/inventory.json": {
+      "source": "fixtures/inventory.json",
+      "sha256": "a80cc587e9129b560b8c8b3f0c064f128a29bffca04eb5d41aef2b46355914a8"
+    },
+    "fixtures/plate.scad": {
+      "source": "fixtures/plate.scad",
+      "sha256": "9a608b265b5423845e4cd3d334ce8925d2c1a3c2846792df40c12e5a7ff8f172"
+    },
+    "references/conversion.md": {
+      "source": "references/conversion.md",
+      "sha256": "877798c174cb526df25406d88102fb14ea91df39a9b887cda0d022a4d585db5e"
+    },
+    "requirements.txt": {
+      "source": "requirements.txt",
+      "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
+    },
+    "scripts/convert.py": {
+      "source": "scripts/convert.py",
+      "sha256": "3188796a1f15aeec1d07b19ac9159337e828e24a0052f5cc9a09e8318fcfa0cd"
+    },
+    "scripts/package_check.py": {
+      "source": "scripts/package_check.py",
+      "sha256": "ee353ceefa62bd1939a64ebd3bdffb52294137488610a6bcc9c7d51c76d9cc2a"
+    },
+    "scripts/routes.py": {
+      "source": "scripts/routes.py",
+      "sha256": "ca020de373ca93556e311b6d5fde59171a60f67ffeea109da66e8d6491ee8d30"
+    },
+    "scripts/scad_source.py": {
+      "source": "scripts/scad_source.py",
+      "sha256": "8ce8ec47a7513562bdf9244c067d0a041c52fc6486ce7c12b541a96ead24db68"
+    }
+  }
+}

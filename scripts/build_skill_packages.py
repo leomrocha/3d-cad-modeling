@@ -14,7 +14,10 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 TRANSLATOR = 'cad-mcp-translator'
-SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake', TRANSLATOR)
+FORMAT = 'cad-format-translator'
+FORMAT_MODULES = ('convert.py', 'routes.py', 'scad_source.py')
+FORMAT_ASSETS = ('SKILL.md', 'references/conversion.md', 'fixtures/plate.scad', 'fixtures/inventory.json')
+SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake', TRANSLATOR, FORMAT)
 TRANSLATOR_MODULES = ('translator.py', 'state.py', 'bore_check.py', 'package_check.py')
 TRANSLATOR_ASSETS = (
     'SKILL.md', 'references/operations.md', 'references/contributing.md',
@@ -23,7 +26,7 @@ TRANSLATOR_ASSETS = (
 )
 TRANSLATOR_SUITES = (
     'test_translator.py', 'test_translator_state.py', 'test_translator_bore.py',
-    'test_translator_install.py',
+    'test_translator_install.py', 'test_format_translation.py', 'test_format_install.py',
 )
 HOST_ONLY = {'scripts/build_skill_packages.py'}
 
@@ -48,6 +51,7 @@ def check_registrations():
     failures = []
     required = {ROOT / relative for relative in source_paths() if Path(relative).name != '__init__.py'}
     required.update(ROOT / 'translator' / name for name in TRANSLATOR_MODULES)
+    required.update(ROOT / 'format_translation' / name for name in FORMAT_MODULES)
     for path in required:
         if path.resolve() not in tools:
             failures.append('Tool catalogue entry missing: ' + str(path.relative_to(ROOT)))
@@ -56,6 +60,7 @@ def check_registrations():
                   if path.is_relative_to(main.parent / 'references')}
     references.update(ROOT / 'skills' / TRANSLATOR / asset for asset in TRANSLATOR_ASSETS
                       if asset.startswith('references/'))
+    references.add(ROOT / 'skills' / FORMAT / 'references/conversion.md')
     for path in references:
         if path not in procedures:
             failures.append('Skill procedure index entry missing: ' + str(path.relative_to(ROOT)))
@@ -146,6 +151,8 @@ def inputs(name, committed=False):
         raise ValueError('Unknown skill package: ' + name)
     paths = source_paths(committed)
     common = ['scripts/component_records.py', 'scripts/part_index.py', 'scripts/package_check.py']
+    if name == FORMAT:
+        return ['format_translation/' + module for module in FORMAT_MODULES] + ['scripts/package_check.py']
     if name == TRANSLATOR:
         return ['translator/' + module for module in TRANSLATOR_MODULES]
     if name == 'cad-source-intake':
@@ -163,11 +170,12 @@ def source_bytes(relative, committed=False):
     return (ROOT / relative).read_bytes()
 
 
-def translator_expected(committed):
+def independent_expected(name, committed):
     """The translator owns a separate, closed distribution and has no CAD dependencies."""
-    package = Path('skills') / TRANSLATOR
-    sources = {asset: (package / asset).as_posix() for asset in TRANSLATOR_ASSETS}
-    sources.update({'scripts/' + name: 'translator/' + name for name in TRANSLATOR_MODULES})
+    package = Path('skills') / name
+    assets = TRANSLATOR_ASSETS if name == TRANSLATOR else FORMAT_ASSETS
+    sources = {asset: (package / asset).as_posix() for asset in assets}
+    sources.update({'scripts/' + Path(path).name: path for path in inputs(name, committed)})
     sources['LICENSE'] = 'LICENSE'
     result = {}
     for dest, source in sources.items():
@@ -176,12 +184,12 @@ def translator_expected(committed):
             raise ValueError('Missing or redirected translator source: ' + source)
         result[dest] = source_bytes(source, committed)
     result['requirements.txt'] = b'# Python 3.12 standard library only.\n'
-    return with_manifest(TRANSLATOR, result)
+    return with_manifest(name, result)
 
 
 def expected(name, committed=False):
-    if name == TRANSLATOR:
-        return translator_expected(committed)
+    if name in (TRANSLATOR, FORMAT):
+        return independent_expected(name, committed)
     files = {str(Path(p).relative_to('scripts')): p for p in inputs(name, committed)}
     result = {'scripts/' + target: source_bytes(source, committed) for target, source in files.items()}
     result['LICENSE'] = source_bytes('LICENSE', committed)
@@ -217,7 +225,7 @@ def build(check=False, committed=False):
     for name in SKILLS:
         target = ROOT / 'skills' / name
         files = expected(name, committed)
-        if name == TRANSLATOR:
+        if name in (TRANSLATOR, FORMAT):
             for path in target.rglob('*'):
                 if path.is_symlink():
                     raise ValueError('Redirected translator asset: ' + str(path.relative_to(target)))

@@ -8,6 +8,8 @@ Each skill directory is its installation unit. The skills CLI copies the selecte
 
 4. **CAD MCP translator:** independent, standard-library-only offline planner, local ledger, mappings, procedures and geometric fixture. [User guide](cad-mcp-translator.md).
 
+5. **CAD format translator:** owns `format_translation/`, its directional inventory example and source fixture. The installed planner runs independently. OpenSCAD and CadQuery are optional conversion runtimes. [User guide](cad-format-translator.md).
+
 The [installation examples](../README.md#installing) select an agent and project/global scope, assign `SKILL_ROOT` to the installed directory, create a Python 3.12 environment and execute the package checker. The skills CLI requires Node.js >=22.20 and npm/npx. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
 
 ## Maintain the packages

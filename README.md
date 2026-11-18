@@ -16,6 +16,8 @@ Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-y
 
 Using another CAD application? [Adapt a procedure to its MCP server](docs/cad-mcp-translator.md).
 
+Need a different file format or editable CAD program? [Translate CAD files and scripts](docs/cad-format-translator.md).
+
 Want to share a script or skill improvement from a modeling job? [Contribute an improvement](docs/contributing.md).
 
 ## License
@@ -167,9 +169,9 @@ python3.12 --version
 
 #### Install an individual skill into a project
 
-Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), `cad-source-intake` (source capture and revisions), and `cad-mcp-translator` (adapt a procedure to another CAD endpoint).
+Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), `cad-source-intake` (source capture and revisions), `cad-mcp-translator` (adapt a procedure to another CAD endpoint), and `cad-format-translator` (convert a model or editable program).
 
-This example installs for Claude Code. Run it from the project directory where you want the skill available. Choose `cad-ocs-engineering`, `cad-drawing-inspection`, `cad-source-intake` or `cad-mcp-translator` as `SKILL_NAME`.
+This example installs for Claude Code. Run it from the project directory where you want the skill available. Choose `cad-ocs-engineering`, `cad-drawing-inspection`, `cad-source-intake`, `cad-mcp-translator` or `cad-format-translator` as `SKILL_NAME`.
 
 ```sh
 SKILL_NAME=cad-ocs-engineering
