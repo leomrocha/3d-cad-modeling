@@ -13,7 +13,18 @@ import importlib.util
 from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake')
+TRANSLATOR = 'cad-mcp-translator'
+SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake', TRANSLATOR)
+TRANSLATOR_MODULES = ('translator.py', 'state.py', 'bore_check.py', 'package_check.py')
+TRANSLATOR_ASSETS = (
+    'SKILL.md', 'references/operations.md', 'references/contributing.md',
+    'mappings/openscad.json', 'mappings/freecad.json', 'mappings/fusion.json',
+    'fixtures/plate.scad',
+)
+TRANSLATOR_SUITES = (
+    'test_translator.py', 'test_translator_state.py', 'test_translator_bore.py',
+    'test_translator_install.py',
+)
 HOST_ONLY = {'scripts/build_skill_packages.py'}
 
 
@@ -36,12 +47,15 @@ def check_registrations():
     markdown = (ROOT / 'research/sources/source-register.md').read_text()
     failures = []
     required = {ROOT / relative for relative in source_paths() if Path(relative).name != '__init__.py'}
+    required.update(ROOT / 'translator' / name for name in TRANSLATOR_MODULES)
     for path in required:
         if path.resolve() not in tools:
             failures.append('Tool catalogue entry missing: ' + str(path.relative_to(ROOT)))
     main = ROOT / 'skills/cad-ocs-engineering/SKILL.md'
     references = {path for path in local_links(main)
                   if path.is_relative_to(main.parent / 'references')}
+    references.update(ROOT / 'skills' / TRANSLATOR / asset for asset in TRANSLATOR_ASSETS
+                      if asset.startswith('references/'))
     for path in references:
         if path not in procedures:
             failures.append('Skill procedure index entry missing: ' + str(path.relative_to(ROOT)))
@@ -132,6 +146,8 @@ def inputs(name, committed=False):
         raise ValueError('Unknown skill package: ' + name)
     paths = source_paths(committed)
     common = ['scripts/component_records.py', 'scripts/part_index.py', 'scripts/package_check.py']
+    if name == TRANSLATOR:
+        return ['translator/' + module for module in TRANSLATOR_MODULES]
     if name == 'cad-source-intake':
         return dependency_closure(common + ['scripts/source_intake.py'], paths, committed)
     if name == 'cad-drawing-inspection':
@@ -147,7 +163,25 @@ def source_bytes(relative, committed=False):
     return (ROOT / relative).read_bytes()
 
 
+def translator_expected(committed):
+    """The translator owns a separate, closed distribution and has no CAD dependencies."""
+    package = Path('skills') / TRANSLATOR
+    sources = {asset: (package / asset).as_posix() for asset in TRANSLATOR_ASSETS}
+    sources.update({'scripts/' + name: 'translator/' + name for name in TRANSLATOR_MODULES})
+    sources['LICENSE'] = 'LICENSE'
+    result = {}
+    for dest, source in sources.items():
+        if not committed and (not (ROOT / source).is_file() or
+                              (ROOT / source).resolve() != ROOT.resolve() / source):
+            raise ValueError('Missing or redirected translator source: ' + source)
+        result[dest] = source_bytes(source, committed)
+    result['requirements.txt'] = b'# Python 3.12 standard library only.\n'
+    return with_manifest(TRANSLATOR, result)
+
+
 def expected(name, committed=False):
+    if name == TRANSLATOR:
+        return translator_expected(committed)
     files = {str(Path(p).relative_to('scripts')): p for p in inputs(name, committed)}
     result = {'scripts/' + target: source_bytes(source, committed) for target, source in files.items()}
     result['LICENSE'] = source_bytes('LICENSE', committed)
@@ -164,6 +198,10 @@ def expected(name, committed=False):
     else:docs=[package/'SKILL.md']+list((package/'references').rglob('*.md'))+list((package/'agents').rglob('*.yaml'))
     for path in docs:
         if path.is_file():result[str(path.relative_to(package))]=source_bytes(str(path.relative_to(ROOT)),committed)
+    return with_manifest(name, result)
+
+
+def with_manifest(name, result):
     manifest = {'skill': name, 'generated_by': 'self-contained skill distribution',
                 'files': {target: {'source': target,
                            'sha256': hashlib.sha256(data).hexdigest()}
@@ -179,6 +217,17 @@ def build(check=False, committed=False):
     for name in SKILLS:
         target = ROOT / 'skills' / name
         files = expected(name, committed)
+        if name == TRANSLATOR:
+            for path in target.rglob('*'):
+                if path.is_symlink():
+                    raise ValueError('Redirected translator asset: ' + str(path.relative_to(target)))
+                if path.is_dir():
+                    continue
+                relative = path.relative_to(target)
+                if relative.parts[:2] == ('scripts', '__pycache__') and path.suffix == '.pyc':
+                    continue
+                if relative.as_posix() not in files:
+                    raise ValueError('Unregistered translator asset: ' + str(path.relative_to(target)))
         old = target / 'package-manifest.json'
         previous = json.loads(old.read_text())['files'] if old.exists() else {}
         for relative in set(previous) | set(files):
@@ -226,13 +275,18 @@ def complete(regenerate=False, cli_root=None, reader_root=None):
     check_registrations()
     env = dict(os.environ, SKILLS_CLI_ROOT=str(cli_root), NATIVE_READER_ROOT=str(reader_root),
                PYTHONDONTWRITEBYTECODE='1', DISABLE_TELEMETRY='1', DO_NOT_TRACK='1')
-    for pattern in ('test_skill_package_build.py', 'test_source_registration.py', 'test_skill_packages.py'):
+    for pattern in ('test_skill_package_build.py', 'test_source_registration.py', 'test_skill_packages.py',
+                    *TRANSLATOR_SUITES):
         process = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover',
                                   '-s', 'tests', '-p', pattern, '-v'], cwd=ROOT, env=env,
                                  text=True, capture_output=True)
         if process.returncode:
             raise ValueError('Package completion checks failed (' + pattern + '):\n' + process.stdout + process.stderr)
-        print(process.stdout + process.stderr, file=sys.stderr, end='')
+        report = process.stdout + process.stderr
+        if pattern in TRANSLATOR_SUITES and (not re.search(r'^Ran [1-9][0-9]* tests? in ', report, re.M)
+                                             or not re.search(r'^OK$', report, re.M)):
+            raise ValueError('Mandatory translator tests missing or skipped: ' + pattern + '\n' + report)
+        print(report, file=sys.stderr, end='')
     # Catch helpers changed or created during validation.
     build(check=True)
     check_registrations()

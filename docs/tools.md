@@ -25,6 +25,8 @@ The [reusable integration procedure](../skills/cad-ocs-engineering/references/ge
 2. [cad-drawing-inspection](../skills/cad-drawing-inspection/SKILL.md) — guides the agent through reading a DXF's units, layers, blocks and source shapes.
 3. [cad-source-intake](../skills/cad-source-intake/SKILL.md) — records the request, source files, hashes and corrections as a new input revision.
 
+4. [CAD MCP translator](../skills/cad-mcp-translator/SKILL.md) — maps and verifies native operations for the chosen bridge.
+
 The [skill catalogue](../skills/README.md) separates these installed skills from proposed workflows. Component-specific procedures are indexed in [cad-ocs-engineering](../skills/cad-ocs-engineering/SKILL.md).
 
 ## Files, sources and component records
@@ -124,3 +126,10 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 2. [mesh_checks.py](../scripts/mesh_checks.py) — triangle/UV numerical area, duplicate and oriented edge-incidence checks.
 3. [mesh_dxf.py](../scripts/mesh_dxf.py) — source-pinned MESH-only DXF layer declarations with exact entity-tag readback.
 4. [insert_recovery.py](../scripts/insert_recovery.py) — offline verification of a recorded cancellation and unchanged caller snapshots.
+
+## Translator-only helpers
+
+1. [Operation planner](../translator/translator.py) validates a documented mapping against a captured tool inventory and selected connection.
+2. [Local state ledger](../translator/state.py) stores verified revisions and unresolved native write intents.
+3. [Bore fixture checker](../translator/bore_check.py) checks the fixture’s bore rims and wall against ASCII STL triangles.
+4. [Installed package checker](../translator/package_check.py) checks the translator’s complete file inventory and hashes.

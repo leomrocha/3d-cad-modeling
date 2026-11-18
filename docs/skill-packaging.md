@@ -6,6 +6,8 @@ Each skill directory is its installation unit. The skills CLI copies the selecte
 2. **Drawing inspection:** DXF inspection, component-record hashing and part-index parsing; pinned native-reader dependencies.
 3. **CAD OCS Engineering:** the complete OCS and component workflows, original OCS references and agent metadata, shared modeling and inspection helpers, `cadtools` geometry/runtime/save-reopen code, OCS transport and coordinate-contract checker; pinned native-reader dependencies and a running OpenCADStudio session.
 
+4. **CAD MCP translator:** independent, standard-library-only offline planner, local ledger, mappings, procedures and geometric fixture. [User guide](cad-mcp-translator.md).
+
 The [installation examples](../README.md#installing) select an agent and project/global scope, assign `SKILL_ROOT` to the installed directory, create a Python 3.12 environment and execute the package checker. The skills CLI requires Node.js >=22.20 and npm/npx. Resolve bundled helpers from `SKILL_ROOT/scripts`. Supply source files, project roots, job records, output locations and the OCS session as caller inputs. [Installation](../README.md#installing).
 
 ## Maintain the packages
@@ -41,3 +43,7 @@ Package and dependency checks establish software execution and retained bytes. C
 3. The former `component-cad` package is now `cad-ocs-engineering`. [Merge inventory and verification](../execution/cad-ocs-engineering-merge-2026-11-13.md).
 
 The dated merge comparison can be rechecked with `VERIFY_OCS_MERGE_SNAPSHOT=1 python -m unittest discover -s tests -p test_ocs_skill_merge.py`. It validates the retained snapshot; ordinary component improvements keep their own current checks and evidence.
+
+## Translator ownership
+
+Canonical translator-only helpers live in `translator/`. The builder explicitly includes each module and bundled asset in the fourth package. Register an added module in the builder, installed checker, tools catalogue and source indexes. Validate in an empty Python environment; the package checks modified, missing and unexpected assets. Existing OCS, drawing inspection and intake distributions keep their original contents.

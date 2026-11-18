@@ -1,0 +1,58 @@
+{
+  "skill": "cad-mcp-translator",
+  "generated_by": "self-contained skill distribution",
+  "files": {
+    "LICENSE": {
+      "source": "LICENSE",
+      "sha256": "0fdb775e00e6fdde23984b4f1184cd13c34135caac1e714ad489141c239704bc"
+    },
+    "SKILL.md": {
+      "source": "SKILL.md",
+      "sha256": "fe699fd8a8b364c3d749134934fe52ab39a563d95ba6045642ba458f77d08726"
+    },
+    "fixtures/plate.scad": {
+      "source": "fixtures/plate.scad",
+      "sha256": "9a608b265b5423845e4cd3d334ce8925d2c1a3c2846792df40c12e5a7ff8f172"
+    },
+    "mappings/freecad.json": {
+      "source": "mappings/freecad.json",
+      "sha256": "23e471792d868dca86a7aa516c2cccdcfa0ccb1d310cd9af8cbf2382eacfaaae"
+    },
+    "mappings/fusion.json": {
+      "source": "mappings/fusion.json",
+      "sha256": "d8c1b5da751ecfda48af36019b9bb15751d2b991473d3c34e83f7f6bbcd51c26"
+    },
+    "mappings/openscad.json": {
+      "source": "mappings/openscad.json",
+      "sha256": "07797b38684f61b7c60d0cbdf10af61ff9a693c3f8a1ead7608599e6dce76108"
+    },
+    "references/contributing.md": {
+      "source": "references/contributing.md",
+      "sha256": "a6d665f5ce6f405eb13f026fb97f54cd2b09842199198ad082eab8bd2963ea43"
+    },
+    "references/operations.md": {
+      "source": "references/operations.md",
+      "sha256": "1b7be183cd111982c6a65ea4515c6ac92e8c5d48fab4c597ae4997a905b335a5"
+    },
+    "requirements.txt": {
+      "source": "requirements.txt",
+      "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
+    },
+    "scripts/bore_check.py": {
+      "source": "scripts/bore_check.py",
+      "sha256": "4dd55bae43623fac53f61a2f04c171e4a88faf2ea667364ea27523afa74e8db8"
+    },
+    "scripts/package_check.py": {
+      "source": "scripts/package_check.py",
+      "sha256": "e43939187d03d195e15a363e07b055a29ccf972eb51274c50b2c972e18990c97"
+    },
+    "scripts/state.py": {
+      "source": "scripts/state.py",
+      "sha256": "f1c820e1358759ca844637494152de3e31f758cf8d57934a08ba75e45493b4b9"
+    },
+    "scripts/translator.py": {
+      "source": "scripts/translator.py",
+      "sha256": "3d5b06ed65513939ad1a12296b22a3354f7a2e5871d886861bf245c17f56ac14"
+    }
+  }
+}

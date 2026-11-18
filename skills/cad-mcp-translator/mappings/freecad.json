@@ -1,0 +1,32 @@
+{
+  "format": 1,
+  "application": "freecad",
+  "bridge": "yonosoft/freecad-mcp",
+  "operation": "edit-bore-diameter",
+  "source": "https://github.com/yonosoft/freecad-mcp/blob/main/docs/architecture.md",
+  "quantity": "diameter",
+  "unit": "mm",
+  "steps": [
+    {
+      "action": "inspect",
+      "tool": "get_sketch"
+    },
+    {
+      "action": "edit",
+      "tool": "update_sketch_constraint_value"
+    },
+    {
+      "action": "recompute",
+      "tool": "recompute_document"
+    },
+    {
+      "action": "readback",
+      "tool": "get_sketch"
+    },
+    {
+      "action": "save",
+      "tool": "save_document"
+    }
+  ],
+  "readback": "Confirm solver state and independently measure the solid in the reopened FCStd revision. Discover an authorized reopen route."
+}

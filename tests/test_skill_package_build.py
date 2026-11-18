@@ -43,6 +43,10 @@ class PackageLifecycle(unittest.TestCase):
             'scripts/dxf_inspect.py': 'VALUE = 1\n',
         }.items():
             self.write(relative, content)
+        for name in builder.TRANSLATOR_MODULES:
+            self.write('translator/' + name, 'VALUE = 1\n')
+        for asset in builder.TRANSLATOR_ASSETS:
+            self.write('skills/' + builder.TRANSLATOR + '/' + asset, 'fixture\n')
         self.cli = self.root / 'cli'
         self.reader = self.root / 'reader'
         self.write('cli/bin/cli.mjs', '// fixture\n')
@@ -56,13 +60,46 @@ class PackageLifecycle(unittest.TestCase):
 
     def register_fixture(self):
         paths = [p for p in builder.source_paths() if Path(p).name != '__init__.py']
+        paths += ['translator/' + name for name in builder.TRANSLATOR_MODULES]
         self.write('docs/tools.md', '\n'.join('[tool](../' + p + ')' for p in paths))
-        self.write('skills/README.md', '# Fixture catalogue\n')
+        refs = ['skills/' + builder.TRANSLATOR + '/' + asset for asset in builder.TRANSLATOR_ASSETS
+                if asset.startswith('references/')]
+        self.write('skills/README.md', '\n'.join('[ref](../' + p + ')' for p in refs))
+        paths += refs
         self.write('skills/cad-ocs-engineering/SKILL.md', '# Fixture skill\n')
         records = [{'id': 'fixture-' + Path(p).stem, 'local_source_path': p} for p in paths]
         self.write('research/sources/source-register.json', json.dumps({'sources': records}))
         self.write('research/sources/source-register.md', '\n'.join(
             '<a id="' + r['id'] + '"></a>\n\n## ' + r['id'] + ' — Fixture source' for r in records))
+
+    def test_translator_owns_new_sources_and_closed_assets(self):
+        builder.build()
+        original = {name: (self.root / 'skills' / name / 'package-manifest.json').read_bytes()
+                    for name in builder.SKILLS if name != builder.TRANSLATOR}
+        self.write('translator/state.py', 'VALUE = 2\n')
+        builder.build()
+        self.assertEqual(builder.build(check=True)['result'], 'PASS')
+        for name, manifest in original.items():
+            self.assertEqual((self.root / 'skills' / name / 'package-manifest.json').read_bytes(), manifest)
+        package = self.root / 'skills' / builder.TRANSLATOR
+        self.assertEqual((package / 'scripts/state.py').read_text(), 'VALUE = 2\n')
+        (package / 'mappings/extra.json').write_text('{}')
+        with self.assertRaisesRegex(ValueError, 'Unregistered translator asset'):
+            builder.build(check=True)
+
+    def test_completion_rejects_skipped_translator_suite(self):
+        self.register_fixture()
+        builder.build()
+
+        def run(command, **kwargs):
+            report = "Ran 1 test in 0.001s\nOK\n"
+            if 'test_translator_install.py' in command:
+                report = "Ran 1 test in 0.001s\nOK (skipped=1)\n"
+            return subprocess.CompletedProcess(command, 0, '', report)
+
+        with patch.object(builder.subprocess, 'run', side_effect=run):
+            with self.assertRaisesRegex(ValueError, 'Mandatory translator tests missing or skipped'):
+                builder.complete(cli_root=self.cli, reader_root=self.reader)
 
     def test_creation_modification_deletion_and_transitive_registration(self):
         builder.build()
@@ -100,7 +137,7 @@ class PackageLifecycle(unittest.TestCase):
         self.write('scripts/source_intake.py', 'import build_skill_packages\n')
         with self.assertRaisesRegex(ValueError, 'Unassigned'):
             builder.build()
-        self.assertFalse((self.root / 'skills').exists())
+        self.assertFalse((self.root / 'skills/cad-ocs-engineering/package-manifest.json').exists())
 
     def test_namespace_relative_imports_include_local_dependencies(self):
         self.write('scripts/source_intake.py', 'from . import local_helper\n')
@@ -112,7 +149,7 @@ class PackageLifecycle(unittest.TestCase):
         self.write('scripts/new_helper.py', 'def broken(\n')
         with self.assertRaisesRegex(ValueError, 'Invalid reusable script'):
             builder.build()
-        self.assertFalse((self.root / 'skills').exists())
+        self.assertFalse((self.root / 'skills/cad-ocs-engineering/package-manifest.json').exists())
 
     def test_unregistered_installed_script_is_preserved_and_reported(self):
         builder.build()
@@ -125,7 +162,7 @@ class PackageLifecycle(unittest.TestCase):
         with patch.dict(os.environ, {}, clear=True):
             with self.assertRaisesRegex(ValueError, 'Completion requires'):
                 builder.complete(regenerate=True)
-        self.assertFalse((self.root / 'skills').exists())
+        self.assertFalse((self.root / 'skills/cad-ocs-engineering/package-manifest.json').exists())
 
     def test_verify_detects_skipped_synchronisation_before_tests(self):
         builder.build()
@@ -147,7 +184,7 @@ class PackageLifecycle(unittest.TestCase):
         self.register_fixture()
         def mutate(command, **kwargs):
             self.write('scripts/new_helper.py', 'VALUE = 1\n')
-            return subprocess.CompletedProcess(command, 0, '', '')
+            return subprocess.CompletedProcess(command, 0, '', 'Ran 1 test in 0s\nOK\n')
         with patch.object(builder.subprocess, 'run', side_effect=mutate):
             with self.assertRaisesRegex(ValueError, 'differs from canonical'):
                 builder.complete(regenerate=True, cli_root=self.cli, reader_root=self.reader)

@@ -6,6 +6,8 @@
 2. [cad-drawing-inspection](cad-drawing-inspection/SKILL.md) — inventories DXF entities, units, layers, spaces and nested transforms.
 3. [cad-source-intake](cad-source-intake/SKILL.md) — preserves source files, hashes, request scope and corrected input revisions.
 
+4. [CAD MCP translator](cad-mcp-translator/SKILL.md) — adapt an operation to a selected endpoint and qualify it independently.
+
 Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Each skill directory includes its runtime files and dependencies. OCS engineering (`cad-ocs-engineering`) includes its OCS control and geometry adapters. [Package maintenance](../docs/skill-packaging.md).
 
 ## Component CAD procedure index
@@ -126,3 +128,8 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Optional contributions
 
 1. [Contribute a verified modeling improvement](cad-ocs-engineering/references/contributing.md) covers the local preview, checked branch and separate choice to publish.
+
+## CAD MCP translator procedures
+
+1. [Bootstrap, adapt and verify one operation](cad-mcp-translator/references/operations.md).
+2. [Contribute a translator improvement](cad-mcp-translator/references/contributing.md).

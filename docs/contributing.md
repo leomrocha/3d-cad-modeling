@@ -9,7 +9,7 @@ Your modeling agent saves files, scripts and check results locally. You can use 
 
 ## Get started
 
-In your modeling project, install the skills and select **CAD OCS Engineering**:
+In your modeling project, install the skills and select **CAD OCS Engineering** for modeling or **CAD MCP Translator** for an adaptation:
 
 ```sh
 npx skills add leomrocha/3d-cad-modeling
@@ -23,7 +23,7 @@ To start later, tell your agent:
 
 ## Review the preview
 
-1. Give the agent the existing job record and a separate local skills repository checkout. The record identifies the improved files, their SHA-256 hashes and the checks run during modeling.
+1. For a translator improvement, use its adaptation receipt with the changed files, hashes, checks and evidence level. Give the agent the existing job record or adaptation receipt and a separate local skills repository checkout. The record identifies the improved files, their SHA-256 hashes and the checks run during modeling.
 2. The agent compares the originally installed version, the version used to complete the job and the current repository source. It shows the exact changes, where each belongs and any overlap with newer work. If the checkout already contains the improvement, the agent identifies the matching behavior and stops there.
 3. Review the proposed diff, including any test inputs. For example, a script might contain a reusable geometry check alongside a component's measured dimensions. The contribution can include the check and a small synthetic test. Your component dimensions, model, drawings, captures and full job log stay in your project.
 4. Tell the agent which changes to keep. It prepares one local branch for the improvement, runs a focused check, rebuilds and verifies affected packages, and shows the final commit and draft pull request. You can keep that branch local.

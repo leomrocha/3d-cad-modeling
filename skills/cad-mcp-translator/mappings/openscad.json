@@ -1,0 +1,28 @@
+{
+  "format": 1,
+  "application": "openscad",
+  "bridge": "Nilusche/OpenscadMCP",
+  "operation": "edit-bore-diameter",
+  "source": "https://github.com/Nilusche/OpenscadMCP",
+  "quantity": "diameter",
+  "unit": "mm",
+  "steps": [
+    {
+      "action": "inspect",
+      "tool": "read_model"
+    },
+    {
+      "action": "edit",
+      "tool": "edit_model"
+    },
+    {
+      "action": "validate",
+      "tool": "validate_model"
+    },
+    {
+      "action": "reopen",
+      "tool": "read_model"
+    }
+  ],
+  "readback": "Pin the saved SCAD and included files; validate a fresh render with an independent bore measurement."
+}

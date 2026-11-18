@@ -14,6 +14,8 @@ npx skills add leomrocha/3d-cad-modeling
 
 Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to use the installed skills.
 
+Using another CAD application? [Adapt a procedure to its MCP server](docs/cad-mcp-translator.md).
+
 Want to share a script or skill improvement from a modeling job? [Contribute an improvement](docs/contributing.md).
 
 ## License
@@ -165,9 +167,9 @@ python3.12 --version
 
 #### Install an individual skill into a project
 
-Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), and `cad-source-intake` (source capture and revisions).
+Current skill names: `cad-ocs-engineering` (OCS modeling and component workflows), `cad-drawing-inspection` (DXF inspection), `cad-source-intake` (source capture and revisions), and `cad-mcp-translator` (adapt a procedure to another CAD endpoint).
 
-This example installs for Claude Code. Run it from the project directory where you want the skill available. Choose `cad-ocs-engineering`, `cad-drawing-inspection` or `cad-source-intake` as `SKILL_NAME`.
+This example installs for Claude Code. Run it from the project directory where you want the skill available. Choose `cad-ocs-engineering`, `cad-drawing-inspection`, `cad-source-intake` or `cad-mcp-translator` as `SKILL_NAME`.
 
 ```sh
 SKILL_NAME=cad-ocs-engineering

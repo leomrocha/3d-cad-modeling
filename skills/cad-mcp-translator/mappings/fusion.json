@@ -1,0 +1,11 @@
+{
+  "format": 1,
+  "application": "fusion",
+  "bridge": "Autodesk/FusionDesktopMCP",
+  "operation": "edit-bore-diameter",
+  "source": "https://help.autodesk.com/cloudhelp/ENU/ADSKMCP-FusionDesktopMcp/files/ADSKMCP_FusionDesktopMcp_connecting_to_the_fusion_mcp_server_html.html",
+  "quantity": "diameter",
+  "unit": "mm",
+  "steps": [],
+  "readback": "Discover native feature editing, versioned save and reopen on the selected desktop connection. Verify design units at the API boundary."
+}
