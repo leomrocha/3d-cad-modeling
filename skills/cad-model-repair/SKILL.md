@@ -14,7 +14,7 @@ description: Repair an existing CAD model with generic or duplicate labels, miss
 
 ## Blender mesh repair
 
-Supply a JSON mapping with source_sha256 and an objects array. Each row gives source_name, id, label, role and layer. Use source_name from the actual object list, id from the verified identity mapping and layer as the name of a collection to add. Keep the original mapping evidence in the job. Run Blender with factory startup, disabled auto-execution and a nonzero Python error exit code. Supply the helper path followed by the three job paths:
+Supply a JSON mapping with source_sha256 and an objects array. Each row gives source_name, id, label, role and layer. Use source_name from the actual object list, id from the verified identity mapping and layer as the name of a collection to add. For a repeat run, pin the new input hash and retain the desired assignments. The helper resolves a renamed object by its stable ID and checks for conflicting source-name matches. Keep the original mapping evidence in the job. Run Blender with factory startup, disabled auto-execution and a nonzero Python error exit code. Supply the helper path followed by the three job paths:
 
 ```sh
 blender -b --factory-startup --disable-autoexec --python-exit-code 1 --python "$SKILL_ROOT/scripts/repair_blend.py" -- original.blend mapping.json repaired.blend

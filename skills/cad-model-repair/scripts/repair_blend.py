@@ -46,16 +46,27 @@ def repair(source, mapping, target):
             raise ValueError(f"missing {field}")
         if field in ("id", "label", "source_name") and len(set(values)) != len(values):
             raise ValueError(f"ambiguous {field}")
-    renamed = {r["source_name"]: r["label"] for r in rows}
+    # Resolve all targets against the unedited scene before mutating any object.
+    resolved = {}
+    for row in rows:
+        matches = [o for o in bpy.context.scene.objects if o.get("navigation_id") == row["id"]]
+        original = bpy.context.scene.objects.get(row["source_name"])
+        if len(matches) > 1 or (matches and original and original != matches[0]):
+            raise ValueError(f"ambiguous identity: {row['id']}")
+        obj = matches[0] if matches else original
+        if obj is None or obj.type != "MESH" or obj.library:
+            raise ValueError(f"expected local mesh: {row['source_name']}")
+        resolved[row["id"]] = obj
+    if len({o.name for o in resolved.values()}) != len(rows):
+        raise ValueError("multiple assignments target the same object")
+    renamed = {resolved[r["id"]].name: r["label"] for r in rows}
     before = {}
     for obj in bpy.data.objects:
         name = renamed.get(obj.name, obj.name)
         parent = renamed.get(obj.parent.name, obj.parent.name) if obj.parent else None
         before[name] = (fingerprint(obj), parent, {c.name for c in obj.users_collection})
     for row in rows:
-        obj = bpy.context.scene.objects.get(row["source_name"])
-        if obj is None or obj.type != "MESH" or obj.library:
-            raise ValueError(f"expected local mesh: {row['source_name']}")
+        obj = resolved[row["id"]]
         if any(other != obj and (other.name == row["label"] or other.get("navigation_id") == row["id"])
                for other in bpy.data.objects):
             raise ValueError(f"conflicting label or identity: {row['id']}")
