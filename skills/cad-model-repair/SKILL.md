@@ -20,4 +20,4 @@ Supply a JSON mapping with source_sha256 and an objects array. Each row gives so
 blender -b --factory-startup --disable-autoexec --python-exit-code 1 --python "$SKILL_ROOT/scripts/repair_blend.py" -- original.blend mapping.json repaired.blend
 ```
 
-This operation checks mesh connectivity, local vertex positions, object transforms and parent relationships across save/reopen. Keep separate evidence for modifiers, physical materials, selection and any other required properties. Use self-contained native inputs for this helper.
+This operation checks mesh connectivity, local vertex positions, object transforms and parent relationships across save/reopen. After reopening, the helper selects each mapped object by its persisted identity. It isolates each requested collection by temporarily hiding nonmembers in the active view layer, verifies the visible set, then restores selection and visibility. This works for objects that also belong to another collection. Keep separate evidence for modifiers, physical materials and other required properties. Use self-contained native inputs for this helper.

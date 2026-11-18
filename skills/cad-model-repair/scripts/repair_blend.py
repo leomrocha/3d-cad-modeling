@@ -25,6 +25,41 @@ def fingerprint(obj):
     return digest.hexdigest()
 
 
+def check_navigation(bpy, rows):
+    """Select by stored identity and isolate visible group members, restoring the view."""
+    view = bpy.context.view_layer
+    objects = list(view.objects)
+    original_hidden = {obj: obj.hide_get() for obj in objects}
+    original_selection = {obj: obj.select_get() for obj in objects}
+    active = view.objects.active
+    try:
+        for row in rows:
+            found = [obj for obj in objects if obj.get("navigation_id") == row["id"]]
+            if len(found) != 1 or found[0].name != row["label"]:
+                raise ValueError(f"cannot resolve original occurrence: {row['id']}")
+            selected = found[0]
+            for obj in objects:
+                obj.select_set(obj == selected)
+            if [obj for obj in objects if obj.select_get()] != [selected]:
+                raise ValueError(f"selection mismatch: {row['id']}")
+        for name in sorted({row["layer"] for row in rows}):
+            members = set(bpy.data.collections[name].all_objects)
+            visible = {obj for obj in objects if obj.visible_get()}
+            if not members & visible:
+                raise ValueError(f"collection has no visible members: {name}")
+            for obj in visible - members:
+                obj.hide_set(True)
+            if {obj for obj in objects if obj.visible_get()} != members & visible:
+                raise ValueError(f"isolation mismatch: {name}")
+            for obj in visible - members:
+                obj.hide_set(False)
+    finally:
+        for obj in objects:
+            obj.hide_set(original_hidden[obj])
+            obj.select_set(original_selection[obj])
+        view.objects.active = active
+
+
 def repair(source, mapping, target):
     import bpy
     config = json.loads(mapping.read_text())
@@ -100,6 +135,7 @@ def repair(source, mapping, target):
             obj = bpy.data.objects[row["label"]]
             if (obj.get("navigation_id"), obj.get("navigation_role")) != (row["id"], row["role"]):
                 raise ValueError(f"reopened identity/role differs for {row['label']}")
+        check_navigation(bpy, rows)
         if hashlib.sha256(source.read_bytes()).hexdigest() != digest:
             raise ValueError("original changed during repair")
         os.link(staged, target)

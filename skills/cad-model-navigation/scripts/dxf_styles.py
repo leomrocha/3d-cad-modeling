@@ -11,7 +11,9 @@ def inventory(path, layout="Model", limit=100000):
     ctx = RenderContext(doc)
     ctx.set_current_layout(space)
     rows = []
+    cells = 0
     def visit(entities, trail, names, visible):
+        nonlocal cells
         for entity in entities:
             if len(rows) >= limit:
                 raise ValueError("occurrence limit exceeded")
@@ -27,6 +29,9 @@ def inventory(path, layout="Model", limit=100000):
             name = entity.dxf.name.casefold()
             if name in names or len(names) >= 32 or entity.block() is None:
                 raise ValueError(f"unresolved, cyclic or too deeply nested block at {key}")
+            cells += entity.mcount
+            if cells > limit:
+                raise ValueError("block cell traversal limit exceeded")
             ctx.push_state(props)
             try:
                 for cell in range(entity.mcount):
