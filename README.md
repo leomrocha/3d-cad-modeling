@@ -14,6 +14,8 @@ npx skills add leomrocha/3d-cad-modeling
 
 Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to use the installed skills.
 
+Want to share a script or skill improvement from a modeling job? [Contribute an improvement](docs/contributing.md).
+
 ## License
 
 [MIT](LICENSE) for project code and documentation.

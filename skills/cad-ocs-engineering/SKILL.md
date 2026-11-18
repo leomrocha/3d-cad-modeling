@@ -7,6 +7,14 @@ description: Create, inspect and revise native engineering geometry in OpenCADSt
 
 Use the bundled native-control, geometry and verification helpers. Supply component inputs and output locations through the caller's job. Keep detailed solids, reconstructed shapes and clearance envelopes explicitly labeled.
 
+## First response for a modeling job
+
+Before creating job files, tell the user:
+
+> During this job I’ll save modeling files, scripts and check results in your local project. You can reuse the scripts and procedures on future jobs. These files stay local. If the job produces a reusable improvement, I’ll ask whether you want to contribute it. You’ll see the exact changes before choosing whether to open a GitHub pull request.
+
+Proceed with the authorized modeling work. Ask about participation at completion when there is a specific improvement to share.
+
 ## Package setup
 
 Use Python 3.12 on Linux or macOS, the pinned requirements.txt dependencies and an already-running OpenCADStudio native-control session. SKILL_ROOT identifies this installed directory. All helper and procedure links resolve within this package.
@@ -75,3 +83,5 @@ For calculations and solver work, use [computational engineering](references/com
 ## Report and preserve evidence
 
 Report actual actions, paths, units, frames, measurements, errors and checks. Keep original source bytes, native models, operation journals, verified checkpoints and output receipts in caller-owned persistent storage. Use [evidence labels and capability checks](references/sources-and-capabilities.md) and report the representation actually constructed.
+
+After reporting the completed job, name its reusable improvement and ask, “Would you like a local preview of a contribution with this change?” Follow the [optional contribution procedure](references/contributing.md) on opt-in or a later contribution request. Only explicit approval of the final diff and destination authorizes a push and pull request.

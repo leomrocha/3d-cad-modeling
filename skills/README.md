@@ -122,3 +122,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Surface and mesh recovery
 
 1. [Numerical surface and mesh recovery](cad-ocs-engineering/references/surface-mesh-recovery.md) — bounded rational evaluation, triangle checks, DXF layer derivatives, cancellation effects and caller-selected persistence operations.
+
+## Optional contributions
+
+1. [Contribute a verified modeling improvement](cad-ocs-engineering/references/contributing.md) covers the local preview, checked branch and separate choice to publish.

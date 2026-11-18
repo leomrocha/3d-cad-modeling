@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "e37ac3bcb59d8d674106e2e236d7b14bf79a576814ce5c49eabd790f179c9978"
+      "sha256": "0f1e1c9d339b8c939f97a9d9235568bd63c97a47f142404970808c1e70bdb14e"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -57,6 +57,10 @@
     "references/conical-washer-profile.md": {
       "source": "references/conical-washer-profile.md",
       "sha256": "62097355c1c46be700b13e6a685ce3923ed89abab99cfe96cdf9c7b23aa7c5c1"
+    },
+    "references/contributing.md": {
+      "source": "references/contributing.md",
+      "sha256": "31044d08e1818134ca16342b3b761da77458794e1f03cf9c3b43411eb1e26648"
     },
     "references/dimension-limits-and-datums.md": {
       "source": "references/dimension-limits-and-datums.md",

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ site.description | escape }}">
-    <title>{{ site.title | escape }}</title>
+    <title>{% if page.title %}{{ page.title | escape }} · {% endif %}{{ site.title | escape }}</title>
     <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
   </head>
   <body>
@@ -18,10 +18,10 @@
     <div class="page">
       <aside class="sidebar">
         <nav aria-label="Page sections">
-          <p class="nav-label">On this page</p>
+          <p class="nav-label">{% if page.url == "/" %}On this page{% else %}Project sections{% endif %}</p>
           <ul>
             {% for section in site.navigation %}
-            <li><a href="#{{ section.id | escape }}">{{ section.title | escape }}</a></li>
+            <li><a href="{% unless page.url == "/" %}{{ '/' | relative_url }}{% endunless %}#{{ section.id | escape }}">{{ section.title | escape }}</a></li>
             {% endfor %}
           </ul>
         </nav>
