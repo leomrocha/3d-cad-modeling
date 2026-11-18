@@ -6,7 +6,7 @@ layout: default
 
 Reusable tools and agent instructions for creating, inspecting and modifying 3D models from descriptions, dimensions, drawings, photographs and existing geometry.
 
-This repo has been used to generate CAD models using the [OpenCADStudio](https://www.opencadstudio.com/) MCP Server.
+[OpenCADStudio](https://www.opencadstudio.com/) is the default CAD application for modeling. To use another CAD application, select its MCP server. The agent checks which modeling operations the server provides and tests each adapted procedure on a sample model.
 
 This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it. Please collaborate, copy it and share it; that is why the license is MIT.
 
@@ -18,9 +18,11 @@ npx skills add leomrocha/3d-cad-modeling
 
 Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to use the installed skills.
 
-Using another CAD application? [Adapt a procedure to its MCP server]({{ '/cad-mcp-translator.html' | relative_url }}).
+## CAD applications and file formats
 
-Need a different file format or editable CAD program? [Translate CAD files and scripts]({{ '/cad-format-translator.html' | relative_url }}).
+1. **Model in another CAD application.** [Adapt a procedure to its MCP server]({{ '/cad-mcp-translator.html' | relative_url }}).
+2. **Convert model files.** Import an STL mesh into a new Blender file (`.blend`), export a named Blender mesh to STL, or convert a STEP solid to STL. If physical scale is unclear, the agent asks for units or a known dimension on a reference model.
+3. **Work from CAD scripts.** Render OpenSCAD (`.scad`) to STL, translate supported OpenSCAD constructs to editable CadQuery Python, or export a supported CadQuery model to STEP. [Translate CAD files and scripts]({{ '/cad-format-translator.html' | relative_url }}).
 
 Want to share a script or skill improvement from a modeling job? [Contribute an improvement]({{ '/contributing.html' | relative_url }}).
 
