@@ -8,7 +8,7 @@
 
 4. [CAD MCP translator](cad-mcp-translator/SKILL.md) — adapt an operation to a selected endpoint and qualify it independently.
 
-5. [CAD format translator](cad-format-translator/SKILL.md) — convert model files, generate geometry or translate editable source. [Conversion routes and verification](cad-format-translator/references/conversion.md).
+5. [CAD format translator](cad-format-translator/SKILL.md) — convert model files, generate geometry or translate editable source. [Blender exchange, conversion routes and verification](cad-format-translator/references/conversion.md).
 
 Install these skills using the [README instructions](../README.md#installing). The [tools page](../docs/tools.md) lists the Python helpers. Each skill directory includes its runtime files and dependencies. OCS engineering (`cad-ocs-engineering`) includes its OCS control and geometry adapters. [Package maintenance](../docs/skill-packaging.md).
 

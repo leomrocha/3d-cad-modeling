@@ -19,3 +19,7 @@ Run that command from a checkout containing the skill. Select the skill in the n
 4. **Use an unfamiliar MCP server.** Select the connection and show the agent its tool inventory. The agent maps actual tools and argument schemas to directional operations, including a single conversion call or an import followed by export from an owned scratch document. It checks required properties, dependencies, path access and known losses before proposing a route. A synthetic inventory ships with the skill so the planner works offline.
 
 The local conversions use whichever optional runtime the route requires. The planner and SCAD-to-Python translator use the Python standard library. A successful local CLI or library check applies to that route. Each live MCP endpoint needs its own readback evidence.
+
+## Blender native files
+
+Convert an STL mesh to a new Blender scene (.blend), or export a named mesh from a .blend file to STL. Specify the receiving unit. If the source has no physical scale, the agent asks how long one coordinate unit is or which dimension should match another model. For example, “Export the Bracket mesh in millimetres. The two mounting-hole centres should be 50.8 mm apart, as on the reference part.” The agent reopens the result and checks that distance.

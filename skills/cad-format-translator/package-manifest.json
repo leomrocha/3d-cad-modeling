@@ -8,7 +8,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "b8e2edcefa75e94374bc49435b0783ca374637803af48c31d4c616b14c02130f"
+      "sha256": "a1124c2f79f1165ffd9f8661fc5b305b123779310539dcba913cb898ac60983a"
     },
     "fixtures/inventory.json": {
       "source": "fixtures/inventory.json",
@@ -20,11 +20,15 @@
     },
     "references/conversion.md": {
       "source": "references/conversion.md",
-      "sha256": "877798c174cb526df25406d88102fb14ea91df39a9b887cda0d022a4d585db5e"
+      "sha256": "374b3019ac6c9af3a28095604ff93ee6237144908002e7d9915eed7d45199c3b"
     },
     "requirements.txt": {
       "source": "requirements.txt",
       "sha256": "044d7700193a0027f884a68de63a30560c26809e8a70572e7b4d1d99b750fbd8"
+    },
+    "scripts/blend_exchange.py": {
+      "source": "scripts/blend_exchange.py",
+      "sha256": "7dbc69a79ce0de4e45f066c1976a45d0cd5778cc48a8d57ddcc0673995718777"
     },
     "scripts/convert.py": {
       "source": "scripts/convert.py",

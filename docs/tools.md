@@ -139,3 +139,4 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 1. [Capability route planner](../format_translation/routes.py) checks directional tool declarations, argument bindings, dependencies and required properties across any selected connection.
 2. [Conversion command](../format_translation/convert.py) generates verified STL, STEP or translated Python with optional local runtimes.
 3. [SCAD source translator](../format_translation/scad_source.py) translates supported source constructs to editable CadQuery Python and reports unsupported source locations.
+4. [Blender mesh exchange](../format_translation/blend_exchange.py) reads and writes native Blender scenes and STL meshes with explicit units or a measured reference.

@@ -15,7 +15,7 @@ from urllib.parse import unquote, urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 TRANSLATOR = 'cad-mcp-translator'
 FORMAT = 'cad-format-translator'
-FORMAT_MODULES = ('convert.py', 'routes.py', 'scad_source.py')
+FORMAT_MODULES = ('blend_exchange.py', 'convert.py', 'routes.py', 'scad_source.py')
 FORMAT_ASSETS = ('SKILL.md', 'references/conversion.md', 'fixtures/plate.scad', 'fixtures/inventory.json')
 SKILLS = ('cad-ocs-engineering', 'cad-drawing-inspection', 'cad-source-intake', TRANSLATOR, FORMAT)
 TRANSLATOR_MODULES = ('translator.py', 'state.py', 'bore_check.py', 'package_check.py')
