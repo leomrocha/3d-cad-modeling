@@ -164,7 +164,7 @@
     },
     "references/shared-feature-checks.md": {
       "source": "references/shared-feature-checks.md",
-      "sha256": "b671d54fe4fdec0fe08bcb545f294cd9a7fe35feb8decca6d7653ec1dec033c6"
+      "sha256": "f8534777fd3af45738a09c831d2f9328456ec3525269213be64eda9bc22ea8b9"
     },
     "references/small-bms.md": {
       "source": "references/small-bms.md",
@@ -320,7 +320,7 @@
     },
     "scripts/feature_checks.py": {
       "source": "scripts/feature_checks.py",
-      "sha256": "9fed8825e1e7e76f37852cb4dcdd4550dad2cc39c804b8886f8bf0cdc81393af"
+      "sha256": "5cf4ce27c99a09271479e7f553c463321906639fb190cd3c9d0bb11f18381634"
     },
     "scripts/hex_screw_reference.py": {
       "source": "scripts/hex_screw_reference.py",

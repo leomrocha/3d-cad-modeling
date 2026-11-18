@@ -79,6 +79,40 @@ When I see things are ready enough, I send the automated 3D modeling pipeline to
 
 ## Examples
 
+### Tractor service-access assembly
+
+![Shaded OpenCADStudio view of the two-panel tractor deck above its frame and motor](docs/images/model-navigation/tractor-shaded.png)
+
+The blue deck in the drawing below is the removable group. Hide it and the fixed receiver rails remain visible above the motor. The lower views show the front interface and one clamp joint.
+
+![Full assembly, deck hidden, front view and clamp detail, coloured by role](docs/images/model-navigation/tractor-layers.png)
+
+### Real-time OpenCADStudio builds
+
+#### Assemble the two-wheel tractor service deck
+
+Watch the frame, receiver rails, motor cartridge and clamp hardware come together in an empty millimetre drawing. The removable deck goes on last. The live terminal follows the commands through layer isolation, reopening the DWG and selecting the outboard washer.
+
+[![OpenCADStudio tractor assembly with the live command log](docs/images/model-navigation/tractor-live-ocs.png)](docs/images/model-navigation/tractor-live-ocs.mp4)
+
+[Play the complete take (1:43)](docs/images/model-navigation/tractor-live-ocs.mp4) · [0:04 Frame](docs/images/model-navigation/tractor-live-ocs.mp4#t=4) · [0:24 M10 screw and first washer](docs/images/model-navigation/tractor-live-ocs.mp4#t=24) · [0:57 Deck layer off](docs/images/model-navigation/tractor-live-ocs.mp4#t=57) · [1:03 Receiver isolation](docs/images/model-navigation/tractor-live-ocs.mp4#t=63) · [1:28 Fresh reopen and eleven-placement check](docs/images/model-navigation/tractor-live-ocs.mp4#t=88)
+
+#### Build a glass-roof veranda against the house
+
+The existing house fixes the position of the veranda. With the ground floor at 0 mm and the terrace at −100 mm, OpenCADStudio builds the post shoes, oak frame, 17 rafters and roof covering. Watch the joint cuts, the glazing and timber layers, and the rafter selection after reopening.
+
+[![Glass veranda being built in OpenCADStudio against the CASA house](docs/images/model-navigation/veranda-live-ocs.png)](docs/images/model-navigation/veranda-live-ocs.mp4)
+
+[Play the complete take (2:04)](docs/images/model-navigation/veranda-live-ocs.mp4) · [0:05 Fabricate the post shoes](docs/images/model-navigation/veranda-live-ocs.mp4#t=5) · [0:29 Seat the transverse members](docs/images/model-navigation/veranda-live-ocs.mp4#t=29) · [1:08 Build seventeen rafters](docs/images/model-navigation/veranda-live-ocs.mp4#t=68) · [1:39 Isolate timber frame](docs/images/model-navigation/veranda-live-ocs.mp4#t=99) · [1:51 Close and reopen the native DWG](docs/images/model-navigation/veranda-live-ocs.mp4#t=111)
+
+### Clevis build and layer isolation
+
+| Complete joint | Fork hidden to inspect the pin and spacers |
+| --- | --- |
+| ![Clevis with its pin and two spacers installed](docs/images/model-navigation/clevis.png) | ![Pin and spacers isolated at the same camera angle](docs/images/model-navigation/clevis-isolated.png) |
+
+[Watch the 16-second Blender build (MP4)](docs/images/model-navigation/clevis-build.mp4). Eight captioned stages show the plate, lugs, bore, pin and spacers, followed by the isolated hardware.
+
 ### House modeling
 
 This is the first thing I did at this complexity level with AI + drawings + pictures + a lot of iterations. It is a kind of model house that I sent to a 3D model and that was interpreted with a custom three.js library for 3D. Many nice things there. The output was finally done in [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser.

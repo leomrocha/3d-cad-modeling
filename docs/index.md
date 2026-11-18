@@ -83,6 +83,48 @@ When I see things are ready enough, I send the automated 3D modeling pipeline to
 
 ## Examples
 
+### Tractor service-access assembly
+
+![Shaded OpenCADStudio view of the two-panel tractor deck above its frame and motor]({{ '/images/model-navigation/tractor-shaded.png' | relative_url }})
+
+The blue deck in the drawing below is the removable group. Hide it and the fixed receiver rails remain visible above the motor. The lower views show the front interface and one clamp joint.
+
+![Full assembly, deck hidden, front view and clamp detail, coloured by role]({{ '/images/model-navigation/tractor-layers.png' | relative_url }})
+
+### Real-time OpenCADStudio builds
+
+#### Assemble the two-wheel tractor service deck
+
+Watch the frame, receiver rails, motor cartridge and clamp hardware come together in an empty millimetre drawing. The removable deck goes on last. The live terminal follows the commands through layer isolation, reopening the DWG and selecting the outboard washer.
+
+<div class="build-player" markdown="1">
+<video controls playsinline preload="none" width="960" style="max-width:100%;height:auto" aria-label="Assemble the two-wheel tractor service deck" poster="{{ '/images/model-navigation/tractor-live-ocs.png' | relative_url }}"><source src="{{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}" type="video/mp4"></video>
+
+[Play the complete take (1:43)]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}) · [0:04 Frame]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=4) · [0:24 M10 screw and first washer]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=24) · [0:57 Deck layer off]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=57) · [1:03 Receiver isolation]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=63) · [1:28 Fresh reopen and eleven-placement check]({{ '/images/model-navigation/tractor-live-ocs.mp4' | relative_url }}#t=88)
+</div>
+
+#### Build a glass-roof veranda against the house
+
+The existing house fixes the position of the veranda. With the ground floor at 0 mm and the terrace at −100 mm, OpenCADStudio builds the post shoes, oak frame, 17 rafters and roof covering. Watch the joint cuts, the glazing and timber layers, and the rafter selection after reopening.
+
+<div class="build-player" markdown="1">
+<video controls playsinline preload="none" width="960" style="max-width:100%;height:auto" aria-label="Build a glass-roof veranda against the house" poster="{{ '/images/model-navigation/veranda-live-ocs.png' | relative_url }}"><source src="{{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}" type="video/mp4"></video>
+
+[Play the complete take (2:04)]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}) · [0:05 Fabricate the post shoes]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=5) · [0:29 Seat the transverse members]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=29) · [1:08 Build seventeen rafters]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=68) · [1:39 Isolate timber frame]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=99) · [1:51 Close and reopen the native DWG]({{ '/images/model-navigation/veranda-live-ocs.mp4' | relative_url }}#t=111)
+</div>
+
+<script defer src="{{ '/assets/build-player.js' | relative_url }}"></script>
+
+### Clevis build and layer isolation
+
+| Complete joint | Fork hidden to inspect the pin and spacers |
+| --- | --- |
+| ![Clevis with its pin and two spacers installed]({{ '/images/model-navigation/clevis.png' | relative_url }}) | ![Pin and spacers isolated at the same camera angle]({{ '/images/model-navigation/clevis-isolated.png' | relative_url }}) |
+
+<video controls playsinline preload="none" style="max-width:100%;height:auto" width="640" aria-label="Eight stages of building a clevis in Blender" poster="{{ '/images/model-navigation/clevis.png' | relative_url }}"><source src="{{ '/images/model-navigation/clevis-build.mp4' | relative_url }}" type="video/mp4"></video>
+
+[Watch the 16-second Blender build (MP4)]({{ '/images/model-navigation/clevis-build.mp4' | relative_url }}). Eight captioned stages show the plate, lugs, bore, pin and spacers, followed by the isolated hardware.
+
 ### House modeling
 
 This is the first thing I did at this complexity level with AI + drawings + pictures + a lot of iterations. It is a kind of model house that I sent to a 3D model and that was interpreted with a custom three.js library for 3D. Many nice things there. The output was finally done in [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser.

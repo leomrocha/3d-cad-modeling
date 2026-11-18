@@ -135,3 +135,8 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 
 1. [Bootstrap, adapt and verify one operation](cad-mcp-translator/references/operations.md).
 2. [Contribute a translator improvement](cad-mcp-translator/references/contributing.md).
+
+## Navigation and repair
+
+1. [Model navigation](cad-model-navigation/SKILL.md) covers occurrence identities, nested placement, materials, visible layers and catalogue lookup. [Saved assembly checks](cad-model-navigation/references/assembly-validation.md).
+2. [Model repair](cad-model-repair/SKILL.md) checks the original geometry and native history, the repaired assignments, and repeat application.
