@@ -8,15 +8,15 @@ Reusable tools and agent instructions for creating, inspecting and modifying 3D 
 
 Each CAD modeling job saves a log and reusable scripts in your project. These stay local unless you choose to share an improvement through a pull request.
 
-Most scripts use [OpenCADStudio](https://www.opencadstudio.com/) by default. To use another CAD application through its MCP server, the agent reads the application's documentation, checks which modeling commands the server provides, and tests the adapted procedure on a sample model. [How to adapt a CAD workflow](cad-mcp-translator.html).
+Most scripts use [OpenCADStudio](https://www.opencadstudio.com/) by default. To use another CAD application through its MCP server, the agent reads the application&#39;s documentation, checks which modeling commands the server provides, and tests the adapted procedure on a sample model. [How to adapt a CAD workflow](cad-mcp-translator.html).
 
 The skills can also convert CAD files and scripts, including rendering an OpenSCAD model to STL and exporting a supported CadQuery model to STEP. [CAD format and script conversions](cad-format-translator.html).
 
-I've tested conversions with STEP files, CadQuery scripts in Python, and a Blender model. You can watch the [Blender clevis build](#clevis-build-and-layer-isolation) below.
+I&#39;ve tested conversions with STEP files, CadQuery scripts in Python, and a Blender model. You can watch the [Blender clevis build](#clevis-build-and-layer-isolation) below.
 
 Geometry calculations and checks can take time.
 
-This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it OFTEN. Please collaborate, copy it and share it; that is why the license is MIT.
+This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I&#39;ll be updating it OFTEN. Please collaborate, copy it and share it; that is why the license is MIT.
 
 ## TLDR Install
 
@@ -29,7 +29,7 @@ Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-y
 ## License
 
 [MIT](https://github.com/leomrocha/3d-cad-modeling/blob/master/LICENSE) for project code and documentation.
-All external sources and assets have their own licenses. If I have accidentally left some things without the real check, please contact me and I'll be really pleased to take them out.
+All external sources and assets have their own licenses. If I have accidentally left some things without the real check, please contact me and I&#39;ll be really pleased to take them out.
 
 ## Share the wins
 
@@ -39,15 +39,15 @@ Want to share a script or skill improvement from a modeling job? [Contribute an 
 
 If you want to go directly to the examples, check the [Examples](#examples).
 
-I've been working for some time on CAD modeling. The last time I really touched CAD was OpenSCAD (cause I've done software for 20+ years now). The last time I really did something manually in CAD was AutoCAD 2000, some 25+ years ago. I'm too lazy now to learn to use another CAD application, so I decided I'd make AI agents model things for me. I draw on paper as I learnt 3 decades ago, then take pictures and show them to the model. I have my computer running while I sometimes manage things from my phone.
+I&#39;ve been working for some time on CAD modeling. The last time I really touched CAD was OpenSCAD (cause I&#39;ve done software for 20+ years now). The last time I really did something manually in CAD was AutoCAD 2000, some 25+ years ago. I&#39;m too lazy now to learn to use another CAD application, so I decided I&#39;d make AI agents model things for me. I draw on paper as I learnt 3 decades ago, then take pictures and show them to the model. I have my computer running while I sometimes manage things from my phone.
 
-This adventure has not been without problems, blockers, frequent cursing and, of course, AI SLOP that I try to keep to a minimum. After so much work, learning and process improvement, I've started to consolidate all things into a single skills and scripts repository that takes lessons from all those "adventures".
+This adventure has not been without problems, blockers, frequent cursing and, of course, AI SLOP that I try to keep to a minimum. After so much work, learning and process improvement, I&#39;ve started to consolidate all things into a single skills and scripts repository that takes lessons from all those &#34;adventures&#34;.
 
-This repo is now a test bed for my recursive self-improving skill (RSI - yes, this is an exaggeration) that I'm using for yet another project to make it better. This skill set is far from done, though I already use it and I'll keep improving it (it is already improving with each new model, and I have 100+ models queued for the automated workflow).
+This repo is now a test bed for my recursive self-improving skill (RSI - yes, this is an exaggeration) that I&#39;m using for yet another project to make it better. This skill set is far from done, though I already use it and I&#39;ll keep improving it (it is already improving with each new model, and I have 100+ models queued for the automated workflow).
 
 The idea is to share and see if somebody can use it, learn new things and make things faster and simpler.
 
-I'll also share the things that I've been working on in other repositories when I consider they are ready enough, although here you'll get some example screenshots from those projects.
+I&#39;ll also share the things that I&#39;ve been working on in other repositories when I consider they are ready enough, although here you&#39;ll get some example screenshots from those projects.
 
 ## Project
 
