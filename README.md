@@ -2,9 +2,15 @@
 
 Reusable tools and agent instructions for creating, inspecting and modifying 3D models from descriptions, dimensions, drawings, photographs and existing geometry.
 
-[OpenCADStudio](https://www.opencadstudio.com/) is the default CAD application for modeling. To use another CAD application, select its MCP server. The agent checks which modeling operations the server provides and tests each adapted procedure on a sample model.
+This project auto-improves itself from every single new cad model, it keeps a log and scripts done and they are reused afterwards. You can keep those for yourself OR use the skills in the repo to open a Pull Request and improve the project for everybody.
 
-This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it. Please collaborate, copy it and share it; that is why the license is MIT.
+This project now works with any CAD application that presents an MCP server, OpenSCAD, Blender and any STEP file. I have tested migrating STEP files, python cadquery and a Blender mdoel (one of the videos in the page)
+ 
+Just be sure to be patient, geometry calculations and checks do take time, the agent checks which modeling operations the MCP server provides and tests each adapted procedure to the new software.
+
+Most current scripts are default to [OpenCADStudio](https://www.opencadstudio.com/)  but the skills do check the MCP server, the documentation and the adaptation to make the needed code and improve automatically is the default CAD application for modeling.
+
+This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it OFTEN. Please collaborate, copy it and share it; that is why the license is MIT.
 
 ## TLDR Install
 
@@ -14,18 +20,16 @@ npx skills add leomrocha/3d-cad-modeling
 
 Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to use the installed skills.
 
-## CAD applications and file formats
-
-1. **Model in another CAD application.** [Adapt a procedure to its MCP server](docs/cad-mcp-translator.md).
-2. **Convert model files.** Import an STL mesh into a new Blender file (`.blend`), export a named Blender mesh to STL, or convert a STEP solid to STL. If physical scale is unclear, the agent asks for units or a known dimension on a reference model.
-3. **Work from CAD scripts.** Render OpenSCAD (`.scad`) to STL, translate supported OpenSCAD constructs to editable CadQuery Python, or export a supported CadQuery model to STEP. [Translate CAD files and scripts](docs/cad-format-translator.md).
-
-Want to share a script or skill improvement from a modeling job? [Contribute an improvement](docs/contributing.md).
+Then tell your agent to use those skills.
 
 ## License
 
 [MIT](LICENSE) for project code and documentation.
 All external sources and assets have their own licenses. If I have accidentally left some things without the real check, please contact me and I'll be really pleased to take them out.
+
+## Share the wins
+
+Want to share a script or skill improvement from a modeling job? [Contribute an improvement](docs/contributing.md).
 
 ## Introduction
 
