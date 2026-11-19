@@ -6,9 +6,17 @@ layout: default
 
 Reusable tools and agent instructions for creating, inspecting and modifying 3D models from descriptions, dimensions, drawings, photographs and existing geometry.
 
-[OpenCADStudio](https://www.opencadstudio.com/) is the default CAD application for modeling. To use another CAD application, select its MCP server. The agent checks which modeling operations the server provides and tests each adapted procedure on a sample model.
+Each CAD modeling job saves a log and reusable scripts in your project. These stay local unless you choose to share an improvement through a pull request.
 
-This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it. Please collaborate, copy it and share it; that is why the license is MIT.
+Most scripts use [OpenCADStudio](https://www.opencadstudio.com/) by default. To use another CAD application through its MCP server, the agent reads the application's documentation, checks which modeling commands the server provides, and tests the adapted procedure on a sample model. [How to adapt a CAD workflow](cad-mcp-translator.html).
+
+The skills can also convert CAD files and scripts, including rendering an OpenSCAD model to STL and exporting a supported CadQuery model to STEP. [CAD format and script conversions](cad-format-translator.html).
+
+I've tested conversions with STEP files, CadQuery scripts in Python, and a Blender model. You can watch the [Blender clevis build](#clevis-build-and-layer-isolation) below.
+
+Geometry calculations and checks can take time.
+
+This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it OFTEN. Please collaborate, copy it and share it; that is why the license is MIT.
 
 ## TLDR Install
 
@@ -18,18 +26,14 @@ npx skills add leomrocha/3d-cad-modeling
 
 Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to use the installed skills.
 
-## CAD applications and file formats
-
-1. **Model in another CAD application.** [Adapt a procedure to its MCP server](cad-mcp-translator.html).
-2. **Convert model files.** Import an STL mesh into a new Blender file (`.blend`), export a named Blender mesh to STL, or convert a STEP solid to STL. If physical scale is unclear, the agent asks for units or a known dimension on a reference model.
-3. **Work from CAD scripts.** Render OpenSCAD (`.scad`) to STL, translate supported OpenSCAD constructs to editable CadQuery Python, or export a supported CadQuery model to STEP. [Translate CAD files and scripts](cad-format-translator.html).
-
-Want to share a script or skill improvement from a modeling job? [Contribute an improvement](contributing.html).
-
 ## License
 
 [MIT](https://github.com/leomrocha/3d-cad-modeling/blob/master/LICENSE) for project code and documentation.
 All external sources and assets have their own licenses. If I have accidentally left some things without the real check, please contact me and I'll be really pleased to take them out.
+
+## Share the wins
+
+Want to share a script or skill improvement from a modeling job? [Contribute an improvement](contributing.html).
 
 ## Introduction
 
@@ -129,6 +133,7 @@ The existing house fixes the position of the veranda. With the ground floor at 0
 
 The first thing I did at this complexity level with AI + drawings + pictures + a lot of iterations is a house model, you can see one example in the videos reproducing part of the build. The first iteration was a model house with ad-hoc  three.js visualization software. Now I've reproduced that model migrating it from the previous model into OCS. The output was finally done in [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser.
 
+[Watch the glass-roof veranda build](#build-a-glass-roof-veranda-against-the-house).
 
 ### Mast physics for a wind generator
 
