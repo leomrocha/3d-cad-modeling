@@ -123,6 +123,32 @@ class IndependentSkills(unittest.TestCase):
                     self.assertEqual(process.returncode, 0, process.stdout + process.stderr)
                 self.results['skills'][name]['command_help_entries'] = entries
 
+    def test_cad_history_and_geometric_evidence_from_installed_package(self):
+        code = """import json, tempfile
+from pathlib import Path
+from finite_solid_contact import finite_solid_contact
+from job_history_archive import create, inventory
+from mesh_checks import shell_components
+from mounting_pattern import screen_assignments
+from photo_constraints import direction_intervals
+from source_trim_loop import prepare_trim_loop
+with tempfile.TemporaryDirectory() as folder:
+    parent = Path(folder)
+    history = parent / 'revision'
+    history.mkdir()
+    raw = history / 'debug.jsonl'
+    raw.write_bytes(b'{}\\n')
+    target = parent / 'history.tar.bz2'
+    manifest = create(history, target, 'fixture', 'one')
+    assert inventory(target) == manifest
+    assert manifest['files'][0]['size'] == raw.stat().st_size
+assert screen_assignments([((0, 0), 0)], [((1, 1), 1)], tolerance=0)['tested'] == 1
+assert direction_intervals((0, 0), [(1, 1)], 0)
+assert all(callable(f) for f in [shell_components, finite_solid_contact, prepare_trim_loop])
+print(json.dumps({'result': 'PASS'}))"""
+        result = self.run_python('cad-ocs-engineering', code)
+        self.assertEqual(result, {'result': 'PASS'})
+
     def test_source_intake_fixture(self):
         code = '''import hashlib,json,tempfile
 from pathlib import Path

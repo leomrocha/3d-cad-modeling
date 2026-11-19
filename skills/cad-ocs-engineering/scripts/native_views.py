@@ -96,12 +96,19 @@ def placed_boundaries(records,blocks,*,max_instances=10000):
     return out,instances
 
 
-def render_views(edges,directory,*,stem,title,formats=('svg',)):
-    """Write XY/XZ/YZ and isometric views; nonlinear trims remain endpoint dots."""
+def render_views(edges,directory,*,stem,title,formats=('svg',),include_top_isometric=False):
+    """Write XY/XZ/YZ and isometric views; optionally add an upright top isometric."""
     directory=Path(directory)
     if not directory.is_dir() or not stem or Path(stem).name!=stem or any(f not in ('svg','png') for f in formats):raise ValueError('Output directory, basename and supported formats required')
     outputs=[]
     projections=[('XY',lambda p:(p[0],p[1])),('XZ',lambda p:(p[0],p[2])),('YZ',lambda p:(p[1],p[2])),('isometric',lambda p:((p[0]-p[1])/math.sqrt(2),(p[0]+p[1]-2*p[2])/math.sqrt(6)))]
+    if type(include_top_isometric) is not bool:
+        raise ValueError('include_top_isometric must be a boolean')
+    if include_top_isometric:
+        def top_isometric(point):
+            x, y, z = point
+            return (x - y) / math.sqrt(2), (2 * z - x - y) / math.sqrt(6)
+        projections.append(('top-isometric', top_isometric))
     targets=[directory/(stem+'-'+name+'.'+ext) for name,_ in projections for ext in formats]
     if any(p.exists() for p in targets):raise ValueError('Retain existing views; choose a new output stem')
     for name,project in projections:
@@ -134,7 +141,7 @@ def render_views(edges,directory,*,stem,title,formats=('svg',)):
     return outputs
 
 
-def render_saved_model(client,source,directory,*,stem,title,persistence_receipt,formats=('svg',)):
+def render_saved_model(client,source,directory,*,stem,title,persistence_receipt,formats=('svg',),include_top_isometric=False):
     source=Path(source);digest=hashlib.sha256(source.read_bytes()).hexdigest()
     if persistence_receipt.get('result')!='PASS' or persistence_receipt.get('saved_path')!=str(source) or persistence_receipt.get('sha256')!=digest:raise CadError('Source persistence receipt must bind the saved model')
     owned_document(client,'open-view','open',path=str(source))
@@ -143,7 +150,8 @@ def render_saved_model(client,source,directory,*,stem,title,persistence_receipt,
     rows=list(iter_records(client,'entities'));blocks=list(iter_records(client,'block_records'))
     edges,instances=placed_boundaries(rows,blocks)
     if identity(client.read('state'))!=baseline:raise CadError('External activation/revision interrupted display extraction')
-    outputs=render_views(edges,directory,stem=stem,title=title,formats=formats)
+    outputs=render_views(edges,directory,stem=stem,title=title,formats=formats,
+                         include_top_isometric=include_top_isometric)
     if hashlib.sha256(source.read_bytes()).hexdigest()!=digest:raise CadError('Source changed during rendering')
     evidence=dict(document_id=client.document_id,expected_path=str(source),expected_geometry_revision=baseline[2],construction_copy=False,dirty_discard_allowed=False,saved_model_path=str(source),saved_model_sha256=digest,persistence_receipt=persistence_receipt)
     cleanup=cleanup_owned_documents(state_reader=lambda:client.helper.request(client.descriptor,{'op':'state'},client.timeout),client=client,owned_documents=[evidence],namespace=client.namespace+'-view-cleanup')

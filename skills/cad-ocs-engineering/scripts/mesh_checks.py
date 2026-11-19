@@ -51,3 +51,90 @@ def triangle_mesh_check(vertices, faces, *, minimum_area, uv_vertices=None,
                 nonpositive_uv_triangles=wrong_uv,positive_uv_zero_3d_triangles=collapsed,
                 boundary_edges=boundary,nonmanifold_edges=nonmanifold,inconsistent_edges=reversed_edges,oriented_edge_closed=closed,
                 scope='triangle arrays, numerical area and oriented edge incidence')
+
+
+def _reachable(adjacency, start):
+    seen = {start}
+    pending = [start]
+    while pending:
+        for node in adjacency[pending.pop()]:
+            if node not in seen:
+                seen.add(node)
+                pending.append(node)
+    return seen
+
+
+def _tetrahedron_volume(a, b, c, origin):
+    x, y, z = ([p[i] - origin[i] for i in range(3)] for p in (a, b, c))
+    return math.fsum((
+        x[0] * (y[1] * z[2] - y[2] * z[1]),
+        x[1] * (y[2] * z[0] - y[0] * z[2]),
+        x[2] * (y[0] * z[1] - y[1] * z[0]),
+    )) / 6
+
+
+def shell_components(vertices, faces, *, minimum_area=0):
+    """Inspect already indexed triangular shells in a right-handed Cartesian frame.
+
+    Components use shared vertex indices. A closed manifold requires a single
+    cycle in every vertex link as well as oppositely oriented incident faces.
+    Signed volumes have units of input length cubed. Their signs characterize
+    winding in embedded shells; self-intersections and nesting are separate tests.
+    """
+    from collections import defaultdict
+
+    vertices = [vector(point) for point in vertices]
+    faces = [tuple(face) for face in faces]
+    gate = triangle_mesh_check(vertices, faces, minimum_area=minimum_area, require_closed=True)
+    vertex_faces = defaultdict(list)
+    neighbours = defaultdict(set)
+    links = defaultdict(list)
+    for index, (a, b, c) in enumerate(faces):
+        for v, x, y in ((a, b, c), (b, c, a), (c, a, b)):
+            vertex_faces[v].append(index)
+            neighbours[v].update((x, y))
+            links[v].append((x, y))
+
+    pending = set(vertex_faces)
+    components = []
+    for first in vertex_faces:
+        if first not in pending:
+            continue
+        used = _reachable(neighbours, first)
+        pending.difference_update(used)
+        indices = sorted({i for v in used for i in vertex_faces[v]})
+        edges = sum(len(neighbours[v]) for v in used) // 2
+        singular = []
+        for v in sorted(used):
+            link = defaultdict(set)
+            for x, y in links[v]:
+                link[x].add(y)
+                link[y].add(x)
+            if any(len(adj) != 2 for adj in link.values()) or len(_reachable(link, next(iter(link)))) != len(link):
+                singular.append(v)
+        # Each component receives its own gate even when another component fails.
+        subset = [faces[i] for i in indices]
+        if len(subset) == len(faces):
+            local_gate = gate
+        else:
+            local_vertices = sorted(used)
+            local_index = {v: i for i, v in enumerate(local_vertices)}
+            local_gate = triangle_mesh_check(
+                [vertices[v] for v in local_vertices],
+                [tuple(local_index[v] for v in tri) for tri in subset],
+                minimum_area=minimum_area, require_closed=True)
+        closed = local_gate['result'] == 'PASS' and not singular
+        volume = None
+        if closed:
+            volume = math.fsum(_tetrahedron_volume(vertices[a], vertices[b], vertices[c], vertices[first])
+                               for a, b, c in subset)
+            if not math.isfinite(volume):
+                raise ValueError('Nonfinite component volume')
+        winding = 'UNDETERMINED'
+        if volume is not None:
+            winding = 'POSITIVE' if volume > 0 else 'NEGATIVE' if volume < 0 else 'ZERO'
+        components.append(dict(first_face=indices[0], vertices=len(used), edges=edges,
+                               triangles=len(indices), euler_characteristic=len(used)-edges+len(indices),
+                               noncycle_vertex_links=singular, closed_manifold=closed,
+                               signed_volume=volume, winding=winding))
+    return dict(components=components, unused_vertex_count=len(vertices)-len(vertex_faces))

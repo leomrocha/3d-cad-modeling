@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "061e859ed47f5ee28117db86ebf9ab7136aea6adc45a2c30e01d23c18d6ab938"
+      "sha256": "9b68f56e28800350715ee5a3ef391281694adf6efccec8044b0b54dab6615f01"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -25,6 +25,10 @@
     "references/annular-reference.md": {
       "source": "references/annular-reference.md",
       "sha256": "d9595d484df064222b24b87fa280ff81f15e0ad01a3e4fcb36da1b4efdc23b6c"
+    },
+    "references/assembly-evidence.md": {
+      "source": "references/assembly-evidence.md",
+      "sha256": "29b026ebe34f810e75b29d51b54b57a70e39206ef2c7ec6efdc3827012718455"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -113,6 +117,10 @@
     "references/insertion-resume-verification.md": {
       "source": "references/insertion-resume-verification.md",
       "sha256": "4d419fbb8feb0c432cda2815d5aa1aaa799024a7cc0f2dc65899ee68270d2b32"
+    },
+    "references/job-history-archive.md": {
+      "source": "references/job-history-archive.md",
+      "sha256": "d840893a762dc5d5ff7bc58d396ce57a8e652c04296f100545da94af0d7463d4"
     },
     "references/manufacturer-assembly.md": {
       "source": "references/manufacturer-assembly.md",
@@ -326,6 +334,10 @@
       "source": "scripts/feature_checks.py",
       "sha256": "5cf4ce27c99a09271479e7f553c463321906639fb190cd3c9d0bb11f18381634"
     },
+    "scripts/finite_solid_contact.py": {
+      "source": "scripts/finite_solid_contact.py",
+      "sha256": "e06a3902efac4a96d6d9b6e378f0a61825dd51a7dc58862974386a3b4c2b457a"
+    },
     "scripts/hex_screw_reference.py": {
       "source": "scripts/hex_screw_reference.py",
       "sha256": "ecdbd74fc17317b57a3a92b3cd76ddaf511b3675b55caa7af1b78d549ed1e35c"
@@ -338,9 +350,13 @@
       "source": "scripts/insert_recovery.py",
       "sha256": "7a32f66064987aa7ddbc54c7ccc940c97582a523022a4c4e211cfdffe676207e"
     },
+    "scripts/job_history_archive.py": {
+      "source": "scripts/job_history_archive.py",
+      "sha256": "3924a6b1e33990adf220c4a684f817a2937b2345d957fdd0627a23eb6207b961"
+    },
     "scripts/mesh_checks.py": {
       "source": "scripts/mesh_checks.py",
-      "sha256": "540f647214242cebab18861e10998d5e014b5741dd8a2f0e716223dda5cbfc58"
+      "sha256": "5eaeb4e208a5308f61c6eb7a2aeade473ea2cb78c6a4efe1c679245b39a22889"
     },
     "scripts/mesh_dxf.py": {
       "source": "scripts/mesh_dxf.py",
@@ -349,6 +365,10 @@
     "scripts/model_inventory.py": {
       "source": "scripts/model_inventory.py",
       "sha256": "325ecdecaf1865f2f6ff2c653167e6bc0110171f725fc0771667be6e4f3cf15e"
+    },
+    "scripts/mounting_pattern.py": {
+      "source": "scripts/mounting_pattern.py",
+      "sha256": "64f360cc2a39f3dd8f0b0b37f66f04cbe58ca03163ea4589b69d2e70edb37b3c"
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",
@@ -360,7 +380,7 @@
     },
     "scripts/native_views.py": {
       "source": "scripts/native_views.py",
-      "sha256": "3570c960971314a7c2acd8b236d6a1fb4cb45f51b77d259d4df583be8c73679e"
+      "sha256": "4fdd8c1859c303274f24a88656b26ee869d2ddb80abd34d352e78612b778eb58"
     },
     "scripts/ocs_control.py": {
       "source": "scripts/ocs_control.py",
@@ -377,6 +397,10 @@
     "scripts/part_index.py": {
       "source": "scripts/part_index.py",
       "sha256": "5649f2740af7f9704417b5274953f342565f91053182dac50a0b0ae9a924bdfb"
+    },
+    "scripts/photo_constraints.py": {
+      "source": "scripts/photo_constraints.py",
+      "sha256": "26df839b008bcfa49c236631913846450e8545b8189512c8107dc2d6cf29b79f"
     },
     "scripts/pillow_block.py": {
       "source": "scripts/pillow_block.py",
@@ -438,6 +462,10 @@
       "source": "scripts/source_solid_checks.py",
       "sha256": "035c6f86b72f0645082b44b1d1631d6f90046c2deb9cc1cb464f78a42ddd7427"
     },
+    "scripts/source_trim_loop.py": {
+      "source": "scripts/source_trim_loop.py",
+      "sha256": "17dbcff30fa92331e4bbff06c38ef74f410c924886c75dc08b8ddd836d618320"
+    },
     "scripts/source_variant_table.py": {
       "source": "scripts/source_variant_table.py",
       "sha256": "08091bb56339ad3a9d19d1b46113f8fd150157f9a7d10957f2bfb1b4aedb708d"
@@ -449,6 +477,10 @@
     "scripts/spherical_seat_profile.py": {
       "source": "scripts/spherical_seat_profile.py",
       "sha256": "8e1a83f5a9d6995268040bc6ed6187c017d85c04581d433addffcd0c5b117450"
+    },
+    "scripts/step_entity_graph.py": {
+      "source": "scripts/step_entity_graph.py",
+      "sha256": "bf7252af3272ff225462dceb7eb52bfb83e2fa7f4ee62fe98ee381173b64d739"
     },
     "scripts/step_placements.py": {
       "source": "scripts/step_placements.py",

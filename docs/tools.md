@@ -148,3 +148,13 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Service clearance
 
 1. [service_clearance.py](../scripts/service_clearance.py) checks continuous box overlap during finite straight translation and supplies exact coincidence witnesses for verified shared definitions.
+
+## Source assembly recovery and evidence
+
+- [Job history archive](../scripts/job_history_archive.py) stores all regular files in a revision directory and verifies the manifest by streaming a read-only inventory.
+- [Photo constraints](../scripts/photo_constraints.py) bounds undirected lines through a vanishing point using pick disks and back-projects a feasible line into its world plane.
+- [Mounting patterns](../scripts/mounting_pattern.py) screens injective assignments against distance bounds and checks finite pin clearance at a supplied planar pose.
+- [Mesh checks](../scripts/mesh_checks.py) reports shell components, closed-manifold vertex links, Euler characteristic and signed volume.
+- [Source trim loops](../scripts/source_trim_loop.py) follows oriented edge uses, computes shared trim corners and independently checks curve endpoint and surface inverse residuals.
+- [Finite solid contact](../scripts/finite_solid_contact.py) classifies finite solid pairs and checks independent inside witnesses with a caller-supplied OpenCascade environment.
+- [STEP entity graph](../scripts/step_entity_graph.py) identifies reachable dependencies within a bounded Part 21 data grammar.
