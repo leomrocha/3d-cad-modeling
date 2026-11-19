@@ -2,17 +2,15 @@
 
 Reusable tools and agent instructions for creating, inspecting and modifying 3D models from descriptions, dimensions, drawings, photographs and existing geometry.
 
-Each CAD modeling job saves a log and reusable scripts in your project. These stay local unless you choose to share an improvement through a pull request.
+This project keeps a _local_ log and scripts made during a build, and they are reused afterwards (meaning it'll keep improving for you). You can keep those for yourself OR use the skills in the repo to open a Pull Request and improve the project for everybody.
 
-Use the CAD application you know. If it provides an MCP server, tell your agent which application to use. The agent reads its documentation, checks the modeling commands available through the server, and adapts and tests the procedure for your model. Most existing scripts default to [OpenCADStudio](https://www.opencadstudio.com/). [How to adapt a CAD workflow](docs/cad-mcp-translator.md).
+This project now works with any CAD application that presents an MCP server, OpenSCAD, Blender and any STEP file. I have tested migrating STEP files, Python CadQuery scripts and a Blender model (one of the videos on the page).
 
-The skills can also convert CAD files and scripts, including rendering an OpenSCAD model to STL and exporting a supported CadQuery model to STEP. [CAD format and script conversions](docs/cad-format-translator.md).
+Just be sure to be patient. Geometry calculations and checks do take time. The agent checks which modeling operations the MCP server provides and tests each adapted procedure on the new software.
 
-I've tested conversions with STEP files, CadQuery scripts in Python, and a Blender model. You can watch the [Blender clevis build](#clevis-build-and-layer-isolation) below.
+Current scripts default to [OpenCADStudio](https://www.opencadstudio.com/), but the skills do check the MCP server and the documentation to make the code needed for the adaptation and improve automatically.
 
-Geometry calculations and checks can take time.
-
-This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll be updating it OFTEN. Please collaborate, copy it and share it; that is why the license is MIT.
+This is ONGOING WORK. I'll be updating it **often**. Please collaborate, copy it and share it. That is why the license is MIT.
 
 ## TLDR Install
 
@@ -22,7 +20,7 @@ npx skills add leomrocha/3d-cad-modeling
 
 Choose the skills and AI agent in the installer.
 
-Then tell your agent to use those skills. [Example instructions for your agent](#ask-your-ai-agent).
+Then tell your agent to use those skills.
 
 ## License
 
@@ -123,9 +121,7 @@ The existing house fixes the position of the veranda. With the ground floor at 0
 
 ### House modeling
 
-This is the first thing I did at this complexity level with AI + drawings + pictures + a lot of iterations. It is a kind of model house that I sent to a 3D model and that was interpreted with a custom three.js library for 3D. Many nice things there. The output was finally done in [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser.
-
-[Watch the glass-roof veranda build](#build-a-glass-roof-veranda-against-the-house).
+The first thing I did at this complexity level with AI + drawings + pictures + a lot of iterations is a house model. You can see one example in [the video reproducing part of the build](#build-a-glass-roof-veranda-against-the-house). The first iteration was a model house with ad-hoc three.js visualization software. Now I've reproduced that model, migrating it from the previous model into OCS. The output was finally done in [IFC](https://en.wikipedia.org/wiki/Industry_Foundation_Classes) and displayed in the browser.
 
 ### Mast physics for a wind generator
 
