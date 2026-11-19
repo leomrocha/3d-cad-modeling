@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "9b68f56e28800350715ee5a3ef391281694adf6efccec8044b0b54dab6615f01"
+      "sha256": "632fc22e192ec81aedf222091b4ef9455c69f219d5938abeea899ff29e81bb96"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -104,7 +104,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "6d87ae1476c435aa52d7983ecd2a83fdf849ac50e6badcf300bd57eb0d1287b8"
+      "sha256": "b9c46a40cc6f5001972a49134ea77b32a8a162b2eb7e7e16cf594ef673c02828"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -276,7 +276,7 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "280fca7c43dbcfec2bb26dc9c834dae7b61c51b6c777197ebf4684018ccca1bf"
+      "sha256": "2366f268faf8823a9e2bc2734fead3088adb156536103168e2f8cddfbd071ac7"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
@@ -292,7 +292,7 @@
     },
     "scripts/cadtools/verification.py": {
       "source": "scripts/cadtools/verification.py",
-      "sha256": "64e3cbd874cdf6410bb2f6d9c49db837f3ef7170e36ea0df88c9e940068a7362"
+      "sha256": "77f9a8ca2c187899df08a08d263d8725be00ddb8cad5f97fca8f401acfe1e724"
     },
     "scripts/calibrated_trace.py": {
       "source": "scripts/calibrated_trace.py",

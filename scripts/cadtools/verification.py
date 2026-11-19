@@ -85,12 +85,15 @@ def require_audit(audit):
     return audit["manifest"]
 
 
-def owned_audit(client, *, expected_path=None, expected_sha256=None):
+def owned_audit(client, *, target_path=None, expected_path=None, expected_sha256=None):
     """Bind audit to a stable active document and optional persisted source pin."""
     before = identity(client.read("state"))
     if before[0] != client.document_id:
         raise CadError("Audit target document is inactive")
-    audit = client.read("audit",target_format="dwg",target_version="2018")
+    options = {"target_format": "dwg", "target_version": "2018"}
+    if target_path is not None:
+        options["path"] = str(target_path)
+    audit = client.read("audit", **options)
     if audit.get("document_id") != before[0] or identity(client.read("state")) != before:
         raise CadError("Audit document or revision identity differs")
     if expected_path is not None:

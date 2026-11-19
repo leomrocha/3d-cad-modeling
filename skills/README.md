@@ -30,7 +30,7 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 [Reusable geometry, recovery and artifact methods](cad-ocs-engineering/references/generic-integration.md) covers stable records, incremental checkpoints, plates, bounded profiles, sidewall cuts, insertion, quantities and native SVG/PNG views with caller-supplied inputs.
 
 1. [OCS control](cad-ocs-engineering/references/ocs-control.md) — session discovery, installed schemas and guarded requests.
-   [Incremental saving](cad-ocs-engineering/SKILL.md#save-work-in-progress) preserves IN_PROGRESS native models and supporting files at verified checkpoints throughout long jobs.
+   [Incremental saving](cad-ocs-engineering/SKILL.md#save-work-in-progress) preserves IN_PROGRESS native models and supporting files at verified checkpoints throughout long jobs. The pre-save audit uses the checkpoint destination.
 2. [Computational engineering](cad-ocs-engineering/references/computational-engineering.md) — equations, geometry/material/solver contracts and representation handoffs.
 3. [Capability evidence](cad-ocs-engineering/references/sources-and-capabilities.md) — original dated OCS and tool findings with source locators.
 4. [Non-geometric requirements](cad-ocs-engineering/references/non-geometric-requirements.md) — explicit source-pinned tasks whose scope requires no CAD geometry.

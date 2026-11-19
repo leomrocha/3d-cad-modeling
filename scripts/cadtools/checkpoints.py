@@ -63,7 +63,7 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
     if intent and (intent['request'].get('geometry_revision')!=baseline[2]
                    or intent.get('context',{}).get('document_id')!=client.document_id):
         raise CadError('Checkpoint recovery belongs to another document or geometry epoch')
-    audit=owned_audit(client)
+    audit=owned_audit(client, target_path=path)
     if identity(client.read('state'))!=baseline:raise CadError('Checkpoint epoch changed during audit')
     manifest=require_audit(audit)
     if manifest.get('by_type')!=expected_counts:raise CadError('Checkpoint entity counts differ')

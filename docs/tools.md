@@ -3,7 +3,7 @@
 ## Reusable native construction and recovery
 
 1. [Stable record pagination](../scripts/cadtools/records.py) — bounded page-size recovery and native document/revision binding.
-2. [Durable progress checkpoints](../scripts/cadtools/checkpoints.py) — ordered stage evidence and verified IN_PROGRESS native saves.
+2. [Durable progress checkpoints](../scripts/cadtools/checkpoints.py) — ordered stage evidence and verified IN_PROGRESS saves that audit the intended DWG path.
 3. [Plate operations](../scripts/plate_reference.py) — supplied outlines, bulges, holes, transforms and actual sidewall checks.
 4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion and analytic equal-radius opening clipping.
 5. [Component insertion](../scripts/assembly_build.py) — source hashes, exact interactive prompts, native metadata and saved placements.

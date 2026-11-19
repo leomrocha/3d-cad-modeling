@@ -148,6 +148,9 @@ class Checkpoints(unittest.TestCase):
             c=Mock();c.namespace='job';c.journal=journal;c.document_id=1
             c.read.side_effect=lambda op,**kw:state.copy() if op=='state' else dict(document_id=1,summary={'errors':0,'warnings':0},manifest=manifest)
             def mutate(label,op,**kw):
+                audit_requests = [request.kwargs for request in c.read.call_args_list if request.args == ("audit",)]
+                self.assertEqual(audit_requests, [{"path": str(path), "target_format": "dwg", "target_version": "2018"}])
+                self.assertEqual(kw["path"], str(path))
                 path.write_bytes(b'native transport fixture')
                 return dict(result=dict(saved=str(path),verified=True,dropped_on_save=0,manifest=manifest,sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
             c.mutate.side_effect=mutate
