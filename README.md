@@ -4,7 +4,7 @@ Reusable tools and agent instructions for creating, inspecting and modifying 3D 
 
 Each CAD modeling job saves a log and reusable scripts in your project. These stay local unless you choose to share an improvement through a pull request.
 
-Most scripts use [OpenCADStudio](https://www.opencadstudio.com/) by default. To use another CAD application through its MCP server, the agent reads the application's documentation, checks which modeling commands the server provides, and tests the adapted procedure on a sample model. [How to adapt a CAD workflow](docs/cad-mcp-translator.md).
+Use the CAD application you know. If it provides an MCP server, tell your agent which application to use. The agent reads its documentation, checks the modeling commands available through the server, and adapts and tests the procedure for your model. Most existing scripts default to [OpenCADStudio](https://www.opencadstudio.com/). [How to adapt a CAD workflow](docs/cad-mcp-translator.md).
 
 The skills can also convert CAD files and scripts, including rendering an OpenSCAD model to STL and exporting a supported CadQuery model to STEP. [CAD format and script conversions](docs/cad-format-translator.md).
 
@@ -20,7 +20,9 @@ This is ONGOING WORK. For now, this is the first pre-pre-pre-alpha release. I'll
 npx skills add leomrocha/3d-cad-modeling
 ```
 
-Choose the skills and AI agent in the installer. Then [ask your AI agent](#ask-your-ai-agent) to use the installed skills.
+Choose the skills and AI agent in the installer.
+
+Then tell your agent to use those skills. [Example instructions for your agent](#ask-your-ai-agent).
 
 ## License
 
