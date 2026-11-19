@@ -144,3 +144,6 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Service clearance
 
 1. [Service clearance](cad-ocs-engineering/references/service-clearance.md) covers straight translation, conservative enclosures, projected separation and interference witnesses.
+
+- [Source assembly evidence](cad-ocs-engineering/references/assembly-evidence.md) covers occurrence frames, fit and contact witnesses, source trims, shell orientation and representation-sensitive recovery.
+- [Job history archives](cad-ocs-engineering/references/job-history-archive.md) preserve and verify raw receipts and debug histories for each revision.

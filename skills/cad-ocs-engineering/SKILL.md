@@ -87,3 +87,7 @@ For calculations and solver work, use [computational engineering](references/com
 Report actual actions, paths, units, frames, measurements, errors and checks. Keep original source bytes, native models, operation journals, verified checkpoints and output receipts in caller-owned persistent storage. Use [evidence labels and capability checks](references/sources-and-capabilities.md) and report the representation actually constructed.
 
 After reporting the completed job, name its reusable improvement and ask, “Would you like a local preview of a contribution with this change?” Follow the [optional contribution procedure](references/contributing.md) on opt-in or a later contribution request. Only explicit approval of the final diff and destination authorizes a push and pull request.
+
+For recovered source assemblies, use [assembly evidence](references/assembly-evidence.md) to bind occurrences, photo constraints, mounting patterns, finite interference and source trims to their measured representations.
+
+Archive raw CAD JSON, JSONL and debug history for every job revision using the [job history archive procedure](references/job-history-archive.md).
