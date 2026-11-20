@@ -79,6 +79,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 ## Insertion recovery and verified resume
 
 1. [Insertion, resume and assembly verification](cad-ocs-engineering/references/insertion-resume-verification.md) — verified defaults, point-only correction, pinned checkpoints, repeated-instance matching and preserved source anomalies.
+2. [Recover a batch of DXF block insertions](cad-ocs-engineering/references/insertion-resume-verification.md#recover-a-batch-of-dxf-block-insertions) covers request journals, saved DXF readback and dependent writes after interruption.
 
 ## Surface and mesh recovery
 

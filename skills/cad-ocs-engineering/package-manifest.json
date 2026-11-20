@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "646e2b6759740722e3b972e16dc3b6f928cc43a447d95ac022b743469fbe857e"
+      "sha256": "8e30068d5f3fe55af62806ea72abf6281a9b10aca2d6891586a3bfd8c9694a34"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -116,7 +116,7 @@
     },
     "references/insertion-resume-verification.md": {
       "source": "references/insertion-resume-verification.md",
-      "sha256": "e4323b8b1dd9a57b2f4640b47df5c28b6414adb4cb67dcd0aa3eabadf13874ae"
+      "sha256": "713a9e094af53147aa8db042e5be63d9bada3775062a35ce66de41b49bac84a8"
     },
     "references/job-history-archive.md": {
       "source": "references/job-history-archive.md",
@@ -289,6 +289,10 @@
     "scripts/batch_dxf_lines.py": {
       "source": "scripts/batch_dxf_lines.py",
       "sha256": "c03a00644ea54fcc8aff0c604daa5be735f7cbf5b6050f648cf1defd5d50b1a3"
+    },
+    "scripts/batch_insert_recovery.py": {
+      "source": "scripts/batch_insert_recovery.py",
+      "sha256": "fa8b723dd8a804328f102af28d4d9a3483b3c353a12335efd3732dae6ce87e31"
     },
     "scripts/batch_request.py": {
       "source": "scripts/batch_request.py",
