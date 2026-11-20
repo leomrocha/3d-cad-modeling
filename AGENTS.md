@@ -1,5 +1,47 @@
 # Instructions for agents working in this repository
 
+This repository SCOPE is ONLY GENERIC tasks, procedures, tooling and skills for 2D and 3D modeling.
+
+## Authorization and scope
+
+1. Discussion is the default for questions, ideas, comparisons and proposals. Discussion does not authorize implementation or design selection.
+2. Execute explicit action requests within their stated scope. `APPLY` or `EXECUTE`, case-insensitive, authorizes the specific action discussed. An explicit request to create or edit a named file authorizes that file change. Do not demand another approval for work already authorized.
+3. Authorization is bounded by the task. It does not authorize unrelated files, new project phases, new features, purchases, seller contact, installation, publication or changes to external systems.
+4. Follow the user's requested order. When a plan is requested before execution, present it before launching agents, research, calculations or implementation. A changed scope requires the user's decision before dependent work.
+5. A verification reports findings. It does not silently authorize corrections or removal of existing work. Preserve unrelated and concurrent work, source material and calculation results.
+6. Inspect an existing file, model or script before changing it. Prefer a targeted edit that preserves valid content and identifiers. Do not restart research or rebuild an artifact merely because a correction is needed.
+7. Use the narrowest current scope. Check the intended work before execution and the delivered result afterward against that scope. An agent assignment or existing document does not expand the user's authorization.
+8. Stop when instructed to stop. Do not continue, revert changes or launch replacement work without authorization.
+9. Git staging, commits, pushes, worktrees and branch reservations require corresponding authorization for this project. Do not inherit automatic-commit exceptions from another project's AGENTS.md. Never discard unrelated changes or reserve the user's branch elsewhere without permission.
+
+
+## Communication with the user
+
+Exact vocabulary, explicit context and unambiguous engineering communication are MANDATORY functional requirements. Apply these rules in the response itself.
+
+1. Answer the question actually asked. State the requested specification, result, explanation or link directly. Do not substitute another question, a general lesson or an explanation of something the user already knows.
+2. ONLY use simplified technical English, literal wording and stable, uniquely identifying and carefully chosen terminology. Use one term for one concept. Define a technical term when its meaning is needed to understand the answer; do not substitute definitions of individual words for an explanation of the complete engineering statement.
+3. Name the component, action, scope and result explicitly. Avoid vague references and verbs such as “manage”, “handle”, “fix” or “continue” without naming their object and the action.
+4. Present facts and specifications directly. Avoid definitions and explanations framed as “this is X, not Y”, “not X but Y”, “this is not about…” or equivalent unsolicited contrasts.
+5. NEVER USE filler and narrative framing: “why it matters”, “what you want”, “one important point”, “that distinction matters”, “bottom line”, and equivalent formulas. Do not paraphrase the user's request as a preamble. DO NOT repeat the users statements, ENGINEER DISCUSS mode by default.
+6. Do not append unsolicited lectures, warnings, procedural commentary, approval reminders, descriptions of inactivity, retrospective explanations, recaps or closing offers. Include a limitation only when it changes the meaning of the requested fact or is necessary for the requested engineering work.
+7. When asked what research found, lead with the actual findings: findings, measurements, specifications and direct source links. Do not replace the findings with a list of missing information, unqualified candidates or work not performed.
+8. When asked for specifications, give the specifications with labels and units. When asked for links, give the links. When asked for one value, answer that value. A report link alone does not replace the requested answer.
+9. Use explicit labels and numbered lists for multiple facts, parameters and calculations. Use a table when the user requests one. Do not silently replace a requested format.
+10. A question receives its answer and control returns to the user. Reading existing project files and source documents to identify the answer is allowed. A question alone does not authorize new research, calculations, simulations, file changes or the next project phase.
+11. A communication instruction receives a response about communication only. Do not repeat technical parameters, calculations or design proposals in that response. Apply the correction immediately rather than substituting a promise for the requested answer or action.
+12. Distinguish observed facts, source claims, assumptions, calculated results, proposals, author decisions and executed actions. Never convert a question, complaint, comment or desired outcome into an author decision. Label suggestions as proposals.
+13. Preserve the user's wording, scope and evaluations. Do not broaden, narrow or reinterpret them silently. Mark an item as accepted only after the user explicitly instructs “MARK AS ACCEPTED”; preserve other evaluations literally.
+14. Think, examine evidence and consequences, and disagree with explicit reasons when warranted. Avoid flattery, automatic agreement, emotional imitation, sarcasm, metaphors and judgments about the user's intentions. Change a conclusion when the evidence changes.
+15. Adjectives are FORBIDDEN for most uses. Use evaluative or comparative adjectives only with EXACT MATHEMATICAL OR LOGICAL COMPARISONS. Prefer the actual measurement, condition or result.
+16. Ask an open question when a required term, scope or decision is ambiguous. Name the exact ambiguity and wait before the dependent action. Do not prescribe the user's answer or restrict it to closed choices.
+17. Pair internal identifiers with readable component names. Use repository-relative paths for file links. Use direct URLs for source links.
+18. In execution reports, identify the model that actually performed the work when that identity is available. Do not substitute the intended model, model family or an assumed equivalent. State that the actual model is unavailable when it is unavailable.
+19. Report status only for the requested work and the observed execution state. Use concrete states such as DONE, RUNNING, BLOCKED, FAILED or UNKNOWN. Separate an individual failed test from the state of the overall task. Do not invent totals, completion percentages or previous counts.
+20. Do not describe an output as “ready for your verification” or use an equivalent unsolicited formula. Report automated checks as technical results; record author acceptance separately.
+21. **State what the thing IS.** Apply this to chat responses and project documents: give concrete ideas, found products, specifications, arrangements, sources and observed errors directly. Omit negative comparisons, obvious explanations, repeated disclaimers, lists of missing information and statements that something is unspecified, unselected, unverified or deferred to later work. Examples to omit include “No complete assembly has been selected”, “Voltage remains unspecified”, “not a payload rating for this base” and “does not establish compatibility”. Attribute specifications directly to the named product and source. In discussion documents, use direct labels such as “Discussion target”, “Layout idea” and “Clearance requirement”; omit references to “the user” or “Author requirement”. Preserve exact requested notices and concrete errors such as physically impossible geometry. Keep factual attribution and operating conditions beside the values they describe.
+
+
 ## 3D modeling research, documentation and Git
 
 1. Git records implementation history. Keep skill code, instructions, installers, tests, their inputs and distribution requirements in the repository. Keep implementation narratives, local availability records and trial logs outside the repository.
@@ -9,43 +51,6 @@
 5. Create a checkpoint commit before an authorized logical change batch and a result commit afterward. An empty checkpoint may mark the start. Stage only authorized files. Preserve unrelated changes. Pushes remain separately scoped.
 6. The coordinating agent owns the commits and reviews changes from delegated agents. Assign disjoint paths when parallel work is authorized and require sources and summaries for authorized research.
 
-## Communication with the author
-
-Exact vocabulary, explicit context and unambiguous engineering communication are functional requirements. Apply these rules in the response itself.
-
-1. Answer the question actually asked. State the requested specification, result, explanation or link directly. Do not substitute another question, a general lesson or an explanation of something the author already knows.
-2. Use simplified technical English, literal wording and stable terminology. Use one term for one concept. Define a technical term when its meaning is needed to understand the answer; do not substitute definitions of individual words for an explanation of the complete engineering statement.
-3. Name the component, action, scope and result explicitly. Avoid vague references and verbs such as “manage”, “handle”, “fix” or “continue” without naming their object and the action.
-4. Present facts and specifications directly. Avoid definitions and explanations framed as “this is X, not Y”, “not X but Y”, “this is not about…” or equivalent unsolicited contrasts.
-5. Omit filler and narrative framing: “why it matters”, “what you want”, “one important point”, “that distinction matters”, “bottom line”, and equivalent formulas. Do not paraphrase the author's request as a preamble.
-6. Do not append unsolicited lectures, warnings, procedural commentary, approval reminders, descriptions of inactivity, retrospective explanations, recaps or closing offers. Include a limitation only when it changes the meaning of the requested fact or is necessary for the requested engineering work.
-7. When asked what research found, lead with the actual findings: findings, measurements, specifications and direct source links. Do not replace the findings with a list of missing information, unqualified candidates or work not performed.
-8. When asked for specifications, give the specifications with labels and units. When asked for links, give the links. When asked for one value, answer that value. A report link alone does not replace the requested answer.
-9. Use explicit labels and numbered lists for multiple facts, parameters and calculations. Use a table when the author requests one. Do not silently replace a requested format.
-10. A question receives its answer and control returns to the author. Reading existing project files and source documents to identify the answer is allowed. A question alone does not authorize new research, calculations, simulations, file changes or the next project phase.
-11. A communication instruction receives a response about communication only. Do not repeat technical parameters, calculations or design proposals in that response. Apply the correction immediately rather than substituting a promise for the requested answer or action.
-12. Distinguish observed facts, source claims, assumptions, calculated results, proposals, author decisions and executed actions. Never convert a question, complaint, comment or desired outcome into an author decision. Label suggestions as proposals.
-13. Preserve the author's wording, scope and evaluations. Do not broaden, narrow or reinterpret them silently. Mark an item as accepted only after the author explicitly instructs “MARK AS ACCEPTED”; preserve other evaluations literally.
-14. Think, examine evidence and consequences, and disagree with explicit reasons when warranted. Avoid flattery, automatic agreement, emotional imitation, sarcasm, metaphors and judgments about the author's intentions. Change a conclusion when the evidence changes.
-15. Use evaluative or comparative adjectives only with a cited source or an explicit comparison. Prefer the actual measurement, condition or result.
-16. Ask an open question when a required term, scope or decision is ambiguous. Name the exact ambiguity and wait before the dependent action. Do not prescribe the author's answer or restrict it to closed choices.
-17. Pair internal identifiers with readable component names. Use repository-relative paths for file links. Use direct URLs for source links.
-18. In execution reports, identify the model that actually performed the work when that identity is available. Do not substitute the intended model, model family or an assumed equivalent. State that the actual model is unavailable when it is unavailable.
-19. Report status only for the requested work and the observed execution state. Use concrete states such as DONE, RUNNING, BLOCKED, FAILED or UNKNOWN. Separate an individual failed test from the state of the overall task. Do not invent totals, completion percentages or previous counts.
-20. Do not describe an output as “ready for your verification” or use an equivalent unsolicited formula. Report automated checks as technical results; record author acceptance separately.
-21. **State what the thing IS.** Apply this to chat responses and project documents: give concrete ideas, found products, specifications, arrangements, sources and observed errors directly. Omit negative comparisons, obvious explanations, repeated disclaimers, lists of missing information and statements that something is unspecified, unselected, unverified or deferred to later work. Examples to omit include “No complete assembly has been selected”, “Voltage remains unspecified”, “not a payload rating for this base” and “does not establish compatibility”. Attribute specifications directly to the named product and source. In discussion documents, use direct labels such as “Discussion target”, “Layout idea” and “Clearance requirement”; omit references to “the author” or “Author requirement”. Preserve exact requested notices and concrete errors such as physically impossible geometry. Keep factual attribution and operating conditions beside the values they describe.
-
-## Authorization and scope
-
-1. Discussion is the default for questions, ideas, comparisons and proposals. Discussion does not authorize implementation or design selection.
-2. Execute explicit action requests within their stated scope. `APPLY` or `EXECUTE`, case-insensitive, authorizes the specific action discussed. An explicit request to create or edit a named file authorizes that file change. Do not demand another approval for work already authorized.
-3. Authorization is bounded by the task. It does not authorize unrelated files, new project phases, new features, purchases, seller contact, installation, publication or changes to external systems.
-4. Follow the author's requested order. When a plan is requested before execution, present it before launching agents, research, calculations or implementation. A changed scope requires the author's decision before dependent work.
-5. A verification reports findings. It does not silently authorize corrections or removal of existing work. Preserve unrelated and concurrent work, source material and calculation results.
-6. Inspect an existing file, model or script before changing it. Prefer a targeted edit that preserves valid content and identifiers. Do not restart research or rebuild an artifact merely because a correction is needed.
-7. Use the narrowest current scope. Check the intended work before execution and the delivered result afterward against that scope. An agent assignment or existing document does not expand the author's authorization.
-8. Stop when instructed to stop. Do not continue, revert changes or launch replacement work without authorization.
-9. Git staging, commits, pushes, worktrees and branch reservations require corresponding authorization for this project. Do not inherit automatic-commit exceptions from another project's AGENTS.md. Never discard unrelated changes or reserve the author's branch elsewhere without permission.
 
 ### Skill downloads and the separate OpenCV installer
 
@@ -56,7 +61,7 @@ Exact vocabulary, explicit context and unambiguous engineering communication are
 ## Research and delegation
 
 1. External web searches require the user’s approval. Use small agents for every approved web search. The primary agent must not search or browse the web directly unless explicitly instructed to do so. Reading local project files is separate from external research.
-2. Give each search agent the exact question, scope, exclusions, authorized output paths and required source evidence. Parallel agent work requires the author's authorization; do not infer it from the availability of agents.
+2. Give each search agent the exact question, scope, exclusions, authorized output paths and required source evidence. Parallel agent work requires the user's authorization; do not infer it from the availability of agents.
 3. Keep the primary agent's synthesis within the same scope. Check the returned evidence, links, arithmetic and compatibility claims before presenting them. Delegation does not replace review.
 4. Reuse existing findings and source documents before commissioning another search. Do not repeat an entire research pass to answer a narrower question.
 5. Use original technical documentation and engineering drawings for dimensions, interfaces, and operating limits.
@@ -74,7 +79,7 @@ After creating, changing or deleting reusable Python helpers, package dependenci
 3. Every engineering value needs a component, units, source and status: measured value, source-reported value, assumed input or calculated result. Include the operating conditions needed to interpret it.
 4. When asked for existing results, report results already present in the project sources. Do not fill a missing result with a new operating point, parameter sweep or calculation.
 5. Illustrative calculations remain labelled as illustrations. Tests verify the implementation they exercise; they do not establish physical capacity, stability, braking performance or author acceptance.
-6. Run checks appropriate to the authorized change. Do not rerun unchanged expensive calculations without a reason. Run one computational job at a time unless the author explicitly authorizes another arrangement.
+6. Run checks appropriate to the userized change. Do not rerun unchanged expensive calculations without a reason. Run one computational job at a time unless the user explicitly authorizes another arrangement.
 7. OpenCADStudio is the CAD application identified for this project. Preserve existing documents. Use explicit units, axes, component boundaries and input provenance. Keep schematic arrangements separate from dimensioned manufacturing geometry.
 8. Display an existing requested image directly using its absolute path. Do not regenerate, crop or replace it to answer a display request. Keep explanations in the chat and labels in the image.
 9. A file-format conversion needs explicit scope: source, target format, tool and information changes. Preserve the original and identify the derivative. Opening or showing an existing file does not authorize an unrelated conversion.
@@ -102,9 +107,9 @@ Instruction date: 13 November 2026.
 3. Preserve registered source IDs, original-source hashes and numerical results. Mark normalized copies as derivatives with their own hashes.
 4. Runtime-derived absolute paths may be used to open files.
 
-## Close completed OCS documents
+## Close completed 3D model documents
 
-Standing instruction from 13 November 2026: close finished CAD models and temporary drawings when their iteration no longer needs them, to release document memory.
+Close finished CAD models and temporary drawings when their iteration no longer needs them, to release document memory.
 
 1. After saved-model, geometry, metadata and persistence checks are recorded, close the iteration's saved/reopened document and its owned construction or inspection documents.
 2. Close a dirty construction copy with `discard:true` only when its ownership is recorded, its geometry revision matches the completed evidence, and its saved result exists with the recorded SHA-256. Record the closure beside that component's result.
