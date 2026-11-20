@@ -78,8 +78,7 @@ When I see things are ready enough, I send the automated 3D modeling pipeline to
 1. `docs/` — linked documentation, selected example copies and images.
 2. `skills/` — agent task instructions.
 3. `scripts/` and `tests/` — reusable helpers and their checks.
-4. `research/` — method assessments, workflow definitions and sources.
-5. `execution/` — reusable trial scripts, fixtures and component evidence.
+4. `execution/` — reusable trial scripts, fixtures and component evidence.
 
 ## Examples
 

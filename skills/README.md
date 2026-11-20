@@ -57,7 +57,7 @@ The following catalogue records external candidates and proposed workflow groups
 | [Foster1202/cad-modeling-fusion-skill](https://github.com/Foster1202/cad-modeling-fusion-skill) | ModelSpec schema and code-generation patterns with Fusion, FreeCAD and OpenSCAD backends | Assess reusable schema and open-backend content under its licence. Use the open software backends for this project. |
 | Blender workflow skills and MCP bridges | Scene/mesh authoring and interactive inspection | Compare reviewed bridges with native `bpy` scripts. Match each bridge's supported Blender version to the installed version. |
 
-Detailed source, licence and dependency assessments: [CAD and skills](../research/cad-and-skills.md). Original archived candidate files remain in `${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/skills/` with the existing research manifests.
+Original archived candidate files remain in `${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/skills/` with the existing research manifests.
 
 ## Proposed project workflows
 
@@ -77,13 +77,9 @@ Detailed source, licence and dependency assessments: [CAD and skills](../researc
 14. `component-library` — component search, provenance, versioning, placement and reuse.
 15. `model-verification` — numeric checks, save/reopen and importer comparisons.
 
-The [implementation plan](../research/implementation-plan.md) defines each workflow's purpose, supporting software, inputs, deliverables and validation sequence. During implementation, package each exercised workflow with its `SKILL.md`, scripts, references and fixtures. Reuse the existing OCS contract across reconstruction and CAD handoffs.
+During implementation, package each exercised workflow with its `SKILL.md`, scripts, references and fixtures. Reuse the existing OCS contract across reconstruction and CAD handoffs.
 
-The [workflow operation catalogue](../research/workflows/operation-catalogue.md) maps the proposed skills to source-backed transformations and combined routes. The [source register](../research/sources/source-register.md) and [ideas register](../research/ideas-register.md) retain the original links, summaries and alternative proposals.
-
-## Detailed action and helper contracts
-
-The [skill-to-action map](../research/action-audit/skill-to-actions.md) links the fifteen catalogue entries to all 77 audited operations. Each operation's action records state proposed helper inputs/outputs, existing API dependencies, software and agent decisions, validation cases and recovery. The [workflow-to-action index](../research/action-audit/workflow-to-actions.md) preserves the original 38 routes and their ordered steps. The existing OCS skill retains its documented capability; the map records proposed packaging and supported-backend conditions.
+Choose a modeling operation using the [operation selection procedure](../docs/modeling-operation-selection.md).
 
 ## Component-driven implementation
 
@@ -99,8 +95,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 ## Continuing iterations and repository ownership
 
 1. Implemented shared procedures include component iteration, source intake, drawing inspection and existing-model checking. The fifteen workflow groups above retain their recorded proposal/implementation status.
-2. [Modeling-agent instructions](../research/repository-split-preparation/modeling-agent-instructions.md) define output routing: component recipes/evidence in FERME; shared helper/skill improvements here. Preserve active paths while historical migration is prepared.
-3. [Script-change specification](../research/repository-split-preparation/script-changes.md) records the external cadtools dependency, component recipe extraction and integration-test changes proposed for migration.
+2. Keep component recipes and evidence in FERME and shared helpers and skills here.
 
 ## Circular opening inspection
 

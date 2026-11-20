@@ -1,7 +1,7 @@
 # Modeling and inspection scripts
 
 1. Purpose: shared code for source records, part-index access, existing-model lookup, DXF inspection, native geometry checks and parameterized construction.
-2. Ownership: shared functions remain here. FERME owns component recipes, dimensions, originals, models and job outputs. Proposed relocations and dependency changes: [script-change plan](../research/repository-split-preparation/script-changes.md).
+2. Ownership: shared functions remain here. FERME owns component recipes, dimensions, originals, models and job outputs.
 3. Dependencies: [requirements-native.txt](../requirements-native.txt) pins native-reader packages. OCS construction imports the local `scripts/cadtools` modules and uses `scripts/ocs_control.py`. Installed skills carry generated copies and their own `requirements.txt`. [Package maintenance](../docs/skill-packaging.md).
 4. Inputs: provide the actual external project index, work index, job, CAD root and source paths. Outputs: component inspection/build records and models go to FERME; a tooling self-test writes its own tooling evidence here. The [tools catalogue](../docs/tools.md) lists every current Python helper and its purpose.
 5. `part_index.py --index PATH --id ID` searches an index; `component_records.py JOB.json` reports source readiness. Both print JSON.

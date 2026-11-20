@@ -1,6 +1,6 @@
 """Generic runtime and persistence tests reused from the original cadtools suite.
 
-Provenance and original hash: research/sources/skill-packaging-2026-11-13.json.
+Runtime attribution is in scripts/cadtools/NOTICE.md.
 Component dictionaries, recipes and retained project data stay in their owner.
 """
 import json

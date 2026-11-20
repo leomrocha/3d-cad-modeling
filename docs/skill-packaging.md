@@ -27,7 +27,7 @@ The [installation examples](../README.md#installing) select an agent and project
 
 ## Runtime ownership
 
-Generic `cadtools` runtime, geometry and persistence functions are maintained here. The existing component-project copies remain intact for current callers. Component recipes, dimensions, model files, source originals and job results retain their owning project. [Runtime provenance](../scripts/cadtools/NOTICE.md). [Migration update](../research/repository-split-preparation/script-changes.md#independent-skill-packaging).
+Generic `cadtools` runtime, geometry and persistence functions are maintained here. The existing component-project copies remain intact for current callers. Component recipes, dimensions, model files, source originals and job results retain their owning project. [Runtime provenance](../scripts/cadtools/NOTICE.md).
 
 Package and dependency checks establish software execution and retained bytes. Component geometry and saved-file checks are recorded by their own modeling job.
 
@@ -43,7 +43,7 @@ Package and dependency checks establish software execution and retained bytes. C
 2. The package retains the component procedures, generic helpers, tests and source checks developed here. It also includes the original OCS control, computational-engineering and capability references and adapted agent metadata.
 3. The former `component-cad` package is now `cad-ocs-engineering`. Merge inventory and verification (`git show 957691b:execution/cad-ocs-engineering-merge-2026-11-13.md`).
 
-The dated merge comparison can be rechecked with `VERIFY_OCS_MERGE_SNAPSHOT=1 python -m unittest discover -s tests -p test_ocs_skill_merge.py`. It validates the retained snapshot; ordinary component improvements keep their own current checks and evidence.
+Run `python3 -m unittest discover -s tests -p test_ocs_skill_merge.py` to check the CAD skill identity and documentation paths.
 
 ## Translator ownership
 
