@@ -155,3 +155,5 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Optional OpenCV setup](cad-opencv-setup/SKILL.md) qualifies a selected interpreter for the image operations in drawing inspection and source intake.
 
 [Source intake](cad-source-intake/SKILL.md) can run a supplied local SAM checkpoint with box or point prompts and preserve the earlier mask when correcting an instance.
+
+[Two-photo measurement and learned-mesh readback](cad-ocs-engineering/references/source-view-evidence.md#two-product-photos-and-a-learned-mesh) covers camera sensitivity, independent dimensions and geometric checks after an edit.
