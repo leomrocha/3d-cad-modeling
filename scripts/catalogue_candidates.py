@@ -101,23 +101,32 @@ def search_saved(catalogue_path, query, *, include_record=None):
         if not available:
             continue
         name = resource["id"]
-        method = next((method for method in available
-                       if checked.get((name, method["name"]), {}).get("usable")), None)
-        if method is None:
+        methods = [method for method in available
+                   if checked.get((name, method["name"]), {}).get("usable")]
+        if not methods:
             reasons = [checked.get((name, method["name"]), {}).get("reason") for method in available]
             sources[name] = {"error": "; ".join(filter(None, reasons)) or "Parts source has no usable search method"}
             continue
-        try:
-            sources[name] = lookup(
-                Path(method["search_cli"]), Path(resource["location"]), query,
-                include_record=include_record,
-                interpreter=resource.get("python") or sys.executable,
-            )
-            for candidate in sources[name]['candidates']:
-                if candidate.get('file'):
-                    candidate['locator'] = '${' + parts_root_name(name) + '}/' + candidate['file']
-        except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as error:
-            sources[name] = {"error": str(error)}
+        errors = []
+        for method in methods:
+            try:
+                result = lookup(
+                    Path(method["search_cli"]), Path(resource["location"]), query,
+                    include_record=include_record,
+                    interpreter=resource.get("python") or sys.executable,
+                )
+                for candidate in result["candidates"]:
+                    if candidate.get("file"):
+                        candidate["locator"] = '${' + parts_root_name(name) + '}/' + candidate['file']
+            except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as error:
+                errors.append(method["name"] + ": " + str(error))
+                continue
+            if errors:
+                result["method_errors"] = errors
+            sources[name] = result
+            break
+        else:
+            sources[name] = {"error": "; ".join(errors)}
     return sources
 
 

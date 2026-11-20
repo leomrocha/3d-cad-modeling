@@ -193,7 +193,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Modeling feature delivery
 
 - [Find single-row deep-groove ball bearings by sourced designation, closure and side count](../scripts/bearing_variant.py)
-- [Generate and check an ISO 4017 screw](../scripts/standard_screw.py)
+- [standard_screw.py](../scripts/standard_screw.py) checks ISO 4017 screw variants against reviewed dimensions. It returns a catalogue asset or its length parameter when qualified, or generates and checks a cosmetic-thread STEP.
 - [Fuse registered RGB-D surface measurements](../scripts/rgbd_surface.py)
 - [Recover metric stereo depth and compare material regions](../scripts/registered_stereo.py)
 - [Reconstruct and align camera locations](../scripts/camera_reconstruction.py)

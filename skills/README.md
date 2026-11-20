@@ -129,4 +129,4 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 
 Model workflows require existing local files or a user-supplied service with the model already loaded. Skill installation and execution must never fetch models.
 
-[Installed modeling operations](cad-ocs-engineering/references/modeling-input-operations.md) gives runtime inputs and outputs for family generation, geometry retrieval, feature recovery, editable sequences and metric reconstruction.
+[Installed modeling operations](cad-ocs-engineering/references/modeling-input-operations.md) gives runtime inputs and outputs for family generation, geometry retrieval, feature recovery, editable sequences and metric reconstruction. [Standard screw selection and generation](cad-ocs-engineering/references/modeling-input-operations.md#a-missing-standard-fastener) covers reviewed ISO 4017 rows, catalogue reuse, exposed length parameters and cosmetic-thread STEP generation.
