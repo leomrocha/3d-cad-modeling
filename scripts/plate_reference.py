@@ -1,6 +1,6 @@
 """Parameterized native plate operations. Coordinates mm, rotations degrees."""
 import math
-from cadtools.geometry import Geometry, vector, positive
+from cadtools.geometry import Geometry, vector, positive, finite
 from rounded_tube import SelectionCheckedClient
 from profile_reference import validate_profile
 from feature_checks import closed_body, vertex_extrema, cylinder_pattern, comparison
@@ -51,6 +51,24 @@ def cylinder_cutter(g,label,axis,centre,diameter,span,overrun):
     raise ValueError('Cartesian cutter axis required')
 
 
+def countersink_tool_profile(*, bore, mouth, angle_degrees, inner_radius, overrun):
+    """Return the annular cutter in (radius, axial distance from transition)."""
+    for value in (bore, mouth, inner_radius, overrun):
+        positive(value)
+    angle = finite(angle_degrees)
+    if mouth <= bore or not 0 < angle < 180:
+        raise ValueError('A larger mouth and an included angle in (0, 180) are required')
+    slope = math.tan(math.radians(angle / 2))
+    depth = (mouth - bore) / (2 * slope)
+    radial_overrun = overrun * slope
+    if bore / 2 - radial_overrun <= inner_radius:
+        raise ValueError('Cutter lower outer radius must clear the inner radius')
+    return dict(depth_mm=depth, profile=[
+        [inner_radius, -overrun], [bore / 2 - radial_overrun, -overrun],
+        [mouth / 2 + radial_overrun, depth + overrun], [inner_radius, depth + overrun],
+    ])
+
+
 def build_plate(client,spec,*,label='plate'):
     """Consume a caller recipe; return body and owned handles. Run no save/cleanup."""
     bounds=spec['sketch_bounds'];points=spec['outline'];bulges=spec.get('bulges',{})
@@ -94,22 +112,39 @@ def native_features(client,handle,**options):
     return sab_features(bytes(row['properties']['acis_data']['sab_data']),**options),identity
 
 
-def cut_sidewalls(client,body,*,axis,centre,diameter,intervals,label):
-    """Cut explicitly bounded wall intervals; cavity equivalence is a caller input."""
-    if not intervals:raise ValueError('Explicit material wall intervals required')
-    if axis not in (0,1,2):raise ValueError('Cartesian axis required')
-    vector(centre,2);positive(diameter)
-    for lo,hi in intervals:positive(hi-lo)
-    ordered=sorted(intervals)
-    if any(b[0]<a[1] for a,b in zip(ordered,ordered[1:])):raise ValueError('Disjoint wall cutter intervals required')
-    g=Geometry(SelectionCheckedClient(client))
-    p,q=centre
-    for i,(lo,hi) in enumerate(intervals):
-        key=label+'-'+str(i)
-        if axis==0:
-            cut=g.cylinder(key,[-q,p,lo],diameter/2,hi-lo);g.rotate(key+'-axis',[cut],'Y',90)
-        elif axis==1:
-            cut=g.cylinder(key,[p,-q,lo],diameter/2,hi-lo);g.rotate(key+'-axis',[cut],'X',-90)
-        else:cut=g.cylinder(key,[p,q,lo],diameter/2,hi-lo)
-        g.subtract(key+'-subtract',body,[cut])
+def cut_sidewalls(client, body, *, axis, centre, diameter, intervals, label, checkpoint=None):
+    """Cut bounded wall intervals, optionally saving each completed native stage.
+
+    The caller establishes cavity equivalence and can pass a checkpoint
+    callback receiving the stage name and only the live owned handles.
+    """
+    if not intervals:
+        raise ValueError('Explicit material wall intervals required')
+    if axis not in (0, 1, 2):
+        raise ValueError('Cartesian axis required')
+    if checkpoint is not None and not callable(checkpoint):
+        raise TypeError('Sidewall checkpoint must be callable')
+    p, q = vector(centre, 2)
+    positive(diameter)
+    for lo, hi in intervals:
+        positive(hi - lo)
+    ordered = sorted(intervals)
+    if any(b[0] < a[1] for a, b in zip(ordered, ordered[1:])):
+        raise ValueError('Disjoint wall cutter intervals required')
+    geometry = Geometry(SelectionCheckedClient(client))
+    rotations = (('Y', 90), ('X', -90), None)
+    for index, (lo, hi) in enumerate(intervals):
+        key = f'{label}-{index}'
+        origins = ([-q, p, lo], [p, -q, lo], [p, q, lo])
+        cutter = geometry.cylinder(key, origins[axis], diameter / 2, hi - lo)
+        if checkpoint is not None:
+            checkpoint(key + '-cutter', (body, cutter))
+        rotation = rotations[axis]
+        if rotation is not None:
+            geometry.rotate(key + '-axis', [cutter], *rotation)
+            if checkpoint is not None:
+                checkpoint(key + '-aligned', (body, cutter))
+        geometry.subtract(key + '-subtract', body, [cutter])
+        if checkpoint is not None:
+            checkpoint(key + '-wall', (body,))
     return body

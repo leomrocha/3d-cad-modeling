@@ -3,7 +3,7 @@ import sys
 import unittest
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from step_placements import eye, inverse, native_fields
+from step_placements import eye, inverse, native_fields, native_matrix, near
 from assembly_repair import apply_source_placements
 
 
@@ -63,6 +63,33 @@ class RepairTests(unittest.TestCase):
         rows, plan = fixture(); c = Client(rows); c.corrupt_readback = True
         with self.assertRaisesRegex(ValueError, 'readback differs'): apply_source_placements(c, plan, rows)
         self.assertEqual(c.writes, ['source-placement-A'])
+    def test_rotated_y_reflection_keeps_signed_scale(self):
+        rows, plan = fixture()
+        original = rows[0]['properties']
+        original['y_scale'] = -1
+        target = [[1,0,0,14],[0,0,1,-12],[0,1,0,28],[0,0,0,1]]
+        plan[0].update(before=native_matrix(original,allow_unit_reflection=True),
+                       expected=target,fields=native_fields(target))
+        c = Client(rows)
+        with self.assertRaisesRegex(ValueError,'Positive finite'):
+            apply_source_placements(c, plan, rows)
+        self.assertEqual(c.writes, [])
+        result = apply_source_placements(c, plan, rows, allow_unit_reflection=True)
+        placed = c.rows['A']['properties']
+        self.assertEqual(result['result'], 'PASS')
+        self.assertEqual(placed['y_scale'], -1)
+        self.assertTrue(near(native_matrix(placed,allow_unit_reflection=True),target))
+
+    def test_reflection_mode_rejects_changed_handedness_before_write(self):
+        rows, plan = fixture()
+        original = rows[0]['properties']
+        original['y_scale'] = -1
+        plan[0]['before'] = native_matrix(original,allow_unit_reflection=True)
+        c = Client(rows)
+        with self.assertRaisesRegex(ValueError,'fields differ'):
+            apply_source_placements(c, plan, rows, allow_unit_reflection=True)
+        self.assertEqual(c.writes, [])
+
     def test_changed_solid_definition_detected(self):
         rows, plan = fixture(); c = Client(rows)
         c.rows['C']['properties']['acis_data']['sat_data'] = 'changed'

@@ -6,7 +6,7 @@ are dimensionless; translation and point tolerances use the length unit.
 import math
 from cadtools.geometry import finite,vector
 from solid_transfer import verify_solid_transfer
-from step_placements import solid_instances
+from step_placements import apply, solid_instances
 
 
 def _tolerance(value):
@@ -43,6 +43,33 @@ def _matrix(m):
         for v in row:finite(v)
     if list(m[3])!=[0,0,0,1]:raise ValueError('Affine placement last row required')
     return m
+
+
+def check_axis_aligned_placement(local_bounds, target_bounds, matrix, *, length_tolerance):
+    """Check corner-to-corner bounds for a signed axis permutation and translation."""
+    tolerance = _tolerance(length_tolerance)
+    matrix = _matrix(matrix)
+    basis = [list(row[:3]) for row in matrix[:3]]
+    if (any(value not in (-1, 0, 1) for row in basis for value in row)
+            or any(sum(abs(value) for value in row) != 1 for row in basis)
+            or any(sum(abs(value) for value in column) != 1
+                   for column in zip(*basis))):
+        raise ValueError('Exact signed axis permutation required')
+    boxes = []
+    for bounds in (local_bounds, target_bounds):
+        if len(bounds) != 2:
+            raise ValueError('Lower and upper three-dimensional bounds required')
+        low, high = (vector(point) for point in bounds)
+        if any(a >= b for a, b in zip(low, high)):
+            raise ValueError('Positive box extents required')
+        boxes.append((low, high))
+    (low, high), target = boxes
+    corners = [apply(matrix, [x, y, z]) for x in (low[0], high[0])
+               for y in (low[1], high[1]) for z in (low[2], high[2])]
+    observed = [[fn(point[i] for point in corners) for i in range(3)] for fn in (min, max)]
+    errors = [[observed[i][j] - target[i][j] for j in range(3)] for i in range(2)]
+    return dict(result='PASS' if all(abs(error) <= tolerance for row in errors for error in row) else 'FAIL',
+                observed_bounds=observed, target_bounds=target, coordinate_errors=errors)
 
 
 def compare_occurrence_matrices(source,target,bindings,*,translation_tolerance,linear_tolerance):

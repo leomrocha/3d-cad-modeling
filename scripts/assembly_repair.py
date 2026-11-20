@@ -8,7 +8,14 @@ journalling and same-request recovery; an exception preserves partial results.
 from step_placements import native_matrix, native_fields, near
 
 
-def apply_source_placements(client, changes, original_records):
+def apply_source_placements(client, changes, original_records, *, allow_unit_reflection=False):
+    """Apply rigid placements, optionally preserving an existing unit Y reflection."""
+    if type(allow_unit_reflection) is not bool:
+        raise ValueError('Explicit boolean reflection mode required')
+
+    def decode(properties):
+        return native_matrix(properties, allow_unit_reflection=allow_unit_reflection)
+
     if not changes:
         raise ValueError('A reviewed nonempty placement plan is required')
     originals = {r['handle']: r for r in original_records}
@@ -24,10 +31,14 @@ def apply_source_placements(client, changes, original_records):
         original = originals[handle]
         if original['type'] != 'Insert':
             raise ValueError('Placement repair requires native insert records')
-        if not near(native_matrix(original['properties']), item['before']):
+        props=original['properties']
+        if allow_unit_reflection and (props['x_scale']!=1 or props['z_scale']!=1 or props['y_scale'] not in (-1,1)):
+            raise ValueError('Expected positive X/Z and a signed unit Y scale')
+        if not near(decode(props), item['before']):
             raise ValueError('Plan baseline differs from original record')
         fields = native_fields(item['expected'])
-        if not near(native_matrix(dict(original['properties'], **item['fields'])), item['expected']):
+        if (not near(decode(dict(props, **item['fields'])), item['expected'])
+                or not near(decode(dict(props, **fields)), item['expected'])):
             raise ValueError('Planned fields differ from source target')
         actual = client.read('records', collection='entities', handles=[handle], limit=1)['records'][0]
         if actual['properties'] != original['properties']:
@@ -41,7 +52,7 @@ def apply_source_placements(client, changes, original_records):
         client.mutate('source-placement-' + handle, 'set_properties',
                       collection='entities', handle=handle, updates=updates)
         actual = client.read('records', collection='entities', handles=[handle], limit=1)['records'][0]
-        if not near(native_matrix(actual['properties']), item['expected']):
+        if not near(decode(actual['properties']), item['expected']):
             raise ValueError('Native placement readback differs: ' + handle)
         observations.append({'handle': handle, 'source_id': item['source_id'],
                              'result': 'PASS', 'record': actual})

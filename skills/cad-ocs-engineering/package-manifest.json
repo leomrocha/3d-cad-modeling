@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "f619126e995ab925791ae2765523aab74138058866c3e55305313a16c6314da5"
+      "sha256": "5ffe52c81da89541aa40d4f8167621a47472cc164efaea1a18b6bd41fc7a49e6"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "19984f94b1abbedfccabec0cb277716de1f1654f84372c408e473693b3a7b7b8"
+      "sha256": "12f7aa4424797bc98e9d06439b82bd7986c8004efdeb3ade98a0ba50b5bbd93e"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -72,7 +72,7 @@
     },
     "references/document-cleanup.md": {
       "source": "references/document-cleanup.md",
-      "sha256": "d1512b782bcb037bd05abd8397b3a78277ce9f22f2277b790089bab92cdc1b34"
+      "sha256": "fa98dbec7c8e7f7ec307601fe6e5e37da845f24df826b5994b482faf40b8f8d7"
     },
     "references/drawing-feature-checks.md": {
       "source": "references/drawing-feature-checks.md",
@@ -104,7 +104,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "d4ae044a48f241ae22628eeb7b5a4474e70ae7d32487970c714a62a4d2a51c3d"
+      "sha256": "193a887ba01b6e4e3ef0e181ff2883964b1378f3284696bc657d315783aa7659"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -116,7 +116,7 @@
     },
     "references/insertion-resume-verification.md": {
       "source": "references/insertion-resume-verification.md",
-      "sha256": "4d419fbb8feb0c432cda2815d5aa1aaa799024a7cc0f2dc65899ee68270d2b32"
+      "sha256": "f50d022180a390ab4c660060095701ee7812267881bd995639baf02d2d0e32ec"
     },
     "references/job-history-archive.md": {
       "source": "references/job-history-archive.md",
@@ -124,7 +124,7 @@
     },
     "references/manufacturer-assembly.md": {
       "source": "references/manufacturer-assembly.md",
-      "sha256": "7384b88acb3c02c2d36ce2a1abcec83d028c0e9d41a683c85c7310ee645de409"
+      "sha256": "274816a16a04de3b9bb3a4d460f13f59020e3cf911ded825a6a782f0963af1cc"
     },
     "references/model-contract.md": {
       "source": "references/model-contract.md",
@@ -192,7 +192,7 @@
     },
     "references/source-first-and-tube.md": {
       "source": "references/source-first-and-tube.md",
-      "sha256": "673147074507a6a87957d1548cea0fbe0d7fe4c5d68d9ed0d8aceaafed3600b6"
+      "sha256": "6292fca132dac966d96c8e77e1cd8ab49ca89517ab46b522a7cf234a4ec83e41"
     },
     "references/source-metadata.md": {
       "source": "references/source-metadata.md",
@@ -216,7 +216,7 @@
     },
     "references/spherical-seat-profile.md": {
       "source": "references/spherical-seat-profile.md",
-      "sha256": "e2309a39fdab737e202a9ca1c62e1b270b9ac4239c5d91274788be340b17402a"
+      "sha256": "dc04632a151906caf5a68020932e941da21a74ef6d44800207038de0fb1ff4a1"
     },
     "references/step-solid-inventory.md": {
       "source": "references/step-solid-inventory.md",
@@ -248,15 +248,15 @@
     },
     "scripts/assembly_build.py": {
       "source": "scripts/assembly_build.py",
-      "sha256": "29a3b1360c9ce69f7d46b21ecd6c3671559716d3c8e39401d6387c7789b672e1"
+      "sha256": "ed84c5833ac2ef30978f6d64c4ffd7c83563017908e820a94abedc4ccdbb3287"
     },
     "scripts/assembly_occurrences.py": {
       "source": "scripts/assembly_occurrences.py",
-      "sha256": "ad63cbae670602038507267604d196f89b33e2288f9d1d1710b07d111ab296a6"
+      "sha256": "8ceba29c5974eb76aa13c3f83853e80ad22d55c9ceb0e40cebd3d2c92fbdf4e4"
     },
     "scripts/assembly_repair.py": {
       "source": "scripts/assembly_repair.py",
-      "sha256": "abb7e5e98bab566051f8d101cb827471b9831d868f373a6ce5e61285b0a704b8"
+      "sha256": "4fd3cad5cb0c809900f20fef9ad4e3d3a9af2b167c488825283354b92b8a5727"
     },
     "scripts/assembly_units.py": {
       "source": "scripts/assembly_units.py",
@@ -264,7 +264,7 @@
     },
     "scripts/assembly_verification.py": {
       "source": "scripts/assembly_verification.py",
-      "sha256": "ef09aa7457062cdb307584d9c3eb8adc9a3f9bf8b536bdf19ff1b6cc8f885602"
+      "sha256": "917045d6df6d07100574d556bdc5c23423b63ddb990f44eea125bc7b4df72e29"
     },
     "scripts/axial_motor.py": {
       "source": "scripts/axial_motor.py",
@@ -288,15 +288,15 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "2366f268faf8823a9e2bc2734fead3088adb156536103168e2f8cddfbd071ac7"
+      "sha256": "5ccff609c720ddd6a79a59749289d871d1d6c632b405acfa7b231ed5cfab4429"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
-      "sha256": "10ff9d4996713659af7e096421e3bc06ff17bcc06d5d2ccf8a6e0917fa2b03b3"
+      "sha256": "d387797e1f7453f4998550199bb77ac108b930cc75b8af786efaa0e004570056"
     },
     "scripts/cadtools/records.py": {
       "source": "scripts/cadtools/records.py",
-      "sha256": "97edbe4ade2327e1792e0974625308186a4937849e660176b680afefce6312bd"
+      "sha256": "57925648eee908f5da4b51aecbc4d43e78b01e622106bdb84bb7dbff545649ec"
     },
     "scripts/cadtools/runtime.py": {
       "source": "scripts/cadtools/runtime.py",
@@ -424,7 +424,7 @@
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",
-      "sha256": "7c76353e90723fa09c086db3086b5863237f0ceebdb426caac4948a4bdc3c11c"
+      "sha256": "7f9e535ecbcbe9aa6b7fd59bd6f9df4de72297601c52856312f296ffcafb75b1"
     },
     "scripts/native_geometry.py": {
       "source": "scripts/native_geometry.py",
@@ -432,7 +432,7 @@
     },
     "scripts/native_views.py": {
       "source": "scripts/native_views.py",
-      "sha256": "d36576e14efba62415ac6bbc2ad282e439aca06b6ac9a4a3a36d412597c874ef"
+      "sha256": "d86f5f28efdb5e2b4726a331d109c165b9d92135e751619fb0f521bac2f94eb0"
     },
     "scripts/ocs_control.py": {
       "source": "scripts/ocs_control.py",
@@ -480,11 +480,11 @@
     },
     "scripts/planar_profiles.py": {
       "source": "scripts/planar_profiles.py",
-      "sha256": "cc00dd9332ef49af3782c62d19f37f1d0dc7fd8d678d27364fcdd791762614f3"
+      "sha256": "14012ca7cee5f7668d34df7f881e007cf9f07813ba70efb6c392b62e657986bb"
     },
     "scripts/plate_reference.py": {
       "source": "scripts/plate_reference.py",
-      "sha256": "1d04e771027ab7c208e39952771d02615e5d60b362c3b04aaa95f066d9b8e57c"
+      "sha256": "f328c359cdfe1ac7e6a043575576e9e9867b0f232383c0d03267fd5995fbd7a1"
     },
     "scripts/private_catalogue.py": {
       "source": "scripts/private_catalogue.py",
@@ -524,7 +524,7 @@
     },
     "scripts/rounded_tube.py": {
       "source": "scripts/rounded_tube.py",
-      "sha256": "3c79015c2f78216f89a30e455bf134b0f854e755e588a4fd36ffb48060b7a388"
+      "sha256": "7a49023f708ef56feed28ad318078fb48b73d7cd55d7bac62c2804efc2b9d03b"
     },
     "scripts/sam_mask.py": {
       "source": "scripts/sam_mask.py",

@@ -29,8 +29,7 @@ def _rigid_world(reachable,Tags,allow_rigid):
     return world, ({'column_major_rotation':matrix,'translation':translation,'scale':1} if transforms else None)
 
 
-def sab_structure(data,allow_rigid=False):
-    """Read body connectivity and vertices independently of surface equations."""
+def _sab_body_graph(data):
     from ezdxf.acis.sab import parse_sab
     from ezdxf.acis.const import Tags
     if not isinstance(data,(bytes,bytearray)) or not data:raise ValueError('Nonempty native SAB bytes required')
@@ -44,6 +43,14 @@ def sab_structure(data,allow_rigid=False):
         if id(e) in seen:continue
         seen[id(e)]=e
         pending.extend(t.value for t in e.data if t.tag==Tags.POINTER and t.value.name!='null-ptr')
+    return b,seen
+
+
+def sab_structure(data,allow_rigid=False):
+    """Read body connectivity and vertices independently of surface equations."""
+    from ezdxf.acis.const import Tags
+
+    b, seen = _sab_body_graph(data)
     reachable=list(seen.values())
     world,body_transform=_rigid_world(reachable,Tags,allow_rigid)
     coedges=[e for e in reachable if e.name=='coedge']
@@ -54,6 +61,76 @@ def sab_structure(data,allow_rigid=False):
             'topology':{'bodies':1,'lumps':sum(e.name=='lump' for e in reachable),'shells':sum(e.name=='shell' for e in reachable),
                         'faces':sum(e.name=='face' for e in reachable),'coedges':len(coedges),'reciprocal_closed_partners':closed},
             'method':'native body graph and vertices; surface equations excluded','acis_header_units_in_mm':b.header.units_in_mm}
+
+
+def sab_straight_planar_faces(data, face_indices, *, tolerance_mm, allow_rigid=False):
+    """Read selected reachable ACIS700 planar face loops with straight edges."""
+    from ezdxf.acis.const import Tags
+
+    if not math.isfinite(tolerance_mm) or tolerance_mm <= 0:
+        raise ValueError('Positive planar face tolerance required')
+    model, reachable = _sab_body_graph(data)
+    indices = list(face_indices)
+    if not indices or any(type(i) is not int or not 0 <= i < len(model.entities) for i in indices):
+        raise ValueError('Valid SAB entity indices required')
+    if len(set(indices)) != len(indices):
+        raise ValueError('Duplicate face entity index')
+    world, _ = _rigid_world(reachable.values(), Tags, allow_rigid)
+
+    def read_point(vertex):
+        if vertex.name != 'vertex':
+            raise ValueError('Native edge endpoint requires a vertex')
+        points = [token.value for token in vertex.data
+                  if token.tag == Tags.POINTER and token.value.name == 'point']
+        if len(points) != 1:
+            raise ValueError('Native edge endpoint requires one vertex point')
+        point = points[0].data[1]
+        if point.tag != Tags.LOCATION_VEC or not all(math.isfinite(v) for v in point.value):
+            raise ValueError('Finite native boundary point required')
+        return world(point.value, True)
+
+    result = []
+    for index in indices:
+        face = model.entities[index]
+        if id(face) not in reachable or face.name != 'face':
+            raise ValueError('Selected entity is not a reachable face')
+        surface = face.data[5].value
+        loop = face.data[2].value
+        if (surface.name != 'plane-surface' or loop.name != 'loop'
+                or loop.data[1].value.name != 'null-ptr' or loop.data[3].value is not face):
+            raise ValueError('Selected face requires one planar boundary loop')
+        origin = world(surface.data[1].value, True)
+        normal = world(surface.data[2].value)
+        if not all(math.isfinite(v) for v in origin + normal) or abs(math.hypot(*normal)-1) > 1e-8:
+            raise ValueError('Finite planar support with unit normal required')
+        start = loop.data[2].value
+        current = start
+        visited = set()
+        edges = []
+        while id(current) not in visited:
+            if current.name != 'coedge' or current.data[6].value is not loop:
+                raise ValueError('Selected planar face has an invalid boundary link')
+            visited.add(id(current))
+            edge = current.data[4].value
+            sense = current.data[5]
+            if edge.name != 'edge' or edge.data[6].value.name != 'straight-curve':
+                raise ValueError('Selected planar face requires straight boundary edges')
+            if sense.tag not in (Tags.BOOL_TRUE, Tags.BOOL_FALSE):
+                raise ValueError('Explicit native coedge sense required')
+            a, b = (read_point(edge.data[i].value) for i in (1, 3))
+            edges.append((b, a) if sense.value else (a, b))
+            current = current.data[1].value
+        if (current is not start or len(edges) < 3
+                or any(math.dist(end, edges[(i+1) % len(edges)][0]) > tolerance_mm
+                       or math.dist(begin, end) <= tolerance_mm
+                       for i, (begin, end) in enumerate(edges))):
+            raise ValueError('Selected planar face boundary is open or degenerate')
+        if any(abs(sum((p-o)*n for p,o,n in zip(point,origin,normal,strict=True))) > tolerance_mm
+               for edge in edges for point in edge):
+            raise ValueError('Boundary point differs from selected plane')
+        result.append(dict(entity_index=index, origin=origin, normal=normal,
+                           vertices=[begin for begin, _ in edges]))
+    return result
 
 
 def named_parts(record, metadata_app, required_parts, aliases=None, **reader_options):
@@ -389,11 +466,36 @@ def _sat_cone_parameters(tokens, version):
     return origin, axis, major, ratio, sine, cosine, radius
 
 
-def sat_readback(data, *, allow_rigid=False, include_cylinders=True):
+def _sat_curved_surface(name, fields, world):
+    """Decode the observed ACIS700 sphere and ring torus support surfaces."""
+    if name == 'sphere-surface':
+        if len(fields) < 12 or fields[11] not in ('forward_v', 'reverse_v'):
+            raise ValueError('Unsupported SAT sphere layout')
+        radius = float(fields[4])
+        if not math.isfinite(radius) or radius <= 0:
+            raise ValueError('Positive finite SAT sphere radius required')
+        return {'origin': world(fields[1:4], True), 'radius': radius}
+    if name != 'torus-surface' or len(fields) < 13 or fields[12] not in ('forward_v', 'reverse_v'):
+        raise ValueError('Unsupported SAT torus layout')
+    centre = world(fields[1:4], True)
+    axis = world(fields[4:7])
+    major, minor = map(float, fields[7:9])
+    radial = world(fields[9:12])
+    if not math.isfinite(major) or not math.isfinite(minor) or not major > minor > 0:
+        raise ValueError('Only positive ring-shaped SAT tori supported')
+    if (abs(sum(x*x for x in axis)-1) > 1e-9
+            or abs(sum(x*x for x in radial)-1) > 1e-9
+            or abs(sum(a*b for a,b in zip(axis,radial))) > 1e-9):
+        raise ValueError('SAT torus requires orthonormal axis/reference directions')
+    return {'center': centre, 'axis': axis, 'major_radius': major, 'minor_radius': minor}
+
+
+def sat_readback(data, *, allow_rigid=False, include_cylinders=True, include_cones=False,
+                 include_spheres=False, include_tori=False):
     """Read live OCS ACIS700 text topology, vertices and supported curves.
 
     Unknown edge equations retain their native trim endpoints. Only circular
-    cylindrical support surfaces are extracted for dimensional comparisons.
+    cylindrical support surfaces and requested cone, sphere and ring torus surfaces are extracted.
     ACIS header units describe the payload and do not rescale coordinates.
     """
     from ezdxf.acis.sat import SatEntity, parse_sat
@@ -433,13 +535,17 @@ def sat_readback(data, *, allow_rigid=False, include_cylinders=True):
         if len(support) != 1:
             raise ValueError('Expected one SAT support surface per face')
         surfaces[id(support[0])] = support[0]
-    cylinders = []
-    if include_cylinders:
+    cylinders, cones = [], []
+    if include_cylinders or include_cones:
         for surface in surfaces.values():
             if surface.name in ('cone-surface', 'cylinder-surface'):
-                cylinder = _sat_cylinder(surface.data, world)
-                if cylinder is not None:
-                    cylinders.append(cylinder)
+                feature = _sat_round_surface(surface.data, world, include_cones)
+                if feature is None:
+                    continue
+                if 'sin_angle' in feature:
+                    cones.append(feature)
+                elif include_cylinders:
+                    cylinders.append(feature)
     edges = [_sat_edge(entity, world) for entity in entities if entity.name == 'edge']
     if not edges:
         raise ValueError('Native SAT boundary edges required')
@@ -459,6 +565,13 @@ def sat_readback(data, *, allow_rigid=False, include_cylinders=True):
             'reciprocal_closed_partners': closed,
         },
     }
+    if include_cones:
+        result['cones'] = cones
+    for requested, key, name in ((include_spheres,'spheres','sphere-surface'),
+                                 (include_tori,'tori','torus-surface')):
+        if requested:
+            result[key]=[_sat_curved_surface(name,surface.data,world) for surface in surfaces.values()
+                         if surface.name==name]
     if matrix is not None:
         result['body_transform'] = {
             'column_major_rotation': matrix,
@@ -540,17 +653,28 @@ def _sat_edge(edge, world):
     return result
 
 
-def _sat_cylinder(tokens, world):
+def _sat_round_surface(tokens, world, include_cones):
     origin, axis, major, ratio, sine, cosine, radius = _sat_cone_parameters(tokens, 700)
     if any(not math.isfinite(value) for value in (ratio, sine, cosine, radius)):
-        raise ValueError('Nonfinite SAT cylinder parameters')
-    if abs(sine) > 1e-9 or abs(cosine - 1) > 1e-9 or abs(ratio - 1) > 1e-9:
+        raise ValueError('Nonfinite SAT cone or cylinder parameters')
+    if abs(ratio - 1) > 1e-9:
+        return None
+    is_cone = abs(sine) > 1e-9 or abs(cosine - 1) > 1e-9
+    if is_cone and not include_cones:
         return None
     axis = world(axis)
-    if (radius <= 0 or abs(math.hypot(*world(major)) - radius) > 1e-7 or
+    major = world(major)
+    if (radius <= 0 or abs(math.hypot(*major) - radius) > 1e-7 or
             abs(math.hypot(*axis) - 1) > 1e-8):
-        raise ValueError('Invalid SAT cylinder axis or radius')
-    return {'origin': world(origin, point=True), 'axis': axis, 'radius': radius}
+        raise ValueError('Invalid SAT circular surface axis or radius')
+    result = {'origin': world(origin, point=True), 'axis': axis, 'radius': radius}
+    if is_cone:
+        if (abs(sine) <= 1e-9 or cosine <= 1e-9 or
+                abs(sine * sine + cosine * cosine - 1) > 1e-8 or
+                abs(sum(a * b for a, b in zip(axis, major))) > 1e-8 * max(1, radius)):
+            raise ValueError('Invalid SAT circular cone angle or reference plane')
+        result.update(sin_angle=sine, cos_angle=cosine)
+    return result
 
 
 def solid_acis_payload(record):

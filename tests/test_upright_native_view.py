@@ -6,7 +6,7 @@ import unittest
 import xml.etree.ElementTree as ET
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
-from native_views import render_views
+from native_views import _plot_projected_edges, render_views
 
 
 class UprightViewTests(unittest.TestCase):
@@ -48,3 +48,27 @@ class UprightViewTests(unittest.TestCase):
             self.render('fixture', include_top_isometric=True)
         self.assertEqual(list(self.root.iterdir()), [target])
         self.assertEqual(target.read_bytes(), b'original')
+
+
+    def test_png_batch_preserves_separate_paths_and_endpoint_only_markers(self):
+        from matplotlib import rcParams
+        from matplotlib.backends.backend_agg import FigureCanvasAgg
+        from matplotlib.figure import Figure
+
+        fig = Figure()
+        FigureCanvasAgg(fig)
+        ax = fig.subplots()
+        edges = self.edges + [
+            {'points': [[100, 0, 0], [100, 0, 2]], 'endpoints_only': False},
+        ]
+        _plot_projected_edges(ax, edges, lambda p: (p[0], p[2]), rcParams)
+        lines, markers = ax.collections
+        self.assertEqual([s.tolist() for s in lines.get_segments()],
+                         [[[0, 0], [0, 2]], [[100, 0], [100, 2]]])
+        self.assertEqual(markers.get_offsets().tolist(), [[2, 0], [0, 0]])
+        self.assertLess(ax.get_xlim()[0], 0)
+        self.assertGreater(ax.get_xlim()[1], 100)
+        outputs = self.render('png', formats=('png',))
+        self.assertEqual(len(outputs), 4)
+        self.assertTrue(all(Path(r['path']).read_bytes().startswith(bytes.fromhex('89504e470d0a1a0a'))
+                            for r in outputs))

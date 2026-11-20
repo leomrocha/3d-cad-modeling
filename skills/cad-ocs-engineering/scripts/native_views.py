@@ -1,4 +1,4 @@
-"""Render native solids and straight polyline boundaries with exact instance transforms.
+"""Render native solids, lines and straight polyline boundaries with exact instance transforms.
 
 Displayed point bounds describe samples/endpoints. Source geometry and dimensions
 remain separate caller inputs. Imports make no native connection or filesystem writes.
@@ -9,7 +9,7 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 
 from native_acis import _rigid_world, sat_readback, solid_acis_payload
-from native_geometry import wcs_straight_polyline_segments
+from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments
 from step_placements import native_matrix,eye,multiply,apply
 from cadtools.records import iter_records,identity
 from cadtools.runtime import owned_document,CadError
@@ -78,7 +78,80 @@ def sample(edge,*,points_per_revolution=128,endpoint_tolerance=1e-5,max_points=1
     return points,False
 
 
-def placed_boundaries(records,blocks,*,max_instances=10000):
+def single_solid_boundary_edges(records, expected_handle):
+    """Render one verified, unplaced solid from the live entity inventory."""
+    records = list(records)
+    if (len(records) != 1 or records[0].get('type') != 'Solid3D'
+            or records[0].get('handle') != expected_handle or not expected_handle):
+        raise ValueError('Expected exactly the declared live Solid3D handle')
+    result = []
+    for curve in boundary_curves(solid_acis_payload(records[0])):
+        points, endpoints_only = sample(curve)
+        result.append(dict(points=points, endpoints_only=endpoints_only,
+                           handle=expected_handle, curve_type=curve['curve_type']))
+    return result
+
+
+def xy_circle_view_curve(record):
+    """Translate a positive-WCS-Z native circle into a sampled view curve."""
+    if record.get('type') != 'Circle':
+        raise ValueError('Native Circle record required')
+    props = record['properties']
+    centre = [props['center'][axis] for axis in 'xyz']
+    normal = [props['normal'][axis] for axis in 'xyz']
+    radius = props['radius']
+    values = [*centre, *normal, radius, props['thickness']]
+    if any(type(v) not in (int, float) or not math.isfinite(v) for v in values) or radius <= 0:
+        raise ValueError('Finite native circle with positive radius required')
+    if normal != [0, 0, 1] or props['thickness'] != 0:
+        raise ValueError('Native circle view requires a positive-Z plane and zero thickness')
+    endpoint = [centre[0] + radius, centre[1], centre[2]]
+    return dict(curve_type='ellipse-curve', endpoints=[endpoint, endpoint],
+                start_parameter=0, end_parameter=math.tau,
+                ellipse=dict(center=centre, major_axis=[radius, 0, 0],
+                             normal=normal, minor_to_major_ratio=1))
+
+
+def xy_polyline_view_curves(record):
+    """Read straight and circular segments of a positive-Z XY polyline."""
+    vertices = wcs_polyline_vertices(record)
+    properties = record['properties']
+    closed = properties.get('is_closed')
+    if len(vertices) < 2 or type(closed) is not bool:
+        raise ValueError('Polyline requires vertices and explicit closure')
+    if [properties['normal'][axis] for axis in 'xyz'] != [0, 0, 1]:
+        raise ValueError('Positive WCS Z polyline frame required')
+    ends = vertices[1:] + vertices[:1] if closed else vertices[1:]
+    curves = []
+    for index, (start, end) in enumerate(zip(vertices, ends)):
+        bulge = properties['vertices'][index].get('bulge')
+        if type(bulge) not in (int, float) or not math.isfinite(bulge):
+            raise ValueError('Finite native bulge required')
+        if start == end:
+            raise ValueError('Distinct polyline segment endpoints required')
+        if bulge == 0:
+            curves.append(dict(curve_type='straight-curve', endpoints=[start, end]))
+            continue
+        dx, dy = end[0] - start[0], end[1] - start[1]
+        offset = (1 / bulge - bulge) / 4
+        centre = [start[0] + dx / 2 - dy * offset,
+                  start[1] + dy / 2 + dx * offset, start[2]]
+        major = [start[i] - centre[i] for i in range(3)]
+        angle = 4 * math.atan(abs(bulge))
+        if not all(math.isfinite(v) for v in centre + major) or angle == 0:
+            raise ValueError('Finite polyline arc geometry required')
+        curves.append(dict(curve_type='ellipse-curve', endpoints=[start, end],
+                           start_parameter=0, end_parameter=angle,
+                           ellipse=dict(center=centre, major_axis=major,
+                                        normal=[0,0,math.copysign(1,bulge)], minor_to_major_ratio=1)))
+    return curves
+
+
+def placed_boundaries(records,blocks,*,max_instances=10000,include_xy_circles=False,include_xy_bulges=False):
+    if type(include_xy_circles) is not bool:
+        raise ValueError('include_xy_circles must be a boolean')
+    if type(include_xy_bulges) is not bool:
+        raise ValueError('include_xy_bulges must be a boolean')
     by={r['handle']:r for r in records};by_name={b['name']:b['properties'] for b in blocks};out=[];cache={};instances=[]
     def visit(handle,matrix,path,active):
         if handle in active:raise ValueError('Cyclic native blocks')
@@ -88,13 +161,24 @@ def placed_boundaries(records,blocks,*,max_instances=10000):
             if any(abs(block['base_point'][a])>1e-9 for a in 'xyz'):raise ValueError('Nonzero block base unsupported')
             transform=multiply(matrix,native_matrix(props,allow_unit_reflection=True))
             for child in block['entity_handles']:visit(child if isinstance(child,str) else format(child,'X'),transform,path+[handle],active|{handle})
-        elif row['type']=='Circle':return
-        elif row['type'] in ('Solid3D','LwPolyline'):
+        elif row['type']=='Circle' and not include_xy_circles:return
+        elif row['type'] in ('Solid3D','LwPolyline','Line','Circle'):
             if len(instances)>=max_instances:raise ValueError('Display instance bound exceeded')
             instances.append(dict(handle=handle,path=path,matrix=matrix))
             if handle not in cache:
                 if row['type'] == 'Solid3D':
                     cache[handle] = boundary_curves(solid_acis_payload(row))
+                elif row['type'] == 'Circle':
+                    cache[handle] = [xy_circle_view_curve(row)]
+                elif row['type'] == 'Line':
+                    properties = row['properties']
+                    endpoints = [[properties[key][axis] for axis in 'xyz'] for key in ('start', 'end')]
+                    if any(isinstance(value, bool) or not isinstance(value, (int, float))
+                           or not math.isfinite(value) for point in endpoints for value in point):
+                        raise ValueError('Finite native line endpoints required')
+                    cache[handle] = [{'curve_type': 'straight-curve', 'endpoints': endpoints}]
+                elif include_xy_bulges and any(v.get('bulge') for v in row['properties']['vertices']):
+                    cache[handle] = xy_polyline_view_curves(row)
                 else:
                     cache[handle] = [
                         {'curve_type': 'straight-curve', 'endpoints': ends}
@@ -107,6 +191,37 @@ def placed_boundaries(records,blocks,*,max_instances=10000):
     for root in by_name['*Model_Space']['entity_handles']:visit(root if isinstance(root,str) else format(root,'X'),eye(),[],set())
     if not instances:raise ValueError('No supported native boundaries reached')
     return out,instances
+
+
+def _plot_projected_edges(axes, edges, project, style):
+    from itertools import cycle
+
+    from matplotlib.collections import LineCollection
+
+    colors = style['axes.prop_cycle'].by_key().get('color', ['k'])
+    line_colors = cycle(colors)
+    point_colors = cycle(colors)
+    segments = []
+    segment_colors = []
+    points = []
+    marker_colors = []
+    for edge in edges:
+        projected = [project(point) for point in edge['points']]
+        if edge['endpoints_only']:
+            points.extend(projected)
+            marker_colors.extend([next(point_colors)] * len(projected))
+        else:
+            segments.append(projected)
+            segment_colors.append(next(line_colors))
+    if segments:
+        axes.add_collection(LineCollection(
+            segments, colors=segment_colors, linewidths=.6,
+            capstyle=style['lines.solid_capstyle'], joinstyle=style['lines.solid_joinstyle'],
+        ))
+    if points:
+        x, y = zip(*points)
+        axes.scatter(x, y, s=2, c=marker_colors)
+    axes.autoscale_view()
 
 
 def render_views(edges,directory,*,stem,title,formats=('svg',),include_top_isometric=False):
@@ -145,23 +260,20 @@ def render_views(edges,directory,*,stem,title,formats=('svg',),include_top_isome
             matplotlib.use('Agg')
             import matplotlib.pyplot as plt
             fig,ax=plt.subplots(figsize=(10,8));ax.set_aspect('equal');ax.set_title(title+' | '+name);ax.set_xlabel('mm');ax.set_ylabel('mm')
-            for edge in edges:
-                p=[project(p) for p in edge['points']];x,y=zip(*p)
-                if edge['endpoints_only']:ax.scatter(x,y,s=2)
-                else:ax.plot(x,y,linewidth=.6)
+            _plot_projected_edges(ax,edges,project,plt.rcParams)
             path=directory/(stem+'-'+name+'.png');fig.savefig(path,dpi=150);plt.close(fig)
             outputs.append(dict(path=str(path),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),projection=name,format='png'))
     return outputs
 
 
-def render_saved_model(client,source,directory,*,stem,title,persistence_receipt,formats=('svg',),include_top_isometric=False):
+def render_saved_model(client,source,directory,*,stem,title,persistence_receipt,formats=('svg',),include_top_isometric=False,include_xy_circles=False):
     source=Path(source);digest=hashlib.sha256(source.read_bytes()).hexdigest()
     if persistence_receipt.get('result')!='PASS' or persistence_receipt.get('saved_path')!=str(source) or persistence_receipt.get('sha256')!=digest:raise CadError('Source persistence receipt must bind the saved model')
     owned_document(client,'open-view','open',path=str(source))
     before=client.read('state');baseline=identity(before)
     if client.read('header').get('insertion_units')!=4:raise CadError('Display requires declared native millimetres')
     rows=list(iter_records(client,'entities'));blocks=list(iter_records(client,'block_records'))
-    edges,instances=placed_boundaries(rows,blocks)
+    edges,instances=placed_boundaries(rows,blocks,include_xy_circles=include_xy_circles)
     if identity(client.read('state'))!=baseline:raise CadError('External activation/revision interrupted display extraction')
     outputs=render_views(edges,directory,stem=stem,title=title,formats=formats,
                          include_top_isometric=include_top_isometric)

@@ -35,6 +35,33 @@ def dimensions(job):
     return p
 
 
+def end_bearing_areas(*, width, height, wall, outer_radius, inner_radius, flat_x):
+    """Nominal tube end area and area crossing an evidenced coplanar flat strip.
+
+    Flat strip spans the entire section height and lies between the X corner
+    tangencies. Dimensions are mm and output areas are square mm.
+    """
+    values = (width, height, wall, outer_radius, inner_radius)
+    if any(isinstance(v, bool) or not isinstance(v, (int, float))
+           or not math.isfinite(v) or v <= 0 for v in values):
+        raise ValueError('Positive finite tube dimensions required')
+    if abs(outer_radius - inner_radius - wall) > 1e-9:
+        raise ValueError('Constant-thickness concentric corners required')
+    inner_width, inner_height = width - 2 * wall, height - 2 * wall
+    rounded_profile(width, height, outer_radius)
+    rounded_profile(inner_width, inner_height, inner_radius)
+    if len(flat_x) != 2 or any(isinstance(v, bool) or not isinstance(v, (int, float))
+                               or not math.isfinite(v) for v in flat_x):
+        raise ValueError('Two finite strip bounds required')
+    left, right = flat_x
+    tangent = width / 2 - outer_radius
+    if not -tangent <= left < right <= tangent:
+        raise ValueError('Strip outside the straight wall span')
+    end = width * height - inner_width * inner_height
+    end -= (4 - math.pi) * (outer_radius**2 - inner_radius**2)
+    return {'end_wall_mm2': end, 'flat_strip_contact_mm2': (right - left) * 2 * wall}
+
+
 def rounded_profile(w,h,r):
     if not all(math.isfinite(v) and v>0 for v in (w,h,r)) or 2*r>=min(w,h):
         raise ValueError('Rounded rectangle needs positive straight wall lengths')
@@ -63,6 +90,56 @@ class SelectionCheckedClient:
                 raise ValueError('Selection readback differs; inspect before dependent command')
             return response
         return self.client.mutate(label,op,**fields)
+
+
+def bounded_wall_in_empty_document(client, *, width, height, wall, length, outer_radius,
+                                   inner_radius, checkpoint):
+    """Build a bounded tube wall with a save callback after each geometry stage."""
+    from cadtools.geometry import Geometry, positive
+    from cadtools.records import iter_records
+
+    for value in (width, height, wall, length, outer_radius, inner_radius):
+        positive(value)
+    if abs(outer_radius-inner_radius-wall)>1e-9:
+        raise ValueError('Constant-thickness concentric corners required')
+    outer, ob = rounded_profile(width, height, outer_radius)
+    inner, ib = rounded_profile(width-2*wall, height-2*wall, inner_radius)
+    if not callable(checkpoint):
+        raise ValueError('A stage checkpoint callback is required')
+    start = client.read('state')
+    if any(start.get(key) for key in ('operation','command','modal')) or list(iter_records(client,'entities')):
+        raise ValueError('An idle empty owned model space is required')
+    document_id = start['document_id']
+    if document_id!=client.document_id:
+        raise ValueError('Active owned document differs')
+
+    g = Geometry(SelectionCheckedClient(client))
+    profiles = {
+        'Outer section': g.profile('outer-boundary',outer,ob),
+        'Inner section': g.profile('inner-boundary',inner,ib),
+    }
+    checkpoint('profiles',dict(profiles))
+    g.select('bounded-clear',[])
+    client.mutate('bounded-extrude','run',allow_wait=True,
+                  cmd=f'PRESSPULL {width/2-wall/2},0,0 {length}')
+    after = client.read('state')
+    if after.get('document_id')!=document_id:
+        raise ValueError('Active owned document changed')
+    if after.get('command'):
+        if after['command'].get('name')!='PRESSPULL':
+            raise ValueError('Unexpected active command')
+        client.mutate('bounded-finish','cancel')
+    entities = {r['handle']:r['type'] for r in iter_records(client,'entities')}
+    solids = [handle for handle,kind in entities.items() if kind=='Solid3D']
+    if len(solids)!=1 or set(entities)-set(solids)-set(profiles.values()):
+        raise ValueError('Bounded extrusion returned unexpected native inventory')
+    solid = solids[0]
+    retained = {name:handle for name,handle in profiles.items() if handle in entities}
+    checkpoint('solid',dict(retained,Tube=solid))
+    if retained:
+        client.mutate('bounded-profile-cleanup','entities_delete',handles=list(retained.values()))
+        checkpoint('profiles-removed',{'Tube':solid})
+    return solid
 
 
 def construct(client,job,outer_profile=None,route="bounded-area"):

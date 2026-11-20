@@ -38,6 +38,12 @@ A calibrated in-plane trace requires coplanarity with its reference. For perspec
 
 ## Judge a mating interface
 
+For a square-corner hollow section, project the confirmed straight edges from each end plane into its section coordinates. Call `rectangular_opening_perimeters` in [planar_profiles.py](../scripts/planar_profiles.py) with independent inner and outer bounds and a length tolerance. It checks continuous coverage of all eight sides and counts internal seams that span a wall. Check the native solid topology and the end stations separately.
+
+For two straight, hole-free rectangular faces parallel to a coordinate plane, use `rectangular_face_overlap` in [planar_profiles.py](../scripts/planar_profiles.py). Supply independently identified ordered boundary loops in one frame, the shared normal axis and a length tolerance. Read the signed plane offset, projected spans and coplanar overlap area separately. A positive coplanar overlap area describes the common face footprint. Establish the bodies’ material sides and actual seating condition from the source geometry.
+
+For a contact footprint on a complex source body, use `sab_straight_planar_faces` in [native_acis.py](../scripts/native_acis.py) with explicitly selected entity indices from the pinned SAB payload. It reads one ordered straight-edge loop per planar face and checks reachable ownership, closure and plane distance. Project the returned vertices and the candidate footprint into the same plane for containment and edge margin checks. Curved or multi-loop trims require their own boundary reader. The selected faces describe geometry. Contact loads and material suitability use separate inputs.
+
 Identify the two occurrences, affected surfaces, pose, and intended relationship from the job or drawing. A seating face may require contact, a running fit may require clearance and a press fit may specify interference. Compare the appropriate signed linear dimension or diametral fit with the specified range and units. Record measurement uncertainty and kernel resolution separately from the permitted fit tolerance. A common volume in cubic units measures material overlap. For a depth or diametral requirement, measure that length on the identified features. If the job supplies no applicable fit criterion, report the observed geometry and measurement resolution without assigning a fit verdict. Where the measurement interval crosses a specified limit, report the interval and the unresolved decision.
 
 ## Carry original STEP assignments into a posed wrapper

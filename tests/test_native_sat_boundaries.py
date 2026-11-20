@@ -3,12 +3,13 @@ import math
 from pathlib import Path
 import sys
 import unittest
+from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 
 from cadtools.records import audit_type_counts
-from native_acis import sat_readback, solid_acis_payload
-from native_views import boundary_curves, placed_boundaries, sample
+from native_acis import _sat_round_surface, sab_straight_planar_faces, sat_readback, solid_acis_payload
+from native_views import boundary_curves, placed_boundaries, sample, single_solid_boundary_edges
 
 try:
     from ezdxf.acis import api
@@ -41,6 +42,36 @@ class NativeSatTests(unittest.TestCase):
             ]))
         self.assertEqual(normalize(centered), normalize(boundary_curves(self.sab)))
 
+    def test_selected_straight_planar_faces_keep_cyclic_boundaries(self):
+        from ezdxf.acis.sab import parse_sab
+
+        source = parse_sab(self.sab)
+        indices = [i for i, entity in enumerate(source.entities) if entity.name == 'face']
+        rows = sab_straight_planar_faces(self.sab, [indices[-1], indices[0]], tolerance_mm=.001)
+        self.assertEqual([row['entity_index'] for row in rows], [indices[-1], indices[0]])
+        for row in rows:
+            self.assertEqual(len(row['vertices']), 4)
+            self.assertTrue(all(math.dist(a,b)==1 for a,b in
+                               zip(row['vertices'],row['vertices'][1:]+row['vertices'][:1])))
+        with self.assertRaisesRegex(ValueError, 'reachable face'):
+            body = next(i for i, entity in enumerate(source.entities) if entity.name == 'body')
+            sab_straight_planar_faces(self.sab, [body], tolerance_mm=.001)
+        with self.assertRaisesRegex(ValueError, 'Duplicate'):
+            sab_straight_planar_faces(self.sab, [indices[0],indices[0]], tolerance_mm=.001)
+
+    def test_single_solid_views_bind_the_exact_live_body(self):
+        body = {'type': 'Solid3D', 'handle': 'A',
+                'properties': {'acis_data': {'is_binary': True, 'sab_data': list(self.sab)}}}
+        edges = single_solid_boundary_edges([body], 'A')
+        self.assertEqual(len(edges), 12)
+        self.assertEqual({edge['handle'] for edge in edges}, {'A'})
+        self.assertEqual(min(point for edge in edges for point in edge['points']), [-.5, -.5, -.5])
+        for records, handle in (([body], 'B'), ([body, body], 'A'), ([], 'A')):
+            with self.assertRaisesRegex(ValueError, 'declared live Solid3D'):
+                single_solid_boundary_edges(records, handle)
+        with self.assertRaises(KeyError):
+            placed_boundaries([body], [{'name': '*Model_Space', 'properties': {'entity_handles': ['A', 'B']}}])
+
     def test_transforms_require_opt_in_and_reject_improper_determinant(self):
         with self.assertRaisesRegex(ValueError, 'rigid-frame'):
             sat_readback(self.sat)
@@ -48,6 +79,19 @@ class NativeSatTests(unittest.TestCase):
         reflected = existing.replace('1 0 0 0 1 0 0 0 1 ', '-1 0 0 0 1 0 0 0 1 ', 1)
         with self.assertRaisesRegex(ValueError, 'Reflected'):
             sat_readback(self.sat.replace(existing, reflected), allow_rigid=True)
+
+    def test_circular_cone_parameters_are_opt_in(self):
+        values = ([1,2,3], [0,0,1], [4,0,0], 1, -math.sqrt(.5), math.sqrt(.5), 4)
+        with patch('native_acis._sat_cone_parameters', return_value=values):
+            self.assertIsNone(_sat_round_surface([], lambda p, point=False: p, False))
+            result = _sat_round_surface([], lambda p, point=False: p, True)
+            self.assertEqual(result['radius'], 4)
+            self.assertAlmostEqual(result['sin_angle']/result['cos_angle'], -1)
+        with patch('native_acis._sat_cone_parameters', return_value=(*values[:4], .4, .4, 4)):
+            with self.assertRaisesRegex(ValueError,'cone angle'):
+                _sat_round_surface([], lambda p, point=False: p, True)
+        self.assertNotIn('cones', sat_readback(self.sat, allow_rigid=True))
+        self.assertEqual(sat_readback(self.sat, allow_rigid=True, include_cones=True)['cones'], [])
 
     def test_nonreciprocal_edges_fail_display(self):
         existing = next(line for line in self.sat.splitlines() if line.startswith('coedge '))

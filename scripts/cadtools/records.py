@@ -58,3 +58,77 @@ def audit_type_counts(records):
     """Translate observed native entity labels to their audit manifest labels."""
     audit_labels = {'Solid3D': '3D Solid', 'Insert': 'Block Reference'}
     return dict(Counter(audit_labels.get(row['type'], row['type']) for row in records))
+
+
+def model_space_live_handles(model_space, entity_records, expected_handles, *, document_id,
+                             erase_intent, erase_response):
+    """Separate proven erased references from a complete current model-space inventory."""
+    if (type(document_id) is not int or document_id < 1
+            or erase_intent.get('op') != 'entities_delete'
+            or erase_intent.get('document_id') != document_id
+            or not erase_intent.get('request_id')
+            or erase_intent.get('request_id') != erase_response.get('request_id')
+            or erase_response.get('ok') is not True
+            or erase_response.get('status') != 'completed'):
+        raise CadError('Completed same-request deletion for the owned document required')
+    erased = erase_intent.get('handles')
+    if (not isinstance(erased, list) or not erased
+            or erase_response.get('result', {}).get('erased') != len(erased)):
+        raise CadError('Explicit fully erased handle inventory required')
+
+    return _reconcile_model_space(model_space, entity_records, expected_handles, erased)
+
+
+def model_space_after_revolve(model_space, entity_records, expected_handles, *, document_id,
+                              profile_handle, solid_handle, revolve_intent, revolve_response):
+    """Resolve a consumed profile using the completed native REVOLVE change list."""
+    request_id = revolve_intent.get('request_id')
+    command = revolve_intent.get('cmd', '').split()
+    if (type(document_id) is not int or document_id < 1
+            or profile_handle == solid_handle
+            or revolve_intent.get('op') != 'run' or command[:1] != ['REVOLVE']
+            or revolve_intent.get('document_id') != document_id
+            or revolve_response.get('state', {}).get('document_id') != document_id
+            or not request_id or request_id != revolve_response.get('request_id')
+            or revolve_response.get('ok') is not True
+            or revolve_response.get('status') != 'completed'):
+        raise CadError('Completed same-request revolve for the owned document required')
+    changes = revolve_response.get('changes')
+    if (not isinstance(changes, list) or len(changes) != 2
+            or not all(isinstance(change, dict) for change in changes)
+            or not any(change.get('kind') == 'Removed' and change.get('handle') == profile_handle
+                       for change in changes)
+            or not any(change.get('kind') == 'Added' and change.get('handle') == solid_handle
+                       for change in changes)):
+        raise CadError('Expected one consumed profile and one new solid in revolve changes')
+    rows = list(entity_records)
+    if not any(r.get('handle') == solid_handle and r.get('type') == 'Solid3D' for r in rows):
+        raise CadError('Expected generated solid in live inventory')
+    return _reconcile_model_space(model_space, rows, expected_handles, [profile_handle])
+
+
+def _reconcile_model_space(model_space, entity_records, expected_handles, erased):
+    if model_space.get('name') != '*Model_Space':
+        raise CadError('Exact Model Space block record required')
+
+    def unique_handles(values):
+        handles = []
+        for value in values:
+            if type(value) is int and value > 0:
+                value = format(value, 'X')
+            if not isinstance(value, str) or not value:
+                raise CadError('Nonempty native handle required')
+            handles.append(value)
+        if len(handles) != len(set(handles)):
+            raise CadError('Duplicate handle in native inventory')
+        return handles
+
+    references = unique_handles(model_space['properties']['entity_handles'])
+    expected = set(unique_handles(expected_handles))
+    inventory = set(unique_handles(row['handle'] for row in entity_records))
+    erased_handles = set(unique_handles(erased))
+    retired_refs = set(references) - inventory
+    live = [handle for handle in references if handle in inventory]
+    if inventory & erased_handles or retired_refs - erased_handles or set(live) != expected:
+        raise CadError('Unexpected, unresolved or missing Model Space handle')
+    return dict(live_handles=live, erased_references=sorted(retired_refs))

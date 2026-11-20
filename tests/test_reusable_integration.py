@@ -11,19 +11,32 @@ import unittest
 from unittest.mock import Mock,patch
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 
+from cadtools.geometry import Geometry, added
 from cadtools.runtime import Client,Journal,CadError,Uncertain,new_owned_document,RecoveringClient
 from cadtools.records import iter_records,read_stable_entity
 from cadtools.checkpoints import write_stage_checkpoint,save_checkpoint
 from feature_checks import cylinder_pattern,cylinder_wall_checks
 from step_placements import native_matrix,classify_hand,eye,apply
 from assembly_occurrences import expand_occurrences,recover_insert_sequence,write_occurrence_tables
-from planar_profiles import clip_circular_openings,bounded_extrusion
-from plate_reference import build_plate,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline
-from native_views import sample,render_views,boundary_curves,placed_boundaries
+from planar_profiles import clip_circular_openings,bounded_extrusion,conservative_tool_polygon
+from plate_reference import build_plate,countersink_tool_profile,cylinder_cutter,cut_sidewalls,verify_plate,validate_outline
+from native_views import sample,render_views,boundary_curves,placed_boundaries,xy_polyline_view_curves
 from source_vector_paths import parse_path,page_point,local_point,cubic_point
 from native_geometry import wcs_polyline_vertices,wcs_straight_polyline_segments,sat_structure
 from ocs_document_cleanup import cleanup_owned_documents
 from retained_artifacts import verify_manifest
+
+
+class GeometryAdapterContract(unittest.TestCase):
+    def test_cylinder_handle_and_raw_command_response_have_distinct_types(self):
+        response = {'changes': [{'kind': 'Added', 'handle': 'A2'}]}
+        client = Mock()
+        client.mutate.return_value = response
+        handle = Geometry(client).cylinder('stock', [0, 0, 0], 5, 7)
+        self.assertEqual(added(response), handle)
+        with self.assertRaisesRegex(CadError, 'use a geometry helper'):
+            added(handle)
+        client.mutate.assert_called_once()
 
 
 class Patterns(unittest.TestCase):
@@ -200,6 +213,25 @@ class Assemblies(unittest.TestCase):
 
 
 class Profiles(unittest.TestCase):
+    def test_tool_reduction_checks_containment_vertex_budget_and_enlargement(self):
+        source = Mock(geom_type='Polygon',is_valid=True,is_empty=False,interiors=[],area=4.)
+        tool = Mock(geom_type='Polygon',is_valid=True,is_empty=False,interiors=[],area=4.2)
+        tool.exterior.coords = [[0,0],[2,0],[2,2],[0,2],[0,0]]
+        tool.covers.return_value = True
+        source.buffer.return_value.simplify.return_value = tool
+        settings = dict(margin=.04,tolerance=.01,max_vertices=4,max_added_area=.25)
+        self.assertIs(conservative_tool_polygon(source,**settings),tool)
+        source.buffer.assert_called_once_with(.04,quad_segs=2)
+        tool.covers.assert_called_once_with(source)
+        tool.covers.return_value = False
+        with self.assertRaisesRegex(ValueError,'fully contain'):
+            conservative_tool_polygon(source,**settings)
+        tool.covers.return_value = True
+        with self.assertRaisesRegex(ValueError,'vertex limit'):
+            conservative_tool_polygon(source,**dict(settings,max_vertices=3))
+        with self.assertRaisesRegex(ValueError,'area growth'):
+            conservative_tool_polygon(source,**dict(settings,max_added_area=.1))
+
     def test_tube_subtraction_requires_explicit_overrun_before_writes(self):
         from rounded_tube import construct
         c=Mock()
@@ -238,6 +270,36 @@ class Profiles(unittest.TestCase):
         with self.assertRaises(ValueError):cut_sidewalls(c,'body',axis=0,centre=[0,0],diameter=2,intervals=[[0,3],[2,4]],label='cut')
         c.mutate.assert_not_called()
 
+    def test_sidewall_stages_preserve_tool_and_result_handles(self):
+        c=Mock()
+        g=Mock()
+        g.cylinder.side_effect=['left','right']
+        checkpoint=Mock()
+        with patch('plate_reference.Geometry',return_value=g):
+            result=cut_sidewalls(c,'body',axis=0,centre=[-2,140],diameter=30,
+                                 intervals=[[-26,-19],[19,26]],label='cut',checkpoint=checkpoint)
+        self.assertEqual(result,'body')
+        self.assertEqual([call.args for call in checkpoint.call_args_list], [
+            ('cut-0-cutter',('body','left')), ('cut-0-aligned',('body','left')), ('cut-0-wall',('body',)),
+            ('cut-1-cutter',('body','right')), ('cut-1-aligned',('body','right')), ('cut-1-wall',('body',)),
+        ])
+        self.assertEqual([call.args[1:] for call in g.subtract.call_args_list],
+                         [('body',['left']),('body',['right'])])
+
+    def test_sidewall_failed_alignment_save_stops_before_cut(self):
+        c=Mock()
+        g=Mock()
+        g.cylinder.return_value='cutter'
+        def checkpoint(stage, handles):
+            if stage.endswith('-aligned'):
+                raise OSError('Uncertain save')
+        with patch('plate_reference.Geometry',return_value=g):
+            with self.assertRaisesRegex(OSError,'Uncertain save'):
+                cut_sidewalls(c,'body',axis=0,centre=[-2,140],diameter=30,
+                              intervals=[[-26,-19],[19,26]],label='cut',checkpoint=checkpoint)
+        g.cylinder.assert_called_once()
+        g.subtract.assert_not_called()
+
 
 class ViewsAndVectors(unittest.TestCase):
     def test_mirrored_nested_display_matrices(self):
@@ -247,6 +309,25 @@ class ViewsAndVectors(unittest.TestCase):
         with patch('native_views.boundary_curves',return_value=[dict(curve_type='straight-curve',endpoints=[[0,1,0],[1,1,0]])]):
             edges,instances=placed_boundaries(records,blocks)
         self.assertEqual(edges[0]['points'],[[0,2,0],[1,2,0]]);self.assertEqual(len(instances),1)
+    def test_native_line_endpoints_follow_mirrored_block_placement(self):
+        insert = dict(handle='A', type='Insert', properties=dict(
+            normal=dict(x=0, y=0, z=1), rotation=0, insert_point=dict(x=5, y=10, z=1),
+            x_scale=1, y_scale=-1, z_scale=1, block_name='child',
+        ))
+        line = dict(handle='B', type='Line', properties=dict(
+            start=dict(x=0, y=2, z=3), end=dict(x=4, y=5, z=6),
+        ))
+        blocks = [
+            dict(name='*Model_Space', properties=dict(entity_handles=['A'])),
+            dict(name='child', properties=dict(base_point=dict(x=0, y=0, z=0), entity_handles=['B'])),
+        ]
+        edges, instances = placed_boundaries([insert, line], blocks)
+        self.assertEqual(edges[0]['points'], [[5, 8, 4], [9, 5, 7]])
+        self.assertEqual(instances[0]['handle'], 'B')
+        line['properties']['end']['x'] = float('inf')
+        with self.assertRaisesRegex(ValueError, 'Finite native line endpoints'):
+            placed_boundaries([insert, line], blocks)
+
     def test_sat_reader_uses_reachable_vertices_and_closed_partner_graph(self):
         from types import SimpleNamespace as E
         null=E(name='null-ptr',data=[]);point=E(name='point',data=[null,'1','2','3']);vertex=E(name='vertex',data=[point]);a=E(name='coedge');b=E(name='coedge');edge=E(name='edge',data=[vertex]);a.data=[null,null,null,b,edge];b.data=[null,null,null,a,edge]
@@ -313,6 +394,73 @@ class ViewsAndVectors(unittest.TestCase):
         self.assertEqual(len(edges), 4)
         self.assertEqual(edges[-1]['points'], [[5, 7, 2], [5, 7, 0]])
         self.assertTrue(all(e['curve_type'] == 'straight-curve' and not e['endpoints_only'] for e in edges))
+
+    def test_positive_z_circle_resolves_through_mirrored_block(self):
+        insert = dict(handle='A', type='Insert', properties=dict(
+            normal=dict(x=0, y=0, z=1), rotation=0, insert_point=dict(x=5, y=10, z=20),
+            x_scale=1, y_scale=-1, z_scale=1, block_name='child',
+        ))
+        circle = dict(handle='B', type='Circle', properties=dict(
+            center=dict(x=2, y=3, z=4), normal=dict(x=0, y=0, z=1), radius=7, thickness=0,
+        ))
+        blocks = [
+            dict(name='*Model_Space', properties=dict(entity_handles=['A'])),
+            dict(name='child', properties=dict(base_point=dict(x=0, y=0, z=0), entity_handles=['B'])),
+        ]
+        edges, instances = placed_boundaries([insert, circle], blocks, include_xy_circles=True)
+        self.assertEqual(instances[0]['path'], ['A'])
+        self.assertEqual(instances[0]['handle'], 'B')
+        edge, = edges
+        self.assertFalse(edge['endpoints_only'])
+        self.assertEqual(edge['points'][0], [14, 7, 24])
+        self.assertAlmostEqual(min(point[0] for point in edge['points']), 0)
+        self.assertAlmostEqual(max(point[1] for point in edge['points']), 14)
+        self.assertTrue(all(point[2] == 24 for point in edge['points']))
+        circle['properties']['thickness'] = 2
+        with self.assertRaisesRegex(ValueError,'zero thickness'):
+            placed_boundaries([insert, circle],blocks,include_xy_circles=True)
+        circle['properties']['thickness'] = 0
+        circle['properties']['normal']['z'] = -1
+        with self.assertRaisesRegex(ValueError,'positive-Z plane'):
+            placed_boundaries([insert, circle],blocks,include_xy_circles=True)
+
+    def test_countersink_profile_extends_past_bore_and_top(self):
+        result = countersink_tool_profile(bore=8,mouth=18,angle_degrees=90,inner_radius=2,overrun=.5)
+        self.assertAlmostEqual(result['depth_mm'],5)
+        for pair, expected in zip(result['profile'],[[2,-.5],[3.5,-.5],[9.5,5.5],[2,5.5]]):
+            for value, target in zip(pair, expected):
+                self.assertAlmostEqual(value,target)
+        with self.assertRaisesRegex(ValueError,'clear the inner radius'):
+            countersink_tool_profile(bore=8,mouth=18,angle_degrees=90,inner_radius=3.9,overrun=.5)
+
+    def test_xy_bulges_preserve_arc_direction_and_elevation(self):
+        row = self.polyline(False)
+        row['properties']['normal'] = dict(x=0,y=0,z=1)
+        first = row['properties']['vertices'][0]
+        for bulge, midpoint_y in [(1,-2),(-1,2),(.5,-1)]:
+            first['bulge'] = bulge
+            arc = xy_polyline_view_curves(row)[0]
+            points, fallback = sample(arc,points_per_revolution=64)
+            nearest = min(points,key=lambda point:abs(point[0]-2))
+            self.assertFalse(fallback)
+            self.assertAlmostEqual(nearest[1],midpoint_y,places=2)
+            self.assertAlmostEqual(nearest[2],3)
+            self.assertEqual(arc['endpoints'],[[0,0,3],[4,0,3]])
+        row['properties']['normal'] = dict(x=0,y=1,z=0)
+        with self.assertRaises(ValueError):
+            xy_polyline_view_curves(row)
+
+    def test_placed_bulged_polylines_require_opt_in_and_close(self):
+        row = self.polyline(True)
+        row['properties']['normal'] = dict(x=0,y=0,z=1)
+        row['properties']['vertices'][-1]['bulge'] = 1
+        blocks = [dict(name='*Model_Space',properties=dict(entity_handles=['B']))]
+        with self.assertRaises(ValueError):
+            placed_boundaries([row],blocks)
+        edges,_ = placed_boundaries([row],blocks,include_xy_bulges=True)
+        self.assertEqual(len(edges),4)
+        self.assertAlmostEqual(min(p[0] for p in edges[-1]['points']),-1)
+        self.assertFalse(edges[-1]['endpoints_only'])
 
     def test_polyline_rejects_bulge_and_legacy_closure_field(self):
         row = self.polyline(True)

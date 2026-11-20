@@ -1,3 +1,4 @@
+from unittest.mock import MagicMock, patch
 import math
 from pathlib import Path
 import sys
@@ -42,6 +43,19 @@ class TubeChecks(unittest.TestCase):
         self.assertAlmostEqual(4*math.atan(bulges[1]),math.pi/2)
         self.assertEqual(points[0],[-14,-20])
         with self.assertRaises(ValueError):rounded_profile(40,40,20)
+    def test_end_bearing_areas_use_material_and_contact_strip(self):
+        from rounded_tube import end_bearing_areas
+        dimensions = dict(width=40, height=60, wall=3, outer_radius=6, inner_radius=3)
+        areas = end_bearing_areas(**dimensions, flat_x=(-12, 14))
+        self.assertEqual(areas['flat_strip_contact_mm2'], 156)
+        self.assertAlmostEqual(areas['end_wall_mm2'], 564 - 27 * (4 - math.pi))
+        with self.assertRaisesRegex(ValueError, 'straight wall'):
+            end_bearing_areas(**dimensions, flat_x=(-15, 14))
+        with self.assertRaisesRegex(ValueError, 'concentric'):
+            end_bearing_areas(**dict(dimensions, inner_radius=4), flat_x=(-12, 14))
+        with self.assertRaises(ValueError):
+            end_bearing_areas(**dimensions, flat_x=(0, float('nan')))
+
     def test_complete_section(self):self.assertEqual(verify_features(observations(),P)['result'],'PASS')
     def test_filled_tube_rejected(self):
         f=observations();f['planes']=[p for p in f['planes'] if all(abs(x)!=17 for x in p['origin'])]
@@ -58,3 +72,36 @@ class TubeChecks(unittest.TestCase):
         with self.assertRaises(ValueError):sat_features('transform foo')
 
 if __name__=='__main__':unittest.main()
+
+
+class BoundedWallCheckpointTests(unittest.TestCase):
+    def test_saved_stages_and_owned_cleanup(self):
+        from rounded_tube import bounded_wall_in_empty_document
+
+        client = MagicMock(document_id=7)
+        client.read.return_value = {'document_id':7}
+        client.mutate.side_effect = [
+            {'result':{'handles':['A']}}, {}, {'result':{'handles':['B']}}, {},
+            {'state':{'selection':[]}}, {}, {},
+        ]
+        states = [[], [{'handle':'A','type':'LwPolyline'},{'handle':'C','type':'Solid3D'}]]
+        records = []
+        with patch('cadtools.records.iter_records',side_effect=states):
+            result = bounded_wall_in_empty_document(client,width=30,height=30,wall=3,length=40,
+                outer_radius=6,inner_radius=3,checkpoint=lambda stage,handles: records.append(
+                    dict(n=stage,handles=handles)))
+        self.assertEqual(result,'C')
+        self.assertEqual([r['n'] for r in records],['profiles','solid','profiles-removed'])
+        self.assertEqual(records[-1]['handles'],{'Tube':'C'})
+        client.mutate.assert_called_with('bounded-profile-cleanup','entities_delete',handles=['A'])
+
+    def test_existing_geometry_prevents_mutation(self):
+        from rounded_tube import bounded_wall_in_empty_document
+
+        client = MagicMock(document_id=7)
+        client.read.return_value = {'document_id':7}
+        with patch('cadtools.records.iter_records',return_value=[{'handle':'A'}]):
+            with self.assertRaisesRegex(ValueError,'empty owned'):
+                bounded_wall_in_empty_document(client,width=30,height=30,wall=3,length=40,
+                    outer_radius=6,inner_radius=3,checkpoint=lambda *_:None)
+        client.mutate.assert_not_called()

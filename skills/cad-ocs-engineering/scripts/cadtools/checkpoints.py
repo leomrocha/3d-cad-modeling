@@ -11,6 +11,32 @@ from .verification import require_audit, owned_audit
 from .records import identity
 
 
+def recover_idle_mutation(client, label, operation, *, fields):
+    """Read back a journaled same-document mutation at its exact live idle revision."""
+    key = client.namespace + ':' + label
+    event = client.journal.requests.get(key, {})
+    request = event.get('request', {})
+    context = dict(session_id=client.descriptor['session_id'], document_id=client.document_id)
+    envelope = {'op', 'request_id', 'document_id', 'revision'}
+    if set(fields) & envelope:
+        raise ValueError('Supply only the expected mutation operands')
+    operands = {k: v for k, v in request.items() if k not in envelope}
+    if (event.get('context') != context or request.get('op') != operation
+            or request.get('request_id') != key or request.get('document_id') != client.document_id
+            or type(request.get('revision')) is not int or operands != fields):
+        raise CadError('Original mutation request does not match the recovery contract')
+    result = client.recover(key)
+    if result.get('ok') is not True or result.get('status') != 'completed' or result.get('request_id') != key:
+        raise CadError('The original mutation has no completed receipt')
+    completed = result.get('state', {})
+    live = client.read('state')
+    if (identity(completed) != identity(live) or live['document_id'] != client.document_id
+            or live['revision'] < request['revision']
+            or any(source.get(k) for source in (completed, live) for k in ('command', 'operation', 'modal'))):
+        raise CadError('Recovered mutation no longer matches the idle owned document')
+    return result
+
+
 def atomic_json(path,value):
     path=Path(path)
     data=json.dumps(value,indent=2,allow_nan=False)+'\n'
@@ -66,7 +92,9 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
     audit=owned_audit(client, target_path=path)
     if identity(client.read('state'))!=baseline:raise CadError('Checkpoint epoch changed during audit')
     manifest=require_audit(audit)
-    if manifest.get('by_type')!=expected_counts:raise CadError('Checkpoint entity counts differ')
+    observed_counts = manifest.get('by_type')
+    if observed_counts != expected_counts:
+        raise CadError(f'Checkpoint entity counts differ: expected {expected_counts!r}, observed {observed_counts!r}')
     if intent:response=client.recover(key)
     else:response=RecoveringClient(client).mutate(label,'save_verified',path=str(path),target_format='dwg',target_version='2018',geometry_revision=state['geometry_revision'])
     saved=response.get('result',{})
@@ -119,7 +147,7 @@ def _check_source_pins(pins,roots):
 
 
 def verify_resume_checkpoint(checkpoint,*,job_id,source_pins,state,roots=None,
-                             expected_handles=None,actual_handles=None):
+                             expected_handles=None,actual_handles=None,observed_handles=None):
     """Offline live-document resume gate; send no native request or mutation.
 
     This verifies a saved state and its current source contract. It does not infer
@@ -141,6 +169,49 @@ def verify_resume_checkpoint(checkpoint,*,job_id,source_pins,state,roots=None,
     from component_records import observe_file,resolve_source_locator
     saved=_checkpoint_locator(checkpoint['saved_path'],roots)
     if observe_file(saved)['sha256']!=checkpoint.get('sha256'):raise CadError('Checkpoint saved bytes changed')
-    if (expected_handles is None)!=(actual_handles is None):raise CadError('Supply both expected and actual handle mappings')
-    if expected_handles is not None and (checkpoint.get('handles')!=expected_handles or expected_handles!=actual_handles):raise CadError('Checkpoint handle mapping differs')
+    if observed_handles is not None:
+        if actual_handles is not None or not isinstance(expected_handles, dict):
+            raise CadError('Raw live handles require the expected role mapping and no observed role mapping')
+        if checkpoint.get('handles') != expected_handles:
+            raise CadError('Checkpoint handle mapping differs')
+        if not isinstance(observed_handles, (list, tuple)) or any(
+            not isinstance(handle, str) or not handle for handle in observed_handles
+        ):
+            raise CadError('Live handles must be a sequence of nonempty strings')
+        expected_values = tuple(expected_handles.values())
+        if (any(not isinstance(handle, str) or not handle for handle in expected_values)
+                or len(set(expected_values)) != len(expected_values)
+                or len(observed_handles) != len(expected_values)
+                or set(observed_handles) != set(expected_values)):
+            raise CadError('Live handle inventory differs from the saved checkpoint')
+    else:
+        if (expected_handles is None) != (actual_handles is None):
+            raise CadError('Supply both expected and actual handle mappings')
+        if expected_handles is not None and (
+            checkpoint.get('handles') != expected_handles or expected_handles != actual_handles
+        ):
+            raise CadError('Checkpoint handle mapping differs')
     return dict(result='PASS',state='RESUME_VERIFIED',job_id=job_id,document_id=epoch[0],geometry_revision=epoch[2],sha256=checkpoint['sha256'])
+
+
+
+def verify_finish_checkpoint(checkpoint, *, job_id, source_pins, state, final_stage_request_id,
+                             planned_roles, observed_handles, roots=None):
+    """Bind final verification to the intended completed construction checkpoint."""
+    if not isinstance(final_stage_request_id, str) or not final_stage_request_id:
+        raise CadError('Expected final construction save request required')
+    if checkpoint.get('request_id') != final_stage_request_id:
+        raise CadError('Checkpoint is not the expected final construction save')
+    if (not isinstance(planned_roles, (list, tuple)) or not planned_roles
+            or any(not isinstance(role, str) or not role for role in planned_roles)
+            or len(set(planned_roles)) != len(planned_roles)):
+        raise CadError('Unique planned occurrence roles required')
+    saved_handles = checkpoint.get('handles')
+    if not isinstance(saved_handles, dict) or set(saved_handles) != set(planned_roles):
+        raise CadError('Final construction checkpoint does not cover the planned occurrence roles')
+    verified = verify_resume_checkpoint(
+        checkpoint, job_id=job_id, source_pins=source_pins, state=state, roots=roots,
+        expected_handles=saved_handles, observed_handles=observed_handles,
+    )
+    return dict(verified, state='FINAL_VERIFICATION_PENDING',
+                construction_save_request_id=final_stage_request_id, occurrence_count=len(planned_roles))

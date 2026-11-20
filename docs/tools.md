@@ -5,10 +5,10 @@
 1. [Stable record pagination](../scripts/cadtools/records.py) — bounded page-size recovery and native document/revision binding.
 2. [Durable progress checkpoints](../scripts/cadtools/checkpoints.py) — ordered stage evidence and verified IN_PROGRESS saves that audit the intended DWG path.
 3. [Plate operations](../scripts/plate_reference.py) — supplied outlines, bulges, holes, transforms and actual sidewall checks.
-4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion and analytic equal-radius opening clipping.
+4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion, analytic equal-radius opening clipping and projected overlap of selected rectangular faces and end-perimeter verification for rectangular hollow sections.
 5. [Component insertion](../scripts/assembly_build.py) — source hashes, exact interactive prompts, native metadata and saved placements.
-6. [Assembly occurrences](../scripts/assembly_occurrences.py) — nested part quantities, mirrored hands and original insertion-journal recovery.
-7. [Native views](../scripts/native_views.py) — native SAT/SAB boundary samples, straight polyline centrelines, nested placements and hashed SVG/PNG orthographic/isometric views.
+6. [Assembly occurrences](../scripts/assembly_occurrences.py) — nested part quantities, revision-pinned catalogue BOMs, mirrored hands and original insertion-journal recovery.
+7. [Native views](../scripts/native_views.py) — native SAT/SAB boundary samples, native lines and straight polyline centrelines, nested placements and hashed SVG/PNG orthographic/isometric views. PNG rendering batches edge paths and endpoint markers into separate collections without joining paths.
 8. [Encoding-aware native geometry](../scripts/native_geometry.py) — stable SAT/SAB readback, OCS points, straight polyline segments and placed vertex extrema.
 9. [Source vector paths](../scripts/source_vector_paths.py) — bounded SVG segment grammar, affine frames and explicit unit conversion.
 
@@ -116,9 +116,9 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Insertion recovery, resume and assembly verification
 
 1. [insert_recovery.py](../scripts/insert_recovery.py) — exact native INSERT default contracts, durable same-request continuation and completion checkpoints.
-2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching, optional unique endpoint attribution and caller-defined envelope checks.
+2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching, optional unique endpoint attribution, signed axis-aligned placement checks and caller-defined envelope checks.
 3. [assembly_build.py](../scripts/assembly_build.py) — guarded insertion-point compare-and-set correction with complete placement readback.
-4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pinned incremental saves and verified live-document resume gates.
+4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pinned incremental saves, exact same-document mutation recovery and verified resume gates.
 
 ## Rational surfaces and open mesh derivatives
 

@@ -4,6 +4,7 @@ Input units are millimetres/degrees. Geometry remains native to OCS; this module
 plans or sends known commands and does not substitute a geometry kernel.
 """
 
+from collections.abc import Mapping
 import math
 
 from .runtime import CadError
@@ -39,7 +40,10 @@ def pattern(pcd, angles_deg):
              pcd / 2 * math.sin(math.radians(a))] for a in angles]
 
 
-def added(response):
+def added(response: Mapping) -> str:
+    """Extract the one added handle from a raw native command response."""
+    if not isinstance(response, Mapping):
+        raise CadError("Expected a raw native command response; use a geometry helper's returned handle directly")
     handles = [v["handle"] for v in response.get("changes", []) or [] if v["kind"] == "Added"]
     if len(handles) != 1:
         raise CadError("Expected one added entity; inspect the operation result")
@@ -86,7 +90,7 @@ class Geometry:
         self.select(label + "-selection", handles)
         return self.run(label, f"3DROTATE 0,0,0 {axis} {degrees}")
 
-    def extrude(self, label, points, z, height, bulges=None):
+    def extrude(self, label, points, z, height, bulges=None) -> str:
         finite(z)
         positive(height)
         handle = self.profile(label, points, bulges)
@@ -95,20 +99,20 @@ class Geometry:
         self.select(label + "-selection", [handle])
         return added(self.run(label + "-extrude", "EXTRUDE " + str(height)))
 
-    def revolve_z(self, label, points, bulges=None):
+    def revolve_z(self, label, points, bulges=None) -> str:
         handle = self.profile(label, points, bulges)
         self.select(label + "-selection", [handle])
         solid = added(self.run(label + "-revolve", "REVOLVE Y 360"))
         self.rotate(label + "-axis-z", [solid], "X", 90)
         return solid
 
-    def cylinder(self, label, centre, radius, height):
+    def cylinder(self, label, centre, radius, height) -> str:
         x, y, z = vector(centre)
         positive(radius)
         positive(height)
         return added(self.run(label, f"CYLINDER {x},{y},{z} {radius} {height}"))
 
-    def sphere(self, label, centre, radius):
+    def sphere(self, label, centre, radius) -> str:
         x, y, z = vector(centre)
         positive(radius)
         return added(self.run(label, f"SPHERE {x},{y},{z} {radius}"))

@@ -55,5 +55,35 @@ class NativeBinaryTests(unittest.TestCase):
         self.assertEqual(analytic["topology"], structure["topology"])
 
 
+class SatAnalyticSurfaceTests(unittest.TestCase):
+    @staticmethod
+    def world(values, point=False):
+        numbers = [float(x) for x in values]
+        return [-numbers[1] + (10 if point else 0), numbers[0], numbers[2]]
+
+    def test_sphere_transform_and_radius(self):
+        from native_acis import _sat_curved_surface
+        fields = [None, *'1 2 3 5 1 0 0 0 0 1 forward_v'.split()]
+        self.assertEqual(_sat_curved_surface('sphere-surface', fields, self.world),
+                         {'origin': [8, 1, 3], 'radius': 5})
+        fields[4] = 'nan'
+        with self.assertRaisesRegex(ValueError, 'radius'):
+            _sat_curved_surface('sphere-surface', fields, self.world)
+
+    def test_ring_torus_radii_and_directions(self):
+        from native_acis import _sat_curved_surface
+        fields = [None, *'2 3 4 1 0 0 8 2 0 0 1 forward_v'.split()]
+        self.assertEqual(_sat_curved_surface('torus-surface', fields, self.world),
+                         {'center': [7, 2, 4], 'axis': [0, 1, 0],
+                          'major_radius': 8, 'minor_radius': 2})
+        fields[7] = '1'
+        with self.assertRaisesRegex(ValueError, 'ring-shaped'):
+            _sat_curved_surface('torus-surface', fields, self.world)
+        fields[7] = '8'
+        fields[9:12] = ['1', '0', '0']
+        with self.assertRaisesRegex(ValueError, 'orthonormal'):
+            _sat_curved_surface('torus-surface', fields, self.world)
+
+
 if __name__ == "__main__":
     unittest.main()
