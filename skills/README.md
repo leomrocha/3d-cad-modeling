@@ -62,7 +62,7 @@ Original archived candidate files remain in `${ENERGY_RAW_ROOT}/wind-prototypes/
 ## Proposed project workflows
 
 1. `model-brief` — descriptions, dimensions, reference views, part boundaries, units and source evidence.
-2. OCS engineering (`cad-ocs-engineering`) — use the [merged skill](cad-ocs-engineering/SKILL.md) for OCS modeling and inspection. The original proposal called this workflow `ocs-engineering`.
+2. OCS engineering (`cad-ocs-engineering`) — use the [skill](cad-ocs-engineering/SKILL.md) for OCS modeling and inspection.
 3. `parametric-solid-modeling` — scripted solid geometry and editable parameters.
 4. `drawing-to-cad` — sketch, DXF and SVG interpretation into constrained geometry.
 5. `blender-modeling` — scene/mesh authoring, inspection and visual derivatives.
