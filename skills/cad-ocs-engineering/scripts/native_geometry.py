@@ -76,3 +76,20 @@ def wcs_polyline_vertices(record):
         if any(isinstance(v,bool) or not isinstance(v,(int,float)) or not math.isfinite(v) for v in xy):raise ValueError('Finite polyline coordinates required')
         result.append(list(frame.to_wcs(Vec3(*xy,elevation))))
     return result
+
+
+def wcs_straight_polyline_segments(record):
+    """Read a native zero-bulge polyline's ordered centreline segments."""
+    vertices = wcs_polyline_vertices(record)
+    properties = record['properties']
+    closed = properties.get('is_closed')
+    if type(closed) is not bool:
+        raise ValueError('Explicit native LwPolyline is_closed flag required')
+    if len(vertices) < 2:
+        raise ValueError('At least two native polyline vertices required')
+    for vertex in properties['vertices']:
+        bulge = vertex.get('bulge')
+        if type(bulge) not in (int, float) or bulge != 0:
+            raise ValueError('Explicit zero-bulge polyline segments required')
+    end_vertices = vertices[1:] + vertices[:1] if closed else vertices[1:]
+    return [[start, end] for start, end in zip(vertices, end_vertices)]

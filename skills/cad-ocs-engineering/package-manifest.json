@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "bc56736c039d3850b46c27fa54eadc00974f98565128716aa2280affff3d12e4"
+      "sha256": "788e1f4e96dec9bb3489f87c29f908826243685a5fb5c92f08ed721a68aeaa0c"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -104,7 +104,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "55700e79165cc6b9f5ca5ace27c5919019ae707ef60a0d26291c050aadf41e00"
+      "sha256": "d4ae044a48f241ae22628eeb7b5a4474e70ae7d32487970c714a62a4d2a51c3d"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -376,11 +376,11 @@
     },
     "scripts/native_geometry.py": {
       "source": "scripts/native_geometry.py",
-      "sha256": "7da9c4150a7a9be6401004ae7afd7a7fed7709a378fe9975fde0a638d049c70a"
+      "sha256": "95828ab23dfc15ab471be304426c2e5da87a9f6d9dfc30a47f0835d7dcfbfdb3"
     },
     "scripts/native_views.py": {
       "source": "scripts/native_views.py",
-      "sha256": "3fd45bf0c14e6129575b8c13f2907ddc8dd7aee9188b2b29792005c1d063ba2a"
+      "sha256": "d36576e14efba62415ac6bbc2ad282e439aca06b6ac9a4a3a36d412597c874ef"
     },
     "scripts/ocs_control.py": {
       "source": "scripts/ocs_control.py",
