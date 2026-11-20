@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "9b68f56e28800350715ee5a3ef391281694adf6efccec8044b0b54dab6615f01"
+      "sha256": "8b642d25e4d44772361be51e7d5e03bb5c3852d2946659444129142f9046b860"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -28,7 +28,7 @@
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
-      "sha256": "29b026ebe34f810e75b29d51b54b57a70e39206ef2c7ec6efdc3827012718455"
+      "sha256": "ec7e7d6d7cbf5c0056f0133c8723812886dc4903d04bc107f43e39e4306d1055"
     },
     "references/assembly-units.md": {
       "source": "references/assembly-units.md",
@@ -200,7 +200,7 @@
     },
     "references/source-view-evidence.md": {
       "source": "references/source-view-evidence.md",
-      "sha256": "5cebe3896c1318a861b06d7597869ce84c0d23d31467e256a0f7d0f75c3ceb60"
+      "sha256": "aa9005d008201f7add3a31b4a4e9296e7b4d88aa1dc05b12416a5e535fca050e"
     },
     "references/sources-and-capabilities.md": {
       "source": "references/sources-and-capabilities.md",
@@ -389,6 +389,10 @@
     "scripts/ocs_document_cleanup.py": {
       "source": "scripts/ocs_document_cleanup.py",
       "sha256": "437a34e827f2d2051ab735f9a05fa980f74c9c905834ba066cc1282c9db3506c"
+    },
+    "scripts/orthographic_checks.py": {
+      "source": "scripts/orthographic_checks.py",
+      "sha256": "1568969374cd56a961c5646321260b6f7c43f1409045758d9be7e77ed22eddc8"
     },
     "scripts/package_check.py": {
       "source": "scripts/package_check.py",

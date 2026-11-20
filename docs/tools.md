@@ -158,3 +158,5 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [Source trim loops](../scripts/source_trim_loop.py) follows oriented edge uses, computes shared trim corners and independently checks curve endpoint and surface inverse residuals.
 - [Finite solid contact](../scripts/finite_solid_contact.py) classifies finite solid pairs and checks independent inside witnesses with a caller-supplied OpenCascade environment.
 - [STEP entity graph](../scripts/step_entity_graph.py) identifies reachable dependencies within a bounded Part 21 data grammar.
+
+[Orthographic landmark checks](../scripts/orthographic_checks.py) compare shared world coordinates and their worst-case uncertainty bounds across named drawing views.

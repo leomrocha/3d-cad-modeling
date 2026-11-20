@@ -35,6 +35,8 @@ Select the existing session explicitly with --session SESSION or --descriptor DE
 3. Use [component records](references/component-procedure.md) for required features and readiness. Resolve a named required input before dependent construction. Match drawing extension-line endpoints and measurement kind using [drawing-feature checks](references/drawing-feature-checks.md).
 4. Keep materials separate from display colors. Use explicit source/job values for physical properties, loads, limits, tolerances and reference geometry.
 
+For ruler photographs or parts dimensioned across several views, follow the [photo and multi-view drawing procedure](references/source-view-evidence.md#ruler-photographs-and-multi-view-blueprints) before using the affected coordinates in a sketch. For mating parts, record the intended interface and its dimensional limits using [assembly evidence](references/assembly-evidence.md#judge-a-mating-interface).
+
 ### Check existing component implementations
 
 Inspect actual matching models and all manifest, work-record, input-sheet and CAD-index references, including NOT_STARTED entries. Mark matching completed components DONE with their readable names, actual model paths and recorded checks. Reuse that geometry and those checks, then select an unfinished item. Construction starts only after reconciliation establishes that the required matching model is absent. Follow [model inventory](references/existing-model-start-check.md).
