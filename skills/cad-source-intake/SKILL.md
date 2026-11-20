@@ -50,6 +50,10 @@ python3 ${SKILL_ROOT}/scripts/source_intake.py \
 
 Run the bundled `scripts/package_check.py` to check package hashes and imports. After intake, call `source_intake.verify_revision()` on the completed source index to check the published index and scope against their receipt. Preserve source conflicts, corrections and interrupted publication as explicit results.
 
+## Hand-drawn concepts
+
+When the input is a freehand design sketch, record its kind as a file and identify it as a concept sketch in the summary. Preserve the sketch, page orientation, accompanying description and corrections as one input revision. Keep distinct design alternatives identifiable. Hand drawing inspection the original page and the decision needed, such as identifying hardware, interpreting motion or locating a mounting feature. Pin subsequent observations to this source hash and page.
+
 ## Image observations
 
 Record image kind, stored pixel size, page, orientation, crop, resize and padding in the source revision. Keep the original file and any decoded response with their hashes. Select the required output (text, point, box, polygon or instance mask). Inspect a supplied endpoint's deployed schema and model, run a labeled case, and record the actual response, latency, cost and corrections. Keep service credentials outside the record.

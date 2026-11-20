@@ -157,3 +157,7 @@ The [skill-to-action map](../research/action-audit/skill-to-actions.md) links th
 [Source intake](cad-source-intake/SKILL.md) can run a supplied local SAM checkpoint with box or point prompts and preserve the earlier mask when correcting an instance.
 
 [Two-photo measurement and learned-mesh readback](cad-ocs-engineering/references/source-view-evidence.md#two-product-photos-and-a-learned-mesh) covers camera sensitivity, independent dimensions and geometric checks after an edit.
+
+[Hand-drawn concept sketches](cad-drawing-inspection/SKILL.md#hand-drawn-concept-sketch) links each part, relationship and dimension to its mark on the page. The [CAD handoff](cad-ocs-engineering/references/source-view-evidence.md#use-a-hand-drawn-concept-for-cad) uses those observations for catalogue lookup, approximate layout and dimensioned features.
+
+[Standard fastener variants](cad-ocs-engineering/references/source-variant-tables.md) covers generator checks and the represented diameter of cosmetic threads.

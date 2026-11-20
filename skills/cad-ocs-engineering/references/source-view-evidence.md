@@ -2,6 +2,12 @@
 
 Use this procedure when a manufacturer drawing is available as a retained raster image or as a rendered page from a retained original PDF. It records how a source view supports dimensions, a traced outline, or both.
 
+## Use a hand-drawn concept for CAD
+
+Start with the sketch interpretation and its source-linked parts, relationships and dimensions. Search the part index using readable designations and the required interface. Open the matched asset. Record which parameters come from that asset, which come from sketch callouts and which placements still rely on a proposed arrangement. A motion arrow can orient a hinge, and a verified hinge model can supply its pin and mounting pattern. The hinge-axis location on its supporting frame requires its own datum.
+
+Use a tentative relation to show an explicitly approximate layout. Promote it to a CAD constraint when a callout, verified part, independent view or user correction establishes it. If a conflict affects the requested placement or cut, identify its source regions and ask only for the dimension or relationship needed for that operation. Retain unaffected decisions when the answer arrives.
+
 ## Preserve and identify the source
 
 1. Keep the original PDF or image unchanged. Record its original URL or local source path, acquisition or observation time, content type, byte count and SHA-256.

@@ -1,13 +1,21 @@
 ---
 name: cad-drawing-inspection
-description: Inspect a DXF drawing's original entities, declared units, spaces, layers, nested blocks and source coordinate systems before selecting geometry for CAD construction.
+description: Inspect DXF entities, raster profiles and dimension leaders, or interpret parts, relationships and feature-specific dimensions in a hand-drawn concept sketch for CAD.
 ---
 
-# Inspect a DXF drawing before selecting a profile
+# Inspect drawings and hand-drawn concepts for CAD
 
 Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation.
 
 Implements the DXF branch of **Inspect source entities, units and drawing contexts (CAD-08-A01)**. Read the existing inspection for the same source hash, space, layer selection and options before executing another inspection.
+
+## Hand-drawn concept sketch
+
+Read the source page and description visually. For each relevant mark record a stable observation ID, its bounding region in original page pixels, what it shows and its target. Use the image hash, pixel size and page to locate it again. Group observations into parts, connections, relative positions, motion and distinct design alternatives. Keep both readings of an ambiguous crossing. A drawn alignment, angle or equal spacing starts as an interpretation.
+
+Record a written dimension with its literal text, unit if supplied, approximation mark, referenced feature and leader or extension marks. An oval marked Ø8 mm can specify a hole diameter. Locating its centre needs separate evidence. One stated length applies only to its identified feature. Freehand pixel ratios cannot establish a scale elsewhere on the page.
+
+Hand modeling a part list, relationships, and per-feature dimensions, each citing observation IDs. Identify which action each conflict affects. For conflicting callouts on one hole, retain both readings and hold that hole operation. Continue independent part lookup or layout decisions. Use OCR, masks or line extraction when they help read a particular mark. Check the original symbol and its leader before using recognized text. OCR can turn Ø8 into 08 and silently lose the diameter meaning.
 
 ## Package setup
 

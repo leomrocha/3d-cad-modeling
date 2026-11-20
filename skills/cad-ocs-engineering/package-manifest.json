@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "7e38ef36b0ec7b9222a2be3b8fca30647c815514c4de04ed4e8b01d98fa14a22"
+      "sha256": "6ad216c4c711d92af6b7d5db1bfaaaf5c371ca03b69b537bce10cc81538d49d2"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -200,11 +200,11 @@
     },
     "references/source-variant-tables.md": {
       "source": "references/source-variant-tables.md",
-      "sha256": "2b0ec48d3998efb1f4e5886f59ddac8cb9b68ee3dea3ad87707d9cd02c113ab9"
+      "sha256": "cb72c25cbab8eb1e7258c5ee98ff4d75eca885be633817f17534878423520f40"
     },
     "references/source-view-evidence.md": {
       "source": "references/source-view-evidence.md",
-      "sha256": "3a0abcb46042abbfb553ba15df1d37b8c75bb1b5a6cb230984aaa410ad7f71fc"
+      "sha256": "9f6c138aa84cb02e7e380dece0f64dc822652c5f977580c14d3c05284ba7f041"
     },
     "references/sources-and-capabilities.md": {
       "source": "references/sources-and-capabilities.md",
