@@ -54,6 +54,12 @@ Exact vocabulary, explicit context and unambiguous engineering communication are
 8. Stop when instructed to stop. Do not continue, revert changes or launch replacement work without authorization.
 9. Git staging, commits, pushes, worktrees and branch reservations require corresponding authorization for this project. Do not inherit automatic-commit exceptions from another project's AGENTS.md. Never discard unrelated changes or reserve the author's branch elsewhere without permission.
 
+### Skill downloads and the separate OpenCV installer
+
+1. Skills must not download anything during execution. Use only resources already available. This rule includes downloads triggered by a library, installer or subprocess. No skill may download models or model weights.
+2. The separate optional OpenCV installer skill is the explicit exception for installing OpenCV. Before installation, it must tell the user that the requested operation needs OpenCV and that the installer will install OpenCV. A modeling skill may point to the installer when OpenCV is missing.
+3. Every exception must come explicitly from the user. To run an exception, require a single, simple user message that contains the word `EXECUTE` and requests only that one action. For example, `EXECUTE the OpenCV installation.` Run it alone. A general execution order, a combined request, an earlier approval or a missing dependency cannot authorize an exception.
+
 ## Research and delegation
 
 1. External web searches require the user’s approval. Use small agents for every approved web search. The primary agent must not search or browse the web directly unless explicitly instructed to do so. Reading local project files is separate from external research.
