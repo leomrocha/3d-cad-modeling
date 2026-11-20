@@ -32,6 +32,7 @@ def read_inventory(model, model_unit):
                     row["unsupported"] = str(exc)
                 else:
                     row.update(definition=d.name, matrix=matrix)
+                    row["anchors"]["block base"] = list(doc.blocks[d.name].block.dxf.base_point)
                     inspect(doc.blocks[d.name])
             elif kind == "LINE":
                 start, end = d.start, d.end

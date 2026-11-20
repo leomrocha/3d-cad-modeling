@@ -289,6 +289,11 @@ def verify_receipts(row, resource, path):
             actual = {"start": list(start), "length": length}
             if json.dumps(actual, sort_keys=True) != json.dumps(props, sort_keys=True):
                 raise ValueError("Readback differs from saved DXF geometry")
+    elif writer["backend"].startswith("ezdxf/") and row["input"] == "DXF INSERT":
+        from batch_dxf_frames import verify_result
+        actual = verify_result(source, result, writer, require_change=True)
+        if actual != observed:
+            raise ValueError("Readback differs from reopened occurrence frames")
     else:
         raise ValueError("No backend artifact verification for this operation")
     return file_digest(path)

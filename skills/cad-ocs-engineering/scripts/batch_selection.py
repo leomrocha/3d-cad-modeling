@@ -161,8 +161,18 @@ def resolve(request, snapshot):
             evidence.update(reference={k: reference[k] for k in ("path", "chain", "matrix")},
                             measurement=m, rule=measure)
         element = record["element"]
+        current = element.get("current")
+        if (request.get("action") == "place" and element["kind"] == "INSERT"
+                and request.get("entity") == "DXF INSERT"):
+            if "block base" not in element.get("anchors", {}):
+                raise ValueError("DXF INSERT selection requires a measured block base")
+            frame = [row[:] for row in record["matrix"]]
+            base = apply(frame, element["anchors"]["block base"])
+            for i in range(3):
+                frame[i][3] = base[i]
+            current = {"world_frame": frame}
         targets.append(dict(id="/".join(key), reference=spec["operation_reference"],
-                            current=element.get("current"), selection=evidence))
+                            current=current, selection=evidence))
     if not targets:
         raise ValueError("Selection matched no elements")
     return targets

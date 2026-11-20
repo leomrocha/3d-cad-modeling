@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "8e30068d5f3fe55af62806ea72abf6281a9b10aca2d6891586a3bfd8c9694a34"
+      "sha256": "b028414628751fe691507e6f8512f88ba24c5a0aa181024e730d4d615398f17b"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -89,6 +89,10 @@
     "references/exact-source-checks.md": {
       "source": "references/exact-source-checks.md",
       "sha256": "f971b170af064bf6a92361dbc49361c0d98a37193afa4d9f4d6f049104066b41"
+    },
+    "references/existing-batch-placement.md": {
+      "source": "references/existing-batch-placement.md",
+      "sha256": "769eb89ff86b222600776872ecc2952bb70fddd7081f8794da3b5eb4f29d345a"
     },
     "references/existing-battery.md": {
       "source": "references/existing-battery.md",
@@ -282,13 +286,21 @@
       "source": "scripts/axial_motor.py",
       "sha256": "6855873b6ea3af62840683a2a8a7ebe6f46484f0c74d6ad9715866c50a4723d6"
     },
+    "scripts/batch_dxf_frames.py": {
+      "source": "scripts/batch_dxf_frames.py",
+      "sha256": "d59a190c65541e0c623cbff6257496bfa745c205681c2024ab24bc54152a62c4"
+    },
     "scripts/batch_dxf_inventory.py": {
       "source": "scripts/batch_dxf_inventory.py",
-      "sha256": "37c0cb7570bae0ad43ff5ec1f0f8f27eae3959f202e99dd8626c5592926a35e6"
+      "sha256": "45566260e315a847145c146ec6248bd000c82802a79d714905c708ff51797b87"
     },
     "scripts/batch_dxf_lines.py": {
       "source": "scripts/batch_dxf_lines.py",
       "sha256": "c03a00644ea54fcc8aff0c604daa5be735f7cbf5b6050f648cf1defd5d50b1a3"
+    },
+    "scripts/batch_dxf_placement.py": {
+      "source": "scripts/batch_dxf_placement.py",
+      "sha256": "ef5600268fa821f1f038a3700ac2d2b9900988431369b9e9b02b3a70cbbc4591"
     },
     "scripts/batch_insert_recovery.py": {
       "source": "scripts/batch_insert_recovery.py",
@@ -300,7 +312,7 @@
     },
     "scripts/batch_selection.py": {
       "source": "scripts/batch_selection.py",
-      "sha256": "5d736298c81c032214ef20494bd5e6d6aa5b086ea042080c08f7da54f7d8ca1e"
+      "sha256": "5b7bef1a0b29479babb1439fa6956a638441a05fcaf01feda674895cb8832cdd"
     },
     "scripts/battery_module.py": {
       "source": "scripts/battery_module.py",
@@ -484,7 +496,7 @@
     },
     "scripts/operation_catalogue.py": {
       "source": "scripts/operation_catalogue.py",
-      "sha256": "c9d8d306c1551ac995800e9a33ec4786c3ead0029bf41592db413452b1f287b7"
+      "sha256": "caffdf049941a737042e00d0c0e479598194ad07a19e2b79625d5ab2cba0475a"
     },
     "scripts/orthographic_checks.py": {
       "source": "scripts/orthographic_checks.py",

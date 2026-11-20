@@ -10,7 +10,7 @@ REQUIRED = {
     'mappings/openscad.json', 'mappings/freecad.json', 'mappings/fusion.json',
     'scripts/operation_catalogue.py', 'scripts/opencv_probe.py',
     'scripts/batch_request.py', 'scripts/batch_dxf_lines.py', 'scripts/batch_dxf_inventory.py',
-    'scripts/batch_selection.py', 'scripts/step_placements.py',
+    'scripts/batch_dxf_frames.py', 'scripts/batch_selection.py', 'scripts/step_placements.py',
     'fixtures/plate.scad', 'scripts/translator.py', 'scripts/state.py',
     'scripts/bore_check.py', 'scripts/package_check.py', 'requirements.txt', 'LICENSE',
 }
