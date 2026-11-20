@@ -1,9 +1,9 @@
 ---
 name: cad-model-repair
-description: Repair an existing CAD model with generic or duplicate labels, missing layers, or unusable assembly navigation. Diagnose observed defects, save a separate native revision and verify geometry, identity and navigation after reopening.
+description: Repair model labels, layers and assembly navigation. Correct a source-linked hole diameter or image outline, save a separate revision and remeasure dependent and independent features after reopening.
 ---
 
-# Repair an existing model's navigation
+# Repair an existing CAD model
 
 Use the [operation selection procedure](references/modeling-operation-selection.md) for component reuse, provider capability checks and job evidence. Apply it to the requested operation. Open the local operation catalogue on first use and after a request to refresh available skills.
 
@@ -29,3 +29,9 @@ For a native drawing repair, compare retained solid properties and feature histo
 ## Source-linked correction
 
 Identify the affected occurrence from its source revision, parent and role. Resolve ambiguity before applying a correction. A revised image mask returns to source intake and invalidates its dependent profile. A changed part number returns to indexed lookup. Save a separate model revision for a role correction. Reopen, repeat the failing selection, compare sibling identity and transform, then reapply the mapping to check idempotence.
+
+For a diameter correction, bind the original and revised source field (with units) to the owning model revision, native feature identifier and entry centre. For imported STEP bind the revision-specific cylindrical face and its two rims to the source field using centre, axis, diameter, depth and end condition. Resolve the feature again after export because STEP entity numbers can change. Identify the mating feature, its diameter and the clearance convention. Record the signed diametral clearance as the measured bore diameter minus the mating diameter. Distinguish the represented cylinder from a nominal thread envelope when the imported screw uses a simplified thread.
+
+In a native feature model, edit the identified driving diameter and retain its centre and axis constraints. For a complete imported cylindrical bore, apply an axis-preserving direct edit to its wall. The engineering skill’s batch modification procedure supports this operation for enlargement of one selected STEP bore. Save a separate revision. Measure both revisions at the same entry centre. Compare the hole diameter, centre, depth, mating clearance and one identified independent hole after reopening. Retain the request, source and derivative hashes, and actual write calls. Count read-only Boolean comparisons separately from geometry edits. A native editor can recompute the host and its dependencies internally. Keep existing independent source analysis, catalogue results and placements.
+
+For an outline correction, identify the source revision and instance mask, the extraction inputs (including calibration and frame), the resulting profile, the CAD feature that consumes that profile and the measurement that reads the feature. Rerun that extraction, revise that feature and remeasure it after reopening. Compare a separate feature with its prior result. If multiple profiles or features match the source, record their identifiers and request the intended binding before editing.

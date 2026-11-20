@@ -102,7 +102,7 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 ## Navigation and repair
 
 1. [Model navigation](cad-model-navigation/SKILL.md) covers occurrence identities, nested placement, materials, visible layers and catalogue lookup. [Saved assembly checks](cad-model-navigation/references/assembly-validation.md).
-2. [Model repair](cad-model-repair/SKILL.md) checks the original geometry and native history, the repaired assignments, and repeat application.
+2. [Model repair](cad-model-repair/SKILL.md) checks the original geometry and native history, the repaired assignments, and repeat application. [Source-linked correction](cad-model-repair/SKILL.md#source-linked-correction) binds role, diameter and outline changes to the affected source revision and model feature, then checks the saved revision.
 
 ## Service clearance
 
