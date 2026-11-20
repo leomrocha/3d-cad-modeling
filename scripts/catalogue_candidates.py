@@ -12,7 +12,7 @@ def digest(path):
         return hashlib.file_digest(stream, 'sha256').hexdigest()
 
 
-def lookup(search_cli, data, query):
+def lookup(search_cli, data, query, *, include_record=None, interpreter=sys.executable):
     """Read one standard CAD Models snapshot. Return candidates for identity review."""
     index = data / 'catalogue.sqlite'
     catalogue = data / 'catalogue.json'
@@ -22,18 +22,33 @@ def lookup(search_cli, data, query):
     records = {row['id']: row for row in rows}
     if len(records) != len(rows):
         raise ValueError('Duplicate catalogue record ID')
-    output = subprocess.run([sys.executable, str(search_cli), '--data', str(data),
+    output = subprocess.run([str(interpreter), str(search_cli), '--data', str(data),
                              '--limit', '1000', '--', query], check=True,
                             capture_output=True, text=True)
     hits = json.loads(output.stdout)
-    candidates = []
-    root = (data / 'packages').resolve()
+    selected = {}
     for hit in hits:
         row = records[hit['id']]
         if any(row.get(key) != hit.get(key) for key in ('name', 'dimensions', 'standards')):
             raise ValueError('Index and asset record disagree: ' + hit['id'])
-        item = dict(id=row['id'], name=row['name'], exact_search_hit=hit['exact'],
+        selected[row['id']] = hit['exact']
+    if include_record is not None:
+        for row in rows:
+            if row['id'] not in selected and include_record(row):
+                selected[row['id']] = False
+
+    candidates = []
+    root = (data / 'packages').resolve()
+    for identifier, exact in selected.items():
+        row = records[identifier]
+        item = dict(id=row['id'], name=row['name'], exact_search_hit=exact,
                     dimensions=row.get('dimensions'), standards=row.get('standards'))
+        for key in ('manufacturer', 'family', 'base', 'designation', 'part_number',
+                    'closure', 'sides', 'evidence', 'designation_evidence'):
+            if key in row:
+                item[key] = row[key]
+        if isinstance(row.get('variant'), dict):
+            item['variant'] = row['variant']
         locator = row.get('file')
         if locator:
             path = (root / locator).resolve()

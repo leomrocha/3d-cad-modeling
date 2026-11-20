@@ -132,7 +132,7 @@
     },
     "references/modeling-input-operations.md": {
       "source": "references/modeling-input-operations.md",
-      "sha256": "a6365cf11f1ae809e87c074e2ce357fe95750ea63b09462a8732867f7f64aa42"
+      "sha256": "cc186e6bcefb96432c0f8336a744c3349a5c6e111a3a5a69023696c8bb0e626e"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
@@ -276,7 +276,7 @@
     },
     "scripts/bearing_variant.py": {
       "source": "scripts/bearing_variant.py",
-      "sha256": "a6b8b5b9502d14bec6b938200b2985dc60f681fd8e245f1ec4c19dbf0f01b242"
+      "sha256": "e7cfb86182aba0c0c86f18d6ef7bf8a5ac4a951c5acfe9c2d596a6104f5b73bd"
     },
     "scripts/cadtools/__init__.py": {
       "source": "scripts/cadtools/__init__.py",
@@ -320,7 +320,7 @@
     },
     "scripts/catalogue_candidates.py": {
       "source": "scripts/catalogue_candidates.py",
-      "sha256": "fa9a3d8bb80c145c2779c31dcdda5a8034497c40c9f49961933e994ffbfabe0a"
+      "sha256": "d0e1e0eeb1eb817101410071f5dce91699304d20ac7cf6190670c997a6efe1e6"
     },
     "scripts/check_contract.py": {
       "source": "scripts/check_contract.py",
