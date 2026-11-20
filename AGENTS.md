@@ -65,8 +65,8 @@ Exact vocabulary, explicit context and unambiguous engineering communication are
 3. Keep the primary agent's synthesis within the same scope. Check the returned evidence, links, arithmetic and compatibility claims before presenting them. Delegation does not replace review.
 4. Reuse existing findings and source documents before commissioning another search. Do not repeat an entire research pass to answer a narrower question.
 5. Use original technical documentation and engineering drawings for dimensions, interfaces, and operating limits.
-9. Preserve original source files when acquired, with title, URL, retrieval date, content type, local path and hash. Keep originals unchanged and derived notes separate. Record actual retrieval status; a URL, search snippet or summary is not a downloaded original.
-10. Source uncertainty belongs next to the affected claim. Do not let generic caveats displace the requested findings. Do not claim a source, video, test or agent result was inspected or completed without evidence.
+6. Preserve original source files when acquired, with title, URL, retrieval date, content type, local path and hash. Keep originals unchanged and derived notes separate. Record actual retrieval status; a URL, search snippet or summary is not a downloaded original.
+7. Source uncertainty belongs next to the affected claim. Do not let generic caveats displace the requested findings. Do not claim a source, video, test or agent result was inspected or completed without evidence.
 
 ## Calculations, implementation and CAD
 
