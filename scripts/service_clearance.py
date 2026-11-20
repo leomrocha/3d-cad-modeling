@@ -91,3 +91,23 @@ def shared_definition_coincidence(moving_matrix, fixed_matrix, displacement):
     if len(fractions) > 1 or not 0 <= fraction <= 1:
         return {"result": "NO_COINCIDENCE_WITNESS", "travel_fraction": None}
     return {"result": "COINCIDENCE_WITNESS", "travel_fraction": str(fraction)}
+
+
+def axial_section_window(moving_span, fixed_span, travel, *, clearance=0):
+    """Bound source stations that can approach a fixed slab during axial travel.
+
+    Inputs are ordered station intervals on the same axis. Travel gives the
+    least and greatest signed displacement from the moving source pose.
+    Output strings are exact rationals in the caller's length unit.
+    """
+    moving_low, moving_high = _vector(moving_span, 2)
+    fixed_low, fixed_high = _vector(fixed_span, 2)
+    first, last = _vector(travel, 2)
+    margin, = _vector([clearance], 1)
+    if moving_low > moving_high or fixed_low > fixed_high or first > last or margin < 0:
+        raise ValueError("Ordered spans, ordered travel and nonnegative clearance required")
+    gap = max(fixed_low - moving_high - last, moving_low + first - fixed_high, 0)
+    low = max(moving_low, fixed_low - margin - last)
+    high = min(moving_high, fixed_high + margin - first)
+    return dict(axial_gap_lower_bound=str(gap),
+                source_section=[str(low), str(high)] if low <= high else None)

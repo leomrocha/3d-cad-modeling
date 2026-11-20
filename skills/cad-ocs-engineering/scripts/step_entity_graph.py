@@ -121,3 +121,53 @@ def step_entity_graph(source, roots):
                 for kind, value in entities[identifier]])
     return dict(roots=roots, entity_count=len(source_ids), source_ids=source_ids,
                 ordered_graph_sha256=digest.hexdigest())
+
+
+def copy_step_closure(entities, roots, *, first_id):
+    """Renumber reachable numbered STEP assignments from one parsed DATA section.
+
+    The caller supplies {positive_id: original_rhs}, without '=' or terminating
+    semicolon. Preserve each right-hand side byte-for-byte except internal
+    reference tokens. The output is input for a caller-owned STEP wrapper.
+    Complex entity right-hand sides can be copied without interpreting them.
+    """
+    if type(first_id) is not int or first_id < 1:
+        raise ValueError('First destination ID must be a positive integer')
+    ordered = list(roots)
+    if not ordered or any(type(i) is not int or i < 1 for i in ordered):
+        raise ValueError('Supply positive root IDs')
+    if any(type(i) is not int or i < 1 for i in entities):
+        raise ValueError('Supply positive source IDs')
+    mapping = {}
+    spans = {}
+    pending = deque(ordered)
+    while pending:
+        key = pending.popleft()
+        if key in mapping:
+            continue
+        if key not in entities:
+            raise ValueError(f'Missing referenced entity #{key}')
+        rhs = entities[key]
+        if not isinstance(rhs, str):
+            raise ValueError('Supply original STEP right-hand sides as text')
+        masked = _without_comments_and_strings(rhs)
+        if (not masked.strip() or ';' in masked or '=' in masked or '"' in masked
+                or '@' in masked or '&' in masked or '<' in masked or '>' in masked):
+            raise ValueError(f'Unsupported STEP right-hand side in #{key}')
+        matches = list(re.finditer(r'#([0-9]+)', masked))
+        if masked.count('#') != len(matches):
+            raise ValueError(f'Invalid reference in #{key}')
+        mapping[key] = first_id + len(mapping)
+        spans[key] = [(hit.start(), hit.end(), int(hit[1])) for hit in matches]
+        pending.extend(ref for _, _, ref in spans[key])
+    copied = {}
+    for key, new_id in mapping.items():
+        rhs = entities[key]
+        start = 0
+        pieces = []
+        for low, high, ref in spans[key]:
+            pieces.extend([rhs[start:low], '#' + str(mapping[ref])])
+            start = high
+        pieces.append(rhs[start:])
+        copied[new_id] = ''.join(pieces)
+    return dict(source_to_target=mapping, roots=[mapping[i] for i in ordered], entities=copied)

@@ -61,3 +61,46 @@ class SolidContact(unittest.TestCase):
         result = self.check(self.box(0), vertex)
         self.assertEqual(result['state'], 'UNKNOWN')
         self.assertIn('one finite solid', result['reason'])
+
+
+@unittest.skipUnless(BRepPrimAPI_MakeBox, 'optional Open CASCADE Python bindings unavailable')
+class BoreTranslation(unittest.TestCase):
+    def fixture(self, **changes):
+        from finite_solid_contact import axial_bore_clearance
+        from OCP.BRepAlgoAPI import BRepAlgoAPI_Cut
+        from OCP.BRepPrimAPI import BRepPrimAPI_MakeCylinder
+        from OCP.gp import gp_Ax2, gp_Dir
+
+        axis = gp_Ax2(gp_Pnt(0, 0, -1), gp_Dir(0, 0, 1))
+        plate = BRepPrimAPI_MakeBox(gp_Pnt(-3, -3, 0), gp_Pnt(3, 3, 1)).Shape()
+        hole = BRepPrimAPI_MakeCylinder(axis, 1.2, 4).Shape()
+        fixed = BRepAlgoAPI_Cut(plate, hole).Shape()
+        from OCP.TopAbs import TopAbs_SOLID
+        from OCP.TopExp import TopExp_Explorer
+        fixed = TopExp_Explorer(fixed, TopAbs_SOLID).Current()
+        moving = BRepPrimAPI_MakeCylinder(axis, 0.9, 3).Shape()
+        options = dict(axis_xy=(0, 0), travel_z=(-1, 2), moving_radius=1,
+                       bore_radius=1.15, reserve=0.05, classifier_tolerance=1e-7)
+        return axial_bore_clearance(moving, fixed, **(options | changes))
+
+    def test_continuous_signed_travel_at_positive_reserve(self):
+        result = self.fixture()
+        self.assertEqual(result['state'], 'CLEAR_WITH_NUMERICAL_RESERVE', result)
+        self.assertEqual(result['outside_moving_limit'], 0)
+        self.assertEqual(result['inside_fixed_guard'], 0)
+
+    def test_offset_shaft_or_occupied_guard_is_inconclusive(self):
+        for options, failed in [({'axis_xy': (0.25, 0)}, 'outside_moving_limit'),
+                                ({'bore_radius': 1.4}, 'inside_fixed_guard')]:
+            with self.subTest(options=options):
+                result = self.fixture(**options)
+                self.assertEqual(result['state'], 'UNKNOWN', result)
+                self.assertGreater(result[failed], 0)
+
+    def test_margin_below_kernel_budget(self):
+        self.assertEqual(self.fixture(reserve=1e-8)['state'], 'UNKNOWN')
+
+    def test_reject_ceiling_through_material(self):
+        result = self.fixture(fixed_ceiling=0.5)
+        self.assertEqual(result['state'], 'UNKNOWN')
+        self.assertGreater(result['fixed_solids_above_ceiling'], 0)

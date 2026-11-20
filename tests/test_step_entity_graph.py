@@ -43,3 +43,19 @@ class StepGraph(unittest.TestCase):
         result = step_entity_graph(data(rows + '#1400=A();'), [1, 1400])
         self.assertEqual(result['source_ids'][:3], [1, 1400, 2])
         self.assertEqual(result['entity_count'], 1400)
+
+
+class CopySourceAssignments(unittest.TestCase):
+    def test_opaque_complex_repeated_cycle_and_protected_literals(self):
+        from step_entity_graph import copy_step_closure
+        originals = {13: "(A(#4) B('#77; ''#4',/*#19*/#4,1.00D0))", 4: 'C(#13)', 1: 'UNUSED()'}
+        result = copy_step_closure(originals, [13, 4], first_id=501)
+        self.assertEqual(result['roots'], [501, 502])
+        self.assertEqual(result['entities'], {501: "(A(#502) B('#77; ''#4',/*#19*/#502,1.00D0))", 502: 'C(#501)'})
+        self.assertEqual(result['source_to_target'], {13: 501, 4: 502})
+
+    def test_nonlocal_and_incomplete_input(self):
+        from step_entity_graph import copy_step_closure
+        for rhs in ['B(#2)', 'B(#)', 'B(#0)', 'B(1);#2=C()', 'B(@2)', 'B(' + chr(34) + 'ab' + chr(34) + ')']:
+            with self.subTest(rhs=rhs), self.assertRaises(ValueError):
+                copy_step_closure({1: rhs}, [1], first_id=10)

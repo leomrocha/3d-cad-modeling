@@ -116,7 +116,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 ## Insertion recovery, resume and assembly verification
 
 1. [insert_recovery.py](../scripts/insert_recovery.py) — exact native INSERT default contracts, durable same-request continuation and completion checkpoints.
-2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching and caller-defined envelope checks.
+2. [assembly_verification.py](../scripts/assembly_verification.py) — geometry-bound nested occurrence matching, repeated source-world vertex matching, optional unique endpoint attribution and caller-defined envelope checks.
 3. [assembly_build.py](../scripts/assembly_build.py) — guarded insertion-point compare-and-set correction with complete placement readback.
 4. [cadtools/checkpoints.py](../scripts/cadtools/checkpoints.py) — source-pinned incremental saves and verified live-document resume gates.
 
@@ -147,7 +147,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 
 ## Service clearance
 
-1. [service_clearance.py](../scripts/service_clearance.py) checks continuous box overlap during finite straight translation and supplies exact coincidence witnesses for verified shared definitions.
+1. [service_clearance.py](../scripts/service_clearance.py) checks continuous box overlap and axial source-section coverage and supplies exact coincidence witnesses for verified shared definitions.
 
 ## Source assembly recovery and evidence
 
@@ -156,5 +156,5 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 - [Mounting patterns](../scripts/mounting_pattern.py) screens injective assignments against distance bounds and checks finite pin clearance at a supplied planar pose.
 - [Mesh checks](../scripts/mesh_checks.py) reports shell components, closed-manifold vertex links, Euler characteristic and signed volume.
 - [Source trim loops](../scripts/source_trim_loop.py) follows oriented edge uses, computes shared trim corners and independently checks curve endpoint and surface inverse residuals.
-- [Finite solid contact](../scripts/finite_solid_contact.py) classifies finite solid pairs and checks independent inside witnesses with a caller-supplied OpenCascade environment.
-- [STEP entity graph](../scripts/step_entity_graph.py) identifies reachable dependencies within a bounded Part 21 data grammar.
+- [Finite solid contact](../scripts/finite_solid_contact.py) classifies finite solid pairs, checks inside witnesses and tests axial bore withdrawal with a numerical reserve with a caller-supplied OpenCascade environment.
+- [STEP entity graph](../scripts/step_entity_graph.py) fingerprints simple STEP instance graphs and renumbers original simple or complex assignment payloads for a caller-owned wrapper.
