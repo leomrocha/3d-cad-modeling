@@ -35,13 +35,12 @@ Package and dependency checks establish software execution and retained bytes. C
 
 1. `drawing-inspection` is now `cad-drawing-inspection`; `source-intake` is now `cad-source-intake`. Installation commands use the CAD-prefixed names.
 2. An existing old-name installation remains its own local copy. Install the new skill by its current name; review and remove an old local copy separately when migrating that environment.
-3. Historical source locators retain their original values. Added current locators and the rename record (`git show 957691b:execution/skill-renaming-2026-11-13.md`) identify the moved packages.
 
 ## Complete OCS engineering merge
 
 1. `cad-ocs-engineering` combines the full original OCS engineering skill and this repository’s component workflow. Both workflows are merged directly into its main `SKILL.md`.
 2. The package retains the component procedures, generic helpers, tests and source checks developed here. It also includes the original OCS control, computational-engineering and capability references and adapted agent metadata.
-3. The former `component-cad` package is now `cad-ocs-engineering`. Merge inventory and verification (`git show 957691b:execution/cad-ocs-engineering-merge-2026-11-13.md`).
+3. The former `component-cad` package is now `cad-ocs-engineering`.
 
 Run `python3 -m unittest discover -s tests -p test_ocs_skill_merge.py` to check the CAD skill identity and documentation paths.
 

@@ -82,7 +82,6 @@ When I see things are ready enough, I send the automated 3D modeling pipeline to
 1. `docs/` — linked documentation, selected example copies and images.
 2. `skills/` — agent task instructions.
 3. `scripts/` and `tests/` — reusable helpers and their checks.
-4. `execution/` — recorded execution reports.
 
 ## Examples
 

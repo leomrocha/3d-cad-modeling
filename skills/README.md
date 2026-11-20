@@ -86,11 +86,11 @@ Choose a modeling operation using the [operation selection procedure](../docs/mo
 [Component CAD iterations](cad-ocs-engineering/SKILL.md) uses the external project's existing part index/dictionary, checks source readiness, records individual action occurrences and requires an applied verified skill/script improvement per completed CAD design. [Python part-index access](../scripts/part_index.py) and [component source/action records](../scripts/component_records.py) operate on explicit data paths; FERME retains its parts data, CAD and component evidence.
 # Implemented source intake
 
-1. [Record source files, revisions and job scope](cad-source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action. Execution evidence (`git show 957691b:execution/source-intake.md`).
+1. [Record source files, revisions and job scope](cad-source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action.
 
 ## Implemented DXF inspection
 
-1. [Inspect a DXF drawing before selecting a profile](cad-drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms. Execution evidence (`git show 957691b:execution/dxf-inspection.md`).
+1. [Inspect a DXF drawing before selecting a profile](cad-drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms.
 
 ## Continuing iterations and repository ownership
 
