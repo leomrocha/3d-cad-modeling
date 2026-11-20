@@ -60,8 +60,8 @@ Exact vocabulary, explicit context and unambiguous engineering communication are
 
 ## Research and delegation
 
-1. External web searches require the user’s approval. Use small agents for every approved web search. The primary agent must not search or browse the web directly unless explicitly instructed to do so. Reading local project files is separate from external research.
-2. Give each search agent the exact question, scope, exclusions, authorized output paths and required source evidence. Parallel agent work requires the user's authorization; do not infer it from the availability of agents.
+1. External web searches require the user’s approval. Use small agents for every approved web search. Reading local project files is separate from external research.
+2. Give each search agent the exact question, scope, exclusions, authorized output paths, and required source evidence. Parallel searches require the user’s explicit authorization.
 3. Keep the primary agent's synthesis within the same scope. Check the returned evidence, links, arithmetic and compatibility claims before presenting them. Delegation does not replace review.
 4. Reuse existing findings and source documents before commissioning another search. Do not repeat an entire research pass to answer a narrower question.
 5. Use original technical documentation and engineering drawings for dimensions, interfaces, and operating limits.
