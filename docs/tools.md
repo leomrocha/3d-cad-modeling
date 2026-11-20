@@ -8,7 +8,7 @@
 4. [Planar profiles](../scripts/planar_profiles.py) — bounded native extrusion and analytic equal-radius opening clipping.
 5. [Component insertion](../scripts/assembly_build.py) — source hashes, exact interactive prompts, native metadata and saved placements.
 6. [Assembly occurrences](../scripts/assembly_occurrences.py) — nested part quantities, mirrored hands and original insertion-journal recovery.
-7. [Native views](../scripts/native_views.py) — saved boundary samples, nested placements and hashed SVG/PNG orthographic/isometric views.
+7. [Native views](../scripts/native_views.py) — native SAT/SAB boundary samples, nested placements and hashed SVG/PNG orthographic/isometric views.
 8. [Encoding-aware native geometry](../scripts/native_geometry.py) — stable SAT/SAB readback, OCS points and placed vertex extrema.
 9. [Source vector paths](../scripts/source_vector_paths.py) — bounded SVG segment grammar, affine frames and explicit unit conversion.
 
@@ -69,7 +69,7 @@ The [skill catalogue](../skills/README.md) separates these installed skills from
 
 Some of these are specialized tools for particular geometries. I still have work to do on these things.
 
-1. [native_acis.py](../scripts/native_acis.py) — reads supported native solids, analytic surfaces and optional [circular boundary curves and adjacent faces](../skills/cad-ocs-engineering/references/circular-boundary-checks.md).
+1. [native_acis.py](../scripts/native_acis.py) — reads ACIS700 SAT topology and trimmed edge samples, plus SAB analytic surfaces and optional [circular boundary curves and adjacent faces](../skills/cad-ocs-engineering/references/circular-boundary-checks.md).
 2. [step_solid_inventory.py](../scripts/step_solid_inventory.py) — inventories STEP solid definitions without counting nested shells as additional solids.
 3. [step_placements.py](../scripts/step_placements.py) — reads supported STEP/native placement matrices and compares component positions.
 4. [assembly_units.py](../scripts/assembly_units.py) — prepares a unit-change plan for specified assembly root inserts, preserving internal geometry.

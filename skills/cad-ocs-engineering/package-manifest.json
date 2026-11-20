@@ -12,7 +12,7 @@
     },
     "SKILL.md": {
       "source": "SKILL.md",
-      "sha256": "b1303599464b6110a80bc282fb1e5302ac173d61e2060697d3eab4b91292bee9"
+      "sha256": "373e272f209c47c1d2be7331116924a7061c913cd0a92f8a6b24bd2e4d73573f"
     },
     "agents/openai.yaml": {
       "source": "agents/openai.yaml",
@@ -104,7 +104,7 @@
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
-      "sha256": "b9c46a40cc6f5001972a49134ea77b32a8a162b2eb7e7e16cf594ef673c02828"
+      "sha256": "55700e79165cc6b9f5ca5ace27c5919019ae707ef60a0d26291c050aadf41e00"
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
@@ -284,7 +284,7 @@
     },
     "scripts/cadtools/records.py": {
       "source": "scripts/cadtools/records.py",
-      "sha256": "4201640287d53c884469c57b1a807b4b56e02869a2ef017643cddffc12fcab0c"
+      "sha256": "97edbe4ade2327e1792e0974625308186a4937849e660176b680afefce6312bd"
     },
     "scripts/cadtools/runtime.py": {
       "source": "scripts/cadtools/runtime.py",
@@ -372,15 +372,15 @@
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",
-      "sha256": "996dec968f99dd3686c12a24b3d9f5235744eaf117c9b7d02c4542a38a5cd064"
+      "sha256": "7c76353e90723fa09c086db3086b5863237f0ceebdb426caac4948a4bdc3c11c"
     },
     "scripts/native_geometry.py": {
       "source": "scripts/native_geometry.py",
-      "sha256": "50e6a69614095de4d808111300714199d7859f6e233ea306acbd81643631c42e"
+      "sha256": "7da9c4150a7a9be6401004ae7afd7a7fed7709a378fe9975fde0a638d049c70a"
     },
     "scripts/native_views.py": {
       "source": "scripts/native_views.py",
-      "sha256": "4fdd8c1859c303274f24a88656b26ee869d2ddb80abd34d352e78612b778eb58"
+      "sha256": "3fd45bf0c14e6129575b8c13f2907ddc8dd7aee9188b2b29792005c1d063ba2a"
     },
     "scripts/ocs_control.py": {
       "source": "scripts/ocs_control.py",
