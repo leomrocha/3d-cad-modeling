@@ -10,10 +10,9 @@ Use `scripts/envelope_job_runner.py` to run an external, source-pinned envelope 
 4. `--session`: selected OCS session.
 5. `--control`: optional helper override for legacy callers; the default is bundled `scripts/ocs_control.py`.
 6. `--cadtools-root`: optional legacy preflight location; defaults to the packaged scripts directory. Python imports use the packaged runtime.
-7. `--modeling-root-name`: optional legacy provenance root name; it supplies no Python imports.
-8. `--root NAME=ABSOLUTE_PATH`: repeat for each explicit portable root needed by the job. Root names are supplied by the caller. Relative source/output locators resolve from the external job file's directory.
-9. `--execution-model`: observed model identity for the run record.
-10. `--allow-write`: explicit native-write switch. Omit for read-only preflight.
+7. `--project-root`: select the containing project when the job uses `${PROJECT_ROOT}` paths. Other [path origins](paths.md) come from the job, the selected output and the saved catalogue.
+8. `--execution-model`: observed model identity for the run record.
+9. `--allow-write`: explicit native-write switch. Omit for read-only preflight.
 
 Example shape (values supplied by the external job):
 
@@ -21,15 +20,14 @@ Example shape (values supplied by the external job):
 python "$SKILL_ROOT/scripts/envelope_job_runner.py" \
   --job /external/job/envelope.json \
   --job-dir /external/job \
-  --output '${PROJECT_ROOT}/cad/parts/reference.dwg' \
+  --output /external/job/models/reference.dwg \
   --session SESSION \
-  --root PROJECT_ROOT=/path/to/project \
   --execution-model OBSERVED_MODEL
 ```
 
 ## Preflight and execution
 
-1. The runner resolves every feature source through caller-supplied roots or the job-directory base, verifies source hashes through `component_records.require_ready`, normalizes stored source metadata to named-root locators, validates envelope parameters, prepares the complete portable metadata payload, checks the `.dwg` destination and replay receipts, and imports `ezdxf.acis.sab.parse_sab` and `SabDataLoader` in the current interpreter. It checks the combined namespace, separator, readable geometry name and longest generated metadata suffix against the installed client's 128-byte UTF-8 request-ID limit before session discovery or document creation. Shorten the caller's labels when that check fails. Existing failure/error JSON and failed source-feature check records also block native replay.
+1. The runner resolves every feature source from the job directory, selected source paths and configured origins, verifies source hashes through `component_records.require_ready`, normalizes stored source metadata to named-root locators, validates envelope parameters, prepares the complete portable metadata payload, checks the `.dwg` destination and replay receipts, and imports `ezdxf.acis.sab.parse_sab` and `SabDataLoader` in the current interpreter. It checks the combined namespace, separator, readable geometry name and longest generated metadata suffix against the installed client's 128-byte UTF-8 request-ID limit before session discovery or document creation. Shorten the caller's labels when that check fails. Existing failure/error JSON and failed source-feature check records also block native replay.
 2. Only after saved-body reader preflight succeeds does the runner import the guarded OCS APIs, load the selected control helper, and read the OCS state. It stores a compact snapshot of document IDs, paths, dirty states, active revisions and command/modal state. It does not create a document during default preflight.
 3. Native execution requires `--allow-write`. The runner creates one isolated document through the journalled client, confirms existing document identities and dirty/path states, requires an empty drawing audit, sets millimetre INSUNITS and world UCS, then calls `envelope_reference.build_envelope`.
 4. `build_envelope` writes its basic metadata with the action label ending `source metadata`; the runner writes the complete payload with a separate action label ending `complete source binding`. Each journalled mutation has its own request identity. Complete metadata includes component identity, readable name, representation, units, local frame, job identity, scope, feature values, original portable source locators, source SHA-256 values and source locations. The runner compares metadata and native geometry before save and again after `save_reopen` against the same native handle.

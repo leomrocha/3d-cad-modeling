@@ -2,7 +2,7 @@
 
 ## Source-pinned incremental checkpoints
 
-Use [save_checkpoint](../scripts/cadtools/checkpoints.py) with an explicit `job_id`, `source_pins=[{path,sha256}]` and an optional readable part-name-to-handle mapping. Source paths are runtime absolute paths or named-root locators resolved with the caller's `roots`. The helper checks sources before and after saving, records the source contract, job, session when exposed, document/geometry revision, saved file hash and handles, and preserves the preceding checkpoint on failure. Stored receipts require the caller's root map for portability. Rooted locators must remain inside their declared roots.
+Use [save_checkpoint](../scripts/cadtools/checkpoints.py) with an explicit `job_id`, `source_pins=[{path,sha256}]` and an optional readable part-name-to-handle mapping. Source paths are runtime absolute paths or locators resolved using the selected job record `job_path` and the saved catalogue. The helper checks sources before and after saving, records the source contract, job, session when exposed, document/geometry revision, saved file hash and handles, and preserves the preceding checkpoint on failure. To reopen a stored receipt, supply its path as `receipt_path` and the selected saved DWG as `output_path`. Rooted locators stay inside their declared origins.
 
 Checkpoint counts use the save audit's `manifest.by_type` labels. Native entity records may use different labels for the same object. For example, a record emitted as `LwPolyline` can appear as `Polyline` in the audit. On a count mismatch, reconcile the reported labels against the owned document's exact live handles and intended entity types, then save the existing geometry.
 

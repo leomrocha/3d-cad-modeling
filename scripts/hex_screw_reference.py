@@ -6,10 +6,9 @@ geometry. It is an offline draft; it performs no OCS session discovery.
 """
 import copy
 import math
-from pathlib import Path
-import re
 
-from component_records import require_ready
+from component_records import require_ready, resolve_source_locator
+from job_paths import selected_roots
 from hexagonal_reference import parameters as hex_parameters
 from hexagonal_reference import build_hexagonal_reference
 from source_metadata import compare_source_metadata
@@ -56,43 +55,20 @@ def _unit(v, label):
     return result
 
 
-def _resolve(locator, roots):
-    if not isinstance(locator, str):
-        raise ValueError('Source locator must be text')
-    match = re.fullmatch(r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}/(.+)', locator)
-    if match:
-        name, suffix = match.groups()
-        if name not in roots:
-            raise ValueError('Missing caller-supplied source root: ' + name)
-        root = Path(roots[name])
-        if not root.is_absolute():
-            raise ValueError('Configured source root must be absolute: ' + name)
-        path = (root / suffix).resolve()
-        try:
-            path.relative_to(root.resolve())
-        except ValueError as error:
-            raise ValueError('Source locator escapes its configured root') from error
-        return path
-    path = Path(locator)
-    if not path.is_absolute():
-        raise ValueError('Source path must be absolute or use a named root')
-    return path.resolve()
-
-
 def _runtime_job(job, roots):
     result = copy.deepcopy(job)
     for feature in result.get('features', []):
         if isinstance(feature, dict) and isinstance(feature.get('source'), str):
-            feature['source'] = str(_resolve(feature['source'], roots))
+            feature['source'] = str(resolve_source_locator(feature['source'], roots))
     for source in result.get('source_files', []):
         if isinstance(source, dict) and isinstance(source.get('path'), str):
-            source['path'] = str(_resolve(source['path'], roots))
+            source['path'] = str(resolve_source_locator(source['path'], roots))
     return result
 
 
 def parameters(job, root_map=None):
     """Validate readiness, source-pinned dimensions, frame and construction envelope."""
-    roots = root_map or {}
+    roots = selected_roots(root_map)
     runtime = _runtime_job(job, roots)
     ready = require_ready(runtime)
     required = ('job_id', 'part_id', 'part_name', 'representation', 'geometry_name',
@@ -161,7 +137,7 @@ def parameters(job, root_map=None):
                 isinstance(source.get(k), str) and source[k].strip()
                 for k in ('path', 'sha256', 'locator')):
             raise ValueError('source_files[%d] needs runtime path, sha256 and portable locator' % i)
-        resolved_path = str(_resolve(source['path'], roots))
+        resolved_path = str(resolve_source_locator(source['path'], roots))
         if (resolved_path, source['sha256']) not in pinned:
             raise ValueError('source_files[%d] is not pinned by a required source feature' % i)
     metadata = job.get('metadata')

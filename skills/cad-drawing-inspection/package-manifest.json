@@ -24,7 +24,7 @@
     },
     "scripts/component_records.py": {
       "source": "scripts/component_records.py",
-      "sha256": "53d828bf9e60554816022e58cebb77af86b04113548466ecb51be6e1a9f74e0b"
+      "sha256": "63390bea4e6479a223a7f6d0f8a8428d88fd35e8dc899e31b98ebd3f45165329"
     },
     "scripts/dxf_inspect.py": {
       "source": "scripts/dxf_inspect.py",
@@ -33,6 +33,10 @@
     "scripts/image_observations.py": {
       "source": "scripts/image_observations.py",
       "sha256": "020d32b4d93267ff35360b25ef8eb5ab052e283db54fa8beb6b62847d7432f4d"
+    },
+    "scripts/job_paths.py": {
+      "source": "scripts/job_paths.py",
+      "sha256": "cc3642c1b7d915101abcbacdcbf35ae03b2a4a9337c02c9f9be47a031916dd2c"
     },
     "scripts/local_model_runtime.py": {
       "source": "scripts/local_model_runtime.py",

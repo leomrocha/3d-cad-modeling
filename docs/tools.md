@@ -161,7 +161,7 @@ The file, index and DXF command-line helpers can be run from a terminal. Constru
 
 [Orthographic landmark checks](../scripts/orthographic_checks.py) compare shared world coordinates and their worst-case uncertainty bounds across named drawing views.
 
-[Catalogue candidate lookup](../scripts/catalogue_candidates.py) uses the CAD Models CLI across named local snapshots and resolves candidate IDs to hashed assets.
+[Catalogue candidate lookup](../scripts/catalogue_candidates.py) uses the configured CAD Models search helpers and resolves candidate IDs to hashed assets. [Job path resolution](../scripts/job_paths.py) derives portable path origins from the installed skill, selected job files and saved parts catalogue.
 
 - [OpenCV probe and isolated setup](../skills/cad-opencv-setup/scripts/opencv_env.py) checks a named image operation and prepares a separate interpreter on request.
 - [Private catalogue preparation](../scripts/private_catalogue.py) runs the CAD Models builder against supplied assets.

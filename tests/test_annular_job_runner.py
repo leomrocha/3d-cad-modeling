@@ -459,7 +459,7 @@ class AnnularJobRunnerTests(unittest.TestCase):
                 patch.object(runner, 'model_gate', return_value={
                     'part_id': 'SAMPLE-PART-17', 'action': 'NEW_MODEL_REQUIRED',
                     'models': [], 'candidates': []}):
-            with self.assertRaisesRegex(ValueError, 'outside caller-supplied'):
+            with self.assertRaisesRegex(ValueError, 'outside the configured origins'):
                 runner.prepare(self.args())
 
 

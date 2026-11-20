@@ -16,7 +16,7 @@ Use this classification only when the component input explicitly states that no 
 }
 ```
 
-1. Pin the exact source file and source location that defines the classification. Resolve named path roots through the caller's explicit root map; an unrooted relative path is rejected.
+1. Pin the exact source file and source location that defines the classification. Resolve relative source paths from the selected job record. A project-relative source path uses the selected project directory.
 2. `component_records.readiness()` returns `SOURCE_READY_NON_GEOMETRIC` only when the enum, literal boolean, source location and current source hash all validate. `require_ready()` rejects this state, so geometry builders that use that gate cannot construct a solid for the consumable.
 3. `model_inventory.start_check()` returns `SKIP_NON_GEOMETRIC` only when no linked matching model or filename candidate exists. Existing models remain `SKIP_EXISTING_MODEL`; candidates remain `REVIEW_EXISTING_CANDIDATES`. A malformed or stale source binding fails closed.
 4. A task containing alternative physical and consumable branches cannot receive a whole-task non-geometric classification. Classify a branch separately only when the job schema binds that declaration to the exact alternative.

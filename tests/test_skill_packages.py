@@ -151,13 +151,15 @@ print(json.dumps({'result': 'PASS'}))"""
 
     def test_source_intake_fixture(self):
         code = '''import hashlib,json,tempfile
+from datetime import date
 from pathlib import Path
 from source_intake import run,verify_revision
 with tempfile.TemporaryDirectory() as folder:
  root=Path(folder); source=root/'source.txt'; source.write_bytes(b'original fixture\\n')
- spec={'job_name':'Isolated package fixture','revision_id':'r1','model':'synthetic fixture','request':{'text':'Register fixture only.','location':'packaging test'},'scope':{'statement':'Register the supplied local fixture.','requested_output':'source index','authorized_paths':[str(root)]},'sources':[{'id':'fixture','title':'Local fixture','summary':'Exact fixture bytes.','kind':'file','locator':str(source),'observed_at':'2026-11-13'}]}
+ spec={'job_name':'Isolated package fixture','revision_id':'r1','model':'synthetic fixture','request':{'text':'Register fixture only.','location':'packaging test'},'scope':{'statement':'Register the supplied local fixture.','requested_output':'source index','authorized_paths':[str(root)]},'sources':[{'id':'fixture','title':'Local fixture','summary':'Exact fixture bytes.','kind':'file','locator':str(source),'observed_at':date.today().isoformat()}]}
  path=root/'input.json';path.write_text(json.dumps(spec));result=run(path,root/'output');index=verify_revision(Path(result['revision'])/'source-index.json')
  assert source.read_bytes()==b'original fixture\\n'
+ assert index['sources'][0]['observed_at']==spec['sources'][0]['observed_at']
  assert index['sources'][0]['observation']['sha256']==hashlib.sha256(source.read_bytes()).hexdigest()
  print(json.dumps({'result':'PASS','source_preserved':True,'receipt_verified':True}))'''
         self.results['skills']['cad-source-intake']['fixture'] = self.run_python('cad-source-intake', code)

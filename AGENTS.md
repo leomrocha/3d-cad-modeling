@@ -90,8 +90,6 @@ For each modeling decision use the first suitable route in this order: reuse an 
 
 ## Existing-model check before every component start
 
-Standing instruction from 13 November 2026:
-
 1. Check the actual component 3D files before starting each component, including when its work record says NOT_STARTED. Inspect the manifest model links, work-record model/output/native_model paths, input-sheet links, existing CAD index and filesystem inventory.
 2. Mark a component with an existing matching 3D model DONE in the current work list, retain its readable name and actual path, and reuse the recorded checks. Move to an unfinished component. Preserve the scope and source attribution of the existing geometry.
 3. Repeated routine inspection, geometry checking and capture attempts do not reopen an existing completed model. A specific requested revision has its own scope. File searches must distinguish a 3D component from its 2D interface drawing and from another component used as a reference.

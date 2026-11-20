@@ -69,14 +69,16 @@ def write_stage_checkpoint(path,job_id,stage,payload,*,order=('pre_save','save_r
     return data
 
 
-def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=None,job_id=None,source_pins=(),handles=None):
+def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=None,job_id=None,source_pins=(),handles=None,job_path=None):
     """Save a new native DWG checkpoint without reopening or closing the live model."""
     path=Path(path)
     if job_id is not None and (not isinstance(job_id,str) or not job_id):raise CadError('Readable checkpoint job identity required')
-    pins=_check_source_pins(source_pins,roots)
-    if handles is not None and (not isinstance(handles,dict) or any(not isinstance(k,str) or not k or not isinstance(v,str) or not v for k,v in handles.items())):raise CadError('Named checkpoint handle mapping required')
-    if receipt_path and not roots:raise CadError('Stored checkpoint receipt requires explicit caller roots')
     if not path.is_absolute() or path.suffix.lower()!='.dwg':raise CadError('Absolute native DWG checkpoint required')
+    from job_paths import selected_roots
+    roots=selected_roots(roots, job=job_path, output=path,
+                         evidence=Path(receipt_path).parent if receipt_path else None)
+    pins=_check_source_pins(source_pins,roots,base=roots.get('JOB_ROOT'))
+    if handles is not None and (not isinstance(handles,dict) or any(not isinstance(k,str) or not k or not isinstance(v,str) or not v for k,v in handles.items())):raise CadError('Named checkpoint handle mapping required')
     key=client.namespace+':'+label
     intent=client.journal.requests.get(key)
     if intent and (intent['request'].get('path')!=str(path) or intent['request']['op']!='save_verified'):
@@ -109,7 +111,7 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
     if hashlib.sha256(path.read_bytes()).hexdigest()!=digest:raise CadError('Checkpoint file changed before receipt')
     result=dict(result='PASS',state='IN_PROGRESS',saved_path=str(path),sha256=digest,
                 document_id=client.document_id,geometry_revision=state['geometry_revision'],request_id=key,save=saved)
-    if _check_source_pins(pins,roots)!=pins:raise CadError('Source contract changed during save')
+    if _check_source_pins(pins,roots,base=roots.get('JOB_ROOT'))!=pins:raise CadError('Source contract changed during save')
     if job_id is not None:result['job_id']=job_id
     result['source_pins']=pins
     if handles is not None:result['handles']=dict(handles)
@@ -120,25 +122,22 @@ def save_checkpoint(client,path,*,label,expected_counts,receipt_path=None,roots=
     return result
 
 
-def _checkpoint_locator(locator,roots):
+def _checkpoint_locator(locator,roots,base=None):
     from component_records import resolve_source_locator
-    import re
-    path=resolve_source_locator(locator,roots)
-    if '${' in locator:
-        match=re.fullmatch(r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}/.+',locator)
-        if not match or not path.is_relative_to(Path(roots[match.group(1)]).resolve()):
-            raise CadError('Checkpoint locator escapes its declared root')
-    return path
+    try:
+        return resolve_source_locator(locator,roots,base=base)
+    except ValueError as error:
+        raise CadError(str(error)) from error
 
 
-def _check_source_pins(pins,roots):
-    from component_records import observe_file,resolve_source_locator
+def _check_source_pins(pins,roots,base=None):
+    from component_records import observe_file
     import re
     rows=[];seen=set()
     for pin in pins:
         if not isinstance(pin,dict) or set(pin)!={'path','sha256'} or not re.fullmatch('[a-f0-9]{64}',str(pin.get('sha256',''))):
             raise CadError('Source pins require exact path and SHA-256')
-        path=_checkpoint_locator(pin['path'],roots)
+        path=_checkpoint_locator(pin['path'],roots,base)
         if path in seen:raise CadError('Duplicate checkpoint source pin')
         seen.add(path)
         if observe_file(path)['sha256']!=pin['sha256']:raise CadError('Checkpoint source revision changed')
@@ -147,7 +146,8 @@ def _check_source_pins(pins,roots):
 
 
 def verify_resume_checkpoint(checkpoint,*,job_id,source_pins,state,roots=None,
-                             expected_handles=None,actual_handles=None,observed_handles=None):
+                             expected_handles=None,actual_handles=None,observed_handles=None,
+                             job_path=None,receipt_path=None,output_path=None):
     """Offline live-document resume gate; send no native request or mutation.
 
     This verifies a saved state and its current source contract. It does not infer
@@ -163,10 +163,13 @@ def verify_resume_checkpoint(checkpoint,*,job_id,source_pins,state,roots=None,
         raise CadError('Checkpoint document or geometry epoch differs')
     if checkpoint.get('session_id') is not None and state.get('session_id')!=checkpoint['session_id']:
         raise CadError('Checkpoint native session differs')
-    pins=_check_source_pins(source_pins,roots)
+    from job_paths import selected_roots
+    roots=selected_roots(roots, job=job_path, output=output_path,
+                         evidence=Path(receipt_path).parent if receipt_path else None)
+    pins=_check_source_pins(source_pins,roots,base=roots.get('JOB_ROOT'))
     if sorted(pins,key=lambda p:p['path'])!=sorted(checkpoint.get('source_pins',[]),key=lambda p:p['path']):
         raise CadError('Checkpoint source contract differs')
-    from component_records import observe_file,resolve_source_locator
+    from component_records import observe_file
     saved=_checkpoint_locator(checkpoint['saved_path'],roots)
     if observe_file(saved)['sha256']!=checkpoint.get('sha256'):raise CadError('Checkpoint saved bytes changed')
     if observed_handles is not None:
@@ -196,7 +199,8 @@ def verify_resume_checkpoint(checkpoint,*,job_id,source_pins,state,roots=None,
 
 
 def verify_finish_checkpoint(checkpoint, *, job_id, source_pins, state, final_stage_request_id,
-                             planned_roles, observed_handles, roots=None):
+                             planned_roles, observed_handles, roots=None,
+                             job_path=None,receipt_path=None,output_path=None):
     """Bind final verification to the intended completed construction checkpoint."""
     if not isinstance(final_stage_request_id, str) or not final_stage_request_id:
         raise CadError('Expected final construction save request required')
@@ -211,6 +215,7 @@ def verify_finish_checkpoint(checkpoint, *, job_id, source_pins, state, final_st
         raise CadError('Final construction checkpoint does not cover the planned occurrence roles')
     verified = verify_resume_checkpoint(
         checkpoint, job_id=job_id, source_pins=source_pins, state=state, roots=roots,
+        job_path=job_path, receipt_path=receipt_path, output_path=output_path,
         expected_handles=saved_handles, observed_handles=observed_handles,
     )
     return dict(verified, state='FINAL_VERIFICATION_PENDING',

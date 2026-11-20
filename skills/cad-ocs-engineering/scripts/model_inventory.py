@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 from urllib.parse import urlparse
 from part_index import load_index, read_json
+from job_paths import parse_roots, rooted_path, selected_roots
 try:
     from component_records import validate_geometry_requirement, RecordError
 except ImportError:
@@ -20,21 +21,7 @@ MODEL_SUFFIXES={'.dwg','.step','.stp','.iges','.igs','.stl','.obj','.glb','.gltf
 
 
 def resolve_locator(value, base, root_map=None):
-    """Resolve a stored path with explicit roots; reject unresolved placeholders."""
-    roots=root_map or {}
-    def replace(match):
-        name=match.group(1)
-        if name not in roots:
-            raise ValueError('Missing configured path root: '+name)
-        root=Path(roots[name])
-        if not root.is_absolute():
-            raise ValueError('Configured path root must be absolute: '+name)
-        return str(root)
-    value=re.sub(r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}',replace,str(value))
-    if '${' in value:
-        raise ValueError('Malformed path root locator: '+value)
-    path=Path(value)
-    return (path if path.is_absolute() else Path(base)/path).resolve()
+    return rooted_path(value, root_map or {}, base)
 
 
 def inventory_models(project_root):
@@ -172,8 +159,9 @@ def _apply_candidate_reviews(candidates, job, root_map, protected_paths=()):
 def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,configuration=None):
     """Use attributed file links first; block construction on discovered candidates."""
     cad_root=Path(cad_root).resolve();job=job or {};files={p['path']:p for p in inventory}
+    root_map=selected_roots(root_map, cad=cad_root, index=index_path)
     try:
-        non_geometric=validate_geometry_requirement(job,root_map)
+        non_geometric=validate_geometry_requirement(job,root_map,base=root_map.get('WORK_INDEX_ROOT'))
     except RecordError as error:
         raise ValueError(str(error)) from error
     if non_geometric is not None:
@@ -273,6 +261,8 @@ def start_check(part,index_path,cad_root,inventory,job=None,root_map=None,config
 
 def audit(index_path,work_index,cad_root,project_root,root_map=None,configuration=None,part_id=None):
     parts=load_index(index_path);work=read_json(work_index);jobs={p['part_id']:p for p in work['jobs']}
+    root_map=selected_roots(root_map, project=project_root, cad=cad_root,
+                            index=index_path, work_index=work_index)
     inventory=inventory_models(project_root)
     if configuration is not None and not part_id:
         raise ValueError('--configuration requires --id')
@@ -295,16 +285,10 @@ def main():
     for name in ['index','work-index','cad-root','project-root']:parser.add_argument('--'+name,type=Path,required=True)
     parser.add_argument('--id')
     parser.add_argument('--configuration')
-    parser.add_argument('--root',action='append',default=[],metavar='NAME=ABSOLUTE_PATH')
-    a=parser.parse_args();roots={}
-    for entry in a.root:
-        name,sep,path=entry.partition('=')
-        if not sep or not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*',name) or not Path(path).is_absolute():
-            parser.error('--root requires NAME=ABSOLUTE_PATH')
-        if name in roots:parser.error('Duplicate configured path root: '+name)
-        roots[name]=path
+    parser.add_argument('--root',action='append',default=[],help=argparse.SUPPRESS)
+    a=parser.parse_args()
     if a.configuration is not None and a.id is None:parser.error('--configuration requires --id')
-    try:result=audit(a.index,a.work_index,a.cad_root,a.project_root,roots,a.configuration,a.id)
+    try:result=audit(a.index,a.work_index,a.cad_root,a.project_root,parse_roots(a.root),a.configuration,a.id)
     except ValueError as exc:parser.error(str(exc))
     if a.id:
         result['components']=[p for p in result['components'] if p['part_id']==a.id]

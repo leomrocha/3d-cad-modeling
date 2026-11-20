@@ -13,7 +13,7 @@ profile and torus radii; it contains no component-specific values.
    `dimension_features.section_diameter` to distinct required source features.
    Each source feature carries its mm value, source locator and SHA-256, source
    location and evidence status. Resolve portable source locators through the
-   caller's named-root map before using the component-record readiness check.
+   selected job and its sources before using the component-record readiness check.
 3. The helper derives minor radius as section diameter/2 and major radius as
    inside diameter/2 plus minor radius. It creates four exact quarter-circle
    profile arcs using equal LWPOLYLINE bulges, revolves the closed profile

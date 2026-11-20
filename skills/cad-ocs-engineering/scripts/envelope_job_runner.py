@@ -14,6 +14,8 @@ import sys
 import time
 from pathlib import Path
 
+from job_paths import add_job_sources, parse_roots, rooted_path, selected_roots
+
 
 def sha256(path):
     digest = hashlib.sha256()
@@ -28,35 +30,19 @@ def write_json(path, value):
                                      allow_nan=False) + '\n', encoding='utf-8')
 
 
-def parse_roots(entries):
-    roots = {}
-    for entry in entries:
-        name, separator, value = entry.partition('=')
-        if not separator or not re.fullmatch(r'[A-Z][A-Z0-9_]*', name):
-            raise ValueError('--root requires NAME=ABSOLUTE_PATH with an uppercase root name')
-        path = Path(value)
-        if not path.is_absolute() or name in roots:
-            raise ValueError('Each named root must be an explicit unique absolute path')
-        roots[name] = path.resolve()
-    if not roots:
-        raise ValueError('At least one caller-supplied named root is required')
-    return roots
-
-
 def resolve_locator(locator, roots, base_dir=None):
-    value = str(locator)
-    match = re.match(r'^\$\{([A-Za-z_][A-Za-z0-9_]*)\}/(.*)$', value)
-    if match:
-        name, suffix = match.groups()
-        if name not in roots:
-            raise ValueError('Missing caller-supplied path root: ' + name)
-        return (roots[name] / suffix).resolve()
-    path = Path(value)
-    if not path.is_absolute():
-        if base_dir is None:
-            raise ValueError('Relative path requires an explicit external-job base directory')
-        path = Path(base_dir) / path
-    return path.resolve()
+    return rooted_path(locator, roots, base_dir)
+
+
+def runner_roots(args, job_path, job_dir):
+    roots = selected_roots(
+        parse_roots(args.root), job=job_path, evidence=job_dir,
+        project=getattr(args, 'project_root', None), cad=getattr(args, 'cad_root', None),
+        index=getattr(args, 'index', None), work_index=getattr(args, 'work_index', None),
+    )
+    output = resolve_locator(args.output, roots, job_path.parent)
+    roots.setdefault('OUTPUT_ROOT', output.parent)
+    return roots, output
 
 
 def portableize(value, roots):
@@ -79,7 +65,7 @@ def source_locator(path, roots):
             return '${' + name + '}/' + resolved.relative_to(root).as_posix()
         except ValueError:
             continue
-    raise ValueError('Path is outside caller-supplied named roots')
+    raise ValueError('Path is outside the configured origins for this job')
 
 
 def check_write_targets(output, job_dir, allow_write):
@@ -140,6 +126,9 @@ def resolve_runtime_job(job_path, roots):
     """Resolve source locators into a runtime clone while retaining portable inputs."""
     job_path = Path(job_path).resolve()
     job = json.loads(job_path.read_text(encoding='utf-8'))
+    if not isinstance(job, dict):
+        raise ValueError('External envelope job must be a JSON object')
+    add_job_sources(roots, job, job_path.parent)
     if not isinstance(job.get('namespace'), str) or not job['namespace'].strip():
         raise ValueError('External envelope job requires a nonempty request namespace')
     if not isinstance(job.get('part_id'), str) or not job['part_id'].strip():
@@ -377,10 +366,9 @@ def cleanup_completed_envelope(*, helper, descriptor, client, namespace, output,
 def run(args):
     job_dir = args.job_dir.resolve()
     job_path = args.job.resolve()
-    roots = parse_roots(args.root)
+    roots, output = runner_roots(args, job_path, job_dir)
     if args.modeling_root_name and args.modeling_root_name not in roots:
         raise ValueError('--modeling-root-name must refer to a caller-supplied root')
-    output = resolve_locator(args.output, roots, job_path.parent)
     write_gate = check_write_targets(output, job_dir, args.allow_write)
 
     job, params, readiness = resolve_runtime_job(job_path, roots)
@@ -442,7 +430,7 @@ def run(args):
         'active_document_before': before_snapshot,
         'output_path': source_locator(output, roots),
         'executing_model': args.execution_model,
-        'source_resolution': 'Runtime feature paths resolve from the explicit root map; stored inputs and metadata keep portable locators.',
+        'source_resolution': 'Feature paths resolve from the selected job and configured origins. Stored metadata uses portable locators.',
     }
     write_json(job_dir / 'native-preflight.json', preflight)
     if not args.allow_write:
@@ -597,7 +585,8 @@ def main(argv=None):
                         help='Optional named root for legacy provenance; code is loaded from this package')
     parser.add_argument('--execution-model', required=True,
                         help='Actual execution-model identity supplied by the caller')
-    parser.add_argument('--root', action='append', default=[], metavar='NAME=ABSOLUTE_PATH')
+    parser.add_argument('--project-root', type=Path, help='Project for saved project-relative paths')
+    parser.add_argument('--root', action='append', default=[], help=argparse.SUPPRESS)
     parser.add_argument('--allow-write', action='store_true')
     args = parser.parse_args(argv)
     try:

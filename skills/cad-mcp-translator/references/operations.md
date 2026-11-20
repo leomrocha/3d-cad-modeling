@@ -8,14 +8,14 @@
 4. Use the [planner](../scripts/translator.py) with the selected application, bridge, operation and optionally a job-local mapping, sanitized inventory and previous binding. All receipts stay local. The normalized snapshot input below is a **synthetic shape example**. Each page stores the requested cursor, the client generation during retrieval and the raw tool descriptors. Use current data for actual mapping. Do not substitute a fabricated schema for discovery.
 
 ```json
-{"application":"freecad","bridge":"yonosoft/freecad-mcp","connection":"local-A","workspace":"fixture-A","session":"session-A","document":"plate-A","privileges":"inspect-only","settings":"mm-local-frame","protocol":"2025-11-25","transport":"streamable-http","host_version":"example","bridge_version":"example","generation":"1","changed":false,"pages":[{"cursor":null,"generation":"1","tools":[]}]}
+{"application":"freecad","bridge":"yonosoft/freecad-mcp","connection":"local-A","workspace":"fixture-A","session":"session-A","document":"plate-A","privileges":"inspect-only","settings":"mm-local-frame","protocol":"NEGOTIATED_PROTOCOL_VERSION","transport":"streamable-http","host_version":"example","bridge_version":"example","generation":"1","changed":false,"pages":[{"cursor":null,"generation":"1","tools":[]}]}
 ```
 
 ```sh
 python3 "$SKILL_ROOT/scripts/translator.py" --application freecad --bridge yonosoft/freecad-mcp --operation edit-bore-diameter --connection local-A --snapshot inventory.json
 ```
 
-On reconnect, changes to tool lists, permissions, units, document or workspace, rediscover. Supply the earlier digest with `--previous-binding`. A stale binding, incomplete inventory or changed generation invalidates the pending plan. Repeat bounded read-only discovery. Missing versions restrict evidence to the current session. Use the negotiated version's rules for paging and tool errors. [MCP discovery](https://modelcontextprotocol.io/specification/2025-11-25/server/tools).
+On reconnect, changes to tool lists, permissions, units, document or workspace, rediscover. Supply the earlier digest with `--previous-binding`. A stale binding, incomplete inventory or changed generation invalidates the pending plan. Repeat bounded read-only discovery. Missing versions restrict evidence to the current session. Use the negotiated version's rules for paging and tool errors. [MCP discovery](https://modelcontextprotocol.io/specification/latest/server/tools).
 
 ## Adapt and verify
 

@@ -20,11 +20,11 @@
     },
     "references/annular-job-runner.md": {
       "source": "references/annular-job-runner.md",
-      "sha256": "a48ce4886e389d75a52d1d879b412da2a0e04f67b9896afe7a879c504e729267"
+      "sha256": "3ac56d8c1d48a929ae1c33060e2157b99560c7d47e4f11698d3cd6f4c408037d"
     },
     "references/annular-reference.md": {
       "source": "references/annular-reference.md",
-      "sha256": "d9595d484df064222b24b87fa280ff81f15e0ad01a3e4fcb36da1b4efdc23b6c"
+      "sha256": "4b75e3af5d7e35e605a6e119aba979e1498e21d7cac25d325d6f6bbf308b7ac9"
     },
     "references/assembly-evidence.md": {
       "source": "references/assembly-evidence.md",
@@ -48,7 +48,7 @@
     },
     "references/component-completion.md": {
       "source": "references/component-completion.md",
-      "sha256": "508285c01ca7a660e1629b0dcf243e2e6d61f671daaca4b1b0d2700ed0c36815"
+      "sha256": "1477ec80ac10843adf871700830e0177a59e32a0fc6dd57af5a3976b0e095604"
     },
     "references/component-procedure.md": {
       "source": "references/component-procedure.md",
@@ -80,7 +80,7 @@
     },
     "references/envelope-job-runner.md": {
       "source": "references/envelope-job-runner.md",
-      "sha256": "be08615e9c674597aea62a91f68d3d2fe3a6931d41a59f34de4f832dc4c0d348"
+      "sha256": "78adb21fb059519ae125fe7612130cc61e5fde442ab37a0f69da29c0c92d8d51"
     },
     "references/envelope-reference.md": {
       "source": "references/envelope-reference.md",
@@ -100,7 +100,7 @@
     },
     "references/existing-model-start-check.md": {
       "source": "references/existing-model-start-check.md",
-      "sha256": "ca3801da179dcda136d720db91075cfdfeeeaa90eaf7561ab071b26b8c88a844"
+      "sha256": "d142a2e587e251351cdd2fa32b35e6c5b71b6a25c9a44a01bcc3ca6bf2b5831c"
     },
     "references/generic-integration.md": {
       "source": "references/generic-integration.md",
@@ -108,7 +108,7 @@
     },
     "references/hex-screw-reference.md": {
       "source": "references/hex-screw-reference.md",
-      "sha256": "423f579c25d033e61e57fa450b38e08e877a0b64ce2ffe5865cb21741cb8f855"
+      "sha256": "fa9f27ad40c09f79e3d98e0e79daaf017cf9c9615ad1329db42d9d6d436842a6"
     },
     "references/hexagonal-reference.md": {
       "source": "references/hexagonal-reference.md",
@@ -116,7 +116,7 @@
     },
     "references/insertion-resume-verification.md": {
       "source": "references/insertion-resume-verification.md",
-      "sha256": "f50d022180a390ab4c660060095701ee7812267881bd995639baf02d2d0e32ec"
+      "sha256": "e4323b8b1dd9a57b2f4640b47df5c28b6414adb4cb67dcd0aa3eabadf13874ae"
     },
     "references/job-history-archive.md": {
       "source": "references/job-history-archive.md",
@@ -132,7 +132,7 @@
     },
     "references/modeling-input-operations.md": {
       "source": "references/modeling-input-operations.md",
-      "sha256": "cc186e6bcefb96432c0f8336a744c3349a5c6e111a3a5a69023696c8bb0e626e"
+      "sha256": "ff85959c4943f6d09ca994f51c6a894245c0d903be0f524f90949b8abd0faf64"
     },
     "references/modeling-operation-selection.md": {
       "source": "references/modeling-operation-selection.md",
@@ -140,15 +140,15 @@
     },
     "references/non-geometric-requirements.md": {
       "source": "references/non-geometric-requirements.md",
-      "sha256": "18c9cf66f0f0ef8dc50dcc9a44b2d5d50f3c386d3eb0b3f7da28d5b79e8381b0"
+      "sha256": "5a397ebef48a24d2773744d6dda4ec9870637cd6b0326e94862574cea18b6b7f"
     },
     "references/ocs-control.md": {
       "source": "references/ocs-control.md",
-      "sha256": "96f2ef36c5e5549db14deec002187a0c95e29531d215f79db8ce865bfb0e8874"
+      "sha256": "4f009d1c67d63fab5e056f661d112a6eee2bd26b9698b52cf8c941d9938f4f63"
     },
     "references/ocs-runtime.md": {
       "source": "references/ocs-runtime.md",
-      "sha256": "c08e7f6b580c2b8b04ad879260dbd05e432b5ff792e871cabb31cab7dd0058d0"
+      "sha256": "ffc622cf7987c809119d309bbaf64d99ba169b54c96b2ee44b17aaa1a299d7f3"
     },
     "references/package-completion.md": {
       "source": "references/package-completion.md",
@@ -156,7 +156,7 @@
     },
     "references/paths.md": {
       "source": "references/paths.md",
-      "sha256": "348dd603605ebaca9ff4bc3387536821eeafadf62e9a4cd507be5e00681fd23b"
+      "sha256": "e7e1494229665d52c10cd6f406c396a117f7dbc04896ee6832f7d0a5b0de226f"
     },
     "references/pixhawk.md": {
       "source": "references/pixhawk.md",
@@ -164,11 +164,11 @@
     },
     "references/profile-reference.md": {
       "source": "references/profile-reference.md",
-      "sha256": "c49593df209b57318f7a21c7c2c0c08fde5351a462033a84db8e2c7c5d4a51ae"
+      "sha256": "c4115b9e4af1b4a1eabca18502c0b1c3dd6547fab4857b9a771d7c48ae3f5351"
     },
     "references/retained-artifact-checks.md": {
       "source": "references/retained-artifact-checks.md",
-      "sha256": "68bee503ac58a25dc54bce0d3ea8d9722996fcf76a6e7ab7abd0510528f007e4"
+      "sha256": "617f14d93aaac194fd962faafcafcb82563f7b732039b1c6c09261016364522c"
     },
     "references/reversible-source-workflows.md": {
       "source": "references/reversible-source-workflows.md",
@@ -232,7 +232,7 @@
     },
     "references/toroidal-reference.md": {
       "source": "references/toroidal-reference.md",
-      "sha256": "1dacca90a1ae83b2afcb95f38d48549c3f2ea3aa0ae4373816a6d253be773599"
+      "sha256": "52e7ac5975960135a8e39b6b10bcfdb93f751cdefeaed987d25e05ff37f0a087"
     },
     "requirements.txt": {
       "source": "requirements.txt",
@@ -240,7 +240,7 @@
     },
     "scripts/annular_job_runner.py": {
       "source": "scripts/annular_job_runner.py",
-      "sha256": "59bc5f47c6180275d27ab5259d4c1bf897d2c0c9cb4dec14d6887232bcebf538"
+      "sha256": "843d42baff44a67c6569a5b0864363e65c5fdbba6e6f11c6b8f63faf62a8a7e1"
     },
     "scripts/annular_reference.py": {
       "source": "scripts/annular_reference.py",
@@ -276,7 +276,7 @@
     },
     "scripts/bearing_variant.py": {
       "source": "scripts/bearing_variant.py",
-      "sha256": "e7cfb86182aba0c0c86f18d6ef7bf8a5ac4a951c5acfe9c2d596a6104f5b73bd"
+      "sha256": "8d9983d393417bcd8cad0475248e835ec29f689d5ae814542413ecf6625ba045"
     },
     "scripts/cadtools/__init__.py": {
       "source": "scripts/cadtools/__init__.py",
@@ -288,7 +288,7 @@
     },
     "scripts/cadtools/checkpoints.py": {
       "source": "scripts/cadtools/checkpoints.py",
-      "sha256": "5ccff609c720ddd6a79a59749289d871d1d6c632b405acfa7b231ed5cfab4429"
+      "sha256": "abee4e2012e3f1a32993bd4476f0be747ec5a1c3a92782ea5c7d5b9a3b06a513"
     },
     "scripts/cadtools/geometry.py": {
       "source": "scripts/cadtools/geometry.py",
@@ -320,7 +320,7 @@
     },
     "scripts/catalogue_candidates.py": {
       "source": "scripts/catalogue_candidates.py",
-      "sha256": "d0e1e0eeb1eb817101410071f5dce91699304d20ac7cf6190670c997a6efe1e6"
+      "sha256": "b827545ff643494efa0f1d4f3164ad7737077aa265191b5a99eb07049e9af392"
     },
     "scripts/check_contract.py": {
       "source": "scripts/check_contract.py",
@@ -328,7 +328,7 @@
     },
     "scripts/component_records.py": {
       "source": "scripts/component_records.py",
-      "sha256": "53d828bf9e60554816022e58cebb77af86b04113548466ecb51be6e1a9f74e0b"
+      "sha256": "63390bea4e6479a223a7f6d0f8a8428d88fd35e8dc899e31b98ebd3f45165329"
     },
     "scripts/conical_washer_profile.py": {
       "source": "scripts/conical_washer_profile.py",
@@ -344,7 +344,7 @@
     },
     "scripts/envelope_job_runner.py": {
       "source": "scripts/envelope_job_runner.py",
-      "sha256": "3e7a6b9f7907b140acd24c881fbdce11cc4932d189a7252b396e122a9dda1086"
+      "sha256": "2a40e7487d8a69d3aa521e6f8397b634018d67f8f120c6afa3796bf00994f683"
     },
     "scripts/envelope_reference.py": {
       "source": "scripts/envelope_reference.py",
@@ -364,7 +364,7 @@
     },
     "scripts/hex_screw_reference.py": {
       "source": "scripts/hex_screw_reference.py",
-      "sha256": "ecdbd74fc17317b57a3a92b3cd76ddaf511b3675b55caa7af1b78d549ed1e35c"
+      "sha256": "855e66fd1297cda0ebde5cfcfe67d8be021925acf9073899c45d43258c8da635"
     },
     "scripts/hexagonal_reference.py": {
       "source": "scripts/hexagonal_reference.py",
@@ -381,6 +381,10 @@
     "scripts/job_history_archive.py": {
       "source": "scripts/job_history_archive.py",
       "sha256": "3924a6b1e33990adf220c4a684f817a2937b2345d957fdd0627a23eb6207b961"
+    },
+    "scripts/job_paths.py": {
+      "source": "scripts/job_paths.py",
+      "sha256": "cc3642c1b7d915101abcbacdcbf35ae03b2a4a9337c02c9f9be47a031916dd2c"
     },
     "scripts/learned_cad_provider.py": {
       "source": "scripts/learned_cad_provider.py",
@@ -412,7 +416,7 @@
     },
     "scripts/model_inventory.py": {
       "source": "scripts/model_inventory.py",
-      "sha256": "325ecdecaf1865f2f6ff2c653167e6bc0110171f725fc0771667be6e4f3cf15e"
+      "sha256": "085e9e9764432fcafbf4ee5c682df00f4c145552c74d193d8960ce185f9e59df"
     },
     "scripts/mounting_pattern.py": {
       "source": "scripts/mounting_pattern.py",
@@ -420,7 +424,7 @@
     },
     "scripts/multiview_part.py": {
       "source": "scripts/multiview_part.py",
-      "sha256": "db7e4870819648e5717aab5b6fec67894fc32e08027253b3d001bb1fddbab50a"
+      "sha256": "4184391543f27be82fd157d8632a2a2042334c2bdfc7d56e6f0405e952db6001"
     },
     "scripts/native_acis.py": {
       "source": "scripts/native_acis.py",
@@ -516,7 +520,7 @@
     },
     "scripts/retained_artifacts.py": {
       "source": "scripts/retained_artifacts.py",
-      "sha256": "e3b3d2b392c49019b2031c3e3bcdd9ac818386998bd05706047abea9f9f4ec77"
+      "sha256": "0adf40be32d6c41c507dbd94210b4304abebe154431aab3749ebde4de6ad1906"
     },
     "scripts/rgbd_surface.py": {
       "source": "scripts/rgbd_surface.py",

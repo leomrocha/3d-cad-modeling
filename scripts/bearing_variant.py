@@ -3,11 +3,10 @@ import argparse
 import json
 from pathlib import Path
 import re
-import subprocess
 import sys
 
-from catalogue_candidates import lookup
-from operation_catalogue import load, location
+from catalogue_candidates import search_saved as search_parts
+from operation_catalogue import location
 
 FAMILY = "single-row-deep-groove-ball-bearing"
 CLOSURES = ("shield", "contact-seal", "non-contact-seal")
@@ -104,30 +103,8 @@ def evaluate(candidate, base, closure, sides):
 
 
 def search_saved(catalogue_path, query):
-    """Read already selected parts sources and search each usable snapshot."""
-    catalogue = load(catalogue_path)
-    checked = {(row["resource"], row["name"]): row for row in catalogue["operations"]}
-    sources = {}
-    for resource in catalogue["resources"]:
-        available = [method for method in resource.get("methods", ()) if method.get("probe") == "parts"]
-        if not available:
-            continue
-        name = resource["id"]
-        method = next((method for method in available
-                       if checked.get((name, method["name"]), {}).get("usable")), None)
-        if method is None:
-            reasons = [checked.get((name, method["name"]), {}).get("reason") for method in available]
-            sources[name] = {"error": "; ".join(filter(None, reasons)) or "Parts source has no usable search method"}
-            continue
-        try:
-            sources[name] = lookup(
-                Path(method["search_cli"]), Path(resource["location"]), query,
-                include_record=lambda row: catalogue_record_may_match(row, query),
-                interpreter=resource.get("python") or sys.executable,
-            )
-        except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as error:
-            sources[name] = {"error": str(error)}
-    return sources
+    return search_parts(catalogue_path, query,
+                        include_record=lambda row: catalogue_record_may_match(row, query))
 
 
 def main():

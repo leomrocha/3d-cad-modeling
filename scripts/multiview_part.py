@@ -6,7 +6,7 @@ import json
 import math
 from pathlib import Path
 
-# Original learned parameters. Regenerate using the repository multiview-part training trial.
+# Original learned parameters.
 WEIGHTS = {
     "span": [
         0.12209247187015061,

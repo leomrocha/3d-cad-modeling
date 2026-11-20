@@ -7,6 +7,7 @@ import unittest
 from urllib.parse import unquote,urlsplit
 
 ROOT=Path(__file__).resolve().parents[1]
+PROJECT_LOCATOR = re.compile(r'(?i)fer' r'me|/home/|/tmp/|\$\{(?:ENERGY|OCS|MODELING|CODEX)[A-Z_]*\}')
 
 
 def without_credit_urls(text):
@@ -25,7 +26,7 @@ class PortableDistribution(unittest.TestCase):
             for doc in package.rglob('*.md'):
                 if '__pycache__' in doc.parts:continue
                 text=doc.read_text()
-                self.assertNotRegex(text,r'(?i)ferme|/home/|/tmp/|\$\{(?:ENERGY|OCS|MODELING|CODEX)[A-Z_]*\}')
+                self.assertNotRegex(text, PROJECT_LOCATOR)
                 self.assertNotRegex(text,r'caller-owned_ROOT|component-led-|engineering/module-development|\$\{SKILL_ROOT\}/tests|gpt-[A-Za-z0-9.]')
                 text = without_credit_urls(text)
                 self.assertNotRegex(text, r'(?i)https?://')
@@ -45,7 +46,7 @@ class PortableDistribution(unittest.TestCase):
     def test_packaged_scripts_have_no_specific_project_locator(self):
         for p in (ROOT/'skills').rglob('*.py'):
             text=p.read_text()
-            self.assertNotRegex(text,r'(?i)ferme|/home/|/tmp/|\$\{(?:ENERGY|OCS|MODELING|CODEX)[A-Z_]*\}')
+            self.assertNotRegex(text, PROJECT_LOCATOR)
             ast.parse(text)
 
     def test_manifest_sources_and_procedure_hashes_are_bundled(self):

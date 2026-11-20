@@ -16,37 +16,25 @@ import sys
 
 try:
     from .part_index import read_json
+    from .job_paths import parse_roots, rooted_path, selected_roots
 except ImportError:
     from part_index import read_json
+    from job_paths import parse_roots, rooted_path, selected_roots
 
 
 class RecordError(ValueError):
     pass
 
 
-def resolve_source_locator(locator, root_map=None):
-    """Resolve an absolute or explicitly rooted source path for validation."""
-    if not isinstance(locator, str) or not locator.strip():
-        raise RecordError('Source path must be a nonempty locator')
-    roots = root_map or {}
-    def replace(match):
-        name = match.group(1)
-        if name not in roots:
-            raise RecordError('Missing configured path root: ' + name)
-        root = Path(roots[name])
-        if not root.is_absolute():
-            raise RecordError('Configured path root must be absolute: ' + name)
-        return str(root)
-    value = re.sub(r'\$\{([A-Za-z_][A-Za-z0-9_]*)\}', replace, locator)
-    if '${' in value:
-        raise RecordError('Malformed source path root locator')
-    path = Path(value)
-    if not path.is_absolute():
-        raise RecordError('Source path must be absolute or use an explicit named root')
-    return path.resolve()
+def resolve_source_locator(locator, root_map=None, *, base=None):
+    """Resolve a source path from its record and configured origins."""
+    try:
+        return rooted_path(locator, selected_roots() if root_map is None else root_map, base)
+    except ValueError as error:
+        raise RecordError(str(error)) from error
 
 
-def validate_geometry_requirement(job, root_map=None):
+def validate_geometry_requirement(job, root_map=None, *, base=None):
     """Validate explicit non-geometric scope; return its observed source pin."""
     requirement = job.get('geometry_requirement')
     if requirement is None:
@@ -68,7 +56,7 @@ def validate_geometry_requirement(job, root_map=None):
     location = source.get('location')
     if not isinstance(location, str) or not location.strip():
         raise RecordError('Non-geometric source needs a readable location')
-    path = resolve_source_locator(source.get('path'), root_map)
+    path = resolve_source_locator(source.get('path'), root_map, base=base)
     observation = observe_file(path)
     if observation['sha256'].casefold() != digest.casefold():
         raise RecordError('Non-geometric source revision changed')
@@ -97,11 +85,13 @@ def observe_file(path):
     return {'path': str(path), 'sha256': digest.hexdigest(), 'bytes': after.st_size}
 
 
-def readiness(job, root_map=None):
+def readiness(job, root_map=None, *, job_path=None):
     for key in ('job_id', 'part_id', 'part_name', 'representation', 'units', 'frame'):
         if not job.get(key):
             raise RecordError('Missing job field: ' + key)
-    geometry_requirement = validate_geometry_requirement(job, root_map)
+    base = Path(job_path).resolve().parent if job_path is not None else None
+    root_map = selected_roots(root_map, job=job_path)
+    geometry_requirement = validate_geometry_requirement(job, root_map, base=base)
     if geometry_requirement is not None:
         return {'job_id': job['job_id'], 'part_id': job['part_id'],
                 'part_name': job['part_name'], 'state': 'SOURCE_READY_NON_GEOMETRIC',
@@ -138,7 +128,7 @@ def readiness(job, root_map=None):
             finite(value)
         if not source or not expected_hash:
             raise RecordError('Supplied value needs a source file and expected digest: ' + name)
-        obs = observe_file(source)
+        obs = observe_file(resolve_source_locator(source, root_map, base=base))
         if obs['sha256'] != expected_hash:
             raise RecordError('Source revision changed for ' + name)
         observations.append({'feature': name, **obs})
@@ -148,8 +138,8 @@ def readiness(job, root_map=None):
             'meaning': 'Required input coverage and source revision checks; geometry construction and measurement have separate results.'}
 
 
-def require_ready(job, root_map=None):
-    result = readiness(job, root_map)
+def require_ready(job, root_map=None, *, job_path=None):
+    result = readiness(job, root_map, job_path=job_path)
     if result['state'] != 'SOURCE_READY':
         if result['state'] == 'SOURCE_READY_NON_GEOMETRIC':
             raise RecordError('CAD geometry is not required for this source-bound job; CAD construction is prohibited')
@@ -192,18 +182,12 @@ def append_occurrence(path, occurrence):
 def main(argv=None):
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('job', type=Path)
-    p.add_argument('--root', action='append', default=[], metavar='NAME=ABSOLUTE_PATH')
+    p.add_argument('--project-root', type=Path, help='Project containing a saved project-relative input')
+    p.add_argument('--root', action='append', default=[], help=argparse.SUPPRESS)
     args = p.parse_args(argv)
     try:
-        roots = {}
-        for entry in args.root:
-            name, sep, path = entry.partition('=')
-            if not sep or not re.fullmatch(r'[A-Za-z_][A-Za-z0-9_]*', name) or not Path(path).is_absolute():
-                raise RecordError('--root requires NAME=ABSOLUTE_PATH')
-            if name in roots:
-                raise RecordError('Duplicate configured path root: ' + name)
-            roots[name] = path
-        result = readiness(read_json(args.job), roots)
+        roots = selected_roots(parse_roots(args.root), job=args.job, project=args.project_root)
+        result = readiness(read_json(args.job), roots, job_path=args.job)
         print(json.dumps(result, indent=2, ensure_ascii=False, allow_nan=False))
         return 0 if result['state'] in {'SOURCE_READY', 'SOURCE_READY_NON_GEOMETRIC'} else 1
     except (OSError, ValueError, TypeError) as error:
@@ -211,7 +195,8 @@ def main(argv=None):
         return 2
 
 
-def completion_check(job_id, *, model, evidence, root_map=None):
+def completion_check(job_id, *, model, evidence, root_map=None, job_path=None,
+                     project_root=None):
     """Return DONE only for source-bound final evidence and an applied improvement.
 
     Pins are {path: named-root or absolute runtime locator, sha256: digest}.
@@ -220,9 +205,11 @@ def completion_check(job_id, *, model, evidence, root_map=None):
     Checkpoints remain caller-owned regardless of the returned completion state.
     """
     if not isinstance(job_id,str) or not job_id.strip(): raise RecordError('Readable job identity required')
+    roots = selected_roots(root_map, job=job_path, project=project_root)
+    base = Path(job_path).resolve().parent if job_path is not None else None
     def pin_ok(pin):
         if not isinstance(pin,dict) or not re.fullmatch('[0-9a-f]{64}',str(pin.get('sha256',''))): return False
-        try: return observe_file(resolve_source_locator(pin['path'],root_map))['sha256']==pin['sha256']
+        try: return observe_file(resolve_source_locator(pin['path'],roots,base=base))['sha256']==pin['sha256']
         except (OSError,ValueError,KeyError): return False
     digest=model.get('sha256');checks=[{'name':'saved model hash','result':'PASS' if pin_ok(model) else 'FAIL'}]
     for name in ('source_geometry','metadata','persistence','cleanup','reusable_improvement'):

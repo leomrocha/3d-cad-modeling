@@ -2,7 +2,7 @@
 
 ## Skills supplied by this repository
 
-1. [cad-ocs-engineering](cad-ocs-engineering/SKILL.md) — merges OCS modeling contracts, guarded session control, component iteration, geometry checks, saved results and computational handoffs.
+1. [cad-ocs-engineering](cad-ocs-engineering/SKILL.md) — OCS modeling contracts, guarded session control, component iteration, geometry checks, saved results and computational handoffs.
 2. [cad-drawing-inspection](cad-drawing-inspection/SKILL.md) — inventories DXF entities, units, layers, spaces and nested transforms.
 3. [cad-source-intake](cad-source-intake/SKILL.md) — preserves source files, hashes, request scope and corrected input revisions.
 
@@ -40,62 +40,19 @@ The [tools page](../docs/tools.md) lists the packaged helper implementations and
 1. [Bundled OCS runtime](cad-ocs-engineering/references/ocs-runtime.md), [model and coordinate-check contract](cad-ocs-engineering/references/model-contract.md) and [caller-owned paths](cad-ocs-engineering/references/paths.md) explain cad-ocs-engineering execution from its installed directory.
 2. [Package maintenance](../docs/skill-packaging.md) records canonical code ownership, distribution generation and isolated checks.
 
-## Research catalogue
-
-The following catalogue records external candidates and proposed workflow groups from 12 November 2026. Each entry retains its recorded implementation status.
-
-## Existing skills to reuse or assess
-
-| Skill or package | Concrete use | Proposed action and evidence |
-| --- | --- | --- |
-| [OCS engineering (`cad-ocs-engineering`)](cad-ocs-engineering/SKILL.md); original source: `${CODEX_HOME}/skills/ocs-engineering/SKILL.md` | Live OCS inspection, model contract, component/frame discipline, measured checks and verified saves | Use the merged repository package and its bundled scripts. The external locator records the inspected original source. |
-| [earthtojake/text-to-cad](https://github.com/earthtojake/text-to-cad) | Code-defined parametric models with `cadgen`/build123d, saved-file measurement and preview | Assess pinned runtime/bootstrap, telemetry, source conventions and output checks. The separately advertised `step-parts` skill searches a component catalogue. |
-| [glotoff/freecad-skills](https://github.com/glotoff/freecad-skills) | FreeCAD user/power-user modeling and API references | Adapt only the exercised operations needed for constrained sketches and editable features. |
-| [GitHub Copilot FreeCAD scripting skill](https://github.com/github/awesome-copilot) | FreeCAD Python documents, Part/Sketcher geometry and recompute | Reuse as an API reference, with pinned-version geometry fixtures. Archived exact skill is available in the existing CAD research. |
-| [reyk/freecad-ai-skill](https://github.com/reyk/freecad-ai-skill) | Terminal-to-running-FreeCAD Python bridge | Compare its session control with a direct local adapter before adopting its bridge. |
-| [mitsuhiko/agent-stuff OpenSCAD skill](https://github.com/mitsuhiko/agent-stuff) | Parameterized CSG, command-line render and multi-view review | Adapt the local OpenSCAD workflow and verify the resulting mesh. |
-| [Foster1202/cad-modeling-fusion-skill](https://github.com/Foster1202/cad-modeling-fusion-skill) | ModelSpec schema and code-generation patterns with Fusion, FreeCAD and OpenSCAD backends | Assess reusable schema and open-backend content under its licence. Use the open software backends for this project. |
-| Blender workflow skills and MCP bridges | Scene/mesh authoring and interactive inspection | Compare reviewed bridges with native `bpy` scripts. Match each bridge's supported Blender version to the installed version. |
-
-Original archived candidate files remain in `${ENERGY_RAW_ROOT}/wind-prototypes/cad-workflow/skills/` with the existing research manifests.
-
-## Proposed project workflows
-
-1. `model-brief` — descriptions, dimensions, reference views, part boundaries, units and source evidence.
-2. OCS engineering (`cad-ocs-engineering`) — use the [skill](cad-ocs-engineering/SKILL.md) for OCS modeling and inspection.
-3. `parametric-solid-modeling` — scripted solid geometry and editable parameters.
-4. `drawing-to-cad` — sketch, DXF and SVG interpretation into constrained geometry.
-5. `blender-modeling` — scene/mesh authoring, inspection and visual derivatives.
-6. `capture-and-calibration` — photo/video/depth capture and independent scale controls.
-7. `photogrammetry` — cameras, point clouds and textured surface reconstruction.
-8. `point-cloud-and-mesh-processing` — registration, cleanup, fitting and distance checks.
-9. `scan-to-cad` — traceable reconstruction-to-feature remodeling, using the OCS model contract.
-10. `generative-3d-reference` — learned image/text generation for reference geometry.
-11. `gaussian-scene-reference` — view-synthesis scene reconstruction and retained camera metadata.
-12. `architecture-ifc` — semantic building elements, relationships and IFC validation.
-13. `robot-model-handoff` — joints, frames, visual/collision assets and MJCF/URDF packages.
-14. `component-library` — component search, provenance, versioning, placement and reuse.
-15. `model-verification` — numeric checks, save/reopen and importer comparisons.
-
-During implementation, package each exercised workflow with its `SKILL.md`, scripts, references and fixtures. Reuse the existing OCS contract across reconstruction and CAD handoffs.
-
 Choose a modeling operation using the [operation selection procedure](../docs/modeling-operation-selection.md).
 
 ## Component-driven implementation
 
-[Component CAD iterations](cad-ocs-engineering/SKILL.md) uses the external project's existing part index/dictionary, checks source readiness, records individual action occurrences and requires an applied verified skill/script improvement per completed CAD design. [Python part-index access](../scripts/part_index.py) and [component source/action records](../scripts/component_records.py) operate on explicit data paths; FERME retains its parts data, CAD and component evidence.
-# Implemented source intake
+[Component CAD iterations](cad-ocs-engineering/SKILL.md) checks source readiness, records individual action occurrences and requires an applied verified skill or script improvement per completed CAD design. Use the [parts catalogue configured at setup or refresh](cad-ocs-engineering/references/modeling-operation-selection.md#set-up-and-refresh-the-local-operation-catalogue) to find existing components. Save component models, recipes and inspection results in the modeling job's configured output directory. [Part-index access](../scripts/part_index.py) and [component source and action records](../scripts/component_records.py) operate on explicit data paths.
+
+## Source intake
 
 1. [Record source files, revisions and job scope](cad-source-intake/SKILL.md) implements source capture, corrections and protected revisions for the shared intake action.
 
-## Implemented DXF inspection
+## DXF inspection
 
 1. [Inspect a DXF drawing before selecting a profile](cad-drawing-inspection/SKILL.md) records source entities, units, spaces, layers and nested block transforms.
-
-## Continuing iterations and repository ownership
-
-1. Implemented shared procedures include component iteration, source intake, drawing inspection and existing-model checking. The fifteen workflow groups above retain their recorded proposal/implementation status.
-2. Keep component recipes and evidence in FERME and shared helpers and skills here.
 
 ## Circular opening inspection
 

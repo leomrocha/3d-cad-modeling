@@ -27,7 +27,7 @@ The [installation examples](../README.md#installing) select an agent and project
 
 ## Runtime ownership
 
-Generic `cadtools` runtime, geometry and persistence functions are maintained here. The existing component-project copies remain intact for current callers. Component recipes, dimensions, model files, source originals and job results retain their owning project. [Runtime provenance](../scripts/cadtools/NOTICE.md).
+Generic `cadtools` runtime, geometry and persistence functions are maintained here. Component recipes, dimensions, model files, source originals and job results retain their owning project. [Runtime provenance](../scripts/cadtools/NOTICE.md).
 
 Package and dependency checks establish software execution and retained bytes. Component geometry and saved-file checks are recorded by their own modeling job.
 
@@ -36,11 +36,7 @@ Package and dependency checks establish software execution and retained bytes. C
 1. `drawing-inspection` is now `cad-drawing-inspection`; `source-intake` is now `cad-source-intake`. Installation commands use the CAD-prefixed names.
 2. An existing old-name installation remains its own local copy. Install the new skill by its current name; review and remove an old local copy separately when migrating that environment.
 
-## Complete OCS engineering merge
-
-1. `cad-ocs-engineering` combines the full original OCS engineering skill and this repository’s component workflow. Both workflows are merged directly into its main `SKILL.md`.
-2. The package retains the component procedures, generic helpers, tests and source checks developed here. It also includes the original OCS control, computational-engineering and capability references and adapted agent metadata.
-3. The former `component-cad` package is now `cad-ocs-engineering`.
+3. `component-cad` is now `cad-ocs-engineering`. From the repository checkout, run `npx skills add . --skill cad-ocs-engineering --agent claude-code --copy --yes` to install it for Claude Code.
 
 Run `python3 -m unittest discover -s tests -p test_ocs_skill_merge.py` to check the CAD skill identity and documentation paths.
 

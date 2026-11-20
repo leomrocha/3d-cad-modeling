@@ -6,6 +6,9 @@ from pathlib import Path
 import subprocess
 import sys
 
+from operation_catalogue import load, location
+from job_paths import parts_root_name
+
 
 def digest(path):
     with path.open('rb') as stream:
@@ -88,12 +91,43 @@ def variant_check(candidate, requirements):
                 missing=missing, evidence=evidence)
 
 
+def search_saved(catalogue_path, query, *, include_record=None):
+    """Read already selected parts sources and search each usable snapshot."""
+    catalogue = load(catalogue_path)
+    checked = {(row["resource"], row["name"]): row for row in catalogue["operations"]}
+    sources = {}
+    for resource in catalogue["resources"]:
+        available = [method for method in resource.get("methods", ()) if method.get("probe") == "parts"]
+        if not available:
+            continue
+        name = resource["id"]
+        method = next((method for method in available
+                       if checked.get((name, method["name"]), {}).get("usable")), None)
+        if method is None:
+            reasons = [checked.get((name, method["name"]), {}).get("reason") for method in available]
+            sources[name] = {"error": "; ".join(filter(None, reasons)) or "Parts source has no usable search method"}
+            continue
+        try:
+            sources[name] = lookup(
+                Path(method["search_cli"]), Path(resource["location"]), query,
+                include_record=include_record,
+                interpreter=resource.get("python") or sys.executable,
+            )
+            for candidate in sources[name]['candidates']:
+                if candidate.get('file'):
+                    candidate['locator'] = '${' + parts_root_name(name) + '}/' + candidate['file']
+        except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as error:
+            sources[name] = {"error": str(error)}
+    return sources
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--search-cli', required=True, type=Path,
+    parser.add_argument('--search-cli', type=Path,
                         help='Trusted cad-models scripts/search.py')
-    parser.add_argument('--source', nargs=2, action='append', required=True,
+    parser.add_argument('--source', nargs=2, action='append',
                         metavar=('NAME', 'DATA_DIRECTORY'))
+    parser.add_argument('--catalogue', type=Path, help='Alternate saved operation catalogue')
     parser.add_argument('--variant', type=Path, help='JSON object of required variant fields and values')
     parser.add_argument('query')
     args = parser.parse_args()
@@ -102,17 +136,28 @@ def main():
     required = json.loads(args.variant.read_text()) if args.variant else None
     if required is not None and (not isinstance(required, dict) or any(v is None for v in required.values())):
         parser.error("Supply named variant fields with known values")
+    if bool(args.source) != bool(args.search_cli):
+        parser.error('Use --source and --search-cli together to select a specific local index')
     results = {}
-    for name, directory in args.source:
-        if name in results:
-            parser.error('Duplicate source name: ' + name)
+    if args.source:
+        for name, directory in args.source:
+            if name in results:
+                parser.error('Duplicate source name: ' + name)
+            try:
+                results[name] = lookup(args.search_cli, Path(directory), args.query)
+            except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as error:
+                results[name] = dict(error=str(error))
+    else:
         try:
-            results[name] = lookup(args.search_cli, Path(directory), args.query)
-            if required is not None:
-                for candidate in results[name]['candidates']:
-                    candidate['variant_check'] = variant_check(candidate, required)
-        except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as error:
-            results[name] = dict(error=str(error))
+            results = search_saved(args.catalogue or location(), args.query)
+        except (OSError, ValueError, KeyError) as error:
+            parser.error(str(error))
+        if not results:
+            parser.error('Select a CAD Models parts source during operation catalogue setup or refresh')
+    if required is not None:
+        for result in results.values():
+            for candidate in result.get('candidates', []):
+                candidate['variant_check'] = variant_check(candidate, required)
     print(json.dumps(dict(query=args.query, sources=results), indent=2))
     return int(any('error' in row for row in results.values()))
 

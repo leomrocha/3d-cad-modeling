@@ -23,7 +23,7 @@ def fixture_job(folder, axis=(0, 0, 1), radial=(1, 0, 0)):
                  'source':locator,'source_sha256':digest,
                  'source_location':location,'evidence_status':'synthetic test source'}
                 for name,value,location in dimensions]
-    return {'schema':'ferme.component-source-job.r01','job_id':'SYNTH-HEX-SCREW-01',
+    return {'job_id':'SYNTH-HEX-SCREW-01',
             'part_id':'SYNTH','part_name':'Synthetic hex-head screw',
             'representation':'Synthetic nominal external screw reference',
             'geometry_role':screw.GEOMETRY_ROLE,'geometry_name':'Synthetic screw',
@@ -121,7 +121,7 @@ class HexScrewReferenceTests(unittest.TestCase):
         named='${TEST_ROOT}/synthetic-source.txt'
         for f in job['features']: f['source']=named
         job['source_files'][0]['path']=named
-        with self.assertRaisesRegex(ValueError,'Missing caller-supplied source root'):
+        with self.assertRaisesRegex(ValueError,'Missing configured path root: TEST_ROOT'):
             screw.parameters(job)
         self.assertEqual(screw.parameters(job,{'TEST_ROOT':self.temp.name})['values']['head_height'],7.0)
 

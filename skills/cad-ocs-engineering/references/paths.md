@@ -1,6 +1,7 @@
-# Installed package and caller paths
+# Installed package and job paths
 
-1. SKILL_ROOT identifies this installed skill folder. Load code from its scripts directory and keep the package intact.
-2. PROJECT_ROOT, SOURCE_ROOT and JOB_ROOT are caller-supplied locations for job inputs, unchanged sources and persistent outputs. Supply absolute paths at runtime.
-3. Stored locators use `${ROOT_NAME}/relative/path`. Resolve them with explicit `--root ROOT_NAME=ABSOLUTE_PATH` inputs where supported. Reject unresolved roots and path escapes before file access.
-4. Keep stored job records portable. Record original hashes and a separate derivative hash when normalizing paths. Installed examples use synthetic values; real dimensions and source evidence come from the caller.
+1. Load bundled code from the installed skill's `scripts` directory. `${SKILL_ROOT}/path` refers to that skill's installation directory.
+2. In a source job, use a path relative to the job file for a selected input beside that file. The job can also select an existing source by its absolute path at runtime. Runners use `${JOB_ROOT}` for the source job directory, `${EVIDENCE_ROOT}` for the receipt directory and `${OUTPUT_ROOT}` for the directory of the selected output. A selected external source directory can be recorded as `${INPUT_n_ROOT}`, where `n` is its source position in the job record.
+3. Where an operation accepts a project, CAD directory, input index or work index, those selections define `PROJECT_ROOT`, `CAD_ROOT`, `INDEX_ROOT` and `WORK_INDEX_ROOT`. The index roots identify the directories that contain the index files. Existing model links keep their established CAD-directory or input-sheet context.
+4. Use the [saved parts catalogue](modeling-operation-selection.md#set-up-and-refresh-the-local-operation-catalogue) to look up reusable parts. A single selected catalogue directory resolves `${PARTS_ROOT}/path`. Candidate lookup from saved catalogues reports a source-specific locator for each asset when multiple catalogues are selected.
+5. An unknown origin or a path that escapes a named origin fails resolution. When reopening an older record with a custom origin, its compatibility override supplies the original mapping. Keep original source hashes and record separate derivative hashes when normalizing stored paths.

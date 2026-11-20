@@ -224,6 +224,18 @@ class EnvelopeJobRunnerTests(unittest.TestCase):
         }
         return modules
 
+    def test_selected_job_and_output_replace_folder_map(self):
+        args = self.args(root=[], modeling_root_name=None, output=self.output)
+        roots, output = runner.runner_roots(args, args.job, args.job_dir)
+        job, _, _ = runner.resolve_runtime_job(args.job, roots)
+
+        self.assertEqual(output, self.output)
+        self.assertEqual(runner.source_locator(output, roots),
+                         '${OUTPUT_ROOT}/synthetic-envelope.dwg')
+        locator = job['_resolved_source_locators'][0]
+        self.assertEqual(locator, '${INPUT_1_ROOT}/manufacturer-source.txt')
+        self.assertEqual(runner.resolve_locator(locator, roots), self.source)
+
     def test_named_root_roundtrip_and_portable_metadata_include_source_hash(self):
         roots = runner.parse_roots(self.args().root)
         self.assertEqual(runner.resolve_locator('${PROJECT_ROOT}/source/manufacturer-source.txt', roots),

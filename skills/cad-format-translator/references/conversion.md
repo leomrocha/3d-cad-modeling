@@ -8,7 +8,7 @@
 
 ## Use any configured MCP server
 
-1. Bind to the connection selected by the user. Collect all pages of the current tools/list inventory, relevant schemas, host version and units. Use local workspace labels; keep credentials private. Inspect publisher docs and actual tool contracts to map reader, writer, generator or direct conversion semantics. Never infer support from a brand or from suggestive tool names. The [MCP tool specification](https://modelcontextprotocol.io/specification/2025-11-25/server/tools) defines discovery.
+1. Bind to the connection selected by the user. Collect all pages of the current tools/list inventory, relevant schemas, host version and units. Use local workspace labels; keep credentials private. Inspect publisher docs and actual tool contracts to map reader, writer, generator or direct conversion semantics. Never infer support from a brand or from suggestive tool names. The [MCP tool specification](https://modelcontextprotocol.io/specification/latest/server/tools) defines discovery.
 2. Use the [example inventory](../fixtures/inventory.json) as a schema example. Populate operations with actual representation identifiers, input argument bindings, format direction, supported properties, documented losses, explicit handoff representation, path visibility and evidence. Use a distinct intermediate identifier for each compatible handle contract. Include document/workspace scope, units, version and settings in the inventory. Set complete only after uninterrupted discovery. An ambiguous capability remains a gap until clarified or tested.
 3. Run the [planner](../scripts/routes.py) with the job's chosen representations:
 

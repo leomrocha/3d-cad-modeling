@@ -18,10 +18,11 @@ import sys
 
 from envelope_job_runner import (
     RecoveringClient, check_audit, check_write_targets, cleanup_completed_envelope,
-    document_snapshot, parse_roots, portableize, resolve_locator, sab_reader_preflight,
+    document_snapshot, portableize, resolve_locator, runner_roots, sab_reader_preflight,
     sha256, source_locator, validate_save_receipt, write_json,
 )
 
+from job_paths import add_job_sources
 
 def resolve_job(job_path, roots):
     """Pin all feature sources and validate annular inputs before OCS access."""
@@ -32,6 +33,7 @@ def resolve_job(job_path, roots):
     original = json.loads(path.read_text(encoding='utf-8'))
     if not isinstance(original, dict):
         raise ValueError('External annular job must be a JSON object')
+    add_job_sources(roots, original, path.parent)
     namespace = original.get('namespace')
     if not isinstance(namespace, str) or not namespace.strip() \
             or len(namespace.encode('utf-8')) > 64:
@@ -422,8 +424,7 @@ def prepare_resume(args):
         raise ValueError('--resume-pre-save requires --allow-write')
     job_path = Path(args.job).resolve()
     job_dir = Path(args.job_dir).resolve()
-    roots = parse_roots(args.root)
-    output = resolve_locator(args.output, roots, job_path.parent)
+    roots, output = runner_roots(args, job_path, job_dir)
     source_locator(job_dir, roots)
     prepared = resolve_job(job_path, roots)
     job = prepared['job']
@@ -531,8 +532,7 @@ def prepare(args):
         return prepare_resume(args)
     job_path = Path(args.job).resolve()
     job_dir = Path(args.job_dir).resolve()
-    roots = parse_roots(args.root)
-    output = resolve_locator(args.output, roots, job_path.parent)
+    roots, output = runner_roots(args, job_path, job_dir)
     source_locator(job_dir, roots)
     write_gate = _annular_write_gate(output, job_dir, args.allow_write)
     prepared = resolve_job(job_path, roots)
@@ -1062,13 +1062,13 @@ def parser():
                      help='Component work index used by model_inventory')
     cli.add_argument('--cad-root', required=True, type=Path)
     cli.add_argument('--project-root', required=True, type=Path)
-    cli.add_argument('--cadtools-root', required=True, type=Path)
-    cli.add_argument('--control', required=True, type=Path)
+    cli.add_argument('--cadtools-root', type=Path, default=Path(__file__).resolve().parent)
+    cli.add_argument('--control', type=Path, default=Path(__file__).resolve().with_name('ocs_control.py'))
     cli.add_argument('--session', required=True)
     cli.add_argument('--execution-model', required=True)
     cli.add_argument('--configuration',
                      help='Optional source-job configuration scope override')
-    cli.add_argument('--root', action='append', default=[], metavar='NAME=ABSOLUTE_PATH')
+    cli.add_argument('--root', action='append', default=[], help=argparse.SUPPRESS)
     cli.add_argument('--allow-write', action='store_true',
                      help='Permit one guarded native build after every preflight passes')
     cli.add_argument('--resume-pre-save', action='store_true',

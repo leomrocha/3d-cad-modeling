@@ -9,7 +9,8 @@ import re
 import sys
 
 from component_records import observe_file
-from envelope_job_runner import parse_roots, portableize, resolve_locator
+from envelope_job_runner import portableize
+from job_paths import NAME, add_job_sources, parse_roots, rooted_path, selected_roots
 
 
 def write_table(path,rows,fields):
@@ -26,9 +27,23 @@ def write_table(path,rows,fields):
     return dict(path=str(path),sha256=hashlib.sha256(path.read_bytes()).hexdigest(),rows=len(rows),result='PASS')
 
 
-def verify_manifest(manifest_path, roots):
+def artifact_path(locator, roots, package):
+    # Historical manifests also stored named origins without the wrapper.
+    prefix, separator, suffix = locator.partition('/')
+    if separator and (prefix in roots or (NAME.fullmatch(prefix) and prefix.endswith('_ROOT'))):
+        locator = '${' + prefix + '}/' + suffix
+    if Path(locator).is_absolute():
+        raise ValueError('Stored artifact path requires a portable origin: ' + locator)
+    resolved = rooted_path(locator, roots, package)
+    if not locator.startswith('${') and not resolved.is_relative_to(package):
+        raise ValueError('Retained artifact escapes its package: ' + locator)
+    return resolved
+
+
+def verify_manifest(manifest_path, roots=None):
     manifest_path = Path(manifest_path).resolve()
     package = manifest_path.parent
+    roots = selected_roots(roots, evidence=package)
     before = observe_file(manifest_path)
     manifest = json.loads(manifest_path.read_text(encoding='utf-8'))
     if observe_file(manifest_path) != before:
@@ -53,19 +68,7 @@ def verify_manifest(manifest_path, roots):
         expected = row.get('retained_sha256', row.get('sha256'))
         if not isinstance(expected, str) or not re.fullmatch('[0-9a-fA-F]{64}', expected):
             raise ValueError('Retained file entry requires a SHA-256 digest: ' + locator)
-        # Older portable records use ROOT_NAME/ without the ${...} wrapper.
-        prefix, separator, suffix = locator.partition('/')
-        named = re.match(r'^\$\{([A-Za-z_][A-Za-z0-9_]*)\}/', locator)
-        if separator and prefix in roots:
-            resolved = (roots[prefix] / suffix).resolve()
-            boundary = roots[prefix].resolve()
-        else:
-            if Path(locator).is_absolute():
-                raise ValueError('Stored artifact path requires a portable root: ' + locator)
-            resolved = resolve_locator(locator, roots, package)
-            boundary = roots[named.group(1)].resolve() if named else package
-        if not resolved.is_relative_to(boundary):
-            raise ValueError('Retained artifact escapes its declared root or package: ' + locator)
+        resolved = artifact_path(locator, roots, package)
         if resolved in seen:
             if seen[resolved] != expected.lower():
                 raise ValueError('Conflicting retained artifact hashes: ' + locator)
@@ -107,8 +110,7 @@ def verify_relationships(bindings,manifest,roots,package):
         record=binding['record'];artifact=binding['artifact'];pointer=binding['field']
         if record not in entries or artifact not in entries or not isinstance(pointer,str) or not pointer.startswith('/'):
             raise ValueError('Relationship needs registered artifacts and a JSON pointer')
-        prefix,_,suffix=record.partition('/')
-        path=(roots[prefix]/suffix).resolve() if prefix in roots else resolve_locator(record,roots,package)
+        path=artifact_path(record,roots,package)
         before=observe_file(path)
         if before['sha256']!=entries[record]:raise ValueError('Relationship record changed')
         value=json.loads(path.read_text())
@@ -123,11 +125,20 @@ def verify_relationships(bindings,manifest,roots,package):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('manifest', type=Path)
-    parser.add_argument('--root', action='append', default=[], metavar='NAME=ABSOLUTE_PATH')
+    parser.add_argument('--job', type=Path, help='Selected job record for source locators')
+    parser.add_argument('--project-root', type=Path)
+    parser.add_argument('--output', type=Path, help='Selected saved model for output-relative locators')
+    parser.add_argument('--root', action='append', default=[], help=argparse.SUPPRESS)
     args = parser.parse_args()
     roots = {}
     try:
-        roots = parse_roots(args.root)
+        roots = selected_roots(parse_roots(args.root), job=args.job, project=args.project_root,
+                               output=args.output)
+        if args.job is not None:
+            job = json.loads(args.job.read_text(encoding='utf-8'))
+            if not isinstance(job, dict):
+                raise ValueError('Selected job must be a JSON object')
+            add_job_sources(roots, job, args.job.resolve().parent)
         result = verify_manifest(args.manifest, roots)
     except (OSError, ValueError) as error:
         print(json.dumps(portableize({'result': 'FAIL', 'error': str(error)}, roots)),

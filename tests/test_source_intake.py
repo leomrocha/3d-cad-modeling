@@ -1,5 +1,6 @@
 """Source-intake contracts: fidelity, revisions, conflicts and protected output."""
 import copy
+from datetime import date
 import hashlib
 import json
 from pathlib import Path
@@ -16,12 +17,13 @@ class IntakeTests(unittest.TestCase):
     def setUp(self):
         self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup)
         self.root=Path(self.temp.name);self.source=self.root/'drawing.txt';self.source.write_bytes(b'original drawing\n')
+        self.observed_at = date.today().isoformat()
         self.spec={'job_name':'New source intake','revision_id':'r1','model':'test fixture',
                    'request':{'text':'Read drawing.\nPreserve café dimensions.','location':'test message'},
                    'scope':{'statement':'Record the supplied sources and correction.','requested_output':'source index',
                             'authorized_paths':[str(self.root)]},
                    'sources':[{'id':'drawing','title':'Original drawing','summary':'Fixture drawing source.',
-                               'kind':'file','locator':str(self.source),'observed_at':'2026-11-12'}],
+                               'kind':'file','locator':str(self.source),'observed_at':self.observed_at}],
                    'corrections':[]}
     def execute(self,spec=None,name='result'):
         p=self.root/(name+'-input.json');p.write_text(json.dumps(spec or self.spec,ensure_ascii=False))
@@ -31,13 +33,14 @@ class IntakeTests(unittest.TestCase):
         before=self.source.read_bytes();folder,index=self.execute()
         self.assertEqual(index['sources'][0]['observation']['sha256'],hashlib.sha256(before).hexdigest())
         self.assertEqual(index['sources'][0]['observation']['bytes'],len(before))
+        self.assertEqual(index['sources'][0]['observed_at'], self.observed_at)
         self.assertEqual(self.source.read_bytes(),before)
         self.assertTrue((folder/'scope.md').is_file())
         self.assertFalse((folder.parent/'incomplete').exists())
     def test_exact_text_correction_and_url_registration_without_network(self):
         s=copy.deepcopy(self.spec);s['sources'] += [
-            dict(id='message',title='Correction message',summary='Exact supplied correction.',kind='text',locator='message:2',observed_at='2026-11-12',text='Ø22\n``` literal\n尾\n'),
-            dict(id='url',title='Supplied reference',summary='URL locator only.',kind='url',locator='https://example.invalid/model?q=a%20b#source',observed_at='2026-11-12')]
+            dict(id='message',title='Correction message',summary='Exact supplied correction.',kind='text',locator='message:2',observed_at=self.observed_at,text='Ø22\n``` literal\n尾\n'),
+            dict(id='url',title='Supplied reference',summary='URL locator only.',kind='url',locator='https://example.invalid/model?q=a%20b#source',observed_at=self.observed_at)]
         s['corrections']=[dict(id='correction1',source_id='drawing',statement='Use the revised drawing.',location='message:2')]
         with patch('socket.socket',side_effect=AssertionError('Network attempted')):
             folder,index=self.execute(s)
